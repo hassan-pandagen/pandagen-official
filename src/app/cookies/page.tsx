@@ -1,3 +1,4 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -5,279 +6,266 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
-  description: "How PandaCodeGen uses cookies. Last updated January 26, 2026.",
+  description: "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {
     title: "Cookie Policy | PandaCodeGen",
-    description: "How PandaCodeGen uses cookies. Last updated January 26, 2026.",
+    description: "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026.",
     url: "https://www.pandacodegen.com/cookies",
     siteName: "PandaCodeGen",
     type: "website",
-    images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    images: [ogImageForPath("/cookies")],
   },
   twitter: {
     card: "summary",
     title: "Cookie Policy | PandaCodeGen",
-    description: "How PandaCodeGen uses cookies.",
+    description: "How PandaCodeGen uses cookies and similar technologies.",
   },
   robots: { index: true, follow: true },
+};
+
+const rows = [
+  {
+    service: "PandaCodeGen consent preferences",
+    category: "Strictly necessary",
+    examples: "pandacodegen_consent_v1 (local storage)",
+    duration: "Up to 180 days",
+    purpose: "Stores the cookie choices you make so the site can respect them.",
+  },
+  {
+    service: "Google Analytics 4",
+    category: "Analytics",
+    examples: "_ga, _ga_*",
+    duration: "Provider-controlled and account-configured",
+    purpose: "Measures visits and interactions when analytics is allowed.",
+  },
+  {
+    service: "Microsoft Clarity",
+    category: "Analytics",
+    examples: "_clck, _clsk and related identifiers",
+    duration: "Provider-controlled",
+    purpose: "Provides usage and session-interaction insights when analytics is allowed.",
+  },
+  {
+    service: "Vercel Web Analytics",
+    category: "Analytics",
+    examples: "May use browser or request identifiers",
+    duration: "Provider-controlled",
+    purpose: "Measures site traffic when analytics is allowed.",
+  },
+  {
+    service: "Meta Pixel",
+    category: "Marketing",
+    examples: "_fbp, _fbc and related identifiers",
+    duration: "Provider-controlled",
+    purpose: "Measures advertising performance and conversions when marketing is allowed.",
+  },
+  {
+    service: "Cal.com",
+    category: "Functional",
+    examples: "Booking-session storage and cookies",
+    duration: "Session or provider-controlled",
+    purpose: "Loads the appointment-booking interface when functional services are allowed.",
+  },
+  {
+    service: "Tawk.to",
+    category: "Functional",
+    examples: "Chat/session storage and trafficSource",
+    duration: "Session or provider-controlled",
+    purpose: "Enables live chat and referral context when functional services are allowed.",
+  },
+] as const;
+
+// The five legal pages were the only indexable routes without structured data.
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.pandacodegen.com/cookies#webpage",
+      url: "https://www.pandacodegen.com/cookies",
+      name: "Cookie Policy",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pandacodegen.com/cookies#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "Cookie Policy", item: "https://www.pandacodegen.com/cookies" },
+      ],
+    },
+  ],
 };
 
 export default function CookiesPage() {
   return (
     <main className="bg-paper min-h-screen">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <Header />
-      
+
       <div className="pt-20 md:pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
-            <p className="text-stone-600">Last updated: January 26, 2026</p>
+            <p className="text-stone-600">Last updated: July 22, 2026</p>
           </div>
 
-          {/* Content */}
           <div className="space-y-8 text-stone-600 leading-relaxed">
-            
-            {/* Section 1 */}
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">1. What Are Cookies?</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">1. Scope</h2>
               <p>
-                Cookies are small text files stored on your device (computer, tablet, or smartphone) when you visit our website. They help us remember your preferences, understand how you use our site, and improve your browsing experience.
+                This policy explains how PandaCodeGen uses cookies, local storage, pixels, scripts,
+                and similar browser technologies on this website. These technologies can remember
+                settings, measure use of the site, support advertising measurement, or enable
+                features such as scheduling and live chat.
+              </p>
+            </FadeIn>
+
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
+              <h2 className="text-2xl font-bold text-charcoal mb-4">2. Your choices</h2>
+              <p>
+                Optional services are off by default. On your first visit, you can accept all
+                optional categories, reject them, or choose categories individually. Rejecting
+                optional services does not prevent access to the main website.
               </p>
               <p className="mt-4">
-                Cookies contain information that can uniquely identify your browser or device, but they do not store personal information like passwords or payment details.
+                You can review or withdraw a choice at any time with the persistent <strong>Cookie
+                settings</strong> control at the lower-left of the site. Withdrawing a previously
+                allowed category reloads the page so its scripts and embedded services stop. We
+                remember your selection for up to 180 days, after which we ask again.
               </p>
-            </FadeIn>
-
-            {/* Section 2 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">2. Types of Cookies We Use</h2>
-              
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.1 Session Cookies</h3>
-              <p>
-                <strong>Duration:</strong> Expire when you close your browser<br/>
-                <strong>Purpose:</strong> Maintain your login session, preserve form data, and track navigation within the site during your visit.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.2 Persistent Cookies</h3>
-              <p>
-                <strong>Duration:</strong> Remain on your device for weeks or months<br/>
-                <strong>Purpose:</strong> Remember your preferences, language settings, and login credentials for future visits. Help us recognize returning users.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.3 Analytics Cookies</h3>
-              <p>
-                <strong>Duration:</strong> Vary (typically 2 years)<br/>
-                <strong>Purpose:</strong> Track page views, user interactions, and behavior patterns. Help us understand which pages are most popular and identify technical issues.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.4 Marketing Cookies</h3>
-              <p>
-                <strong>Duration:</strong> Vary based on partner policies<br/>
-                <strong>Purpose:</strong> Enable targeted advertising, track conversion rates, and understand marketing campaign effectiveness. Allow retargeting on third-party platforms.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.5 Functional Cookies</h3>
-              <p>
-                <strong>Duration:</strong> Session or persistent<br/>
-                <strong>Purpose:</strong> Enable advanced features like live chat, contact forms, and calendar scheduling. Essential for providing core functionality.
-              </p>
-            </FadeIn>
-
-            {/* Section 3 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">3. Third-Party Cookies</h2>
-              <p>
-                Our website includes content from third-party services that may set their own cookies:
-              </p>
-              
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">3.1 Google Analytics</h3>
-              <p>
-                Tracks website traffic, user behavior, and conversion metrics. Uses persistent cookies to identify returning visitors. Does not store personal information.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">3.2 Cal.com (Calendar Integration)</h3>
-              <p>
-                Enables appointment scheduling. Sets cookies to maintain your booking session and preferences. You can review their cookie policy at cal.com/privacy.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">3.3 Social Media Pixels</h3>
-              <p>
-                Facebook, LinkedIn, and Twitter may set cookies to track visits and enable retargeting. These are set by third-party platforms, not directly by us.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">3.4 Payment Processors</h3>
-              <p>
-                Stripe and other payment providers set cookies for secure transactions. We do not control these; review their cookie policies for details.
-              </p>
-            </FadeIn>
-
-            {/* Section 4 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">4. How We Use Cookie Information</h2>
-              <ul className="list-disc list-inside space-y-2 text-stone-600">
-                <li>Improve website performance and load times.</li>
-                <li>Understand user preferences and behavior patterns.</li>
-                <li>Deliver personalized content and recommendations.</li>
-                <li>Measure the effectiveness of marketing campaigns.</li>
-                <li>Prevent fraud and enhance security.</li>
-                <li>Maintain your login session and form progress.</li>
-                <li>Enable advanced features like chat and scheduling.</li>
-              </ul>
-            </FadeIn>
-
-            {/* Section 5 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">5. Cookie Consent and Control</h2>
-              
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">5.1 Your Consent</h3>
-              <p>
-                When you first visit our website, we display a cookie consent banner. By clicking "Accept," you consent to all cookie types. You can adjust preferences anytime through the cookie settings.
-              </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">5.2 Browser Controls</h3>
-              <p>
-                You can manage cookies through your browser settings:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-2 ml-4">
-                <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies</li>
-                <li><strong>Firefox:</strong> Settings → Privacy & Security → Cookies and Site Data</li>
-                <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
-                <li><strong>Edge:</strong> Settings → Privacy → Cookies and Site Permissions</li>
-              </ul>
               <p className="mt-4">
-                Note: Disabling cookies may affect site functionality and your ability to access certain features.
+                If you try to open scheduling or live chat before allowing functional services,
+                the site asks for that choice at the time. We do not treat continued browsing as
+                consent.
               </p>
-
-              <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">5.3 Opt-Out Options</h3>
-              <p>
-                You can opt out of specific cookie types:
+              <p className="mt-4">
+                If your browser sends an enabled Global Privacy Control signal, the site keeps the
+                marketing category disabled. You can still choose analytics and functional services
+                separately.
               </p>
-              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-2 ml-4">
-                <li><strong>Google Analytics:</strong> Install Google Analytics Opt-out Browser Add-on</li>
-                <li><strong>Marketing Cookies:</strong> Visit youradchoices.com or networkadvertising.org</li>
-                <li><strong>Email Marketing:</strong> Click "Unsubscribe" in any marketing email</li>
-              </ul>
             </FadeIn>
 
-            {/* Section 6 */}
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">6. Cookie List</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">3. Categories</h2>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Strictly necessary</h3>
+              <p>
+                The site stores your consent selection so it can apply your choices. This storage
+                cannot be switched off in our preference center because it is needed to remember
+                the choice itself.
+              </p>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Analytics</h3>
+              <p>
+                Google Analytics, Microsoft Clarity, and Vercel Web Analytics help us understand
+                traffic, interactions, technical performance, and aggregate lead-form funnel
+                milestones such as start, progress, validation, abandonment, and completion. We do
+                not send the values typed into form fields as analytics events. Their client-side
+                code loads only after you allow analytics.
+              </p>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Marketing</h3>
+              <p>
+                Meta Pixel measures advertising activity and conversions. It loads only after you
+                allow marketing. We do not load a fallback tracking pixel when marketing is denied.
+              </p>
+
+              <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Functional</h3>
+              <p>
+                Cal.com provides appointment scheduling. Tawk.to provides live chat, and the chat
+                setup may request approximate IP-based location and referral context. These
+                services and requests load only after you allow functional services.
+              </p>
+            </FadeIn>
+
+            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
+              <h2 className="text-2xl font-bold text-charcoal mb-4">4. Current technology list</h2>
               <p className="mb-4">
-                Here is a detailed list of cookies used on our website:
+                Exact names and lifetimes can change when providers update their services. The list
+                below describes optional technologies the codebase supports. A provider is active
+                only when the deployment has a verified configuration and you allow its category.
               </p>
-              
+
               <div className="overflow-x-auto">
-                <table className="w-full text-sm border border-stone-200 rounded-lg overflow-hidden">
+                <table className="w-full min-w-[760px] text-sm border border-stone-200 rounded-lg overflow-hidden">
+                  <caption className="sr-only">Current cookie and browser-storage technology inventory</caption>
                   <thead className="bg-stone-50">
                     <tr className="border-b border-stone-200">
-                      <th className="px-4 py-3 text-left text-charcoal font-bold">Cookie Name</th>
-                      <th className="px-4 py-3 text-left text-charcoal font-bold">Type</th>
+                      <th className="px-4 py-3 text-left text-charcoal font-bold">Service</th>
+                      <th className="px-4 py-3 text-left text-charcoal font-bold">Category</th>
+                      <th className="px-4 py-3 text-left text-charcoal font-bold">Examples</th>
                       <th className="px-4 py-3 text-left text-charcoal font-bold">Duration</th>
                       <th className="px-4 py-3 text-left text-charcoal font-bold">Purpose</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-stone-200">
-                    <tr>
-                      <td className="px-4 py-3">_ga</td>
-                      <td className="px-4 py-3">Analytics</td>
-                      <td className="px-4 py-3">2 years</td>
-                      <td className="px-4 py-3">Google Analytics tracking</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3">_ga_*</td>
-                      <td className="px-4 py-3">Analytics</td>
-                      <td className="px-4 py-3">2 years</td>
-                      <td className="px-4 py-3">GA session management</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3">__Secure-ENID</td>
-                      <td className="px-4 py-3">Marketing</td>
-                      <td className="px-4 py-3">13 months</td>
-                      <td className="px-4 py-3">Google ad personalization</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3">cal-auth</td>
-                      <td className="px-4 py-3">Functional</td>
-                      <td className="px-4 py-3">Session</td>
-                      <td className="px-4 py-3">Calendar booking session</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3">_fbp</td>
-                      <td className="px-4 py-3">Marketing</td>
-                      <td className="px-4 py-3">3 months</td>
-                      <td className="px-4 py-3">Facebook pixel tracking</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3">li_buid</td>
-                      <td className="px-4 py-3">Marketing</td>
-                      <td className="px-4 py-3">1 year</td>
-                      <td className="px-4 py-3">LinkedIn tracking</td>
-                    </tr>
+                    {rows.map((row) => (
+                      <tr key={row.service}>
+                        <td className="px-4 py-3 font-medium text-charcoal">{row.service}</td>
+                        <td className="px-4 py-3">{row.category}</td>
+                        <td className="px-4 py-3">{row.examples}</td>
+                        <td className="px-4 py-3">{row.duration}</td>
+                        <td className="px-4 py-3">{row.purpose}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
             </FadeIn>
 
-            {/* Section 7 */}
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">7. Do Not Track</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">5. Browser controls and vendor policies</h2>
               <p>
-                Some browsers include a "Do Not Track" feature. Currently, there is no industry standard for recognizing DNT signals, so we do not respond to DNT browser headers. However, you can disable cookies through your browser settings.
-              </p>
-            </FadeIn>
-
-            {/* Section 8 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">8. Privacy and Data Security</h2>
-              <p>
-                We use cookies in compliance with applicable privacy laws, including GDPR and CCPA. Your data is processed securely, and we do not sell cookie data to third parties.
+                You can also delete or block browser storage through your browser. Doing so may
+                remove your saved preference and cause the consent prompt to appear again. Browser
+                controls cannot replace our in-site settings for services that use requests or
+                scripts without cookies.
               </p>
               <p className="mt-4">
-                For more information about how we handle your data, please review our <a href="/privacy" className="text-cognac hover:underline">Privacy Policy</a>.
+                Third-party providers process information under their own privacy and retention
+                terms. Their settings and storage names may change independently of PandaCodeGen.
               </p>
-            </FadeIn>
-
-            {/* Section 9 */}
-            <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">9. International Users</h2>
-              <p>
-                If you are located in the European Union, UK, or other jurisdictions with strict cookie laws:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
-                <li>Non-essential cookies require your explicit consent before being set.</li>
-                <li>You can withdraw consent at any time through cookie settings.</li>
-                <li>We comply with GDPR and similar regulations.</li>
+              <ul className="mt-4 list-disc space-y-2 pl-5">
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google Privacy Policy</a></li>
+                <li><a href="https://www.microsoft.com/en-us/privacy/privacystatement" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Microsoft Privacy Statement</a></li>
+                <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Meta Privacy Policy</a></li>
+                <li><a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Vercel Privacy Notice</a></li>
+                <li><a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Cal.com Privacy Policy</a></li>
+                <li><a href="https://www.tawk.to/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Tawk.to Privacy Policy</a></li>
               </ul>
             </FadeIn>
 
-            {/* Section 10 */}
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">10. Changes to This Policy</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">6. Changes to this policy</h2>
               <p>
-                We may update this Cookie Policy to reflect changes in technology, legal requirements, or our cookie practices. Updates will be posted on this page with a new "Last updated" date. Your continued use of the website signifies acceptance of changes.
+                We may update this policy when our services, providers, or legal obligations change.
+                We will publish the new date here. Where a new use requires consent, we will ask
+                for that consent instead of relying on continued use of the website.
               </p>
             </FadeIn>
 
-            {/* Section 11 */}
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6 mb-16">
-              <h2 className="text-2xl font-bold text-charcoal mb-4">11. Contact Us</h2>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">7. Contact us</h2>
               <p>
-                If you have questions about our cookie practices or need to update your preferences, please contact us:
+                For questions about these technologies or your choices, contact us. For more about
+                how we handle personal data, read our{" "}
+                <a href="/privacy" className="text-cognac hover:underline">Privacy Policy</a>.
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
-                <p>701 Tillery St Ste 12</p>
-                <p>Austin, TX 78702, USA</p>
-                <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
-                <p className="mt-4 text-sm">
-                  <strong>Cookie Preference Center:</strong> Use the cookie settings on our website to manage your preferences at any time.
+                <p className="text-charcoal font-semibold">PandaCodeGen, website operator and controller</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">
+                    info@pandacodegen.com
+                  </a>
                 </p>
+                <p className="mt-2 text-sm">Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States.</p>
               </div>
             </FadeIn>
-
           </div>
         </div>
       </div>

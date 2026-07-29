@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Zap, BarChart3, Globe, ShoppingBag, Code2, Clock, TrendingUp } from "lucide-react";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
         description: "3.2s to 0.7s load time. PageSpeed ~45 to 90+. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
-        images: [{ url: "https://www.pandacodegen.com/work/mycustompatches.png", width: 1200, height: 630 }],
+        images: [ogImageForPath("/work/mycustompatches")],
     },
     twitter: {
         card: "summary_large_image",
@@ -55,7 +56,7 @@ const caseStudySchema = {
             "@id": "https://www.pandacodegen.com/work/mycustompatches#article",
             "headline": "MyCustomPatches: WordPress Migration to Next.js 14, 90+ PageSpeed, $0 Hosting",
             "description": "An aging WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~45 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build in about 22 days. Result: 0.7s load time, 90+ PageSpeed, $0/mo hosting, zero SEO rankings lost.",
-            "image": "https://www.pandacodegen.com/work/mycustompatches.png",
+            "image": ogImageUrlForPath("/work/mycustompatches"),
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
             "articleSection": "Case Study",
@@ -226,7 +227,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A custom patch business running an aging WordPress site: 3.2s load time, ~45 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. Every SEO ranking preserved. Every dollar saved.
+                            A custom patch business running an aging WordPress site: 3.2s load time, ~45 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. No ranking losses were recorded in the monitored post-launch period.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -239,7 +240,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
-                                    <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
+                                    <div className="text-xs text-stone-600 leading-snug">{m.sub}</div>
                                 </div>
                             ))}
                         </div>
@@ -323,7 +324,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { step: "06", name: "Zero-Downtime Cutover", desc: "Lowered Cloudflare TTL to 60s pre-migration. DNS flip took under 2 minutes. WordPress site stayed live in parallel for 48 hours as fallback. Zero visitor downtime recorded." },
                             ].map((s) => (
                                 <div key={s.step} className="flex gap-4 p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
-                                    <div className="w-8 h-8 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center shrink-0">{s.step}</div>
+                                    <div className="w-8 h-8 rounded-full bg-stone-100 text-stone-600 text-xs font-black flex items-center justify-center shrink-0">{s.step}</div>
                                     <div>
                                         <div className="font-bold text-charcoal mb-1">{s.name}</div>
                                         <p className="text-stone-500 text-sm leading-relaxed">{s.desc}</p>
@@ -381,7 +382,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </p>
 
                         <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
-                            <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
+                            <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-600 uppercase tracking-widest">
                                 <div>Page</div>
                                 <div>Scope</div>
                                 <div className="text-right">Type</div>
@@ -465,7 +466,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { before: "~45 PageSpeed, Google flagging every page as slow", after: "90+ PageSpeed. Core Web Vitals all green." },
                                 { before: "$150/mo managed WordPress hosting", after: "$0/mo. Vercel free tier + Cloudflare. No monthly platform cost." },
                                 { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
-                                { before: "200+ pages of SEO equity at risk during migration", after: "100% SEO rankings preserved. Zero pages lost. Zero 404s post-launch." },
+                                { before: "200+ pages of SEO equity at risk during migration", after: "No ranking losses recorded in the monitored period. No pages dropped and no 404s observed post-launch." },
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
@@ -495,7 +496,7 @@ export default function MyCustomPatchesCaseStudy() {
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>
-                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">{item.label}</div>
                                     <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
                                     <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
                                 </div>
@@ -541,7 +542,7 @@ export default function MyCustomPatchesCaseStudy() {
                     <section className="mb-20 p-8 md:p-12 bg-linear-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
                         <h2 className="text-3xl font-bold mb-4">Want results like this for your site?</h2>
                         <p className="text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                            If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Same results. Guaranteed 90+ PageSpeed or we fix it for free.
+                            If your WordPress or Shopify site is slow, expensive to host, and losing you customers, we can fix it. Same process. Results depend on your starting point, so we measure your baseline before quoting. Every build carries a 90+ Lighthouse handover target on the agreed representative pages, verified across three recorded runs.
                         </p>
                         <a
                             href="https://cal.com/pandagen/discovery"

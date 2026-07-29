@@ -3,47 +3,42 @@
 import { useState } from "react";
 import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Server, Database, Globe, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
-import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
-import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 
 const comparisonData = [
-  { feature: "Page Load Speed", webflow: "2-4 seconds", custom: "Under 1 second", icon: Gauge },
-  { feature: "Code Ownership", webflow: "Vendor lock-in (export is unusable)", custom: "100% yours forever", icon: Lock },
-  { feature: "Google PageSpeed", webflow: "50-70 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
-  { feature: "Monthly Hosting", webflow: "$14-212/mo", custom: "Starts at $0, about $20/mo at scale", icon: DollarSign },
-  { feature: "Server-Side Logic", webflow: "None (client-side only)", custom: "Full API routes, auth, databases", icon: Server },
-  { feature: "CMS Limitations", webflow: "10,000 items max", custom: "Unlimited (any content management system with no limits)", icon: Database },
+  { feature: "Performance", webflow: "Measure the current pages and scripts", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
+  { feature: "Access & Rights", webflow: "Review account, export, and hosting terms", custom: "State repository, licensing, IP, and handover terms", icon: Lock },
+  { feature: "Operating Cost", webflow: "Review the active plan, seats, add-ons, and usage", custom: "Estimate hosting, services, maintenance, and usage", icon: DollarSign },
+  { feature: "Application Logic", webflow: "Map supported native features and extensions", custom: "Scope APIs, authentication, and data requirements", icon: Server },
+  { feature: "Content Model", webflow: "Inventory collections, relationships, localization, and limits", custom: "Choose a CMS and model against validated requirements", icon: Database },
 ];
 
 const faqData = [
   {
     q: "Is custom code harder to use than Webflow's visual editor?",
-    a: "For content editing, no. We set up a content management system with no limits that's just as easy. For design changes, yes, you'll need a developer. But that's the trade-off: unlimited power vs. visual simplicity. Most businesses outgrow the visual editor anyway.",
+    a: "The editorial experience depends on the selected CMS, roles, previews, workflows, and content model. Discovery compares those requirements with Webflow's current editor and records any training, maintenance, or developer dependency in scope.",
   },
   {
     q: "Can you recreate my Webflow animations in code?",
-    a: "Yes. Custom animations can do everything Webflow interactions can do, and more. We can even add interactions that Webflow's interaction panel can't handle: scroll-triggered 3D effects, page transitions, and real-time data animations.",
+    a: "We can inventory Webflow interactions and evaluate equivalent or revised implementations. Feasibility, accessibility, reduced-motion behavior, browser support, assets, and acceptance criteria are defined for the approved interactions.",
   },
   {
     q: "What about Webflow's CMS?",
-    a: "We migrate all your CMS content to a content management system with no limits like Sanity or Contentful. No 10,000-item limit. Relational data, computed fields, and API access. You can query your content from anywhere: web, mobile, even AI agents.",
+    a: "We can map Webflow collections, fields, references, assets, localization, slugs, and editorial workflows to a suitable CMS. Export coverage, provider limits, data cleanup, API access, and migration verification vary by project and provider.",
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Typical agencies charge $20,000 to $60,000 and take 10 to 16 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js). Growth starts at $3,500 (business sites with custom interactions and CMS). Scale is $5,000 to $10,000 (complex builds, Webflow Ecommerce, localization, 30+ pages). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. You also stop paying $39 to $235/month in Webflow fees forever.",
+    a: "Price and timing depend on the page inventory, design system, interactions, CMS data, localization, ecommerce, integrations, redirects, and acceptance requirements. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
   },
   {
     q: "What if Webflow adds the features I need later?",
-    a: "It's possible. But Webflow has been promising server-side logic and better CMS for years. Meanwhile, custom code has no roadmap dependency. You build exactly what you need, when you need it.",
+    a: "It is possible, and platform capabilities change. The decision should use current Webflow documentation, your actual account and roadmap tolerance, and a like-for-like comparison of implementation and operating responsibilities.",
   },
 ];
 
@@ -52,7 +47,6 @@ export default function WebflowPageContent() {
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <ReadingProgressBar />
       <Header />
 
@@ -71,15 +65,11 @@ export default function WebflowPageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            The Webflow Migration Service <br />
-            <span className="font-serif italic text-cognac">
-              That Looks Like Webflow. Loads Like Vercel.
+            The Webflow Migration Service{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">
+              Preserve the design intent. Reassess the architecture.
             </span>
           </motion.h1>
-
-          <p className="text-xs text-red-600 font-semibold mb-4">
-            Webflow was down 12+ hours on April 14-15, 2026. Read the incident below.
-          </p>
 
           <motion.p
             initial={{ opacity: 1 }}
@@ -87,227 +77,187 @@ export default function WebflowPageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Webflow is the best visual builder out there. But if you&apos;re hitting its ceiling: slow CMS, expensive hosting, limited logic. It&apos;s time for <span className="text-charcoal font-medium">custom code that you actually own</span>.
+            Webflow can be a strong visual-authoring tool. If content, interactions, application logic, performance, localization, or operating needs have changed, we can compare the current site with a scoped replacement. <span className="text-charcoal font-medium">Commercial terms, support, access, licensing, ownership, and handover are documented after discovery.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 1, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Get your migration plan <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#when-to-migrate" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               When to Migrate <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Webflow URL when you book. We test the speed gap, scope the migration, and <span className="text-charcoal font-medium">quote you before we hang up.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Webflow URL when you book. We can run a point-in-time diagnostic, review migration inputs, and <span className="text-charcoal font-medium">identify what is needed for a written proposal.</span></p>
         </div>
       </section>
 
-      {/* 2. PLATFORM KILLER CHART — Webflow comparison */}
-      <PlatformKillerChart
-        badge="What Your Webflow Agency Won't Tell You"
-        headline="You're paying for a ceiling"
-        headlineAccent="you can't break."
-        description="You're paying $235/mo for Webflow's CMS Business plan because you hit the 10,000 item cap. Custom code has no cap. You're paying $2,820/yr for localization add-ons. Custom builds ship localization natively. You're paying a designer retainer because Webflow's editor can't handle your logic. Custom code has no editor limits."
-        descriptionSecondary="Nobody tells you this because Webflow and its partner agencies both bill monthly. Webflow charges you. The agency charges to work around Webflow's limits. We're the ones who tell you when to graduate. No pitch. Just receipts."
-        comparisonTitle="Webflow vs Custom"
-        themLabel="Webflow"
-        metrics={[
-          { metric: "Load Speed",    themLabel: "2-4s",      usLabel: "< 1s",        themPct: 40, usPct: 98, icon: Gauge },
-          { metric: "Monthly Cost",  themLabel: "$39-$235",  usLabel: "~$20",        themPct: 85, usPct: 10, icon: DollarSign },
-          { metric: "CMS Items",     themLabel: "10K cap",   usLabel: "Unlimited",   themPct: 50, usPct: 100, icon: Database },
-          { metric: "Localization",  themLabel: "$2K/mo",    usLabel: "Built in",    themPct: 90, usPct: 5,  icon: Globe },
-          { metric: "Ownership",     themLabel: "Hosted",    usLabel: "100% Yours",  themPct: 35, usPct: 100, icon: Lock },
-          { metric: "AI Search",     themLabel: "Partial",   usLabel: "Optimized",   themPct: 45, usPct: 98, icon: FileSearch },
-        ]}
-        savingsLines={[
-          { label: "Webflow CMS Plan (Business tier)",   amount: "$1,020" },
-          { label: "Localization add-on",                 amount: "$2,820" },
-          { label: "Workspace seats (team plan)",         amount: "$540" },
-          { label: "3rd-party Webflow plugins / apps",    amount: "$720" },
-          { label: "Developer retainer for custom code",  amount: "$3,600" },
-          { label: "Lost conversions (CLS + speed)",      amount: "$4,800" },
-        ]}
-        totalPerYear="$13,500"
-      />
-
-      {/* 2a. CASE STUDY GRID — generic design-first migrations (no Webflow-specific receipt) */}
-      <CaseStudyGrid
-        label="Real Design-First Migrations"
-        heading="Webflow-quality design, done"
-        subheading="Design matters. Here are sites where we matched or exceeded Webflow's visual fidelity without the performance cap."
-      />
-
-      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
-      <SocialProof />
-
-      {/* 2c. 3-PILLAR POSITIONING — emerging Next.js agency, fair-priced, customer-first */}
+      {/* 2c. Delivery and evidence controls */}
       <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
-            <Zap className="w-3 h-3" /> Emerging Next.js Agency
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-orange-300 rounded-full text-xs font-semibold mb-4">
+            <Zap className="w-3 h-3" /> Migration decision controls
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Cheaper than market, <span className="font-serif italic text-cognac">not cheap.</span>
+            Scope first, <span className="font-serif font-normal italic text-orange-300">then commit in writing.</span>
           </h2>
           <p className="text-base text-stone-400 leading-relaxed mb-6">
-            Two bills come with staying on Webflow: the one on your invoice and the one nobody itemizes. <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">status.webflow.com</a> logged 15+ documented incidents between February and May 2026, including the 12-hour April outage above, and every one of those hours came out of your revenue, not Webflow&apos;s. We rebuild your site as custom Next.js + Sanity served from Vercel&apos;s global edge network, where pages are pre-built and cached instead of depending on one builder&apos;s infrastructure. <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">See the full Webflow true cost breakdown</Link>.
+            Review both the current account costs and the operational responsibilities of a replacement. Availability incidents should be checked against <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-orange-300 hover:underline">Webflow&apos;s current status history</a>; a different hosting architecture changes dependencies but does not eliminate outage risk. <Link href="/blog/webflow-true-cost" className="text-orange-300 hover:underline">See the Webflow cost-input guide</Link>.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            A migration that a traditional agency quotes at $15,000 to $50,000 runs $1,500 (Starter) to $10,000 (Scale) here, fixed before we write a line of code. Nothing about the build is discounted; the overhead is gone. You work directly with a co-founder instead of an account manager, we carry no downtown office rent, AI tooling compresses the repetitive parts of development, and billing runs through an Austin LLC while engineering runs from Karachi. What that structure saves lands in your quote, not our margin.
+            Compare vendors on equivalent page, design, CMS, localization, commerce, integration, testing, support, and handover scope, not headline prices or generic market benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Diagnostic discipline</p>
             <p className="text-stone-300 leading-relaxed">
-              The free audit at pandacodegen.com asks for a URL and nothing else. No email field, no Calendly redirect, no follow-up sequence. In minutes you get a real PageSpeed and revenue-leak report, including what Webflow hosting costs you against a $0 Vercel start. Want a human read on a competing agency quote? Co-founder Hassan Jamal takes free 30-minute calls and will say plainly when a rival&apos;s number is fair, or when staying on Webflow is genuinely your best move.
+              A diagnostic is a point-in-time technical review, not proof of lost revenue or a guaranteed business result. We document the test context, distinguish observations from hypotheses, and flag when a migration may not be justified.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Evidence before outcomes</p>
             <p className="text-stone-300 leading-relaxed">
-              PandaCodeGen opened in February 2026 and earned all-5-star public reviews on Clutch, Trustpilot, and GoodFirms inside its first 90 days. The work is public: 900+ GitHub contributions over the past year at github.com/hassan-pandagen, all on live client projects. MyCustomPatches moved from PageSpeed 45 to 90+ while hosting fell from $150 a month to $0. Panda Patches grew from $38K to about $50K in monthly revenue on roughly $55 a month of tooling: Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator. A young agency, yes. Also one verified on more independent review platforms than most shops manage in 2 to 3 years.
+              Public URLs can be inspected as implementation references, but they do not by themselves verify a client relationship, historical performance, revenue, costs, or commercial terms. Outcome claims require dated, client-approved source records and a reproducible method.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
-              <p className="text-sm text-stone-400">Guaranteed in your contract, backed by a full refund.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Measured baseline</div>
+              <p className="text-sm text-stone-600">Record the page set, tool, device, network, date, and repeated runs.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
-              <p className="text-sm text-stone-400">The quote you sign is the invoice you pay. Published tiers.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Written proposal</div>
+              <p className="text-sm text-stone-600">Define scope, assumptions, exclusions, price model, and changes.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
-              <p className="text-sm text-stone-400">Every migration ships with 15 to 30 days of post-launch tweaks, depending on tier.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Defined handover</div>
+              <p className="text-sm text-stone-600">State support, access, licensing, ownership, and remedies explicitly.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 3. WHEN TO MIGRATE */}
-      <section id="when-to-migrate" className="py-12 md:py-20 px-6 bg-[#0F172A]">
+      <section id="when-to-migrate" className="py-12 md:py-20 px-6 bg-stone-100 border-y border-stone-200">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-sm font-bold uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/10 text-cognac border border-cognac/20 text-sm font-bold uppercase tracking-widest mb-6">
               <AlertTriangle className="w-4 h-4" /> The Ceiling
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">When It&apos;s Time to Leave Webflow</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Not every Webflow site needs to migrate. But if you&apos;re seeing these signals, custom code is the next step:
+            <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-4">When to Reassess Webflow</h2>
+            <p className="text-stone-600 max-w-2xl mx-auto">
+              Not every Webflow site needs to migrate. These signals justify discovery, not a predetermined platform decision:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, signal: "Hosting Costs That Scale Against You", detail: "Webflow’s CMS and Enterprise plans run $100-212/month. Every time your content grows, the bill grows. Custom code on Vercel costs $0 for most sites and fractions of a cent per request beyond that." },
-              { icon: Server, signal: "The Logic You Need Lives Outside Webflow", detail: "Authentication, payments, database queries, real-time APIs. Webflow has none of it natively. You bolt on Wized, Memberstack, and Xano, adding $50-300/month in third-party fees for features custom code handles out of the box." },
-              { icon: Database, signal: "You’ve Hit Webflow’s 10,000-Item Hard Limit", detail: "Webflow’s CMS cap is non-negotiable. If you’re content-heavy, migration is already inevitable. Headless CMS like Sanity has no limits, gives you relational data, API access, and AI-ready content pipelines." },
-              { icon: Code2, signal: "Your Product Needs App Architecture, Not a Website Builder", detail: "User dashboards, multi-tenant portals, real-time data, role-based access. These are application features that require server-side architecture. Webflow builds polished websites. It cannot build products." },
-              { icon: Lock, signal: "Webflow’s Export Code Is Unusable", detail: "Webflow lets you ‘export’ your code, but it’s a tangle of classes and divs no developer would maintain. You can’t deploy it independently. You’re permanently locked to Webflow’s hosting. Custom code is yours on Day 1." },
-              { icon: Globe, signal: "AI Search Skips Slow Webflow Sites", detail: "Google’s AI Overviews, ChatGPT, and Perplexity now cite brands by name in buying decisions. They surface fast, clean-coded sites. Webflow’s JavaScript overhead and limited server-side rendering put you at a systematic disadvantage." },
+              { icon: DollarSign, signal: "Account Economics Need Review", detail: "Inventory the current site plan, workspace seats, localization, ecommerce, apps, bandwidth, support, and maintenance before comparing a replacement." },
+              { icon: Server, signal: "Required Logic Relies on Extensions", detail: "Map authentication, payments, databases, real-time data, and third-party tools, then compare supported Webflow paths with a custom architecture." },
+              { icon: Database, signal: "Content Model Is Under Pressure", detail: "Review current collection limits, relationships, localization, editorial workflows, exports, and growth assumptions against current provider documentation." },
+              { icon: Code2, signal: "Website and Application Needs Are Converging", detail: "Dashboards, portals, role-based access, and live data may require application architecture. Discovery should validate the exact workflows and security requirements." },
+              { icon: Lock, signal: "Portability Is Unclear", detail: "Test exports and document domains, assets, CMS data, code, credentials, repository access, licensing, and handover before choosing a migration path." },
+              { icon: Globe, signal: "Discoverability Needs Evidence", detail: "Audit crawlability, rendering, entity clarity, structured data, content quality, and source credibility. Search and AI systems control indexing, rankings, and citations." },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-orange-500/30 transition-all duration-300 group"
+                className="p-8 rounded-2xl bg-white border border-stone-200 hover:bg-cognac/5 hover:border-cognac/30 transition-all duration-300 group"
               >
-                <div className="p-3 rounded-xl bg-orange-500/20 text-orange-400 w-fit mb-4">
+                <div className="p-3 rounded-xl bg-cognac/10 text-cognac w-fit mb-4">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{item.signal}</h3>
-                <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                <h3 className="text-charcoal font-bold text-lg mb-2">{item.signal}</h3>
+                <p className="text-stone-600 leading-relaxed text-sm">{item.detail}</p>
               </motion.div>
             ))}
           </div>
 
-          <p className="text-slate-400 text-sm leading-relaxed text-center mt-8 max-w-2xl mx-auto">
-            There is a seventh signal Webflow wrote itself: it retired native User Accounts on January 29, 2026, and every membership site on the platform had to rebuild its login flow. If gated content or logins matter to you, read our breakdown of the <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-orange-400 hover:underline underline-offset-2">Webflow User Accounts sunset and your migration options</Link>.
+          <p className="text-stone-600 text-sm leading-relaxed text-center mt-8 max-w-2xl mx-auto">
+            Product capabilities and retirement dates can change. If gated content or login flows matter, confirm the current status in Webflow&apos;s official documentation and inventory your implementation before relying on our <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline underline-offset-2">overview of membership migration questions</Link>.
           </p>
         </div>
       </section>
 
-      {/* Webflow Uptime Warning (updated Apr 15, 2026) */}
-      <section id="uptime" className="py-10 md:py-14 px-6 bg-red-50 border-y border-red-200">
+      {/* Availability dependency review */}
+      <section id="uptime" className="py-10 md:py-14 px-6 bg-cognac/5 border-y border-cognac/20">
         <div className="container mx-auto max-w-4xl">
-          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-red-600 text-white rounded-full mb-4">Update Apr 15, 2026</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">The Outage Cost Nobody Talks About</h2>
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-cognac text-white rounded-full mb-4">Availability Review</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Map Hosting and Service Dependencies</h2>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            On April 14-15, 2026, every hosted Webflow site went dark for over 12 hours. 5xx errors, Dashboard down, Forms broken, Public API offline. According to{" "}
-            <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s official status page</a>, the incident was caused by an upstream provider and lasted for a full business day.
+            Review <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s current official status history</a> when availability matters to the migration case. Status records are time-sensitive and should be read in their original context.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            For a business doing $2,000/day in online sales, that is $1,000 in lost revenue. For a lead-generation site, 10+ leads gone. For anyone running paid ads during the outage, every click sent visitors to a broken page. Webflow does not refund that.
+            An incident does not establish a specific revenue or lead loss without the business&apos;s own traffic, transaction, attribution, and recovery data. Document critical journeys and an evidence method before estimating impact.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed mb-4">
-            This is not isolated. <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown&apos;s third-party monitoring</a> shows Webflow had <strong>14 incidents in the last 90 days</strong> (4 major, 10 minor). March 2026 alone included a 5 hour 20 minute outage on March 2, a 3 hour 15 minute warning on March 16, and a 3 hour 30 minute warning on March 31. In July 2025, Webflow had a{" "}
-            <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">31-hour outage</a> that was described on Hacker News as &ldquo;an entire work week lost for e-commerce stores.&rdquo;
+            Third-party monitors such as <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown</a> may provide additional signals, but their classifications and windows require verification. Use current provider records, your own monitoring, and the agreed service requirements.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            A custom Next.js site runs on Vercel&apos;s global edge network with 300+ locations. Pages are pre-built and served from cache. When you own the code, you own the uptime.
+            A custom deployment introduces a different set of hosting, DNS, CDN, data, monitoring, and operational dependencies. The architecture and proposal should state responsibilities, recovery controls, support, and acceptance without promising uninterrupted availability.
           </p>
         </div>
       </section>
 
-      {/* 3.5. REAL BUYER VOICES — Reddit citations for trust signal */}
+      {/* 3.5. Linked community discussions provide anecdotal context only. */}
       <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
         <div className="container mx-auto max-w-4xl">
-          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. Verifiable.</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Webflow Agency Owners Are Actually Saying</h2>
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Linked Community Discussions</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Examples of Issues to Investigate</h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
-            Not curated testimonials. Real Reddit threads from agency owners and Webflow Community MVPs. Click the links to verify every quote.
+            These posts describe individual experiences and are not representative performance or pricing evidence. Follow the links for context, then verify relevant issues against your own account and current provider documentation.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
-            {/* Quote 1: Agency owner pain */}
+            {/* Discussion 1: agency workflow */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                It just seems silly that Webflow makes it harder for us to make things easier for clients. Crazy how other builders like Wix make it simple to do this, yet Webflow does the opposite.
+                One agency participant described friction in configuring a simple editing workflow for clients.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">Small agency owner</strong> · r/webflow · 19 upvotes</span>
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">Small agency owner</strong> · r/webflow</span>
                 <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 
-            {/* Quote 2: Cost shock */}
+            {/* Discussion 2: workspace economics */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                The new Workspace system is a mess for small client sites. Paying extra just to let them change a few lines of text feels way off, especially when some of them barely touch the site after launch.
+                A participant questioned the workspace economics for small client sites with limited editing needs.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">Quick_Custard5288</strong> · r/webflow agency owner</span>
                 <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n6872kw/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 
-            {/* Quote 3: Inside Webflow's own community */}
+            {/* Discussion 3: hosting economics */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                Webflow&apos;s hosting came to about $159/mo on a 400GB/mo site... It doesn&apos;t really suit high traffic on a low budget.
+                One community participant described a hosting-cost concern for a high-bandwidth site; verify the original context and current pricing.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">memetican</strong> · Webflow Community MVP (verified badge)</span>
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">memetican</strong> · Webflow community participant</span>
                 <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n63wfd3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 
-            {/* Quote 4: Competitor warning */}
+            {/* Discussion 4: agency service model */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                Webflow&apos;s amazing for design and dev, but their pricing model really doesn&apos;t work well for small agencies trying to offer simple, all-in-one support.
+                The same participant contrasted Webflow&apos;s design capabilities with the economics of an all-in-one agency service.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">Quick_Custard5288</strong> · r/webflow</span>
                 <a href="https://www.reddit.com/r/webflow/comments/1mdhvcx/why_does_webflow_make_hosting_so_expensive_and/n6872kw/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
@@ -316,12 +266,12 @@ export default function WebflowPageContent() {
 
           {/* Bridging CTA */}
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
-            <p className="text-lg font-bold mb-2">The agencies in this thread are stuck on Webflow because migrating feels expensive. It is not.</p>
+            <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate Webflow agency client sites to custom Next.js for $1,500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. White-label for your agency. Your client never sees us.
+              A migration assessment should verify editor workflows, CMS exports, interactions, localization, ecommerce, account costs, performance, and third-party terms. Any white-label arrangement, price, timing, support, confidentiality, access, ownership, or remedy belongs in the written proposal.
             </p>
-            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-              See Migration Pricing →
+            <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-800 transition-all">
+              Get your migration plan →
             </a>
           </div>
         </div>
@@ -331,13 +281,13 @@ export default function WebflowPageContent() {
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Webflow vs Custom Coded</h2>
-          <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
+          <p className="text-stone-600 text-center mb-12">Compare current constraints with a project-specific architecture and operating model.</p>
 
           <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
-            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            {/* Header for desktop only. On mobile, each row gets inline labels. */}
             <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
-              <div className="text-stone-500 font-bold text-sm text-center">Webflow</div>
+              <div className="text-stone-600 font-bold text-sm text-center">Webflow</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
@@ -347,16 +297,16 @@ export default function WebflowPageContent() {
                 className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
               >
                 <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-600 shrink-0" />
                   {row.feature}
                 </div>
                 <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">Webflow</span>
-                  <span className="text-red-400/90 text-sm md:text-center">{row.webflow}</span>
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600">Webflow</span>
+                  <span className="text-stone-700 text-sm md:text-center">{row.webflow}</span>
                 </div>
                 <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
                   <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
-                  <span className="text-green-500 text-sm font-medium md:text-center">{row.custom}</span>
+                  <span className="text-cognac text-sm font-medium md:text-center">{row.custom}</span>
                 </div>
               </div>
             ))}
@@ -367,30 +317,30 @@ export default function WebflowPageContent() {
       {/* 5. HOW WE MIGRATE */}
       <section className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How We Migrate Your Webflow Site</h2>
-          <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Every interaction rebuilt. Every CMS item migrated.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Webflow Site</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. The proposal identifies included interactions, content, dependencies, milestones, and acceptance checks.</p>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
             {[
-              { step: "01", title: "Webflow Audit", desc: "We analyze your site\u2019s structure, CMS collections, and integrations. We map exactly what transfers and what gets rebuilt.", duration: "Phase 1" },
-              { step: "02", title: "Architecture & Design", desc: "We recreate every interaction in custom code, with server-side rendering, real API routes, and unlimited CMS. No compromises.", duration: "Phase 2" },
-              { step: "03", title: "Full Development", desc: "Sprint-based build. CMS content migrates automatically. We add features Webflow couldn\u2019t handle: auth, databases, custom integrations.", duration: "Phase 3" },
-              { step: "04", title: "Launch & Handover", desc: "Deploy to Vercel, set up your new CMS, hand over the GitHub repo. You own everything. No vendor lock-in. Most migrations take 2 to 4 weeks end to end.", duration: "Phase 4" },
+              { step: "01", title: "Webflow Inventory", desc: "We review structure, pages, components, interactions, collections, assets, forms, domains, localization, ecommerce, and integrations.", duration: "Phase 1" },
+              { step: "02", title: "Architecture & Design Mapping", desc: "We define what is retained, redesigned, rebuilt, transformed, or excluded, including content, responsive states, accessibility, and technical dependencies.", duration: "Phase 2" },
+              { step: "03", title: "Implementation & Data Validation", desc: "We build the approved scope in reviewable increments and verify migrated content and integrations against agreed samples and checks.", duration: "Phase 3" },
+              { step: "04", title: "Cutover & Handover", desc: "We follow the agreed deployment, DNS, redirect, analytics, monitoring, rollback, access, licensing, documentation, and support plan.", duration: "Phase 4" },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl border border-stone-200 shadow-xs hover:border-cognac/30 hover:shadow-md transition-all"
               >
                 <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
                   {item.step}
                 </div>
                 <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-lg text-charcoal mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -404,17 +354,17 @@ export default function WebflowPageContent() {
             <Code2 className="w-4 h-4" /> What You Get
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
-            Everything Webflow Does. And Everything It Can&apos;t.
+            Define What the Replacement Must Do.
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            A custom coded website gives you what Webflow never will: full ownership, server-side power, unlimited CMS, and hosting that starts free and only costs more when your business grows.
+            A custom implementation can provide different application, content, and deployment controls. The proposal defines measurable targets, recurring services, support, repository access, licensing, IP, and handover.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: Gauge, title: "Everything Webflow Does, But Better", desc: "Same visual polish, but with server-side rendering, unlimited CMS, real API routes, and load times under 1 second. No compromises." },
-              { icon: Server, title: "Server-Side Power", desc: "User authentication, payment processing, database queries, API integrations. Everything Webflow can\u2019t do natively. Built into your codebase." },
-              { icon: DollarSign, title: "Start Free, Scale When You Grow", desc: "Deploy on Vercel starting at $0/mo. Only scale to $20/mo on Vercel Pro when your business grows. Own every line of code. No vendor lock-in. Scale to millions of pages without hitting CMS limits." },
+              { icon: Gauge, title: "Measured Experience", desc: "Define visual, responsive, accessibility, and performance acceptance checks for representative pages and interactions." },
+              { icon: Server, title: "Scoped Application Logic", desc: "Assess authentication, payments, data, and API integrations against security, provider, and operational requirements." },
+              { icon: DollarSign, title: "Documented Operating Model", desc: "Estimate hosting and connected services, then state maintenance, support, repository access, licensing, and handover responsibilities." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -428,62 +378,53 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      {/* Scope and evidence framework */}
       <PartnerPromise />
 
-      {/* PRICING TIERS — foot-in-the-door with agency comparison */}
+      {/* PRICING TIERS: an initial offer with an agency comparison */}
       <PricingTiers
-        heading="Agencies charge $20K to $60K."
-        headingAccent="We meet you halfway."
+        heading="Choose a migration planning path."
+        headingAccent="Confirm commitments after discovery."
         agencyComparison={{
-          agencyPrice: "$20K to $60K+",
-          agencyNote: "10-16 week timeline. Hourly billing. Plus $235/mo Webflow fees forever.",
-          ourPrice: "From $1,500",
-          ourNote: "3 week timeline. Fixed price. You own the code. No platform fees.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare equivalent design, content, interaction, integration, and support scope.",
+          ourPrice: "Scoped proposal",
+          ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
         tiers={[
           {
             tier: "Starter",
-            price: "Starting from $1,500",
-            timeline: "1 to 2 weeks",
-            fit: "Simple Webflow site. 5-15 pages. Our Starter tier.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A focused marketing-site migration with validated inputs.",
             includes: [
-              "Full Webflow content export + migration",
-              "Custom Next.js build matching your design",
-              "Sanity CMS for content editing",
-              "90+ PageSpeed guaranteed",
-              "301 redirect mapping",
-              "15 days of free post-launch support",
+              "Page, component, and content inventory",
+              "Design and redirect requirements",
+              "Written acceptance and handover terms",
             ],
-            cta: "Get Starter Quote",
+            cta: "Get your migration plan",
           },
           {
             tier: "Growth",
-            price: "Starting from $3,500",
-            timeline: "2-3 weeks",
-            fit: "Business Webflow site. 15-50 pages. Custom interactions, CMS collections.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A business site with broader interactions and content-model requirements.",
             includes: [
-              "Everything in Starter",
-              "Custom Webflow interactions recreated in code",
-              "Complex CMS collections migrated",
-              "Full SEO migration with schema",
-              "Analytics setup (GA4, Clarity)",
-              "30 days of free post-launch support",
+              "Interaction and CMS mapping",
+              "Consent-aware analytics requirements",
+              "Written support and change process",
             ],
             featured: true,
           },
           {
             tier: "Scale",
-            price: "$5,000 to $10,000",
-            timeline: "3 to 5 weeks",
-            fit: "Complex Webflow. 30+ pages, localization, ecommerce, custom logic.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "Localization, ecommerce, data, or complex application requirements.",
             includes: [
-              "Everything in Growth",
-              "Webflow Ecommerce to custom storefront",
-              "Multi-language / localization",
-              "Custom admin dashboard",
-              "Performance monitoring",
-              "30 days of free post-launch support",
+              "Export and data-risk assessment",
+              "Cutover, rollback, and verification plan",
+              "Written licensing, access, and handover terms",
             ],
           },
         ]}
@@ -492,15 +433,15 @@ export default function WebflowPageContent() {
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Ready to Level Up?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-8 md:mb-12">Improve the current system, or plan the migration.</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Webflow Optimization */}
             <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-charcoal/30 transition-colors">
-              <div className="text-stone-500 text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
+              <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Webflow Optimization</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Not ready to leave Webflow? We&apos;ll optimize what you have within the platform to squeeze out maximum performance and SEO results.
+                Not ready to leave Webflow? We can audit the current site and scope feasible improvements within its account, editor, script, content, and integration constraints.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Performance optimization", "SEO improvements", "CMS restructuring", "Interaction refinements"].map((item, i) => (
@@ -510,7 +451,7 @@ export default function WebflowPageContent() {
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"optimize_my_webflow",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all">
-                Optimize My Webflow
+                Scope Webflow improvements
               </button>
             </div>
 
@@ -520,17 +461,17 @@ export default function WebflowPageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Migrate to Custom Code</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Migrate from Webflow to a custom coded platform you own forever. Faster, full server-side logic, unlimited CMS. Vercel hosting starts free and only scales to $20/mo when your business grows.
+                Scope a replacement implementation around the required design system, content model, application logic, performance method, and operating responsibilities.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "Full server-side logic", "Unlimited CMS", "100% code ownership", "Hosting starts at $0, about $20/mo at scale", "30-day money-back guarantee (full refund)"].map((item, i) => (
+                {["Documented performance budgets", "Scoped server-side requirements", "Validated content model", "Written repository and rights terms", "Current hosting and service estimate", "Written support and remedies"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_quote",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
-                Get Migration Quote
+                Get your migration plan
               </button>
             </div>
           </div>
@@ -541,7 +482,7 @@ export default function WebflowPageContent() {
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-500/10 border border-charcoal/20 text-sm text-stone-500 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-300 text-sm text-stone-600 mb-6">
               <HelpCircle className="w-4 h-4" /> FAQ
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Frequently Asked Questions</h2>
@@ -549,89 +490,87 @@ export default function WebflowPageContent() {
           </div>
 
           <div className="space-y-3">
-            {faqData.map((faq, i) => (
-              <button key={i} onClick={() => setOpenFaq(openFaq === i ? null : i)} aria-expanded={openFaq === i} className="w-full text-left p-5 rounded-xl bg-stone-50/50 border border-stone-200 hover:border-stone-200 transition-all">
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                  <div className={`w-6 h-6 rounded-full bg-stone-50 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                    <span className="text-charcoal text-sm font-bold">+</span>
+            {faqData.map((faq, i) => {
+              const isOpen = openFaq === i;
+              const buttonId = `webflow-faq-button-${i}`;
+              const panelId = `webflow-faq-panel-${i}`;
+
+              return (
+                <div key={faq.q} className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50/50">
+                  <h3>
+                    <button
+                      id={buttonId}
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                      className="w-full p-5 text-left transition-all hover:text-cognac"
+                    >
+                      <span className="flex items-center justify-between gap-4">
+                        <span className="text-base font-medium text-charcoal">{faq.q}</span>
+                        <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-50 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
+                          <span className="text-sm font-bold text-charcoal">+</span>
+                        </span>
+                      </span>
+                    </button>
+                  </h3>
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={buttonId}
+                    hidden={!isOpen}
+                    className="border-t border-stone-200 px-5 py-4"
+                  >
+                    <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                   </div>
                 </div>
-                <p className={`text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4 ${openFaq === i ? 'block' : 'hidden'}`}>{faq.a}</p>
-              </button>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
+      {/* 9. WRITTEN MIGRATION TERMS */}
       <section className="py-10 md:py-14 px-6">
-        <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-500/30 rounded-[3rem] p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
+        <div className="container mx-auto max-w-4xl bg-linear-to-br from-stone-50 to-white border border-cognac/30 rounded-[3rem] p-12 relative overflow-hidden shadow-xl shadow-stone-300/20">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-cognac/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
-              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/10 text-cognac border border-cognac/20 text-xs font-bold uppercase tracking-[0.22em] mb-6">
+              <ShieldCheck className="w-4 h-4" /> Written Migration Terms
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+              Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen Webflow migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
+              The accepted proposal states the page set, test conditions, redirect and data checks, client responsibilities, accessibility criteria, support, access, licensing, ownership, handover, and any remedies. This page does not create a performance or refund promise.
             </p>
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
-              Book Free Discovery Call
+              Get your migration plan
             </button>
           </div>
         </div>
       </section>
 
-      {/* Further Reading — blog cluster links */}
+      {/* Further Reading: blog cluster links */}
       <section className="py-10 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
-            <li>&rarr; <Link href="/blog/webflow-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">What a Webflow migration actually costs in 2026</Link></li>
-            <li>&rarr; <Link href="/blog/webflow-true-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">The true cost of staying on Webflow: $125 to $400 per month</Link></li>
+            <li>&rarr; <Link href="/blog/webflow-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">Webflow migration scoping and cost inputs</Link></li>
+            <li>&rarr; <Link href="/blog/webflow-true-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">How to review Webflow&apos;s total operating cost</Link></li>
             <li>&rarr; <Link href="/blog/leaving-webflow-2026" className="text-charcoal hover:text-cognac underline underline-offset-2">Leaving Webflow in 2026: what actually happened</Link></li>
             <li>&rarr; <Link href="/blog/webflow-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Webflow vs custom website 2026 comparison</Link></li>
           </ul>
         </div>
       </section>
 
-      {/* Related Services — expanded to all platforms via reusable component */}
+      {/* Related Services, expanded to all platforms via reusable component */}
       <RelatedServicesGrid currentHref="/services/webflow" />
-
-      {/* Author Attribution */}
-      <section className="py-10 border-t border-stone-200 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-start gap-4">
-              <Link href="/about/hassan" className="shrink-0">
-                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Webflow-to-Next.js migrations that score 90+ on PageSpeed. Full CMS migration from Webflow Collections to headless Sanity or Contentful, with every animation rebuilt in clean code.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran Raza" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran Raza</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes Webflow escapes to protect CMS data, eliminate hosting premiums, and unlock capabilities the Webflow editor cannot deliver. 8+ years in web architecture.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

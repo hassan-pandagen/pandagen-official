@@ -1,573 +1,529 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, Blocks, Code2, Gauge, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const dawnFAQs = blogPosts.find(p => p.id === 'shopify-dawn-theme-slow')?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
+const PageSpeedAnimation = dynamicImport(() => import("@/components/blog/PageSpeedAnimation"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
-const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
+const postId = "shopify-dawn-theme-slow";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "Shopify Dawn Theme Slow? Diagnose the Store, Not the Name";
+const description =
+    "Use Shopify field data, controlled theme previews and route-level traces to find whether media, apps, third-party code, customization or theme code is slowing a Dawn store.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+",
-    description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
-    alternates: {
-        canonical: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
-    },
-    keywords: ["shopify dawn theme slow", "shopify dawn theme speed", "shopify 2.0 performance", "why is shopify slow", "shopify pagespeed score", "shopify speed optimization", "shopify dawn pagespeed"],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "Shopify Dawn theme slow",
+        "Shopify Dawn performance",
+        "speed up Dawn theme",
+        "Shopify Core Web Vitals",
+        "Shopify theme performance",
+    ],
     openGraph: {
-        title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
-        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
+        title,
+        description,
         type: "article",
         publishedTime: "2026-03-07",
+        modifiedTime: "2026-07-28",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/shopify-dawn-theme-slow")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
-        description: "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    { name: "Shopify Dawn source repository", url: "https://github.com/Shopify/dawn" },
+    {
+        name: "Shopify theme performance best practices",
+        url: "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
+    },
+    {
+        name: "Shopify theme architecture",
+        url: "https://shopify.dev/docs/storefronts/themes/architecture",
+    },
+    {
+        name: "Shopify storefront app performance",
+        url: "https://shopify.dev/docs/apps/build/performance/storefront",
+    },
+    {
+        name: "Shopify web performance reports",
+        url: "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports",
+    },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#article",
-            "headline": "Shopify Dawn Theme Slow? The Real Fix to Hit 90+ (2026)",
-            "description": "You optimize Dawn to 75. Add one app and it drops to 50. Why the loop never ends and the one approach that stays at 90+.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-03-07T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-03-07",
+            dateModified: "2026-07-28",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow" },
-            "articleSection": "Shopify",
-            "keywords": ["Shopify Dawn theme slow", "Shopify speed optimization", "Shopify PageSpeed score", "Shopify 2.0 performance", "headless Shopify"],
-            "timeRequired": "PT9M",
-            "wordCount": 2200,
-            "about": [
-                { "@type": "Thing", "name": "Shopify Dawn Theme" },
-                { "@type": "Thing", "name": "Shopify PageSpeed Score" },
-                { "@type": "Thing", "name": "E-Commerce Performance" },
-                { "@type": "Thing", "name": "Shopify" }
-            ],
-            "inLanguage": "en-US",
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Shopify Dawn Theme. GitHub", "url": "https://github.com/Shopify/dawn" },
-                { "@type": "CreativeWork", "name": "Core Web Vitals. Google Web Dev", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Shopify Performance. Shopify Docs", "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/content/dam/Deloitte/ie/Documents/Consulting/Milliseconds_Make_Millions_report.pdf" },
-                { "@type": "CreativeWork", "name": "Next.js Commerce. Vercel", "url": "https://vercel.com/templates/next.js/nextjs-commerce" },
-                { "@type": "CreativeWork", "name": "Google Think: 53% of mobile users abandon sites taking over 3 seconds", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance report", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
-            ]
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Shopify Dawn Theme Slow", "item": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#webpage",
-            "url": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow",
-            "name": "Shopify Dawn Theme Slow? Here's Exactly Why (and the Real Fix)",
-            "description": "Dawn is Shopify's fastest theme but most stores still load in 3+ seconds. Here's why and what actually fixes it.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-07T00:00:00-05:00",
-            "dateModified": "2026-03-07T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#breadcrumb" },
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress and Shopify sites. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Shopify performance",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-dawn-theme-slow#faq",
-            "mainEntity": dawnFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
-        }
-    ]
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
+
+const sourceLinkClass =
+    "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function ShopifyDawnThemeSlowPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-                    />
-
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Shopify Dawn Theme Slow", href: "/blog/shopify-dawn-theme-slow" }
+                            { label: "Dawn performance", href: `/blog/${postId}` },
                         ]}
                     />
-
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Shopify Dawn Theme Slow?{" "}
-                            <span className="font-serif italic text-cognac">The Real Fix to Hit 90+.</span>
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify performance</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Shopify Dawn Theme Slow? <span className="italic text-cognac">Diagnose the Store</span>
                         </h1>
-
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Dawn is Shopify&apos;s fastest theme, and it&apos;s a great starting point. But if your store is still loading in 3+ seconds, this guide explains what&apos;s behind it and how to get faster.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Dawn is Shopify&apos;s source-available reference theme and was built with performance in
+                            mind. A slow Dawn store needs route-level diagnosis. The theme name alone does not identify
+                            the cause, impose a Lighthouse ceiling or prove that headless is required.
                         </p>
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed July 28, 2026 against current Shopify documentation and the Dawn repository.
+                        </p>
+                    </header>
 
-                        <BlogAuthor
-                            date="Mar 7, 2026"
-                            readTime="9 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 7, 2026" readTime="11 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Start with four evidence layers</h2>
+                        <BlogList
+                            items={[
+                                "Shopify real-user LCP, INP and CLS by URL, page type, device and time.",
+                                "Repeatable lab tests for representative home, collection, product and cart states.",
+                                "A network, main-thread, media and third-party inventory for each affected route.",
+                                "A controlled preview that separates base Dawn from the production configuration.",
+                            ]}
                         />
+                    </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Gauge, title: "Field data", body: "Find the users and routes with a real problem." },
+                            { icon: Blocks, title: "Apps", body: "Trace embeds, scripts, pixels and dependencies." },
+                            { icon: ImageIcon, title: "Media", body: "Inspect dimensions, formats and loading priority." },
+                            { icon: Code2, title: "Theme", body: "Compare custom code with a controlled preview." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="mb-12">
+                    <div className="my-10">
                         <PageSpeedAnimation />
                     </div>
 
-                    <div className="bg-cognac/5 border-l-4 border-cognac p-5 mb-6 rounded-r-lg" data-speakable="true">
-                        <p className="text-sm text-charcoal leading-relaxed"><strong>Short answer:</strong> Shopify Dawn is slow because third-party app scripts, Liquid server-side rendering, and Shopify&apos;s built-in checkout and analytics scripts load on every page. A clean Dawn store scores 65 to 80 on mobile PageSpeed. Add five apps and it drops to 35 to 55. Theme-level optimization caps around 75. Hitting 90+ requires moving to a headless Next.js storefront.</p>
+                    <BlogHeader>What Dawn is in 2026</BlogHeader>
+                    <BlogText>
+                        Shopify describes Dawn as an HTML-first, JavaScript-only-as-needed reference theme with
+                        performance and Online Store 2.0 features built in. It uses server-rendered Liquid HTML,
+                        progressive enhancement, sections, blocks, snippets and supporting assets. A merchant&apos;s
+                        production store can differ substantially after apps, sections, media, tracking and custom code
+                        are added.
+                    </BlogText>
+                    <BlogText>
+                        Dawn shipped in 2021 as the reference theme for Online Store 2.0 and became the theme most new
+                        stores started from. Shopify has since introduced Horizon as the reference theme for new stores.
+                        Dawn is still free, still source-available and still running on a large number of established
+                        stores, which is why how it behaves in production still matters. If you are on Dawn today, you
+                        are not on a deprecated theme. You are on a supported one that has been customized for several
+                        years, and the customization history is usually where the evidence is.
+                    </BlogText>
+                    <InsightBox variant="info" label="Why there is no Dawn score ceiling here">
+                        You will not find a PageSpeed figure that Dawn supposedly cannot pass. Shopify publishes no such
+                        universal ceiling, and scores move with the route, the content, the code layered on top of the
+                        theme, the test environment and the individual run. Treating a headless rebuild as the only way
+                        past an imagined ceiling skips the diagnosis entirely. Measure your own routes across repeated
+                        runs, work out which layer owns the time, and decide from that.
+                    </InsightBox>
+
+                    <BlogHeader>What is actually in the page, and who owns it</BlogHeader>
+                    <BlogText>
+                        Before you change anything, split the payload by owner. On a typical production Dawn store the
+                        bytes and the main-thread time belong to four different parties, and only one of them is the
+                        theme. This is the reason switching to another Shopify theme so often changes very little: three
+                        of the four layers travel with the store, not with the theme.
+                    </BlogText>
+
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Layer</th><th className="p-4">Who controls it</th><th className="p-4">What to do about it</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">App scripts</td><td className="p-4">App vendors, via app embeds and injected storefront code</td><td className="p-4">Inventory, justify, restrict to the routes that need them, remove the rest</td></tr>
+                                <tr><td className="p-4 font-bold">Platform scripts</td><td className="p-4">Shopify</td><td className="p-4">Budget around them. They are not a theme-level lever</td></tr>
+                                <tr><td className="p-4 font-bold">Media</td><td className="p-4">You, through uploads and section settings</td><td className="p-4">Size, format and loading priority per rendered slot</td></tr>
+                                <tr><td className="p-4 font-bold">Theme and custom code</td><td className="p-4">You and whoever has edited the theme</td><td className="p-4">Compare against a clean preview to isolate what was added</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "Dawn is Shopify's fastest theme, but 'fastest Shopify theme' and 'fast website' are not the same thing.",
-                            "A clean Dawn store scores 65 to 80/100 on mobile. Add 5 apps and you're at 35 to 55/100.",
-                            "The speed killers are apps, Liquid rendering, Shopify's checkout scripts. None of which the theme controls.",
-                            "Theme-level fixes improve your score by 10 to 20 points. To hit 90+, you need to leave Shopify's theme system.",
-                        ]} />
+                    <BlogHeader>Audit the app layer by name</BlogHeader>
+                    <BlogText>
+                        Apps add storefront JavaScript through app embeds and theme app extensions. That code runs on
+                        your customers&apos; devices, it is versioned by the vendor rather than by you, and it often loads
+                        on routes where the app has no visible interface. Go through your installed apps by
+                        category and write down what each one actually costs on the routes you care about. Do not take a
+                        vendor&apos;s word for its weight. Measure it in your own trace.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Reviews and user-generated content: Judge.me, Okendo, Yotpo, Loox and similar.",
+                            "Live chat and helpdesk: Gorgias, Tidio, Intercom and similar.",
+                            "Email, SMS and popups: Klaviyo, Privy, Attentive and similar.",
+                            "Loyalty, referrals and rewards: Smile.io, LoyaltyLion and similar.",
+                            "Upsell, bundling, subscriptions, currency, wishlist and search apps.",
+                            "Tag managers, pixels, heatmaps, A/B tools and anything a marketer installed directly.",
+                        ]}
+                    />
+                    <BlogText>
+                        For each one, record the owner inside your business, the routes it needs, the routes it actually
+                        loads on, its measured transfer size and its main-thread cost in a trace. Apps that no longer
+                        have an owner are usually the easiest thing to remove. Uninstalling an app does not always remove
+                        its code, so check the theme for leftover snippets and script tags after every removal.
+                    </BlogText>
+                    <InsightBox variant="info" label="Why a theme swap rarely fixes this">
+                        Your app payload is attached to the store, not to the theme. Install the same apps on a
+                        different Shopify theme and the same third-party scripts follow you across. Test that claim on
+                        your own store with a duplicated theme before you pay anyone to re-theme for speed reasons.
+                    </InsightBox>
+
+                    <BlogHeader>What Shopify loads regardless of your theme</BlogHeader>
+                    <BlogText>
+                        Some storefront JavaScript belongs to the platform. Analytics and web pixels, cart behaviour,
+                        payment and checkout-related code and Shopify&apos;s own performance instrumentation are managed
+                        by Shopify rather than by your theme. You can influence how much of your own work competes with
+                        them, but removing them is not a theme-level option on the standard storefront. Treat that as
+                        fixed cost in your performance budget rather than something a developer failed to fix.
+                    </BlogText>
+                    <BlogText>
+                        Liquid is server-rendered on request. Shopify generates the HTML for each page view and returns
+                        it, so expensive loops, heavy section logic and large numbers of rendered products show up as
+                        server time before the browser starts work. A pre-rendered or cached custom frontend moves that
+                        work to build time instead. That is a real architectural difference, but it is not free: it
+                        moves work rather than deleting it, and it adds a codebase you have to own.
+                    </BlogText>
+
+                    <BlogHeader>1. Read the field report first</BlogHeader>
+                    <BlogText>
+                        Shopify&apos;s Web Performance reports use real-user data and show LCP, INP and CLS over time, by
+                        URL and by page type. The summary reflects the 75th percentile. Use it to locate the affected
+                        population instead of treating one homepage Lighthouse run as the whole store.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Compare mobile and desktop distributions.",
+                            "Separate home, collection, product and other page types.",
+                            "Annotate app installs, theme releases, campaigns and media changes.",
+                            "Account for the reporting delay before judging a release.",
+                        ]}
+                    />
+
+                    <BlogHeader>2. Create controlled comparisons</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Duplicate the current production theme and preserve a rollback point.",
+                            "Create a current clean-theme preview with representative content where practical.",
+                            "Test the same routes, products, viewport, network profile, cache and consent state.",
+                            "Repeat runs and use the median rather than selecting the best screenshot.",
+                            "Compare one change at a time when isolating an app, section or custom feature.",
+                        ]}
+                    />
+                    <BlogText>
+                        Shopify&apos;s own theme guidance tests home, product and collection pages and recommends repeated
+                        runs. Your store may need additional routes such as search, cart, account and high-traffic
+                        landing pages.
+                    </BlogText>
+
+                    <BlogHeader>3. Inspect JavaScript and third parties</BlogHeader>
+                    <BlogText>
+                        Shopify advises theme developers to minimize JavaScript, avoid parser-blocking scripts and load
+                        noncritical resources on interaction where appropriate. It also advises app developers to use
+                        theme app extensions and limit resources to the pages where they are needed.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "List every script by owner, purpose, route and consent category.",
+                            "Find long tasks, duplicate libraries, synchronous work and global listeners.",
+                            "Check whether an app embed loads on routes where its interface is absent.",
+                            "Remove abandoned tags and residual theme code only after dependency review.",
+                            "Preserve accessibility, analytics and purchase behavior when deferring work.",
+                        ]}
+                    />
+
+                    <BlogHeader>4. Fix media and loading priority</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Serve responsive images sized for their rendered slot.",
+                            "Do not lazy-load the likely above-the-fold LCP image.",
+                            "Lazy-load below-the-fold media and reserve dimensions to prevent layout shift.",
+                            "Avoid large autoplay video or carousel work unless measured business value justifies it.",
+                            "Host theme assets through Shopify's supported delivery path where applicable.",
+                        ]}
+                    />
+
+                    <BlogHeader>5. Review Liquid, sections and custom code</BlogHeader>
+                    <BlogText>
+                        Use Shopify Theme Check and browser traces to find large assets, blocking resources and expensive
+                        custom work. Review layout-level inclusions because they affect every route. Inspect product and
+                        collection loops, section settings and repeated snippets using the actual production data that
+                        triggers the problem.
+                    </BlogText>
+
+                    <BlogHeader>6. Validate the fix</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Layer</th><th className="p-4">Before and after</th><th className="p-4">Guardrail</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Lab</td><td className="p-4">Repeated representative route tests</td><td className="p-4">Same profile and page state</td></tr>
+                                <tr><td className="p-4 font-bold">Field</td><td className="p-4">P75 LCP, INP and CLS after enough traffic</td><td className="p-4">Device and route distribution</td></tr>
+                                <tr><td className="p-4 font-bold">Functional</td><td className="p-4">Browse, variant, cart and checkout flows</td><td className="p-4">No broken feature or event</td></tr>
+                                <tr><td className="p-4 font-bold">Business</td><td className="p-4">Defined funnel and operating metrics</td><td className="p-4">No unsupported causal claim</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Shopify Dawn theme is slow because it loads all theme CSS and JavaScript on every page, even sections not used on that page. Dawn scores 42 to 65 on mobile PageSpeed by default. You can optimize it to around 75 with image compression and script deferral, but you cannot break the 80 barrier without replacing Liquid entirely with a headless Next.js frontend.</p>
+                    <BlogHeader>What moves the number, and what only feels like it does</BlogHeader>
+                    <BlogText>
+                        The left column is the work. The right column is how you prove it on your own store rather than
+                        taking anyone&apos;s word for the size of the effect. Measure before and after on the same route,
+                        the same profile and the same page state.
+                    </BlogText>
 
-                    <div className="space-y-8">
-
-                        <BlogText>
-                            Here is our receipt for what a custom storefront does: we took <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a> from 45 to 90+ on mobile PageSpeed, and load time from 3.2 seconds to 0.7. That store was on WordPress and WooCommerce, not Shopify, but it had the exact disease Dawn stores have: a theme plus apps stack the owner could not get past no matter what was optimized. For a Shopify store, the same escape is <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link>. You can click that store right now and run PageSpeed yourself.
-                        </BlogText>
-
-                        <BlogText>
-                            Because it is never really the theme. That store had compressed images, no bloated plugins, and a developer who had &ldquo;optimized&rdquo; everything. It was still stuck at 45. The issue was not the setup. It was the template-platform architecture, and Dawn stores hit the same wall.
-                        </BlogText>
-
-                        <BlogText>
-                            If you have already paid a developer to &ldquo;fix&rdquo; your speed, switched themes, installed a speed optimization app, or upgraded to Shopify Plus hoping it would solve this, and you are still sitting at 40 to 55 on mobile, you are not alone. That money was not wasted on bad work. It was spent solving the wrong problem.
-                        </BlogText>
-
-                        <BlogHeader>Dawn Was Built to Fix Shopify&apos;s Speed Problem. It Didn&apos;t.</BlogHeader>
-
-                        <BlogText>
-                            Dawn shipped in 2021 as Shopify&apos;s free performance-focused theme, replacing Debut, and it was the default theme for new stores for several years. Shopify has since introduced Horizon as the new default for new stores, but Dawn remains free, actively supported, and still runs on a large share of existing stores, which is why its ceiling still matters. A clean Dawn install with no apps and optimized images scores <BlogHighlight>65 to 80/100 on mobile PageSpeed.</BlogHighlight> That is the ceiling, and most stores never get there because real stores have apps.
-                        </BlogText>
-
-                        <BlogHeader>The Four Things Actually Slowing Your Store (None Is the Theme)</BlogHeader>
-
-                        <BlogText>
-                            Here are the four actual culprits. The theme is not one of them.
-                        </BlogText>
-
-                        <BlogHeader>Reason 1: Third-Party Apps Are Injecting Scripts You Can&apos;t Control</BlogHeader>
-
-                        <BlogText>
-                            This is the #1 speed killer on 90% of Shopify stores. Every app you install adds JavaScript to every page load, whether you want it there or not.
-                        </BlogText>
-
-                        <BlogText>
-                            Here&apos;s what a typical &ldquo;standard&rdquo; Shopify store looks like:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Reviews app (Okendo, Judge.me, Yotpo). 80 to 150KB JS",
-                            "Upsell/cross-sell app. 60 to 120KB JS",
-                            "Live chat (Gorgias, Tidio). 100 to 200KB JS",
-                            "Email pop-up (Klaviyo, Privy). 80 to 140KB JS",
-                            "Loyalty/rewards (Smile.io). 60 to 100KB JS",
-                        ]} />
-
-                        <BlogText>
-                            That&apos;s 380 to 710KB of third-party JavaScript loading on every single page. Before your theme loads a single line. Each script adds 100 to 300ms of blocking time.
-                        </BlogText>
-
-                        <BlogQuote>
-                            Your Dawn theme isn&apos;t slow. Your app stack is. And Shopify gives you no way to defer or control when those scripts load.
-                        </BlogQuote>
-
-                        <BlogText>
-                            The theme has nothing to do with it. You could switch to any other Shopify theme and get the exact same result.
-                        </BlogText>
-
-                        <BlogHeader>Reason 2: Liquid Rendering Hits Your Server on Every Request</BlogHeader>
-
-                        <BlogText>
-                            Shopify&apos;s templating language is called Liquid. Every time a visitor loads a page, Shopify&apos;s servers run Liquid to generate the HTML and send it back.
-                        </BlogText>
-
-                        <BlogText>
-                            This is called server-side rendering, and it adds 200 to 600ms to every page load before anything even reaches the visitor&apos;s browser. On a busy store or during a traffic spike, this gets worse.
-                        </BlogText>
-
-                        <BlogText>
-                            Compare this to a custom Next.js storefront where pages are pre-built at deploy time and served instantly from edge locations. <BlogHighlight>Zero server computation. Zero wait.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>Reason 3: Hero Images and Section Images Default to Oversized</BlogHeader>
-
-                        <BlogText>
-                            Dawn includes image optimization, but it&apos;s only effective if you upload correctly sized images. Most store owners upload the high-resolution image from their photographer or product shoot and let Shopify handle the rest.
-                        </BlogText>
-
-                        <BlogText>
-                            Shopify does resize images, but the responsive sizing logic in Dawn still serves larger files than necessary to mobile visitors. A hero image that should be 120KB on mobile often loads at 380 to 600KB.
-                        </BlogText>
-
-                        <BlogText>
-                            This directly tanks your LCP (Largest Contentful Paint): the Core Web Vital that most strongly correlates with Google rankings.
-                        </BlogText>
-
-                        <BlogHeader>Reason 4: Shopify&apos;s Own Scripts Load Whether You Want Them or Not</BlogHeader>
-
-                        <BlogText>
-                            Every Shopify store loads a set of platform scripts automatically. Cart functionality, checkout, payment processing. These are not optional. You can&apos;t remove them, defer them, or replace them.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Shopify Analytics script, loads on every page",
-                            "Cart drawer JavaScript, loads even on pages with no cart",
-                            "Payment method detection, loads checkout scripts on product pages",
-                            "Shopify Web Performance. Monitoring scripts loaded automatically",
-                        ]} />
-
-                        <BlogText>
-                            These are baked into the platform. No theme, not even a custom one. Can eliminate them while staying on Shopify&apos;s standard storefront.
-                        </BlogText>
-
-                        {/* Mid CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is Dawn the fastest your store will ever get?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your real PageSpeed ceiling live on the call and quote a custom storefront that actually clears 90+. Takes 30 minutes.</p>
-                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
-                                <QuoteModalButton cta="shopify_dawn_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
-                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
-                            </div>
-                        </div>
-
-                        <div className="my-8 p-6 bg-cognac/5 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-charcoal font-serif italic text-lg leading-relaxed mb-2">&ldquo;We have audited 30+ Shopify stores. The ceiling with theme-level optimization is 70 to 75 on mobile. To get past that, you have to leave Shopify&apos;s rendering layer. There is no plugin fix.&rdquo;</p>
-                            <p className="text-sm text-stone-600 font-semibold">Hassan Jamal, PandaCodeGen</p>
-                        </div>
-
-                        <BlogHeader>Real Dawn Scores From 30 Store Audits</BlogHeader>
-
-                        <BlogText>
-                            Here&apos;s the honest breakdown based on what we see auditing Shopify stores:
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Store Configuration</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Mobile PageSpeed Score</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-stone-100">
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Clean Dawn, no apps, optimized images</td>
-                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-green-700 font-medium">65 to 80/100</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Dawn with 3 to 5 typical apps (reviews, chat, upsell)</td>
-                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-orange-600 font-medium">40 to 60/100</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Dawn with 6+ apps + Klaviyo + Gorgias + loyalty program</td>
-                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-red-600 font-medium">25 to 45/100</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Dawn on Shopify Plus with heavy customization</td>
-                                        <td data-label="Mobile PageSpeed Score" className="px-4 py-3 text-red-600 font-medium">30 to 55/100</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            A 2026 benchmark study of 1,000 Shopify stores found that only 48% pass all three Core Web Vitals on mobile. The median Shopify store LCP is 2.26 seconds, sitting right at the edge of Google&apos;s &ldquo;good&rdquo; threshold. One additional app install or an unoptimized hero image pushes that number into the failing range. Shopify&apos;s admin dashboard speed score makes this worse by creating a false sense of security. That number comes from a simplified Lighthouse test, not real Core Web Vitals field data from actual visitors browsing your store.
-                        </BlogText>
-
-                        <BlogText>
-                            The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study found that a 0.1-second improvement in mobile load time increases conversions by 8%. A typical Shopify store scoring 45/100 is leaving 20 to 30% of conversions on the table compared to a 95/100 storefront.
-                        </BlogText>
-
-                        <BlogText>
-                            On a store doing $50K/month, that&apos;s <BlogHighlight>$10,000 to $15,000 in recoverable revenue every month.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>What Actually Moves the Score (and the Ceiling You Will Hit)</BlogHeader>
-
-                        <BlogText>
-                            Yes, with real limits. Here&apos;s what actually works and what the ceiling looks like:
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Optimization</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Works?</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Impact</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-stone-100">
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Audit and remove unused apps</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Each app removed saves 80 to 200ms</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Compress and resize hero images before uploading</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Target under 150KB per image</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Enable native lazy loading for below-fold images</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Reduces initial page weight and improves LCP</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Defer non-critical scripts via Script Tag API</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Reduces blocking time where supported</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Remove redundant theme sections</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-green-700 font-medium">Yes</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Even hidden sections add rendering overhead</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Switching to a &ldquo;faster&rdquo; paid theme</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">App bloat follows you to any theme</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Installing a speed optimization app</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Adds another script to fix your scripts</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">Using a CDN</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Shopify already uses a CDN, not the bottleneck</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Upgrading to Shopify Plus</td>
-                                        <td data-label="Works?" className="px-4 py-3 text-red-600 font-medium">No</td>
-                                        <td data-label="Impact" className="px-4 py-3 text-stone-600">Plus is faster at checkout, not storefront rendering</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogQuote>
-                            We&apos;ve audited 30+ Shopify stores. The ceiling with theme-level optimization is 70 to 75/100 mobile. To get above that, you need to move outside Shopify&apos;s rendering layer.
-                        </BlogQuote>
-
-                        <BlogHeader>75/100 Is the Orange Zone. Your Competitors Are in the Green.</BlogHeader>
-
-                        <BlogText>
-                            Google classifies 75/100 as &ldquo;Needs Improvement&rdquo;. The orange zone. Your competitors running custom storefronts are at 90+, comfortably in the green.
-                        </BlogText>
-
-                        <BlogText>
-                            In Google&apos;s ranking algorithm, Core Web Vitals (what PageSpeed measures) are a direct ranking factor. A site at 95/100 outranks a site at 65/100 with identical content. Not by one or two positions. By a full page in competitive categories.
-                        </BlogText>
-
-                        <BlogText>
-                            And that is before accounting for the direct conversion impact. <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google research</a> found that 53% of mobile shoppers abandon a store that takes more than 3 seconds to load. If your Dawn store loads in 3.5 seconds, you are losing more than half your mobile traffic before they see a single product. <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Portent research</a> found that a site loading in 1 second converts 3 times better than a site loading in 5 seconds. That gap is exactly the difference between Dawn and a custom headless build.
-                        </BlogText>
-
-                        <BlogHeader>How We Got MyCustomPatches From 45 to 90+</BlogHeader>
-
-                        <BlogText>
-                            The fix that actually gets you into the 90+ green zone is headless Shopify. Keeping your Shopify backend (products, orders, inventory, payments) and replacing the Shopify storefront with a custom Next.js frontend. Our <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">headless Shopify development service</Link> covers the full transition.
-                        </BlogText>
-
-                        <BlogText>
-                            Here&apos;s what changes:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Pages pre-built at deploy time, no server rendering on each visit",
-                            "Served from Vercel&apos;s edge network (300+ locations). Instant global delivery",
-                            "Full control over every script, nothing loads unless you explicitly add it",
-                            "Custom image pipeline. Serves WebP/AVIF at exact display dimensions",
-                            "App functionality rebuilt natively, no third-party scripts for reviews, cart, upsell",
-                        ]} />
-
-                        <BlogText>
-                            The result is a storefront that loads in under 1 second with a 90+ PageSpeed score, while your Shopify backend handles all the e-commerce operations you already rely on.
-                        </BlogText>
-
-                        <BlogText>
-                            We ran this exact playbook on{" "}
-                            <Link href="/work/mycustompatches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                MyCustomPatches
-                            </Link>
-                            {" "}(their stack was WordPress and WooCommerce rather than Shopify, but the storefront rebuild is the same move). Their store went from 45 mobile to 90+. Load time dropped from 3.2 seconds to 0.7 seconds. The site is live and verifiable at{" "}
-                            <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                mycustompatches.net
-                            </a>.
-                        </BlogText>
-
-                        <BlogHeader>Is a Headless Build Right for Your Store?</BlogHeader>
-
-                        <BlogText>
-                            Headless isn&apos;t for every store. Here&apos;s a simple filter:
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Strong fit for headless:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Mobile PageSpeed below 60/100 and you can see it in your bounce rate or analytics",
-                            "High-traffic store where every 0.1s matters at scale",
-                            "Complex product configuration that Shopify&apos;s theme system can&apos;t handle cleanly",
-                            "Brand that needs precise design control with no theme limitations",
-                            "Speed is costing you conversions and you want it fixed permanently, not patched",
-                        ]} />
-
-                        <BlogText>
-                            <strong>Probably not the right time:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Store is brand new with minimal traffic and no conversion data yet",
-                            "Simple product catalog with minimal app requirements",
-                            "Not sure? Book a free call and we will tell you honestly whether it makes sense for your store",
-                        ]} />
-
-                        <BlogText>
-                            If you&apos;re in the middle. $10K to $20K/month with a PageSpeed score below 60: the calculation is close. Run the numbers: multiply your monthly revenue by 10% (a conservative conversion improvement estimate). If that number is bigger than the build cost divided by 12, it pays for itself in the first year. For the full three-year cost math between the two paths, see our <Link href="/blog/shopify-vs-custom-website" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Shopify vs custom website comparison</Link>.
-                        </BlogText>
-
-                        <BlogText>
-                            Want to understand what this looks like for your specific store? Read our breakdown of{" "}
-                            <Link href="/blog/shopify-slow-losing-sales" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                how Shopify speed directly impacts sales
-                            </Link>
-                            {" "}or{" "}
-                            <Link href="/blog/shopify-headless" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                what headless Shopify actually involves
-                            </Link>.
-                        </BlogText>
-
+                    <p className="mb-2 mt-4 text-xs font-bold text-cognac md:hidden">Swipe to see more</p>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Action</th><th className="p-4">Worth doing</th><th className="p-4">How to verify on your store</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4">Remove apps with no current business owner</td><td className="p-4 font-bold text-green-700">Yes</td><td className="p-4">Trace the route before and after, then check for leftover theme snippets</td></tr>
+                                <tr><td className="p-4">Resize and compress hero and section images before upload</td><td className="p-4 font-bold text-green-700">Yes</td><td className="p-4">Compare delivered file size against the rendered slot size in DevTools</td></tr>
+                                <tr><td className="p-4">Stop lazy-loading the above-the-fold LCP image</td><td className="p-4 font-bold text-green-700">Yes</td><td className="p-4">Confirm the LCP element and its request timing in a trace</td></tr>
+                                <tr><td className="p-4">Restrict app embeds to the routes that use them</td><td className="p-4 font-bold text-green-700">Yes</td><td className="p-4">Load a product page and a policy page, then diff the script list</td></tr>
+                                <tr><td className="p-4">Remove unused sections, snippets and legacy tracking</td><td className="p-4 font-bold text-green-700">Yes</td><td className="p-4">Diff against a clean theme preview, and regression-test the purchase flow</td></tr>
+                                <tr><td className="p-4">Switch to another theme marketed as fast</td><td className="p-4 font-bold text-red-600">Rarely</td><td className="p-4">Duplicate the theme, keep the apps, and test before you buy anything</td></tr>
+                                <tr><td className="p-4">Install a speed-optimizer app</td><td className="p-4 font-bold text-red-600">Rarely</td><td className="p-4">Check whether it added a script of its own, and test with it disabled</td></tr>
+                                <tr><td className="p-4">Add a third-party CDN in front of the storefront</td><td className="p-4 font-bold text-red-600">No</td><td className="p-4">Shopify already serves the storefront through its own CDN</td></tr>
+                                <tr><td className="p-4">Upgrade the plan to fix storefront rendering</td><td className="p-4 font-bold text-red-600">No</td><td className="p-4">A plan change does not remove app scripts or oversized media from your routes</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Find out what your store is actually losing</h3>
-                        <p className="text-stone-600 mb-4">
-                            Every week your store runs at 45/100 PageSpeed is another week faster competitors are taking conversions that should be yours.
+                    <BlogHeader>When to keep Dawn, change theme or go headless</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Keep and optimize Dawn when the required experience fits the theme model and measured issues are removable.",
+                            "Consider another theme when its tested capabilities better match the merchandising and editorial requirements.",
+                            "Consider custom theme work when the business needs a controlled Shopify-native experience and can maintain it.",
+                            "Consider headless when requirements, integrations and ownership justify a separate storefront, not as a default speed patch.",
+                        ]}
+                    />
+
+                    <BlogHeader>Is a rebuild right for your store?</BlogHeader>
+                    <BlogText>
+                        A rebuild is not the right answer for most stores that ask about it. Use your own numbers, not a
+                        theme name, to decide. These are the signals we look for before we will quote a headless or
+                        custom storefront project at all.
+                    </BlogText>
+                    <p className="mb-2 mt-6 font-bold text-charcoal">A rebuild is worth costing out when:</p>
+                    <BlogList
+                        items={[
+                            "Your Shopify field report shows a failing Core Web Vitals distribution on high-intent routes, not a single bad lab run.",
+                            "You have already removed the removable apps and media problems and the constraint is still there.",
+                            "The experience you need does not fit the section and block model without fighting it every release.",
+                            "You have enough traffic that a small conversion or crawl change is measurable rather than noise.",
+                            "You have someone, internal or contracted, who will own a codebase after handover.",
+                        ]}
+                    />
+                    <p className="mb-2 mt-6 font-bold text-charcoal">Stay on Dawn and fix it in place when:</p>
+                    <BlogList
+                        items={[
+                            "The store is new, traffic is low and you have no conversion baseline to improve against.",
+                            "You have not yet run a controlled clean-theme comparison, so you do not know what is causing the problem.",
+                            "Your catalogue and merchandising fit the theme model and the pain is a handful of specific routes.",
+                            "You depend on apps whose functionality you are not prepared to rebuild or replace.",
+                            "Nobody in the business wants to own a separate frontend, its releases and its incidents.",
+                        ]}
+                    />
+                    <InsightBox variant="info" label="Honest answer">
+                        If the second list describes you, keep Dawn. A focused repair on the routes that are failing is
+                        cheaper, faster and lower risk than a rebuild, and it is the work we will recommend even when
+                        you came in asking to go headless.
+                    </InsightBox>
+
+                    <BlogHeader>What to check before you accept a Shopify speed quote</BlogHeader>
+                    <BlogText>
+                        Most disappointing speed engagements are scoping failures rather than engineering failures. A
+                        cheap quote is usually cheap because it leaves these out, and you find out at handover.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Which routes are in scope. Home, collection, product, search, cart and account behave differently.",
+                            "Which devices and profiles the acceptance test uses, and how many runs are recorded.",
+                            "What happens to the apps: which are kept, which are replaced, which functionality disappears.",
+                            "Who owns analytics, consent, pixels and conversion tracking continuity through the change.",
+                            "URL, redirect, structured data and Merchant Center continuity if the storefront layer changes.",
+                            "Who owns the code, the repository and the deployment account after handover.",
+                            "Third-party running costs after launch: hosting, image delivery, search, reviews and monitoring.",
+                            "What the rollback plan is on a revenue-generating route, and who executes it.",
+                        ]}
+                    />
+
+                    <BlogHeader>What our engagements cost</BlogHeader>
+                    <BlogText>
+                        Published tiers are planning anchors, not a quote. The accepted written terms control the final
+                        price, the page inventory and the acceptance protocol.
+                    </BlogText>
+                    <div className="my-6 grid gap-4 sm:grid-cols-3">
+                        <StatCard stat="$1,500" label="Starter" context="Small, clearly bounded scope" />
+                        <StatCard stat="$3,500" label="Growth" context="Larger migration, CMS or content-continuity scope" />
+                        <StatCard stat="$5,000+" label="Scale" context="$5,000 to $10,000 for integration-heavy commerce work" />
+                    </div>
+                    <BlogText>
+                        Where a 90-plus Lighthouse result is included, it is written as a handover target on mobile and
+                        desktop for the representative pages named in the scope, verified across three recorded runs
+                        under stated conditions before handover. It is a lab acceptance target. It is not a promise
+                        about rankings, traffic or revenue, and no honest supplier can give you one of those.
+                    </BlogText>
+
+                    <div className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-center">
+                        <p className="mb-2 font-bold text-charcoal">Not sure whether your Dawn store needs a repair or a rebuild?</p>
+                        <p className="mb-5 text-sm text-stone-600">
+                            Run the audit on your own URL first, or bring the store to a call and we will trace it with
+                            you and tell you which of the two it is.
                         </p>
-                        <p className="text-stone-600 mb-6">
-                            Book a free 30-minute audit. We screen-share, run your store live through PageSpeed and Core Web Vitals, identify every bottleneck, and tell you exactly what&apos;s recoverable, and what it&apos;s costing you. You leave with a written report. No pitch, no obligation.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
-                            <QuoteModalButton cta="shopify_dawn_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
-                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
+                        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+                            <Link href="/free-audit" className="inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-bold text-white hover:bg-stone-800">
+                                Run the free audit <ArrowRight className="h-4 w-4" />
+                            </Link>
+                            <QuoteModalButton cta="shopify_dawn_mid_quote" className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 px-6 py-3 text-sm font-bold text-charcoal hover:border-charcoal">
+                                Get a quote
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 px-6 py-3 text-sm font-bold text-charcoal hover:border-charcoal">
+                                Book a call
+                            </CalModalButton>
                         </div>
                     </div>
 
-                    {/* Key Takeaways */}
-                    <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Dawn is not the problem</strong>: Third-party apps, Liquid rendering, and Shopify's own platform scripts are what make your store slow, not the theme.</li>
-                            <li><strong>Every app you install adds 80-200KB of JavaScript</strong>: Five typical apps can add 1-2 seconds to every page load, dropping your score from 75 to 40.</li>
-                            <li><strong>Theme-level fixes only gain 10-20 points</strong>: Removing unused apps, compressing images, and deferring scripts help, but the ceiling on standard Shopify is 70-75/100.</li>
-                            <li><strong>A store at 45/100 is leaving $10K-$15K/month on the table</strong>: Every 0.1-second improvement increases conversions by 8%, and the gap between 45 and 95 is enormous.</li>
-                            <li><strong>Headless Shopify is the only path to a 90+ score</strong>: Keeping your Shopify backend while replacing the storefront with Next.js eliminates every speed bottleneck the platform imposes.</li>
-                        </ol>
+                    <BlogHeader>Key takeaways</BlogHeader>
+                    <ol className="mb-10 list-inside list-decimal space-y-3 leading-relaxed text-stone-700">
+                        <li><strong className="text-charcoal">The theme name is not a diagnosis.</strong> Dawn is a performance-oriented reference theme, and a slow Dawn store is a store-level question about apps, media, custom code and content.</li>
+                        <li><strong className="text-charcoal">Start with field data.</strong> Shopify&apos;s Web Performance reports tell you which real users and which routes have a problem. One homepage Lighthouse run does not.</li>
+                        <li><strong className="text-charcoal">Most of the payload is not the theme&apos;s.</strong> App scripts and platform scripts travel with the store, which is why re-theming for speed so often disappoints.</li>
+                        <li><strong className="text-charcoal">Prove every change on your own store.</strong> Same route, same profile, same page state, repeated runs, median rather than best run.</li>
+                        <li><strong className="text-charcoal">Headless is a requirements decision.</strong> Choose it when experience, integration and ownership requirements justify it, not as a default fix for a slow route.</li>
+                    </ol>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <Gauge className="mb-4 h-7 w-7 text-amber-300" />
+                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will audit representative routes, trace the production configuration and show whether a
+                            focused Dawn repair, theme change or SEO-conscious headless migration fits the evidence. Our{" "}
+                            <Link href="/services/ecommerce?ref=blog/shopify-dawn-theme-slow" className="font-semibold text-amber-300 underline underline-offset-4">
+                                e-commerce development service
+                            </Link>{" "}
+                            covers the full transition, including analytics, redirect and structured-data continuity.
+                        </p>
+                        <QuoteModalButton cta="shopify_dawn_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
                     </section>
 
-                    {dawnFAQs.length > 0 && <FAQAccordion faqs={dawnFAQs} />}
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
-                    <section className="mb-4 mt-6">
-                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For the complete Shopify speed playbook (Dawn is no longer the default theme in 2026, Horizon is), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the full conversion rate impact of slow Shopify, see <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline font-medium">Shopify conversion rate and speed fix</Link>. For why Shopify Plus still has the same speed ceiling, see <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline font-medium">why Shopify Plus is still slow in 2026</Link>.</p>
-                    </section>
+                    <BlogHeader>Related reading</BlogHeader>
+                    <BlogText>
+                        For the full diagnostic playbook across any Shopify theme, see our{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className="font-medium text-cognac hover:underline">Shopify speed optimization guide</Link>.
+                        For what a headless build actually involves, read{" "}
+                        <Link href="/blog/shopify-headless" className="font-medium text-cognac hover:underline">headless Shopify on Next.js</Link>.
+                        For the same question on the enterprise plan, see{" "}
+                        <Link href="/blog/shopify-plus-still-slow" className="font-medium text-cognac hover:underline">why Shopify Plus can still be slow</Link>.
+                        To reason about conversion impact with your own data rather than borrowed statistics, see{" "}
+                        <Link href="/blog/shopify-conversion-rate-speed-fix" className="font-medium text-cognac hover:underline">Shopify conversion rate and speed</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/shopify-slow-losing-sales" className="font-medium text-cognac hover:underline">is a slow Shopify store losing sales</Link>.
+                        For the cost comparison over a multi-year horizon, see{" "}
+                        <Link href="/blog/shopify-vs-custom-website" className="font-medium text-cognac hover:underline">Shopify versus a custom website</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/shopify-app-costs-real-monthly-bill" className="font-medium text-cognac hover:underline">what your Shopify app stack really costs each month</Link>.
+                    </BlogText>
 
-                    <RelatedPosts currentPostId="shopify-dawn-theme-slow" />
-
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

@@ -1,294 +1,313 @@
-import { ArrowLeft, ArrowRight, DollarSign, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, BellRing, CalendarClock, CheckCircle2, ReceiptText } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "saas-price-increases-2026-tracker")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "saas-price-increases-2026-tracker";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "SaaS Price Changes in 2026: A Verified Watchlist";
+const description =
+    "A primary-source watchlist for Microsoft 365, Webflow and Klaviyo billing changes, with effective-date, renewal, unit and invoice checks for every SaaS contract.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "9 SaaS Price Increases in 2026 So Far (Snapshot)" },
-    description: "9 documented SaaS price increases from the first five months of 2026, with dates and sources. Webflow, Microsoft 365, Klaviyo's stealth 30 to 150% billing change, and what to do next.",
-    alternates: { canonical: "/blog/saas-price-increases-2026-tracker" },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
     keywords: [
-        "saas price increases 2026", "software price increase 2026", "microsoft 365 price increase 2026",
-        "webflow price increase may 2026", "klaviyo active profiles billing", "recharge starter tier 2026",
-        "salesforce price increase 2025", "adobe creative cloud price increase 2026", "saas inflation 2026",
-        "how to stop saas price increases", "stealth saas price increase"
+        "SaaS price increases 2026",
+        "software price changes 2026",
+        "Microsoft 365 price increase 2026",
+        "Webflow pricing 2026",
+        "Klaviyo active profiles billing",
     ],
     openGraph: {
-        title: "9 SaaS Price Increases in 2026 So Far (Snapshot, May 2026)",
-        description: "9 documented software price increases from the first five months of 2026 with dates and sources, plus exactly what to do about each one.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-05-31T00:00:00-05:00",
+        publishedTime: "2026-05-31",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "9 SaaS Price Increases in 2026 So Far (Snapshot, May 2026)",
-        description: "9 documented software price increases from the first five months of 2026 with dates and sources, plus what to do about each.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    {
+        name: "Microsoft 365 pricing and packaging updates",
+        url: "https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates",
+    },
+    {
+        name: "Webflow May 2026 plan update",
+        url: "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026",
+    },
+    {
+        name: "Klaviyo February 18 billing-change FAQ",
+        url: "https://help.klaviyo.com/hc/en-us/articles/33136281415451",
+    },
+    { name: "Klaviyo current pricing", url: "https://www.klaviyo.com/pricing" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#article",
-            "headline": "9 SaaS Price Increases From the First Five Months of 2026 (Snapshot)",
-            "description": "9 documented software price increases in 2026 with dates and sources, plus exactly what to do about each one.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-05-31",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker" },
-            "articleSection": "Pricing",
-            "keywords": ["saas price increases 2026", "microsoft 365 price increase 2026", "webflow price increase may 2026", "klaviyo active profiles billing", "saas inflation 2026"],
-            "wordCount": 1450,
-            "timeRequired": "PT8M",
-            "inLanguage": "en-US",
-            "about": [
-                { "@type": "Thing", "name": "SaaS Price Increases" },
-                { "@type": "Thing", "name": "Software Cost Optimization" },
-                { "@type": "Thing", "name": "SaaS Inflation" }
-            ],
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Vertice SaaS Inflation Index 2026", "url": "https://www.vertice.one/insights/saas-inflation-rate" },
-                { "@type": "CreativeWork", "name": "Microsoft 365 2026 Pricing Increase", "url": "https://rcpmag.com/articles/2025/12/09/microsoft-365-commercial-subscription-prices-set-to-hike-mid-2026.aspx" },
-                { "@type": "CreativeWork", "name": "Webflow May 2026 Pricing Update", "url": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" },
-                { "@type": "CreativeWork", "name": "SaaStr Great Price Surge of 2025", "url": "https://www.saastr.com/the-great-price-surge-of-2025-a-comprehensive-breakdown-of-pricing-increases-and-the-issues-they-have-created-for-all-of-us/" },
-                { "@type": "CreativeWork", "name": "Klaviyo Pricing 2026", "url": "https://www.klaviyo.com/pricing" },
-                { "@type": "CreativeWork", "name": "Salesforce Sales Cloud Pricing", "url": "https://www.salesforce.com/sales/pricing/" }
-            ]
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Software procurement",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#faq",
-            "mainEntity": postFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "2026 SaaS Price Increase Snapshot", "item": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker#webpage",
-            "url": "https://www.pandacodegen.com/blog/saas-price-increases-2026-tracker",
-            "name": "9 SaaS Price Increases From the First Five Months of 2026 (Snapshot)",
-            "description": "9 documented software price increases from the first five months of 2026 with dates and sources.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
-            "email": "info@pandacodegen.com",
-            "description": "PandaCodeGen builds custom Next.js websites and operations software that replace expensive SaaS stacks. You own the code outright.",
-            "areaServed": "Worldwide",
-            "sameAs": ["https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://twitter.com/pandacodegen", "https://clutch.co/profile/panda-code-gen"]
-        }
-    ]
+    ],
 };
+
+const sourceLinkClass =
+    "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function SaasPriceIncreases2026TrackerPage() {
     return (
-        <main className="bg-paper min-h-screen overflow-x-hidden">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+        <>
             <Header />
-
-            <section className="relative pt-24 md:pt-40 pb-10 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "2026 SaaS Price Increase Snapshot" }
-                    ]} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "2026 SaaS price changes", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-semibold mb-4">
-                            <DollarSign className="w-3 h-3" /> Pricing
-                        </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            9 SaaS Price Increases From the First Five Months of 2026.{" "}
-                            <span className="font-serif italic text-cognac">A Dated Snapshot</span> and How to Stop Yours.
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Software procurement</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            SaaS Price Changes in 2026 <span className="italic text-cognac">Verified Watchlist</span>
                         </h1>
-                        <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            Nine major software vendors changed pricing between January and May 2026. Some announced it. Most did not. Webflow quietly restructured every plan on May 13. Microsoft 365 raises tiers on July 1. Klaviyo changed how it counts who you pay for and most stores never noticed their bill climb 30 to 150%. This is a snapshot of every increase we had confirmed as of publication, with the date and the source for each, and exactly what to do about each one. It is not a live feed. Check the date below and treat vendor pricing pages as the source of truth for anything more recent.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            A pricing tracker is only useful when every row has a primary source, effective date,
+                            renewal rule, region and billed unit. This watchlist carries three changes that meet that
+                            standard, and says plainly what each one does and does not tell you about your own invoice.
                         </p>
-                        <BlogAuthor
-                            date="May 31, 2026"
-                            readTime="8 min read"
-                            bio="Hassan replaces recurring software bills with custom code clients own outright. He tracks SaaS pricing changes because every increase quietly widens the gap between what businesses pay and what they own."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">
+                            Checked July 24, 2026. Vendor dashboards, contracts and invoices remain the source of truth
+                            for a specific account.
+                        </p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="9 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The verified watchlist</h2>
+                        <BlogList
+                            items={[
+                                "Microsoft published commercial Microsoft 365 changes effective July 1, 2026, with renewal and market caveats.",
+                                "Webflow began a phased Site-plan restructure on May 13, 2026, with account-specific transition dates.",
+                                "Klaviyo's active-profile compliance change began February 18, 2025 and can still affect 2026 billing.",
+                                "None of these rows establishes the percentage change on your invoice without your SKU, region, term and usage.",
+                            ]}
                         />
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            <section className="px-6 pb-6">
-                <div className="max-w-3xl mx-auto">
-                    <SalesImpactAnimation />
-                </div>
-            </section>
-
-            <section className="px-6 pb-20">
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    {/* Short Answer box — AI Overview bait */}
-                    <div className="mb-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl" data-speakable="true">
-                        <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer</p>
-                        <ul className="space-y-2 text-sm text-stone-700">
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> SaaS inflation hit 12.2% YoY in early 2026, peaking at 14.5%, roughly 2x general inflation (Vertice). The average company now spends about $9,100 per employee per year on software.</li>
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> The most dangerous increases are stealth ones: Klaviyo changed its billing unit definition and raised most stores 30 to 150% with no published price change.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> The fix for any tool over $500/month: audit usage, cancel dormant licenses, then evaluate a one-time custom build that stops billing forever.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A custom build&apos;s cost stays flat. A SaaS bill at 12% annual inflation roughly doubles in five years.</li>
-                        </ul>
+                    <div className="my-8 grid gap-4 sm:grid-cols-3">
+                        {[
+                            { icon: CalendarClock, title: "Effective date", body: "Announcement, new purchase, renewal and migration dates can differ." },
+                            { icon: ReceiptText, title: "Billing unit", body: "Seat, profile, contact, bandwidth, request, message or other measured unit." },
+                            { icon: BellRing, title: "Account notice", body: "Dashboard, invoice, message center, renewal quote and contract amendments." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
+                    <BlogHeader>Microsoft 365: July 1, 2026 commercial changes</BlogHeader>
                     <BlogText>
-                        I track software pricing because I migrate businesses off it. Over the first five months of 2026 I watched nine vendors raise prices, and in most cases the client did not find out until I pulled their statements line by line during a migration audit. This is that list as of publication, with dates and sources, so you can check your own stack against it.
+                        Microsoft&apos;s licensing page lists U.S. commercial price changes effective July 1, 2026 for
+                        selected Enterprise, Business, Frontline and standalone products. It lists Business Basic with
+                        Teams moving from $6 to $7 and Business Standard with Teams from $12.50 to $14, while Business
+                        Premium remains listed at $22. Existing customers remain on their current price until the
+                        applicable renewal, and country, currency, channel and product configuration can change the
+                        result.
+                    </BlogText>
+                    <BlogText>
+                        Do not apply one percentage to every Microsoft invoice. Export assigned licenses, identify the
+                        exact SKU and Teams configuration, remove or reassign unused seats through the supported admin
+                        process, and compare the renewal quote with the official table and contract. The full method for
+                        that reconciliation is in our{" "}
+                        <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software pricing audit walkthrough</Link>.
                     </BlogText>
 
-                    {/* Brand anchor — Version C, first-third zone */}
-                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">
-                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site and operations as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. The full cross-platform cost picture is in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>.
+                    <BlogHeader>Webflow: phased plan restructuring</BlogHeader>
+                    <BlogText>
+                        Webflow&apos;s current help article says new Site-plan purchases changed May 13, 2026. It
+                        combined CMS and Business into Premium, listed Premium at $25 per month billed yearly or $39
+                        monthly, and included 20,000 CMS items. Existing-site timing differs: June 29 for some accounts
+                        and November 16 for Freelancer, Agency or legacy-pricing accounts, then at renewal or a billable
+                        change.
+                    </BlogText>
+                    <BlogText>
+                        The impact is not uniformly an increase. Webflow&apos;s own scenarios show cases where a Business
+                        customer pays less, the same or more after bandwidth add-ons. Record the current plan, renewal,
+                        bandwidth, workspace, add-ons and billable changes before modelling an alternative. We itemise
+                        those lines in our{" "}
+                        <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow cost breakdown</Link>. If the
+                        review turns into a departure, our notes on{" "}
+                        <Link href="/blog/leaving-webflow-2026" className="text-cognac hover:underline font-medium">leaving Webflow</Link>,{" "}
+                        <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">what a Webflow migration involves</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/webflow-vs-custom-website" className="text-cognac hover:underline font-medium">Webflow compared with a custom build</Link>{" "}
+                        cover the work that follows.
+                    </BlogText>
+
+                    <BlogHeader>Klaviyo: a 2025 billing-unit change still relevant in 2026</BlogHeader>
+                    <BlogText>
+                        Klaviyo&apos;s help center says that from February 18, 2025 credit-card customers had to use an
+                        email plan that matched or exceeded active-profile count. It also introduced optional flexible
+                        sending and auto-downgrade behavior. This is not a 2026 price increase, so it is labelled here
+                        as an earlier billing-policy change that can affect a 2026 invoice.
+                    </BlogText>
+                    <BlogText>
+                        We do not publish a typical percentage for what this change costs, because the effect on any
+                        account depends on its own profile counts, plan and sending behaviour. Compare active profiles,
+                        suppressions, sends, SMS, credits, selected preferences and the current invoice for the
+                        specific account. Storefront owners tracking this alongside app subscriptions can use our
+                        walkthrough of{" "}
+                        <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">how Shopify app charges land on a monthly bill</Link>.
+                    </BlogText>
+
+                    <InsightBox variant="info" label="Why this tracker has no headline percentage">
+                        We do not publish an industry-wide software inflation rate, a per-employee software cost or a
+                        blanket saving from replacing licensed software with a custom system. Each of those moves with
+                        company size, region, contract term, usage and renewal timing, so a single figure quoted without
+                        a stated sample and method is not something you can budget against. Licensed software and custom
+                        systems both carry ongoing operating costs, so compare them on your own invoices and your own
+                        running costs across a full renewal cycle.
+                    </InsightBox>
+
+                    <BlogHeader>How to maintain a defensible internal tracker</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Vendor, product, exact SKU, region, currency, billing channel and contract owner.",
+                            "Current unit price, billed quantity, discounts, credits, taxes and total invoice.",
+                            "Announcement, effective, renewal and notice dates with the primary-source URL.",
+                            "Definition of the billed unit and any threshold, overage or auto-upgrade behavior.",
+                            "Termination, downgrade, export, deletion and renewal-notice requirements.",
+                            "Evidence captured from the dashboard, renewal quote and paid invoice.",
+                        ]}
+                    />
+                    <BlogText>
+                        Once the tracker holds those fields, it feeds directly into the review steps in our{" "}
+                        <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">guide to reducing a software bill</Link>.
+                    </BlogText>
+
+                    <BlogHeader>Match the response to the type of change</BlogHeader>
+                    <BlogText>
+                        Not every billing change calls for the same move. Four patterns come up often enough to decide
+                        in advance how each one will be handled.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "A published list-price rise: confirm assigned seats and actual use first, then remove or right-size before accepting the new rate at renewal.",
+                            "A redefined billing unit: read the new definition against your own counts. A tier price can stay still while the invoice moves, so check what is being counted, not only what is being charged per unit.",
+                            "A forced plan restructure or migration: treat it as a scheduled review point. Configuration work you were deferring is happening anyway, so this is the moment to compare staying, right-sizing and moving on the same set of numbers.",
+                            "A single workflow carrying a large share of the bill: scope it properly through a build-versus-buy comparison rather than reacting to the renewal notice.",
+                        ]}
+                    />
+
+                    <BlogHeader>Respond with usage evidence, not a migration reflex</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Remove duplicate, inactive or incorrectly assigned seats using the vendor's supported process.",
+                            "Right-size the plan only after confirming the features, permissions and data needed.",
+                            "Check negotiated discounts, committed usage, renewal notice and termination obligations.",
+                            "Compare alternatives on migration, integration, security, support, training and exit costs.",
+                            "Consider custom software only when requirements and total cost support it; custom code still needs hosting, maintenance and ownership.",
+                        ]}
+                    />
+                    <BlogText>
+                        Work the last point through properly rather than by instinct. Our{" "}
+                        <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="text-cognac hover:underline font-medium">build versus buy comparison</Link>{" "}
+                        sets out the inputs, our{" "}
+                        <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost assessment</Link>{" "}
+                        covers what moving off a platform involves, and our{" "}
+                        <Link href="/work" className="text-cognac hover:underline font-medium">delivered project write-ups</Link>{" "}
+                        show what the finished work looks like. Where a replacement is worth scoping, our{" "}
+                        <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering service</Link>{" "}
+                        and <Link href="/pricing" className="text-cognac hover:underline font-medium">engagement tiers</Link> describe how we work.
+                    </BlogText>
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
+                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            Bring the current invoices, renewal dates, usage exports and workflow requirements. We will
+                            separate seats to remove, plans to right-size, tools to retain and workflows worth scoping
+                            as a replacement.
                         </p>
-                    </div>
-
-                    <BlogHeader id="the-9-increases">The 9 Documented 2026 Price Increases</BlogHeader>
-
-                    {/* Comparison table — 2.5x AI citation rate */}
-                    <div className="my-8 overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0">
-                        <p className="md:hidden text-xs font-bold text-cognac mb-2">← Swipe to see full table →</p>
-                        <table className="min-w-[640px] w-full border-collapse text-sm">
-                            <thead>
-                                <tr className="border-b-2 border-stone-300">
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Vendor</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">What changed</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Date</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Real impact</th>
-                                </tr>
-                            </thead>
-                            <tbody className="text-stone-700">
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Webflow</td><td className="py-3 px-3 align-top">CMS + Business merged into Premium</td><td className="py-3 px-3 align-top">May 13, 2026</td><td className="py-3 px-3 align-top">Forced migration after June 29; headroom cut for CMS-tier sites</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Microsoft 365</td><td className="py-3 px-3 align-top">Basic $6 to $7, Standard $12.50 to $14</td><td className="py-3 px-3 align-top">July 1, 2026</td><td className="py-3 px-3 align-top">First hike since 2022; 50-person co. +$900/yr</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Klaviyo</td><td className="py-3 px-3 align-top">Billing unit: emailable to active profiles</td><td className="py-3 px-3 align-top">Feb 18, 2025</td><td className="py-3 px-3 align-top">Stealth: most stores up 30 to 150%, no price change</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Recharge</td><td className="py-3 px-3 align-top">New $25 starter tier (new merchants only)</td><td className="py-3 px-3 align-top">Feb 9, 2026</td><td className="py-3 px-3 align-top">Existing customers cannot downgrade into it</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Mailchimp</td><td className="py-3 px-3 align-top">Free plan cut 500 to 250 contacts</td><td className="py-3 px-3 align-top">Jan 2026</td><td className="py-3 px-3 align-top">Pushes free users onto Essentials ($13/mo)</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Salesforce</td><td className="py-3 px-3 align-top">Enterprise + Unlimited +6%</td><td className="py-3 px-3 align-top">Aug 1, 2025</td><td className="py-3 px-3 align-top">20-user Enterprise: +$2,520/yr</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">HubSpot</td><td className="py-3 px-3 align-top">5% migration-related increases at renewal</td><td className="py-3 px-3 align-top">Late 2025</td><td className="py-3 px-3 align-top">Plus mandatory $3,000 Pro onboarding</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Adobe</td><td className="py-3 px-3 align-top">Creative Cloud restructured (Pro/Standard)</td><td className="py-3 px-3 align-top">2025</td><td className="py-3 px-3 align-top">Effective increases up to 27%</td></tr>
-                                <tr><td className="py-3 px-3 font-semibold align-top">Atlassian</td><td className="py-3 px-3 align-top">Cloud +5 to 15%, Data Center +15 to 40%</td><td className="py-3 px-3 align-top">2025-2026</td><td className="py-3 px-3 align-top">2,000-user Jira Premium: $189K to $203K/yr</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <BlogHeader id="stealth-increase">The One That Should Worry You Most: The Stealth Increase</BlogHeader>
-                    <BlogText>
-                        Of the nine, the Klaviyo change is the one I see catch businesses off guard most often. On February 18, 2025, Klaviyo changed its billing model from emailable profiles to active profiles. <BlogHighlight>The published per-tier prices did not change at all.</BlogHighlight> What changed was the definition of who counts toward your tier. Most stores immediately moved up two or three tiers without adding a single subscriber, and bills commonly rose 30 to 150%.
-                    </BlogText>
-                    <BlogQuote>
-                        In my experience auditing client stacks, the increases that hurt most are never the ones in the press release. They are the ones where the vendor quietly redefines the unit you pay for. The price-per-tier looks frozen. Your invoice is not.
-                    </BlogQuote>
-                    <BlogText>
-                        The lesson: when you audit your stack, do not just check the published price. Check the definition of the billed unit (user, contact, ticket, message, transaction). That is where the stealth increases hide. Source: <a href="https://www.klaviyo.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Klaviyo pricing</a>.
-                    </BlogText>
-
-                    {/* Mid CTA */}
-                    <div className="my-6 md:my-10 p-7 bg-stone-50 border border-stone-200 rounded-2xl">
-                        <p className="font-bold text-charcoal text-lg mb-2">Want us to audit your real software bill?</p>
-                        <p className="text-stone-600 text-sm mb-4 leading-relaxed">Send us your list of recurring subscriptions. We map them to current 2026 pricing, flag the increases you may not know about, and tell you which tools to keep, downgrade, or replace with custom code. Most first-pass audits find 25 to 40% in savings.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Book Free Software Bill Audit <ArrowRight className="w-4 h-4" />
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-bold text-white transition hover:bg-cognac/90">
+                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
-                    </div>
+                    </section>
 
-                    <BlogHeader id="what-to-do">What to Actually Do About Each Increase</BlogHeader>
-                    <BlogText>
-                        Reading the list is not the point. Acting on it is. Here is the decision for each kind of increase, in the order I run it during a client audit.
-                    </BlogText>
-                    <BlogText>
-                        <strong>If a tool just raised its price (Microsoft 365, Salesforce, Adobe):</strong> check actual usage first. Productiv&apos;s 2026 data shows 23% of licenses have zero usage. Cancel the dormant seats before you accept the new rate, then downgrade any tier you are not fully using. This alone usually offsets the increase.
-                    </BlogText>
-                    <BlogText>
-                        <strong>If a tool changed its billing unit (Klaviyo):</strong> this is the moment to price a switch. When the goalposts move, your loyalty is worth nothing. Brevo (pay-per-send) and a custom email layer on Zoho ZeptoMail ($2.50 per 10,000 sends) are the two cheapest exits for most stores.
-                    </BlogText>
-                    <BlogText>
-                        <strong>If a tool restructured plans and forced you to migrate (Webflow):</strong> a forced migration is a free moment to ask whether you should migrate off the platform entirely. If you are being moved to a new plan anyway, the switching cost you were avoiding is now partly sunk. See our <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow true cost breakdown</Link> for the math.
-                    </BlogText>
-                    <BlogText>
-                        <strong>If a single workflow costs over $1,500/month (HubSpot Enterprise, Salesforce Unlimited):</strong> this is where a one-time custom build beats paying forever. The full decision framework is in our <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="text-cognac hover:underline font-medium">build vs buy guide</Link>, and the step-by-step audit is in <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">how to cut your SaaS bill 40 to 70%</Link>.
-                    </BlogText>
-
-                    <BlogQuote>
-                        Software is the only line item that goes up 12% every year forever and rarely improves the business enough to justify it. Custom code is the only line item that goes to zero after you ship it.
-                    </BlogQuote>
-
-                    {/* Bottom CTA */}
-                    <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
-                        <TrendingDown className="w-8 h-8 text-amber-400 mx-auto mb-3" />
-                        <p className="font-bold text-xl mb-2">Stop Renting. Start Owning.</p>
-                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Send us your recurring subscriptions. We will show you which 2026 increases hit you, what to cut, and what a custom replacement costs. Fixed pricing from $1,500. 90+ PageSpeed in writing or full refund.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
-                            Book Free Software Bill Audit <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
-                    </div>
-
-                    <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
+                    <BlogHeader>Frequently asked questions</BlogHeader>
                     <FAQAccordion faqs={postFAQs} />
-
-                    <RelatedPosts currentPostId="saas-price-increases-2026-tracker" />
-
+                    <RelatedPosts currentPostId={postId} />
                 </article>
-            </section>
-
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

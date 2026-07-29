@@ -1,84 +1,49 @@
-"use client";
+import { FileCheck2, ListChecks, Receipt } from "lucide-react";
 
-import { motion } from "@/components/ui/motion";
-import { TrendingDown, Target, Receipt, ArrowUpRight } from "lucide-react";
-
-const stats = [
+const controls = [
   {
-    icon: TrendingDown,
-    number: "40-70%",
-    title: "Lower Subscription Tax",
-    body: "We replace the paid apps, plugins, and platform fees bleeding you every month with custom code you own. Clients cut their software bills 40 to 70 percent.",
-    borderRight: true,
-  },
-  {
-    icon: Target,
-    number: "20-40%",
-    title: "Conversions Recovered",
-    body: "iOS, ad blockers, and cookie limits hide 20 to 40 percent of your sales from Meta and Google. Our server-side tracking sends every purchase straight to them, so your ad budget optimizes on real buyers, not guesses.",
-    borderRight: true,
+    icon: ListChecks,
+    label: "01",
+    title: "Inventory before architecture",
+    body: "Review URLs, content, CMS models, forms, integrations, analytics, accessibility needs, stakeholders, and cutover constraints before selecting a stack.",
   },
   {
     icon: Receipt,
-    number: "$1,500",
-    title: "Fixed Price, No Surprises",
-    body: "Published pricing from $1,500. No hourly billing, no change-order traps, no $15,000 enterprise minimum. You know the number before you ever talk to us.",
-    borderRight: false,
+    label: "02",
+    title: "Compare total cost",
+    body: "Document current and proposed platform, app, hosting, database, email, observability, payment, support, and migration costs using dated provider prices and usage assumptions.",
+  },
+  {
+    icon: FileCheck2,
+    label: "03",
+    title: "Accept against written evidence",
+    body: "Put deliverables, exclusions, test conditions, ownership, licensing, change control, warranty, support, remedies, and handover into the proposal.",
   },
 ];
 
 export default function UnfairAdvantage() {
   return (
-    <section className="py-12 md:py-20 bg-white text-charcoal">
+    <section className="bg-white py-12 text-charcoal md:py-20">
       <div className="container mx-auto px-6">
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-20 gap-6"
-        >
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              The Unfair{" "}
-              <span className="font-serif italic text-cognac">Advantage.</span>
-            </h2>
-            <p className="text-lg text-stone-600 leading-relaxed">
-              Most agencies sell you a pretty site and walk away. The unfair part is everything underneath:
-              lower monthly bills, ad tracking that actually sees your sales, and a fixed price you know
-              before you ever call.
-            </p>
-          </div>
-          <div className="hidden md:block pb-2">
-            <ArrowUpRight className="w-12 h-12 text-stone-200" />
-          </div>
-        </motion.div>
-
-        {/* Financial Grid Layout */}
-        <div className="grid md:grid-cols-3 border-t border-stone-200">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`group border-b ${stat.borderRight ? "border-r-0 md:border-r" : ""} border-stone-200 p-6 md:p-10 hover:bg-stone-50 transition-colors duration-500`}
-            >
-              <div className="mb-8">
-                <div className="w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center group-hover:bg-cognac transition-all duration-300">
-                  <stat.icon className="w-6 h-6 text-stone-500 group-hover:text-white transition-colors duration-300" />
-                </div>
+        <div className="max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-cognac">Decision controls</p>
+          <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">Make the commercial assumptions visible.</h2>
+          <p className="mt-6 text-lg leading-8 text-stone-700">
+            A custom build is not automatically cheaper, faster, or more appropriate than a managed platform. The useful comparison is the documented scope, operating model, risk, and measurement method for this site.
+          </p>
+        </div>
+        <div className="mt-12 grid border-t border-stone-300 md:grid-cols-3">
+          {controls.map(({ icon: Icon, label, title, body }, index) => (
+            <article key={title} className={`border-b border-stone-300 p-7 md:p-9 ${index < 2 ? "md:border-r" : ""}`}>
+              <div className="flex items-center justify-between">
+                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+                <span className="font-mono text-sm text-stone-600">{label}</span>
               </div>
-              <div className="text-7xl font-sans font-bold text-charcoal tracking-tighter mb-4">
-                {stat.number}
-              </div>
-              <h3 className="text-xl font-bold text-stone-900 mb-3 font-serif">{stat.title}</h3>
-              <p className="text-stone-500 leading-relaxed text-sm">{stat.body}</p>
-            </motion.div>
+              <h3 className="mt-6 text-xl font-bold">{title}</h3>
+              <p className="mt-3 text-sm leading-7 text-stone-700">{body}</p>
+            </article>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -1,42 +1,61 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
+import {
+    ArrowLeft,
+    ArrowRight,
+    CheckCircle2,
+    CircleDollarSign,
+    FileCode2,
+    Gauge,
+    Route,
+    ShieldCheck,
+} from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "leaving-webflow-2026")?.faqs ?? [];
+const postFAQs = blogPosts.find(post => post.id === "leaving-webflow-2026")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Leaving Webflow 2026: Why We Left After 14 Outages",
-    description: "Multiple documented Webflow outages, including a widely reported 31-hour incident. Bandwidth bills hit $170 overnight. Memberships killed with 6 weeks notice. The full migration story.",
+    title: "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+    description: "A current 2026 framework for leaving Webflow: pricing and bandwidth changes, export limits, total cost, performance diagnosis, and an SEO-safe migration plan.",
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
-    keywords: ["leaving webflow 2026", "webflow too expensive 2026", "webflow alternative custom code", "migrate from webflow 2026", "webflow problems 2026", "webflow bandwidth limit", "webflow membership deprecated", "webflow cart not working"],
+    keywords: [
+        "leaving webflow 2026",
+        "webflow too expensive 2026",
+        "webflow alternative custom code",
+        "migrate from webflow 2026",
+        "webflow problems 2026",
+        "webflow bandwidth limit",
+        "webflow code export limitations",
+        "webflow migration cost",
+    ],
     openGraph: {
-        title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
-        description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed with 6 weeks notice. The real story of leaving Webflow.",
+        title: "Leaving Webflow in 2026: A Practical Decision Framework",
+        description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/leaving-webflow-2026")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
-        description: "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow.",
+        title: "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+        description: "A current guide to Webflow costs, limits, exports, performance, SEO risk, and migration planning.",
     },
 };
 
@@ -46,55 +65,105 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#article",
-            "headline": "Should You Leave Webflow in 2026? Real Migration Story After Repeated Outages",
-            "description": "Bandwidth cut 75%. Bills hit $170 overnight. Carts broke. Memberships killed. The real story of leaving Webflow and what comes next.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "headline": "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+            "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
+            "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-04-15T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                "url": "https://www.pandacodegen.com/about",
+                "sameAs": [
+                    "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                    "https://github.com/hassan-pandagen",
+                ],
             },
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.pandacodegen.com/logo.png",
+                    "width": 655,
+                    "height": 113,
+                },
             },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026" },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
+            },
             "articleSection": "Webflow",
-            "wordCount": 2800,
-            "timeRequired": "PT11M",
             "inLanguage": "en-US",
-            "keywords": ["leaving webflow 2026", "webflow too expensive", "webflow alternative", "migrate from webflow", "webflow problems 2026", "webflow bandwidth limit"],
+            "keywords": [
+                "leaving webflow 2026",
+                "webflow too expensive 2026",
+                "webflow alternative custom code",
+                "migrate from webflow",
+                "webflow bandwidth limit",
+                "webflow code export limitations",
+            ],
             "speakable": {
                 "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"],
             },
             "about": [
-                { "@type": "Thing", "name": "Webflow", "description": "A visual website builder and CMS platform used by designers and agencies worldwide" },
-                { "@type": "Thing", "name": "Website Migration", "description": "The process of moving a website from one platform or technology stack to another" },
-                { "@type": "Thing", "name": "Web Performance Optimization", "description": "Improving website speed, Core Web Vitals, and Google PageSpeed scores to improve rankings and conversions" },
-                { "@type": "Thing", "name": "E-Commerce Development", "description": "Building online stores that process transactions, manage inventory, and convert visitors into buyers" }
+                { "@type": "Thing", "name": "Webflow" },
+                { "@type": "Thing", "name": "Website Migration" },
+                { "@type": "Thing", "name": "Search Engine Optimization" },
+                { "@type": "Thing", "name": "Core Web Vitals" },
             ],
             "citation": [
-                { "@type": "CreativeWork", "name": "BRIX Templates: Webflow Bandwidth Limit Guide", "url": "https://brixtemplates.com/blog/how-to-optimize-webflow-bandwidth-usage-full-guide-to-avoid-overages" },
-                { "@type": "CreativeWork", "name": "BCMS: Is Webflow Too Expensive in 2026?", "url": "https://thebcms.com/blog/is-webflow-too-expensive" },
-                { "@type": "CreativeWork", "name": "Hacker News: WTF Is Wrong with Webflow", "url": "https://news.ycombinator.com/item?id=41005904" },
-                { "@type": "CreativeWork", "name": "Webflow Updates: Deprecating Logic and User Accounts", "url": "https://webflow.com/updates/deprecating-logic-and-user-accounts" },
-                { "@type": "CreativeWork", "name": "UltimateWB: Webflow's Breaking Point", "url": "https://www.ultimatewb.com/blog/7182/webflows-breaking-point-downtime-bugs-and-a-community-fed-up/" },
-                { "@type": "CreativeWork", "name": "Webflow Forum: The High Cost of Webflow", "url": "https://discourse.webflow.com/t/the-high-cost-of-webflow-is-it-time-to-find-a-more-affordable-alternative/232093" },
-                { "@type": "CreativeWork", "name": "Webflow Status Page: Official Incident History", "url": "https://status.webflow.com/history" },
-                { "@type": "CreativeWork", "name": "IsDown: Webflow Uptime Monitoring and Outage History", "url": "https://isdown.app/status/webflow" },
-                { "@type": "CreativeWork", "name": "Medium: Webflow 31-Hour Outage Business Lessons", "url": "https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" },
-                { "@type": "CreativeWork", "name": "Hacker News: Webflow Down for >31 Hours Thread", "url": "https://news.ycombinator.com/item?id=44728554" }
-            ]
+                {
+                    "@type": "CreativeWork",
+                    "name": "Updated pricing and simplified plans for May 2026",
+                    "url": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Updates to Webflow Site and Workspace plans for July 2024",
+                    "url": "https://help.webflow.com/hc/en-us/articles/33961218328595-Updates-to-our-Site-Workspace-plans-for-July-2024",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Webflow code export documentation",
+                    "url": "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Deprecating Logic and User Accounts",
+                    "url": "https://webflow.com/updates/deprecating-logic-and-user-accounts",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Webflow incident history",
+                    "url": "https://status.webflow.com/history",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Central site move guidance",
+                    "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Central page experience guidance",
+                    "url": "https://developers.google.com/search/docs/appearance/page-experience",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Central traffic-drop diagnostic guidance",
+                    "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Vercel pricing",
+                    "url": "https://vercel.com/pricing",
+                },
+            ],
         },
         {
             "@type": "BreadcrumbList",
@@ -102,21 +171,21 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Leaving Webflow in 2026", "item": "https://www.pandacodegen.com/blog/leaving-webflow-2026" }
-            ]
+                { "@type": "ListItem", "position": 3, "name": "Leaving Webflow in 2026", "item": "https://www.pandacodegen.com/blog/leaving-webflow-2026" },
+            ],
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage",
             "url": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
-            "name": "Why We Left Webflow in 2026 (Cost, Timeline, SEO Results)",
-            "description": "Bandwidth cut 75%. Bills hit $170 overnight. Cart buttons disappeared on live sites. Memberships killed. The real story of leaving Webflow and what we built instead.",
+            "name": "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+            "description": "A current 2026 framework for Webflow cost, limits, performance, exports, and SEO-safe migration planning.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-06-11T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
         },
         {
             "@type": "Organization",
@@ -124,12 +193,20 @@ const articleSchema = {
             "name": "PandaCodeGen",
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow, expensive platforms. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.pandacodegen.com/logo.png",
+                "width": 655,
+                "height": 113,
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "info@pandacodegen.com",
+            },
+            "description": "PandaCodeGen plans and builds documented website migrations, custom Next.js sites, and commerce experiences.",
             "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            "foundingDate": "2026-02",
         },
         {
             "@type": "FAQPage",
@@ -137,21 +214,43 @@ const articleSchema = {
             "mainEntity": postFAQs.map(faq => ({
                 "@type": "Question",
                 "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+                "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+            })),
+        },
+    ],
 };
+
+const decisionSignals = [
+    {
+        icon: Gauge,
+        title: "Performance",
+        text: "Measure field data and template-level bottlenecks before blaming the platform.",
+    },
+    {
+        icon: CircleDollarSign,
+        title: "Total cost",
+        text: "Compare plans, seats, add-ons, apps, maintenance, and the replacement stack.",
+    },
+    {
+        icon: FileCode2,
+        title: "Product logic",
+        text: "Map CMS, forms, search, accounts, checkout, APIs, and editorial workflows.",
+    },
+    {
+        icon: ShieldCheck,
+        title: "Control",
+        text: "Decide who must control the repository, hosting, data, access, and release process.",
+    },
+];
 
 export default function LeavingWebflow2026Page() {
     return (
         <>
             <Header />
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
+                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-6 py-9 md:px-14 md:py-12">
                     <script
                         type="application/ld+json"
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -161,7 +260,7 @@ export default function LeavingWebflow2026Page() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Leaving Webflow in 2026", href: "/blog/leaving-webflow-2026" }
+                            { label: "Leaving Webflow in 2026", href: "/blog/leaving-webflow-2026" },
                         ]}
                     />
 
@@ -170,454 +269,445 @@ export default function LeavingWebflow2026Page() {
                         Back to Blog
                     </Link>
 
-                    <div className="mb-10">
+                    <header className="mb-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
-                            Webflow · Migration
+                            Webflow / Migration strategy
                         </div>
 
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Leaving{" "}
-                            <span className="font-serif italic text-cognac">Webflow</span>{" "}
-                            in 2026: What Actually Happened After
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-[1.08] tracking-tight">
+                            Leaving <span className="font-serif italic text-cognac">Webflow</span> in 2026: stay, optimize, or migrate?
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The bandwidth got cut 75%. The bill jumped to $170 overnight with no warning. The cart button disappeared on a live store during peak hours. And then Webflow killed memberships with six weeks notice. This is the real story of what pushed businesses over the edge, what the migration looked like, and what happened after.
+                            Webflow changed its plan structure in 2026, while many teams are also reviewing bandwidth, CMS scale, product logic, and ownership. None of those facts automatically means you should leave. This guide shows how to make the decision with current vendor terms, measured constraints, and a controlled migration plan.
                         </p>
 
                         <BlogAuthor
-                            date="Apr 6, 2026"
-                            readTime="11 min read"
-                            bio="Hassan builds custom-coded websites for businesses that have outgrown their platforms. Every site scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host."
+                            date="Updated Jul 24, 2026"
+                            readTime="17 min read"
+                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                    </div>
+                    </header>
 
-                    <div className="mb-12">
-                        <FeatureVisual />
-                    </div>
+                    <section className="mb-12 rounded-2xl border border-stone-200 bg-stone-950 p-5 text-white md:p-8" aria-label="Four controls for deciding whether to leave Webflow">
+                        <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                            <div>
+                                <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">Migration decision controls</p>
+                                <h2 className="mt-2 text-2xl font-bold md:text-3xl">Do not migrate from one frustration.</h2>
+                            </div>
+                            <p className="max-w-xs text-sm leading-relaxed text-stone-300">Build the case from four connected constraints.</p>
+                        </div>
+                        <div className="grid gap-3 sm:grid-cols-2">
+                            {decisionSignals.map(({ icon: Icon, title, text }, index) => (
+                                <div key={title} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+                                    <div className="mb-3 flex items-center justify-between">
+                                        <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cognac text-white">
+                                            <Icon className="h-5 w-5" aria-hidden="true" />
+                                        </span>
+                                        <span className="font-serif text-3xl italic text-white/25">0{index + 1}</span>
+                                    </div>
+                                    <h3 className="font-bold text-white">{title}</h3>
+                                    <p className="mt-1 text-sm leading-relaxed text-stone-300">{text}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <p className="font-semibold text-charcoal mb-3">What you will learn in this post:</p>
-                        <ul className="space-y-2 text-stone-700">
-                            <li>The exact Webflow pricing changes that blindsided thousands of businesses in 2025 and 2026</li>
-                            <li>Why the cart and checkout keep breaking on Webflow stores</li>
-                            <li>Which Webflow features were killed without warning and what it cost users to recover</li>
-                            <li>What a real 50-page migration to Next.js looked like: timeline, process, and results</li>
-                            <li>The before and after numbers: PageSpeed, load time, and monthly cost</li>
-                        </ul>
+                    <div className="rounded-xl border border-stone-200 bg-stone-50 p-6 mb-10" data-speakable="true">
+                        <p className="font-semibold text-charcoal mb-3">The short answer</p>
+                        <p className="text-stone-700 leading-relaxed">
+                            Stay on Webflow if the visual editor, the plan you are on and the features it supports will still cover what you need for the next two or three years. Fix things first if the problem is one template, one heavy asset, one script or one workflow. Start thinking about leaving when several documented problems stack up at once: the bill keeps climbing, you cannot export what you need, it will not run the application logic you want, you have governance rules it cannot meet, or it is still slow after you have properly measured and optimised it.
+                        </p>
                     </div>
-
-                    <p className="text-stone-700 leading-relaxed mb-6">You should leave Webflow in 2026 if your site has experienced outages, your monthly Webflow bill exceeds $150, or your Google rankings are stuck. Webflow has multiple documented outages on record in 2025 and 2026, including a widely reported 31-hour incident. Migrating to a custom Next.js site gives you zero-downtime hosting on Vercel, $0 monthly fees, and full code ownership.</p>
 
                     <div className="space-y-8">
+                        <BlogHeader>What Actually Changed in Webflow Pricing and Limits</BlogHeader>
 
-                    {/* Real Buyer Voices — verified Reddit threads */}
-                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Webflow Users Are Saying Right Now</p>
-                        <div className="space-y-4">
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;I have been using Webflow for years and NEVER have been able to understand the pricing models nor fully communicate to my clients which plan they needed and why. It is so convoluted and counterintuitive but it seems the confusion is part of the business model here.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/proteanradish</strong> · r/webflow · Mar 8, 2026 · 16 upvotes</span>
-                                    <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Webflow should credit us downtime.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/Jambajamba90</strong> (Webflow Community MVP) · r/webflow · Apr 13, 2026 · 15 upvotes</span>
-                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Really screwing up our development schedule. Hired people cannot continue website development because of these issues events.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/eweber911</strong> · r/webflow · Apr 13, 2026 · 6 upvotes</span>
-                                    <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <BlogText>
+                            Two plan updates matter when evaluating Webflow in 2026. First, Webflow&apos;s official July 2024 plan notice changed bandwidth limits for new purchases and certain billable plan changes. Basic moved from 50 GB to 10 GB, CMS from 200 GB to 50 GB, and Business from 400 GB to 100 GB. Webflow also introduced bandwidth and CMS-item add-ons for eligible plans. The same notice explains that unchanged legacy plans were not all moved immediately, so a blanket statement that every customer lost 75 percent of bandwidth on the same day would be inaccurate. Read the <a href="https://help.webflow.com/hc/en-us/articles/33961218328595-Updates-to-our-Site-Workspace-plans-for-July-2024" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">official July 2024 plan update</a> for the transition rules.
+                        </BlogText>
 
-                        <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">
-                                Your Webflow plan and add-ons bill keeps climbing. Your revenue does not. PandaCodeGen migrates Webflow CMS content to Sanity, recreates designs in Next.js, and preserves 100% of SEO equity through 301 redirect mapping, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund.
+                        <BlogText>
+                            Second, Webflow simplified its Site plans beginning May 13, 2026. CMS and Business were combined into a Premium plan. Webflow&apos;s current help documentation lists Premium at $25 per month when billed yearly or $39 when billed monthly, with 20,000 CMS items. Existing Business sites moving to Premium receive 50 GB of included bandwidth, and eligible sites can add more. Transition dates depend on the account, workspace type, renewal, and whether a billable change occurs. Your own Webflow billing screen is therefore the source of truth for the plan and effective date that apply to your site. See Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">May 2026 pricing FAQ</a> and <a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">current pricing page</a> before making a budget decision.
+                        </BlogText>
+
+                        <div className="my-6 rounded-xl border-l-4 border-cognac bg-stone-50 p-5">
+                            <p className="text-xs font-bold uppercase tracking-wide text-cognac mb-2">Important distinction</p>
+                            <p className="text-stone-700 leading-relaxed">
+                                A Site plan and a Workspace plan solve different problems and are billed separately. A total-cost review should include the hosted site, workspace access, paid seats, localization, analytics, optimization, bandwidth, apps, and any external systems. Comparing only one headline plan price will produce a weak business case.
                             </p>
                         </div>
 
-                        <BlogHeader>The Moment Webflow Stopped Feeling Like a Good Deal</BlogHeader>
+                        <BlogHeader>Feature Deprecations Are a Planning Signal, Not a Panic Button</BlogHeader>
 
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">In July 2024, Webflow cut bandwidth limits by 75 to 80% across all plans without a price reduction. Sites that exceeded the new limits were auto-upgraded to a higher plan with no warning. That is when most businesses we work with started seriously reconsidering the platform.</p>
+                        <BlogText>
+                            Webflow announced that Logic would sunset on June 27, 2025 and User Accounts on January 29, 2026. The company said it was moving those needs to specialist partners such as Zapier, Make, Outseta, and Memberstack. These dates are documented in Webflow&apos;s <a href="https://webflow.com/updates/deprecating-logic-and-user-accounts" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">official deprecation notice</a>. User Accounts functionality and related APIs were disabled on January 29, 2026.
+                        </BlogText>
+
+                        <BlogText>
+                            That change is material if your site depended on native authentication, access groups, gated content, or Logic workflows. It does not prove that Webflow is unsuitable for a brochure site, editorial site, or marketing team that never used those products. The correct question is narrower: which business capabilities are native today, which now depend on an app, and which should become separately owned services?
+                        </BlogText>
+
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            <div className="rounded-xl border border-stone-200 bg-white p-5">
+                                <h3 className="font-bold text-charcoal">Stay and integrate</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">Keep the Webflow front end and connect a supported app when the extra vendor, cost, consent flow, and operational dependency are acceptable.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 bg-white p-5">
+                                <h3 className="font-bold text-charcoal">Move the application layer</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">Use a custom architecture when authentication, permissions, transactions, real-time data, or API behavior has become the product rather than a small website add-on.</p>
+                            </div>
                         </div>
 
+                        <BlogHeader>Treat Ecommerce and Membership as Separate Architecture Decisions</BlogHeader>
+
                         <BlogText>
-                            There was a time when Webflow made sense. Visual editor, clean code output, no plugins to maintain. For a certain type of business at a certain size, it was a genuinely good choice. That time has passed for most of the businesses we talk to. See the full <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Webflow migration cost breakdown</Link> before deciding.
+                            An Ecommerce site should not leave Webflow because somebody encountered a cart problem on a different store. Reproduce the issue on the affected site and document the browser, device, product, variant, promotion, payment method, consent state, and network request. Confirm whether the failure comes from the Webflow feature, custom code, an app, analytics, a payment configuration, or a release. A forum report can suggest a test case, but it is not evidence that every Webflow checkout has the same defect.
                         </BlogText>
 
                         <BlogText>
-                            The shift did not happen overnight. It happened in layers. A price increase here. A bandwidth cut there. A feature deprecated with six weeks notice. A bill that doubled without a single email warning. And then one day, a business owner opens their billing portal, sees a number they did not agree to, and realizes the platform they built their business on is no longer working for them.
+                            Then map the complete commerce operation, not only the storefront. Include products and variants, inventory, pricing, promotions, tax, shipping, payment methods, refunds, order notifications, customer service, analytics, feeds, subscriptions, and accounting. Webflow Ecommerce may remain appropriate for a straightforward catalog that fits its current plan. A headless commerce service or custom application becomes relevant when the business needs logic or integrations that the existing system cannot support cleanly. The destination should be chosen from those requirements, not from a belief that custom code automatically removes transaction fees or operational costs.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>In July 2024, Webflow restructured its pricing and cut bandwidth limits by 75 to 80% across all plans without a corresponding price reduction.</BlogHighlight> The Basic plan went from 50 GB to 10 GB. The CMS plan went from 200 GB to 50 GB. The Business plan went from 400 GB to 100 GB. If your site grew naturally over time and crossed those limits two months in a row, Webflow auto-upgraded your plan. No warning, no refund, no conversation.
+                            Membership sites need a similar map because Webflow User Accounts has already been disabled. Record how users sign up, verify email, reset passwords, manage consent, receive roles, access content, update billing, cancel, request data, and contact support. Confirm where identities and subscriptions live today. If Stripe or another billing system sits outside Webflow, do not assume an account migration automatically changes or stops those subscriptions. Authentication, authorization, billing, and the visible member experience are related systems with different data and failure modes.
                         </BlogText>
 
-                        <BlogText>
-                            One user documented on Hacker News going from a $468/year plan to being quoted $15,000/year because of bandwidth overages. Another reported their monthly bill jumping from $25 to $170 overnight when Webflow silently upgraded them from the CMS plan to the Business plan. These are not edge cases. They are the pattern.
-                        </BlogText>
-
-                        <BlogHeader>The Subscription Stack That Got Out of Control</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A mid-sized Webflow business site typically costs $948 to $2,028 per year once you add hosting, form submissions, bandwidth overages, and third-party integrations. Most owners discover this number only after it auto-bills. The same site on custom Next.js costs $12 to $372 per year on Vercel.</p>
+                        <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-5">
+                            <p className="font-bold text-charcoal">Commerce and account exit checklist</p>
+                            <ul className="mt-3 grid gap-2 text-sm leading-relaxed text-stone-700 sm:grid-cols-2">
+                                <li>Customer and member data owner</li>
+                                <li>Passwords and account recovery path</li>
+                                <li>Active subscriptions and billing events</li>
+                                <li>Orders, refunds, taxes, and fulfillment</li>
+                                <li>Consent records and privacy requests</li>
+                                <li>Email, CRM, support, and analytics events</li>
+                                <li>Parallel testing and customer communication</li>
+                                <li>Rollback and access after cutover</li>
+                            </ul>
                         </div>
 
-                        <BlogText>
-                            The base plan price is not the real cost of running a Webflow site in 2026. The real cost is the stack you build on top of it, because Webflow has been systematically separating features that used to be included into paid add-ons.
-                        </BlogText>
+                        <BlogHeader>How to Decide Whether Webflow Is Too Expensive</BlogHeader>
 
                         <BlogText>
-                            Here is what a mid-sized business running a Webflow site might be paying today, before they realize it:
+                            "Webflow is too expensive" is not a useful conclusion until the comparison includes equivalent capabilities. A $39 Site plan and a custom application with a CMS, search, authentication, transactional email, analytics, backups, monitoring, and developer support are not substitutes at the same scope. Build a twelve-month and thirty-six-month model using the actual invoices and expected roadmap.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">Scroll horizontally to compare</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
+                            <table className="w-full min-w-[620px] border-collapse text-left responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
-                                        <th className="py-3 pr-4 text-charcoal font-bold">Item</th>
-                                        <th className="py-3 pl-4 text-charcoal font-bold">Monthly Cost</th>
+                                        <th className="py-3 pr-4 font-bold text-charcoal">Cost input</th>
+                                        <th className="py-3 px-4 font-bold text-charcoal">Current Webflow stack</th>
+                                        <th className="py-3 pl-4 font-bold text-charcoal">Replacement stack</th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-stone-700">
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Business plan (after forced upgrade)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Workspace plan (pro)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$60/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Localization (2 languages, Advanced tier)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$58/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Editor seats for team (3 extra)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$54/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Third-party membership tool (Memberstack, replacing deprecated User Accounts)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$39/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">Zapier (replacing deprecated Logic automations)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$49/month</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4">E-commerce 2% transaction fee ($20K/month revenue)</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4">$400/month</td>
-                                    </tr>
-                                    <tr className="font-bold border-t-2 border-stone-300">
-                                        <td className="py-3 pr-4">Total</td>
-                                        <td data-label="Monthly Cost" className="py-3 pl-4 text-cognac">$699/month</td>
-                                    </tr>
+                                    {[
+                                        ["Platform", "Site plan, Workspace, seats", "Commercial hosting and deployment"],
+                                        ["Content", "CMS plan and item limits", "CMS, storage, image delivery"],
+                                        ["Capabilities", "Apps, Localize, Analyze, Optimize", "Auth, search, email, analytics, integrations"],
+                                        ["Operations", "Webflow support and agency help", "Monitoring, backups, maintenance, support"],
+                                        ["Change cost", "Design and implementation time", "Discovery, rebuild, QA, cutover, training"],
+                                    ].map(([label, current, replacement]) => (
+                                        <tr key={label} className="border-b border-stone-200 last:border-b-0">
+                                            <td className="py-3 pr-4 font-medium">{label}</td>
+                                            <td data-label="Current Webflow stack" className="py-3 px-4">{current}</td>
+                                            <td data-label="Replacement stack" className="py-3 pl-4">{replacement}</td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            That is $8,388 per year for a website that you do not own, on a platform that can change its pricing, deprecate your features, or go down for 31 hours without notice. The Pro plan alone jumped 71% in 2024, from $35 to $60 per month, adding $300 per year per workspace. <BlogHighlight>The Webflow community described it as "a predatory corporate money-grab" and "the most overrated and overpriced ecosystem in modern web development."</BlogHighlight>
+                            Include the migration as a one-time investment, then model recurring costs under realistic traffic and team assumptions. Do not write "unlimited" for a target service unless its current terms actually say that. Infrastructure providers meter bandwidth, requests, compute, storage, seats, or support in different ways. For example, Vercel&apos;s <a href="https://vercel.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">current pricing page</a> lists Pro from $20 per month with included usage credit and usage-based charges. Its free Hobby plan is restricted to personal, non-commercial use under the <a href="https://vercel.com/legal/terms" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">current terms</a>. A revenue-generating client site should therefore be budgeted on a commercially permitted plan, not presented as free hosting.
                         </BlogText>
 
                         <BlogText>
-                            The frustration is not just the cost. It is that the cost keeps changing. You budget for one number, you get charged another. You plan around a feature, Webflow kills it. You build a workflow, Webflow deprecates the tool. Every few months, something you relied on disappears or gets more expensive.
+                            A migration may reduce or increase total cost depending on traffic, integrations, editorial needs, reliability requirements, and ongoing engineering. The defensible decision is the one supported by a written model, not a universal claim that custom code is always cheaper.
                         </BlogText>
 
-                        <BlogHeader>The Outages Nobody Warned Us About</BlogHeader>
+                        <BlogHeader>What Webflow Code Export Does and Does Not Give You</BlogHeader>
 
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow has multiple documented outages on record, including a widely reported 31-hour outage in July 2025, plus smaller incidents tracked on independent uptime monitors like IsDown and on Webflow&apos;s own status history. Custom Next.js on Vercel runs on a global edge network with 300+ locations and does not carry that incident history.</p>
+                        <BlogText>
+                            Webflow supports code export on paid Workspace plans. The export includes HTML, CSS, JavaScript, and assets. That is useful, but it is not a complete portable copy of every Webflow feature. According to Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">official code export documentation</a>, CMS, User Accounts, Ecommerce databases and functionality, code components, localized content, password protection, form processing, reCAPTCHA, and site search are not included or do not function as they did on Webflow hosting.
+                        </BlogText>
+
+                        <BlogText>
+                            CMS and Ecommerce records can be exported separately as CSV files, but content migration still requires reconciliation. Reference fields, rich text, asset URLs, locales, slugs, drafts, redirects, and relationships need to be checked. Webflow also warns that exported CSV files can point to assets hosted on the original site, and those links can break if the old site is deleted. A migration plan should download or re-home required assets instead of assuming a CSV alone is a durable backup.
+                        </BlogText>
+
+                        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+                            <h3 className="font-bold text-charcoal">Inventory these before choosing the destination</h3>
+                            <ul className="mt-4 grid gap-3 text-stone-700 sm:grid-cols-2">
+                                {[
+                                    "Static pages and CMS collections",
+                                    "Slugs, redirects, canonicals, and metadata",
+                                    "Forms, spam controls, and notification routes",
+                                    "Search, localization, and gated content",
+                                    "Ecommerce catalog, checkout, taxes, and subscriptions",
+                                    "Custom code, scripts, analytics, consent, and CRM flows",
+                                    "Editor roles, approvals, staging, and publishing",
+                                    "Domains, DNS, repositories, data, and account ownership",
+                                ].map(item => (
+                                    <li key={item} className="flex items-start gap-2 text-sm leading-relaxed">
+                                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cognac" aria-hidden="true" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <BlogHeader>Do Not Diagnose a Platform From One PageSpeed Score</BlogHeader>
+
+                        <BlogText>
+                            Webflow does not impose one universal PageSpeed ceiling, and Next.js does not guarantee a 90-plus score. Results vary by page template, device, network, images, fonts, third-party scripts, consent configuration, client-side code, and caching. A slow page can be caused by implementation choices that are fixable without a migration. A custom rebuild can also be slow if it repeats the same choices.
+                        </BlogText>
+
+                        <BlogText>
+                            Start with real-user Core Web Vitals from Search Console or another field-data source. Then reproduce the issue with lab tests on agreed representative pages and devices. Separate server response, Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift, JavaScript execution, image weight, and third-party scripts. Test the current site after obvious fixes before pricing a replacement.
+                        </BlogText>
+
+                        <BlogText>
+                            Google says Core Web Vitals are used by its ranking systems, but good scores do not guarantee top rankings. Relevance, content quality, links, intent, and other signals still matter. The practical goal is a faster and more stable user experience, with any Lighthouse or PageSpeed target defined in the signed scope by page, device, test environment, and number of runs. Read Google&apos;s <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">page experience guidance</a> before treating a score as a ranking forecast.
+                        </BlogText>
+
+                        <div className="my-6 rounded-xl border border-orange-200 bg-orange-50 p-5">
+                            <p className="font-bold text-charcoal">Keep Google update timing in the diagnostic</p>
+                            <p className="mt-2 text-sm leading-relaxed text-stone-700">
+                                If visibility changes near a confirmed Google update, do not automatically blame Webflow or speed. Compare pages, queries, countries, devices, indexing, crawl errors, seasonality, competitors, and release history. Monitoring what Google officially announces helps you avoid an expensive migration aimed at the wrong cause. Google&apos;s <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener noreferrer" className="font-medium text-cognac underline underline-offset-2">traffic-drop diagnostic</a> provides the primary workflow. Our <Link href="/blog/google-march-2026-update" className="font-medium text-cognac underline underline-offset-2">Google update guide</Link> applies that approach to the March incident.
+                            </p>
+                        </div>
+
+                        <BlogHeader>Run an Evidence Sprint Before Approving a Rebuild</BlogHeader>
+
+                        <BlogText>
+                            A short evidence sprint can prevent a team from spending migration money on the wrong problem. Give one owner access to billing, Webflow usage, Search Console, analytics, consent records, the status history, and the product roadmap. The deliverable is a decision memo with dated evidence, assumptions, and unresolved questions. It should be possible for a finance lead, marketer, editor, and engineer to review the same facts without relying on a sales presentation.
+                        </BlogText>
+
+                        <div className="my-6 space-y-4">
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Day 1 to 2</p>
+                                <h3 className="mt-1 font-bold text-charcoal">Reconcile cost and contract terms</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">Collect twelve months of Webflow and app invoices. Record the Site plan, Workspace, paid seats, add-ons, bandwidth, renewals, legacy entitlements, and any negotiated terms. Forecast the next renewal and expected usage. Compare that with an equivalent replacement budget that includes commercial hosting, CMS, integrations, monitoring, and maintenance.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Day 3 to 4</p>
+                                <h3 className="mt-1 font-bold text-charcoal">Map people and workflows</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">Interview the people who edit, approve, publish, analyze, and support the site. Document common changes, urgent releases, staging, localization, forms, CRM routing, permissions, and training. A cheaper infrastructure choice can still be more expensive if every routine content change starts requiring a developer.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Day 5 to 7</p>
+                                <h3 className="mt-1 font-bold text-charcoal">Measure content and performance</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">Crawl the public site and reconcile it with CMS exports, sitemaps, analytics, and Search Console. Test representative templates on mobile and desktop. Identify heavy assets, scripts, long tasks, layout shifts, slow responses, and third-party dependencies. Separate fixes that Webflow can support from requirements that need a different architecture.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Day 8 to 10</p>
+                                <h3 className="mt-1 font-bold text-charcoal">Test the decision against the roadmap</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-stone-600">List the next two years of planned content, campaigns, markets, data, integrations, account features, compliance, and traffic. Score stay, optimize, hybrid, and rebuild options against those requirements. Document the switching cost and risks. The preferred option should remain sensible when one assumption changes.</p>
+                            </div>
                         </div>
 
                         <BlogText>
-                            The real breaking point was uptime. Independent uptime monitoring for Webflow, alongside <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Webflow&apos;s own status history</a>, shows a recurring pattern of incidents rather than an isolated bad week: some minor and resolved within hours, some larger and disruptive to live sites and dashboards. We are not going to pretend we have an exact, audited count of every incident in a given quarter, since third-party monitors and Webflow&apos;s own status page do not always agree on what counts as an incident. What we can say with confidence, because we lived it and because it is publicly documented, is the pattern below.
+                            The result may be a migration plan, but "stay and fix these five issues" is also a successful outcome. Discovery should open the right door for the customer rather than force every Webflow review into a rebuild. If the evidence is incomplete, state what must be measured next and avoid presenting an estimate as a receipt.
+                        </BlogText>
+
+                        <BlogHeader>Use Outage History as an Operational Input</BlogHeader>
+
+                        <BlogText>
+                            Webflow publishes a <a href="https://status.webflow.com/history" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">status and incident history</a>. It records incidents affecting hosted sites, publishing, login, and other services. That history is useful during a risk review, but an incident count alone does not prove that every site should migrate or that another provider will never fail.
                         </BlogText>
 
                         <BlogText>
-                            The clearest, most citable example is the outage in July 2025. Webflow had a <a href="https://medium.com/@slimx/web-flow-outage-for-over-31-hours-a-lesson-many-business-owners-learnt-the-hardway-476ae9168a9a" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">reported 31-hour outage</a>. Entire work week lost for e-commerce stores that depended on it. The <a href="https://news.ycombinator.com/item?id=44728554" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Hacker News thread</a> still reads like a eulogy for small businesses that trusted the platform. We read it while it was happening. We did not leave the day of that outage. We left after watching the pattern repeat in smaller incidents over the months that followed, and deciding we were not willing to keep betting client revenue on someone else&apos;s uptime.
+                            Define the business requirement first: acceptable downtime, recovery target, support response, monitoring, deployment rollback, geographic needs, and any contractual service level. Then compare the exact Webflow plan with the exact target hosting plan. A global edge network is not a zero-downtime guarantee. Multi-provider failover also adds cost and operational complexity. Reliability belongs in architecture and contract decisions, not marketing absolutes.
                         </BlogText>
 
-                        <BlogQuote>
-                            Every hour a Webflow store is down, competitors keep selling. One e-commerce client we audited before migration calculated outages cost them roughly $4,800 over twelve months. More than the entire migration.
-                        </BlogQuote>
+                        <BlogHeader>A Stay, Optimize, or Leave Webflow Framework</BlogHeader>
 
-                        <BlogHeader>When the Cart Stopped Working and Webflow Could Not Fix It</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Webflow e-commerce has a 50-variant cap per product, a 2% transaction fee on every sale, no native subscription billing, and a checkout button that disappears on live sites — a known bug with no native fix. Most serious e-commerce stores outgrow these limits before they hit $20K/month.</p>
+                        <div className="space-y-4">
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Stay</p>
+                                <h3 className="mt-1 text-xl font-bold text-charcoal">Webflow still matches the operating model</h3>
+                                <p className="mt-2 leading-relaxed text-stone-700">Stay when non-technical teams need visual control, the current Site and Workspace plans fit the budget, CMS scale is comfortable, supported integrations cover the roadmap, and measured performance is acceptable. Migration cost and disruption would not produce a clear business benefit.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Optimize</p>
+                                <h3 className="mt-1 text-xl font-bold text-charcoal">The constraint is implementation-specific</h3>
+                                <p className="mt-2 leading-relaxed text-stone-700">Optimize first when a few templates, oversized media, third-party scripts, animation choices, CMS structure, or publishing practices create most of the problem. Set a time-boxed remediation scope and measure the same pages before and after.</p>
+                            </div>
+                            <div className="rounded-xl border border-stone-200 p-5">
+                                <p className="text-xs font-bold uppercase tracking-wide text-cognac">Leave</p>
+                                <h3 className="mt-1 text-xl font-bold text-charcoal">Several structural constraints overlap</h3>
+                                <p className="mt-2 leading-relaxed text-stone-700">Consider leaving when product logic, data relationships, authentication, integrations, governance, portability, or total cost no longer fit the platform, and an optimization pass cannot resolve the gap. A documented roadmap should explain why the target architecture is worth the migration risk.</p>
+                            </div>
                         </div>
 
                         <BlogText>
-                            If you run an e-commerce store on Webflow, you have probably experienced this. You are in the Designer, everything looks correct. You publish. A customer visits the live site. The checkout button is gone. Or the add-to-cart does not respond on mobile. Or the checkout popup never appears.
+                            One signal is rarely enough. A low lab score may be fixable. A plan increase may still be cheaper than a rebuild. A feature gap may be solved by a well-supported app. The migration case becomes stronger when the same future requirements create cost, technical, operational, and ownership pressure at the same time.
                         </BlogText>
+
+                        <BlogHeader>Choose the Destination From Exit Criteria, Not Fashion</BlogHeader>
 
                         <BlogText>
-                            These are not isolated bugs. They are persistent, documented, recurring failures that appear across Webflow community forums with no permanent resolution. The checkout button disappearing on live sites is a known issue with multiple active threads and no native fix. The add-to-cart failing on mobile has been reported since 2023 and is still being reported in 2026. The e-commerce tool crashing when managing large product catalogs appears on Trustpilot reviews from as recently as March 2026.
+                            Leaving Webflow does not automatically mean Next.js, and choosing Next.js does not automatically mean Vercel or a particular CMS. A team may move to another managed visual platform, a traditional CMS, a headless CMS with a custom front end, or a commerce platform with a separate presentation layer. Start with exit criteria that explain what the new system must do better and what tradeoffs the team accepts.
                         </BlogText>
 
-                        <BlogList items={[
-                            "Checkout button appears in the Designer but disappears on the published live site",
-                            "Add-to-cart stops responding on mobile devices with no code change on your end",
-                            "Checkout popup fails to open on certain browsers or screen sizes",
-                            "Hard cap of 50 product variants per item, eliminating most apparel and accessories brands immediately",
-                            "2% transaction fee on every sale, on top of Stripe processing fees",
-                            "No native multi-currency support for international brands",
-                            "No bulk order management for high-volume stores",
-                            "No advanced discount logic: no volume pricing, no B2B tiers, no conditional rules",
-                            "No native subscription or recurring billing support"
-                        ]} />
-
-                        <BlogText>
-                            For a business doing real revenue, these are not inconveniences. A checkout button that disappears during peak hours is lost money. A mobile cart that does not work means you are invisible to the majority of your buyers. A 2% transaction fee on $20,000 a month is $400 out of your margin every single month, forever.
-                        </BlogText>
-
-                        <BlogText>
-                            Many businesses ended up running a{" "}
-                            <Link href="/blog/webflow-true-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Webflow frontend bolted to a Shopify backend
-                            </Link>{" "}
-                            just to get reliable checkout. Two platforms, two subscriptions, two sets of maintenance, double the points of failure. That is not a solution. That is a workaround for a platform that could not handle the job.
-                        </BlogText>
-
-                        <BlogHeader>The Features Webflow Killed Without Warning</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">In 2025-2026, Webflow sunset Logic (automation, June 27, 2025) and deprecated User Accounts (membership, January 29, 2026) — two native features businesses had built workflows around. Replacements cost more per month than the Webflow hosting itself. No migration tooling was provided for either.</p>
-                        </div>
-
-                        <BlogText>
-                            The pricing changes were frustrating. The crashes were infuriating. But for many businesses, the tipping point was not the money. It was trust. Specifically, watching Webflow kill features that real businesses had built their operations around.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Logic, Webflow's native automation tool, was sunset on June 27, 2025.</strong> Businesses that had built lead routing, form notifications, CRM sync, and content workflows inside Logic had to rebuild everything from scratch using paid third-party tools like Zapier or Make. No migration tooling was provided. The notice period was short.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>User Accounts, Webflow's native membership system, was deprecated on January 29, 2026.</strong> Every site that used gated content, login-based access, protected pages, or member-only sections had to rebuild. The suggested replacements, Memberstack, Outseta, and similar tools, often cost more per month than the Webflow hosting itself. The community response was immediate: "sudden and upsetting," "requiring migration to a third-party solution within a month and a half is a huge burden."
-                        </BlogText>
-
-                        <BlogQuote>
-                            For creators who chose Webflow specifically because of its built-in membership system, this news landed hard. It revealed that Webflow is explicitly deprioritizing independent creators in favor of enterprise clients.
-                        </BlogQuote>
-
-                        <BlogText>
-                            Then came the July 2025 outage. The platform went down for over 31 hours. Status updates were described by Hacker News commenters as "99% LLM slop." Businesses with live client sites had no recourse, no timeline, and no compensation. Community discussion about platform instability on Webflow's own forums and on Hacker News was widely shared in the weeks that followed.
-                        </BlogText>
-
-                        <BlogText>
-                            When your platform kills your membership system, your automation tool, and your uptime in the same calendar year, the question is no longer "should I leave?" The question is "how fast can I get out?"
-                        </BlogText>
-
-                        {/* Mid CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Ready to leave Webflow but not sure where to start?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute call. We will walk through your current Webflow setup, show you exactly what a migration looks like, and give you a real timeline and cost. No sales pitch, no obligation.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Book Free Migration Call <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
-                        </div>
-
-                        <BlogHeader>What a Real 50-Page Migration Actually Looked Like</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A 50-page Webflow migration takes 4 weeks: week 1 URL audit and redirect map, week 2 custom Next.js build, week 3 content transfer and QA across 6 screen sizes, week 4 301 redirect setup and zero-downtime DNS cutover. Your Webflow site stays live the entire time until the moment the new site goes live.</p>
-                        </div>
-
-                        <BlogText>
-                            We ran this exact process on our Obare Magazine rebuild (Wix to Next.js and Sanity, 7 days). The playbook travels to Webflow cleanly. Here is what a real migration looks like from the inside, with no glossing over the hard parts. For the full scope breakdown and hour-per-phase estimates specifically for 50 to 100 page Webflow sites, see our <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">Scale-tier pricing breakdown</Link>. The fixed-price scope and what every migration includes is on our <Link href="/services/webflow" className="text-cognac hover:underline">Webflow migration service page</Link>, with the full tier menu at <Link href="/pricing" className="text-cognac hover:underline">pricing</Link>.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Week 1: Audit and architecture.</strong> We map every URL on the Webflow site. Every blog post, every service page, every product page, every image. We document the current sitemap, the internal linking structure, and every backlink pointing to the domain. This becomes the redirect map. Nothing gets left behind.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Week 2: Build.</strong> We build the new site on Next.js using your existing design as the reference. No templates. Every component is custom-coded for your specific content structure. Forms, CTAs, navigation, footers, blog layouts, and product pages are all built from scratch and optimized for speed from day one. The result is a site with zero unused code, zero plugin dependencies, and zero third-party scripts adding weight.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Week 3: Content transfer and QA.</strong> We transfer all CMS content manually. Webflow&apos;s code export strips all dynamic content, so this step is done by hand. Every blog post, every team member, every product description. We then run the full QA checklist: mobile rendering across 6 screen sizes, form submissions, link integrity, image loading, and performance testing on both mobile and desktop.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Week 4: Redirects, DNS, and launch.</strong> Every old Webflow URL gets a 301 redirect to its new equivalent. Your domain stays the same. Your backlinks stay intact. Your Google rankings carry over. We handle the DNS cutover and monitor the new site for 72 hours post-launch. You stay on Webflow until the moment the new site goes live.
-                        </BlogText>
-
-                        <BlogText>
-                            The entire process is zero downtime. Your Webflow site keeps running while we build. Your visitors never see a maintenance page. The switch happens at the DNS level, invisibly, in under 60 seconds.
-                        </BlogText>
-
-                        <BlogHeader>The Numbers After Migration: Before vs After</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Post-migration results from real client sites: PageSpeed 45-62 → 90+, load time 3.2-4.5s → 0.6-0.8s, monthly hosting $150-$700 → $0, transaction fee 2% → 0%, CMS item limit removed, bandwidth limit removed, and Vercel's global edge network replacing Webflow's outage history.</p>
-                        </div>
-
-                        <BlogText>
-                            Here is what the data looks like when a real business completes a migration from a template-based platform to a custom Next.js site. These are not projections. These are numbers from sites we have built.
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">Scroll horizontally to compare</p>
                         <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
+                            <table className="w-full min-w-[620px] border-collapse text-left responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
-                                        <th className="py-3 pr-4 text-charcoal font-bold">Metric</th>
-                                        <th className="py-3 px-4 text-charcoal font-bold">Webflow</th>
-                                        <th className="py-3 pl-4 text-charcoal font-bold">Custom Next.js</th>
+                                        <th className="py-3 pr-4 font-bold text-charcoal">Requirement</th>
+                                        <th className="py-3 px-4 font-bold text-charcoal">Question to answer</th>
+                                        <th className="py-3 pl-4 font-bold text-charcoal">Evidence at acceptance</th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-stone-700">
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
-                                        <td data-label="Webflow" className="py-3 px-4">45 to 62</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">90+</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Page Load Time (Mobile)</td>
-                                        <td data-label="Webflow" className="py-3 px-4">3.2 to 4.5 seconds</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Monthly Hosting Cost</td>
-                                        <td data-label="Webflow" className="py-3 px-4">$150 to $700+</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">$0</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Transaction Fee</td>
-                                        <td data-label="Webflow" className="py-3 px-4">2% of every order</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0%</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">CMS Item Limit</td>
-                                        <td data-label="Webflow" className="py-3 px-4">2,000 to 10,000 (then pay more)</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Bandwidth Limit</td>
-                                        <td data-label="Webflow" className="py-3 px-4">10 to 100 GB/month</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Unlimited</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Features Deprecated</td>
-                                        <td data-label="Webflow" className="py-3 px-4">Memberships, Logic, others pending</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">You own the code. Nothing gets deprecated.</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 pr-4 font-medium">Downtime Risk</td>
-                                        <td data-label="Webflow" className="py-3 px-4">31+ hour outages, no compensation</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">Vercel global edge network, 300+ locations</td>
-                                    </tr>
+                                    {[
+                                        ["Editorial control", "Who publishes which changes?", "Role and workflow test"],
+                                        ["Portability", "Which code, data, and accounts transfer?", "Export and handover test"],
+                                        ["Performance", "Which pages, devices, and field metrics matter?", "Recorded test environment and results"],
+                                        ["Integrations", "Which events and data must remain correct?", "End-to-end workflow tests"],
+                                        ["Reliability", "What recovery and support are required?", "Monitoring and rollback exercise"],
+                                        ["Cost", "What is the equivalent 36-month total?", "Assumption-based cost model"],
+                                    ].map(([requirement, question, evidence]) => (
+                                        <tr key={requirement} className="border-b border-stone-200 last:border-b-0">
+                                            <td className="py-3 pr-4 font-medium">{requirement}</td>
+                                            <td data-label="Question" className="py-3 px-4">{question}</td>
+                                            <td data-label="Evidence" className="py-3 pl-4">{evidence}</td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>
 
                         <BlogText>
-                            The PageSpeed improvement alone changes what Google thinks of your site. The{" "}
-                            <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                March 2026 Google core update penalized 47% of slow sites
-                            </Link>. Only 48% of Webflow pages pass all three Core Web Vitals on mobile. After migration, every site we build passes all three from day one.
+                            If the primary requirement is visual autonomy for a small marketing team, another managed builder may be a better answer than custom code. If the site is becoming an application with controlled data, roles, APIs, transactions, and frequent product releases, a custom architecture may justify its engineering cost. If commerce operations already work well on a specialist platform, keeping that system and replacing only the front end may reduce migration risk. The decision is strongest when each requirement has a testable acceptance condition.
                         </BlogText>
+
+                        <BlogHeader>How to Migrate From Webflow Without Treating SEO as a Guarantee</BlogHeader>
 
                         <BlogText>
-                            The cost difference compounds fast. A business paying $300 per month on Webflow saves $3,600 in year one alone. A business paying $700 per month saves $8,400. The migration pays for itself in 30 to 90 days depending on where your bill currently sits.
+                            A platform migration can preserve most of the existing search foundation when it is planned carefully, but no agency can guarantee unchanged rankings. Google states that site moves can create temporary ranking fluctuations while pages are recrawled and reindexed. The goal is to control avoidable technical changes, not promise that search results will never move.
                         </BlogText>
 
-                        <BlogHeader>What You Actually Own When You Leave Webflow</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">When you migrate from Webflow to custom Next.js, you receive the full source code on day one. You can host it anywhere, hire any developer to maintain it, and change anything without platform permission. The code is an asset you own outright — not a monthly rental that can be repriced or deprecated.</p>
+                        <div className="my-6 space-y-3">
+                            {[
+                                ["1", "Baseline", "Export Search Console pages and queries, analytics landing pages, backlinks, conversions, indexed URLs, sitemaps, and current Core Web Vitals."],
+                                ["2", "Inventory", "Crawl the live site and reconcile static pages, CMS items, localized URLs, assets, canonicals, metadata, schema, internal links, forms, and integrations."],
+                                ["3", "Map", "Keep valuable URLs unchanged where practical. Map each changed URL to a relevant equivalent. Use an intentional 404 or 410 when no replacement exists instead of redirecting everything to the homepage."],
+                                ["4", "Build and stage", "Recreate required content and workflows, block staging from indexing, test representative devices, and compare rendered HTML and structured data."],
+                                ["5", "Cut over", "Deploy redirects before launch, switch DNS in a controlled window, retain rollback instructions, submit the sitemap, and inspect priority URLs."],
+                                ["6", "Monitor", "Track server errors, redirect chains, indexing, rankings, clicks, conversions, forms, analytics, and Core Web Vitals against the dated baseline."],
+                            ].map(([number, title, text]) => (
+                                <div key={number} className="grid grid-cols-[44px_1fr] gap-4 rounded-xl border border-stone-200 p-4">
+                                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-charcoal font-serif text-xl italic text-white">{number}</span>
+                                    <div>
+                                        <h3 className="font-bold text-charcoal">{title}</h3>
+                                        <p className="mt-1 text-sm leading-relaxed text-stone-600">{text}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
 
                         <BlogText>
-                            This is the part that most migration conversations miss. When you leave Webflow, you do not just get a faster site and a lower bill. You get ownership.
+                            Google&apos;s <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">site move guidance</a> recommends preparing a URL map, testing redirects, and keeping redirects for as long as possible, generally at least one year. Do not limit the map to the highest-traffic pages. Priority pages deserve extra testing, but every discovered URL still needs a documented disposition so users and crawlers do not hit accidental dead ends.
                         </BlogText>
 
                         <BlogText>
-                            On Webflow, you rent everything. The editor, the hosting, the CMS, the bandwidth. If Webflow raises prices again, you pay more. If they deprecate a feature, you rebuild. If they go down, your site goes down. You have no control over any of it because none of it is yours.
+                            A controlled cutover can reduce interruption because the Webflow site remains live while the replacement is tested. It cannot make DNS propagation, caches, third-party services, or launch defects disappear. The launch plan should name the change window, owner, test script, rollback trigger, monitoring period, and communication path.
+                        </BlogText>
+
+                        <BlogHeader>Timeline and Migration Cost Depend on the Inventory</BlogHeader>
+
+                        <BlogText>
+                            Page count alone does not define Webflow migration cost or duration. Ten application-like pages with account states, complex forms, localization, and integrations may take longer than fifty editorial pages using two repeatable templates. The estimate should be built from the URL inventory, content model, design system, interaction complexity, data volume, integrations, accessibility requirements, testing matrix, migration controls, and approval process.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>When we build you a custom Next.js site, you receive the full source code. You can host it anywhere. You can hire any developer to work on it. You can change anything without asking permission from a platform.</BlogHighlight> If Vercel changes their pricing tomorrow, you move the code to Cloudflare Pages or Netlify in an afternoon. Nothing breaks. Nothing is lost.
+                            A useful discovery output is not a single promise such as "four weeks for every site." It is a phased plan with assumptions and dependencies. Small, content-light sites can move quickly. Ecommerce, membership, localization, large CMS archives, regulated data, and multi-team approvals add work. Review our <Link href="/blog/webflow-migration-cost" className="text-cognac underline underline-offset-2">Webflow migration cost guide</Link> for the cost drivers, then use the inventory to request an actual scope.
+                        </BlogText>
+
+                        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+                            <h3 className="font-bold text-charcoal">A written scope should define</h3>
+                            <ul className="mt-4 space-y-3 text-stone-700">
+                                {[
+                                    "Included pages, collections, content, assets, locales, and integrations",
+                                    "URL dispositions, metadata, schema, analytics, consent, and Search Console tasks",
+                                    "Acceptance criteria by browser, device, workflow, and representative performance test",
+                                    "Client dependencies, exclusions, change control, approval dates, and launch responsibilities",
+                                    "Repository, hosting, account, content, deliverable, and third-party license ownership",
+                                    "Support period, defect definition, response process, and out-of-scope pricing",
+                                ].map(item => (
+                                    <li key={item} className="flex items-start gap-3">
+                                        <Route className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <BlogHeader>What Ownership Means After a Custom Rebuild</BlogHeader>
+
+                        <BlogText>
+                            "You own everything" is too broad unless the contract defines everything. A common structure is that custom deliverables transfer after full payment, while the agency retains reusable internal tools, templates, and pre-existing code. The client keeps its content and business data. Third-party packages and services remain subject to their original licenses and terms.
                         </BlogText>
 
                         <BlogText>
-                            The code is an asset. You own an asset. That is fundamentally different from paying monthly rent on someone else&apos;s infrastructure and hoping they do not change the rules.
+                            The strongest anti-lock-in arrangement puts the domain, hosting project, repository, CMS, analytics, email, payment, and other business accounts under client-controlled identities whenever practical. Documentation should explain deployments, environment variables, backups, integrations, billing, and recovery. If the client asks the agency to manage those accounts, the agreement should still define access, handover, and exit responsibilities.
                         </BlogText>
 
                         <BlogText>
-                            We have written a full breakdown of{" "}
-                            <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                what Webflow migration actually costs in 2026
-                            </Link>{" "}
-                            if you want to see the exact pricing by page count. The short version: a 50-page site is $3,500 with our Growth tier or scales to $5,000 to $10,000 with Scale. Agencies charge $15,000 to $35,000 for the same job. The difference is that we do not have a team of 30 people, a Soho office, and a brand deck to pay for.
+                            Performance targets, refunds, payment milestones, ownership transfer, support days, and remedies should come from the signed statement of work. They should not be universal promises embedded in an educational article. A representative mobile PageSpeed target may be appropriate for one project, but its pages, environment, number of runs, exclusions, and remedy need to be written before work begins.
+                        </BlogText>
+
+                        <BlogHeader>The Practical Conclusion for Leaving Webflow in 2026</BlogHeader>
+
+                        <BlogText>
+                            Webflow remains a valid choice for teams that value visual production and fit its current plan and product boundaries. The 2024 bandwidth changes, 2026 plan restructure, and completed Logic and User Accounts sunsets are real inputs, but they are not a universal instruction to leave. Use your actual account terms, invoices, usage, field performance, roadmap, and governance requirements.
                         </BlogText>
 
                         <BlogText>
-                            If you are still on Webflow today and recognize any of what we have described here, the next step is a 15-minute call. No deck, no demo, no pressure. You tell us what your site does, we tell you what a migration looks like for your specific situation. You leave with a real plan and real numbers. Or you decide it is not the right time. Either way, you know where you stand.
+                            If the platform still fits, stay and optimize it. If one implementation issue is driving the conversation, fix and remeasure it. If several structural constraints overlap, plan a migration that accounts for content, logic, integrations, SEO, consent, accessibility, testing, cutover, ownership, and support. That approach opens the door to a better architecture without pretending the move is free, instant, or riskless.
                         </BlogText>
-
-                        <BlogText>
-                            The businesses that stayed on Webflow through the pricing changes, the feature deprecations, and the outages did not do it because they were happy. They did it because migration felt complicated. We do this every week. It is not complicated when you have done it before. It is just a process, and the process works.
-                        </BlogText>
-
                     </div>
 
-                    {/* Key Takeaways */}
-                    <section className="mt-6 md:mt-10 md:mt-16 mb-10" data-speakable="true">
+                    <section className="mt-12 mb-10" data-speakable="true">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Webflow cut bandwidth 75 to 80% in 2024 without a price reduction</strong>: Bills jumped from $25 to $170 overnight for businesses that crossed the new limits two months in a row. No warning, no refund.</li>
-                            <li><strong>The real monthly cost of Webflow is not the base plan price</strong>: Add workspace fees, localization, editor seats, third-party tools replacing deprecated features, and transaction fees. Many businesses are paying $300 to $700+ per month for a site they do not own.</li>
-                            <li><strong>Webflow deprecated memberships and automation tools in 2025 and 2026</strong>: Logic was sunset June 2025. User Accounts were deprecated January 2026. Businesses had weeks to rebuild workflows they spent months creating.</li>
-                            <li><strong>Cart and checkout failures are persistent and unresolved</strong>: Checkout buttons disappearing on live sites, add-to-cart failing on mobile, and a hard 50-variant product cap make Webflow unreliable for serious e-commerce.</li>
-                            <li><strong>Migration to custom Next.js takes 4 weeks and costs $1,500 (Starter) or $3,500 (Growth)</strong>: You get 90+ PageSpeed, $0 monthly hosting, zero transaction fees, unlimited bandwidth, and you own every line of code. The migration pays for itself within 90 days for most businesses.</li>
+                        <ol className="list-decimal list-inside space-y-3 text-stone-700 leading-relaxed">
+                            <li><strong>Webflow changed plans and limits in 2024 and 2026, but transition rules vary.</strong> Check your current dashboard and official plan documentation before comparing costs.</li>
+                            <li><strong>Stay, optimize, or migrate based on several constraints.</strong> One outage, bill, or lab score is not a complete business case.</li>
+                            <li><strong>Code export is not a complete application export.</strong> CMS data, Ecommerce functionality, accounts, forms, search, localization, and other services require separate planning.</li>
+                            <li><strong>Performance is measured, not inherited from a framework.</strong> Webflow has no universal ceiling, and Next.js does not guarantee a score or ranking outcome.</li>
+                            <li><strong>An SEO-safe migration controls risk but cannot guarantee rankings.</strong> Inventory URLs, map dispositions, preserve signals, test, monitor, and keep relevant redirects for at least a year.</li>
+                            <li><strong>Commercial hosting and project promises belong in the budget and contract.</strong> Do not assume free business hosting or universal performance, refund, ownership, and support terms.</li>
                         </ol>
                     </section>
 
-                    {/* Bottom CTA */}
-                    <div className="bg-charcoal rounded-2xl p-8 mt-6 md:mt-10 mb-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4 text-white">Done With Webflow? Let&apos;s Talk.</h3>
-                        <p className="text-stone-300 mb-6">
-                            15-minute call. We look at your current Webflow setup, walk you through what a migration looks like for your specific site, and give you a real cost and timeline. No agency deck, no upsell. Just a straight answer.
+                    <div className="bg-charcoal rounded-2xl p-8 mt-10 mb-16 text-center">
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300 mb-3">Free fit audit</p>
+                        <h2 className="text-2xl font-bold mb-4 text-white">Get Your Webflow Migration Plan</h2>
+                        <p className="text-stone-300 mb-6 leading-relaxed">
+                            Bring your current URLs, integrations, plan, and roadmap. We will identify whether you should stay, optimize, or scope a migration, then document the next step without forcing a platform decision.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
-                            Book Free Migration Call <ArrowRight className="w-5 h-5" />
+                            Get your migration plan <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                     </div>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
 
-                    <section className="mb-10 mt-6 md:mt-10">
+                    <section className="mb-10 mt-10">
                         <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For every hidden Webflow fee and the PageSpeed ceiling, read <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">the full Webflow pricing breakdown for 2026</Link>. For pricing across any platform, see the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">2026 website rebuild cost guide</Link>.</p>
+                        <p className="text-stone-700 leading-relaxed">
+                            Compare current recurring inputs in the <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow true-cost guide</Link>, review scope drivers in the <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow migration cost guide</Link>, or see the <Link href="/services/webflow" className="text-cognac hover:underline font-medium">Webflow migration service</Link> for the delivery framework.
+                        </p>
                     </section>
 
                     <RelatedPosts currentPostId="leaving-webflow-2026" />
-
                 </article>
             </main>
             <Footer />

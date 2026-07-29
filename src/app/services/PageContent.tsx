@@ -121,7 +121,7 @@ export default function PageContent() {
 
       </div>
 
-      {/* PRICING SPINE — fixed tiers + written guarantee */}
+      {/* PRICING SPINE — fixed tiers + scoped handover target */}
       <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-10">
@@ -150,7 +150,7 @@ export default function PageContent() {
           <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-green-50 border border-green-200 flex items-start gap-3">
             <Shield className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
             <p className="text-sm text-stone-700 leading-relaxed">
-              <span className="font-bold text-charcoal">Fixed price. 90+ PageSpeed or full refund.</span> A 30% deposit starts the build, backed by a 30-day money-back guarantee: if your site does not hit 90+ on Google PageSpeed at launch, we refund 100% of your payment.{" "}
+              <span className="font-bold text-charcoal">Fixed price for the written scope.</span> A 30% deposit starts the build. Every build carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.{" "}
               <Link href="/pricing" className="text-cognac font-semibold hover:underline">See full pricing →</Link>
             </p>
           </div>
@@ -170,7 +170,7 @@ export default function PageContent() {
       <section className="py-10 md:py-16 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Cost breakdowns and receipts behind our pricing.</p>
+          <p className="text-stone-600 text-center mb-10 text-sm">Cost breakdowns and receipts behind our pricing.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { href: "/blog/website-migration-cost-2026", title: "Website Migration Cost in 2026", desc: "What a platform migration really costs this year." },
@@ -180,7 +180,7 @@ export default function PageContent() {
             ].map((post) => (
               <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
-                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <p className="text-stone-600 text-xs leading-relaxed flex-1">{post.desc}</p>
                 <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             ))}
@@ -280,7 +280,7 @@ function MigrationDecoration() {
                 <span className="text-xs font-bold text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200">WordPress</span>
                 <div className="text-center mt-1">
                     <div className="text-lg font-bold text-red-500">3.8s</div>
-                    <div className="text-[10px] text-stone-400 uppercase tracking-wider">Load Time</div>
+                    <div className="text-[10px] text-stone-600 uppercase tracking-wider">Load Time</div>
                 </div>
             </div>
 
@@ -301,7 +301,7 @@ function MigrationDecoration() {
                 <span className="text-xs font-bold text-cognac bg-stone-50 px-3 py-1 rounded-full border border-stone-200">Custom Code</span>
                 <div className="text-center mt-1">
                     <div className="text-lg font-bold text-green-500">0.8s</div>
-                    <div className="text-[10px] text-stone-400 uppercase tracking-wider">Load Time</div>
+                    <div className="text-[10px] text-stone-600 uppercase tracking-wider">Load Time</div>
                 </div>
             </div>
 
@@ -344,7 +344,7 @@ function DashboardDecoration() {
                     <div className="w-3 h-3 rounded-full bg-red-400" />
                     <div className="w-3 h-3 rounded-full bg-yellow-400" />
                     <div className="w-3 h-3 rounded-full bg-green-400" />
-                    <span className="ml-3 text-xs font-mono text-stone-400">dashboard.tsx</span>
+                    <span className="ml-3 text-xs font-mono text-stone-600">dashboard.tsx</span>
                 </div>
 
                 {/* Dashboard Content */}
@@ -364,21 +364,21 @@ function DashboardDecoration() {
                         <div className="grid grid-cols-3 gap-2">
                             <div className="p-3 bg-stone-50 border border-stone-100 rounded-xl">
                                 <div className="text-lg font-bold text-cognac">98%</div>
-                                <div className="text-[9px] text-stone-400 uppercase">Uptime</div>
+                                <div className="text-[9px] text-stone-600 uppercase">Uptime</div>
                             </div>
                             <div className="p-3 bg-green-50 border border-green-100 rounded-xl">
                                 <div className="text-lg font-bold text-green-600">0.8s</div>
-                                <div className="text-[9px] text-stone-400 uppercase">Speed</div>
+                                <div className="text-[9px] text-stone-600 uppercase">Speed</div>
                             </div>
                             <div className="p-3 bg-stone-50 border border-stone-100 rounded-xl">
                                 <div className="text-lg font-bold text-stone-600">24K</div>
-                                <div className="text-[9px] text-stone-400 uppercase">Users</div>
+                                <div className="text-[9px] text-stone-600 uppercase">Users</div>
                             </div>
                         </div>
 
                         {/* Chart Area */}
                         <div className="h-28 bg-stone-50 border border-stone-100 rounded-xl p-3 relative overflow-hidden">
-                            <div className="text-[10px] font-bold text-stone-400 uppercase mb-2">Revenue</div>
+                            <div className="text-[10px] font-bold text-stone-600 uppercase mb-2">Revenue</div>
                             <div className="flex items-end gap-1.5 h-16">
                                 {[40, 55, 45, 70, 60, 85, 75, 95, 88, 100].map((h, i) => (
                                     <div
@@ -434,18 +434,18 @@ function EcommerceDecoration() {
 
                 {/* Product Info */}
                 <div className="p-4">
-                    <div className="text-[10px] text-stone-400 uppercase tracking-wider mb-1">Premium Collection</div>
+                    <div className="text-[10px] text-stone-600 uppercase tracking-wider mb-1">Premium Collection</div>
                     <div className="text-sm font-bold text-charcoal mb-2">Custom Product</div>
                     <div className="flex items-center gap-1 mb-3">
                         {[1,2,3,4,5].map(s => (
                             <svg key={s} className="w-3.5 h-3.5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         ))}
-                        <span className="text-[10px] text-stone-400 ml-1">(128)</span>
+                        <span className="text-[10px] text-stone-600 ml-1">(128)</span>
                     </div>
                     <div className="flex items-center justify-between">
                         <div className="flex items-baseline gap-2">
                             <span className="text-xl font-bold text-charcoal">$168</span>
-                            <span className="text-sm text-stone-400 line-through">$240</span>
+                            <span className="text-sm text-stone-600 line-through">$240</span>
                         </div>
                         <button className="px-4 py-2 bg-charcoal text-white text-xs font-bold rounded-lg shadow-xs">
                             Add to Cart
@@ -461,7 +461,7 @@ function EcommerceDecoration() {
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     className="px-3 py-2 bg-white border border-green-200 rounded-xl shadow-card"
                 >
-                    <div className="text-[10px] text-stone-400 uppercase">Load Time</div>
+                    <div className="text-[10px] text-stone-600 uppercase">Load Time</div>
                     <div className="text-sm font-bold text-green-600">0.6s</div>
                 </motion.div>
                 <motion.div
@@ -469,7 +469,7 @@ function EcommerceDecoration() {
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                     className="px-3 py-2 bg-white border border-stone-200 rounded-xl shadow-card"
                 >
-                    <div className="text-[10px] text-stone-400 uppercase">PageSpeed</div>
+                    <div className="text-[10px] text-stone-600 uppercase">PageSpeed</div>
                     <div className="text-sm font-bold text-cognac">90+</div>
                 </motion.div>
             </div>

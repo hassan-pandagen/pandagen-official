@@ -20,7 +20,6 @@ import {
   type ReactNode,
 } from "react";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type AnyProps = Record<string, any>;
 
 const MOTION_ONLY_KEYS = new Set([
@@ -50,7 +49,7 @@ function createComponent(tag: string) {
     useEffect(() => {
       if (!hasReveal || !innerRef.current) return;
       if (typeof IntersectionObserver === "undefined") {
-        setVisible(true);
+        innerRef.current.dataset.reveal = "visible";
         return;
       }
       const observer = new IntersectionObserver(

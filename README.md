@@ -1,170 +1,99 @@
-# 🐼 PandaCodeGen | The Agency Platform
+# PandaCodeGen website
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Next.js](https://img.shields.io/badge/Next.js-16-black)
-![React](https://img.shields.io/badge/React-19-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Tailwind](https://img.shields.io/badge/Tailwind-4-cyan)
+Remediated working copy intended for [PandaCodeGen.com](https://www.pandacodegen.com), built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4. A passive audit check on 21 July 2026 found that the live domain still served the older site; this working copy is not represented as deployed or production-verified.
 
-The official production source code for [PandaCodeGen.com](https://www.pandacodegen.com).
+This is a private proprietary repository. PandaCodeGen's primary offer is SEO-safe migration for revenue-generating WordPress, Webflow, and GoHighLevel sites, with custom web engineering available when the migration scope requires it. "SEO-safe" describes the migration controls; search engines, not PandaCodeGen, determine rankings.
 
-We believe in **Open Engineering**. Most agencies hide their code because it's messy. We open-source our marketing platform to demonstrate our commitment to:
-- **Zero Bloat:** No CMS plugins, no page builders.
-- **Type Safety:** 100% Strict TypeScript.
-- **Performance:** 100/100 Core Web Vitals.
+## Stack
 
-## ⚡ Tech Stack
+- Next.js 16 App Router
+- React 19 and TypeScript
+- Tailwind CSS 4 and Framer Motion
+- Pagefind static blog search
+- Resend transactional email
+- Google PageSpeed Insights for the public technical audit
+- Optional, consent-gated GA4, Meta Pixel, Microsoft Clarity, Tawk.to, Cal.com, and Vercel Analytics
 
-This project is built on the **"PandaCodeGen Enterprise Stack"**:
+## Repository map
 
-- **Framework:** [Next.js 16](https://nextjs.org/) (App Router + Server Actions + Route Handlers)
-- **UI Library:** [React 19](https://react.dev/)
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) (via `@tailwindcss/postcss`)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Smooth Scroll:** [Lenis](https://lenis.studio/)
-- **Booking Engine:** [Cal.com](https://cal.com/) Embedded API
-- **Transactional Email:** [Resend](https://resend.com/)
-- **Blog Search:** [Pagefind](https://pagefind.app/) (static, build-time index)
-- **Analytics:** [Vercel Analytics](https://vercel.com/analytics)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Fonts:** Inter (sans) + Playfair Display (serif) via `next/font`
-
-### Third-Party Integrations
-
-Loaded conditionally via environment variables:
-
-- Google Analytics
-- Facebook Pixel
-- Microsoft Clarity
-- Tawk.to live chat
-- Google Indexing API + IndexNow (programmatic search-engine submission)
-- Google PageSpeed Insights API (powers the Site Audit tool)
-
-## 🏗️ Architecture
-
-We use a feature-based architecture to ensure scalability.
-
-```
+```text
 src/
-├── app/                  # Next.js App Router
-│   ├── about/            # About + team member pages
-│   ├── ai-info/          # AEO / answer-engine optimization pages
-│   ├── api/              # Route handlers
-│   │   ├── audit/        # Site audit: analyze + lead capture
-│   │   ├── google-index/ # Google Indexing API submission
-│   │   ├── indexnow/     # IndexNow submission
-│   │   └── submit-quote/ # Quote form → Resend email
-│   ├── blog/             # Engineering insights (per-post route segments)
-│   ├── contact/          # Contact page
-│   ├── demo/             # Demo / showcase pages
-│   ├── manifesto/        # Manifesto
-│   ├── partners/         # Partners
-│   ├── pricing/          # Pricing page
-│   ├── services/         # Service detail pages (WordPress, Shopify, Webflow, etc.)
-│   ├── work/             # Case studies
-│   ├── privacy/ terms/ cookies/  # Legal pages
-│   └── layout.tsx        # Global layout (providers, fonts, metadata)
-├── components/
-│   ├── audit/            # Site audit widget, email gate, loading state
-│   ├── blog/             # Blog visuals, animations, table of contents
-│   ├── demo/             # Demo components
-│   ├── home/             # Home-page sections (FAQ, social proof)
-│   ├── layout/           # Header, Footer, ThemeProvider, SmoothScroll, scroll bars
-│   ├── sections/         # Reusable marketing sections (Hero, calculators, quizzes…)
-│   ├── services/         # Service-page building blocks (pricing tiers, charts…)
-│   ├── ui/               # Primitives (QuoteModal, CalEmbed, FAQAccordion, BlogSearch…)
-│   └── *.tsx             # Analytics/chat script loaders (GA, Pixel, Clarity, Tawk.to)
-├── data/                 # Static data (blog index, LinkedIn proof)
-├── lib/
-│   ├── audit/            # PageSpeed analysis, deep checks, scoring
-│   └── utils.ts          # Shared helpers
-└── proxy.ts              # Edge proxy helper
+  app/                    Routes, metadata, policies, services, blog, and APIs
+    api/audit/            Website analysis and opaque-token email summary
+    api/submit-quote/     Text-only quote request handler
+    editorial-policy/     Public evidence and corrections standard
+    security/             Public security information
+  components/
+    audit/                Audit widget, results, and email dialog
+    consent/              Granular default-deny consent controls
+    layout/               Header and footer
+    services/             Shared migration/service components
+    ui/                   Forms, dialogs, search, and other primitives
+  data/                   Blog and internal topical relationships
+  hooks/                  Privacy-safe form funnel instrumentation
+  lib/
+    audit/                SSRF policy, rate limits, tokens, and audit scoring
+    forms/                Quote request validation
+  proxy.ts                Response security headers
+docs/
+  audit-2026-07-20/       Audit, remediation status, and rescoring
+  operations/             Performance, release, and incident runbooks
 ```
 
-## 📊 Performance Benchmarks
+The `/work` route publishes the evidence standard used before project results are released. Detailed case studies and personal profiles are withheld until the facts, permissions, and owner record are confirmed.
 
-| Metric | Score | Note |
-|--------|-------|------|
-| Performance | 100 | Static Edge Rendering |
-| Accessibility | 100 | Semantic HTML5 |
-| Best Practices | 100 | Modern Image Formats (AVIF/WebP) |
-| SEO | 100 | Metadata & JSON-LD |
+## Local development
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm
-
-### Installation
+Prerequisites: Node.js 20.9 or newer and npm.
 
 ```bash
-# Clone the repository
-git clone https://github.com/pandacodegen/pandagen-platform.git
-cd pandagen-platform
-
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-### Scripts
+Copy [`.env.example`](.env.example) and configure the services you intend to use. `PAGESPEED_API_KEY` powers the public audit. Production form and audit routes require the durable Redis REST configuration and `AUDIT_RATE_LIMIT_SECRET`; they fail closed when those controls are unavailable.
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start the development server |
-| `npm run build` | Production build + generate the Pagefind blog search index |
-| `npm run start` | Serve the production build |
-| `npm run lint` | Run ESLint (`eslint-config-next`) |
-| `npm run pagefind` | Rebuild only the Pagefind search index |
-| `npm run analyze` | Build with the bundle analyzer (`ANALYZE=true`) |
+The public audit accepts only public HTTP(S) sites on ports 80/443. It validates DNS and the connected peer on every redirect and bounds redirects, time, content type, and bytes. The quote route accepts only a small, allowlisted, text-only multipart body. Public uploads are disabled until an access-controlled quarantine and scanning workflow exists.
 
-### Build for Production
+## Validation commands
 
-```bash
-npm run build
-npm start
-```
+| Command | Purpose |
+|---|---|
+| `npm run check` | Type-check, lint, and run the security-focused tests |
+| `npm run build` | Production build and Pagefind index |
+| `npm run audit:dependencies` | Query current npm advisories and fail on high/critical findings |
+| `npm run smoke:release -- <origin>` | Check routes, hostile origins, headers, retired endpoints, and 404 behavior |
+| `npm run seo:check -- --base-url <origin>` | Crawl the sitemap and enforce structural SEO checks |
+| `npm run analyze` | Build with the bundle analyzer |
 
-## 📝 Key Features
+CI runs the relevant static, test, dependency, and build checks. See [SECURITY.md](SECURITY.md) for vulnerability reporting and [docs/operations/RELEASE_CHECKLIST.md](docs/operations/RELEASE_CHECKLIST.md) for release controls.
 
-- **Site Audit Tool:** Runs a live PageSpeed Insights analysis plus deep checks and scoring, gated behind a lead-capture email form ([src/lib/audit/](src/lib/audit/), [src/components/audit/](src/components/audit/)).
-- **Static Blog Search:** Build-time full-text search over blog posts powered by Pagefind.
-- **Quote & Lead Capture:** Modal-driven quote requests delivered via Resend.
-- **Cal.com Integration:** Embedded booking calendar.
-- **Programmatic Indexing:** Google Indexing API + IndexNow route handlers for fast search-engine discovery.
-- **Answer-Engine Optimization:** Dedicated `/ai-info` pages structured for LLM and AI-search citation.
-- **Dark Mode:** Built-in theme switching via `ThemeProvider`.
-- **Smooth Scroll & Animations:** Lenis smooth scrolling with Framer Motion transitions.
-- **SEO Optimized:** Per-page metadata, structured data (JSON-LD), Open Graph images.
+## Privacy and measurement
 
-## 🤝 Work With Us
+Optional browser vendors are default-denied until the corresponding consent choice is granted. Form progress and abandonment events are aggregate GA4 events emitted only after analytics consent; typed values, names, email addresses, phone numbers, and message content are never sent. See [docs/FORM_FUNNEL_ANALYTICS.md](docs/FORM_FUNNEL_ANALYTICS.md).
 
-We help founders and enterprises migrate from legacy monoliths (WordPress/Shopify Themes) to high-performance Headless Architectures.
+Code support and owner intent do not prove production activation. Exact vendor identifiers, denied/granted consent-network behavior, Redis/Resend configuration, and end-to-end lead delivery must be verified against the deployed Vercel project without exposing secrets.
 
-**Locations:**
-- **HQ:** Austin, Texas, USA 🇺🇸
-- **Engineering Lab:** Karachi, Pakistan 🇵🇰
+Real-user performance should be evaluated with consented LCP, INP, and CLS distributions alongside controlled lab tests. See [docs/operations/PERFORMANCE_BUDGET.md](docs/operations/PERFORMANCE_BUDGET.md).
 
-**Ready to build?**
-- Book a Discovery Call
-- Email us at [info@pandacodegen.com](mailto:info@pandacodegen.com)
+## Offer and published package terms
 
-## 📄 License
+The primary call to action is **Get your migration plan**. Published package starting points are:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Starter: **$1,500**, with 15 business days of included support.
+- Growth: **$3,500**, with 30 business days of included support.
+- Scale: **$5,000-$10,000**, with 30 business days of included support.
 
-## 🔗 Links
+Pages, features, integrations, and other additions are discussed and documented in written project terms accepted by both parties. For a straightforward project, that record may be a concise quote or order summary explicitly accepted in email or chat; regulated or complex work may use a detailed signed proposal, SOW, or master agreement. The published package defaults are 30% at onboarding and 70% at the agreed delivery milestone, plus 15 business days of included support for Starter or 30 business days for Growth and Scale. A project may use different written terms.
 
-- Website: [PandaCodeGen.com](https://www.pandacodegen.com)
-- Services: [Our Services](https://www.pandacodegen.com/services)
-- Case Studies: [Our Work](https://www.pandacodegen.com/work)
-- Blog: [Engineering Insights](https://www.pandacodegen.com/blog)
+When the accepted project terms include 100% contracted-scope protection, PandaCodeGen refunds the fees paid under that scope if it fails to deliver the promised deliverables. The project terms define the trigger, verification, cure process, and work-product consequences; this is not a preference or change-of-mind guarantee. A refund that is due or approved is normally initiated within 2-3 business days, while bank or payment-provider settlement may take up to 10-12 business days. The published performance default is a 90+ Lighthouse target on both mobile and desktop for the agreed representative pages, with all three recorded pre-handover runs for each agreed page/profile passing. Only provisions expressly included in the accepted project terms apply to an engagement.
 
----
+## Company and claims status
 
-**Built with ❤️ by PandaCodeGen**
+PandaCodeGen was founded in February 2026. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Lead Architect. The published mailing address is 701 Tillery St Ste 12, Austin, TX 78702, United States; it is not represented as the registered office. The owner reports Wyoming formation. The supplied unsigned SOW uses both **MC Patches LLC, doing business as PandaCodeGen** and **PandaCodeGen LLC**, so the exact active entity/DBA and authorized-signatory record remain to be confirmed before the website legal/controller identity is changed.
+
+The delivery/acceptance milestone, cancellation and cure process, support start event, and successful-project ownership/licensing timing must be confirmed for each engagement rather than copied from another client. On a full refund, the client keeps its content, data, brand assets, and client-owned accounts, while it receives no right to use unpaid/refunded custom code; PandaCodeGen retains its reusable tools, templates, and pre-existing code. Detailed case-study metrics, cost baselines, testimonial wording, attribution, and permission records also remain pending reconciliation before publication. These unresolved items are tracked in the [claims register](docs/CLAIMS_REGISTER.md) and must be settled in the accepted project terms where applicable.
+
+The current audit and remediation status is in [docs/audit-2026-07-20/AUDIT_REPORT.md](docs/audit-2026-07-20/AUDIT_REPORT.md). This is a proprietary private repository; no public open-source license is granted. Third-party dependencies and assets retain their own license terms.

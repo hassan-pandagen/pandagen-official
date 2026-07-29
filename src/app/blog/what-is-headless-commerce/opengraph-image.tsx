@@ -48,23 +48,23 @@ export default function Image() {
             </div>
           </div>
           <div style={{ fontSize: '22px', color: '#999999', lineHeight: 1.4, maxWidth: '760px', display: 'flex' }}>
-            Keep your products, orders, and payments in Shopify. Replace the slow theme with a lightning-fast custom storefront. Save on hosting. Rank higher.
+            Separate the storefront from the commerce backend only when measured requirements justify the added integration and operating work.
           </div>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', width: '100%' }}>
           <div style={{ display: 'flex', gap: '52px' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>3-5x</div>
-              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Faster Load Time</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>Backend</div>
+              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Commerce system retained</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>$0/mo</div>
-              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Frontend Hosting</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>Frontend</div>
+              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Separately deployed</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>+35%</div>
-              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Conversion Lift</div>
+              <div style={{ fontSize: '32px', fontWeight: 700, color: '#b8410c', display: 'flex' }}>Decision</div>
+              <div style={{ fontSize: '15px', color: '#555555', display: 'flex' }}>Evidence-led scope</div>
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>

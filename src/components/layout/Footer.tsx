@@ -1,13 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Sparkles, Github, Linkedin, Mail, Facebook, Instagram, type LucideIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Route, Mail, type LucideIcon } from "lucide-react";
+import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 
 interface FooterProps {
   onOpenQuote?: () => void;
 }
 
 export default function Footer({ onOpenQuote }: FooterProps) {
+  const openQuote = () => {
+    if (onOpenQuote) onOpenQuote();
+    else window.dispatchEvent(new Event("open-quote-modal"));
+  };
+
   return (
     <footer className="bg-[#F5F5F4] pt-10 md:pt-20 border-t border-stone-200">
 
@@ -19,27 +25,26 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-5 md:mb-8">
-              <Sparkles className="w-3 h-3 text-cognac" />
-              Limited Availability
+              <Route className="w-3 h-3 text-orange-300" aria-hidden="true" />
+              Migration planning
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-5 md:mb-8 tracking-tight">
-              Ready to build something{" "}
-              <span className="font-serif italic text-cognac">Legendary?</span>
+              Need to move platforms without losing track of{" "}
+              <span className="font-serif italic text-orange-300">URLs, content, or integrations?</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
-                data-cal-config='{"layout":"month_view"}'
+                type="button"
+                onClick={openQuote}
                 className="w-full sm:w-auto px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 transform duration-200"
               >
-                Book Strategy Call <ArrowRight className="w-4 h-4" />
+                Get your migration plan <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </button>
               <Link
                 href="/pricing"
                 className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white hover:text-charcoal transition-all flex items-center justify-center gap-2"
               >
-                View Pricing
+                Review Example Scopes
               </Link>
             </div>
           </div>
@@ -50,33 +55,37 @@ export default function Footer({ onOpenQuote }: FooterProps) {
       <div className="container mx-auto px-6 pb-10 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
 
-          {/* Brand & Socials */}
+          {/* Brand & contact */}
           <div className="lg:col-span-4 flex flex-col">
             <div>
               <Link href="/" className="text-3xl font-bold text-charcoal tracking-tight">
                 PandaCodeGen<span className="text-cognac">.</span>
               </Link>
               <p className="mt-6 text-stone-600 leading-relaxed max-w-sm">
-                We replace slow WordPress &amp; Shopify sites with custom Next.js websites engineered to get cited by AI search and load in under 1 second. Code you own, a written 90+ PageSpeed guarantee, no monthly fees, no vendor lock-in.
+                Website migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-stone-600">
-                <li>📍 701 Tillery St Ste 12, Austin, TX 78702</li>
                 <li>
-                  <Link href="tel:+13027738982" className="hover:text-charcoal transition-colors">
-                    📞 +1 (302) 773-8982
+                  <Link href="mailto:info@pandacodegen.com" className="hover:text-charcoal transition-colors">
+                    info@pandacodegen.com
                   </Link>
+                </li>
+                <li>
+                  <address className="not-italic leading-relaxed">
+                    701 Tillery St Ste 12<br />
+                    Austin, TX 78702, United States
+                  </address>
                 </li>
               </ul>
             </div>
             <div className="flex flex-wrap gap-3 mt-6">
-              <SocialPill href="https://x.com/PandaCodeGen" label="Twitter / X" isX />
-              <SocialPill href="https://www.linkedin.com/company/pandacodegen" icon={Linkedin} label="LinkedIn" ariaLabel="PandaCodeGen on LinkedIn" />
-              <SocialPill href="https://github.com/hassan-pandagen" icon={Github} label="GitHub" />
-              <SocialPill href="https://www.facebook.com/profile.php?id=61587111848962" icon={Facebook} label="Facebook" />
-              <SocialPill href="https://www.instagram.com/pandacodegen/" icon={Instagram} label="Instagram" />
-              <SocialPill href="https://www.reddit.com/user/PandaCodeGen/" label="Reddit" isReddit ariaLabel="PandaCodeGen on Reddit" />
               <SocialPill href="mailto:info@pandacodegen.com" icon={Mail} label="Email" />
-              <SocialPill href="https://www.trustpilot.com/review/pandacodegen.com" label="Leave a Review" />
+              <Link
+                href="/contact"
+                className="group flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-full text-sm font-medium text-stone-600 hover:border-cognac hover:text-cognac transition-all shadow-xs hover:shadow-md"
+              >
+                Contact form
+              </Link>
             </div>
           </div>
 
@@ -105,18 +114,18 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             <div className="grid gap-2">
               <FeaturedLink
                 href="/work"
-                title="Case Studies"
-                desc="Real results. 90+ scores."
+                title="Project Evidence"
+                desc="Method, permission, and publication controls."
               />
               <FeaturedLink
                 href="/partners"
-                title="For Agencies"
-                desc="White-label partnership."
+                title="Agency Pilot"
+                desc="Test one scoped engagement first."
               />
               <FeaturedLink
                 href="/about"
-                title="About Us"
-                desc="Meet the engineers, not the account managers."
+                title="About"
+                desc="Migration delivery standards."
               />
               <FeaturedLink
                 href="/blog"
@@ -125,52 +134,57 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               />
               <FeaturedLink
                 href="/manifesto"
-                title="Our Manifesto"
-                desc="Why we refuse hourly billing."
+                title="Delivery Principles"
+                desc="Scope, evidence, control, and acceptance."
               />
               <FeaturedLink
                 href="/contact"
-                title="Contact Us"
-                desc="Get a free quote or book a call."
+                title="Contact"
+                desc="Describe the current site and migration goal."
               />
             </div>
           </div>
 
-          {/* AI Reference Cluster Cards */}
+          {/* Release and buyer resources */}
           <div className="lg:col-span-3">
             <h3 className="font-bold text-charcoal mb-8 text-xs uppercase tracking-widest border-b border-stone-300 pb-4">
-              AI Reference
+              Resources
             </h3>
             <div className="grid gap-2">
               <FeaturedLink
-                href="/ai-info"
-                title="AI Info Hub"
-                desc="Verified facts about PandaCodeGen for AI assistants."
+                href="/pricing"
+                title="Example Scopes"
+                desc="Price drivers and proposal controls."
               />
               <FeaturedLink
-                href="/ai-info/pricing-and-guarantees"
-                title="Pricing & Guarantees"
-                desc="Fixed tiers $1,500 to $10,000+ and refund mechanics."
-              />
-              <FeaturedLink
-                href="/ai-info/migration-services"
+                href="/services"
                 title="Migration Services"
-                desc="9 platforms. 4-phase process. 301 redirects."
+                desc="Platform and engineering options."
               />
               <FeaturedLink
-                href="/ai-info/case-studies"
-                title="Case Studies"
-                desc="MyCustomPatches and Panda Patches with receipts."
+                href="/security"
+                title="Security"
+                desc="Reporting and disclosure process."
               />
               <FeaturedLink
-                href="/ai-info/team-and-company"
-                title="Team & Company"
-                desc="Hassan, Imran, and the global engineering structure."
+                href="/editorial-policy"
+                title="Editorial Policy"
+                desc="Sources, evidence, freshness, and corrections."
               />
               <FeaturedLink
-                href="/ai-info/competitor-comparison"
-                title="Competitor Comparison"
-                desc="Side-by-side facts vs Next.js boutiques."
+                href="/privacy"
+                title="Privacy"
+                desc="Data use and visitor choices."
+              />
+              <FeaturedLink
+                href="/cookies"
+                title="Cookie Choices"
+                desc="Optional services and consent."
+              />
+              <FeaturedLink
+                href="/terms"
+                title="Website Terms"
+                desc="Use of the site and inquiries."
               />
             </div>
           </div>
@@ -178,44 +192,25 @@ export default function Footer({ onOpenQuote }: FooterProps) {
         </div>
       </div>
 
-      {/* 3. Reference page navigation bar */}
-      <div className="border-t border-stone-200 bg-stone-50/60">
-        <div className="container mx-auto px-6 py-5">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center mb-3">
-            <span className="text-xs font-medium text-stone-700">Detailed reference pages:</span>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-stone-600">
-            <Link href="/ai-info" className="font-bold text-charcoal hover:text-cognac transition-colors underline decoration-cognac/40 decoration-2 underline-offset-4">AI Info Hub</Link>
-            <span className="text-stone-300">·</span>
-            <Link href="/ai-info/pricing-and-guarantees" className="hover:text-cognac transition-colors">Pricing &amp; Guarantees</Link>
-            <span className="text-stone-300">·</span>
-            <Link href="/ai-info/migration-services" className="hover:text-cognac transition-colors">Migration Services</Link>
-            <span className="text-stone-300">·</span>
-            <Link href="/ai-info/case-studies" className="hover:text-cognac transition-colors">Case Studies</Link>
-            <span className="text-stone-300">·</span>
-            <Link href="/ai-info/team-and-company" className="hover:text-cognac transition-colors">Team &amp; Company</Link>
-            <span className="text-stone-300">·</span>
-            <Link href="/ai-info/competitor-comparison" className="hover:text-cognac transition-colors">Competitor Comparison</Link>
-          </div>
-        </div>
-      </div>
-
-      {/* 4. BOTTOM BAR */}
+      {/* 3. BOTTOM BAR */}
       <div className="border-t border-stone-200 bg-white py-6">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 font-medium uppercase tracking-wide">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-600 font-medium uppercase tracking-wide">
           <div className="flex flex-wrap gap-6 items-center">
-            <span>&copy; 2026 PandaCodeGen LLC. All rights reserved.</span>
-            <Link href="/privacy" className="hover:text-cognac transition-colors">Privacy</Link>
-            <Link href="/terms" className="hover:text-cognac transition-colors">Terms</Link>
-            <Link href="/cookies" className="hover:text-cognac transition-colors">Cookies</Link>
+            {/* Renders only on pages that have a French and German version. */}
+            <LocaleSwitcher label="Language" className="normal-case tracking-normal" />
+            <span>&copy; 2026 PandaCodeGen. All rights reserved.</span>
+            <Link href="/privacy" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Privacy</Link>
+            <Link href="/terms" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Terms</Link>
+            <Link href="/cookies" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Cookies</Link>
+            <Link href="/security" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Security</Link>
+            <Link href="/editorial-policy" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Editorial</Link>
           </div>
-          <div className="flex items-center gap-2 bg-stone-50 px-3 py-1.5 rounded-full border border-stone-100">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-            </span>
-            All Systems Operational
-          </div>
+          <a
+            href="mailto:info@pandacodegen.com?subject=Security%20report"
+            className="rounded-full border border-stone-200 bg-stone-50 px-3 py-2 hover:border-cognac hover:text-cognac transition-colors"
+          >
+            Report a security issue
+          </a>
         </div>
       </div>
 
@@ -291,9 +286,9 @@ function FeaturedLink({ href, title, desc }: { href: string; title: string; desc
         <h3 className="font-semibold text-sm text-charcoal group-hover:text-cognac transition-colors">
           {title}
         </h3>
-        <p className="text-xs text-stone-500 mt-0.5">{desc}</p>
+        <p className="text-xs text-stone-600 mt-0.5">{desc}</p>
       </div>
-      <ArrowUpRight className="w-3.5 h-3.5 text-stone-300 group-hover:text-cognac transition-colors shrink-0" />
+      <ArrowUpRight className="w-3.5 h-3.5 text-stone-600 group-hover:text-cognac transition-colors shrink-0" />
     </Link>
   );
 }

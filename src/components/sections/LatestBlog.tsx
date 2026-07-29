@@ -1,5 +1,5 @@
 // Server component (no client hooks needed). Importing blogPosts here is safe because
-// this file does not declare "use client" — blog.ts (server-only) won't reach the browser.
+// this file does not declare "use client", so blog.ts (server-only) won't reach the browser.
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
@@ -66,7 +66,7 @@ export default function LatestBlog() {
                     >
                       {post.category}
                     </span>
-                    <div className="flex items-center gap-1.5 text-xs text-stone-500">
+                    <div className="flex items-center gap-1.5 text-xs text-stone-600">
                       <Clock className="w-3 h-3" />
                       <span>{post.readTime}</span>
                     </div>
@@ -84,7 +84,7 @@ export default function LatestBlog() {
 
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-6 pt-5 border-t border-stone-100">
-                    <span className="text-xs text-stone-500">{post.date}</span>
+                    <span className="text-xs text-stone-600">{post.date}</span>
                     <div className="flex items-center gap-1.5 text-sm font-bold group-hover:gap-2.5 transition-all" style={{ color: tColor }}>
                       Read Article
                       <ArrowRight className="w-3.5 h-3.5" />

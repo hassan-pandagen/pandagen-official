@@ -8,6 +8,7 @@ coverage
 
 # Next.js
 .next/
+.next-audit/
 out/
 
 # Pagefind search index (generated at build time from .next/server/app)
@@ -53,6 +54,9 @@ test-results/
 # Internal docs and trackers (not for repo)
 *.md
 !README.md
+!SECURITY.md
+!docs/
+!docs/**/*.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
 ad-creative.md

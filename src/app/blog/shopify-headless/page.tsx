@@ -1,377 +1,394 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, ShoppingCart, RefreshCw } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, Boxes, GitBranch, SearchCheck, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "shopify-headless")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "shopify-headless";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "Headless Shopify in 2026: Architecture and Migration Guide";
+const description =
+    "Compare Shopify themes, Hydrogen and custom Storefront API builds across requirements, integrations, SEO migration, analytics, ownership, testing and total cost.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
-    description: "Liquid is render-blocking by design. Here's the real headless Shopify architecture decision: Hydrogen vs custom Next.js, what the Storefront API does and doesn't fix, and verified 2026 cost ranges.",
-    alternates: { canonical: "/blog/shopify-headless" },
-    keywords: ["headless shopify", "shopify hydrogen", "shopify next.js", "shopify storefront api", "shopify liquid slow", "hydrogen vs next.js"],
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "headless Shopify 2026",
+        "Shopify Hydrogen",
+        "Shopify Storefront API",
+        "Shopify headless migration",
+        "headless Shopify SEO",
+    ],
     openGraph: {
-        title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
-        description: "Liquid is render-blocking by design. The real architecture decision: Hydrogen vs custom Next.js, what the Storefront API fixes, and verified 2026 cost ranges.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-02-15T00:00:00-05:00",
+        publishedTime: "2026-02-15",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/shopify-headless",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/shopify-headless")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
-        description: "Liquid is render-blocking by design. The real architecture decision: Hydrogen vs custom Next.js, what the Storefront API fixes, and verified 2026 cost ranges.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    {
+        name: "Shopify: headless benefits, tradeoffs and fit",
+        url: "https://www.shopify.com/enterprise/blog/what-is-headless-commerce",
+    },
+    { name: "Shopify Storefront API reference", url: "https://shopify.dev/docs/api/storefront/latest" },
+    {
+        name: "Shopify Hydrogen and Oxygen getting started",
+        url: "https://shopify.dev/docs/storefronts/headless/hydrogen/getting-started",
+    },
+    {
+        name: "Shopify: SEO for Hydrogen",
+        url: "https://shopify.dev/docs/storefronts/headless/hydrogen/seo",
+    },
+    {
+        name: "Shopify: custom headless analytics migration",
+        url: "https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/cookies-custom-setup",
+    },
+    {
+        name: "Google: site moves and migrations",
+        url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+    },
+    {
+        name: "Google: merchant listing structured data",
+        url: "https://developers.google.com/search/docs/appearance/structured-data/merchant-listing",
+    },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/shopify-headless#article",
-            "headline": "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
-            "description": "Shopify Liquid templates are render-blocking by design. The real architecture decision between Shopify Hydrogen and custom Next.js, what the Storefront API does and doesn't fix, and verified 2026 cost ranges.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-02-15",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-headless" },
-            "articleSection": "Shopify",
-            "keywords": ["headless shopify", "shopify speed", "shopify next.js", "shopify storefront api", "core web vitals ecommerce"],
-            "timeRequired": "PT14M",
-            "wordCount": 3450,
-            "about": [
-                { "@type": "Thing", "name": "Headless Shopify" },
-                { "@type": "Thing", "name": "Shopify" },
-                { "@type": "Thing", "name": "E-Commerce Speed Optimisation" },
-                { "@type": "Thing", "name": "Next.js" }
-            ],
-            "inLanguage": "en-US",
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Shopify Storefront API Documentation", "url": "https://shopify.dev/docs/api/storefront" },
-                { "@type": "CreativeWork", "name": "Next.js Commerce Starter", "url": "https://nextjs.org/commerce" },
-                { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google. Speed and Revenue", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Shopify Partners: Headless Commerce", "url": "https://www.shopify.com/partners/headless-commerce" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac: Ecommerce performance", "url": "https://almanac.httparchive.org/en/2024/ecommerce" }
-            ]
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/shopify-headless#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Headless Shopify Architecture: Hydrogen vs Next.js", "item": "https://www.pandacodegen.com/blog/shopify-headless" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-headless#webpage",
-            "url": "https://www.pandacodegen.com/blog/shopify-headless",
-            "name": "Headless Shopify Architecture: Hydrogen vs Next.js in 2026",
-            "description": "Most Shopify stores fail Core Web Vitals because Liquid templates are render-blocking by design. Here is the real architecture decision between Hydrogen and custom Next.js.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-15T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-headless#breadcrumb" },
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Shopify architecture",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-headless#faq",
-            "mainEntity": postFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
+
+const sourceLinkClass =
+    "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+const inlineLinkClass = "font-medium text-cognac hover:underline";
 
 export default function ShopifyHeadlessPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Headless Shopify Architecture: Hydrogen vs Next.js", href: "/blog/shopify-headless" }
-                    ]} />
-
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Headless Shopify", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    {/* Title & Meta */}
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
-                            <ShoppingCart className="w-3 h-3" />
-                            E-Commerce · Shopify Speed
-                        </div>
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Headless Shopify Architecture:{" "}
-                            <span className="font-serif italic text-cognac">Hydrogen vs Next.js</span>{" "}
-                            in 2026.
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify architecture</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Headless Shopify in 2026 <span className="italic text-cognac">Architecture Before Hype</span>
                         </h1>
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Liquid templates are server-rendered and render-blocking by design. Here&apos;s the real architecture decision: Shopify&apos;s own Hydrogen framework versus custom Next.js on the Storefront API, what each one actually fixes, and what it costs.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Going headless means you build your own storefront and let Shopify keep handling the commerce
+                            behind it. You get more control, and you take on more responsibility with it. Do it because
+                            you need a specific experience, need to connect to something, or need to sell somewhere
+                            Shopify&apos;s themes cannot reach. Do not do it expecting a guaranteed lift in speed,
+                            rankings or revenue.
                         </p>
-                        <BlogAuthor
-                            date="Feb 15, 2026"
-                            readTime="12 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                        </p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="14 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The 2026 decision in one view</h2>
+                        <BlogList
+                            items={[
+                                "Keep a theme when its customization model meets requirements and the team values simpler operation.",
+                                "Choose Hydrogen when Shopify's official React stack and its commerce conventions fit the team.",
+                                "Choose a custom Storefront API client when framework independence is a real requirement and the team accepts the integration work.",
+                                "Treat SEO, analytics, accessibility, consent, checkout, operations and maintenance as first-class migration scope.",
+                            ]}
                         />
-                    </div>
-
-                    {/* Animation */}
-                    <div className="mb-12"><FeatureVisual /></div>
-
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "Shopify's Liquid templates are server-rendered and render-blocking: you cannot fix this with apps or theme edits alone.",
-                            "The two real headless paths are Shopify's own Hydrogen framework or a custom Next.js frontend on the Storefront API, and they carry different cost and lock-in tradeoffs.",
-                            "Headless keeps your backend (orders, inventory, Shopify checkout) and replaces only the slow Liquid frontend.",
-                            "On our own headless rebuild (MyCustomPatches, off WooCommerce), mobile PageSpeed went from 45 to 90+ and load time fell from 3.2s to 0.7s."
-                        ]} />
-                    </div>
-
-                    <p className="text-stone-700 leading-relaxed mb-6">Shopify headless is worth it when your store does over $500K per year and loads slower than 3 seconds on mobile. You keep Shopify for orders, inventory, and checkout. You replace the Liquid frontend with either Shopify&apos;s own Hydrogen framework or a custom Next.js build on the Storefront API. The architecture decision (not just "go headless") is what determines your total cost of ownership. PandaCodeGen Scale tier covers a custom Next.js headless build at $5,000 to $10,000.</p>
-
-                    <div className="space-y-8">
-                        <BlogText>
-                            Liquid is Shopify&apos;s templating language, and it renders every page server-side, on every request, before a single byte reaches the browser. That is not a bug you can optimize away with a faster theme or fewer apps. It is the architecture. Going headless means removing Liquid from the render path entirely, and then the real question starts: do you rebuild the frontend on Shopify&apos;s own Hydrogen framework, or on custom Next.js against the Storefront API? That decision, not the word "headless" itself, is what this guide is actually about.
-                        </BlogText>
-                        <BlogText>
-                            Our own reference point is <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link>, which we moved off a WordPress/WooCommerce theme-and-plugin stack onto a custom Next.js frontend. Mobile PageSpeed went from 45 to 90+ and load time fell from 3.2 seconds to 0.7. The platform was WooCommerce, not Shopify, but the architectural problem, and the fix, is identical: a server-rendered templating layer capped the score no matter how much the theme itself was optimized. Swap WooCommerce for Shopify Liquid and Storefront API for WooCommerce REST, and the same rebuild pattern applies.
-                        </BlogText>
-
-                        <BlogHeader>Why Is Your Shopify Store Slow No Matter What You Try?</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: Why Is My Shopify Store Slow on Mobile?</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">Shopify stores are slow on mobile because Liquid templates render server-side on every request, all theme CSS and JS load on every page (even code unused on that page), and third-party apps inject scripts that block render. Stock themes (Dawn, Sense, Refresh) score 50 to 65 on PageSpeed mobile in 2026. The fix is not theme optimization or fewer apps. It is decoupling the frontend with headless Shopify on Next.js so Liquid stops rendering pages on every request.</p>
-                        </div>
-
-                        <BlogText>
-                            Shopify uses a templating system called Liquid. Here&apos;s the fundamental problem:
-                        </BlogText>
-                        <BlogList items={[
-                            "Liquid templates are server-rendered: Every page request hits Shopify's servers before the browser gets anything",
-                            "All theme CSS and JS loads on every page, even code for sections not on that page",
-                            "Third-party apps inject scripts directly into the theme, blocking page render",
-                            "The average Shopify store loads 1.2 to 1.8MB of JavaScript from apps alone",
-                            "Shopify's CDN is fast, but Liquid rendering adds 400 to 800ms you cannot eliminate"
-                        ]} />
-                        <BlogQuote>
-                            Shopify theme optimization is rearranging deck chairs. You can get from 3.5 seconds to 2.8 seconds, and that&apos;s roughly your ceiling. Under 1 second requires a fundamentally different architecture.
-                        </BlogQuote>
-
-                        <BlogHeader>What Is Headless Shopify and How Does It Fix This?</BlogHeader>
-                        <BlogText>
-                            Headless Shopify separates the frontend (what customers see) from the backend (inventory, orders, checkout):
-                        </BlogText>
-                        <BlogList items={[
-                            "Backend stays on Shopify: Products, inventory, pricing, orders, Shopify Payments, fraud protection",
-                            "Frontend becomes Next.js: Custom-built React pages that load in under 1 second",
-                            "Connection: Shopify Storefront API feeds product data to the Next.js frontend in real-time",
-                            "Checkout: Stays on Shopify: they handle payments, tax, compliance",
-                            "Result: All the reliability of Shopify + speed of a custom-built site"
-                        ]} />
-
-                        <BlogHeader>What Results Do Headless Stores See?</BlogHeader>
-                        <BlogText>
-                            The closest receipt we have: MyCustomPatches, a store we rebuilt for Matt Conner off WooCommerce. Mobile PageSpeed jumped from 45 to 90+. First-paint times fell under one second. The same headless pattern applies to Shopify by swapping the backend from Woo to the Shopify Storefront API.
-                        </BlogText>
-                        <div className="my-6 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
-                            <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Illustrative, Not a Real Store</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">
-                                We do not yet have a named, verifiable Shopify headless case study to publish alongside MyCustomPatches. Publicly documented Shopify Plus headless migrations (Allbirds, Gymshark, Victoria Beckham Beauty) report load-time drops in the same range we see on our own headless rebuilds, and the Deloitte finding that a 0.1-second improvement lifts conversions roughly 8% is a real, citable benchmark. Combining those two data points, a store moving from a 4-second Liquid storefront to a sub-1-second headless build would reasonably expect a meaningful, multi-point conversion rate improvement. That is a directional estimate built from public sources, not a client result, and we will not dress it up as one.
-                            </p>
-                        </div>
-                        <BlogText>
-                            The pattern reported across those public case studies is consistent: cutting load time to under 1 second translates to <Link href="/blog/shopify-conversion-rate-speed-fix" className="text-cognac hover:underline">meaningfully more conversions</Link> from the same traffic, because fewer visitors abandon before the page finishes rendering. For the full revenue math see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how much slow Shopify costs per year</Link>. Still on Shopify Plus and wondering why speed didn&apos;t change? Read <Link href="/blog/shopify-plus-still-slow" className="text-cognac hover:underline">why Shopify Plus is still slow</Link>. Comparing platforms? See <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website</Link>.
-                        </BlogText>
-
-                        {/* Mid-Article CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is your Shopify store bleeding revenue to slow load times right now?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We run your PageSpeed live on the call, calculate your exact monthly conversion loss, and show you the headless build that fixes it.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Shopify Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                        </div>
-
-                        <BlogHeader>How Do You Go Headless on Shopify? The 6-Step Process</BlogHeader>
-                        <BlogText>
-                            Here&apos;s exactly what going headless involves, in the order we do it:
-                        </BlogText>
-                        <BlogList items={[
-                            "Step 1: Audit your current store. Load time, PageSpeed score, which scripts are slowest",
-                            "Step 2: Create a Shopify Custom App with Storefront API access (products, collections, cart)",
-                            "Step 3: Build the Next.js frontend using React Server Components for product and collection pages",
-                            "Step 4: Optimize all images with next/image, defer third-party scripts, lazy load below-the-fold content",
-                            "Step 5: Deploy to Vercel Edge Network. Pre-generate top product pages at build time",
-                            "Step 6: Keep Shopify checkout: it handles payments, tax, and fraud protection"
-                        ]} />
-
-                        <BlogHeader>Can I Still Use Shopify Apps After Going Headless?</BlogHeader>
-
-                        <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                            <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer: How to Make My Shopify Store Faster Without Apps</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">The fastest way to speed up Shopify without apps is to remove the apps, not add new ones. Most stores can drop 8 to 15 third-party apps by going headless: replace review apps with native Storefront API queries, replace email apps with Klaviyo direct integration, replace currency converters with build-time logic, replace upsell apps with custom Next.js components. Result: fewer apps loaded, no iframe overhead, mobile PageSpeed jumps from 40 to 60 range to 90+.</p>
-                        </div>
-
-                        <BlogText>
-                            Most backend apps continue working normally because they connect to Shopify admin, not the frontend theme:
-                        </BlogText>
-                        <BlogList items={[
-                            "Inventory and fulfilment apps: Work as before via Shopify admin",
-                            "Email marketing (Klaviyo, Mailchimp): Work via Storefront API events",
-                            "Shipping and tax apps: Work via Shopify backend",
-                            "Review apps: Rebuilt as custom React components, loads 10× faster than the original script"
-                        ]} />
-                        <BlogText>
-                            Frontend apps (popups, countdown timers, visual upsell widgets) need to be rebuilt as custom components. This actually makes your site faster: you replace a 200KB third-party script with a 4KB custom component.
-                        </BlogText>
-
-                        <BlogHeader>Is Headless Shopify Worth the Investment?</BlogHeader>
-                        <BlogText>
-                            For stores doing $200K+/year, the ROI typically arrives in 3 to 6 months:
-                        </BlogText>
-                        <BlogList items={[
-                            "$200K/year store: 2× conversion rate improvement = $200K additional revenue",
-                            "$500K/year store: 30% conversion improvement = $150K more annually",
-                            "$1M+/year store: The first month of improved conversion usually covers the entire build cost"
-                        ]} />
-                        <BlogText>
-                            Not sure if the numbers work for your store? <a href="/services/ecommerce?ref=blog/shopify-headless" className="text-cognac hover:underline">Book a free call</a> and we will run the ROI calculation for your specific situation before you commit to anything.
-                        </BlogText>
-
-                        <BlogHeader>Shopify Hydrogen vs Custom Next.js: Which Should You Build On?</BlogHeader>
-                        <BlogText>
-                            Shopify has its own headless framework called Hydrogen. As of 2026 it is no longer experimental and ships on a calendar release cadence (the latest is @shopify/hydrogen@2026.4.0, released April 9, 2026). One important 2026 change: Hydrogen moved off Remix to React Router, and the old @shopify/remix-oxygen package was deprecated. If you read older headless guides built around Remix, that advice is now stale. Before committing to a build, the current trade-offs:
-                        </BlogText>
-                        <BlogList items={[
-                            "Hydrogen is Shopify-native: Deeply integrated with Shopify APIs, Oxygen hosting (Shopify's edge network on Cloudflare), and built-in cart/checkout components. Oxygen hosting is free on all paid Shopify plans with unlimited bandwidth.",
-                            "Hydrogen lock-in: You host on Shopify Oxygen, which ties you to Shopify's infrastructure for the long term, but the hosting cost is zero.",
-                            "Custom Next.js: Hosted on Vercel, completely independent of Shopify. You could swap your commerce backend later without rebuilding the frontend.",
-                            "Performance: Both deliver similar load times when built correctly. The difference is in maintenance cost, hosting cost, and flexibility.",
-                            "Talent: Next.js developers are more widely available than Hydrogen specialists, which affects long-term maintenance cost."
-                        ]} />
-                        <BlogText>
-                            The honest 2026 recommendation is more nuanced than &ldquo;always go Next.js.&rdquo; For a commerce-first Shopify Plus build, Hydrogen plus free Oxygen hosting now wins on total cost of ownership. For a content-heavy or editorial site, or one that pulls from multiple backends beyond Shopify, custom Next.js plus the Storefront API wins on flexibility. Most growing brands ($200K to $2M/year) still benefit from custom Next.js because it keeps vendor options open.
-                        </BlogText>
-
-                        <h3 id="headless-cost-2026" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">What headless Shopify actually costs in 2026</h3>
-                        <BlogText>
-                            Most headless articles say &ldquo;it is expensive&rdquo; without numbers. Here are the verified 2026 ranges. A Hydrogen plus Oxygen build from a specialist agency runs <BlogHighlight>$30,000 to $100,000+</BlogHighlight>. A custom Next.js plus Storefront API build runs <BlogHighlight>$40,000 to $150,000+</BlogHighlight>. Ongoing retainers run $2,000 to $8,000 per month, putting 12-month total cost of ownership at $80,000 to $200,000+ at agency rates.
-                        </BlogText>
-                        <BlogText>
-                            PandaCodeGen builds headless Shopify on the Storefront API at fixed prices from $5,000 to $10,000 (Scale tier), well below the agency ranges above, because the delivery is co-founder-led and AI-accelerated rather than billed hourly through a strategy-and-change-order cycle. The full cross-platform cost picture is in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>, and the app-fee math that usually triggers the headless decision is in our <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">Shopify app cost breakdown</Link>.
-                        </BlogText>
-                        <BlogText>
-                            Why this matters more in 2026: Shopify reported in its Q1 2026 results that orders from AI-powered searches grew roughly <BlogHighlight>13x year over year</BlogHighlight> on $100.7B GMV (up 35%). Google&apos;s Universal Commerce Protocol launched in January 2026 with Shopify as a launch partner. Agentic storefronts decouple the catalog from the storefront so AI agents parse structured data directly. A headless build gives you full control over that structured data layer in a way a locked Liquid theme cannot.
-                        </BlogText>
-
-                        <BlogHeader>What Happens in the First 90 Days After Going Headless?</BlogHeader>
-                        <BlogText>
-                            The performance improvement is immediate. The SEO and revenue compounding take 60 to 90 days to fully materialize:
-                        </BlogText>
-                        <BlogList items={[
-                            "Day 1 to 7: PageSpeed jumps to 90+. Google Search Console shows Core Web Vitals switching from Poor to Good",
-                            "Week 2 to 3: Bounce rate drops. Sessions that previously ended within 3 seconds now stay and browse. Mobile engagement metrics improve significantly",
-                            "Month 1 to 2: Conversion rate improvement becomes measurable. Most stores see a 40 to 80% lift in mobile conversions within the first 30 days of full traffic on the new site",
-                            "Month 2 to 3: Organic rankings begin recovering and improving. Pages that were stuck at position 8 to 12 start moving toward position 3 to 5 as Google registers the improved Core Web Vitals",
-                            "Month 3+: Revenue impact compounds. Better rankings bring more traffic, and the higher conversion rate means each new visitor is worth more than before"
-                        ]} />
-                        <BlogText>
-                            The stores that see the fastest ROI are those that launch during a high-traffic period (Q4 for most e-commerce). Every percentage point improvement in conversion rate is worth more per month during peak season than during a slow month. Timing your headless launch to coincide with your seasonal peak is a strategy worth discussing during the planning phase.
-                        </BlogText>
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Ready to Cut Your Shopify Load Time by 80%?</h3>
-                        <p className="text-stone-600 mb-6">
-                            Free audit. We&apos;ll show you your current speed impact and what headless would return for your specific store revenue.
-                        </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Book Free Shopify Audit <ArrowRight className="w-5 h-5" /></CalModalButton>
-                    </div>
-
-                    <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Shopify&apos;s Liquid templates are the bottleneck</strong>, no theme edit or app removal can break the 2.5-second floor because Liquid is server-rendered and render-blocking by design.</li>
-                            <li><strong>The real decision is Hydrogen vs. custom Next.js</strong>, not "headless or not": Shopify's own Hydrogen framework offers free Oxygen hosting and deep API integration, while custom Next.js on the Storefront API trades that free hosting for full backend independence.</li>
-                            <li><strong>Your Shopify checkout stays untouched</strong>: Headless replaces only the slow storefront; payments, fraud detection, and tax compliance remain on Shopify.</li>
-                            <li><strong>ROI arrives in 3-6 months for stores doing $200K+/year</strong>: The conversion rate improvement from faster load times typically covers the entire headless build cost within the first few months.</li>
-                        </ol>
                     </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Boxes, title: "Commerce", body: "Catalog, markets, pricing, cart, checkout and accounts." },
+                            { icon: GitBranch, title: "Experience", body: "Routes, CMS, search, personalization and channels." },
+                            { icon: SearchCheck, title: "Discovery", body: "URLs, rendering, metadata, schema, feeds and sitemaps." },
+                            { icon: ShieldCheck, title: "Operation", body: "Consent, security, deployments, monitoring and ownership." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader>What headless changes</BlogHeader>
+                    <BlogText>
+                        The storefront team owns rendering, routing, UI state, content integration and much of the
+                        analytics and deployment system. Shopify remains the commerce engine for products, collections,
+                        pricing, cart, checkout and associated operations exposed through supported interfaces. The
+                        boundary must be documented feature by feature. If you are still settling the terminology,{" "}
+                        <Link href="/blog/what-is-headless-commerce" className={inlineLinkClass}>what headless commerce means in practice</Link>{" "}
+                        covers the architecture in plainer terms first.
+                    </BlogText>
+                    <InsightBox variant="info" label="Why there is no headless price band or uplift figure here">
+                        You will not find a cost band for a headless build or a predicted ranking and conversion gain on
+                        this page. Both depend on the scope you commission, the systems you integrate and the team that
+                        operates the result, so a single figure would tell you nothing about your own project. Headless
+                        is also not automatically faster. Shopify&apos;s own guidance ties performance to implementation
+                        quality, and moving rendering into your own frontend moves the engineering responsibility with
+                        it. Scope the work against your requirements, then measure the build you actually ship.
+                    </InsightBox>
+
+                    <BlogHeader>1. Start with requirements that a theme cannot meet well</BlogHeader>
+                    <BlogList
+                        items={[
+                            "A differentiated interaction model that is impractical within accepted theme constraints.",
+                            "A storefront that combines multiple commerce, content or product systems.",
+                            "Consistent experience logic across web, app, kiosk or other supported channels.",
+                            "Release independence needed by an established product and engineering team.",
+                            "Rendering, caching or personalization control supported by a clear operating model.",
+                        ]}
+                    />
+                    <BlogText>
+                        If the requirement is merely a slow route, diagnose the theme, apps, media and third parties
+                        first. A separate frontend can reproduce the same problems and add new ones. Start with{" "}
+                        <Link href="/blog/shopify-dawn-theme-slow" className={inlineLinkClass}>diagnosing a slow Dawn theme</Link>{" "}
+                        and the wider{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className={inlineLinkClass}>Shopify store speed optimization guide</Link>,
+                        and see{" "}
+                        <Link href="/blog/shopify-plus-still-slow" className={inlineLinkClass}>why a Shopify Plus store can still be slow</Link>{" "}
+                        before assuming the plan is the constraint.
+                    </BlogText>
+
+                    <BlogHeader>2. Compare the three storefront paths</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Path</th><th className="p-4">Best fit</th><th className="p-4">Responsibility</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Shopify theme</td><td className="p-4">Requirements fit Liquid, sections and platform extensibility</td><td className="p-4">Lower separate-frontend burden</td></tr>
+                                <tr><td className="p-4 font-bold">Hydrogen</td><td className="p-4">Custom React storefront using Shopify&apos;s official headless framework</td><td className="p-4">Custom app plus Shopify integration and release operation</td></tr>
+                                <tr><td className="p-4 font-bold">Custom API client</td><td className="p-4">A justified framework or runtime requirement</td><td className="p-4">More integration decisions owned by the implementation team</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Shopify lists Hydrogen as its React framework and the Storefront API Client as its recommended
+                        lightweight JavaScript client for custom storefronts outside Hydrogen. The API is versioned, so
+                        quarterly versions, upgrades and deprecations belong in maintenance planning. If the choice is
+                        still open between staying native, going headless or leaving the platform, work through our{" "}
+                        <Link href="/blog/shopify-vs-custom-website" className={inlineLinkClass}>Shopify and custom website decision framework</Link>.
+                    </BlogText>
+
+                    <BlogHeader>3. Inventory commerce compatibility</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Products, variants, collections, inventory, pricing, discounts and markets.",
+                            "Cart behavior, checkout handoff, accelerated payment and account flows.",
+                            "Search, recommendations, subscriptions, bundles, loyalty, reviews and wish lists.",
+                            "Tax, shipping, pickup, returns, customer service and fulfillment.",
+                            "B2B, internationalization, localization and accessibility requirements.",
+                            "App behavior: API support, headless UI, webhooks, server events and checkout integration.",
+                        ]}
+                    />
+                    <BlogText>
+                        App compatibility is where most of the rework hides, so inventory what each app does and what it
+                        charges before you commit.{" "}
+                        <Link href="/blog/shopify-app-costs-real-monthly-bill" className={inlineLinkClass}>How to read your real monthly Shopify app bill</Link>{" "}
+                        gives you a method for the second half of that.
+                    </BlogText>
+
+                    <BlogHeader>4. Treat analytics and consent as architecture</BlogHeader>
+                    <BlogText>
+                        A custom storefront does not inherit every theme analytics behavior automatically. Shopify&apos;s
+                        current documentation includes a specific migration path for custom headless analytics and
+                        warns that the documented custom setup is not officially supported. Hydrogen has its own
+                        supported path. Decide this before framework selection, especially after the 2026 cookie changes.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Define consent categories and pre-consent behavior for each region in scope.",
+                            "Map Shopify, advertising, email and internal analytics events with owners and definitions.",
+                            "Test event identity, deduplication, attribution and checkout handoff.",
+                            "Document server and browser data flows, retention, processors and deletion paths.",
+                        ]}
+                    />
+                    <BlogText>
+                        Advertising measurement is part of the same scope rather than a later task. Our guide to{" "}
+                        <Link href="/blog/fix-meta-ad-tracking-2026" className={inlineLinkClass}>repairing Meta ad tracking in 2026</Link>{" "}
+                        covers the server-side event work that a storefront change usually disturbs.
+                    </BlogText>
+
+                    <BlogHeader>5. Make the migration SEO-safe</BlogHeader>
+                    <BlogText>
+                        Headless is not inherently better or worse for SEO. The implementation controls the output.
+                        Google warns that significant site changes can produce temporary ranking fluctuations while
+                        URLs are recrawled and reindexed. Build an evidence-backed migration plan instead of promising
+                        ranking retention.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Crawl and preserve the current URL, status, canonical, metadata, heading, content, internal-link and indexability inventory.",
+                            "Map every changed URL to a relevant destination and test permanent redirects.",
+                            "Render crawlable navigation, product content, canonicals and directives in the delivered HTML.",
+                            "Keep product price, availability, variants, structured data and Merchant Center feeds consistent.",
+                            "Generate accurate robots and sitemap output and verify production Search Console properties.",
+                            "Monitor crawl errors, indexed pages, queries, templates and server capacity after launch.",
+                        ]}
+                    />
+                    <BlogText>
+                        <Link href="/blog/will-migrating-hurt-my-seo" className={inlineLinkClass}>What a migration does to search visibility</Link>{" "}
+                        expands on the monitoring side of this list. The same product data also feeds agentic shopping
+                        surfaces, which we cover in{" "}
+                        <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className={inlineLinkClass}>what Google&apos;s universal commerce protocol means for a store</Link>.
+                    </BlogText>
+
+                    <BlogHeader>6. Define performance acceptance precisely</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Representative home, collection, product, search, cart and agreed campaign routes.",
+                            "Mobile and desktop profiles with device, network, geography, cache and consent state recorded.",
+                            "Three consecutive tests per agreed page and profile, reported without selecting only the best run.",
+                            "Functional, accessibility, SEO, analytics and error guardrails.",
+                            "Field Core Web Vitals monitored after enough real traffic exists.",
+                            "A written remedy if the contracted target is not met under the accepted conditions.",
+                        ]}
+                    />
+                    <BlogText>
+                        PandaCodeGen can contract for a 90-plus Lighthouse acceptance target under documented test
+                        conditions. That is a delivery criterion, not a promise that every visitor, route, date or
+                        third-party state will permanently produce the same score.{" "}
+                        <Link href="/blog/core-web-vitals-explained" className={inlineLinkClass}>Core Web Vitals explained</Link>{" "}
+                        sets out the field metrics that acceptance criterion is measured against later.
+                    </BlogText>
+
+                    <BlogHeader>7. Price total ownership, not only the build</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Discovery, design, implementation, migration, content and data work.",
+                            "Shopify plan, hosting, CMS, search, email, monitoring and other providers.",
+                            "App replacement, API limits, integrations and vendor support.",
+                            "Security updates, framework and API upgrades, incident response and recovery.",
+                            "Merchandising workflow, preview, localization, training and documentation.",
+                            "Internal product, design, analytics and engineering time.",
+                        ]}
+                    />
+                    <InsightBox variant="info" label="PandaCodeGen commercial context">
+                        Our published Scale tier starts at $5,000 and commonly covers scoped headless work in the
+                        $5,000 to $10,000-plus range. That is our price, not an industry benchmark. Final scope, third-party
+                        costs, ownership, support and acceptance terms are agreed before onboarding. See the{" "}
+                        <Link href="/services/ecommerce" className={inlineLinkClass}>ecommerce development service</Link> and the{" "}
+                        <Link href="/pricing" className={inlineLinkClass}>pricing page</Link> for what each tier covers.
+                    </InsightBox>
+
+                    <BlogHeader>8. Require a reversible launch</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Content, URL and data freezes with named exceptions.",
+                            "Production-like staging and a complete acceptance checklist.",
+                            "Load, security, accessibility, browser and device testing.",
+                            "DNS, redirects, cache, webhook, secret and provider-account runbooks.",
+                            "Rollback criteria, decision owner and tested recovery path.",
+                            "Post-launch monitoring for commerce, SEO, analytics and performance.",
+                        ]}
+                    />
+                    <BlogText>
+                        For a commerce build delivered under this kind of plan, see our{" "}
+                        <Link href="/work/mycustompatches" className={inlineLinkClass}>MyCustomPatches project</Link>.
+                    </BlogText>
+
+                    <section className="my-10">
+                        <h2 className="mb-3 text-xl font-bold text-charcoal">Related reading</h2>
+                        <p className="leading-relaxed text-stone-700">
+                            On the storefront performance side, read{" "}
+                            <Link href="/blog/shopify-conversion-rate-speed-fix" className={inlineLinkClass}>testing storefront speed against conversion data</Link>{" "}
+                            and{" "}
+                            <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>how to tell whether a slow store is costing sales</Link>.
+                        </p>
+                    </section>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <GitBranch className="mb-4 h-7 w-7 text-amber-300" />
+                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will map URLs, commerce requirements, app dependencies, data flows, test conditions and
+                            ownership before recommending Hydrogen, a custom storefront or a Shopify-native solution.
+                        </p>
+                        <QuoteModalButton cta="shopify_headless_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
+                    </section>
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-
-                    <section className="mb-10 mt-6 md:mt-10">
-                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">Before going headless, check why <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">Dawn theme still caps at 75 PageSpeed</Link>. Running WooCommerce instead? Same architectural ceiling applies. Read <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why WooCommerce is too slow and how to fix it</Link>. And see what it means that with <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">Google UCP, customers can now buy without visiting your store</Link>.</p>
-                    </section>
-
-                    <RelatedPosts currentPostId="shopify-headless" />
-
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

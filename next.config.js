@@ -7,15 +7,13 @@ const withBundleAnalyzer = process.env.ANALYZE?.trim() === 'true'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Keep release verification isolated from a developer-owned `.next` process.
+  // Ordinary development and deployment builds continue to use `.next`.
+  distDir: process.env.PANDACODEGEN_AUDIT_BUILD === '1' ? '.next-audit' : '.next',
   // Non-www → www redirect handled by Vercel domain config (edge-level, no function overhead)
-  // 1. Image optimization for external images
+  // Image optimization is intentionally limited to same-origin assets. Add an
+  // exact remote host only when a reviewed product requirement needs it.
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 90],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -25,7 +23,11 @@ const nextConfig = {
   reactStrictMode: true,
   // 3. Performance optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+    // Keep server-side warnings and errors available to the deployment logger.
+    // Production diagnostics must not disappear during an incident.
+    removeConsole: process.env.NODE_ENV === "production"
+      ? { exclude: ["error", "warn"] }
+      : false,
   },
   // 4. Optimize package imports for better tree-shaking + performance
   experimental: {
@@ -41,6 +43,38 @@ const nextConfig = {
   // 8. Catch malformed URLs (e.g. pandacodegen.com/$ from broken external links)
   async redirects() {
     return [
+      // Consolidate narrow legacy reference pages into the canonical visible
+      // business pages. The factual /ai-info hub remains available and links
+      // these same human-facing sources instead of maintaining duplicate facts.
+      {
+        source: '/ai-info/pricing-and-guarantees',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/ai-info/migration-services',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/ai-info/case-studies',
+        destination: '/work',
+        permanent: true,
+      },
+      {
+        source: '/ai-info/team-and-company',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/ai-info/competitor-comparison',
+        destination: '/pricing',
+        permanent: true,
+      },
+      // NOTE: the four /work/* case-study routes were briefly redirected to /work
+      // during the July 2026 claim remediation. They have since been rebuilt with
+      // dated sources, ownership disclosures and bounded claims, so the redirects
+      // are removed and the routes serve their own pages again.
       {
         source: '/$',
         destination: '/',
@@ -70,29 +104,34 @@ const nextConfig = {
       },
     ];
   },
-  // 9. Security headers + static asset caching
+  // 9. Security headers. Next.js owns cache semantics for its static and image
+  // routes; overriding them can break development and framework revalidation.
   async headers() {
     return [
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/_next/image(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
-        ],
-      },
       {
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '0' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+          // Deliberately scoped. It closes clickjacking, base-tag injection, plugin
+          // injection and form hijacking without a script-src directive, because a
+          // script-src here would silently break the consent-gated vendors (GTM,
+          // Clarity, cal.com, Meta Pixel) on a page that generates leads. Tightening
+          // to script-src requires testing each vendor with consent granted first.
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "base-uri 'self'",
+              "object-src 'none'",
+              "frame-ancestors 'none'",
+              "form-action 'self'",
+              'upgrade-insecure-requests',
+            ].join('; '),
+          },
         ],
       },
     ];

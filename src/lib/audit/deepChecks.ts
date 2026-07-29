@@ -1,4 +1,5 @@
 import type { PageSpeedResult } from './pagespeed';
+import { fetchPublicText } from './publicFetch';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -11,6 +12,7 @@ export interface DeepCheckResult {
   status: 'pass' | 'warn' | 'fail';
   findings: string[];
   fix: string;
+  applicable?: boolean;
 }
 
 export interface DeepChecksResult {
@@ -23,9 +25,6 @@ export interface DeepChecksResult {
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
 
-const UA = 'PandaCodeGen-Audit/1.0';
-const FETCH_TIMEOUT = 10_000;
-
 function status(score: number): 'pass' | 'warn' | 'fail' {
   if (score >= 90) return 'pass';
   if (score >= 50) return 'warn';
@@ -36,18 +35,18 @@ function clamp(n: number): number {
   return Math.max(0, Math.min(100, Math.round(n)));
 }
 
-async function safeFetch(url: string): Promise<{ ok: boolean; text: string; headers: Headers }> {
+async function safeFetch(
+  url: string,
+  maxBytes: number
+): Promise<{ ok: boolean; text: string; headers: Headers }> {
   try {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT);
-    const res = await fetch(url, {
-      headers: { 'User-Agent': UA },
-      signal: controller.signal,
-      redirect: 'follow',
+    const response = await fetchPublicText(url, {
+      timeoutMs: 8_000,
+      maxBytes,
+      maxRedirects: 3,
+      allowedContentTypes: ['text/', 'application/xhtml+xml', 'application/xml'],
     });
-    const text = await res.text();
-    clearTimeout(timer);
-    return { ok: res.ok, text, headers: res.headers };
+    return { ok: response.ok, text: response.text, headers: response.headers };
   } catch {
     return { ok: false, text: '', headers: new Headers() };
   }
@@ -410,7 +409,7 @@ function checkCrawlBudget(html: string, robotsTxt: string, robotsOk: boolean): D
 
 function checkIndexingSpeed(html: string, robotsTxt: string, robotsOk: boolean, sitemapOk: boolean, sitemapText: string): DeepCheckResult {
   const id = 'indexing-speed';
-  const name = 'Indexing Speed';
+  const name = 'Indexing Readiness';
   const findings: string[] = [];
   let score = 60;
 
@@ -471,33 +470,34 @@ function checkIndexingSpeed(html: string, robotsTxt: string, robotsOk: boolean, 
 
 function checkTrustSignals(html: string, url: string): DeepCheckResult {
   const id = 'trust-signals';
-  const name = 'Trust Signals';
+  const name = 'Public Accountability Signals';
   const findings: string[] = [];
-  let score = 30; // baseline
+  let score = 0;
 
   // SSL
   if (url.startsWith('https://')) {
     findings.push('SSL (HTTPS) active');
-    score += 15;
+    score += 25;
   } else {
     findings.push('Site not using HTTPS');
   }
 
   // Privacy policy
   const hasPrivacy = /privacy[\s-]*policy/i.test(html) || /href=["'][^"']*privacy/i.test(html);
-  if (hasPrivacy) { findings.push('Privacy policy link found'); score += 10; }
+  if (hasPrivacy) { findings.push('Privacy policy link found (presence only; content not legally verified)'); score += 20; }
   else { findings.push('No privacy policy link detected'); }
 
   // Terms
   const hasTerms = /terms[\s-]*(of|&amp;|and)?\s*(service|use|conditions)/i.test(html) || /href=["'][^"']*terms/i.test(html);
-  if (hasTerms) { findings.push('Terms of service link found'); score += 8; }
+  if (hasTerms) { findings.push('Terms link found (presence only; content not legally verified)'); score += 15; }
   else { findings.push('No terms of service link detected'); }
 
   // Contact info
   const hasPhone = /(\+?1?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})/i.test(html) || /tel:/i.test(html);
   const hasEmail = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/i.test(html) || /mailto:/i.test(html);
-  if (hasPhone) { findings.push('Phone number found'); score += 7; }
-  if (hasEmail) { findings.push('Email address found'); score += 7; }
+  if (hasPhone) findings.push('Phone number found');
+  if (hasEmail) findings.push('Email address found');
+  if (hasPhone || hasEmail) score += 15;
   if (!hasPhone && !hasEmail) { findings.push('No contact info (phone/email) detected'); }
 
   // Social media links
@@ -506,22 +506,38 @@ function checkTrustSignals(html: string, url: string): DeepCheckResult {
   const uniqueSocials = [...new Set(socialMatches.map(s => s.toLowerCase()))];
   if (uniqueSocials.length > 0) {
     findings.push(`${uniqueSocials.length} social media link(s) found`);
-    score += Math.min(uniqueSocials.length * 3, 10);
+    findings.push('Social-link presence does not verify ownership or endorsement');
   } else {
     findings.push('No social media links detected');
   }
 
-  // Testimonials/reviews
+  const hasAbout = /href=["'][^"']*(about|company|team)/i.test(html);
+  if (hasAbout) {
+    findings.push('About/company information link found (identity not independently verified)');
+    score += 15;
+  } else {
+    findings.push('No about/company information link detected');
+  }
+
+  const hasEvidencePolicy = /editorial[\s-]*policy|evidence[\s-]*(standard|method)|methodology|corrections/i.test(html);
+  if (hasEvidencePolicy) {
+    findings.push('Evidence, methodology, editorial, or corrections language found');
+    score += 10;
+  } else {
+    findings.push('No evidence or editorial-method link detected');
+  }
+
+  // Presence is informational only. Automated text matching cannot authenticate
+  // a testimonial, badge, relationship, rating, permission, or outcome.
   const hasTestimonials = /testimonial|review|rating|star[s]?[\s-]*rating|client[\s-]*say/i.test(html);
-  if (hasTestimonials) { findings.push('Testimonials/reviews section detected'); score += 8; }
-  else { findings.push('No testimonials/reviews section detected'); }
+  if (hasTestimonials) findings.push('Testimonials/reviews language detected; authenticity and permission were not verified');
 
   // Trust badges
   const hasTrustBadges = /bbb|better\s*business|trust[\s-]*pilot|trustpilot|norton|mcafee|ssl[\s-]*badge|secure[\s-]*checkout|verified/i.test(html);
-  if (hasTrustBadges) { findings.push('Trust badges detected'); score += 5; }
+  if (hasTrustBadges) findings.push('Trust-badge language detected; authenticity and current status were not verified');
 
   score = clamp(score);
-  return { id, name, score, status: status(score), findings, fix: score < 70 ? 'Add trust signals: privacy policy, contact info, social links, and testimonials.' : 'Good trust signals present.' };
+  return { id, name, score, status: status(score), findings, fix: score < 70 ? 'Publish accurate privacy/terms/contact/company information and an evidence or corrections method. Verify ownership and permission outside this automated check.' : 'Core accountability links were detected; their accuracy still requires human verification.' };
 }
 
 function checkSecurityHeaders(headers: Headers): DeepCheckResult {
@@ -559,7 +575,7 @@ function checkSecurityHeaders(headers: Headers): DeepCheckResult {
 
 function checkMobileCheckout(html: string): DeepCheckResult {
   const id = 'mobile-checkout';
-  const name = 'Mobile Checkout';
+  const name = 'Checkout Markup Indicators';
   const findings: string[] = [];
   let score = 80;
 
@@ -598,23 +614,23 @@ function checkMobileCheckout(html: string): DeepCheckResult {
     if (hasSecureCheckout) { findings.push('Secure checkout messaging found'); score += 10; }
 
   } else {
-    findings.push('Not an e-commerce site (default score 80/100)');
-
-    // Check for contact forms or booking widgets
-    const hasContactForm = /<form/i.test(html);
-    const hasBooking = /book|schedule|appointment|calendly|booking/i.test(html);
-
-    if (hasContactForm) { findings.push('Contact form detected'); score += 5; }
-    else { findings.push('No contact form found'); score -= 5; }
-
-    if (hasBooking) { findings.push('Booking/scheduling functionality detected'); score += 5; }
+    findings.push('No storefront indicators detected; checkout-specific scoring is not applicable and is excluded from the overall snapshot');
+    return {
+      id,
+      name,
+      score: 100,
+      status: 'pass',
+      findings,
+      fix: 'Not applicable to the inspected page.',
+      applicable: false,
+    };
   }
 
   score = clamp(score);
-  return { id, name, score, status: status(score), findings, fix: isEcommerce ? 'Add payment badges, enable form autocomplete, and offer guest checkout for better mobile conversion.' : 'Consider adding a contact form or booking widget to improve conversions.' };
+  return { id, name, score, status: status(score), findings, fix: isEcommerce ? 'Add explicit payment-method, autocomplete, guest-checkout, and transport-security indicators where applicable, then verify the live mobile flow manually.' : 'No checkout-specific action is required for this page.' };
 }
 
-function checkAIReadiness(
+export function checkSearchAndAIFoundations(
   html: string,
   robotsTxt: string,
   robotsOk: boolean,
@@ -622,151 +638,240 @@ function checkAIReadiness(
   aiTxtOk: boolean
 ): DeepCheckResult {
   const id = 'ai-readiness';
-  const name = 'AI Readiness';
+  const name = 'Search & AI Foundations';
   const findings: string[] = [];
   let score = 0;
 
-  // ── 1. AI manifest files: llms.txt / ai.txt (15 pts) ──────────────
-  // The AI-specific manifests that tell engines how to read and cite you.
-  if (llmsTxtOk && aiTxtOk) {
-    findings.push('Both llms.txt and ai.txt found (full AI manifest)');
-    score += 15;
-  } else if (llmsTxtOk) {
-    findings.push('llms.txt found (add ai.txt too)');
-    score += 11;
-  } else if (aiTxtOk) {
-    findings.push('ai.txt found (add llms.txt too)');
-    score += 8;
-  } else {
-    findings.push('No llms.txt or ai.txt found — AI engines have no usage manifest');
-  }
-
-  // ── 2. Structured data depth + @graph (15 pts) ────────────────────
-  const ldJsonPattern = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
-  let schemaCount = 0;
-  let hasGraph = false;
-  let schemaBlob = '';
-  let m: RegExpExecArray | null;
-  while ((m = ldJsonPattern.exec(html)) !== null) {
-    schemaCount++;
-    schemaBlob += m[1];
-    if (m[1].includes('@graph')) hasGraph = true;
-  }
-  if (hasGraph || schemaCount >= 2) {
-    findings.push(`${schemaCount} structured data block${schemaCount !== 1 ? 's' : ''}${hasGraph ? ' with @graph' : ''}`);
-    score += 15;
-  } else if (schemaCount === 1) {
-    findings.push('1 structured data block (no @graph — entity context is thin)');
-    score += 8;
-  } else {
-    findings.push('No structured data — AI cannot resolve your entity');
-  }
-
-  // ── 3. FAQPage schema (10 pts) — highest-citation schema type ─────
-  // AI Overviews lift FAQ content more than any other schema.
-  const hasFAQ = /"@type"\s*:\s*"FAQPage"/i.test(schemaBlob) || /"@type"\s*:\s*"Question"/i.test(schemaBlob);
-  if (hasFAQ) {
-    findings.push('FAQPage schema present (top AI-citation format)');
+  // 1. Retrieval, crawl and index controls (45 points).
+  // This is deliberately provider-neutral: a named crawler allowlist is not a
+  // universal visibility signal, while a wildcard block affects ordinary access.
+  const htmlAvailable = html.trim().length > 0;
+  if (htmlAvailable) {
+    findings.push('HTML document retrieved for inspection');
     score += 10;
   } else {
-    findings.push('No FAQPage schema — missing the highest-citation format');
+    findings.push('HTML document could not be inspected');
   }
 
-  // ── 4. Entity / E-E-A-T signals: Organization + Person + sameAs (10 pts) ──
-  const hasOrg = /"@type"\s*:\s*"Organization"/i.test(schemaBlob);
-  const hasPerson = /"@type"\s*:\s*"Person"/i.test(schemaBlob);
-  const hasSameAs = /"sameAs"\s*:/i.test(schemaBlob);
-  let eeatPts = 0;
-  if (hasOrg) eeatPts += 4;
-  if (hasPerson) eeatPts += 3;
-  if (hasSameAs) eeatPts += 3;
-  if (eeatPts >= 7) {
-    findings.push('Strong entity signals (Organization + Person + sameAs)');
-  } else if (eeatPts > 0) {
-    findings.push(`Partial entity signals (${[hasOrg && 'Organization', hasPerson && 'Person', hasSameAs && 'sameAs'].filter(Boolean).join(', ')})`);
+  const wildcardRobotsBlocksAll = (() => {
+    let appliesToWildcard = false;
+    let directivesStarted = false;
+    let disallowAll = false;
+    let allowAll = false;
+
+    const groupBlocksAll = () => appliesToWildcard && disallowAll && !allowAll;
+
+    for (const rawLine of robotsTxt.split(/\r?\n/)) {
+      const line = rawLine.replace(/#.*$/, '').trim();
+      if (!line) continue;
+
+      const separator = line.indexOf(':');
+      if (separator < 0) continue;
+      const field = line.slice(0, separator).trim().toLowerCase();
+      const value = line.slice(separator + 1).trim();
+
+      if (field === 'user-agent') {
+        if (directivesStarted) {
+          if (groupBlocksAll()) return true;
+          appliesToWildcard = false;
+          directivesStarted = false;
+          disallowAll = false;
+          allowAll = false;
+        }
+        if (value === '*') appliesToWildcard = true;
+        continue;
+      }
+
+      directivesStarted = true;
+      if (!appliesToWildcard) continue;
+      if (field === 'disallow' && value === '/') disallowAll = true;
+      if (field === 'allow' && value === '/') allowAll = true;
+    }
+
+    return groupBlocksAll();
+  })();
+
+  if (robotsOk && wildcardRobotsBlocksAll) {
+    findings.push('robots.txt contains a wildcard Disallow: / rule');
+  } else if (robotsOk) {
+    findings.push('No site-wide wildcard crawl block found in robots.txt');
+    score += 20;
   } else {
-    findings.push('No entity/author signals — weak E-E-A-T for AI trust');
+    findings.push('robots.txt was unavailable, so crawl policy could not be fully verified');
+    score += 10;
   }
-  score += eeatPts;
 
-  // ── 5. AI-info hub / cluster (10 pts) — the AEO power signal ──────
-  // A dedicated /ai-info, /llms, or similar hub of "verified facts for AI"
-  // is what separates AEO-serious sites from everyone else.
+  const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
+  const hasNoindex = metaTags.some((tag) =>
+    /\bname\s*=\s*["']robots["']/i.test(tag)
+      && /\bcontent\s*=\s*["'][^"']*\bnoindex\b/i.test(tag)
+  );
+  if (htmlAvailable && !hasNoindex) {
+    findings.push('No general noindex directive detected');
+    score += 10;
+  } else if (hasNoindex) {
+    findings.push('Page has a general noindex directive');
+  }
+
+  const hasCanonical = /<link\b(?=[^>]*\brel\s*=\s*["'][^"']*\bcanonical\b)[^>]*>/i.test(html);
+  if (hasCanonical) {
+    findings.push('Canonical link present');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('Canonical link missing');
+  }
+
+  // 2. Extractable on-page content (30 points).
+  const titleText = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1].replace(/<[^>]*>/g, '').trim() || '';
+  if (titleText) {
+    findings.push('Descriptive page title available');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('Page title missing or empty');
+  }
+
+  const descriptionTag = metaTags.find((tag) => /\bname\s*=\s*["']description["']/i.test(tag));
+  const metaDescription = descriptionTag?.match(/\bcontent\s*=\s*["']([^"']*)["']/i)?.[1].trim() || '';
+  if (metaDescription) {
+    findings.push('Meta description available');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('Meta description missing or empty');
+  }
+
+  const h1Count = extractHeadings(html).filter((heading) => heading.level === 1).length;
+  if (h1Count === 1) {
+    findings.push('One clear H1 found');
+    score += 5;
+  } else if (h1Count > 1) {
+    findings.push(`${h1Count} H1 elements found; the primary topic is ambiguous`);
+    score += 2;
+  } else if (htmlAvailable) {
+    findings.push('No H1 found');
+  }
+
+  const visibleText = html
+    .replace(/<(script|style|template|noscript)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:[a-z]+|#\d+|#x[\da-f]+);/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const wordCount = visibleText ? visibleText.split(/\s+/).length : 0;
+  if (wordCount >= 250) {
+    findings.push(`${wordCount} words of extractable visible text`);
+    score += 10;
+  } else if (wordCount >= 100) {
+    findings.push(`${wordCount} words of extractable visible text (limited depth)`);
+    score += 7;
+  } else if (wordCount >= 30) {
+    findings.push(`${wordCount} words of extractable visible text (thin)`);
+    score += 3;
+  } else if (htmlAvailable) {
+    findings.push(`Only ${wordCount} words of extractable visible text`);
+  }
+
+  const hasSemanticMain = /<(main|article)\b/i.test(html);
+  if (hasSemanticMain) {
+    findings.push('Semantic main/article content landmark found');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('No main or article content landmark found');
+  }
+
+  // 3. Identity and provenance evidence (25 points).
+  const ldJsonPattern = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let rawSchemaBlob = '';
+  let validSchemaBlob = '';
+  let invalidSchemaCount = 0;
+  let m: RegExpExecArray | null;
+  while ((m = ldJsonPattern.exec(html)) !== null) {
+    rawSchemaBlob += m[1];
+    try {
+      validSchemaBlob += JSON.stringify(JSON.parse(m[1].trim()));
+    } catch {
+      invalidSchemaCount++;
+    }
+  }
+
+  const hasParseableEntity = /"@type"\s*:\s*"(?:Organization|Person|LocalBusiness|Corporation)"/i.test(validSchemaBlob);
+  if (hasParseableEntity) {
+    findings.push('Parseable organization/person identity markup found; factual accuracy is not verified');
+    score += 10;
+  } else {
+    findings.push('No parseable organization/person identity markup found');
+  }
+  if (invalidSchemaCount > 0) {
+    findings.push(`${invalidSchemaCount} invalid JSON-LD block${invalidSchemaCount === 1 ? '' : 's'} detected`);
+  }
+
+  const hasAccountabilityLink = /href=["'][^"']*\/(?:about|contact)(?:[\/?#"']|$)/i.test(html);
+  if (hasAccountabilityLink) {
+    findings.push('Visible About or Contact path found');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('No visible About or Contact path found');
+  }
+
+  const hasPolicyLink = /href=["'][^"']*\/(?:privacy|terms)(?:[\/?#"']|$)/i.test(html);
+  if (hasPolicyLink) {
+    findings.push('Visible privacy or terms path found');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('No visible privacy or terms path found');
+  }
+
+  const hasProvenance = /<meta\b[^>]*\bname\s*=\s*["']author["']/i.test(html)
+    || /<a\b[^>]*\brel\s*=\s*["'][^"']*\bauthor\b/i.test(html)
+    || /<(?:address|cite)\b/i.test(html)
+    || /<time\b[^>]*\bdatetime\s*=/i.test(html)
+    || /"(?:datePublished|dateModified|author)"\s*:/i.test(validSchemaBlob);
+  if (hasProvenance) {
+    findings.push('Authorship, date, or citation provenance marker found; factual accuracy is not verified');
+    score += 5;
+  } else if (htmlAvailable) {
+    findings.push('No authorship, date, or citation provenance marker found');
+  }
+
+  // Experimental or provider-specific signals below are reported for context
+  // only. They never add points or imply discovery, citation, or eligibility.
   const aiHubPattern = /href=["'][^"']*\/(ai-info|ai-faq|llms?|for-ai|ai-overview|knowledge-base)\b/i;
   const mentionsAiHub = aiHubPattern.test(html);
   if (mentionsAiHub) {
-    findings.push('Dedicated AI-info hub/cluster linked (AEO-serious signal)');
-    score += 10;
-  } else {
-    findings.push('No AI-info hub found — no dedicated page feeding AI verified facts');
+    findings.push('Informational only: an AI-focused resource path is linked; its label/path has no score impact');
   }
 
-  // ── 6. Speakable markup (8 pts) ───────────────────────────────────
-  if (/speakable/i.test(html)) { findings.push('Speakable markup detected'); score += 8; }
-  else { findings.push('No speakable markup (voice/AI answer eligibility)'); }
-
-  // ── 7. Meta description (7 pts) — AI pulls this for summaries ─────
-  const metaDescMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
-  if (metaDescMatch) {
-    const descLen = metaDescMatch[1].length;
-    if (descLen >= 140 && descLen <= 165) { findings.push(`Meta description: ${descLen} chars (optimal)`); score += 7; }
-    else if (descLen >= 100 && descLen <= 180) { findings.push(`Meta description: ${descLen} chars (acceptable)`); score += 5; }
-    else { findings.push(`Meta description: ${descLen} chars (aim 140-165)`); score += 2; }
-  } else {
-    findings.push('Missing meta description');
+  const hasFaqMarkup = /"@type"\s*:\s*"(?:FAQPage|Question)"/i.test(rawSchemaBlob);
+  if (hasFaqMarkup) {
+    findings.push('Informational only: FAQ/Question markup detected; it has no score impact or general citation guarantee');
   }
 
-  // ── 8. Open Graph tags (5 pts) ────────────────────────────────────
-  const ogTags = html.match(/<meta[^>]*property=["']og:/gi) || [];
-  if (ogTags.length >= 4) { findings.push(`${ogTags.length} Open Graph tags`); score += 5; }
-  else if (ogTags.length > 0) { findings.push(`${ogTags.length} Open Graph tag(s) (add more)`); score += 2; }
-  else { findings.push('No Open Graph tags'); }
-
-  // ── 9. Content freshness — dateModified (5 pts) ───────────────────
-  // AI engines favor fresh, dated content. Reward a recent dateModified.
-  const dateModMatch = schemaBlob.match(/"dateModified"\s*:\s*"(\d{4})-(\d{2})/);
-  if (dateModMatch) {
-    const year = parseInt(dateModMatch[1], 10);
-    if (year >= 2026) { findings.push('Fresh dateModified (2026+)'); score += 5; }
-    else { findings.push(`dateModified is ${year} (stale — AI favors fresh)`); score += 2; }
-  } else {
-    findings.push('No dateModified in schema (freshness signal missing)');
+  if (/speakable/i.test(rawSchemaBlob)) {
+    findings.push('Informational only: speakable markup detected; support is platform- and use-case-specific');
   }
 
-  // ── 10. AI crawler access in robots.txt (15 pts) ──────────────────
-  // The 2026 crawler landscape: 12 bots that matter. Blocking them = invisible to AI.
-  if (robotsOk) {
-    const aiBots = [
-      'GPTBot', 'ChatGPT-User', 'OAI-SearchBot',        // OpenAI
-      'ClaudeBot', 'Claude-Web', 'anthropic-ai',         // Anthropic
-      'PerplexityBot', 'Perplexity-User',                // Perplexity
-      'Google-Extended', 'Google-Agent',                 // Google AI / agentic
-      'CCBot', 'Applebot-Extended',                      // Common Crawl / Apple
-    ];
-    const blocked: string[] = [];
-    for (const bot of aiBots) {
-      const botBlocked = new RegExp(`user-agent:\\s*${bot}[\\s\\S]*?disallow:\\s*/\\s*$`, 'im').test(robotsTxt);
-      if (botBlocked) blocked.push(bot);
-    }
-    if (blocked.length === 0) {
-      findings.push('No AI crawlers blocked (all 12 major 2026 bots allowed)');
-      score += 15;
-    } else if (blocked.length <= 2) {
-      findings.push(`${blocked.length} AI crawler(s) blocked: ${blocked.join(', ')}`);
-      score += 8;
-    } else {
-      findings.push(`${blocked.length} AI crawlers blocked: ${blocked.join(', ')} — you are invisible to these engines`);
-      score += 0;
-    }
-  } else {
-    findings.push('Cannot check AI crawler access (robots.txt unavailable)');
-    score += 5;
+  const discoveryFiles = [llmsTxtOk && 'llms.txt', aiTxtOk && 'ai.txt'].filter(Boolean) as string[];
+  findings.push(
+    discoveryFiles.length > 0
+      ? `Informational only: ${discoveryFiles.join(' and ')} detected; these files have no score impact or eligibility guarantee`
+      : 'Informational only: no llms.txt or ai.txt detected; their absence has no score impact'
+  );
+
+  const namedCrawlerRules = (robotsTxt.match(/^\s*user-agent\s*:\s*[^\r\n#]+/gim) || [])
+    .map((line) => line.slice(line.indexOf(':') + 1).trim())
+    .filter((agent) => agent !== '*');
+  if (namedCrawlerRules.length > 0) {
+    findings.push(`Informational only: ${namedCrawlerRules.length} named crawler directive${namedCrawlerRules.length === 1 ? '' : 's'} detected; provider-specific rules have no score impact`);
+  }
+
+  if (wildcardRobotsBlocksAll || hasNoindex) {
+    score = Math.min(score, 40);
+    findings.push('Score capped at 40 because a general crawl or index control blocks discovery');
   }
 
   score = clamp(score);
   const fix = score < 70
-    ? 'Tighten AI readiness: add llms.txt + ai.txt, FAQPage schema, Organization + Person + sameAs entity markup, a dedicated AI-info hub, speakable markup, and confirm all 12 major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Google-Agent, OAI-SearchBot and others) are allowed in robots.txt.'
-    : 'Strong AI readiness. AI engines can crawl, parse, and cite this site.';
+    ? 'Improve the verifiable foundations: allow general crawling, remove unintended noindex directives, add a canonical, expose substantial semantic HTML, and provide clear identity, policy, and provenance signals. Experimental files and markup do not change this score.'
+    : 'Review the listed crawlability, indexability, content, and evidence findings. This score does not predict inclusion, citations, or recommendations in any AI system.';
   return { id, name, score, status: status(score), findings, fix };
 }
 
@@ -780,11 +885,11 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
 
   // Fetch all external resources in parallel
   const [htmlRes, robotsRes, sitemapRes, llmsRes, aiTxtRes] = await Promise.allSettled([
-    safeFetch(url),
-    safeFetch(`${origin}/robots.txt`),
-    safeFetch(`${origin}/sitemap.xml`),
-    safeFetch(`${origin}/llms.txt`),
-    safeFetch(`${origin}/ai.txt`),
+    safeFetch(url, 1_500_000),
+    safeFetch(`${origin}/robots.txt`, 256_000),
+    safeFetch(`${origin}/sitemap.xml`, 1_000_000),
+    safeFetch(`${origin}/llms.txt`, 512_000),
+    safeFetch(`${origin}/ai.txt`, 256_000),
   ]);
 
   const htmlData = htmlRes.status === 'fulfilled' ? htmlRes.value : { ok: false, text: '', headers: new Headers() };
@@ -811,7 +916,7 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
     () => checkTrustSignals(html, url),
     () => checkSecurityHeaders(headers),
     () => checkMobileCheckout(html),
-    () => checkAIReadiness(html, robotsData.text, robotsData.ok, llmsData.ok, aiTxtData.ok),
+    () => checkSearchAndAIFoundations(html, robotsData.text, robotsData.ok, llmsData.ok, aiTxtData.ok),
   ];
 
   for (const runner of runners) {
@@ -830,8 +935,9 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
     }
   }
 
-  const overallScore = checks.length > 0
-    ? Math.round(checks.reduce((sum, c) => sum + c.score, 0) / checks.length)
+  const scoredChecks = checks.filter((check) => check.applicable !== false);
+  const overallScore = scoredChecks.length > 0
+    ? Math.round(scoredChecks.reduce((sum, c) => sum + c.score, 0) / scoredChecks.length)
     : 0;
 
   return { checks, overallScore, htmlFetched };

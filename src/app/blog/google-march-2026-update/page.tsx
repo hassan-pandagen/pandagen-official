@@ -1,15 +1,16 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, InsightBox, StatCard } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
 
-const marchUpdateFAQs = blogPosts.find(p => p.id === 'google-march-2026-update')?.faqs ?? [];
+const marchUpdateFAQs = blogPosts.find(p => p.id === "google-march-2026-update")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
@@ -17,26 +18,36 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Google March 2026 Update: Fast Sites Won",
-    description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
+    title: "Google March 2026 Core Update: What Google Confirmed",
+    description: "Google's March 2026 core update ran from March 27 to April 8. Learn what Google confirmed, whether speed thresholds changed, and how to diagnose a traffic drop with Search Console.",
     alternates: {
-        canonical: '/blog/google-march-2026-update',
+        canonical: "/blog/google-march-2026-update",
     },
-    keywords: ["Google March 2026 core update", "Google algorithm update 2026", "Core Web Vitals ranking factor", "website speed SEO 2026", "LCP 2.0 threshold", "INP ranking signal", "slow website ranking drop"],
+    keywords: [
+        "Google March 2026 core update",
+        "Google algorithm update 2026",
+        "Google traffic drop",
+        "core update recovery",
+        "Core Web Vitals SEO",
+        "website speed SEO 2026",
+        "LCP threshold",
+        "INP Core Web Vital",
+        "Search Console traffic drop",
+    ],
     openGraph: {
-        title: "What Did Google's March 2026 Update Do to Rankings? Fast Sites Won",
-        description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
+        title: "Google March 2026 Core Update: What Google Confirmed",
+        description: "The rollout ran from March 27 to April 8. Separate a core-update correlation from content, indexing, demand, and performance problems with an evidence-led workflow.",
         type: "article",
         publishedTime: "2026-04-01T00:00:00-05:00",
-        modifiedTime: "2026-04-01T00:00:00-05:00",
+        modifiedTime: "2026-07-24T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-march-2026-update",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/google-march-2026-update")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "What Did Google's March 2026 Update Do to Rankings? Fast Sites Won",
-        description: "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
+        title: "Google March 2026 Core Update: What Google Confirmed",
+        description: "Google did not announce a new speed threshold. Use Search Console, field performance data, analytics, and a change log to find the real cause of a traffic change.",
     },
 };
 
@@ -46,50 +57,48 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#article",
-            "headline": "What Did Google's March 2026 Update Do to Rankings? Fast Sites Won",
-            "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "headline": "Google March 2026 Core Update: What Google Confirmed",
+            "description": "Google's March 2026 core update ran from March 27 to April 8. This guide separates Google's confirmed record from unsupported speed claims and explains how to investigate a traffic change responsibly.",
+            "image": ogImageUrlForPath("/blog/google-march-2026-update"),
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-04-01T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                "url": "https://www.pandacodegen.com/about",
+                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-march-2026-update" },
             "articleSection": "SEO",
-            "keywords": ["Google March 2026 core update", "Core Web Vitals", "website speed SEO", "LCP threshold", "INP ranking signal"],
-            "timeRequired": "PT10M",
-            "wordCount": 2200,
+            "keywords": ["Google March 2026 core update", "Google traffic drop", "Core Web Vitals SEO", "LCP threshold", "INP Core Web Vital", "Search Console"],
             "about": [
-                { "@type": "Thing", "name": "Google Core Update", "description": "Google's periodic broad algorithm updates that reassess content quality and ranking signals" },
-                { "@type": "Thing", "name": "Core Web Vitals", "description": "Google's metrics for measuring real-world user experience including LCP, INP, and CLS" },
-                { "@type": "Thing", "name": "Website Performance Optimization", "description": "Technical improvements to reduce page load time and improve user experience metrics" }
+                { "@type": "Thing", "name": "Google March 2026 Core Update", "description": "A broad Google Search core update that rolled out from March 27 to April 8, 2026" },
+                { "@type": "Thing", "name": "Core Web Vitals", "description": "Real-user metrics for loading performance, responsiveness, and visual stability" },
+                { "@type": "Thing", "name": "Search Console", "description": "Google's service for monitoring and troubleshooting a site's presence in Google Search" },
             ],
             "inLanguage": "en-US",
             "speakable": {
                 "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"],
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Digital Applied: Google March 2026 Core Update Impact Analysis", "url": "https://www.digitalapplied.com/blog/google-march-2026-core-update-impact-analysis-recovery" },
-                { "@type": "CreativeWork", "name": "Nventory: Google March 2026 Core Update E-commerce Impact", "url": "https://nventory.io/blog/google-march-2026-core-update-ecommerce" },
-                { "@type": "CreativeWork", "name": "Words Guru: Google March 2026 Core Update Winners and Losers", "url": "https://www.wordsguru.com/google-march-2026-core-update-explained-a-look-at-the-winners-losers/" },
-                { "@type": "CreativeWork", "name": "Click Rank: Google March 2026 Core Update Analysis", "url": "https://www.clickrank.ai/google-march-2026-core-update/" },
-                { "@type": "CreativeWork", "name": "Queue-it: E-commerce Website Speed Statistics 2026", "url": "https://queue-it.com/blog/ecommerce-website-speed-statistics/" },
-                { "@type": "CreativeWork", "name": "ALM Corp: Google March 2026 Core Update Guide", "url": "https://almcorp.com/blog/google-march-2026-core-update/" }
-            ]
+                { "@type": "CreativeWork", "name": "Google Search Status Dashboard: March 2026 core update", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y" },
+                { "@type": "CreativeWork", "name": "Google Search's core updates and your website", "url": "https://developers.google.com/search/docs/appearance/core-updates" },
+                { "@type": "CreativeWork", "name": "Understanding Core Web Vitals and Google search results", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
+                { "@type": "CreativeWork", "name": "Understanding page experience in Google Search results", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
+                { "@type": "CreativeWork", "name": "Debugging drops in Google Search traffic", "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" },
+                { "@type": "CreativeWork", "name": "Using Search Console and Google Analytics data for SEO", "url": "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console" },
+                { "@type": "CreativeWork", "name": "Search Console annotations", "url": "https://support.google.com/webmasters/answer/16530728" },
+            ],
         },
         {
             "@type": "BreadcrumbList",
@@ -97,21 +106,21 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Google March 2026 Update", "item": "https://www.pandacodegen.com/blog/google-march-2026-update" }
-            ]
+                { "@type": "ListItem", "position": 3, "name": "Google March 2026 Update", "item": "https://www.pandacodegen.com/blog/google-march-2026-update" },
+            ],
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#webpage",
             "url": "https://www.pandacodegen.com/blog/google-march-2026-update",
-            "name": "Google's March 2026 Update: Fast Sites Win the Ranking Boost",
-            "description": "Google's March 2026 core update tightened speed requirements and dropped 47% of slow sites. Here's what changed and what your business should do now.",
+            "name": "Google March 2026 Core Update: What Google Confirmed",
+            "description": "The rollout ran from March 27 to April 8. This page explains the confirmed record, unchanged Core Web Vitals thresholds, and a Search Console diagnostic process.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-march-2026-update") },
             "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-04-01T00:00:00-05:00",
+            "dateModified": "2026-07-22T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb" },
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
         },
         {
             "@type": "Organization",
@@ -122,16 +131,16 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
+            "description": "PandaCodeGen plans and delivers SEO-safe migrations for revenue-generating WordPress, Webflow, and GoHighLevel websites. Scope, performance tests, acceptance criteria, and remedies are defined in accepted written terms.",
             "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            "foundingDate": "2026-02",
         },
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#faq",
-            "mainEntity": marchUpdateFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
-        }
-    ]
+            "mainEntity": marchUpdateFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } })),
+        },
+    ],
 };
 
 export default function GoogleMarchUpdatePage() {
@@ -139,316 +148,278 @@ export default function GoogleMarchUpdatePage() {
         <>
             <Header />
             <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                {/* Global Noise Texture */}
                 <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
 
                 <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    {/* Article Schema */}
                     <script
                         type="application/ld+json"
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    {/* Breadcrumb Navigation */}
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Google March 2026 Update", href: "/blog/google-march-2026-update" }
+                            { label: "Google March 2026 Update", href: "/blog/google-march-2026-update" },
                         ]}
                     />
 
-                    {/* Back Button */}
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
                         Back to Blog
                     </Link>
 
-                    {/* Title & Meta */}
                     <div className="mb-10">
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Google&apos;s March 2026 Update Rewards <span className="font-serif italic text-cognac">Fast Sites</span>
+                            Google March 2026 Core Update: <span className="font-serif italic font-normal text-cognac">What Google Confirmed</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The March 2026 core update tightened speed requirements and dropped 47% of slow sites from the first page. Here is what changed, what it costs you, and what to do about it.
+                            Google confirmed a broad core update from March 27 to April 8. It did not announce a new speed threshold or a penalty for a specific platform. Here is how to separate the official record from speculation and investigate a real traffic change.
                         </p>
 
                         <BlogAuthor
-                            date="Apr 1, 2026"
-                            readTime="10 min read"
-                            bio="Hassan founded PandaCodeGen in Feb 2026 to build custom-coded websites that load under 1 second and score 90+ on PageSpeed. Six years of WordPress experience before going fully custom. No templates, no bloat, no plugins."
+                            date="Apr 1, 2026, reviewed Jul 22, 2026"
+                            readTime="13 min read"
+                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He focuses on performance testing, technical SEO, and controlled website migrations with documented baselines and acceptance criteria."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
 
-                    {/* Executive Summary */}
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Google's March 2026 core update tightened LCP from 2.5s to 2.0s and made INP a primary ranking signal. 55% of sites saw ranking changes within two weeks.",
-                            "47% of sites with slow Core Web Vitals lost rankings. Every 1-second delay in load time reduces conversions by 7%, compounding into thousands in lost revenue per year for a typical small business.",
-                            "Recovery takes 3 to 6 months. The fastest path forward is rebuilding on a modern framework that scores 90+ on PageSpeed out of the box."
+                            "Google's Search Status Dashboard records the March 2026 core update as running from March 27 to April 8. The dashboard does not describe a new LCP threshold, a special INP change, or a percentage of slow sites that lost rankings.",
+                            "Google's current good Core Web Vitals thresholds remain LCP at 2.5 seconds or better, INP at 200 milliseconds or better, and CLS at 0.1 or better. These metrics matter, but good scores do not guarantee high rankings.",
+                            "A traffic drop should be segmented by page, query, device, country, and search type, then compared with indexing, field performance, analytics, release, and server data before anyone assigns a cause.",
+                            "Businesses should monitor Google's official update record and annotate their own releases. That discipline reduces panic, prevents destructive SEO reactions, and makes the next change easier to diagnose.",
                         ]} />
                     </div>
 
-                    {/* Content */}
                     <div className="space-y-8">
                         <BlogText>
-                            On March 27, 2026, Google rolled out its latest core algorithm update. Within 48 hours, ranking dashboards across the industry lit up red. Businesses that had spent years building their organic traffic watched their positions drop overnight.
+                            Google began the March 2026 core update on March 27 and marked the rollout complete on April 8. Those dates are confirmed in the <a href="https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Google Search Status Dashboard</a>. That official record is the right starting point for any analysis.
                         </BlogText>
 
                         <BlogText>
-                            This was not a small tweak. <BlogHighlight>55% of tracked websites saw ranking changes within two weeks.</BlogHighlight> And the pattern was clear: slow sites dropped, fast sites climbed.
-                        </BlogText>
-
-                        <BlogText>
-                            If your website takes more than 2 seconds to load, this update likely affected you. Here is what changed, why it matters for your revenue, and exactly what you can do about it.
+                            It is not enough to notice that traffic moved during the same period and declare a cause. A core update, a technical release, a crawl problem, changing search demand, a competitor's stronger page, a tracking fault, or normal volatility can overlap. <BlogHighlight>Timing creates a hypothesis, not proof.</BlogHighlight>
                         </BlogText>
 
                         <InsightBox variant="warning">
-                            The March 2026 core update tightened the LCP threshold from 2.5 seconds to 2.0 seconds and elevated INP to a primary ranking signal. Slow sites dropped, fast sites climbed &mdash; if your site loads in more than 2 seconds, it likely lost ground.
+                            Google did not announce that the March 2026 core update reduced the good LCP threshold to 2.0 seconds, made INP a new primary signal, penalized WordPress or Shopify, or caused a stated percentage of slow sites to lose rankings. Those claims should not be used to diagnose a site or sell a rebuild.
                         </InsightBox>
 
-                        <BlogHeader>What Google Changed on March 27, 2026</BlogHeader>
+                        <BlogHeader>What Google Actually Confirmed About the March 2026 Core Update</BlogHeader>
 
                         <BlogText>
-                            Google releases core updates several times per year. Each one adjusts how Google decides which websites deserve the top spots in search results. The March 2026 update focused on two major areas: website speed and content quality.
+                            Google's public update notice confirms the name and rollout window. Google's <a href="https://developers.google.com/search/docs/appearance/core-updates" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">core-update guidance</a> explains that core updates are broad changes intended to improve how Search presents helpful and reliable results. They do not target one website, one page, or one content management system.
                         </BlogText>
 
                         <BlogText>
-                            <strong>The speed changes are the biggest story.</strong> Google tightened the performance requirements that websites must meet to rank well. Think of it like a bar exam getting harder. The same website that passed last year might fail this year.
-                        </BlogText>
-
-                        <BlogText>
-                            Google also increased the weight it gives to original research, author credentials, and first-hand expertise. Thin content from sites with no clear authorship dropped significantly.
-                        </BlogText>
-
-                        <BlogQuote>
-                            The March 2026 update is the most performance-focused core update since Google introduced Core Web Vitals as a ranking signal in 2021.
-                        </BlogQuote>
-
-                        <BlogText>
-                            The update finished rolling out on April 3. Three weeks later, the dust has settled and the rankings picture is clear. If you have not checked your positions since the rollout, start there.
-                        </BlogText>
-
-                        <BlogHeader>The New Speed Requirements: 2.0 Seconds to Load, 200ms to Respond</BlogHeader>
-
-                        <BlogText>
-                            Google measures website speed using three metrics called Core Web Vitals. You do not need to memorize these, but you do need to understand what they mean for your business.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>LCP (Largest Contentful Paint):</strong> How fast your main content appears on screen. Previously, Google considered anything under 2.5 seconds acceptable. <BlogHighlight>The new threshold is 2.0 seconds.</BlogHighlight> Half a second might sound small, but millions of websites fall between 2.0 and 2.5 seconds. They went from "passing" to "failing" overnight.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>INP (Interaction to Next Paint):</strong> How fast your website responds when someone clicks a button, opens a menu, or fills out a form. This metric existed before, but Google elevated it to a primary ranking signal. <BlogHighlight>43% of websites currently fail the 200-millisecond INP threshold.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>CLS (Cumulative Layout Shift):</strong> Whether your page jumps around while loading. This metric stayed the same, but it still matters. If your site shifts content while loading, Google counts that against you.
-                        </BlogText>
-
-                        <BlogText>
-                            The practical impact: if your website loads in 2.3 seconds, you were fine before March 27. Now you are not. And if your buttons feel sluggish on mobile, Google is measuring that too.
-                        </BlogText>
-
-                        <BlogHeader>47% of Slow Sites Lost Rankings. Here&apos;s Why.</BlogHeader>
-
-                        <BlogText>
-                            The numbers from the first two weeks tell a clear story. According to multiple industry analyses, 47% of websites with poor Core Web Vitals saw ranking drops after the update.
-                        </BlogText>
-
-                        <BlogText>
-                            But ranking drops are just the beginning. Rankings translate directly to revenue.
+                            Google also explains that a page moving down is not automatically a penalty or proof that the page is bad. Search results change as systems, content, user expectations, and the open web change. A competitor may now satisfy the query better. A page can also lose clicks with little position movement if demand or the appearance of the results page changes.
                         </BlogText>
 
                         <BlogList items={[
-                            "Every 1-second delay in page load time reduces conversions by 7%",
-                            "Sites that load in 1 second convert at 3x the rate of sites that load in 5 seconds",
-                            "52% of e-commerce sites were affected by this update, with product pages hit hardest"
+                            "Confirmed: the rollout began March 27, 2026 and completed April 8, 2026.",
+                            "Confirmed: it was a broad core update affecting Google's ranking systems.",
+                            "Not announced: a 2.0-second LCP threshold or a new PageSpeed score requirement.",
+                            "Not announced: a March-specific slow-site penalty, platform penalty, traffic-loss percentage, or guaranteed recovery period.",
+                            "Not proven by timing alone: that a site's speed, content, platform, or recent release caused its change.",
                         ]} />
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
-                            <StatCard stat="55%" label="Sites Saw Ranking Changes" context="Within two weeks of the update" />
-                            <StatCard stat="47%" label="Slow Sites Lost Rankings" context="Sites with poor Core Web Vitals" />
-                            <StatCard stat="7%" label="Conversion Loss" context="Per 1-second delay in load time" />
+                        <BlogHeader>Did Google Introduce a New Speed Threshold?</BlogHeader>
+
+                        <BlogText>
+                            No new March threshold appears in Google's announcement or current Search documentation. Google's current <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Core Web Vitals guidance</a> defines a good user experience as LCP at 2.5 seconds or better, INP at 200 milliseconds or better, and CLS at 0.1 or better.
+                        </BlogText>
+
+                        <BlogText>
+                            These are field-performance thresholds, not a statement that every page beyond one number loses rankings. Search Console's Core Web Vitals report uses anonymized real-user data, evaluates the 75th percentile over the latest 28 days, and groups similar URLs. A one-time Lighthouse run and a Search Console URL group answer different questions. Our <Link href="/blog/core-web-vitals-explained" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">guide to Core Web Vitals</Link> explains which metric answers which question.
+                        </BlogText>
+
+                        <BlogText>
+                            A PageSpeed score is useful for finding lab-test opportunities, but Google did not publish a score of 70, 90, or 100 as the March ranking cutoff. Google's <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">page-experience documentation</a> says good Core Web Vitals can contribute to Search success, while also stating that good report scores do not guarantee top rankings. Relevance and helpfulness still matter.
+                        </BlogText>
+
+                        <BlogText>
+                            That distinction protects both SEO decisions and development budgets. Improve a slow or unstable experience because visitors benefit and because page experience is relevant. Do not promise that moving one metric across a line will reverse a core-update loss. The evidence and its limits are laid out in <Link href="/blog/how-website-speed-affects-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">how website speed affects SEO</Link>, and the testing method in our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">repeatable PageSpeed process</Link>.
+                        </BlogText>
+
+                        <BlogHeader>Why Slow Sites May Still Lose Visibility</BlogHeader>
+
+                        <BlogText>
+                            Rejecting a false March speed threshold does not mean performance is unimportant. Google recommends good Core Web Vitals, and slow pages can create real operational disadvantages. Visitors may abandon a page before its content becomes useful, interaction delays can obstruct navigation or forms, and layout shifts can cause mistakes. Those problems can reduce the value of traffic even when rankings remain unchanged.
+                        </BlogText>
+
+                        <BlogText>
+                            Performance can also interact with other technical conditions. Unavailable servers, blocked resources, unstable rendering, excessive client-side work, or a broken mobile experience may affect crawling, rendering, accessibility, and conversion. Those are specific defects to test. Our walkthrough of <Link href="/blog/why-is-my-website-loading-so-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">why a website loads slowly</Link> covers how to isolate each one. They are not evidence that Google applied a universal slow-site penalty in March.
+                        </BlogText>
+
+                        <BlogText>
+                            Think in layers. Search visibility depends on whether Google can discover, crawl, render, index, understand, and select the page for a query. The visitor then has to load, understand, trust, and act on it. Speed influences parts of that journey, but it cannot compensate for the wrong search intent, duplicate pages, an accidental noindex, weak information, or an offer that does not match the user.
+                        </BlogText>
+
+                        <BlogList items={[
+                            "A slow page with uniquely helpful information may still rank because relevance remains important.",
+                            "A fast page can still lose visibility when it does not satisfy the query or cannot be indexed correctly.",
+                            "A ranking change and a conversion change can happen together, but each needs its own measurement.",
+                            "Improving real-user performance is valuable even when no ranking recovery can be promised.",
+                        ]} />
+
+                        <BlogHeader>How to Separate a Core-Update Change From a Performance Problem</BlogHeader>
+
+                        <BlogText>
+                            Start with a controlled comparison, not a site-wide rewrite. Google recommends confirming that the rollout has finished, waiting at least a full week, and comparing a post-rollout week with a week before the rollout. Keep seasonality in mind, and use a year-over-year comparison when the business has enough history.
+                        </BlogText>
+
+                        <BlogText>
+                            In Search Console's Performance report, compare clicks, impressions, click-through rate, and average position. Then segment the change by page, query, device, country, and search type. A site-wide position loss across many established queries looks different from a mobile-only click decline on a few templates. If impressions are steady while clicks fall, inspect titles, snippets, result features, and demand before blaming performance.
+                        </BlogText>
+
+                        <BlogText>
+                            Next, check whether Google could access and index the affected pages. Review the Page indexing report, Crawl stats, Manual Actions, and Security Issues. Use <a href="https://support.google.com/webmasters/answer/9012289" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">URL Inspection</a> on representative winners and losers to compare crawl status, the indexed version, canonicals, rendered output, and live availability.
+                        </BlogText>
+
+                        <BlogText>
+                            Only then overlay performance. Compare the mobile and desktop Core Web Vitals URL groups, CrUX field data, and representative PageSpeed or Lighthouse tests. Check whether the affected pages actually became slower before the visibility change. If poor LCP existed for months while rankings fell only on one content cluster, speed alone is a weak explanation. If a release caused field metrics, errors, and conversions to worsen on the same template, performance becomes a stronger lead.
+                        </BlogText>
+
+                        <BlogText>
+                            Finally, compare Search Console with analytics and business outcomes. Google notes that Search Console clicks and Analytics sessions are calculated differently, so they will not match exactly. Use them together to understand discovery before the visit and behavior after the visit. Separate a visibility loss from a tracking break, landing-page engagement problem, or conversion issue. Where a rival page moved up instead, our <Link href="/blog/why-competitor-outranks-you" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">competitor ranking gap analysis</Link> sets out the seven evidence groups to compare.
+                        </BlogText>
+
+                        <div className="grid md:grid-cols-2 gap-4 my-10">
+                            {[
+                                ["Search change", "Clicks, impressions, queries, pages, devices, countries, search types, and position moved during or after the rollout."],
+                                ["Technical change", "Indexing, crawl, canonical, server, security, structured-data, or rendering signals changed for the affected URLs."],
+                                ["Performance change", "Real-user LCP, INP, or CLS worsened for the same device and template before the traffic or conversion change."],
+                                ["Demand or result change", "Google Trends, impressions, CTR, competitors, or result features show that the market or search page changed."],
+                            ].map(([title, detail]) => (
+                                <div key={title} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                    <h3 className="font-bold text-charcoal mb-2">{title}</h3>
+                                    <p className="text-sm leading-relaxed text-stone-600">{detail}</p>
+                                </div>
+                            ))}
                         </div>
 
+                        <InsightBox variant="info">
+                            A useful diagnosis states what changed, where it changed, when it changed, which evidence supports the hypothesis, which alternatives were checked, and what remains unknown. If the evidence cannot isolate a cause, say so before changing the site.
+                        </InsightBox>
+
+                        <BlogHeader>Why You Should Always Know What Google Is Doing</BlogHeader>
+
                         <BlogText>
-                            <BlogHighlight>If your site dropped from position 3 to position 13, you did not just lose a number on a screen. You lost 70 to 80% of the clicks that position was generating.</BlogHighlight> For a business getting 5,000 monthly visitors from that keyword, that is 3,500 to 4,000 fewer potential customers every month.
+                            A business does not need to chase every SEO rumor, but it should maintain awareness of official Google changes. Google continually updates its systems, including smaller changes that are not individually announced. Monitoring does not prevent every traffic loss. It gives you context, protects the baseline, and reduces the chance that your own release is confused with an external update.
                         </BlogText>
 
                         <BlogText>
-                            The compounding effect makes this worse over time. Fewer visitors means fewer sales, fewer reviews, fewer backlinks, and weaker signals to Google. Sites that do not address speed issues quickly can enter a downward spiral that takes months to reverse.
+                            Keep the <a href="https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Search Status Dashboard</a> and <a href="https://developers.google.com/search/updates" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">Search documentation updates</a> in a simple monitoring routine. Review Search Console messages, Page indexing, performance, security, and Core Web Vitals on an agreed cadence. Record major site releases, migrations, template changes, content updates, consent changes, analytics changes, and outages.
                         </BlogText>
 
                         <BlogText>
-                            Recovery is not instant, either. Google has stated that improvements may not fully reflect until the next core update. That means <BlogHighlight>3 to 6 months minimum</BlogHighlight> from the time you fix the underlying issues.
-                        </BlogText>
-
-                        <BlogHeader>WordPress and Shopify Sites Are Falling Behind</BlogHeader>
-
-                        <BlogText>
-                            Not all websites were affected equally. The update disproportionately impacted sites built on older platforms with heavy page builders and plugin dependencies.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>WordPress:</strong> Only 44% of WordPress sites pass Core Web Vitals on mobile. Sites built with{" "}
-                            <Link href="/blog/elementor-kills-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Elementor, the most popular WordPress page builder
-                            </Link>, average 3.8 to 5.2 seconds LCP. That is more than double the new 2.0-second threshold.
-                        </BlogText>
-
-                        <BlogText>
-                            The problem is not WordPress itself. It is the layers of plugins, themes, and page builders that pile up over time. Every plugin adds code that your visitor&apos;s browser has to download and process. A typical WordPress site loads 30 to 60 external scripts before a visitor can even interact with the page. Speed is only half the plugin problem too. The fast-multiplying AI plugins carry a{" "}
-                            <Link href="/blog/wordpress-ai-security-risk-2026" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                WordPress AI plugin security risk
-                            </Link>{" "}
-                            that most site owners have not priced in yet.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Shopify:</strong> Standard Shopify themes perform better than WordPress, but still struggle with the tighter thresholds.{" "}
-                            <Link href="/blog/shopify-dawn-theme-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Even Shopify&apos;s fastest theme still loads slowly
-                            </Link>. Heavy product images, third-party apps for reviews, upsells, and tracking scripts push most Shopify stores past the 2.0-second LCP target on mobile.
-                        </BlogText>
-
-                        <BlogText>
-                            If you are running a business on WordPress or Shopify and noticed a traffic dip in late March, your platform is likely part of the problem. Our detailed comparison of{" "}
-                            <Link href="/blog/wordpress-vs-nextjs" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                WordPress vs Next.js performance
-                            </Link>{" "}
-                            breaks down exactly where these platforms hit their speed ceiling.
-                        </BlogText>
-
-                        <BlogHeader>What Google Actually Rewards Now</BlogHeader>
-
-                        <BlogText>
-                            Speed is the headline, but the March 2026 update also sharpened Google&apos;s focus on content quality signals. Understanding both sides of this update is important because fixing your speed alone will not recover lost rankings if your content does not meet the new bar.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>E-E-A-T signals matter more than ever.</strong> E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google uses these signals to decide whether your content deserves to rank. After this update, <BlogHighlight>72% of top-ranking pages show detailed author credentials</BlogHighlight>, including real names, job titles, and professional backgrounds.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Original research gets rewarded.</strong> Sites that publish their own data, case studies, and first-hand findings gained approximately 22% more visibility after the update. Rewriting information that already exists on other sites is no longer enough.
+                            Search Console now supports <a href="https://support.google.com/webmasters/answer/16530728" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom annotations</a> in Performance charts. Add concise notes for important releases and fixes without including personal information. Keep a longer internal change log with the deployment ID, affected templates, owner, expected effect, rollback path, and validation result.
                         </BlogText>
 
                         <BlogList items={[
-                            "Pages with detailed author bios and credentials rank significantly higher than anonymous content",
-                            "Sites publishing original data and case studies gained roughly 22% visibility",
-                            "Thin, recycled content was hit hard, especially in competitive niches",
-                            "Fast sites with strong E-E-A-T signals saw the biggest gains"
+                            "Weekly: review official ranking updates, Search Console messages, and unusual click or indexing changes.",
+                            "Monthly: compare important page groups, queries, devices, conversions, Core Web Vitals, and crawl health.",
+                            "At every release: annotate the date, affected routes, measurement plan, and rollback decision.",
+                            "After an announced update: preserve the baseline, wait for the rollout to finish, and analyze the right comparison window.",
+                            "Before a large response: require page-level evidence and test the smallest reversible change first.",
                         ]} />
 
                         <BlogText>
-                            The takeaway for business owners: your website needs to be fast AND credible. A 90+ PageSpeed score paired with expert-written content about your industry is the combination Google rewards most right now.
+                            This is how you avoid getting hurt by an update in two different ways. The first risk is losing visibility because a genuine content, technical, or experience weakness was ignored. The second is damaging a healthy site by reacting to an unverified theory. A monitoring and change-control habit helps with both.
                         </BlogText>
 
-                        {/* Mid-Article CTA */}
+                        <BlogHeader>Do Not Blame WordPress, Shopify, or Another Platform Without Testing</BlogHeader>
+
+                        <BlogText>
+                            Google did not state that the March update targeted WordPress, Shopify, Webflow, Wix, or any framework. Platform names are not a diagnosis. Hosting, themes, apps, plugins, media, fonts, consent tools, analytics, third-party scripts, caching, rendering strategy, and editorial decisions can produce very different results on the same platform.
+                        </BlogText>
+
+                        <BlogText>
+                            Test representative templates and actual user journeys. A WordPress site with disciplined engineering can provide good Core Web Vitals. A custom Next.js site can be slow when it ships oversized media, excessive JavaScript, or uncontrolled third-party tags. Modern architecture creates options, not automatic rankings.
+                        </BlogText>
+
+                        <BlogText>
+                            Start from the diagnostic for the stack in front of you: <Link href="/blog/how-to-fix-slow-wordpress" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">fixing a slow WordPress site</Link>, <Link href="/blog/wix-too-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">testing a slow Wix site</Link>, <Link href="/blog/is-squarespace-bad-for-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">auditing Squarespace for SEO</Link>, or <Link href="/blog/shopify-dawn-theme-slow" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">diagnosing a Shopify Dawn theme</Link>.
+                        </BlogText>
+
+                        <BlogText>
+                            Optimization is usually the first path when the current system can meet the agreed requirement without creating unsustainable maintenance. A migration becomes reasonable when documented constraints repeatedly block performance, security, content operations, integration, ownership, or growth goals. The migration still needs a complete URL inventory, redirect decisions, metadata parity, analytics validation, staged crawl, cutover plan, and rollback path. The search side of that is covered in <Link href="/blog/will-migrating-hurt-my-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">what a migration does to search visibility</Link>, and delivery under <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">our migration service</Link> and <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom engineering</Link>.
+                        </BlogText>
+
+                        <BlogHeader>What to Change After a Confirmed Traffic Drop</BlogHeader>
+
+                        <BlogText>
+                            Match the remedy to the evidence. Fix technical access when pages cannot be crawled or indexed. Improve the affected content when the query intent, accuracy, usefulness, or trust context is weak. Improve performance when field and lab data identify a real user-experience problem. Address snippets when impressions hold but CTR declines. Repair analytics when Search Console and session data diverge after a measurement release. For a WordPress property where the drop followed a speed regression, our <Link href="/blog/wordpress-traffic-drop-speed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">WordPress traffic drop walkthrough</Link> follows the same order.
+                        </BlogText>
+
+                        <BlogText>
+                            Google advises against radical quick fixes when a page is already performing well. Make sustainable improvements for users, release them in controlled groups, and record what changed. Do not change content, templates, internal links, navigation, schema, and hosting at the same time if you expect to learn which change helped.
+                        </BlogText>
+
+                        <BlogText>
+                            There is no universal core update recovery time. Google's guidance says some effects can appear within days, while broader reassessment can take several months. It also states that no improvement guarantees a visible ranking effect. Use a review schedule and decision gates, not a promised recovery date.
+                        </BlogText>
+
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Not sure if the March 2026 update affected your site?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute audit. We will run your PageSpeed score live, check your Core Web Vitals, and show you exactly where you stand after the update.</p>
+                            <p className="font-bold text-charcoal mb-2">Need to separate a Google update from a site problem?</p>
+                            <p className="text-stone-600 mb-4 text-sm">We can review the rollout window, affected queries and pages, indexing, Core Web Vitals, analytics, releases, and the evidence behind each hypothesis before recommending a fix.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Schedule Free Speed Audit <ArrowRight className="w-4 h-4" />
+                                Get an evidence-led audit <ArrowRight className="w-4 h-4" />
                             </CalModalButton>
                         </div>
 
-                        <BlogHeader>What This Means for Your Business (Action Steps)</BlogHeader>
+                        <BlogHeader>A Practical 30-Day Monitoring Plan</BlogHeader>
 
                         <BlogText>
-                            If your rankings dropped after March 27, here is what to do. If your rankings held steady, these steps will protect you from the next update.
+                            During the first week, preserve exports from Search Console and analytics, record the official rollout dates, and list every relevant internal change. Build a page-by-query comparison for the pages with the largest click or position differences. Inspect representative URLs and rule out manual actions, security issues, indexation problems, server errors, robots directives, and canonical mistakes.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 1: Check your Core Web Vitals right now.</strong> Go to pagespeed.web.dev and enter your URL. Look at your mobile score. If your LCP is above 2.0 seconds or your PageSpeed score is below 70, the update likely affected you.
+                            During the second week, compare mobile and desktop field performance by template. Reproduce problems with lab tools, then trace them to images, fonts, JavaScript, rendering, server response, layouts, or third-party code. Separately review search intent, competing results, content accuracy, authorship, and the usefulness of each affected page.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 2: Understand where the slowness comes from.</strong> In most cases, it is your platform. WordPress themes, page builders, and plugins create layers of code that cannot be optimized away. You can compress images and add caching, but there is a ceiling. Our guide on{" "}
-                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                how to hit a 90+ PageSpeed score
-                            </Link>{" "}
-                            explains exactly where that ceiling is and why.
+                            During weeks three and four, prioritize changes by confidence, user impact, and reversibility. Release small groups when possible. Validate indexing and rendering, monitor errors and conversions, and document the outcome. Continue watching Search Console, but avoid interpreting daily noise as a verdict.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 3: Decide whether to optimize or rebuild.</strong> If your LCP is between 2.0 and 2.5 seconds, targeted optimization might get you below the threshold. Compress images, defer scripts, and remove unused tools. If your LCP is above 3.0 seconds, optimization alone will not be enough. This applies whether you are on WordPress, Shopify,{" "}
-                            <Link href="/blog/webflow-migration-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Webflow
-                            </Link>,{" "}
-                            <Link href="/services/wix?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Wix
-                            </Link>, or any template-based platform. You need modern architecture.
+                            The result should be a decision log, not a dramatic headline: confirmed observations, rejected explanations, open questions, chosen changes, owners, validation dates, and rollback conditions. That record becomes the baseline for the next Google algorithm update and the next website release.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Step 4: Consider a migration to a modern framework.</strong> Custom-coded sites built on Next.js consistently score 90+ on PageSpeed with load times under 1 second. That is not a theoretical number. Every site we build hits that benchmark. Our{" "}
-                            <Link href="/services/wordpress-migration?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                WordPress migration service
-                            </Link>{" "}
-                            takes 4 to 6 weeks and preserves all your existing SEO equity with proper redirects.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Step 5: Strengthen your content quality.</strong> Speed gets you in the door. Content keeps you there. Add author bios with real credentials, publish original insights from your business experience, and make sure every page on your site answers a real question better than anyone else.
-                        </BlogText>
-
-                        <BlogText>
-                            For e-commerce businesses, the stakes are even higher. A slow online store does not just lose rankings. It loses sales at every step of the checkout process. Our{" "}
-                            <Link href="/services/ecommerce?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                e-commerce solutions
-                            </Link>{" "}
-                            are built specifically to pass Core Web Vitals while handling product catalogs, search, and checkout at speed.
-                        </BlogText>
-
-                        <BlogText>
-                            <BlogHighlight>The businesses that act in the next 30 to 60 days will recover fastest.</BlogHighlight> Every month you wait is another month of lost traffic, lost revenue, and stronger competitors pulling further ahead. Sites with optimized Core Web Vitals see 25% higher conversions. That gap compounds every single month.
-                        </BlogText>
-
-                        <BlogText>
-                            If you are evaluating your options, our{" "}
-                            <Link href="/services/custom-engineering?ref=blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                custom engineering service
-                            </Link>{" "}
-                            page explains exactly what a performance-first build includes and what results to expect.
+                            If the log points at a rebuild rather than a repair, scope tiers are on the <Link href="/pricing" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">pricing page</Link> and finished projects on the <Link href="/work" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">work page</Link>.
                         </BlogText>
                     </div>
 
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Ready to Future-Proof Your Rankings?</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-16 text-center">
+                        <h2 className="text-2xl font-bold mb-4">Build a Search Monitoring Plan Before the Next Update</h2>
                         <p className="text-stone-600 mb-6">
-                            Get a free speed audit. We will show you your Core Web Vitals, identify what is slowing you down, and map out the fastest path to a site that scores 90+ on PageSpeed.
+                            Get a scoped review of Search Console, indexing, Core Web Vitals, analytics, release history, and the pages and queries that changed. You will receive evidence, limitations, and recommended next steps instead of a guaranteed ranking claim.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                            Schedule Free Audit <ArrowRight className="w-5 h-5" />
+                            Get your diagnostic plan <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                     </div>
 
-                    {/* Key Takeaways */}
-                    <section className="mb-10">
+                    <section className="mt-10 mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Google tightened speed requirements significantly</strong>: LCP dropped from 2.5s to 2.0s, INP became a primary ranking signal, and 55% of sites saw ranking changes within two weeks.</li>
-                            <li><strong>47% of slow sites lost rankings</strong>: Every 1-second delay reduces conversions by 7%, which compounds into a meaningful revenue hit for any small business running on organic traffic.</li>
-                            <li><strong>WordPress and Shopify sites were hit hardest</strong>: Only 44% of WordPress sites pass Core Web Vitals on mobile. Elementor sites average 3.8 to 5.2s LCP, more than double the new threshold.</li>
-                            <li><strong>Content quality matters just as much as speed</strong>: 72% of top pages show detailed author credentials, and sites with original research gained roughly 22% visibility.</li>
-                            <li><strong>Recovery takes 3 to 6 months, so act now</strong>: Sites that load in 1 second convert at 3x the rate of 5-second sites. The fastest fix is rebuilding on a modern framework that passes Core Web Vitals out of the box.</li>
+                            <li><strong>Use Google's confirmed record:</strong> the March 2026 core update ran from March 27 to April 8.</li>
+                            <li><strong>Do not invent a threshold:</strong> Google did not announce a 2.0-second LCP cutoff or a March-specific slow-site penalty.</li>
+                            <li><strong>Keep performance in context:</strong> good Core Web Vitals support user experience and can contribute to Search success, but they do not guarantee rankings.</li>
+                            <li><strong>Diagnose by segment:</strong> compare pages, queries, devices, countries, search types, indexing, field performance, analytics, releases, and demand.</li>
+                            <li><strong>Monitor official changes and your own releases:</strong> annotations and a durable change log make future traffic changes safer to investigate.</li>
+                            <li><strong>Change only what the evidence supports:</strong> use controlled, reversible improvements and never promise a fixed recovery date.</li>
                         </ol>
                     </section>
 
-                    {/* FAQ Section */}
                     {marchUpdateFAQs.length > 0 && <FAQAccordion faqs={marchUpdateFAQs} />}
 
-                    {/* Related Posts */}
                     <RelatedPosts currentPostId="google-march-2026-update" />
-
                 </article>
             </main>
             <Footer />

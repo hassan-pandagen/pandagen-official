@@ -1,235 +1,140 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { ArrowRight } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
   title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
-  description: "The first principles behind PandaCodeGen. Why we refuse hourly billing. Why we publish our prices. Why we meet clients halfway on cost. Written by Hassan Jamal.",
+  description: "The first principles behind PandaCodeGen. Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer. Written by Hassan Jamal.",
   alternates: { canonical: "/manifesto" },
   openGraph: {
-    title: "The PandaCodeGen Manifesto",
-    description: "The first principles behind PandaCodeGen. Why we refuse hourly billing. Why we publish our prices. Why we meet clients halfway on cost.",
+    title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
+    description: "Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer.",
     url: "https://www.pandacodegen.com/manifesto",
-    siteName: "PandaCodeGen",
     type: "article",
-    images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    images: [ogImageForPath("/manifesto")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The PandaCodeGen Manifesto",
-    description: "The first principles behind PandaCodeGen. Why we refuse hourly billing. Why we publish our prices. Why we meet clients halfway on cost.",
+    title: "The PandaCodeGen Manifesto | Why We Build The Way We Build",
+    description: "Why we refuse hourly billing, why we publish our prices, and why we tell clients when a rebuild is the wrong answer.",
+    images: [ogImageForPath("/manifesto")],
   },
 };
 
+const principles = [
+  {
+    title: "Diagnose before recommending a rebuild",
+    body: "A migration is justified only when the business goal, current platform, operating cost, content, integrations, and measured constraints support it. Sometimes repair is the better answer.",
+  },
+  {
+    title: "Define the scope before the price",
+    body: "A proposal should list deliverables, exclusions, dependencies, client responsibilities, third-party costs, acceptance criteria, payment milestones, and change terms.",
+  },
+  {
+    title: "Treat URLs and content as business assets",
+    body: "Migration planning includes a URL inventory, redirect map, content model, metadata, analytics, forms, integrations, cutover sequence, monitoring, and rollback conditions.",
+  },
+  {
+    title: "Measure performance honestly",
+    body: "A performance target is meaningful only when it names the pages, device and network profile, tools, number of runs, measurement date, third-party state, exclusions, and remedy.",
+  },
+  {
+    title: "Put control and handover in writing",
+    body: "Repository, hosting, domains, credentials, data, pre-existing materials, open-source licenses, ownership-transfer timing, backups, and retention should not be implied.",
+  },
+  {
+    title: "Make changes explicit",
+    body: "When a request falls outside the accepted scope, the effect on cost, timeline, testing, and responsibility is documented and approved before the work changes.",
+  },
+  {
+    title: "Ship accessibility, privacy, and security work",
+    body: "Keyboard access, readable contrast, consent, data minimization, endpoint controls, dependency checks, monitoring, and rollback are release responsibilities, not decorative badges.",
+  },
+  {
+    title: "Do not promise systems we do not control",
+    body: "A technical implementation can reduce risk and improve foundations, but it cannot guarantee rankings, revenue, conversions, field performance, uptime, or AI citations.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.pandacodegen.com/manifesto#webpage",
+  url: "https://www.pandacodegen.com/manifesto",
+  name: "PandaCodeGen Delivery Principles",
+  description: "Principles for scoping and delivering website migrations.",
+  isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+  inLanguage: "en-US",
+};
+
 export default function ManifestoPage() {
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "@id": "https://www.pandacodegen.com/manifesto#article",
-        "headline": "The PandaCodeGen Manifesto",
-        "description": "The first principles behind PandaCodeGen. Why we refuse hourly billing. Why we publish our prices. Why we meet clients halfway on cost.",
-        "image": "https://www.pandacodegen.com/og-image.jpg",
-        "datePublished": "2026-04-19T00:00:00-05:00",
-        "dateModified": "2026-04-19T00:00:00-05:00",
-        "author": {
-          "@type": "Person",
-          "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-          "name": "Hassan Jamal",
-          "url": "https://www.pandacodegen.com/about/hassan",
-        },
-        "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
-        "inLanguage": "en-US",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": ["h1", "h2", "[data-speakable='true']"],
-        },
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-          { "@type": "ListItem", "position": 2, "name": "Manifesto", "item": "https://www.pandacodegen.com/manifesto" },
-        ],
-      },
-    ],
-  };
-
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <main className="bg-paper min-h-screen overflow-x-hidden relative">
-        <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
-        <Header />
+    <main className="min-h-screen bg-paper text-charcoal">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Header />
 
-        <article className="relative pt-24 md:pt-40 pb-16 md:pb-24 px-6">
-          <div className="container mx-auto max-w-2xl">
-            {/* Top label */}
-            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-4">The PandaCodeGen Manifesto</p>
+      <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
+        <div className="mx-auto max-w-5xl border-l-2 border-cognac pl-5 md:pl-8">
+          <p className="text-sm font-bold uppercase tracking-widest text-cognac">The PandaCodeGen Manifesto</p>
+          <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">
+            Make the <span className="font-serif font-normal italic text-cognac">risky parts explicit.</span>
+          </h1>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
+            Why we refuse hourly billing. Why we publish our prices. Why we tell you when a rebuild is the wrong answer. A modern framework is not the offer by itself — the work is understanding the current system, deciding whether migration is justified at all, and agreeing up front how continuity, quality, control and acceptance will be proven.
+          </p>
+          <p className="mt-6 text-sm text-stone-500">
+            Written by Hassan Jamal, Co-founder and Lead Engineer, with co-founder Imran Raza Ladhani.
+          </p>
+        </div>
+      </section>
 
-            <h1 className="text-[2.5rem] md:text-[4.5rem] font-bold text-charcoal leading-[1.05] tracking-[-0.025em] mb-6">
-              Speed is a contract. <br />
-              <span className="font-serif italic text-cognac">Not a marketing claim.</span>
-            </h1>
+      <section className="px-6 py-16 md:py-24" aria-labelledby="principles-heading">
+        <div className="mx-auto max-w-5xl">
+          <h2 id="principles-heading" className="sr-only">PandaCodeGen delivery principles</h2>
+          <ol className="grid gap-6 md:grid-cols-2">
+            {principles.map((principle, index) => (
+              <li key={principle.title} className="rounded-3xl border border-stone-300 bg-white p-7 md:p-8">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-charcoal font-bold text-white">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold">{principle.title}</h3>
+                    <p className="mt-3 leading-7 text-stone-700">{principle.body}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-            <p className="text-lg md:text-xl text-stone-600 mb-12 leading-[1.7] font-medium" data-speakable="true">
-              Here&apos;s what we believe. No pitch. No upsell. Just the first principles behind every line of code we write.
-            </p>
-
-            {/* Editorial article body */}
-            <div className="prose prose-lg max-w-none space-y-8">
-              {/* Section 1 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  1. The web industry runs on patches.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  WordPress is a maintenance tax economy where every line of code produces three more lines of &quot;maintenance.&quot; Shopify charges $399 a month for a platform that forces you into another $650 a month of apps. Webflow caps you at 10,000 CMS items and then raises prices. Wix locks you in and throws away the key.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  None of this is accidental. Every platform extracts a monthly tax. Every agency bills for hours. Every plugin vendor lives on the recurring charge. The entire industry is designed to make your website fragile enough to keep feeding it.
-                </p>
-              </section>
-
-              {/* Section 2 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  2. We refuse to bill by the hour.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Hourly billing is a conflict of interest. The slower we work, the more we earn. The buggier our code, the more maintenance we bill. The vaguer our scope, the more change orders we send. An entire agency economy is built on that incentive and pretends it isn&apos;t.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  We quote fixed scope. You know the price before the first line of code. If we finish in 10 hours instead of 40, good, we&apos;re fast, you still pay the quote. If we underestimate and it takes 80 hours, that&apos;s our problem to solve, not yours to absorb.
-                </p>
-              </section>
-
-              {/* Section 3 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  3. We publish our prices.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Every agency page that says &quot;contact for quote&quot; is protecting a pricing strategy that can&apos;t survive public scrutiny. They change the number based on what they think you can pay. We refuse to play that game.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  Our pricing is on every service page. Starter. Growth. Scale. Scale+. You know what we charge before you ever book a call. If someone tells you &quot;it depends&quot; as a pricing answer, they&apos;re deciding how much they can extract from you specifically.
-                </p>
-              </section>
-
-              {/* Section 4 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  4. You own everything on day one.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  The code ships to your GitHub. The site deploys to your Vercel. The domain stays yours. The CMS stays yours. We hand over documentation, admin access, and the power to fire us at any time without breaking anything.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  If the only way we keep you as a client is by holding your code hostage, we deserve to lose you.
-                </p>
-              </section>
-
-              {/* Section 5 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  5. AI didn&apos;t kill craft. It killed padding.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Every agency charging 8-week timelines today is billing 2022 workflows at 2026 market rates. AI-paired development with Claude and Cursor collapses the scaffolding, boilerplate, and configuration work that used to take weeks. What&apos;s left is decision-making, architecture, and judgment. That&apos;s the real work. That&apos;s what we charge for.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  We ship in three weeks because the tools allow it. Agencies still quoting three months are charging you for work AI already did.
-                </p>
-              </section>
-
-              {/* Section 6 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  6. We meet you halfway on cost.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Agencies quote $30K. Offshore shops quote $5K and ghost you mid-project. Neither of those is a real option for most business owners. So we built something in between: fixed-scope pricing across four published tiers (Starter, Growth, Scale, Scale+) from $1,500 to $10,000+, transparent tiers, same-day quotes, NDAs before anything else.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  If you want proof before you commit, drop your URL on a free 60-second audit and we will show you where you are leaking revenue.
-                </p>
-              </section>
-
-              {/* Section 7 */}
-              <section>
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  7. The guarantee is the pitch.
-                </h2>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75] mb-4">
-                  Every site we ship scores 90 or higher on Google PageSpeed. If it doesn&apos;t on launch day, we refund 100%. In writing. Every other agency promise dies on a disclaimer. This one doesn&apos;t.
-                </p>
-                <p className="text-base md:text-lg text-stone-700 leading-[1.75]">
-                  We can write that guarantee because we only know how to build it one way: fast, by default, no exceptions. If your current dev partner can&apos;t make the same promise, you know why.
-                </p>
-              </section>
-
-              {/* Closing */}
-              <section className="pt-8 border-t border-stone-200">
-                <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-4 tracking-tight">
-                  What we refuse to do.
-                </h2>
-                <ul className="space-y-3 text-base md:text-lg text-stone-700 leading-[1.75]">
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Bill hourly.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Hide prices.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Build on WordPress, Wix, Squarespace, or any platform that takes a monthly tax.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Hold your code hostage.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Send you an account manager.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Subcontract your project to a stranger.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Pad estimates with work AI already automated.</li>
-                  <li className="flex gap-3"><span className="text-cognac font-bold shrink-0">&bull;</span> Pitch you anything you didn&apos;t ask for.</li>
-                </ul>
-              </section>
-
-              {/* Signoff */}
-              <section className="pt-12">
-                <p className="text-lg md:text-xl text-charcoal leading-[1.7] italic font-serif mb-6">
-                  If any of this sounds obvious, it&apos;s because it should be. The fact that most agencies don&apos;t work this way is the real problem.
-                </p>
-                <p className="text-base md:text-lg text-stone-600 font-medium">
-                  Hassan Jamal
-                  <br />
-                  <span className="text-sm text-stone-500">Co-founder, PandaCodeGen (with co-founder Imran Raza)</span>
-                </p>
-              </section>
-            </div>
-
-            {/* CTA strip at bottom */}
-            <div className="mt-16 p-8 md:p-10 bg-white border border-stone-200 rounded-3xl shadow-card">
-              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">
-                Want to see what this looks like in practice?
-              </h3>
-              <p className="text-stone-600 mb-6 text-base md:text-lg">
-                Run the free optimization report on your current site. You&apos;ll get a custom PDF plus a personal video walkthrough within 24 business hours.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/#audit-widget"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
-                >
-                  Run Free Audit <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/work"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-stone-200 text-charcoal font-semibold rounded-full hover:border-cognac/30 transition-all"
-                >
-                  See the Work
-                </Link>
-              </div>
-            </div>
+      <section className="bg-midnight px-6 py-16 text-white md:py-24">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold md:text-5xl">What a useful proposal should let you verify</h2>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+            {["What is included and excluded", "Who supplies content and access", "How acceptance is measured", "What happens when scope changes", "Who controls accounts and source", "How launch and rollback are handled"].map((item) => (
+              <li key={item} className="flex gap-3 text-stone-200">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link href="/pricing" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 font-bold text-charcoal hover:bg-orange-100">
+              Review example scopes <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-500 px-6 font-bold text-white hover:border-white">
+              Describe your migration
+            </Link>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <Footer />
-      </main>
-    </>
+      <Footer />
+    </main>
   );
 }

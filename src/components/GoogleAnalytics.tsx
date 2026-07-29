@@ -2,7 +2,8 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { hasConsent } from "@/components/consent/ConsentProvider";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -16,6 +17,7 @@ declare global {
 export default function GoogleAnalytics() {
   const pathname = usePathname();
   const [loadLib, setLoadLib] = useState(false);
+  const initialized = useRef(false);
 
   // Defer the heavy gtag/js library (155 KiB, ~178ms main-thread) until the
   // first real user interaction, with a 10s fallback for non-interactors.
@@ -37,7 +39,18 @@ export default function GoogleAnalytics() {
   }, [loadLib]);
 
   useEffect(() => {
-    if (!GA_ID || typeof window === "undefined" || !window.gtag) return;
+    if (!GA_ID || typeof window === "undefined") return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || ((...args: unknown[]) => window.dataLayer!.push(args));
+
+    if (!initialized.current) {
+      window.gtag("js", new Date());
+      window.gtag("config", GA_ID, { send_page_view: false });
+      initialized.current = true;
+    }
+
+    // Queue exactly one view on consent-time mount, then one per route change.
     window.gtag("event", "page_view", { page_path: pathname });
   }, [pathname]);
 
@@ -45,17 +58,6 @@ export default function GoogleAnalytics() {
 
   return (
     <>
-      {/* Lightweight stub: defines gtag + dataLayer immediately so page_view and
-          trackGAEvent() calls queue before the heavy library arrives. Near-zero cost. */}
-      <Script id="ga4-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}', { send_page_view: false });
-        `}
-      </Script>
       {/* Heavy library: loaded only after interaction or the 10s fallback. It
           drains the queued dataLayer events on arrival, so nothing is lost. */}
       {loadLib && (
@@ -71,14 +73,15 @@ export default function GoogleAnalytics() {
 /**
  * Helper to fire custom GA4 events from anywhere in the app.
  * Falls back to dataLayer push if gtag hasn't loaded yet.
- * Usage: trackGAEvent("audit_url_submit", { url: "..." });
+ * Usage: trackGAEvent("lead_form_completed", { form_id: "quote_modal" });
+ * Do not include URLs, contact details, or form-field values in event params.
  */
 export function trackGAEvent(name: string, params: Record<string, unknown> = {}) {
-  if (typeof window === "undefined") return;
+  if (typeof window === "undefined" || !hasConsent("analytics")) return;
   if (window.gtag) {
     window.gtag("event", name, params);
   } else {
-    // gtag not ready yet — push directly to dataLayer queue
+    // gtag not ready yet; push directly to dataLayer queue
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: name, ...params });
   }

@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Zap, Shield, Smartphone, Code2, BarChart3, Layers, Eye } from "lucide-react";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
         description: "Live at pandacodelab.com. Next.js 16. Spring physics. Magnetic buttons. Spline 3D. WCAG 2.1 AA. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-codelab",
-        images: [{ url: "https://www.pandacodegen.com/work/pandacodelab.png", width: 1200, height: 630 }],
+        images: [ogImageForPath("/work/panda-codelab")],
     },
     twitter: {
         card: "summary_large_image",
@@ -55,7 +56,7 @@ const caseStudySchema = {
             "@id": "https://www.pandacodegen.com/work/panda-codelab#article",
             "headline": "Panda CodeLab: Building Our Agency Site on the Tech We Sell",
             "description": "How we built our own agency website using Next.js 16, React 19, Framer Motion 12 spring physics, Spline 3D scenes, and full WCAG 2.1 AA accessibility compliance. Zero TypeScript errors. Zero ESLint errors. Live proof we practice what we sell.",
-            "image": "https://www.pandacodegen.com/work/pandacodelab.png",
+            "image": ogImageUrlForPath("/work/panda-codelab"),
             "datePublished": "2025-12-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
             "author": {
@@ -247,7 +248,7 @@ export default function PandaCodelabCaseStudy() {
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
-                                    <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
+                                    <div className="text-xs text-stone-600 leading-snug">{m.sub}</div>
                                 </div>
                             ))}
                         </div>
@@ -301,7 +302,7 @@ export default function PandaCodelabCaseStudy() {
                                     <div className="w-8 h-8 rounded-lg" style={{ background: "#F59E0B" }} />
                                 </div>
                                 <div className="text-sm font-bold text-charcoal mb-1">Solar Gradient</div>
-                                <div className="text-xs text-stone-400">#E60040 → #E91E63 → #F59E0B</div>
+                                <div className="text-xs text-stone-600">#E60040 → #E91E63 → #F59E0B</div>
                             </div>
                             <div className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                 <div className="text-sm font-bold text-charcoal mb-2">Typography</div>
@@ -396,7 +397,7 @@ export default function PandaCodelabCaseStudy() {
                         <h2 className="text-3xl font-bold text-charcoal mb-6">9 pages. Every one hand-coded.</h2>
 
                         <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
-                            <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
+                            <div className="grid grid-cols-[1fr_1fr_auto] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-600 uppercase tracking-widest">
                                 <div>Page</div>
                                 <div>Purpose</div>
                                 <div className="text-right">Type</div>
@@ -476,7 +477,7 @@ export default function PandaCodelabCaseStudy() {
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>
-                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">{item.label}</div>
                                     <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
                                     <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
                                 </div>

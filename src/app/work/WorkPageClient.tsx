@@ -1,370 +1,215 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "@/components/ui/motion";
-import FadeIn from "@/components/ui/FadeIn";
-import { Code2, BarChart3, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, BarChart3, CheckCircle2, FileSearch, Route, ShoppingCart } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
-// --- PROJECT DATA ---
-const projects = [
-    {
-        id: "01",
-        client: "MyCustomPatches",
-        category: "WordPress Migration",
-        tagline: "Aging WordPress site. 3.2s load time. $150/mo in hosting. We fixed all three.",
-        caseStudyUrl: "/work/mycustompatches",
-        outcome: "Rebuilt from scratch in custom Next.js in about 22 days. Same content, same SEO rankings. Now loads in under 1 second at $0/month.",
-        results: [
-            { label: "Load Time", value: "0.7s", from: "was 3.2s" },
-            { label: "PageSpeed", value: "90+", from: "was ~45" },
-            { label: "Hosting", value: "$0/mo", from: "was $150" },
-        ],
-        insight: "Migrated with zero downtime in about 22 days. Every SEO ranking preserved. Contact form runs on Web3Forms, free forever, no backend needed.",
-        review: {
-            quote: "We were nervous about losing our Google rankings during the migration. PandaCodeGen preserved every URL, our rankings held, and the site now loads faster than anything we've ever had. The $0 hosting alone paid for the project within two months.",
-            author: "Founder, MyCustomPatches",
-        },
-        tags: ["WordPress Migration", "Speed Optimization", "SEO Preservation", "Custom Code"],
-        image: "/work/mycustompatches.png",
-        liveUrl: "https://www.mycustompatches.net",
-        isLive: true,
-        accentColor: "from-stone-800/60 to-stone-900/80",
-    },
-    {
-        id: "02",
-        client: "Panda Patches",
-        category: "E-Commerce + Operations Platform",
-        tagline: "WordPress + 3 paid tools + spreadsheets. Rebuilt from scratch. Scaled from $38K to about $50K/mo on about $55/mo in tooling.",
-        caseStudyUrl: "/work/panda-patches",
-        outcome: "We were hitting a ceiling. Customers had to fill out a form and wait for a quote because WordPress couldn't handle the pricing complexity: 9 patch types, size tiers, quantity breaks, backing and border options. Every combination is a different price. We rebuilt the storefront in Next.js with a real-time pricing calculator. Now customers see the price before they even talk to us. Then we replaced the CRM, spreadsheets, and attendance tracker with a single Supabase ops platform: order pipeline, sales agent performance across 7 team members, employee clock in/out, and role-based access. Every change is logged. Everyone sees the same data in real time.",
-        results: [
-            { label: "Monthly Revenue", value: "$50K/mo", from: "up from $38K · powered by $55/mo" },
-            { label: "Tool Fees", value: "$0/mo", from: "was $200+" },
-            { label: "Tools → One", value: "7 → 1", from: "CRM · ops · store" },
-        ],
-        insight: "Stack: Next.js · Sanity · Supabase · Square. Started free on Vercel, scaled to Vercel Pro ($20/mo) once revenue hit $38K/mo; it has since scaled to about $50K/mo. Total monthly tooling: about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
-        tags: ["Real-Time Pricing Calculator", "Square Checkout · Cash App Pay", "Apple Pay · Google Pay · Afterpay", "Supabase CRM · Ops Portal"],
-        image: "/work/panda-patches.png",
-        liveUrl: "https://pandapatches.com",
-        portalUrl: "https://portal.pandapatches.com",
-        isLive: true,
-        badge: "In-House Brand",
-        accentColor: "from-stone-800/60 to-stone-900/80",
-    },
-    {
-        id: "03",
-        client: "Enterprise Operations",
-        category: "Custom Business Dashboard",
-        tagline: "A high-volume production business running entirely on spreadsheets and WhatsApp updates.",
-        caseStudyUrl: "/work/enterprise-ops",
-        outcome: "Full-stack business intelligence platform: real-time order tracking, automated production reports, role-based sales dashboards, and complete lead attribution.",
-        results: [
-            { label: "Automation", value: "95%", from: "was near-zero" },
-            { label: "Reporting", value: "Live", from: "was daily CSVs" },
-            { label: "Efficiency", value: "10×", from: "baseline" },
-        ],
-        insight: "One platform replaced spreadsheets, WhatsApp chains, and 3 separate SaaS tools.",
-        tags: ["Real-time Analytics", "Automated Reports", "Role-based Access", "Supabase"],
-        image: "/work/panda-operations.png",
-        isLive: false,
-        accentColor: "from-stone-800/60 to-stone-900/80",
-    },
-    {
-        id: "04",
-        client: "Panda CodeLab",
-        category: "Agency Website",
-        tagline: "A separate brand we built from scratch, premium animations, Spline 3D, WCAG 2.1 AA, and zero templates.",
-        caseStudyUrl: "/work/panda-codelab",
-        outcome: "Custom agency site for Panda CodeLab built on Next.js with Framer Motion spring physics, magnetic interactions, Spline 3D scenes, and full accessibility compliance. Under a second load. Zero page builder.",
-        results: [
-            { label: "Load Time", value: "0.6s", from: "avg 3s+" },
-            { label: "Accessibility", value: "AA", from: "WCAG 2.1" },
-            { label: "Hosting", value: "$0/mo", from: "was $20-50" },
-        ],
-        insight: "Live at pandacodelab.com, custom-built, no templates, no page builders.",
-        tags: ["Custom Website", "Framer Motion", "Spline 3D", "WCAG 2.1 AA"],
-        image: "/work/pandacodelab.png",
-        liveUrl: "https://www.pandacodelab.com",
-        isLive: true,
-        accentColor: "from-stone-800/60 to-stone-900/80",
-    },
+const evidenceAreas = [
+  {
+    icon: Route,
+    title: "Website migration",
+    scope: "URL and content inventory, redirect map, content model, integrations, analytics, cutover, monitoring, rollback, and handover.",
+    evidence: "Dated pre/post exports, representative URLs, test profile, Search Console comparison window, launch record, and known limitations.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Commerce replatforming",
+    scope: "Catalog, pricing, checkout, payments, customer accounts, analytics, consent, operations, platform trade-offs, and ongoing vendor costs.",
+    evidence: "Comparable cost periods, order and revenue definitions, attribution method, performance conditions, refund state, and owner permission.",
+  },
+  {
+    icon: BarChart3,
+    title: "Operations software",
+    scope: "Roles, workflows, data model, integrations, audit history, reporting, access control, backup, recovery, and support boundaries.",
+    evidence: "Approved requirements, acceptance record, role matrix, test evidence, incident history, measurement period, and authorized screenshots.",
+  },
 ];
 
-// --- MAIN PAGE ---
+const publicationChecks = [
+  "A dated source record",
+  "A defined baseline and method",
+  "Permission to publish",
+  "The limitation beside the result",
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.pandacodegen.com/work#webpage",
+      url: "https://www.pandacodegen.com/work",
+      name: "Project evidence and case-study methodology",
+      description: "The evidence standard used before PandaCodeGen publishes project outcomes.",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "Work", item: "https://www.pandacodegen.com/work" },
+      ],
+    },
+  ],
+};
+
 export default function WorkPageClient() {
-    const portfolioSchema = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "CollectionPage",
-                "@id": "https://www.pandacodegen.com/work#webpage",
-                "url": "https://www.pandacodegen.com/work",
-                "name": "Our Work & Portfolio | PandaCodeGen",
-                "description": "Real case studies: WordPress migrations, custom e-commerce platforms, and business dashboards with measurable results.",
-                "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-                "about": { "@id": "https://www.pandacodegen.com/#organization" },
-                "inLanguage": "en-US"
-            },
-            {
-                "@type": "ItemList",
-                "name": "PandaCodeGen Portfolio",
-                "itemListElement": projects.map((project, index) => ({
-                    "@type": "ListItem",
-                    "position": index + 1,
-                    "item": {
-                        "@type": "CreativeWork",
-                        "name": project.client,
-                        "description": project.tagline,
-                        "creator": { "@id": "https://www.pandacodegen.com/#organization" },
-                        ...(project.caseStudyUrl ? { "url": `https://www.pandacodegen.com${project.caseStudyUrl}` } : project.liveUrl ? { "url": project.liveUrl } : {})
-                    }
-                }))
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                    { "@type": "ListItem", "position": 2, "name": "Our Work", "item": "https://www.pandacodegen.com/work" }
-                ]
-            }
-        ]
-    };
+  return (
+    <main className="min-h-screen bg-paper text-charcoal">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Header />
 
-    return (
-        <main className="bg-paper min-h-screen overflow-x-hidden relative">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }} />
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-            <ReadingProgressBar />
-            <Header />
+      <section className="relative isolate overflow-hidden border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
+        <div aria-hidden="true" className="absolute -right-40 top-12 h-[30rem] w-[30rem] rounded-full bg-cognac/[0.07] blur-3xl" />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cognac to-transparent" />
 
-            {/* HERO */}
-            <section className="relative pt-24 md:pt-24 md:pt-40 pb-6 md:pb-10 px-6 bg-linear-to-b from-white to-stone-50 overflow-hidden">
-                <div className="absolute top-20 right-1/4 w-[500px] h-[500px] bg-stone-200/30 blur-[120px] rounded-full pointer-events-none" />
-                <div className="container mx-auto relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="flex items-center gap-3 mb-6"
-                    >
-                        <div className="h-px w-12 bg-cognac" />
-                        <span className="text-cognac tracking-widest text-sm font-bold uppercase">Selected Works</span>
-                    </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-6xl md:text-8xl font-bold text-charcoal tracking-tighter mb-2 md:mb-8 leading-[0.9]"
-                    >
-                        Results, not just <br />
-                        <span className="font-serif italic text-cognac">Aesthetics.</span>
-                    </motion.h1>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid items-end gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
+            <div className="max-w-4xl border-l-2 border-cognac pl-5 md:pl-8">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Project evidence</p>
+              <h1 className="mt-5 text-4xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-5xl md:text-7xl">
+                A case study should show the work, {" "}
+                <span className="font-serif font-normal italic text-cognac">the proof, and the limits.</span>
+              </h1>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
+                We label the source behind every result. Owner-confirmed project facts and first-party platform snapshots are not independent studies, ranking promises, or forecasts. Public reviews stay linked to their original source.
+              </p>
+            </div>
+
+            <aside className="overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal text-white shadow-[0_24px_70px_-36px_rgba(28,25,23,0.75)]" aria-label="Publication threshold">
+              <div className="border-b border-white/10 px-6 py-5 md:px-7">
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#ffc2a6]">Publication threshold</div>
+                <h2 className="mt-3 font-serif text-2xl font-normal italic leading-snug text-white md:text-3xl">
+                  A result needs a record behind it.
+                </h2>
+              </div>
+              <ul className="grid sm:grid-cols-2 lg:grid-cols-1">
+                {publicationChecks.map((item) => (
+                  <li key={item} className="flex items-center gap-3 border-b border-white/10 px-6 py-4 text-sm text-stone-200 last:border-b-0 sm:odd:border-r lg:border-r-0 md:px-7">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[#f2a17c]" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </div>
+
+          <div className="mt-12 grid gap-4 lg:grid-cols-[1.08fr_0.92fr]" aria-label="Owner-confirmed project facts">
+            <article className="relative overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal p-7 text-white md:p-9">
+              <div aria-hidden="true" className="absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cognac/30 blur-3xl" />
+              <div className="relative grid gap-6 sm:grid-cols-[0.55fr_1.45fr] sm:items-end">
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#ffc2a6]">Owner-confirmed project fact</div>
+                  <div className="mt-5 font-serif text-6xl font-normal italic leading-none text-[#f2a17c] md:text-7xl">22 days</div>
                 </div>
-            </section>
-
-            {/* PROJECT GALLERY */}
-            <section className="bg-stone-50 border-y border-stone-200 pt-6 md:pt-10 pb-10 md:pb-20">
-                <div className="space-y-12 md:space-y-24">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
-                    ))}
+                <div className="border-t border-white/15 pt-5 sm:border-l sm:border-t-0 sm:pl-7 sm:pt-0">
+                  <h2 className="text-2xl font-bold">MyCustomPatches WordPress migration</h2>
+                  <div className="mt-3 leading-7 text-stone-300">
+                    Owner-confirmed July 21, 2026: approximately 3.2-second and 45 Mobile PageSpeed legacy baseline; 0.7-second lab result and 90+ Mobile PageSpeed after the rebuild; $150 legacy monthly hosting invoice versus a $0 hosting invoice in the recorded target period.
+                  </div>
+                  <div className="mt-3 text-sm leading-6 text-stone-400">
+                    These are first-party project records, not an independent benchmark. Publish the original dated test profiles and invoice periods with any standalone comparison. Hosting eligibility and future cost are usage-dependent; no ranking or conversion result is implied.
+                  </div>
                 </div>
-            </section>
+              </div>
+            </article>
 
-            <Footer />
-        </main>
-    );
-}
+            <article className="rounded-[1.75rem] border border-cognac/35 bg-white p-7 md:p-9">
+              <div className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Ownership disclosure</div>
+              <div className="mt-5 font-serif text-4xl font-normal italic leading-none text-cognac md:text-5xl">Founder-affiliated</div>
+              <h2 className="mt-5 text-2xl font-bold text-charcoal">Panda Patches</h2>
+              <div className="mt-3 leading-7 text-stone-700">
+                Panda Patches is owned and operated by Imran Raza Ladhani, a PandaCodeGen co-founder. PandaCodeGen built and maintains its technical platform. PandaCodeGen holds no ownership or partnership stake in the business. A June 2026 internal dashboard tagged more than $7,000 in orders as customer-reported AI-assisted referrals. A separate dated Meta Events Manager screenshot reported about 10.4% additional Lead events through Conversions API and displayed 9.0/10 Lead Event Match Quality.
+              </div>
+              <div className="mt-3 text-sm leading-6 text-stone-600">
+                Because the owner is a co-founder, treat this as a founder-affiliated project rather than an independent client engagement. These are first-party attribution and platform-reporting snapshots—not independent endorsements, controlled lift studies, guarantees, or forecasts. The AI referral tags are customer-reported.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-// --- PROJECT CARD ---
-function ProjectCard({ project }: any) {
-    return (
-        <section className="container mx-auto px-6">
-            <FadeIn className="group">
-                <div className="grid lg:grid-cols-12 items-stretch rounded-4xl overflow-hidden border border-stone-200 shadow-2xl shadow-stone-900/10 hover:shadow-stone-900/15 transition-shadow duration-500">
-
-                    {/* LEFT, Dark image panel */}
-                    <div className="lg:col-span-7 relative bg-[#0C0A09] h-[380px] sm:h-[440px] lg:h-auto min-h-[380px] sm:min-h-[440px] lg:min-h-[520px] overflow-hidden">
-
-                        {/* Dot grid pattern */}
-                        <div className="absolute inset-0 opacity-[0.08] pointer-events-none"
-                            style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "24px 24px" }}
-                        />
-
-                        {/* Cognac ambient glow, stronger on mobile for wow factor */}
-                        <div className="absolute -top-20 -left-20 w-[280px] h-[280px] rounded-full pointer-events-none blur-[80px]"
-                            style={{ background: "radial-gradient(circle, rgba(176,108,51,0.45) 0%, transparent 70%)" }}
-                        />
-                        <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] rounded-full pointer-events-none blur-[90px]"
-                            style={{ background: "radial-gradient(circle, rgba(176,108,51,0.35) 0%, transparent 70%)" }}
-                        />
-
-                        {/* Center radial spotlight */}
-                        <div className="absolute inset-0 pointer-events-none"
-                            style={{ background: "radial-gradient(ellipse at 50% 55%, rgba(255,220,180,0.12) 0%, transparent 65%)" }}
-                        />
-
-                        {/* Screenshot */}
-                        {project.image && (
-                            <div className="absolute inset-4 sm:inset-6 lg:inset-10 transform group-hover:scale-[1.02] transition-transform duration-700">
-                                <Image
-                                    src={project.image}
-                                    alt={`${project.client} - ${project.category}`}
-                                    fill
-                                    className="object-contain object-center drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
-                                    priority={project.image === "/work/mycustompatches.png"}
-                                    loading={project.image === "/work/mycustompatches.png" ? "eager" : "lazy"}
-                                    quality={90}
-                                />
-                            </div>
-                        )}
-
-                        {/* Bottom gradient fade */}
-                        <div className="absolute inset-x-0 bottom-0 h-32 pointer-events-none bg-linear-to-t from-[#0C0A09] to-transparent" />
-
-                        {/* Corner accent brackets */}
-                        <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-cognac/40 pointer-events-none" />
-                        <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-cognac/40 pointer-events-none" />
-
-                        {/* Badge */}
-                        <div className={`absolute top-5 left-5 z-20 px-4 py-2 bg-white/10 backdrop-blur-xs border ${
-                            project.badge === "In-House Brand" ? "border-cognac/40"
-                            : project.isLive ? "border-white/20"
-                            : "border-white/10"
-                        } rounded-full flex items-center gap-2`}>
-                            <div className={`w-2 h-2 rounded-full ${
-                                project.badge === "In-House Brand" ? "bg-cognac"
-                                : project.isLive ? "bg-emerald-400 animate-pulse"
-                                : "bg-stone-500"
-                            }`} />
-                            <span className="text-xs font-bold text-white/80">
-                                {project.badge ?? (project.isLive ? "Live Project" : "Internal Tool")}
-                            </span>
-                        </div>
-
-                        {/* Project number, large ghost text bottom-right */}
-                        <div className="absolute bottom-4 right-6 text-[120px] font-black text-white/4 leading-none select-none pointer-events-none">
-                            {project.id}
-                        </div>
-                    </div>
-
-                    {/* RIGHT, White content panel */}
-                    <div className="lg:col-span-5 bg-white flex flex-col p-5 md:p-8 lg:p-10 min-w-0">
-
-                        {/* Category + ID */}
-                        <div className="flex items-center gap-3 mb-5">
-                            <span className="text-[10px] font-black text-stone-300 tracking-[0.2em] uppercase">{project.id}</span>
-                            <div className="h-px flex-1 bg-stone-100" />
-                            <span className="text-[10px] font-bold text-cognac tracking-widest uppercase">{project.category}</span>
-                        </div>
-
-                        {/* Client name */}
-                        <h3 className="text-4xl lg:text-5xl font-bold text-charcoal mb-4 leading-[1.05] tracking-tight">
-                            {project.client}
-                        </h3>
-
-                        {/* Tagline, punchy single sentence */}
-                        <p className="text-stone-800 text-base leading-relaxed mb-4 font-semibold">
-                            {project.tagline}
-                        </p>
-
-                        {/* Outcome, orange accent border = visual anchor */}
-                        <div className="pl-5 border-l-2 border-cognac mb-8">
-                            <p className="text-stone-600 text-sm leading-relaxed">
-                                {project.outcome}
-                            </p>
-                        </div>
-
-                        {/* KEY RESULTS, big numbers, not cards */}
-                        <div className="flex-1">
-                            <p className="text-[10px] font-black text-stone-300 tracking-[0.18em] uppercase mb-4">Key Results</p>
-                            <div className="grid grid-cols-3 gap-0 border border-stone-100 rounded-xl overflow-hidden mb-4">
-                                {project.results.map((result: any, i: number) => (
-                                    <div
-                                        key={i}
-                                        className={`p-2.5 md:p-4 min-w-0 ${i < project.results.length - 1 ? "border-r border-stone-100" : ""} bg-stone-50 hover:bg-stone-100 transition-colors`}
-                                    >
-                                        <div className="text-lg sm:text-2xl lg:text-3xl font-black text-charcoal tracking-tight leading-none mb-1.5 truncate">{result.value}</div>
-                                        <div className="text-[9px] font-bold text-stone-400 uppercase tracking-wider leading-tight">{result.label}</div>
-                                        <div className="text-[9px] text-stone-300 mt-1 leading-tight truncate">{result.from}</div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Insight, pull quote */}
-                            <div className="flex items-start gap-3 mb-6">
-                                <div className="w-[3px] shrink-0 self-stretch bg-linear-to-b from-cognac to-cognac/20 rounded-full" />
-                                <p className="text-sm text-stone-600 italic leading-relaxed">{project.insight}</p>
-                            </div>
-
-                            {/* Client Review */}
-                            {project.review && (
-                                <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-5">
-                                    <div className="flex gap-2 mb-2">
-                                        {[1,2,3,4,5].map((s) => (
-                                            <svg key={s} className="w-3 h-3 fill-cognac" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                                        ))}
-                                    </div>
-                                    <p className="text-sm text-stone-600 leading-relaxed italic mb-2">"{project.review.quote}"</p>
-                                    <p className="text-[11px] font-bold text-stone-400 uppercase tracking-wider">{project.review.author}</p>
-                                </div>
-                            )}
-
-                            {/* Tags */}
-                            <div className="flex flex-wrap gap-1.5 mb-8">
-                                {project.tags.map((tag: string, i: number) => (
-                                    <span key={i} className="px-2.5 py-1 bg-stone-50 border border-stone-200 rounded-md text-[11px] font-medium text-stone-500">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* CTAs */}
-                        <div className="flex flex-wrap gap-3 pt-6 border-t border-stone-100">
-                            {project.caseStudyUrl && (
-                                <Link
-                                    href={project.caseStudyUrl}
-                                    className="inline-flex items-center gap-2 px-5 py-3 bg-cognac text-white text-sm font-bold rounded-xl hover:bg-cognac/90 transition-all hover:gap-3"
-                                >
-                                    Read Case Study <ArrowUpRight className="w-4 h-4" />
-                                </Link>
-                            )}
-                            {project.liveUrl ? (
-                                <a
-                                    href={project.liveUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-3 bg-charcoal text-white text-sm font-bold rounded-xl hover:bg-stone-800 transition-all hover:gap-3 group/cta"
-                                >
-                                    View Live Site <ArrowUpRight className="w-4 h-4" />
-                                </a>
-                            ) : (
-                                <div className="inline-flex items-center gap-2 px-5 py-3 bg-stone-100 text-stone-400 text-sm font-bold rounded-xl cursor-default">
-                                    <Code2 className="w-4 h-4" />
-                                    Internal Project
-                                </div>
-                            )}
-                            {project.portalUrl && (
-                                <a
-                                    href={project.portalUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-3 bg-stone-100 text-charcoal text-sm font-bold rounded-xl hover:bg-stone-200 transition-all"
-                                >
-                                    <BarChart3 className="w-4 h-4" />
-                                    Ops Portal
-                                </a>
-                            )}
-                        </div>
-                    </div>
-
+      <section className="px-6 py-16 md:py-24" aria-labelledby="case-studies">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Project records</p>
+          <h2 id="case-studies" className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">
+            The full write-ups, <span className="font-serif font-normal italic text-cognac">with their limits stated.</span>
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
+            Each record states the relationship, the measurement conditions and what the figures do not prove. Two are
+            founder-affiliated and labelled as such; they are operating experience, not independent client proof.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {[
+              { href: "/work/mycustompatches", name: "MyCustomPatches", kind: "Independent client", desc: "WordPress to Next.js migration. Owner-confirmed: 22 days, 3.2s to 0.7s, $150/mo to $0/mo hosting." },
+              { href: "/work/panda-patches", name: "Panda Patches", kind: "Founder-affiliated", desc: "Headless Next.js, Sanity, Supabase and Square build with a real-time pricing calculator and ops platform." },
+              { href: "/work/enterprise-ops", name: "Enterprise Operations", kind: "Client project", desc: "Custom operations platform: order tracking, role-based dashboards and reporting replacing spreadsheets." },
+              { href: "/work/panda-codelab", name: "Panda CodeLab", kind: "Founder-affiliated", desc: "Agency site build. Sub-second load times and an accessibility-first component system." },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="group rounded-3xl border border-stone-300 bg-white p-7 transition-colors hover:border-cognac md:p-8"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">{c.kind}</span>
+                  <ArrowRight className="h-5 w-5 shrink-0 text-stone-600 transition-transform group-hover:translate-x-1 group-hover:text-cognac" aria-hidden="true" />
                 </div>
-            </FadeIn>
-        </section>
-    );
+                <h3 className="mt-4 text-2xl font-bold text-charcoal">{c.name}</h3>
+                <p className="mt-3 leading-7 text-stone-700">{c.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="project-types">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Evidence architecture</p>
+          <h2 id="project-types" className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">
+            What each project record <span className="font-serif font-normal italic text-cognac">must contain.</span>
+          </h2>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {evidenceAreas.map(({ icon: Icon, title, scope, evidence }) => (
+              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
+                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+                <h3 className="mt-5 text-xl font-bold">{title}</h3>
+                <h4 className="mt-5 text-sm font-bold uppercase tracking-wider text-stone-700">Scope record</h4>
+                <p className="mt-2 leading-7 text-stone-700">{scope}</p>
+                <h4 className="mt-5 text-sm font-bold uppercase tracking-wider text-stone-700">Outcome evidence</h4>
+                <p className="mt-2 leading-7 text-stone-700">{evidence}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-midnight px-6 py-16 text-white md:py-24" aria-labelledby="publication-gate">
+        <div className="mx-auto max-w-5xl">
+          <FileSearch className="h-8 w-8 text-orange-300" aria-hidden="true" />
+          <h2 id="publication-gate" className="mt-5 text-3xl font-bold md:text-5xl">
+            The <span className="font-serif font-normal italic text-orange-300">publication gate.</span>
+          </h2>
+          <ul className="mt-9 grid gap-4 md:grid-cols-2">
+            {["Client or data-owner permission is recorded", "Baseline and outcome use comparable conditions", "Dates, sample, tools, and definitions are stated", "Third-party costs include assumptions and exclusions", "Testimonials match the approved original text", "Rankings and revenue are not presented as guaranteed causation", "Structured data does not exceed visible evidence", "A review date and withdrawal trigger are assigned"].map((item) => (
+              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-4 text-stone-200">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 font-bold text-charcoal hover:bg-orange-100">
+              Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <Link href="/about" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-500 px-6 font-bold text-white hover:border-white">
+              Review delivery standards
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
 }

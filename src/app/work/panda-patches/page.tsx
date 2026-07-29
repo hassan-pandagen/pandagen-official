@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Zap, DollarSign, Server, ShoppingBag, BarChart3, Lock, Users, Clock, Sparkles, CreditCard, LineChart, Search, UserRound, Trophy, Star } from "lucide-react";
@@ -8,18 +9,18 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
-    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. 100% of Google rankings preserved. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
+    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. No ranking losses recorded in Search Console during the monitored post-launch period. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
     openGraph: {
         title: "Panda Patches: WordPress to Next.js Migration (Zero SEO Drops)",
         description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. Revenue scaled from $38K to about $50K/mo on about $55/mo tooling.",
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-patches",
-        images: [{ url: "https://www.pandacodegen.com/work/panda-patches.png", width: 1200, height: 630 }],
+        images: [ogImageForPath("/work/panda-patches")],
     },
     twitter: {
         card: "summary_large_image",
         title: "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. 100% rankings preserved. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
+        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. No ranking losses recorded in the monitored post-launch period. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
     },
     alternates: { canonical: "/work/panda-patches" },
 };
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 const pageFaqs: { question: string; answer: string }[] = [
     {
         question: "Did the Panda Patches WordPress migration preserve Google search rankings?",
-        answer: "Yes. We migrated the 3-year-old WordPress site to Next.js with 100 percent of Google rankings preserved and zero drops in Google Search Console. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held position for 30 days post-launch and improved after 60 days because the new site loads in under 1 second, which Google rewards under its 2026 Core Web Vitals algorithm.",
+        answer: "We migrated the 3-year-old WordPress site to Next.js and recorded no ranking losses in Google Search Console during the 30-day post-launch monitoring window. We exported every indexed URL before migration, built 301 redirects for each one in Next.js middleware, preserved existing meta titles and descriptions, upgraded schema markup without changing entity signals, and submitted a fresh sitemap to Google the day of launch. Rankings held through that 30-day window. Movement after that point reflects many factors outside our control and is not attributed to the rebuild. No provider controls search rankings.",
     },
     {
         question: "Can you replace Shopify with a custom coded e-commerce store?",
@@ -58,8 +59,8 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-patches#article",
             "headline": "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with 100% of Google rankings preserved. Includes a real-time pricing calculator handling 9 patch types. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
-            "image": "https://www.pandacodegen.com/work/panda-patches.png",
+            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with no ranking losses recorded in Search Console during the monitored post-launch period. Includes a real-time pricing calculator handling 9 patch types. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
+            "image": ogImageUrlForPath("/work/panda-patches"),
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
             "articleSection": "Case Study",
@@ -132,7 +133,7 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned by PandaCodeGen co-founder Imran Raza; PandaCodeGen built and operates it.",
+            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business.",
             "email": "info@pandacodegen.com",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
@@ -145,7 +146,7 @@ const caseStudySchema = {
             "founder": [
                 {
                     "@type": "Person",
-                    "name": "Imran Raza",
+                    "name": "Imran Raza Ladhani",
                     "jobTitle": "Co-Founder"
                 },
                 {
@@ -301,21 +302,28 @@ export default function PandaPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. 100% of the Google rankings were preserved. Zero drops in Google Search Console. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. No ranking losses were recorded in Google Search Console during the 30-day post-launch monitoring window. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
+
+                        <div className="mb-10 rounded-2xl border border-cognac/30 bg-cognac/5 p-5 max-w-3xl">
+                            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac mb-2">Ownership disclosure</p>
+                            <p className="text-sm leading-6 text-stone-600">
+                                Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business. Treat the figures below as owner-reported first-party records, not an independent client testimonial or a controlled study.
+                            </p>
+                        </div>
 
                         {/* Key metrics */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
                                 { value: "$50K/mo", label: "Monthly Revenue", sub: "up from $38K · powered by $55/mo in tooling" },
-                                { value: "100%", label: "Rankings Preserved", sub: "zero drops in Search Console" },
+                                { value: "No losses", label: "Rankings, monitored period", sub: "Search Console, 30 days post-launch" },
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
                                 { value: "3 yr", label: "Legacy Site Migrated", sub: "full content + SEO equity" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
-                                    <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
+                                    <div className="text-xs text-stone-600 leading-snug">{m.sub}</div>
                                 </div>
                             ))}
                         </div>
@@ -361,7 +369,7 @@ export default function PandaPatchesCaseStudy() {
                             <div className="p-6 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                 <div className="flex items-center gap-2 mb-3">
                                     <Trophy className="w-5 h-5 text-cognac" />
-                                    <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Flagship Activation</span>
+                                    <span className="text-xs font-bold text-stone-600 uppercase tracking-widest">Flagship Activation</span>
                                 </div>
                                 <p className="text-charcoal font-bold mb-2">16,000 patches for Wise&apos;s Nasdaq Times Square activation</p>
                                 <p className="text-stone-500 text-sm leading-relaxed mb-3">
@@ -374,7 +382,7 @@ export default function PandaPatchesCaseStudy() {
                             <div className="p-6 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                 <div className="flex items-center gap-2 mb-3">
                                     <Star className="w-5 h-5 text-cognac" />
-                                    <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">Reputation</span>
+                                    <span className="text-xs font-bold text-stone-600 uppercase tracking-widest">Reputation</span>
                                 </div>
                                 <p className="text-charcoal font-bold mb-2">Rated 4.8/5 by 72+ customers on Trustpilot</p>
                                 <p className="text-stone-500 text-sm leading-relaxed">
@@ -477,7 +485,7 @@ export default function PandaPatchesCaseStudy() {
 
                         {/* Replaced tools table */}
                         <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
-                            <div className="grid grid-cols-[1fr_auto_1fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
+                            <div className="grid grid-cols-[1fr_auto_1fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-600 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center px-4">Cost</div>
                                 <div>Problem</div>
@@ -508,7 +516,7 @@ export default function PandaPatchesCaseStudy() {
                                 <div key={d.label} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-2xl font-black text-cognac">{d.count}</span>
-                                        <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
+                                        <span className="text-xs font-bold text-stone-600 uppercase tracking-widest">{d.label}</span>
                                     </div>
                                     <p className="text-xs text-stone-500 leading-relaxed">{d.examples}</p>
                                 </div>
@@ -603,7 +611,7 @@ export default function PandaPatchesCaseStudy() {
                         <h2 className="text-3xl font-bold text-white mb-10">What changed after launch.</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
-                                { before: "3 years of WordPress SEO equity at risk", after: "100% of Google rankings preserved. Zero drops in Search Console." },
+                                { before: "3 years of WordPress SEO equity at risk", after: "No ranking losses recorded in Search Console across the 30-day post-launch window." },
                                 { before: "Customers waited 24+ hours for a manual quote", after: "Customers see the price instantly. Self-serve checkout." },
                                 { before: "$200+/mo across 3 separate tools + hosting", after: "About $55/mo total (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). CRM, ops, store, and hosting." },
                                 { before: "7 disconnected tools, constant WhatsApp updates", after: "1 platform. All 7 team members on the same real-time data." },
@@ -630,7 +638,7 @@ export default function PandaPatchesCaseStudy() {
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
-                        <p className="text-stone-500 mb-8 max-w-2xl">This is our own brand. Panda Patches is owned by PandaCodeGen co-founder Imran Raza; PandaCodeGen built and operates it. We built the tech and the business runs on it. These aren&apos;t projections — they&apos;re live numbers.</p>
+                        <p className="text-stone-500 mb-8 max-w-2xl">This is a founder-affiliated project, not an independent client engagement. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business. We built the technical platform and the business runs on it. These are first-party operating figures reported by the owner, not projections and not independent client proof.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
                                 { icon: "💰", label: "Monthly Revenue", value: "$50K/mo", detail: "Scaled from $38K to about $50K/mo. A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
@@ -639,7 +647,7 @@ export default function PandaPatchesCaseStudy() {
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>
-                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">{item.label}</div>
                                     <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
                                     <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
                                 </div>

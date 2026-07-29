@@ -98,7 +98,7 @@ export default function UCPFlowAnimation() {
                   ? "border-cognac shadow-[0_0_0_3px_rgba(234,88,12,0.12)]"
                   : "border-stone-200"
               }`}>
-                <Search className={`w-5 h-5 md:w-6 md:h-6 transition-colors duration-500 ${isSearching ? "text-cognac" : "text-stone-400"}`} />
+                <Search className={`w-5 h-5 md:w-6 md:h-6 transition-colors duration-500 ${isSearching ? "text-cognac" : "text-stone-600"}`} />
               </div>
             </div>
             <span className="text-[8px] md:text-[9px] font-bold text-stone-500 uppercase tracking-widest">Customer</span>

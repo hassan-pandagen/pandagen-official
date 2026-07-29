@@ -3,15 +3,15 @@ import { Code2, ShoppingBag, Globe, Zap, ArrowRightLeft } from "lucide-react";
 import { getRelatedServiceHrefs } from "@/data/topical-map";
 
 const ALL_SERVICES = [
-  { href: "/services/wordpress-migration", icon: Code2,        title: "WordPress Migration",   desc: "Escape plugin bloat. Load under 1 second." },
-  { href: "/services/ecommerce",           icon: ShoppingBag,  title: "Shopify (Headless)",    desc: "Keep the backend. Kill the app taxes." },
-  { href: "/services/woocommerce",         icon: ShoppingBag,  title: "WooCommerce Migration", desc: "Cut $500/mo in plugins. Own your store." },
-  { href: "/services/wix",                 icon: Globe,        title: "Wix Migration",         desc: "Break free from Wix limitations. Own your code." },
-  { href: "/services/squarespace",         icon: Globe,        title: "Squarespace Migration", desc: "Outgrow templates. Build something bespoke." },
-  { href: "/services/webflow",             icon: Globe,        title: "Webflow Migration",     desc: "Performance ceiling hit? Move to Next.js." },
-  { href: "/services/gohighlevel",         icon: Zap,          title: "GoHighLevel",           desc: "GHL site slow? Custom frontend, same CRM." },
-  { href: "/services/custom-engineering",  icon: Zap,          title: "Custom Engineering",    desc: "SaaS, dashboards, APIs built from scratch." },
-  { href: "/partners",                     icon: ArrowRightLeft, title: "For Agencies",        desc: "White-label dev partnership. You sell, we build." },
+  { href: "/services/wordpress-migration", icon: Code2,         title: "WordPress Migration",   desc: "Inventory plugins, content, redirects, and migration dependencies." },
+  { href: "/services/ecommerce",           icon: ShoppingBag,   title: "Shopify (Headless)",    desc: "Review frontend architecture while retaining compatible commerce workflows." },
+  { href: "/services/woocommerce",         icon: ShoppingBag,   title: "WooCommerce Migration", desc: "Assess checkout, plugin dependencies, store data, and migration options." },
+  { href: "/services/wix",                 icon: Globe,         title: "Wix Migration",         desc: "Map content, integrations, DNS, and a feasible migration scope." },
+  { href: "/services/squarespace",         icon: Globe,         title: "Squarespace Migration", desc: "Review content, commerce, scheduling, and migration requirements." },
+  { href: "/services/webflow",             icon: Globe,         title: "Webflow Migration",     desc: "Assess CMS data, interactions, hosting, and migration trade-offs." },
+  { href: "/services/gohighlevel",         icon: Zap,           title: "GoHighLevel",           desc: "Evaluate a custom public frontend alongside compatible CRM workflows." },
+  { href: "/services/custom-engineering",  icon: Zap,           title: "Custom Engineering",    desc: "Scope applications, dashboards, APIs, permissions, and integrations." },
+  { href: "/partners",                     icon: ArrowRightLeft, title: "For Agencies",          desc: "Discuss delivery roles, confidentiality, and terms in a partner agreement." },
 ];
 
 type Props = {
@@ -33,10 +33,10 @@ export default function RelatedServicesGrid({ currentHref }: Props) {
     .sort((a, b) => rank(a.href) - rank(b.href));
 
   return (
-    <section className="py-10 md:py-16 px-6 bg-[#F8FAFC]">
+    <section className="py-10 md:py-16 px-6 bg-stone-50 border-y border-stone-200">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-        <p className="text-stone-500 text-center mb-10 text-sm">Every platform migrates differently. Here is the right path for each.</p>
+        <p className="text-stone-600 text-center mb-10 text-sm">Compare the scope, dependencies, and trade-offs for each service path.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {services.map((s) => (
             <Link
@@ -49,7 +49,7 @@ export default function RelatedServicesGrid({ currentHref }: Props) {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">{s.title}</h3>
-                <p className="text-stone-500 text-xs mt-1 leading-relaxed">{s.desc}</p>
+                <p className="text-stone-600 text-xs mt-1 leading-relaxed">{s.desc}</p>
               </div>
             </Link>
           ))}

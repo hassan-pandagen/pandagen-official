@@ -1,64 +1,133 @@
-const proofPoints = [
-  { value: "90+", label: "Guaranteed PageSpeed" },
-  { value: "<1s", label: "Avg Load Time" },
-  { value: "$0", label: "Platform Fees" },
-  { value: "100%", label: "Code Ownership" },
+import Link from "next/link";
+import { ArrowUpRight, ShieldCheck } from "lucide-react";
+
+const continuityControls = [
+  {
+    area: "Search continuity",
+    control: "URLs, canonicals, and indexable content",
+    artifact: "Inventory + redirect specification",
+  },
+  {
+    area: "Revenue continuity",
+    control: "Forms, checkout paths, and integrations",
+    artifact: "Staged end-to-end test log",
+  },
+  {
+    area: "Measurement continuity",
+    control: "Analytics, consent, and conversion events",
+    artifact: "Baseline + event QA record",
+  },
+  {
+    area: "Operating continuity",
+    control: "DNS, launch owners, monitoring, and rollback",
+    artifact: "Ownered launch runbook",
+  },
 ];
 
 export default function TrustLogoBar() {
   return (
     <section
-      className="border-y border-stone-200 bg-white"
-      style={{ contain: "layout style" }}
+      aria-labelledby="migration-standard-heading"
+      className="relative isolate overflow-hidden bg-charcoal px-4 py-16 text-white sm:px-6 md:py-24"
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-center gap-2 py-3 border-b border-stone-100 text-center">
-          <span className="uppercase tracking-widest text-stone-500 font-semibold" style={{ fontSize: "10px", letterSpacing: "0.1em" }}>
-            Featured in
-          </span>
-          <a
-            href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-serif italic text-stone-600 hover:text-cognac transition-colors"
-            style={{ fontSize: "clamp(0.95rem, 3vw, 1.1rem)" }}
-          >
-            Woman&rsquo;s World
-          </a>
-          <span className="text-stone-400 hidden sm:inline" style={{ fontSize: "11px" }}>
-            &mdash; founder Hassan Jamal quoted as an AI expert
-          </span>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {proofPoints.map((point, i) => (
-            <div
-              key={point.label}
-              className={`flex flex-col items-center justify-center py-4 md:py-5 px-2 md:px-4 text-center ${
-                i > 0 ? "md:border-l border-gray-200" : ""
-              } ${i === 1 ? "border-l border-gray-200" : ""} ${
-                i >= 2 ? "border-t md:border-t-0 border-gray-200" : ""
-              }`}
-              style={{ minHeight: "72px" }}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -right-32 top-1/2 h-[34rem] w-[34rem] -translate-y-1/2 rounded-full bg-cognac/25 blur-3xl"
+      />
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cognac to-transparent" />
+
+      <div className="container relative z-10 mx-auto max-w-7xl">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16 xl:gap-24">
+          <div className="max-w-xl">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#f2a17c]">
+              The migration standard
+            </p>
+            <h2
+              id="migration-standard-heading"
+              className="mt-5 text-4xl font-bold leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl"
             >
-              <div
-                className="font-black text-charcoal tracking-tight leading-none mb-1"
-                style={{ fontSize: "clamp(1.25rem, 5vw, 1.875rem)", lineHeight: 1, fontWeight: 900, letterSpacing: "-0.025em" }}
-              >
-                {point.value}
+              The rebuild is new.{" "}
+              <span className="font-serif italic font-normal text-[#f2a17c]">
+                The critical paths stay accounted for.
+              </span>
+            </h2>
+            <p className="mt-6 max-w-lg text-base leading-7 text-stone-300 md:text-lg md:leading-8">
+              Before cutover, we document what must survive the move and how each item will be checked. That is what SEO-safe means here: risk controls, not a ranking promise.
+            </p>
+
+            <Link
+              href="/services/wordpress-migration"
+              className="mt-8 inline-flex min-h-11 items-center gap-2 border-b border-[#f2a17c]/70 pb-1 text-sm font-bold text-white transition-colors hover:border-white hover:text-[#f2a17c] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f2a17c] focus-visible:ring-offset-4 focus-visible:ring-offset-charcoal"
+            >
+              Review our migration standard
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+
+          <figure className="overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#211c18] shadow-[0_28px_80px_-36px_rgba(0,0,0,0.9)]">
+            <div className="flex flex-col gap-4 border-b border-white/10 px-5 py-5 sm:flex-row sm:items-center sm:justify-between md:px-7">
+              <div>
+                <p className="font-serif text-xl italic text-white">Migration continuity ledger</p>
+                <p className="mt-1 text-xs text-stone-400">The handover view for systems that cannot disappear during a rebuild.</p>
               </div>
-              <div
-                className="uppercase tracking-widest text-stone-500 font-semibold whitespace-nowrap"
-                style={{ fontSize: "clamp(9px, 2.4vw, 10px)", lineHeight: 1.2, letterSpacing: "0.08em", fontWeight: 600 }}
-              >
-                {point.label}
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#f2a17c]/30 bg-[#f2a17c]/10 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#ffc2a6]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#f2a17c]" aria-hidden="true" />
+                Defined before launch
               </div>
             </div>
-          ))}
+
+            <div className="hidden grid-cols-[1fr_1.35fr_1.15fr] gap-5 border-b border-white/10 px-7 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-500 md:grid">
+              <span>Continuity</span>
+              <span>Control surface</span>
+              <span>Client-readable evidence</span>
+            </div>
+
+            <ul>
+              {continuityControls.map((item) => (
+                <li
+                  key={item.area}
+                  className="group grid gap-4 border-b border-white/10 px-5 py-5 last:border-b-0 md:grid-cols-[1fr_1.35fr_1.15fr] md:gap-5 md:px-7 md:py-6"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cognac shadow-[0_0_0_5px_rgba(184,65,12,0.18)]" aria-hidden="true" />
+                    <div>
+                      <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Continuity</span>
+                      <span className="font-semibold text-white">{item.area}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Control surface</span>
+                    <span className="text-sm leading-6 text-stone-300">{item.control}</span>
+                  </div>
+                  <div>
+                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Client-readable evidence</span>
+                    <span className="inline-flex items-start gap-2 text-sm font-semibold leading-6 text-[#ffc2a6]">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                      {item.artifact}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <figcaption className="border-t border-white/10 bg-black/15 px-5 py-4 text-xs leading-5 text-stone-400 md:px-7">
+              Illustrative handover structure. Your accepted scope defines the actual systems, checks, owners, and acceptance evidence.
+            </figcaption>
+          </figure>
         </div>
-        <div className="border-t border-stone-100 py-3 text-center">
-          <p className="text-xs md:text-sm text-stone-600">
-            <span className="font-bold text-charcoal">Our guarantee:</span> 90+ Google PageSpeed or 100% refund. In writing.
-          </p>
+
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-stone-400 lg:flex-row lg:items-center lg:justify-between">
+          <p>Custom Next.js and commerce work remains available when the migration requires it.</p>
+          <p className="font-semibold text-stone-200">Scope, exclusions, acceptance, ownership, and launch responsibilities are confirmed in writing.</p>
         </div>
       </div>
     </section>

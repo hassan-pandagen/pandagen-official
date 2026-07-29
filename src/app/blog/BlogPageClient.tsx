@@ -17,25 +17,25 @@ type BlogPostMeta = Omit<BlogPost, "faqs">;
 // ssr: false because pagefind loads /_pagefind/pagefind.js from the runtime assets.
 const BlogSearch = lazyLoad(() => import("@/components/ui/BlogSearch"), { ssr: false });
 
-// Light-mode editorial stat display — data report style (Stripe / McKinsey aesthetic)
-// bgTint = very light category color · statColor = deep category color · border = light border
+// Warm editorial stat display using the site's stone, parchment, and cognac palette.
+// Categories keep distinct labels without introducing an unrelated rainbow theme.
 const cardDisplay: Record<IllustrationType, { stat: string; label: string; bgTint: string; statColor: string; border: string }> = {
-  aicommerce:  { stat: "AI",           label: "No website visit required",   bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
-  security:    { stat: "100K+",        label: "Sites exposed to takeover",   bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
-  performance: { stat: "3.8s",         label: "Average WordPress load time", bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
-  hosting:     { stat: "$0",           label: "Monthly hosting cost",        bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
-  speed:       { stat: "100",          label: "Perfect Speed Score",         bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
-  ranking:     { stat: "3×",           label: "More revenue from speed",     bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
-  conversion:  { stat: "1.2%",         label: "Avg Shopify store CVR",       bgTint: "#f5f3ff", statColor: "#5b21b6", border: "#ddd6fe" },
-  sales:       { stat: "$75K",         label: "Lost revenue every year",     bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
-  plugins:     { stat: "$75K",         label: "Lost to plugin slowdowns",    bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
-  cost:        { stat: "$2,300",       label: "Monthly you pay Shopify",     bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
-  migration:   { stat: "$8K",          label: "Average migration investment", bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
-  traffic:     { stat: "80%",          label: "Traffic lost after penalty",  bgTint: "#f5f3ff", statColor: "#5b21b6", border: "#ddd6fe" },
-  wordpress:   { stat: "3.8s",         label: "WordPress average load time", bgTint: "#fff1f2", statColor: "#be123c", border: "#fecdd3" },
-  saas:        { stat: "40+",          label: "Agencies we partner with",    bgTint: "#eff6ff", statColor: "#1d4ed8", border: "#bfdbfe" },
-  code:        { stat: "5×",           label: "Faster than WordPress",       bgTint: "#ecfdf5", statColor: "#065f46", border: "#a7f3d0" },
-  webflow:     { stat: "$4,700",       label: "Saved yearly vs Webflow",     bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
+  aicommerce:  { stat: "Protocols",    label: "Verify current support",       bgTint: "#faf7f2", statColor: "#9a3412", border: "#ead8c8" },
+  security:    { stat: "Threat model", label: "Scope, patch, and monitor",     bgTint: "#f7f4ef", statColor: "#7c2d12", border: "#e7e0d8" },
+  performance: { stat: "CWV",          label: "Measure lab and field data",   bgTint: "#fafaf9", statColor: "#57534e", border: "#e7e5e4" },
+  hosting:     { stat: "TCO",          label: "Model the full operating cost", bgTint: "#f5f2ed", statColor: "#44403c", border: "#ded8cf" },
+  speed:       { stat: "Method",       label: "Define representative tests", bgTint: "#faf7f2", statColor: "#b8410c", border: "#ead8c8" },
+  ranking:     { stat: "Search",       label: "Measure an external outcome",  bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
+  conversion:  { stat: "Funnel",       label: "Use the site's own baseline", bgTint: "#f7f4ef", statColor: "#78350f", border: "#e7e0d8" },
+  sales:       { stat: "Attribution",  label: "Test before claiming causation", bgTint: "#faf7f2", statColor: "#9a3412", border: "#ead8c8" },
+  plugins:     { stat: "Dependencies", label: "Inventory and test changes",   bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
+  cost:        { stat: "Invoices",     label: "Use current dated evidence",    bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
+  migration:   { stat: "Inventory",    label: "Scope data and continuity",     bgTint: "#fff7ed", statColor: "#c2410c", border: "#fed7aa" },
+  traffic:     { stat: "Continuity",   label: "Plan and monitor the cutover", bgTint: "#f5f2ed", statColor: "#57534e", border: "#ded8cf" },
+  wordpress:   { stat: "Baseline",     label: "Measure the actual site",       bgTint: "#faf7f2", statColor: "#9a3412", border: "#ead8c8" },
+  saas:        { stat: "Lifecycle",    label: "Compare equivalent options",    bgTint: "#fafaf9", statColor: "#44403c", border: "#e7e5e4" },
+  code:        { stat: "Architecture", label: "Choose for documented needs",  bgTint: "#f7f4ef", statColor: "#7c2d12", border: "#e7e0d8" },
+  webflow:     { stat: "Workflows",    label: "Price the whole lifecycle",     bgTint: "#fffbeb", statColor: "#92400e", border: "#fde68a" },
 };
 
 // Resolve the card visual for a given post. Per-post cardStat/cardStatLabel win over the
@@ -52,7 +52,7 @@ function getCardDisplay(article: BlogPostMeta) {
   };
 }
 
-// Interactive filter + article list — wrapped in Suspense because it calls useSearchParams()
+// Interactive filter + article list, wrapped in Suspense because it calls useSearchParams()
 function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -86,15 +86,16 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
 
           {/* Category Filters: horizontal scroll on mobile, wrap on desktop */}
           <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none">
-            <Filter className="w-4 h-4 text-stone-600 shrink-0" />
+            <Filter aria-hidden="true" className="w-4 h-4 text-stone-600 shrink-0" />
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
+                aria-pressed={activeCategory === category}
                 className={`shrink-0 snap-start px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-charcoal text-white'
-                    : 'bg-white text-stone-500 border border-stone-200 hover:border-stone-400 hover:text-charcoal'
+                    : 'bg-white text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-charcoal'
                 }`}
               >
                 {category}
@@ -104,23 +105,23 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
         </div>
 
         {/* Result Count */}
-        <div className="mt-6 text-center text-stone-600 text-sm">
+        <div aria-live="polite" className="mt-6 text-center text-stone-600 text-sm">
           Showing {filteredArticles.length} of {articles.length} article{articles.length !== 1 ? 's' : ''}
           {activeCategory !== "All" && ` in ${activeCategory}`}
         </div>
       </section>
 
-      {/* Featured Articles — Hero + 2 secondary */}
+      {/* Featured Articles: Hero plus 2 secondary */}
       {heroArticle && heroDisplay && (
         <section className="container mx-auto px-6 py-12">
           <div className="flex flex-col gap-5">
 
-            {/* Hero — full width, compact */}
+            {/* Hero: full width and compact */}
             <Link href={`/blog/${heroArticle.id}`} className="group block">
               <div className="relative rounded-[2.5rem] overflow-hidden border border-stone-200 bg-white grid md:grid-cols-2 hover:border-stone-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
                 <div
-                  className="relative overflow-hidden flex flex-col justify-center p-10 min-h-[240px]"
-                  style={{ backgroundColor: heroDisplay.bgTint, borderRight: `1px solid ${heroDisplay.border}` }}
+                  className="relative overflow-hidden flex flex-col justify-center p-8 sm:p-10 min-h-[220px] border-b md:border-b-0 md:border-r"
+                  style={{ backgroundColor: heroDisplay.bgTint, borderColor: heroDisplay.border }}
                 >
                   <div
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 w-fit"
@@ -131,54 +132,54 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                   <div className="text-5xl md:text-6xl font-black leading-none break-words" style={{ color: heroDisplay.statColor }}>
                     {heroDisplay.stat}
                   </div>
-                  <div className="text-xs font-bold uppercase tracking-widest mt-3" style={{ color: `${heroDisplay.statColor}90` }}>
+                  <div className="text-xs font-bold uppercase tracking-widest mt-3" style={{ color: heroDisplay.statColor }}>
                     {heroDisplay.label}
                   </div>
                   <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                       <path d="M0 100 L100 0 L100 100 Z" style={{ fill: heroDisplay.statColor }} />
                     </svg>
                   </div>
                 </div>
-                <div className="p-10 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-4">
+                <div className="p-8 sm:p-10 flex flex-col justify-center">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
                     <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: heroDisplay.statColor }}>{heroArticle.category}</span>
-                    <span className="text-stone-400 text-xs">·</span>
-                    <span className="text-stone-400 text-xs">{heroArticle.date}</span>
-                    <span className="text-stone-400 text-xs">·</span>
-                    <span className="text-stone-400 text-xs">{heroArticle.readTime} read</span>
+                    <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
+                    <span className="text-stone-600 text-xs">{heroArticle.date}</span>
+                    <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
+                    <span className="text-stone-600 text-xs">{heroArticle.readTime} read</span>
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-charcoal leading-snug mb-4 group-hover:text-stone-700 transition-colors">
                     {heroArticle.title}
                   </h2>
                   <p className="text-stone-600 leading-relaxed">{heroArticle.excerpt}</p>
                   <div className="flex items-center gap-2 font-bold text-charcoal group-hover:gap-3 transition-all mt-6">
-                    Read Analysis <ArrowRight className="w-4 h-4" style={{ color: heroDisplay.statColor }} />
+                    Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: heroDisplay.statColor }} />
                   </div>
                 </div>
               </div>
             </Link>
 
-            {/* Secondary featured — 2 side by side */}
+            {/* Secondary featured: 2 side by side */}
             {secondaryArticles.length > 0 && (
               <div className="grid md:grid-cols-2 gap-5">
                 {secondaryArticles.map((article) => {
                   const sd = getCardDisplay(article);
                   return (
                     <Link key={article.id} href={`/blog/${article.id}`} className="group block h-full">
-                      <div className="relative rounded-4xl overflow-hidden border border-stone-200 bg-white grid grid-cols-[180px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
+                      <div className="relative rounded-4xl overflow-hidden border border-stone-200 bg-white grid grid-cols-1 sm:grid-cols-[160px_1fr] hover:border-stone-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
                         <div
-                          className="relative overflow-hidden flex flex-col justify-center p-7"
-                          style={{ backgroundColor: sd.bgTint, borderRight: `1px solid ${sd.border}` }}
+                          className="relative overflow-hidden flex flex-col justify-center p-7 border-b sm:border-b-0 sm:border-r"
+                          style={{ backgroundColor: sd.bgTint, borderColor: sd.border }}
                         >
                           <div className="text-2xl md:text-3xl font-black leading-none break-words" style={{ color: sd.statColor }}>
                             {sd.stat}
                           </div>
-                          <div className="text-[10px] font-bold uppercase tracking-wider mt-2" style={{ color: `${sd.statColor}99` }}>
+                          <div className="text-[10px] font-bold uppercase tracking-wider mt-2" style={{ color: sd.statColor }}>
                             {sd.label}
                           </div>
                           <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                               <path d="M0 100 L100 0 L100 100 Z" style={{ fill: sd.statColor }} />
                             </svg>
                           </div>
@@ -186,14 +187,14 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                         <div className="p-7 flex flex-col justify-center">
                           <div className="flex items-center gap-2 mb-3">
                             <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: sd.statColor }}>{article.category}</span>
-                            <span className="text-stone-400 text-xs">·</span>
-                            <span className="text-stone-400 text-xs">{article.date}</span>
+                            <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
+                            <span className="text-stone-600 text-xs">{article.date}</span>
                           </div>
                           <h2 className="text-lg md:text-xl font-bold text-charcoal leading-snug line-clamp-3 group-hover:text-stone-700 transition-colors">
                             {article.title}
                           </h2>
                           <div className="flex items-center gap-1.5 font-bold text-charcoal group-hover:gap-2.5 transition-all mt-4 text-sm">
-                            Read Analysis <ArrowRight className="w-4 h-4" style={{ color: sd.statColor }} />
+                            Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: sd.statColor }} />
                           </div>
                         </div>
                       </div>
@@ -209,6 +210,9 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
 
       {/* Non-Featured Articles Grid */}
       <section className="container mx-auto px-6 pb-16 md:pb-32">
+        <h2 className="mb-8 text-3xl font-bold tracking-tight text-charcoal md:text-4xl">
+          {activeCategory === "All" ? "All migration and engineering guides" : `${activeCategory} guides`}
+        </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[...overflowFeatured, ...filteredArticles.filter(a => !a.featured)].map((article) => {
             const display = getCardDisplay(article);
@@ -218,7 +222,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                 href={`/blog/${article.id}`}
                 className="group bg-white border border-stone-200 rounded-2xl overflow-hidden hover:border-stone-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
-                {/* Light-mode data header — tinted bg, colored stat */}
+                {/* Light-mode data header with tinted background and colored stat */}
                 <div
                   className="p-6 relative overflow-hidden shrink-0"
                   style={{
@@ -242,14 +246,14 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                   </div>
                   <div
                     className="text-xs font-bold uppercase tracking-wider mt-2"
-                    style={{ color: `${display.statColor}cc` }}
+                    style={{ color: display.statColor }}
                   >
                     {display.label}
                   </div>
 
                   {/* Decorative triangle */}
                   <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.06] pointer-events-none overflow-hidden">
-                    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                       <path d="M0 100 L100 0 L100 100 Z" style={{ fill: display.statColor }} />
                     </svg>
                   </div>
@@ -257,16 +261,16 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
 
                 {/* Card body */}
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 mb-4 text-xs text-stone-400">
+                  <div className="flex items-center gap-2 mb-4 text-xs text-stone-600">
                     <span>{article.date}</span>
-                    <span>·</span>
+                    <span aria-hidden="true">·</span>
                     <span>{article.readTime} read</span>
                   </div>
                   <h3 className="text-xl font-bold text-charcoal leading-snug line-clamp-2 group-hover:text-stone-700 transition-colors">
                     {article.title}
                   </h3>
                   <div className="flex items-center gap-1.5 mt-auto pt-5 text-sm font-bold text-charcoal group-hover:gap-2.5 transition-all">
-                    Read Analysis <ArrowRight className="w-4 h-4" style={{ color: display.statColor }} />
+                    Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: display.statColor }} />
                   </div>
                 </div>
               </Link>
@@ -282,7 +286,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
 export default function BlogPageClient({ articles, blogSchema }: { articles: BlogPostMeta[]; blogSchema: object }) {
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden relative">
-      {/* Schema.org JSON-LD for SEO — rendered server-side (not inside Suspense) */}
+      {/* Schema.org JSON-LD for SEO, rendered server-side (not inside Suspense) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
@@ -290,14 +294,14 @@ export default function BlogPageClient({ articles, blogSchema }: { articles: Blo
 
       <Header />
 
-      {/* Hero with h1 — rendered server-side so Bingbot and Googlebot see it in initial HTML */}
+      {/* Hero with h1, rendered server-side so Bingbot and Googlebot see it in initial HTML */}
       <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
         <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
-        <h1 className="text-5xl md:text-7xl font-bold text-charcoal relative z-10">
-          Insights from the <span className="font-serif italic text-cognac">Engine Room.</span>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-charcoal relative z-10 leading-[1.08] text-balance">
+          Insights from the <span className="font-serif font-normal italic text-cognac">Engine Room.</span>
         </h1>
         <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
-          Technical guides on Next.js, WordPress migration, e-commerce performance, and web speed, written by the engineers who build it.
+          Practical guides on Next.js, website migration, commerce architecture, analytics, and web performance from the PandaCodeGen editorial team.
         </p>
       </section>
 
@@ -305,6 +309,23 @@ export default function BlogPageClient({ articles, blogSchema }: { articles: Blo
       <Suspense fallback={<div className="min-h-[400px]" />}>
         <BlogArticlesSection articles={articles} />
       </Suspense>
+
+      <nav aria-label="All articles" className="container mx-auto px-6 pb-16">
+        <details className="rounded-2xl border border-stone-200 bg-white p-5">
+          <summary className="min-h-11 cursor-pointer py-2 font-semibold text-charcoal">
+            Browse the complete article directory ({articles.length})
+          </summary>
+          <ul className="mt-4 grid gap-x-8 gap-y-3 border-t border-stone-200 pt-5 md:grid-cols-2 lg:grid-cols-3">
+            {articles.map((article) => (
+              <li key={article.id}>
+                <Link className="inline-flex min-h-11 items-center text-sm text-stone-700 underline-offset-4 hover:text-cognac hover:underline" href={`/blog/${article.id}`}>
+                  {article.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </nav>
 
       <Footer />
     </main>

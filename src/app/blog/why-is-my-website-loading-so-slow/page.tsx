@@ -1,460 +1,718 @@
-import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import {
+  BlogAuthor,
+  BlogHeader,
+  BlogHighlight,
+  BlogList,
+  BlogText,
+  InsightBox,
+} from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "why-is-my-website-loading-so-slow")?.faqs ?? [];
+const slowWebsiteFAQs =
+  blogPosts.find((post) => post.id === "why-is-my-website-loading-so-slow")?.faqs ?? [];
 
+const DiagnosticVisual = lazyLoad(
+  () => import("@/components/blog/SlowSiteDiagnosticVisual"),
+);
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
-    title: "Why Is My Website Loading So Slow? 12 Fixes",
-    description: "Your site is slow because images, scripts, hosting, or the platform itself is making visitors wait. 12 root causes, free tools, and fixes that work.",
-    alternates: { canonical: "/blog/why-is-my-website-loading-so-slow" },
-    keywords: [
-        "why is my website loading so slow",
-        "website loading slow",
-        "how to fix slow website",
-        "website speed fix",
-        "slow website causes",
-        "website performance optimization",
-        "core web vitals fix",
-        "website speed test",
-        "how to speed up website",
-        "slow website revenue impact",
-        "website loading too slow",
-        "fix slow loading website"
-    ],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
-    openGraph: {
-        title: "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
-        description: "12 root causes of slow websites, free diagnostic tools, 8 step-by-step fixes, and when a rebuild makes more financial sense than optimization.",
-        type: "article",
-        publishedTime: "2026-05-13T00:00:00-05:00",
-        modifiedTime: "2026-05-13T00:00:00-05:00",
-        authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
-        description: "12 root causes, free diagnostic tools, 8 fixes, and when to rebuild instead of optimize.",
-    },
+  title: "Why Is My Website Loading So Slow? 12 Causes + Fixes",
+  description:
+    "Diagnose a slow website with field data, lab traces and 12 common causes. Learn what to fix, how to validate it and when a rebuild is justified.",
+  alternates: {
+    canonical: "/blog/why-is-my-website-loading-so-slow",
+  },
+  keywords: [
+    "why is my website loading so slow",
+    "slow website fix",
+    "website loading slow",
+    "how to speed up a website",
+    "website speed test",
+    "Core Web Vitals fix",
+    "slow website on mobile",
+    "PageSpeed Insights",
+    "website performance audit",
+    "slow website causes",
+  ],
+  openGraph: {
+    title: "Why Is My Website Loading So Slow? 12 Causes and Fixes",
+    description:
+      "A measurement-first guide to slow websites: field data, lab traces, 12 causes, practical fixes and an optimize-versus-rebuild decision framework.",
+    type: "article",
+    publishedTime: "2026-05-13T00:00:00-05:00",
+    modifiedTime: "2026-07-23T00:00:00-05:00",
+    authors: ["Hassan Jamal"],
+    url: "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
+    images: [ogImageForPath("/blog/why-is-my-website-loading-so-slow")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Why Is My Website Loading So Slow? 12 Causes and Fixes",
+    description:
+      "Find the slow layer before paying for the wrong fix. Test field data, lab traces, templates, scripts, media, hosting and platform constraints.",
+  },
 };
 
 const articleSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id":
+        "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#article",
+      headline: "Why Is My Website Loading So Slow? 12 Causes and Fixes",
+      description:
+        "A measurement-first guide to diagnosing slow websites with field data, lab traces, twelve common causes, practical fixes and a rebuild decision framework.",
+      image: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
+      datePublished: "2026-05-13T00:00:00-05:00",
+      dateModified: "2026-07-23T00:00:00-05:00",
+      author: {
+        "@type": "Person",
+        "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+        name: "Hassan Jamal",
+        jobTitle: "Co-founder and Lead Engineer",
+        url: "https://www.pandacodegen.com/about/hassan",
+        sameAs: [
+          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+          "https://github.com/hassan-pandagen",
+        ],
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://www.pandacodegen.com/#organization",
+        name: "PandaCodeGen",
+        url: "https://www.pandacodegen.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.pandacodegen.com/logo.png",
+          width: 655,
+          height: 113,
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id":
+          "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
+      },
+      articleSection: "Performance",
+      keywords: [
+        "why is my website loading so slow",
+        "slow website fix",
+        "website speed test",
+        "Core Web Vitals",
+        "PageSpeed Insights",
+        "website performance audit",
+      ],
+      inLanguage: "en-US",
+      about: [
         {
-            "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#article",
-            "headline": "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
-            "description": "Your site is slow because images, scripts, hosting, or the platform itself is making visitors wait. 12 root causes, diagnostic tools, step-by-step fixes, and when a rebuild beats optimization.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-05-13T00:00:00-05:00",
-            "author": {
-                "@type": "Person",
-                "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
-            },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow" },
-            "articleSection": "Performance",
-            "keywords": ["slow website fix", "website loading slow", "core web vitals", "website speed optimization", "how to fix slow website"],
-            "timeRequired": "PT14M",
-            "wordCount": 3600,
-            "about": [
-                { "@type": "Thing", "name": "Website Speed Optimization" },
-                { "@type": "Thing", "name": "Core Web Vitals" },
-                { "@type": "Thing", "name": "Website Performance" },
-                { "@type": "Thing", "name": "Page Load Time" }
-            ],
-            "inLanguage": "en-US",
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "GTmetrix Speed Testing Tool", "url": "https://gtmetrix.com/" },
-                { "@type": "CreativeWork", "name": "WebPageTest Performance Tool", "url": "https://webpagetest.org/" }
-            ]
+          "@type": "Thing",
+          name: "Website performance",
+          description:
+            "Network, origin, browser and user-experience conditions that affect how a web page loads and responds",
         },
         {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Why Is My Website Loading So Slow", "item": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow" }
-            ]
+          "@type": "Thing",
+          name: "Core Web Vitals",
+          description:
+            "Real-user loading, responsiveness and visual-stability metrics",
         },
         {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#webpage",
-            "url": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
-            "name": "Why Is My Website Loading So Slow? 12 Causes and Fast Fixes",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-05-13T00:00:00-05:00",
-            "inLanguage": "en-US"
+          "@type": "Thing",
+          name: "PageSpeed Insights",
+          description:
+            "Google tooling that presents field data when available and a controlled Lighthouse lab test",
+        },
+      ],
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", "h2", "[data-speakable='true']"],
+      },
+      citation: [
+        {
+          "@type": "CreativeWork",
+          name: "Understanding page experience in Google Search results",
+          url: "https://developers.google.com/search/docs/appearance/page-experience",
         },
         {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "email": "info@pandacodegen.com",
-            "foundingDate": "2026",
-            "areaServed": "Worldwide"
+          "@type": "CreativeWork",
+          name: "Core Web Vitals threshold methodology",
+          url: "https://web.dev/articles/defining-core-web-vitals-thresholds",
         },
         {
-            "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#faq",
-            "mainEntity": postFAQs.map((faq: { question: string; answer: string }) => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+          "@type": "CreativeWork",
+          name: "PageSpeed Insights field and lab data",
+          url: "https://web.dev/articles/whats-new-pagespeed-insights",
+        },
+        {
+          "@type": "CreativeWork",
+          name: "Optimize Largest Contentful Paint",
+          url: "https://web.dev/articles/optimize-lcp",
+        },
+        {
+          "@type": "CreativeWork",
+          name: "Efficiently load third-party JavaScript",
+          url: "https://web.dev/articles/efficiently-load-third-party-javascript",
+        },
+        {
+          "@type": "CreativeWork",
+          name: "Content delivery networks",
+          url: "https://web.dev/articles/content-delivery-networks",
+        },
+        {
+          "@type": "CreativeWork",
+          name: "Evaluate Google Ads landing pages",
+          url: "https://support.google.com/google-ads/answer/7543502",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.pandacodegen.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: "https://www.pandacodegen.com/blog",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Why Is My Website Loading So Slow?",
+          item:
+            "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
+        },
+      ],
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#webpage",
+      url: "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
+      name: "Why Is My Website Loading So Slow? 12 Causes and Fixes",
+      description:
+        "A measurement-first guide to diagnosing and fixing a slow website without assuming one platform, score or cause.",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
+      },
+      datePublished: "2026-05-13T00:00:00-05:00",
+      dateModified: "2026-07-23T00:00:00-05:00",
+      breadcrumb: {
+        "@id":
+          "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#breadcrumb",
+      },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#faq",
+      mainEntity: slowWebsiteFAQs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
 };
 
-export default function WhyWebsiteSlowPage() {
-    return (
-        <main className="min-h-screen bg-paper text-charcoal overflow-x-hidden">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-            <Header />
+const causes = [
+  {
+    title: "1. Slow origin response",
+    body: "A delayed first response can come from overloaded infrastructure, uncached page generation, database work, slow upstream APIs or geographic distance. Measure Time to First Byte by template and location before concluding that a hosting brand or plan is the cause.",
+  },
+  {
+    title: "2. The main content is discovered late",
+    body: "The browser cannot load the largest image or text block until it can discover the resource. A hero image hidden in JavaScript or CSS, a client-rendered shell or a late API response can delay LCP even when the asset itself is small.",
+  },
+  {
+    title: "3. Oversized images and video",
+    body: "A source file may be much larger than its rendered dimensions, use an inefficient format or load at full quality on every device. Above-the-fold media needs the right dimensions and priority. Offscreen media can usually wait.",
+  },
+  {
+    title: "4. Render-blocking CSS and fonts",
+    body: "Large stylesheets, chained imports and late font files can delay visible text and create layout movement. Inspect which files are required for the first viewport, preload only truly critical resources and use stable font fallbacks.",
+  },
+  {
+    title: "5. Too much JavaScript on the main thread",
+    body: "Downloading is only part of the cost. Browsers must parse, compile and execute JavaScript. Long tasks, hydration work and expensive component rendering can delay interaction, especially on constrained mobile devices.",
+  },
+  {
+    title: "6. Third-party scripts",
+    body: "Analytics, chat, ads, maps, video embeds, consent tools and experimentation platforms execute code you do not fully control. Load each tool only where it creates enough value, and delay optional work until consent or interaction when appropriate.",
+  },
+  {
+    title: "7. A long or serial request chain",
+    body: "The raw number of requests is less useful than their order and dependency. A small file can still block the page when another file must finish before it can be discovered. Read the waterfall and shorten critical chains.",
+  },
+  {
+    title: "8. Missing or ineffective caching",
+    body: "Browser, CDN and application caches solve different problems. A cache that is bypassed by cookies, query parameters or incorrect headers may look configured while every request still reaches the origin. Check actual cache status and invalidation behavior.",
+  },
+  {
+    title: "9. CDN configuration misses the important work",
+    body: "A CDN can reduce round-trip distance and origin load, but only for resources it can serve or accelerate. Dynamic HTML, authenticated pages and uncacheable API work may still depend on the origin. Verify hit ratios and regional behavior.",
+  },
+  {
+    title: "10. Unstable layout",
+    body: "Images without dimensions, late banners, ads, embeds and font swaps can move content after it appears. Reserve space for dynamic elements and test the full consent and personalization flow, not only a clean laboratory page.",
+  },
+  {
+    title: "11. Slow interactions",
+    body: "Menus and forms may load quickly but respond slowly because event handlers perform too much work. Use field INP data and a performance trace to locate the interaction, script and component responsible instead of optimizing unrelated page-load assets.",
+  },
+  {
+    title: "12. Template or platform constraints",
+    body: "Themes, plugins, apps, builders and custom applications can all accumulate work. The platform name alone does not prove a ceiling. A constraint becomes actionable when repeated traces show required code or architecture that the team cannot remove or control.",
+  },
+];
 
-            <article className="pt-28 md:pt-32 pb-12 md:pb-24">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-3xl mx-auto">
-                        <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "Why Is My Website Loading So Slow" }]} />
-                        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac transition mt-4 mb-8">
-                            <ArrowLeft className="w-4 h-4" /> Back to Blog
-                        </Link>
-                        <div className="mb-6">
-                            <span className="inline-block bg-cognac/10 text-cognac text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Performance</span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight tracking-tight mb-6">
-                            Why Is My Website Loading So Slow? <span className="font-serif italic text-cognac">12 Causes and Fast Fixes</span>
-                        </h1>
-                        <BlogAuthor name="Hassan Jamal" role="Founder, PandaCodeGen" date="May 13, 2026" readTime="14 min read" />
-                    </div>
-                </div>
+const fixes = [
+  {
+    title: "1. Record a reproducible baseline",
+    body: "Save the tested URL, device, network profile, consent state, cache state and date. Run representative templates rather than only the homepage. Compare several consistent runs and keep field data separate from the laboratory score.",
+  },
+  {
+    title: "2. Trace the LCP path",
+    body: "Identify the LCP element, its resource, when the browser discovers it, its download duration and the render delay after it arrives. Fix the largest measured subpart instead of applying a generic speed checklist.",
+  },
+  {
+    title: "3. Deliver media for its actual slot",
+    body: "Resize and compress images, use responsive sources and modern formats where supported, avoid lazy-loading the LCP asset and defer below-the-fold media. Give images and embeds dimensions to protect layout stability.",
+  },
+  {
+    title: "4. Reduce main-thread and third-party work",
+    body: "Remove code that has no current job, split work by route, load optional tools after consent or interaction, and use async or defer where the dependency permits it. Validate forms, analytics and attribution after every change.",
+  },
+  {
+    title: "5. Fix origin, cache and CDN behavior",
+    body: "Profile the origin before upgrading it. Cache safe responses, verify headers and hit ratios, reduce database or API work, and test from the regions where users actually visit. A provider change is justified only when the measured constraint follows the infrastructure.",
+  },
+  {
+    title: "6. Stabilize CSS, fonts and layout",
+    body: "Inline or prioritize only critical styles, remove unused CSS, preload sparingly, select an intentional font-loading strategy and reserve space for late components. Re-test with consent banners and real content enabled.",
+  },
+  {
+    title: "7. Diagnose the slow interaction",
+    body: "Reproduce the exact click, tap or keyboard action, inspect the long task and reduce the work that blocks the next paint. Field data can identify affected page groups; a trace explains the code path.",
+  },
+  {
+    title: "8. Validate and monitor",
+    body: "Check visual behavior, accessibility, forms, analytics, SEO output and business events after optimization. Monitor real-user Core Web Vitals over the following reporting window and add performance budgets to prevent regressions.",
+  },
+];
 
-                <div className="container mx-auto px-6 mt-8 md:mt-12">
-                    <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10">
+export default function SlowWebsitePage() {
+  return (
+    <>
+      <Header />
+      <main className="relative min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal selection:bg-stone-200 selection:text-stone-900 md:pb-20 md:pt-32">
+        <div className="fixed inset-0 z-50 bg-noise opacity-[0.03] pointer-events-none" />
 
-                        <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">Your site is slow because something on it — images, scripts, hosting, or the platform itself — is making visitors wait. Every second of that wait costs you conversions, rankings, and ad efficiency. This guide covers how to <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">diagnose the problem</Link>, the 12 most common causes, and the fixes that actually work, including when optimization hits a ceiling and a rebuild makes more financial sense.</p>
+        <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+          />
 
-                        <div className="mb-12"><PageSpeedAnimation /></div>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog", href: "/blog" },
+              {
+                label: "Why Is My Website Loading So Slow?",
+                href: "/blog/why-is-my-website-loading-so-slow",
+              },
+            ]}
+          />
 
-                        <div className="space-y-8">
+          <Link
+            href="/blog"
+            className="mb-8 inline-flex items-center gap-2 text-charcoal transition-colors hover:text-stone-700"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Blog
+          </Link>
 
-                            <BlogHeader>How to Tell if Your Website Is Actually Slow</BlogHeader>
+          <div className="mb-10">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-cognac">
+              Website performance diagnosis
+            </p>
+            <h1 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-charcoal md:text-5xl lg:text-6xl">
+              Why Is My Website Loading So Slow?{" "}
+              <span className="font-serif font-normal italic text-cognac">
+                12 Causes and Practical Fixes
+              </span>
+            </h1>
+            <p className="mb-6 text-xl leading-relaxed text-stone-600" data-speakable="true">
+              A slow site rarely has one cause. The delay can start with the network, with your server, in the
+              browser, in the template, or in something a third party loaded. This guide shows you how to
+              measure the pages that are actually affected, work out which layer is holding things up, and
+              only then decide whether to optimise what you have or rebuild it.
+            </p>
+            <BlogAuthor
+              date="May 13, 2026, reviewed Jul 23, 2026"
+              readTime="14 min read"
+              bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He works on performance diagnostics, technical SEO and controlled website migrations with documented baselines and acceptance criteria."
+              linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+            />
+          </div>
 
-                            <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl" data-speakable="true">
-                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                                <p className="text-sm text-stone-700 leading-relaxed">A slow website is usually caused by unoptimized large media files, lack of caching, slow web hosting, or too many plugins and external scripts. If your site takes more than 3 seconds to load, visitors are leaving before they see your content. The modern standard is under 1 second. Sites above 3 seconds see bounce rates climb, ad costs rise, and Google start favoring faster competitors.</p>
-                            </div>
+          <div className="mb-12">
+            <DiagnosticVisual />
+          </div>
 
-                            <BlogText>
-                                Google measures speed through <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals</Link>, three metrics that determine whether your site passes or fails in search rankings:
-                            </BlogText>
+          <section className="mb-10 rounded-2xl border border-stone-200 bg-stone-50 p-6" data-speakable="true">
+            <h2 className="mb-4 text-base font-bold text-charcoal">Short answer</h2>
+            <BlogList
+              items={[
+                "Use PageSpeed Insights to separate available real-user field data from the controlled Lighthouse lab test. One score is not a complete diagnosis.",
+                "Google's good Core Web Vitals thresholds remain LCP at 2.5 seconds or less, INP at 200 milliseconds or less and CLS at 0.1 or less, evaluated at the 75th percentile of visits.",
+                "Test multiple page templates on mobile and desktop. A homepage, service page, product page and article can fail for different reasons.",
+                "Performance can affect user experience, Search success and paid landing-page quality, but there is no universal traffic, revenue or ranking loss per second.",
+                "Rebuild only when repeated measurement shows a required platform or architecture constraint that optimization cannot responsibly remove.",
+              ]}
+            />
+          </section>
 
-                            <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
-                                <li className="flex items-start gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
-                                    <span><strong>Largest Contentful Paint (LCP):</strong> how long until the main content appears. Target: under 2.5 seconds.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
-                                    <span><strong>Interaction to Next Paint (INP):</strong> how quickly the site responds when someone clicks or taps. Target: under 200 milliseconds.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-cognac mt-2 flex-shrink-0"></span>
-                                    <span><strong>Cumulative Layout Shift (CLS):</strong> how much the page jumps around while loading. Target: under 0.1.</span>
-                                </li>
-                            </ul>
+          <div className="space-y-8">
+            <BlogHeader>How to Tell if Your Website Is Actually Slow</BlogHeader>
 
-                            <BlogText>
-                                If your LCP is above 4 seconds, your INP is above 200ms, or your CLS is above 0.25, Google considers your site to have poor user experience. That directly affects rankings and <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">confirmed ranking factor</Link> status means your competitors with faster sites outrank you even with equivalent content.
-                            </BlogText>
+            <BlogText>
+              Start by naming the experience that is slow. A blank first screen, a late hero image,
+              a menu that ignores a tap and a form that freezes after submission are different
+              problems. They require different evidence and different fixes. A single homepage
+              score cannot represent every visitor, route, device and interaction.
+            </BlogText>
 
-                            <BlogHeader>How to Test Your Website Speed</BlogHeader>
+            <BlogText>
+              Google&apos;s current{" "}
+              <a
+                href="https://web.dev/articles/defining-core-web-vitals-thresholds"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-2 hover:text-stone-600"
+              >
+                Core Web Vitals thresholds
+              </a>{" "}
+              classify LCP of 2.5 seconds or less, INP of 200 milliseconds or less and CLS of
+              0.1 or less as good at the 75th percentile. Poor begins above 4 seconds for LCP,
+              above 500 milliseconds for INP and above 0.25 for CLS. These are real-user
+              experience categories, not a promise that crossing one line changes a ranking or
+              conversion by a fixed amount.
+            </BlogText>
 
-                            <BlogText>
-                                Before diagnosing anything, you want a baseline. Free tools give you actionable diagnostics in under 60 seconds.
-                            </BlogText>
+            <div className="overflow-x-auto rounded-xl border border-stone-200">
+              <table className="w-full min-w-[620px] border-collapse text-sm">
+                <thead className="bg-stone-100">
+                  <tr>
+                    <th className="border-b border-stone-200 p-3 text-left">Metric</th>
+                    <th className="border-b border-stone-200 p-3 text-left">Good</th>
+                    <th className="border-b border-stone-200 p-3 text-left">Poor</th>
+                    <th className="border-b border-stone-200 p-3 text-left">What it helps diagnose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">LCP</td>
+                    <td className="border-b border-stone-200 p-3">2.5s or less</td>
+                    <td className="border-b border-stone-200 p-3">Above 4.0s</td>
+                    <td className="border-b border-stone-200 p-3">Main-content loading</td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">INP</td>
+                    <td className="border-b border-stone-200 p-3">200ms or less</td>
+                    <td className="border-b border-stone-200 p-3">Above 500ms</td>
+                    <td className="border-b border-stone-200 p-3">Interaction responsiveness</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-bold">CLS</td>
+                    <td className="p-3">0.1 or less</td>
+                    <td className="p-3">Above 0.25</td>
+                    <td className="p-3">Unexpected layout movement</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                            <div className="overflow-x-auto my-6">
-                                <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to see full table</div>
-                                <table className="min-w-[560px] w-full border-collapse border border-stone-300 text-sm">
-                                    <thead>
-                                        <tr className="bg-stone-100">
-                                            <th className="p-3 text-left font-bold border border-stone-300">Tool</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Best For</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Cost</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td className="p-3 border border-stone-300 font-medium"><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google PageSpeed Insights</a></td><td className="p-3 border border-stone-300">Mobile vs desktop scores, Core Web Vitals</td><td className="p-3 border border-stone-300 text-emerald-700">Free</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium"><a href="https://gtmetrix.com/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">GTmetrix</a></td><td className="p-3 border border-stone-300">Waterfall chart showing which files load slowest</td><td className="p-3 border border-stone-300 text-emerald-700">Free</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Pingdom Tools</td><td className="p-3 border border-stone-300">Testing from multiple global locations</td><td className="p-3 border border-stone-300 text-emerald-700">Free</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium"><a href="https://webpagetest.org/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">WebPageTest</a></td><td className="p-3 border border-stone-300">Filmstrip view of exactly when content appears</td><td className="p-3 border border-stone-300 text-emerald-700">Free</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Chrome DevTools Lighthouse</td><td className="p-3 border border-stone-300">Running audits locally without signup</td><td className="p-3 border border-stone-300 text-emerald-700">Free</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
+            <InsightBox variant="info">
+              First Input Delay is no longer a Core Web Vital. INP replaced it in March 2024.
+              A current performance report or visual should use LCP, INP and CLS.
+            </InsightBox>
 
-                            <BlogText>
-                                Run PageSpeed Insights on your homepage, your most important service page, and a blog post. They often score differently. A score below 50 is poor. A <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">score of 90+</Link> is where you want to be. The mobile score is the one that affects your Google rankings.
-                            </BlogText>
+            <BlogHeader>How to Test a Slow Website Without Misreading the Score</BlogHeader>
 
-                            <BlogHeader>12 Common Reasons Your Website Loads So Slow</BlogHeader>
+            <BlogText>
+              PageSpeed Insights combines two different views when sufficient data exists. The
+              field section summarizes what eligible Chrome users experienced during the recent
+              reporting window. The Lighthouse section runs one controlled laboratory test and
+              produces diagnostics. Google&apos;s{" "}
+              <a
+                href="https://web.dev/articles/whats-new-pagespeed-insights"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-2 hover:text-stone-600"
+              >
+                PageSpeed documentation
+              </a>{" "}
+              explains this separation. A 90 laboratory score can be a useful engineering target,
+              but it is not the field Core Web Vitals assessment and it is not a Google ranking
+              cutoff.
+            </BlogText>
 
-                            <BlogText>
-                                The causes fall into four categories: media issues, server issues, code bloat, and third-party scripts. Most slow sites have problems in at least two of these categories simultaneously.
-                            </BlogText>
+            <BlogList
+              items={[
+                "Test representative templates: homepage, service or category, product or conversion page, and a content page.",
+                "Record mobile and desktop separately. Device capability, network and layout can change the result.",
+                "Record consent and cache state. Analytics, chat and advertising tags may load only after a visitor choice.",
+                "Use several consistent lab runs to identify repeatable bottlenecks, then compare them with field data when available.",
+                "Save release dates and the exact URLs tested so a later regression can be traced to a real change.",
+              ]}
+            />
 
-                            <div className="overflow-x-auto my-6">
-                                <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to see full table</div>
-                                <table className="min-w-[560px] w-full border-collapse border border-stone-300 text-sm">
-                                    <thead>
-                                        <tr className="bg-stone-100">
-                                            <th className="p-3 text-left font-bold border border-stone-300">Category</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Common Culprits</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Impact Level</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Media</td><td className="p-3 border border-stone-300">Unoptimized images, autoplay video</td><td className="p-3 border border-stone-300 text-red-600">High</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Server</td><td className="p-3 border border-stone-300">Cheap hosting, no CDN, no caching</td><td className="p-3 border border-stone-300 text-red-600">High</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Code</td><td className="p-3 border border-stone-300">Page builders, unminified JS/CSS</td><td className="p-3 border border-stone-300 text-amber-700">Medium-High</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Third Party</td><td className="p-3 border border-stone-300">Plugins, ads, chat widgets</td><td className="p-3 border border-stone-300 text-amber-700">Medium</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
+            <BlogText>
+              Search Console&apos;s Core Web Vitals report groups similar URLs and is useful for
+              prioritizing affected page groups. Chrome DevTools and Lighthouse are useful for
+              reproducing and tracing a particular page. Your analytics and business systems show
+              whether the affected visitors also experienced lower engagement or conversion.
+              Keep those measurements related, but do not treat correlation as proof of one cause.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">1. Cheap or Overloaded Hosting</h3>
-                            <BlogText>
-                                Shared hosting means your site competes for CPU and RAM with hundreds of other sites on the same server. When traffic spikes, your site gets queued behind others. A site that loads fine at 2am can crawl at noon. The difference between a $5/month shared plan and a $25/month managed plan can be 200 to 500 milliseconds of server response time on every request.
-                            </BlogText>
+            <BlogHeader>12 Common Reasons Your Website Loads So Slowly</BlogHeader>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">2. Server Located Far From Your Visitors</h3>
-                            <BlogText>
-                                Physical distance creates latency. If your server is in Texas and your visitors are in London, every request has to travel thousands of miles. That round trip adds 100 to 300 milliseconds per request, and a typical page makes 50 to 100 requests. CDNs exist to solve this problem by storing copies of your site on servers worldwide.
-                            </BlogText>
+            <div className="grid gap-4 md:grid-cols-2">
+              {causes.map((cause) => (
+                <section key={cause.title} className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                  <h3 className="mb-2 text-lg font-bold text-charcoal">{cause.title}</h3>
+                  <p className="text-sm leading-relaxed text-stone-600">{cause.body}</p>
+                </section>
+              ))}
+            </div>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">3. Heavy Unoptimized Images and Videos</h3>
-                            <BlogText>
-                                Images often account for over half of a page's total size. An unoptimized image is one that has not been compressed, is in the wrong format (PNG instead of WebP), or is larger than the dimensions it displays at. A 4000x3000 pixel image displayed at 400x300 pixels still downloads at full size unless you resize it. Autoplay videos on homepages are the second biggest offender.
-                            </BlogText>
+            <BlogText>
+              These causes often interact. A large hero image may be delayed by slow origin HTML,
+              discovered through JavaScript and then decoded on a constrained phone. The useful
+              answer is not merely &quot;compress the image.&quot; It is the measured chain that delayed the
+              user&apos;s main content. The same logic applies to a slow{" "}
+              <Link href="/blog/how-to-fix-slow-wordpress" className="text-charcoal underline underline-offset-2">
+                WordPress implementation
+              </Link>{" "}
+              or any other platform.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">4. No Caching or Misconfigured Caching</h3>
-                            <BlogText>
-                                Without caching, the server has to rebuild the page from scratch on every visit. Browser caching stores assets locally so returning visitors load instantly. Server-side caching stores pre-built pages so the server does not have to regenerate them. If neither is configured, every visitor triggers a full page build.
-                            </BlogText>
+            <BlogHeader>What Slow Website Performance Can Affect</BlogHeader>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">5. Missing CDN</h3>
-                            <BlogText>
-                                A CDN (Content Delivery Network) stores copies of your site on servers worldwide so visitors load from the nearest location. Without a CDN, a visitor in Sydney loads from your server in Virginia. The difference can be 500+ milliseconds per request. On a page with 80 requests, that adds up to several seconds of additional load time.
-                            </BlogText>
+            <BlogText>
+              Slow or unstable pages can make tasks harder. Visitors may leave before useful
+              content appears, abandon an interaction that gives no feedback or tap the wrong
+              element after a layout shift. The size of that business effect depends on audience,
+              device, intent, market, page type and the measured delay. Use your own analytics and
+              conversion definitions rather than applying a universal loss percentage.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">6. Too Many HTTP Requests</h3>
-                            <BlogText>
-                                Every image, script, font, and stylesheet is a separate request. Each request has overhead regardless of file size. A typical WordPress site with a page builder can make 150+ requests. A well-optimized custom site makes 20 to 40. Even a 1KB file takes time to request, wait for, and receive.
-                            </BlogText>
+            <BlogText>
+              For organic Search, Google says Core Web Vitals are used by its ranking systems and
+              recommends good results for Search and user experience. Its{" "}
+              <a
+                href="https://developers.google.com/search/docs/appearance/page-experience"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-2 hover:text-stone-600"
+              >
+                page-experience guidance
+              </a>{" "}
+              also says good scores do not guarantee top rankings and relevant content can still
+              rank with a weaker experience. That is why speed is worth improving without calling
+              it a penalty or a fixed tie-breaker. Our{" "}
+              <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2">
+                March 2026 core-update guide
+              </Link>{" "}
+              shows how to separate an update correlation from a performance problem.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">7. Render-Blocking JavaScript and CSS</h3>
-                            <BlogText>
-                                Render-blocking means files the browser has to download and process before showing any content. This creates the blank white screen effect while visitors wait. If your CSS and JavaScript files are not deferred or loaded asynchronously, the browser stops rendering until they finish downloading. On a slow connection, that can be 3 to 5 seconds of nothing.
-                            </BlogText>
+            <BlogText>
+              For paid Search, landing-page experience is one input in ad quality. Google&apos;s{" "}
+              <a
+                href="https://support.google.com/google-ads/answer/7543502"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-2 hover:text-stone-600"
+              >
+                landing-page guidance
+              </a>{" "}
+              recommends evaluating mobile page speed, but cost per click and conversions depend on
+              additional auction, relevance, creative, targeting and market factors. Measure the
+              campaign instead of converting one speed score into a promised ad saving.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">8. Too Many Plugins or Third-Party Apps</h3>
-                            <BlogText>
-                                Each plugin adds code, database queries, and often external requests. A <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">WordPress site with 30 plugins</Link> is running 30 separate pieces of software on every page load. Tools designed for ease of use often sacrifice speed. Drag-and-drop convenience comes at a performance cost.
-                            </BlogText>
+            <BlogHeader>How to Fix a Slow Website in Eight Controlled Steps</BlogHeader>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">9. Bloated Code From Drag-and-Drop Page Builders</h3>
-                            <BlogText>
-                                <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">Elementor</Link>, <Link href="/blog/divi-theme-slow" className="text-cognac hover:underline">Divi</Link>, Wix Editor, and Squarespace generate excessive nested HTML and CSS. What takes 10 lines of clean code can become 200+ lines in a page builder. This is structural. You cannot fully fix it with plugins or optimization tools. The bloat is baked into how the page was built.
-                            </BlogText>
+            <div className="space-y-4">
+              {fixes.map((fix) => (
+                <section key={fix.title} className="rounded-2xl border border-stone-200 bg-white p-5 shadow-xs">
+                  <h3 className="mb-2 text-lg font-bold text-charcoal">{fix.title}</h3>
+                  <p className="leading-relaxed text-stone-600">{fix.body}</p>
+                </section>
+              ))}
+            </div>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">10. Third-Party Scripts, Ads, and Trackers</h3>
-                            <BlogText>
-                                Chat widgets, analytics, ad networks, and social embeds all load external JavaScript. Each script is outside your control and can block rendering. A single chat widget can add 500KB of JavaScript. A Facebook pixel, Google Analytics, and a live chat tool together can add 1 to 2 seconds of load time on their own.
-                            </BlogText>
+            <BlogText>
+              The exact sequence changes with the trace. For LCP, follow the official{" "}
+              <a
+                href="https://web.dev/articles/optimize-lcp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal underline underline-offset-2 hover:text-stone-600"
+              >
+                LCP breakdown
+              </a>{" "}
+              across origin response, resource discovery, download and render delay. For third-party
+              code, remove tools that do not create enough value and load remaining scripts with an
+              appropriate async, defer, lazy or consent strategy. For delivery, verify a CDN&apos;s real
+              cache behavior instead of assuming installation alone creates a fixed improvement.
+            </BlogText>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">11. Traffic Spikes Your Stack Cannot Handle</h3>
-                            <BlogText>
-                                A viral post or sale event can overwhelm server capacity. If the architecture is not built for scale, response times collapse under load. Static sites on CDNs handle traffic spikes without slowdown because pages are pre-built and served from cache, not generated on demand.
-                            </BlogText>
+            <BlogHeader>When Should You Optimize, and When Should You Rebuild?</BlogHeader>
 
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">12. Outdated CMS or Platform Architecture</h3>
-                            <BlogText>
-                                Legacy WordPress themes, old PHP versions, and outdated Shopify Liquid themes carry technical debt. Platform architecture has a ceiling that plugins cannot overcome. This is the most overlooked cause of persistent slowness after all other optimizations have been applied.
-                            </BlogText>
+            <BlogText>
+              Optimize the current system when the slow work is identifiable, removable and
+              maintainable. Common examples include an oversized media library, a small set of
+              global scripts, a cache configuration error or one problematic template. This is
+              usually lower risk than replacing the platform, and it protects existing content,
+              workflows and integrations.
+            </BlogText>
 
-                            <BlogHeader>How a Slow Website Costs You Revenue and Rankings</BlogHeader>
+            <BlogText>
+              Consider a rebuild discovery when required code cannot be removed, the same regressions
+              return after repeated cleanup, important templates cannot meet an agreed requirement,
+              or operational, security, integration and ownership constraints now outweigh the cost
+              of replacement. A low PageSpeed score alone is not enough. Document the constrained
+              layer, affected pages, business requirement, attempted fixes and total cost of each
+              option.
+            </BlogText>
 
-                            <BlogText>
-                                Speed ties directly to money. Here is where the damage shows up:
-                            </BlogText>
+            <div className="grid gap-4 md:grid-cols-2">
+              <section className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                <h3 className="mb-3 text-lg font-bold text-charcoal">Keep and optimize</h3>
+                <BlogList
+                  items={[
+                    "The trace identifies a bounded set of media, scripts or cache defects.",
+                    "The team can remove or control the slow work without breaking required features.",
+                    "The current content and integration workflow still fits the business.",
+                    "Validation shows the improvements persist across representative templates.",
+                  ]}
+                />
+              </section>
+              <section className="rounded-2xl border border-orange-200 bg-orange-50/50 p-5">
+                <h3 className="mb-3 text-lg font-bold text-charcoal">Scope a rebuild or migration</h3>
+                <BlogList
+                  items={[
+                    "Required platform code or architecture repeatedly dominates the measured delay.",
+                    "Optimization conflicts with essential features, security or editorial operations.",
+                    "Maintenance and vendor costs are modeled against a comparable replacement scope.",
+                    "URL, content, analytics, integration, cutover and rollback controls can be documented.",
+                  ]}
+                />
+              </section>
+            </div>
 
-                            <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Visitor abandonment:</strong> <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">53% of mobile visitors leave</a> before the page loads if it takes more than 3 seconds. Most of them never come back.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Lower conversion rates:</strong> <a href="https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Portent&apos;s research</a> shows conversion rates drop 4.42% per second of additional load time. <a href="https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Deloitte</a> found a 0.1-second improvement alone lifts conversions by 8 percent.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Google ranking penalties:</strong> <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">Core Web Vitals are a confirmed ranking factor</Link>. Sites with poor scores rank lower than faster sites with equivalent content.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Higher ad costs:</strong> slow landing pages hurt Quality Score in Google Ads, which increases your cost per click. You pay more for the same traffic to a site that converts less.</span>
-                                </li>
-                            </ul>
+            <InsightBox variant="warning">
+              A migration is not a performance shortcut. It can introduce ranking, analytics,
+              accessibility, content and operational risk when URL mapping, parity, testing,
+              cutover and rollback are weak. Define acceptance on representative pages and both
+              mobile and desktop before implementation begins.
+            </InsightBox>
 
-                            {/* Mid CTA */}
-                            <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                                <p className="font-bold text-charcoal mb-2">Not sure what is slowing your site down?</p>
-                                <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We run PageSpeed live on the call, identify the top 3 speed killers, and tell you whether fixes or a rebuild makes more financial sense.</p>
-                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get Free Speed Audit <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            </div>
+            <BlogText>
+              If the evidence supports replacement, review the{" "}
+              <Link href="/blog/website-rebuild-cost-2026" className="text-charcoal underline underline-offset-2">
+                website rebuild cost inputs
+              </Link>{" "}
+              and the{" "}
+              <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-charcoal underline underline-offset-2">
+                SEO-safe migration controls
+              </Link>{" "}
+              before choosing an architecture or signing a scope. The agreed plan should state the
+              pages tested, environment, run method, support, ownership, integrations and remedies.
+            </BlogText>
+          </div>
 
-                            <BlogHeader>How to Fix a Slow Website Fast</BlogHeader>
+          <section className="mt-12 rounded-3xl bg-stone-950 p-7 text-white md:p-9">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-orange-300">
+              Diagnose before rebuilding
+            </p>
+            <h2 className="mb-3 text-2xl font-bold md:text-3xl">
+              Get a measured performance and migration plan.
+            </h2>
+            <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+              We can review representative URLs, field data, lab traces, third-party scripts,
+              platform constraints and business requirements. You receive the evidence, limitations
+              and recommended next step, whether that is targeted optimization or a scoped migration.
+            </p>
+            <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-stone-950 transition-colors hover:bg-stone-100">
+              Get your diagnostic plan <ArrowRight className="h-4 w-4" />
+            </CalModalButton>
+          </section>
 
-                            <BlogText>
-                                Start with the highest-impact changes and work down. Do step 1 first to get a baseline, then measure after each subsequent step.
-                            </BlogText>
+          <section className="mb-10 mt-10">
+            <h2 className="mb-4 text-2xl font-bold text-charcoal">Key takeaways</h2>
+            <ol className="list-inside list-decimal space-y-2 leading-relaxed text-stone-700">
+              <li>
+                <strong>Define the slow experience:</strong> loading, interaction and layout movement
+                are different problems.
+              </li>
+              <li>
+                <strong>Separate field and lab evidence:</strong> a Lighthouse score is a diagnostic,
+                not the Core Web Vitals field assessment or a ranking cutoff.
+              </li>
+              <li>
+                <strong>Test representative templates:</strong> do not let one homepage run stand in
+                for the entire website.
+              </li>
+              <li>
+                <strong>Follow the measured constraint:</strong> media, scripts, origin, cache, CDN and
+                platform work can interact.
+              </li>
+              <li>
+                <strong>Measure business impact locally:</strong> avoid universal abandonment,
+                conversion, ranking and advertising-loss percentages.
+              </li>
+              <li>
+                <strong>Rebuild only with a controlled case:</strong> document constraints, parity,
+                acceptance criteria, cutover and rollback first.
+              </li>
+            </ol>
+          </section>
 
-                            <div className="space-y-4 my-6">
-                                {[
-                                    { num: "1", title: "Run a Baseline Speed Audit", body: "Use PageSpeed Insights and GTmetrix to document your current score and load time. Write down your mobile PageSpeed score, your LCP, and your total page weight. You want a before number to measure improvement after each fix." },
-                                    { num: "2", title: "Compress and Convert Images to WebP", body: "Use TinyPNG, Squoosh, or ShortPixel to compress images. Convert JPEGs and PNGs to WebP, a modern format 25 to 35 percent smaller than JPEG. Resize images to actual display dimensions before uploading. Enable lazy loading so images load as the user scrolls instead of all at once. This alone can cut initial page weight by 50 percent or more." },
-                                    { num: "3", title: "Enable Browser and Server Caching", body: "For WordPress, WP Rocket and W3 Total Cache handle caching — see the full guide to fixing slow WordPress for additional methods. For other platforms, cache settings are usually available in the hosting panel. Set cache expiration so returning visitors load the site instantly from their browser cache." },
-                                    { num: "4", title: "Install a Global CDN", body: "Cloudflare's free tier is sufficient for most sites and takes minutes to set up. It distributes your content globally so visitors load from a nearby server. Most sites see 100 to 400 millisecond improvement on international traffic after adding a CDN." },
-                                    { num: "5", title: "Remove Unused Plugins and Third-Party Scripts", body: "Audit every plugin and delete anything not actively used. Check for scripts that load site-wide even though they are only used on specific pages. A chat widget that loads on every page but is only used on the contact page is wasting resources on every other page." },
-                                    { num: "6", title: "Minify and Defer JavaScript and CSS", body: "Minifying removes whitespace and comments from code files. Deferring loads scripts after the page renders instead of blocking it. Most caching plugins include both options. For manual setups, Autoptimize handles both for WordPress." },
-                                    { num: "7", title: "Upgrade Hosting or Move to Edge Rendering", body: "If your site is on shared hosting, managed WordPress hosting or static hosting like Vercel or Netlify may be better options. Edge rendering generates pages at servers closest to each visitor. This often requires architectural changes, not just switching hosts." },
-                                    { num: "8", title: "Monitor Core Web Vitals Continuously", body: "Set up Google Search Console to track Core Web Vitals over time. Speed often degrades as more content and features are added. A plugin update or new tracking script can undo weeks of optimization work. Monthly monitoring catches regressions early." }
-                                ].map((step) => (
-                                    <div key={step.num} className="flex gap-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
-                                        <span className="flex-shrink-0 w-8 h-8 bg-cognac text-white font-bold rounded-full flex items-center justify-center text-sm">{step.num}</span>
-                                        <div>
-                                            <p className="font-bold text-charcoal mb-1">{step.title}</p>
-                                            <p className="text-sm text-stone-700 leading-relaxed">{step.body}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+          {slowWebsiteFAQs.length > 0 && <FAQAccordion faqs={slowWebsiteFAQs} />}
 
-                            <BlogHeader>When Optimization Stops Working and You Need a Rebuild</BlogHeader>
-
-                            <BlogText>
-                                There is a point where plugins and tweaks hit a ceiling. If the platform architecture is the problem, you cannot plugin your way out of it.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Your PageSpeed Score Stays Below 50 After Cleanup</h3>
-                            <BlogText>
-                                If you have done all the steps above and still score poorly, the platform itself is likely the bottleneck. WordPress with <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">Elementor</Link>, <Link href="/blog/wix-too-slow" className="text-cognac hover:underline">Wix</Link>, and <Link href="/blog/squarespace-too-slow" className="text-cognac hover:underline">Squarespace</Link> have architectural speed ceilings that no amount of optimization can overcome. See our <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">guide to hitting 90+ PageSpeed</Link> to understand what architecture actually achieves it.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Your Plugin Stack Costs More Than a Custom Rebuild</h3>
-                            <BlogText>
-                                Tally your monthly plugin or app fees. When those fees exceed the <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">cost of a custom build</Link>, you are effectively paying for slowness indefinitely. A $200/month plugin stack over 3 years costs $7,200. A $3,500 custom build costs $3,500 once with $0/month in platform fees.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Your Platform Caps Your Core Web Vitals</h3>
-                            <BlogText>
-                                Some platforms — Wix, Squarespace, GoDaddy builders — have hard limits on what scores are achievable due to underlying code. No setting change, plugin, or optimization can break through the architecture ceiling. The only path past it is migrating to a faster stack.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">You Are Losing Rankings to Faster Competitors</h3>
-                            <BlogText>
-                                If competitors load in under 1 second while your site loads in 3+ seconds, Google is more likely to <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">favor the faster sites</Link>. Speed acts as a tiebreaker when content and backlinks are equal. In competitive niches, that tiebreaker determines whether you are on page 1 or page 2.
-                            </BlogText>
-
-                            <BlogQuote>
-                                If the platform is the bottleneck, the fix is not another plugin. It is a rebuild on architecture designed for speed from the start.
-                            </BlogQuote>
-
-                            {/* Bottom CTA */}
-                            <div className="my-10 md:my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
-                                <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">PandaCodeGen</p>
-                                <h3 className="text-2xl md:text-3xl font-bold mb-3">Get a Sub-Second Website</h3>
-                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">PandaCodeGen replaces slow WordPress, Shopify, Wix, Squarespace, and drag-and-drop sites with custom Next.js websites that load under 1 second. <Link href="/pricing" className="text-cognac hover:underline">Fixed pricing from $1,500</Link>, no monthly platform fees, no vendor lock-in.</p>
-                                <ul className="space-y-2 mb-6 text-sm text-stone-300 text-left max-w-xs mx-auto">
-                                    {["Sub-1-second load times", "90+ PageSpeed guaranteed or full refund", "$0 monthly platform fees", "100% code ownership"].map(item => (
-                                        <li key={item} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cognac flex-shrink-0" />{item}</li>
-                                    ))}
-                                </ul>
-                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Book Free Migration Call <ArrowRight className="w-5 h-5" /></CalModalButton>
-                            </div>
-
-                            <BlogHeader>Frequently Asked Questions About Slow Websites</BlogHeader>
-
-                        </div>
-
-                        <FAQAccordion faqs={postFAQs} />
-
-                        <div className="mt-8 mb-4">
-                            <h2 className="text-xl font-bold text-charcoal mb-4">Related Articles</h2>
-                            <div className="grid gap-3">
-                                {[
-                                    { href: "/blog/how-to-speed-up-your-website", label: "How to Speed Up Your Website in 2026 (12 Tactics)" },
-                                    { href: "/blog/core-web-vitals-explained", label: "What Are Core Web Vitals and Why Do They Affect Revenue?" },
-                                    { href: "/blog/how-website-speed-affects-seo", label: "How Website Speed Affects SEO Rankings" },
-                                    { href: "/blog/wordpress-plugins-destroy-speed", label: "Are WordPress Plugins Slowing Down Your Site?" },
-                                    { href: "/blog/how-to-achieve-100-pagespeed", label: "How to Hit a 90+ PageSpeed Score (Our Exact 8-Step Process)" },
-                                    { href: "/blog/website-rebuild-cost-2026", label: "How Much Does a Website Rebuild Cost in 2026?" }
-                                ].map(link => (
-                                    <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-cognac hover:underline">
-                                        <ArrowRight className="w-4 h-4 flex-shrink-0" />
-                                        {link.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        <RelatedPosts currentPostId="why-is-my-website-loading-so-slow" />
-
-                    </div>
-                </div>
-            </article>
-
-            <Footer />
-        </main>
-    );
+          <RelatedPosts currentPostId="why-is-my-website-loading-so-slow" />
+        </article>
+      </main>
+      <Footer />
+    </>
+  );
 }

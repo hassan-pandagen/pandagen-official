@@ -37,7 +37,7 @@ export default function ExportLockAnimation() {
   }, []);
 
   return (
-    <div role="img" aria-label="Interactive animation showing that Wix has no full site export: products, contacts, orders, and blog posts escape as CSV and XML files, but design, layouts, theme, and page SEO stay locked inside Wix, which is why a migration is a rebuild" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive migration inventory showing which Wix data has documented export paths and which design or page elements may need to be rebuilt and verified" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`
         @keyframes slideOut { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes lockShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
@@ -102,10 +102,10 @@ export default function ExportLockAnimation() {
             <span className="text-[11px] font-bold text-stone-600">301 map</span>
           </div>
           <div className="flex-1 flex flex-col items-center gap-1.5">
-            <span className="text-[11px] font-bold text-charcoal uppercase tracking-widest">Rebuilt custom</span>
+            <span className="text-[11px] font-bold text-charcoal uppercase tracking-widest">Replacement implementation</span>
             <div className="w-full px-3 py-4 bg-white border-2 border-cognac rounded-xl text-center shadow-xs">
-              <span className="text-xs md:text-sm font-bold text-charcoal">You own everything</span>
-              <div className="text-[11px] md:text-xs text-stone-600 mt-0.5">90+ PageSpeed · exports anything</div>
+              <span className="text-xs md:text-sm font-bold text-charcoal">Define ownership and portability</span>
+              <div className="text-[11px] md:text-xs text-stone-600 mt-0.5">Record accounts, repositories, exports, licenses, and acceptance tests</div>
             </div>
           </div>
         </div>
@@ -114,9 +114,9 @@ export default function ExportLockAnimation() {
       <div className="absolute bottom-4 left-0 right-0 text-center px-4">
         <p className={`text-[11px] md:text-xs font-bold uppercase tracking-wider transition-colors duration-500 ${phase === "rebuild" ? "text-cognac" : "text-stone-600"}`}>
           {phase === "export" && "Step one of leaving Wix: try to take your site with you"}
-          {phase === "split" && "Only your data escapes, as CSV and XML files"}
-          {phase === "locked" && "Design, layout, and page SEO cannot leave Wix"}
-          {phase === "rebuild" && "✓ That is why a migration is a rebuild, and why you end up owning it"}
+          {phase === "split" && "Document every supported export path and its limits"}
+          {phase === "locked" && "Inventory design, layout, URL, and SEO elements that need reconstruction"}
+          {phase === "rebuild" && "Verify ownership, portability, redirects, content, and behavior in the accepted scope"}
         </p>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'PandaCodeGen LLC terms of service. Read our service agreements, payment terms, and satisfaction guarantee for web development projects.',
+  description: 'Terms for using the PandaCodeGen website, automated audit, content, and inquiry forms. Signed project agreements control paid services.',
   robots: {
     index: true,
     follow: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Terms of Service | PandaCodeGen',
-    description: 'PandaCodeGen LLC terms of service. Read our service agreements, payment terms, and satisfaction guarantee for web development projects.',
+    description: 'Terms for using the PandaCodeGen website, automated audit, content, and inquiry forms. Signed project agreements control paid services.',
     url: 'https://www.pandacodegen.com/terms',
     siteName: 'PandaCodeGen',
     type: 'website',

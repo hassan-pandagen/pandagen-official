@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { Sparkles } from "lucide-react";
-import { HeroCTAs, HeroAuditWidget } from "./HeroClient";
+import { HeroCTAs } from "./HeroClient";
 import AskExpertsButton from "@/components/ui/AskExpertsButton";
+import HeroLeadForm from "@/components/forms/HeroLeadForm";
 
 export default function Hero() {
   return (
@@ -25,7 +27,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Soft warm glow — hidden on mobile (expensive GPU blur) */}
+      {/* Soft warm glow, hidden on mobile (expensive GPU blur) */}
       <div className="hidden md:block absolute top-1/3 right-[10%] w-[500px] h-[500px] bg-stone-200/50 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
@@ -34,42 +36,54 @@ export default function Hero() {
         <div className="max-w-2xl">
 
           {/* Founder trust pill: replaces generic "Accepting Q2 Clients" with Hassan signature */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-stone-500 mb-5 shadow-xs">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-300 text-xs font-bold uppercase tracking-widest text-stone-600 mb-5 shadow-xs">
+            <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
-            Built by Hassan Jamal &middot; Featured in Woman&apos;s World
+            SEO-safe migrations &middot; Fixed scope &middot; Documented handover
           </div>
 
           {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint.
-              AEO + first-mover urgency — the one claim no competitor can copy. */}
+              Structure is deliberate: the first clause carries the searched problem
+              (people query "wix too slow", "woocommerce too slow", not "custom Next.js"),
+              the second carries the differentiator. Problem first, payoff second.
+
+              The second clause describes how WE build, never what other platforms
+              cannot do. An earlier version read "a site AI search can actually read",
+              which entails that WordPress, Wix and Webflow sites cannot be read. They
+              can, and most pages AI engines cite today are built on them. Keep this
+              clause about how we build; do not reintroduce a comparison. Plain words
+              only, no "server-rendered" or "structured data" in the headline. */}
           <h1
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem" }}
           >
-            Get in front of AI search{" "}
+            Outgrown WordPress, Wix or Webflow?{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              before your competitor does.
+              Move to a site built for the way AI picks its answers.
             </span>
           </h1>
 
-          {/* Clarifying subhead: explains the H1 in plain terms + names the AI platforms.
+          {/* Clarifying subhead: names the platforms people search for, then the AI engines.
               Soft-styled so it supports the headline without competing. */}
           <p
             className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
-            style={{ color: "#44403c", fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }}
+            style={{ color: "#44403c" }}
           >
-            We build custom Next.js websites that{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude and Google AI recommend</span>, so when your buyers ask who to buy from, you&apos;re the answer, not your competitor.
+            We move you off WordPress, Wix, Squarespace, Webflow or GoHighLevel onto{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own outright</span>, without
+            losing the traffic you already have. Your pages load fast and put a clear answer where{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude, Perplexity and Google AI</span>{" "}
+            can find it and quote you.
           </p>
 
-          {/* One proof line: reason to believe — cited (proof) + ownership + price, tight. */}
+          {/* One proof line with cited proof, ownership, and price in a tight format. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Already cited by ChatGPT, Claude and Perplexity. Custom code you own from $1,500, backed by a written 90+ PageSpeed guarantee.
+            Your migration plan documents scope, redirects, staged QA, acceptance criteria, and cutover risks before implementation. “SEO-safe” describes the process controls; search engines still control rankings.
           </p>
 
           {/* CTAs, animated client component */}
@@ -80,17 +94,21 @@ export default function Hero() {
 
         </div>
 
-        {/* --- RIGHT: AUDIT WIDGET --- */}
-        <div
-          className="relative lg:min-h-[400px] lg:-mt-8"
-          style={{ contain: "layout" }}
-        >
-          {/* Fixed size + fixed vertical anchor so the glow never reflows when the
-              audit widget swaps from fallback to real (was the CLS 0.122 culprit). */}
+        {/* --- RIGHT: INLINE LEAD CAPTURE ---
+            This slot previously mounted the audit widget. It was moved to /free-audit
+            for two reasons: it converted no leads from here, and the fallback-to-real
+            swap was the page's entire layout shift. The form that replaced it renders
+            on first paint with a reserved height, so this column cannot shift. */}
+        <div className="relative lg:-mt-8">
           <div className="hidden md:block absolute -top-[100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/50 blur-3xl rounded-full pointer-events-none" />
-          <div className="relative z-10">
-            <HeroAuditWidget />
-          </div>
+          <HeroLeadForm />
+          <p className="relative z-10 mt-3 text-center text-sm text-stone-600">
+            Just exploring?{" "}
+            <Link href="/free-audit" className="font-semibold text-cognac underline-offset-4 hover:underline">
+              Run a free technical scan
+            </Link>{" "}
+            of your site first.
+          </p>
         </div>
 
       </div>

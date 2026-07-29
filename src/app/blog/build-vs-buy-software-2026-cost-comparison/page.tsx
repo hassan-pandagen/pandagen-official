@@ -1,10 +1,11 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogList, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -16,8 +17,8 @@ const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpac
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
-    title: "Build vs Buy Software 2026: The $80K Question",
-    description: "35% of enterprises replaced a SaaS tool with custom code. When SaaS wins, when custom wins, and the monthly spend threshold where building beats buying.",
+    title: "Build vs Buy Software 2026: A Cost Framework",
+    description: "Compare SaaS with custom software using current quotes, migration, maintenance, security, adoption, operating risk, and scenario-based break-even.",
     alternates: { canonical: "/blog/build-vs-buy-software-2026-cost-comparison" },
     keywords: [
         "build vs buy software 2026", "custom software vs saas", "is it cheaper to build a custom crm",
@@ -25,19 +26,19 @@ export const metadata: Metadata = {
         "when to build custom software", "3 year cost of saas", "replace saas with custom software"
     ],
     openGraph: {
-        title: "Build vs Buy Software in 2026: The $80K Question, Answered",
-        description: "The decision framework: when SaaS wins, when custom wins, and the exact spend threshold where building beats buying.",
+        title: "Build vs Buy Software in 2026: A Cost Framework",
+        description: "A scenario-based build-versus-buy framework with no universal spend or payback threshold.",
         type: "article",
         publishedTime: "2026-05-31T00:00:00-05:00",
-        modifiedTime: "2026-05-31T00:00:00-05:00",
+        modifiedTime: "2026-07-24T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/build-vs-buy-software-2026-cost-comparison")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Build vs Buy Software in 2026: The $80K Question, Answered",
-        description: "When SaaS wins, when custom wins, and the exact spend threshold where building beats buying.",
+        title: "Build vs Buy Software in 2026: A Cost Framework",
+        description: "Compare current quotes and operating risks; no universal monthly-spend or payback rule.",
     },
 };
 
@@ -47,18 +48,17 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison#article",
-            "headline": "Should You Build or Buy Software in 2026? The $80K Question, Answered",
-            "description": "The decision framework for build vs buy: when SaaS wins, when custom wins, and the exact monthly spend threshold where building beats buying.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "headline": "Should You Build or Buy Software in 2026? A Cost Framework",
+            "description": "A scenario-based build-versus-buy framework using current quotes, migration, maintenance, security, adoption, and operating risk.",
+            "image": ogImageUrlForPath("/blog/build-vs-buy-software-2026-cost-comparison"),
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "url": "https://www.pandacodegen.com/about",
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
@@ -71,8 +71,6 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison" },
             "articleSection": "Pricing",
             "keywords": ["build vs buy software 2026", "custom software vs saas", "custom crm cost vs hubspot", "when to build custom software", "3 year cost of saas"],
-            "wordCount": 1500,
-            "timeRequired": "PT8M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Build vs Buy" },
@@ -81,12 +79,8 @@ const articleSchema = {
             ],
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
             "citation": [
-                { "@type": "CreativeWork", "name": "Retool 2026 Build vs Buy Report", "url": "https://retool.com/blog/ai-build-vs-buy-report-2026" },
-                { "@type": "CreativeWork", "name": "Gartner Predicts 2026 AI Software Engineering", "url": "https://www.armorcode.com/report/gartner-predicts-2026-ai-potential-and-risks-emerge-in-software-engineering-technologies" },
                 { "@type": "CreativeWork", "name": "HubSpot Marketing Hub Pricing", "url": "https://www.hubspot.com/pricing/marketing" },
-                { "@type": "CreativeWork", "name": "Salesforce Sales Cloud Pricing", "url": "https://www.salesforce.com/sales/pricing/" },
-                { "@type": "CreativeWork", "name": "Vertice SaaS Inflation Index 2026", "url": "https://www.vertice.one/insights/saas-inflation-rate" },
-                { "@type": "CreativeWork", "name": "Cledara Average SaaS Spend Per Employee 2026", "url": "https://www.cledara.com/blog/average-saas-spend-per-employee-2026" }
+                { "@type": "CreativeWork", "name": "Salesforce Sales Cloud Pricing", "url": "https://www.salesforce.com/sales/pricing/" }
             ]
         },
         {
@@ -107,11 +101,11 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison#webpage",
             "url": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
-            "name": "Should You Build or Buy Software in 2026? The $80K Question, Answered",
-            "description": "The decision framework: when SaaS wins, when custom wins, and the spend threshold where building beats buying.",
+            "name": "Should You Build or Buy Software in 2026? A Cost Framework",
+            "description": "A scenario-based framework with current quotes and no universal spend or payback threshold.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-31T00:00:00-05:00",
-            "dateModified": "2026-05-31T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -121,10 +115,10 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
+            "foundingDate": "2026-02",
             "email": "info@pandacodegen.com",
-            "description": "PandaCodeGen builds custom Next.js websites and operations software that replace expensive SaaS stacks. You own the code outright.",
-            "areaServed": "Worldwide",
+            "description": "PandaCodeGen builds custom Next.js websites and scoped operations software. Cost, replacement scope, ownership, licensing, maintenance, and support follow the accepted project terms.",
+            "areaServed": ["United States", "Worldwide"],
             "sameAs": ["https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://twitter.com/pandacodegen", "https://clutch.co/profile/panda-code-gen"]
         }
     ]
@@ -153,15 +147,15 @@ export default function BuildVsBuySoftware2026Page() {
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
                             Should You Build or Buy Software in 2026?{" "}
-                            <span className="font-serif italic text-cognac">The $80K Question</span>, Answered
+                            <span className="font-serif italic text-cognac">Use the Full-Cost Test</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            For years the answer was always &ldquo;buy.&rdquo; Building was slow, expensive, and risky. In 2026 that flipped: 35% of enterprises have already replaced at least one SaaS tool with custom-built software, and 78% plan to build more. AI-assisted engineering collapsed build timelines from 12 months to 4 to 8 weeks. Here is the exact decision framework I use with clients: when buying still wins, when building wins, and the monthly spend number where the math tips.
+                            There is no monthly SaaS bill that automatically makes building your own software cheaper. The only way to know is to put a dated quote from your current vendor next to what a build would really cost: the work itself, moving your data, hosting, support, keeping it secure, and getting your team to use it. Then run those numbers again for a good year and a bad one.
                         </p>
                         <BlogAuthor
-                            date="May 31, 2026"
+                            date="Updated Jul 24, 2026"
                             readTime="8 min read"
-                            bio="Hassan has built custom CRMs, dashboards, and operations tools that replaced six-figure SaaS contracts. He runs the build-versus-buy math with clients before writing a line of code."
+                            bio="Hassan scopes custom CRMs, dashboards, and operations tools only after documenting the existing workflow, costs, risks, and ownership requirements."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -181,67 +175,68 @@ export default function BuildVsBuySoftware2026Page() {
                     <div className="mb-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl" data-speakable="true">
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer</p>
                         <ul className="space-y-2 text-sm text-stone-700">
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Under $500/month for a workflow: buy. SaaS is cheaper to start, maintain, and update.</li>
-                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> $500 to $1,500/month: audit first. Build only if the workflow is highly specific and SaaS imposes constraints you cannot work around.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Over $1,500/month: a custom build typically pays for itself in 12 to 18 months, then you own it with no recurring fees.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Over $3,000/month (HubSpot Enterprise, Salesforce Unlimited): custom pays for itself in 6 to 12 months.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Buy when something on the market already fits how you work, connects to your other tools, and lets you leave with your data, for less than a build would cost.</li>
+                            <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" /> Build only when the way you work is genuinely different from what you can buy, and you are willing to own and run the thing for years afterwards.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Only count the software costs a build would actually replace. Then add the ones people forget: moving the data, hosting it, supporting it, keeping it patched, wiring it to your other tools, and training the team.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> Ignore the usual &ldquo;it pays for itself in six to eighteen months&rdquo; rule. Work out your own break-even from real quotes, then check whether it still holds in a bad year.</li>
                         </ul>
                     </div>
 
                     <BlogText>
-                        A client asked me last month whether they should keep paying $890 a month for HubSpot Professional or build their own CRM. That is the $80K question, because over a typical engagement that HubSpot contract (plus the mandatory $3,000 onboarding and seat add-ons) runs close to $80,000. The honest answer was not &ldquo;build&rdquo; or &ldquo;buy.&rdquo; It was a number. Here is how to find yours.
+                        Start with your actual invoice, not the price you remember seeing on the website. Write down what you pay for seats, contacts and usage, plus onboarding, integrations, support, any discount you are currently on, and when the contract renews. Then list only the jobs a custom system would have to take over, and the data it would have to bring with it.
                     </BlogText>
 
-                    {/* Brand anchor — Version C */}
+                    {/* Brand anchor: Version C */}
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen builds the &ldquo;build&rdquo; side of this decision: custom Next.js software you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. See the full cost picture in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">2026 software pricing audit</Link>.
+                            PandaCodeGen&apos;s website tiers are planning anchors, not standard prices for a CRM or operations platform. A software replacement requires a separate accepted scope covering data, roles, integrations, security, migration, acceptance, ownership, licenses, support, and third-party costs. See the broader inputs in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software cost audit</Link>.
                         </p>
                     </div>
 
-                    <BlogHeader id="the-threshold">The Spend Threshold Where Building Beats Buying</BlogHeader>
+                    <BlogHeader id="the-threshold">The Scenario Test That Replaces a Spend Threshold</BlogHeader>
                     <BlogText>
-                        The decision tips on combined recurring cost for a single workflow. Not your whole software bill, one workflow (your CRM, your booking system, your email automation). Here is the framework, ordered by monthly spend.
+                        Isolate one workflow and compare like for like. The table below is the worksheet structure; it deliberately does not declare that a monthly bill makes custom software worthwhile.
                     </BlogText>
 
                     {/* Comparison table */}
                     <div className="my-8 overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0">
-                        <p className="md:hidden text-xs font-bold text-cognac mb-2">← Swipe to see full table →</p>
+                        <p className="md:hidden text-xs font-bold text-cognac mb-2">Swipe to see the full table</p>
                         <table className="min-w-[600px] w-full border-collapse text-sm">
                             <thead>
                                 <tr className="border-b-2 border-stone-300">
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Monthly spend</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Decision</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Why</th>
-                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Payback if you build</th>
+                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Cost group</th>
+                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Buy path</th>
+                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Build path</th>
+                                    <th className="text-left py-3 px-3 font-bold text-charcoal">Evidence to attach</th>
                                 </tr>
                             </thead>
                             <tbody className="text-stone-700">
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Under $500</td><td className="py-3 px-3 align-top text-emerald-700 font-medium">Buy</td><td className="py-3 px-3 align-top">SaaS cheaper to start, maintain, update</td><td className="py-3 px-3 align-top">Never worth it</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">$500 to $1,500</td><td className="py-3 px-3 align-top text-amber-700 font-medium">Audit first</td><td className="py-3 px-3 align-top">Build only if workflow is business-specific + SaaS constrains you</td><td className="py-3 px-3 align-top">18 to 30 months</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">$1,500 to $3,000</td><td className="py-3 px-3 align-top text-emerald-700 font-medium">Build (usually)</td><td className="py-3 px-3 align-top">Custom pays off, you own the code</td><td className="py-3 px-3 align-top">12 to 18 months</td></tr>
-                                <tr><td className="py-3 px-3 font-semibold align-top">Over $3,000</td><td className="py-3 px-3 align-top text-emerald-700 font-medium">Build</td><td className="py-3 px-3 align-top">Cost is decisive; integration depth is the real question</td><td className="py-3 px-3 align-top">6 to 12 months</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Acquire</td><td className="py-3 px-3 align-top">Subscription, onboarding, implementation</td><td className="py-3 px-3 align-top">Discovery, design, engineering, migration</td><td className="py-3 px-3 align-top">Dated quotes and accepted scope</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Operate</td><td className="py-3 px-3 align-top">Seats, contacts, usage, add-ons, support</td><td className="py-3 px-3 align-top">Hosting, vendors, monitoring, support, maintenance</td><td className="py-3 px-3 align-top">Invoices, usage exports, support model</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-3 px-3 font-semibold align-top">Change and risk</td><td className="py-3 px-3 align-top">Plan changes, lock-in, outages, vendor roadmap</td><td className="py-3 px-3 align-top">Change requests, defects, security, key-person risk</td><td className="py-3 px-3 align-top">Terms, status history, risk register</td></tr>
+                                <tr><td className="py-3 px-3 font-semibold align-top">Exit</td><td className="py-3 px-3 align-top">Export, termination, replacement migration</td><td className="py-3 px-3 align-top">Repository, accounts, documentation, successor support</td><td className="py-3 px-3 align-top">Export test and ownership clauses</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogText>
-                        The math compounds when the SaaS uses per-user, per-contact, per-transaction, or usage-based pricing, because those models scale fastest with your growth. A custom build&apos;s cost stays flat. A SaaS bill at 12% annual inflation (the 2026 Vertice figure) roughly doubles in five years. By year five the SaaS path costs about 2x your current annual spend; the custom path costs $0 incremental beyond hosting.
+                        Model each path over the same horizon with the same demand scenarios. SaaS can change with seats, contacts, usage, discounts, and renewal terms. Custom software also changes with vendor usage, support, maintenance, security work, new requirements, staff, and incidents. Neither path has a flat or zero-incremental-cost future by default.
                     </BlogText>
 
                     <BlogHeader id="crm-example">The CRM Example: Custom vs HubSpot vs Salesforce</BlogHeader>
                     <BlogText>
-                        CRM is the workflow I get asked about most, so here is the real math. A custom Next.js CRM with the specific pipeline stages, automations, and integrations a business actually uses typically costs <BlogHighlight>$15,000 to $40,000 one-time</BlogHighlight>. Against the three most common SaaS CRMs:
+                        For a CRM comparison, obtain current quotes from the shortlisted vendors and a scoped custom estimate. Match user roles, contacts, pipelines, automations, reporting, email and telephony, permissions, audit logs, integrations, migration, support, security, and service levels.
                     </BlogText>
                     <BlogList items={[
-                        "GoHighLevel ($97 to $497/month): custom breaks even between year 3 and year 7. GHL is cheap enough that the case for building is weakest here unless you need something GHL cannot do.",
-                        "HubSpot Professional ($890/month plus mandatory $3,000 onboarding, year-one total ~$13,700): custom breaks even between year 2 and year 3. This is the classic build case.",
-                        "Salesforce Enterprise ($175/user/month): for a team of 10 that is $21,000/year. Custom breaks even within year 1. For any team of 5 or more, the math favors building."
+                        "HighLevel: save the current plan, add-on, usage, implementation, and rebilling terms for the required configuration.",
+                        "HubSpot: use the current product-specific pricing or sales quote, including onboarding, seats, contacts, limits, term, discounts, and renewal conditions.",
+                        "Salesforce: use the current edition and per-user quote plus implementation, support, integrations, storage, add-ons, and internal administration.",
+                        "Custom: include discovery, build, data migration, hosting, services, monitoring, security, maintenance, support, change requests, and internal ownership."
                     ]} />
 
                     <BlogQuote>
-                        The question I ask every client is not &ldquo;can we build this?&rdquo; We almost always can. The question is &ldquo;does this workflow cost you more than $1,500 a month and is it specific to how your business runs?&rdquo; If yes to both, building is usually the cheaper path within two years and you own it forever after.
+                        The useful question is not only whether a workflow can be built. Compare the current system&apos;s full cost and limitations with the scoped build, migration, hosting, security, maintenance, support, internal capability, and exit plan. Ownership and licensing follow the accepted project terms; payback is not promised.
                     </BlogQuote>
 
                     {/* Mid CTA */}
@@ -249,16 +244,16 @@ export default function BuildVsBuySoftware2026Page() {
                         <p className="font-bold text-charcoal text-lg mb-2">Not sure which side of the line you are on?</p>
                         <p className="text-stone-600 text-sm mb-4 leading-relaxed">Tell us the workflow and what you pay for it monthly. We will run the build-versus-buy math for your specific situation and tell you honestly whether building makes sense. No pitch if it does not.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Book Free Build vs Buy Call <ArrowRight className="w-4 h-4" />
+                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                     </div>
 
                     <BlogHeader id="ai-caveat">The AI Caveat: Why Cheap-to-Build Is Not the Same as Build-It-Yourself</BlogHeader>
                     <BlogText>
-                        AI-assisted development is the main reason the build-versus-buy math flipped in 2026. Paired engineering with tools like Claude and Cursor collapses build timelines from 12 months to 4 to 8 weeks for many internal tools. That is real, and it is what makes fixed-price custom builds viable at all.
+                        AI-assisted tools can reduce time on some engineering tasks, but they do not establish a universal delivery timeline or make the build path cheaper. Estimate the actual requirements, review burden, tests, migration, security, and adoption work.
                     </BlogText>
                     <BlogText>
-                        But there is a trap. <BlogHighlight>Gartner predicts that by 2028, unsupervised prompt-to-app and citizen-developer approaches will increase software defects by 2,500%</BlogHighlight>, triggering a quality crisis because the generated code is architecturally unsound and far costlier to fix later. Source: <a href="https://www.armorcode.com/report/gartner-predicts-2026-ai-potential-and-risks-emerge-in-software-engineering-technologies" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Gartner Predicts 2026</a>. AI accelerates a skilled engineer. It does not replace one. The cheap path (an unsupervised AI builder) produces a mockup that breaks in production. The professional path (AI-accelerated engineering with human review) is what delivers software you can actually run a business on. We cover this trap in detail in our <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">guide to hiring cheap web developers without getting burned</Link>.
+                        Generated code has the same production obligations as other code: threat modeling, review, tests, accessibility, observability, data protection, dependency management, rollback, and accountable maintenance. Evaluate the delivered system and process rather than treating either &ldquo;AI-built&rdquo; or &ldquo;human-built&rdquo; as a quality verdict.
                     </BlogText>
 
                     <BlogHeader id="when-buy-wins">When Buying Still Wins (Be Honest About This)</BlogHeader>
@@ -266,25 +261,33 @@ export default function BuildVsBuySoftware2026Page() {
                         Building is not always right, and I tell clients when it is not. Buy when:
                     </BlogText>
                     <BlogList items={[
-                        "Combined recurring cost for the workflow is under $500/month.",
                         "The tool is commodity functionality with no business-specific logic (basic email, file storage, video calls).",
-                        "You have fewer than five users.",
-                        "The vendor is doing genuinely hard engineering you could not replicate cheaply: payment processing (Stripe), email deliverability infrastructure (the actual sending reputation, not the UI), real-time video.",
+                        "The current product satisfies the required workflow, integrations, security, compliance, support, and exit needs.",
+                        "The vendor operates infrastructure or regulated capabilities the business should not recreate without a compelling reason.",
                         "Speed-to-launch matters more than ownership and the tool is not a core competitive workflow."
                     ]} />
                     <BlogText>
-                        The mistake is not buying when you should build. The mistake is staying on SaaS <em>by default</em> for a high-spend, business-specific workflow where custom would pay off within 18 months, simply because switching feels like effort. When you find a workflow over $1,500/month, run the math. The step-by-step audit is in <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">how to cut your SaaS bill 40 to 70%</Link>, and the full list of 2026 price increases pushing this decision is in our <Link href="/blog/saas-price-increases-2026-tracker" className="text-cognac hover:underline font-medium">2026 SaaS price increase tracker</Link>.
+                        Revisit the decision when renewal terms, usage, workflow fit, risk, or strategic importance changes. Run the worksheet with dated evidence and assign an owner to every assumption. Our related <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">SaaS cost audit</Link> and <Link href="/blog/saas-price-increases-2026-tracker" className="text-cognac hover:underline font-medium">vendor price-change tracker</Link> provide additional inputs, but still require current primary verification.
                     </BlogText>
 
                     {/* Bottom CTA */}
                     <div className="my-6 md:my-10 p-8 bg-charcoal text-white rounded-2xl text-center">
                         <TrendingDown className="w-8 h-8 text-amber-400 mx-auto mb-3" />
                         <p className="font-bold text-xl mb-2">Run the Math on Your Workflow</p>
-                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Tell us the tool, the monthly cost, and what it does. We will tell you honestly whether building beats buying for your situation, and what a custom replacement costs. Fixed pricing from $1,500. 90+ PageSpeed in writing or full refund.</p>
+                        <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Bring the current quote, invoice, user and usage counts, workflow map, integration list, and exit requirements. We will scope the replacement inputs and identify what still needs evidence before a build decision.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
-                            Book Free Build vs Buy Call <ArrowRight className="w-4 h-4" />
+                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                     </div>
+
+                    <section className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
+                        <h2 className="text-xl font-bold text-charcoal mb-3">Mutable vendor references checked July 24, 2026</h2>
+                        <p className="text-sm text-stone-600 mb-3">These pricing pages are starting evidence only. A signed quote and the account&apos;s actual configuration control the comparison.</p>
+                        <ul className="space-y-2 text-sm">
+                            <li><a className="text-cognac underline underline-offset-4" href="https://www.hubspot.com/pricing/marketing" target="_blank" rel="noreferrer">HubSpot pricing</a></li>
+                            <li><a className="text-cognac underline underline-offset-4" href="https://www.salesforce.com/sales/pricing/" target="_blank" rel="noreferrer">Salesforce Sales pricing</a></li>
+                        </ul>
+                    </section>
 
                     <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
                     <FAQAccordion faqs={postFAQs} />

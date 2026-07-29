@@ -17,7 +17,7 @@ const processSteps = [
   {
     step: "01",
     title: "You Pitch. We Scope.",
-    desc: "You win the client (that's your skill). Send us the brief + requirements. We return a fixed-scope quote within 24 business hours. NDA signed before you send anything.",
+    desc: "You win the client (that's your skill). Send us the brief + requirements. We aim to return a fixed-scope quote within one to two business days, subject to brief completeness. A mutual NDA is signed before you send client details.",
     duration: "Same day",
   },
   {
@@ -59,11 +59,11 @@ const partnerFaqs = [
   },
   {
     q: "What's the minimum commitment?",
-    a: "Referral Partner: zero commitment. Send a lead, get commission, done. White-Label Partner: 1 pilot project to start, no minimums after that. Most white-label partners send 1-3 projects/month once they see how it works.",
+    a: "Referral Partner: zero commitment. Send a lead, get commission, done. White-Label Partner: one paid pilot project to start, no minimums after that. Ongoing volume is whatever suits your pipeline; nothing is committed unless the partner agreement says so.",
   },
   {
     q: "How fast can you start on a project?",
-    a: "Typically within 1 week of brief approval. Rush timelines available for partners with urgent client deadlines. Our 3-week average build time is exactly what helps agencies win clients who expect speed.",
+    a: "Usually within about a week of brief approval, subject to current capacity. Rush timelines can sometimes be arranged. Build duration depends on scope; the committed dates for your project are the ones written into the accepted terms, not a published average.",
   },
   {
     q: "What happens if my client asks for changes after launch?",
@@ -71,7 +71,7 @@ const partnerFaqs = [
   },
   {
     q: "What technologies do you build with?",
-    a: "Next.js, React, TypeScript, Tailwind CSS, Sanity CMS, Supabase or Postgres, Stripe, and Vercel. Every site scores 90+ on Google PageSpeed. No WordPress, no Webflow, no page builders. Pure custom code.",
+    a: "Next.js, React, TypeScript, Tailwind CSS, Sanity CMS, Supabase or Postgres, Stripe, and Vercel. Builds carry a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No WordPress, no Webflow, no page builders. Pure custom code.",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function PartnersContent() {
             data-speakable="true"
             className="text-base md:text-lg text-charcoal max-w-2xl mb-5 leading-[1.7] font-semibold"
           >
-            PandaCodeGen builds white-label custom Next.js sites under agency brands, with mutual NDA and published 15/35/50 partner rates.
+            PandaCodeGen builds white-label custom Next.js sites under agency brands, under a mutual NDA, with commercial terms agreed per partner in writing.
           </motion.p>
 
           <motion.p
@@ -176,7 +176,7 @@ export default function PartnersContent() {
               >
                 <p className="text-2xl md:text-3xl font-black text-charcoal tracking-tight leading-none">{stat.value}</p>
                 <p className="text-xs text-stone-600 font-semibold mt-2 leading-snug">{stat.label}</p>
-                <p className="text-[10px] text-stone-400 uppercase tracking-widest mt-1">{stat.sub}</p>
+                <p className="text-[10px] text-stone-600 uppercase tracking-widest mt-1">{stat.sub}</p>
               </motion.div>
             ))}
           </div>
@@ -357,6 +357,41 @@ export default function PartnersContent() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* What the signed partner agreement actually pins down. Kept from the
+          July 2026 remediation pass — it sets expectations without replacing
+          the commercial case above it. */}
+      <section className="px-6 py-16 md:py-24 bg-paper" aria-labelledby="partner-agreement">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-cognac">Before we start</p>
+          <h2 id="partner-agreement" className="mt-4 text-3xl font-bold text-charcoal md:text-5xl">
+            What goes in the <span className="font-serif italic text-cognac">written agreement.</span>
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-600">
+            Everything above describes how we normally work. What actually binds either side is the signed partner agreement, which covers:
+          </p>
+          <ul className="mt-9 grid gap-4 md:grid-cols-2">
+            {[
+              "Confidentiality and permitted client contact",
+              "Branding and white-label boundaries",
+              "Scope, acceptance, revisions, and change control",
+              "Price, invoicing, tax, commission, and payment timing",
+              "Accounts, source, licenses, data, and handover",
+              "Support, warranty, incident, and escalation process",
+              "Capacity, response targets, dependencies, and holidays",
+              "Termination, retention, deletion, and ongoing obligations",
+            ].map((item) => (
+              <li key={item} className="flex gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-stone-700">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 max-w-3xl text-sm leading-6 text-stone-500">
+            No commission, margin, delivery window, response time, exclusivity, support period, or ownership transfer applies unless it appears in the signed terms for that engagement.
+          </p>
         </div>
       </section>
 

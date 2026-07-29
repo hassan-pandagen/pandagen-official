@@ -11,10 +11,10 @@ const HeroCTAs = dynamic(
         onClick={() => { if (typeof window !== "undefined") window.dispatchEvent(new Event("open-quote-modal")); }}
         className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-xl cursor-pointer"
       >
-        Get a Free Quote
+        Get your migration plan
       </button>
       <a href="/work" className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-charcoal text-charcoal font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-card">
-        View Case Studies
+        See our work
       </a>
     </div>
   )}
@@ -34,10 +34,10 @@ function AuditFallback() {
     >
       <div className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl">
         <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-stone-50/80">
-          <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit Engine</span>
+          <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">Technical Website Audit</span>
         </div>
         <div className="p-5 md:p-6 space-y-3 md:space-y-4">
-          <div className="text-base md:text-xl font-bold text-charcoal leading-tight">Get Your Free Website Audit</div>
+          <div className="text-base md:text-xl font-bold text-charcoal leading-tight">Run a Free Technical Audit</div>
           <div className="w-full bg-stone-50 border border-gray-200 rounded-xl h-11 md:h-12" />
           <div className="w-full h-11 md:h-12 bg-charcoal rounded-xl" />
         </div>
@@ -56,8 +56,8 @@ function HeroAuditWidget() {
     // Desktop: load immediately (audit is above the fold on desktop lg breakpoint)
     // Mobile/tablet: defer until scrolled near it
     if (window.innerWidth >= 1024) {
-      setIsVisible(true);
-      return;
+      const frame = window.requestAnimationFrame(() => setIsVisible(true));
+      return () => window.cancelAnimationFrame(frame);
     }
 
     const observer = new IntersectionObserver(

@@ -1,113 +1,134 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
-import { runPageSpeedAnalysis } from '@/lib/audit/pagespeed';
+import { runPageSpeedAnalysis, type PageSpeedResult } from '@/lib/audit/pagespeed';
 import { runDeepChecks } from '@/lib/audit/deepChecks';
-import type { PageSpeedResult } from '@/lib/audit/pagespeed';
+import {
+  assertPublicUrl,
+  normalizePublicUrl,
+  PublicFetchError,
+} from '@/lib/audit/publicFetch';
+import {
+  AuditRateLimitConfigurationError,
+  enforceAuditRateLimit,
+} from '@/lib/audit/auditRateLimit';
+import { issueAuditLeadToken } from '@/lib/audit/auditLeadToken';
+import {
+  assertSameOriginAuditRequest,
+  AuditLeadRequestError,
+} from '@/lib/audit/auditLeadRequest';
+const MAX_REQUEST_BYTES = 4_096;
+let activeAudits = 0;
 
-// Lazy-init: a module-level `new Resend(...)` throws during `next build`
-// page-data collection when RESEND_API_KEY is absent locally.
-let resendClient: Resend | null = null;
-function getResend(): Resend {
-  if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
-  return resendClient;
+class AuditRequestError extends Error {
+  constructor(public readonly status: number, message: string) {
+    super(message);
+    this.name = 'AuditRequestError';
+  }
 }
 
-// In-memory dedup cache. Lives as long as the serverless function stays warm.
-// Good enough for early phase. Prevents accidental double-fires from refresh/retry.
-const recentAudits = new Map<string, number>();
-const DEDUP_WINDOW_MS = 60 * 1000; // 60 seconds
+function jsonResponse(body: unknown, status: number, extraHeaders?: HeadersInit) {
+  return NextResponse.json(body, {
+    status,
+    headers: {
+      'Cache-Control': 'no-store',
+      ...Object.fromEntries(new Headers(extraHeaders).entries()),
+    },
+  });
+}
 
-function shouldSkipNotification(normalizedUrl: string): boolean {
-  // Skip own domain (testing the widget on your own site)
-  if (normalizedUrl.includes('pandacodegen.com')) return true;
+async function readBoundedJson(request: NextRequest): Promise<unknown> {
+  const contentType = request.headers.get('content-type')?.toLowerCase() || '';
+  if (!contentType.startsWith('application/json')) {
+    throw new AuditRequestError(415, 'Content-Type must be application/json.');
+  }
 
-  // Skip if same URL audited in last 60 seconds
-  const last = recentAudits.get(normalizedUrl);
-  const now = Date.now();
-  if (last && now - last < DEDUP_WINDOW_MS) return true;
+  const declaredLength = Number(request.headers.get('content-length'));
+  if (Number.isFinite(declaredLength) && declaredLength > MAX_REQUEST_BYTES) {
+    throw new AuditRequestError(413, 'Request body is too large.');
+  }
+  if (!request.body) throw new AuditRequestError(400, 'Request body is required.');
 
-  recentAudits.set(normalizedUrl, now);
-
-  // Lightweight cleanup: drop entries older than the dedup window
-  if (recentAudits.size > 500) {
-    for (const [key, ts] of recentAudits) {
-      if (now - ts > DEDUP_WINDOW_MS) recentAudits.delete(key);
+  const reader = request.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let received = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    received += value.byteLength;
+    if (received > MAX_REQUEST_BYTES) {
+      await reader.cancel('Request exceeded the byte limit.');
+      throw new AuditRequestError(413, 'Request body is too large.');
     }
+    chunks.push(value);
   }
 
-  return false;
-}
-
-function fmt(n: number) {
-  return n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
-}
-
-function buildAuditNotification(
-  url: string,
-  data: PageSpeedResult,
-  geo: { country: string; city: string; region: string }
-): string {
-  const hasDeep = data.deepChecks && data.deepChecks.checks.length > 0;
-  const failCount = hasDeep
-    ? data.deepChecks!.checks.filter((c) => c.status === 'fail').length
-    : data.criticalIssues;
-  const warnCount = hasDeep
-    ? data.deepChecks!.checks.filter((c) => c.status === 'warn').length
-    : data.warnings;
-
-  let text = `AUDIT WIDGET USED (no email submitted yet)\n`;
-  text += `${new Date().toUTCString()}\n\n`;
-
-  text += `SITE\n`;
-  text += `URL: ${url}\n`;
-  text += `Platform: ${data.platformDetected}\n\n`;
-
-  text += `LOCATION\n`;
-  text += `Country: ${geo.country || 'Unknown'}\n`;
-  if (geo.city && geo.city !== 'Unknown') text += `City: ${geo.city}\n`;
-  if (geo.region && geo.region !== 'Unknown') text += `Region: ${geo.region}\n\n`;
-
-  text += `SCORES\n`;
-  text += `Performance: ${data.performanceScore}/100\n`;
-  text += `SEO: ${data.seoScore}/100\n`;
-  text += `Accessibility: ${data.accessibilityScore}/100\n`;
-  text += `Best Practices: ${data.bestPracticesScore}/100\n\n`;
-
-  text += `CORE WEB VITALS\n`;
-  text += `LCP: ${fmt(data.lcp)}\n`;
-  text += `FCP: ${fmt(data.fcp)}\n`;
-  text += `TBT: ${fmt(data.tbt)}\n`;
-  text += `CLS: ${data.cls.toFixed(3)}\n`;
-  text += `Load Time: ${data.loadTime}s\n\n`;
-
-  if (failCount + warnCount > 0) {
-    text += `Issues found: ${failCount + warnCount} (${failCount} fail, ${warnCount} warn)\n\n`;
+  const bytes = new Uint8Array(received);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
   }
 
-  text += `Note: This is a usage notification only. The visitor has not yet left an email. If they do, you will receive a separate full lead notification.\n`;
+  try {
+    return JSON.parse(new TextDecoder().decode(bytes));
+  } catch {
+    throw new AuditRequestError(400, 'Request body must contain valid JSON.');
+  }
+}
 
-  return text;
+function maxConcurrentAudits(): number {
+  const configured = Number(process.env.AUDIT_MAX_CONCURRENT || 2);
+  return Number.isInteger(configured) && configured >= 1 && configured <= 20 ? configured : 2;
 }
 
 export async function POST(request: NextRequest) {
+  let hasConcurrencySlot = false;
   try {
-    const body = await request.json();
-    const { url } = body;
+    assertSameOriginAuditRequest(request);
+    const body = await readBoundedJson(request);
+    const url = body && typeof body === 'object' && 'url' in body
+      ? (body as { url?: unknown }).url
+      : undefined;
 
     if (!url || typeof url !== 'string') {
-      return NextResponse.json({ error: 'URL is required' }, { status: 400 });
+      throw new AuditRequestError(400, 'URL is required.');
     }
 
-    let normalizedUrl = url.trim();
-    if (!normalizedUrl.startsWith('http://') && !normalizedUrl.startsWith('https://')) {
-      normalizedUrl = 'https://' + normalizedUrl;
+    const trimmedUrl = url.trim();
+    const submittedUrl = /^[a-z][a-z0-9+.-]*:/i.test(trimmedUrl)
+      ? trimmedUrl
+      : `https://${trimmedUrl}`;
+
+    // Syntactic policy comes before the rate limiter so malformed input is
+    // cheap, while DNS lookup comes after it so an attacker cannot get
+    // unlimited resolver work by cycling hostnames.
+    const parsedUrl = normalizePublicUrl(submittedUrl);
+    const rateLimit = await enforceAuditRateLimit(request, parsedUrl);
+    if (!rateLimit.allowed) {
+      return jsonResponse(
+        { error: 'Too many audit requests. Please try again later.' },
+        429,
+        {
+          'Retry-After': String(rateLimit.retryAfterSeconds),
+          'X-RateLimit-Backend': rateLimit.backend,
+        }
+      );
     }
 
-    try {
-      new URL(normalizedUrl);
-    } catch {
-      return NextResponse.json({ error: 'Invalid URL format' }, { status: 400 });
+    // Resolve and reject private/reserved/mixed answers before spending a
+    // PageSpeed API request. The later direct fetch repeats this validation and
+    // pins the connection, protecting against DNS rebinding between stages.
+    const publicUrl = await assertPublicUrl(parsedUrl);
+    const normalizedUrl = publicUrl.toString();
+
+    if (activeAudits >= maxConcurrentAudits()) {
+      return jsonResponse(
+        { error: 'The audit service is busy. Please try again shortly.' },
+        503,
+        { 'Retry-After': '10' }
+      );
     }
+    activeAudits += 1;
+    hasConcurrencySlot = true;
 
     const pageSpeedResult = await runPageSpeedAnalysis(normalizedUrl);
 
@@ -120,41 +141,40 @@ export async function POST(request: NextRequest) {
       deepChecks = null;
     }
 
-    const result = { ...pageSpeedResult, deepChecks: deepChecks ?? undefined };
+    const result: PageSpeedResult = {
+      ...pageSpeedResult,
+      deepChecks: deepChecks ?? undefined,
+    };
+    const leadToken = await issueAuditLeadToken(normalizedUrl, result);
 
-    // Fire-and-forget usage notification. Skips own domain + 60-sec dedup.
-    // Wrapped in try/catch so notification failure never breaks the audit response.
-    if (!shouldSkipNotification(normalizedUrl)) {
-      const geo = {
-        country: request.headers.get('x-vercel-ip-country') || 'Unknown',
-        city: decodeURIComponent(request.headers.get('x-vercel-ip-city') || 'Unknown'),
-        region: request.headers.get('x-vercel-ip-country-region') || 'Unknown',
-      };
-
-      const fromEmail = process.env.RESEND_FROM_EMAIL;
-      // Notifications go to AUDIT_NOTIFY_EMAIL (a real inbox you read), falling back
-      // to the send-from address. Set AUDIT_NOTIFY_EMAIL so audit-used alerts land
-      // somewhere you actually check, not a send-only address.
-      const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
-      if (fromEmail && notifyEmail && process.env.RESEND_API_KEY) {
-        const subject = `[AUDIT USED] ${pageSpeedResult.performanceScore}/100 | ${pageSpeedResult.platformDetected} | ${geo.country} | ${normalizedUrl}`;
-        getResend().emails
-          .send({
-            from: fromEmail,
-            to: notifyEmail,
-            subject,
-            text: buildAuditNotification(normalizedUrl, result, geo),
-          })
-          .catch((err) => console.error('Audit usage notification failed:', err));
-      }
-    }
-
-    return NextResponse.json({ success: true, data: result }, { status: 200 });
+    return jsonResponse({ success: true, data: result, leadToken }, 200);
   } catch (error) {
+    if (error instanceof AuditLeadRequestError) {
+      return jsonResponse({ error: error.message }, error.status);
+    }
+    if (error instanceof AuditRequestError) {
+      return jsonResponse({ error: error.message }, error.status);
+    }
+    if (error instanceof PublicFetchError) {
+      return jsonResponse(
+        { error: 'URL must resolve to a public HTTP or HTTPS website.' },
+        400
+      );
+    }
+    if (error instanceof AuditRateLimitConfigurationError) {
+      console.error('Audit rate-limit error:', error);
+      return jsonResponse(
+        { error: 'The audit service is temporarily unavailable. Please try again later.' },
+        503,
+        { 'Retry-After': '60' }
+      );
+    }
     console.error('PageSpeed analysis error:', error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : 'Analysis failed. Try again.' },
-      { status: 500 }
+    return jsonResponse(
+      { error: 'The website could not be analyzed right now. Please try again.' },
+      502
     );
+  } finally {
+    if (hasConcurrencySlot) activeAudits -= 1;
   }
 }

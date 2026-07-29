@@ -1,15 +1,45 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import lazyLoad from "next/dynamic";
-import Script from "next/script";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
+import { alternatesFor } from "@/lib/i18n/config";
 
 // Tell Next.js to statically generate this page at build time
 // so critters can inline critical CSS into the HTML output
 export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+  description:
+    "We move you off WordPress, Wix, Squarespace, Webflow or GoHighLevel onto custom Next.js you own outright, without losing the traffic you already have. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+  // Self-referencing canonical plus reciprocal hreflang to the French and
+  // German versions of this page. x-default points at English.
+  alternates: alternatesFor("home", "en"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.pandacodegen.com",
+    siteName: "PandaCodeGen",
+    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    description:
+      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+    images: [
+      ogImageForPath("/"),
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    description:
+      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
+    images: [ogImageForPath("/")],
+  },
+};
 
 // Lazy load below-the-fold components
 const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
@@ -27,53 +57,49 @@ const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 const homeFaqs = [
   {
     q: "How much does WordPress to Next.js migration cost?",
-    a: "WordPress to Next.js migration costs $1,500 for a 5 to 7 page business site (Starter), $3,500 for a 10 to 20 page site with blog migration and 301 redirects (Growth, most popular), and $5,000 to $10,000 for headless e-commerce with 30+ pages and custom integrations (Scale). Pricing is fixed with no surprises. Enterprise agencies charge $15,000 to $25,000 for the same scope. We move your content, SEO settings, and design to a custom coded site loading in under 1 second, with no monthly plugin fees and no vendor lock in. Every plan includes a written 90+ PageSpeed guarantee or full refund.",
+    a: "WordPress to Next.js migration starts at $1,500 for a 5 to 7 page business site (Starter), $3,500 for a 10 to 20 page site with blog migration and 301 redirects (Growth, most popular), and $5,000 to $10,000 for headless e-commerce with 30+ pages and custom integrations (Scale). Pricing is fixed for the scope written into the accepted project terms. We move your content, SEO settings and design to a custom coded site with no monthly plugin fees and no vendor lock in. Every plan carries a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.",
   },
   {
     q: "How does the free AI website audit work?",
-    a: "Our free AI audit analyzes your website's load time, Core Web Vitals (the speed and stability scores Google uses to rank your site), SEO performance, and security vulnerabilities in real-time. Simply enter your URL above and get a full breakdown of what's costing you revenue, including your average load time, PageSpeed score, and specific actionable recommendations. The audit takes under 30 seconds and requires no signup.",
+    a: "The free audit analyses your website's load time, Core Web Vitals (the speed and stability signals Google reports), technical SEO and common security misconfigurations. Enter your URL and you get a breakdown of what the tests found, including your measured load time and Lighthouse performance score, plus specific recommendations. It runs in well under a minute and requires no signup. It is a point-in-time technical review, not a diagnosis of lost revenue.",
   },
   {
-    q: "How much faster will my site be after migration from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we migrate go from 4 to 8 second load times to under 1 second, an improvement of 80 to 95%. Our builds reliably score 90+ on Google PageSpeed. Load times under 1 second directly improve your Google rankings, lower bounce rates, and increase conversion rates. Faster sites also cost less to host because they require fewer server resources.",
+    q: "How much faster will my site be after migrating from WordPress or Shopify?",
+    a: "It depends on your starting point, your templates and what runs on the page. Typical WordPress and Shopify sites we assess load in roughly 3 to 8 seconds; our builds target sub-second lab load times and a 90+ Lighthouse score on the agreed representative pages. What we commit to in writing is the handover target and the test conditions used to verify it, measured across three recorded runs on mobile and desktop. Field Core Web Vitals depend on your real traffic, devices and any third-party scripts added after launch, so those are monitored rather than promised.",
   },
   {
     q: "Do you work with Shopify stores?",
-    a: "Yes. We build custom Shopify storefronts using headless architecture (your customers see a lightning-fast custom site, while you still manage products and orders in Shopify as usual). If your Shopify store is slow due to too many apps, a bloated theme, or unoptimized code, we replace the slow storefront with a custom coded solution that delivers 4x faster load times. You keep your entire Shopify backend for product management, orders, and payments.",
+    a: "Yes. We build custom Shopify storefronts using headless architecture: your customers see a fast custom front end while you keep managing products and orders in Shopify as usual. If your store is slow because of app bloat, a heavy theme or unoptimised code, we replace the storefront layer with custom code while your entire Shopify backend stays in place for products, orders and payments. Speed improvement varies by store, so we measure your baseline before quoting.",
   },
   {
     q: "Will I lose SEO rankings when migrating from WordPress?",
-    a: "No. We preserve every SEO ranking through a documented 301 redirect map (a permanent forwarding instruction that tells Google your URLs moved), schema markup migration, sitemap regeneration, and a phased DNS cutover. Most clients see rankings hold steady within 7 to 14 days post-launch, and many gain rankings because their Core Web Vitals scores jump from poor to excellent. We have done 12 migrations in 2026 with zero ranking losses. Most migrations take 1 to 3 weeks: Discovery, Architecture, Build, QA testing, Launch. Zero downtime during the switch, your old site stays live until the new one is fully verified.",
+    a: "No provider controls search rankings, so nobody can honestly guarantee they hold. What reduces avoidable risk is a documented process: a complete URL inventory, a one-to-one 301 redirect map, schema and metadata migration, sitemap regeneration, canonical consistency, a phased DNS cutover and Search Console monitoring afterwards. Your old site stays live until the new one is verified, and a rollback path is documented before cutover. Our MyCustomPatches migration is an owner-confirmed record: 22 days, rankings held, and hosting cost moved from $150/month to $0/month in the recorded period.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
-    a: "Faster hosting and caching plugins help marginally, but they don't fix the root cause: WordPress itself is heavy. Every time someone visits your WordPress site, the server has to build the page from scratch (querying the database, loading plugins, rendering the theme). This happens on every single visit. Plugins like WP Rocket or W3 Total Cache can shave off 0.3 to 0.5 seconds at best. The only permanent fix for a slow WordPress site is replacing it with a purpose built, custom coded website that is pre-built and ready to serve instantly. That is exactly what we do.",
+    a: "Faster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.",
   },
 ];
 
 export default function Home() {
   // Schema.org structured data for homepage
-  const organizationSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
         "@id": "https://www.pandacodegen.com/#organization",
         "name": "PandaCodeGen",
-        "alternateName": "Panda Code Gen",
         "url": "https://www.pandacodegen.com",
-        "image": "https://www.pandacodegen.com/og-image.jpg",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.pandacodegen.com/logo.png",
           "width": 655,
           "height": 113
         },
-        "description": "Custom Next.js web development agency. We rebuild slow WordPress and Shopify sites into custom code that ChatGPT, Claude and Google AI cite, and cut clients' monthly subscriptions 40 to 70%. Load times under 1 second, 90+ PageSpeed guaranteed.",
+        "description": "Custom Next.js web development studio. We rebuild slow WordPress, Shopify, Webflow and Squarespace sites into custom code the client owns outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "email": "info@pandacodegen.com",
-        "telephone": "+13027738982",
-        "foundingDate": "2026",
-        "areaServed": "Worldwide",
+        "foundingDate": "2026-02",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "701 Tillery St Ste 12",
@@ -82,15 +108,37 @@ export default function Home() {
           "postalCode": "78702",
           "addressCountry": "US"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.2603295,
-          "longitude": -97.7042901
-        },
+        "areaServed": "Worldwide",
+        "founder": [
+          {
+            "@type": "Person",
+            "@id": "https://www.pandacodegen.com/about/hassan#person",
+            "name": "Hassan Jamal",
+            "jobTitle": "Co-founder and Lead Engineer",
+            "url": "https://www.pandacodegen.com/about/hassan",
+            // Personal profiles belong on the Person entity, not on the
+            // Organization's sameAs.
+            "sameAs": [
+              "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+              "https://github.com/hassan-pandagen"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://www.pandacodegen.com/about/imran#person",
+            "name": "Imran Raza Ladhani",
+            "jobTitle": "Co-founder and Lead Architect",
+            "url": "https://www.pandacodegen.com/about/imran",
+            "sameAs": [
+              "https://www.linkedin.com/in/imran-raza-ladhani/"
+            ]
+          }
+        ],
+        // Company-owned profiles, confirmed by the owner as controlled and live
+        // (2026-07-27). sameAs is an identity assertion, so a URL that starts
+        // 404ing should be removed rather than left asserted.
         "sameAs": [
           "https://www.linkedin.com/company/pandacodegen",
-          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-          "https://github.com/hassan-pandagen",
           "https://clutch.co/profile/panda-code-gen",
           "https://www.trustpilot.com/review/pandacodegen.com",
           "https://www.goodfirms.co/company/pandacodegen",
@@ -101,22 +149,24 @@ export default function Home() {
           "https://www.sanity.io/exchange/community/pandacodegen",
           "https://www.behance.net/pandacodegen",
           "https://dev.to/pandacodegen",
+          "https://pandacodegen.hashnode.dev",
+          "https://x.com/PandaCodeGen",
+          "https://www.g2.com/products/pandacodegen",
           "https://www.reddit.com/user/PandaCodeGen/"
         ],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@pandacodegen.com",
-          "telephone": "+13027738982",
           "contactType": "customer service",
           "availableLanguage": "English"
         },
         "serviceType": [
           "Custom Web Development",
           "WordPress Migration",
-          "Shopify Store Optimization",
+          "Shopify Headless Commerce",
           "E-Commerce Development",
           "Web Performance Optimization",
-          "Business Website Development"
+          "Answer Engine Optimization (AEO)"
         ],
         "knowsAbout": [
           "Next.js development",
@@ -127,11 +177,10 @@ export default function Home() {
           "Squarespace migration",
           "Webflow migration",
           "GoHighLevel migration",
-          "Core Web Vitals optimization",
+          "URL and redirect planning",
+          "Core Web Vitals measurement",
           "Custom e-commerce development",
-          "Custom SaaS and dashboard development",
           "Server-side ad tracking (Meta Conversions API)",
-          "SaaS cost reduction",
           "Answer Engine Optimization (AEO)",
           "Technical SEO",
           "Headless CMS architecture",
@@ -142,27 +191,19 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://www.pandacodegen.com/#website",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaCodeGen - Custom Web Development",
-        "description": "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut monthly subscriptions 40 to 70%. Load times under 1 second. 90+ PageSpeed guaranteed.",
+        "name": "PandaCodeGen - Custom Next.js Web Development",
+        "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "publisher": {
           "@id": "https://www.pandacodegen.com/#organization"
         },
-        "inLanguage": "en-US",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://www.pandacodegen.com/blog?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+        "inLanguage": "en-US"
       },
       {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "PandaCodeGen | Custom Web Development & Shopify Optimization",
-        "description": "We rebuild slow WordPress and Shopify sites into custom Next.js code that ChatGPT, Claude and Google AI cite, and cut monthly subscriptions 40 to 70%. Load times under 1 second. 90+ PageSpeed guaranteed.",
+        "name": "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+        "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
         },
@@ -170,118 +211,10 @@ export default function Home() {
           "@id": "https://www.pandacodegen.com/#organization"
         },
         "inLanguage": "en-US",
-        "datePublished": "2026-02-10",
-        "dateModified": "2026-06-01",
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["h1", "h2", "[data-speakable='true']"]
         }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-matt-conner",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Matt Conner" },
-        "publisher": { "@type": "Organization", "name": "Clutch", "url": "https://clutch.co" },
-        "reviewBody": "Hassan was available to me at any time, and his response time was always less than an hour. Panda Code Gen successfully delivered a speedy, bug-free website using the latest coding language. The team was punctual, responsive, helpful, and communicative via email. They assisted with UI design and did not charge for revisions. Overall, their expertise and support were commendable.",
-        "datePublished": "2026-03-08",
-        "url": "https://clutch.co/profile/panda-code-gen",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-marshall-james",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Marshall James" },
-        "publisher": { "@type": "Organization", "name": "Trustpilot", "url": "https://www.trustpilot.com" },
-        "reviewBody": "I recently worked with PandaCodeGen and had a great experience. Hassan was super helpful and communicative throughout the process. Even though I am not tech-savvy, he broke things down in a way that made sense to me. The service was pretty good overall.",
-        "datePublished": "2026-03-10",
-        "url": "https://www.trustpilot.com/review/pandacodegen.com",
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" }
-      },
-      {
-        "@type": ["ProfessionalService", "LocalBusiness"],
-        "@id": "https://www.pandacodegen.com/#service",
-        "name": "PandaCodeGen Development Services",
-        "description": "Custom web development, WordPress migration, and Shopify optimization for growing businesses.",
-        "image": "https://www.pandacodegen.com/og-image.jpg",
-        "telephone": "+13027738982",
-        "priceRange": "$1,500 - $10,000",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "701 Tillery St Ste 12",
-          "addressLocality": "Austin",
-          "addressRegion": "TX",
-          "postalCode": "78702",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.2603295,
-          "longitude": -97.7042901
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        },
-        "provider": {
-          "@id": "https://www.pandacodegen.com/#organization"
-        },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Development Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "WordPress Migration",
-                "description": "Migrate your WordPress site to a custom coded website with load times under 1 second."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Shopify Store Optimization",
-                "description": "Build a custom Shopify storefront for 4x faster load times."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Custom Web Applications",
-                "description": "Build custom business tools, dashboards, and web applications."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-james-peace",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "James Peace" },
-        "publisher": { "@type": "Organization", "name": "Trustpilot", "url": "https://www.trustpilot.com" },
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "I was not sure at first. Can a custom website really be built for $300 with no costs? PandaCodeGen. Hassan showed me it can be done. They gave me a quote at first. They worked with me to make a website I could afford. They made sure there are no costs or extra fees. PandaCodeGen and Hassan are good at what they do. They care about their customers.",
-        "datePublished": "2026-03-18",
-        "url": "https://www.trustpilot.com/review/pandacodegen.com"
-      },
-      {
-        "@type": "Review",
-        "@id": "https://www.pandacodegen.com/#review-richard-junior",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-        "author": { "@type": "Person", "name": "Richard Junior" },
-        "publisher": { "@type": "Organization", "name": "GoodFirms", "url": "https://www.goodfirms.co" },
-        "itemReviewed": { "@id": "https://www.pandacodegen.com/#organization" },
-        "reviewBody": "I was on the fence about leaving Squarespace, but PandaCodeGen really understood what I needed. I talked to a few other agencies and PandaCodeGen's proposal aligned best with my vision. They migrated my site in 10 days and did exactly what they said they'd do. Super happy with the result. Would definitely recommend them.",
-        "datePublished": "2026-04-02",
-        "url": "https://www.goodfirms.co/company/pandacodegen"
       },
       {
         "@type": "FAQPage",
@@ -299,11 +232,10 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-paper text-charcoal overflow-x-hidden">
-      {/* Schema.org JSON-LD for SEO */}
+    <main className="bg-paper min-h-screen overflow-x-hidden">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
       {/* Paper grain texture */}
@@ -321,15 +253,15 @@ export default function Home() {
       <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen is a custom Next.js web development agency</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix, and Squarespace sites into fast custom code the client owns outright. Every build ships with a written 90+ Google PageSpeed guarantee or a full refund, fixed pricing from $1,500, and no monthly platform fees. Sites load in under one second and are engineered to be cited by AI search engines like ChatGPT, Claude, and Perplexity.
+            <strong className="text-charcoal">PandaCodeGen is a custom Next.js web development studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code the client owns outright. Builds start at $1,500 with fixed pricing for the written scope, carry a 90+ Lighthouse handover target on mobile and desktop verified across three recorded runs, and have no monthly platform fees. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
           </p>
         </div>
       </section>
 
-      {/* Trust Stats Strip, 90+ PageSpeed, <1s load, $0 fees, 100% ownership */}
+      {/* Trust Stats Strip */}
       <TrustLogoBar />
 
-      {/* Social Proof, quiet confidence strip (Paper) */}
+      {/* Public reviews and owner-confirmed project records */}
       <SocialProof />
 
       {/* Unfair Advantage, financial grid stats (White) */}
@@ -347,7 +279,7 @@ export default function Home() {
       {/* AI-Powered, Speed Comparison */}
       <AIPowered />
 
-      {/* Revenue Recovery Calculator */}
+      {/* Revenue model, illustrative estimate on the visitor's own numbers */}
       <RevenueCalculator />
 
       {/* Founders */}
@@ -366,10 +298,6 @@ export default function Home() {
       <LatestBlog />
 
       <Footer />
-      <Script
-        src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-        strategy="lazyOnload"
-      />
     </main>
   );
 }

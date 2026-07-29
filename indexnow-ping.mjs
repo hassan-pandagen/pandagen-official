@@ -1,117 +1,70 @@
-// IndexNow ping — run with: node indexnow-ping.mjs
-// ⚠️  WARNING: Only ping NEW or UPDATED URLs. Do NOT run the full list repeatedly.
-// Pinging the same URLs daily risks Bing blacklisting the domain.
-// Rule: add new URLs here → ping once after deployment → done.
+// Submit only URLs that were added or materially updated in the current release.
+// Usage:
+//   node indexnow-ping.mjs https://www.pandacodegen.com/example [...more URLs]
 
-const KEY  = "95b8869ac7714e9fa60226a559eb96ca";
+const KEY = process.env.INDEXNOW_KEY || "95b8869ac7714e9fa60226a559eb96ca";
 const HOST = "www.pandacodegen.com";
 const BASE = `https://${HOST}`;
+const MAX_URLS = 100;
 
-const urls = [
-  // Core
-  `${BASE}/`,
-  `${BASE}/services`,
-  `${BASE}/pricing`,
-  `${BASE}/contact`,
-  `${BASE}/work`,
-  `${BASE}/about`,
-  `${BASE}/about/hassan`,
-  `${BASE}/about/imran`,
-  `${BASE}/partners`,
-  `${BASE}/blog`,
-  `${BASE}/ai-info`,
+function usage(message) {
+  if (message) console.error(message);
+  console.error(`Usage: node indexnow-ping.mjs ${BASE}/changed-page [...more URLs]`);
+  process.exitCode = 1;
+}
 
-  // Service pages
-  `${BASE}/services/wordpress-migration`,
-  `${BASE}/services/ecommerce`,
-  `${BASE}/services/custom-engineering`,
-  `${BASE}/services/woocommerce`,
-  `${BASE}/services/wix`,
-  `${BASE}/services/squarespace`,
-  `${BASE}/services/webflow`,
-  `${BASE}/services/gohighlevel`,
-
-  // Blog posts
-  `${BASE}/blog/wordpress-killer`,
-  `${BASE}/blog/shopify-headless`,
-  `${BASE}/blog/wordpress-plugins-destroy-speed`,
-  `${BASE}/blog/elementor-kills-seo`,
-  `${BASE}/blog/shopify-plus-still-slow`,
-  `${BASE}/blog/shopify-conversion-rate-speed-fix`,
-  `${BASE}/blog/wordpress-traffic-drop-speed`,
-  `${BASE}/blog/wordpress-ai-security-risk-2026`,
-  `${BASE}/blog/how-to-fix-slow-wordpress`,
-  `${BASE}/blog/how-to-achieve-100-pagespeed`,
-  `${BASE}/blog/shopify-slow-losing-sales`,
-  `${BASE}/blog/why-competitor-outranks-you`,
-  `${BASE}/blog/google-universal-commerce-protocol-what-it-means-for-your-store`,
-  `${BASE}/blog/for-agencies-offer-custom-web-development`,
-  `${BASE}/blog/why-we-chose-nextjs-over-wordpress-2026`,
-  `${BASE}/blog/wordpress-vs-custom-code-real-cost-3-years`,
-  `${BASE}/blog/shopify-dawn-theme-slow`,
-  `${BASE}/blog/how-website-speed-affects-seo`,
-  `${BASE}/blog/wordpress-vs-nextjs`,
-  `${BASE}/blog/how-to-migrate-wordpress-to-nextjs`,
-  `${BASE}/blog/nextjs-hosting-zero-cost`,
-  `${BASE}/blog/what-is-headless-commerce`,
-  `${BASE}/blog/webflow-true-cost`,
-  `${BASE}/blog/shopify-app-costs-real-monthly-bill`,
-  `${BASE}/blog/wordpress-migration-cost`,
-  `${BASE}/blog/gohighlevel-website-speed`,
-  `${BASE}/blog/squarespace-too-slow`,
-  `${BASE}/blog/woocommerce-too-slow`,
-  `${BASE}/blog/webflow-migration-cost`,
-  `${BASE}/blog/cloudflare-emdash-wordpress-replacement`,
-  `${BASE}/blog/leaving-webflow-2026`,
-  `${BASE}/blog/wix-too-slow`,
-  `${BASE}/blog/website-rebuild-cost-2026`,
-  `${BASE}/blog/saas-software-pricing-audit-2026`,
-  `${BASE}/blog/shopify-store-speed-optimization`,
-  `${BASE}/blog/cheap-web-developer`,
-  `${BASE}/blog/saas-price-increases-2026-tracker`,
-  `${BASE}/blog/build-vs-buy-software-2026-cost-comparison`,
-  `${BASE}/blog/how-to-cut-saas-bill-2026`,
-  `${BASE}/blog/do-you-own-your-website`,
-  `${BASE}/blog/how-long-does-a-custom-website-take`,
-  `${BASE}/blog/will-migrating-hurt-my-seo`,
-  `${BASE}/blog/spending-more-on-ads-fewer-orders-tracking`,
-
-  // Legal
-  `${BASE}/privacy`,
-  `${BASE}/terms`,
-  `${BASE}/cookies`,
-];
-
-const payload = {
-  host: HOST,
-  key: KEY,
-  keyLocation: `${BASE}/${KEY}.txt`,
-  urlList: urls,
-};
-
-console.log(`Pinging IndexNow with ${urls.length} URLs...`);
-
-const res = await fetch("https://api.indexnow.org/indexnow", {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify(payload),
-});
-
-console.log(`Status: ${res.status} ${res.statusText}`);
-
-if (res.status === 200) {
-  console.log("✅ Success — Bing + Yandex will crawl these within 24-48h");
-} else if (res.status === 202) {
-  console.log("✅ Accepted — URLs queued for crawling");
-} else if (res.status === 400) {
-  console.log("❌ Bad request — check URL format");
-} else if (res.status === 403) {
-  console.log("❌ Key mismatch — verify key file is accessible at keyLocation");
-} else if (res.status === 422) {
-  console.log("❌ URLs don't match the host — check for typos");
-} else if (res.status === 429) {
-  console.log("⚠️  Too many requests — wait 1 hour and retry");
+const requested = [...new Set(process.argv.slice(2))];
+if (requested.length === 0) {
+  usage("Pass at least one new or materially updated production URL.");
+} else if (requested.length > MAX_URLS) {
+  usage(`This release helper accepts at most ${MAX_URLS} URLs per invocation.`);
 } else {
-  const body = await res.text();
-  console.log("Response body:", body);
+  const urlList = [];
+  for (const value of requested) {
+    let parsed;
+    try {
+      parsed = new URL(value);
+    } catch {
+      usage(`Invalid URL: ${value}`);
+      break;
+    }
+
+    if (parsed.protocol !== "https:" || parsed.hostname !== HOST || parsed.username || parsed.password) {
+      usage(`URL must be an HTTPS URL on ${HOST}: ${value}`);
+      break;
+    }
+    parsed.hash = "";
+    urlList.push(parsed.toString());
+  }
+
+  if (!process.exitCode) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10_000);
+    try {
+      const response = await fetch("https://api.indexnow.org/indexnow", {
+        method: "POST",
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        body: JSON.stringify({
+          host: HOST,
+          key: KEY,
+          keyLocation: `${BASE}/${KEY}.txt`,
+          urlList,
+        }),
+        signal: controller.signal,
+      });
+
+      if (response.status === 200 || response.status === 202) {
+        console.log(`IndexNow accepted ${urlList.length} changed URL(s).`);
+      } else {
+        await response.body?.cancel();
+        console.error(`IndexNow rejected the request (${response.status} ${response.statusText}).`);
+        process.exitCode = 1;
+      }
+    } catch (error) {
+      console.error(error instanceof Error ? error.message : "IndexNow request failed.");
+      process.exitCode = 1;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
 }

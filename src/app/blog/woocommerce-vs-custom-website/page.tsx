@@ -1,511 +1,420 @@
-import { ArrowLeft, ArrowRight, ShoppingCart } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, Boxes, Database, GitBranch, Store } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "woocommerce-vs-custom-website")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "woocommerce-vs-custom-website";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "WooCommerce vs Custom Website in 2026: A Requirements Guide";
+const description =
+    "Compare WooCommerce, headless WooCommerce and a custom commerce website across features, editing, performance, security, SEO, data, ownership and operating cost.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce vs Custom Website: When to Switch (2026)" },
-    description: "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
-    alternates: {
-        canonical: "/blog/woocommerce-vs-custom-website",
-    },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
     keywords: [
-        "woocommerce vs custom website",
-        "is woocommerce good for seo",
-        "woocommerce too slow",
-        "woocommerce maintenance cost",
-        "cost to migrate from woocommerce to custom website",
-        "woocommerce vs custom ecommerce platform",
-        "when to leave woocommerce",
-        "headless woocommerce vs custom",
-        "do i own my woocommerce store data"
+        "WooCommerce vs custom website",
+        "custom ecommerce website",
+        "headless WooCommerce",
+        "WooCommerce alternatives",
+        "migrate WooCommerce",
+        "WooCommerce architecture",
     ],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WooCommerce vs Custom Website: When to Switch (2026)",
-        description: "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-06-27",
-        modifiedTime: "2026-07-08",
+        publishedTime: "2026-05-20",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/woocommerce-vs-custom-website")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "WooCommerce vs Custom Website: When to Switch (2026)",
-        description: "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    { name: "WooCommerce REST API", url: "https://developer.woocommerce.com/docs/apis/rest-api/" },
+    { name: "WooCommerce Store API", url: "https://developer.woocommerce.com/docs/apis/store-api/" },
+    { name: "WooCommerce product CSV", url: "https://woocommerce.com/document/product-csv-importer-exporter/" },
+    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
+    { name: "WooCommerce caching guidance", url: "https://developer.woocommerce.com/docs/best-practices/performance/configuring-caching-plugins" },
+    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website#article",
-            "headline": "WooCommerce vs Custom Website: When to Switch (2026)",
-            "description": "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-06-27T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-05-20",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website" },
-            "articleSection": "WooCommerce",
-            "keywords": ["woocommerce vs custom website", "is woocommerce good for seo", "woocommerce maintenance cost", "cost to migrate from woocommerce to custom website", "headless woocommerce vs custom"],
-            "wordCount": 1850,
-            "timeRequired": "PT9M",
-            "inLanguage": "en-US",
-            "about": [
-                { "@type": "Thing", "name": "WooCommerce" },
-                { "@type": "Thing", "name": "Custom Website" },
-                { "@type": "Thing", "name": "E-Commerce" },
-                { "@type": "Thing", "name": "Next.js" }
-            ],
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Rovela: WooCommerce Maintenance Cost", "url": "https://rovela.ai/blog/woocommerce-maintenance-cost" },
-                { "@type": "CreativeWork", "name": "WeDoWebApps: Ecommerce Website Rebuild Cost", "url": "https://www.wedowebapps.com/ecommerce-website-rebuild-cost/" },
-                { "@type": "CreativeWork", "name": "WebyKing: Website Migration Cost", "url": "https://www.webyking.com/blog/website-migration-cost/" }
-            ]
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Commerce platform strategy",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website#faq",
-            "mainEntity": postFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "WooCommerce vs Custom Website", "item": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website#webpage",
-            "url": "https://www.pandacodegen.com/blog/woocommerce-vs-custom-website",
-            "name": "WooCommerce vs Custom Website: When to Switch (and When Not To)",
-            "description": "WooCommerce store loading in 4 seconds? Here is when a custom build beats WooCommerce on speed, cost and SEO, and when it does not.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-06-27T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and WooCommerce stores. Sites load under 1 second, score 90+ on Google PageSpeed, and cost $20/month to run.",
-            "areaServed": "Worldwide",
-            "sameAs": [
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://twitter.com/pandacodegen"
-            ]
-        }
-    ]
+    ],
 };
 
 export default function WooCommerceVsCustomWebsitePage() {
     return (
-        <main className="bg-paper min-h-screen overflow-x-hidden">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-            />
+        <>
             <Header />
-
-            <section className="relative pt-24 md:pt-40 pb-10 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "WooCommerce vs Custom Website" }
-                    ]} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "WooCommerce vs custom", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-semibold mb-4">
-                            <ShoppingCart className="w-3 h-3" /> WooCommerce · Comparison
-                        </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            WooCommerce vs Custom Website:{" "}
-                            <span className="font-serif italic text-cognac">When to Switch</span>{" "}
-                            (and When Not To)
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Commerce architecture</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            WooCommerce vs Custom Website <span className="italic text-cognac">Choose by Requirements</span>
                         </h1>
-                        <p className="text-lg text-stone-500 leading-relaxed mb-6">
-                            Catalog size, plugin dependency, budget, and whether you have technical help on call decide this, not vibes. Here is the actual decision framework for when a custom rebuild beats WooCommerce, and the honest case for staying put.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            WooCommerce, a separated WooCommerce storefront and a custom commerce platform solve
+                            different operating problems. The right choice follows capabilities, risk and ownership,
+                            not a universal winner.
                         </p>
-                        <BlogAuthor
-                            date="Jun 27, 2026"
-                            readTime="9 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed against current WooCommerce and Google documentation on July 24, 2026.
+                        </p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 20, 2026" readTime="16 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <BlogList
+                            items={[
+                                "Use WooCommerce when its catalog, content, extension and editing model fit the business and the team can operate it.",
+                                "Consider headless WooCommerce when the back office still fits but the customer experience needs a separately engineered frontend.",
+                                "Consider a custom platform when the core data model or workflows are the differentiator and packaged commerce creates repeated constraints.",
+                                "None of the three choices guarantees performance, security, SEO, conversion or lower total cost.",
+                            ]}
                         />
+                    </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Store, title: "WooCommerce", body: "Integrated WordPress content, catalog and plugin ecosystem." },
+                            { icon: GitBranch, title: "Headless Woo", body: "Woo operations with a separately deployed customer frontend." },
+                            { icon: Boxes, title: "Custom", body: "Purpose-built workflows and interfaces with selected services." },
+                            { icon: Database, title: "Decision", body: "Capabilities, data, operations, ownership and exit." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="mb-12">
-                        <FeatureVisual />
+                    <BlogHeader id="define">First define what custom means</BlogHeader>
+                    <BlogText>
+                        Custom can mean a bespoke theme, a headless frontend using WooCommerce APIs, or a different
+                        commerce application with selected providers for content, payments, search and operations.
+                        Those are not equivalent. A useful proposal names every system of record, third-party service,
+                        integration, deployment and team responsibility. Our own definitions sit under{" "}
+                        <Link href="/services/woocommerce" className="text-cognac hover:underline font-medium">WooCommerce development</Link>{" "}
+                        and{" "}
+                        <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="comparison">Requirements-led comparison</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[1050px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Area</th><th className="p-4">WooCommerce</th><th className="p-4">Headless WooCommerce</th><th className="p-4">Custom commerce</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Editing</td><td className="p-4">WordPress and Woo admin</td><td className="p-4">Woo admin plus preview integration</td><td className="p-4">Chosen CMS and operational interface</td></tr>
+                                <tr><td className="p-4 font-bold">Features</td><td className="p-4">Core plus extensions and custom code</td><td className="p-4">Same backend with frontend API work</td><td className="p-4">Explicitly designed or integrated</td></tr>
+                                <tr><td className="p-4 font-bold">Performance</td><td className="p-4">Depends on implementation and operations</td><td className="p-4">Frontend control with backend and API constraints</td><td className="p-4">Depends on architecture and implementation</td></tr>
+                                <tr><td className="p-4 font-bold">Updates</td><td className="p-4">Core, WordPress, theme and extensions</td><td className="p-4">Woo stack plus frontend dependencies</td><td className="p-4">Application, framework and provider lifecycle</td></tr>
+                                <tr><td className="p-4 font-bold">Ownership</td><td className="p-4">Code, data, licenses and accounts vary</td><td className="p-4">More repositories and deployment boundaries</td><td className="p-4">Defined by contract and provider terms</td></tr>
+                                <tr><td className="p-4 font-bold">Exit</td><td className="p-4">Products export; other data needs inventory</td><td className="p-4">Backend plus frontend and integration handoff</td><td className="p-4">Data, code, documentation and service portability</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    {/* Executive Summary */}
-                    <div
-                        className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12"
-                        data-speakable="true"
-                    >
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Key Facts</p>
-                        <ul className="space-y-2">
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Four factors decide this: catalog size, how many plugins you depend on, your budget, and whether you have technical help on call
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                WooCommerce maintenance usually runs $200-$500/month for basic coverage and $500-$3,000/month for a complex store, on top of plugin licenses
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                An agency WooCommerce-to-custom rebuild typically runs $5,000-$20,000, with data migration adding $2,000-$13,000+ on top
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Stay and optimize if you are small, have not tuned hosting and plugins yet, or your store already runs fast and stable
-                            </li>
-                        </ul>
-                    </div>
+                    <BlogHeader id="features">Capabilities and extension fit</BlogHeader>
+                    <BlogText>
+                        WooCommerce can be a strong fit when mature extensions cover subscriptions, bookings,
+                        memberships, taxes, shipping, feeds or payment methods. Evaluate the exact extension, its data
+                        ownership, support, update record and compatibility. A custom build must recreate or integrate
+                        each required capability, including edge cases that a feature checklist often misses.
+                    </BlogText>
+                    <InsightBox variant="tip" label="Build a capability matrix">
+                        Record every customer and staff journey, integration, exception, report, role and compliance
+                        control. Mark each as retain, configure, replace, redesign or retire, with an acceptance test and
+                        responsible owner.
+                    </InsightBox>
 
-                    {/* Article body */}
-                    <div className="space-y-8">
+                    <BlogHeader id="editing">Content and merchandising workflow</BlogHeader>
+                    <BlogText>
+                        Ask who creates products, landing pages, promotions, navigation and localized content. Test
+                        preview, approvals, scheduling, reusable sections, product relationships and rollback.
+                        WooCommerce&apos;s integrated WordPress editing may be more valuable than a custom frontend for
+                        some teams. A separated storefront needs deliberate preview and publishing integration.
+                    </BlogText>
 
-                        <BlogText>
-                            This is a decision framework, not a pitch. I rebuild WooCommerce stores onto Next.js for clients, and I also run a store on that same stack myself, so I have seen both sides of the decision up close. That is useful context, but it is not the reason to switch. The reason is whether the criteria below actually match your store.
-                        </BlogText>
+                    <BlogHeader id="performance">Performance is implementation-specific</BlogHeader>
+                    <BlogText>
+                        Do not compare an unoptimized production store with an empty custom demo. Use the same catalog,
+                        content, third-party scripts and customer journeys. Compare field and lab evidence across home,
+                        category, product, search, cart and checkout. WooCommerce documents performance and caching
+                        practices, including keeping customer-specific pages dynamic. A headless frontend can improve
+                        rendering control, but it does not remove backend, API, search, payment or operational latency.
+                        Where a store is measurably slow, the diagnostic route is set out in{" "}
+                        <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why a WooCommerce store runs slowly</Link>.
+                    </BlogText>
+                    <BlogText>
+                        It helps to know what a request actually does. A WooCommerce page is assembled per request: PHP
+                        runs, the database is queried for products, pricing, sessions and cart state, the active theme
+                        loads, and every plugin hooked into that page executes before anything reaches the browser.
+                        Cart, checkout and account pages are customer-specific, so full page caching cannot cover them
+                        the way it covers a category page. Query weight tends to grow with the catalogue, and stores
+                        accumulate transient records that are not always cleaned up. A pre-rendered frontend removes
+                        most of that per-request work for pages that can be pre-rendered, which is why the honest
+                        comparison is route by route rather than site against site.
+                    </BlogText>
+                    <InsightBox variant="tip" label="Tune before you rebuild">
+                        If hosting, object caching, database health and plugin count have never been reviewed, you do
+                        not yet know the ceiling of the store you already own. That work is cheaper than a rebuild, it
+                        is reversible, and it produces the baseline any rebuild has to beat. Do it first, then decide.
+                    </InsightBox>
 
-                        <BlogText>
-                            One data point worth naming up front, since it comes up constantly: we run <BlogHighlight>Panda Patches</BlogHighlight> (my co-founder Imran&apos;s store) on this same custom stack, and it has scaled from <BlogHighlight>$38,000 to about $50,000 a month</BlogHighlight> on roughly $55 a month in tooling, a Supabase backend, Vercel hosting, and the FAL AI patch generator. I mention it once, here, because it is the clearest illustration of the underlying mechanic this whole post is about: on a custom stack, the bill does not grow with your feature list the way a plugin stack does. Everything below is about figuring out whether that mechanic actually applies to your store, or whether WooCommerce is still the smarter call for where you are today.
-                        </BlogText>
+                    <BlogHeader id="security">Security and dependency responsibility</BlogHeader>
+                    <BlogText>
+                        WooCommerce requires maintained WordPress, core, themes, extensions, hosting and privileged
+                        access. A custom platform still depends on frameworks, packages, infrastructure and vendors.
+                        Compare patch ownership, least privilege, secrets, logging, backups, recovery, testing and
+                        incident response. Fewer plugins do not prove zero vulnerabilities, and more components do not
+                        prove that a store is compromised.
+                    </BlogText>
 
-                        <BlogHeader>The decision framework: four questions before you touch anything</BlogHeader>
+                    <BlogHeader id="seo">SEO and discoverability</BlogHeader>
+                    <BlogText>
+                        Either architecture can render crawlable content, metadata, canonicals, internal links,
+                        structured data and sitemaps. During a migration, inventory URLs, preserve useful URLs where
+                        practical, redirect changed URLs to relevant successors and monitor Search Console. A framework
+                        does not automatically create rankings, and a migration cannot guarantee traffic retention or
+                        recovery timing. What to expect from a platform move is covered in{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline font-medium">will migrating hurt your SEO</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            Skip the vibes-based version of this decision. Four factors do almost all the work in predicting whether a rebuild pays off: catalog size, how deep you are into the plugin ecosystem, your actual budget ceiling, and whether you have technical help on call. Score your store against each one honestly before reading another word of platform comparison.
-                        </BlogText>
+                    <BlogHeader id="data">Data model and portability</BlogHeader>
+                    <BlogText>
+                        Inventory products, variants, media, customers, consent, orders, refunds, subscriptions,
+                        coupons, tax, shipping, payment references and extension-owned fields. WooCommerce provides a
+                        product CSV tool and APIs, but not every extension&apos;s records share one universal export.
+                        A custom system needs documented schemas, export procedures and reconciliation controls as well.
+                    </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Criteria</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Stay on WooCommerce</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Custom wins</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Catalog size</td>
-                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Under ~50 SKUs, simple products, low SKU churn</td>
-                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">Hundreds of SKUs, or a catalog that changes often enough that plugin-driven pages feel slow to manage</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Plugin dependency</td>
-                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Under ~15 plugins, nothing mission-critical breaks on updates</td>
-                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">25-40+ plugins, checkout has broken from an update before, renewal fees add up to real money</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Budget</td>
-                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Pre-revenue or thin margins; every dollar needs to go to inventory or ads right now</td>
-                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">You can cover $1,500-$10,000 upfront and the monthly savings on hosting/plugins pays it back within a year</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Technical team</td>
-                                        <td data-label="Stay on WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">No developer on call; you rely on plugin support and community forums</td>
-                                        <td data-label="Custom wins" className="border border-stone-300 px-4 py-3 text-stone-700">You have an agency or freelancer relationship already, or the build comes with a CMS you can run without one</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <BlogHeader id="hpos">High-Performance Order Storage</BlogHeader>
+                    <BlogText>
+                        WooCommerce&apos;s HPOS uses dedicated order tables and is enabled by default for new
+                        installations from version 8.2. Existing stores may be on legacy storage, HPOS or compatibility
+                        synchronization. Confirm the authoritative data store and extension compatibility before
+                        estimating performance or migration work. HPOS is an operational input, not proof that either
+                        architecture wins every comparison.
+                    </BlogText>
 
-                        <BlogText>
-                            If you land mostly in the left column, stop reading and go optimize what you have, the rest of this post still applies later, just not yet. If you land mostly in the right column, the question-by-question breakdown below will tell you exactly where the money and the risk are.
-                        </BlogText>
+                    <BlogHeader id="cost">Compare total operating cost, not a headline build price</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Discovery, design, implementation, data migration and testing",
+                            "Hosting, CDN, storage, search, email, monitoring and provider usage",
+                            "Themes, extensions, software subscriptions and payment fees",
+                            "Security maintenance, updates, incident response and backups",
+                            "Content, merchandising, development and support time",
+                            "Future changes, integration replacement and exit cost",
+                        ]}
+                    />
+                    <BlogText>
+                        Use the same period, capabilities, traffic assumptions, service levels and internal labor rates.
+                        Do not present a fixed WooCommerce or custom cost as universal. PandaCodeGen&apos;s published
+                        project tiers are starting points for defined scope, not an industry price benchmark.
+                        Comparable inputs are collected in our{" "}
+                        <Link href="/blog/woocommerce-migration-cost" className="text-cognac hover:underline font-medium">WooCommerce migration cost breakdown</Link>, the
+                        wider{" "}
+                        <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">website migration cost guide</Link>{" "}
+                        and a{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">three-year platform running cost comparison</Link>.
+                    </BlogText>
 
-                        <BlogHeader>Why is my WooCommerce store so slow, and will a custom site fix it?</BlogHeader>
+                    <BlogHeader id="when-woo">When WooCommerce is likely the better fit</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Required commerce workflows are well served by maintained WooCommerce capabilities.",
+                            "The team values WordPress content and merchandising workflows.",
+                            "The current store can meet measured performance and reliability requirements after repair.",
+                            "The business has clear ownership for extension updates, security and operations.",
+                            "A rebuild would add cost and risk without solving a material constraint.",
+                        ]}
+                    />
+                    <BlogText>
+                        Give WooCommerce credit for the thing it genuinely does well. It is open source, the store code
+                        and the store data are yours, the catalogue is not subject to a vendor&apos;s plan limits, and
+                        the hosting relationship is yours to change. Most stories that begin &ldquo;WooCommerce is
+                        bad&rdquo; are really stories about an installation nobody maintained. You have reached a
+                        platform ceiling rather than an untidy installation when:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Hosting, caching, database and plugin count have already been tuned and the measured problem remains.",
+                            "Checkout or another critical path breaks after core, WooCommerce or extension updates, and a developer is repeatedly paid to repair it.",
+                            "Required business logic such as unusual pricing, B2B tiers, bundle rules or a deep internal integration is being assembled from stacked extensions.",
+                            "Extension licences and a maintenance retainer add up to more per year than a defined one-off build plus its running costs.",
+                            "A required capability depends on an extension that is unmaintained, unsupported or incompatible with the version you must run.",
+                        ]}
+                    />
 
-                        <BlogText>
-                            WooCommerce is slow because every page load fights through WordPress, PHP, your database, and a stack of plugins before a customer sees anything, and a custom site fixes it because it removes most of that work entirely.
-                        </BlogText>
+                    <BlogHeader id="when-headless">When headless WooCommerce may fit</BlogHeader>
+                    <BlogList
+                        items={[
+                            "WooCommerce remains a suitable catalog and order system.",
+                            "The storefront needs a separately engineered experience or delivery model.",
+                            "The team can operate frontend and backend deployments, APIs, preview and cache invalidation.",
+                            "Cart, checkout, account, search and integration behavior have written acceptance tests.",
+                            "The measured benefit justifies extra system boundaries and support responsibility.",
+                        ]}
+                    />
+                    <BlogText>
+                        Price the loss as well as the gain. Front-end extensions that render through WordPress hooks,
+                        shortcodes or the theme stop working the moment the storefront is a separate application.
+                        Reviews, wishlists, loyalty, upsell prompts and chat tied to store data all have to be rebuilt,
+                        replaced with a service or dropped. You also end up operating two deployments, two dependency
+                        sets and two update schedules rather than one. That can be the right trade when the back office
+                        genuinely fits and the storefront genuinely does not. It is a poor trade when the only goal is a
+                        faster front end, because the same effort would buy a single system.
+                    </BlogText>
+                    <BlogText>
+                        <Link href="/blog/what-is-headless-commerce" className="text-cognac hover:underline font-medium">What headless commerce means</Link>{" "}
+                        sets out the shared vocabulary for that model before the comparison starts.
+                    </BlogText>
 
-                        <InsightBox variant="info" label="Quick Answer">
-                            Optimization can buy you a second or two. A custom static/headless front end gets you to sub-second loads because the page is already built before the request arrives.
-                        </InsightBox>
+                    <BlogHeader id="when-custom">When a custom commerce platform may fit</BlogHeader>
+                    <BlogList
+                        items={[
+                            "The core product, pricing, workflow or integration model is genuinely differentiated.",
+                            "Repeated packaged-platform constraints create measurable cost or operating risk.",
+                            "The business can fund discovery, build, validation and long-term product ownership.",
+                            "Every retained commerce capability has a replacement or integration plan.",
+                            "Data portability, documentation, monitoring and incident ownership are contractual.",
+                        ]}
+                    />
 
-                        <BlogText>
-                            Here is what actually happens on a WooCommerce request. The server runs PHP, queries the database for products, pricing, sessions, and cart logic, loads the active theme, then runs every plugin hooked into that page. Cart and checkout pages can&apos;t be fully cached because they&apos;re dynamic per user. As your catalog grows, those database queries get heavier. WooCommerce also spins up thousands of transients for pricing and sessions that don&apos;t always clean themselves up.
-                        </BlogText>
+                    <BlogHeader id="migration">Migration and cutover controls</BlogHeader>
+                    <BlogText>
+                        Create a URL map, data inventory, capability matrix and baseline before building. Run test
+                        migrations, reconcile counts and financial totals, test every critical transaction, plan the
+                        final data delta and define rollback triggers. Keep the old store available as the agreed plan
+                        permits. No responsible provider should promise universal zero interruption or guaranteed SEO
+                        outcomes. The technical route for a WordPress-based move is described in{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">migrating WordPress to Next.js</Link>, and
+                        we scope that work under{" "}
+                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            You can fix a lot of this. Better hosting, object caching, fewer plugins, an optimized database. Most stores can reach 460-560ms loads that way. If you&apos;ve never tried that, do it first, it&apos;s cheaper than a rebuild. I wrote up the specifics in <Link href="/blog/woocommerce-too-slow" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce too slow</Link>.
-                        </BlogText>
+                    <BlogHeader id="decision">A practical decision sequence</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Write measurable business, customer, staff and compliance requirements.",
+                            "Profile the current store and identify actual constraints.",
+                            "Compare repair, headless and replacement against the same capability matrix.",
+                            "Prototype the riskiest data, payment, search or editing boundary.",
+                            "Model implementation and operating cost with named assumptions.",
+                            "Contract acceptance, ownership, support, remedy and exit before onboarding.",
+                        ]}
+                    />
 
-                        <BlogText>
-                            A custom build wins in two cases: when you&apos;ve already optimized and you&apos;re still slow, or when the speed you&apos;d gain is worth real money. Speed is not a vanity score. On a storefront it is checkout friction, and friction is just orders you lose without ever watching them leave. A page that loads in well under a second stops giving a mobile shopper a reason to bounce before anything even appears on screen. When you are already doing real revenue, every second you cut off a page is money, not decoration. That is when a rebuild pays for itself. For the full mechanical breakdown of why WooCommerce hits a wall here, our <Link href="/blog/woocommerce-too-slow" className="text-cognac underline underline-offset-2 hover:text-amber-700">deep dive on WooCommerce speed</Link> covers TTFB, cart fragments, and HPOS in detail.
-                        </BlogText>
+                    <BlogHeader id="terms">PandaCodeGen scope and ownership</BlogHeader>
+                    <BlogText>
+                        PandaCodeGen tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with
+                        custom scope where needed. Standard payment is 30 percent at onboarding and 70 percent on
+                        delivery. Custom deliverables transfer after full payment under the signed agreement.
+                        PandaCodeGen retains reusable internal tools, templates and pre-existing code, while third-party
+                        components keep their original licenses. Client domain, hosting, repository and business
+                        accounts can remain client-controlled when agreed. Current tiers are listed on the{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>, and what transfers at
+                        handover is covered in{" "}
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline font-medium">who owns your website</Link>.
+                    </BlogText>
+                    <BlogText>
+                        Examples of the commerce systems we build are in our{" "}
+                        <Link href="/work" className="text-cognac hover:underline font-medium">client work</Link>, including the{" "}
+                        <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches store</Link>, and
+                        ongoing storefront work sits under{" "}
+                        <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce development</Link>.
+                    </BlogText>
 
-                        <BlogHeader>When should I move off WooCommerce instead of just optimizing it?</BlogHeader>
+                    {postFAQs.length > 0 && (
+                        <>
+                            <BlogHeader id="faq">Frequently asked questions</BlogHeader>
+                            <FAQAccordion faqs={postFAQs} />
+                        </>
+                    )}
 
-                        <BlogText>
-                            Move off WooCommerce when the platform itself is the ceiling, not when you&apos;ve simply got a messy install you haven&apos;t tuned yet. Most &quot;WooCommerce is bad&quot; stories are actually &quot;my WooCommerce was never set up properly&quot; stories.
-                        </BlogText>
-
-                        <BlogText>
-                            You&apos;ve hit the real ceiling when:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "You've already optimized hosting, caching, and plugins, and you're still failing Core Web Vitals.",
-                            "Your checkout breaks after WordPress, WooCommerce, or plugin updates, and you're paying a developer to firefight it.",
-                            "You need custom logic (unusual pricing, B2B tiers, bundle rules, deep internal integrations) that turns into plugin-on-plugin duct tape.",
-                            "Plugin and license renewals plus a maintenance retainer cost more per year than a one-time build would.",
-                            "Your store is doing enough revenue that a half-second of speed is worth more than the rebuild cost.",
-                        ]} />
-
-                        <BlogText>
-                            If none of those are true, stay and optimize. I&apos;d rather tell you that than sell you a build you don&apos;t need.
-                        </BlogText>
-
-                        <BlogHeader>What does WooCommerce actually cost to maintain per month?</BlogHeader>
-
-                        <BlogText>
-                            WooCommerce maintenance usually runs $200-$500/month for basic coverage and $500-$3,000/month for a complex store, on top of plugin licenses that can hit several thousand dollars a year. The sticker price of &quot;free&quot; software is the part nobody quotes you up front.
-                        </BlogText>
-
-                        <BlogText>
-                            A typical WooCommerce store runs 25-40 plugins and themes. Each one updates on its own schedule. WordPress and WooCommerce both push major releases several times a year. When versions clash, something breaks, and it&apos;s usually checkout, the one page where downtime costs you money by the hour. Compatibility fixes after a third-party plugin update are one of the most common surprise bills store owners get.
-                        </BlogText>
-
-                        <BlogText>
-                            There&apos;s a stat that stuck with me: roughly 20% of self-hosted WooCommerce stores reportedly close within six months of launch, and the maintenance load gets blamed more than anything else. That&apos;s not a knock on the people, it&apos;s a knock on running a storefront that needs a part-time mechanic.
-                        </BlogText>
-
-                        <BlogText>
-                            A custom Next.js site flips this. There is no plugin update roulette, because there is no plugin stack to license, patch, or watch break on the next core release. Hosting typically runs near $0 on a static/edge host for a small-to-mid catalog, since there is no PHP process to keep warm. The full cost breakdown for a switch is in <Link href="/blog/woocommerce-migration-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">our WooCommerce migration cost breakdown</Link>.
-                        </BlogText>
-
-                        <BlogHeader>Is WooCommerce good for SEO compared to a custom site?</BlogHeader>
-
-                        <BlogText>
-                            WooCommerce can rank fine, but it makes you fight for the technical SEO a custom site gives you by default, and Core Web Vitals are where the gap shows up most. Google uses page experience signals in ranking, and a slow store loses on the exact metric you&apos;re paying plugins to patch.
-                        </BlogText>
-
-                        <BlogText>
-                            WooCommerce SEO depends on stacking plugins (an SEO plugin, a caching plugin, an image optimizer, a schema plugin) and keeping them in sync, and each one is a separate point of failure if it falls out of date. A custom build ships clean HTML, fast server-rendered pages, structured data, and passing Core Web Vitals as part of the architecture itself, not as add-ons bolted on after the fact. A 90+ PageSpeed score on a custom build isn&apos;t the result of a plugin doing cleanup work, it is a direct consequence of how the pages are generated in the first place.
-                        </BlogText>
-
-                        <BlogText>
-                            To be fair: content, links, and product depth still decide rankings more than platform. A fast custom site won&apos;t rank a thin catalog. But two stores with equal content, the faster one wins the page-experience tiebreaker.
-                        </BlogText>
-
-                        <BlogHeader>WooCommerce vs custom website: the side-by-side</BlogHeader>
-
-                        <BlogText>
-                            Here is the honest comparison across what store owners actually care about.
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Factor</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">WooCommerce</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Custom Website (Next.js)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Speed</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">2-4s typical; ~0.5s achievable with heavy optimization</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Sub-second by default; pages are pre-built, not assembled per request</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Monthly cost</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">$200-$3,000 maintenance + plugin licenses + hosting</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Near $0 hosting; no plugin licenses to renew</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Ownership</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">You own the data and code (open source)</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">You own the data and the full codebase outright</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Maintenance</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Constant plugin/core updates; checkout breakage risk</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">No plugin updates; periodic, predictable code maintenance</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">SEO / Core Web Vitals</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Possible, but plugin-dependent and easy to lose</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Passing CWV built into the architecture</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Scalability</td>
-                                        <td data-label="WooCommerce" className="border border-stone-300 px-4 py-3 text-stone-700">Scales with hosting spend and tuning; queries get heavy</td>
-                                        <td data-label="Custom Website (Next.js)" className="border border-stone-300 px-4 py-3 text-stone-700">Scales with traffic without database strain on the front end</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            One thing WooCommerce gets right: ownership. You own your store, your data, and your code. No platform can shut you down, cap your products, or freeze your funds. A custom build keeps that ownership and removes the plugin tax.
-                        </BlogText>
-
-                        <BlogHeader>How much does it cost to migrate from WooCommerce to a custom website?</BlogHeader>
-
-                        <BlogText>
-                            A WooCommerce-to-custom rebuild from an agency typically runs $5,000-$20,000, with data migration adding $2,000-$13,000+ on top depending on catalog size and how messy the data is. Enterprise agencies quote $15K-$25K+ for the same scope. Our pricing is deliberately below that.
-                        </BlogText>
-
-                        <BlogText>
-                            Here&apos;s what we charge, and it doesn&apos;t move:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Starter, $1,500: a focused build for a smaller store.",
-                            "Growth, $3,500: the common WooCommerce migration tier.",
-                            "Scale, $5K-$10K: larger catalogs, more custom logic.",
-                            "Scale+, $10K+: complex, integration-heavy stores.",
-                        ]} />
-
-                        <BlogText>
-                            Every build ships with a <BlogHighlight>written 90+ PageSpeed guarantee or your money back</BlogHighlight>. Not &quot;we&apos;ll try.&quot; In writing. The migration itself, including keeping your orders, customers, and URLs intact, is covered under our <Link href="/services/woocommerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce migration service</Link>.
-                        </BlogText>
-
-                        <BlogText>
-                            The return is usually fast on a Starter or Growth-tier build specifically because the math is simple: killed hosting fees plus plugin renewals you no longer pay, plus whatever conversion lift comes from the speed jump. On a smaller store those two line items alone can cover a $1,500-$3,500 build within a year. A smaller budget does not mean smaller-quality work, it means the payback period is shorter because there was less monthly overhead to begin with.
-                        </BlogText>
-
-                        {/* Mid CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
-                            <p className="text-sm font-bold text-charcoal mb-2">Not sure whether to optimize or rebuild your WooCommerce store?</p>
-                            <p className="text-sm text-stone-500 mb-4">
-                                Drop your store URL when you book. We run your speed live on the call, do the 3-year cost math, and tell you honestly whether a rebuild pays off, or whether you should just tune what you have.
-                            </p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
-                        </div>
-
-                        <BlogHeader>Is headless WooCommerce worth it, or should I leave WooCommerce entirely?</BlogHeader>
-
-                        <BlogText>
-                            If your only goal is speed, skip headless WooCommerce and rebuild on a custom stack, because headless leaves you maintaining two systems for the price of one rebuild. Headless makes sense for very large stores that genuinely need the WordPress admin, not for owners chasing a faster front end.
-                        </BlogText>
-
-                        <BlogText>
-                            Headless means putting a Next.js front end on top of WooCommerce&apos;s back end. It&apos;s fast, but every frontend plugin you relied on (reviews, wishlists, loyalty, upsell popups, live chat tied to Woo data) stops working, because they depend on WordPress hooks and shortcodes that don&apos;t exist in a Next.js app. You keep the maintenance of WordPress and add the complexity of a custom front end.
-                        </BlogText>
-
-                        <BlogText>
-                            For most owners, that&apos;s the worst of both worlds. You spend roughly the same engineering effort as a full rebuild and end up with two systems instead of one. If you want the long version of how the architecture works, I covered it in <Link href="/blog/what-is-headless-commerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">what is headless commerce</Link>. The short version: rebuild clean unless you have a specific reason to keep the WordPress admin.
-                        </BlogText>
-
-                        <BlogHeader>When WooCommerce is the right call</BlogHeader>
-
-                        <BlogText>
-                            WooCommerce is the right call more often than agencies admit, and if you&apos;re in one of these spots, don&apos;t let anyone talk you into a rebuild.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "You're early or small. Pre-revenue or a few sales a month? A tuned WooCommerce store is cheap to launch and gets you selling now. Spend on inventory and ads, not code.",
-                            "You haven't optimized yet. If you've never touched hosting, caching, or your plugin count, you don't know your real speed ceiling. Fix the cheap stuff first.",
-                            "You lean on the WordPress ecosystem. If your business depends on specific WordPress plugins or a content workflow your team knows cold, ripping that out has a real cost.",
-                            "Your store is stable and fast enough. If you're passing Core Web Vitals, checkout is reliable, and maintenance isn't eating your week, there's no prize for rebuilding.",
-                        ]} />
-
-                        <BlogText>
-                            The point of a custom site isn&apos;t to be fancier. It&apos;s to remove a tax you&apos;re paying in money, speed, and stress. If you&apos;re not paying that tax, keep your money.
-                        </BlogText>
-
-                        <BlogText>
-                            Here&apos;s the honest version from my side, though: the reason I push back on going heavy on WooCommerce early is that the plugin debt starts stacking from day one. We lived it on Panda Patches, on WordPress, every new feature meant another plugin, another subscription, another thing that could break. Next.js let us fold that into the build with no monthly app tax. Some clients skip WordPress entirely because of it. We&apos;re building for a doctor right now who started on WordPress, but he wanted Sanity and the fastest site possible, so it never went live there, we moved him to Next.js and his landing page is already up.
-                        </BlogText>
-
-                        <BlogHeader>So which one should you pick?</BlogHeader>
-
-                        <BlogText>
-                            Stay on WooCommerce if you&apos;re small, haven&apos;t optimized, or your store already runs fast and stable. Move to a custom site if you&apos;ve optimized and you&apos;re still slow, you&apos;re bleeding money on maintenance and plugin licenses, or your revenue makes a half-second of speed worth real cash. The way I think about it: WooCommerce is a great place to start and the worst place to scale. The day it stops being the cheapest way to sell and becomes the thing you spend your week managing, you&apos;ve outgrown it.
-                        </BlogText>
-
-                        <BlogText>
-                            If you came here from Shopify-land instead, the same logic plays out differently, and I broke it down in <Link href="/blog/shopify-vs-custom-website" className="text-cognac underline underline-offset-2 hover:text-amber-700">Shopify vs custom website</Link>.
-                        </BlogText>
-
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-xl font-bold text-charcoal mb-2">Find Out if a Custom Rebuild Pays Off for Your Store</h3>
-                        <p className="text-stone-500 text-sm mb-6">
-                            Free WooCommerce audit. We will show you your PageSpeed score, the 3-year cost comparison against your current maintenance and plugin spend, and tell you honestly whether to optimize or rebuild.
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <h2 className="mb-3 font-serif text-3xl">Choose the smallest architecture that meets the brief</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will compare repair, headless WooCommerce and replacement against your capabilities,
+                            data, acceptance criteria and operating team.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Get My Free Store Audit <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
-                    </div>
+                        <QuoteModalButton cta="woocommerce_vs_custom_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
+                    </section>
 
-                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-
-                    <RelatedPosts currentPostId="woocommerce-vs-custom-website" />
-
-                </div>
-            </section>
-
+                    <RelatedPosts currentPostId={postId} />
+                </article>
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

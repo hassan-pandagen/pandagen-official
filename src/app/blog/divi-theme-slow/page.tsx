@@ -1,42 +1,55 @@
-import { ArrowLeft } from "lucide-react";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Search, Wrench } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
+
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const PageSpeedAnimation = dynamicImport(() => import("@/components/blog/PageSpeedAnimation"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
+
+const postId = "divi-theme-slow";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = "https://www.pandacodegen.com/blog/divi-theme-slow";
+const title = "Divi Theme Slow? A 2026 Diagnostic and Fix Guide";
+const description =
+    "Diagnose a slow Divi site, test Divi 5 and in-place fixes, and decide whether to optimize, rebuild in WordPress, or migrate without invented score or revenue claims.";
 
 export const dynamic = "force-static";
 
-const diviFAQs = blogPosts.find(p => p.id === 'divi-theme-slow')?.faqs ?? [];
-
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const PageSpeedAnimation = lazyLoad(() => import("@/components/blog/PageSpeedAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
-
 export const metadata: Metadata = {
-    title: "Divi Theme Slow in 2026? Real Scores and the Fix",
-    description: "1.58 million sites run Divi. 60% fail Core Web Vitals and cost owners $20,172/year in lost revenue. Real Divi PageSpeed scores and the only fix that works.",
-    alternates: {
-        canonical: "/blog/divi-theme-slow",
-    },
-    keywords: ["divi theme slow", "divi pagespeed score 2026", "divi performance", "why is divi slow", "divi core web vitals failing", "divi wordpress slow 2026", "divi speed fix"],
+    title,
+    description,
+    alternates: { canonical: "/blog/divi-theme-slow" },
+    keywords: [
+        "Divi theme slow",
+        "Divi performance 2026",
+        "why is Divi slow",
+        "Divi Core Web Vitals",
+        "Divi 5 performance",
+        "Divi speed optimization",
+        "migrate from Divi",
+    ],
     openGraph: {
-        title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
-        description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Slow sites cost businesses an average of $20,172 per year.",
+        title,
+        description,
         type: "article",
         publishedTime: "2026-04-08",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/divi-theme-slow",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/divi-theme-slow")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
-        description: "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Here is what your Divi site is costing you.",
+        title,
+        description,
     },
 };
 
@@ -45,116 +58,85 @@ const articleSchema = {
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#article",
-            "headline": "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
-            "description": "1.58 million businesses use Divi. A 2025 survey of 206 businesses found slow websites cost an average of $20,172 per year in lost revenue. Here is what your Divi site is actually scoring and what that costs your business.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-04-08T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            image: ogImageUrlForPath("/blog/divi-theme-slow"),
+            datePublished: "2026-04-08",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/divi-theme-slow" },
-            "articleSection": "WordPress",
-            "keywords": ["Divi theme slow", "Divi PageSpeed 2026", "Divi Core Web Vitals", "Divi business cost", "WordPress speed optimization"],
-            "timeRequired": "PT11M",
-            "wordCount": 1800,
-            "about": [
-                { "@type": "Thing", "name": "Divi Theme", "description": "A WordPress page builder theme by Elegant Themes used on over 1.5 million active websites" },
-                { "@type": "Thing", "name": "Core Web Vitals", "description": "Google performance metrics used as search ranking signals: LCP, INP, and CLS" },
-                { "@type": "Thing", "name": "Website Conversion Rate", "description": "The percentage of website visitors who complete a desired action such as a purchase or form submission" },
-                { "@type": "Thing", "name": "WordPress Performance", "description": "The speed and performance characteristics of WordPress-based websites" }
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "WordPress",
+            inLanguage: "en-US",
+            keywords: ["Divi", "Divi 5", "WordPress performance", "Core Web Vitals", "website migration"],
+            citation: [
+                {
+                    "@type": "WebPage",
+                    name: "Elegant Themes: Divi 5 official release",
+                    url: "https://www.elegantthemes.com/blog/theme-releases/divi-5-official",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Elegant Themes: Divi 5 Update Status",
+                    url: "https://help.elegantthemes.com/en/articles/9973580-divi-5-update-status",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Elegant Themes: Divi 5 Migrator System",
+                    url: "https://help.elegantthemes.com/en/articles/9799364-what-is-the-divi-5-migrator-system",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Elegant Themes: Divi performance options",
+                    url: "https://www.elegantthemes.com/documentation/divi/theme-options/",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Google Search Central: Core Web Vitals",
+                    url: "https://developers.google.com/search/docs/appearance/core-web-vitals",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Google Search Central: Page experience",
+                    url: "https://developers.google.com/search/docs/appearance/page-experience",
+                },
             ],
-            "inLanguage": "en-US",
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Liquid Web: 67% of Businesses Lose Revenue to Slow Websites", "url": "https://www.liquidweb.com/press-releases/website-performance-study/" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www.deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Conversion Rate Research", "url": "https://portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac 2024: CMS Performance", "url": "https://almanac.httparchive.org/en/2024/cms" },
-                { "@type": "CreativeWork", "name": "WP Rocket: How Fast Is the Divi Theme?", "url": "https://wp-rocket.me/blog/how-fast-is-divi-wordpress-theme/" },
-                { "@type": "CreativeWork", "name": "Google Search Central: Page Speed as Mobile Ranking Factor", "url": "https://developers.google.com/search/blog/2018/01/using-page-speed-in-mobile-search" }
-            ]
         },
         {
             "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Divi Theme Slow", "item": "https://www.pandacodegen.com/blog/divi-theme-slow" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#webpage",
-            "url": "https://www.pandacodegen.com/blog/divi-theme-slow",
-            "name": "Divi Theme Slow in 2026? Real Scores and the Only Fix That Works",
-            "description": "1.58 million businesses use Divi. 60% of WordPress sites fail Core Web Vitals. Here is what your Divi site is actually scoring and what that costs your business.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-04-08T00:00:00-05:00",
-            "dateModified": "2026-04-08T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#breadcrumb" },
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "email": "info@pandacodegen.com",
-            "telephone": "+13027738982",
-            "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg", "width": 1200, "height": 630 },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "701 Tillery St Ste 12",
-                "addressLocality": "Austin",
-                "addressRegion": "TX",
-                "postalCode": "78702",
-                "addressCountry": "US"
-            },
-            "sameAs": ["https://twitter.com/pandacodegen", "https://www.linkedin.com/company/pandacodegen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses losing revenue to slow WordPress and Divi sites. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Divi Theme Slow", item: canonicalUrl },
+            ],
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/divi-theme-slow#faq",
-            "mainEntity": diviFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
-        }
-    ]
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
+
+const sourceLinkClass = "font-medium text-cognac underline underline-offset-4 hover:text-charcoal";
 
 export default function DiviThemeSlowPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
+            <main className="min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal md:pb-20 md:pt-32">
+                <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script
                         type="application/ld+json"
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -164,364 +146,330 @@ export default function DiviThemeSlowPage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Divi Theme Slow", href: "/blog/divi-theme-slow" }
+                            { label: "Divi Theme Slow", href: "/blog/divi-theme-slow" },
                         ]}
                     />
 
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
+                    <Link
+                        href="/blog"
+                        className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 transition-colors hover:text-charcoal"
+                    >
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Divi Is Slow.{" "}
-                            <span className="font-serif italic text-cognac">Here Is What It Is Costing You.</span>
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress performance</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Divi Theme Slow? A <span className="italic text-cognac">2026 Diagnostic and Fix Guide</span>
                         </h1>
-
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            1.58 million businesses run Divi. A 2025 survey found slow websites cost businesses an average of $20,172 per year in lost revenue. This guide shows you exactly what your Divi site is scoring, why, and what the number means for your bottom line.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Divi sites do not share one PageSpeed score, conversion loss, or migration answer. Measure
+                            the real routes, identify the responsible work, test Divi 5 and in-place fixes, then compare
+                            the remaining cost with a lighter WordPress build or controlled migration.
                         </p>
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed July 24, 2026 against current Elegant Themes and Google primary documentation.
+                        </p>
+                    </header>
 
-                        <BlogAuthor
-                            date="Apr 8, 2026"
-                            readTime="11 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
-                    </div>
+                    <BlogAuthor
+                        name="Hassan Jamal"
+                        role="Co-founder and Lead Engineer"
+                        date="April 8, 2026"
+                        readTime="11 min read"
+                        bio="Hassan works on measured WordPress migrations, performance diagnostics, and testable delivery criteria."
+                    />
 
-                    <div className="mb-12">
+                    <div className="my-10">
                         <PageSpeedAnimation />
                     </div>
 
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h3 className="font-bold text-charcoal mb-4">Key Takeaways</h3>
-                        <BlogList items={[
-                            "Divi scores 64 to 68 on mobile PageSpeed unoptimized, with a load time of 5.8 seconds. That is in Google's red zone.",
-                            "60% of all WordPress sites are currently failing Google's performance standards. Divi sites are disproportionately in that group.",
-                            "A 2025 survey of 206 businesses found 67% are losing revenue to slow websites, averaging $20,172 per year.",
-                            "Caching plugins raise Divi scores by 10 to 15 points. The ceiling is around 70 to 80 on mobile regardless of what you add.",
-                            "Divi 5 launched February 2026 with real improvements, but real-world sites with plugins are not seeing those clean-demo scores.",
-                            "The only way past the ceiling is to move off Divi entirely.",
-                        ]} />
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The answer in one minute</h2>
+                        <BlogList
+                            items={[
+                                "Do not diagnose Divi from one Lighthouse score or a generic theme benchmark.",
+                                "Check field Core Web Vitals where available, then repeat controlled lab tests on representative templates.",
+                                "Separate theme and compatibility-mode work from hosting, plugins, media, fonts, tags, database, cache, and application behavior.",
+                                "Divi 5 officially left beta on February 26, 2026, but legacy or unsupported modules can still load backward compatibility mode.",
+                                "Optimize first when measured bottlenecks are removable. Migrate when required outcomes remain blocked or the continuing workaround cost is no longer sensible.",
+                            ]}
+                        />
+                    </section>
+
+                    <BlogHeader>Why a Divi site can be slow</BlogHeader>
+                    <BlogText>
+                        A Divi page is the result of a complete WordPress system, not the theme alone. The visitor may
+                        receive HTML generated by PHP and database queries, Divi assets, child-theme code, plugin code,
+                        media, fonts, analytics, consent controls, chat, advertising tags, embeds, and cache behavior.
+                        Any combination can affect loading, responsiveness, and visual stability. Our{" "}
+                        <Link href="/blog/wordpress-plugins-destroy-speed" className={sourceLinkClass}>WordPress plugin audit guide</Link>{" "}
+                        covers how to attribute that work to a named component.
+                    </BlogText>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-2">
+                        {[
+                            {
+                                icon: Gauge,
+                                title: "Loading path",
+                                body: "Server response, cache misses, database work, render-blocking CSS, hero discovery, image size, fonts, and third-party connections can delay LCP.",
+                            },
+                            {
+                                icon: Wrench,
+                                title: "Interaction path",
+                                body: "Long JavaScript tasks, event handlers, animations, plugin behavior, DOM complexity, and application logic can affect INP.",
+                            },
+                            {
+                                icon: Search,
+                                title: "Visual stability",
+                                body: "Missing dimensions, late fonts, injected banners, embeds, ads, and dynamic modules can contribute to CLS.",
+                            },
+                            {
+                                icon: CheckCircle2,
+                                title: "Operational state",
+                                body: "Divi version, compatibility mode, plugin versions, cache state, consent choice, logged-in state, and page template all change the result.",
+                            },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-700">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Divi theme is slow in 2026 because it loads over 400KB of CSS and JavaScript on every page regardless of which modules are used. Mobile PageSpeed scores for Divi sites range from 20 to 55. The only permanent fix is replacing Divi with a custom Next.js build. Optimization plugins can get you to 60 to 70, but Divi's architecture prevents you from reaching 90 or above.</p>
+                    <BlogText>
+                        This is why claims such as &quot;Divi always scores 64,&quot; &quot;caching adds 15 points,&quot;
+                        or &quot;Divi cannot exceed 80&quot; are not defensible without a named sample and method. A
+                        theme demo, a client route, and a plugin-heavy store are different test subjects.
+                    </BlogText>
 
-                    <div className="space-y-8">
+                    <BlogHeader>What changed with Divi 5</BlogHeader>
+                    <BlogText>
+                        Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of this article&apos;s
+                        July 24 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
+                        newer framework and has continued to receive features, improvements, and bug fixes. That
+                        current status replaces the old claim that Divi 5 is still a beta preview.
+                    </BlogText>
+                    <BlogText>
+                        Existing sites still need a careful upgrade. Elegant Themes instructs owners to back up the
+                        site, test on staging, run the migrator, and inspect the result. Pages containing a legacy Divi
+                        4 module or an unsupported third-party module can run in backward compatibility mode. The vendor
+                        states that those pages do not receive all Divi 5 performance improvements.
+                    </BlogText>
+                    <BlogText>
+                        The practical question is therefore not simply &quot;Are we on Divi 5?&quot; Record which pages
+                        migrated, which modules remain in compatibility mode, which custom CSS changed, and which
+                        third-party products support the new architecture. Test business-critical page states before
+                        production.
+                    </BlogText>
 
-                        <BlogText>
-                            A business owner reached out to us in February. Her Divi site had been live for three years. She had paid for WP Rocket, a CDN, an image optimization plugin, and a developer who spent two days &ldquo;fixing the speed.&rdquo; Total cost: just under $2,800. Her mobile PageSpeed score after all of that: 52.
-                        </BlogText>
+                    <BlogHeader>How to measure the problem correctly</BlogHeader>
+                    <BlogText>
+                        Start with the routes that represent both traffic and architecture: homepage, main landing
+                        template, service or product template, article template, contact or lead form, and any
+                        transaction-critical flow. A homepage-only test can miss the template that actually needs work.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Capture PageSpeed Insights field data when URL-level or origin-level CrUX data is available.",
+                            "Record whether the evidence is mobile or desktop and whether it describes a URL or the origin.",
+                            "Run repeated Lighthouse tests with the same browser, version, device, network, geography, consent, cache, and authentication state.",
+                            "Inspect the LCP element, long tasks and interaction traces, layout-shift sources, request waterfall, unused resources, and server timing.",
+                            "Measure a logged-out visitor path; logged-in WordPress administration can bypass caches and create a different result.",
+                            "Save the raw reports and a release timestamp so later tests are comparable.",
+                        ]}
+                    />
+                    <BlogText>
+                        Google&apos;s current good field thresholds are LCP within 2.5 seconds, INP under 200
+                        milliseconds, and CLS under 0.1 at the 75th percentile. These are experience targets.
+                        Passing them does not guarantee a ranking position, and failing them does not reveal a fixed
+                        revenue loss. Each metric is defined in our{" "}
+                        <Link href="/blog/core-web-vitals-explained" className={sourceLinkClass}>Core Web Vitals explainer</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            Her competitor, a smaller business in the same market, had a site that loaded in under a second. It ranked above her on every keyword she cared about.
-                        </BlogText>
+                    <BlogHeader>A Divi optimization order that produces evidence</BlogHeader>
+                    <BlogText>
+                        Change one meaningful group at a time and re-test. If ten plugins and a CDN are added at once,
+                        the team cannot tell which change helped, which did nothing, or which created a new defect.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Update WordPress, Divi, the child theme, and required extensions through a staged and recoverable process.",
+                            "If moving to Divi 5, run its compatibility scan and inventory every legacy or unsupported module before migration.",
+                            "Review Divi's documented Dynamic Module Framework, Dynamic CSS, Critical CSS, Dynamic JavaScript Libraries, icons, fonts, and stylesheet settings.",
+                            "Measure server response, cache hit behavior, database queries, background work, and PHP resource constraints before blaming frontend code.",
+                            "Resize and encode images for their rendered use, give media dimensions, and avoid loading the largest asset late.",
+                            "Remove unused plugins and tags only after confirming ownership, business purpose, data flow, and rollback.",
+                            "Delay or replace expensive embeds and third-party scripts when the business requirement allows it.",
+                            "Retest representative routes and forms after every group of changes, including consent and error states.",
+                        ]}
+                    />
+                    <BlogText>
+                        A cache or CDN can reduce repeated delivery work, but it does not fix every cause. It cannot make
+                        a required third-party script smaller, correct a slow interaction handler, reserve missing
+                        layout space, or remove a legacy module. Conversely, a migration is excessive when an oversized
+                        hero image or one unnecessary tag is the measured problem. The same order applied to WordPress
+                        more broadly is set out in our{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className={sourceLinkClass}>evidence-led methods for fixing a slow WordPress site</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            She was not doing anything wrong. She had spent real money on the right tools. The problem is that those tools were built to work around Divi. They cannot fix what Divi is doing at its foundation.
-                        </BlogText>
+                    <BlogHeader id="what-each-fix-addresses">What each common fix actually addresses</BlogHeader>
+                    <BlogText>
+                        The usual advice is a shopping list without a diagnosis, which is how people spend money in the
+                        wrong order. Costs below are the published vendor ranges at the time of writing and move around,
+                        so check the current price before buying. We deliberately do not publish a &ldquo;points gained&rdquo;
+                        column: the gain depends entirely on which bottleneck your site actually has, and a fix aimed at
+                        the wrong bottleneck returns close to nothing.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[700px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr>
+                                    <th className="p-4">Fix</th>
+                                    <th className="p-4">Typical cost</th>
+                                    <th className="p-4">What it actually addresses</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Caching plugin (WP Rocket, LiteSpeed)</td><td className="p-4">~$49 to $199/year</td><td className="p-4">Repeated server assembly on cacheable pages. Does nothing for logged-in views, cart or checkout, or for the size of what you ship.</td></tr>
+                                <tr><td className="p-4 font-bold">CDN (Cloudflare, BunnyCDN)</td><td className="p-4">~$20 to $200/month</td><td className="p-4">Distance between user and server. Helps most for geographically distant traffic; does not reduce page weight or script execution.</td></tr>
+                                <tr><td className="p-4 font-bold">Image optimisation plugin</td><td className="p-4">~$50 to $150/year</td><td className="p-4">Oversized media and missing modern formats. Often the single biggest win on a Divi site, and the easiest to verify.</td></tr>
+                                <tr><td className="p-4 font-bold">Faster hosting plan</td><td className="p-4">~$50 to $300/month</td><td className="p-4">Server response time and database query speed. Only helps if your measurement shows a slow TTFB.</td></tr>
+                                <tr><td className="p-4 font-bold">Developer optimisation work</td><td className="p-4">~$500 to $2,000</td><td className="p-4">Module bloat, nesting depth, render-blocking assets and third-party sequencing — the causes a plugin cannot reach.</td></tr>
+                                <tr><td className="p-4 font-bold">Frontend rebuild</td><td className="p-4">Quoted per scope</td><td className="p-4">The rendering and delivery model itself. Justified only when the measurement shows the ceiling is architectural, not incidental.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <InsightBox variant="warning" label="Buy in diagnosis order">
+                        Run the measurement section above first, then buy the row that matches what it found. Stacking a
+                        caching plugin, a CDN and a faster host against an image-weight problem is the most common way to
+                        spend several hundred dollars and move almost nothing.
+                    </InsightBox>
 
-                        <BlogText>
-                            Her situation is not an isolated case. Independent 2026 lab testing by WP Rocket, comparing WordPress themes and page builders under controlled conditions, put a number on exactly what she ran into: Divi&apos;s page weight came in <BlogHighlight>6.9 times heavier than GeneratePress</BlogHighlight> for equivalent content, and its LCP measured <BlogHighlight>5.8 seconds, more than double Google&apos;s 2.5-second &ldquo;Good&rdquo; threshold</BlogHighlight>. That is a third party running the same test across multiple themes, not a single site&apos;s story. It is also why her $2,800 in fixes only moved the needle a few points: caching and CDNs cannot compensate for a theme that ships that much extra weight by default.
-                        </BlogText>
-
-                        <BlogText>
-                            Even Elegant Themes, the company that makes Divi, has effectively confirmed the problem. Divi 5, released February 26, 2026, cut the theme&apos;s JavaScript bundle from 276KB down to 45KB, a rebuild specifically aimed at the performance complaints that had been piling up. A vendor does not rebuild its own core architecture unless the old numbers were bad enough to threaten the product. The catch: Divi&apos;s ecosystem includes thousands of third-party add-on plugins that mostly have not been updated for Divi 5&apos;s new architecture yet, and Elegant Themes has advised site owners to hold off migrating production sites until that catches up. In practice, that means most real-world Divi sites today, including ones running the old architecture or an incompatible add-on, are still performing close to the numbers WP Rocket measured, not the clean-demo numbers Divi 5 is capable of.
-                        </BlogText>
-
-                        <BlogHeader>The Business Cost of a Slow Website in 2026</BlogHeader>
-
-                        <BlogText>
-                            Before we look at Divi specifically, here is what the research says about slow websites and revenue.
-                        </BlogText>
-
-                        <BlogText>
-                            A 2025 Liquid Web survey of 206 businesses found that <BlogHighlight>67% are actively losing revenue to slow websites, with an average loss of $20,172 per year.</BlogHighlight> That is not a projection. That is what business owners reported when asked directly.
-                        </BlogText>
-
-                        <BlogText>
-                            Deloitte Digital tracked 37 brands across 30 million mobile sessions. They found that a <BlogHighlight>0.1-second improvement in load speed increased retail conversions by 8.4% and average order values by 9.2%.</BlogHighlight> Not 1 second. One tenth of a second.
-                        </BlogText>
-
-                        <BlogText>
-                            Portent research across 20 websites and 100 million page views found that a site loading in 1 second converts <BlogHighlight>3 times higher than one loading in 5 seconds</BlogHighlight> for B2B businesses. For e-commerce, a 1-second site converts 2.5 times higher than a 5-second site.
-                        </BlogText>
-
-                        <BlogText>
-                            Akamai tracked 10 billion user visits from top online retailers. A 2-second delay in load time increased bounce rates by 103%. Visitors did not wait. They left.
-                        </BlogText>
-
-                        <BlogQuote>
-                            A typical Divi site loads in 2.5 to 5.8 seconds on mobile. Using Portent&apos;s research, that means a Divi site converting at 2% could be converting at 5 to 6% with a 1-second load time. That gap is your lost revenue.
-                        </BlogQuote>
-
-                        <BlogHeader>What Divi Is Actually Scoring Right Now</BlogHeader>
-
-                        <BlogText>
-                            Independent testing by WP Rocket in 2026, using a controlled environment with the same hosting and content across themes, found:
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">Platform</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">Mobile Score</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">LCP</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">CLS</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">Page Weight</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300 font-medium">GeneratePress</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">99/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-300">0.9s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-300">45KB</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium">Astra</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">96/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-300">1.2s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-300">68KB</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300 font-medium">Elementor</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-amber-600 font-medium">75/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-300">5.4s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-300">220KB</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-medium text-red-700">Divi (unoptimized)</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-red-600 font-medium">64/100</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-300 text-red-600">5.8s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-300 text-amber-600">0.196</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-300">310KB</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300 font-medium">Custom Next.js</td>
-                                        <td data-label="Mobile Score" className="p-3 border border-stone-300 text-green-600 font-medium">90+</td>
-                                        <td data-label="LCP" className="p-3 border border-stone-300">0.8s</td>
-                                        <td data-label="CLS" className="p-3 border border-stone-300 text-green-600">0.000</td>
-                                        <td data-label="Page Weight" className="p-3 border border-stone-300">18KB</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <BlogHeader>Should you keep Divi, rebuild in WordPress, or migrate?</BlogHeader>
+                    <div className="my-8 overflow-hidden rounded-xl border border-stone-200">
+                        <div className="grid bg-stone-100 text-sm font-bold text-charcoal sm:grid-cols-3">
+                            <div className="p-4">Option</div>
+                            <div className="p-4">When it can fit</div>
+                            <div className="p-4">Evidence to require</div>
                         </div>
-
-                        <BlogText>
-                            Divi is last place. Its page is <BlogHighlight>6.9 times heavier than GeneratePress</BlogHighlight> for the same content. Its LCP of 5.8 seconds is more than double Google&apos;s &ldquo;Good&rdquo; threshold of 2.5 seconds. Its CLS score of 0.196 fails the 0.1 threshold, meaning your page is visually shifting after it loads, which Google penalizes directly.
-                        </BlogText>
-
-                        <BlogHeader>950,000 Divi Businesses Are Failing Google&apos;s Standards Right Now</BlogHeader>
-
-                        <BlogText>
-                            There are 1.58 million active Divi websites as of 2025. The HTTP Archive Web Almanac 2024 found that <BlogHighlight>60% of all WordPress sites are currently failing Core Web Vitals</BlogHighlight>, Google&apos;s performance standards used as a ranking signal.
-                        </BlogText>
-
-                        <BlogText>
-                            Applying that rate to Divi&apos;s 1.58 million active sites: <BlogHighlight>roughly 950,000 Divi-built businesses are failing Google&apos;s performance standards right now.</BlogHighlight> They are not ranking as high as they could. They are not converting as well as they could. Most of them do not know why.
-                        </BlogText>
-
-                        <BlogText>
-                            Google has used page speed as a mobile ranking factor since 2018. In December 2025, Google&apos;s core update gave page experience signals more weight than ever. Sites that had held top-3 positions for years dropped to page 4 overnight when their performance scores could no longer compensate for their slow load times.
-                        </BlogText>
-
-                        <BlogHeader>Why Divi Is Slow: The Three Actual Causes</BlogHeader>
-
-                        <BlogHeader>Cause 1: Your Site Is Carrying 860KB of Dead Weight on Every Page</BlogHeader>
-
-                        <BlogText>
-                            Divi stores your design choices in a database and generates CSS for all of them on every single page load.
-                        </BlogText>
-                        <BlogText>
-                            On a site with 20 to 30 page templates, Divi generates CSS for every module you have ever used, even on pages where those modules do not appear.
-                        </BlogText>
-
-                        <BlogText>
-                            The unoptimized Divi CSS stylesheet is 860 to 900KB. For context, a well-built custom website ships with 8 to 25KB of CSS. <BlogHighlight>Divi is loading 35 to 100 times more CSS than necessary.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogText>
-                            Elegant Themes released a Dynamic CSS feature that reduces this to around 54KB, a 94% reduction. But it requires manual activation, it breaks compatibility with many third-party Divi plugins, and most live Divi sites do not have it properly configured. You can check whether yours does by opening your site in an incognito browser, viewing the page source, and searching for &ldquo;et-dynamic&rdquo; in the CSS links.
-                        </BlogText>
-
-                        <BlogHeader>Cause 2: Hidden Interactivity Problems Google Started Measuring in 2024</BlogHeader>
-
-                        <BlogText>
-                            Most people checking their site speed look at LCP (how fast the page loads) and CLS (whether the layout shifts). But in March 2024, Google replaced an older metric with INP: Interaction to Next Paint. It measures how quickly your site responds when a visitor clicks a button, submits a form, or taps a menu item.
-                        </BlogText>
-
-                        <BlogText>
-                            Google&apos;s threshold for a good INP score is under 200 milliseconds. Page builders like Divi routinely <BlogHighlight>add 400 to 800 milliseconds to every interaction</BlogHighlight>. That means every button click, every form submission, every dropdown on a Divi site feels noticeably sluggish to visitors.
-                        </BlogText>
-
-                        <BlogText>
-                            This directly affects your contact forms, your quote request buttons, and your checkout flows. It is also a ranking signal. Most Divi site owners have never heard of INP and have no idea their site is failing it.
-                        </BlogText>
-
-                        <BlogHeader>Cause 3: You Are Running 22 Fixes for Problems a Custom Site Does Not Have</BlogHeader>
-
-                        <BlogText>
-                            Search &ldquo;how to speed up Divi&rdquo; and you will find guides with 15 to 22 steps. Enable Dynamic CSS. Enable Dynamic JavaScript. Move jQuery to the footer. Configure WP Rocket exclusions. Disable Google Fonts loading. Enable critical CSS. Configure your CDN. Compress images. Minify files. Defer render-blocking resources.
-                        </BlogText>
-
-                        <BlogText>
-                            Every one of those steps is a patch for a problem that Divi created. A custom-coded website does not have any of these problems to begin with. There are no 22 steps. There is no plugin stack to maintain. There is no version update that breaks your configuration.
-                        </BlogText>
-
-                        <BlogQuote>
-                            The optimization playbook for Divi is a list of 22 workarounds for 22 architectural decisions that make Divi slow by default. You are not fixing your site. You are managing its limitations.
-                        </BlogQuote>
-
-                        <BlogHeader>What About Divi 5?</BlogHeader>
-
-                        <BlogText>
-                            Divi 5 launched on February 26, 2026. Elegant Themes reduced the JavaScript bundle from 276KB to 45KB, improved the CSS architecture, and addressed several long-standing performance complaints. These are real improvements.
-                        </BlogText>
-
-                        <BlogText>
-                            On a clean demo site with no third-party plugins, Divi 5 scores significantly better than Divi 4. The problem is that the Divi ecosystem has thousands of third-party add-on plugins, and most of them have not yet been updated to work with Divi 5&apos;s new architecture.
-                        </BlogText>
-
-                        <BlogText>
-                            Elegant Themes themselves advised site owners to wait before migrating production sites that use third-party Divi extensions. Real-world Divi 5 sites with the typical plugin stack are still nowhere near the 90+ range that custom-built sites achieve from day one.
-                        </BlogText>
-
-                        <BlogHeader>The Actual Cost of &ldquo;Fixing&rdquo; Divi</BlogHeader>
-
-                        <BlogText>
-                            Most businesses go through a predictable sequence before accepting that the problem is Divi itself:
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border-collapse min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">What You Tried</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">Cost</th>
-                                        <th className="text-left p-3 border border-stone-300 font-semibold">Score After</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300">WP Rocket or LiteSpeed Cache</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300">$49 to $199/year</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+10 to 15 points</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-300">CDN (Cloudflare Pro, BunnyCDN)</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300">$20 to $200/month</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+5 to 8 points</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300">Developer optimization work</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300">$500 to $2,000</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+5 to 10 points</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-300">Faster hosting plan</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300">$50 to $300/month</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+3 to 5 points</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="p-3 border border-stone-300">Image optimization plugin</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300">$50 to $150/year</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600">+3 to 7 points</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="p-3 border border-stone-300 font-semibold">Total spent</td>
-                                        <td data-label="Cost" className="p-3 border border-stone-300 font-semibold">$1,500 to $5,000+</td>
-                                        <td data-label="Score After" className="p-3 border border-stone-300 text-amber-600 font-semibold">Final score: 65 to 78</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            You spend $1,500 to $5,000 and land at a score that is still failing Core Web Vitals on mobile. Still losing to faster competitors. Still costing you the $20,172 per year average that the Liquid Web survey found.
-                        </BlogText>
-
-                        <BlogText>
-                            The optimization spend is not wasted because the work is bad. It is wasted because the ceiling is built into Divi. No amount of plugins removes 860KB of CSS overhead or brings a 5.8-second LCP into the 2.5-second Good range.
-                        </BlogText>
-
+                        {[
+                            [
+                                "Optimize the existing site",
+                                "Editors are productive, required modules are supported, and measured issues are removable.",
+                                "Before-and-after route tests, regression checks, costs, and a maintenance owner.",
+                            ],
+                            [
+                                "Move to Divi 5",
+                                "The current site is on Divi 4 and the compatibility report supports a controlled upgrade.",
+                                "Staging backup, migrator report, legacy-module list, visual QA, forms, and rollback test.",
+                            ],
+                            [
+                                "Rebuild within WordPress",
+                                "WordPress workflows or plugins remain valuable, but the current builder or template is the constraint.",
+                                "Feature parity, editor workflow, URL plan, measured performance, and extension governance.",
+                            ],
+                            [
+                                "Migrate to another architecture",
+                                "Required performance, security, integration, ownership, or operating outcomes remain blocked at unacceptable cost.",
+                                "Total cost, dependency map, URL inventory, acceptance tests, cutover, rollback, and support plan.",
+                            ],
+                        ].map(([option, fit, evidence]) => (
+                            <div key={option} className="grid border-t border-stone-200 text-sm sm:grid-cols-3">
+                                <div className="p-4 font-semibold text-charcoal">{option}</div>
+                                <div className="p-4 text-stone-700">{fit}</div>
+                                <div className="p-4 text-stone-700">{evidence}</div>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Mid CTA */}
-                    <div className="my-8 md:my-12 bg-charcoal rounded-xl p-8 text-white text-center">
-                        <p className="text-sm font-semibold uppercase tracking-widest text-stone-400 mb-3">Free Audit</p>
-                        <h3 className="text-2xl font-bold mb-3">Find Out Exactly What Your Divi Site Is Costing You</h3>
-                        <p className="text-stone-300 mb-6 max-w-lg mx-auto">We run your site through 11 checks: PageSpeed, Core Web Vitals, INP, security, mobile performance, and more. You get the actual numbers and what they mean for your revenue.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 bg-cognac hover:bg-orange-700 text-white font-bold px-8 py-4 rounded-xl transition-colors">
-                            Get My Free Audit
-                        </CalModalButton>
-                    </div>
+                    <BlogText>
+                        A custom Next.js build is not automatically faster, safer, or cheaper. It offers a different
+                        control surface and dependency model. The implementation, data, third parties, hosting, and
+                        operating process still determine the outcome. Compare the two operating models in{" "}
+                        <Link href="/blog/wordpress-vs-nextjs" className={sourceLinkClass}>WordPress and Next.js side by side</Link>, and
+                        the ownership side in our{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={sourceLinkClass}>three-year cost model for WordPress and custom code</Link>.
+                    </BlogText>
 
-                    <div className="space-y-8">
+                    <BlogHeader>How to estimate the business cost</BlogHeader>
+                    <BlogText>
+                        Do not apply a survey&apos;s average loss or another brand&apos;s conversion lift to your
+                        business. The deleted version of this page used an unsupported fixed annual-loss estimate and
+                        third-party case-study percentages. Those sources did not prove what one Divi site was losing.
+                    </BlogText>
+                    <BlogText>
+                        Use first-party evidence instead. Define the affected journey, baseline sessions, conversion
+                        event, value or margin, device mix, and current performance. Segment visitors exposed to the
+                        slow route. Annotate design, price, offer, campaign, and checkout changes. After an optimization
+                        or migration, compare the same definitions and report uncertainty. This can support a business
+                        decision without pretending speed was the only cause. The evidence and the limits of the
+                        speed-to-search relationship are covered in{" "}
+                        <Link href="/blog/how-website-speed-affects-seo" className={sourceLinkClass}>how website speed affects SEO</Link>, and
+                        a fall in traffic has its own{" "}
+                        <Link href="/blog/wordpress-traffic-drop-speed" className={sourceLinkClass}>WordPress traffic drop diagnostic</Link>.
+                    </BlogText>
 
-                        <BlogHeader>What Businesses See After Leaving Divi</BlogHeader>
-
-                        <BlogText>
-                            The research on platform migrations is consistent. A Commercetools study of recent platform migrations found that <BlogHighlight>90% of businesses that switched platforms saw revenue improvements</BlogHighlight>, with 30% reporting sales increases of 30% or more.
-                        </BlogText>
-
-                        <BlogText>
-                            A RannLab case study of a <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce site migration</Link> found 357% year-over-year sales growth after moving off the slow platform. At Deloitte's measured rate of 8% conversion lift per 100ms, moving a Divi site from 5.8s to 1.0s represents a realistic 40%+ conversion improvement. For the Elementor parallel, see <Link href="/blog/elementor-kills-seo" className="text-cognac hover:underline">how Elementor kills SEO</Link>, and for the full plugin story <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">why WordPress plugins destroy speed</Link>. If you are considering leaving WordPress entirely, see <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">our WordPress replacement breakdown</Link> and the <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link>.
-                        </BlogText>
-
-                        <BlogText>
-                            These are not outliers. They are the result of removing the architectural overhead that was suppressing conversions and rankings. The content did not change. The products did not change. The speed changed.
-                        </BlogText>
-
-                        <BlogHeader>What a Custom-Built Site Looks Like Compared to Divi</BlogHeader>
-
-                        <BlogList items={[
-                            "Mobile PageSpeed: 90+ on every build vs. Divi's 64 to 78 ceiling",
-                            "Load time: under 1 second vs. Divi's 2.5 to 5.8 seconds",
-                            "LCP: under 1.2 seconds vs. Divi's 5.8-second average",
-                            "CLS: 0.000 vs. Divi's 0.196 (your page stops shifting after it loads)",
-                            "INP: under 100ms vs. Divi's 400 to 800ms (every click and form responds instantly)",
-                            "CSS shipped: 8 to 25KB vs. Divi's 54 to 900KB",
-                            "Monthly platform fees: $0 vs. ongoing hosting, plugin, and CDN costs",
-                            "Plugins required for performance: none vs. Divi's minimum of 3 to 5",
-                        ]} />
-
-                        <BlogText>
-                            The migration preserves every URL with a 301 redirect, transfers all your content, and includes post-launch monitoring (15 days on Starter-tier projects, 1 month on Growth and above). Your domain authority, backlinks, and indexed pages carry over completely. Rankings do not drop with a properly executed migration. In most cases they improve within 60 to 90 days as Google re-crawls the faster pages and adjusts positions accordingly.
-                        </BlogText>
-
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="my-8 md:my-12 border border-stone-200 rounded-xl p-8 text-center">
-                        <p className="text-sm font-semibold uppercase tracking-widest text-cognac mb-3">Done With Divi</p>
-                        <h3 className="text-2xl font-bold text-charcoal mb-3">We Migrate Divi Sites to Custom Next.js</h3>
-                        <p className="text-stone-600 mb-6 max-w-lg mx-auto">Your content, your domain, your URLs, all preserved. The new site scores 90+ on PageSpeed and loads in under 1 second. No monthly fees, no plugins, no Divi.</p>
-                        <CalModalButton className="inline-flex items-center gap-2 bg-charcoal hover:bg-stone-800 text-white font-bold px-8 py-4 rounded-xl transition-colors">
-                            Book a Free Discovery Call
-                        </CalModalButton>
-                    </div>
-
-                    <FAQAccordion faqs={diviFAQs} />
-
-                    <RelatedPosts currentPostId="divi-theme-slow" />
-
-                    <BlogAuthor
-                        date="Apr 8, 2026"
-                        readTime="11 min read"
-                        bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                    <BlogHeader>SEO controls for a Divi migration</BlogHeader>
+                    <BlogText>
+                        Moving away from Divi can reduce avoidable search risk when the migration keeps useful content
+                        and signals intact. It cannot guarantee stable rankings or a recovery date because Google
+                        controls crawling, indexing, and ranking. We look at that question directly in{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className={sourceLinkClass}>will migrating my website hurt my SEO</Link>.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Export a dated inventory of indexable URLs, status codes, canonicals, titles, descriptions, headings, structured data, internal links, images, and sitemap membership.",
+                            "Keep valuable URLs stable where practical and map every changed URL to the most relevant replacement, not automatically to the homepage.",
+                            "Render and compare the new HTML, metadata, content, links, robots controls, and schema before cutover.",
+                            "Crawl the staging and production outputs, test redirect chains, and preserve access to the old system for rollback.",
+                            "Annotate launch, submit the correct sitemap, and monitor Search Console indexing, queries, pages, and crawl failures.",
+                        ]}
                     />
 
+                    <BlogText>
+                        The full sequence for a controlled move is in our{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className={sourceLinkClass}>step-by-step WordPress to Next.js migration guide</Link>. What
+                        we deliver is described on the{" "}
+                        <Link href="/services/wordpress-migration" className={sourceLinkClass}>WordPress migration service page</Link>, with
+                        the{" "}
+                        <Link href="/blog/wordpress-migration-cost" className={sourceLinkClass}>scope and tiers behind a migration quote</Link>{" "}
+                        and current planning tiers on the{" "}
+                        <Link href="/pricing" className={sourceLinkClass}>pricing page</Link>.
+                    </BlogText>
+
+                    <BlogHeader>Related reading</BlogHeader>
+                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
+                        <li><Link href="/blog/elementor-kills-seo" className={sourceLinkClass}>Testing Elementor pages for search and speed problems</Link></li>
+                        <li><Link href="/work/mycustompatches" className={sourceLinkClass}>A dated WordPress migration we delivered</Link></li>
+                    </ul>
+
+                    <BlogHeader>Primary sources used for this guide</BlogHeader>
+                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
+                        <li><a href="https://www.elegantthemes.com/blog/theme-releases/divi-5-official" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: Divi 5 official release and migration guidance</a></li>
+                        <li><a href="https://help.elegantthemes.com/en/articles/9973580-divi-5-update-status" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: current Divi 5 update log</a></li>
+                        <li><a href="https://help.elegantthemes.com/en/articles/9799364-what-is-the-divi-5-migrator-system" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: Divi 5 Migrator and compatibility behavior</a></li>
+                        <li><a href="https://www.elegantthemes.com/documentation/divi/theme-options/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Elegant Themes: documented Divi performance settings</a></li>
+                        <li><a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: Core Web Vitals thresholds</a></li>
+                        <li><a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Google Search Central: page experience and ranking limits</a></li>
+                    </ul>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
+                        <h2 className="mb-3 font-serif text-3xl">Get your Divi migration plan</h2>
+                        <p className="mb-6 leading-relaxed text-stone-300">
+                            We will test representative routes, inventory modules and integrations, preserve
+                            search-sensitive URLs, and compare in-place optimization with a lighter rebuild. You get
+                            the evidence and scope before choosing a platform.
+                        </p>
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white transition-colors hover:bg-cognac/90">
+                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
+                        </CalModalButton>
+                    </section>
+
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

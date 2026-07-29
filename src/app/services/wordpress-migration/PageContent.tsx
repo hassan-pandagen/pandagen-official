@@ -115,7 +115,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks with zero downtime, and include a full 301-redirect map that preserves SEO rankings. Every migration ships with a written 90+ Google PageSpeed guarantee or a full refund and removes recurring plugin and managed-hosting fees, one client dropped from $150/month to $0.
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks with zero downtime, and include a full 301-redirect map built to carry existing SEO equity across. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, one client dropped from $150/month to $0.
           </p>
         </div>
       </section>
@@ -171,12 +171,12 @@ export default function PageContent() {
               >
                 <div className="h-1 w-full" style={{ backgroundColor: stat.color }} />
                 <div className="p-6 text-center">
-                  <p className="text-[11px] text-stone-400 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
+                  <p className="text-[11px] text-stone-600 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-black" style={{ color: stat.color }}>{stat.after}</span>
-                    {stat.suffix && <span className="text-sm font-medium text-stone-400">{stat.suffix}</span>}
+                    {stat.suffix && <span className="text-sm font-medium text-stone-600">{stat.suffix}</span>}
                   </div>
-                  <p className="text-xs text-stone-400 mt-2">was <span className="line-through">{stat.before}</span></p>
+                  <p className="text-xs text-stone-600 mt-2">was <span className="line-through">{stat.before}</span></p>
                 </div>
               </motion.div>
             ))}
@@ -227,15 +227,15 @@ export default function PageContent() {
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
-              <p className="text-sm text-stone-400">Refund-backed in writing on every project.</p>
+              <p className="text-sm text-stone-600">Refund-backed in writing on every project.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
-              <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
+              <p className="text-sm text-stone-600">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
-              <p className="text-sm text-stone-400">15 to 30 days of post-launch tweaks included, depending on tier.</p>
+              <p className="text-sm text-stone-600">15 to 30 days of post-launch tweaks included, depending on tier.</p>
             </div>
           </div>
         </div>
@@ -295,7 +295,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google penalizes slow landing pages with lower Quality Scores. You pay 30 to 50% more per click than a competitor with a faster site, and those visitors convert at half the rate. Every slow load is direct revenue loss." },
+              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google Ads factors landing page experience, including speed, into Quality Score, and a lower Quality Score generally means a higher cost per click than a faster competitor bidding on the same term. The size of that gap depends on your account, auction and competition. Every slow load is direct revenue loss." },
               { icon: XCircle, title: "One Update Crashes Your Revenue", detail: "WordPress sites run 20-30 plugins on average. A single bad update can take your site offline during a campaign launch, a sale, or Black Friday. Every minute of downtime is orders you'll never recover." },
               { icon: AlertTriangle, title: "AI Search Sends Buyers to Competitors", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'which brand should I buy' directly. They only cite fast, clean-coded sites. WordPress page builder bloat makes you invisible to AI-driven traffic." },
               { icon: Lock, title: "A Single Hack Can End Your Business", detail: "WordPress is the #1 target for automated attacks. A breach means days offline, legal liability, potential GDPR fines, and customers who never return. A custom static site has no database at all. Nothing to inject." },
@@ -388,7 +388,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Stuck between $1K Upwork templates and $100K agency quotes? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate WordPress sites to custom Next.js for $1,500 to $10,000 with 90+ PageSpeed guaranteed or 100% refund. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+              We migrate WordPress sites to custom Next.js for $1,500 to $10,000, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -412,7 +412,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: Database, title: "Clean Data Migration", desc: "We clean your WordPress database, remove bloat, and migrate to a modern backend. Zero data loss guaranteed." },
+              { icon: Database, title: "Clean Data Migration", desc: "We clean your WordPress database, remove bloat, and migrate to a modern backend. Migrated content is reconciled against a pre-migration inventory and the exceptions are reported." },
               { icon: Server, title: "Static Edge Rendering", desc: "Your site is pre-built as static HTML. It loads instantly worldwide and cannot be hacked. No server to attack." },
               { icon: Lock, title: "SEO Preservation", desc: "We map every single old URL to the new site. You won't lose a single ounce of Google rankings or traffic." },
             ].map((item, i) => (
@@ -496,7 +496,7 @@ export default function PageContent() {
               "Full WordPress content export + cleanup",
               "Custom Next.js build up to 15 pages",
               "Sanity CMS so your team can edit",
-              "90+ PageSpeed guaranteed",
+              "90+ Lighthouse handover target",
               "301 redirect mapping (no SEO loss)",
               "15 days of free post-launch support",
             ],
@@ -569,7 +569,7 @@ export default function PageContent() {
                 Complete migration from WordPress to a custom coded platform you own forever. Faster, more secure, and cheaper to maintain long-term.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "Refund terms stated in the written scope"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -625,13 +625,13 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
-              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
+              <ShieldCheck className="w-4 h-4" /> How we reduce your risk
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+              A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
+              Every PandaCodeGen migration carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -649,7 +649,7 @@ export default function PageContent() {
       <section className="py-10 md:py-16 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Deep dives on WordPress, migration, and performance.</p>
+          <p className="text-stone-600 text-center mb-10 text-sm">Deep dives on WordPress, migration, and performance.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { href: "/blog/how-to-migrate-wordpress-to-nextjs", title: "How to Migrate WordPress to Next.js", desc: "Step-by-step migration guide with zero downtime." },
@@ -663,7 +663,7 @@ export default function PageContent() {
             ].map((post) => (
               <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
-                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <p className="text-stone-600 text-xs leading-relaxed flex-1">{post.desc}</p>
                 <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             ))}
@@ -677,7 +677,7 @@ export default function PageContent() {
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-600 mb-4">Built by</p>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
@@ -685,7 +685,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Dozens of WordPress rescues across our careers. Every site scores 90+ on Google PageSpeed. Specialises in zero-downtime launches and full SEO preservation.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Lead engineer on WordPress migrations, focused on redirect planning, acceptance testing and controlled cutovers.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

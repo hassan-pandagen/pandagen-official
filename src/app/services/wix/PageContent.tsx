@@ -4,47 +4,41 @@ import FadeIn from "@/components/ui/FadeIn";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, HelpCircle, FileSearch, Wrench, Rocket, Search, Scale, Unlock } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SocialProof from "@/components/home/SocialProof";
-import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
-import PlatformKillerChart from "@/components/services/PlatformKillerChart";
-import { Eye } from "lucide-react";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
-  { feature: "Page Load Speed", wix: "3.4-5.2 seconds", custom: "Under 1 second", icon: Gauge },
-  { feature: "Code Ownership", wix: "You own nothing (hosted on Wix)", custom: "100% yours, deploy anywhere", icon: Lock },
-  { feature: "Google PageSpeed Score", wix: "30-55 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
-  { feature: "Monthly Cost", wix: "$17-159/mo subscription forever", custom: "Starts at $0, about $20/mo at scale", icon: DollarSign },
-  { feature: "Customization", wix: "Limited to drag-and-drop editor", custom: "Unlimited, any design possible", icon: Palette },
-  { feature: "SEO Control", wix: "Basic, can't edit meta robots or schema", custom: "Full control over everything Google, ChatGPT and AI search love", icon: TrendingUp },
+  { feature: "Performance", wix: "Measure representative pages, scripts, media, and apps", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
+  { feature: "Access & Rights", wix: "Review account, export, domain, and provider terms", custom: "State repository, licensing, IP, and handover terms", icon: Lock },
+  { feature: "Operating Cost", wix: "Review the active plan, apps, commerce, and usage", custom: "Estimate hosting, services, maintenance, and usage", icon: DollarSign },
+  { feature: "Customization", wix: "Map current editor, Velo, and extension capabilities", custom: "Scope required components and application logic", icon: Palette },
+  { feature: "Search Controls", wix: "Audit rendering, metadata, links, and structured data", custom: "Implement agreed controls; outcomes remain third-party controlled", icon: TrendingUp },
 ];
 
 const faqs = [
   {
     q: "Will I lose my Google rankings if I leave Wix?",
-    a: "No. We set up 301 redirects from every old URL to the new URL. Google treats it as the same content at a faster address. Rankings typically improve within 30-60 days because the new site is significantly faster."
+    a: "Any migration can affect crawling, indexing, and visibility. We inventory URLs, metadata, canonicals, content, links, and redirects, then define pre-launch and post-launch checks. Search engines control rankings, so no ranking outcome is guaranteed."
   },
   {
     q: "Can I still edit my website without coding?",
-    a: "Yes. We set up a built-in content editor (like Sanity) with an easy visual editor. You can edit text, images, and blog posts just like you did on Wix \u2014 but without the speed and SEO limitations."
+    a: "We can scope a CMS for approved text, image, and post workflows. The editor experience, roles, previews, content model, training, and maintenance responsibilities depend on the selected provider and written scope."
   },
   {
     q: "How long does it take to migrate from Wix?",
-    a: "7 days to 3 weeks depending on site size. Foot-in-the-door migrations ship in 7 days (Obare Magazine did). Growth sites in 2 to 3 weeks. Scale sites with Wix Stores or Bookings in 3 to 4 weeks."
+    a: "Timing depends on the page and content inventory, design, apps, forms, stores, bookings, localization, data, integrations, redirects, reviews, and acceptance requirements. Discovery produces a written proposal with milestones and dependencies."
   },
   {
     q: "What about my Wix forms and contact pages?",
-    a: "All forms get rebuilt with better functionality. We can integrate with any email service (Mailchimp, ConvertKit) or CRM. Form submissions work exactly as before, but the page loads 5x faster."
+    a: "We inventory each form, field, validation rule, destination, consent requirement, notification, automation, and error path. Supported integrations and acceptance tests are defined for the approved services; continuity and performance are measured rather than assumed."
   },
   {
     q: "Is custom code harder to maintain than Wix?",
-    a: "No. With a built-in content editor, content editing is just as easy. And because there are no plugins or themes to update, there\u2019s actually LESS maintenance. No monthly subscription fees, no broken updates."
+    a: "The maintenance model changes rather than disappearing. Discovery compares editorial needs, application updates, hosting, third-party services, monitoring, security, and support so ongoing responsibilities and costs can be stated in the proposal."
   },
 ];
 
@@ -53,7 +47,6 @@ export default function PageContent() {
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <ReadingProgressBar />
       <Header />
 
@@ -68,89 +61,50 @@ export default function PageContent() {
           </div>
 
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
-            Trapped on Wix? <br />
-            <span className="font-serif italic text-cognac">
-              We rebuilt Obare Magazine in 7 days.
+            Has your Wix site outgrown its current setup?{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">
+              Start with a measured migration assessment.
             </span>
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Wix got your business online fast. But now it&apos;s holding you back with slow loading, limited SEO, and a monthly subscription that never ends. We help businesses <span className="text-charcoal font-medium">break free and own their platform</span>.
+            Wix can be a practical starting point. If design, content, commerce, performance, or integration needs have changed, we can compare the current site with a scoped custom implementation. <span className="text-charcoal font-medium">Search outcomes, commercial terms, support, access, licensing, ownership, and handover are not assumed.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Get your migration plan <ArrowRight className="w-5 h-5" />
             </button>
-            <Link href="#cost-breakdown" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
-              See the Cost Breakdown <ArrowRight className="w-5 h-5" />
+            <Link href="#comparison" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
+              Compare migration options <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your Wix URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">give you a fixed migration quote before we hang up.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Wix URL when you book. We can run a point-in-time diagnostic, review migration inputs, and <span className="text-charcoal font-medium">identify what is needed for a written proposal.</span></p>
 
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-500">
-            <span>From $1,500</span>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-600">
+            <span>Current-state review</span>
             <span>&bull;</span>
-            <span>7 days</span>
+            <span>Migration inventory</span>
             <span>&bull;</span>
-            <span>90+ PageSpeed or refund</span>
+            <span>Written scope and acceptance</span>
             <span>&bull;</span>
-            <span>Austin, TX</span>
+            <span>Terms in writing</span>
           </div>
         </div>
       </section>
 
-      {/* 2. PLATFORM KILLER CHART — Wix comparison */}
-      <PlatformKillerChart
-        badge="What Your Wix Consultant Won't Tell You"
-        headline="You're paying to be"
-        headlineAccent="trapped."
-        description="You're paying $29 to $159/mo for Wix. You can never export your site. You're paying for Wix apps that replace basic features (bookings, store, SEO). Custom code has all of it built in. You hit PageSpeed 35 on mobile and no one tells you why. Because Wix's architecture caps it there."
-        descriptionSecondary="Nobody tells you this because Wix's entire business depends on you staying. Not Wix. Not the Wix Partner Program consultants. Not the app companies inside Wix. We're the ones who show you the way out. No pitch. Just receipts."
-        comparisonTitle="Wix vs Custom"
-        themLabel="Wix"
-        metrics={[
-          { metric: "Load Speed",    themLabel: "2-4s",       usLabel: "< 1s",       themPct: 40, usPct: 98, icon: Gauge },
-          { metric: "Monthly Cost",  themLabel: "$29-$159",   usLabel: "~$20",       themPct: 80, usPct: 10, icon: DollarSign },
-          { metric: "SEO Limits",    themLabel: "Hard",       usLabel: "None",       themPct: 75, usPct: 100, icon: FileSearch },
-          { metric: "Export",        themLabel: "Impossible", usLabel: "Full rights",themPct: 15, usPct: 100, icon: Lock },
-          { metric: "Design",        themLabel: "Template",   usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
-          { metric: "AI Search",     themLabel: "Invisible",  usLabel: "Optimized",  themPct: 20, usPct: 98, icon: Eye },
-        ]}
-        savingsLines={[
-          { label: "Wix Business VIP plan",           amount: "$348" },
-          { label: "Wix apps (booking, stores, etc.)", amount: "$720" },
-          { label: "3rd-party dev hacks",              amount: "$1,800" },
-          { label: "Migration delay cost (compound)",  amount: "$3,600" },
-          { label: "Lost leads (SEO + speed)",         amount: "$6,000" },
-          { label: "Brand / design compromises",       amount: "$1,200" },
-        ]}
-        totalPerYear="$13,668"
-      />
-
-      {/* 2a. CASE STUDY GRID — Obare was a Wix migration (225K IG followers) */}
-      <CaseStudyGrid
-        highlight="obare"
-        label="Real Wix Migrations"
-        heading="Wix to custom, delivered"
-        subheading="Obare Magazine, a Wix site with 225K Instagram followers, rebuilt on custom Next.js for $1,350. Build delivered in 7 days; launching on the client's domain. Here is their build plus three others."
-      />
-
-      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
-      <SocialProof />
-
-      {/* 2c. REAL BUYER VOICES — Reddit citations for trust signal (Apr 2026 verified) */}
+      {/* 2c. Linked community discussions provide anecdotal context only. */}
       <section id="real-voices" className="py-12 md:py-20 px-6 bg-stone-50 border-y border-stone-200">
         <div className="container mx-auto max-w-4xl">
-          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What Wix Users Are Actually Saying Right Now</h2>
+          <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Linked Community Discussions</div>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Examples of Issues to Investigate</h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
-            Not curated testimonials. Real Reddit threads from r/WIX, all dated within the last 30 days. Click the links to verify every quote.
+            These April 2026 posts describe individual experiences and are not representative performance or pricing evidence. Follow the links for context, then verify relevant issues against your own account and current provider documentation.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -158,10 +112,10 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                You are completely locked in. You cannot export your data, your code, anything. They want you trapped on their crappy service and paying them forever. Everything that they can do to make leaving difficult, they do do.
+                One user described difficulty exporting site assets and moving away from the platform.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026 · 60 upvotes, 70 comments</span>
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -170,9 +124,9 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                Mobile is just a nightmare. You have to do the work 3x over, once for each version, and then you add a language, and it is all over again. As someone that can actually code JS, it is just a mess. Variable boxes, everything that should work, it does not.
+                The same user reported frustration adapting layouts across breakpoints and languages.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
@@ -182,22 +136,22 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                The vendor lock in is extreme. I had a hobby site on Wix. The site would not load on any iOS Apple device. I spent hours with their support. I then was so fed up I paid a Wix Studio developer $500 to rebuild it on Wix Studio. It finally expired and I did not even bother with it anymore. Just money flushed down the drain and many hours wasted because of this awful company and vendor lock in.
+                Another user described an iOS loading issue, a support interaction, and additional rebuild work.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/jn024</strong> · r/WIX · Apr 3, 2026 · 7 upvotes</span>
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/jn024</strong> · r/WIX · Apr 3, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 
-            {/* Quote 4: Wix denied refund + Next.js migration success */}
+            {/* Discussion 4: migration experience */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                I do have 2 years remaining on my Wix plan, and they denied a refund, so honestly dunno what to do about that. My new Next.js site is highly responsive, uses a modern tech-stack, is really fast and fluid (high scores on everything I tested). You can definitely beat anything Wix offers.
+                A user described moving to a Next.js site while an existing Wix subscription term remained unresolved.
               </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/AnshulJ999</strong> · r/WIX · Apr 4, 2026 · 9 upvotes</span>
+              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
+                <span><strong className="text-charcoal">u/AnshulJ999</strong> · r/WIX · Apr 4, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1sdh7kp/my_experience_with_migrating_away_from_wix_to/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -205,12 +159,12 @@ export default function PageContent() {
 
           {/* Bridging CTA */}
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
-            <p className="text-lg font-bold mb-2">These are this month&apos;s threads. The pattern is the same every month.</p>
+            <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              Lock-in. Mobile editor that needs 3x the work. Refund denials on years of remaining time. We migrate Wix sites to custom Next.js with 90+ PageSpeed guaranteed or 100% refund. Your domain stays yours. Your code is yours. Your hosting is on Vercel, not on a builder that charges you to leave.
+              A migration assessment should verify editor constraints, exports, domains, content, apps, responsive behavior, current performance, account costs, and provider terms. The written proposal, not this page, defines price, timing, support, confidentiality, access, ownership, and remedies.
             </p>
-            <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-              See Migration Pricing →
+            <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
+              Get your migration plan <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -220,14 +174,14 @@ export default function PageContent() {
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Wix Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your current Wix site stays live the entire time.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. The proposal defines milestones, continuity controls, responsibilities, and acceptance for the approved site.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Content Export", desc: "We extract every page, image, blog post, and form from your Wix site. Nothing gets left behind.", icon: FileSearch, duration: "Day 1-2" },
-              { step: "02", title: "Custom Design & Build", desc: "Your new site gets designed and coded from scratch. No templates. Pixel-perfect, unique design that reflects your brand.", icon: Wrench, duration: "Day 3-10" },
-              { step: "03", title: "SEO Migration", desc: "We map every old URL, set up 301 redirects, and transfer all your SEO metadata. Google sees a faster version of the same site.", icon: Search, duration: "Day 11-13" },
-              { step: "04", title: "Launch & Handover", desc: "We deploy, set up analytics, and hand over the keys. You get a built-in content editor for easy content editing. No coding needed.", icon: Rocket, duration: "Day 14" },
+              { step: "01", title: "Inventory & Export Review", desc: "We inventory pages, media, posts, forms, products, bookings, members, domains, metadata, apps, and available exports, then record gaps or manual work.", icon: FileSearch, duration: "Phase 1" },
+              { step: "02", title: "Design & Workflow Mapping", desc: "We define what is retained, redesigned, transformed, or excluded, including responsive states, accessibility, content, and integrations.", icon: Wrench, duration: "Phase 2" },
+              { step: "03", title: "Build & Redirect Plan", desc: "We implement the approved scope and prepare a source-to-destination URL map. Redirects reduce migration risk but do not guarantee rankings or traffic.", icon: Search, duration: "Phase 3" },
+              { step: "04", title: "Cutover & Handover", desc: "We follow the agreed DNS, content, functional, analytics, accessibility, monitoring, rollback, training, access, and support checks.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn
                 key={i}
@@ -257,12 +211,12 @@ export default function PageContent() {
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs Next.js: Speed and SEO Compared</h2>
-          <p className="text-stone-600 text-center mb-12">See exactly what you&apos;re missing and what you could have.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs a Scoped Custom Implementation</h2>
+          <p className="text-stone-600 text-center mb-12">Compare current constraints with a project-specific architecture and operating model.</p>
 
           <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
-            {/* Header — desktop only. On mobile, each row gets inline labels. */}
-            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
+            {/* Header for desktop only. On mobile, each row gets inline labels. */}
+            <div className="hidden md:grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.1fr)_minmax(0,1.1fr)] bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-stone-600 font-bold text-sm text-center">Wix</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
@@ -271,22 +225,22 @@ export default function PageContent() {
             {comparisonData.map((row, i) => (
               <div
                 key={i}
-                className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
+                className={`p-4 sm:p-5 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-center md:gap-4`}
               >
                 {/* Feature */}
                 <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-600 shrink-0" />
                   {row.feature}
                 </div>
                 {/* Wix value */}
-                <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">Wix</span>
-                  <span className="text-red-400/90 text-sm md:text-center">{row.wix}</span>
+                <div className="grid gap-1.5 rounded-xl border border-stone-200 bg-stone-50 p-3 mb-2 md:mb-0 md:block md:rounded-none md:border-0 md:bg-transparent md:p-0 md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600">Current Wix setup</span>
+                  <span className="text-stone-700 text-sm leading-relaxed md:text-center">{row.wix}</span>
                 </div>
                 {/* Custom value */}
-                <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
-                  <span className="text-green-600 text-sm font-medium md:text-center">{row.custom}</span>
+                <div className="grid gap-1.5 rounded-xl border border-cognac/20 bg-cognac/[0.04] p-3 md:block md:rounded-none md:border-0 md:bg-transparent md:p-0 md:text-center">
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Scoped custom implementation</span>
+                  <span className="text-charcoal text-sm font-medium leading-relaxed md:text-center">{row.custom}</span>
                 </div>
               </div>
             ))}
@@ -295,39 +249,39 @@ export default function PageContent() {
       </section>
 
       {/* 5. PAIN POINTS */}
-      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
-              <AlertTriangle className="w-4 h-4" /> The Hard Truth
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/15 text-amber-200 border border-cognac/30 text-sm font-bold uppercase tracking-widest mb-6">
+              <AlertTriangle className="w-4 h-4" /> Diagnostic Review
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Wix Studio, Editor X, and Velo All Hit the Same Ceiling</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Wix Studio, Editor X, Velo, and Wix ADI all run on the same architecture. The Corvid runtime injects render-blocking JavaScript on every page, and the Wix App Market plugins (SEO Wiz, Site Booster, Wix Stores, Wix Bookings) add layers on top. The speed ceiling is the same no matter which editor you use. These are the exact problems growing businesses hit when they try to scale on Wix.
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">What to Review Across the Wix Stack</h2>
+            <p className="text-stone-400 max-w-2xl mx-auto">
+              Wix products, plans, and capabilities change. Review the actual editor, Velo code, apps, store, bookings, content, scripts, and account settings in use before recommending optimization or migration.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: Gauge, pain: "Every Slow Second Costs You Leads and Ad Spend", detail: "Wix injects its own JavaScript framework that can't be removed. Google penalizes slow pages with lower Quality Scores. You pay more per click AND convert fewer visitors. Every slow load is money leaving your business." },
-              { icon: DollarSign, pain: "You're Renting a Business Asset You'll Never Own", detail: "Cancel your Wix subscription and your site disappears overnight. Five years of content, design, and SEO work, gone. You're not building an asset. You're paying rent on someone else's platform, indefinitely." },
-              { icon: Code2, pain: "Any Feature Beyond the Editor Is Off the Table", detail: "Custom checkout flows, client portals, API integrations, advanced animations. Wix's drag-and-drop editor hits a hard ceiling. Real business logic requires real code, and Wix doesn't do real code." },
-              { icon: Search, pain: "Wix Blocks the SEO Tactics That Actually Move Rankings", detail: "No custom schema markup. No server-side rendering. No full URL control. Wix sites consistently score lower in technical SEO audits. You're fighting for rankings with tools your competitors already have." },
-              { icon: Palette, pain: "Wix's Branding Shows on Your Professional Website", detail: "Lower Wix plans show 'Made with Wix' on your business site. Enterprise clients notice. Upgrade to remove it and you're paying even more for a site you still don't own." },
-              { icon: TrendingUp, pain: "AI Search Can't Index Your Wix Site Properly", detail: "ChatGPT, Perplexity, and AI Overviews now cite specific brands when answering buying questions. They prioritize fast, structured code. Wix's JavaScript-heavy pages make you invisible to the AI search layer your competitors are already winning." },
+              { icon: Gauge, pain: "Performance Baseline", detail: "Measure representative pages across agreed devices, networks, cache states, and consent states. Identify scripts, media, apps, and templates before setting targets." },
+              { icon: DollarSign, pain: "Account and Operating Costs", detail: "Review the actual plan, apps, commerce, bookings, domains, integrations, support, and maintenance, then compare them with a complete migration estimate." },
+              { icon: Code2, pain: "Workflow Fit", detail: "Map checkout, portals, forms, bookings, APIs, and editorial workflows to determine what the current platform supports and what a replacement would require." },
+              { icon: Search, pain: "Search Implementation", detail: "Audit rendering, indexability, canonicals, metadata, content, internal links, redirects, and structured data. Search engines control crawling, indexing, and rankings." },
+              { icon: Palette, pain: "Design and Accessibility", detail: "Check whether the current editor and components support the required brand, responsive states, keyboard use, and accessibility criteria." },
+              { icon: TrendingUp, pain: "AI Discoverability", detail: "Review crawlability, entity clarity, structured data, content quality, and source credibility. Inclusion and citation by AI systems remain controlled by third parties." },
             ].map((item, i) => (
               <FadeIn
                 key={i}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/40 transition-colors group"
+                className="p-8 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-cognac/50 transition-colors group"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-red-500/15 text-red-400 shrink-0 group-hover:bg-red-500/25 transition-colors">
+                  <div className="p-3 rounded-xl bg-cognac/15 text-amber-200 shrink-0 group-hover:bg-cognac/25 transition-colors">
                     <item.icon className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">{item.pain}</h3>
-                    <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                    <p className="text-stone-600 leading-relaxed text-sm">{item.detail}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -337,42 +291,42 @@ export default function PageContent() {
       </section>
 
       {/* 6. UPGRADE PATH */}
-      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-stone-100 border-b border-stone-200">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
-            <span className="text-stone-500 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Own Your Platform. Stop Renting.</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              A custom coded website gives you what Wix never will: full ownership, blazing speed, and zero monthly platform fees.
+            <span className="text-cognac font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-charcoal">Choose the Architecture That Fits.</h2>
+            <p className="text-stone-600 text-lg max-w-2xl mx-auto">
+              A custom implementation can provide different design, integration, and deployment controls. The proposal defines measurable targets, recurring services, support, repository access, licensing, IP, and handover.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Gauge, title: "5x Faster Loading", desc: "Your Wix site loads in 3-5 seconds. A custom site loads in under 1 second. That\u2019s the difference between a bounce and a sale." },
-              { icon: Lock, title: "You Own Everything", desc: "Cancel anytime and take your site with you. Your code. Your design. Your data. It\u2019s yours forever \u2014 no platform can take it away." },
-              { icon: DollarSign, title: "No More Subscriptions", desc: "Stop paying Wix $17-159/month forever. Hosting starts at $0 and runs about $20/mo at scale." },
+              { icon: Gauge, title: "Measured Experience", desc: "Define page-specific performance, responsive, and accessibility acceptance checks under documented conditions." },
+              { icon: Lock, title: "Clear Access and Rights", desc: "Record repository access, third-party licenses, IP transfer, deployment responsibilities, and handover in the accepted proposal." },
+              { icon: DollarSign, title: "Documented Operating Model", desc: "Estimate hosting and connected services, then state maintenance and support responsibilities for the proposed architecture." },
             ].map((item, i) => (
               <FadeIn
                 key={i}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                className="p-8 rounded-2xl bg-white border border-stone-200 shadow-sm hover:border-cognac/30 hover:shadow-md transition-all"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 text-stone-300 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-xl bg-stone-100 border border-stone-200 text-cognac flex items-center justify-center mb-6">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
+                <p className="text-stone-600 leading-relaxed">{item.desc}</p>
               </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      {/* Scope and evidence framework */}
       <PartnerPromise />
 
-      {/* SIGNATURE BLOCK — SEO Control Ledger (unique to Wix) */}
+      {/* SIGNATURE BLOCK: SEO Control Ledger (unique to Wix) */}
       <section id="seo-control-ledger" className="py-12 md:py-20 px-6 bg-paper">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-12">
@@ -380,48 +334,54 @@ export default function PageContent() {
               <Scale className="w-4 h-4" /> The SEO Control Ledger
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Every SEO lever Wix locks, and what you{" "}
-              <span className="font-serif italic text-cognac">get back in writing.</span>
+              Review each search control, then define the{" "}
+              <span className="font-serif font-normal italic text-cognac">scoped implementation.</span>
             </h2>
             <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
-              This is the balance sheet your Wix plan never shows you. On the left, the technical SEO controls Wix keeps off-limits. On the right, the exact control you own line-for-line on a custom Next.js build hosted on your own infrastructure.
+              Platform behavior varies by plan, apps, account, and current product changes. Each row is an audit question and a possible implementation direction, not a universal Wix limitation or promised search outcome.
             </p>
           </div>
 
           {/* Ledger panel: single bordered panel, centered vertical rule, ruled rows */}
           <div className="rounded-3xl border border-stone-200 bg-white overflow-hidden">
             {/* Ledger headers */}
-            <div className="grid grid-cols-2 border-b-2 border-stone-200 bg-stone-50/60">
+            <div className="hidden sm:grid sm:grid-cols-2 border-b-2 border-stone-200 bg-stone-50/60">
               <div className="flex items-center gap-2 p-4 md:p-5 border-r border-stone-200">
-                <Lock className="w-4 h-4 text-stone-400 shrink-0" />
-                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-stone-500">What Wix Locks</span>
+                <Lock className="w-4 h-4 text-stone-600 shrink-0" />
+                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-stone-600">Current-State Question</span>
               </div>
               <div className="flex items-center gap-2 p-4 md:p-5">
                 <Unlock className="w-4 h-4 text-cognac shrink-0" />
-                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-cognac">What You Own on Custom Next.js</span>
+                <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-cognac">Possible Scoped Response</span>
               </div>
             </div>
 
             {/* Ruled ledger rows, aligned row-for-row across the centered rule */}
             {[
-              { locked: "No real robots.txt control — Wix generates it for you", owned: "Hand-authored robots.txt and per-route crawl rules you commit to git" },
-              { locked: "Templated, capped schema markup you can’t extend", owned: "Custom JSON-LD schema for any entity Google and AI search reward" },
-              { locked: "Rigid URL structure dictated by the Wix editor", owned: "Full URL architecture, clean slugs, and 301 maps you define" },
-              { locked: "No true server-side rendering — JS-heavy client paint", owned: "Server-rendered HTML crawlers and LLMs read on first request" },
-              { locked: "Slow Core Web Vitals you have no way to fix", owned: "Sub-second LCP you tune directly in code, 90+ guaranteed" },
-              { locked: "No log-file or crawl-budget visibility or control", owned: "Server logs, sitemaps, and crawl signals fully in your hands" },
+              { locked: "Verify robots.txt and per-route indexing controls", owned: "Define required crawl directives and validate the deployed output" },
+              { locked: "Audit supported structured-data fields and custom markup", owned: "Implement and validate agreed JSON-LD without promising eligibility or visibility" },
+              { locked: "Inventory URL patterns, slugs, canonicals, and redirects", owned: "Define the target URL map and migration verification process" },
+              { locked: "Inspect rendered HTML and client-side dependencies", owned: "Choose a rendering strategy based on content and application requirements" },
+              { locked: "Measure Core Web Vitals and identify controllable causes", owned: "Set budgets, test conditions, and third-party exclusions in the specification" },
+              { locked: "Review available logs, reports, sitemaps, and crawl signals", owned: "Define observability and search-monitoring responsibilities for the proposed stack" },
             ].map((row, i, arr) => (
               <div
                 key={i}
-                className={`grid grid-cols-2 ${i < arr.length - 1 ? "border-b border-stone-200" : ""}`}
+                className={`grid sm:grid-cols-2 ${i < arr.length - 1 ? "border-b border-stone-200" : ""}`}
               >
-                <div className="flex items-start gap-2 p-4 md:p-5 border-r border-stone-200">
-                  <XCircle className="w-4 h-4 text-red-400/90 shrink-0 mt-0.5" />
-                  <span className="text-sm text-stone-500 leading-relaxed line-through decoration-stone-300">{row.locked}</span>
+                <div className="p-4 md:p-5 border-b border-stone-200 sm:border-b-0 sm:border-r">
+                  <span className="sm:hidden block mb-2 text-[11px] font-bold uppercase tracking-wider text-stone-500">Current-state question</span>
+                  <div className="flex items-start gap-2">
+                    <FileSearch className="w-4 h-4 text-stone-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-stone-600 leading-relaxed">{row.locked}</span>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2 p-4 md:p-5">
-                  <CheckCircle2 className="w-4 h-4 text-cognac shrink-0 mt-0.5" />
-                  <span className="text-sm text-charcoal font-medium leading-relaxed">{row.owned}</span>
+                <div className="p-4 md:p-5 bg-cognac/[0.025] sm:bg-transparent">
+                  <span className="sm:hidden block mb-2 text-[11px] font-bold uppercase tracking-wider text-cognac">Possible scoped response</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-cognac shrink-0 mt-0.5" />
+                    <span className="text-sm text-charcoal font-medium leading-relaxed">{row.owned}</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -432,7 +392,7 @@ export default function PageContent() {
                 <Scale className="w-4 h-4 text-cognac" /> Net Balance
               </div>
               <p className="text-sm md:text-base text-center sm:text-right text-stone-300">
-                Six locked controls cleared <span className="text-white font-bold">→ 100% of your technical SEO surface owned, editable, and portable.</span>
+                Six review areas documented <span className="text-white font-bold">→ final controls, access, and responsibilities follow the approved scope.</span>
               </p>
             </div>
           </div>
@@ -441,81 +401,74 @@ export default function PageContent() {
 
       {/* PRICING TIERS */}
       <PricingTiers
-        heading="Agencies charge $10K to $25K."
-        headingAccent="We meet you halfway."
+        heading="Choose a migration planning path."
+        headingAccent="Confirm commitments after discovery."
         agencyComparison={{
-          agencyPrice: "$10K to $25K+",
-          agencyNote: "6-10 week timeline. Hourly billing. Wix monthly fees continue.",
-          ourPrice: "From $1,500",
-          ourNote: "2-3 week timeline. Fixed price. No platform fees. You own the code.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare equivalent content, app, commerce, integration, and support scope.",
+          ourPrice: "Scoped proposal",
+          ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
         tiers={[
           {
             tier: "Starter",
-            price: "Starting from $1,500",
-            timeline: "1 to 2 weeks",
-            fit: "Simple Wix site. 5-15 pages, portfolio or brochure. Starter tier.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
-              "Full Wix content export + migration",
-              "Custom Next.js build matching your design",
-              "Sanity CMS for content editing",
-              "90+ PageSpeed guaranteed",
-              "301 redirect mapping",
-              "15 days of free post-launch support",
+              "Page, content, and app inventory",
+              "Design and redirect requirements",
+              "Written acceptance and handover terms",
             ],
-            cta: "Get Starter Quote",
+            cta: "Get your migration plan",
           },
           {
             tier: "Growth",
-            price: "Starting from $3,500",
-            timeline: "2 to 3 weeks",
-            fit: "Business site. 15 to 50 pages. Forms, blog, custom interactions.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A business site with broader content, forms, or interaction requirements.",
             includes: [
-              "Everything in Starter",
-              "Custom animations and interactions",
-              "Forms with custom API routes",
-              "Full SEO migration with schema",
-              "Analytics setup (GA4, Clarity)",
-              "30 days of free post-launch support",
+              "Content and integration mapping",
+              "Consent-aware analytics requirements",
+              "Written support and change process",
             ],
             featured: true,
+            cta: "Get your migration plan",
           },
           {
             tier: "Scale",
-            price: "$5,000 to $10,000",
-            timeline: "3 to 4 weeks",
-            fit: "Wix Ecommerce or 30+ pages. Custom features, integrations, booking.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "Commerce, bookings, localization, data, or complex integration requirements.",
             includes: [
-              "Everything in Growth",
-              "Wix Stores → custom ecommerce",
-              "Wix Bookings → custom booking system",
-              "Multi-language / localization",
-              "Custom admin dashboard",
-              "30 days of free post-launch support",
+              "Export and data-risk assessment",
+              "Cutover, rollback, and verification plan",
+              "Written licensing, access, and handover terms",
             ],
+            cta: "Get your migration plan",
           },
         ]}
       />
 
       {/* 7. DUAL CTA */}
-      <section className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
+      <section className="py-12 md:py-20 px-6 bg-stone-100">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold text-center mb-8 md:mb-16 text-slate-900">Choose Your Future</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 md:mb-16 text-charcoal">Choose Your Future</h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Option A: The "safe" choice (de-emphasized) */}
-            <div className="p-8 rounded-2xl border border-slate-200 bg-white opacity-80 hover:opacity-100 transition-opacity">
-              <h3 className="text-lg font-bold text-slate-500 uppercase tracking-widest mb-2">Option A</h3>
-              <h4 className="text-2xl font-bold text-slate-900 mb-4">Optimization Only</h4>
-              <p className="text-slate-500 mb-8 text-sm">We try to speed up your existing Wix site, but we&apos;re limited by the platform&apos;s heavy JavaScript and template constraints.</p>
+            <div className="p-8 rounded-2xl border border-stone-200 bg-white hover:border-cognac/30 transition-colors">
+              <h3 className="text-lg font-bold text-stone-500 uppercase tracking-widest mb-2">Option A</h3>
+              <h4 className="text-2xl font-bold text-charcoal mb-4">Optimization Only</h4>
+              <p className="text-stone-600 mb-8 text-sm">Audit the current site and scope improvements that are feasible within its account, editor, script, app, and template constraints.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Slight speed improvement</li>
-                <li className="flex items-center gap-2 text-slate-600 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Image compression</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still paying monthly fees forever</li>
-                <li className="flex items-center gap-2 text-slate-400 text-sm"><XCircle className="w-4 h-4 text-red-300 shrink-0" /> Still locked into Wix</li>
+                <li className="flex items-center gap-2 text-stone-700 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Measured optimization opportunities</li>
+                <li className="flex items-center gap-2 text-stone-700 text-sm"><CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> Image compression</li>
+                <li className="flex items-center gap-2 text-stone-500 text-sm"><XCircle className="w-4 h-4 text-stone-600 shrink-0" /> Current subscriptions and apps remain</li>
+                <li className="flex items-center gap-2 text-stone-500 text-sm"><XCircle className="w-4 h-4 text-stone-600 shrink-0" /> Platform constraints still apply</li>
               </ul>
-              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"optimize_existing_site",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-3 rounded-xl border border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-colors">
-                Optimize Existing Site
+              <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"scope_wix_improvements",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-3 rounded-xl border border-stone-300 text-charcoal font-bold hover:border-cognac hover:text-cognac transition-colors">
+                Scope Wix improvements
               </button>
             </div>
 
@@ -525,16 +478,16 @@ export default function PageContent() {
                 Recommended
               </div>
               <h3 className="text-lg font-bold text-cognac uppercase tracking-widest mb-2">Option B</h3>
-              <h4 className="text-3xl font-bold text-slate-900 mb-4">Full Migration to Next.js</h4>
-              <p className="text-slate-600 mb-8">We rebuild your site from scratch. 90+ scores, in writing. Zero monthly fees. Full ownership. Built to last.</p>
+              <h4 className="text-3xl font-bold text-charcoal mb-4">Full Migration to Next.js</h4>
+              <p className="text-stone-600 mb-8">Scope a replacement implementation with explicit measurements, dependencies, recurring services, access, licensing, support, and handover terms.</p>
               <ul className="space-y-4 mb-10">
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Under a second load times (&lt;0.8s)</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> 100% SEO Preservation</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Zero Monthly Platform Fees</li>
-                <li className="flex items-center gap-3 text-slate-900 font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> You Own the Code</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Documented performance baseline and budgets</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> URL mapping and migration checks</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Current hosting and service estimate</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Written repository and rights terms</li>
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_plan",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2">
-                Get Migration Plan <ArrowRight className="w-5 h-5" />
+                Get your migration plan <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -551,104 +504,94 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-12">Everything you need to know about migrating from Wix.</p>
 
           <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <FadeIn
-                key={i}
-                style={{ transitionDelay: `${i * 50}ms` }}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left p-5 rounded-xl bg-stone-50 border border-stone-200 hover:border-stone-200 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
+            {faqs.map((faq, i) => {
+              const isOpen = openFaq === i;
+              const buttonId = `wix-faq-button-${i}`;
+              const panelId = `wix-faq-panel-${i}`;
+
+              return (
+                <FadeIn key={faq.q} style={{ transitionDelay: `${i * 50}ms` }}>
+                  <div className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50">
+                    <h3>
+                      <button
+                        id={buttonId}
+                        type="button"
+                        aria-expanded={isOpen}
+                        aria-controls={panelId}
+                        onClick={() => setOpenFaq(isOpen ? null : i)}
+                        className="w-full p-5 text-left transition-all hover:text-cognac"
+                      >
+                        <span className="flex items-center justify-between gap-4">
+                          <span className="text-base font-medium text-charcoal">{faq.q}</span>
+                          <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-100 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
+                            <span className="text-sm font-bold text-charcoal">+</span>
+                          </span>
+                        </span>
+                      </button>
+                    </h3>
+                    <div
+                      id={panelId}
+                      role="region"
+                      aria-labelledby={buttonId}
+                      hidden={!isOpen}
+                      className="border-t border-stone-200 px-5 py-4"
+                    >
+                      <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                     </div>
                   </div>
-                  {openFaq === i && (
-                    <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                  )}
-                </button>
-              </FadeIn>
-            ))}
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
-      <section className="py-10 md:py-14 px-6 bg-white border-t border-slate-100">
+      {/* 9. WRITTEN MIGRATION TERMS */}
+      <section className="py-10 md:py-14 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-[#F0FDF4] border border-green-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+          <div className="bg-stone-100 border border-cognac/25 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
             <div className="shrink-0">
-              <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+              <div className="w-20 h-20 rounded-full bg-white border border-cognac/20 flex items-center justify-center text-cognac shadow-sm">
                 <ShieldCheck className="w-10 h-10" />
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-green-900 mb-3 tracking-tight">90+ PageSpeed <span className="font-serif italic">or full refund.</span></h3>
-              <p className="text-green-800 leading-relaxed mb-6">
-                Every PandaCodeGen Wix migration ships at 90+ on Google PageSpeed. If your new site doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
+              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span></h3>
+              <p className="text-stone-700 leading-relaxed mb-6">
+                The accepted proposal states the page set, test conditions, redirect and data checks, client responsibilities, accessibility criteria, support, access, licensing, ownership, handover, and any remedies. This page does not create a performance or refund promise.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-xs font-bold text-green-700 uppercase tracking-wider mb-6">
-                <span>• Legal Contract</span>
-                <span>• Escrow Payments</span>
-                <span>• US LLC</span>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start text-xs font-bold text-cognac uppercase tracking-wider mb-6">
+                <span>• Written Scope</span>
+                <span>• Defined Acceptance</span>
+                <span>• Recorded Responsibilities</span>
               </div>
               <button
                 data-cal-namespace="discovery"
-                data-cal-link="pandagen/discovery"
+                data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
                 data-cal-config='{"layout":"month_view"}'
                 className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
-                Book Free Discovery Call
+                Get your migration plan
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      {/* Further Reading: blog cluster links that close the pillar-to-supporting-content loop */}
       <section className="py-10 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
-            <li>&rarr; <Link href="/blog/wix-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix migration cost: what it really costs to leave Wix</Link></li>
+            <li>&rarr; <Link href="/blog/wix-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix migration scoping and cost inputs</Link></li>
             <li>&rarr; <Link href="/blog/wix-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix vs custom website: the honest comparison</Link></li>
-            <li>&rarr; <Link href="/blog/wix-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">Wix too slow? Why it happens and how to fix it</Link></li>
+            <li>&rarr; <Link href="/blog/wix-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">How to diagnose Wix performance</Link></li>
           </ul>
         </div>
       </section>
 
-      {/* Related Services — expanded to all platforms via reusable component */}
+      {/* Related Services, expanded to all platforms via reusable component */}
       <RelatedServicesGrid currentHref="/services/wix" />
-
-      {/* Author Attribution */}
-      <section className="py-10 border-t border-stone-200 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-start gap-4">
-              <Link href="/about/hassan" className="shrink-0">
-                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Wix-to-Next.js migrations that score 90+ on PageSpeed. Full site rebuilds with 301-mapped URLs, zero downtime, and content editors clients can use without developer help.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes Wix escapes to protect organic rankings, eliminate monthly subscription fees, and migrate all content without data loss. 8+ years in web architecture.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

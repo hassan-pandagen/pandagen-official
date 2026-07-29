@@ -1,32 +1,40 @@
 @import 'tailwindcss';
 
+/* Playfair is the 400-weight editorial accent. Prevent browsers from inventing
+   a bold face when the accent sits inside an Inter heading. */
+.font-serif {
+  font-weight: 400;
+  font-synthesis: none;
+}
+
 @theme {
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, serif;
 
-  --color-background: #f1f5f9;
-  --color-surface: #f8f9fa;
-  --color-border: #e2e8f0;
-  --color-primary: #2563eb;
-  --color-secondary: #334155;
-  --color-muted: #64748b;
-  --color-dark: #0f172a;
-  --color-accent: #3b82f6;
+  --color-background: #f5f5f4;
+  --color-surface: #fafaf9;
+  --color-border: #e7e5e4;
+  --color-primary: #b8410c;
+  --color-secondary: #44403c;
+  --color-muted: #57534e;
+  --color-dark: #1c1917;
+  --color-accent: #c2410c;
   --color-success: #16a34a;
-  --color-neon: #2563eb;
-  --color-focus: #2563eb;
-  --color-electric: #7c3aed;
+  --color-neon: #c2410c;
+  --color-focus: #b8410c;
+  --color-electric: #9a3412;
   --color-orange: #f97316;
   --color-paper: #f5f5f4;
   --color-charcoal: #1c1917;
   --color-midnight: #0c0a09;
   --color-cognac: #b8410c;
-  --color-brand-blue: #2563eb;
 
   --color-stone-50: #fafaf9;
   --color-stone-100: #f5f5f4;
   --color-stone-200: #e7e5e4;
   --color-stone-300: #d6d3d1;
+  /* Keep the semantic Tailwind neutral scale intact. Components choose a
+     surface-aware step: stone-600 on light surfaces, stone-400 on dark. */
   --color-stone-400: #a8a29e;
   --color-stone-500: #78716c;
   --color-stone-600: #57534e;
@@ -66,8 +74,6 @@
     0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
   --shadow-elevated:
     0 20px 50px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
-  --shadow-blue-glow:
-    0 8px 30px rgba(37, 99, 235, 0.12), 0 2px 8px rgba(37, 99, 235, 0.08);
   --shadow-green-glow:
     0 8px 30px rgba(22, 163, 74, 0.12), 0 2px 8px rgba(22, 163, 74, 0.08);
   --shadow-red-glow:
@@ -82,7 +88,7 @@
   --animate-scan: scan 3s linear infinite;
   --animate-gradient-x: gradient-x 3s ease infinite;
   --animate-fade-in-up: fadeInUp 0.5s ease-out backwards;
-  /* Stagger delay variants — replaces framer-motion `transition={{ delay: 0.X }}` patterns.
+  /* Stagger delay variants replace framer-motion `transition={{ delay: 0.X }}` patterns.
      Used as `animate-fade-in-up [animation-delay:50ms]` or via the .fade-up-1..5 classes below. */
   --animate-fade-in-up-1: fadeInUp 0.5s ease-out 0.05s backwards;
   --animate-fade-in-up-2: fadeInUp 0.5s ease-out 0.10s backwards;
@@ -160,12 +166,15 @@
    Default state: invisible + offset. When [data-reveal="visible"] is set by the
    IntersectionObserver in <FadeIn>, the element animates into place.
    Stagger delays via inline style or [data-stagger="N"] (N = 1..5).
-   No `will-change` — that promotes every reveal element to its own GPU layer permanently,
+   No `will-change`, because that promotes every reveal element to its own GPU layer permanently,
    which tanks Lenis smooth-scroll on desktop. The transition itself triggers compositing only
    for the brief 500ms window each element is animating, which is exactly what we want. */
 [data-reveal="hidden"] {
   opacity: 0;
   transform: translateY(20px);
+  /* Never leave content invisible when hydration or IntersectionObserver is
+     delayed. The observer normally reveals it first; this is a safety net. */
+  animation: reveal-content-safety 0s linear 1s forwards;
 }
 [data-reveal] {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -173,6 +182,14 @@
 [data-reveal="visible"] {
   opacity: 1;
   transform: translateY(0);
+  animation: none;
+}
+
+@keyframes reveal-content-safety {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 [data-reveal][data-stagger="1"] { transition-delay: 0.05s; }
 [data-reveal][data-stagger="2"] { transition-delay: 0.10s; }
@@ -183,13 +200,14 @@
 [data-reveal][data-stagger="7"] { transition-delay: 0.35s; }
 [data-reveal][data-stagger="8"] { transition-delay: 0.40s; }
 
-/* Honor user motion preference — skip reveal animations entirely. */
+/* Honor user motion preference: skip reveal animations entirely. */
 @media (prefers-reduced-motion: reduce) {
   [data-reveal],
   [data-reveal="visible"] {
     opacity: 1;
     transform: none;
     transition: none;
+    animation: none;
   }
 }
 
@@ -211,15 +229,6 @@
   }
 }
 
-@utility bg-grid-slate {
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  mask-image: linear-gradient(to bottom, white 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, white 50%, transparent 100%);
-}
-
 @utility glass-panel {
   @apply bg-white/80 backdrop-blur-md border border-border;
 }
@@ -229,19 +238,11 @@
 }
 
 @utility text-gradient-primary {
-  @apply text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-blue-800;
+  @apply text-transparent bg-clip-text bg-linear-to-r from-cognac to-orange-800;
 }
 
 @utility text-gradient-vibrant {
-  @apply text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600;
-}
-
-@utility section-glow-blue {
-  background: radial-gradient(
-    ellipse 80% 60% at 50% 40%,
-    rgba(37, 99, 235, 0.06) 0%,
-    transparent 70%
-  );
+  @apply text-transparent bg-clip-text bg-linear-to-r from-cognac via-orange-700 to-amber-700;
 }
 
 @utility section-glow-green {
@@ -268,7 +269,7 @@
   /* Radial hero glow */
   background: radial-gradient(
     ellipse 70% 50% at 50% 30%,
-    rgba(37, 99, 235, 0.05) 0%,
+    rgba(184, 65, 12, 0.06) 0%,
     transparent 70%
   );
 }
@@ -276,13 +277,9 @@
 @utility bg-radial-subtle {
   background: radial-gradient(
     ellipse 60% 40% at 50% 50%,
-    rgba(37, 99, 235, 0.03) 0%,
+    rgba(184, 65, 12, 0.04) 0%,
     transparent 70%
   );
-}
-
-@utility card-premium-blue {
-  @apply bg-linear-to-br from-white to-blue-50/50 border border-blue-100 rounded-2xl shadow-card hover:shadow-card-hover hover:border-blue-200 transition-all duration-300;
 }
 
 @utility scrollbar-hide {
@@ -295,7 +292,7 @@
 }
 
 @utility theme-paper {
-  /* ─── NEW PREMIUM THEMES (Phase 1 — apply section by section) ─── */
+  /* ─── NEW PREMIUM THEMES (Phase 1, applied section by section) ─── */
   background-color: #f5f5f4; /* Stone-100 */
   color: #1c1917; /* Stone-900 */
 }
@@ -318,14 +315,14 @@
   border-color: #b8410c;
 }
 
-/* Base styles in @layer base — overridden by utilities, overrides v4 preflight */
+/* Base styles in @layer base are overridden by utilities and override v4 preflight. */
 @layer base {
   :root {
-    --background: #f1f5f9;
-    --foreground: #0f172a;
-    --surface: #f8f9fa;
-    --border: #e2e8f0;
-    --focus: #2563eb;
+    --background: #f5f5f4;
+    --foreground: #1c1917;
+    --surface: #fafaf9;
+    --border: #e7e5e4;
+    --focus: #b8410c;
   }
 
   * {
@@ -353,8 +350,8 @@
   }
 
   ::selection {
-    background: #dbeafe;
-    color: #1e40af;
+    background: #ffedd5;
+    color: #7c2d12;
   }
 
   *:focus-visible {
@@ -367,6 +364,28 @@
     scroll-padding-top: 100px;
   }
 
+  html.lenis {
+    scroll-behavior: auto;
+  }
+
+  /* Defensive reset: decorative article drop caps must be explicitly opted in. */
+  article > p:first-of-type::first-letter {
+    float: none;
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -376,18 +395,18 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #a8a29e;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #78716c;
   }
 
   /* ── Typography polish: balanced headings + orphan-free paragraphs ──
      text-wrap: balance evens heading line lengths (no lone last word on titles).
      text-wrap: pretty prevents orphans/runts at the end of body paragraphs.
-     Both degrade gracefully — unsupported browsers just wrap normally, no layout shift. */
+     Both degrade gracefully. Unsupported browsers just wrap normally with no layout shift. */
   h1, h2, h3, h4 {
     text-wrap: balance;
   }
@@ -404,7 +423,24 @@
   contain: layout;
 }
 
-/* Global paper grain applied directly to body — ensures every page gets texture */
+/* Long articles already inherit the global paper grain below. The legacy
+   fixed overlay duplicated an SVG turbulence filter across the viewport and
+   added avoidable paint/compositing work during scroll. */
+.fixed.bg-noise {
+  display: none;
+}
+
+/* Long editorial titles must fit a 320px viewport without forced phrases or
+   synthetic typography. Desktop sizes remain controlled by page utilities. */
+@media (max-width: 639px) {
+  main article h1 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Global paper grain applied directly to body ensures every page gets texture. */
 body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E");
   background-size: 200px 200px;
@@ -509,42 +545,6 @@ body {
   .swipe-hint {
     display: none !important;
   }
-}
-
-/* ── Font metric override: prevent CLS from Playfair Display italic swap ──
-   When Playfair loads late, it replaces the Georgia fallback. Different metrics
-   = text reflow = CLS. This @font-face creates a "Playfair fallback" that uses
-   Georgia but with size-adjust / ascent / descent overrides that match Playfair's
-   actual metrics exactly. When Playfair finally loads, the swap is pixel-perfect.
-
-   Metrics calculated from Playfair Display Italic 400:
-   - unitsPerEm: 1000
-   - ascent: 1037 → 103.7%
-   - descent: 327 → 32.7%
-   - lineGap: 0
-   - xHeight ratio vs Georgia: ~0.908 → size-adjust: 110.25%
-*/
-@font-face {
-  font-family: 'Playfair fallback';
-  src: local('Georgia Italic'), local('Times New Roman Italic');
-  font-style: italic;
-  font-weight: 400;
-  size-adjust: 110.25%;
-  ascent-override: 94.07%;
-  descent-override: 29.66%;
-  line-gap-override: 0%;
-}
-
-/* Blog article drop cap — editorial first letter */
-article > p:first-of-type::first-letter {
-  font-size: 4.5rem;
-  font-family: var(--font-playfair);
-  font-weight: 700;
-  float: left;
-  line-height: 0.85;
-  margin-right: 0.4rem;
-  margin-top: 0.1rem;
-  color: #1C1917;
 }
 
 /* ── Footer social pills: no sticky hover on touch devices ──

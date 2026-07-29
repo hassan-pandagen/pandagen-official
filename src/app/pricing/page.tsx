@@ -1,23 +1,23 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import PricingPageClient from "./PricingPageClient";
+import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
-    title: { absolute: "Web Development Pricing: $1,500-$10K Fixed Tiers (2026)" },
-    description: "Fixed-price custom web development. Starter sites from $1,500, Growth migrations $3,500, Scale e-commerce $5K to $10K. 90+ PageSpeed guarantee or full refund.",
-    alternates: {
-        canonical: "/pricing",
-    },
+    title: { absolute: "Website Migration Pricing & Scope | PandaCodeGen" },
+    description: "Website migration packages start at $1,500, $3,500, and $5,000–$10,000, with pages and features adjusted in a written quote.",
+    alternates: alternatesFor("pricing", "en"),
     openGraph: {
-        title: "Fixed-Price Web Development: From $1,500 | PandaCodeGen",
-        description: "Starter $1,500, Growth $3,500, Scale $5K to $10K. Fixed pricing, no hourly rates. 90+ PageSpeed guaranteed or full refund.",
+        title: "Website Migration Pricing & Scope | PandaCodeGen",
+        description: "Migration packages start at $1,500, $3,500, and $5,000–$10,000, with exact scope confirmed in writing.",
         url: "https://www.pandacodegen.com/pricing",
         type: "website",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/pricing")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fixed-Price Web Development: From $1,500 | PandaCodeGen",
-        description: "Starter $1,500, Growth $3,500, Scale $5K to $10K. 90+ PageSpeed guarantee or full refund.",
+        title: "Website Migration Pricing & Scope | PandaCodeGen",
+        description: "Migration packages start at $1,500, $3,500, and $5,000–$10,000, with exact scope confirmed in writing.",
     },
 };
 

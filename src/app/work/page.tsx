@@ -1,23 +1,24 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import WorkPageClient from "./WorkPageClient";
 
 export const metadata: Metadata = {
-    title: "Our Work: Client Case Studies & Results",
-    description: "Real results from real migrations. See how we took MyCustomPatches from 45 to 90+ PageSpeed, cut hosting costs to $0, and delivered in under 2 weeks.",
+    title: "Project Evidence & Case-Study Methodology",
+    description: "The evidence, measurement, permission, and publication standard used before PandaCodeGen publishes migration and project outcomes.",
     alternates: {
         canonical: "/work",
     },
     openGraph: {
-        title: "Our Work: Client Case Studies & Results",
-        description: "Real results from real migrations. PageSpeed 45 to 90+. Hosting $150/mo to $0. Load time 3.2s to 0.7s.",
+        title: "Project Evidence & Case-Study Methodology | PandaCodeGen",
+        description: "How migration outcomes are measured, qualified, approved, and published.",
         url: "https://www.pandacodegen.com/work",
         type: "website",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/work")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Our Work: Client Case Studies & Results",
-        description: "Real results from real migrations. PageSpeed 45 to 90+. Hosting $0.",
+        title: "Project Evidence & Case-Study Methodology | PandaCodeGen",
+        description: "How migration outcomes are measured, qualified, approved, and published.",
     },
 };
 

@@ -1,299 +1,221 @@
-import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Code2, FileCheck2, Gauge, Route } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { ArrowLeft, ArrowRight, Code2, Target } from "lucide-react";
 import { blogPosts } from "@/data/blog";
+import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
-    title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
-    description: "Hassan Jamal is co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering from Karachi. 7+ years full-stack experience, 900+ public GitHub contributions in the past year.",
-    openGraph: {
-        title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
-        description: "Co-founder of PandaCodeGen. Austin LLC, global engineering from Karachi. Helping e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
-        type: "profile",
-        url: "https://www.pandacodegen.com/about/hassan",
-        images: [{ url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 }],
-    },
-    twitter: {
-        card: "summary",
-        title: "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
-        description: "Co-founder of PandaCodeGen. Austin LLC, global engineering from Karachi. Custom Next.js builds.",
-    },
-    alternates: { canonical: "/about/hassan" },
+  title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+  description: "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for SEO-safe website migrations, Next.js implementation, performance, and technical delivery.",
+  alternates: { canonical: "/about/hassan" },
+  openGraph: {
+    title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    description: "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery.",
+    type: "profile",
+    url: "https://www.pandacodegen.com/about/hassan",
+    images: [ogImageForPath("/about/hassan")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+    description: "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery.",
+    images: [ogImageForPath("/about/hassan")],
+  },
+  robots: { index: true, follow: true },
 };
 
-const personSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Person",
-            "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-            "name": "Hassan Jamal",
-            "givenName": "Hassan",
-            "familyName": "Jamal",
-            "jobTitle": "Co-founder and Lead Engineer",
-            "description": "Co-founder and Lead Engineer at PandaCodeGen, an Austin-headquartered custom Next.js studio with engineering operations from Karachi. 7+ years of full-stack experience, 900+ public GitHub contributions in the past year. Helps e-commerce brands ditch Shopify fees and WordPress bloat with high-performance custom code.",
-            "url": "https://www.pandacodegen.com/about/hassan",
-            "image": "https://www.pandacodegen.com/team/hassan.png",
-            "worksFor": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Austin",
-                "addressRegion": "Texas",
-                "addressCountry": "US",
-            },
-            "knowsAbout": [
-                "Custom Web Development", "Web Performance Optimization", "SEO",
-                "E-commerce Development", "Shopify Optimization", "WordPress Migration",
-                "Speed Optimization", "Core Web Vitals", "Custom Business Software", "Cloud Hosting",
-            ],
-            "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Karachi",
-                "alternateName": "Karachi University",
-            },
-            "sameAs": [
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://github.com/hassan-pandagen",
-                "https://clutch.co/profile/panda-code-gen",
-                "https://www.crunchbase.com/person/hassan-jamal",
-                "https://www.reddit.com/user/PandaCodeGen/",
-            ],
-        },
-        {
-            "@type": "ProfilePage",
-            "@id": "https://www.pandacodegen.com/about/hassan#webpage",
-            "url": "https://www.pandacodegen.com/about/hassan",
-            "name": "Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen",
-            "description": "Learn about Hassan Jamal, co-founder of PandaCodeGen. Six years building WordPress sites in Karachi before launching a custom Next.js studio in February 2026 with co-founder Imran Raza Ladhani. Austin LLC, global engineering from Karachi.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
-            "inLanguage": "en-US",
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/about/hassan#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.pandacodegen.com/about" },
-                { "@type": "ListItem", "position": 3, "name": "Hassan Jamal", "item": "https://www.pandacodegen.com/about/hassan" },
-            ],
-        },
-    ],
+const profileSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
+      name: "Hassan Jamal",
+      jobTitle: "Co-founder and Lead Engineer",
+      url: "https://www.pandacodegen.com/about/hassan",
+      worksFor: { "@id": "https://www.pandacodegen.com/#organization" },
+      sameAs: [
+        "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+        "https://github.com/hassan-pandagen",
+      ],
+      knowsAbout: [
+        "Next.js",
+        "Website migration",
+        "Technical SEO",
+        "Core Web Vitals",
+        "Accessibility",
+        "Web application engineering",
+      ],
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.pandacodegen.com/about/hassan#webpage",
+      url: "https://www.pandacodegen.com/about/hassan",
+      name: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
+      mainEntity: { "@id": "https://www.pandacodegen.com/#/schema/person/hassan" },
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://www.pandacodegen.com/about" },
+        { "@type": "ListItem", position: 3, name: "Hassan Jamal", item: "https://www.pandacodegen.com/about/hassan" },
+      ],
+    },
+  ],
 };
 
-const expertise = [
-    "Custom Website Engineering",
-    "SEO & Google Rankings",
-    "Speed & Performance Optimization",
-    "Custom Software Development",
-    "Shopify Speed Optimization",
-    "Business Tool & Dashboard Development",
-    "Cloud Hosting & Databases",
-    "WordPress & Platform Migrations",
-    "Strategic Planning",
-    "Business Strategy",
+const responsibilities = [
+  {
+    icon: Route,
+    title: "Migration implementation",
+    body: "Turn the approved URL, content, redirect, integration, analytics, and cutover plan into a testable production implementation.",
+  },
+  {
+    icon: Code2,
+    title: "Engineering delivery",
+    body: "Build and review the Next.js application, content interfaces, forms, integrations, and repository handover defined in the project scope.",
+  },
+  {
+    icon: Gauge,
+    title: "Measured quality",
+    body: "Record the agreed devices, pages, runs, accessibility checks, and performance conditions instead of presenting a single lab score as a business outcome.",
+  },
 ];
 
-const builds = [
-    { title: "Custom Coded Storefronts", desc: "Online stores that score 90+ on Google PageSpeed out of the box. Vercel hosting starts free." },
-    { title: "Shopify Plus & WordPress Migrations", desc: "Replace $3,200/month in platform fees with custom code. Same features. Zero app fees. PageSpeed from 31 to 92." },
-    { title: "Admin Dashboards & SaaS", desc: "Admin dashboards that replace $500+/mo in SaaS apps. Built with enterprise level architecture and bank-level security." },
-    { title: "Speed & Cost Audits", desc: "Free speed and cost audit for e-commerce stores paying $1,000+/month in platform fees and still loading in 3+ seconds." },
-];
+export default function HassanProfilePage() {
+  const recentPosts = blogPosts.filter((post) => post.author === "Hassan").slice(0, 6);
 
-export default function HassanAuthorPage() {
-    const hassanPosts = blogPosts.filter(p => p.author === "Hassan");
+  return (
+    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
+      <Header />
 
-    return (
-        <main className="bg-paper min-h-screen">
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-            <Header />
-
-            <div className="pt-20 md:pt-40 pb-12 md:pb-24 px-6">
-                <div className="container mx-auto max-w-5xl">
-
-                    {/* Back */}
-                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-6 md:mb-12 font-medium">
-                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        Back to Team
-                    </Link>
-
-                    {/* Hero */}
-                    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start mb-10 md:mb-24">
-                        <div className="w-full max-w-[280px] mx-auto md:mx-0 md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
-                            <Image
-                                src="/team/hassan.png"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 256px"
-                                alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen"
-                                className="object-cover object-top"
-                                priority
-                            />
-                        </div>
-
-                        <div className="flex-1 pt-2">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
-                                Co-founder &amp; Lead Engineer
-                            </div>
-                            <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Hassan Jamal.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Full-Stack Architect &middot; Austin LLC &middot; Engineering from Karachi</p>
-                            <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I built WordPress sites for six years before I got tired of watching clients pay $3,000 a month in plugin fees for sites that loaded in four seconds. I co-founded PandaCodeGen in February 2026 with Imran Raza Ladhani to do it differently. We run an Austin LLC with engineering from Karachi. On one Shopify Plus project, a client was paying $3,200/month with a PageSpeed score of 31. We migrated them to custom code. Same features. Zero app fees. PageSpeed jumped from 31 to 92. On a separate WordPress migration for Matt Conner at MyCustomPatches, PageSpeed went from 45 to 90+ and hosting dropped from $150/month to $0.
-                            </p>
-                            <div className="flex flex-wrap gap-3">
-                                <a
-                                    href="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
-                                >
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                                    LinkedIn
-                                </a>
-                                <a
-                                    href="https://github.com/hassan-pandagen"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:bg-cognac hover:text-white hover:border-cognac transition-all"
-                                >
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Skills Grid */}
-                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-16">
-                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Code2 className="w-5 h-5 text-cognac" />
-                                <h3 className="text-xl font-serif text-charcoal">Technical Expertise</h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {expertise.map((skill) => (
-                                    <span key={skill} className="px-3 py-1 bg-stone-50 border border-stone-100 text-stone-600 text-sm font-medium rounded-md">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Target className="w-5 h-5 text-cognac" />
-                                <h3 className="text-xl font-serif text-charcoal">What I Build</h3>
-                            </div>
-                            <ul className="space-y-4">
-                                {builds.map((item) => (
-                                    <li key={item.title} className="border-t border-stone-100 pt-4 first:border-0 first:pt-0">
-                                        <div className="font-bold text-charcoal text-sm mb-1">{item.title}</div>
-                                        <div className="text-stone-500 text-xs leading-relaxed">{item.desc}</div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Trust Signals & Credentials */}
-                    <section className="mb-10 md:mb-16 p-6 md:p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                        <h3 className="text-xl font-serif text-charcoal mb-6">Credentials &amp; Press</h3>
-                        <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
-                            <p><strong>Quoted as an AI expert in <a href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Woman&apos;s World</a></strong> (1.6M readers), 2026.</p>
-                            <p><strong>Client reviews:</strong> all 5-star, including a verified Clutch review from MyCustomPatches (Matt Conner) and Trustpilot reviews from James Peace and Marshall James.</p>
-                            <p><strong>31 published articles</strong> on web performance, SEO, and e-commerce migration. Every article uses first-hand data from real client projects, not generic advice.</p>
-                            <p><strong>Education:</strong> University of Karachi (Karachi University).</p>
-                        </div>
-                        <div className="flex flex-wrap gap-3 mt-6">
-                            <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Clutch</a>
-                            <a href="https://www.crunchbase.com/person/hassan-jamal" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Crunchbase</a>
-                            <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">GoodFirms</a>
-                            <a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 text-stone-600 text-xs font-bold rounded-full hover:border-cognac/40 transition-all">Trustpilot</a>
-                        </div>
-                    </section>
-
-                    {/* Client Reviews */}
-                    <section className="mb-10 md:mb-16">
-                        <h3 className="text-xl font-serif text-charcoal mb-6">What Clients Say</h3>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="p-6 bg-white border border-stone-200 rounded-2xl">
-                                <div className="flex items-center gap-1 mb-3">
-                                    {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
-                                </div>
-                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 45 to 90+. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover.&quot;</p>
-                                <p className="text-xs font-bold text-charcoal">Matt Conner, MyCustomPatches LLC (WordPress migration)</p>
-                            </div>
-                            <div className="p-6 bg-white border border-stone-200 rounded-2xl">
-                                <div className="flex items-center gap-1 mb-3">
-                                    {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>)}
-                                </div>
-                                <p className="text-stone-600 text-sm leading-relaxed mb-3">&quot;I was not sure at first. Can a custom website really be built for $300 with no costs? Hassan showed me it can be done. They worked with me to make a website that I could afford. No costs or extra fees. PandaCodeGen and Hassan are good at what they do.&quot;</p>
-                                <p className="text-xs font-bold text-charcoal">James Peace</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Articles */}
-                    {hassanPosts.length > 0 && (
-                        <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
-                            <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Hassan</h2>
-                            <p className="text-stone-500 mb-8">Technical deep-dives on web performance, SEO, and modern architecture.</p>
-                            <div className="grid gap-3">
-                                {hassanPosts.map((post) => (
-                                    <Link
-                                        key={post.id}
-                                        href={`/blog/${post.id}`}
-                                        className="group flex items-center justify-between p-5 rounded-xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all duration-300"
-                                    >
-                                        <div>
-                                            <h3 className="text-charcoal font-medium group-hover:text-cognac transition-colors mb-1">{post.title}</h3>
-                                            <div className="flex items-center gap-3 text-xs text-stone-400">
-                                                <span>{post.category}</span>
-                                                <span>&middot;</span>
-                                                <span>{post.readTime}</span>
-                                                <span>&middot;</span>
-                                                <span>{post.date}</span>
-                                            </div>
-                                        </div>
-                                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors shrink-0 ml-4" />
-                                    </Link>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {/* CTA */}
-                    <section className="text-center py-10 md:py-16 bg-white border border-stone-300 rounded-3xl px-6 md:px-8">
-                        <h2 className="text-2xl font-serif text-charcoal mb-4">Work With Me</h2>
-                        <p className="text-stone-500 mb-8 max-w-md mx-auto">No account managers. You talk directly to the engineer building your product.</p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button
-                                data-cal-namespace="discovery"
-                                data-cal-link="pandagen/discovery"
-                                data-cal-config='{"layout":"month_view"}'
-                                className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
-                            >
-                                Book a Call
-                            </button>
-                            <Link
-                                href="/about"
-                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
-                            >
-                                Meet the Full Team
-                            </Link>
-                        </div>
-                    </section>
-
-                </div>
+      <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
+        <div className="mx-auto max-w-6xl">
+          <Link href="/about" className="inline-flex min-h-11 items-center text-sm font-semibold text-stone-700 hover:text-cognac">
+            Back to PandaCodeGen
+          </Link>
+          <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div className="flex aspect-square max-w-sm items-end overflow-hidden rounded-[2.5rem] border border-stone-300 bg-charcoal p-8 text-white shadow-elevated">
+              <div>
+                <p className="font-serif text-8xl font-normal italic text-orange-300" aria-hidden="true">H</p>
+                <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-300">Engineering lead</p>
+              </div>
             </div>
-            <Footer />
-        </main>
-    );
+            <div className="border-l-2 border-cognac pl-5 md:pl-8">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Engineer</p>
+              <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Hassan Jamal</h1>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
+                Hassan leads implementation at PandaCodeGen. His work covers SEO-safe website migrations, custom Next.js applications, performance engineering, technical QA, and the handover required to keep clients in control of their platform.
+              </p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
+                  Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
+                  Review public GitHub activity
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="hassan-responsibilities">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Delivery responsibility</p>
+          <h2 id="hassan-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">Engineering follows the written migration plan.</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {responsibilities.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
+                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+                <h3 className="mt-5 text-xl font-bold">{title}</h3>
+                <p className="mt-3 leading-7 text-stone-700">{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="hassan-standard">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <FileCheck2 className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <h2 id="hassan-standard" className="mt-5 text-3xl font-bold md:text-5xl">What the engineering claim should mean</h2>
+          </div>
+          <ul className="space-y-4">
+            {[
+              "URLs, redirects, canonicals, metadata, and structured data are checked against an inventory.",
+              "Performance is measured on the pages, profiles, and conditions agreed for acceptance.",
+              "Rankings, revenue, field traffic, and third-party behavior are monitored outcomes, not universal guarantees.",
+              "The client receives the repository, accounts, documentation, and licenses described in the accepted terms.",
+            ].map((item) => (
+              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
+                <span className="leading-7">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Independent press. This is one of the few third-party citations we have, so
+          it is stated plainly with the link doing the work. No readership or reach
+          figure: the article is checkable, an audience number is not. */}
+      <section className="px-6 pt-16 md:pt-24" aria-labelledby="hassan-press">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Press</p>
+          <h2 id="hassan-press" className="mt-3 text-3xl font-bold md:text-4xl">Quoted as an AI expert</h2>
+          <div className="mt-6 rounded-2xl border border-stone-300 bg-stone-50 p-6 md:p-8">
+            <p className="text-lg leading-8 text-stone-700">
+              <a
+                href="https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-serif text-xl italic text-cognac underline decoration-cognac/40 underline-offset-4 transition-colors hover:decoration-cognac"
+              >
+                Woman&rsquo;s World
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>{" "}
+              quoted Hassan Jamal, co-founder and lead engineer at PandaCodeGen, on how remote AI-training
+              work actually operates. The article is public, names him directly, and links back here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="hassan-writing">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Engineering journal</p>
+              <h2 id="hassan-writing" className="mt-3 text-3xl font-bold md:text-5xl">Recent articles by Hassan</h2>
+            </div>
+            <Link href="/blog" className="inline-flex min-h-11 items-center gap-2 font-bold text-charcoal hover:text-cognac">
+              Browse all articles <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {recentPosts.map((post) => (
+              <article key={post.id} className="flex flex-col rounded-3xl border border-stone-300 bg-white p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{post.category}</p>
+                <h3 className="mt-3 text-xl font-bold leading-snug">{post.title}</h3>
+                <p className="mt-3 line-clamp-3 leading-7 text-stone-700">{post.excerpt}</p>
+                <Link href={`/blog/${post.id}`} className="mt-6 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
+                  Read article <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
 }

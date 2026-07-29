@@ -1,7 +1,15 @@
 import coreWebVitals from "eslint-config-next/core-web-vitals";
 
 const config = [
-  { ignores: [".next/**", "out/**", "public/_pagefind/**", "next-env.d.ts"] },
+  {
+    ignores: [
+      ".next/**",
+      ".next-audit/**",
+      "out/**",
+      "public/_pagefind/**",
+      "next-env.d.ts",
+    ],
+  },
   ...coreWebVitals,
   {
     rules: {

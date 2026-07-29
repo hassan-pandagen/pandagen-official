@@ -1,202 +1,194 @@
-import { Resend } from 'resend';
-import { NextRequest, NextResponse } from 'next/server';
+import { createHash } from "node:crypto";
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+import {
+  AuditRateLimitConfigurationError,
+  claimQuoteSubmission,
+  enforceQuoteRateLimit,
+  releaseQuoteSubmission,
+  type QuoteSubmissionClaim,
+} from "@/lib/audit/auditRateLimit";
+import {
+  assertSameOriginQuoteRequest,
+  QuoteRequestError,
+  readBoundedQuoteFormData,
+  readQuoteHoneypot,
+  validateQuoteScalarFields,
+} from "@/lib/forms/quoteRequest";
 
-// Lazy-init: a module-level `new Resend(...)` throws during `next build`
-// page-data collection when RESEND_API_KEY is absent locally.
 let resendClient: Resend | null = null;
 function getResend(): Resend {
   if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
   return resendClient;
 }
 
-// Escape HTML special characters to prevent injection in email templates
-function escHtml(str: string | null | undefined): string {
-  if (!str) return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;');
+function escHtml(value: string | null | undefined): string {
+  if (!value) return "";
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
 }
 
-const ALLOWED_MIME_TYPES = new Set([
-  'application/pdf',
-  'application/msword',
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-  'image/png',
-  'image/jpeg',
-  'application/zip',
-  'application/x-zip-compressed',
-]);
-
-const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
-const MAX_TOTAL_SIZE = 25 * 1024 * 1024; // 25 MB
-const MAX_FILES = 3;
+function detailRow(label: string, value: string): string {
+  if (!value) return "";
+  return `<p style="margin:10px 0"><strong>${escHtml(label)}:</strong> ${escHtml(value)}</p>`;
+}
 
 export async function POST(request: NextRequest) {
+  let quoteClaim: QuoteSubmissionClaim | null = null;
+  let emailSent = false;
+
   try {
-    const formData = await request.formData();
+    assertSameOriginQuoteRequest(request);
 
-    // Anti-spam: honeypot field check
-    const honeypot = formData.get('website_url_confirm') as string;
-    if (honeypot) {
-      // Bot filled the hidden field - return fake success
-      return NextResponse.json({ success: true, message: 'Quote request sent successfully' }, { status: 200 });
-    }
-
-    // Anti-spam: time-based check (reject if submitted in under 3 seconds)
-    const formTimestamp = formData.get('_t') as string;
-    if (formTimestamp) {
-      const elapsed = Date.now() - Number(formTimestamp);
-      if (elapsed < 3000) {
-        return NextResponse.json({ success: true, message: 'Quote request sent successfully' }, { status: 200 });
-      }
-    }
-
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const phone = formData.get('phone') as string;
-    const service = formData.get('service') as string;
-    const details = formData.get('details') as string;
-
-    // Source tracking fields
-    const trafficSource = formData.get('trafficSource') as string;
-    const trafficMedium = formData.get('trafficMedium') as string;
-    const trafficCampaign = formData.get('trafficCampaign') as string;
-    const landingPage = formData.get('landingPage') as string;
-    const firstVisit = formData.get('firstVisit') as string;
-
-    // Validate required fields
-    if (!name || !email || !phone) {
+    const rateLimit = await enforceQuoteRateLimit(request);
+    if (!rateLimit.allowed) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: "Too many quote requests. Please try again later." },
+        {
+          status: 429,
+          headers: {
+            "Cache-Control": "no-store",
+            "Retry-After": String(rateLimit.retryAfterSeconds),
+            "X-RateLimit-Backend": rateLimit.backend,
+          },
+        }
       );
     }
 
-    // Validate email format
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const formData = await readBoundedQuoteFormData(request);
+    if (readQuoteHoneypot(formData)) {
       return NextResponse.json(
-        { error: 'Invalid email address' },
-        { status: 400 }
+        { success: true, message: "Quote request sent successfully" },
+        { status: 200, headers: { "Cache-Control": "no-store" } }
       );
     }
 
-    // Prepare attachments with server-side validation
-    const attachments: { filename: string; content: Buffer }[] = [];
-    const files = formData.getAll('file') as File[];
+    const fields = validateQuoteScalarFields(formData);
+    const submissionFingerprint = createHash("sha256")
+      .update(JSON.stringify({
+        name: fields.name,
+        email: fields.email,
+        phone: fields.phone,
+        service: fields.service,
+        details: fields.details,
+        currentUrl: fields.currentUrl,
+        currentPlatform: fields.currentPlatform,
+        primaryGoal: fields.primaryGoal,
+        trafficBand: fields.trafficBand,
+        timeline: fields.timeline,
+        budget: fields.budget,
+        trafficSource: fields.trafficSource,
+        trafficMedium: fields.trafficMedium,
+        trafficCampaign: fields.trafficCampaign,
+        landingPage: fields.landingPage,
+        firstVisit: fields.firstVisit,
+      }))
+      .digest("hex");
 
-    if (files.length > MAX_FILES) {
+    quoteClaim = await claimQuoteSubmission(request, submissionFingerprint);
+    if (!quoteClaim.acquired) {
       return NextResponse.json(
-        { error: 'Maximum 3 files allowed' },
-        { status: 400 }
+        { success: true, message: "Quote request sent successfully" },
+        { status: 200, headers: { "Cache-Control": "no-store" } }
       );
     }
 
-    let totalSize = 0;
-    for (const file of files) {
-      if (file && file.size > 0) {
-        // Validate MIME type
-        if (!ALLOWED_MIME_TYPES.has(file.type)) {
-          return NextResponse.json(
-            { error: 'Invalid file type. Allowed: PDF, DOC, DOCX, PNG, JPG, ZIP' },
-            { status: 400 }
-          );
-        }
-        // Validate file size
-        if (file.size > MAX_FILE_SIZE) {
-          return NextResponse.json(
-            { error: 'File exceeds 10 MB limit' },
-            { status: 400 }
-          );
-        }
-        totalSize += file.size;
-        if (totalSize > MAX_TOTAL_SIZE) {
-          return NextResponse.json(
-            { error: 'Total file size exceeds 25 MB limit' },
-            { status: 400 }
-          );
-        }
-        // Sanitize filename — strip path traversal characters
-        const safeFilename = file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 100);
-        const bytes = await file.arrayBuffer();
-        attachments.push({
-          filename: safeFilename,
-          content: Buffer.from(bytes),
-        });
-      }
-    }
+    const safeEmail = escHtml(fields.email);
+    const safePhone = escHtml(fields.phone);
 
-    // Escape all user-supplied values before embedding in HTML email
-    const safeName = escHtml(name);
-    const safeEmail = escHtml(email);
-    const safePhone = escHtml(phone);
-    const safeService = escHtml(service);
-    const safeDetails = escHtml(details);
-    const safeSource = escHtml(trafficSource);
-    const safeMedium = escHtml(trafficMedium);
-    const safeCampaign = escHtml(trafficCampaign);
-    const safeLanding = escHtml(landingPage);
+    // The localized hero form tags its submissions so we answer in the language the
+    // visitor actually used. This goes in the subject, not just a row in the body,
+    // so the language is visible in the inbox list before the mail is opened.
+    const localeNames: Record<string, string> = { FR: "French", DE: "German" };
+    const localeCode = /\((FR|DE)\)\s*$/.exec(fields.service)?.[1] ?? "";
+    const replyLanguage = localeNames[localeCode] ?? "English";
+    const subjectPrefix = localeCode ? `[${localeCode}] ` : "";
 
-    // Send email via Resend
     const response = await getResend().emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'noreply@pandagen.com',
-      to: 'info@pandacodegen.com',
-      replyTo: email,
-      subject: `New Quote Request from ${safeName}`,
+      from: process.env.RESEND_FROM_EMAIL || "noreply@pandacodegen.com",
+      to: process.env.QUOTE_RECIPIENT_EMAIL || "info@pandacodegen.com",
+      replyTo: fields.email,
+      subject: `${subjectPrefix}New website request from ${fields.name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f9f9f9; padding: 20px; border-radius: 8px;">
-          <h2 style="color: #3B82F6; margin-bottom: 20px;">🎉 New Quote Request</h2>
-
-          <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
-            <p style="margin: 10px 0;"><strong>Name:</strong> ${safeName}</p>
-            <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
-            <p style="margin: 10px 0;"><strong>Phone:</strong> <a href="tel:${safePhone}">${safePhone}</a></p>
-            ${safeService && safeService !== 'Select a service...' ? `<p style="margin: 10px 0;"><strong>Service:</strong> ${safeService}</p>` : ''}
-            ${safeDetails ? `<p style="margin: 10px 0;"><strong>Project Details:</strong></p><p style="background: #f5f5f5; padding: 10px; border-radius: 4px; white-space: pre-wrap;">${safeDetails}</p>` : ''}
-            ${attachments.length > 0 ? `<p style="margin: 10px 0;"><strong>Attachments (${attachments.length}):</strong></p><ul style="margin: 5px 0; padding-left: 20px;">${attachments.map(a => `<li>${escHtml(a.filename)}</li>`).join('')}</ul>` : ''}
+        <div style="font-family:Arial,sans-serif;max-width:680px;margin:0 auto;background:#f5f5f4;padding:24px;border-radius:12px;color:#1c1917">
+          <h2 style="margin:0 0 20px">New website request</h2>
+          ${localeCode ? `<p style="margin:0 0 16px;padding:12px 14px;background:#7c4a2d;color:#fff;border-radius:8px;font-weight:bold">Submitted from the ${replyLanguage} site. Reply in ${replyLanguage}.</p>` : ""}
+          <div style="background:#fff;padding:20px;border-radius:8px">
+            ${detailRow("Name", fields.name)}
+            ${detailRow("Reply language", replyLanguage)}
+            <p style="margin:10px 0"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
+            <p style="margin:10px 0"><strong>Phone:</strong> ${safePhone ? `<a href="tel:${safePhone}">${safePhone}</a>` : "Not provided"}</p>
+            ${detailRow("Current website", fields.currentUrl)}
+            ${detailRow("Current platform", fields.currentPlatform)}
+            ${detailRow("Primary goal", fields.primaryGoal)}
+            ${detailRow("Monthly traffic", fields.trafficBand)}
+            ${detailRow("Timeline", fields.timeline)}
+            ${detailRow("Indicative budget", fields.budget)}
+            ${detailRow("Service", fields.service)}
+            ${fields.details ? `<p style="margin:14px 0 6px"><strong>Project details:</strong></p><p style="white-space:pre-wrap;background:#f5f5f4;padding:12px;border-radius:6px">${escHtml(fields.details)}</p>` : ""}
           </div>
-
-          ${safeSource ? `
-          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 8px; margin-bottom: 15px; color: white;">
-            <h3 style="margin: 0 0 15px 0; font-size: 16px; display: flex; align-items: center;">
-              📊 Traffic Source
-            </h3>
-            <div style="background: rgba(255,255,255,0.1); padding: 12px; border-radius: 6px; backdrop-filter: blur(10px);">
-              <p style="margin: 6px 0; font-size: 14px;"><strong>Source:</strong> ${safeSource}</p>
-              <p style="margin: 6px 0; font-size: 14px;"><strong>Medium:</strong> ${safeMedium}</p>
-              ${safeCampaign && safeCampaign !== 'none' ? `<p style="margin: 6px 0; font-size: 14px;"><strong>Campaign:</strong> ${safeCampaign}</p>` : ''}
-              ${safeLanding ? `<p style="margin: 6px 0; font-size: 14px;"><strong>Landing Page:</strong> ${safeLanding}</p>` : ''}
-              ${firstVisit ? `<p style="margin: 6px 0; font-size: 14px;"><strong>First Visit:</strong> ${new Date(firstVisit).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>` : ''}
+          ${fields.trafficSource || fields.landingPage ? `
+            <div style="margin-top:16px;background:#fff;padding:16px;border-radius:8px">
+              <h3 style="margin:0 0 10px;font-size:15px">Attribution</h3>
+              ${detailRow("Source", fields.trafficSource)}
+              ${detailRow("Medium", fields.trafficMedium)}
+              ${detailRow("Campaign", fields.trafficCampaign)}
+              ${detailRow("Landing page", fields.landingPage)}
+              ${detailRow("First visit", fields.firstVisit)}
             </div>
-          </div>
-          ` : ''}
-
-          <div style="background: #3B82F6; color: white; padding: 15px; border-radius: 8px; text-align: center;">
-            <p style="margin: 0; font-size: 14px;">This is a lead from your website. Reply directly to ${safeEmail}</p>
-          </div>
+          ` : ""}
+          <p style="margin:16px 0 0;font-size:12px;color:#57534e">Reply directly to the requester. This form intentionally does not accept attachments.</p>
         </div>
       `,
-      attachments,
+    }, {
+      idempotencyKey: `quote-${submissionFingerprint}`,
     });
 
     if (response.error) {
+      await releaseQuoteSubmission(quoteClaim);
+      quoteClaim = null;
       return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
+        { error: "Failed to send email" },
+        { status: 500, headers: { "Cache-Control": "no-store" } }
       );
     }
 
+    emailSent = true;
     return NextResponse.json(
-      { success: true, message: 'Quote request sent successfully' },
-      { status: 200 }
+      { success: true, message: "Quote request sent successfully" },
+      { status: 200, headers: { "Cache-Control": "no-store" } }
     );
   } catch (error) {
-    console.error('Form submission error:', error);
+    if (quoteClaim?.acquired && !emailSent) {
+      try {
+        await releaseQuoteSubmission(quoteClaim);
+      } catch (releaseError) {
+        console.error("Quote idempotency release failed:", releaseError);
+      }
+    }
+
+    if (error instanceof QuoteRequestError) {
+      return NextResponse.json(
+        { error: error.message },
+        { status: error.status, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+    if (error instanceof AuditRateLimitConfigurationError) {
+      console.error("Quote rate-limit/idempotency error:", error);
+      return NextResponse.json(
+        { error: "Quote submission is temporarily unavailable. Please try again later." },
+        { status: 503, headers: { "Cache-Control": "no-store", "Retry-After": "60" } }
+      );
+    }
+
+    console.error("Form submission error:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500, headers: { "Cache-Control": "no-store" } }
     );
   }
 }

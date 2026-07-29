@@ -1,11 +1,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// TOPICAL MAP — single source of truth for semantic relationships
+// TOPICAL MAP: single source of truth for semantic relationships
 // ─────────────────────────────────────────────────────────────────────────────
 // Implements the Koray Tuğberk Gübür Semantic SEO model as DATA, so internal
 // linking, related-content ranking, and topical boundaries are derived from one
 // place instead of being re-asserted by hand on every page.
 //
-// IMPORTANT: This module is intentionally framework-pure — NO `server-only`, NO
+// IMPORTANT: This module is intentionally framework-pure: NO `server-only`, NO
 // import of `@/data/blog` (which is server-only). It is keyed by string ids so it
 // can be imported by BOTH server components (RelatedPosts) and client components
 // (RelatedServicesGrid renders inside "use client" service pages). Map post ids
@@ -45,12 +45,12 @@ export interface Cluster {
   entityIds: string[];
   /** Supporting blog post ids (a post may live in multiple clusters). */
   postIds: string[];
-  /** Topically adjacent clusters — drives horizontal internal-link flow. */
+  /** Topically adjacent clusters that drive horizontal internal-link flow. */
   relatedClusterIds: string[];
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// ENTITIES — core entity model with attribute tiers
+// ENTITIES: core entity model with attribute tiers
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const entities: Record<string, Entity> = {
@@ -60,15 +60,10 @@ export const entities: Record<string, Entity> = {
     type: 'Organization',
     pillarHref: '/',
     attributes: {
-      popular: ['custom website cost', 'pagespeed guarantee', 'code ownership', 'fixed pricing'],
-      prominent: ['Next.js agency', 'AEO/GEO engineering', 'SaaS cost reduction', '90+ PageSpeed refund guarantee'],
+      popular: ['custom website scope', 'performance acceptance criteria', 'code ownership terms', 'project pricing'],
+      prominent: ['Next.js engineering', 'search-ready content', 'software operating cost', 'performance measurement'],
       relevant: ['Sanity CMS', 'Vercel hosting', 'server-side ad tracking', 'white-label for agencies'],
     },
-    sameAs: [
-      'https://clutch.co/profile/panda-code-gen',
-      'https://www.trustpilot.com/review/pandacodegen.com',
-      'https://www.linkedin.com/company/pandacodegen',
-    ],
   },
   nextjs: {
     id: 'nextjs',
@@ -195,7 +190,7 @@ export const entities: Record<string, Entity> = {
     id: 'aeo',
     name: 'Answer Engine Optimization (AEO/GEO)',
     type: 'Thing',
-    pillarHref: '/ai-info',
+    pillarHref: '/editorial-policy',
     attributes: {
       popular: ['get cited by ChatGPT', 'AI search', 'show up in AI overviews'],
       prominent: ['llms.txt', 'structured data', 'speakable', 'entity trust'],
@@ -215,7 +210,7 @@ export const entities: Record<string, Entity> = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// CLUSTERS — pillar → supporting content, with horizontal adjacency
+// CLUSTERS: pillar → supporting content, with horizontal adjacency
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const clusters: Cluster[] = [
@@ -228,7 +223,7 @@ export const clusters: Cluster[] = [
     postIds: [
       'wordpress-april-2026-evidence', 'divi-theme-slow', 'cloudflare-emdash-wordpress-replacement',
       'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-vs-nextjs',
-      'why-we-chose-nextjs-over-wordpress-2026', 'wordpress-vs-custom-code-real-cost-3-years',
+      'why-we-chose-nextjs-over-wordpress-2026', 'nextjs-sanity-stack', 'wordpress-vs-custom-code-real-cost-3-years',
       'wordpress-ai-security-risk-2026', 'wordpress-killer', 'elementor-kills-seo',
       'wordpress-plugins-destroy-speed', 'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',
     ],
@@ -343,7 +338,7 @@ export const clusters: Cluster[] = [
   {
     id: 'seo-aeo',
     label: 'SEO & Answer Engine Optimization',
-    pillarHref: '/ai-info',
+    pillarHref: '/editorial-policy',
     entityIds: ['aeo', 'core-web-vitals'],
     relatedClusterIds: ['performance', 'migration'],
     postIds: [
@@ -372,7 +367,7 @@ export const clusters: Cluster[] = [
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
-// TOPICAL BOUNDARY — defines the site's context vector (what's in/out of scope).
+// TOPICAL BOUNDARY: defines the site's context vector (what's in/out of scope).
 // Used to keep content authoring inside the topical border and avoid dilution.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -384,7 +379,7 @@ export const topicalBoundary = {
     'answer engine optimization (AEO/GEO) & being cited by AI',
     'custom engineering (e-commerce, dashboards, APIs)',
   ],
-  // Explicitly OUT of scope — do not create content here (dilutes topical authority).
+  // Explicitly OUT of scope; do not create content here (dilutes topical authority).
   excluded: [
     'general marketing/social-media management',
     'paid-ads campaign management (we build tracking, we do not run accounts)',

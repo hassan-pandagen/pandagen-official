@@ -1,480 +1,528 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, TrendingUp, RefreshCw } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, BarChart3, FlaskConical, Gauge, Route } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "shopify-conversion-rate-speed-fix")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const SalesImpactAnimation = lazyLoad(() => import("@/components/blog/SalesImpactAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
-const QuoteModalButton = lazyLoad(() => import("@/components/ui/QuoteModalButton"));
+const postId = "shopify-conversion-rate-speed-fix";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "Low Shopify Conversion Rate? Measure Speed in the Funnel";
+const description =
+    "Diagnose Shopify conversion and performance together by route, device, traffic source, funnel stage and release instead of assuming load time caused the result.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Low Shopify Conversion Rate? Speed Hurts Sales",
-    description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Cart abandonment spikes specifically at checkout-page speed thresholds. Here is the funnel-level fix.",
-    alternates: { canonical: "/blog/shopify-conversion-rate-speed-fix" },
-    keywords: ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify checkout abandonment", "shopify cro speed"],
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "Shopify conversion rate",
+        "Shopify speed conversion",
+        "Shopify funnel analysis",
+        "Shopify Core Web Vitals",
+        "Shopify performance testing",
+    ],
     openGraph: {
-        title: "Low Shopify Conversion Rate? How Checkout Speed Hurts Sales",
-        description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Cart abandonment spikes specifically at checkout-page speed thresholds. Here is the funnel-level fix.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-02-11T00:00:00-05:00",
+        publishedTime: "2026-02-11",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/shopify-conversion-rate-speed-fix")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Low Shopify Conversion Rate? How Checkout Speed Hurts Sales",
-        description: "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Cart abandonment spikes specifically at checkout-page speed thresholds. Here is the funnel-level fix.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    {
+        name: "Shopify: conversion rate breakdown report",
+        url: "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports",
+    },
+    {
+        name: "Shopify: measuring marketing performance",
+        url: "https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/marketing-performance",
+    },
+    {
+        name: "Shopify: web performance reports",
+        url: "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports",
+    },
+    {
+        name: "Shopify: improving web performance",
+        url: "https://help.shopify.com/en/manual/online-store/web-performance/improving-web-performance",
+    },
+    {
+        name: "Shopify: Storefront API reference",
+        url: "https://shopify.dev/docs/api/storefront",
+    },
+    {
+        name: "Shopify: theme performance guidance",
+        url: "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
+    },
+    { name: "Google web.dev: Web Vitals", url: "https://web.dev/articles/vitals" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#article",
-            "headline": "Low Shopify Conversion Rate? How Checkout Speed Hurts Sales",
-            "description": "Your Shopify conversion rate is stuck at 1.4% because your store loads in 4 seconds. Cart abandonment spikes specifically at checkout-page speed thresholds. Here is the funnel-level fix.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-11T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-02-11",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix" },
-            "articleSection": "Shopify",
-            "keywords": ["shopify conversion rate", "low shopify conversion rate", "shopify speed conversion", "improve shopify conversion rate", "shopify cro speed"],
-            "timeRequired": "PT15M",
-            "wordCount": 2800,
-            "about": [
-                { "@type": "Thing", "name": "Shopify Conversion Rate Optimisation" },
-                { "@type": "Thing", "name": "Checkout Abandonment" },
-                { "@type": "Thing", "name": "Shopify" },
-                { "@type": "Thing", "name": "E-Commerce Speed Optimisation" },
-                { "@type": "Thing", "name": "Core Web Vitals E-Commerce" }
-            ],
-            "inLanguage": "en-US",
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Think With Google. Speed and Conversion", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Shopify Storefront API", "url": "https://shopify.dev/docs/api/storefront" },
-                { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
-                { "@type": "CreativeWork", "name": "Next.js Commerce", "url": "https://nextjs.org/commerce" },
-                { "@type": "CreativeWork", "name": "PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent Research: Site speed impact on conversion rates", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
-            ]
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Shopify Conversion Rate Speed Fix", "item": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#webpage",
-            "url": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
-            "name": "Low Shopify Conversion Rate? Checkout Speed Is Killing Your Sales",
-            "description": "The average Shopify store converts at 1.4%. Cart abandonment spikes specifically at checkout-page speed thresholds. Your conversion rate problem is a funnel-level speed problem.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-11T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb" },
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Shopify analytics",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#faq",
-            "mainEntity": postFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
+
+const sourceLinkClass =
+    "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function ShopifyConversionRateSpeedFixPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Shopify Conversion Rate Fix", href: "/blog/shopify-conversion-rate-speed-fix" }
-                    ]} />
-
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Shopify conversion and speed", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    {/* Title & Meta */}
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
-                            <TrendingUp className="w-3 h-3" />
-                            Conversion · E-Commerce
-                        </div>
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-charcoal">
-                            Low Shopify Conversion Rate?{" "}
-                            <span className="font-serif italic text-cognac">How Speed Kills Your Sales</span>{" "}
-                            (Fix Guide, 2026)
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify analytics</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Low Shopify Conversion Rate? <span className="italic text-cognac">Measure Speed in the Funnel</span>
                         </h1>
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The average Shopify store converts at 1.4%, but fast stores hit 3 to 5%. The biggest losses concentrate at the checkout page specifically, where a slow load costs you a visitor who already had a cart. Here is the funnel-level breakdown of where speed is losing you sales.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            A slow experience can obstruct shopping, but a conversion rate does not reveal its cause.
+                            Segment performance and funnel behavior together, control other changes and test a defined
+                            intervention before assigning revenue to speed.
                         </p>
-                        <BlogAuthor
-                            date="Feb 11, 2026"
-                            readTime="9 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                        </p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="12 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Do not diagnose from one average</h2>
+                        <BlogList
+                            items={[
+                                "Conversion rate changes with device, market, traffic source, product, price, inventory, promotion and customer intent.",
+                                "Performance changes with route, device, connection, geography, consent state, apps, media and release.",
+                                "A useful analysis joins those dimensions and preserves the reporting definitions.",
+                                "A useful test changes one defined system, checks guardrails and records uncertainty.",
+                            ]}
                         />
-                    </div>
-
-                    {/* Animation */}
-                    <div className="mb-12"><SalesImpactAnimation /></div>
-
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "Every additional second of load time reduces Shopify conversions by 7%, compounding losses at scale.",
-                            "A store loading in 1 second converts at 3.05%. The same store at 5 seconds converts at 0.99%.",
-                            "Standard Shopify theme optimisation hits a ceiling at 2.5 seconds, not enough to move conversion rates significantly.",
-                            "A headless Next.js storefront loads in 0.7 to 1.0 seconds and typically doubles conversion rates within 60 days."
-                        ]} />
-                    </div>
-
-                    {/* Real Buyer Voices — verified Reddit threads, May 2026 */}
-                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">What Shopify Store Owners Are Discovering Right Now</p>
-                        <div className="space-y-4">
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;We added the sticky checkout button that stays visible when a user scrolls on their phone and it nearly doubled our conversion rate. I would add it if you have not.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/CoryJ0407</strong> · r/shopify · May 4, 2026 · 41 upvotes, 43 comments</span>
-                                    <a href="https://www.reddit.com/r/shopify/comments/1szso5w/sticky_checkout_button_nearly_doubled_conversion/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Months of data. Watching interactions via Hotjar and you can see the interactions change dramatically. People scroll down, analyze a bit more and click to order instead of searching for the checkout button.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/CoryJ0407</strong> (OP follow-up) · r/shopify · May 4, 2026 · 10 upvotes</span>
-                                    <a href="https://www.reddit.com/r/shopify/comments/1szso5w/sticky_checkout_button_nearly_doubled_conversion/oj42k0v/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;Shopify store getting hammered with fake YouTube referrer traffic from countries we do not sell to, conversion rate is wrecked. Anyone seen this?&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">r/shopify thread</strong> · Apr 22, 2026 · 15 upvotes, 22 comments — conversion rate affected by platform issues</span>
-                                    <a href="https://www.reddit.com/r/shopify/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/shopify →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="space-y-8">
-                        <BlogText>
-                            You&apos;ve tested new product photography. You&apos;ve rewritten your copy. You&apos;ve added trust badges and a sticky add-to-cart. Your conversion rate is still stuck at 1.2%. Speed is the missing variable. See how <Link href="/blog/shopify-headless" className="text-cognac hover:underline">headless Shopify on Next.js</Link> fixes load time at the architecture level.
-                        </BlogText>
-                        <BlogText>
-                            Here&apos;s what nobody tells you: <BlogHighlight>if your Shopify store loads in 4 seconds on mobile, all the CRO in the world won&apos;t save you.</BlogHighlight> Your visitors are leaving before they see anything.
-                        </BlogText>
-
-                        <BlogHeader>The Brutal Math of Speed and Conversion</BlogHeader>
-                        <BlogText>
-                            Google&apos;s research quantified exactly what slow loading costs you in conversions:
-                        </BlogText>
-                        <BlogList items={[
-                            "1 second load time → 3.05% conversion rate",
-                            "2 seconds → 1.68% conversion rate (45% drop)",
-                            "3 seconds → 1.08% conversion rate (65% drop)",
-                            "5 seconds → 0.99% conversion rate (68% drop)",
-                            "53% of mobile shoppers abandon carts if load time exceeds 3 seconds"
-                        ]} />
-
-                        {/* 2026 CRO Benchmark Update */}
-                        <div className="my-8 p-6 bg-blue-50 border border-blue-200 rounded-2xl">
-                            <h3 className="font-bold text-charcoal mb-3 text-lg">2026 E-Commerce CRO Benchmarks</h3>
-                            <BlogList items={[
-                                "Average Shopify conversion rate (2026): 1.4% across all industries (Littledata)",
-                                "Top 20% of Shopify stores convert at 3.2%+ with sub-2-second load times",
-                                "Mobile commerce now accounts for 73% of all e-commerce sales (Statista 2026)",
-                                "Stores scoring 90+ on mobile PageSpeed convert 2.4x higher than stores scoring below 50",
-                                "Google's INP metric measures interaction responsiveness and penalizes stores with heavy JavaScript: most Shopify themes fail this test"
-                            ]} />
-                        </div>
-                        <BlogText>
-                            For a store making $500K/year at 1.2% conversion, getting to 3% conversion (just by fixing speed) means $1.25M/year. The same traffic. The same products. Just a faster site. To see a concrete revenue calculation based on real store data, read our post on <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline">how slow Shopify costs $75K per year</Link>.
-                        </BlogText>
-
-                        <BlogHeader>Why Is Your Shopify Conversion Rate Stuck?</BlogHeader>
-                        <BlogText>
-                            The standard Shopify stack has structural speed problems that no app or theme tweak can fully solve:
-                        </BlogText>
-                        <BlogList items={[
-                            "Liquid templates are server-rendered: Every product page requires a round-trip to Shopify's servers before your customer sees anything",
-                            "Third-party app scripts: The average Shopify store runs 12 to 18 apps. Each adds 50 to 200ms of JavaScript that blocks rendering",
-                            "Theme CSS bloat: Popular themes load 400 to 800KB of styles, most of which are unused on any given page",
-                            "Uncompressed images: Product images served as 2 to 4MB JPEGs instead of sub-100KB WebP/AVIF",
-                            "Synchronous JavaScript: Scripts that must execute in sequence, each one blocking the next from running"
-                        ]} />
-                        <BlogQuote>
-                            We audit Shopify stores every week. The most common Mobile PageSpeed score we see: 23 to 41. That&apos;s not a theme problem or an app problem. That&apos;s a platform architecture problem. You can&apos;t polish your way to a fast Liquid store.
-                        </BlogQuote>
-
-                        <BlogHeader>What CRO Tools Miss Without Speed</BlogHeader>
-                        <BlogText>
-                            Conversion rate optimisation tools (heatmaps, A/B testing, exit intent popups) assume your visitors are actually seeing your page. When 53% leave before load completes, your heatmap data is biased toward fast-connection users. You&apos;re optimising for the minority who stayed.
-                        </BlogText>
-                        <BlogList items={[
-                            "Heatmaps miss 53% of mobile visitors who left before page load: your scroll data is skewed",
-                            "A/B tests show false positives: Variant B 'wins' because the server-rendered version happened to be slightly faster",
-                            "Exit intent popups don't fire when visitors close the tab during load: you never capture these bounces",
-                            "Add-to-cart rates look low, but visitors aren't abandoning your products, they're abandoning your load time"
-                        ]} />
-
-                        <BlogHeader>What the March 2026 Core Update Did to Slow Shopify Stores</BlogHeader>
-                        <BlogText>
-                            After the March 27 to April 8, 2026 Core Update — the one Google confirmed as the &quot;Information Gain&quot; update — business owners started reporting sitewide traffic drops of 50% or more. Many were confused. They had not changed anything.
-                        </BlogText>
-                        <BlogText>
-                            One r/SEO thread from May 3, 2026 captured it precisely:{" "}
-                            <a href="https://www.reddit.com/r/SEO/comments/1sxyn8q/sitewide_traffic_drop_more_than_50/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">a business owner with 50,000 indexed pages seeing 40 clicks per day</a>{" "}
-                            despite 57,000 monthly impressions. Their average position had slipped from page 1 to page 4 or 5 on their strongest keywords. The cause was almost always Core Web Vitals combined with thin content — a combination the March 2026 update specifically targeted.
-                        </BlogText>
-                        <BlogText>
-                            The pattern is documented. According to the r/SEO community and Sistrix&apos;s analysis of the March 2026 update: sites with poor Core Web Vitals scores AND low information gain in their content lost 30 to 80% of visibility. Fast, original content gained 15 to 25%. The update amplified existing weaknesses — it did not create new ones. For Shopify stores, the existing weakness was almost always speed.
-                        </BlogText>
-                        <BlogList items={[
-                            "Stores scoring below 50 on Mobile PageSpeed saw the steepest ranking drops in the March 2026 Core Update.",
-                            "Sites with heavy app scripts (blocking LCP and INP) were disproportionately affected because Google now weights Core Web Vitals more heavily in competitive niches.",
-                            "Recovery after a core update takes 3 to 4 months minimum — one full update cycle. The fix must be structural, not cosmetic.",
-                            "Core updates amplify existing weaknesses. A slow Shopify store that survived previous updates is now more exposed, not less."
-                        ]} />
-
-                        <BlogHeader>Cart Abandonment at Each Speed Threshold (Not Just Bounce Rate)</BlogHeader>
-                        <BlogText>
-                            Most Shopify speed content talks about homepage or product-page load time. That is the wrong page to obsess over if your problem is conversion rate. The page that matters most for revenue is the one furthest down the funnel: checkout. A visitor who bounces from your homepage never cost you a sale you had. A visitor who abandons at checkout had already added to cart, already committed mentally, and left anyway. That is the more expensive kind of slow.
-                        </BlogText>
-                        <BlogText>
-                            Checkout-specific speed behaves differently from storefront speed because the visitor is closer to converting and has less patience for friction, not more. Google&apos;s research on mobile abandonment (53% leave after 3 seconds) was measured on general page loads; checkout abandonment tracks the same direction but compounds with every additional step:
-                        </BlogText>
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4">
-                            <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-50">
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">Checkout Page Load Time</th>
-                                        <th className="text-left px-4 py-3 font-semibold text-stone-700 border-b border-stone-300">What Typically Happens</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-stone-100">
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">Under 1.5s</td>
-                                        <td className="px-4 py-3 text-green-700 font-medium">Cart-to-purchase completion holds near baseline; speed is not a factor visitors notice</td>
-                                    </tr>
-                                    <tr className="bg-stone-50/50">
-                                        <td className="px-4 py-3 text-stone-600">1.5s to 3s</td>
-                                        <td className="px-4 py-3 text-orange-600 font-medium">Visitors on mobile data start to notice the wait; payment-field entry gets interrupted by layout shift</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="px-4 py-3 text-stone-600">3s+</td>
-                                        <td className="px-4 py-3 text-red-600 font-medium">Abandonment risk rises sharply. Google&apos;s 53% mobile abandonment threshold applies directly, except now the visitor is abandoning a cart they already filled</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <BlogText>
-                            The reason checkout speed gets less attention than homepage speed is that Shopify&apos;s own checkout (Shopify Payments, Shop Pay) is generally fast and outside a merchant&apos;s direct control. What is inside a merchant&apos;s control, and what usually breaks checkout-adjacent speed, is everything feeding into that final step: the cart drawer, the shipping calculator widget, upsell apps that fire on the cart page, and any custom scripts injected before the handoff to Shopify&apos;s checkout. A slow cart page before checkout is functionally a slow checkout, because the visitor has to survive both to complete the purchase.
-                        </BlogText>
-
-                        <BlogHeader>Treat Speed Like an A/B Test, Not a One-Time Fix</BlogHeader>
-                        <BlogText>
-                            The most reliable way to know whether a speed change actually moved your conversion rate, rather than coinciding with a seasonal traffic shift, is to treat it like any other CRO test:
-                        </BlogText>
-                        <BlogList items={[
-                            "Baseline first: record your current checkout completion rate and cart-to-purchase rate for at least 2 full weeks before changing anything, so day-of-week and traffic-source noise averages out.",
-                            "Change one layer at a time: cart-page app scripts, then checkout-adjacent widgets, then full storefront architecture, so you can attribute the lift correctly instead of crediting the wrong fix.",
-                            "Segment mobile from desktop: mobile is where speed-driven abandonment concentrates; a desktop-only conversion lift after a speed fix suggests the change wasn't actually about speed.",
-                            "Watch cart-to-purchase rate specifically, not just overall conversion rate: overall conversion rate can be dragged by top-of-funnel traffic quality changes that have nothing to do with speed.",
-                            "Give it a full purchase cycle: for stores with any consideration period, a week of data after a speed fix is not enough to separate signal from normal variance."
-                        ]} />
-                        <BlogText>
-                            This is the same discipline as any A/B test: isolate the variable, measure the right metric, and don&apos;t declare victory on noise. Speed changes are easy to mis-attribute because everything on a Shopify store touches load time to some degree, so the checkout-specific metrics (cart-to-purchase rate, checkout abandonment rate, time-to-first-payment-field-interaction) matter more here than store-wide conversion rate.
-                        </BlogText>
-
-                        <BlogHeader>Small UX Changes That Move Conversion Rate Without Speed Fixes</BlogHeader>
-                        <BlogText>
-                            Not every store can go headless immediately. While the architecture fix is underway, two categories of changes reliably improve conversion rate on existing Shopify stores:
-                        </BlogText>
-                        <BlogText>
-                            <BlogHighlight>Friction reduction on the checkout path.</BlogHighlight> A store owner on r/shopify documented that adding a sticky checkout button — one that stays visible as users scroll on mobile — nearly doubled their conversion rate, confirmed over months of Hotjar session data. The explanation is simple: visitors who scroll down to read more product information should not have to scroll back up to find the buy button. Every extra click costs conversions.
-                        </BlogText>
-                        <BlogList items={[
-                            "Sticky add-to-cart button: stays visible during scroll, eliminates button-hunt friction on long product pages.",
-                            "Progress indicator at checkout: showing 'Step 2 of 3' reduces abandonment because customers know how close they are to done.",
-                            "Single-page checkout: removing the billing/shipping split reduced checkout abandonment by 21% in documented Shopify Plus cases.",
-                            "Mobile-optimized images: switching product photos from full-resolution JPEG to next-gen WebP format cuts image load time by 25 to 35% with no visible quality loss."
-                        ]} />
-                        <BlogText>
-                            These fixes improve conversion rate because they reduce friction for visitors who are already engaged. They do not solve the 53% who leave before the page loads. For that group, only speed solves it.
-                        </BlogText>
-
-                        <BlogHeader>The App Stack Problem: Why Adding More Apps Makes It Worse</BlogHeader>
-                        <BlogText>
-                            Most Shopify store owners respond to low conversion rates by adding more apps. A review app to build trust. An upsell app to increase AOV. A countdown timer to create urgency. A chat widget to answer questions. Each one is justified individually. Together they are catastrophic for load time.
-                        </BlogText>
-                        <BlogText>
-                            The April 2026 r/shopify thread with 105 upvotes — &ldquo;Starting a Shopify store and realizing EVERYTHING is a subscription is actually insane&rdquo; — captured the reality: stores add apps for reviews, loyalty, email capture, currency conversion, and more, then wonder why their bill is past $800 per month and their site feels slow. What they do not realize is that each front-end app adds a script that fires on every page load, regardless of whether that page actually uses the feature.
-                        </BlogText>
-                        <BlogList items={[
-                            "One badly-written app that injects a synchronous script in the head can drag your LCP more than 15 well-written apps combined.",
-                            "Apps that load on every page when they only need to fire on product pages are the single most common cause of Shopify speed problems.",
-                            "Any app whose JavaScript size is over 100KB is a significant performance risk. Most chat widgets and review apps exceed this threshold.",
-                            "Uninstalling an app does not always clean up its scripts. Leftover code from deleted apps stacks up silently and continues slowing page loads."
-                        ]} />
-                        <BlogText>
-                            The headless architecture solves this permanently. Instead of Shopify apps running scripts on every page, each feature is built natively into the Next.js frontend and fires only when needed. A review display is a React component that loads once. A loyalty point total is a single API call. No app store. No monthly fees. No script accumulation. We compared the two stacks on cost, speed, and app dependence in our <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">Shopify vs custom website comparison</Link>.
-                        </BlogText>
-
-                        {/* Mid-Article CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Is your Shopify conversion rate suffering from slow load times right now?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your store URL when you book. We test your load time live on the call, calculate your exact conversion loss per month, and show you what a custom storefront returns in Year 1.</p>
-                            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                                <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-4 h-4" /></Link>
-                                <QuoteModalButton cta="shopify_conv_mid_quote" className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
-                                <CalModalButton className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-stone-300 text-charcoal font-bold rounded-full text-sm hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
-                            </div>
-                        </div>
-
-                        <BlogHeader>The Real Fix: Under 1 second Load Times</BlogHeader>
-                        <BlogText>
-                            The only reliable path to a Shopify conversion rate above 2.5% is getting your load time under 1.5 seconds on mobile. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">Standard Shopify theme optimisation gets you to 2.5 seconds at best</a>. To break the 1.5-second barrier, you need a <a href="/blog/shopify-headless" className="text-cognac hover:underline">headless storefront</a>.
-                        </BlogText>
-                        <BlogText>
-                            Here&apos;s what a headless Shopify architecture looks like:
-                        </BlogText>
-                        <BlogList items={[
-                            "Frontend: Next.js with React Server Components. HTML pre-rendered at the CDN edge",
-                            "Backend: Shopify stays exactly as-is. Inventory, orders, checkout, payments unchanged",
-                            "Connection: Shopify Storefront API feeds product data to Next.js in real-time",
-                            "Images: Automatic WebP/AVIF conversion and lazy loading built into Next.js Image component",
-                            "JavaScript: Only loaded when needed, no theme bloat, no unused app scripts on every page"
-                        ]} />
-
-                        <BlogHeader>What Published Headless Case Studies Show About Conversion Rate</BlogHeader>
-                        <div className="my-6 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
-                            <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">What's Real vs. What's a Projection</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">
-                                We do not have a named Shopify conversion-rate case study of our own to publish yet. What follows is a real, citable benchmark (Deloitte) plus publicly reported directional outcomes from Shopify Plus headless migrations (Allbirds, Gymshark, Victoria Beckham Beauty) - not a client of ours, and not a guarantee of what any specific store will see.
-                            </p>
-                        </div>
-                        <BlogText>
-                            The Deloitte &ldquo;Milliseconds Make Millions&rdquo; study is the most defensible number in this space: a 0.1-second improvement in load time is associated with roughly an 8% lift in conversions. Extrapolated (not measured) across the kind of load-time drop a headless migration produces, that compounds into a large directional range, which is why publicly reported Shopify Plus headless case studies tend to show conversion rate roughly doubling to tripling post-migration. Treat that as a plausible range to model your own numbers against, not as a promise.
-                        </BlogText>
-                        <BlogText>
-                            The mechanism matters more than the exact multiplier: a 3 to 4x improvement in load time reduces abandonment at every stage of the funnel simultaneously, from the product page through to checkout, because the fixes compound rather than reducing conversion rate through better copy or photography. For how that plays out specifically on the checkout page, see the funnel breakdown below.
-                        </BlogText>
-
-                        <BlogHeader>How Long Does It Take to See Conversion Rate Improvements?</BlogHeader>
-                        <BlogText>
-                            Speed improvements produce near-immediate conversion rate gains because it&apos;s not a ranking or algorithm change. It&apos;s simply that visitors stop leaving before the page loads:
-                        </BlogText>
-                        <BlogList items={[
-                            "Day 1: New fast store launches, bounce rate drops immediately",
-                            "Week 1: Mobile conversion rate climbs as more visitors reach product pages",
-                            "Week 2 to 4: Add-to-cart rates increase as mobile UX improves across all page types",
-                            "Month 2: Full conversion rate improvement realised as Google also improves your rankings",
-                            "Month 3+: Revenue compounds as both conversion rate and organic traffic improve simultaneously"
-                        ]} />
-                        <BlogText>
-                            <BlogHighlight>Speed fixes pay for themselves. A well-executed headless migration typically recovers its cost within the first 4 to 8 weeks from conversion rate gains alone.</BlogHighlight>
-                        </BlogText>
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Double Your Shopify Conversion Rate with Speed</h3>
-                        <p className="text-stone-600 mb-6">
-                            Free audit. We&apos;ll analyse your store speed, calculate your exact conversion rate loss, and show you the headless migration path that recovers it.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                            <Link href="/#audit-widget" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">Run Your Free Audit <ArrowRight className="w-5 h-5" /></Link>
-                            <QuoteModalButton cta="shopify_conv_bottom_quote" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Get a Free Quote</QuoteModalButton>
-                            <CalModalButton className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-stone-300 text-charcoal font-bold rounded-full hover:border-charcoal transition-all">Or Book a Call</CalModalButton>
-                        </div>
-                    </div>
-
-                    <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Speed is the biggest conversion rate lever you&apos;re ignoring</strong>: A store loading in 1 second converts at 3.05%, while the same store at 5 seconds converts at just 0.99%.</li>
-                            <li><strong>Checkout-page speed matters more than homepage speed</strong>: A visitor who abandons at checkout already had a cart. Slow cart drawers, shipping calculators, and upsell widgets feeding into checkout are usually the real culprit, not Shopify's own checkout itself.</li>
-                            <li><strong>CRO tools give misleading data on slow sites</strong>: Heatmaps and A/B tests miss 53% of mobile visitors who leave before the page loads, so you&apos;re optimizing for the minority who stayed.</li>
-                            <li><strong>Standard Shopify optimization caps out at 2.5 seconds</strong>: Removing apps and compressing images helps, but Liquid rendering and platform scripts create a speed ceiling well above the 1.5-second threshold needed for competitive conversions.</li>
-                            <li><strong>Treat speed fixes like an A/B test</strong>: baseline your cart-to-purchase rate for two weeks, change one layer at a time, and segment mobile from desktop before crediting a conversion lift to a speed fix.</li>
-                        </ol>
                     </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Route, title: "Route", body: "Landing, collection, product, cart and checkout." },
+                            { icon: Gauge, title: "Field speed", body: "LCP, INP and CLS at the 75th percentile." },
+                            { icon: BarChart3, title: "Funnel", body: "Sessions, cart, checkout and purchase." },
+                            { icon: FlaskConical, title: "Test", body: "Controlled release, hypothesis and guardrails." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader>1. Lock the metric definitions</BlogHeader>
+                    <BlogText>
+                        Shopify defines online-store conversion rate as the percentage of sessions that result in an
+                        order. Its conversion breakdown uses all sessions, sessions with cart additions, sessions that
+                        reached checkout and sessions that completed checkout. Preserve those definitions when you
+                        export or compare data.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Use the same timezone, date range, currency and attribution view.",
+                            "Separate sessions from users and orders from paid cash receipts.",
+                            "Record refunds, cancellations, test orders and bot filtering where relevant.",
+                            "Do not compare Shopify's session conversion rate directly with a differently defined ad-platform metric.",
+                        ]}
+                    />
+
+                    <BlogHeader>2. Find the funnel stage that changed</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Drop</th><th className="p-4">Investigate</th><th className="p-4">Performance evidence</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Landing to product</td><td className="p-4">Traffic intent, merchandising, navigation and availability</td><td className="p-4">Landing and collection field data</td></tr>
+                                <tr><td className="p-4 font-bold">Product to cart</td><td className="p-4">Price, offer, content, variants, trust and add-to-cart behavior</td><td className="p-4">Product LCP, INP, CLS and interaction errors</td></tr>
+                                <tr><td className="p-4 font-bold">Cart to checkout</td><td className="p-4">Shipping, tax, discounts, cart logic and account requirements</td><td className="p-4">Cart responsiveness and transition traces</td></tr>
+                                <tr><td className="p-4 font-bold">Checkout to purchase</td><td className="p-4">Payment, address, delivery, fraud, errors and checkout configuration</td><td className="p-4">Checkout telemetry available to the merchant</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogHeader>3. Segment before attributing</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Device type and browser.",
+                            "Country, region, market, language and currency.",
+                            "New versus returning customers.",
+                            "Traffic source, campaign and landing page.",
+                            "Product, collection, inventory state and discount.",
+                            "Consent state and major app or tag combinations.",
+                        ]}
+                    />
+                    <BlogText>
+                        Shopify supports multiple attribution models, and the selected model changes how credit is
+                        assigned across a customer journey. Record the model. A channel mix shift can change the store
+                        average even when each segment is stable.
+                    </BlogText>
+
+                    <BlogHeader>4. Use field and lab performance for different jobs</BlogHeader>
+                    <BlogText>
+                        Shopify&apos;s Web Performance reports show real-user LCP, INP and CLS by time, URL and page type.
+                        The summary uses the 75th percentile and can be delayed. Lab tools help reproduce and debug a
+                        defined page state, but a lab score is not a conversion result.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Use field data to identify which real users and routes experience a problem.",
+                            "Use repeated lab tests and traces to isolate media, JavaScript, app, theme and network work.",
+                            "Record device profile, throttling, location, cache, login, consent and test account state.",
+                            "Track errors and functional failures alongside performance metrics.",
+                        ]}
+                    />
+                    <InsightBox variant="info" label="Why we do not convert a load time into a conversion figure">
+                        This article will not hand you an abandonment rate, an uplift or a revenue loss calculated from
+                        a load time. Conversion moves with traffic mix, offer, price, stock, seasonality and the
+                        attribution model you have selected at the same time as it moves with speed, so a figure lifted
+                        from one property does not describe yours. Set your own baseline, change one thing at a time,
+                        and hold everything else you can control steady while you measure the effect.
+                    </InsightBox>
+
+                    <BlogHeader>5. Know what actually loads on a Shopify storefront</BlogHeader>
+                    <BlogText>
+                        Before you attribute a funnel change to speed, identify which layer produces the delay. A
+                        Shopify page is assembled from several independent sources, and each one fails in a different
+                        way. Naming the layer is what turns a score into a work item.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Liquid templates render on Shopify's servers, so the browser waits for the document before it can begin any work of its own.",
+                            "Theme CSS and JavaScript are usually authored for the whole store rather than per route, so a page commonly downloads rules and scripts it never uses.",
+                            "App embeds and script tags are injected into the theme and typically load site-wide, whether or not the current route uses the feature.",
+                            "A script added synchronously in the head blocks parsing until it resolves, so one badly placed tag can outweigh several well-behaved ones.",
+                            "Images uploaded at full camera resolution are served at that resolution unless the theme requests a resized, modern-format variant.",
+                            "Uninstalling an app does not always remove the code it added. Leftover snippets keep executing after the subscription ends.",
+                        ]}
+                    />
+                    <InsightBox variant="tip" label="Do this first">
+                        Open the network panel on a product page, sort by blocking time and group requests by origin.
+                        The origins that are neither your store nor Shopify are your app layer. That list, not a
+                        headline score, is the thing you can actually negotiate down.
+                    </InsightBox>
+
+                    <BlogHeader>6. Separate the cart page from Shopify&apos;s checkout</BlogHeader>
+                    <BlogText>
+                        Shopify&apos;s checkout runs on Shopify&apos;s own infrastructure. On most plans you cannot
+                        modify it, which also means you are rarely the cause of its behavior. What you do control is
+                        everything a shopper passes through immediately before it: the cart drawer, the shipping and
+                        tax estimator, upsell and bundle widgets on the cart page, and any script that fires on the way
+                        to the handoff. A slow cart step functions as a slow checkout, because the shopper has to clear
+                        both to buy.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Establish how much of the cart-to-checkout drop happens on your cart page and how much happens after the handoff.",
+                            "Test the cart drawer separately from the cart page. Many themes ship both, and only one usually gets measured.",
+                            "Time the shipping or tax estimator. It is a network call, and shoppers read a stalled total as a broken price.",
+                            "Watch for layout shift while address and payment fields are being filled. A shift during input costs more than a shift at load.",
+                            "Record checkout errors, declines and validation failures alongside timings, because in an aggregate funnel report they look identical to a speed problem.",
+                        ]}
+                    />
+
+                    <BlogHeader>7. Understand what your CRO tooling cannot see</BlogHeader>
+                    <BlogText>
+                        Heatmaps, session recordings, on-page tests and exit-intent prompts each need their own script
+                        to load before they can observe anything. A visitor who leaves during load is often not in that
+                        data at all. On a slow store the tooling therefore describes the people who waited rather than
+                        the people you lost, and those are not the same population.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Scroll and click maps over-represent fast connections and returning visitors with a warm cache.",
+                            "An on-page test can register a win because the winning variant happened to load sooner, not because its content was better.",
+                            "Exit-intent prompts do not fire for a tab closed during load, so those exits never enter the report.",
+                            "A low add-to-cart rate can mean the product page never became interactive, not that the product or price was rejected.",
+                            "Compare tool-reported sessions with Shopify's session count. A large, route-specific gap is itself a signal worth chasing.",
+                        ]}
+                    />
+
+                    <BlogHeader>8. Form a falsifiable hypothesis</BlogHeader>
+                    <BlogText>
+                        A useful hypothesis names the segment, route, mechanism, intervention and outcome. For example:
+                        reducing product-page main-thread work for mobile paid-search sessions will improve add-to-cart
+                        completion without harming analytics, accessibility or feature use. That can be tested. “Faster
+                        sites convert better” is directionally plausible but too broad to evaluate.
+                    </BlogText>
+
+                    <BlogHeader>9. Choose the least disruptive intervention</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Compress, resize and correctly prioritize route-critical media.",
+                            "Remove unused tags, pixels, app embeds and theme code after dependency review.",
+                            "Load noncritical reviews, chat, recommendations and analytics at an appropriate time and consent state.",
+                            "Reduce variant, search or personalization work that blocks the intended interaction.",
+                            "Fix functional errors, layout shifts and event duplication before redesigning the page.",
+                            "Consider theme replacement or headless migration only when the measured constraint and operating model justify it.",
+                        ]}
+                    />
+
+                    <BlogHeader>10. Fix funnel friction that has nothing to do with speed</BlogHeader>
+                    <BlogText>
+                        Some of the drop you are investigating is layout and flow rather than load time. These changes
+                        are cheap, reversible and worth doing while you are still gathering performance evidence,
+                        because they are easy to isolate and they do not commit you to an architecture decision.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Keep the add-to-cart control reachable on long mobile product pages so a shopper who scrolls to read does not have to scroll back to buy.",
+                            "Show progress through a multi-step cart or account flow so the remaining effort is visible.",
+                            "Remove duplicate apps serving the same function. Two review widgets or three popup tools cost several script budgets for one feature.",
+                            "Serve product images in a modern format at the size the layout actually renders, rather than at upload resolution.",
+                            "Reserve space for anything that arrives late, including badges, banners, review stars and currency switchers, so the page does not move under a thumb.",
+                            "Make errors specific. A rejected discount code or an unsupported shipping destination should say so at the field, not at submission.",
+                        ]}
+                    />
+
+                    <BlogHeader>11. Validate the release</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Define primary and guardrail metrics before launch.",
+                            "Use an experiment when traffic and implementation permit; otherwise use a documented phased release or time-series design.",
+                            "Avoid launching beside a major promotion, pricing change or campaign mix shift when possible.",
+                            "Confirm sample size, test duration and seasonality with an analyst rather than stopping at the first favorable movement.",
+                            "Report the estimate and uncertainty, including a neutral or negative result.",
+                            "Monitor field performance because Shopify's real-user reports are not instantaneous.",
+                        ]}
+                    />
+
+                    <BlogHeader>12. Calculate business impact as a scenario</BlogHeader>
+                    <BlogText>
+                        Use observed eligible sessions, measured baseline completion, average contribution margin and a
+                        conservative range for the tested effect. Keep the range separate from realized revenue. Do not
+                        present a modeled scenario as money already lost or guaranteed to return.
+                    </BlogText>
+
+                    <BlogHeader>13. Repair or rebuild</BlogHeader>
+                    <BlogText>
+                        Most stores that ask us for a rebuild need a repair. The distinction is not a matter of taste,
+                        and it is not decided by a score. It is decided by whether the constraint is local to a few
+                        routes or built into the layer itself, and by whether your business can carry a frontend of its
+                        own after launch.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Signals that point to a repair:</strong>
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "The problem is concentrated on a small number of routes and you can name them.",
+                            "A short list of identifiable scripts accounts for most of the blocking work.",
+                            "Your catalog, merchandising and promotions still fit the theme model you already have.",
+                            "You depend on apps whose functionality you are not prepared to rebuild or replace.",
+                            "Nobody in the business wants to own a separate frontend, its releases and its incidents.",
+                            "The store is new, traffic is low and you have no conversion baseline to improve against.",
+                        ]}
+                    />
+                    <BlogText>
+                        <strong>Signals that point to a rebuild:</strong>
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "The constraint appears on every route and survives removing apps and testing against a clean theme.",
+                            "Your merchandising or content model needs more custom theme code every quarter to express what the business wants.",
+                            "You already run, or are willing to fund, a function that ships and monitors releases.",
+                            "You are subscribing to a stack of apps to reproduce features you would rather own in your own codebase.",
+                            "You have a measured baseline you are willing to be judged against after the change.",
+                        ]}
+                    />
+                    <InsightBox variant="info" label="Honest answer">
+                        If the first list describes you, repair. A focused fix on the routes that are failing is
+                        cheaper, faster and lower risk than a rebuild, and it is the work we will recommend even when
+                        you arrived asking to go headless.
+                    </InsightBox>
+
+                    <BlogHeader>14. What a headless Shopify build actually changes</BlogHeader>
+                    <BlogText>
+                        Headless is not a performance setting. It is a change of ownership over what loads and when,
+                        and it moves work rather than deleting it.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "The storefront becomes a separate application, commonly Next.js, served from a CDN instead of rendered by the theme layer.",
+                            "Product, collection and inventory data come from the Shopify Storefront API, so the admin your team already uses does not change.",
+                            "Checkout stays on Shopify, so payments, fraud handling, taxes and Shop Pay are unchanged.",
+                            "Features that were apps become components in your own codebase, which removes the site-wide script and transfers the maintenance to you.",
+                            "Images are sized and converted by the frontend framework rather than by whatever the theme happened to request.",
+                        ]}
+                    />
+                    <BlogText>
+                        The trade is explicit. You gain control over the request waterfall. You take on a codebase, a
+                        deployment pipeline and an on-call responsibility that the theme layer used to absorb. It is
+                        the right answer when the constraint is architectural and the operating model can carry it, and
+                        the wrong answer when either half is missing. Our{" "}
+                        <Link href="/blog/shopify-headless" className="text-cognac hover:underline">
+                            headless Shopify guide
+                        </Link>{" "}
+                        covers the migration path in detail.
+                    </BlogText>
+
+                    <BlogHeader>15. What to check before you accept a Shopify speed quote</BlogHeader>
+                    <BlogText>
+                        Disappointing speed engagements are usually scoping failures rather than engineering failures.
+                        A cheap quote is often cheap because it leaves these out, and you find out at handover.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Which routes are in scope, and whether cart and checkout-adjacent pages are among them.",
+                            "Which device profile, network profile and number of recorded runs the acceptance test uses.",
+                            "Which apps are kept, which are replaced, and which functionality disappears at launch.",
+                            "Who owns analytics, consent, pixels and conversion-tracking continuity through the change.",
+                            "URL, redirect, structured data and Merchant Center continuity if the storefront layer changes.",
+                            "Who owns the code, the repository and the deployment accounts after handover.",
+                            "Ongoing third-party running costs after launch: hosting, image delivery, search, reviews and monitoring.",
+                            "The rollback plan for a revenue-generating route, and who executes it.",
+                        ]}
+                    />
+
+                    <BlogHeader>16. What our engagements cost</BlogHeader>
+                    <BlogText>
+                        Published tiers are planning anchors, not a quote. The accepted written terms control the final
+                        price, the page inventory and the acceptance protocol.
+                    </BlogText>
+                    <div className="my-6 grid gap-4 sm:grid-cols-3">
+                        <StatCard stat="$1,500" label="Starter" context="Small, clearly bounded scope" />
+                        <StatCard stat="$3,500" label="Growth" context="Larger migration, CMS or content-continuity scope" />
+                        <StatCard stat="$5,000+" label="Scale" context="$5,000 to $10,000 for integration-heavy commerce work" />
+                    </div>
+                    <BlogText>
+                        Where a 90-plus Lighthouse result is included, it is written as a handover target on mobile and
+                        desktop for the representative pages named in the scope, verified across three recorded runs
+                        under stated conditions before handover. It is a lab acceptance target. It is not a promise
+                        about rankings, traffic, conversion rate or revenue, and no honest supplier can give you one of
+                        those.
+                    </BlogText>
+
+                    <div className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-center">
+                        <p className="mb-2 font-bold text-charcoal">Not sure whether your store needs a repair or a rebuild?</p>
+                        <p className="mb-5 text-sm text-stone-600">
+                            Run the audit on your own URL first, or bring the store to a call and we will trace it with
+                            you and tell you which of the two it is.
+                        </p>
+                        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+                            <Link href="/free-audit" className="inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-bold text-white hover:bg-stone-800">
+                                Run the free audit <ArrowRight className="h-4 w-4" />
+                            </Link>
+                            <QuoteModalButton cta="shopify_conversion_mid_quote" className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 px-6 py-3 text-sm font-bold text-charcoal hover:border-charcoal">
+                                Get a quote
+                            </QuoteModalButton>
+                            <CalModalButton className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 px-6 py-3 text-sm font-bold text-charcoal hover:border-charcoal">
+                                Book a call
+                            </CalModalButton>
+                        </div>
+                    </div>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <FlaskConical className="mb-4 h-7 w-7 text-amber-300" />
+                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will define representative routes, preserve analytics and SEO requirements, document the
+                            performance test profile and show whether optimization or migration fits the evidence.
+                        </p>
+                        <QuoteModalButton cta="shopify_conversion_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
+                    </section>
+
+                    <BlogHeader>Related reading</BlogHeader>
+                    <BlogText>
+                        For the layer-by-layer optimization sequence, see our{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline">
+                            Shopify speed optimization guide
+                        </Link>
+                        . For why a default theme still hits a ceiling, see{" "}
+                        <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">
+                            the Dawn theme performance breakdown
+                        </Link>
+                        . For what the app layer costs you in money as well as milliseconds, see{" "}
+                        <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">
+                            the real monthly Shopify app bill
+                        </Link>
+                        . For the platform-versus-custom decision itself, see{" "}
+                        <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline">
+                            Shopify versus a custom website
+                        </Link>
+                        .
+                    </BlogText>
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-
-                    <section className="mb-4 mt-6">
-                        <h2 className="text-xl font-bold text-stone-900 mb-3">Related Reading</h2>
-                        <p className="text-stone-700 leading-relaxed">For the complete speed playbook (the 2026 average Shopify store scores just 30 on mobile), see our <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline font-medium">Shopify speed optimization guide</Link>. For the full revenue loss calculation from slow Shopify, see <Link href="/blog/shopify-slow-losing-sales" className="text-cognac hover:underline font-medium">how slow Shopify costs stores $75K per year</Link>. For why Dawn theme specifically hits performance ceilings, see <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline font-medium">why the Shopify Dawn theme is slow</Link>.</p>
-                    </section>
-
-                    <RelatedPosts currentPostId="shopify-conversion-rate-speed-fix" />
-
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

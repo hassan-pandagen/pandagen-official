@@ -1,3 +1,4 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -5,7 +6,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | PandaCodeGen" },
-  description: "How PandaCodeGen collects, uses, and protects your data. Last updated January 26, 2026.",
+  description: "How PandaCodeGen collects, uses, and protects your data. Last updated July 22, 2026.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | PandaCodeGen",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://www.pandacodegen.com/privacy",
     siteName: "PandaCodeGen",
     type: "website",
-    images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+    images: [ogImageForPath("/privacy")],
   },
   twitter: {
     card: "summary",
@@ -23,10 +24,34 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+// The five legal pages were the only indexable routes without structured data.
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.pandacodegen.com/privacy#webpage",
+      url: "https://www.pandacodegen.com/privacy",
+      name: "Privacy Policy",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.pandacodegen.com/privacy#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://www.pandacodegen.com/privacy" },
+      ],
+    },
+  ],
+};
+
 export default function PrivacyPage() {
   return (
     <main className="bg-paper min-h-screen">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <Header />
 
       <div className="pt-20 md:pt-32 pb-20 px-6">
@@ -34,7 +59,7 @@ export default function PrivacyPage() {
 
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Privacy Policy</h1>
-            <p className="text-stone-600">Last updated: March 4, 2026</p>
+            <p className="text-stone-600">Last updated: July 22, 2026</p>
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">
@@ -42,10 +67,10 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">1. Introduction</h2>
               <p>
-                PandaCodeGen LLC ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site"), use our services, and interact with us.
+                PandaCodeGen ("we," "us," or "our") operates pandacodegen.com and is the controller of personal information collected through this public website, its automated audit, and its inquiry forms. This notice explains how that information is handled when you visit the website, request an audit, submit an inquiry, or enable an optional service.
               </p>
               <p className="mt-4">
-                Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our Site or Services. By accessing and using PandaCodeGen, you acknowledge that you have read, understood, and agree to be bound by all the terms of this Privacy Policy.
+                This notice is not used to manufacture consent. Optional analytics, advertising, scheduling, and chat services remain off until you make the relevant choice. Project-specific processing is also described in the signed engagement documents where applicable.
               </p>
             </FadeIn>
 
@@ -62,9 +87,9 @@ export default function PrivacyPage() {
 
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.2 Information Collected Automatically</h3>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
-                <li><strong>Usage Data:</strong> Pages visited, time spent, click patterns, and browser information.</li>
-                <li><strong>Device Information:</strong> Device type, operating system, IP address, and browser type.</li>
-                <li><strong>Cookies and Tracking:</strong> We use cookies to improve your experience and understand site performance.</li>
+                <li><strong>Usage Data:</strong> With analytics consent, pages visited, time spent, click patterns, browser information, and aggregate form milestones such as started, progressed, abandoned, errored, or completed. Form-field values are not included in these analytics events.</li>
+                <li><strong>Device Information:</strong> Device type, operating system, IP address, and browser type where needed to deliver the site, protect it, or provide a service you enable.</li>
+                <li><strong>Cookies and Similar Technologies:</strong> We use necessary preference storage and, only with the applicable choice, analytics, advertising, scheduling, chat, and approximate-location technologies.</li>
               </ul>
 
               <h3 className="text-lg font-semibold text-charcoal mb-3 mt-6">2.3 Free Website Audit Tool Data</h3>
@@ -72,13 +97,13 @@ export default function PrivacyPage() {
                 Our homepage provides a free website audit tool. When you submit a URL through this tool, we collect and process the following information for the purpose of providing the audit and tracking tool usage:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600">
-                <li><strong>The URL You Submit:</strong> We pass it to Google PageSpeed Insights API and our internal performance checks. We retain a record of audited URLs for usage tracking.</li>
-                <li><strong>Approximate Geographic Location:</strong> Country, region, and city derived from your IP address (when available via Vercel infrastructure). We do not store your raw IP address in our records.</li>
-                <li><strong>Audit Results:</strong> The performance score, platform detected, Core Web Vitals, and issue findings are stored as part of the usage record.</li>
-                <li><strong>Email Address (Optional):</strong> If you choose to receive a polished PDF report, you provide your email. This is the only step at which we collect personally identifiable contact information from audit users.</li>
+                <li><strong>The URL You Submit:</strong> We pass it to Google PageSpeed Insights and run bounded internal checks to return the automated result. Google and our hosting infrastructure process the request under their own service terms.</li>
+                <li><strong>Approximate Geographic Location:</strong> Country, region, and city may be read from Vercel request headers for abuse monitoring and, when you request an emailed summary, included in the internal notification. The application does not place the raw IP address in that message.</li>
+                <li><strong>Audit Results:</strong> The response can include lab scores, detected platform, web-vital diagnostics, and issue findings. These are point-in-time automated estimates.</li>
+                <li><strong>Email Address (Optional):</strong> If you ask us to email the automated summary, your email, submitted URL, result, and coarse location are sent through our email provider to deliver the confirmation and notify us of the request.</li>
               </ul>
               <p className="text-stone-600 mt-3">
-                You can use the audit tool freely without leaving an email. We use audit usage data to understand which platforms and regions are most interested in our services. We do not sell or share this data with third parties. The URL you submit is yours to share, and by submitting it you grant us permission to analyze it.
+                You can use the audit tool without leaving an email. Do not submit a private, confidential, or unauthorized URL. We do not create a database of partially completed forms or receive the values entered into an unfinished form; consented analytics records only aggregate milestone and field-identifier events.
               </p>
             </FadeIn>
 
@@ -101,7 +126,8 @@ export default function PrivacyPage() {
                 We do not sell, trade, or rent your personal information. We may share information in the following circumstances:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
-                <li><strong>Service Providers:</strong> Third-party vendors who assist us (hosting, payment processing, email services).</li>
+                <li><strong>Service Providers:</strong> Vendors that help us host the site, process email and payments, and deliver requested services.</li>
+                <li><strong>Optional Website Providers:</strong> When a provider is configured for the deployment and you allow its category, Google Analytics, Microsoft Clarity, and Vercel Web Analytics may provide analytics; Meta Pixel may provide advertising measurement; Cal.com may provide scheduling; and Tawk.to may provide chat.</li>
                 <li><strong>Legal Requirements:</strong> When required by law, court order, or government request.</li>
                 <li><strong>Business Transfers:</strong> In case of merger, acquisition, or sale of assets.</li>
                 <li><strong>With Your Consent:</strong> We will share information only with your explicit permission.</li>
@@ -111,7 +137,7 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">5. Data Security</h2>
               <p>
-                We implement industry-standard security measures to protect your data, including SSL encryption, firewalls, and secure password policies. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security, but we maintain reasonable safeguards to protect against unauthorized access.
+                We use reasonable technical and organizational safeguards appropriate to the website, including encrypted transport, access controls, bounded requests, origin checks, rate limits, dependency checks, and data minimization. No transmission or storage method is completely secure, and this statement is not a guarantee against every incident.
               </p>
             </FadeIn>
 
@@ -132,16 +158,20 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">7. Cookies and Tracking Technologies</h2>
               <p>
-                Our website uses cookies and similar tracking technologies to enhance your experience. You can control cookie preferences through your browser settings. Disabling cookies may affect site functionality.
+                Optional browser technologies are off by default. The first-visit banner lets you accept all, reject optional services, or choose analytics, advertising, and functional services separately. You can change or withdraw a choice at any time with the persistent <strong>Cookie settings</strong> control at the lower-left of the site. We remember the selection for up to 180 days.
               </p>
               <p className="mt-4">
-                We use:
+                The categories are:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-2">
-                <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser.</li>
-                <li><strong>Persistent Cookies:</strong> Cookies that remain on your device for improved user experience.</li>
-                <li><strong>Analytics Tools:</strong> Google Analytics to understand site traffic and user behavior.</li>
+                <li><strong>Necessary:</strong> Local storage that records and applies your privacy choice.</li>
+                <li><strong>Analytics:</strong> Google Analytics, Microsoft Clarity, and Vercel Web Analytics.</li>
+                <li><strong>Advertising:</strong> Meta Pixel.</li>
+                <li><strong>Functional:</strong> Cal.com scheduling and Tawk.to chat.</li>
               </ul>
+              <p className="mt-4">
+                See our <a href="/cookies" className="text-cognac hover:underline">Cookie Policy</a> for the current inventory, purposes, and retention details. Browser settings provide an additional way to delete or block storage, but are not the only control available.
+              </p>
             </FadeIn>
 
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
@@ -154,14 +184,14 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">9. Data Retention</h2>
               <p>
-                We retain your personal information for as long as necessary to provide services and fulfill the purposes outlined in this policy. You can request deletion of your data at any time, subject to legal and contractual obligations.
+                We keep inquiry and project information only for the period needed to respond, administer an engagement, secure the service, resolve disputes, and meet legal or accounting duties. We periodically review whether identifiable records are still needed. Email, hosting, analytics, and scheduling providers may retain data under their configured retention periods. You may request deletion; legal, security, backup, and contractual exceptions can apply.
               </p>
             </FadeIn>
 
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">10. International Data Transfers</h2>
               <p>
-                PandaCodeGen operates globally. Your information may be transferred to, stored, and processed in countries other than your country of residence. These countries may have different data protection laws. By providing information, you consent to such transfers.
+                Website and communication providers may process information in countries other than the one where you live. Where transfer safeguards are legally required, the responsible contracting entity must use the appropriate provider terms or transfer mechanism; providing an inquiry is not treated as blanket consent to waive those protections.
               </p>
             </FadeIn>
 
@@ -175,7 +205,7 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">12. Changes to This Policy</h2>
               <p>
-                We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will notify you of material changes via email or by posting the updated policy on our website. Your continued use of our services constitutes acceptance of the revised policy.
+                We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will post the revised policy and its effective date here and provide any additional notice the law requires. Where a new use requires consent, we will ask for that consent instead of relying on continued use of the website.
               </p>
             </FadeIn>
 
@@ -185,23 +215,22 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy or our privacy practices, please contact us:
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaCodeGen LLC</p>
-                <p>701 Tillery St Ste 12</p>
-                <p>Austin, TX 78702, USA</p>
+                <p className="text-charcoal font-semibold">PandaCodeGen, website operator and controller</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
-                <p>Response Time: Within 48 hours during business days</p>
+                <p>Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States.</p>
+                <p>Project agreements separately record whether PandaCodeGen acts as a controller or processes project data only on a client&apos;s documented instructions.</p>
               </div>
             </FadeIn>
 
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6">
               <h2 className="text-2xl font-bold text-charcoal mb-4">14. GDPR Rights (EU/UK Users)</h2>
               <p>
-                If you are located in the European Economic Area (EEA) or United Kingdom, your personal data is processed under the General Data Protection Regulation (GDPR). Our lawful basis for processing includes:
+                If EU or UK data-protection law applies to the processing, the potential lawful bases include:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li><strong>Contractual necessity:</strong> To deliver the web development services you have engaged us for.</li>
-                <li><strong>Legitimate interests:</strong> Website analytics, fraud prevention, and business operations.</li>
-                <li><strong>Consent:</strong> For marketing communications and optional cookies.</li>
+                <li><strong>Legitimate interests:</strong> Fraud prevention, service security, responding to ordinary business inquiries, and essential operations, subject to the required balancing assessment.</li>
+                <li><strong>Consent:</strong> For optional analytics, marketing, scheduling, chat, and related browser storage where consent is the applicable basis.</li>
                 <li><strong>Legal obligation:</strong> Compliance with applicable laws and regulations.</li>
               </ul>
               <p className="mt-4">As an EEA or UK resident, you have the following rights under GDPR:</p>
@@ -222,18 +251,18 @@ export default function PrivacyPage() {
             <FadeIn as="section" className="border-l-2 border-stone-300 pl-6 mb-16">
               <h2 className="text-2xl font-bold text-charcoal mb-4">15. CCPA Rights (California Residents)</h2>
               <p>
-                If you are a California resident, the California Consumer Privacy Act (CCPA) grants you the following rights:
+                If California privacy law applies to the operator and the processing, it may grant rights including:
               </p>
               <ul className="list-disc list-inside space-y-2 text-stone-600 mt-4">
                 <li><strong>Right to Know:</strong> Request information about the categories and specific pieces of personal data we have collected, used, disclosed, or sold in the past 12 months.</li>
                 <li><strong>Right to Delete:</strong> Request deletion of personal data we have collected from you, subject to certain exceptions (e.g., completing transactions, legal obligations).</li>
-                <li><strong>Right to Opt-Out of Sale:</strong> We do not sell your personal information to third parties. You will not be asked to opt in or out of data sales.</li>
+                <li><strong>Right to Opt Out of Sale or Sharing:</strong> We do not sell personal information. Optional marketing measurement remains off unless you allow marketing cookies, and you can withdraw that choice through Cookie settings. We also honor a browser&apos;s enabled Global Privacy Control signal by keeping marketing disabled.</li>
                 <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any CCPA rights, including by denying services or charging different prices.</li>
                 <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information we maintain about you.</li>
                 <li><strong>Right to Limit Sensitive Information:</strong> We do not collect sensitive personal information beyond what is necessary for service delivery.</li>
               </ul>
               <p className="mt-4">
-                To submit a CCPA request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a> or call <a href="tel:+13027738982" className="text-cognac hover:underline">+1 (302) 773-8982</a>. We will respond to verified requests within 45 days. You may designate an authorized agent to make requests on your behalf.
+                To submit a privacy request, contact us at <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a>. We will verify and handle applicable requests within the period required by the law that governs the request. An authorized agent may be permitted where the law provides for one.
               </p>
             </FadeIn>
 

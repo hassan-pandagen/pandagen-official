@@ -18,7 +18,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
     fits: [
       "Under 10 pages",
       "Brochure or service site, no e-commerce",
-      "Next.js custom build, 90+ PageSpeed guaranteed",
+      "Next.js custom build, 90+ Lighthouse handover target",
       "1 to 2 weeks delivery",
     ],
   },
@@ -161,7 +161,7 @@ export default function TierQuiz() {
                   className="text-left p-4 rounded-xl border border-stone-200 hover:border-cognac hover:bg-stone-50 transition flex items-center justify-between group"
                 >
                   <span className="font-medium text-charcoal">{opt.label}</span>
-                  <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-cognac transition" />
+                  <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-cognac transition" />
                 </button>
               ))}
             </div>

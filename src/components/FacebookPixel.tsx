@@ -2,11 +2,16 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { hasConsent } from '@/components/consent/ConsentProvider';
+
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim();
 
 export default function FacebookPixel() {
   const pathname = usePathname();
 
   useEffect(() => {
+    if (!META_PIXEL_ID) return;
+
     let loaded = false;
 
     // Load Facebook Pixel only on user interaction (click, scroll, touch)
@@ -41,7 +46,7 @@ export default function FacebookPixel() {
       // Initialize pixel after loading
       setTimeout(() => {
         if ((window as any).fbq) {
-          (window as any).fbq('init', '1612130730207311');
+          (window as any).fbq('init', META_PIXEL_ID);
           (window as any).fbq('track', 'PageView');
         }
       }, 100);
@@ -68,25 +73,14 @@ export default function FacebookPixel() {
     }
   }, [pathname]);
 
-  return (
-    <>
-      {/* Noscript fallback */}
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1612130730207311&ev=PageView&noscript=1"
-          alt=""
-        />
-      </noscript>
-    </>
-  );
+  // A noscript tracking image cannot read an informed consent choice, so it is
+  // intentionally omitted. The pixel only mounts after marketing consent.
+  return null;
 }
 
 // Export helper function for tracking custom events
 export const trackFBEvent = (eventName: string, params?: any) => {
-  if (typeof window !== 'undefined' && (window as any).fbq) {
+  if (typeof window !== 'undefined' && hasConsent('marketing') && (window as any).fbq) {
     (window as any).fbq('track', eventName, params);
   }
 };

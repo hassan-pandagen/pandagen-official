@@ -1,57 +1,51 @@
-import { ArrowLeft, ArrowRight, Radar } from "lucide-react";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, CheckCircle2, GitCompareArrows, ShieldCheck, Wrench } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "fix-meta-ad-tracking-2026")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/SignalLeakAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "fix-meta-ad-tracking-2026";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026";
+const title = "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide";
+const description =
+    "Reconcile orders and Meta events, diagnose browser and server integrations, prevent duplicate events, and document privacy controls without promising recovered attribution.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Facebook Ad Tracking Not Working? Fix It (2026)",
-    description: "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? Here is how to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
-    alternates: {
-        canonical: "/blog/fix-meta-ad-tracking-2026",
-    },
+    title,
+    description,
+    alternates: { canonical: "/blog/fix-meta-ad-tracking-2026" },
     keywords: [
-        "facebook ad tracking not working",
-        "meta pixel not firing 2026",
-        "facebook conversions not tracking",
-        "facebook reporting fewer sales than shopify",
-        "ios 14 conversion tracking fix",
-        "meta conversions api server side tracking",
-        "event match quality low fix",
-        "fbp fbc tracking facebook",
-        "shopify checkout.liquid tracking broke",
-        "shopify conversion tracking fix",
-        "shopify server side tracking",
-        "fix shopify meta pixel ios",
-        "shopify sales not showing in meta ads manager"
+        "Meta ad tracking not working",
+        "Meta Pixel not firing",
+        "Conversions API debugging",
+        "Meta event deduplication",
+        "Meta Event Match Quality",
+        "Shopify Meta tracking",
     ],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "Facebook Ad Tracking Not Working? Fix It (2026)",
-        description: "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? Here is how to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
+        title,
+        description,
         type: "article",
         publishedTime: "2026-07-06",
-        modifiedTime: "2026-07-09",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/fix-meta-ad-tracking-2026")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Facebook Ad Tracking Not Working? Fix It (2026)",
-        description: "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? Here is how to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
 
 const articleSchema = {
@@ -59,396 +53,327 @@ const articleSchema = {
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026#article",
-            "headline": "Facebook Ad Tracking Not Working? Diagnose and Fix It (2026)",
-            "description": "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? How to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-07-06T00:00:00-05:00",
-            "dateModified": "2026-07-09T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            image: ogImageUrlForPath("/blog/fix-meta-ad-tracking-2026"),
+            datePublished: "2026-07-06",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026" },
-            "articleSection": "Ad Tracking",
-            "keywords": ["facebook ad tracking not working", "meta pixel not firing", "facebook conversions not tracking", "meta conversions api", "event match quality", "shopify conversion tracking fix"],
-            "wordCount": 2800,
-            "timeRequired": "PT11M",
-            "inLanguage": "en-US",
-            "about": [
-                { "@type": "Thing", "name": "Meta Conversions API" },
-                { "@type": "Thing", "name": "Facebook Pixel" },
-                { "@type": "Thing", "name": "Server-Side Tracking" },
-                { "@type": "Thing", "name": "Event Match Quality" },
-                { "@type": "Thing", "name": "Shopify Conversions API" }
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Measurement",
+            inLanguage: "en-US",
+            citation: [
+                {
+                    "@type": "WebPage",
+                    name: "Meta Business Tools Terms",
+                    url: "https://www.facebook.com/legal/terms/businesstools",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Meta Data Processing Terms",
+                    url: "https://www.facebook.com/legal/terms/dataprocessing",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Meta Conversions API documentation",
+                    url: "https://developers.facebook.com/docs/marketing-api/conversions-api/",
+                },
+                {
+                    "@type": "WebPage",
+                    name: "Meta Pixel and Conversions API deduplication",
+                    url: "https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/",
+                },
             ],
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            }
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026#faq",
-            "mainEntity": postFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Fix Meta Ad Tracking", "item": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026#webpage",
-            "url": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026",
-            "name": "Facebook Ad Tracking Not Working? Diagnose and Fix It (2026)",
-            "description": "Pixel not firing, iOS killed your tracking, Meta under-reporting sales? How to diagnose broken Facebook ad tracking and fix it with server-side CAPI.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-07-06T00:00:00-05:00",
-            "dateModified": "2026-07-09T00:00:00-05:00",
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites with server-side ad tracking (Meta CAPI) built in. Sites load under 1 second and cost about $0 a month to host.",
-            "areaServed": "Worldwide",
-            "sameAs": [
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://twitter.com/pandacodegen"
-            ]
-        }
-    ]
+    ],
 };
 
-export default function FixMetaAdTrackingPage() {
-    return (
-        <main className="bg-paper min-h-screen overflow-x-hidden">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-            />
-            <Header />
+const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
-            <section className="relative pt-24 md:pt-40 pb-10 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Fix Meta Ad Tracking" }
-                    ]} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
+export default function MetaAdTrackingGuide() {
+    return (
+        <>
+            <Header />
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Meta ad tracking diagnostic", href: "/blog/fix-meta-ad-tracking-2026" },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold mb-4">
-                            <Radar className="w-3 h-3" /> Ad Tracking · Guide
-                        </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            Your Facebook Ad Tracking Isn&apos;t Broken by Accident.{" "}
-                            <span className="font-serif italic text-cognac">Here&apos;s How to Diagnose and Fix It.</span>
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Measurement and privacy</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Meta Ad Tracking Not Working? <span className="italic text-cognac">Diagnose the Data Path</span>
                         </h1>
-                        <p className="text-lg text-stone-500 leading-relaxed mb-6">
-                            iOS opt-outs, ad blockers, Safari&apos;s 7-day cookie cap, and Shopify&apos;s checkout changes quietly eat your conversion signal. Meta reports a worse ROAS than you actually got, then optimizes toward the wrong people. Here is the diagnosis, and the server-side fix.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Ads Manager, your shop and your analytics tool can all report different numbers
+                            without any of them being wrong. Work out what each system is actually counting,
+                            line up the events you can fairly compare, then follow the path an event takes
+                            through the browser, your server, consent, and the check that stops it being
+                            counted twice.
                         </p>
-                        <BlogAuthor
-                            date="Jul 6, 2026"
-                            readTime="11 min read"
-                            bio="Hassan builds custom Next.js sites with server-side Meta CAPI tracking wired in. On Panda Patches, the store we build and run, that setup lifted credited Lead conversions ~10% and pushed Lead Event Match Quality to 9.0."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">
+                            Reviewed July 24, 2026 against current Meta terms and developer documentation.
+                        </p>
+                    </header>
+
+                    <BlogAuthor
+                        name="Hassan Jamal"
+                        role="Co-founder and Lead Engineer"
+                        date="July 6, 2026"
+                        readTime="10 min read"
+                        bio="Hassan works on consent-aware measurement integrations and custom commerce systems."
+                    />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <BlogList
+                            items={[
+                                "Start with the order or lead system of record and a written event definition.",
+                                "Compare the same event, time zone, date range, test status, refund treatment, and attribution window.",
+                                "Use Meta diagnostics, browser developer tools, and server logs to find where an event is lost or duplicated.",
+                                "If browser and server both send one occurrence, use the same event name and event ID for deduplication.",
+                                "Conversions API is another data path. It is not a consent bypass or a guarantee of recovered attribution.",
+                            ]}
                         />
+                    </section>
+
+                    <BlogHeader>First decide what is actually wrong</BlogHeader>
+                    <BlogText>
+                        A storefront normally counts completed orders. A CRM may count qualified leads. Ads Manager
+                        applies its own attribution rules to events it can associate with ads. Those are different
+                        questions. A mismatch alone does not prove that the Pixel is broken or that one platform has
+                        hidden a fixed percentage of sales. If the symptom is rising spend next to a falling order
+                        count, the same reconciliation sequence is set out in our guide to{" "}
+                        <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">auditing tracking when ad spend rises and orders fall</Link>.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Write the business event: for example, a paid order after test and cancelled orders are excluded.",
+                            "Record the source of truth, currency, time zone, order state, date range, and comparison timestamp.",
+                            "Export event identifiers where permitted so individual records can be matched, not merely totals.",
+                            "Separate delivery from attribution: an event can arrive at Meta without being attributed to an ad.",
+                        ]}
+                    />
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-3">
+                        {[
+                            { icon: GitCompareArrows, title: "Reconcile", body: "Compare equivalent records under a documented scope." },
+                            { icon: Wrench, title: "Debug", body: "Trace consent, browser requests, server responses, IDs, and logs." },
+                            { icon: ShieldCheck, title: "Govern", body: "Send only permitted data under current notices, choices, terms, and law." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="mb-12">
-                        <FeatureVisual />
-                    </div>
+                    <BlogHeader>A browser and server diagnostic sequence</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Confirm the expected Pixel or dataset ID and remove stale or duplicate integrations.",
+                            "Test with Meta's current diagnostic tools and the browser network panel. Record consent state and test mode.",
+                            "Inspect the exact event name, event time, value, currency, source URL, and event ID.",
+                            "For server events, log request acceptance and rejected parameters without logging prohibited personal data.",
+                            "Repeat a controlled test for denial, acceptance, returning visitor, checkout, and any relevant refund or cancellation state.",
+                            "Check that production tags are not firing from preview, staging, bot, staff, or automated-test traffic unless intentionally separated.",
+                        ]}
+                    />
+                    <BlogText>
+                        An ad blocker, browser policy, consent choice, navigation race, script error, integration update,
+                        or duplicate tag can affect a browser request. None is a universal diagnosis. Evidence from the
+                        affected session should decide the next step.
+                    </BlogText>
 
-                    {/* Executive Summary */}
-                    <div
-                        className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12"
-                        data-speakable="true"
-                    >
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Key Facts</p>
-                        <ul className="space-y-2">
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Browser pixel tracking loses a large share of conversions to iOS App Tracking Transparency, cookie loss, Safari&apos;s 7-day cap, ad blockers, and Shopify&apos;s checkout.liquid removal
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Meta can&apos;t credit sales it can&apos;t see, so it under-reports ROAS and optimizes on partial data
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                The fix is server-side tracking through the Meta Conversions API: events sent from your server with strong identifiers, deduplicated against the pixel by a shared event ID
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                On Panda Patches, the store we build and run, this setup lifted credited Lead conversions about 10% and pushed Lead Event Match Quality to roughly 9.0/10
-                            </li>
-                        </ul>
-                    </div>
+                    <BlogHeader>How browser and server event deduplication works</BlogHeader>
+                    <BlogText>
+                        Sending both paths can improve resilience, but two copies of one purchase must not become two
+                        purchases. Meta&apos;s current documentation describes using matching event names and event IDs
+                        so corresponding browser and server events can be deduplicated. Generate one stable ID for the
+                        business occurrence, pass it through both paths, and do not reuse it for a different occurrence.
+                        For what building and operating both paths involves as a project, see our breakdown of a{" "}
+                        <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">server-side Conversions API build</Link>.
+                    </BlogText>
+                    <InsightBox variant="warning" label="Do not infer success from HTTP acceptance">
+                        An accepted request does not prove correct attribution, consent, deduplication, value, or
+                        downstream reporting. Verify the event in diagnostics and reconcile it against the system of
+                        record.
+                    </InsightBox>
 
-                    {/* Article body */}
-                    <div className="space-y-8">
+                    <BlogHeader>Event Match Quality is a diagnostic, not a guarantee</BlogHeader>
+                    <BlogText>
+                        Event Match Quality reflects how customer information parameters may help Meta associate events.
+                        It is not a universal minimum score and does not promise lower acquisition cost, recovered
+                        revenue, or a particular attribution result. Send only fields that are accurate, permitted,
+                        and formatted for the current interface.
+                    </BlogText>
 
-                        <BlogText>
-                            A while back, the Meta ads for <BlogHighlight>Panda Patches</BlogHighlight> looked like they were slipping. Same creative, same audiences, but the reported numbers were softer than the bank account suggested. The ads weren&apos;t the problem. The tracking was. Once we wired up proper server-side tracking with the right identifiers and Meta&apos;s Conversions API, Lead conversions Meta could actually credit went up about <BlogHighlight>10%</BlogHighlight>, and Event Match Quality for the Lead event reached roughly <BlogHighlight>9.0 out of 10</BlogHighlight>. Panda Patches is a custom Next.js store we build and run, and it puts real paid traffic on the exact stack described below, so these are first-party numbers, not a case study we bought.
-                        </BlogText>
+                    <figure className="my-10 overflow-hidden rounded-2xl border border-stone-200 bg-stone-50">
+                        <Image
+                            src="/blog-images/capi-conversions-lift-10pct.jpeg"
+                            alt="Owner-provided Meta Events Manager screenshot showing a Lead event diagnostic and Event Match Quality"
+                            width={1600}
+                            height={900}
+                            className="h-auto w-full"
+                        />
+                        <figcaption className="px-5 py-4 text-sm leading-relaxed text-stone-600">
+                            Owner-approved first-party Panda Patches snapshot. The visible interface shows a Lead Event
+                            Match Quality of 9.0/10 and a Meta estimate for the selected seven-day view. The capture does
+                            not independently show its year and is not evidence of a universal lift, causal result, or
+                            client benchmark.
+                        </figcaption>
+                    </figure>
 
-                        <BlogText>
-                            If your ads suddenly look worse than they used to, read this before you touch a single budget. Most of the time the campaign is fine. The pipe carrying the data back to Meta is leaking.
-                        </BlogText>
+                    <BlogHeader>Conversions API does not remove privacy duties</BlogHeader>
+                    <BlogText>
+                        Meta&apos;s Business Tools Terms cover technologies including the Pixel and Conversions API and
+                        impose notice, choice, and data-use obligations. The current Data Processing Terms address
+                        applicable processing arrangements, but legal roles depend on the product, data flow,
+                        jurisdiction, and parties. Hashing an identifier for transmission does not by itself make the
+                        collection anonymous or eliminate consent and disclosure requirements. Where the tracking code
+                        lives and who controls it belongs to the wider question covered in{" "}
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline font-medium">who owns your website and its code</Link>.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Map each field from collection through browser, server, Meta, storage, access, retention, and deletion.",
+                            "Align tag and server behavior with the site's actual consent choices and regional configuration.",
+                            "Avoid sending prohibited or unnecessary data in URLs, custom parameters, logs, or event names.",
+                            "Keep vendor terms, privacy notices, data-processing terms, and deletion procedures current.",
+                            "Get qualified legal advice for the jurisdictions and data involved instead of treating this guide as legal advice.",
+                        ]}
+                    />
 
-                        <BlogHeader>Why is my Facebook ad tracking not working all of a sudden?</BlogHeader>
+                    <BlogHeader>Shopify and other managed integrations</BlogHeader>
+                    <BlogText>
+                        A native sales-channel integration may manage parts of browser and server delivery, but labels,
+                        availability, consent behavior, and supported events change. Use the current Shopify and Meta
+                        administration screens and documentation for the installed integration. Verify its data-sharing
+                        setting, test events, IDs, values, deduplication, and privacy behavior. Do not assume that
+                        installing an app reproduces another store&apos;s diagnostics. If you are weighing a managed
+                        integration against a storefront you control, compare the two models in{" "}
+                        <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline font-medium">Shopify compared with a custom website</Link>{" "}
+                        and in our guide to{" "}
+                        <Link href="/blog/shopify-headless" className="text-cognac hover:underline font-medium">headless Shopify architecture</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            Because the old way of tracking, a JavaScript pixel running in the visitor&apos;s browser, depends on things that browsers and Apple have spent five years taking away. The pixel still loads, so it <em>looks</em> fine in a quick check, but a growing slice of your customers are invisible to it.
-                        </BlogText>
+                    <h3 className="mt-8 text-xl font-bold text-charcoal">Why is Shopify&apos;s setup simpler than a custom build?</h3>
+                    <BlogText>
+                        Because the sales channel already knows what a purchase is. On a{" "}
+                        <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom-engineered stack</Link>{" "}
+                        you define the event
+                        contract yourself: which server action counts as a conversion, which identifiers you are permitted
+                        to send, how the event ID is generated so browser and server copies deduplicate, and where that
+                        code runs. Shopify&apos;s integration makes those decisions for you for its own standard events.
+                        That is genuinely less work, and it is also less control. You inherit whichever events, parameters
+                        and consent behaviour the integration currently supports, and those change without your involvement.
+                    </BlogText>
 
-                        <BlogList items={[
-                            "iOS App Tracking Transparency (ATT). Since iOS 14.5 (2021), Apple shows the \"Ask App Not to Track\" prompt, and the large majority of users tap it. When an opted-out Facebook or Instagram user lands on your site, Meta's ability to connect the visit to their account is heavily restricted. Industry estimates put the visibility loss from this alone at 30 to 50 percent.",
-                            "Third-party cookies are gone or blocked. The pixel historically leaned on cookies to recognize people. Safari and Firefox block third-party cookies outright. No cookie, no match.",
-                            "Safari's 7-day cookie cap (ITP). Safari caps cookies set by JavaScript at seven days. Someone clicks your ad Monday and buys the following week? Safari already wiped the cookie that linked the sale to the click. The purchase shows up as \"direct\" and your ad gets no credit.",
-                            "Ad blockers and consent banners. Ad blockers stop the pixel's network call from ever reaching Meta. Consent banners hold the pixel back until the visitor clicks accept, and plenty never do. This is why a pixel can fire perfectly in incognito and still miss real customers.",
-                            "Shopify's checkout.liquid deprecation. Shopify removed support for checkout.liquid and custom scripts on the Thank You and Order Status pages (Plus stores hit the deadline August 28, 2025; other plans follow in 2026). Any conversion tracking living on those pages stopped firing overnight.",
-                        ]} />
+                    <h3 className="mt-8 text-xl font-bold text-charcoal">Why aren&apos;t my Shopify sales showing in Meta Ads Manager?</h3>
+                    <BlogText>
+                        Work through the four questions at the top of this article in order rather than reinstalling
+                        anything. Confirm the order exists in Shopify admin. Confirm an event was actually sent for it,
+                        using Meta&apos;s Test Events tool on a real transaction rather than a preview. Confirm the event
+                        was accepted rather than dropped or deduplicated away. Only then look at attribution: the sale may
+                        be recorded correctly but assigned outside the reporting window, to a different channel, or to a
+                        view-through the model does not credit. A missing sale in Ads Manager is far more often an
+                        attribution or consent outcome than a broken integration.
+                    </BlogText>
 
-                        <BlogText>
-                            None of these are your campaign&apos;s fault. They&apos;re the environment your pixel runs in, and that environment keeps getting more hostile.
-                        </BlogText>
+                    <h3 className="mt-8 text-xl font-bold text-charcoal">What about tracking after the iOS privacy changes?</h3>
+                    <BlogText>
+                        Server events do not restore visibility into people who declined tracking, and no integration
+                        does. What server-side delivery can improve is the completeness of events you are already
+                        permitted to send, because a server call does not depend on the browser holding state. Treat it as
+                        reducing avoidable loss rather than recovering opted-out users, and expect reported conversions to
+                        stay below your order count in the system of record. Any vendor promising to recover the gap is
+                        describing something the consent framework does not allow.
+                    </BlogText>
 
-                        <BlogHeader>How can I tell my tracking is actually broken (and not just my ads underperforming)?</BlogHeader>
+                    <BlogHeader>What a defensible handoff contains</BlogHeader>
+                    <BlogList
+                        items={[
+                            "A dated event dictionary and data-flow map.",
+                            "Consent-state test results for representative regions and journeys.",
+                            "Browser and server request evidence with secrets and personal data redacted.",
+                            "Deduplication, value, currency, timestamp, refund, and test-traffic checks.",
+                            "A reconciliation report that separates delivery, attribution, and business records.",
+                            "Named owners for monitoring, vendor changes, incident response, retention, and deletion.",
+                        ]}
+                    />
+                    <BlogText>
+                        Report measured observations with their date, scope, and limitations. Do not promise that a
+                        technical change will restore a fixed share of conversions or produce a particular advertising
+                        result.
+                    </BlogText>
+                    <BlogText>
+                        We scope this work as part of{" "}
+                        <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">e-commerce development</Link>, the
+                        project tiers it sits in are listed on our{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>, and you can see how we
+                        build owned commerce systems in the{" "}
+                        <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches case study</Link>{" "}
+                        alongside the rest of our{" "}
+                        <Link href="/work" className="text-cognac hover:underline font-medium">client work</Link>. To talk through a specific
+                        store, <Link href="/contact" className="text-cognac hover:underline font-medium">get in touch</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            You look for the gap between what Meta says happened and what really happened. Tracking problems leave fingerprints. Run through this checklist:
-                        </BlogText>
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
+                        <li><a href="https://www.facebook.com/legal/terms/businesstools" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta Business Tools Terms</a></li>
+                        <li><a href="https://www.facebook.com/legal/terms/dataprocessing" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta Data Processing Terms</a></li>
+                        <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta Conversions API documentation</a></li>
+                        <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>Meta guidance for deduplicating Pixel and server events</a></li>
+                    </ul>
 
-                        <BlogList items={[
-                            "Meta reports fewer sales than your store. Compare Meta's reported purchases to the orders in your store admin for the same window. A persistent shortfall (Meta low) is the classic under-reporting signature.",
-                            "Your Event Match Quality (EMQ) is low. Open Events Manager and check the EMQ score on your key events. Below 6 is weak. A Purchase or Lead event should sit in the 7 to 10 range.",
-                            "Events Manager shows lots of unmatched or browser-only events. Important events arriving with thin data is signal you're paying for but Meta can't use.",
-                            "Reported ROAS dropped without a real change. Same creative and audiences, suddenly worse numbers, usually lines up with a platform change (an iOS update, a checkout migration), not your campaign.",
-                            "Pixel works in incognito but misses real traffic. That points to ad blockers or a consent banner suppressing the pixel for normal visitors.",
-                            "Test Events shows less than reality. Open Events Manager's Test Events tool, complete a purchase or lead on your live site, and watch what arrives. If your own test conversion shows up thin or not at all, so do your customers'.",
-                            "You're relying on the pixel alone. If you've never set up server-side tracking, assume you're leaking. In 2026, pixel-only is the broken default.",
-                        ]} />
-
-                        <BlogText>
-                            The one to fixate on is the first: <BlogHighlight>the discrepancy between Meta-reported orders and real orders</BlogHighlight>. When we built the live tracking dashboard for Panda Patches, it laid this bare. Only about half the sales were reaching Meta with their full story attached. Meta knew the other half happened, but couldn&apos;t connect them to an ad, so it couldn&apos;t learn from them. Meta optimizes against the data it can see. Feed it half the picture and it spends your budget chasing the wrong people.
-                        </BlogText>
-
-                        <BlogHeader>What&apos;s the actual difference between the pixel and server-side tracking?</BlogHeader>
-
-                        <BlogText>
-                            The pixel runs in the customer&apos;s browser and is at the mercy of everything that browser allows. Server-side tracking sends the event from <em>your</em> server straight to Meta, where Apple, ad blockers, and cookie rules can&apos;t reach it. <BlogHighlight>Apple cannot block a server-to-server call.</BlogHighlight> You don&apos;t pick one; you run both and let Meta deduplicate.
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal"></th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Pixel only (browser)</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Pixel + server-side (CAPI)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Survives iOS ATT</td>
-                                        <td data-label="Pixel only" className="border border-stone-300 px-4 py-3 text-stone-700">No, opted-out users are largely invisible</td>
-                                        <td data-label="Pixel + CAPI" className="border border-stone-300 px-4 py-3 text-stone-700">Yes, the server event still sends</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Survives ad blockers</td>
-                                        <td data-label="Pixel only" className="border border-stone-300 px-4 py-3 text-stone-700">No, the network call gets stopped</td>
-                                        <td data-label="Pixel + CAPI" className="border border-stone-300 px-4 py-3 text-stone-700">Yes, the call comes from your server</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Survives Safari 7-day cap</td>
-                                        <td data-label="Pixel only" className="border border-stone-300 px-4 py-3 text-stone-700">No, delayed conversions get lost</td>
-                                        <td data-label="Pixel + CAPI" className="border border-stone-300 px-4 py-3 text-stone-700">Yes, server events aren&apos;t cookie-dependent</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Match quality (EMQ)</td>
-                                        <td data-label="Pixel only" className="border border-stone-300 px-4 py-3 text-stone-700">Typically low, thin identifiers</td>
-                                        <td data-label="Pixel + CAPI" className="border border-stone-300 px-4 py-3 text-stone-700">Higher: email, phone, fbp, fbc, IP, user agent</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Optimization signal to Meta</td>
-                                        <td data-label="Pixel only" className="border border-stone-300 px-4 py-3 text-stone-700">Partial, Meta learns from a fraction of sales</td>
-                                        <td data-label="Pixel + CAPI" className="border border-stone-300 px-4 py-3 text-stone-700">Fuller, Meta credits and learns from far more</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            The pixel is a guest in someone else&apos;s browser. Server-side tracking is a message you send from your own house.
-                        </BlogText>
-
-                        <BlogHeader>How does server-side tracking actually fix it?</BlogHeader>
-
-                        <BlogText>
-                            It gives Meta a clean, complete copy of every conversion, with enough detail to confidently match it to a real person, sent from a place nothing can block. Here&apos;s what &quot;done right&quot; looks like:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Send the event from your server, not just the browser. When a customer completes a purchase or submits a lead, your server fires the event to Meta's Conversions API directly. No browser, no cookie dependency, no ad blocker in the path.",
-                            "Capture the identifiers Meta needs to match: fbp (the Facebook browser ID), fbc (the click ID from the ad URL), hashed email and phone (email is the single strongest identifier), plus IP address and user agent captured server-side. For Google, the equivalent is gclid plus enhanced conversions.",
-                            "Hash the personal data correctly. Email and phone run through SHA-256 before they leave your server, lowercased and trimmed, phone with country code, exactly to Meta's spec. Meta never sees raw data, only hashes.",
-                            "Deduplicate with a shared event ID. The pixel and the server send the same purchase with the same eventID; Meta counts it once. This is the step people skip, and it's why sloppy setups double-count.",
-                            "Watch EMQ climb. On Panda Patches, the Lead event reached about 9.0 out of 10, and Events Manager reported roughly 10% more Lead conversions than the pixel had caught alone. That's optimization signal that was on the floor.",
-                        ]} />
-
-                        <BlogText>
-                            Email plus fbc alone can move an EMQ score from the low 3s into the 7s. If you want the deeper breakdown of what this build involves and costs, we wrote it up in <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">Meta Conversions API setup cost</Link>. If your symptom is specifically &quot;spending more, seeing fewer orders,&quot; that framing is in <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac underline underline-offset-2 hover:text-amber-700">spending more on ads, fewer tracked orders</Link>.
-                        </BlogText>
-
-                        {/* Mid CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
-                            <p className="text-sm font-bold text-charcoal mb-2">Want to know how much signal your store is leaking?</p>
-                            <p className="text-sm text-stone-500 mb-4">
-                                Drop your store URL when you book. We&apos;ll compare your Meta-reported orders to reality, check your EMQ live on the call, and tell you straight whether server-side tracking is worth it for your spend.
-                            </p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free Tracking Audit <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
-                        </div>
-
-                        <BlogHeader>What does &quot;good&quot; tracking look like once it&apos;s fixed?</BlogHeader>
-
-                        <BlogText>
-                            Good tracking is boring, in the best way. The numbers stop arguing with each other.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Meta-reported orders line up closely with your real orders. The discrepancy shrinks to a small, explainable gap.",
-                            "Event Match Quality sits in the 7 to 10 range on your money events (Purchase, Lead).",
-                            "Events Manager shows rich, matched events with identifiers attached, not thin browser-only pings.",
-                            "Your reported ROAS reflects reality, so you can trust it when deciding where to scale.",
-                            "Platform changes stop breaking you. The next iOS update or checkout migration doesn't wipe a third of your data, because your conversion source lives on your server.",
-                        ]} />
-
-                        <BlogText>
-                            The payoff isn&apos;t just cleaner dashboards. When Meta can see the full set of conversions, it optimizes toward people who actually buy. Better signal in, better spend out.
-                        </BlogText>
-
-                        <BlogHeader>Should I use a third-party tracking app or build it into the site?</BlogHeader>
-
-                        <InsightBox variant="info" label="Quick Answer">
-                            An app is faster to switch on and a recurring cost forever. A built-in setup is more work up front and then it&apos;s just yours. For a store spending real money on ads every month, owning the pipe usually wins.
-                        </InsightBox>
-
-                        <BlogText>
-                            Most tracking apps are middleware: a monthly subscription sitting between your store and Meta, and the day you stop paying, your tracking goes with it. You&apos;re renting your own conversion data.
-                        </BlogText>
-
-                        <BlogText>
-                            PandaCodeGen builds server-side tracking directly into the site, so it&apos;s owned, with no monthly middleware tax. Server-side Meta CAPI is included in our Scale tier ($5K to $10K), and it can be added to an existing site too, it doesn&apos;t require a full rebuild. It&apos;s part of how we do <Link href="/services/ecommerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">e-commerce development</Link> and <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-amber-700">custom engineering</Link>: the tracking is yours, wired in once, and it doesn&apos;t expire when an invoice does.
-                        </BlogText>
-
-                        <BlogHeader>Fixing Meta Ad Tracking If You&apos;re on Shopify</BlogHeader>
-
-                        <BlogText>
-                            Everything above describes wiring the Conversions API into a custom-built stack, the way we did it for Panda Patches, our own Next.js store. A lot of the store owners reading this run Shopify instead, and the fix path there is genuinely different. Shopify has shipped its own native Meta Conversions API support directly into the platform, so most Shopify merchants don&apos;t need to write server code, hash identifiers, or build a deduplication pipeline from scratch. You&apos;re turning on an integration Shopify and Meta already built and maintain, not building one.
-                        </BlogText>
-
-                        <InsightBox variant="tip" label="Quick Answer">
-                            On Shopify, look for server-side tracking inside Shopify&apos;s own Marketing settings and the official Meta (Facebook &amp; Instagram) sales channel, usually alongside Settings &gt; Customer events. The exact label shifts as Shopify updates its admin, so if what you see doesn&apos;t match, search &quot;Meta&quot; or &quot;Facebook&quot; from Shopify admin search and look for the conversions API or server-side tracking option attached to your ad connection.
-                        </InsightBox>
-
-                        <BlogText>
-                            Connect your Meta ad account and catalog through that channel, then check that the data-sharing setting is on the highest option available rather than the default. That one setting is usually the difference between Shopify sending Meta a thin, browser-only event and a full server-side event with order, email, and phone data attached.
-                        </BlogText>
-
-                        <BlogHeader>Why is Shopify&apos;s server-side tracking setup simpler than the custom Next.js path above?</BlogHeader>
-
-                        <BlogText>
-                            Because Shopify owns the checkout. On a custom stack, you build the server, capture the identifiers, hash them correctly, and deduplicate against the pixel yourself, which is the work described earlier in this post. On Shopify, the platform already sits between the buyer and the order data: it knows the email, phone, and order total the moment checkout completes, and its native integration passes that straight to Meta&apos;s Conversions API on your behalf.
-                        </BlogText>
-
-                        <BlogText>
-                            This is also why Shopify pushed merchants toward the native integration in the first place. When Shopify <BlogHighlight>removed checkout.liquid</BlogHighlight> and custom scripts on the Thank You and Order Status pages, it closed off the old workaround of pasting a custom pixel snippet onto the checkout page. The native, platform-level Conversions API connection is the supported replacement, not a workaround, and it keeps working through checkout changes that would otherwise break a custom script.
-                        </BlogText>
-
-                        <BlogHeader>Why aren&apos;t my Shopify sales showing up in Meta Ads Manager?</BlogHeader>
-
-                        <BlogText>
-                            Run the same check described earlier in this post: compare Meta&apos;s reported purchases to your actual Shopify order count for the same date range. If Meta is under-counting, the cause on Shopify is almost always one of two things.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "The app is installed but server-side sharing isn't actually turned on. Plenty of stores connected the Facebook & Instagram channel years ago for the browser pixel and never revisited it once Shopify added the conversions API layer, so they're still effectively pixel-only.",
-                            "Event Match Quality is low. Open Events Manager and check the EMQ score on your Purchase event, same as described earlier in this post. A low score on Shopify usually means the channel isn't passing hashed email and phone with the order, not that the integration itself is broken.",
-                        ]} />
-
-                        <BlogText>
-                            Neither of those is a code problem. Both are a settings problem, which is the practical upside of being on Shopify: the fix is a checklist, not a build.
-                        </BlogText>
-
-                        <BlogHeader>How do I fix Shopify tracking after iOS privacy changes?</BlogHeader>
-
-                        <BlogText>
-                            The same way described throughout this post, just through Shopify&apos;s own toggle instead of custom code. iOS App Tracking Transparency restricts what the <em>browser</em> pixel can see once a customer opts out. It has no power over a server-to-server call, which is exactly what Shopify&apos;s native Conversions API integration sends. Turn it on, connect your ad account, and set data sharing to the highest level, and iOS opt-outs stop being a blind spot for that share of your traffic.
-                        </BlogText>
-
-                        <BlogText>
-                            The EMQ mechanics behind that fix are the same ones behind the Panda Patches numbers referenced earlier in this post. Panda Patches isn&apos;t a Shopify store, it runs on our own Next.js and Square stack, but it hits Meta&apos;s Conversions API and EMQ scoring the same way any CAPI integration does. Feeding Meta a full set of identifiers, email, phone, fbp, fbc, is what moved Lead EMQ to roughly 9.0 there. A Shopify store with the native integration fully connected and data sharing maxed out is feeding Meta that same kind of identifier set, so the EMQ lift follows the same logic, even though the plumbing underneath is Shopify&apos;s, not custom code.
-                        </BlogText>
-
-                        <BlogText>
-                            If your native integration is already connected, data sharing is already maxed out, and EMQ is still weak, or you&apos;re running a headless Shopify setup where checkout doesn&apos;t sit on Shopify&apos;s standard hosted flow, that&apos;s closer to the custom-stack problem described in the rest of this post. Book the free tracking audit below and we&apos;ll tell you which situation you&apos;re actually in.
-                        </BlogText>
-
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-xl font-bold text-charcoal mb-2">Stop Optimizing on Half Your Data</h3>
-                        <p className="text-stone-500 text-sm mb-6">
-                            Free tracking audit. We&apos;ll measure the gap between your real orders and what Meta sees, then quote a fixed price to wire server-side CAPI into your site, owned, no monthly middleware.
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
+                        <h2 className="mb-3 font-serif text-3xl">Get your measurement integration plan</h2>
+                        <p className="mb-6 leading-relaxed text-stone-300">
+                            We will map the event path, inspect the current integration, and define a consent-aware,
+                            testable scope. Any implementation, outcome, and support commitment belongs in the accepted
+                            statement of work.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Get My Free Tracking Audit <ArrowRight className="w-4 h-4" />
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
+                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
-                    </div>
+                    </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-
-                    <RelatedPosts currentPostId="fix-meta-ad-tracking-2026" />
-
-                </div>
-            </section>
-
+                    <RelatedPosts currentPostId={postId} />
+                </article>
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

@@ -1,268 +1,179 @@
-import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, Boxes, CheckCircle2, Database, FileCheck2, Network, Route } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { ArrowLeft, ArrowRight, BarChart3, Target } from "lucide-react";
-import { blogPosts } from "@/data/blog";
+import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
-    title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
-    description: "Imran Raza Ladhani is co-founder and Lead Architect at PandaCodeGen, working with co-founder Hassan Jamal on scalable custom Next.js builds, platform migrations, and headless commerce architecture.",
-    openGraph: {
-        title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
-        description: "Co-founder and Lead Architect at PandaCodeGen. Custom Next.js builds, platform migrations, system design, headless commerce.",
-        type: "profile",
-        url: "https://www.pandacodegen.com/about/imran",
-        images: [{ url: "https://www.pandacodegen.com/team/imran.png", width: 400, height: 400 }],
-    },
-    twitter: {
-        card: "summary",
-        title: "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
-        description: "Co-founder and Lead Architect at PandaCodeGen. Custom Next.js builds and platform migrations.",
-    },
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
-    alternates: { canonical: "/about/imran" },
+  title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
+  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Lead Architect for migration feasibility, system design, data models, integrations, and cutover planning.",
+  alternates: { canonical: "/about/imran" },
+  openGraph: {
+    title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
+    description: "Architecture leadership for migration feasibility, system design, integrations, data, and cutover planning.",
+    type: "profile",
+    url: "https://www.pandacodegen.com/about/imran",
+    images: [ogImageForPath("/about/imran")],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
+    description: "Architecture leadership for migration feasibility, system design, integrations, data, and cutover planning.",
+    images: [ogImageForPath("/about/imran")],
+  },
+  robots: { index: true, follow: true },
 };
 
-const personSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Person",
-            "@id": "https://www.pandacodegen.com/#/schema/person/imran",
-            "name": "Imran Raza Ladhani",
-            "givenName": "Imran",
-            "familyName": "Raza Ladhani",
-            "jobTitle": "Co-founder and Lead Architect",
-            "description": "Co-founder and Lead Architect at PandaCodeGen. Works alongside co-founder Hassan Jamal on scalable custom Next.js builds, platform migrations, headless commerce architecture, and system design.",
-            "url": "https://www.pandacodegen.com/about/imran",
-            "image": "https://www.pandacodegen.com/team/imran.png",
-            "worksFor": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-            },
-            "sameAs": [
-                "https://www.linkedin.com/in/imran-raza-ladhani/",
-            ],
-            "knowsAbout": [
-                "Next.js Architecture", "Platform Migrations", "System Design",
-                "Headless Commerce", "WordPress Migration", "Shopify Headless",
-                "Performance Optimization", "Technical Planning",
-            ],
-            "owns": {
-                "@type": "WebSite",
-                "name": "Panda Patches",
-                "url": "https://www.pandapatches.com",
-                "description": "Custom embroidered patches e-commerce store fully owned by Imran Raza, built and operated on the PandaCodeGen stack (Next.js, Sanity, Supabase, Square). As of 2026, revenue grew from $38,000 to about $50,000 per month while tooling stayed near $55 per month (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
-            },
-        },
-        {
-            "@type": "ProfilePage",
-            "@id": "https://www.pandacodegen.com/about/imran#webpage",
-            "url": "https://www.pandacodegen.com/about/imran",
-            "name": "Imran Raza Ladhani - Co-founder & Lead Architect at PandaCodeGen",
-            "description": "Learn about Imran Raza Ladhani, co-founder and Lead Architect at PandaCodeGen. Works alongside co-founder Hassan Jamal on custom Next.js builds and platform migrations.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "mainEntity": { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
-            "inLanguage": "en-US",
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/about/imran#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.pandacodegen.com/about" },
-                { "@type": "ListItem", "position": 3, "name": "Imran", "item": "https://www.pandacodegen.com/about/imran" },
-            ],
-        },
-    ],
+const profileSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.pandacodegen.com/#/schema/person/imran",
+      name: "Imran Raza Ladhani",
+      jobTitle: "Co-founder and Lead Architect",
+      url: "https://www.pandacodegen.com/about/imran",
+      worksFor: { "@id": "https://www.pandacodegen.com/#organization" },
+      sameAs: ["https://www.linkedin.com/in/imran-raza-ladhani/"],
+      knowsAbout: [
+        "System architecture",
+        "Website migration",
+        "Content modeling",
+        "Headless commerce",
+        "Database design",
+        "API integration",
+      ],
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.pandacodegen.com/about/imran#webpage",
+      url: "https://www.pandacodegen.com/about/imran",
+      name: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
+      mainEntity: { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://www.pandacodegen.com/about" },
+        { "@type": "ListItem", position: 3, name: "Imran Raza Ladhani", item: "https://www.pandacodegen.com/about/imran" },
+      ],
+    },
+  ],
 };
 
-const expertise = [
-    "Next.js Architecture",
-    "Platform Migrations",
-    "System Design",
-    "Headless Commerce",
-    "WordPress Migration",
-    "Shopify Headless",
-    "Performance Optimization",
-    "Database Modeling",
-    "API Design",
-    "Sanity CMS",
+const responsibilities = [
+  {
+    icon: Route,
+    title: "Migration feasibility",
+    body: "Review platform constraints, content, URLs, integrations, access, business dependencies, and rollback needs before a replacement is recommended.",
+  },
+  {
+    icon: Database,
+    title: "Data and content architecture",
+    body: "Define content models, data ownership, application boundaries, APIs, and the account structure required for a maintainable handover.",
+  },
+  {
+    icon: Network,
+    title: "Operational design",
+    body: "Map authentication, payments, forms, analytics, automation, monitoring, support, and third-party responsibilities into the approved scope.",
+  },
 ];
 
-const builds = [
-    { title: "Migration Feasibility Reviews", desc: "Before any quote goes out, I review the source platform, content structure, integrations, and SEO risk. The call is: feasible in 3 weeks, feasible in 8, or not feasible at all." },
-    { title: "System Design & Data Modeling", desc: "Sanity schema, Supabase tables, Stripe connect architecture, webhook flow. The stuff Hassan does not want to re-think three weeks into a build." },
-    { title: "Zero-Downtime Migration Planning", desc: "WordPress and Shopify cutovers without losing a ranking, a subscription, or a customer card. DNS sequencing, 301 maps, staging-to-prod handoffs." },
-    { title: "Technical Quality Review", desc: "Before launch, I stress-test the architecture: can it scale past 10,000 users, hold up under a Shop Pay spike, survive a hosting vendor switch. If it cannot, we fix before launch." },
-];
+export default function ImranProfilePage() {
+  return (
+    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
+      <Header />
 
-export default function ImranAuthorPage() {
-    const imranPosts = blogPosts.filter(p => p.author === "Imran");
-
-    return (
-        <main className="bg-paper min-h-screen">
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-            <Header />
-
-            <div className="pt-20 md:pt-40 pb-12 md:pb-24 px-6">
-                <div className="container mx-auto max-w-5xl">
-
-                    {/* Back */}
-                    <Link href="/about" className="group inline-flex items-center gap-2 text-stone-500 hover:text-cognac transition-colors mb-6 md:mb-12 font-medium">
-                        <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                        Back to Team
-                    </Link>
-
-                    {/* Hero */}
-                    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start mb-10 md:mb-24">
-                        <div className="w-full max-w-[280px] mx-auto md:mx-0 md:w-64 shrink-0 aspect-square relative rounded-2xl overflow-hidden shadow-xl shadow-stone-200/60 border border-white">
-                            <Image
-                                src="/team/imran.png"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 256px"
-                                alt="Imran - Lead Solutions Architect at PandaCodeGen"
-                                className="object-cover object-top"
-                                priority
-                            />
-                        </div>
-
-                        <div className="flex-1 pt-2">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-6">
-                                Co-founder & Lead Architect
-                            </div>
-                            <h1 className="text-5xl md:text-6xl font-serif text-charcoal mb-3">Imran Raza Ladhani.</h1>
-                            <p className="text-lg font-mono text-cognac mb-6">Co-founder & Lead Architect &middot; PandaCodeGen</p>
-                            <p className="text-xl text-stone-600 leading-relaxed max-w-xl mb-8">
-                                I co-founded PandaCodeGen with Hassan and lead the architecture work. Which migrations are actually feasible without breaking SEO. How to keep a WooCommerce checkout live during a headless rebuild. Where Next.js App Router ends and Sanity or Supabase takes over. Hassan writes the code. I make sure it does what it needs to do at scale.
-                            </p>
-                            <div className="flex flex-wrap gap-3">
-                                <a
-                                    href="https://www.linkedin.com/in/imran-raza-ladhani/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
-                                >
-                                    LinkedIn &rarr;
-                                </a>
-                                <button
-                                    data-cal-namespace="discovery"
-                                    data-cal-link="pandagen/discovery"
-                                    data-cal-config='{"layout":"month_view"}'
-                                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 text-charcoal rounded-full text-sm font-bold hover:border-cognac/40 hover:text-cognac transition-all"
-                                >
-                                    Book Architecture Call
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Skills Grid */}
-                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-16">
-                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                            <div className="flex items-center gap-3 mb-6">
-                                <BarChart3 className="w-5 h-5 text-cognac" />
-                                <h3 className="text-xl font-serif text-charcoal">Technical Expertise</h3>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                {expertise.map((skill) => (
-                                    <span key={skill} className="px-3 py-1 bg-stone-50 border border-stone-100 text-stone-600 text-sm font-medium rounded-md">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Target className="w-5 h-5 text-cognac" />
-                                <h3 className="text-xl font-serif text-charcoal">What I Do</h3>
-                            </div>
-                            <ul className="space-y-4">
-                                {builds.map((item) => (
-                                    <li key={item.title} className="border-t border-stone-100 pt-4 first:border-0 first:pt-0">
-                                        <div className="font-bold text-charcoal text-sm mb-1">{item.title}</div>
-                                        <div className="text-stone-500 text-xs leading-relaxed">{item.desc}</div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Operator Receipt: Panda Patches ownership */}
-                    <section className="mb-10 md:mb-16 p-6 md:p-8 bg-white border border-stone-300 rounded-2xl shadow-xs">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-50 border border-stone-200 text-xs font-bold uppercase tracking-widest text-charcoal mb-5">
-                            Owner-Operator
-                        </div>
-                        <h3 className="text-xl font-serif text-charcoal mb-4">I Own The Store I Architected</h3>
-                        <div className="space-y-4 text-stone-600 text-sm leading-relaxed">
-                            <p>
-                                I own <a href="https://www.pandapatches.com" target="_blank" rel="noopener noreferrer" className="text-cognac underline decoration-cognac/40 hover:decoration-cognac transition-colors">Panda Patches</a> outright, a custom embroidered patches e-commerce store built and operated on the same PandaCodeGen stack we ship to clients: Next.js, Sanity, Supabase, and Square. I am not just advising on architecture; I run the production system that proves it.
-                            </p>
-                            <p>
-                                <strong>The receipt:</strong> as of 2026, revenue grew from <strong className="text-charcoal">$38,000 to about $50,000 per month</strong>, while tooling stayed near <strong className="text-charcoal">$55 per month</strong> (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). That is the cost discipline I bring to every migration call.
-                            </p>
-                        </div>
-                    </section>
-
-                    {/* Articles */}
-                    {imranPosts.length > 0 && (
-                        <section className="border-t border-stone-200 pt-10 md:pt-16 mb-10 md:mb-16">
-                            <h2 className="text-2xl font-serif text-charcoal mb-2">Articles by Imran</h2>
-                            <p className="text-stone-500 mb-8">Architecture notes on custom migrations and system design.</p>
-                            <div className="grid gap-3">
-                                {imranPosts.map((post) => (
-                                    <Link
-                                        key={post.id}
-                                        href={`/blog/${post.id}`}
-                                        className="group flex items-center justify-between p-5 rounded-xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all duration-300"
-                                    >
-                                        <div>
-                                            <h3 className="text-charcoal font-medium group-hover:text-cognac transition-colors mb-1">{post.title}</h3>
-                                            <div className="flex items-center gap-3 text-xs text-stone-400">
-                                                <span>{post.category}</span>
-                                                <span>&middot;</span>
-                                                <span>{post.readTime}</span>
-                                                <span>&middot;</span>
-                                                <span>{post.date}</span>
-                                            </div>
-                                        </div>
-                                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-cognac transition-colors shrink-0 ml-4" />
-                                    </Link>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {/* CTA */}
-                    <section className="text-center py-10 md:py-16 bg-white border border-stone-300 rounded-3xl px-6 md:px-8">
-                        <h2 className="text-2xl font-serif text-charcoal mb-4">Architecture Review Before You Commit</h2>
-                        <p className="text-stone-500 mb-8 max-w-md mx-auto">Book a 30-minute architecture call. We review your current stack, flag the migration risks, and scope feasibility before you commit a dollar.</p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button
-                                data-cal-namespace="discovery"
-                                data-cal-link="pandagen/discovery"
-                                data-cal-config='{"layout":"month_view"}'
-                                className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-105 transition-all"
-                            >
-                                Book Architecture Call
-                            </button>
-                            <Link
-                                href="/about/hassan"
-                                className="px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all"
-                            >
-                                Meet the Co-founder
-                            </Link>
-                        </div>
-                    </section>
-
-                </div>
+      <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
+        <div className="mx-auto max-w-6xl">
+          <Link href="/about" className="inline-flex min-h-11 items-center text-sm font-semibold text-stone-700 hover:text-cognac">
+            Back to PandaCodeGen
+          </Link>
+          <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+            <div className="flex aspect-square max-w-sm items-end overflow-hidden rounded-[2.5rem] border border-stone-300 bg-[#faf7f2] p-8 shadow-elevated">
+              <div>
+                <p className="font-serif text-8xl font-normal italic text-cognac" aria-hidden="true">I</p>
+                <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-700">Architecture lead</p>
+              </div>
             </div>
-            <Footer />
-        </main>
-    );
+            <div className="border-l-2 border-cognac pl-5 md:pl-8">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Architect</p>
+              <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Imran Raza Ladhani</h1>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
+                Imran leads architecture at PandaCodeGen. He reviews whether a migration is justified, defines the system and data boundaries, and makes sure the approved solution can be operated and handed over without hidden platform or agency lock-in.
+              </p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
+                  Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <a href="https://www.linkedin.com/in/imran-raza-ladhani/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
+                  View LinkedIn profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="imran-responsibilities">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Architecture responsibility</p>
+          <h2 id="imran-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">The destination follows the operating requirements.</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {responsibilities.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
+                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+                <h3 className="mt-5 text-xl font-bold">{title}</h3>
+                <p className="mt-3 leading-7 text-stone-700">{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="architecture-review">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <Boxes className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <h2 id="architecture-review" className="mt-5 text-3xl font-bold md:text-5xl">Questions answered before implementation</h2>
+          </div>
+          <ul className="space-y-4">
+            {[
+              "Which parts of the current platform should stay, and which constraints justify replacement?",
+              "What data, content, commerce, identity, and integration behavior must survive cutover?",
+              "Which third-party accounts belong to the client, and what recurring services remain after launch?",
+              "What acceptance, rollback, documentation, support, licensing, and ownership terms belong in writing?",
+            ].map((item) => (
+              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
+                <span className="leading-7">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="owner-operator-evidence">
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-cognac/30 bg-[#faf7f2] p-8 md:p-12">
+          <FileCheck2 className="h-8 w-8 text-cognac" aria-hidden="true" />
+          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-cognac">Owner-operated reference</p>
+          <h2 id="owner-operator-evidence" className="mt-3 text-3xl font-bold md:text-5xl">Imran owns Panda Patches. It is not a client testimonial.</h2>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
+            Panda Patches is owned and operated by Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business. It can be used as an implementation reference for architecture, tooling, and operating decisions. Any public performance, cost, or revenue figure still needs its date, source, definition, and measurement conditions so a founder-affiliated project is not presented as independent client proof.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link href="/work" className="inline-flex min-h-12 items-center justify-center rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">See the project records</Link>
+            <a href="https://www.pandapatches.com" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">Visit Panda Patches</a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
 }

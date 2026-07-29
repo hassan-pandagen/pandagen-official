@@ -1,112 +1,55 @@
-import type { Metadata } from 'next';
-import PageContent from './PageContent';
+import { ogImageForPath } from "@/lib/seo/og";
+import type { Metadata } from "next";
+import PageContent from "./PageContent";
+
+const canonical = "https://www.pandacodegen.com/services/ecommerce";
 
 export const metadata: Metadata = {
-  title: 'Shopify Speed Optimization: Headless Next.js',
-  description: "Shopify stores score 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js from $1,500. 90+ PageSpeed guaranteed, no app fees, you own the code.",
-  alternates: { canonical: '/services/ecommerce' },
-  keywords: [
-    'shopify speed optimization service',
-    'headless shopify development',
-    'shopify slow website fix',
-    'shopify performance optimization',
-    'headless shopify storefront',
-    'shopify app fees alternative',
-    'shopify nextjs migration',
-    'shopify headless commerce agency',
-    'slow shopify store fix',
-    'shopify speed fix agency',
-  ],
+  title: "Shopify & WooCommerce Storefront Engineering",
+  description: "Evaluate theme repair, headless storefronts, and replatforming for Shopify or WooCommerce using measured constraints, operating costs, risks, and acceptance criteria.",
+  alternates: { canonical: "/services/ecommerce" },
   openGraph: {
-    title: 'Shopify Speed Optimization: Headless Next.js | PandaCodeGen',
-    description: "Shopify stores score 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js from $1,500. 90+ PageSpeed guaranteed, no app fees, you own the code.",
-    url: 'https://www.pandacodegen.com/services/ecommerce',
-    siteName: 'PandaCodeGen',
-    type: 'website',
-    images: [{ url: 'https://www.pandacodegen.com/og-image.jpg', width: 1200, height: 630 }],
+    title: "Shopify & WooCommerce Storefront Engineering | PandaCodeGen",
+    description: "A measured path from storefront constraint to a scoped commerce architecture and migration plan.",
+    url: canonical,
+    siteName: "PandaCodeGen",
+    type: "website",
+    images: [ogImageForPath("/services/ecommerce")],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Shopify Speed Optimization: Headless Next.js | PandaCodeGen',
-    description: "Shopify scoring 40 to 60 on PageSpeed. We rebuild the frontend headless in Next.js. 90+ PageSpeed guaranteed, no app fees, you own the code.",
+    card: "summary_large_image",
+    title: "Shopify & WooCommerce Storefront Engineering | PandaCodeGen",
+    description: "A measured path from storefront constraint to a scoped commerce architecture and migration plan.",
   },
 };
 
 export default function EcommercePage() {
-  const pageSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
-        "@id": "https://www.pandacodegen.com/services/ecommerce#service",
-        "name": "Shopify Headless & E-Commerce Development",
-        "description": "Custom headless Shopify storefronts that load instantly. No templates, no monthly app fees, complete customization.",
-        "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
-        "areaServed": "Worldwide",
-        "serviceType": ["Shopify Headless", "E-Commerce Development", "Shopify Migration", "Custom Shopify Storefront"],
-        "priceRange": "$1,500 - $10,000",
-        "image": "https://www.pandacodegen.com/og-image.jpg",
-        "telephone": "+13027738982",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "701 Tillery St Ste 12",
-          "addressLocality": "Austin",
-          "postalCode": "78702",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Headless Shopify Development Tiers",
-          "itemListElement": [
-            { "@type": "Offer", "name": "Starter", "price": "1500", "priceCurrency": "USD", "description": "Custom Next.js storefront up to 20 products with Shopify Storefront API integration" },
-            { "@type": "Offer", "name": "Growth", "price": "3500", "priceCurrency": "USD", "description": "30 to 100 products, custom checkout, upsell logic, custom review system" },
-            { "@type": "Offer", "name": "Scale", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "5000", "maxPrice": "10000", "priceCurrency": "USD" }, "description": "Subscriptions, multi-currency, custom loyalty logic, large catalogs, 30+ pages" },
-            { "@type": "Offer", "name": "Scale+", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "10000", "priceCurrency": "USD" }, "description": "Enterprise headless commerce, custom-quoted after a scoping call" }
-          ]
-        }
-      },
-      {
         "@type": "WebPage",
-        "@id": "https://www.pandacodegen.com/services/ecommerce#webpage",
-        "url": "https://www.pandacodegen.com/services/ecommerce",
-        "name": "Shopify Headless Development | PandaCodeGen",
-        "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-        "about": { "@id": "https://www.pandacodegen.com/services/ecommerce#service" },
-        "inLanguage": "en-US",
-        "datePublished": "2026-01-27T00:00:00-05:00",
-        "dateModified": "2026-07-07T00:00:00-05:00",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-        }
+        "@id": `${canonical}#webpage`,
+        url: canonical,
+        name: "Shopify & WooCommerce Storefront Engineering",
+        description: "A diagnostic and delivery approach for Shopify and WooCommerce storefront repair, headless architecture, and replatforming.",
+        isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+        inLanguage: "en-US",
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.pandacodegen.com/services" },
-          { "@type": "ListItem", "position": 3, "name": "E-Commerce", "item": "https://www.pandacodegen.com/services/ecommerce" }
-        ]
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+          { "@type": "ListItem", position: 2, name: "Services", item: "https://www.pandacodegen.com/services" },
+          { "@type": "ListItem", position: 3, name: "E-commerce", item: canonical },
+        ],
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.pandacodegen.com/services/ecommerce#faq",
-        "mainEntity": [
-          { "@type": "Question", "name": "What is custom Shopify?", "acceptedAnswer": { "@type": "Answer", "text": "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, 4x faster store." } },
-          { "@type": "Question", "name": "Will my Shopify apps still work?", "acceptedAnswer": { "@type": "Answer", "text": "Your backend apps (inventory, email, shipping) work as before. Frontend apps (review widgets, upsell popups) get rebuilt as native features in your custom code, so they load instantly instead of injecting slow JavaScript. You stop paying monthly app fees for features we build once." } },
-          { "@type": "Question", "name": "How long does a custom storefront migration take?", "acceptedAnswer": { "@type": "Answer", "text": "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: Launch with zero downtime. Agencies still quote 8-12 weeks because they bill hourly." } },
-          { "@type": "Question", "name": "Will I lose sales during the migration?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Zero downtime, zero lost sales." } },
-          { "@type": "Question", "name": "How much does a custom Shopify storefront cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typical agencies charge $30,000 to $60,000 and take 8 to 12 weeks. We meet you halfway. Four tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30-100 products, custom features). Scale builds are $5,000 to $10,000 (subscriptions, custom logic, large catalogs). Scale+ is $10,000+ for enterprise headless commerce, custom-quoted after a scoping call. Most clients recover the investment within 4 to 6 months through eliminated app fees and conversion lift." } }
-        ]
-      }
-    ]
+    ],
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <p className="sr-only" data-speakable="true">PandaCodeGen rebuilds slow Shopify storefronts as headless Next.js sites that load under 1 second. Shopify stores score 40 to 60 on PageSpeed because Liquid templates render server-side on every request. We keep your Shopify backend for orders, inventory, and payments while replacing the slow frontend. Load times drop 80%, and conversion rates often improve.</p>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <PageContent />
     </>
   );

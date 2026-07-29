@@ -3,48 +3,42 @@
 import { motion } from "@/components/ui/motion";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Users, BarChart3, HelpCircle, FileSearch, Wrench, Rocket, Cable, Database, Workflow, CalendarClock, MessageSquare, Webhook } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SocialProof from "@/components/home/SocialProof";
-import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
-import PlatformKillerChart from "@/components/services/PlatformKillerChart";
-import { Eye } from "lucide-react";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
-  { feature: "Page Load Speed", ghl: "3 to 5 seconds (funnel pages)", custom: "Under 1 second", icon: Gauge },
-  { feature: "Code Ownership", ghl: "You own nothing (SaaS lock-in)", custom: "100% yours forever", icon: Lock },
-  { feature: "Google PageSpeed Score", ghl: "20 to 45 average (mobile)", custom: "90+ guaranteed", icon: TrendingUp },
-  { feature: "Monthly Cost", ghl: "$97-497/mo subscription", custom: "$0 to start. Pay only when you scale massively", icon: DollarSign },
-  { feature: "Design Freedom", ghl: "Template-based funnel builder", custom: "Unlimited, pixel-perfect designs", icon: Palette },
-  { feature: "SEO Capability", ghl: "Minimal, funnels rarely rank", custom: "Full SEO that Google, ChatGPT and AI search love", icon: TrendingUp },
+  { feature: "Performance Review", ghl: "Measure the current pages with a defined device, network, and test run", custom: "Set a baseline, budget, and acceptance method for the approved frontend", icon: Gauge },
+  { feature: "Access & Rights", ghl: "Account, export, and licensing rights follow GHL's current terms", custom: "Repository access, licensing, IP, and handover follow the proposal", icon: Lock },
+  { feature: "Operating Cost", ghl: "Review the active plan, add-ons, messaging, and usage charges", custom: "Estimate hosting, services, maintenance, and usage for the proposed design", icon: DollarSign },
+  { feature: "Design System", ghl: "Uses the platform's supported builder and components", custom: "Design flexibility depends on the approved scope and accessibility requirements", icon: Palette },
+  { feature: "Search Readiness", ghl: "Audit rendering, metadata, content, links, and structured data", custom: "Implement agreed technical controls; search visibility remains third-party controlled", icon: TrendingUp },
 ];
 
 const faqs = [
   {
     q: "Will my GHL automations break during migration?",
-    a: "No. We build the new site in parallel while your GHL funnels stay live. When we launch, all forms and triggers connect to your existing GHL pipelines through the API. Everything keeps working."
+    a: "We first inventory the relevant forms, triggers, pipelines, webhooks, and account settings. A parallel build and staged cutover can reduce risk, but continuity depends on GHL's APIs, account configuration, third-party services, and the acceptance checks documented for the project."
   },
   {
     q: "Do I need to cancel GHL?",
-    a: "Not if you don't want to. Option A keeps GHL for CRM while upgrading your website. Option B replaces GHL entirely with a custom CRM. Most clients choose Option A because GHL's automation engine is solid."
+    a: "Not necessarily. One path keeps GHL for CRM and connects a separate frontend; another scopes replacement workflows. Discovery determines feasibility, migration risk, and the responsibilities of each system."
   },
   {
     q: "How much does a custom site with GHL integration cost?",
-    a: "Four tiers. Starter starts at $1,500 (5 to 7 page landing site with GHL API integration). Growth starts at $3,500 (15 to 40 page marketing site with full GHL API integration). Scale is $5,000 to $10,000 (agency white-label, member portals, complex Workflows, 30+ pages). Scale+ is $10,000+ for enterprise agency scope, custom-quoted after a scoping call. Your GHL CRM, automations, snapshots, and sub-accounts stay fully intact at every tier."
+    a: "Price and timing depend on page inventory, design, API access, forms, calendars, workflows, sub-accounts, data, and testing needs. The written proposal states scope, dependencies, commercial terms, support, access, ownership, and the cutover plan."
   },
   {
     q: "Can you build custom landing pages that work with GHL?",
-    a: "Yes. We build custom landing pages that load in under 1 second and push leads directly into your GHL CRM via API. Higher Quality Scores on Google Ads = lower cost per lead."
+    a: "We can scope landing pages that submit to supported GHL endpoints or webhooks. Performance, data flow, attribution, and error handling are tested against agreed conditions; advertising scores and lead costs are controlled by third parties and are not guaranteed."
   },
   {
     q: "What if I want to leave GHL later?",
-    a: "If you chose Option A, your custom website already works independently. We can replace the GHL API connections with a custom backend whenever you're ready. No vendor lock-in, no rebuilding from scratch."
+    a: "A future replacement can be considered when the initial architecture defines clear integration boundaries. Feasibility still depends on the workflows, data access, exports, provider terms, and a separately approved migration scope."
   },
 ];
 
@@ -53,7 +47,6 @@ export default function PageContent() {
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <ReadingProgressBar />
       <Header />
 
@@ -64,7 +57,7 @@ export default function PageContent() {
 
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
-            <Zap className="w-4 h-4" /> GoHighLevel Website Fix
+            <Zap className="w-4 h-4" /> GoHighLevel Website and CRM Integration
           </motion.div>
 
           <motion.h1
@@ -72,9 +65,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            Keep GHL. Upgrade your website. <br />
-            <span className="font-serif italic text-cognac">
-              We took one chiropractor from PageSpeed 23 to 90+. More leads.
+            Keep the useful GHL workflows. Review the frontend.{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">
+              Start with an inventory, baseline, and integration plan.
             </span>
           </motion.h1>
 
@@ -85,73 +78,45 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            I&apos;m Hassan. I rebuilt a chiropractor&apos;s GHL frontend from 23 to 90+ PageSpeed while every Workflow, Pipeline, and sub-account kept firing. Lead volume climbed in the weeks that followed. Book the call, share your GHL URL, I&apos;ll run your audit live.
+            Share your GHL URL and the workflows the public site must support. We can inspect the current implementation, identify integration dependencies, and propose a measured frontend path without promising search, advertising, or lead outcomes.
           </motion.p>
 
           <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">
-            <span className="font-bold text-charcoal">Chiropractor client:</span>
-            <span className="text-stone-600">23 to 90+ PageSpeed</span>
+            <span className="font-bold text-charcoal">Review path:</span>
+            <span className="text-stone-600">Current-state inventory</span>
             <span className="text-stone-300">|</span>
-            <span className="text-green-700 font-bold">More leads</span>
+            <span className="text-cognac font-bold">Point-in-time tests</span>
             <span className="text-stone-300">|</span>
-            <span className="text-stone-500">GHL CRM untouched</span>
+            <span className="text-stone-600">Written integration scope</span>
           </div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Get your migration plan <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#how-it-works" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your GHL site URL when you book. We run your PageSpeed live and <span className="text-charcoal font-medium">show you the custom integration path with a fixed quote.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your GHL site URL when you book. We can run a point-in-time diagnostic and <span className="text-charcoal font-medium">identify the inputs needed for a written proposal.</span></p>
         </div>
       </section>
-
-      {/* 2. PLATFORM KILLER CHART — GoHighLevel comparison */}
-      <PlatformKillerChart
-        badge="What Your GHL Consultant Won't Tell You"
-        headline="You're paying $297/mo for a"
-        headlineAccent="slow site."
-        description="You're paying $297/mo because GHL's CRM and automations are genuinely useful. But the site it ships with scores 20 to 45 on mobile PageSpeed. You're paying $2,000/mo in Meta ads to send traffic to a page Google rarely ranks and users won't wait for. You're paying a designer to work around GHL's page builder limits."
-        descriptionSecondary="Nobody tells you this because GHL's Partner Program pays commissions on every account. Not GHL. Not the GHL consultants. Not the course sellers teaching you to stay inside it. We keep your CRM. We replace the frontend. No pitch. Just receipts."
-        comparisonTitle="GHL Site vs Custom"
-        themLabel="GHL Site"
-        metrics={[
-          { metric: "PageSpeed",     themLabel: "20-45",     usLabel: "90+",         themPct: 35, usPct: 98, icon: Gauge },
-          { metric: "Load Speed",    themLabel: "3-5s",      usLabel: "< 1s",        themPct: 30, usPct: 98, icon: Gauge },
-          { metric: "SEO Control",   themLabel: "Limited",   usLabel: "Full",        themPct: 30, usPct: 100, icon: FileSearch },
-          { metric: "GHL CRM",       themLabel: "Stays",     usLabel: "Stays",       themPct: 100, usPct: 100, icon: Users },
-          { metric: "Custom Design", themLabel: "Templates", usLabel: "Fully Custom",themPct: 35, usPct: 100, icon: Palette },
-          { metric: "AI Search",     themLabel: "Rarely cited", usLabel: "Optimized",   themPct: 15, usPct: 98, icon: Eye },
-        ]}
-        savingsLines={[
-          { label: "GHL Agency plan (stays)",             amount: "(kept)" },
-          { label: "Ad spend wasted on slow landing",     amount: "$6,000" },
-          { label: "Lost leads (slow page drop-offs)",    amount: "$9,600" },
-          { label: "SEO rankings never earned",           amount: "$4,800" },
-          { label: "Developer hacks to speed up GHL",     amount: "$1,200" },
-          { label: "Brand design compromises",            amount: "$2,400" },
-        ]}
-        totalPerYear="$24,000"
-      />
 
       {/* 2a. GHL IS GREAT FOR CRM */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">GHL Is Great for CRM. Not for Websites.</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">GoHighLevel excels at automations, pipelines, and client management. But when it comes to your actual website and landing pages, here&apos;s the reality:</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">Assess GHL as a CRM and Website Stack</h2>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">GoHighLevel can support CRM, automation, and public-page workflows. The right architecture depends on your account, content, integrations, design needs, and measured frontend baseline.</p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* What GHL does well */}
-            <div className="p-6 rounded-2xl bg-green-50 border border-green-200">
-              <h3 className="text-lg font-bold text-green-600 mb-4 flex items-center gap-2"><CheckCircle2 className="w-5 h-5" /> Where GHL Shines</h3>
+            {/* Common GHL uses */}
+            <div className="p-6 rounded-2xl bg-white border border-stone-300">
+              <h3 className="text-lg font-bold text-charcoal mb-4 flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-cognac" /> Common GHL Uses</h3>
               <ul className="space-y-3">
                 {["CRM & pipeline management", "Email & SMS automations", "Appointment booking", "Reputation management", "Client communication"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
@@ -161,13 +126,13 @@ export default function PageContent() {
               </ul>
             </div>
 
-            {/* Where GHL falls short */}
-            <div className="p-6 rounded-2xl bg-red-50 border border-red-200">
-              <h3 className="text-lg font-bold text-red-600 mb-4 flex items-center gap-2"><XCircle className="w-5 h-5" /> Where GHL Falls Short</h3>
+            {/* Frontend review areas */}
+            <div className="p-6 rounded-2xl bg-[#faf7f2] border border-cognac/30">
+              <h3 className="text-lg font-bold text-charcoal mb-4 flex items-center gap-2"><XCircle className="w-5 h-5 text-cognac" /> Frontend Review Areas</h3>
               <ul className="space-y-3">
-                {["Funnel pages load in 3 to 5 seconds", "Templates look generic and cheap", "Systematically disadvantaged in search", "No custom design flexibility", "Mobile experience is poor"].map((item, i) => (
+                {["Measured loading and interaction behavior", "Design-system and component constraints", "Rendering, metadata, links, and structured data", "Supported customization paths", "Responsive and accessibility testing"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
-                    <XCircle className="w-4 h-4 text-red-600 shrink-0" /> {item}
+                    <XCircle className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
@@ -176,56 +141,45 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2a. CASE STUDY GRID — real migrations with integrations preserved */}
-      <CaseStudyGrid
-        highlight="myCustomPatches"
-        label="Real Custom Builds"
-        heading="Custom frontend, CRM intact, done"
-        subheading="Four sites where we built fast custom frontends while keeping the business systems clients rely on."
-      />
-
-      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
-      <SocialProof />
-
-      {/* 2c. 3-PILLAR POSITIONING — emerging Next.js agency, fair-priced, customer-first */}
+      {/* 2c. Delivery and evidence controls */}
       <section className="py-12 md:py-16 px-6 bg-charcoal text-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-cognac rounded-full text-xs font-semibold mb-4">
-            <Zap className="w-3 h-3" /> Emerging Next.js Agency
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/20 text-orange-300 rounded-full text-xs font-semibold mb-4">
+            <Zap className="w-3 h-3" /> Integration decision controls
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Cheaper than market, <span className="font-serif italic text-cognac">not cheap.</span>
+            Scope first, <span className="font-serif font-normal italic text-cognac">then commit in writing.</span>
           </h2>
           <p className="text-base text-stone-400 leading-relaxed mb-6">
-            For GoHighLevel agencies specifically: the hybrid stack we ship (Next.js public site + GHL CRM backend) keeps your $97 to $497 monthly GHL bill unchanged while fixing the 20 to 45 PageSpeed problem.
+            A hybrid architecture can place a custom public frontend in front of supported GHL CRM workflows. Discovery verifies API access, forms, calendars, attribution, account configuration, and the current measured baseline.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $40,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            Projects are compared on like-for-like deliverables, dependencies, test methods, support, and handover, not headline prices or generic agency benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Diagnostic discipline</p>
             <p className="text-stone-300 leading-relaxed">
-              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a real PageSpeed and revenue-leak analysis in minutes. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
+              A diagnostic is a point-in-time technical review, not proof of lost revenue or a guaranteed business result. We document the test context, distinguish observations from hypotheses, and flag when a frontend replacement may not be justified.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Evidence before outcomes</p>
             <p className="text-stone-300 leading-relaxed">
-              Launched February 2026. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+              Public URLs can be inspected as implementation references, but they do not by themselves verify a client relationship, historical performance, revenue, costs, or commercial terms. Outcome claims require dated, client-approved source records and a reproducible method.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
-              <p className="text-sm text-stone-400">Refund-backed in writing on every project.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Measured baseline</div>
+              <p className="text-sm text-stone-600">Record the tool, device, network, date, runs, and page set.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
-              <p className="text-sm text-stone-400">No hourly billing. No surprise invoices. Published tiers.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Written proposal</div>
+              <p className="text-sm text-stone-600">Define scope, assumptions, exclusions, price model, and changes.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
-              <p className="text-sm text-stone-400">15 to 30 days of post-launch tweaks included, depending on tier.</p>
+              <div className="text-2xl font-bold text-cognac mb-1">Defined handover</div>
+              <p className="text-sm text-stone-600">State support, access, licensing, ownership, and remedies explicitly.</p>
             </div>
           </div>
         </div>
@@ -234,30 +188,30 @@ export default function PageContent() {
       {/* 3. HOW IT WORKS - Process Timeline */}
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">How GoHighLevel Custom Website Integration Works</h2>
-          <p className="text-slate-500 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-step process. Your GHL stays running the entire time.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How GoHighLevel Custom Website Integration Works</h2>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase review and implementation path. Continuity controls and acceptance checks are defined for the approved account and integrations.</p>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
             {[
-              { step: "01", title: "GHL Audit", desc: "We map your Funnels, Workflows, Pipelines, Opportunities, sub-accounts, Locations, snapshots, and custom values. Inbound webhooks route leads into the correct sub-account. Agency white-label and SaaS mode resale remain intact.", duration: "Week 1" },
-              { step: "02", title: "API Architecture", desc: "We design the integration between your custom website and GHL's API. Forms, lead capture, booking widgets, and pipeline triggers, all connected seamlessly.", duration: "Week 2" },
-              { step: "03", title: "Custom Site Build", desc: "Your new website is built in Next.js with GHL API baked in. Landing pages load instantly. Forms push directly into your GHL CRM. All automations keep firing.", duration: "Weeks 3-5" },
-              { step: "04", title: "Testing & Launch", desc: "We test every automation, form, and pipeline trigger. You verify everything works. Then we launch with zero disruption to your existing GHL workflows.", duration: "Week 6" },
+              { step: "01", title: "GHL Inventory", desc: "We map the in-scope funnels, workflows, pipelines, sub-accounts, locations, forms, calendars, snapshots, custom values, and webhooks.", duration: "Phase 1" },
+              { step: "02", title: "API Architecture", desc: "We document supported endpoints, authentication, field mapping, error handling, data responsibilities, and third-party dependencies.", duration: "Phase 2" },
+              { step: "03", title: "Frontend Implementation", desc: "We build the approved pages and integrations in reviewable increments, then test data flow against the agreed fixtures and account configuration.", duration: "Phase 3" },
+              { step: "04", title: "Cutover & Verification", desc: "The launch plan defines monitoring, rollback, acceptance, client verification, and any post-launch support included in the proposal.", duration: "Phase 4" },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl border border-stone-200 shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
                   {item.step}
                 </div>
                 <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-lg text-charcoal mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -265,39 +219,39 @@ export default function PageContent() {
       </section>
 
       {/* 4. PAIN POINTS */}
-      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 text-sm font-bold uppercase tracking-widest mb-6">
-              <AlertTriangle className="w-4 h-4" /> Revenue Leak
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/20 text-orange-300 border border-cognac/30 text-sm font-bold uppercase tracking-widest mb-6">
+              <AlertTriangle className="w-4 h-4" /> Diagnostic Review
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The Hidden Cost of GHL Funnels</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              You&apos;re paying for ads to drive traffic to your GHL funnel pages. But those pages are killing your conversions:
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">What to Inspect in a GHL Frontend</h2>
+            <p className="text-stone-300 max-w-2xl mx-auto">
+              Performance and conversion issues require measurement. These are useful review areas, not assumed defects or revenue-loss calculations:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: TrendingUp, pain: "Slow Funnel Pages Are Burning Your Ad Budget", detail: "Google Ads Quality Score is tied directly to landing page speed. GHL pages load in 3 to 5 seconds. Slow pages mean lower scores and higher CPC. You're paying 30-50% more per lead than competitors with faster pages." },
-              { icon: XCircle, pain: "GHL Funnels Rarely Appear in Google Search", detail: "GHL funnel pages are JavaScript-rendered and systematically disadvantaged in Google search. Organic traffic to a funnel URL is rare in practice, so nearly every lead keeps requiring paid ad spend, with little compounding return." },
-              { icon: DollarSign, pain: "You're Paying CRM Prices for a Website Builder", detail: "GHL's $297-497/month is priced for agencies running full automation suites. Using it primarily for funnel pages and a website means you're dramatically overpaying for the web presence portion of that subscription." },
-              { icon: Palette, pain: "Template Funnels Signal 'Small Operation' to Cold Traffic", detail: "Experienced buyers recognize GHL and ClickFunnels templates on sight. A template funnel signals 'this person just learned marketing.' A custom site signals 'established business.' First impressions decide if cold traffic converts." },
-              { icon: Lock, pain: "One Platform Failure Takes Down Your Entire Business", detail: "GHL has had outages. When it goes down, your lead capture, booking system, and website all go down together. Your entire online presence runs on one company's uptime. Custom code plus GHL API splits that risk completely." },
-              { icon: BarChart3, pain: "Your Brand Disappears in a Sea of Identical Funnels", detail: "In any niche, dozens of competitors use the same GHL templates. Prospects visit multiple sites before deciding. When every site looks the same, decisions default to price. A custom site gives you a genuine visual advantage." },
+              { icon: TrendingUp, pain: "Page Experience", detail: "Measure loading, interaction, and layout behavior across representative pages, devices, networks, and consent states before identifying causes or setting targets." },
+              { icon: XCircle, pain: "Search Implementation", detail: "Inspect rendering, indexability, canonicals, metadata, internal links, content quality, and structured data. Search engines control crawling, indexing, and rankings." },
+              { icon: DollarSign, pain: "Current Account Economics", detail: "Review the active GHL plan, add-ons, messaging, domains, connected services, and actual usage. Do not infer savings from public list prices alone." },
+              { icon: Palette, pain: "Design and Accessibility", detail: "Test whether the current component system supports the brand, content hierarchy, keyboard use, responsive behavior, and accessibility requirements." },
+              { icon: Lock, pain: "Operational Concentration", detail: "Map which lead, booking, website, and communication workflows depend on each provider, then define monitoring, fallback, and recovery responsibilities." },
+              { icon: BarChart3, pain: "Attribution and Data Flow", detail: "Verify consent, event definitions, form delivery, deduplication, source capture, and CRM field mapping before drawing conclusions about campaign or conversion performance." },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-red-500/30 transition-all duration-300 group"
+                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cognac/40 transition-all duration-300 group"
               >
-                <div className="p-3 rounded-xl bg-red-500/20 text-red-400 w-fit mb-4">
+                <div className="p-3 rounded-xl bg-cognac/20 text-orange-300 w-fit mb-4">
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.pain}</h3>
-                <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                <p className="text-stone-300 leading-relaxed text-sm">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -311,7 +265,7 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-12">Keep GHL for CRM. Upgrade your website and funnels.</p>
 
           <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
-            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            {/* Header for desktop only. On mobile, each row gets inline labels. */}
             <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
               <div className="text-cognac font-bold text-sm text-center">GHL Funnels</div>
@@ -324,16 +278,16 @@ export default function PageContent() {
                 className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
               >
                 <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-600 shrink-0" />
                   {row.feature}
                 </div>
                 <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">GHL</span>
-                  <span className="text-red-600 text-sm md:text-center">{row.ghl}</span>
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600">GHL</span>
+                  <span className="text-stone-700 text-sm md:text-center">{row.ghl}</span>
                 </div>
                 <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
                   <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
-                  <span className="text-green-600 text-sm font-medium md:text-center">{row.custom}</span>
+                  <span className="text-cognac text-sm font-medium md:text-center">{row.custom}</span>
                 </div>
               </div>
             ))}
@@ -342,7 +296,7 @@ export default function PageContent() {
           {/* Important Note */}
           <div className="mt-8 p-4 rounded-xl bg-stone-50 border border-stone-200">
             <p className="text-sm text-stone-600 text-center">
-              <strong>Note:</strong> We&apos;re not saying drop GHL. Keep it for CRM, automations, and pipelines. Just don&apos;t use it as your website builder. Your website is your business&apos;s front door, and it deserves custom code. We integrate seamlessly with GHL&apos;s API. And if you ever want to replace GHL entirely? We custom-code your CRM and automations too: build once, own forever, no monthly fees.
+              <strong>Note:</strong> This page does not assume GHL should be removed. Discovery compares keeping the current frontend, using a separate frontend, or replacing selected workflows. API compatibility, portability, recurring services, repository access, licensing, and IP terms must be verified and written into scope.
             </p>
           </div>
         </div>
@@ -358,14 +312,14 @@ export default function PageContent() {
             Two Ways to Win with GHL + Custom Code
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            Keep your GHL automations and pipelines running. We either build a custom website that plugs into your existing GHL setup via API, or we build you an entirely custom CRM + website that connects to your automations. Either way, <span className="text-charcoal font-medium">you own the code</span>.
+            One path connects a separate frontend to supported GHL APIs; another evaluates replacing selected CRM workflows. <span className="text-charcoal font-medium">Feasibility, continuity checks, repository access, licensing, IP, and handover depend on the approved scope.</span>
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: Gauge, title: "Instant Landing Pages", desc: "Your ad traffic lands on pages that load in under 1 second. Higher Quality Score = lower CPC = more leads for the same budget." },
-              { icon: Users, title: "Seamless GHL API Integration", desc: "Forms, bookings, and lead capture flow directly into your GHL CRM. All your existing automations and pipelines keep working. Zero disruption." },
-              { icon: BarChart3, title: "Organic Traffic (Free Leads)", desc: "Custom sites rank on Google. For the first time, you'll get leads WITHOUT paying for ads. GHL funnels rarely manage this." },
+              { icon: Gauge, title: "Measured Frontend Work", desc: "Set a reproducible baseline and page-specific budgets, then verify the implementation under the agreed test conditions." },
+              { icon: Users, title: "Documented GHL Integration", desc: "Map supported forms, bookings, webhooks, fields, and error paths, with test cases for the approved account configuration." },
+              { icon: BarChart3, title: "Search-Ready Foundations", desc: "Implement the agreed technical and content controls while recognizing that crawling, indexing, visibility, and leads remain third-party and market controlled." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -379,10 +333,10 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* PARTNER PROMISE — locked brand voice, 3 guarantees */}
+      {/* Scope and evidence framework */}
       <PartnerPromise />
 
-      {/* SIGNATURE BLOCK — Keep/Replace Architecture Split (unique to GoHighLevel) */}
+      {/* SIGNATURE BLOCK: Keep/Replace Architecture Split (unique to GoHighLevel) */}
       <section id="keep-replace-architecture" className="py-12 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-10 md:mb-14">
@@ -390,22 +344,22 @@ export default function PageContent() {
               <Cable className="w-4 h-4" /> The Architecture
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Keep the engine. <span className="font-serif italic text-cognac">Replace the bodywork.</span>
+              Keep the engine. <span className="font-serif font-normal italic text-cognac">Replace the bodywork.</span>
             </h2>
             <p data-speakable="true" className="text-stone-300 leading-relaxed max-w-2xl mx-auto">
-              Your migration is one clean cut, not a teardown. Everything GoHighLevel does well stays exactly where it is. The only thing that changes is the slow public site visitors actually see, rebuilt as custom Next.js code you own, wired back to your CRM over the same GHL API and webhooks.
+              The architecture can separate a public frontend from selected GHL CRM workflows. Discovery determines which systems remain, which interfaces change, and how data flow, cutover, rollback, access, and acceptance will be verified.
             </p>
           </div>
 
           {/* Split: KEEP | bridge | REPLACE. Stacks on mobile with bridge between. */}
           <div className="grid md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-0 items-stretch">
-            {/* LEFT — KEEP */}
+            {/* LEFT: KEEP */}
             <div className="rounded-3xl border border-cognac/30 bg-white/5 p-6 md:p-8 md:rounded-r-none">
               <div className="flex items-center gap-2 mb-1">
                 <CheckCircle2 className="w-5 h-5 text-cognac" />
-                <span className="text-xs font-bold uppercase tracking-widest text-cognac">Keep — GHL Backend</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-cognac">Keep: GHL Backend</span>
               </div>
-              <p className="text-sm text-stone-400 mb-6">The systems your business runs on. Untouched.</p>
+              <p className="text-sm text-stone-600 mb-6">Candidate systems to retain, subject to account and integration review.</p>
               <ul className="space-y-3">
                 {[
                   { icon: Database, label: "CRM, contacts & opportunities" },
@@ -422,7 +376,7 @@ export default function PageContent() {
               </ul>
             </div>
 
-            {/* CENTER — API / WEBHOOK BRIDGE */}
+            {/* CENTER: API / WEBHOOK BRIDGE */}
             <div className="relative flex md:flex-col items-center justify-center gap-3 py-2 md:py-0 md:px-4">
               <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px -translate-x-1/2 bg-linear-to-b from-cognac/40 via-stone-500/40 to-cognac/40" />
               <div className="md:hidden h-px flex-1 bg-linear-to-r from-cognac/40 to-stone-500/40" />
@@ -434,101 +388,92 @@ export default function PageContent() {
               <div className="md:hidden h-px flex-1 bg-linear-to-r from-stone-500/40 to-stone-400/40" />
             </div>
 
-            {/* RIGHT — REPLACE */}
+            {/* RIGHT: REPLACE */}
             <div className="rounded-3xl border border-stone-500/40 bg-white/5 p-6 md:p-8 md:rounded-l-none">
               <div className="flex items-center gap-2 mb-1">
-                <XCircle className="w-5 h-5 text-stone-400" />
-                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">Replace — Public Front-End</span>
+                <XCircle className="w-5 h-5 text-stone-600" />
+                <span className="text-xs font-bold uppercase tracking-widest text-stone-600">Replace: Public Front-End</span>
               </div>
-              <p className="text-sm text-stone-400 mb-6">The slow GHL-hosted site, rebuilt and owned.</p>
-              <div className="rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 mb-3">
-                <div className="flex items-center gap-2 mb-1"><Gauge className="w-4 h-4 text-red-400 shrink-0" /><span className="text-xs font-bold text-red-400">Before — GHL funnel / site</span></div>
-                <p className="text-sm text-stone-300 leading-relaxed">3 to 5s loads, 20 to 45 PageSpeed, template look, weak SEO, code you can never export.</p>
+              <p className="text-sm text-stone-600 mb-6">The public frontend path, subject to approved scope and rights terms.</p>
+              <div className="rounded-xl border border-stone-600 bg-stone-800/70 px-4 py-3 mb-3">
+                <div className="flex items-center gap-2 mb-1"><Gauge className="w-4 h-4 text-stone-300 shrink-0" /><span className="text-xs font-bold text-stone-200">Before: GHL funnel / site</span></div>
+                <p className="text-sm text-stone-300 leading-relaxed">Document the measured baseline, current design constraints, search implementation, exports, and provider terms.</p>
               </div>
               <div className="flex items-center justify-center my-2"><ArrowRight className="w-5 h-5 text-cognac rotate-90" /></div>
               <div className="rounded-xl border border-cognac/30 bg-cognac/10 px-4 py-3">
-                <div className="flex items-center gap-2 mb-1"><Code2 className="w-4 h-4 text-cognac shrink-0" /><span className="text-xs font-bold text-cognac">After — custom Next.js front-end</span></div>
-                <p className="text-sm text-stone-300 leading-relaxed">Sub-second loads, 90+ PageSpeed, pixel-perfect design, full SEO, and 100% of the code in your repo.</p>
+                <div className="flex items-center gap-2 mb-1"><Code2 className="w-4 h-4 text-cognac shrink-0" /><span className="text-xs font-bold text-orange-300">After: custom Next.js front-end</span></div>
+                <p className="text-sm text-stone-300 leading-relaxed">Define the target architecture, test method, accessibility checks, repository access, licensing, and handover in writing.</p>
               </div>
             </div>
           </div>
 
           <p className="text-center text-sm text-stone-400 mt-8 max-w-2xl mx-auto">
-            One bridge, two halves: the CRM keeps firing while every visitor lands on a site you actually own. For the full technical walkthrough, read our guide on <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline underline-offset-2">keeping your GHL CRM while replacing the website</Link>.
+            One bridge, two systems: verify each supported workflow before cutover and monitor it afterward. For a technical overview, read our guide on <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-orange-300 hover:underline underline-offset-2">keeping the GHL CRM while evaluating a separate website</Link>.
           </p>
         </div>
       </section>
 
-      {/* PRICING TIERS — GoHighLevel site overlay pricing */}
+      {/* PRICING TIERS: GoHighLevel site overlay pricing */}
       <PricingTiers
-        heading="Agencies charge $8K to $25K."
-        headingAccent="We meet you halfway."
+        heading="Choose an integration planning path."
+        headingAccent="Confirm commitments after discovery."
         agencyComparison={{
-          agencyPrice: "$8K to $25K+",
-          agencyNote: "6-10 week timeline. Hourly billing. Your $297/mo GHL fee continues forever.",
-          ourPrice: "From $1,500",
-          ourNote: "2-3 week timeline. Fixed price. Keep your GHL CRM intact. Own the frontend.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare equivalent account, integration, testing, and support scope.",
+          ourPrice: "Scoped proposal",
+          ourNote: "Price, timing, continuity checks, access, and rights follow discovery.",
         }}
         tiers={[
           {
             tier: "Starter",
-            price: "Starting from $1,500",
-            timeline: "1 to 2 weeks",
-            fit: "Simple funnel or landing page site. 5-10 pages. Our Starter tier.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A focused landing-page and GHL data-flow review.",
             includes: [
-              "Custom Next.js site with your design",
-              "GHL form + webhook integration",
-              "Sanity CMS for content editing",
-              "90+ PageSpeed guaranteed",
-              "Your GHL automations stay intact",
-              "15 days of free post-launch support",
+              "Current-state inventory",
+              "Supported endpoint and field mapping",
+              "Written test and handover terms",
             ],
-            cta: "Get Starter Quote",
+            cta: "Get your migration plan",
           },
           {
             tier: "Growth",
-            price: "Starting from $3,500",
-            timeline: "2 to 3 weeks",
-            fit: "Multi-page marketing site. 15 to 40 pages. Blog, forms, GHL integrations.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A broader marketing site with content, forms, and supported GHL integrations.",
             includes: [
-              "Everything in Starter",
-              "Full GHL API + webhook integration",
-              "Custom lead capture flows",
-              "Full SEO with schema markup",
-              "Analytics (GA4, Clarity, GHL tracking)",
-              "30 days of free post-launch support",
+              "Page, content, and integration inventory",
+              "Consent-aware analytics requirements",
+              "Written acceptance and support terms",
             ],
             featured: true,
           },
           {
             tier: "Scale",
-            price: "$5,000 to $10,000",
-            timeline: "3 to 5 weeks",
-            fit: "Agency white-label sites, membership portals, complex GHL integrations.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "Multi-site, portal, or complex workflow requirements that need deeper review.",
             includes: [
-              "Everything in Growth",
-              "Multi-site / agency white-label",
-              "Custom member portal with GHL auth",
-              "Calendar integration (GHL or Cal.com)",
-              "Multi-step funnel with GHL triggers",
-              "30 days of free post-launch support",
+              "Account and permission mapping",
+              "Security, failure, and rollback planning",
+              "Written licensing, access, and handover terms",
             ],
           },
         ]}
-        footnote="Every build keeps your GHL CRM, automations, and integrations fully intact. We replace only the slow frontend."
+        footnote="The accepted proposal controls scope, price, timing, continuity checks, support, access, licensing, ownership, and remedies."
       />
 
-      {/* Agency cluster link — sits under the Scale (agency white-label) tier */}
+      {/* Agency delivery-path link */}
       <section className="px-6 pb-10 bg-paper">
-        <p className="text-center text-sm text-stone-500 max-w-2xl mx-auto">
-          Running a GHL agency? The Scale tier covers white-label builds for your client roster. Compare your options in our guide to the <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="text-cognac hover:underline underline-offset-2">best website builder for GoHighLevel agencies</Link>.
+        <p className="text-center text-sm text-stone-600 max-w-2xl mx-auto">
+          Running a GHL agency? Review delivery-model, confidentiality, acceptance, and handover considerations in our guide to choosing a <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="text-cognac hover:underline underline-offset-2">website delivery approach for GoHighLevel agencies</Link>.
         </p>
       </section>
 
       {/* 7. TRIPLE CTA */}
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Two Paths. Both Fast. Both Yours.</h2>
+          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Two Paths to Evaluate</h2>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* Custom Site + GHL API */}
@@ -537,17 +482,17 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom Site + GHL CRM</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Keep your GHL CRM and automations. We build a custom coded website that integrates with GHL&apos;s API. You own the code.
+                Evaluate a separate public frontend connected to the supported GHL workflows identified during discovery.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second landing pages", "Full GHL API integration", "All automations keep working", "Organic SEO (free leads)", "100% code ownership", "30-day money-back guarantee"].map((item, i) => (
+                {["Point-in-time performance baseline", "Supported GHL API and webhook map", "Workflow acceptance tests", "Search-ready implementation scope", "Repository and licensing terms", "Written support and remedies"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_custom_plus_ghl_quote",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
-                Get Custom + GHL Quote
+                Get your migration plan
               </button>
             </div>
 
@@ -557,17 +502,17 @@ export default function PageContent() {
               <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-xl font-bold text-charcoal mb-4">Custom CRM + Website</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Want to own everything? We build a custom CRM and website connected to your automations. No monthly platform fees. You own the code.
+                Evaluate replacing selected CRM and website workflows where the data, integration, operational, and migration requirements justify it.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Custom CRM dashboard", "Website + CRM in one codebase", "Connect existing automations", "No SaaS subscription fees", "100% code ownership", "Scale without limits"].map((item, i) => (
+                {["CRM workflow requirements", "Frontend and backend architecture", "Automation migration map", "Current service-cost estimate", "Repository and rights terms", "Capacity and monitoring plan"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"build_my_custom_crm",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all">
-                Build My Custom CRM
+                Discuss custom CRM scope
               </button>
             </div>
           </div>
@@ -584,96 +529,89 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-12">Everything you need to know about GHL integration.</p>
 
           <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  aria-expanded={openFaq === i}
-                  className="w-full text-left p-5 rounded-xl bg-stone-50 border border-stone-200 hover:border-stone-200 transition-all"
+            {faqs.map((faq, i) => {
+              const isOpen = openFaq === i;
+              const buttonId = `gohighlevel-faq-button-${i}`;
+              const panelId = `gohighlevel-faq-panel-${i}`;
+
+              return (
+                <motion.div
+                  key={faq.q}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50"
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
-                    </div>
+                  <h3>
+                    <button
+                      id={buttonId}
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                      className="w-full p-5 text-left transition-all hover:text-cognac"
+                    >
+                      <span className="flex items-center justify-between gap-4">
+                        <span className="text-base font-medium text-charcoal">{faq.q}</span>
+                        <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-100 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
+                          <span className="text-sm font-bold text-charcoal">+</span>
+                        </span>
+                      </span>
+                    </button>
+                  </h3>
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={buttonId}
+                    hidden={!isOpen}
+                    className="border-t border-stone-200 px-5 py-4"
+                  >
+                    <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                   </div>
-                  <p className={`text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4 ${openFaq === i ? 'block' : 'hidden'}`}>{faq.a}</p>
-                </button>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
+      {/* 9. WRITTEN INTEGRATION TERMS */}
       <section className="py-10 md:py-14 px-6">
-        <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-green-100/50 blur-[80px] pointer-events-none" />
+        <div className="container mx-auto max-w-4xl bg-linear-to-br from-[#faf7f2] to-white border border-cognac/30 rounded-[3rem] p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-cognac/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/10 text-cognac border border-cognac/20 text-xs font-bold uppercase tracking-wider mb-6">
+              <ShieldCheck className="w-4 h-4" /> Written Integration Terms
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Your GHL Automations Keep Working. We Guarantee It.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Define the Workflows and How They Will Be Tested.</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              We seamlessly integrate with your existing GHL workflows. If anything breaks or the site doesn&apos;t outperform your current funnels, full refund. No questions.
+              The proposal identifies the in-scope GHL workflows, test fixtures, account assumptions, acceptance process, monitoring, support, and any remedies. This page does not promise uninterrupted third-party services, improved performance, or a refund.
             </p>
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
-              Book Free Discovery Call
+              Get your migration plan
             </button>
           </div>
         </div>
       </section>
 
-      {/* Related Services — expanded to all platforms via reusable component */}
+      {/* Related Services, expanded to all platforms via reusable component */}
       <section className="py-8 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
-            <li>&rarr; <Link href="/blog/gohighlevel-website-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">Why GoHighLevel sites score 20 to 45 on PageSpeed (and the fix)</Link></li>
-            <li>&rarr; <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Keep the GoHighLevel CRM, replace just the slow website</Link></li>
+            <li>&rarr; <Link href="/blog/gohighlevel-website-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">How to measure GoHighLevel website performance</Link></li>
+            <li>&rarr; <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Keep the GoHighLevel CRM while evaluating the website</Link></li>
             <li>&rarr; <Link href="/blog/core-web-vitals-explained" className="text-charcoal hover:text-cognac underline underline-offset-2">Core Web Vitals explained for business owners</Link></li>
           </ul>
         </div>
       </section>
 
       <RelatedServicesGrid currentHref="/services/gohighlevel" />
-
-      {/* Author Attribution */}
-      <section className="py-10 border-t border-stone-200 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-start gap-4">
-              <Link href="/about/hassan" className="shrink-0">
-                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Builds custom Next.js frontends that connect to GoHighLevel via API, scoring 90+ on PageSpeed while keeping every automation intact.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran Raza" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran Raza</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Maps your existing GHL pipelines, automations, and CRM workflows to ensure zero disruption during the frontend rebuild.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

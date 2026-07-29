@@ -19,7 +19,7 @@ import { Gauge } from "lucide-react";
 const faqs = [
   {
     q: "Will I lose my WooCommerce orders and customer data?",
-    a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. Zero data loss. We test imports in staging before anything touches your live store."
+    a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. Migrated records are reconciled against a pre-migration export and any exceptions are reported before cutover. We test imports in staging before anything touches your live store."
   },
   {
     q: "Do I keep my Google rankings after migrating from WooCommerce?",
@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 const comparisonRows = [
-  { label: "Load Time",     woo: "2.5 to 5s average",              custom: "Under 1s, guaranteed",        isPain: true  },
+  { label: "Load Time",     woo: "2.5 to 5s average",              custom: "Under 1s target",        isPain: true  },
   { label: "Monthly Cost",  woo: "$300 to $700/mo (hosting+plugins)", custom: "$0 to $50/mo at any scale",  isPain: true  },
   { label: "Checkout",      woo: "Plugin-dependent, fragile",    custom: "Custom logic, bulletproof", isPain: true  },
   { label: "Security",      woo: "Self-managed, plugin surface", custom: "Static, no attack surface", isPain: true  },
@@ -121,7 +121,7 @@ export default function PageContent() {
           <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We run your checkout speed live, calculate your monthly loss, and give you a fixed quote. <span className="text-charcoal font-medium">Best fit for stores doing $50K+/year.</span></p>
 
           {/* Trust line */}
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xs text-stone-400 mt-4">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xs text-stone-600 mt-4">
             Serving stores in UK · Australia · Canada · Europe · United States
           </motion.p>
         </div>
@@ -176,12 +176,12 @@ export default function PageContent() {
               >
                 <div className="h-1 w-full" style={{ backgroundColor: stat.color }} />
                 <div className="p-6 text-center">
-                  <p className="text-[11px] text-stone-400 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
+                  <p className="text-[11px] text-stone-600 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
                   <div className="flex items-baseline justify-center gap-1">
                     <span className="text-4xl font-black" style={{ color: stat.color }}>{stat.after}</span>
-                    {stat.suffix && <span className="text-sm font-medium text-stone-400">{stat.suffix}</span>}
+                    {stat.suffix && <span className="text-sm font-medium text-stone-600">{stat.suffix}</span>}
                   </div>
-                  <p className="text-xs text-stone-400 mt-2">was <span className="line-through">{stat.before}</span></p>
+                  <p className="text-xs text-stone-600 mt-2">was <span className="line-through">{stat.before}</span></p>
                 </div>
               </motion.div>
             ))}
@@ -266,7 +266,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">When the WooCommerce Core team lead publicly admits the problem, you know it is structural.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a working supply-chain attack playbook with 400,000+ sites compromised in a single April 2026 incident. Custom Next.js stores on Vercel have zero third-party plugins, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with Shopify, BigCommerce, or Sanity backend, with 90+ PageSpeed guaranteed or 100% refund.
+              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a demonstrated supply-chain attack surface; see our dated write-up of the April 2026 incident for the sourced figures. Custom Next.js stores on Vercel have zero third-party plugins, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with a Shopify, BigCommerce, or Sanity backend, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -324,7 +324,7 @@ export default function PageContent() {
             </div>
             {/* Header — desktop only. On mobile, each row gets inline labels. */}
             <div className="hidden md:grid md:grid-cols-3 bg-stone-50 border-b border-stone-200">
-              <div className="px-5 py-4 text-xs font-black text-stone-400 uppercase tracking-widest">Feature</div>
+              <div className="px-5 py-4 text-xs font-black text-stone-600 uppercase tracking-widest">Feature</div>
               <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">WooCommerce</div>
               <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">Custom Code</div>
             </div>
@@ -453,7 +453,7 @@ export default function PageContent() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-bold text-charcoal truncate">{node.label}</p>
-                    <p className={`text-[11px] font-medium truncate ${node.broken ? "text-red-500" : "text-stone-400"}`}>{node.note}</p>
+                    <p className={`text-[11px] font-medium truncate ${node.broken ? "text-red-500" : "text-stone-600"}`}>{node.note}</p>
                   </div>
                 </div>
               ))}
@@ -502,7 +502,7 @@ export default function PageContent() {
               "Full WooCommerce product + order export",
               "Custom Next.js storefront",
               "Stripe checkout integration",
-              "90+ PageSpeed guaranteed",
+              "90+ Lighthouse handover target",
               "301 redirect mapping",
               "15 days of free post-launch support",
             ],
@@ -538,7 +538,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="All builds include: zero downtime migration, 301 redirect mapping, SEO preservation, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
+        footnote="All builds include: zero downtime migration, 301 redirect mapping, redirect and metadata carry-over, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
       />
 
       {/* 6. DUAL CTA */}
@@ -573,7 +573,7 @@ export default function PageContent() {
                 A complete rebuild on custom Next.js. Faster checkout, zero platform fees, and a storefront you own forever.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "Refund terms stated in the written scope"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -629,13 +629,13 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
-              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
+              <ShieldCheck className="w-4 h-4" /> How we reduce your risk
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+              A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen WooCommerce migration ships at 90+ on Google PageSpeed. If your new store doesn&apos;t hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
+              Every PandaCodeGen WooCommerce migration carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -669,7 +669,7 @@ export default function PageContent() {
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-600 mb-4">Built by</p>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">

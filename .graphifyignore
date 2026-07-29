@@ -1,0 +1,38 @@
+# ── Generated dependencies, build output, caches ────────────────────────────
+node_modules/
+.next/
+.next-audit/
+out/
+dist/
+build/
+coverage/
+public/_pagefind/
+package-lock.json
+*.tsbuildinfo
+next-env.d.ts
+
+# ── VCS, tooling, assistant/config noise ────────────────────────────────────
+.git/
+.agents/
+.claude/
+.vercel/
+.vscode/
+.idea/
+graphify-out/
+Usershassa.claudeclaude_desktop_config.json
+
+# ── Local analytics/data exports (not architecture) ─────────────────────────
+GSC/
+airops/
+exports/
+*.csv
+
+# ── Ephemeral test/automation artifacts (assistant tooling, not project assets) ──
+.playwright-mcp/
+playwright-report/
+test-results/
+*.png.playwright
+
+# Preserved on purpose: src/**, fric/**, drafts/**, blog-drafts/**, docs/**,
+# *.md, *.pdf, meaningful *.png design artifacts, config (next.config.js,
+# tsconfig.json, eslint/postcss), and the .mjs build/SEO scripts.

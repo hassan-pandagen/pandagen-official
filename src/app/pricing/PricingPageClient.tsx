@@ -5,15 +5,15 @@ import { Check, ShieldCheck, ArrowRight, X, Minus, Zap, Clock, DollarSign, Rotat
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 const comparisonRows = [
-  { label: "Technology",    agency: "WordPress / Elementor",              pandagen: "Custom Next.js architecture",   isPain: false },
-  { label: "PageSpeed",     agency: "40-70/100 average",                  pandagen: "90+ guaranteed",            isPain: true  },
-  { label: "Load Time",     agency: "2.0s to 4.0s average",               pandagen: "Under 1s, guaranteed",          isPain: true  },
-  { label: "Security",      agency: "Plugin vulnerabilities",             pandagen: "No plugins, no backdoors",      isPain: true  },
-  { label: "Ownership",     agency: "Locked to theme / agency",           pandagen: "100% code ownership",           isPain: true  },
-  { label: "Monthly Cost",  agency: "Shopify Plus: $2,300+/mo + app fees", pandagen: "Starts at $0, about $20/mo at scale (never more than ~$50)",    isPain: true  },
-  { label: "Billing",       agency: "Hourly, unpredictable",              pandagen: "Fixed-price deposit",           isPain: true  },
+  { label: "Scope", agency: "May be described at a high level", pandagen: "URLs, content, integrations, and exclusions listed", isPain: false },
+  { label: "Performance", agency: "Target may be unspecified", pandagen: "90+ Lighthouse target, pages, profile, and three-run handover check written into scope", isPain: false },
+  { label: "Migration", agency: "Redirect and cutover detail varies", pandagen: "Inventory, redirect map, QA, and rollback plan", isPain: false },
+  { label: "Ownership", agency: "Depends on the contract", pandagen: "Ownership and license terms stated in the proposal", isPain: false },
+  { label: "Ongoing cost", agency: "Platform and vendor charges vary", pandagen: "Known third-party costs documented before approval", isPain: false },
+  { label: "Changes", agency: "Process varies", pandagen: "Out-of-scope work requires a separate written quote", isPain: false },
 ];
 
 const pricingSchema = {
@@ -23,10 +23,9 @@ const pricingSchema = {
       "@type": "WebPage",
       "@id": "https://www.pandacodegen.com/pricing#webpage",
       "url": "https://www.pandacodegen.com/pricing",
-      "name": "Pricing | PandaCodeGen Custom Web Development",
-      "description": "Fixed-price custom Next.js builds. Starter $1,500. Growth $3,500. Scale $5,000 to $10,000. Scale+ custom quote for enterprise. No hourly billing. 30-day money-back guarantee.",
+      "name": "Website Migration Pricing & Scope | PandaCodeGen",
+      "description": "Website migration packages starting at $1,500, $3,500, and $5,000–$10,000, adjusted through a written project scope.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-      "about": { "@id": "https://www.pandacodegen.com/pricing#service" },
       "inLanguage": "en-US"
     },
     {
@@ -35,85 +34,6 @@ const pricingSchema = {
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
         { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.pandacodegen.com/pricing" }
       ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.pandacodegen.com/pricing#service",
-      "name": "Fixed-Price Custom Web Development",
-      "description": "Fixed-price custom Next.js web development in four tiers: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ custom-quoted for enterprise scope. 90+ PageSpeed guarantee or full refund.",
-      "provider": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization", "name": "PandaCodeGen" },
-      "areaServed": "Worldwide",
-      "serviceType": ["Custom Web Development", "Next.js Development", "Website Migration", "Headless E-Commerce Development"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Fixed-Price Web Development Tiers",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "@id": "https://www.pandacodegen.com/pricing#offer-starter",
-            "name": "Starter",
-            "description": "5 to 7 page custom Next.js business site. Under 1 second load time. 90+ Google PageSpeed guaranteed. Mobile-first build. Hosting starts at $0. Includes 15 days of post-launch support.",
-            "price": "1500",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.pandacodegen.com/pricing",
-            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-          },
-          {
-            "@type": "Offer",
-            "@id": "https://www.pandacodegen.com/pricing#offer-growth",
-            "name": "Growth",
-            "description": "10 to 20 page custom Next.js site with Sanity CMS, blog migration, 301 redirects, and 30 days of post-launch support. Most Popular tier.",
-            "price": "3500",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.pandacodegen.com/pricing",
-            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-          },
-          {
-            "@type": "Offer",
-            "@id": "https://www.pandacodegen.com/pricing#offer-scale",
-            "name": "Scale",
-            "description": "Headless e-commerce (Shopify or WooCommerce), 30+ pages, custom integrations, advanced performance optimization. Full Next.js rebuild. Includes 30 days of post-launch support.",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": "5000",
-              "maxPrice": "10000",
-              "priceCurrency": "USD"
-            },
-            "priceCurrency": "USD",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.pandacodegen.com/pricing",
-            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-          },
-          {
-            "@type": "Offer",
-            "@id": "https://www.pandacodegen.com/pricing#offer-scale-plus",
-            "name": "Scale+ Custom Engagement",
-            "description": "Enterprise scope. Multi-region e-commerce, custom SaaS platforms, complex integrations, dedicated engineering. Custom-quoted. Includes 30 days of post-launch support.",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.pandacodegen.com/pricing",
-            "seller": { "@type": "Organization", "@id": "https://www.pandacodegen.com/#organization" }
-          }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.pandacodegen.com/pricing#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "Which tier should I start with?", "acceptedAnswer": { "@type": "Answer", "text": "Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." } },
-        { "@type": "Question", "name": "How does the deposit model work?", "acceptedAnswer": { "@type": "Answer", "text": "You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." } },
-        { "@type": "Question", "name": "Do you do retainers after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." } },
-        { "@type": "Question", "name": "Why is your price higher than a freelancer?", "acceptedAnswer": { "@type": "Answer", "text": "Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin fees." } },
-        { "@type": "Question", "name": "What if my project is bigger than Scale?", "acceptedAnswer": { "@type": "Answer", "text": "Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." } },
-        { "@type": "Question", "name": "What's in the Discovery Call?", "acceptedAnswer": { "@type": "Answer", "text": "We audit your current site, understand your revenue goals, and map out the tech stack. Free, non-binding. Takes 30 minutes." } }
-      ]
     }
   ]
 };
@@ -121,8 +41,12 @@ const pricingSchema = {
 export default function PricingPageClient() {
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden relative">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }} />
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pricingSchema),
+        }}
+      />
       <Header />
 
       {/* 1. HERO */}
@@ -135,21 +59,32 @@ export default function PricingPageClient() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-6 leading-[1.08] md:leading-tight break-words"
           >
-            Production-grade engineering. <br className="hidden md:inline" />{" "}
-            <span className="font-serif italic text-cognac">Fixed-price transparency.</span>
+            Example migration scopes. <br className="hidden md:inline" />{" "}
+            <span className="font-serif italic text-cognac">A written quote for your actual risk.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-stone-700 max-w-2xl mx-auto mb-12"
+            className="text-xl text-stone-700 max-w-2xl mx-auto mb-6"
           >
-            Most business rebuilds land in the <span className="font-bold text-charcoal">Growth tier from $3,500</span>. Stop paying for hours. Pay for outcomes. 30% deposit to start.
+            Choose the closest starting package, then add or remove pages and features in a written quote. A common package starting structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms; another written schedule can be agreed for a particular project.
           </motion.p>
 
-          <p data-speakable="true" className="text-base font-semibold text-charcoal max-w-2xl mx-auto -mt-6 mb-12">
-            PandaCodeGen builds fixed-price custom Next.js websites from $1,500, with a 90+ PageSpeed guarantee or a full refund.
+          <button
+            type="button"
+            onClick={() => {
+              trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_hero" });
+              window.dispatchEvent(new Event("open-quote-modal"));
+            }}
+            className="mb-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-7 py-3 font-bold text-white transition-colors hover:bg-cognac"
+          >
+            Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </button>
+
+          <p className="text-base font-semibold text-charcoal max-w-2xl mx-auto mb-12">
+            Scope is driven by URL and content volume, CMS models, integrations, analytics, compliance needs, stakeholders, and migration risk, not page count alone.
           </p>
 
           {/* Work Teaser Strip */}
@@ -171,11 +106,11 @@ export default function PricingPageClient() {
               </div>
             </div>
             <span className="text-sm font-bold text-stone-600 uppercase tracking-widest">
-              Avg PageSpeed: 90+ · Avg Load Time: 0.8s · Founded Feb 2026, Austin TX
+              URL inventory · Content model · Integrations · Cutover risk
             </span>
           </motion.div>
 
-          {/* Guarantee Badges */}
+          {/* Scope-control badges */}
           <motion.div
             initial={{ opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -183,10 +118,10 @@ export default function PricingPageClient() {
             className="flex flex-wrap md:flex-nowrap justify-center gap-3"
           >
             {[
-              { icon: <Zap className="w-4 h-4" />, text: "90+ PageSpeed. Guaranteed." },
-              { icon: <Clock className="w-4 h-4" />, text: "Under 1s load time. Guaranteed." },
-              { icon: <DollarSign className="w-4 h-4" />, text: "Hosting starts free on Vercel." },
-              { icon: <RotateCcw className="w-4 h-4" />, text: "30-day money-back guarantee." },
+              { icon: <Zap className="w-4 h-4" />, text: "Acceptance test in writing" },
+              { icon: <Clock className="w-4 h-4" />, text: "Timeline defined by scope" },
+              { icon: <DollarSign className="w-4 h-4" />, text: "Third-party costs listed" },
+              { icon: <RotateCcw className="w-4 h-4" />, text: "Change terms documented" },
             ].map((badge, i) => (
               <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white border border-stone-300 rounded-full text-sm font-semibold text-charcoal shadow-xs">
                 <span className="text-cognac">{badge.icon}</span>
@@ -199,6 +134,7 @@ export default function PricingPageClient() {
 
       {/* 2. PRICING GRID */}
       <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-6xl">
+        <h2 className="sr-only">Website planning examples</h2>
         <div className="grid lg:grid-cols-3 gap-10 md:gap-8 items-stretch max-w-md lg:max-w-none mx-auto">
 
           {/* CARD 1: Starter */}
@@ -206,45 +142,46 @@ export default function PricingPageClient() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 opacity-80 hover:opacity-100 hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500 flex flex-col"
+            className="p-8 rounded-3xl bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500 flex flex-col"
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Starter</h3>
-              <p className="text-sm text-stone-500 mt-1">Small business sites, 5 to 7 pages.</p>
+              <p className="text-sm text-stone-600 mt-1">Small business sites, 5 to 7 pages.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
-              <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">From</div>
+              <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-5xl font-black text-charcoal">$1,500</span>
-                <span className="text-lg font-bold text-stone-500">USD+</span>
+                <span className="text-4xl font-black text-charcoal">$1,500</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
-                <p className="text-sm font-bold text-stone-700">Deposit: 30% to start</p>
+                <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
               </div>
             </div>
 
             <ul className="space-y-3 mb-8 grow">
-              <Feature text="5 to 7 Custom Pages (home, about, services, contact, and up to 3 more. Every page hand-built, not templated)" />
-              <Feature text="Next.js + Vercel Deployment (production-grade framework, same stack Nike and Hulu ship on)" />
-              <Feature text="90+ Google PageSpeed Mobile (guaranteed in writing. We fix it free if it scores lower)" />
-              <Feature text="Under 1 Second Load Time (your site loads before slow sites render their hero image)" />
+              <Feature text="5 to 7 custom pages, with the exact templates and content responsibilities listed in scope" />
+              <Feature text="Next.js deployment with repository, environment, and handover responsibilities documented" />
+              <Feature text="90+ Lighthouse performance target on both mobile and desktop for the agreed representative pages" />
+              <Feature text="Three recorded pre-handover runs per agreed page/profile; every run must meet the target" />
               <Feature text="Mobile-First Build (designed on mobile screen first, then scaled up, not the other way around)" />
-              <Feature text="Hosting Starts at $0 (no platform subscription, no plugin bills. Vercel starts free, about $20/mo as you scale)" />
-              <Feature text="15 Days of Free Post-Launch Support (bug fixes and refinements at no extra cost after handover)" />
+              <Feature text="Hosting and third-party service options documented before approval" />
+              <Feature text="15 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
             </ul>
 
             <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
+              type="button"
+              onClick={() => {
+                trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_starter" });
+                window.dispatchEvent(new Event("open-quote-modal"));
+              }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
             >
-              Book Discovery Call
+              Get your migration plan
             </button>
           </motion.div>
 
-          {/* CARD 2: Growth (Most Popular anchor) */}
+          {/* CARD 2: Growth */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -253,7 +190,7 @@ export default function PricingPageClient() {
             className="relative p-8 rounded-[2.5rem] bg-[#0C0A09] text-white shadow-2xl shadow-stone-900/30 lg:scale-105 lg:z-10 flex flex-col"
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-cognac text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg whitespace-nowrap">
-              Most Popular
+              Migration example
             </div>
 
             <div className="mb-6 min-h-[64px]">
@@ -262,34 +199,33 @@ export default function PricingPageClient() {
             </div>
 
             <div className="mb-6 pb-6 border-b border-white/10 min-h-[140px] flex flex-col justify-start">
-              <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">From</div>
+              <div className="text-xs font-black text-orange-300 uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-6xl font-black text-white">$3,500</span>
-                <span className="text-lg font-bold text-stone-400">USD+</span>
+                <span className="text-4xl font-black text-white">$3,500</span>
               </div>
               <div className="inline-block bg-white/10 px-3 py-1 rounded-md border border-white/10">
-                <p className="text-sm font-bold text-stone-300">Deposit: 30% to start</p>
+                <p className="text-sm font-bold text-stone-300">Starting package · exact scope in proposal</p>
               </div>
             </div>
 
             <ul className="space-y-3 mb-6 grow">
               <Feature dark text="10 to 20 Page Custom Site (full marketing site with service pages, case studies, and resources)" />
               <Feature dark text="Sanity CMS Integration (your team updates content without touching code)" />
-              <Feature dark text="Full Blog Migration (every post moved, 301 redirects preserved, SEO rankings held)" />
-              <Feature dark text="90+ PageSpeed Guaranteed (not an aspiration, a contract)" />
-              <Feature dark text="No Platform Fees (Vercel hosting starts free, about $20/month when you grow)" />
-              <Feature dark text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost)" />
+              <Feature dark text="Blog migration with a URL inventory, redirect map, metadata preservation, and post-launch monitoring" />
+              <Feature dark text="90+ Lighthouse performance target on mobile and desktop, with three passing runs per agreed page/profile" />
+              <Feature dark text="Hosting and third-party service costs listed before approval" />
+              <Feature dark text="30 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
             </ul>
 
-            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_project",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
-                Start Project <ArrowRight className="w-5 h-5" />
+            <button onClick={() => { trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_growth" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
+                Get your migration plan <ArrowRight className="w-5 h-5" />
             </button>
 
-            <p className="text-xs text-center text-stone-500 mt-4">
-              Fully refundable within 30 days. No risk.
+            <p className="text-xs text-center text-stone-600 mt-4">
+              Final scope, payment, warranty, and remedy terms are confirmed in accepted written project terms.
             </p>
 
-            <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-400 hover:text-cognac transition-colors mt-3 underline underline-offset-2">
+            <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-600 hover:text-orange-300 transition-colors mt-3 underline underline-offset-2">
               Moving off WordPress? See the full migration scope
             </Link>
           </motion.div>
@@ -300,43 +236,44 @@ export default function PricingPageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-3xl bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 opacity-80 hover:opacity-100 hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500 flex flex-col"
+            className="p-8 rounded-3xl bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-200/40 ring-1 ring-stone-900/5 hover:border-cognac/20 hover:shadow-2xl hover:shadow-cognac/10 transition-all duration-500 flex flex-col"
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Scale</h3>
-              <p className="text-sm text-stone-500 mt-1">Headless e-commerce &amp; 30+ pages.</p>
+              <p className="text-sm text-stone-600 mt-1">Headless e-commerce &amp; 30+ pages.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
-              <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Range</div>
+              <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-5xl font-black text-charcoal">$5K to $10K</span>
-                <span className="text-lg font-bold text-stone-500">USD</span>
+                <span className="text-4xl font-black text-charcoal">$5,000–$10,000</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
-                <p className="text-sm font-bold text-stone-700">Deposit: 30% to start</p>
+                <p className="text-sm font-bold text-stone-700">Starting range · exact scope in proposal</p>
               </div>
             </div>
 
             <ul className="space-y-4 mb-8 grow">
               <Feature text="Headless E-Commerce (Shopify or WooCommerce backend, Next.js frontend. The speed of custom, the admin of Shopify)" />
-              <Feature text="30+ Custom Pages (product pages, collections, landing pages. All hand-built, not templated)" />
-              <Feature text="Custom Integrations (Klaviyo, HubSpot, Salesforce, Stripe subscriptions, or any API you need)" />
-              <Feature text="Advanced Performance Optimization (edge caching, ISR, image pipeline tuned to your catalog size)" />
+              <Feature text="30+ page or template scope for products, collections, content, and landing pages" />
+              <Feature text="Reviewed integrations such as Klaviyo, HubSpot, Salesforce, Stripe subscriptions, or another documented API" />
+              <Feature text="90+ Lighthouse performance target on mobile and desktop, with three passing runs per agreed page/profile" />
               <Feature text="Sanity CMS + Content Ops (content model designed for your editors, not generic templates)" />
-              <Feature text="30 Days Post-Launch Support (bug fixes and refinements at no extra cost after handover)" />
+              <Feature text="30 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
             </ul>
 
             <button
-              data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
-              data-cal-config='{"layout":"month_view"}'
+              type="button"
+              onClick={() => {
+                trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_scale" });
+                window.dispatchEvent(new Event("open-quote-modal"));
+              }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
             >
-              Book Scope Call
+              Get your migration plan
             </button>
 
-            <Link href="/services/ecommerce" className="block text-center text-xs text-stone-400 hover:text-cognac transition-colors mt-3 underline underline-offset-2">
+            <Link href="/services/ecommerce" className="block text-center text-xs text-stone-600 hover:text-cognac transition-colors mt-3 underline underline-offset-2">
               See our headless e-commerce service
             </Link>
           </motion.div>
@@ -356,15 +293,15 @@ export default function PricingPageClient() {
               <h3 className="text-lg md:text-xl font-bold text-charcoal mb-1">Bigger project? Let&apos;s scope it together.</h3>
               <p className="text-sm text-stone-600">Enterprise scope, multi-region e-commerce, custom SaaS platforms, complex integrations. We cannot quote without understanding the work. Message us and we will scope it on a call. Curious what this looks like in practice? See our <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">custom engineering service</Link>.</p>
             </div>
-            <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"scope_it_with_us",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
-                Scope It With Us
+            <button onClick={() => { trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_scale_plus" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
+                Get your migration plan
             </button>
           </div>
         </motion.div>
 
       </section>
 
-      {/* 3. DEPOSIT MODEL EXPLAINER */}
+      {/* 3. WRITTEN QUOTE EXPLAINER */}
       <section className="container mx-auto px-6 pb-24 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -372,29 +309,29 @@ export default function PricingPageClient() {
           viewport={{ once: true }}
           className="bg-white border border-stone-300 rounded-3xl p-8 md:p-12 shadow-xs"
         >
-          <h2 className="text-3xl font-bold text-charcoal mb-6">Why we use the Deposit Model.</h2>
+          <h2 className="text-3xl font-bold text-charcoal mb-6">How the written quote works.</h2>
           <div className="grid md:grid-cols-2 gap-10 text-stone-600 leading-relaxed">
             <div>
               <h3 className="text-charcoal font-bold mb-2 flex items-center gap-2">
-                <span>🚫</span> The Hourly Billing Trap
+                <span aria-hidden="true">01</span> Scope before price
               </h3>
               <p>
-                Most agencies charge $100 to $200/hour. This punishes efficiency. If they work slowly, you pay more. You never know the final bill. It creates a conflict of interest where their incentive is to go slow.
+                We first inventory the pages, content, integrations, constraints, stakeholders, and acceptance tests. The written project summary then states what is included, excluded, and assumed.
               </p>
             </div>
             <div>
               <h3 className="text-charcoal font-bold mb-2 flex items-center gap-2">
-                <span>✅</span> The PandaCodeGen Sprint Model
+                <span aria-hidden="true">02</span> Written change control
               </h3>
               <p>
-                A 30% deposit secures your engineering sprint. Whether it takes 50 hours or 500 to get it perfect, you pay the agreed price. We take the risk, not you. Your incentive and ours are perfectly aligned.
+                A common payment option is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms, but another written schedule may be agreed. Revision limits are stated before work begins, and material out-of-scope requests receive a separate written estimate and require approval.
               </p>
             </div>
           </div>
         </motion.div>
       </section>
 
-      {/* 4. RISK REVERSAL */}
+      {/* 4. PACKAGE STARTING POINTS */}
       <section className="container mx-auto px-6 pb-12 md:pb-24 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -407,25 +344,25 @@ export default function PricingPageClient() {
               <ShieldCheck className="w-8 h-8 text-green-600" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-charcoal mb-1">Our Guarantee</h3>
-              <p className="text-stone-500 text-sm">Here&apos;s exactly how this works, step by step.</p>
+              <h2 className="text-2xl font-bold text-charcoal mb-1">Flexible package starting points</h2>
+              <p className="text-stone-600 text-sm">These options may be used, changed, or omitted. A signed agreement or a clear quote or order summary accepted in email or chat supplies the project-specific detail and controls.</p>
             </div>
           </div>
 
           <div className="space-y-5">
             {[
-              { num: "00", title: "You approve the design before we write a line of code", body: "We do not move into production until you have reviewed and signed off on the design direction. No surprise launches. No 'we built it, now you have to pay'. If the design direction isn't right, we iterate until it is. Production code only starts after your explicit approval." },
-              { num: "01", title: "You only pay a deposit to start", body: "We take a 30% deposit upfront to secure your engineering sprint and cover initial design and architecture work. That's all you owe until delivery." },
-              { num: "02", title: "No final payment until you're satisfied", body: "The remaining balance is only due after we deliver the project and you're happy with it. We don't charge you the rest just because the calendar says so. We charge when the work is done right." },
-              { num: "03", title: "30-day money-back after delivery", body: "After we hand over the finished site, you have 30 days to put it through its paces. If the site is genuinely not performing as agreed (slow load times, broken features, anything we promised and didn't deliver), we refund every dollar you've paid. Not just the deposit, the full amount. No awkward conversations. No dispute process. You clearly asked us for something and we didn't deliver it: you get your money back." },
-              { num: "04", title: "Escrow available on request", body: "If you prefer, we can run the project through a third-party escrow service (Escrow.com or similar). Funds are held by the escrow provider and released to us only when you approve the final delivery. Industry standard for larger projects." },
-              { num: "05", title: "You keep everything, either way", body: "If we refund you, you keep all designs, wireframes, and any code written to that point. We don't ask for anything back. It's your IP from the moment it's created." },
+              { num: "01", title: "Scope and additions", body: "The starting package is adjusted for the approved pages and features. Deliverables, integrations, content responsibilities, exclusions, and any separately priced additions are listed explicitly." },
+              { num: "02", title: "Written scope protection", body: "When included in the accepted project terms, PandaCodeGen refunds 100% of the fees paid under that scope if it fails to deliver the promised deliverables. The written terms define the trigger and cure process; this is not a change-of-mind refund." },
+              { num: "03", title: "90+ performance handover target", body: "The accepted project terms name the representative pages and test conditions for mobile and desktop. Each of three recorded runs per agreed page/profile must reach 90+ before handover." },
+              { num: "04", title: "Support option", body: "Package discussions may start with 15 business days for Starter and 30 business days for Growth and Scale. Support applies only when the accepted project terms state when it starts, what defects or minor adjustments it covers, and any bespoke arrangement." },
+              { num: "05", title: "Payment, changes, and ownership", body: "A common payment option is 30% at onboarding and 70% at the defined delivery milestone; the parties may agree otherwise in writing. Currency, taxes, revision limits, separately priced additions, ownership transfer, licenses, accounts, and third-party costs are stated before implementation." },
+              { num: "06", title: "Launch and rollback", body: "Responsibilities for redirects, analytics, forms, DNS, monitoring, rollback, and post-launch review are included in the cutover plan." },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
-                <div className="text-xs font-black text-stone-300 tracking-widest w-6 shrink-0 pt-0.5">{item.num}</div>
+                <div className="text-xs font-black text-stone-600 tracking-widest w-6 shrink-0 pt-0.5">{item.num}</div>
                 <div>
                   <div className="text-charcoal font-bold mb-1">{item.title}</div>
-                  <div className="text-stone-500 text-sm leading-relaxed">{item.body}</div>
+                  <div className="text-stone-600 text-sm leading-relaxed">{item.body}</div>
                 </div>
               </div>
             ))}
@@ -441,41 +378,46 @@ export default function PricingPageClient() {
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-12"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">The Real Cost</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Contract clarity</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
-            Why Standard Agencies{" "}
-            <span className="font-serif italic text-cognac">Cost You More.</span>
+            Compare the scope,{" "}
+            <span className="font-serif italic text-cognac">not just the headline price.</span>
           </h2>
         </motion.div>
 
-        <div className="rounded-3xl border border-stone-200 overflow-hidden shadow-xs bg-white">
-          {/* Accent bar — desktop only */}
-          <div className="hidden md:grid md:grid-cols-[1fr_1.4fr_1.4fr]">
+        <div
+          className="rounded-3xl border border-stone-200 overflow-hidden shadow-xs bg-white"
+          role="table"
+          aria-label="High-level quote and reviewed project scope comparison"
+        >
+          {/* Accent bar for desktop only */}
+          <div className="hidden md:grid md:grid-cols-[1fr_1.4fr_1.4fr]" aria-hidden="true">
             <div className="h-1 bg-stone-50" />
             <div className="h-1 bg-stone-50" />
             <div className="h-1 bg-cognac" />
           </div>
-          {/* Header — desktop only. On mobile each row gets inline labels. */}
-          <div className="hidden md:grid md:grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
-            <div className="px-5 py-4 text-xs font-black text-stone-500 uppercase tracking-widest">Feature</div>
-            <div className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">Standard Agency</div>
-            <div className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">PandaCodeGen</div>
+          {/* Header for desktop only. On mobile each row gets inline labels. */}
+          <div role="row" className="sr-only md:not-sr-only md:grid md:grid-cols-[1fr_1.4fr_1.4fr] bg-stone-50 border-b border-stone-200">
+            <div role="columnheader" className="px-5 py-4 text-xs font-black text-stone-600 uppercase tracking-widest">Feature</div>
+            <div role="columnheader" className="px-5 py-4 text-sm font-bold text-stone-600 border-l border-stone-200">High-level quote</div>
+            <div role="columnheader" className="px-5 py-4 text-sm font-bold text-cognac border-l border-stone-200 bg-paper">Reviewed project scope</div>
           </div>
           {comparisonRows.map((row, i) => (
             <div
               key={i}
+              role="row"
               className="p-4 border-b border-stone-200 text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]"
             >
-              <div className="text-charcoal font-bold mb-3 md:mb-0 md:px-5 md:py-4 md:flex md:items-center">{row.label}</div>
-              <div className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${row.isPain ? "text-red-600 md:bg-red-50/40" : "text-stone-500"}`}>
-                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500 not-italic">Standard Agency</span>
+              <div role="rowheader" className="text-charcoal font-bold mb-3 md:mb-0 md:px-5 md:py-4 md:flex md:items-center">{row.label}</div>
+              <div role="cell" className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${row.isPain ? "text-red-600 md:bg-red-50/40" : "text-stone-600"}`}>
+                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600 not-italic">High-level quote</span>
                 <span className="flex items-center gap-2.5">
-                  {row.isPain ? <X className="w-4 h-4 text-red-500 shrink-0" /> : <Minus className="w-4 h-4 text-stone-400 shrink-0" />}
+                  {row.isPain ? <X className="w-4 h-4 text-red-600 shrink-0" /> : <Minus className="w-4 h-4 text-stone-600 shrink-0" />}
                   {row.agency}
                 </span>
               </div>
-              <div className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 md:bg-paper font-black text-charcoal">
-                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">PandaCodeGen</span>
+              <div role="cell" className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 md:bg-paper font-black text-charcoal">
+                <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">Reviewed scope</span>
                 <span className="flex items-center gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-cognac flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3 text-white" />
@@ -486,27 +428,27 @@ export default function PricingPageClient() {
             </div>
           ))}
           {/* Net Result footer */}
-          <div className="p-4 bg-charcoal text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]">
-            <div className="text-xs font-black uppercase tracking-widest text-white mb-3 md:mb-0 md:px-5 md:py-6 md:flex md:items-center">Net Result</div>
-            <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 text-stone-300 font-medium">
-              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400 not-italic">Standard Agency</span>
+          <div role="row" className="p-4 bg-charcoal text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]">
+            <div role="rowheader" className="text-xs font-black uppercase tracking-widest text-white mb-3 md:mb-0 md:px-5 md:py-6 md:flex md:items-center">What to compare</div>
+            <div role="cell" className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 text-stone-300 font-medium">
+              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-300 not-italic">High-level quote</span>
               <span className="flex items-center gap-2.5">
-                <X className="w-4 h-4 text-red-400 shrink-0" />
-                Endless maintenance &amp; fees
+                <X className="w-4 h-4 text-stone-300 shrink-0" />
+                Important assumptions can remain unresolved
               </span>
             </div>
-            <div className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 md:bg-cognac text-white font-black text-base">
-              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac not-italic">PandaCodeGen</span>
+            <div role="cell" className="flex items-center justify-between gap-3 md:justify-start md:gap-2.5 md:px-5 md:py-6 md:border-l md:border-white/10 md:bg-cognac text-white font-black text-base">
+              <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-white not-italic">Reviewed scope</span>
               <span className="flex items-center gap-2.5">
                 <ArrowRight className="w-4 h-4 shrink-0" />
-                An asset that compounds in value
+                Named acceptance, ownership, cost, and change rules
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. TESTIMONIAL */}
+      {/* 6. EVIDENCE NOTE */}
       <section className="container mx-auto px-6 pb-10 md:pb-16 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -514,26 +456,20 @@ export default function PricingPageClient() {
           viewport={{ once: true }}
           className="bg-white border border-stone-300 rounded-3xl p-8 md:p-10 shadow-xs text-center"
         >
-          <div className="flex justify-center gap-1 mb-4">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-4 h-4 text-cognac" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          <blockquote className="text-lg md:text-xl font-serif italic text-charcoal leading-relaxed mb-6 max-w-2xl mx-auto">
-            &ldquo;Load time dropped from 3+ seconds to 0.7 seconds. PageSpeed went from 45 to 90+. Hosting cost dropped from $150/month to $0. Zero data loss, zero downtime during cutover. The ROI was immediate.&rdquo;
-          </blockquote>
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Evidence standard</p>
+          <p className="text-lg md:text-xl font-serif italic text-charcoal leading-relaxed mb-6 max-w-2xl mx-auto">
+            Review the migration scope, baseline, implementation, measurement date, and limitations before relying on a result figure.
+          </p>
           <div className="flex items-center justify-center gap-3">
             <div className="h-px w-8 bg-stone-300" />
             <div>
-              <div className="text-sm font-bold text-charcoal">Matt Conner</div>
-              <div className="text-xs text-stone-500">Owner, MyCustomPatches · WordPress Migration</div>
+              <div className="text-sm font-bold text-charcoal">Project evidence</div>
+              <div className="text-xs text-stone-600">Method, permission, date, and limitations</div>
             </div>
             <div className="h-px w-8 bg-stone-300" />
           </div>
           <Link href="/work" className="inline-block mt-6 text-sm font-bold text-cognac hover:underline underline-offset-2">
-            See this build and more in our work portfolio →
+            Review the publication standard →
           </Link>
         </motion.div>
       </section>
@@ -542,14 +478,16 @@ export default function PricingPageClient() {
       <section className="container mx-auto px-6 pb-16 md:pb-32 max-w-3xl">
         <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Common Questions</h2>
         <div className="space-y-6">
-          <FAQ q="Which tier should I start with?" a="Most business rebuilds land in the Growth tier from $3,500: 10 to 20 pages, Sanity CMS, full blog migration with 301 redirects. Starter ($1,500+) is for simpler 5 to 7 page business sites. Scale ($5,000 to $10,000) is for headless e-commerce, 30+ pages, and custom integrations. Bigger scope is handled in Scale+ with a custom quote after a scoping call." />
-          <FAQ q="How does the deposit model work?" a="You pay 30% upfront to secure your engineering sprint and lock in your timeline. The remaining 70% is due on launch day, after you've seen the finished product and approved it." />
-          <FAQ q="What if my project is bigger than Scale?" a="Scale+ is for enterprise scope, multi-region e-commerce, custom SaaS platforms, and complex integrations. We cannot quote without understanding the work, so we scope it together on a call. Book a discovery call and tell us what you need." />
-          <FAQ q="Do you do retainers after launch?" a="Yes. Most clients keep us on for ongoing updates ($500/mo) or priority new feature development at discounted rates." />
-          <FAQ q="Why not just hire a freelancer on Upwork or Fiverr?" a="A freelancer gives you a file. We give you a system. Our builds include architecture review, SEO preservation, performance guarantees, and full IP handover to your accounts, plus 15 to 30 days of free post-launch support depending on tier (15 days on Starter, 30 days on Growth and above). Freelancers disappear after delivery. We don't, and we have the case studies to prove it." />
-          <FAQ q="Why is your price higher than a freelancer?" a="Because we're not building templates. We're building assets. Clients typically see their investment pay for itself within 6 to 12 months through faster load times, higher conversion rates, and eliminated plugin and hosting fees. MyCustomPatches went from $150/mo in hosting to $0 and from a 45 PageSpeed score to 90+. The build paid for itself in under a year." />
-          <FAQ q="What's in the Discovery Call?" a="We audit your current site, understand your revenue goals, and map out the tech stack. Free, non-binding. Takes 30 minutes." />
-          <FAQ q="What exactly does the 90+ PageSpeed guarantee mean?" a="It means your site will score 90+ on Google PageSpeed Insights at launch. If it doesn't, we keep working until it does at no extra cost. We have never failed to hit our 90+ guarantee on a completed project." />
+          <FAQ q="Which package should I start with?" a="Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Choose the closest base; extra pages or features are discussed and priced in the written scope before work starts." />
+          <FAQ q="Do I need a long contract for every project?" a="No. A straightforward project can use a clear written quote or order summary accepted in email or chat. Regulated, sensitive, or complex work may need a signed statement of work or other detailed agreement. In either case, the accepted written project terms control." />
+          <FAQ q="How do payment milestones work?" a="A common option is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms, but the parties may agree to another written schedule. The accepted terms also state currency, taxes, due dates, approval points, and any pause or cancellation terms." />
+          <FAQ q="What if my project is bigger than Scale?" a="Larger, multi-region, e-commerce, application, and integration-heavy work is scoped separately after discovery. The proposal lists the team, deliverables, dependencies, exclusions, and schedule for that engagement." />
+          <FAQ q="What support is included?" a="A package discussion may start with 15 business days of support for Starter and 30 business days for Growth and Scale. Support is included only when the accepted project terms state the period, start event, covered defects or minor adjustments, response expectations, exclusions, and any bespoke arrangement. Material new features, extra pages, and third-party changes are separately scoped." />
+          <FAQ q="When does the 100% refund apply?" a="When that protection is included in the accepted project terms, it applies if PandaCodeGen fails to deliver the promised deliverables under that written scope. The terms define the trigger, verification, and any cure process. It does not apply merely because preferences change, a new direction is requested, or work outside the agreed scope is desired." />
+          <FAQ q="How should I compare providers?" a="Compare the actual scope, migration plan, acceptance tests, ownership and licensing terms, third-party costs, change process, launch responsibilities, warranty, and remedies, not just the headline price." />
+          <FAQ q="What determines the quote?" a="The main drivers are URL and content volume, CMS structure, custom design and functionality, integrations, analytics, accessibility and compliance needs, stakeholders, migration risk, and deadline." />
+          <FAQ q="What happens before you quote?" a="We review your current platform and URL, primary goal, content and traffic scale, required integrations, timeline, budget range, and known constraints. We then document assumptions and open questions before pricing." />
+          <FAQ q="How is the 90+ performance target checked?" a="The accepted project terms name the representative pages and reproducible Lighthouse conditions for mobile and desktop. Each of three recorded pre-handover runs per agreed page/profile must score 90 or higher. This is a lab acceptance target, not a guarantee of field Core Web Vitals, rankings, revenue, or unchanged results after third-party or client changes." />
         </div>
       </section>
 

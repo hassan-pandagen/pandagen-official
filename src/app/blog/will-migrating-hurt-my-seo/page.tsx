@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, TrendingUp, Link2, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
@@ -18,7 +19,7 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
     title: "Will Migrating My Website Hurt My SEO? (2026)",
-    description: "Done wrong, a website migration can lose 50% of your traffic. Done right, you keep 95 to 100% of your rankings. The checklist that protects them.",
+    description: "A practical website-migration SEO checklist covering URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
     alternates: {
         canonical: "/blog/will-migrating-hurt-my-seo",
     },
@@ -37,18 +38,18 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: "Will Migrating My Website Hurt My SEO? (2026)",
-        description: "Done wrong, a migration can lose 50% of your traffic. Done right, you keep 95 to 100% of your rankings and end up faster. The exact difference and the checklist that protects you.",
+        description: "How to reduce avoidable migration risk with URL mapping, redirects, metadata, crawl checks, rollback planning, and post-launch monitoring.",
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-06-03",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/will-migrating-hurt-my-seo")],
     },
     twitter: {
         card: "summary_large_image",
         title: "Will Migrating My Website Hurt My SEO? (2026)",
-        description: "Done wrong, a migration loses 50% of traffic. Done right, you keep 95 to 100% of rankings and end up faster. The exact difference.",
+        description: "A controlled website-migration SEO process, the risks it can reduce, and the search outcomes no agency can guarantee.",
     },
 };
 
@@ -59,17 +60,16 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#article",
             "headline": "Will Migrating My Website Hurt My SEO? (The Honest Answer)",
-            "description": "A website migration done carelessly can lose up to 50% of traffic with an average recovery over 500 days. Done correctly, with full 301 redirect mapping, preserved metadata, and improved Core Web Vitals, it keeps 95 to 100% of rankings. The outcome is about execution. Here is the exact difference, the honest recovery timeline, and the protective checklist.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "description": "A website-migration SEO guide covering URL inventories, page-level redirects, metadata and canonical checks, crawl validation, rollback planning, and post-launch Search Console monitoring.",
+            "image": ogImageUrlForPath("/blog/will-migrating-hurt-my-seo"),
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-06-03T00:00:00-05:00",
+            "dateModified": "2026-07-24",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "url": "https://www.pandacodegen.com/about",
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
@@ -83,8 +83,6 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo" },
             "articleSection": "Guide",
             "keywords": ["will migrating my website hurt my seo", "website migration seo", "301 redirects migration", "preserve seo during migration", "traffic drop after redesign", "website migration without losing rankings"],
-            "wordCount": 2400,
-            "timeRequired": "PT9M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Website migration SEO" },
@@ -98,11 +96,10 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Search Engine Land: Ultimate Site Migration SEO Checklist", "url": "https://searchengineland.com/guide/ultimate-site-migration-seo-checklist" },
                 { "@type": "CreativeWork", "name": "Google Search Central: Site Moves With URL Changes", "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-                { "@type": "CreativeWork", "name": "Numen Technology: Website Migration SEO, Avoid 50% Traffic Loss", "url": "https://www.numentechnology.co.uk/blog/website-migration-seo-strategy" },
-                { "@type": "CreativeWork", "name": "ClickRank: SEO Site Migration Guide 2026", "url": "https://www.clickrank.ai/seo-site-migration/" },
-                { "@type": "CreativeWork", "name": "Web.dev: Core Web Vitals", "url": "https://web.dev/articles/vitals" }
+                { "@type": "CreativeWork", "name": "Google Search Central: Change of Address Tool", "url": "https://support.google.com/webmasters/answer/9370220" },
+                { "@type": "CreativeWork", "name": "Google Search Central: Debugging Search Traffic Drops", "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" },
+                { "@type": "CreativeWork", "name": "Google Search Central: Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" }
             ]
         },
         {
@@ -128,10 +125,10 @@ const articleSchema = {
             "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#webpage",
             "url": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo",
             "name": "Will Migrating My Website Hurt My SEO? The Honest Answer",
-            "description": "What separates a migration that keeps 95 to 100% of rankings from one that loses 50% of traffic, the honest recovery timeline, and the protective checklist.",
+            "description": "The controls that reduce avoidable website-migration SEO risk, plus the outcomes and timelines no agency can guarantee.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-03T00:00:00-05:00",
-            "dateModified": "2026-06-03T00:00:00-05:00",
+            "dateModified": "2026-07-24",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -144,7 +141,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "foundingDate": "2026",
             "email": "info@pandacodegen.com",
-            "description": "PandaCodeGen migrates websites to custom Next.js with full 301 redirect mapping and preserved metadata, keeping 95 to 100% of rankings while improving Core Web Vitals. 90+ Google PageSpeed guaranteed in writing or a full refund.",
+            "description": "PandaCodeGen plans SEO-conscious migrations with URL inventories, page-level redirect mapping, rendered-output checks, rollback planning, and post-launch monitoring. Search outcomes are not guaranteed.",
             "areaServed": "Worldwide",
             "sameAs": [
                 "https://www.linkedin.com/company/pandacodegen",
@@ -185,12 +182,16 @@ export default function WillMigratingHurtSeoPage() {
                             <span className="font-serif italic text-cognac">The honest answer, not the sales pitch.</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            This is the fear that keeps owners on a slow, dated site for years. It is a real risk, and you deserve a straight answer: done carelessly, a migration can lose up to 50% of your traffic and take over a year to recover. Done correctly, you keep 95 to 100% of your rankings and end up on a faster site that ranks better over time. The outcome is entirely about execution. Here is exactly what separates the two.
+                            A migration can genuinely cost you search traffic if URLs, the content that
+                            renders, metadata, canonicals, internal links or crawl rules change in the wrong
+                            way. Running it carefully removes the avoidable technical risk. It cannot
+                            guarantee your rankings, your traffic, that pages get indexed, or a date by which
+                            anything recovers. Here is the process, and the evidence you should insist on.
                         </p>
                         <BlogAuthor
                             date="June 3, 2026"
                             readTime="9 min read"
-                            bio="Hassan migrates websites to custom Next.js with full 301 redirect mapping and preserved metadata, keeping 95 to 100% of rankings while improving Core Web Vitals. 90+ Google PageSpeed guaranteed in writing or a full refund."
+                            bio="Hassan plans SEO-conscious migrations using URL inventories, page-level redirect maps, rendered-output checks, and post-launch monitoring. Search outcomes remain controlled by search engines."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -204,16 +205,18 @@ export default function WillMigratingHurtSeoPage() {
                     <div className="mb-10 p-6 bg-amber-50 border border-amber-200 rounded-2xl" data-speakable="true">
                         <p className="font-bold text-charcoal mb-3 text-sm uppercase tracking-wide">The Short Answer</p>
                         <p className="text-sm text-stone-700 leading-relaxed mb-3">
-                            Migrating does not hurt your SEO. Migrating <em>carelessly</em> does. The difference comes down to a few things done before launch:
+                            A migration can affect search performance. Careful planning reduces avoidable implementation
+                            risk, but it cannot make crawling, indexing, rankings, traffic or recovery timing certain.
+                            The controls below should exist before launch:
                         </p>
                         <ul className="space-y-2 text-sm text-stone-700">
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>Every old URL mapped to a 301 redirect, which carries 90 to 99% of its ranking power across.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>Every old URL receives a documented disposition: keep it stable, redirect it to a relevant successor, retire it with the correct status, or investigate it.</span></li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>Title tags, descriptions, and structured data preserved, not reset to platform defaults.</span></li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>The new site as fast or faster, so Core Web Vitals improve instead of regress.</span></li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>Post-launch monitoring for the first 90 days while Google re-crawls.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>Representative journeys are tested for rendered content, functionality, and performance before cutover.</span></li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" /> <span>The agreed monitoring window covers Search Console, analytics continuity, crawl errors, redirects, and rollback triggers.</span></li>
                         </ul>
                         <p className="text-sm text-stone-700 leading-relaxed mt-3">
-                            Get those right and you keep 95 to 100% of your rankings. Skip them and you risk the 50% traffic loss horror stories.
+                            These controls reduce preventable implementation errors. They do not make ranking or traffic outcomes certain.
                         </p>
                     </div>
 
@@ -221,35 +224,40 @@ export default function WillMigratingHurtSeoPage() {
                         Let us be honest about why this question matters so much. Your current site might be slow, dated, or expensive to run, but it works. It brings in leads. The terror of a migration is not the rebuild, it is the thought that you could move it and watch your Google traffic, the thing that actually feeds your business, fall off a cliff. That fear is legitimate, and anyone who waves it away is not being straight with you.
                     </BlogText>
                     <BlogText>
-                        So here is the truth, with the numbers. The research is consistent: a well-executed migration keeps 95 to 100% of rankings and traffic. A poorly executed one can lose around 50% of traffic, with an average recovery of more than 500 days. Same goal, wildly different outcomes, and the only variable is how carefully it was done.
+                        Migration outcomes vary. A controlled process reduces avoidable technical risk, while search
+                        engines still control indexing, rankings, traffic, and recovery timing. Implementation quality
+                        is one factor alongside site history, content, competition, demand, algorithm changes and
+                        measurement.
                     </BlogText>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10">
-                        <StatCard stat="95–100%" label="Rankings Kept" context="When the migration is done correctly" />
-                        <StatCard stat="50%" label="Traffic At Risk" context="A careless migration, ~500+ days to recover" />
-                        <StatCard stat="90–99%" label="Ranking Power Carried" context="By each properly mapped 301 redirect" />
+                        <StatCard stat="4" label="Control groups" context="URLs, content, technical signals, monitoring" />
+                        <StatCard stat="No" label="Ranking guarantee" context="Search engines control the outcome" />
+                        <StatCard stat="Page-level" label="Redirect mapping" context="Only to a relevant successor" />
                     </div>
 
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen handles <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">website migrations</Link> with full 301 redirect mapping and preserved metadata, so you keep your rankings and gain speed. The technical step-by-step is in our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">WordPress to Next.js migration guide</Link>. 90+ PageSpeed in writing or a full refund.
+                            PandaCodeGen handles <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">website migrations</Link> with URL inventories, page-level redirect mapping, metadata and rendered-content checks, staged cutovers, and post-launch monitoring. The technical step-by-step is in our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">WordPress to Next.js migration guide</Link>. Any Lighthouse target and remedy must appear in the accepted project terms.
                         </p>
                     </div>
 
-                    <BlogHeader id="number-one-cause">The Number One Cause of Traffic Loss</BlogHeader>
+                    <BlogHeader id="url-disposition">URL changes and redirects</BlogHeader>
                     <BlogText>
-                        If a migration is going to hurt your SEO, this is almost always why: missing or broken 301 redirects. It is the single biggest cause of traffic loss, and it is entirely preventable.
+                        Missing, broken or irrelevant redirects are a common avoidable migration defect when valuable
+                        URLs change. They are not the only possible cause of a traffic change, and even a technically
+                        correct redirect cannot guarantee unchanged rankings or visits.
                     </BlogText>
                     <BlogText>
-                        When you move to a new site, your page addresses often change. A 301 redirect is a permanent signal to Google that a page has moved to a new address, and it carries 90 to 99% of that page's accumulated ranking authority across to the new URL. Map every old URL to its closest new equivalent and your rankings come with you. Miss a redirect, and that page's ranking power simply evaporates while visitors hit a dead end. A careless migration skips this mapping. A careful one treats it as the most important task of the entire project.
+                        When a valuable page address changes, use a server-side permanent redirect to its closest relevant successor and update internal links, canonicals, and sitemaps to the final URL. Do not redirect unrelated pages to the home page. Redirects help search engines process a move, but they do not guarantee that every signal, position, or visit will transfer unchanged.
                     </BlogText>
                     <InsightBox variant="danger">
-                        Missing or broken 301 redirects are the single biggest cause of traffic loss in a migration, and they are entirely preventable. Miss a redirect and that page's ranking power simply evaporates.
+                        Missing, chained, looping, or irrelevant redirects create avoidable crawl and user problems. Test the complete URL disposition map before and after launch.
                     </InsightBox>
 
                     <BlogHighlight>
-                        Pre-launch preparation accounts for 60 to 70% of migration success. The redirect map, the metadata inventory, and the URL audit all happen before anyone flips the switch. Errors made there compound the moment you go live.
+                        The redirect map, metadata inventory, rendered-content checks, analytics validation, rollback plan, and acceptance evidence should exist before cutover. A percentage cannot meaningfully describe migration success without a defined dataset and methodology.
                     </BlogHighlight>
 
                     <BlogHeader id="silent-killers">The Four Silent Killers Beyond Redirects</BlogHeader>
@@ -260,15 +268,15 @@ export default function WillMigratingHurtSeoPage() {
                     <div className="my-8 grid gap-4">
                         <div className="p-5 bg-white border border-stone-200 rounded-xl">
                             <div className="flex items-center gap-2 mb-2"><Search className="w-5 h-5 text-cognac shrink-0" /><p className="font-bold text-charcoal">1. Lost metadata</p></div>
-                            <p className="text-sm text-stone-700 leading-relaxed">Title tags and meta descriptions often get dropped or reset to platform defaults during a move, because every platform handles them differently. Those tags are part of how Google ranks and displays your pages. They have to be inventoried and carried over deliberately.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Titles, descriptions and structured data can be dropped or reset during a move because platforms model them differently. Inventory the current output, preserve approved values where appropriate and validate that structured data matches visible content. Descriptions can influence snippets but are not a promised ranking control.</p>
                         </div>
                         <div className="p-5 bg-white border border-stone-200 rounded-xl">
                             <div className="flex items-center gap-2 mb-2"><TrendingUp className="w-5 h-5 text-cognac shrink-0" /><p className="font-bold text-charcoal">2. Page speed regression</p></div>
-                            <p className="text-sm text-stone-700 leading-relaxed">If the new site loads slower than the old one, Core Web Vitals drop and rankings follow. This is why migrating to a genuinely fast build matters: speed should go up, not down.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A new implementation can regress real-user performance. Compare representative routes and field Core Web Vitals where available, then use repeated lab tests for diagnosis. Google uses Core Web Vitals in broader systems but says good scores do not guarantee top rankings.</p>
                         </div>
                         <div className="p-5 bg-white border border-stone-200 rounded-xl">
                             <div className="flex items-center gap-2 mb-2"><Link2 className="w-5 h-5 text-cognac shrink-0" /><p className="font-bold text-charcoal">3. Broken internal links and structure</p></div>
-                            <p className="text-sm text-stone-700 leading-relaxed">Internal links and content placement tell Google how your pages relate and what matters. Break the internal linking or bury key content below the fold during a redesign and you change the signals Google has been relying on.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">Internal links help people and crawlers discover related pages. Validate navigation, breadcrumbs, contextual links, anchor text and crawl depth. Check that important content remains present and useful instead of assuming one screen position creates a fixed ranking signal.</p>
                         </div>
                         <div className="p-5 bg-white border border-stone-200 rounded-xl">
                             <div className="flex items-center gap-2 mb-2"><AlertTriangle className="w-5 h-5 text-cognac shrink-0" /><p className="font-bold text-charcoal">4. Wrong canonicals or blocked crawling</p></div>
@@ -278,7 +286,7 @@ export default function WillMigratingHurtSeoPage() {
 
                     <BlogHeader id="recovery-timeline">The Honest Recovery Timeline</BlogHeader>
                     <BlogText>
-                        Here is the part most agencies do not mention: even a perfect migration usually involves a small, temporary dip while Google re-crawls and re-processes your site. That is normal. What matters is the shape of the curve.
+                        Search behavior after a migration varies. Monitor from the launch baseline and investigate material changes rather than promising a standard dip or recovery curve.
                     </BlogText>
 
                     <div className="my-8 overflow-x-auto">
@@ -292,63 +300,65 @@ export default function WillMigratingHurtSeoPage() {
                             </thead>
                             <tbody className="text-stone-700">
                                 <tr>
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Weeks 2 to 4</td>
-                                    <td className="border border-stone-300 px-4 py-3">Initial volatility as Google re-crawls and reprocesses the new site. A small dip here is normal.</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Launch day</td>
+                                    <td className="border border-stone-300 px-4 py-3">Validate status codes, redirects, canonicals, rendered content, analytics, sitemaps, and critical journeys; use rollback criteria if needed.</td>
                                 </tr>
                                 <tr className="bg-stone-50">
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Weeks 4 to 8</td>
-                                    <td className="border border-stone-300 px-4 py-3">Core pages stabilize and start returning to their previous positions.</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Early monitoring</td>
+                                    <td className="border border-stone-300 px-4 py-3">Compare crawl, indexing, queries, landing pages, conversions, and errors with the recorded baseline; investigate by page and query.</td>
                                 </tr>
                                 <tr>
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Weeks 8 to 12</td>
-                                    <td className="border border-stone-300 px-4 py-3">Full traffic recovery, often with a speed-driven lift above the old baseline.</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Agreed review window</td>
+                                    <td className="border border-stone-300 px-4 py-3">Keep monitoring for the period defined in the accepted scope. Recovery timing is not promised.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogText>
-                        Many clean migrations recover 90 to 95% of traffic within the first 30 days. The danger sign is the opposite shape: traffic that keeps falling past the first month. That almost always points to a redirect or indexing problem that needs fixing, not to the migration itself being doomed. This is exactly why the first 90 days need monitoring, not just a launch-and-forget.
+                        Compare like-for-like dates, seasonality, channels, queries, landing pages, and conversion tracking. A continuing decline can have technical, content, algorithmic, competitive, demand, or measurement causes, so diagnosis should not assume a redirect error or a standard recovery deadline.
                     </BlogText>
 
                     <BlogQuote>
-                        A small, brief dip you were warned about is a healthy migration. A slow, silent decline nobody is watching is a broken one. The difference is whether anyone is still looking after launch.
+                        A migration needs a dated baseline, active monitoring and named rollback or investigation
+                        triggers. The shape and duration of any search change are property-specific.
                     </BlogQuote>
 
                     <div className="my-8 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
                         <p className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-2 flex items-center gap-2"><TrendingUp className="w-4 h-4" /> A real receipt</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            When we migrated Panda Patches, a 3 year old WordPress site with established rankings, off WordPress and onto custom Next.js, the rankings did not drop. Three years of accumulated SEO authority carried across cleanly, because every URL was mapped to a 301 redirect and the metadata was preserved before launch. The site came out faster, and the rankings stayed put. That is what a careful migration looks like in practice. See the full project on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>.
+                            Panda Patches is owned by a PandaCodeGen co-founder, so it is not independent client proof. Its migration informed our URL-inventory, redirect, metadata, and monitoring process, but any dated search or performance result must be shown with the exact reporting period, comparable baseline, measurement source, and limitations. See the current evidence boundary on our <Link href="/work" className="text-cognac hover:underline font-medium">work page</Link>.
                         </p>
                     </div>
 
-                    <BlogHeader id="faster-helps">Moving to a Faster Site Usually Helps</BlogHeader>
+                    <BlogHeader id="performance">Performance is one migration acceptance area</BlogHeader>
                     <BlogText>
-                        There is an upside the fear often hides. If your current platform scores poorly on mobile PageSpeed, it is already costing you rankings every single day, because Google rewards Core Web Vitals. Staying put is not the safe choice it feels like, it is a slow tax.
+                        Performance can affect user experience and is one part of Google&apos;s page-experience systems, but a Lighthouse score does not map directly to a ranking position. Diagnose field Core Web Vitals, content relevance, links, intent, technical health, and the actual funnel together.
                     </BlogText>
                     <BlogText>
-                        Moving to a fast custom build improves those exact signals. So while the migration carries short-term risk if done carelessly, the destination is a tailwind. Once you are through the transition, a faster site tends to rank better than the slow one you left. The goal is not just to avoid losing rankings. It is to come out the other side stronger.
+                        A rebuild can improve measured performance when the implementation, content, media, third parties, and infrastructure support it. Validate the result separately from search outcomes; neither ranking gains nor a standard recovery timeline are promised.
                     </BlogText>
 
-                    <BlogHeader id="how-we-protect">How We Protect Your Rankings</BlogHeader>
+                    <BlogHeader id="how-we-reduce-risk">How we reduce avoidable search risk</BlogHeader>
                     <BlogText>
-                        Because pre-launch work is most of the battle, that is where we spend the effort. Here is what protecting your rankings actually looks like in practice.
+                        Pre-launch inventories and validation catch defects while rollback is still simple. Here is what
+                        our search-risk control process looks like in practice.
                     </BlogText>
                     <BlogList items={[
                         "Audit your current site and inventory every ranking URL, title tag, description, and piece of structured data before touching anything.",
-                        "Map every existing URL to a 301 redirect in Next.js, so ranking authority transfers cleanly to the new addresses.",
+                        "Give every existing URL a documented disposition and use a server-side permanent redirect only where there is a relevant successor.",
                         "Preserve your metadata and content structure rather than letting a new platform reset them to defaults.",
-                        "Build to 90+ mobile PageSpeed so Core Web Vitals improve, turning the move into a long-term ranking gain.",
-                        "Monitor indexed pages, crawl errors, and organic traffic through the first 90 days, fixing any redirect or indexing issue fast.",
+                        "Test every agreed representative page under the recorded mobile and desktop conditions; lab acceptance remains separate from field Core Web Vitals and search outcomes.",
+                        "Monitor indexed pages, crawl errors, landing pages, queries, and conversions for the period stated in the accepted scope.",
                     ]} />
                     <BlogText>
-                        For the full technical walkthrough of how this works on a real migration, see our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">step-by-step WordPress to Next.js guide</Link>, and for fixed pricing and the refund guarantee, the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing &amp; Guarantees reference</Link>.
+                        For the full technical walkthrough, see our <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline font-medium">step-by-step WordPress to Next.js guide</Link>. The <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link> shows planning anchors; scope, acceptance, support, ownership, payment milestones, and any conditional remedy belong in the accepted project terms.
                     </BlogText>
 
                     {/* Mid CTA */}
                     <div className="my-10 p-6 bg-charcoal rounded-2xl text-center">
                         <p className="text-white font-bold text-lg mb-2">Worried a migration will cost you rankings?</p>
-                        <p className="text-stone-300 text-sm mb-5 max-w-lg mx-auto">Send me your current site and I will tell you honestly what your migration risk looks like and how we would protect your traffic. No sales pressure.</p>
+                        <p className="text-stone-300 text-sm mb-5 max-w-lg mx-auto">Send your current site and we will identify the main migration risks, controls and evidence without promising a search outcome.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-semibold rounded-full hover:bg-amber-700 transition-colors">
                             Book a 15-minute call with Hassan <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
@@ -358,8 +368,8 @@ export default function WillMigratingHurtSeoPage() {
                     <div className="mt-12 p-6 bg-white border border-cognac/30 rounded-2xl flex items-start gap-3">
                         <ShieldCheck className="w-6 h-6 text-cognac shrink-0 mt-1" />
                         <div>
-                            <p className="font-bold text-charcoal mb-1">Keep your rankings. Gain the speed.</p>
-                            <p className="text-sm text-stone-700 leading-relaxed">A migration done right keeps 95 to 100% of your traffic and leaves you faster than before. <Link href="/contact" className="text-cognac hover:underline font-medium">Tell me about your current site</Link> and I will give you a straight assessment.</p>
+                            <p className="font-bold text-charcoal mb-1">Control the migration risks you can control.</p>
+                            <p className="text-sm text-stone-700 leading-relaxed">A controlled migration uses URL mapping, redirect validation, metadata and canonical checks, rendered-output testing, rollback planning, and post-launch monitoring without guaranteeing traffic or ranking outcomes. <Link href="/contact" className="text-cognac hover:underline font-medium">Tell me about your current site</Link> and I will give you a straight assessment.</p>
                         </div>
                     </div>
 

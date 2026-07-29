@@ -5,7 +5,6 @@ export interface PageSpeedResult {
   seoScore: number;
   accessibilityScore: number;
   bestPracticesScore: number;
-  loadTime: number;
   pageSize: string;
   fcp: number;
   lcp: number;
@@ -26,20 +25,94 @@ export interface AuditIssue {
   severity: 'warning' | 'error';
 }
 
+interface LighthouseCategory {
+  score?: number | null;
+  auditRefs?: Array<{ id: string }>;
+}
+
+interface LighthouseAudit {
+  numericValue?: number;
+  score?: number | null;
+  scoreDisplayMode?: string;
+  title?: string;
+  displayValue?: string;
+}
+
+interface LighthouseResult {
+  categories: Record<string, LighthouseCategory | undefined>;
+  audits: Record<string, LighthouseAudit | undefined>;
+  stackPacks?: Array<{ id?: string }>;
+}
+
+const PAGESPEED_TIMEOUT_MS = 35_000;
+const PAGESPEED_MAX_RESPONSE_BYTES = 10 * 1024 * 1024;
+
+async function readBoundedJson(response: Response): Promise<unknown> {
+  const contentType = response.headers.get('content-type')?.toLowerCase() || '';
+  if (!contentType.startsWith('application/json')) {
+    throw new Error('PageSpeed API returned an unexpected content type.');
+  }
+
+  const declaredLength = Number(response.headers.get('content-length'));
+  if (Number.isFinite(declaredLength) && declaredLength > PAGESPEED_MAX_RESPONSE_BYTES) {
+    throw new Error('PageSpeed API response exceeded the safety limit.');
+  }
+
+  if (!response.body) throw new Error('PageSpeed API returned an empty response.');
+  const reader = response.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let received = 0;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    received += value.byteLength;
+    if (received > PAGESPEED_MAX_RESPONSE_BYTES) {
+      await reader.cancel('Response exceeded the configured byte limit.');
+      throw new Error('PageSpeed API response exceeded the safety limit.');
+    }
+    chunks.push(value);
+  }
+
+  const body = new Uint8Array(received);
+  let offset = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return JSON.parse(new TextDecoder().decode(body));
+}
+
 export async function runPageSpeedAnalysis(url: string): Promise<PageSpeedResult> {
   const apiKey = process.env.PAGESPEED_API_KEY;
+  if (!apiKey) throw new Error('PageSpeed API is not configured.');
+
   const categories = ['performance', 'seo', 'accessibility', 'best-practices'];
   const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&key=${apiKey}&${categories.map(c => `category=${c}`).join('&')}&strategy=mobile`;
 
-  const response = await fetch(apiUrl, { cache: 'no-store' });
-
-  if (!response.ok) {
-    const errorBody = await response.text();
-    throw new Error(`PageSpeed API error: ${response.status} - ${errorBody}`);
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), PAGESPEED_TIMEOUT_MS);
+  let response: Response;
+  try {
+    response = await fetch(apiUrl, { cache: 'no-store', signal: controller.signal });
+    if (!response.ok) {
+      await response.body?.cancel();
+      throw new Error(`PageSpeed API request failed with status ${response.status}.`);
+    }
+    const data = await readBoundedJson(response);
+    return parsePageSpeedResult(data);
+  } finally {
+    clearTimeout(timer);
   }
+}
 
-  const data = await response.json();
-  const lighthouse = data.lighthouseResult;
+function parsePageSpeedResult(data: unknown): PageSpeedResult {
+  const lighthouse = data && typeof data === 'object' && 'lighthouseResult' in data
+    ? (data as { lighthouseResult?: LighthouseResult }).lighthouseResult
+    : undefined;
+  if (!lighthouse?.categories || !lighthouse?.audits) {
+    throw new Error('PageSpeed API response did not contain Lighthouse results.');
+  }
   const cats = lighthouse.categories;
   const audits = lighthouse.audits;
 
@@ -54,7 +127,6 @@ export async function runPageSpeedAnalysis(url: string): Promise<PageSpeedResult
   const tbt = audits['total-blocking-time']?.numericValue || 0;
   const speedIndex = audits['speed-index']?.numericValue || 0;
 
-  const loadTime = parseFloat((fcp / 1000).toFixed(1));
   const totalByteWeight = audits['total-byte-weight']?.numericValue || 0;
   const pageSize = formatBytes(totalByteWeight);
   const platformDetected = detectPlatform(lighthouse);
@@ -71,7 +143,7 @@ export async function runPageSpeedAnalysis(url: string): Promise<PageSpeedResult
 
     if (audit.score === 1) {
       passedChecks++;
-    } else if (audit.score === null || audit.score < 0.5) {
+    } else if (typeof audit.score !== 'number' || audit.score < 0.5) {
       criticalIssues++;
       if (topIssues.length < 5 && audit.title) {
         topIssues.push({ title: audit.title, savings: audit.displayValue || '', severity: 'error' });
@@ -86,7 +158,7 @@ export async function runPageSpeedAnalysis(url: string): Promise<PageSpeedResult
 
   return {
     performanceScore, seoScore, accessibilityScore, bestPracticesScore,
-    loadTime, pageSize, fcp, lcp, cls, tbt, speedIndex,
+    pageSize, fcp, lcp, cls, tbt, speedIndex,
     platformDetected, criticalIssues, warnings, passedChecks, topIssues,
   };
 }
@@ -99,7 +171,7 @@ function formatBytes(bytes: number): string {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-function detectPlatform(lighthouse: any): string {
+function detectPlatform(lighthouse: LighthouseResult): string {
   const stacks = lighthouse.stackPacks || [];
   for (const stack of stacks) {
     const id = (stack.id || '').toLowerCase();

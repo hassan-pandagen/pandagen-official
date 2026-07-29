@@ -1,33 +1,70 @@
+import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import BlogPageClient from "./BlogPageClient";
 import { blogPosts } from "@/data/blog";
 
+const HUB_TITLE = "Website Migration, SEO & Performance Blog | PandaCodeGen";
+const HUB_DESCRIPTION = "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds.";
+
+const MONTH_NUMBER: Record<string, string> = {
+    Jan: "01",
+    Feb: "02",
+    Mar: "03",
+    Apr: "04",
+    May: "05",
+    Jun: "06",
+    Jul: "07",
+    Aug: "08",
+    Sep: "09",
+    Oct: "10",
+    Nov: "11",
+    Dec: "12",
+};
+
+function catalogDateToIso(value: string): string | undefined {
+    const isoDate = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (isoDate) return value;
+
+    const displayDate = value.match(/^([A-Z][a-z]{2})\s+(\d{1,2})(?:,\s*(\d{4}))?$/);
+    if (!displayDate) return undefined;
+
+    const month = MONTH_NUMBER[displayDate[1]];
+    if (!month) return undefined;
+
+    const day = displayDate[2].padStart(2, "0");
+    const year = displayDate[3] ?? "2026";
+    return `${year}-${month}-${day}`;
+}
+
+function catalogAuthorName(value: string): string {
+    return value === "Hassan" ? "Hassan Jamal" : value;
+}
+
 export const metadata: Metadata = {
-    title: { absolute: "Web Development & Performance Blog | PandaCodeGen" },
-    description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 90+ PageSpeed sites.",
+    title: { absolute: HUB_TITLE },
+    description: HUB_DESCRIPTION,
     alternates: {
         canonical: "/blog",
     },
     openGraph: {
-        title: { absolute: "Web Development & Performance Blog | PandaCodeGen" },
-        description: "Guides on WordPress migration, Shopify speed, Next.js performance, and Core Web Vitals. Written by engineers who build 90+ PageSpeed sites.",
+        title: HUB_TITLE,
+        description: HUB_DESCRIPTION,
         url: "https://www.pandacodegen.com/blog",
         type: "website",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Web Development & Performance Blog | PandaCodeGen",
-        description: "Guides on WordPress migration, Shopify speed, Next.js, and Core Web Vitals.",
+        title: HUB_TITLE,
+        description: HUB_DESCRIPTION,
     },
 };
 
 export default function BlogPage() {
-    // Strip faqs from each post — the listing UI never renders them and faqs alone
+    // Strip faqs from each post. The listing UI never renders them, and faqs alone
     // are ~50KB serialized per post when shipped to the client RSC payload.
     // Faqs stay server-only on individual blog post pages where they're actually rendered.
     const articles = blogPosts
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         .map(({ faqs, ...rest }) => rest)
         .sort((a, b) => {
             const dateA = new Date(a.lastModified || a.date);
@@ -43,8 +80,8 @@ export default function BlogPage() {
                 "@type": "CollectionPage",
                 "@id": "https://www.pandacodegen.com/blog#webpage",
                 "url": "https://www.pandacodegen.com/blog",
-                "name": "PandaCodeGen Blog - Insights from the Engine Room",
-                "description": "Expert insights on Next.js development, WordPress migration, Shopify optimization, and enterprise web performance.",
+                "name": HUB_TITLE,
+                "description": HUB_DESCRIPTION,
                 "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
                 "breadcrumb": { "@id": "https://www.pandacodegen.com/blog#breadcrumb" },
                 "inLanguage": "en-US"
@@ -60,8 +97,8 @@ export default function BlogPage() {
             {
                 "@type": "Blog",
                 "@id": "https://www.pandacodegen.com/blog#blog",
-                "name": "PandaCodeGen Blog",
-                "description": "Technical insights on modern web development, WordPress alternatives, and performance optimization.",
+                "name": HUB_TITLE,
+                "description": HUB_DESCRIPTION,
                 "publisher": {
                     "@type": "Organization",
                     "@id": "https://www.pandacodegen.com/#organization",
@@ -69,21 +106,19 @@ export default function BlogPage() {
                     "url": "https://www.pandacodegen.com"
                 },
                 "blogPost": articles.map((article) => {
-                    const raw = article.lastModified || article.date;
-                    const hasYear = /\d{4}/.test(raw);
-                    const year = hasYear ? "" : raw.startsWith("Dec") ? ", 2025" : ", 2026";
-                    const parsed = new Date(`${raw}${year}`);
-                    const iso = isNaN(parsed.getTime()) ? "2026-01-01T00:00:00.000Z" : parsed.toISOString();
+                    const datePublished = catalogDateToIso(article.date);
+                    const dateModified = article.lastModified || datePublished;
+
                     return {
                         "@type": "BlogPosting",
                         "headline": article.title,
                         "description": article.excerpt,
                         "url": `https://www.pandacodegen.com/blog/${article.id}`,
-                        "datePublished": iso,
+                        ...(datePublished ? { "datePublished": datePublished } : {}),
+                        ...(dateModified ? { "dateModified": dateModified } : {}),
                         "author": {
                             "@type": "Person",
-                            "name": article.author,
-                            "url": "https://www.pandacodegen.com/about/hassan"
+                            "name": catalogAuthorName(article.author)
                         },
                         "publisher": {
                             "@type": "Organization",

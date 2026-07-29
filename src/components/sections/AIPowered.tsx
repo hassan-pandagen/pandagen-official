@@ -35,11 +35,11 @@ export default function AIPowered() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal tracking-tight mb-6">
             AI + Engineers.{" "}
-            <span className="font-serif italic text-cognac">10x Faster.</span>
+            <span className="font-serif italic text-cognac">Weeks, not months.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            We combine AI-powered development tools with senior engineers
-            to ship production quality websites in weeks, not months.
+            We combine AI-assisted development tooling with senior engineers to ship
+            production-quality websites on a schedule stated in the written project terms.
           </p>
         </motion.div>
 

@@ -28,19 +28,22 @@ export default function RevenueCalculator() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cognac/5 border border-cognac/20 text-cognac text-xs font-bold uppercase tracking-widest mb-6">
               <AlertCircle className="w-4 h-4" />
-              The Cost of Inaction
+              Model it on your own numbers
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
-              How much is <span className="font-serif italic text-cognac">&ldquo;Slow&rdquo;</span> costing you?
+              What could <span className="font-serif italic text-cognac">faster</span> be worth to you?
             </h2>
             <p className="text-lg text-stone-500 mb-8 leading-relaxed">
-              Amazon found that every 100ms of latency costs 1% in sales. If your site loads in 3+ seconds, you are bleeding revenue every single day.
+              Page speed and conversion rate are correlated across published retail research. This tool models what that relationship could be worth on your own numbers.
             </p>
 
             <div className="p-6 bg-stone-50 rounded-2xl border border-stone-200 mb-8">
-              <h3 className="font-bold text-charcoal mb-2">The Calculation Logic</h3>
+              <h3 className="font-bold text-charcoal mb-2">The calculation logic, stated openly</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                Based on Google &amp; Deloitte data: a 2-second speed improvement typically lifts conversion rates by 20%. Custom Next.js sites average 0.8s vs. 3-5s on WordPress/Squarespace.
+                The model applies a flat 20% conversion-rate uplift to the traffic, conversion rate and order value <em>you</em> enter. That 20% is our own planning assumption, extrapolated from the Deloitte and Google &ldquo;Milliseconds Make Millions&rdquo; study (2020), which measured an 8.4% retail conversion lift from a 0.1s mobile improvement. It is not a measurement of your site and not a finding of that study.
+              </p>
+              <p className="mt-3 text-sm text-stone-500 leading-relaxed">
+                Your actual result depends on your baseline speed, traffic mix, pricing, checkout and demand. Treat the output as an illustrative estimate for discussion, not a forecast, a promise, or a measured loss.
               </p>
             </div>
 
@@ -111,26 +114,29 @@ export default function RevenueCalculator() {
                 {/* Result Box, Bank Statement style */}
                 <div className="mt-4 p-6 bg-stone-50 border border-stone-200 rounded-2xl">
                   <div className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mb-3">
-                    Revenue Recovered Per Year
+                    Modelled annual upside
                   </div>
                   <div className="text-5xl md:text-6xl font-black text-charcoal leading-none tracking-tight">
                     ${annualLoss.toLocaleString('en-US')}
                   </div>
-                  <div className="text-sm text-stone-500 font-normal mt-1">per year</div>
+                  <div className="text-sm text-stone-500 font-normal mt-1">per year, estimated</div>
                   <p className="text-[11px] text-stone-500 mt-4 pt-4 border-t border-stone-200">
-                    Based on 20% CVR lift from a 2s speed improvement (Google &amp; Deloitte, 2023)
+                    Your inputs &times; a 20% conversion-uplift planning assumption. Extrapolated from Deloitte and Google, &ldquo;Milliseconds Make Millions&rdquo; (2020), which measured 8.4% retail conversion lift from a 0.1s mobile improvement. Not a measurement of your site.
                   </p>
                 </div>
 
                 {/* Monthly breakdown */}
                 <div className="flex items-center justify-between text-sm text-stone-500 px-1">
-                  <span>Monthly revenue at current speed</span>
+                  <span>Monthly revenue from the figures you entered</span>
                   <span className="font-bold text-charcoal">${monthlyRevenue.toLocaleString('en-US')}</span>
                 </div>
                 <div className="flex items-center justify-between text-sm text-stone-500 px-1 -mt-4">
-                  <span>Revenue lost to slow load times</span>
-                  <span className="font-bold text-cognac">-${lostRevenue.toLocaleString('en-US')}/mo</span>
+                  <span>Modelled upside at a 20% conversion uplift</span>
+                  <span className="font-bold text-cognac">${lostRevenue.toLocaleString('en-US')}/mo</span>
                 </div>
+                <p className="px-1 -mt-2 text-xs leading-5 text-stone-600">
+                  Illustrative estimate based on your inputs and our stated 20% planning assumption. Not a measurement of your site, a forecast, or a promised result.
+                </p>
               </div>
             </div>
           </motion.div>

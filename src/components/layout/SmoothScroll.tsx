@@ -1,50 +1,56 @@
 "use client";
 
+import { MotionConfig } from "framer-motion";
+import Lenis from "lenis";
 import { useEffect } from "react";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Skip on mobile — smooth scroll is a desktop-only enhancement
-    if (window.innerWidth < 768) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const desktopViewport = window.matchMedia("(min-width: 768px)");
+    let lenis: Lenis | null = null;
+    let disposed = false;
 
-    let lenis: import("lenis").default | null = null;
-    let rafId: number;
-    let loaded = false;
-
-    const init = async () => {
-      if (loaded) return;
-      loaded = true;
-
-      const { default: Lenis } = await import("lenis");
-      lenis = new Lenis({
-        lerp: 0.1,
-        duration: 1.4,
-        smoothWheel: true,
-        wheelMultiplier: 1,
-        touchMultiplier: 0,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      });
-
-      function raf(time: number) {
-        lenis!.raf(time);
-        rafId = requestAnimationFrame(raf);
-      }
-      rafId = requestAnimationFrame(raf);
+    const destroyLenis = () => {
+      lenis?.destroy();
+      lenis = null;
     };
 
-    // Defer briefly so it never blocks LCP paint, but start quickly so first scroll is smooth
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(() => init(), { timeout: 200 });
-    } else {
-      setTimeout(() => init(), 100);
-    }
+    const init = () => {
+      if (lenis || disposed || reducedMotion.matches || !desktopViewport.matches) return;
+
+      lenis = new Lenis({
+        autoRaf: true,
+        lerp: 0.12,
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        anchors: { offset: -96 },
+        stopInertiaOnNavigate: true,
+      });
+    };
+
+    const reconcile = () => {
+      if (reducedMotion.matches || !desktopViewport.matches) {
+        destroyLenis();
+        return;
+      }
+
+      init();
+    };
+
+    reducedMotion.addEventListener("change", reconcile);
+    desktopViewport.addEventListener("change", reconcile);
+    reconcile();
 
     return () => {
-      if (rafId) cancelAnimationFrame(rafId);
-      if (lenis) lenis.destroy();
+      disposed = true;
+      reducedMotion.removeEventListener("change", reconcile);
+      desktopViewport.removeEventListener("change", reconcile);
+      destroyLenis();
     };
   }, []);
 
-  // No wrapper div — children render exactly as-is, zero re-render on mount
-  return <>{children}</>;
+  // This adds no DOM wrapper and makes every Framer Motion consumer respect the
+  // operating-system motion preference, including dialogs and audit states.
+  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
 }

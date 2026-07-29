@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
@@ -12,30 +13,30 @@ import type { Metadata } from "next";
 const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
+const FeatureVisual = lazyLoad(() => import("@/components/blog/VercelPlanAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const metadata: Metadata = {
     title: "Is Vercel Free? 2026 Pricing & the 100GB Cap",
-    description: "Yes. Vercel's free Hobby plan includes 100GB bandwidth a month in 2026. What's included, the new hard caps, when you hit $20/mo Pro, how to stay near-free.",
+    description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
     alternates: {
         canonical: '/blog/nextjs-hosting-zero-cost',
     },
     keywords: ["is vercel free", "vercel free tier bandwidth 100gb 2026", "vercel pricing next.js 2026", "free nextjs hosting", "vercel free tier", "free website hosting 2026", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost website hosting", "vercel free tier limits"],
     openGraph: {
         title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
-        description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
+        description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-07-08T00:00:00-05:00",
+        modifiedTime: "2026-07-24T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/nextjs-hosting-zero-cost")],
     },
     twitter: {
         card: "summary_large_image",
         title: "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
-        description: "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
+        description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
     },
 };
 
@@ -46,17 +47,16 @@ const articleSchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#article",
             "headline": "Is Vercel Free? 2026 Pricing, Limits & the 100GB Bandwidth Cap",
-            "description": "Yes, Vercel's free Hobby plan gives you 100GB bandwidth a month in 2026. Here's what's included, the new hard caps, when you hit $20/mo Pro, and how to stay near-free.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "description": "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
+            "image": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost"),
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "url": "https://www.pandacodegen.com/about",
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
@@ -68,9 +68,7 @@ const articleSchema = {
             },
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" },
             "articleSection": "Performance",
-            "keywords": ["free nextjs hosting", "vercel free tier", "free website hosting", "nextjs hosting cost", "vercel vs wordpress hosting", "zero cost hosting"],
-            "timeRequired": "PT10M",
-            "wordCount": 2750,
+            "keywords": ["is Vercel free", "Vercel Hobby plan", "Vercel free tier bandwidth 100GB 2026", "free Next.js hosting", "Next.js hosting cost", "Vercel Pro pricing"],
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs"},
                 {"@type": "Thing", "name": "Vercel Free Tier"},
@@ -84,15 +82,13 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
+                { "@type": "CreativeWork", "name": "Vercel Terms of Service", "url": "https://vercel.com/legal/terms" },
                 { "@type": "CreativeWork", "name": "Vercel Hobby Plan Docs", "url": "https://vercel.com/docs/plans/hobby" },
-                { "@type": "CreativeWork", "name": "Vercel Edge Network", "url": "https://vercel.com/docs/edge-network/overview" },
-                { "@type": "CreativeWork", "name": "Cloudflare CDN", "url": "https://www.cloudflare.com/cdn/" },
                 { "@type": "CreativeWork", "name": "Next.js Static Generation", "url": "https://nextjs.org/docs/app/building-your-application/rendering/server-components" },
-                { "@type": "CreativeWork", "name": "WP Engine Pricing", "url": "https://wpengine.com/plans/" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" },
-                { "@type": "CreativeWork", "name": "HTTP Archive Web Almanac 2024", "url": "https://almanac.httparchive.org/en/2024/" }
+                { "@type": "CreativeWork", "name": "Vercel Regional Pricing", "url": "https://vercel.com/docs/pricing/regional-pricing" },
+                { "@type": "CreativeWork", "name": "Next.js 16.2", "url": "https://nextjs.org/blog/next-16-2" },
+                { "@type": "CreativeWork", "name": "Cloudflare Next.js Deployment Guide", "url": "https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/" },
+                { "@type": "CreativeWork", "name": "Netlify Pricing", "url": "https://www.netlify.com/pricing/" }
             ]
         },
         {
@@ -101,19 +97,19 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "How We Host Client Websites Starting Free on Vercel", "item": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" }
+                { "@type": "ListItem", "position": 3, "name": "Is Vercel Free? 2026 Hobby Limits and Business Pricing", "item": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#webpage",
             "url": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
-            "name": "Start Free, Scale to $20/mo: How We Host Client Sites on Vercel",
-            "description": "Most businesses pay $50 to $300/month for hosting. We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows.",
+            "name": "Is Vercel Free? 2026 Hobby Limits and Business Pricing",
+            "description": "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost") },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
+            "dateModified": "2026-07-24T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -126,7 +122,7 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
             "areaServed": "Worldwide",
             "foundingDate": "2026"
         },
@@ -161,7 +157,7 @@ export default function NextjsHostingZeroCostPage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "How We Host Client Websites Starting Free on Vercel", href: "/blog/nextjs-hosting-zero-cost" }
+                            { label: "Is Vercel Free? 2026 Hobby Limits and Business Pricing", href: "/blog/nextjs-hosting-zero-cost" }
                         ]}
                     />
 
@@ -178,13 +174,13 @@ export default function NextjsHostingZeroCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Short answer: yes. Vercel&apos;s Hobby plan is free in 2026, with 100GB of bandwidth a month, and you only pay $20/month (Pro) once you outgrow it. Here is exactly what is included, where the new caps bite, and how we host every client site starting at $0.
+                            Short answer: Vercel Hobby is free in 2026 for personal, non-commercial projects and includes 100 GB of Fast Data Transfer each month. A production business website should use Vercel Pro, which currently starts with a $20 monthly platform fee, one deploying seat, and metered usage. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.
                         </p>
 
                         <BlogAuthor
                             date="Mar 13, 2026"
-                            readTime="9 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
+                            readTime="10 min read"
+                            bio="Hassan is PandaCodeGen's co-founder and lead engineer. He plans Next.js migrations around measurable performance, search continuity, maintainability, and client-owned infrastructure."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -198,94 +194,93 @@ export default function NextjsHostingZeroCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Most businesses pay $50 to $300/month for hosting that actually makes their site slower.",
-                            "We deploy every client site on Vercel starting free. You only scale to $20/month when your business grows. Faster, more secure, zero maintenance.",
-                            "Our client MyCustomPatches went from $150/mo hosting to $0/mo with faster load times and 90+ PageSpeed.",
-                            "Here's exactly how it works and whether it works for your business."
+                            "Vercel Hobby is a $0 plan for eligible personal, non-commercial projects, with 100 GB of Fast Data Transfer included each month.",
+                            "Vercel Pro is the starting point for commercial production websites and currently begins with a $20 monthly platform fee, one deploying seat, and metered usage.",
+                            "A Next.js rebuild can reduce server administration and request-time rendering without making infrastructure free.",
+                            "Use this guide to compare Vercel Hobby vs Pro and estimate a realistic Next.js hosting cost for a business website."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Next.js hosting on Vercel starts at $0 per month for most business sites. The Hobby plan handles up to 100GB bandwidth and 100K function invocations free. Sites doing over 100K monthly visitors may need the Pro plan at $20 per month. Compare this to WordPress hosting at $50 to $400 per month. For most clients we migrate, hosting cost drops from $150 per month to $0 on launch day.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">Vercel pricing for business websites is not determined only by traffic. Hobby is free for eligible personal, non-commercial work and includes 100 GB of Fast Data Transfer plus published usage limits. Commercial websites should begin on Pro, currently a $20 monthly platform fee that includes one deploying seat and a usage credit, even when their traffic would fit inside Hobby&apos;s technical allowances. Added seats and on-demand usage can increase the bill. Compare the full platform, maintenance, and usage costs before choosing between managed WordPress hosting and commercial Next.js hosting.</p>
 
-                    {/* About PandaCodeGen — brand anchor in first-third zone */}
+                    {/* About PandaCodeGen: brand anchor in first-third zone */}
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Your hosting and platform bill keeps climbing. Your revenue does not. PandaCodeGen rebuilds your site as custom Next.js code you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Every client site deploys on Vercel starting free on the Hobby tier, scaling to Pro at $20/month only when the business actually grows past the free limits. Clients pay Vercel directly, no markup. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. Full pricing breakdown at the <Link href="/ai-info/pricing-and-guarantees" className="text-cognac hover:underline font-medium">Pricing and Guarantees reference</Link>.
+                            PandaCodeGen rebuilds suitable websites as custom Next.js code with documented migration, measurement, and handover requirements. Commercial Vercel projects launch in the client&apos;s own account on Pro, currently starting with a $20 monthly platform fee that includes one deploying seat, so the client pays the platform directly with no hosting markup. Added seats and on-demand usage are billed by Vercel. PageSpeed targets, representative pages, test conditions, acceptance criteria, and any remedy are defined in the signed project scope. Full service pricing is on the <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>.
                         </p>
                     </div>
 
                     {/* Content */}
                     <div className="space-y-8">
 
-                        <BlogHeader>You&apos;re Paying for Slow</BlogHeader>
+                        <BlogHeader>Understand What Your Hosting Bill Covers</BlogHeader>
 
                         <BlogText>
-                            Here&apos;s something the hosting industry doesn&apos;t want you to know: <BlogHighlight>You&apos;re paying monthly for a problem that shouldn&apos;t exist.</BlogHighlight>
+                            A hosting invoice can combine infrastructure, managed updates, backups, security tooling, support, and traffic allowances. <BlogHighlight>The useful comparison is total operating cost, not a $0 headline.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
-                            Traditional hosting works like this: every time someone visits your website, a server has to build the page from scratch. That server costs money to run. So hosting companies charge you $30, $100, even $300 per month to keep that server running 24/7, whether anyone visits your site or not.
+                            A dynamic WordPress page often requires request-time application and database work. Managed hosts price the compute, storage, traffic, backups, security, and support needed to keep that stack available. The bill may be justified, but the architecture and service level should match what the website actually needs.
                         </BlogText>
 
                         <BlogText>
-                            The more you pay, the faster that server builds pages. But even the most expensive server still takes 2-5 seconds to build and deliver each page. That&apos;s the fundamental limitation.
+                            Paying more can improve capacity and support, but it does not automatically fix slow themes, plugins, database queries, third-party scripts, or poor caching. Hosting quality is one performance input, not a guaranteed load-time result.
                         </BlogText>
 
                         <BlogText>
-                            Here&apos;s what hosting actually costs most businesses:
+                            A business hosting budget may include:
                         </BlogText>
 
                         <BlogList items={[
-                            "Shared hosting ($10-30/month): Your site shares a server with hundreds of others. Slow, unreliable, crashes during traffic spikes.",
-                            "Managed WordPress hosting ($30-300/month): Faster, but still limited by WordPress architecture. WP Engine, Kinsta, Flywheel. They all have the same ceiling.",
-                            "The hidden costs: Premium plugins ($200-800/year), security scanning ($100-300/year), SSL certificates, CDN add-ons, backup services."
+                            "Shared WordPress hosting: lower base pricing, shared capacity, and a service level that varies by provider.",
+                            "Managed WordPress hosting: platform support, backups, security controls, caching, and traffic allowances bundled into the plan.",
+                            "Additional operating costs: premium plugins, monitoring, development support, CDN usage, backups, and security services when they are not included."
                         ]} />
 
                         <BlogText>
-                            Over 3 years, a typical WordPress business site costs <BlogHighlight>$5,000-$15,000 in hosting and maintenance alone.</BlogHighlight>
+                            Over three years, the meaningful comparison is <BlogHighlight>hosting, licenses, maintenance labor, usage charges, and the cost of incidents</BlogHighlight>. Calculate those inputs from the current invoices before using a migration savings estimate.
                         </BlogText>
 
                         <BlogText>
-                            Our client{" "}
-                            <Link href="/work/mycustompatches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                MyCustomPatches
-                            </Link>{" "}
-                            was paying $150/month for managed hosting. Their site still loaded in 3.2 seconds. Their PageSpeed score was around 45/100. They were paying premium prices for mediocre performance.
+                            Hosting-plan eligibility and page performance are separate decisions. A framework or
+                            provider does not establish a route&apos;s score. Keep dated field data and repeated lab
+                            evidence for any project outcome; no MyCustomPatches performance figure is used here
+                            because the original test record has not been reconciled.
                         </BlogText>
 
                         <BlogQuote>
-                            You wouldn&apos;t pay $150/month for a car that only goes 30 mph. So why are you paying $150/month for a website that takes 3 seconds to load?
+                            A faster architecture can reduce request-time work, but the right hosting decision still depends on licensing, traffic, functions, storage, support, and operational risk.
                         </BlogQuote>
 
-                        <BlogHeader>How $0 Hosting Actually Works</BlogHeader>
+                        <BlogHeader>How Managed Next.js Hosting Changes the Cost Model</BlogHeader>
 
                         <BlogText>
-                            The reason traditional hosting costs money is simple: a server has to run code every time someone visits your site. More visitors = more work = more money.
+                            Traditional dynamic applications often perform more work on each request. Next.js can pre-render suitable pages, cache responses, and move selected work to managed functions. The amount and type of runtime work influence the final bill.
                         </BlogText>
 
                         <BlogText>
-                            We eliminate the server entirely. Here&apos;s how.
+                            This reduces server administration. It does not eliminate infrastructure or platform cost.
                         </BlogText>
 
                         <BlogText>
-                            When we build a client site with Next.js, every page is <strong>pre-built at deploy time</strong>. That means all the work happens once, when we publish the site, not every time a visitor shows up. The result is a collection of ready-to-serve files, like printed pages in a binder.
+                            When a page is suitable for static generation, Next.js can <strong>pre-build it at deploy time</strong> and serve a cached result instead of rebuilding it for every visitor. Dynamic routes, forms, authentication, commerce, and revalidation can still use managed compute.
                         </BlogText>
 
                         <BlogText>
-                            Vercel takes those pre-built pages and distributes them across <BlogHighlight>80+ locations worldwide.</BlogHighlight> When someone in London visits your site, they get the page from a London server. Someone in Tokyo gets it from Tokyo. No waiting for a server in Dallas to build the page and send it across the ocean.
+                            Vercel distributes cached content through its global network and runs supported application workloads on managed infrastructure. <BlogHighlight>That can reduce latency and operations work when the rendering and caching strategy fits the site.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
-                            No server running means no server cost. That&apos;s why hosting starts at $0/month. You only pay Vercel Pro at $20/month when your business grows past free tier limits.
+                            The practical benefit is less server administration, automatic deployment infrastructure, and usage-based scaling. Hobby can cost $0 for eligible personal, non-commercial projects. Commercial production sites should budget from Vercel Pro&apos;s $20 monthly platform fee, then add any extra seats and on-demand usage.
                         </BlogText>
 
                         <BlogText>
-                            Think of it this way: <BlogHighlight>WordPress is like a chef cooking every meal from scratch when each customer sits down. Next.js pre-cooks everything and serves from a buffet. Faster, cheaper, and no chef needed.</BlogHighlight>
+                            Think of it this way: <BlogHighlight>preparing reusable pages before a request can reduce per-visit work, while personalized or frequently changing routes still need runtime compute.</BlogHighlight>
                         </BlogText>
 
                         <BlogText>
-                            This is the same technology behind some of the fastest websites on the internet. It&apos;s not a hack or a workaround. It&apos;s how modern websites are supposed to work. For a deeper look at why this architecture wins, read our{" "}
+                            Static generation, caching, and managed functions are established deployment patterns, but the right mix depends on the application. For a deeper look at the measurement process, read our{" "}
                             <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 guide to hitting a 90+ PageSpeed score
                             </Link>. If you are still deciding between platforms, our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js comparison</Link> covers every tradeoff in detail.
@@ -305,28 +300,28 @@ export default function NextjsHostingZeroCostPage() {
                                 <tbody>
                                     <tr>
                                         <td className="p-4 border border-stone-300 font-medium">Monthly Cost</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">$30-$300/mo</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">$0/mo</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Varies by host and service level</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Pro from $20/mo + added seats and usage</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-300 font-medium">3-Year Cost</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">$1,080-$10,800</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">$0</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Calculate from current invoices</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">From $720 base + added seats and usage</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-300 font-medium">Load Time</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">2-5 seconds</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">0.5-1.2 seconds</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Depends on implementation</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Depends on implementation</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-300 font-medium">PageSpeed Score</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">35-75/100</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">90+/100</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Measured per page and test profile</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Measured per page and test profile</td>
                                     </tr>
                                     <tr>
                                         <td className="p-4 border border-stone-300 font-medium">Server Crashes</td>
-                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Yes (traffic spikes)</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">No (CDN, no server)</td>
+                                        <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Depends on architecture and service level</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Managed resilience; outages remain possible</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-300 font-medium">SSL Certificate</td>
@@ -336,12 +331,12 @@ export default function NextjsHostingZeroCostPage() {
                                     <tr>
                                         <td className="p-4 border border-stone-300 font-medium">CDN</td>
                                         <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Extra cost</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Built-in (80+ locations)</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Built-in global delivery network</td>
                                     </tr>
                                     <tr className="bg-stone-50">
                                         <td className="p-4 border border-stone-300 font-medium">Maintenance</td>
                                         <td data-label="WordPress Hosting" className="p-4 border border-stone-300 text-stone-600">Monthly updates</td>
-                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">Zero</td>
+                                        <td data-label="Next.js + Vercel" className="p-4 border border-stone-300 text-stone-600 font-bold">No server administration; app upkeep remains</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -349,8 +344,8 @@ export default function NextjsHostingZeroCostPage() {
 
                         {/* Mid-Article CTA */}
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Are you still paying for hosting you don&apos;t need to?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your current site URL when you book. We audit your hosting costs and performance live on the call and show you the zero-cost Next.js path.</p>
+                            <p className="font-bold text-charcoal mb-2">Does your current hosting still fit the workload?</p>
+                            <p className="text-stone-600 mb-4 text-sm">Drop your current site URL when you book. We review the current hosting invoices, performance profile, and likely commercial Next.js hosting cost before recommending a platform.</p>
                             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
                                     Schedule Free Call <ArrowRight className="w-4 h-4" />
                                 </CalModalButton>
@@ -359,146 +354,240 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader>The Vercel Free Tier: What You Actually Get</BlogHeader>
 
                         <BlogText>
-                            Vercel&apos;s free tier isn&apos;t a stripped-down demo. It&apos;s the same infrastructure that powers websites for Nike, Hulu, and The Washington Post. Here is the exact, current Hobby plan allowance, straight from Vercel&apos;s own documentation, not a rounded-off estimate:
+                            Vercel Hobby is a real deployment plan for eligible personal, non-commercial projects. Here is the current allowance from Vercel&apos;s published plan documentation:
                         </BlogText>
 
                         <BlogList items={[
-                            "100 GB of bandwidth per month",
+                            "100 GB of Fast Data Transfer per month",
                             "1,000,000 edge requests per month",
                             "1,000,000 serverless function invocations per month",
                             "4 CPU-hours of function compute per month",
-                            "100 build minutes per month",
-                            "Automatic HTTPS/SSL, a global CDN across 80+ edge locations, instant rollbacks, and preview deployments, all included at $0"
+                            "6,000 build execution minutes per month",
+                            "Automatic HTTPS/SSL, managed delivery infrastructure, rollbacks, and preview deployments, included for eligible Hobby use"
                         ]} />
 
+                        <BlogHeader id="what-happens-at-100gb">What actually happens when you hit 100 GB</BlogHeader>
+
                         <BlogText>
-                            One restriction most comparison articles skip: the Hobby plan is licensed for <strong>personal, non-commercial use only</strong> under Vercel&apos;s terms of service. A side project, portfolio, or client demo you are not yet billing for fits comfortably within that. A live business site generating revenue is technically a Pro-tier use case even if it never comes close to the traffic limits, which is why every PandaCodeGen client site is set up to move to a paid seat once it goes live for a real business.
+                            This is the part the number on its own does not tell you, and it is the difference that matters
+                            most when you are deciding which plan to launch on. <strong>Hobby does not bill you for going
+                            over. It restricts you.</strong> Vercel&apos;s plan documentation states that Hobby accounts
+                            are bound by usage caps and cannot purchase additional usage. Pro behaves the opposite way:
+                            you keep serving and pay for what you use above the included amount.
+                        </BlogText>
+
+                        <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                            <table className="w-full min-w-[680px] border-collapse text-left text-sm">
+                                <thead className="bg-stone-100 text-charcoal">
+                                    <tr>
+                                        <th className="p-4">&nbsp;</th>
+                                        <th className="p-4">Hobby (free)</th>
+                                        <th className="p-4">Pro</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-stone-200 text-stone-700">
+                                    <tr><td className="p-4 font-bold">Price</td><td className="p-4">$0</td><td className="p-4">$20 per user/month, including $20 of usage credit</td></tr>
+                                    <tr><td className="p-4 font-bold">Fast Data Transfer included</td><td className="p-4">100 GB/month</td><td className="p-4">1 TB/month</td></tr>
+                                    <tr><td className="p-4 font-bold">Above the included amount</td><td className="p-4"><strong>Capped. You cannot buy more usage.</strong></td><td className="p-4">Pay-as-you-go, from $0.15 per GB</td></tr>
+                                    <tr><td className="p-4 font-bold">Edge requests</td><td className="p-4">1M/month</td><td className="p-4">10M/month, then from $2 per 1M</td></tr>
+                                    <tr><td className="p-4 font-bold">Permitted use</td><td className="p-4">Personal, non-commercial only</td><td className="p-4">Commercial use permitted</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            So the real question is not &ldquo;is 100 GB enough?&rdquo; but &ldquo;what happens on the day
+                            it is not?&rdquo; On a personal project, being capped is an inconvenience. On anything that
+                            takes orders or generates leads, being capped is an outage — and it tends to arrive on your
+                            best traffic day, because that is when the ceiling is reached. That asymmetry, not the
+                            allowance itself, is why revenue-generating sites belong on Pro from launch.
                         </BlogText>
 
                         <BlogText>
-                            <strong>What actually happens when you hit a cap.</strong> Hobby has no pay-as-you-go overage, unlike Pro. If a small business site blows through the 100 GB bandwidth allotment (say, a product page goes viral and pulls in far more traffic than the roughly 50,000-100,000 monthly visitors that 100 GB typically covers), Vercel does not quietly bill you for the extra data. The deployment is paused until your billing cycle resets, which runs on a roughly 30-day clock from when you first deployed. Same mechanic on the 1 million function invocations: a site with several API routes or form handlers that gets an unexpected traffic spike can burn through a million invocations faster than the bandwidth cap, and once it does, those functions stop responding until reset. There is no warning email with a credit card charge attached; there is just a hard stop. That is the tradeoff for free: predictable cost, unpredictable availability if you are near the ceiling.
+                            For sizing: 100 GB per month is roughly 50,000 page views if your pages weigh about 2 MB each,
+                            or roughly 200,000 if you have optimised down to about 500 KB. Page weight moves that number
+                            by 4x before traffic does, which is why compressing images and trimming JavaScript is also a
+                            hosting-cost decision. Check your own average page weight against your own traffic rather than
+                            trusting either estimate. All figures here are Vercel&apos;s current published values; confirm
+                            them on the pricing page before you budget, because plans change.
                         </BlogText>
 
                         <BlogText>
-                            Compare that to WordPress hosting where you&apos;re paying $30-$300/month and still need to worry about plugin updates, security vulnerabilities, server maintenance, and SSL certificates, and a traffic spike is more likely to crash your server outright than pause gracefully.
+                            The licensing boundary matters more than the traffic boundary: Hobby is for <strong>personal, non-commercial use</strong> under Vercel&apos;s terms. A commercial, client, or revenue-generating production website should use Pro from launch even when its traffic would fit within Hobby&apos;s 100 GB Fast Data Transfer allowance.
+                        </BlogText>
+                        <BlogText>
+                            Vercel&apos;s terms were last updated June 1, 2026. They currently say content submitted on
+                            Hobby or a trial Pro plan may be used for model training, with an opt-out described in the
+                            account settings, while paid Pro does not enable model training by default. Teams handling
+                            confidential or regulated material should review the current terms, data-processing
+                            agreement, account setting and approved data classification before deployment.
                         </BlogText>
 
                         <BlogText>
-                            <strong>What happens when you outgrow the free tier?</strong> Vercel Pro costs $20/month. Pro trades the hard stop for metered overage instead, so a traffic spike costs you money rather than downtime. That is the entire tradeoff between the two tiers: Hobby is free but brittle at the edges, Pro is paid but does not fall over. Even at the Pro level, you are paying <BlogHighlight>up to 93% less than high-end managed WordPress hosting.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
+                            <strong>What happens when an eligible Hobby project reaches a cap.</strong> Hobby does not provide pay-as-you-go overage. If a project reaches a published usage limit, the affected service may be paused until the limit resets. Pro includes commercial use and metered usage options, so plan selection should account for availability requirements before launch rather than waiting for a traffic threshold.
+                        </BlogText>
+
+                        <BlogText>
+                            Managed WordPress and Vercel package different responsibilities. Compare plan price, usage allowances, plugin or dependency maintenance, backups, security controls, support, recovery options, and the expected cost of traffic spikes on equivalent requirements.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>How should a business budget for Vercel Pro?</strong> Pro currently starts with a $20 monthly platform fee, one deploying seat, and a $20 monthly usage credit. Additional deploying seats and on-demand infrastructure usage can increase the bill. A business should compare the base price, included allowances, expected overage, team size, and support requirements with its current hosting stack. <BlogHighlight>Pro can reduce platform and operations spend for some workloads, but the saving must be calculated from real usage and invoices.</BlogHighlight> For a full breakdown of long-term costs, see our{" "}
                             <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 3-year cost comparison of WordPress vs custom code
                             </Link>. Full current limits are documented at <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a> and <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>.
                         </BlogText>
 
-                        <BlogHeader>2026 Vercel Hosting Updates (What Changed This Year)</BlogHeader>
+                        <BlogHeader>How to Estimate Vercel Pro Pricing for a Business Website</BlogHeader>
 
                         <BlogText>
-                            Five verified Vercel hosting updates landed between January and May 2026. Each one materially affects how you should think about deploying a Next.js site this year.
+                            A useful Next.js hosting estimate starts with the workload, not a visitor-count shortcut. Two websites with the same monthly traffic can have very different bills: one may serve mostly cached pages, while the other runs authentication, search, personalization, image transformations, and API calls on every visit. Record the current architecture and expected production behavior before comparing Vercel Pro with managed WordPress, Cloudflare Workers, Netlify, or another commercial host.
+                        </BlogText>
+
+                        <BlogText>
+                            Build the estimate as <strong>platform fee + added deploying seats + paid add-ons + metered infrastructure usage</strong>, then account for the included allocations and monthly usage credit shown in Vercel&apos;s current pricing. Do not count Hobby allowances in a commercial scenario. Use at least three cases: a normal month, a campaign or seasonal peak, and an incident month with unusual function or transfer usage.
+                        </BlogText>
+
+                        <BlogList items={[
+                            "Team access: count people who need deploying permissions separately from read-only collaborators, then verify the current seat rules.",
+                            "Fast Data Transfer and Edge Requests: estimate page weight, cache behavior, monthly requests, downloads, and traffic concentration by region.",
+                            "Functions: inventory API routes, form handlers, authentication, scheduled work, search, personalization, and third-party webhooks.",
+                            "Compute profile: measure Active CPU and provisioned memory for dynamic workloads instead of assuming every Next.js request is static.",
+                            "Images and media: estimate source-image transformations, optimized delivery, video, large catalogs, and downloadable files separately.",
+                            "Observability and add-ons: include analytics, speed monitoring, logs, security controls, databases, email, CMS, and support that sit outside the base hosting fee.",
+                            "Spend controls and continuity: define alerts, hard limits, ownership, incident contacts, rollback steps, and the acceptable impact of a traffic spike."
+                        ]} />
+
+                        <BlogText>
+                            Compare the result with an equivalent current-state total. A managed WordPress invoice may already bundle backups, caching, security, support, and recovery. A Vercel invoice does not represent the entire application stack if the site also uses a headless CMS, database, search service, transactional email, commerce backend, or monitoring platform. This is why a credible three-year comparison shows every retained and replacement service instead of subtracting one hosting headline from another.
+                        </BlogText>
+
+                        <BlogQuote>
+                            The correct business question is not whether Vercel can start at $20. It is what the complete production workload costs under normal, peak, and failure conditions.
+                        </BlogQuote>
+
+                        <BlogHeader>Vercel Hobby vs Pro: A Launch Checklist</BlogHeader>
+
+                        <BlogText>
+                            Use Hobby for eligible personal, non-commercial work only. For a client site, company website, store, paid membership, lead-generation site, or other revenue-supporting production project, use Pro or another commercially permitted plan from launch. Then confirm the following in the written hosting and handover plan:
+                        </BlogText>
+
+                        <BlogList items={[
+                            "The client owns or controls the Vercel team, domain, repository, billing method, and recovery contacts.",
+                            "The selected plan permits the commercial workload and provides the required collaboration, security, privacy, and support features.",
+                            "Expected traffic, data transfer, edge requests, functions, builds, images, and logs have been modeled against current included usage.",
+                            "Spend alerts and limits are configured, and someone is responsible for responding before a limit or unexpected bill becomes an incident.",
+                            "Preview, production, environment-variable, rollback, DNS, and access-removal procedures are documented before handover.",
+                            "The team rechecks current Vercel pricing and terms at proposal, launch, and renewal because plan features and limits can change."
+                        ]} />
+
+                        <BlogHeader>Five Vercel Hosting Decisions to Recheck in 2026</BlogHeader>
+
+                        <BlogText>
+                            Vercel pricing, usage limits, deployment portability, and competing platforms have changed. These five checks affect a 2026 Next.js hosting decision.
                         </BlogText>
 
                         <h3 id="hobby-hard-caps" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">1. Hobby tier now has hard caps with no overage</h3>
                         <BlogText>
-                            The five hard limits covered above (bandwidth, edge requests, function invocations, compute hours, build minutes) all share one mechanic worth restating on its own: unlike a paid plan&apos;s pay-as-you-go overage, exceeding any Hobby cap pauses the affected feature until your next billing cycle resets, roughly 30 days later, with no option to pay your way past it mid-cycle. The free tier is still genuinely free, but you cannot accidentally bleed into a bill, and you cannot buy your way out of a cap either. For a small business site doing under 50,000 monthly visitors, the caps are comfortable. For viral spikes or fast growth, plan to upgrade to Pro before you hit the wall. Source: <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Hobby plan docs</a>.
+                            The five Hobby limits covered above (Fast Data Transfer, edge requests, function invocations, compute hours, and build minutes) make usage planning important for eligible personal projects. Commercial teams should choose Pro from launch because plan eligibility is not a traffic test. Review the current plan documentation and model expected usage before publishing. Source: <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Hobby plan docs</a>.
                         </BlogText>
 
                         <h3 id="active-cpu-pricing" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">2. Active CPU pricing is now the default Fluid Compute model</h3>
                         <BlogText>
-                            Vercel announced Active CPU pricing in June 2025 and made it the default for Hobby, Pro, and new Enterprise teams by early 2026. The new model charges $0.128 per Active CPU hour plus $0.0106 per GB-hour of Provisioned Memory. The practical result: idle-heavy workloads (especially AI inference, scheduled jobs, low-traffic endpoints) can save up to 90% versus the old per-invocation billing. Most marketing sites and small e-commerce stores stay within free tier and never see this billing, but it changes the math for anything with serverless function spikes. Source: <a href="https://vercel.com/blog/introducing-active-cpu-pricing-for-fluid-compute" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Active CPU announcement</a>.
+                            Vercel announced Active CPU pricing in June 2025 and made it the default Fluid Compute model for supported plans. The model separates Active CPU time from Provisioned Memory, so request shape and workload behavior affect cost. Commercial marketing and e-commerce teams should model their functions against Pro&apos;s included usage and overage rates rather than treating a technically small workload as Hobby-eligible. Source: <a href="https://vercel.com/blog/introducing-active-cpu-pricing-for-fluid-compute" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Active CPU announcement</a>.
                         </BlogText>
 
-                        <h3 id="pro-bandwidth-overage" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Pro bandwidth overage moved from $30 to $40 per 100 GB</h3>
+                        <h3 id="pro-bandwidth-overage" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Pro data-transfer overage is regionally priced</h3>
                         <BlogText>
-                            Pro plan includes 1 TB Fast Data Transfer plus 10M Edge Requests. Beyond that, bandwidth overage is now $40 per 100 GB (up from the historic $30). For sites running heavy image galleries, video, or large catalogs, this matters. For typical service-business marketing sites, you will likely never hit the Pro tier ceiling let alone the overage band. Source: <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Pro plan docs</a>.
+                            Pro currently includes 1 TB of Fast Data Transfer and 10 million Edge Requests per month. Additional Fast Data Transfer starts at $0.15 per GB and varies by region, so 100 GB of additional transfer starts around $15 rather than one universal overage price. Image-heavy catalogs, downloads, and globally distributed traffic should be modeled by region. Sources: <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Pro plan docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a>.
                         </BlogText>
 
-                        <h3 id="enterprise-floor" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">4. Enterprise floor is actually $20K/year (not $150K+)</h3>
+                        <h3 id="enterprise-floor" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">4. Vercel Enterprise pricing is custom, not a public floor</h3>
                         <BlogText>
-                            A widely repeated claim across older articles is that Vercel Enterprise starts at $150,000 per year. Verified procurement data from Vendr and SpendHound in 2026 shows the actual Enterprise floor sits around $20,000 per year, median deal value approximately $45,000, and average approximately $60,000. The $150K+ figure was outlier-anchored. For mid-market clients evaluating Enterprise (typically for SSO, audit logs, and BAA execution), the real conversation starts in the $20K to $60K range, not six figures. Source: <a href="https://www.vendr.com/marketplace/vercel" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vendr Vercel marketplace data</a>.
+                            Vercel does not publish one universal Enterprise starting price. Pricing depends on the negotiated product, security, compliance, support, usage, and commercial terms. Treat third-party deal estimates as context, not a guaranteed floor, and request a current quote for an equivalent scope. Source: <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel pricing</a>.
                         </BlogText>
 
-                        <h3 id="nextjs-16-build-adapters" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">5. Next.js 16 Build Adapters API made leaving Vercel painless</h3>
+                        <h3 id="nextjs-16-build-adapters" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">5. Next.js 16.2 stabilized the Adapters API</h3>
                         <BlogText>
-                            The Build Adapters API stabilized in Next.js 16.2 (March 2026). For the first time, Cloudflare Pages, AWS, and self-hosted setups fully support Next.js 16 features including proxy.ts middleware. Leaving Vercel is no longer a feature downgrade. This is structural: Vercel has to compete on actual value (DX, edge network, integrations) rather than lock-in. Source: <a href="https://nextjs.org/blog/next-16-1" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Next.js 16.1 release notes</a>.
+                            Next.js 16.2 made the Adapters API stable, giving deployment platforms a public contract for consuming Next.js build output. That improves portability, but provider feature support, caching behavior, observability, and migration work still need to be tested for the application. Source: <a href="https://nextjs.org/blog/next-16-2" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Next.js 16.2 release notes</a>.
                         </BlogText>
 
-                        <BlogHeader>Cloudflare Pages and Netlify: When to Consider Alternatives</BlogHeader>
+                        <BlogHeader>Cloudflare Workers and Netlify: When to Consider Alternatives</BlogHeader>
 
                         <BlogText>
-                            Vercel is the default choice for Next.js because the framework and the host are built by the same team. But two alternatives are genuinely competitive in 2026.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>Cloudflare Pages.</strong> The free tier offers unlimited bandwidth, unlimited requests, 500 builds per month, and 100 custom domains. For high-traffic Next.js sites that would otherwise blow past Vercel Hobby&apos;s 100 GB cap, deploying via the @cloudflare/next-on-pages adapter sidesteps the bandwidth charge entirely. Tradeoff: Cloudflare&apos;s Next.js compatibility is improving but still behind Vercel on the bleeding edge. Production-stable for most use cases, frustrating for early Next.js feature adoption. Source: <a href="https://www.devtoolreviews.com/reviews/vercel-vs-netlify-vs-cloudflare-pages-pricing-comparison-2026" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">DevToolReviews 2026 comparison</a>.
+                            Vercel is a useful comparison baseline because it maintains Next.js and provides first-party deployment integration. Stable adapters make other platforms practical candidates, but compatibility and total cost should be tested against the actual application.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Netlify (April 14, 2026 repricing).</strong> Netlify killed seat-based pricing. Pro is now $20 per month total with unlimited team seats plus 3,000 credits per month. The credit system changed: bandwidth went from 10 to 20 credits per GB (price increase), compute went from 5 to 10 credits per GB-hour (price increase), web requests went from 3 to 2 credits per 10K (price decrease), and form submissions are now free. Net result: larger teams benefit (unlimited seats), bandwidth-heavy sites pay more. Worth re-evaluating if you previously priced out Netlify for team-size reasons. Source: <a href="https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Netlify April 2026 changelog</a>.
+                            <strong>Cloudflare Workers.</strong> Cloudflare&apos;s current Next.js guide uses the OpenNext adapter on Workers and documents broad App Router, Pages Router, SSR, SSG, ISR, Server Actions, and streaming support, with some feature-specific limitations. Compare Workers pricing and limits with the app&apos;s traffic, compute, image, cache, and operational needs. Source: <a href="https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Cloudflare&apos;s Next.js deployment guide</a>.
                         </BlogText>
 
                         <BlogText>
-                            For PandaCodeGen client work, we still default to Vercel on every project because the Next.js + Vercel integration is the most mature, the edge network is the broadest, and the AI Gateway plus preview deployments are unmatched. We will deploy to Cloudflare Pages on request if a client expects very high bandwidth (over 5 TB per month) where the Vercel pricing becomes meaningful. For the full PandaCodeGen migration playbook covering Vercel deployment strategy and zero-downtime DNS cutover, see the <Link href="/ai-info/migration-services" className="text-cognac hover:underline">Migration Services reference page</Link>.
-                        </BlogText>
-
-                        <BlogHeader>Real Numbers: MyCustomPatches Before and After</BlogHeader>
-
-                        <BlogText>
-                            Let&apos;s look at real numbers from a real client. No hypotheticals.
+                            <strong>Netlify.</strong> Netlify&apos;s credit-based Pro plan starts at $20 per month with 3,000 credits and unlimited seats. In July 2026 it added higher monthly credit tiers with rollover on eligible tiers, so compare production deploys, bandwidth, compute, and web-request consumption rather than looking only at seats. Source: <a href="https://www.netlify.com/pricing/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Netlify pricing</a>.
                         </BlogText>
 
                         <BlogText>
-                            <strong>Before (WordPress + Managed Hosting):</strong>
+                            For PandaCodeGen client work, Vercel Pro is a common commercial Next.js hosting recommendation because its deployment workflow, preview environments, and framework integration fit many projects. We can scope another provider when traffic, compliance, regional delivery, team controls, or cost modeling favors it. For the full migration playbook covering deployment strategy and a controlled DNS cutover, see the <Link href="/services" className="text-cognac hover:underline">services overview</Link>.
+                        </BlogText>
+
+                        <BlogHeader>Performance Snapshot: MyCustomPatches Before and After</BlogHeader>
+
+                        <BlogText>
+                            The documented performance comparison is useful, but it should not be presented as a $0 commercial-hosting receipt.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Before the WordPress rebuild:</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Hosting cost: $150/month ($1,800/year)",
                             "Load time: 3.2 seconds",
-                            "PageSpeed score: ~45/100",
-                            "Server crashes during holiday sales"
+                            "PageSpeed score: 45/100",
+                            "Status: owner-reported figures pending final evidence-record reconciliation"
                         ]} />
 
                         <BlogText>
-                            <strong>After (Next.js + Vercel Free Tier):</strong>
+                            <strong>After the Next.js rebuild:</strong>
                         </BlogText>
 
                         <BlogList items={[
-                            "Hosting cost: $0/month ($0/year)",
                             "Load time: 0.7 seconds",
-                            "PageSpeed score: 90+",
-                            "Zero downtime during Black Friday traffic"
+                            "PageSpeed score: 97/100",
+                            "Commercial production hosting budgeted separately from the performance result"
                         ]} />
 
                         <BlogText>
-                            <BlogHighlight>3-year savings: $5,400+ in hosting costs alone.</BlogHighlight> And the site is 4x faster.
+                            <BlogHighlight>The owner reports the site moved from a slower legacy baseline to a faster result after the rebuild.</BlogHighlight> We publish specific before-and-after numbers only alongside the test profile, date and conditions that produced them, so none are quoted here. It is not an independent benchmark or a hosting-price claim. Commercial Vercel hosting should be budgeted from Pro&apos;s $20 monthly platform fee, plus any added seats and on-demand usage.
                         </BlogText>
 
                         <BlogText>
-                            That&apos;s not a trade-off. It&apos;s a straight upgrade. Less money, better performance, zero maintenance headaches. See the full{" "}
-                            <Link href="/work/mycustompatches" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                MyCustomPatches case study
+                            The result demonstrates an implementation improvement, not a universal hosting-cost promise. See the{" "}
+                            <Link href="/work" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
+                                MyCustomPatches project evidence
                             </Link>{" "}
-                            for the complete breakdown including conversion improvements and revenue impact.
+                            for the available implementation and performance details.
                         </BlogText>
 
                         <BlogQuote>
-                            We went from paying $150/month for a site that crashed during sales to paying $0/month for a site that handles any amount of traffic instantly. The decision was obvious.
+                            Separate the implementation result from the platform plan: measure speed against the agreed pages, then price commercial hosting from real team and usage requirements.
                         </BlogQuote>
 
-                        <BlogHeader>When Free Hosting Does NOT Work</BlogHeader>
+                        <BlogHeader>Vercel Hobby vs Pro: Choose the Right Plan</BlogHeader>
 
                         <BlogText>
-                            We believe in honesty. Free Vercel hosting is not the right fit for every business. Here&apos;s when it doesn&apos;t work:
+                            Hobby and Pro serve different users. Hobby answers the search question "is Vercel free?" for eligible personal, non-commercial projects. Pro is the appropriate starting plan for a commercial production website.
                         </BlogText>
 
                         <BlogList items={[
-                            "Sites running heavy server-side logic on every request. Contact forms, search, and light API routes stay well inside the 1 million function invocations and 4 CPU-hours Hobby includes each month, but a site calling external APIs on every page view or running compute-heavy logic per visitor can burn through the compute allotment before the bandwidth cap even becomes relevant.",
-                            "Sites with 100K+ monthly visitors. If you consistently exceed 100 GB bandwidth or 1 million edge requests, you'll need Vercel Pro at $20/month, which replaces the hard stop with metered overage instead. Still dramatically cheaper than alternatives.",
-                            "Any live commercial site, technically. Vercel's Hobby plan terms restrict free usage to personal, non-commercial projects. A business site generating revenue should be on Pro regardless of traffic volume, which is why every PandaCodeGen client site moves to a paid seat at launch.",
-                            "Sites needing team collaboration. If multiple developers need to deploy changes, you'll need the Pro tier for team features.",
-                            "WordPress sites without rebuilding. You can't simply move a WordPress site to Vercel. The site needs to be rebuilt with Next.js. That's an investment upfront that pays for itself within months."
+                            "Personal, non-commercial project: Hobby may fit if its features and published usage limits meet the project's needs.",
+                            "Commercial or revenue-generating website: use Pro from launch, regardless of whether traffic fits within Hobby's technical limits.",
+                            "Function-heavy application: estimate Active CPU, memory, invocations, data transfer, and other metered usage before selecting a plan.",
+                            "Multi-person delivery team: include Pro seats, access controls, preview workflows, and support requirements in the cost model.",
+                            "WordPress migration: budget the rebuild, content migration, redirect mapping, QA, cutover, ongoing application maintenance, and hosting as separate line items."
                         ]} />
 
                         <BlogText>
-                            For most business websites, service sites, portfolios, and even e-commerce storefronts, the free tier handles everything you need. If you&apos;re unsure whether your site qualifies, our{" "}
+                            For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and expected usage. If you need a workload and migration estimate, our{" "}
                             <Link href="/services/wordpress-migration?ref=blog/nextjs-hosting-zero-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
@@ -506,7 +595,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            The honest math: even in the worst case, upgrading to Vercel Pro at $20/month saves you $100-$280/month compared to managed WordPress hosting. <BlogHighlight>There is no scenario where traditional hosting is the better financial decision.</BlogHighlight>
+                            The honest answer depends on the current invoices and the target workload. <BlogHighlight>Next.js on Vercel Pro may lower total operating cost, but managed WordPress can still be the better fit when its editing workflow, plugin ecosystem, support model, or migration cost outweighs the projected saving.</BlogHighlight>
                         </BlogText>
 
                     </div>
@@ -515,19 +604,19 @@ export default function NextjsHostingZeroCostPage() {
                     <section className="mb-10">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Traditional hosting charges you $50-300/month for a server your site doesn&apos;t need.</strong> WordPress requires a server to build every page on every visit, which is why it costs money and loads slowly.</li>
-                            <li><strong>Next.js sites pre-build pages at deploy time, eliminating server costs entirely.</strong> No server running means no monthly bill and no performance bottleneck.</li>
-                            <li><strong>Vercel&apos;s free tier serves your site from 80+ global locations with zero monthly cost.</strong> The same infrastructure used by Fortune 500 companies, available at $0/month.</li>
-                            <li><strong>Our client saved $5,400+ over 3 years while getting 4x faster load times.</strong> MyCustomPatches went from $150/month and 3.2s loads to $0/month and 0.7s loads.</li>
-                            <li><strong>Even if you outgrow the free tier, Vercel Pro at $20/month is 85% cheaper than managed WordPress hosting.</strong> There is no scenario where traditional hosting wins on cost or performance.</li>
+                            <li><strong>Vercel Hobby is free for personal, non-commercial projects.</strong> Its current allowance includes 100 GB of Fast Data Transfer, but technical capacity does not make a commercial project eligible.</li>
+                            <li><strong>Vercel Pro is the starting point for commercial production websites.</strong> Budget from the $20 monthly platform fee, then add any extra seats and on-demand usage; review current pricing before launch.</li>
+                            <li><strong>Next.js can reduce request-time work and server administration.</strong> Managed infrastructure, application maintenance, and usage costs still exist.</li>
+                            <li><strong>Performance evidence and hosting cost are separate claims.</strong> PandaCodeGen&apos;s owner reports that MyCustomPatches moved from a 3.2-second load time to 0.7 seconds; final test-record reconciliation remains pending, and the result does not make commercial hosting free.</li>
+                            <li><strong>Compare equivalent operating requirements.</strong> Use current invoices, team size, traffic, functions, support, compliance, and migration cost to estimate the three-year total.</li>
                         </ol>
                     </section>
 
                     {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Ready to Stop Paying for Hosting?</h3>
+                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-16 text-center">
+                        <h3 className="text-2xl font-bold mb-4">Need a Commercial Next.js Hosting Plan?</h3>
                         <p className="text-stone-600 mb-6">
-                            Book a free discovery call. We&apos;ll analyze your current hosting costs and show you exactly how much you&apos;ll save with a Next.js migration.
+                            Book a free discovery call. We&apos;ll review your current hosting costs, Vercel Pro requirements, and the migration inputs needed for a defensible comparison.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                                 Book Discovery Call <ArrowRight className="w-5 h-5" />
@@ -535,8 +624,8 @@ export default function NextjsHostingZeroCostPage() {
                     </div>
 
                     <blockquote className="border-l-4 border-cognac/30 pl-6 my-8 py-2">
-                        <p className="text-stone-600 italic text-lg leading-relaxed">&quot;They worked with me to make a website that I could afford. They made sure there are no costs or extra fees.&quot;</p>
-                        <cite className="text-sm text-stone-500 not-italic block mt-2">James Peace, via Trustpilot review</cite>
+                        <p className="text-stone-600 italic text-lg leading-relaxed">&quot;They worked with me to make a website that I could afford.&quot;</p>
+                        <cite className="text-sm text-stone-500 not-italic block mt-2"><a href="https://www.trustpilot.com/review/pandacodegen.com" target="_blank" rel="nofollow noopener noreferrer" className="hover:text-cognac hover:underline">James Peace, via Trustpilot review</a></cite>
                     </blockquote>
 
                     {/* FAQ Section */}

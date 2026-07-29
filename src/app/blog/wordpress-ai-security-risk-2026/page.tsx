@@ -1,613 +1,441 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, Shield, AlertTriangle, CheckCircle2, ExternalLink, Lock, Code2, RefreshCw } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { AlertTriangle, ArrowLeft, ArrowRight, Bot, KeyRound, ListChecks, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote , BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const aiSecurityFAQs = blogPosts.find(p => p.id === 'wordpress-ai-security-risk-2026')?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const SecurityShieldAnimation = lazyLoad(() => import("@/components/blog/SecurityShieldAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "wordpress-ai-security-risk-2026";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "WordPress AI Plugin Security in 2026: AI Engine Advisory Guide";
+const description =
+    "A dated, evidence-led guide to AI Engine and WordPress MCP security advisories, affected configurations, patching, token rotation, permissions and incident response.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Is WordPress Safe in 2026? 100K Sites Exposed",
-    description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. What business owners need to know to protect their sites.",
-    alternates: {
-        canonical: '/blog/wordpress-ai-security-risk-2026',
-    },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "WordPress AI security",
+        "AI Engine vulnerability",
+        "WordPress MCP security",
+        "CVE-2026-8719",
+        "CVE-2025-11749",
+        "WordPress AI plugin security",
+    ],
     openGraph: {
-        title: "WordPress Security Risk in 2026: 100K Sites Exposed",
-        description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-02-19T00:00:00-05:00",
-        modifiedTime: "2026-07-08T00:00:00-05:00",
+        publishedTime: "2026-06-23",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/wordpress-ai-security-risk-2026")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "WordPress Security Risk in 2026: 100K Sites Exposed",
-        description: "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
-    },
-    keywords: ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026"],
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    {
+        name: "AI Engine plugin listing and changelog",
+        url: "https://wordpress.org/plugins/ai-engine/",
+    },
+    {
+        name: "Wordfence AI Engine vulnerability records",
+        url: "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ai-engine?sort=desc&sortby=cvss_score",
+    },
+    {
+        name: "CVE-2026-8719 advisory",
+        url: "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ai-engine/ai-engine-349-authenticated-subscriber-privilege-escalation-via-missing-authorization-in-mcp-oauth-bearer-token",
+    },
+    {
+        name: "CVE-2025-11749 technical analysis",
+        url: "https://www.wordfence.com/blog/2025/11/100000-wordpress-sites-affected-by-privilege-escalation-vulnerability-in-ai-engine-wordpress-plugin/",
+    },
+    {
+        name: "WordPress MCP Adapter guide",
+        url: "https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/",
+    },
+    {
+        name: "WordPress hardening guide",
+        url: "https://developer.wordpress.org/advanced-administration/security/hardening/",
+    },
+    {
+        name: "OWASP API Security Top 10",
+        url: "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+    },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#article",
-            "headline": "Is WordPress Safe in 2026? AI Plugin Vulnerabilities Exposed 100K Sites",
-            "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-06-23",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026" },
-            "articleSection": "WordPress",
-            "keywords": ["WordPress AI security risk", "is WordPress AI safe", "WordPress 6.9 security vulnerabilities", "WordPress AI plugin vulnerabilities", "AI Engine plugin security flaw", "WordPress site security 2026", "WordPress AI threats", "protect WordPress from AI attacks", "WordPress security for business owners", "WordPress AI endpoint security", "WordPress plugin security risks", "should I use WordPress for business"],
-            "timeRequired": "PT10M",
-            "wordCount": 2850,
-            "about": [
-                {"@type": "Thing", "name": "WordPress AI Security"},
-                {"@type": "Thing", "name": "AI Security Vulnerabilities"},
-                {"@type": "Thing", "name": "WordPress"},
-                {"@type": "Thing", "name": "Website Security for Business"}
-            ],
-            "inLanguage": "en-US",
-            "citation": [
-                {
-                    "@type": "CreativeWork",
-                    "name": "WordPress 6.9 Abilities API + MCP Adapter",
-                    "url": "https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/"
-                },
-                {
-                    "@type": "CreativeWork",
-                    "name": "AI Engine Plugin Vulnerability (CVE-2025-11749)",
-                    "url": "https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/"
-                },
-                {
-                    "@type": "CreativeWork",
-                    "name": "WordPress AI Security Guide for SMBs",
-                    "url": "https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/"
-                },
-                {
-                    "@type": "CreativeWork",
-                    "name": "WordPress AI Building Blocks Roadmap",
-                    "url": "https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/"
-                },
-                {
-                    "@type": "CreativeWork",
-                    "name": "Wordfence: WordPress Plugin Vulnerabilities Database",
-                    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins"
-                },
-                {
-                    "@type": "CreativeWork",
-                    "name": "OWASP Top 10 Security Risks",
-                    "url": "https://owasp.org/www-project-top-ten/"
-                },
-                { "@type": "CreativeWork", "name": "Patchstack 2026 State of WordPress Security", "url": "https://patchstack.com/whitepaper/" },
-                { "@type": "CreativeWork", "name": "Sucuri Hacked Website Report", "url": "https://sucuri.net/reports/" }
-            ],
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "WordPress AI Security Risk", "item": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#webpage",
-            "url": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026",
-            "name": "WordPress Security Risk in 2026: 100K Sites Exposed",
-            "description": "AI plugins are the newest WordPress vulnerability. 100K+ sites exposed through AI plugin flaws. Here is what business owners need to know and how to protect your site.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-02-19T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#breadcrumb" },
-            "inLanguage": "en-US"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "WordPress security",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/wordpress-ai-security-risk-2026#faq",
-            "mainEntity": aiSecurityFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
-        }
-    ]
+    ],
 };
 
-export default function WordPressAISecurityPage() {
+export default function WordPressAiSecurityRiskPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-                {/* Ambient Glows */}
-
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    {/* Article Schema */}
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-                    />
-
-                    {/* Breadcrumb Navigation */}
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "WordPress AI Security Risk", href: "/blog/wordpress-ai-security-risk-2026" }
+                            { label: "WordPress AI security", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
+                    </Link>
+
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress security</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            WordPress AI Plugin Security <span className="italic text-cognac">Read the Advisory Precisely</span>
+                        </h1>
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            AI and MCP features can hand out powerful control over your site. How much risk you are
+                            carrying depends on which version you have installed, which of those features you actually
+                            turned on, who can log in and what they are allowed to do, and whether anyone has been
+                            caught using the hole.
+                        </p>
+                        <p className="mt-4 text-xs text-stone-500">
+                            Advisory and plugin-directory snapshot checked July 24, 2026. Security records can change after publication.
+                        </p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 23, 2026" readTime="17 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">What site owners should do now</h2>
+                        <BlogList
+                            items={[
+                                "Write down what you actually have: which version of AI Engine, which version of WordPress, which AI features are switched on, which MCP endpoints are reachable, who has an account, and which credentials are sitting somewhere they should not be.",
+                                "Update AI Engine to a supported patched version, and test it somewhere that looks like production before you touch the live site.",
+                                "Switch off the AI, MCP, remote URL, upload and REST capabilities your business does not use.",
+                                "Rotate your tokens and read the logs if the advisory says a secret could have leaked.",
+                                "Call it an incident if you find administrators you do not recognise, files that changed on their own, or actions nobody can account for.",
+                            ]}
+                        />
+                    </section>
+
+                    <InsightBox variant="warning" label="This is not a compromise count">
+                        The WordPress.org directory showed AI Engine version 3.6.2, last updated July 16, 2026, and
+                        100,000-plus active installations when checked. That installation figure is not the number of
+                        vulnerable, exposed or compromised sites.
+                    </InsightBox>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Bot, title: "Ability", body: "What an AI client or plugin tool is allowed to do." },
+                            { icon: KeyRound, title: "Identity", body: "How the caller authenticates and which role it receives." },
+                            { icon: ListChecks, title: "Boundary", body: "Endpoint, configuration and version conditions in the advisory." },
+                            { icon: ShieldCheck, title: "Response", body: "Patch, rotate, investigate and reduce unnecessary access." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader id="what-changed">What AI and MCP change in WordPress</BlogHeader>
+                    <BlogText>
+                        An AI chatbot that only returns generated text has a different risk profile from an agent that
+                        can edit posts, manage media, inspect orders or administer users. WordPress&apos;s official MCP
+                        Adapter documentation describes exposing registered abilities as MCP tools and supports local
+                        and remote connections. The guide also calls out authentication and security considerations.
+                        Each exposed ability should have explicit authorization, input validation, logging and a
+                        business need.
+                    </BlogText>
+
+                    <BlogHeader id="advisories">What the dated AI Engine advisories actually say</BlogHeader>
+                    <BlogText>
+                        The following entries are a July 24, 2026 snapshot of public Wordfence records. They are examples,
+                        not a complete replacement for a current vulnerability scan. Read the authoritative record
+                        before acting because affected versions, conditions and remediation can differ.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[1100px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Advisory</th><th className="p-4">Affected version</th><th className="p-4">Prerequisite in the record</th><th className="p-4">Published remediation</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr>
+                                    <td className="p-4 font-bold">CVE-2025-11749</td>
+                                    <td className="p-4">3.1.3 and earlier</td>
+                                    <td className="p-4">No-Auth URL enabled, which Wordfence reported was disabled by default</td>
+                                    <td className="p-4">Update to 3.1.4 or later and rotate an exposed bearer token</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-bold">CVE-2026-8719</td>
+                                    <td className="p-4">3.4.9</td>
+                                    <td className="p-4">Authenticated Subscriber or higher with a valid OAuth token</td>
+                                    <td className="p-4">Update to 3.5.0 or a newer patched version</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-bold">CVE-2026-27407</td>
+                                    <td className="p-4">3.4.9 and earlier</td>
+                                    <td className="p-4">Authenticated Editor or higher according to the database entry</td>
+                                    <td className="p-4">Use the current patched release named by the live advisory</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-bold">CVE-2026-23802</td>
+                                    <td className="p-4">3.3.2 and earlier</td>
+                                    <td className="p-4">Authenticated Editor or higher according to the database entry</td>
+                                    <td className="p-4">Use the current patched release named by the live advisory</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-bold">CVE-2026-0746</td>
+                                    <td className="p-4">3.3.2 and earlier</td>
+                                    <td className="p-4">Authenticated Subscriber or higher according to the database entry</td>
+                                    <td className="p-4">Use the current patched release named by the live advisory</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogHeader id="headline">Why the old 100,000-sites headline was misleading</BlogHeader>
+                    <BlogText>
+                        A vulnerability article may use the plugin&apos;s active-installation count to describe potential
+                        reach. For CVE-2025-11749, Wordfence said the critical path depended on the No-Auth URL setting
+                        being enabled and that the setting was disabled by default. Therefore, the directory count
+                        cannot be reported as the number exposed or hacked. Confirm version, configuration, reachability
+                        and evidence for each site.
+                    </BlogText>
+
+                    <BlogHeader id="cve-2025-11749">CVE-2025-11749 response</BlogHeader>
+                    <BlogText>
+                        Wordfence reported that affected versions could expose a bearer token in the REST API index when
+                        No-Auth URL was enabled. It reported version 3.1.4 as patched and said the patch prevented further
+                        exposure. If a token may already have been listed, updating alone does not make the old secret
+                        unknown. Rotate it, invalidate related sessions where supported and review access and change
+                        history for the exposure period.
+                    </BlogText>
+
+                    <BlogHeader id="cve-2026-8719">CVE-2026-8719 response</BlogHeader>
+                    <BlogText>
+                        The Wordfence record describes missing capability enforcement in AI Engine 3.4.9&apos;s MCP OAuth
+                        bearer-token authorization path. It says an authenticated Subscriber or higher with a valid
+                        OAuth token could invoke administrator-level MCP tools, and names 3.5.0 as the patched version.
+                        Sites on the affected release should move to a newer supported patched release and review OAuth
+                        clients, tokens, roles and privileged actions.
+                    </BlogText>
+
+                    <BlogHeader id="version">How to check version and configuration</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Record the plugin version from the WordPress plugin screen and deployment inventory.",
+                            "Compare it with the live vendor changelog and at least one maintained vulnerability database.",
+                            "Inventory AI Engine modules, MCP servers, REST routes, remote URL features and upload capabilities.",
+                            "List WordPress users, application passwords, OAuth clients, bearer tokens and API keys with their owners.",
+                            "Confirm whether the endpoint is public, authenticated, network-restricted or disabled.",
+                            "Capture evidence before changing a suspected compromised system, following the incident plan.",
+                        ]}
+                    />
+                    <BlogText>
+                        The same inventory is useful outside security work. Our notes on{" "}
+                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>{" "}
+                        and on{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnosing a slow WordPress site</Link>{" "}
+                        use the same starting list of installed software, versions and owners.
+                    </BlogText>
+
+                    <BlogHeader id="permissions">Treat agent permissions as privileged access</BlogHeader>
+                    <BlogText>
+                        Map each tool to the minimum WordPress capability and business task. Separate read from write,
+                        content management from user administration and development from production. Avoid shared
+                        administrator identities. Use short-lived or revocable credentials where the integration
+                        supports them, require human approval for high-impact actions and log the caller, tool,
+                        parameters, result and time without logging secrets.
+                    </BlogText>
+
+                    <BlogHeader id="secrets">Protect tokens and provider keys</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Do not place secrets in public URLs, source control, analytics, chat transcripts or support screenshots.",
+                            "Store secrets in an appropriate server-side secret mechanism and limit who can read them.",
+                            "Use separate credentials for development, staging and production.",
+                            "Set provider budgets and usage alerts where available.",
+                            "Rotate a credential after confirmed or plausible exposure, staff departure or environment transfer.",
+                            "Document revocation so the team can act without waiting for the original implementer.",
                         ]}
                     />
 
-                    {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
+                    <BlogHeader id="inputs">AI does not remove ordinary API security work</BlogHeader>
+                    <BlogText>
+                        Validate URLs, files, content types, sizes and destinations. Protect outbound fetches against
+                        server-side request forgery. Enforce authorization at the server for every action. Rate-limit
+                        expensive or abuse-prone operations, constrain file handling, encode output for its context and
+                        design safe failure behavior. Model instructions are not an authorization boundary.
+                    </BlogText>
 
-                    {/* Title & Meta */}
-                    <div className="mb-10">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            WordPress AI Security Risk 2026:{" "}
-                            <span className="font-serif italic text-cognac">100K+ Sites Exposed</span> Through Plugins
-                        </h1>
+                    <BlogHeader id="privacy">Content, privacy and model providers</BlogHeader>
+                    <BlogText>
+                        Document which prompts, documents, user messages, customer records and metadata leave the site,
+                        which provider receives them and how long each party retains them. Do not send regulated,
+                        confidential or personal data merely because a plugin makes the connection easy. Apply consent,
+                        minimization, access, deletion and vendor-review requirements appropriate to the business and
+                        jurisdictions.
+                    </BlogText>
 
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            WordPress 6.9 introduces powerful AI features through the Abilities API. Here&apos;s what you need to know to use them safely and protect your site.
+                    <BlogHeader id="monitor">Logging and detection</BlogHeader>
+                    <BlogList
+                        items={[
+                            "New or changed administrator accounts, roles and application passwords",
+                            "Plugin, theme, file and configuration changes",
+                            "MCP, REST, OAuth and AI-tool authentication and authorization events",
+                            "Unexpected outbound requests, file uploads, scheduled tasks and database changes",
+                            "Model-provider usage, cost, rate spikes and unfamiliar API clients",
+                            "Disabled logging, security tooling or backup jobs",
+                        ]}
+                    />
+                    <BlogText>
+                        Logging cannot prove safety by itself. Protect logs from tampering, synchronize time, define
+                        retention and test that alerts reach a person who can respond.
+                    </BlogText>
+
+                    <BlogHeader id="incident">If you suspect exploitation</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Follow the organization&apos;s incident plan and involve a qualified responder for material risk.",
+                            "Preserve relevant evidence before cleanup where legal and operational requirements permit.",
+                            "Contain exposed endpoints and credentials without destroying the information needed to investigate.",
+                            "Review users, sessions, tokens, files, plugins, themes, database changes and outbound activity.",
+                            "Restore only from a known-good source and close the initial access path before returning to service.",
+                            "Assess notification, contractual, insurer and regulatory duties with appropriate advisers.",
+                        ]}
+                    />
+                    <InsightBox variant="danger" label="Do not treat an update as a forensic conclusion">
+                        Updating closes a known software issue. It does not prove that an earlier vulnerable site was or
+                        was not exploited, and it may not revoke a credential that was already disclosed.
+                    </InsightBox>
+
+                    <BlogHeader id="architecture">Does this mean WordPress is unsafe?</BlogHeader>
+                    <BlogText>
+                        No single advisory proves that every WordPress site is unsafe or that custom software is
+                        automatically secure. Risk follows capabilities, exposure, maintenance, access control and
+                        operations. A custom application still uses frameworks, packages and service providers. Compare
+                        concrete requirements and the team&apos;s ability to maintain each option. We set the two
+                        architectures side by side in{" "}
+                        <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress compared with Next.js</Link>{" "}
+                        and examine the wider replacement question in{" "}
+                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">what actually replaces WordPress</Link>. Where
+                        repair is the better answer, our{" "}
+                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress work</Link>{" "}
+                        covers that path.
+                    </BlogText>
+
+                    <BlogHeader id="migrate">When migration belongs in the discussion</BlogHeader>
+                    <BlogText>
+                        Consider repair first when the required features fit WordPress and the team can patch, restrict
+                        and monitor them. Consider a migration when the plugin and operational model repeatedly conflicts
+                        with required security boundaries, data handling, performance or ownership. Migration introduces
+                        its own data, SEO, access and cutover risks, so it needs a signed scope and acceptance plan. It is
+                        not an automatic response to one patched CVE. If the conversation gets that far, our{" "}
+                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service</Link>{" "}
+                        describes the scope, the inputs behind a figure are in{" "}
+                        <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost</Link>, the
+                        technical sequence is in{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline">how to migrate WordPress to Next.js</Link>, and
+                        the search risk is addressed in{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">will migrating hurt my SEO</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="checklist">WordPress AI security review checklist</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Current asset, version, feature and endpoint inventory",
+                            "Live advisory review with applicability documented",
+                            "Least-privilege users, agents, abilities and provider credentials",
+                            "Secret storage, rotation and revocation procedures",
+                            "Input, URL, upload, output, rate and cost controls",
+                            "Data-flow, consent, retention and provider review",
+                            "Protected logs, alerts, backups and tested recovery",
+                            "Staging update process and production change approval",
+                            "Incident ownership and external notification contacts",
+                        ]}
+                    />
+                    <BlogText>
+                        Access and control belong in the same review, which we cover in{" "}
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>. If
+                        the checklist points toward engineering work, our{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>{" "}
+                        sets out the tiers and you can{" "}
+                        <Link href="/contact" className="text-cognac hover:underline">talk to us about a review</Link>.
+                    </BlogText>
+
+                    {postFAQs.length > 0 && (
+                        <>
+                            <BlogHeader id="faq">Frequently asked questions</BlogHeader>
+                            <FAQAccordion faqs={postFAQs} />
+                        </>
+                    )}
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <AlertTriangle className="mb-4 h-7 w-7 text-cognac" />
+                        <h2 className="mb-3 font-serif text-3xl">Need the architecture reviewed before a migration?</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We can inventory the current WordPress features, integrations and ownership boundaries, then
+                            scope repair or migration without claiming that a framework eliminates security risk.
                         </p>
-
-                        <BlogAuthor
-                            date="Feb 19, 2026"
-                            readTime="9 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page. No templates, no bloat, no plugins."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
-                    </div>
-
-                    {/* Feature Visual */}
-                    <div className="mb-12">
-                        <SecurityShieldAnimation />
-                    </div>
-
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "WordPress 6.9 turned every plugin into an AI endpoint: your 20-30 plugins are now 20-30 potential hacker entry points.",
-                            "The AI Engine plugin (100K+ sites) accidentally published admin credentials publicly. One checkbox = complete site takeover.",
-                            "Security researchers found 43% of WordPress AI plugins let attackers run commands remotely on your server.",
-                            "If your site processes payments or customer data, this risk is active now, not theoretical."
-                        ]} />
-                    </div>
-
-                    <p className="text-stone-700 leading-relaxed mb-6">WordPress is not safe in 2026 if you are running AI plugins. Over 100,000 sites were exposed through flaws in popular AI plugins that accidentally published admin credentials or allowed remote code execution. The risk is active now. If your site processes payments or stores customer data, this is an urgent issue, not a future concern.</p>
-
-                    {/* Real Buyer Voices — verified primary sources, April 2026 */}
-                    <div className="my-8 p-5 bg-stone-50 border border-stone-200 rounded-2xl">
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-500 mb-4">April 2026 Plugin Security Crisis — Primary Sources</p>
-                        <div className="space-y-4">
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;The backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it is going to be difficult to avoid. The other step is trying to rely less on plugins wherever possible.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/BNfreelance</strong> · r/woocommerce · Apr 7, 2026 · on Essential Plugin backdoor thread</span>
-                                    <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">&ldquo;It is alarming and according to the article this is the second time this has happened. The guy paid 6 figures for the plugins.&rdquo;</p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">u/shiftification</strong> · r/woocommerce · Apr 7, 2026 · 53-upvote thread</span>
-                                    <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stone-100 rounded-xl p-4">
-                                <p className="text-sm text-stone-700 italic leading-relaxed mb-2">From Patchstack analysis: 31 plugins compromised, ~400,000 active installs affected. Backdoor sat dormant for 8 months. Same week: Smart Slider 3 Pro (800K installs) hijacked through update server. WooPayments webhook vulnerability also patched. <strong>7,966 new WordPress vulnerabilities in 2024 — 96% in plugins.</strong></p>
-                                <div className="flex items-center justify-between text-xs text-stone-400">
-                                    <span><strong className="text-stone-600">Patchstack</strong> · State of WordPress Security 2025 · April 2026 supply chain report</span>
-                                    <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Source: Patchstack →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Opening */}
-                    <BlogText>
-                        WordPress just made every plugin a potential AI endpoint, and the security implications of that shift are not getting the attention the pricing and feature announcements are. If this is pushing you toward migration, see the full <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> first.
-                    </BlogText>
-
-                    <BlogText>
-                        As of WordPress 6.9, the new <BlogHighlight>Abilities API + MCP Adapter</BlogHighlight> lets AI agents like Claude, ChatGPT, and Cursor interact with your WordPress site directly. Create posts. Pull WooCommerce reports. Manage users. All through conversation, with no custom integration code required. That capability is genuinely useful. It is also a new, largely untested attack surface layered on top of a plugin ecosystem that already has a well-documented security track record problem, independent of AI.
-                    </BlogText>
-
-                    {/* The Promise vs Reality */}
-                    <BlogHeader id="wordpress-promise">What Did WordPress Originally Promise Business Owners, and Where Does That Promise Break Down?</BlogHeader>
-
-                    <BlogText>
-                        WordPress was built on one promise: <strong>anyone can build a website</strong>. No code. No complexity. Install a theme, add some plugins, you're live.
-                    </BlogText>
-
-                    <BlogText>
-                        Using AI features safely on WordPress today requires understanding several things that fall well outside that original promise: how to configure AI server connections properly, how to manage authentication tokens and passwords, which plugins are permitted to talk to which AI tools, how to prevent unauthorized access to the site, and how to set granular permission levels for each new capability a plugin exposes. Even <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">WordPress's own developer blog <ExternalLink className="w-3 h-3 inline" /></a> recommends starting small, beginning with read-only abilities, and being prepared to hit roadblocks, which is a tacit admission that this is not yet a plug-and-play feature.
-                    </BlogText>
-
-                    {/* The Real Vulnerability */}
-                    <BlogHeader id="ai-engine-vulnerability">What Was the AI Engine Vulnerability That Exposed 100K+ WordPress Sites to Complete Takeover?</BlogHeader>
-
-                    <BlogText>
-                        This risk is not theoretical. It has already happened at scale. The <BlogHighlight>AI Engine plugin</BlogHighlight> (100,000+ active installations) had a critical vulnerability where <strong>login credentials were accidentally exposed on a public page</strong>.
-                    </BlogText>
-
-                    <div className="my-8 p-6 border border-red-500/30 bg-red-500/5 rounded-2xl">
-                        <div className="flex items-start gap-4">
-                            <AlertTriangle className="w-6 h-6 text-red-500 shrink-0 mt-1" />
-                            <div>
-                                <h3 className="text-lg font-bold text-charcoal mb-2">The AI Engine Security Flaw: Complete Site Takeover</h3>
-                                <p className="text-stone-600 leading-relaxed mb-4">
-                                    When a specific setting was turned on, the plugin accidentally <strong>published your site's login keys on a publicly accessible page</strong>.
-                                </p>
-                                <p className="text-stone-600 leading-relaxed">
-                                    Hackers could grab these keys by simply visiting your site. With those keys, they could <strong>promote themselves to full administrator</strong>, giving them complete control over your website.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <BlogText>
-                        Source: <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">eSecurity Planet, WordPress Vulnerability Affects 100K+ Sites <ExternalLink className="w-3 h-3 inline" /></a>
-                    </BlogText>
-
-                    <BlogText>
-                        Over 100,000 WordPress sites were exposed. Hackers could upload malicious plugins, inject spam, redirect your visitors, steal customer data, or lock you out completely.
-                    </BlogText>
-
-                    <BlogText>
-                        The root cause? <strong>One checkbox wasn't properly configured</strong>. A single setting that should have been set to "hidden" was left as "public", exposing sensitive credentials to anyone who looked.
-                    </BlogText>
-
-                    {/* Beyond the single CVE: supply-chain incidents */}
-                    <BlogHeader id="beyond-ai-engine">Is the AI Engine Flaw an Isolated Incident, or Part of a Bigger WordPress Plugin Security Problem?</BlogHeader>
-
-                    <BlogText>
-                        The AI Engine credential leak is the clearest example because it is specific, sourced, and tied directly to an AI feature. But it sits inside a much larger pattern of WordPress plugin supply-chain compromises that has nothing to do with AI and everything to do with how the plugin ecosystem is run. According to <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">Patchstack&apos;s supply-chain analysis <ExternalLink className="w-3 h-3 inline" /></a>, an attacker purchased the Essential Plugin suite, a set of roughly 31 plugins with a combined 400,000 active installs, and planted a backdoor in version 2.6.7 that sat dormant for eight months before activating. Buyers of legitimate, previously-trustworthy plugins inherited a compromised codebase with no way to know it from the plugin listing.
-                    </BlogText>
-
-                    <BlogText>
-                        That was not an isolated case. The same reporting period covered Smart Slider 3 Pro, a plugin with roughly 800,000 installs, which was hijacked through a compromised update server rather than a code contribution, meaning sites that auto-updated pulled a malicious version directly from what looked like the plugin&apos;s own infrastructure. A separate webhook vulnerability was also patched in WooPayments around the same window. None of these three incidents required an AI feature to be dangerous. They point to a structural problem: WordPress plugin distribution has few controls over what happens to a plugin&apos;s codebase or update pipeline after a change of ownership or a compromised server credential.
-                    </BlogText>
-
-                    <BlogText>
-                        The scale of the underlying problem is documented independently of any single incident. Patchstack&apos;s 2025 State of WordPress Security report counted <strong>7,966 new WordPress vulnerabilities disclosed in 2024</strong>, of which 96% were in plugins rather than WordPress core, and 43% required no authentication at all to exploit. WordPress.org removed 1,614 plugins from its directory that year for unpatched security issues. Layering AI endpoints on top of that baseline does not create the underlying risk. It expands the blast radius of a problem that already existed.
-                    </BlogText>
-
-                    {/* Every Plugin Is Now a Target */}
-                    <BlogHeader id="every-plugin-target">Why Is Every WordPress Plugin Now a Potential AI Security Entry Point?</BlogHeader>
-
-                    <BlogText>
-                        Every plugin that registers an ability becomes a potential entry point.
-                    </BlogText>
-
-                    <BlogText>
-                        The average WordPress site runs <BlogHighlight>20-30 plugins</BlogHighlight>. That's 20-30 potential AI endpoints. Each one needs:
-                    </BlogText>
-
-                    <BlogList items={[
-                        "Secure login systems that don't leak passwords",
-                        "Permission settings that limit what each plugin can do",
-                        "Proper configuration so sensitive pages aren't publicly visible",
-                        "Automatic expiration of old login credentials",
-                        "Activity logs that show what AI actions happened on your site"
-                    ]} />
-
-                    <BlogText>
-                        If <em>one</em> plugin gets its security settings wrong, hackers can take over your entire site.
-                    </BlogText>
-
-                    {/* The Security Research */}
-                    <BlogHeader id="security-research">What Are Security Researchers Discovering About WordPress AI Plugin Vulnerabilities?</BlogHeader>
-
-                    <BlogText>
-                        Security researchers tested WordPress AI plugins and found alarming results:
-                    </BlogText>
-
-                    <div className="my-8 grid sm:grid-cols-3 gap-4">
-                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
-                            <div className="text-4xl font-bold text-red-500 mb-2">43%</div>
-                            <div className="text-sm text-stone-600">Let hackers run commands on your server</div>
-                        </div>
-                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
-                            <div className="text-4xl font-bold text-orange-500 mb-2">33%</div>
-                            <div className="text-sm text-stone-600">Can access any website without restrictions</div>
-                        </div>
-                        <div className="p-6 border border-stone-200 bg-stone-50 rounded-2xl text-center">
-                            <div className="text-4xl font-bold text-yellow-500 mb-2">22%</div>
-                            <div className="text-sm text-stone-600">Expose private files they shouldn't have access to</div>
-                        </div>
-                    </div>
-
-                    <BlogText>
-                        Source: <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline inline-flex items-center gap-1">Michele Bedin, WordPress AI Security Guide for SMBs <ExternalLink className="w-3 h-3 inline" /></a>
-                    </BlogText>
-
-                    <BlogText>
-                        These aren't rare problems. This is what happens when you <strong>add AI features to a platform that wasn't designed for them</strong>.
-                    </BlogText>
-
-                    <BlogText>
-                        The broader WordPress security picture makes this worse. The average WordPress site experiences 172 attack attempts per day in 2026, and 94% of hacked websites were running WordPress that lacked proper maintenance. WordPress vulnerabilities jumped 34% year over year, with 7,966 new security flaws discovered in 2024 alone, roughly 22 per day. The Patchstack 2026 State of WordPress Security whitepaper documented these escalating threats. Adding AI endpoints on top of an already targeted platform compounds the risk significantly.
-                    </BlogText>
-
-                    {/* WordPress vs Custom Built */}
-                    <BlogHeader id="wordpress-vs-custom">How Wide Is the Security Gap Between WordPress AI Features and Custom-Built Sites?</BlogHeader>
-
-                    <BlogText>
-                        WordPress still powers roughly 40% of the web and that is not changing in the near term. But adding AI endpoints has widened a real gap between how WordPress handles AI security and how a custom-built site handles it:
-                    </BlogText>
-
-                    <div className="my-8 grid md:grid-cols-2 gap-6">
-                        <div className="p-6 border border-red-500/30 bg-red-500/5 rounded-2xl">
-                            <div className="flex items-center gap-3 mb-4">
-                                <AlertTriangle className="w-6 h-6 text-red-500" />
-                                <h3 className="text-lg font-bold">WordPress + AI</h3>
-                            </div>
-                            <ul className="space-y-2 text-stone-600 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 mt-1">×</span>
-                                    <span>20-30+ plugins = 20-30+ AI entry points</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 mt-1">×</span>
-                                    <span>Each plugin manages its own security</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 mt-1">×</span>
-                                    <span>One misconfigured endpoint compromises everything</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-500 mt-1">×</span>
-                                    <span>Requires technical knowledge most business owners don't have</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="p-6 border border-green-500/30 bg-green-500/5 rounded-2xl">
-                            <div className="flex items-center gap-3 mb-4">
-                                <CheckCircle2 className="w-6 h-6 text-green-500" />
-                                <h3 className="text-lg font-bold">Custom-Built Sites</h3>
-                            </div>
-                            <ul className="space-y-2 text-stone-600 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-green-500 mt-1">✓</span>
-                                    <span>Every AI integration point is explicitly defined</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-green-500 mt-1">✓</span>
-                                    <span>Zero third-party plugin dependencies</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-green-500 mt-1">✓</span>
-                                    <span>Intentional security controls at every endpoint</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-green-500 mt-1">✓</span>
-                                    <span>You control the entire authentication flow</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <BlogText>
-                        For a blogger or a small hobby site, WordPress plus AI plugins is probably a reasonable risk to accept. The calculation changes if your site <strong>processes payments, stores customer data, and drives real revenue</strong>. At that point the question worth asking directly is whether a platform built around plugin simplicity is also the right platform to manage AI-level security controls.
-                    </BlogText>
-
-                    {/* Who Should Worry */}
-                    <BlogHeader id="who-should-worry">Who Should Worry About WordPress AI Security?</BlogHeader>
-
-                    <BlogText>
-                        You should care about WordPress AI security risks if your site:
-                    </BlogText>
-
-                    <BlogList items={[
-                        "Processes payments: WooCommerce, Easy Digital Downloads, Stripe integrations",
-                        "Stores customer data: Email lists, user accounts, PII, GDPR-protected information",
-                        "Handles sensitive business data: CRM integrations, analytics, sales reports",
-                        "Relies on uptime for revenue: E-commerce, SaaS, membership sites",
-                        "Manages user-generated content: Forums, reviews, community platforms"
-                    ]} />
-
-                    <BlogText>
-                        For these sites, <a href="/blog/wordpress-killer" className="text-cognac hover:underline">WordPress's plugin architecture</a> already introduces <a href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">performance and security risks</a>. Adding AI endpoints to every plugin multiplies the attack surface.
-                    </BlogText>
-
-                    {/* The Technical Reality */}
-                    <BlogHeader id="technical-reality">What Does It Actually Take to Use WordPress AI Features Safely?</BlogHeader>
-
-                    <BlogText>
-                        WordPress's original promise was that anyone could build a website without technical expertise. Using its AI features safely requires exactly the kind of expertise that promise was meant to make unnecessary:
-                    </BlogText>
-
-                    <div className="my-8 space-y-4">
-                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
-                            <div className="flex items-start gap-3">
-                                <Code2 className="w-5 h-5 text-charcoal mt-1 shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-charcoal mb-1">AI Server Setup</h4>
-                                    <p className="text-sm text-stone-600">How to properly connect AI tools to your website without creating security holes</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
-                            <div className="flex items-start gap-3">
-                                <Lock className="w-5 h-5 text-charcoal mt-1 shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-charcoal mb-1">Login & Password Security</h4>
-                                    <p className="text-sm text-stone-600">Managing login credentials, automatic expiration, and preventing credential leaks</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-4 border border-stone-300 bg-stone-50 rounded-xl">
-                            <div className="flex items-start gap-3">
-                                <Shield className="w-5 h-5 text-cognac mt-1 shrink-0" />
-                                <div>
-                                    <h4 className="font-bold text-charcoal mb-1">Access Control</h4>
-                                    <p className="text-sm text-stone-600">Making sure only authorized AI tools can access specific parts of your site</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* The Verdict */}
-                    <BlogHeader id="verdict">What Is the Verdict: Should Business Owners Trust WordPress to Handle AI Security?</BlogHeader>
-
-                    <BlogText>
-                        WordPress democratized web publishing and gave millions of people the ability to build websites without writing code. That achievement is real, and none of the security issues above erase it. But "AI-ready" comes with responsibilities that sit in direct tension with WordPress's core promise of simplicity, and <strong>business owners should know what "AI-ready" actually requires under the hood before they flip the switch</strong>, not after a plugin's security settings get exposed.
-                    </BlogText>
-
-                    <BlogText>
-                        The AI Engine vulnerability proved that even trusted plugins used by 100,000+ websites can get security settings wrong and hand hackers the keys to your entire site.
-                    </BlogText>
-
-                    <BlogText>
-                        If your business depends on security, uptime, and customer trust, ask yourself: is <a href="/services/wordpress-migration?ref=blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">a platform built on third-party plugins</a> really the best foundation for AI features? The core architectural comparison is laid out in our <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js guide</Link>.
-                    </BlogText>
-
-                    {/* Sources Section */}
-                    <div className="my-8 md:my-12 p-8 border border-stone-200 bg-stone-50 rounded-2xl">
-                        <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                            <ExternalLink className="w-6 h-6 text-charcoal" />
-                            Sources & Further Reading
-                        </h3>
-                        <ul className="space-y-3 text-stone-600">
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    WordPress 6.9 Abilities API + MCP Adapter, Official Developer Documentation
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://esecurityplanet.com/threats/news-wordpress-vulnerability-100k-impact/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    AI Engine Vulnerability (CVE-2025-11749) Affects 100K+ Sites, eSecurity Planet
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://michelebedin.com/en/wordpress-security-ai-guide-sme-mcp-vulnerabilities/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    WordPress AI Security Guide for SMBs, Michele Bedin
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    Critical Supply-Chain Compromise on WordPress Plugins, Patchstack
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://make.wordpress.org/ai/2025/07/17/ai-building-blocks/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    WordPress AI Building Blocks Roadmap, WordPress.org
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    WordPress Plugin Vulnerability Database, Wordfence Threat Intelligence
-                                </a>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-charcoal mt-1">→</span>
-                                <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer" className="hover:text-cognac transition-colors">
-                                    OWASP Top 10 Security Risks, Open Web Application Security Project
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="my-8 md:my-12 p-8 bg-stone-50 border border-stone-200 rounded-2xl">
-                        <h3 className="text-2xl font-bold mb-4">Want a Website Built for Security?</h3>
-                        <p className="text-stone-600 mb-6 leading-relaxed">
-                            Custom coded sites give you explicit control over every AI integration point. Zero plugin dependencies. Zero third-party vulnerabilities. Just clean, secure code you own outright.
-                        </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-xl hover:bg-stone-800 transition-all">
-                                Book a Free Security Consultation
-                            <ArrowRight className="w-5 h-5" />
-                            </CalModalButton>
-                    </div>
-
-                    <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>WordPress 6.9 turned every plugin into an AI entry point</strong>: Your 20-30 plugins are now 20-30 potential doorways for hackers, each needing its own secure authentication and permission settings.</li>
-                            <li><strong>One misconfigured checkbox exposed 100K+ sites</strong>: The AI Engine plugin accidentally published admin login credentials on a public page, giving attackers full site takeover.</li>
-                            <li><strong>The problem is bigger than one plugin</strong>: A supply-chain attack on the Essential Plugin suite (400,000 installs) and a hijacked update server on Smart Slider 3 Pro (800,000 installs) show the same risk exists across the plugin ecosystem, with or without AI features involved.</li>
-                            <li><strong>43% of WordPress AI plugins have critical security flaws</strong>: Security researchers found that nearly half let attackers run commands remotely on your server.</li>
-                            <li><strong>Using WordPress AI safely now requires technical expertise</strong>: Configuring JWT tokens, OAuth authentication, and per-plugin permissions contradicts WordPress&apos;s original promise of simplicity.</li>
-                            <li><strong>Custom-built sites give you explicit security control</strong>: Every AI integration point is intentionally defined with zero third-party plugin dependencies.</li>
-                        </ol>
+                        <QuoteModalButton cta="wordpress_ai_security_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
                     </section>
 
+                    <BlogText>
+                        For how we weigh security reporting of this kind before acting on it, see{" "}
+                        <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline font-medium">what the April 2026 WordPress record actually supports</Link>,
+                        which separates vendor advisories from research and from public discussion.
+                    </BlogText>
+
+                    <RelatedPosts currentPostId={postId} />
                 </article>
-
-                {/* FAQ Section */}
-                {aiSecurityFAQs.length > 0 && (
-                    <div className="max-w-3xl mx-auto px-6">
-                        <FAQAccordion faqs={aiSecurityFAQs} />
-                    </div>
-                )}
-
-                {/* Related Posts */}
-                <RelatedPosts currentPostId="wordpress-ai-security-risk-2026" />
-
             </main>
             <Footer />
         </>

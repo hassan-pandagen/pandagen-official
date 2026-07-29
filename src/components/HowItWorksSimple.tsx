@@ -2,6 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import { ArrowRight } from "lucide-react";
+import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 /* ── Step-specific mini diagrams ── */
 
@@ -14,24 +15,22 @@ function DiscoveryDiagram() {
           <div className="w-2 h-2 rounded-full bg-yellow-400" />
           <div className="w-2 h-2 rounded-full bg-green-400" />
         </div>
-        <div className="text-[11px] text-stone-500 font-mono">yoursite.com · audit running</div>
+        <div className="text-[11px] text-stone-600 font-mono">migration inventory</div>
       </div>
       {[
-        { label: "Performance", score: 42, w: "42%", color: "bg-red-400" },
-        { label: "SEO",         score: 38, w: "38%", color: "bg-orange-400" },
-        { label: "Speed",       score: 51, w: "51%", color: "bg-yellow-400" },
-        { label: "Accessibility", score: 61, w: "61%", color: "bg-yellow-300" },
+        { label: "URLs", status: "Mapped" },
+        { label: "Content", status: "Inventoried" },
+        { label: "Analytics", status: "Baselined" },
+        { label: "Integrations", status: "Reviewed" },
       ].map((m) => (
         <div key={m.label} className="flex items-center gap-3">
-          <div className="text-xs text-stone-500 w-20 shrink-0">{m.label}</div>
-          <div className="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden">
-            <div className={`h-full ${m.color} rounded-full`} style={{ width: m.w }} />
-          </div>
-          <div className="text-xs font-bold text-stone-600 w-5 text-right">{m.score}</div>
+          <div className="text-xs text-stone-600 w-20 shrink-0">{m.label}</div>
+          <div className="h-px flex-1 bg-stone-200" />
+          <div className="text-xs font-bold text-stone-600">{m.status}</div>
         </div>
       ))}
-      <div className="text-xs text-red-500 font-semibold pt-1 flex items-center gap-1.5">
-        <span>⚠</span> 12 critical issues found
+      <div className="text-xs text-stone-600 font-semibold pt-1">
+        Risks and unknowns become written scope inputs
       </div>
     </div>
   );
@@ -39,32 +38,29 @@ function DiscoveryDiagram() {
 
 function ArchitectureDiagram() {
   const apps = [
-    { name: "Page Builder", cost: "$49/mo" },
-    { name: "SEO Plugin", cost: "$29/mo" },
-    { name: "Reviews App", cost: "$39/mo" },
-    { name: "Speed Booster", cost: "$19/mo" },
+    { name: "CMS", decision: "Keep or migrate" },
+    { name: "Forms", decision: "Rebuild or connect" },
+    { name: "Analytics", decision: "Preserve" },
+    { name: "Integrations", decision: "Test" },
   ];
   return (
     <div className="rounded-xl border border-stone-200 bg-stone-50 p-4 space-y-2.5">
-      <div className="text-[11px] font-bold uppercase tracking-wider text-stone-500 pb-1">
-        Apps we kill, rebuilt as custom code
+      <div className="text-[11px] font-bold uppercase tracking-wider text-stone-600 pb-1">
+        Current-stack decisions
       </div>
       {apps.map((a) => (
         <div key={a.name} className="flex items-center justify-between">
-          <span className="text-xs text-stone-400 line-through decoration-red-300 flex items-center gap-1.5">
-            <span className="text-red-400">✕</span> {a.name}
+          <span className="text-xs text-stone-600 flex items-center gap-1.5">
+            <span className="text-cognac">•</span> {a.name}
           </span>
-          <span className="text-xs font-mono text-stone-400 line-through decoration-red-300">{a.cost}</span>
+          <span className="text-xs font-mono text-stone-600">{a.decision}</span>
         </div>
       ))}
       <div className="flex items-center justify-between border-t border-stone-200 pt-2.5">
         <span className="text-xs font-bold text-charcoal flex items-center gap-1.5">
-          <span className="text-emerald-500">→</span> Custom code, yours
+          <span className="text-cognac">→</span> Target architecture documented
         </span>
-        <span className="text-xs font-mono font-bold text-emerald-600">$0/mo</span>
-      </div>
-      <div className="text-center pt-1">
-        <span className="text-sm font-bold text-cognac">$136/mo back in your pocket</span>
+        <span className="text-xs font-mono font-bold text-stone-600">Reviewed</span>
       </div>
     </div>
   );
@@ -74,27 +70,27 @@ function BuildDiagram() {
   return (
     <div className="rounded-xl border border-stone-200 bg-stone-50 p-4 space-y-3">
       <div className="flex items-center justify-between">
-        <span className="text-xs font-bold text-stone-500 uppercase tracking-wider">Sprint Progress</span>
+        <span className="text-xs font-bold text-stone-600 uppercase tracking-wider">Build checkpoints</span>
         <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-stone-100 border border-stone-200">
           <div className="w-1.5 h-1.5 rounded-full bg-cognac animate-pulse" />
-          <span className="text-[10px] font-bold text-stone-600">AI Assisted</span>
+          <span className="text-[10px] font-bold text-stone-600">Reviewable</span>
         </div>
       </div>
       {[
-        { label: "Week 1", w: "100%", done: true,  note: "Discovery + Setup" },
-        { label: "Week 2", w: "100%", done: true,  note: "Core build" },
-        { label: "Week 3", w: "65%",  done: false, note: "In progress..." },
+        { label: "Foundation", w: "100%", done: true, note: "Environment + structure" },
+        { label: "Migration", w: "100%", done: true, note: "Content + features" },
+        { label: "QA", w: "65%", done: false, note: "Review + fixes" },
       ].map((s) => (
         <div key={s.label} className="space-y-1">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-stone-600">{s.label}</span>
-            <span className="text-[10px] text-stone-500">{s.note}</span>
+            <span className="text-[10px] text-stone-600">{s.note}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden">
-              <div className={`h-full rounded-full ${s.done ? "bg-emerald-400" : "bg-cognac/70"}`} style={{ width: s.w }} />
+              <div className={`h-full rounded-full ${s.done ? "bg-emerald-700" : "bg-cognac"}`} style={{ width: s.w }} />
             </div>
-            <span className={`text-xs font-bold ${s.done ? "text-emerald-500" : "text-stone-300"}`}>✓</span>
+            <span className={`text-xs font-bold ${s.done ? "text-emerald-700" : "text-stone-600"}`}>✓</span>
           </div>
         </div>
       ))}
@@ -106,20 +102,20 @@ function LaunchDiagram() {
   return (
     <div className="rounded-xl border border-stone-200 bg-stone-50 p-4 space-y-3">
       <div className="grid grid-cols-2 gap-3 text-center">
-        <div className="rounded-xl bg-red-50 border border-red-200 p-3">
-          <div className="text-xs text-red-400 font-semibold mb-1">Before</div>
-          <div className="text-3xl font-black text-red-400 leading-none">3.2s</div>
-          <div className="text-[10px] text-red-300 mt-1">Avg Load Time</div>
+        <div className="rounded-xl bg-white border border-stone-200 p-3">
+          <div className="text-xs text-stone-600 font-semibold mb-1">Redirects</div>
+          <div className="text-lg font-black text-charcoal leading-none">Checked</div>
+          <div className="text-[10px] text-stone-600 mt-1">Old URL → target</div>
         </div>
-        <div className="rounded-xl bg-emerald-50 border border-emerald-300 p-3">
-          <div className="text-xs text-emerald-500 font-semibold mb-1">After</div>
-          <div className="text-3xl font-black text-emerald-500 leading-none">0.8s</div>
-          <div className="text-[10px] text-emerald-400 mt-1">Avg Load Time</div>
+        <div className="rounded-xl bg-white border border-stone-200 p-3">
+          <div className="text-xs text-stone-600 font-semibold mb-1">Lead forms</div>
+          <div className="text-lg font-black text-charcoal leading-none">Tested</div>
+          <div className="text-[10px] text-stone-600 mt-1">Validation → delivery</div>
         </div>
       </div>
       <div className="flex items-center justify-between rounded-lg bg-white border border-stone-200 px-3 py-2">
-        <span className="text-xs text-stone-500 font-medium">Google PageSpeed Score</span>
-        <span className="text-base font-black text-cognac">98 / 100</span>
+        <span className="text-xs text-stone-600 font-medium">Analytics and rollback plan</span>
+        <span className="text-sm font-black text-cognac">Launch checklist</span>
       </div>
     </div>
   );
@@ -130,25 +126,25 @@ const steps = [
   {
     number: "01",
     title: "Discovery",
-    description: "We audit your existing site for performance gaps, SEO issues, and revenue leaks, then map the fastest route to load times under one second.",
+    description: "We inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.",
     Diagram: DiscoveryDiagram,
   },
   {
     number: "02",
     title: "Architecture",
-    description: "We map exactly which paid apps and plugins are draining you each month, then rebuild only what you actually need into custom code you own. The monthly bill drops to zero.",
+    description: "We document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.",
     Diagram: ArchitectureDiagram,
   },
   {
     number: "03",
     title: "Build",
-    description: "AI powered sprints with senior engineers. Production quality code shipped in weekly cycles with full transparency.",
+    description: "The new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.",
     Diagram: BuildDiagram,
   },
   {
     number: "04",
     title: "Launch",
-    description: "Deployed to a global network (your site loads fast from anywhere in the world), full source code handover, zero monthly fees. You own everything.",
+    description: "Before cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.",
     Diagram: LaunchDiagram,
   },
 ];
@@ -170,7 +166,7 @@ export default function HowItWorksSimple() {
             <span className="font-serif italic text-cognac">Launch.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            Four steps. No complexity. No confusion. Just results.
+            Four reviewable stages, with the important decisions recorded before launch.
           </p>
         </motion.div>
 
@@ -219,10 +215,10 @@ export default function HowItWorksSimple() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_with_step_1",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-10 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2">
-                Start with Step 1 <ArrowRight className="w-5 h-5" />
+          <button onClick={() => { if (typeof window !== "undefined") { trackGAEvent("cta_click", { cta: "start_discovery", location: "process" }); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-10 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 hover:scale-[1.02] transition-all duration-300 inline-flex items-center gap-2">
+                Start with Discovery <ArrowRight className="w-5 h-5" />
           </button>
-          <p className="text-sm text-stone-500 mt-3">Response within 2 hours. No credit card required.</p>
+          <p className="text-sm text-stone-600 mt-3">Tell us your current platform, primary risk, and target timeline.</p>
         </motion.div>
 
       </div>

@@ -1,479 +1,366 @@
 "use client";
 
-import { motion } from "@/components/ui/motion";
-import { Mail, MapPin, Phone, Send, CheckCircle2, Code2, Search, FileText, Rocket, ChevronDown } from "lucide-react";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import { CheckCircle2, Globe, Mail, MapPin, Send } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+
+const platforms = [
+  "WordPress",
+  "Webflow",
+  "GoHighLevel",
+  "Wix",
+  "Squarespace",
+  "Shopify",
+  "WooCommerce",
+  "Custom / Other",
+  "No current website",
+];
+
+const goals = [
+  "SEO-safe migration",
+  "Performance / Core Web Vitals",
+  "Reduce platform costs",
+  "Rebuild or redesign",
+  "Headless ecommerce",
+  "Custom app or integration",
+  "Other",
+];
+
+const trafficBands = ["Under 1,000", "1,000–10,000", "10,000–50,000", "50,000+", "Unknown"];
+const timelines = ["Within 30 days", "1–3 months", "3–6 months", "Researching"];
+const budgets = ["Under $3,500", "$3,500–$7,500", "$7,500–$15,000", "$15,000+", "Not sure"];
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://www.pandacodegen.com/contact#webpage",
+      url: "https://www.pandacodegen.com/contact",
+      name: "Request a Website Migration Plan",
+      description: "Share a website, platform, goal, traffic band, timeline, and budget so PandaCodeGen can assess fit and migration risks.",
+      inLanguage: "en-US",
+      mainEntity: { "@id": "https://www.pandacodegen.com/#organization" },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.pandacodegen.com/#organization",
+      name: "PandaCodeGen",
+      url: "https://www.pandacodegen.com/",
+      email: "info@pandacodegen.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "701 Tillery St Ste 12",
+        addressLocality: "Austin",
+        addressRegion: "TX",
+        postalCode: "78702",
+        addressCountry: "US",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com/" },
+        { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.pandacodegen.com/contact" },
+      ],
+    },
+  ],
+};
+
+async function responseMessage(response: Response): Promise<string> {
+  try {
+    const body = await response.json() as { error?: unknown };
+    if (typeof body.error === "string" && body.error.trim()) return body.error;
+  } catch {
+    // A generic message is used for non-JSON proxy errors.
+  }
+  return "We could not send your request. Please email info@pandacodegen.com.";
+}
 
 export default function ContactPageClient() {
-   const [formData, setFormData] = useState({
-     name: "",
-     email: "",
-     phone: "",
-     message: ""
-   });
-   const [isSubmitting, setIsSubmitting] = useState(false);
-   const [isSuccess, setIsSuccess] = useState(false);
-   const [submitError, setSubmitError] = useState<string | null>(null);
-   const [errors, setErrors] = useState<{name?: string; email?: string; message?: string}>({});
-   const [formLoadedAt] = useState<number>(Date.now());
-   const [honeypot, setHoneypot] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
+  const formFunnel = useLeadFormFunnel({ formId: "contact_page", active: !isSuccess });
 
-  const contactSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ContactPage",
-        "@id": "https://www.pandacodegen.com/contact#webpage",
-        "url": "https://www.pandacodegen.com/contact",
-        "name": "Contact PandaCodeGen - Let's Talk Engineering",
-        "description": "Get in touch with PandaCodeGen for custom web development, WordPress migration, or Shopify optimization. Free discovery call. Response within 2 hours.",
-        "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-        "about": { "@id": "https://www.pandacodegen.com/#organization" },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.pandacodegen.com/#organization",
-        "name": "PandaCodeGen",
-        "alternateName": "Panda Code Gen",
-        "url": "https://www.pandacodegen.com",
-        "image": "https://www.pandacodegen.com/og-image.jpg",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.pandacodegen.com/logo.png",
-          "width": 655,
-          "height": 113
-        },
-        "email": "info@pandacodegen.com",
-        "telephone": "+13027738982",
-        "foundingDate": "2026",
-        "areaServed": "Worldwide",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "701 Tillery St Ste 12",
-          "addressLocality": "Austin",
-          "addressRegion": "TX",
-          "postalCode": "78702",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.2603295,
-          "longitude": -97.7042901
-        },
-        "sameAs": [
-          "https://twitter.com/pandacodegen",
-          "https://www.linkedin.com/company/pandacodegen",
-          "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-          "https://github.com/hassan-pandagen",
-          "https://clutch.co/profile/panda-code-gen",
-          "https://www.trustpilot.com/review/pandacodegen.com"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Sales",
-          "email": "info@pandacodegen.com",
-          "telephone": "+13027738982",
-          "availableLanguage": "English"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.pandacodegen.com/contact" }
-        ]
-      }
-    ]
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formFunnel.markSubmitAttempt();
+    setSubmitError(null);
+
+    if (formData.get("website_url_confirm")) {
+      formFunnel.markIgnored();
+      setIsSuccess(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
+      if (!response.ok) throw new Error(await responseMessage(response));
+      formFunnel.markSubmitted();
+      form.reset();
+      setFieldErrors({});
+      setIsSuccess(true);
+    } catch (error) {
+      formFunnel.markSubmitError("network_or_server");
+      setSubmitError(error instanceof Error ? error.message : "We could not send your request.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInvalidCapture = (event: React.FormEvent<HTMLFormElement>) => {
+    formFunnel.onInvalidCapture(event);
+    const control = event.target;
+    if (!(control instanceof HTMLInputElement)) return;
+    if (control.name === "name") {
+      setFieldErrors((current) => ({ ...current, name: "Enter your name." }));
+    }
+    if (control.name === "email") {
+      setFieldErrors((current) => ({
+        ...current,
+        email: control.validity.valueMissing ? "Enter your email address." : "Enter a valid email address.",
+      }));
+    }
   };
 
   return (
-    <main className="bg-paper min-h-screen overflow-x-hidden relative">
-      {/* Schema.org JSON-LD */}
+    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
-
-      {/* Global Noise Texture */}
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
       <Header />
 
-      <section className="relative pt-20 md:pt-40 pb-10 md:pb-20 px-6 bg-paper overflow-hidden">
-        {/* Decorative orb */}
-        <div className="absolute top-20 right-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[120px] rounded-full pointer-events-none" />
+      <section className="relative px-5 pb-20 pt-28 md:px-8 md:pb-28 md:pt-40">
+        <div className="pointer-events-none absolute right-1/4 top-20 h-96 w-96 rounded-full bg-stone-200/50 blur-[110px]" />
+        <div className="container relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-cognac">Migration fit request</p>
+            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+              Plan the move <span className="font-serif italic text-cognac">before you build.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-700">
+              Tell us what runs today, what must be preserved, and what is driving the change. We will use the information to assess fit and propose a sensible next step.
+            </p>
 
-        <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-start relative z-10">
+            <a
+              href="#contact-quote-form"
+              className="mt-7 inline-flex min-h-11 items-center rounded-full border border-stone-300 bg-white px-5 py-3 text-sm font-bold transition-colors hover:border-cognac hover:text-cognac lg:hidden"
+            >
+              Go to the request form
+            </a>
 
-           {/* LEFT: INFO & TRUST */}
-           <div className="space-y-12">
-              <div>
-                 <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6">
-                    Let&apos;s Talk <br />
-                    <span className="font-serif italic text-cognac">
-                       Engineering.
-                    </span>
-                 </h1>
-                 <p className="text-xl text-stone-600 leading-relaxed">
-                    Ready to get started? Fill out the form and our team will review your stack personally within 2 hours.
-                 </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                 {/* Email */}
-                 <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
-                 >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
-                       <Mail className="w-5 h-5 text-charcoal" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                       <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">Email</div>
-                       <a href="mailto:info@pandacodegen.com" className="text-sm font-medium text-charcoal hover:text-stone-600 transition-colors break-all">info@pandacodegen.com</a>
-                    </div>
-                 </motion.div>
-
-                 {/* Phone */}
-                 <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
-                 >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
-                       <Phone className="w-5 h-5 text-charcoal" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                       <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">Call</div>
-                       <a href="tel:+13027738982" className="text-sm font-medium text-charcoal hover:text-stone-600 transition-colors">+1 (302) 773-8982</a>
-                    </div>
-                 </motion.div>
-
-                 {/* HQ */}
-                 <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 p-4 bg-white border border-stone-300 rounded-xl hover:bg-stone-50 transition-all"
-                 >
-                    <div className="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center border border-stone-200 shrink-0">
-                       <MapPin className="w-5 h-5 text-charcoal" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                       <div className="text-xs text-stone-500 uppercase tracking-wider font-bold mb-1">HQ</div>
-                       <div className="text-sm font-medium text-charcoal">701 Tillery St Ste 12, </div>
-                       <div className="text-xs text-stone-500">Austin, TX 78702</div>
-                       <div className="text-xs text-stone-500 mt-0.5">Clients in UK · AU · CA · EU</div>
-                    </div>
-                 </motion.div>
-
-              </div>
-
-              {/* International notice */}
-              <motion.div
-                 initial={{ opacity: 0, y: 10 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 className="p-4 bg-stone-50 border border-stone-200 rounded-xl flex items-start gap-3"
-              >
-                 <div className="text-lg leading-none mt-0.5">🌍</div>
-                 <div>
-                    <div className="text-sm font-bold text-charcoal mb-1">We work with clients worldwide</div>
-                    <div className="text-xs text-stone-500 leading-relaxed">
-                       All projects are managed async with weekly video demos. No timezone issues. Currently serving businesses in the <span className="text-charcoal font-medium">United Kingdom, Australia, Canada, Europe</span>, and the United States. US-registered LLC. Contracts in English under US law.
-                    </div>
-                 </div>
-              </motion.div>
-
-              <motion.div
-                 initial={{ opacity: 0, y: 20 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 className="space-y-3"
-              >
-                 {/* Why work with us - 2x2 Grid */}
-                 <div className="p-5 bg-white border border-stone-300 rounded-xl">
-                    <h3 className="text-charcoal font-bold mb-4 flex items-center gap-2 text-base">
-                       <CheckCircle2 className="text-charcoal w-5 h-5" /> Why work with us?
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                       <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
-                          <span>US-Registered LLC</span>
-                        </div>
-                       <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
-                          <span>US Law Contracts</span>
-                        </div>
-                       <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
-                          <span>100% IP Transfer</span>
-                        </div>
-                       <div className="flex items-start gap-2 text-sm text-stone-600">
-                          <span className="text-charcoal font-bold shrink-0 mt-0.5">&#10003;</span>
-                          <span>Fixed Pricing</span>
-                        </div>
-                    </div>
-                 </div>
-
-                 {/* Risk-Free Guarantee - 2x2 Grid */}
-                 <div className="p-5 bg-stone-50 border border-stone-200 rounded-xl">
-                    <h3 className="text-charcoal font-bold mb-4 flex items-center gap-2 text-base">
-                       <CheckCircle2 className="text-charcoal w-5 h-5" /> Risk-Free Guarantee
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                       <div className="flex items-start gap-2">
-                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
-                          <div>
-                             <div className="font-semibold text-charcoal text-sm">30-Day Guarantee</div>
-                             <div className="text-stone-500 text-xs">Refund if unsatisfied</div>
-                           </div>
-                        </div>
-                       <div className="flex items-start gap-2">
-                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
-                          <div>
-                             <div className="font-semibold text-charcoal text-sm">1-Month Support</div>
-                             <div className="text-stone-500 text-xs">Free technical support</div>
-                          </div>
-                       </div>
-                       <div className="flex items-start gap-2 col-span-2">
-                          <span className="text-charcoal font-bold shrink-0 text-sm mt-0.5">&#10003;</span>
-                          <div>
-                             <div className="font-semibold text-charcoal text-sm">100% Code Ownership</div>
-                             <div className="text-stone-500 text-xs">Full source code & assets immediately</div>
-                           </div>
-                        </div>
-                    </div>
-                 </div>
-              </motion.div>
-           </div>
-
-           {/* RIGHT: FORM OR SUCCESS STATE */}
-           <div className="bg-white border border-stone-300 rounded-4xl p-8 md:p-10 relative overflow-hidden shadow-card">
-
-              {isSuccess ? (
-                <div className="relative z-10 flex flex-col items-center justify-center text-center py-16 space-y-6">
-                  <div className="w-20 h-20 rounded-full bg-stone-100 flex items-center justify-center">
-                    <CheckCircle2 className="w-10 h-10 text-charcoal" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-charcoal">Message Received!</h3>
-                  <p className="text-stone-600 text-lg max-w-sm">We&apos;ll review your stack within 2 hours. Check your inbox.</p>
-                  <button
-                    onClick={() => setIsSuccess(false)}
-                    className="px-6 py-3 bg-stone-100 text-charcoal font-medium rounded-xl hover:bg-stone-200 transition-all"
-                  >
-                    Send Another Message
-                  </button>
+            <div className="mt-10 rounded-2xl border border-stone-300 bg-white p-6">
+              <div className="flex gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100">
+                  <Mail className="h-5 w-5" aria-hidden="true" />
                 </div>
-              ) : (
-              <form className="relative z-10 space-y-6" onSubmit={async (e) => {
-                 e.preventDefault();
-                 setIsSubmitting(true);
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-stone-600">Prefer email?</p>
+                  <a href="mailto:info@pandacodegen.com" className="mt-1 inline-block break-all font-semibold hover:text-cognac">
+                    info@pandacodegen.com
+                  </a>
+                </div>
+              </div>
+              <div className="mt-6 flex gap-4 border-t border-stone-200 pt-6">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100">
+                  <MapPin className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-stone-600">Mailing address</p>
+                  <address className="mt-1 not-italic leading-relaxed text-stone-700">
+                    701 Tillery St Ste 12<br />
+                    Austin, TX 78702, United States
+                  </address>
+                </div>
+              </div>
+            </div>
 
-                 const newErrors: {name?: string; email?: string; message?: string} = {};
-                 if (!formData.name.trim()) newErrors.name = "Name is required";
-                 if (!formData.email.trim()) newErrors.email = "Email is required";
+            <div className="mt-6 rounded-2xl border border-stone-300 bg-stone-50 p-6">
+              <h2 className="text-xl font-bold">What happens next</h2>
+              <ol className="mt-5 space-y-4 text-sm leading-relaxed text-stone-700">
+                <li className="flex gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" /> We review the current platform, goals, and constraints.</li>
+                <li className="flex gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" /> We clarify missing scope or evidence before recommending a build.</li>
+                <li className="flex gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" /> Any price, schedule, acceptance test, ownership, support, or remedy is documented in the accepted written project terms.</li>
+              </ol>
+            </div>
 
-                 setErrors(newErrors);
+            <div className="mt-6 rounded-2xl border border-stone-300 bg-white p-6">
+              <div className="flex gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-stone-100">
+                  <Globe className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold">Working with us from anywhere</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-stone-700">
+                    We are a remote-first studio and welcome enquiries worldwide. Most of our work to date has been with
+                    clients in the United States, and we currently have live conversations in the United Kingdom and Asia.
+                    Projects run over email, shared documents and scheduled calls, so your time zone is a scheduling
+                    question rather than a barrier. Contracts and invoicing are handled in US dollars unless we agree
+                    otherwise in writing.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                 if (Object.keys(newErrors).length === 0) {
-                    // Time-based bot trap: if submitted in under 3 seconds, fake success
-                    const elapsed = Date.now() - formLoadedAt;
-                    if (elapsed < 3000 || honeypot) {
-                       setIsSuccess(true);
-                       setIsSubmitting(false);
-                       return;
-                    }
+            <div className="mt-6 rounded-2xl border border-cognac/30 bg-cognac/5 p-6">
+              <h2 className="text-xl font-bold">What you get, and where it is written down</h2>
+              <ul className="mt-5 space-y-3 text-sm leading-relaxed text-stone-700">
+                <li className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                  <span><strong>Full ownership on handover.</strong> Source code, design files, CMS models, documentation and production accounts are transferred to, or created under, your control.</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                  <span><strong>Fixed price for the agreed scope.</strong> No hourly billing. Separately priced additions are listed explicitly before implementation.</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                  <span><strong>A 90+ Lighthouse handover target</strong> on mobile and desktop for the representative pages named in your scope, verified across three recorded runs. It is a lab acceptance target, not a ranking or revenue promise.</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                  <span><strong>Included support after launch</strong>, with the start point, coverage and duration stated in the accepted terms.</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                  <span><strong>Regulated data handled properly.</strong> Where a project involves protected health information, we will execute a Business Associate Agreement. Tell us early if HIPAA, GDPR or a sector-specific regime applies, so it shapes the architecture rather than being retrofitted.</span>
+                </li>
+              </ul>
+              <p className="mt-5 text-xs leading-5 text-stone-600">
+                These are the terms we normally work to. The accepted written project terms are what actually bind either
+                side, and they take precedence over anything on this page. See{" "}
+                <Link href="/pricing" className="font-semibold text-cognac hover:underline">pricing</Link> for current
+                tiers and the full acceptance and refund conditions.
+              </p>
+            </div>
+          </div>
 
-                    try {
-                       // Submit to your existing Resend API
-                       const formDataToSend = new FormData();
-                       formDataToSend.append('name', formData.name);
-                       formDataToSend.append('email', formData.email);
-                       formDataToSend.append('phone', formData.phone || 'Not provided');
-                       formDataToSend.append('details', formData.message);
-                       formDataToSend.append('_t', String(formLoadedAt));
+          <div className="rounded-3xl border border-stone-300 bg-white p-5 shadow-card md:p-9">
+            {isSuccess ? (
+              <div className="flex min-h-[520px] flex-col items-center justify-center text-center" role="status" aria-live="polite">
+                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-cognac/10 text-cognac">
+                  <CheckCircle2 className="h-10 w-10" />
+                </div>
+                <h2 className="text-3xl font-bold">Request received</h2>
+                <p className="mt-3 max-w-md text-stone-700">We will review the information and reply by email.</p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    formFunnel.reset();
+                    setFieldErrors({});
+                    setSubmitError(null);
+                    setIsSuccess(false);
+                  }}
+                  className="mt-7 min-h-11 rounded-xl border border-stone-300 px-5 py-3 font-semibold hover:border-cognac hover:text-cognac"
+                >
+                  Send another request
+                </button>
+              </div>
+            ) : (
+              <>
+                <h2 id="contact-quote-form" tabIndex={-1} className="scroll-mt-32 text-3xl font-bold outline-none">
+                  Get your migration plan
+                </h2>
+                <p className="mt-2 text-sm text-stone-700">Required fields are marked with an asterisk.</p>
 
-                       const response = await fetch("/api/submit-quote", {
-                          method: "POST",
-                          body: formDataToSend,
-                       });
+                <form
+                  name="contact_quote"
+                  aria-labelledby="contact-quote-form"
+                  aria-busy={isSubmitting}
+                  onSubmit={handleSubmit}
+                  onFocusCapture={formFunnel.onFocusCapture}
+                  onBlurCapture={formFunnel.onBlurCapture}
+                  onInvalidCapture={handleInvalidCapture}
+                  className="mt-7 space-y-5"
+                >
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <ContactField label="Name" id="contact-name" required>
+                      <input
+                        required
+                        id="contact-name"
+                        name="name"
+                        autoComplete="name"
+                        aria-invalid={Boolean(fieldErrors.name)}
+                        aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
+                        onInput={() => setFieldErrors((current) => ({ ...current, name: undefined }))}
+                        className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                      />
+                      {fieldErrors.name && <p id="contact-name-error" role="alert" className="mt-2 text-sm text-red-800">{fieldErrors.name}</p>}
+                    </ContactField>
+                    <ContactField label="Email" id="contact-email" required>
+                      <input
+                        required
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        autoComplete="email"
+                        aria-invalid={Boolean(fieldErrors.email)}
+                        aria-describedby={fieldErrors.email ? "contact-email-error" : undefined}
+                        onInput={() => setFieldErrors((current) => ({ ...current, email: undefined }))}
+                        className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                      />
+                      {fieldErrors.email && <p id="contact-email-error" role="alert" className="mt-2 text-sm text-red-800">{fieldErrors.email}</p>}
+                    </ContactField>
+                    <ContactField label="Phone" id="contact-phone" hint="optional">
+                      <input type="tel" id="contact-phone" name="phone" autoComplete="tel" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
+                    </ContactField>
+                    <ContactField label="Current website" id="contact-url" hint="optional">
+                      <input type="url" id="contact-url" name="currentUrl" autoComplete="url" placeholder="https://example.com" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
+                    </ContactField>
+                    <ContactSelect label="Current platform" id="contact-platform" name="currentPlatform" options={platforms} />
+                    <ContactSelect label="Primary goal" id="contact-goal" name="primaryGoal" options={goals} />
+                    <ContactSelect label="Monthly traffic" id="contact-traffic" name="trafficBand" options={trafficBands} />
+                    <ContactSelect label="Timeline" id="contact-timeline" name="timeline" options={timelines} />
+                    <ContactSelect label="Indicative budget" id="contact-budget" name="budget" options={budgets} />
+                  </div>
 
-                       const result = await response.json();
-
-                       if (response.ok && result.success) {
-                          setIsSuccess(true);
-                          setSubmitError(null);
-                          setFormData({ name: "", email: "", phone: "", message: "" });
-                       } else {
-                          setSubmitError("Something went wrong. Please email us directly at info@pandacodegen.com");
-                       }
-                    } catch (error) {
-                       console.error("Form submission error:", error);
-                       setSubmitError("Something went wrong. Please email us directly at info@pandacodegen.com");
-                    }
-                 }
-
-                 setIsSubmitting(false);
-              }}>
-                 {/* Name */}
-                 <div className="space-y-2">
-                    <label htmlFor="contact-name" className="text-base font-bold text-charcoal">Name *</label>
-                    <input
-                       type="text"
-                       id="contact-name"
-                       placeholder="John Doe"
-                       value={formData.name}
-                       onChange={(e) => {
-                          setFormData({...formData, name: e.target.value});
-                          if (errors.name) setErrors({...errors, name: undefined});
-                       }}
-                       required
-                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-hidden transition-colors ${
-                          errors.name ? "border-red-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" : "border-stone-200 focus:border-cognac focus:ring-1 focus:ring-cognac"
-                       }`}
-                    />
-                    {errors.name && <p className="text-sm text-red-700">{errors.name}</p>}
-                 </div>
-
-                 {/* Email */}
-                 <div className="space-y-2">
-                    <label htmlFor="contact-email" className="text-base font-bold text-charcoal">Email *</label>
-                    <input
-                       type="email"
-                       id="contact-email"
-                       placeholder="john@company.com"
-                       value={formData.email}
-                       onChange={(e) => {
-                          setFormData({...formData, email: e.target.value});
-                          if (errors.email) setErrors({...errors, email: undefined});
-                       }}
-                       required
-                       className={`w-full bg-white border rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-hidden transition-colors ${
-                          errors.email ? "border-red-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" : "border-stone-200 focus:border-cognac focus:ring-1 focus:ring-cognac"
-                       }`}
-                    />
-                    {errors.email && <p className="text-sm text-red-700">{errors.email}</p>}
-                 </div>
-
-                 {/* Phone (optional) */}
-                 <div className="space-y-2">
-                    <label htmlFor="contact-phone" className="text-base font-bold text-charcoal">Phone <span className="text-stone-500 font-normal text-sm">(optional, for faster response)</span></label>
-                    <input
-                       type="tel"
-                       id="contact-phone"
-                       placeholder="+1 (555) 000-0000"
-                       value={formData.phone}
-                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                       className="w-full bg-white border border-stone-200 rounded-xl p-4 text-base text-charcoal placeholder:text-stone-400 outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
-                    />
-                 </div>
-
-                 {/* Message (optional) */}
-                 <div className="space-y-2">
-                    <label htmlFor="contact-message" className="text-base font-bold text-charcoal">What can we help you with? <span className="text-stone-500 font-normal text-sm">(optional)</span></label>
+                  <ContactField label="Project details" id="contact-details" hint="optional">
                     <textarea
-                       id="contact-message"
-                       className="w-full bg-white border border-stone-200 rounded-xl p-4 text-charcoal placeholder:text-stone-400 outline-hidden h-32 resize-none transition-colors text-base focus:border-cognac focus:ring-1 focus:ring-cognac"
-                       placeholder="e.g., 'Need to migrate WordPress site with 50 pages' or 'Looking to build custom e-commerce platform'"
-                       value={formData.message}
-                       onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      id="contact-details"
+                      name="details"
+                      rows={4}
+                      autoComplete="off"
+                      placeholder="Important URLs, integrations, constraints, or questions"
+                      className="w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
                     />
-                 </div>
+                  </ContactField>
 
-                 {/* HONEYPOT - invisible to humans, bots fill it */}
-                 <div className="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true" tabIndex={-1}>
-                    <label htmlFor="contact_website_url">Leave this empty</label>
-                    <input type="text" id="contact_website_url" tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
-                 </div>
+                  <p className="rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-700">
+                    For security, files cannot be uploaded here. We can arrange a safe transfer method after replying.
+                  </p>
 
-                 {submitError && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
-                       {submitError}
+                  <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+                    <label htmlFor="contact-website-confirm">Leave this field empty</label>
+                    <input id="contact-website-confirm" name="website_url_confirm" tabIndex={-1} autoComplete="off" />
+                  </div>
+
+                  {submitError && (
+                    <div role="alert" aria-live="assertive" className="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-800">
+                      {submitError}
                     </div>
-                 )}
+                  )}
 
-                 <motion.button
+                  <button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-5 bg-charcoal text-white font-bold text-lg rounded-xl hover:bg-stone-800 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                 >
-                    <Send className="w-5 h-5" /> {isSubmitting ? "Sending..." : "Get Free Quote"}
-                 </motion.button>
-
-                 <p className="text-center text-sm text-stone-500 mt-4">
-                    &#10003; 2-hour response &bull; &#10003; No obligation &bull; &#10003; Free consultation
-                 </p>
-              </form>
-              )}
-           </div>
-
+                    className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-5 py-4 text-lg font-bold text-white transition-colors hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    <Send className="h-5 w-5" aria-hidden="true" /> {isSubmitting ? "Sending…" : "Send request"}
+                  </button>
+                  <p className="text-center text-xs leading-relaxed text-stone-600">
+                    No obligation. Your submission is used to respond to this request as described in our <a href="/privacy" className="font-medium text-cognac underline underline-offset-2 hover:text-orange-800">privacy notice</a>.
+                  </p>
+                </form>
+              </>
+            )}
+          </div>
         </div>
-      </section>
-
-      {/* 2. THE ENGAGEMENT PROTOCOL (Architectural Version) */}
-      <section className="container mx-auto px-6 py-32 overflow-hidden">
-         <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">How We Work</h2>
-            <p className="text-xl text-stone-600 max-w-2xl mx-auto">
-               No complex jargon. Just a straight line from problem to solution.
-            </p>
-         </div>
-
-         <div className="relative">
-            {/* THE PIPELINE (Desktop Only) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-[2px] bg-stone-200">
-                {/* The Moving Beam */}
-                <div className="absolute top-0 left-0 h-full w-[200px] bg-linear-to-r from-transparent via-stone-400 to-transparent animate-shimmer" />
-                <style jsx>{`
-                    @keyframes shimmer {
-                        0% { transform: translateX(-100%); }
-                        100% { transform: translateX(600%); }
-                    }
-                    .animate-shimmer {
-                        animation: shimmer 3s infinite linear;
-                    }
-                `}</style>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-8">
-                {/* STEP 1 */}
-                <ProtocolCard
-                   step="01"
-                   title="Review"
-                   desc="We audit your current stack to find the bleeding."
-                   icon={Search}
-                />
-
-                {/* STEP 2 */}
-                <ProtocolCard
-                   step="02"
-                   title="Plan"
-                   desc="15-min strategy call. No sales pitch, just engineering."
-                   icon={Phone}
-                />
-
-                {/* STEP 3 */}
-                <ProtocolCard
-                   step="03"
-                   title="Quote"
-                   desc="Fixed price. Guaranteed delivery. No hourly nonsense."
-                   icon={FileText}
-                />
-
-                {/* STEP 4 */}
-                <ProtocolCard
-                   step="04"
-                   title="Launch"
-                   desc="We build, test, and deploy. You own 100% of the code."
-                   icon={Rocket}
-                />
-            </div>
-         </div>
       </section>
 
       <Footer />
@@ -481,30 +368,37 @@ export default function ContactPageClient() {
   );
 }
 
-// --- SUB COMPONENTS ---
+function ContactField({
+  label,
+  id,
+  hint,
+  required = false,
+  children,
+}: {
+  label: string;
+  id: string;
+  hint?: string;
+  required?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="block text-sm font-bold text-stone-800">
+        {label} {required ? <span className="text-cognac">*</span> : hint ? <span className="font-normal text-stone-600">({hint})</span> : null}
+      </label>
+      <div className="mt-2">{children}</div>
+    </div>
+  );
+}
 
-function ProtocolCard({ step, title, desc, icon: Icon }: any) {
-   return (
-      <div className="relative flex flex-col items-center text-center group">
-
-         {/* The Icon Container */}
-         <div className="relative z-10 w-24 h-24 mb-8 flex items-center justify-center">
-            {/* The Big Architectural Number (Behind) */}
-            <span className="absolute text-8xl font-bold text-stone-100 select-none z-0 group-hover:text-stone-200 transition-colors duration-500 scale-125">
-               {step}
-            </span>
-
-            {/* The Icon Circle (Front) */}
-            <div className="relative z-10 w-16 h-16 rounded-2xl bg-white border border-stone-200 flex items-center justify-center group-hover:border-stone-400 group-hover:shadow-md transition-all duration-300">
-                <Icon className="w-6 h-6 text-stone-500 group-hover:text-charcoal transition-colors" />
-            </div>
-         </div>
-
-         {/* The Text */}
-         <h3 className="text-2xl font-bold text-charcoal mb-3 group-hover:text-stone-700 transition-colors">{title}</h3>
-         <p className="text-stone-600 leading-relaxed text-sm px-4">
-            {desc}
-         </p>
-      </div>
-   )
+function ContactSelect({ label, id, name, options }: { label: string; id: string; name: string; options: string[] }) {
+  return (
+    <label htmlFor={id} className="block text-sm font-bold text-stone-800">
+      {label} <span className="font-normal text-stone-600">(optional)</span>
+      <select id={id} name={name} defaultValue="" className="mt-2 w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac">
+        <option value="">Select an option</option>
+        {options.map((option) => <option key={option} value={option}>{option}</option>)}
+      </select>
+    </label>
+  );
 }

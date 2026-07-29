@@ -1,9 +1,9 @@
 "use client";
 
-// PROTOTYPE — interactive "click a thumbnail, it becomes the big featured product"
+// PROTOTYPE: interactive "click a thumbnail, it becomes the big featured product"
 // hero for a Gen-Z store. Click a product in the strip; the big card swaps with a
 // light fade/scale (not a heavy morph) and its description + price + CTA stagger in.
-// Placeholders are gradients — swap `gradient` for a real <img src> when ready.
+// Placeholders are gradients; swap `gradient` for a real product image when ready.
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
@@ -74,7 +74,7 @@ export default function FeaturedProductHero() {
 
       {/* --- FEATURED (the "big" state) --- */}
       <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-        {/* Image area — re-keyed so the fade/scale replays on each selection */}
+        {/* Image area, re-keyed so the fade/scale replays on each selection */}
         <div
           key={`img-${active.id}`}
           className={`relative aspect-[4/5] rounded-2xl bg-gradient-to-br ${active.gradient} overflow-hidden`}
@@ -86,7 +86,7 @@ export default function FeaturedProductHero() {
           <span className="absolute bottom-4 right-4 text-white/40 text-xs font-mono">swap for real photo</span>
         </div>
 
-        {/* Copy + CTA — staggered in after the image */}
+        {/* Copy + CTA, staggered in after the image */}
         <div key={`txt-${active.id}`} className="flex flex-col">
           <span
             className="text-xs font-bold uppercase tracking-widest text-white/50 mb-3"

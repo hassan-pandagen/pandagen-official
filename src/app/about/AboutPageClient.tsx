@@ -1,18 +1,12 @@
 "use client";
 
-import { motion } from "@/components/ui/motion";
-import { ShieldCheck, Globe, Rocket, Terminal, Code2, Cpu, Linkedin } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import { useState } from "react";
 import dynamic from "next/dynamic";
-import LinkedInProof from "@/components/sections/LinkedInProof";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Code2, FileCheck2, Route, ShieldCheck } from "lucide-react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
-// Lazy load: QuoteModal pulls in framer-motion (~37KB gzipped). Keeping it out of
-// AboutPage's static bundle until the user actually opens the modal.
 const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 
 const aboutSchema = {
@@ -21,332 +15,282 @@ const aboutSchema = {
     {
       "@type": "AboutPage",
       "@id": "https://www.pandacodegen.com/about#webpage",
-      "url": "https://www.pandacodegen.com/about",
-      "name": "About PandaCodeGen - The Anti-Agency",
-      "description": "Meet the engineers behind PandaCodeGen. We build web assets, not templates. Direct access to architects, fixed pricing, full code ownership.",
-      "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-      "about": { "@id": "https://www.pandacodegen.com/#organization" },
-      "inLanguage": "en-US",
-      "datePublished": "2026-01-01",
-      "dateModified": "2026-03-22"
+      url: "https://www.pandacodegen.com/about",
+      name: "About PandaCodeGen",
+      description: "How PandaCodeGen scopes and delivers website migrations and custom web engineering.",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      about: { "@id": "https://www.pandacodegen.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+        { "@type": "ListItem", position: 2, name: "About", item: "https://www.pandacodegen.com/about" },
+      ],
     },
     {
       "@type": "Organization",
       "@id": "https://www.pandacodegen.com/#organization",
-      "name": "PandaCodeGen",
-      "alternateName": "Panda Code Gen",
-      "url": "https://www.pandacodegen.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.pandacodegen.com/logo.png",
-        "width": 655,
-        "height": 113
-      },
-      "image": "https://www.pandacodegen.com/og-image.jpg",
-      "description": "Custom web development agency specializing in WordPress migration, Shopify optimization, and high performance business websites.",
-      "email": "info@pandacodegen.com",
-      "telephone": "+13027738982",
-      "foundingDate": "2026",
-      "areaServed": "Worldwide",
-      "address": {
+      name: "PandaCodeGen",
+      url: "https://www.pandacodegen.com",
+      foundingDate: "2026-02",
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "701 Tillery St Ste 12",
-        "addressLocality": "Austin",
-        "addressRegion": "TX",
-        "postalCode": "78702",
-        "addressCountry": "US"
+        streetAddress: "701 Tillery St Ste 12",
+        addressLocality: "Austin",
+        addressRegion: "TX",
+        postalCode: "78702",
+        addressCountry: "US",
       },
-      "founder": [
-        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/hassan", "name": "Hassan Jamal", "jobTitle": "Co-founder and Lead Engineer", "url": "https://www.pandacodegen.com/about/hassan", "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/"] },
-        { "@type": "Person", "@id": "https://www.pandacodegen.com/#/schema/person/imran", "name": "Imran Raza Ladhani", "jobTitle": "Co-founder and Lead Architect", "url": "https://www.pandacodegen.com/about/imran", "sameAs": ["https://www.linkedin.com/in/imran-raza-ladhani/"] }
+      founder: [
+        { "@type": "Person", name: "Hassan Jamal", jobTitle: "Co-founder and Lead Engineer", url: "https://www.pandacodegen.com/about/hassan" },
+        { "@type": "Person", name: "Imran Raza Ladhani", jobTitle: "Co-founder and Lead Architect", url: "https://www.pandacodegen.com/about/imran" },
       ],
-      "knowsAbout": [
-        "Next.js Development",
-        "WordPress Migration",
-        "Shopify Optimization",
-        "Headless Commerce",
-        "Answer Engine Optimization (AEO)"
-      ],
-      "serviceType": [
-        "Next.js Development",
-        "WordPress Migration",
-        "Shopify Optimization",
-        "Headless Commerce",
-        "Answer Engine Optimization (AEO)"
-      ],
-      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 2 },
-      "sameAs": [
-        "https://twitter.com/pandacodegen",
-        "https://www.linkedin.com/company/pandacodegen",
-        "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-        "https://github.com/hassan-pandagen",
-        "https://clutch.co/profile/panda-code-gen",
-        "https://www.trustpilot.com/review/pandacodegen.com"
-      ]
     },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.pandacodegen.com/about" }
-      ]
-    }
-  ]
+  ],
 };
+
+const standards = [
+  {
+    icon: Route,
+    title: "Migration continuity",
+    body: "The scope identifies current URLs, content, integrations, redirects, analytics, cutover responsibilities, and rollback conditions.",
+  },
+  {
+    icon: FileCheck2,
+    title: "Written acceptance",
+    body: "Deliverables, exclusions, test pages, browser support, performance methodology, ownership, warranty, and remedies belong in the accepted written project terms.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Documented access and handover",
+    body: "Repository, hosting, domains, accounts, licenses, and handover timing are documented so control is not implied or left until launch.",
+  },
+];
+
+const process = [
+  "Review the current platform, URL set, content model, integrations, traffic profile, business goal, timeline, and budget range.",
+  "Document assumptions, open questions, dependencies, exclusions, acceptance criteria, and third-party costs before implementation.",
+  "Build and test representative templates, then validate redirects, forms, analytics, accessibility, and launch responsibilities.",
+  "Cut over against a written checklist, retain a rollback path, and complete the evidence and handover defined in the accepted project terms.",
+];
 
 export default function AboutPageClient() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   return (
-    <main className="bg-paper min-h-screen overflow-x-hidden relative">
+    <main className="min-h-screen overflow-x-hidden bg-paper text-charcoal">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }} />
-
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-      <ReadingProgressBar />
       <Header onOpenQuote={() => setIsQuoteModalOpen(true)} />
 
-      {/* 1. HERO with DNA STRIP */}
-      <section className="relative pt-20 md:pt-40 pb-16 md:pb-32 px-6 overflow-hidden bg-paper">
-        <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-stone-200/40 blur-[150px] rounded-full pointer-events-none" />
-
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-600 mb-8">
-            <Terminal className="w-4 h-4 text-stone-500" /> <span>The Anti-Agency</span>
-          </motion.div>
-
-          <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-8 leading-tight">
-            I rebuild slow platform sites. <br />
-            <span className="font-serif italic text-cognac">90+ PageSpeed. Always.</span>
-          </h1>
-
-          <p className="text-xl text-stone-600 leading-relaxed mb-6">
-            Most agencies sell you a template and disappear. I spent six years building WordPress sites before I launched PandaCodeGen to do it differently. We were born from a simple truth: <strong className="text-charcoal">The web is too slow, and business owners are paying the price.</strong>
+      <section className="border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
+        <div className="mx-auto max-w-5xl border-l-2 border-cognac pl-5 md:pl-8">
+          <p className="mb-6 inline-flex min-h-8 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-700">
+            The anti-agency &middot; Founded February 2026 &middot; Co-founder led
           </p>
-          <p className="text-sm text-stone-500 font-mono mb-8 md:mb-12">Founded February 2026 &middot; Austin, TX &middot; Co-founder led</p>
-        </div>
-
-        {/* DNA STRIP */}
-        <div className="absolute bottom-0 left-0 right-0 border-t border-stone-200 bg-white py-4 overflow-hidden">
-            <div className="flex md:justify-center gap-6 md:gap-16 text-[10px] md:text-sm font-mono text-stone-500 uppercase tracking-widest overflow-x-auto scrollbar-hide px-6">
-                <span className="shrink-0">Lightning Speed</span>
-                <span className="shrink-0">Bank Level Security</span>
-                <span className="shrink-0">Zero Monthly Fees</span>
-                <span className="shrink-0">You Own Everything</span>
-            </div>
-        </div>
-      </section>
-
-      {/* 2. TRACK RECORD */}
-      <section className="container mx-auto px-6 py-12">
-         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
-               <div className="text-4xl font-bold text-charcoal mb-2">4</div>
-               <div className="text-sm text-stone-500 uppercase tracking-wider">Live Projects</div>
-            </div>
-            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
-               <div className="text-4xl font-bold text-charcoal mb-2">90+</div>
-               <div className="text-sm text-stone-500 uppercase tracking-wider">Avg Lighthouse Score</div>
-            </div>
-            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
-               <div className="text-4xl font-bold text-charcoal mb-2">&lt;1s</div>
-               <div className="text-sm text-stone-500 uppercase tracking-wider">Avg Load Time</div>
-            </div>
-            <div className="text-center p-6 bg-white border border-stone-300 rounded-2xl">
-               <div className="text-4xl font-bold text-charcoal mb-2">2026</div>
-               <div className="text-sm text-stone-500 uppercase tracking-wider">Est. Year</div>
-            </div>
-         </div>
-      </section>
-
-      {/* 3. THE ENGINEERS */}
-      <section className="bg-[#0C0A09] py-12 md:py-20 px-6">
-         <div className="container mx-auto">
-         <div className="text-center mb-8 md:mb-16">
-            <h2 className="text-3xl font-bold text-white">The Co-founders</h2>
-            <p className="text-stone-500">No account managers. You talk directly to the architects.</p>
-         </div>
-
-         <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {/* IMRAN */}
-            <div className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500">
-               <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
-               <div className="h-96 w-full relative">
-                  <Image src="/team/imran.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Imran Raza Ladhani - Co-founder and Lead Architect at PandaCodeGen" className="object-cover object-top" />
-               </div>
-               <div className="absolute bottom-0 left-0 w-full p-8 z-20">
-                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Architecture</div>
-                  <h3 className="text-3xl font-bold text-white mb-1">Imran Raza Ladhani</h3>
-                  <p className="text-stone-400 font-mono text-sm mb-2">Co-founder and Lead Architect</p>
-                  <div className="flex gap-3 mb-3 text-xs text-stone-500">
-                     <span>Next.js</span>
-                     <span>•</span>
-                     <span>System Design</span>
-                  </div>
-                  <p className="text-stone-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">&ldquo;Hassan writes the code. I help decide what that code needs to do.&rdquo;</p>
-               </div>
-            </div>
-
-            {/* HASSAN */}
-            <Link href="/about/hassan" className="group relative bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden hover:border-stone-700 transition-colors duration-500 block">
-               <div className="absolute inset-0 bg-linear-to-b from-transparent to-stone-950/95 z-10" />
-               <div className="h-96 w-full relative">
-                  <Image src="/team/hassan.png" fill sizes="(max-width: 768px) 100vw, 50vw" alt="Hassan Jamal - Lead Full-Stack Engineer at PandaCodeGen" className="object-cover object-top" />
-               </div>
-               <div className="absolute bottom-0 left-0 w-full p-8 z-20">
-                  <div className="px-3 py-1 bg-white/10 text-stone-300 text-[10px] font-bold uppercase tracking-wider rounded-sm w-fit mb-2">Engineering</div>
-                  <h3 className="text-3xl font-bold text-white mb-1">Hassan Jamal</h3>
-                  <p className="text-stone-400 font-mono text-sm mb-2">Lead Full-Stack Engineer</p>
-                  <div className="flex gap-3 mb-3 text-xs text-stone-500">
-                     <span>7+ years</span>
-                     <span>•</span>
-                     <span>100k+ lines shipped</span>
-                  </div>
-                  <p className="text-stone-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">&ldquo;I obsess over milliseconds. I build the engines that run the business.&rdquo;</p>
-                  <button
-                     type="button"
-                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open("https://www.linkedin.com/in/hassan-jamal-713ba6228/", "_blank"); }}
-                     className="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 border border-[#0A66C2]/30 rounded-full text-xs font-bold text-[#0A66C2] hover:bg-[#0A66C2]/30 transition-all"
-                  >
-                     <Linkedin className="w-3.5 h-3.5" /> Connect on LinkedIn
-                  </button>
-               </div>
+          <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">
+            Reduce migration risk <span className="font-serif font-normal italic text-cognac">before writing production code.</span>
+          </h1>
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
+            PandaCodeGen helps businesses plan and implement website migrations when URLs, content, integrations, measurement, and operational control matter. The work begins with evidence and a written scope, not an automatic promise that every site needs a rebuild.
+          </p>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
+            You will not be handed to an account manager. The two founders who scope your project are the two engineers who build it, and if the evidence says repairing your current site is the better answer, we will tell you that instead of selling you a rebuild.
+          </p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => setIsQuoteModalOpen(true)}
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac"
+            >
+              Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </button>
+            <Link
+              href="/work"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold text-charcoal hover:border-charcoal"
+            >
+              Review project evidence
             </Link>
-         </div>
-         </div>
-      </section>
-
-      {/* FOUNDER SPOTLIGHT */}
-      <section className="py-12 md:py-20 px-6 border-t border-stone-200">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-600 mb-6">
-              <Code2 className="w-4 h-4 text-stone-500" /> Founder Spotlight
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">The Engineer Behind PandaCodeGen</h2>
-            <p className="text-stone-500 max-w-2xl mx-auto">No account managers. When you work with PandaCodeGen, you talk directly to the person writing the code.</p>
-          </div>
-
-          <div className="grid md:grid-cols-5 gap-8 items-start">
-            <div className="md:col-span-2 flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-3xl overflow-hidden border-2 border-stone-200 relative mb-4">
-                <Image src="/team/hassan.png" fill sizes="192px" alt="Hassan Jamal - Co-founder & Lead Engineer at PandaCodeGen" className="object-cover object-top" />
-              </div>
-              <h3 className="text-2xl font-bold text-charcoal">Hassan Jamal</h3>
-              <p className="text-stone-500 font-mono text-sm mb-1">Co-founder & Lead Full-Stack Engineer</p>
-              <p className="text-stone-500 text-xs mb-4">Karachi University &middot; Austin, TX</p>
-              <div className="flex gap-3">
-                <a href="https://www.linkedin.com/in/hassan-jamal-713ba6228/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 border border-[#0A66C2]/30 rounded-full text-xs font-bold text-[#0A66C2] hover:bg-[#0A66C2]/30 transition-all"><Linkedin className="w-3.5 h-3.5" /> LinkedIn</a>
-                <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-stone-50 border border-stone-200 rounded-full text-xs font-medium hover:bg-stone-100 hover:border-stone-400 transition-all text-stone-500">GitHub</a>
-              </div>
-            </div>
-
-            <div className="md:col-span-3 space-y-6">
-              <div>
-                <p className="text-stone-600 text-lg leading-relaxed mb-4">
-                  I help e-commerce brands ditch Shopify fees and WordPress bloat with high performance custom code. One client was paying <strong className="text-charcoal">$3,200/month</strong> on Shopify Plus. Their storefront scored <strong className="text-charcoal">31 on Google PageSpeed</strong>. We migrated them to a custom build. Same features. Zero app fees. PageSpeed went from <strong className="text-charcoal">31 to 92</strong>.
-                </p>
-                <p className="text-stone-600 leading-relaxed">
-                  Most agencies hand you a WordPress theme and call it a day. I build from scratch: custom code, no plugins, no bloat. No $500/month in SaaS fees just to run your store. You get a website that loads in under a second and costs nearly nothing to host.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-sm font-bold text-stone-500 uppercase tracking-wider mb-3">Core Expertise</h4>
-                <div className="flex flex-wrap gap-2">
-                  {["Custom Website Engineering", "Shopify Speed Optimization", "WordPress & Platform Migrations", "Google Rankings & Speed", "Cloud Hosting & Databases", "Custom Business Software"].map((skill) => (
-                    <span key={skill} className="px-3 py-1.5 bg-stone-50 border border-stone-200 rounded-full text-xs text-stone-500 font-medium">{skill}</span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3">
-                <div className="p-4 rounded-xl bg-white border border-stone-200">
-                  <h4 className="text-charcoal font-bold text-sm mb-1">Custom Coded Storefronts</h4>
-                  <p className="text-stone-500 text-xs">90+ PageSpeed. Vercel hosting starts free.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-white border border-stone-200">
-                  <h4 className="text-charcoal font-bold text-sm mb-1">Platform Migrations</h4>
-                  <p className="text-stone-500 text-xs">Shopify Plus & WordPress to custom code.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-white border border-stone-200">
-                  <h4 className="text-charcoal font-bold text-sm mb-1">Admin Dashboards & SaaS</h4>
-                  <p className="text-stone-500 text-xs">Replace $500+/mo in SaaS apps.</p>
-                </div>
-                <div className="p-4 rounded-xl bg-white border border-stone-200">
-                  <h4 className="text-charcoal font-bold text-sm mb-1">Speed & Cost Audits</h4>
-                  <p className="text-stone-500 text-xs">Free audit for stores paying $1k+/mo.</p>
-                </div>
-              </div>
-
-              <Link href="/about/hassan" className="inline-flex items-center gap-2 text-cognac text-sm font-medium hover:underline">
-                View full profile & articles &rarr;
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. WHY CHOOSE US */}
-      <section className="py-12 md:py-20 px-6 border-y border-stone-200 relative overflow-hidden">
-         <div className="relative z-10 container mx-auto max-w-5xl">
-             <div className="text-center mb-8 md:mb-16">
-                <h2 className="text-charcoal font-bold text-4xl mb-4">Why Choose PandaCodeGen</h2>
-                <p className="text-stone-500 text-lg">What makes us different from traditional agencies</p>
-             </div>
-
-             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
-                   <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
-                      <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                      </svg>
-                   </div>
-                   <h3 className="text-xl font-bold text-charcoal mb-3">Full Code Ownership</h3>
-                   <p className="text-stone-500 leading-relaxed">You own 100% of the source code. No vendor lock-in, no recurring licensing fees. It&apos;s yours forever.</p>
-                </div>
-
-                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
-                   <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
-                      <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                   </div>
-                   <h3 className="text-xl font-bold text-charcoal mb-3">Fixed Pricing</h3>
-                   <p className="text-stone-500 leading-relaxed">No hourly rates or surprise invoices. You get a guaranteed fixed price upfront before we write a single line of code.</p>
-                </div>
-
-                <div className="bg-white border border-stone-300 rounded-2xl p-8 hover:border-stone-400 transition-all">
-                   <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center mb-6">
-                      <svg className="w-6 h-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                   </div>
-                   <h3 className="text-xl font-bold text-charcoal mb-3">Direct Access to Engineers</h3>
-                   <p className="text-stone-500 leading-relaxed">No account managers or middlemen. You work directly with the developers building your product.</p>
-                </div>
-             </div>
-         </div>
+      <section className="px-6 py-16 md:py-24" aria-labelledby="company-facts">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm font-bold uppercase tracking-widest text-cognac">Company facts</p>
+          <h2 id="company-facts" className="mt-3 text-3xl font-bold md:text-5xl">The people accountable for the work</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <p className="text-sm font-bold uppercase tracking-widest text-cognac">Engineering</p>
+              <h3 className="mt-3 text-2xl font-bold">Hassan Jamal</h3>
+              <p className="mt-2 text-stone-700">Co-founder and Lead Engineer</p>
+              <Link href="/about/hassan" className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
+                View Hassan&apos;s profile <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <p className="text-sm font-bold uppercase tracking-widest text-cognac">Architecture</p>
+              <h3 className="mt-3 text-2xl font-bold">Imran Raza Ladhani</h3>
+              <p className="mt-2 text-stone-700">Co-founder and Lead Architect</p>
+              <Link href="/about/imran" className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
+                View Imran&apos;s profile <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </article>
+          </div>
+          <dl className="mt-6 grid gap-4 rounded-3xl border border-stone-300 bg-stone-50 p-7 sm:grid-cols-2">
+            <div>
+              <dt className="text-sm font-bold uppercase tracking-widest text-stone-600">Founded</dt>
+              <dd className="mt-2 font-semibold text-charcoal">February 2026</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-bold uppercase tracking-widest text-stone-600">Mailing address</dt>
+              <dd className="mt-2 font-semibold text-charcoal">701 Tillery St Ste 12, Austin, TX 78702, United States</dd>
+            </div>
+          </dl>
+        </div>
       </section>
 
-      {/* LinkedIn Social Proof */}
-      <LinkedInProof />
+      <section className="px-6 py-16 md:py-24" aria-labelledby="delivery-standards">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-cognac">Delivery standard</p>
+            <h2 id="delivery-standards" className="mt-3 text-3xl font-bold md:text-5xl">
+              What should be clear before approval
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {standards.map(({ icon: Icon, title, body }) => (
+              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
+                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+                <h3 className="mt-5 text-xl font-bold">{title}</h3>
+                <p className="mt-3 leading-7 text-stone-700">{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* 5. MANIFESTO */}
-      <section className="py-12 md:py-20 px-6">
-         <div className="container mx-auto max-w-4xl bg-white border border-stone-300 rounded-2xl overflow-hidden text-sm">
-            <div className="p-8 md:p-12 space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal">Our Mission: Eradicate Bloat.</h2>
-                <p className="text-stone-500 text-lg leading-relaxed">
-                    In 2026, WordPress still powers 43% of the web. Agencies make billions from plugin subscriptions.
-                    Business owners pay thousands per month for websites that feel like 2010.
-                </p>
-                <p className="border-l-2 border-stone-300 pl-4 text-charcoal text-lg leading-relaxed">
-                    We build websites using modern architecture. No bloat. No recurring plugin fees.
-                    You get an asset you own, not a service you rent.
-                </p>
-            </div>
-         </div>
+      <section className="px-6 py-16 md:py-24" aria-labelledby="what-you-get">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-cognac">Why clients choose us</p>
+            <h2 id="what-you-get" className="mt-3 text-3xl font-bold md:text-5xl">
+              What we will put <span className="font-serif font-normal italic text-cognac">in writing.</span>
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-stone-700">
+              Not slogans. Each of these appears as a term in the accepted project terms, which is where you should hold
+              us to them.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">You own everything</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                Source code, design files, CMS models, documentation and production accounts are transferred to, or
+                created under, your control. There is no proprietary layer you have to keep paying us for, and no
+                scenario where leaving means starting over.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">A measured speed target</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                A 90+ Lighthouse target on mobile and desktop, for representative pages named in your scope, verified
+                across three recorded runs before handover. It is a lab acceptance test with stated conditions, not a
+                promise about rankings, traffic or revenue, which nobody controls.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">No platform rent</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                We do not charge a monthly licence to keep your own site running. You will still pay third parties for
+                hosting, a CMS or email if your build uses them, and we document those costs and who owns each account
+                before you approve anything.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">Your exposure is capped at the deposit</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                Payment is normally 30% at onboarding and 70% at the delivery milestone, after you have reviewed the
+                work. So you never pay the balance for something you have not accepted. Where scope protection is
+                included in your accepted terms, we refund the fees paid under that scope if we fail to deliver what was
+                promised, which at that point is the deposit. The terms define the trigger, verification and cure
+                process. It is not a change-of-mind refund, and we would rather say that plainly than bury it.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">Fixed price, no hourly billing</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                You approve a number before work starts, and that number holds for the agreed scope. Anything outside it
+                is quoted and approved separately before it is built. A common structure is 30% at onboarding and 70% at
+                the delivery milestone.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">Support after launch</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                Discussions typically start at 15 business days for Starter and 30 for Growth and Scale. What it covers,
+                when it starts, and what counts as a defect versus a new request are written down, so nobody argues about
+                it later.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">A launch you can reverse</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                Your current site stays live until you approve the new one. Redirects, analytics, forms, DNS, monitoring
+                and a documented rollback path are agreed before cutover, so going live is a decision rather than a leap.
+              </p>
+            </article>
+            <article className="rounded-3xl border border-stone-300 bg-white p-7">
+              <h3 className="text-xl font-bold">You talk to the engineers</h3>
+              <p className="mt-3 leading-7 text-stone-700">
+                Two co-founders scope your project and two co-founders build it. There is no account manager relaying
+                messages, and no junior team you were not told about. If we think repairing your current site beats
+                rebuilding it, you will hear that from the person who would have done the rebuild.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-midnight px-6 py-16 text-white md:py-24" aria-labelledby="working-process">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <Code2 className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <h2 id="working-process" className="mt-5 text-3xl font-bold md:text-5xl">How the work is governed</h2>
+            <p className="mt-5 leading-7 text-stone-300">
+              Architecture and implementation stay connected to the commercial scope. If discovery shows that the current platform is the better option, the recommendation should say so.
+            </p>
+          </div>
+          <ol className="space-y-5">
+            {process.map((item, index) => (
+              <li key={item} className="flex gap-4 rounded-2xl border border-stone-700 bg-stone-900 p-5">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-300 font-bold text-midnight">
+                  {index + 1}
+                </span>
+                <span className="leading-7 text-stone-200">{item}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:py-24" aria-labelledby="evidence-policy">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-stone-300 bg-white p-8 md:p-12">
+          <p className="text-sm font-bold uppercase tracking-widest text-cognac">Evidence policy</p>
+          <h2 id="evidence-policy" className="mt-3 text-3xl font-bold">Claims need a date, method, and limitation.</h2>
+          <p className="mt-5 leading-7 text-stone-700">
+            Performance, cost, ranking, conversion, revenue, testimonial, and delivery figures should be published only with the source, measurement conditions, permission, and review date needed to interpret them. Search rankings, field performance, revenue, and AI citations remain controlled by external systems and are not guaranteed by a technical implementation.
+          </p>
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            {["Visible copy and structured data must agree", "Lab results must name the tested profile", "Third-party costs must include assumptions", "Commercial remedies belong in accepted written project terms"].map((item) => (
+              <li key={item} className="flex gap-3 text-stone-700">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <Footer />

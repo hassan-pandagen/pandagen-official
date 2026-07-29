@@ -4,11 +4,8 @@ import { useState } from "react";
 import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Cpu, Users, Palette, HelpCircle, FileSearch, Lightbulb, Code, Rocket, Gauge, ShoppingBag, Wrench, Layers, Database, KeyRound, Plug, Server, GitBranch } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SocialProof from "@/components/home/SocialProof";
-import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
@@ -16,34 +13,34 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import BuiltWith from "@/components/sections/BuiltWith";
 
 const comparisonData = [
-  { feature: "Scalability",     nocode: "Bubble: 1,000-user hard limit on $119/mo plan", custom: "Vercel Edge + Supabase: handles millions, pay only when you scale", icon: Users },
-  { feature: "Code Ownership",  nocode: "Bubble shuts down → your product disappears", custom: "100% yours on GitHub, Day 1. Fire us and hire anyone.", icon: Lock },
-  { feature: "Performance",     nocode: "30 to 55 PageSpeed mobile (Bubble / Webflow avg)", custom: "90+ PageSpeed (our own site scores 90+)", icon: TrendingUp },
-  { feature: "Monthly Cost",    nocode: "$49 to $499/mo forever, forced annual upgrades", custom: "Starts free. $20/mo only when you scale. Our brand that scaled from $38K to about $50K/mo runs on about $55/mo (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).", icon: DollarSign },
-  { feature: "Customization",   nocode: "Can't build complex logic: custom auth, B2B pricing, real-time", custom: "Unlimited: role-based access, live data, custom pricing calculators, anything", icon: Palette },
-  { feature: "AI Integration",  nocode: "Zapier webhooks only. No real AI architecture", custom: "OpenAI + Claude natively in your product, trained on your own data", icon: Cpu },
+  { feature: "Capacity Planning", nocode: "Capacity and scaling controls depend on the selected platform and plan", custom: "Load profile, capacity targets, and scaling controls are defined during discovery", icon: Users },
+  { feature: "Repository & Rights", nocode: "Export, access, and licensing terms vary by platform", custom: "Repository access, licensing, IP transfer, and handover are stated in the proposal", icon: Lock },
+  { feature: "Performance", nocode: "Results vary with templates, scripts, content, and integrations", custom: "The baseline, test conditions, and acceptance targets are agreed before implementation", icon: TrendingUp },
+  { feature: "Operating Costs", nocode: "Subscriptions, add-ons, and usage charges require a current account review", custom: "Hosting and service estimates are itemized against the proposed architecture", icon: DollarSign },
+  { feature: "Customization", nocode: "Changes are limited by supported extension points and plan features", custom: "Custom workflows can be designed within the agreed scope and dependencies", icon: Palette },
+  { feature: "AI Integration", nocode: "Options depend on available APIs, add-ons, and data controls", custom: "Provider integrations are designed around approved data, security, and evaluation requirements", icon: Cpu },
 ];
 
 const faqData = [
   {
     q: "How long does it take to build a custom app?",
-    a: "A working MVP takes 4-6 weeks. A full-featured platform takes 8-16 weeks depending on complexity. We do sprint-based development so you see working features every week, not just at the end.",
+    a: "Delivery timing depends on validated requirements, integrations, data migration, review availability, and acceptance criteria. Discovery produces a written proposal with milestones, dependencies, and the change process before work begins.",
   },
   {
     q: "How much does custom development cost?",
-    a: "Typical dev shops charge $50,000 to $200,000+ and take 3-6 months. We meet you halfway. Three tiers: Tool starts at $3,000 (small internal tool or marketing site with clear scope). Platform starts at $10,000 (SaaS MVP, client portal, or full dashboard with custom business logic). Enterprise starts at $25,000 (multi-tenant SaaS, complex integrations, enterprise features). Fixed-price quotes. No hourly billing. You own 100% of the code and IP from Day 1.",
+    a: "Custom development is quoted after the team reviews requirements, integrations, data, security needs, and delivery dependencies. The accepted proposal states the price model, payment schedule, scope, exclusions, support, repository access, licensing, and IP terms.",
   },
   {
     q: "Can I add AI features to my app?",
-    a: "Yes. We integrate OpenAI and Claude APIs directly into your product. Examples: AI chat support, document analysis, automated data extraction, content generation, and smart search. These features are built natively, not bolted on.",
+    a: "We can scope direct integrations with supported AI-provider APIs for chat, document analysis, extraction, generation, or search. Feasibility depends on provider capabilities, data quality, privacy requirements, evaluation criteria, and the approved scope.",
   },
   {
     q: "What if I already have a Bubble/no-code app?",
-    a: "We migrate your logic and data to custom code. Your users don't notice a difference except that everything is faster. We handle database migration, auth setup, and API recreation.",
+    a: "We can assess the application logic, data model, authentication, and integrations, then propose a staged migration and cutover plan. Performance and continuity are measured against agreed baselines and acceptance checks rather than assumed in advance.",
   },
   {
     q: "Do I own the code?",
-    a: "100%. You get the full GitHub repository, all documentation, and deployment access. It's your intellectual property from day one. You can hire any developer in the world to maintain or extend it.",
+    a: "Repository access, documentation, deployment access, licensing, third-party components, IP transfer, and handover timing are documented in the accepted proposal so both parties know exactly what is included.",
   },
 ];
 
@@ -52,7 +49,6 @@ export default function PageContent() {
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]" />
       <ReadingProgressBar />
       <Header />
 
@@ -71,8 +67,8 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            SaaS founders: stop waiting 6 months for a dev shop. <br />
-            <span className="font-serif italic text-cognac">We ship your first working version in 4 to 6 weeks.</span>
+            Turn a product idea into an engineering plan.{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">Validate the scope before committing to delivery.</span>
           </motion.h1>
 
           <motion.p
@@ -81,23 +77,23 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Templates can&apos;t build unicorns. We architect scalable SaaS platforms, internal dashboards, and AI-powered tools. <span className="text-charcoal font-medium">You own the code. You own the IP. You own the future.</span> We run our own custom CRM and AI automation systems on the same stack we build for clients.
+            We design SaaS platforms, internal dashboards, and AI-enabled tools around the workflows, integrations, and constraints discovered for each project. <span className="text-charcoal font-medium">Repository access, licensing, IP, support, and handover are defined in the written proposal.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Get your engineering plan <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#what-we-build" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               See What We Build <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Describe your idea or share your current tool when you book. We scope it live, identify what custom code replaces, and <span className="text-charcoal font-medium">give you a fixed MVP quote.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Describe your idea or share your current tool when you book. We review the problem, identify open dependencies, and <span className="text-charcoal font-medium">outline the next discovery step.</span> Any commercial commitment appears in a written proposal.</p>
         </div>
       </section>
 
@@ -105,20 +101,20 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen builds custom software, SaaS platforms, dashboards, and internal tools</strong> on Next.js, TypeScript, and Supabase, with the client owning 100% of the code and IP from day one. Projects are fixed-price from $3,000 (Tool) to $25,000+ (Enterprise), take 1 to 12 weeks depending on scope, and replace $50,000 to $200,000 agency quotes and recurring SaaS subscriptions with owned code. No hourly billing.
+            <strong className="text-charcoal">PandaCodeGen scopes and builds custom software, SaaS platforms, dashboards, and internal tools</strong> with technologies such as Next.js, TypeScript, and Supabase. The accepted proposal records deliverables, dependencies, price, timing, support, repository access, licensing, IP, and handover terms for the specific project.
           </p>
         </div>
       </section>
 
       {/* 2. WHAT WE BUILD */}
-      <section id="what-we-build" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-[#F8FAFC]">
+      <section id="what-we-build" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
               What We Build
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">What Our Next.js Development Agency Builds</h2>
-            <p className="text-stone-600 text-lg max-w-2xl mx-auto">Every project we take on falls into one of these categories. Here&apos;s what we&apos;ve built for companies like yours.</p>
+            <p className="text-stone-600 text-lg max-w-2xl mx-auto">These capability examples help frame discovery. They are not claims about a completed client project or a promise that every feature belongs in your scope.</p>
           </div>
 
           <div className="space-y-6">
@@ -135,7 +131,7 @@ export default function PageContent() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-charcoal mb-3">SaaS Platforms</h3>
                   <p className="text-stone-600 text-base leading-relaxed mb-4">Multi-tenant applications with authentication, subscription billing, user dashboards, and scalable architecture built to grow with your business.</p>
-                  <p className="text-sm text-cognac font-medium mb-4">We use this exact stack ourselves. Our internal CRM and AI automation system are built on Next.js and Supabase — the same architecture we deliver to clients.</p>
+                  <p className="text-sm text-cognac font-medium mb-4">The proposal selects architecture after reviewing tenancy, permissions, data sensitivity, integrations, portability, operational ownership, and expected load.</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {["Subscription management dashboards", "Marketplace platforms with payments", "Project management tools", "CRM & client portals", "Multi-tenant auth with role-based access", "Stripe/payment gateway integration"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
@@ -200,17 +196,6 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2a. CASE STUDY GRID — Saforne featured (custom build from scratch) */}
-      <CaseStudyGrid
-        highlight="saforne"
-        label="Real Custom Builds"
-        heading="Custom Next.js, built from scratch"
-        subheading="Four custom applications we've built. Live URLs, verifiable performance scores, real clients shipping real products."
-      />
-
-      {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
-      <SocialProof />
-
       {/* 3. HOW WE BUILD - Process Timeline */}
       <section id="how-we-build" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
@@ -218,31 +203,31 @@ export default function PageContent() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 text-sm text-stone-600 font-bold uppercase tracking-widest mb-6">
               How We Build
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">From Idea to Production in Sprints</h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto">No 6-month waterfall projects. We ship in 2-week sprints with weekly demos. You see progress every single week.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">From Idea to an Agreed Delivery Plan</h2>
+            <p className="text-stone-600 text-lg max-w-2xl mx-auto">Work is organized into reviewable phases. The proposal defines milestones, review cadence, dependencies, and acceptance for the approved scope.</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-slate-100 -z-10" />
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
             {[
-              { step: "01", title: "Discovery Sprint", duration: "Phase 1", desc: "We map your requirements, user flows, and technical architecture. You get a detailed spec doc and timeline before a single line of code is written." },
-              { step: "02", title: "Prototype & Validate", duration: "Phase 2", desc: "We build a working prototype with real functionality, not mockups. You test it, your users test it, we iterate until it's right." },
-              { step: "03", title: "Full Development", duration: "Phase 3", desc: "Sprint-based build on Next.js App Router with React Server Components, Tailwind CSS, Turbopack, and Sanity or Supabase for content and data. Auth, Stripe payments, real-time features, Claude and OpenAI integration. Weekly demos. Never surprises." },
-              { step: "04", title: "Launch & Scale", duration: "Phase 4", desc: "We deploy to production, set up monitoring, and hand over the codebase. You own 100% of the code and IP. We stay on for support." },
+              { step: "01", title: "Discovery", duration: "Phase 1", desc: "We map requirements, user flows, constraints, and technical options. The resulting scope records assumptions, dependencies, milestones, and acceptance criteria." },
+              { step: "02", title: "Prototype & Validate", duration: "Phase 2", desc: "Where useful, we test important workflows or technical risks before committing to the full implementation path." },
+              { step: "03", title: "Implementation", duration: "Phase 3", desc: "We build the approved features and integrations in reviewable increments using the architecture selected for the project." },
+              { step: "04", title: "Verification & Handover", duration: "Phase 4", desc: "We run the agreed checks, prepare deployment and documentation, and complete support, access, licensing, and handover steps stated in the proposal." },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl border border-stone-200 shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className="w-14 h-14 rounded-full bg-stone-50 border-4 border-white shadow-xs flex items-center justify-center text-lg font-black text-cognac mb-6">
                   {item.step}
                 </div>
                 <div className="text-xs font-semibold text-stone-600 uppercase tracking-widest mb-2">{item.duration}</div>
-                <h3 className="font-bold text-lg text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-lg text-charcoal mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -250,26 +235,26 @@ export default function PageContent() {
       </section>
 
       {/* 4. PAIN POINTS */}
-      <section className="py-12 md:py-20 px-6 bg-[#0F172A]">
+      <section className="py-12 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 text-sm font-bold uppercase tracking-widest mb-6">
               <AlertTriangle className="w-4 h-4" /> Growth Cap
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The No-Code Ceiling</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <p className="text-stone-300 max-w-2xl mx-auto">
               These are the problems founders and businesses hit when they try to scale on no-code platforms:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, pain: "The $180K Quote That Ships 9 Months Late", detail: "Dev shops pad estimates with project managers, QA, account managers, and a billable discovery phase. Half your budget goes to people who never open a code editor. Founder-built means zero handoff tax, zero coordination meetings, zero Slack threads about what was supposed to be in the spec." },
-              { icon: XCircle, pain: "The Offshore Black Hole", detail: "You ship specs to Manila at 9pm and wake up to code that technically works but architecturally cannot scale past 500 users. Rewrites in year two cost more than the original build. Custom architecture decisions need to be made by people who will maintain them." },
-              { icon: Zap, pain: "Hourly Billing Rewards Slow Work", detail: "Every unexpected complication is revenue for the shop and a line item for you. Fixed-price forces the agency to design for speed and correctness on day one. We price the outcome, not the hours. If it takes longer than quoted, that is our problem, not yours." },
-              { icon: Lock, pain: "Your Product Disappears If the Platform Shuts Down", detail: "Bubble, Glide, and Softr have had outages and pricing hikes. If they shut down or price you out, your entire product disappears with them. Custom code lives on GitHub. You own it from Day 1. No vendor controls your business." },
-              { icon: TrendingUp, pain: "Investors Pass Because of Your Tech Stack", detail: "Due diligence audits your architecture. A no-code app signals prototype, not scalable business. Custom code signals investable technology and lets you pass technical DD without rebuilding anything." },
-              { icon: Cpu, pain: "Competitors Are Shipping AI Features You Cannot Match", detail: "Claude, OpenAI, and AI search integrations require native API architecture. No-code and off-the-shelf platforms cannot wire AI into your product core logic. Competitors on custom code ship AI features in days. You wait for a plugin." },
+              { icon: DollarSign, pain: "Unclear Commercial Assumptions", detail: "A proposal should separate discovery, implementation, third-party services, change requests, and ongoing support so the cost model can be evaluated before commitment." },
+              { icon: XCircle, pain: "Architecture Without a Load Model", detail: "Capacity depends on user behavior, data volume, integrations, and failure handling. Those assumptions should be documented and tested against the approved requirements." },
+              { icon: Zap, pain: "Incentives Hidden in the Contract", detail: "Fixed-price, hourly, and milestone models each have trade-offs. The selected model, change process, and acceptance criteria should be explicit in the written proposal." },
+              { icon: Lock, pain: "Portability and Access Gaps", detail: "Platform exports, repository access, credentials, licensing, and handover vary. Review them before choosing an implementation path or vendor." },
+              { icon: TrendingUp, pain: "Technology Chosen Before the Problem", detail: "Technical due diligence examines architecture, operations, security, and maintainability. The stack should follow the product constraints and evidence, not a generic label." },
+              { icon: Cpu, pain: "AI Added Without Evaluation", detail: "AI features need suitable provider APIs, data controls, test cases, fallback behavior, and monitoring. Discovery identifies whether native integration is appropriate." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -282,7 +267,7 @@ export default function PageContent() {
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.pain}</h3>
-                <p className="text-slate-400 leading-relaxed text-sm">{item.detail}</p>
+                <p className="text-stone-300 leading-relaxed text-sm">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -293,13 +278,13 @@ export default function PageContent() {
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom Coded</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-12">Build to last. Build to scale. Build to own.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-12">Compare constraints, dependencies, portability, and operating responsibilities.</p>
 
           <div className="rounded-2xl border border-stone-300 overflow-hidden bg-white">
-            {/* Header — desktop only. On mobile, each row gets inline labels. */}
+            {/* Header for desktop only. On mobile, each row gets inline labels. */}
             <div className="hidden md:grid md:grid-cols-3 bg-stone-50 p-4 border-b border-stone-200">
               <div className="text-stone-600 font-medium text-sm">Feature</div>
-              <div className="text-stone-500 font-bold text-sm text-center">No-Code / Templates</div>
+              <div className="text-stone-600 font-bold text-sm text-center">No-Code / Templates</div>
               <div className="text-cognac font-bold text-sm text-center">Custom Coded</div>
             </div>
 
@@ -309,16 +294,16 @@ export default function PageContent() {
                 className={`p-4 ${i % 2 === 0 ? 'bg-white' : 'bg-stone-50/50'} ${i < comparisonData.length - 1 ? 'border-b border-stone-200' : ''} md:grid md:grid-cols-3 md:items-center`}
               >
                 <div className="flex items-center gap-2 text-charcoal text-sm font-bold mb-3 md:mb-0 md:font-medium">
-                  <row.icon className="w-4 h-4 text-stone-400 shrink-0" />
+                  <row.icon className="w-4 h-4 text-stone-600 shrink-0" />
                   {row.feature}
                 </div>
                 <div className="flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-center md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-500">No-Code</span>
-                  <span className="text-red-400/90 text-sm md:text-center">{row.nocode}</span>
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600">No-Code</span>
+                  <span className="text-stone-700 text-sm md:text-center">{row.nocode}</span>
                 </div>
                 <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
                   <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom</span>
-                  <span className="text-green-500 text-sm font-medium md:text-center">{row.custom}</span>
+                  <span className="text-cognac text-sm font-medium md:text-center">{row.custom}</span>
                 </div>
               </div>
             ))}
@@ -337,23 +322,23 @@ export default function PageContent() {
               H
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">Who writes your code</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Founder-built. Not farmed out.</h2>
+              <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">Delivery accountability</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Know the Team and Responsibilities Before Kickoff.</h2>
               <p className="text-stone-600 text-lg leading-relaxed mb-4">
-                I am Hassan. I spent six years shipping WordPress sites for founders before I watched too many of them hit the platform ceiling. Now I build custom Next.js from Austin, Texas, with Imran on architecture. When you hire PandaCodeGen, I write your code. Not a junior. Not an offshore team. Not a project manager forwarding Slack messages.
+                The written proposal identifies the delivery roles, technical responsibilities, communication path, review cadence, and any approved subcontracting or external dependencies for the project.
               </p>
               <p className="text-stone-600 text-base">
-                Every quote I give on a discovery call is a quote I can personally deliver on. That is why the pricing below looks the way it does.
+                Discovery establishes the implementation path and open risks. Price, timing, staffing, support, and commercial terms are then recorded in the written proposal.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PARTNER PROMISE — locked brand voice, 3 guarantees. hideTiers: this page has its own $3K/$10K/$25K tiers */}
+      {/* Scope and evidence framework */}
       <PartnerPromise hideTiers />
 
-      {/* SIGNATURE BLOCK — Build Blueprint Spec (unique to Custom Engineering) */}
+      {/* SIGNATURE BLOCK: Build Blueprint Spec (unique to Custom Engineering) */}
       <section id="build-blueprint" className="py-12 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-10 md:mb-12">
@@ -361,36 +346,36 @@ export default function PageContent() {
               <Server className="w-4 h-4" /> Spec Sheet
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              The exact <span className="font-serif italic text-cognac">build blueprint</span> behind every project
+              A reviewable <span className="font-serif font-normal italic text-cognac">build blueprint</span> for each project
             </h2>
             <p data-speakable="true" className="text-stone-300 text-lg max-w-2xl leading-relaxed">
-              Before we write a line of code, you get the datasheet. This is the production architecture we ship, every field locked to a real, outcome-oriented value, so you know precisely what you own before kickoff.
+              Before implementation, we document the proposed architecture, dependencies, measurements, and responsibilities. Final commitments are the ones stated in the accepted proposal and technical specification.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-stone-700 bg-[#0F172A] overflow-hidden">
-            {/* Datasheet header — blueprint stamp */}
+          <div className="rounded-3xl border border-stone-700 bg-stone-950 overflow-hidden">
+            {/* Datasheet header with blueprint stamp */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 px-6 md:px-8 py-4 border-b border-stone-700 bg-white/5">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-stone-400">SPEC // CUSTOM-ENGINEERING-BUILD</span>
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-cognac">REV 2026.06 · STATUS: SHIP-READY</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-stone-600">SPEC // CUSTOM-ENGINEERING-BUILD</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-orange-300">REV 2026.07 · STATUS: REVIEW-READY</span>
             </div>
 
             {/* Ruled spec rows */}
             <dl>
               {[
-                { icon: Layers, field: "ARCHITECTURE", value: "Next.js 15 App Router · React Server Components · TypeScript · Tailwind" },
+                { icon: Layers, field: "ARCHITECTURE", value: "A maintained Next.js App Router release · React Server Components · TypeScript · Tailwind" },
                 { icon: Database, field: "DATA_LAYER", value: "Postgres (Supabase) or headless CMS · typed schema · row-level security" },
                 { icon: KeyRound, field: "AUTH", value: "Session-based auth · role-based access control · multi-tenant isolation" },
                 { icon: Plug, field: "APIS_&_INTEGRATIONS", value: "REST + GraphQL endpoints · Stripe, OpenAI, Claude · inbound/outbound webhooks" },
-                { icon: Gauge, field: "PERFORMANCE_TARGET", value: "90+ Lighthouse · sub-1s LCP · edge-cached static + streamed dynamic" },
-                { icon: Server, field: "HOSTING", value: "Vercel edge network · $0 to start · pay-as-you-scale, no idle cost" },
-                { icon: GitBranch, field: "OWNERSHIP", value: "100% your GitHub repo on Day 1 · full IP + docs · zero vendor lock-in" },
+                { icon: Gauge, field: "PERFORMANCE", value: "Baseline · test environment · budgets · acceptance method · known third-party constraints" },
+                { icon: Server, field: "HOSTING", value: "Selected provider · usage assumptions · operational roles · current service estimates" },
+                { icon: GitBranch, field: "ACCESS_&_RIGHTS", value: "Repository access · licensing · IP transfer · documentation · handover timing" },
               ].map((row, i, arr) => (
                 <div
                   key={i}
                   className={`grid grid-cols-1 md:grid-cols-[minmax(0,260px)_1fr] gap-2 md:gap-6 px-6 md:px-8 py-5 ${i < arr.length - 1 ? "border-b border-stone-700/70" : ""} hover:bg-white/5 transition-colors`}
                 >
-                  <dt className="flex items-center gap-3 font-mono text-sm text-stone-400">
+                  <dt className="flex items-center gap-3 font-mono text-sm text-stone-600">
                     <row.icon className="w-4 h-4 text-cognac shrink-0" />
                     <span className="tracking-wider">{row.field}</span>
                   </dt>
@@ -401,95 +386,86 @@ export default function PageContent() {
 
             {/* Datasheet footer note */}
             <div className="px-6 md:px-8 py-4 border-t border-stone-700 bg-white/5">
-              <p className="font-mono text-xs text-stone-500 leading-relaxed">
-                {/* */}— Fields are defaults; every value is tuned to your scope on the discovery call. No part of this stack is rented from us.
+              <p className="font-mono text-xs text-stone-600 leading-relaxed">
+                {/* */}These are planning categories, not universal defaults. The approved specification and proposal control the project.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PRICING TIERS — SaaS / custom application pricing */}
+      {/* PRICING TIERS: SaaS / custom application pricing */}
       <PricingTiers
-        heading="Dev shops charge $50K to $200K."
-        headingAccent="We ship real software for less."
+        heading="Plan the right engineering scope."
+        headingAccent="Confirm commercial terms in writing."
         agencyComparison={{
-          agencyPrice: "$50K to $200K+",
-          agencyNote: "3-6 month timeline. Hourly billing. Agency overhead baked into every hour.",
-          ourPrice: "From $3,000",
-          ourNote: "2-8 week timeline. Fixed-scope pricing. You own 100% of the code + IP.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare like-for-like scope, dependencies, and contract terms.",
+          ourPrice: "Scoped proposal",
+          ourNote: "Price, timing, access, support, and rights follow discovery.",
         }}
         tiers={[
           {
             tier: "Tool",
-            price: "Starting from $3,000",
-            timeline: "1 to 2 weeks",
-            fit: "Marketing site, internal tool, or small portal. Clear scope.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A focused tool or portal with validated requirements.",
             includes: [
-              "Custom Next.js + TypeScript build",
-              "Database (Supabase or Postgres)",
-              "Auth + role-based access",
-              "Responsive design, 90+ PageSpeed",
-              "Deployment to Vercel",
-              "Full code ownership on Day 1",
+              "Requirements and dependency review",
+              "Architecture and integration plan",
+              "Written acceptance and handover terms",
             ],
-            cta: "Scope My Project",
+            cta: "Get your migration plan",
           },
           {
             tier: "Platform",
-            price: "Starting from $10,000",
-            timeline: "3 to 5 weeks",
-            fit: "SaaS MVP, client portal, or full dashboard. Custom business logic.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "A SaaS product, client portal, or dashboard with custom workflows.",
             includes: [
-              "Everything in Starter",
-              "Stripe payments + subscriptions",
-              "Admin dashboard with analytics",
-              "Custom business workflow logic",
-              "API integrations (up to 3)",
-              "30-day post-launch support",
+              "Validated feature and data scope",
+              "Security and integration requirements",
+              "Written support and change process",
             ],
             featured: true,
           },
           {
             tier: "Enterprise",
-            price: "Starting from $25,000",
-            timeline: "6-12 weeks",
-            fit: "Multi-tenant SaaS, complex integrations, enterprise features.",
+            price: "Defined after discovery",
+            timeline: "Milestones proposed after review",
+            fit: "Complex systems with broader security, integration, or operational requirements.",
             includes: [
-              "Everything in Growth",
-              "Multi-tenant architecture",
-              "Scales to 10,000+ users",
-              "Complex API integrations",
-              "Security audit + penetration testing",
-              "30-day post-launch support",
+              "Architecture and risk assessment",
+              "Acceptance method and operational plan",
+              "Written licensing, access, and handover terms",
             ],
           },
         ]}
-        footnote="All builds include: 100% code ownership + IP rights on Day 1, deployment to your own Vercel account, complete documentation, and our scales-to-10K-users guarantee."
+        footnote="The accepted proposal controls scope, price, timing, support, access, licensing, ownership, and remedies."
       />
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Ready to Build Something Real?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-8 md:mb-12">Choose the right validation path.</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* MVP / Prototype */}
             <div className="p-8 rounded-3xl bg-stone-50 border border-stone-200 hover:border-charcoal/30 transition-colors">
-              <div className="text-stone-500 text-sm font-bold uppercase tracking-wider mb-4">For Startups</div>
+              <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">For Startups</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">MVP / Prototype</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Need to validate your idea fast? We build functional MVPs that look polished and are built on real architecture (not no-code that you&apos;ll outgrow).
+                Need to validate an idea? We can scope a functional prototype around the riskiest workflows, dependencies, and user questions.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Functional prototype in weeks", "Real code (not no-code)", "Scalable from day one", "Investor-ready architecture", "User testing ready"].map((item, i) => (
+                {["Defined validation questions", "Reviewable implementation path", "Documented architecture assumptions", "User-testing plan", "Written acceptance criteria"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"build_my_mvp",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 border border-charcoal text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white hover:border-cognac transition-all">
-                Build My MVP
+                Discuss an MVP scope
               </button>
             </div>
 
@@ -499,17 +475,17 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">For Growing Businesses</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Full SaaS / Platform</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                A complete custom coded platform with AI integration, multi-tenant architecture, and everything you need to scale to millions of users.
+                A scoped platform path for projects that may require AI integrations, multi-tenant architecture, or custom operational workflows.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Full SaaS architecture", "AI-powered features", "Mobile app (PWA)", "Admin dashboard", "100% code ownership", "Scales to 1M+ users"].map((item, i) => (
+                {["SaaS architecture review", "AI-provider feasibility", "Responsive application scope", "Administration workflows", "Repository and licensing terms", "Capacity and monitoring plan"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"build_my_platform",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
-                Build My Platform
+                Discuss a platform scope
               </button>
             </div>
           </div>
@@ -520,7 +496,7 @@ export default function PageContent() {
       <section className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-sm text-stone-500 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-100 border border-stone-300 text-sm text-stone-600 mb-6">
               <HelpCircle className="w-4 h-4" /> FAQ
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Frequently Asked Questions</h2>
@@ -528,100 +504,92 @@ export default function PageContent() {
           </div>
 
           <div className="space-y-3">
-            {faqData.map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left p-5 rounded-xl bg-stone-50 border border-stone-200 hover:border-stone-200 transition-all"
+            {faqData.map((faq, i) => {
+              const isOpen = openFaq === i;
+              const buttonId = `custom-engineering-faq-button-${i}`;
+              const panelId = `custom-engineering-faq-panel-${i}`;
+
+              return (
+                <motion.div
+                  key={faq.q}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50"
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
-                    </div>
+                  <h3>
+                    <button
+                      id={buttonId}
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      onClick={() => setOpenFaq(isOpen ? null : i)}
+                      className="w-full p-5 text-left transition-all hover:text-cognac"
+                    >
+                      <span className="flex items-center justify-between gap-4">
+                        <span className="text-base font-medium text-charcoal">{faq.q}</span>
+                        <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-100 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
+                          <span className="text-sm font-bold text-charcoal">+</span>
+                        </span>
+                      </span>
+                    </button>
+                  </h3>
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={buttonId}
+                    hidden={!isOpen}
+                    className="border-t border-stone-200 px-5 py-4"
+                  >
+                    <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                   </div>
-                  {openFaq === i && (
-                    <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                  )}
-                </button>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 9. GUARANTEE */}
+      {/* 9. WRITTEN DELIVERY TERMS */}
       <section className="py-10 md:py-14 px-6">
-        <div className="container mx-auto max-w-4xl bg-linear-to-br from-green-50 to-white border border-green-200 rounded-[3rem] p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] pointer-events-none" />
+        <div className="container mx-auto max-w-4xl bg-linear-to-br from-[#faf7f2] to-white border border-cognac/30 rounded-[3rem] p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-cognac/10 blur-[80px] pointer-events-none" />
           <div className="relative z-10 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-6">
-              <ShieldCheck className="w-4 h-4" /> 30-Day Money-Back Guarantee (from delivery)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cognac/10 text-cognac border border-cognac/20 text-xs font-bold uppercase tracking-wider mb-6">
+              <ShieldCheck className="w-4 h-4" /> Written Delivery Terms
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Scales to 10,000 Users. Or We Fix It Free.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Define How the Build Will Be Verified.</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-2 max-w-2xl mx-auto">
-              If our architecture doesn&apos;t scale to your first 10,000 users without crashing, we will fix it for free. You receive 100% Code Ownership and IP Rights on Day 1.
+              Capacity assumptions, test conditions, acceptance criteria, support, repository access, licensing, IP transfer, handover, and any remedies are documented for the approved scope. This page does not create a performance or refund promise.
             </p>
-            <p className="text-sm text-stone-500 mb-8">Built in Austin, Texas. Shipped for founders worldwide.</p>
+            <p className="text-sm text-stone-600 mb-8">Project location, staffing, and delivery responsibilities are confirmed in the written proposal.</p>
             <button
               data-cal-namespace="discovery"
-              data-cal-link="pandagen/discovery"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
-              Book Free Discovery Call
+              Get your migration plan
             </button>
           </div>
         </div>
       </section>
 
-      {/* Further Reading — blog cluster links (closes the pillar -> supporting-content loop) */}
+      {/* Further Reading: blog cluster links that close the pillar-to-supporting-content loop */}
       <section className="py-10 px-6 bg-white border-t border-stone-200">
         <div className="container mx-auto max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">Further reading</p>
           <ul className="space-y-2 text-stone-700">
-            <li>&rarr; <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="text-charcoal hover:text-cognac underline underline-offset-2">Build vs buy software in 2026: the real cost comparison</Link></li>
+            <li>&rarr; <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="text-charcoal hover:text-cognac underline underline-offset-2">Build-versus-buy software planning guide</Link></li>
             <li>&rarr; <Link href="/blog/how-long-does-a-custom-website-take" className="text-charcoal hover:text-cognac underline underline-offset-2">How long does a custom website take to build?</Link></li>
-            <li>&rarr; <Link href="/blog/custom-website-5000-whats-included" className="text-charcoal hover:text-cognac underline underline-offset-2">A $5,000 custom website: what&apos;s actually included</Link></li>
-            <li>&rarr; <Link href="/blog/do-you-own-your-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Do you own your website? Code ownership explained</Link></li>
+            <li>&rarr; <Link href="/blog/custom-website-5000-whats-included" className="text-charcoal hover:text-cognac underline underline-offset-2">What a custom website scope may include</Link></li>
+            <li>&rarr; <Link href="/blog/do-you-own-your-website" className="text-charcoal hover:text-cognac underline underline-offset-2">Repository, licensing, and IP terms explained</Link></li>
           </ul>
         </div>
       </section>
 
-      {/* Related Services — expanded to all platforms via reusable component */}
+      {/* Related Services, expanded to all platforms via reusable component */}
       <RelatedServicesGrid currentHref="/services/custom-engineering" />
-
-      {/* Author Attribution */}
-      <section className="py-10 border-t border-stone-200 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-start gap-4">
-              <Link href="/about/hassan" className="shrink-0">
-                <Image src="/team/hassan.png" alt="Hassan Jamal" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Builds SaaS platforms, AI-integrated dashboards, and client portals from scratch. Fixed-price, sprint-based delivery with working features every week, not just at the end.</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Link href="/about/imran" className="shrink-0">
-                <Image src="/team/imran.png" alt="Imran" width={48} height={48} className="w-12 h-12 rounded-full border border-stone-200 object-cover" />
-              </Link>
-              <div>
-                <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Designs scalable system architecture for custom web apps, SaaS products, and no-code-to-custom migrations. Specialises in auth systems, API design, and data modelling. 8+ years in enterprise software.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

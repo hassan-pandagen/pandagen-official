@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-07-27T16:15:11.018956+00:00",
+  "nodes": {
+    "docs_audit_2026_07_20_blog_article_audit": {
+      "code_fingerprint": "73bcd8a36a3e1f23550d7f9054b1d951e66a09cc3e7b6bc0859b5009151d23d9",
+      "label": "Blog article source audit (77 routes)",
+      "last": "2026-07-24T12:22:56.537177+00:00",
+      "neg": 1,
+      "provenance": [
+        {
+          "date": "2026-07-24T12:22:56.537177+00:00",
+          "outcome": "useful",
+          "q": "What is the verified completion state of the 77-route blog claim audit?"
+        },
+        {
+          "date": "2026-07-23T21:02:14.709842+00:00",
+          "outcome": "corrected",
+          "q": "Is the external audit correct that all blog articles were not actually cleared despite the 77 PASS banner?"
+        }
+      ],
+      "score": 0.013631175,
+      "source_file": "docs/audit-2026-07-20/BLOG_ARTICLE_AUDIT.md",
+      "status": "contested",
+      "uses": 1,
+      "verdict": "useful"
+    },
+    "docs_audit_2026_07_20_blog_claim_decision_ledger": {
+      "code_fingerprint": "3266ca7cedf40d78a162c13b26f201366889a5c5a13281ca47d42e37c6705806",
+      "label": "Blog claim decision ledger",
+      "last": "2026-07-24T12:22:56.537177+00:00",
+      "neg": 1,
+      "provenance": [
+        {
+          "date": "2026-07-24T12:22:56.537177+00:00",
+          "outcome": "useful",
+          "q": "What is the verified completion state of the 77-route blog claim audit?"
+        },
+        {
+          "date": "2026-07-23T21:02:14.709842+00:00",
+          "outcome": "corrected",
+          "q": "Is the external audit correct that all blog articles were not actually cleared despite the 77 PASS banner?"
+        }
+      ],
+      "score": 0.013631175,
+      "source_file": "docs/audit-2026-07-20/BLOG_CLAIM_DECISION_LEDGER.md",
+      "status": "contested",
+      "uses": 1,
+      "verdict": "useful"
+    }
+  },
+  "version": 1
+}

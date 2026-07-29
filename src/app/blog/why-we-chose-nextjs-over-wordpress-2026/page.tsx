@@ -1,534 +1,330 @@
-import { ArrowLeft, Calendar, Clock, ArrowRight, RefreshCw } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, Blocks, Database, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const nextjsFAQs = blogPosts.find(p => p.id === 'why-we-chose-nextjs-over-wordpress-2026')?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/PlatformComparisonAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "why-we-chose-nextjs-over-wordpress-2026";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "Why We Choose Next.js for Some WordPress Migrations in 2026";
+const description =
+    "Our requirements-led reason for choosing Next.js on selected WordPress migrations, including performance, editing, security, cost, ownership and SEO tradeoffs.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "Why We Chose Next.js Over WordPress in 2026 (Client Results)" },
-    description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
-    alternates: {
-        canonical: '/blog/why-we-chose-nextjs-over-wordpress-2026',
-    },
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "Next.js vs WordPress 2026",
+        "why migrate WordPress to Next.js",
+        "WordPress Next.js migration",
+        "Next.js website agency",
+        "SEO safe WordPress migration",
+    ],
     openGraph: {
-        title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-        description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
+        title,
+        description,
         type: "article",
         publishedTime: "2026-03-04",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-        description: "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
-    },
-    keywords: ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    { name: "Next.js rendering", url: "https://nextjs.org/docs/app/getting-started/server-and-client-components" },
+    { name: "Next.js caching", url: "https://nextjs.org/docs/app/guides/caching" },
+    { name: "WordPress hardening", url: "https://developer.wordpress.org/advanced-administration/security/hardening/" },
+    { name: "WordPress plugins", url: "https://wordpress.org/documentation/article/manage-plugins/" },
+    { name: "WordPress performance", url: "https://make.wordpress.org/performance/handbook/measuring-performance/" },
+    { name: "Vercel pricing", url: "https://vercel.com/pricing" },
+    { name: "Vercel terms", url: "https://vercel.com/legal/terms" },
+    { name: "Sanity Visual Editing", url: "https://www.sanity.io/docs/visual-editing" },
+    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#article",
-            "headline": "Why We Chose Next.js Over WordPress in 2026 (With Client Results)",
-            "description": "We built WordPress for years. Client data made it impossible to justify. The speed, cost, and SEO numbers that made us switch.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-03-04T00:00:00-05:00",
-            "dateModified": "2026-03-04T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-03-04",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026" },
-            "articleSection": "WordPress",
-            "keywords": ["nextjs vs wordpress 2026", "why nextjs over wordpress", "wordpress alternative nextjs", "switch from wordpress to nextjs", "nextjs benefits over wordpress"],
-            "timeRequired": "PT11M",
-            "wordCount": 2500,
-            "about": [
-                {"@type": "Thing", "name": "Next.js"},
-                {"@type": "Thing", "name": "WordPress"},
-                {"@type": "Thing", "name": "Website Performance Optimisation"},
-                {"@type": "Thing", "name": "WordPress to Next.js Migration"}
-            ],
-            "inLanguage": "en-US",
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Next.js Documentation", "url": "https://nextjs.org/docs" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals Ranking Signal", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
-                { "@type": "CreativeWork", "name": "WordPress Security Report 2024. Sucuri", "url": "https://sucuri.net/reports/website-hacked-report/" },
-                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Sanity CMS Documentation", "url": "https://www.sanity.io/docs" },
-                { "@type": "CreativeWork", "name": "Google Think: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Deloitte: Milliseconds Make Millions", "url": "https://www2.deloitte.com/ie/en/pages/consulting/articles/milliseconds-make-millions.html" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Revenue Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
-            ]
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Why We Chose Next.js Over WordPress in 2026", "item": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#webpage",
-            "url": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026",
-            "name": "Why We Chose Next.js Over WordPress for Every New Client in 2026",
-            "description": "In 2023 we still built in WordPress. By mid-2024 we stopped completely.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-03-04T00:00:00-05:00",
-            "dateModified": "2026-03-04T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#breadcrumb" },
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Platform strategy",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#faq",
-            "mainEntity": nextjsFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
 
-export default function WhyNextjsOverWordPressPage() {
+export default function WhyWeChooseNextJsPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-                    />
-
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Why We Chose Next.js Over WordPress in 2026", href: "/blog/why-we-chose-nextjs-over-wordpress-2026" }
+                            { label: "Why we choose Next.js", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
+                    </Link>
+
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Platform strategy</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Why We Choose Next.js <span className="italic text-cognac">for Some WordPress Migrations</span>
+                        </h1>
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            We use Next.js when a client needs a deliberately engineered presentation layer and can
+                            own its operating model. We do not treat WordPress as automatically slow, insecure or wrong.
+                        </p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="15 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The honest reason</h2>
+                        <BlogList
+                            items={[
+                                "Next.js gives our engineering team explicit rendering, caching, component and integration choices.",
+                                "WordPress gives many teams a familiar editor and a broad managed ecosystem.",
+                                "Neither platform guarantees performance, security, SEO, low cost or ownership by itself.",
+                                "We recommend migration only when measured requirements remain blocked after realistic WordPress repairs.",
+                            ]}
+                        />
+                    </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Gauge, title: "Delivery", body: "Rendering and caching chosen per route and data need." },
+                            { icon: Database, title: "Editing", body: "A governed CMS selected for the content workflow." },
+                            { icon: ShieldCheck, title: "Security", body: "A smaller intentional surface, still requiring updates." },
+                            { icon: Blocks, title: "Ownership", body: "Repository, accounts, data and licenses defined in writing." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader id="what-changed">What changed our platform decision</BlogHeader>
+                    <BlogText>
+                        Our choice came from recurring requirements: tighter control over rendered output, reusable
+                        design systems, route-specific data loading, integration work and a cleaner handoff for
+                        revenue-generating sites. That is our delivery preference, not proof that every WordPress
+                        property should migrate. We do not attribute any single client&apos;s ranking movement or
+                        hosting bill to the platform on its own, because a rebuild usually changes content, structure
+                        and hosting at the same time and no one of those can be isolated after the fact. The
+                        feature-by-feature comparison behind that preference is in{" "}
+                        <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress compared with Next.js</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="performance">Performance is implementation-specific</BlogHeader>
+                    <BlogText>
+                        Next.js supports server and client components plus multiple caching and revalidation patterns.
+                        Those tools can help an experienced team send less work and control data freshness. They can
+                        also be implemented poorly. WordPress performance depends on hosting, cache, theme, plugins,
+                        content, media, database work and third parties. Measure representative routes with field data
+                        where available and repeated lab tests before naming the cause. Our method for the WordPress
+                        side is in{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">diagnosing a slow WordPress site</Link>, and
+                        the metrics themselves are explained in{" "}
+                        <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals explained</Link>.
+                    </BlogText>
+                    <InsightBox variant="info" label="Why there are no platform score ranges here">
+                        We do not publish a Lighthouse score range for either platform. A score belongs to a specific
+                        page, build, hosting setup and test condition rather than to the platform name, so a range
+                        quoted without that context tells you nothing about what your own site would score. Test your
+                        representative routes yourself and compare them against themselves over time. Our 90+ Lighthouse
+                        handover target on mobile and desktop applies to the representative pages named in the written
+                        scope, verified across three recorded runs.
+                    </InsightBox>
+
+                    <BlogHeader id="hosting">Hosting and lifecycle cost</BlogHeader>
+                    <BlogText>
+                        Build the comparison from current invoices and equivalent requirements. WordPress cost can
+                        include hosting, backups, security, premium extensions, maintenance and support. A Next.js
+                        system can include build, runtime, bandwidth, image processing, database, CMS, email, monitoring
+                        and engineering. Vercel&apos;s Hobby plan is intended for personal, non-commercial use under its
+                        current terms, so it is not a universal free-business-hosting promise. We set out a full
+                        input-by-input model in{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">the three-year platform cost comparison</Link>, and
+                        our own tiers sit on the{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="security">Plugins, packages and security</BlogHeader>
+                    <BlogText>
+                        WordPress advises keeping software current, limiting access, using trusted sources, backups and
+                        defense in depth. Plugin risk depends on the installed software, versions, configuration and
+                        maintenance. A Next.js application still uses framework and package dependencies, provider
+                        services, secrets and custom code. Our goal is a smaller, intentional dependency and privilege
+                        surface, not a vulnerability-free or maintenance-free system. The same inventory has a
+                        performance dimension, which we cover in{" "}
+                        <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="editing">Will editors miss WordPress?</BlogHeader>
+                    <BlogText>
+                        Some will, especially when their workflow depends on WordPress themes, blocks and plugins.
+                        Others prefer a structured CMS with constrained fields and preview. Sanity&apos;s current Visual
+                        Editing documentation supports live preview and direct editing from the rendered page. The
+                        correct choice depends on roles, approvals, localization, media, publishing volume, preview,
+                        portability and training.
+                    </BlogText>
+
+                    <BlogHeader id="ownership">Ownership is a contract question</BlogHeader>
+                    <BlogText>
+                        A framework does not decide who owns deliverables. Our standard position is that client content
+                        remains client property; custom deliverables transfer after full payment under the signed
+                        agreement; PandaCodeGen retains reusable tools and pre-existing code; and third-party
+                        components keep their original licenses. Client-controlled domains, repositories, hosting and
+                        business accounts can be established when agreed. We walk through what to check in your own
+                        arrangement in{" "}
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="first-party-example">What we can say about MyCustomPatches</BlogHeader>
+                    <BlogText>
+                        The owner confirmed a 22-day delivery for the MyCustomPatches project. That is a first-party
+                        timeline for one scope, not a market benchmark or promise. We do not attach performance, ranking,
+                        conversion, hosting or revenue figures to it. Numbers like those mean something only with the
+                        measurement period, method and comparable baseline stated beside them, and one site&apos;s
+                        results would not predict yours in any case. The scope of that project is written up on the{" "}
+                        <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches project page</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="when-wordpress-fits">When WordPress is still the right choice</BlogHeader>
+                    <BlogList
+                        items={[
+                            "The team relies on mature WordPress editing, theme or extension workflows.",
+                            "The current site meets performance, security and integration requirements after repair.",
+                            "The organization has reliable WordPress operations and update ownership.",
+                            "A custom application would add engineering responsibility without enough business value.",
+                            "The budget or deadline supports a focused improvement but not a controlled migration.",
                         ]}
                     />
 
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
+                    <BlogHeader id="when-nextjs-fits">When we consider Next.js</BlogHeader>
+                    <BlogList
+                        items={[
+                            "The design system and rendered output need deliberate engineering control.",
+                            "Integrations or application behavior exceed the current theme and extension model.",
+                            "A separate structured content workflow fits the editors and governance.",
+                            "Measured performance or reliability constraints remain after realistic repairs.",
+                            "The client can own the target providers, maintenance, security and release process.",
+                        ]}
+                    />
+                    <BlogText>
+                        Requirements in the second line usually become{" "}
+                        <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering</Link>{" "}
+                        rather than another extension. For the broader replacement question, see{" "}
+                        <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">what actually replaces WordPress</Link>.
+                    </BlogText>
 
-                    <div className="mb-10">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Why We Chose Next.js Over WordPress in 2026{" "}
-                            <span className="font-serif italic text-cognac">(With Client Results)</span>
-                        </h1>
+                    <BlogHeader id="seo">What happens to SEO during migration?</BlogHeader>
+                    <BlogText>
+                        A platform move can create search risk when URLs, rendered content, status codes, internal links,
+                        canonicals, metadata or crawl controls change. Google recommends careful planning, relevant
+                        redirects, updated links and canonicals, sitemaps and monitoring. Keep valuable URLs stable
+                        where practical and preserve a rollback path. No agency controls crawling, indexing, rankings,
+                        traffic or recovery timing. We answer the question people usually ask next in{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">will migrating hurt my SEO</Link>.
+                    </BlogText>
 
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            In 2023 we still built in WordPress. By mid-2024 we stopped completely. Here&apos;s the data, the client stories, and the 7 reasons we made the switch permanent.
+                    <BlogHeader id="process">Our migration process</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Inventory URLs, templates, content, data, forms, accounts and integrations.",
+                            "Define target architecture, content workflow, ownership and acceptance evidence.",
+                            "Build and validate the replacement while the current site remains available.",
+                            "Test redirects, rendered output, analytics, consent, accessibility, security and performance.",
+                            "Launch with monitoring, rollback conditions and named owners.",
+                            "Complete handoff and contract-defined launch defect support.",
+                        ]}
+                    />
+                    <BlogText>
+                        That sequence is what our{" "}
+                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service</Link>{" "}
+                        is built around, and the step-by-step technical version is in{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="text-cognac hover:underline">how to migrate WordPress to Next.js</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="offer">PandaCodeGen offer and terms</BlogHeader>
+                    <BlogText>
+                        We start with a free fit audit and prepare an SEO-safe migration plan when migration is
+                        justified. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to
+                        $10,000 Scale. Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund
+                        is tied to failure to deliver the signed scope. Starter includes 15 business days of launch
+                        defect support; Growth and Scale include 30. The inputs behind a migration figure are broken
+                        down in{" "}
+                        <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost</Link>.
+                    </BlogText>
+
+                    {postFAQs.length > 0 && (
+                        <>
+                            <BlogHeader id="faq">Frequently asked questions</BlogHeader>
+                            <FAQAccordion faqs={postFAQs} />
+                        </>
+                    )}
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <h2 className="mb-3 font-serif text-3xl">Decide from your requirements, not platform slogans</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will compare WordPress repair and Next.js migration against the same routes, workflows,
+                            costs, risks and acceptance evidence.
                         </p>
-
-                        <BlogAuthor
-                            date="Mar 4, 2026"
-                            readTime="11 min read"
-                            bio="I am Hassan. I spent years building WordPress before one client&apos;s data made me stop. Every site I ship now loads under a second, hosts for $0 to $20 a month, and ships with zero plugins. Based in Austin."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
-                    </div>
-
-                    <div className="mb-12">
-                        <FeatureVisual />
-                    </div>
-
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "In 2023, we built client sites in WordPress. By late 2024, every new project was Next.js. This is why.",
-                            "The breaking point: A client showed us data proving their WordPress site (3.2s load) was outranked on every keyword by competitors loading in under 1 second.",
-                            "We now guarantee 90+ PageSpeed in writing, Vercel hosting that starts free and only scales to $20/month when your business grows, and zero plugin vulnerabilities on every build.",
-                            "When is WordPress still OK? Hobby blogs, small personal sites, and situations where the client will self-manage without developer help."
-                        ]} />
-                    </div>
-
-                    <div className="space-y-8">
-
-                        <BlogText>
-                            I built in WordPress for six years before launching PandaCodeGen. Then a client walked in with a spreadsheet that made WordPress indefensible.
-                        </BlogText>
-
-                        <BlogHeader>The Client Data That Made Me Quit WordPress For Good</BlogHeader>
-
-                        <BlogText>
-                            An e-commerce client came in frustrated. Their competitor, eighteen months younger, was outranking them on twenty-two keywords. Their Kinsta invoice was $340 a month. PageSpeed: 42 on mobile. Their competitor, on the same test, scored 97. That was the day I stopped taking WordPress projects.
-                        </BlogText>
-
-                        <BlogText>
-                            We ran a technical audit. The findings were uncomfortable:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Our client's site: 3.2 second load time, 42/100 PageSpeed Mobile",
-                            "Their competitor's site: 0.9 second load time, 97/100 PageSpeed Mobile",
-                            "Google ranking difference: 15 to 22 positions on every core keyword",
-                            "Traffic difference: Competitor was getting 6× more organic traffic",
-                            "The competitor's tech stack: Next.js + Vercel"
-                        ]} />
-
-                        <BlogText>
-                            We had built a WordPress site that was perfectly set up. Good plugins. Clean theme. Decent hosting (Kinsta). And it was still being outranked by a Next.js site running for free on Vercel.
-                        </BlogText>
-
-                        <BlogText>
-                            <BlogHighlight>That&apos;s when we knew WordPress wasn&apos;t a cost-saving tool anymore. It was a competitive disadvantage.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>WordPress Cannot Load In Under A Second. The Architecture Will Not Let It.</BlogHeader>
-
-                        <BlogText>
-                            This is the core issue. WordPress and Next.js don&apos;t have a performance gap. They have a performance canyon.
-                        </BlogText>
-
-                        <div className="my-6 md:my-10 border border-stone-200 rounded-2xl overflow-hidden shadow-xs bg-white">
-                            {/* Header — desktop only. On mobile each row gets inline labels. */}
-                            <div className="hidden md:grid md:grid-cols-3 bg-stone-50 px-5 py-3 border-b border-stone-200 text-xs font-black text-stone-400 uppercase tracking-widest">
-                                <div>Metric</div>
-                                <div className="text-center text-red-400">WordPress</div>
-                                <div className="text-center text-charcoal">Next.js</div>
-                            </div>
-                            {[
-                                { metric: "Average Load Time", wp: "3.8s", nxt: "0.9s" },
-                                { metric: "Mobile PageSpeed", wp: "35 to 65/100", nxt: "90+/100" },
-                                { metric: "Time to Interactive", wp: "5.2s", nxt: "1.1s" },
-                                { metric: "Monthly Hosting Cost", wp: "$150 to $400", nxt: "$0 to $20" },
-                                { metric: "Plugin Vulnerabilities", wp: "20 to 30+ surfaces", nxt: "Zero" },
-                                { metric: "Maintenance Required", wp: "4 to 8 hrs/month", nxt: "Near zero" },
-                            ].map((row, i) => (
-                                <div key={i} className="px-5 py-3 border-b border-stone-100 last:border-0 text-sm hover:bg-stone-50/50 transition-colors md:grid md:grid-cols-3">
-                                    <div className="text-charcoal font-bold mb-2 md:mb-0 md:font-medium">{row.metric}</div>
-                                    <div className="flex items-center justify-between gap-3 mb-1 md:mb-0 md:justify-center md:text-center">
-                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-red-400">WordPress</span>
-                                        <span className="text-stone-400">{row.wp}</span>
-                                    </div>
-                                    <div className="flex items-center justify-between gap-3 md:justify-center md:text-center">
-                                        <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-charcoal">Next.js</span>
-                                        <span className="font-bold text-charcoal">{row.nxt}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        <BlogText>
-                            Why is it structural? WordPress generates pages server-side on every request. Each page load triggers PHP execution, a database query, and 20-30 plugin operations before a single byte reaches the visitor.
-                        </BlogText>
-
-                        <BlogText>
-                            Next.js pre-builds pages at deploy time and serves cached HTML from a global edge network. The server does zero work on each page load. That&apos;s not optimization. That&apos;s a fundamentally different architecture.
-                        </BlogText>
-
-                        <BlogQuote>
-                            You can&apos;t caching-plugin your way to 0.9 second load times on WordPress. The architecture doesn&apos;t allow it.
-                        </BlogQuote>
-
-                        <BlogHeader>We Moved A Client From $340/mo Kinsta To $0/mo Vercel</BlogHeader>
-
-                        <BlogText>
-                            When we tell clients their new site will host for free and only cost $20/month when their business grows, they don&apos;t believe us at first.
-                        </BlogText>
-
-                        <BlogText>
-                            Vercel&apos;s free tier handles most business websites from day one. You only scale to Vercel Pro at $20/month when your business grows past free tier limits. Pages load from 300+ global edge locations. Zero server maintenance. Auto-scaling. No hosting company to babysit.
-                        </BlogText>
-
-                        <BlogText>
-                            Compared to:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "WP Engine: $30 to $400/month depending on traffic",
-                            "Kinsta: $35 to $300/month for comparable performance",
-                            "Cloudways: $14 to $80/month (plus server management overhead)",
-                            "SiteGround: $20 to $100/month (and still slow under load)"
-                        ]} />
-
-                        <BlogText>
-                            The savings over 3 years: <BlogHighlight>$1,800 to $14,400 in hosting costs alone.</BlogHighlight> On top of the build investment, which pays for itself faster every month Vercel is free.
-                        </BlogText>
-
-                        <BlogHeader>Every WordPress Site Is 20 Strangers&apos; Code. Ours Is Zero.</BlogHeader>
-
-                        <BlogText>
-                            43% of all website hacks in 2024 targeted WordPress. Not because WordPress itself is insecure, but because of how WordPress is used.
-                        </BlogText>
-
-                        <BlogText>
-                            The average WordPress site runs 20-30 plugins. Every plugin is third-party code maintained by a different developer. Each one is a potential security vulnerability. Each one can be outdated, abandoned, or exploited through a zero-day vulnerability.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "The contact form plugin gets abandoned. Security patch never comes.",
-                            "The SEO plugin releases an update. Conflicts with your security plugin. Site goes down.",
-                            "A plugin with 2M installations gets a critical CVE. You have 48 hours to patch before mass exploitation.",
-                            "You go on vacation. An update runs automatically. Something breaks. Nobody notices for 3 days."
-                        ]} />
-
-                        <BlogText>
-                            Custom Next.js sites have <BlogHighlight>zero plugins</BlogHighlight>. We build every feature from scratch using stable npm packages. No attack surface. No plugin conflicts. No emergency patches.
-                        </BlogText>
-
-                        <BlogHeader>Why We Guarantee 90+ And WordPress Caps At 70</BlogHeader>
-
-                        <BlogText>
-                            We guarantee 90+ PageSpeed Mobile on every client site. Not because we&apos;re magicians. Because Next.js makes it structurally achievable. You can see exactly what goes into each build on our <Link href="/services/custom-engineering?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">custom engineering service page</Link>.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>What we get on every build:</strong>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Images are automatically compressed and sized for each device, no manual optimisation needed",
-                            "Fonts load instantly with no blank text or flicker while the page renders",
-                            "Each page only loads the code it actually needs, nothing extra to slow things down",
-                            "Heavy processing happens on our servers before the page ever reaches your visitor",
-                            "Your pages are stored at 300+ locations worldwide, visitors load from the nearest one",
-                            "Your site only ships the design code it uses: zero bloat, zero wasted load time"
-                        ]} />
-
-                        <BlogText>
-                            WordPress best case: 65-75/100. And that requires removing most plugins, using a minimal theme, and spending significant developer time on optimization. Even then, it tops out at 70-75.
-                        </BlogText>
-
-                        <BlogText>
-                            Our recent clients: MyCustomPatches. <a href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+</a>. Our own agency site (this one). 90+. Every project. Consistent.
-                        </BlogText>
-
-                        <BlogHeader>Your Team Will Stop Missing WordPress In Week Two</BlogHeader>
-
-                        <BlogText>
-                            &quot;But my team knows WordPress. What do they use to edit the site?&quot;
-                        </BlogText>
-
-                        <BlogText>
-                            We connect Next.js to a headless CMS (usually Sanity). Here&apos;s what clients actually say after the switch:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "\"This is way simpler than WordPress.\" (Most common response)",
-                            "\"Where are all the settings I never used?\" (They&apos;re gone, intentionally)",
-                            "\"I can actually see what I&apos;m editing.\" (Visual editing with live preview)",
-                            "\"I don&apos;t have to update plugins anymore?\" (Correct)"
-                        ]} />
-
-                        <BlogText>
-                            Sanity gives you a clean, focused content dashboard. Edit text, images, blog posts, and pages. No theme settings. No plugin configurations. No Gutenberg block library to navigate. Just your content.
-                        </BlogText>
-
-                        <BlogText>
-                            And since it&apos;s separate from the site code, a content editor can never accidentally break the site by clicking the wrong setting.
-                        </BlogText>
-
-                        {/* Mid-Article CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Still on WordPress?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Drop your URL when you book. We test your speed live on the call and show you the exact performance gap between your WordPress site and a custom Next.js build. Takes 30 minutes.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                    Get Free WordPress Audit <ArrowRight className="w-4 h-4" />
-                                </CalModalButton>
-                        </div>
-
-                        <BlogHeader>You Own An Asset, Not A Licence</BlogHeader>
-
-                        <BlogText>
-                            With WordPress, you own a configuration of someone else&apos;s software. The theme is built by a third party. The plugins are built by third parties. Your website&apos;s functionality depends on other people&apos;s code staying maintained.
-                        </BlogText>
-
-                        <BlogText>
-                            What happens when a critical plugin gets acquired and the new owner raises the price 5×? What happens when your theme&apos;s developer abandons it? What happens when WordPress changes a core API and suddenly half your plugins break?
-                        </BlogText>
-
-                        <BlogText>
-                            With a custom coded site:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Every line of code is yours",
-                            "No subscriptions that can be cancelled or price-hiked",
-                            "No third-party abandonment risk",
-                            "Any developer can pick it up and work on it (clean, standard Next.js)",
-                            "You&apos;re not locked into our agency forever: the code is portable"
-                        ]} />
-
-                        <BlogText>
-                            <BlogHighlight>You own an asset, not a license.</BlogHighlight> That distinction matters when you&apos;re selling your business or onboarding a new developer.
-                        </BlogText>
-
-                        <BlogHeader>Vercel Serves 10 Million Visitors For The Same Price As 100</BlogHeader>
-
-                        <BlogText>
-                            WordPress hosting costs increase with traffic. Go viral on a Tuesday morning and your shared/VPS hosting buckles. You upgrade. Costs more. Then traffic normalizes and you&apos;re overpaying.
-                        </BlogText>
-
-                        <BlogText>
-                            Vercel&apos;s edge network serves 100 visitors or 10 million visitors for essentially the same cost. Pages are pre-built. Servers don&apos;t spin up per request. There&apos;s no infrastructure to scale manually.
-                        </BlogText>
-
-                        <BlogText>
-                            For e-commerce clients running campaigns, this is a non-trivial advantage. Your Shopify sale gets featured on a big newsletter. Traffic spikes 50×. The WordPress/WooCommerce site crashes. The Next.js custom store doesn&apos;t notice. For a side-by-side look at how these platforms compare on every axis, see our full <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress vs Next.js breakdown</Link>.
-                        </BlogText>
-
-                        <BlogHeader>When Is WordPress Still the Right Choice?</BlogHeader>
-
-                        <BlogText>
-                            We&apos;re going to be honest here. WordPress is still the right choice in some situations.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "You want to self-manage the site without any developer involvement, ever",
-                            "You run a personal blog or community site where speed isn&apos;t a revenue factor",
-                            "Your budget is under $5,000 total and you need something functional now",
-                            "You have an existing large WordPress site with thousands of pages and migration ROI doesn&apos;t pencil out yet"
-                        ]} />
-
-                        <BlogText>
-                            For everything else: businesses where the website drives leads, sales, bookings, or brand credibility. <BlogHighlight>the economics of Next.js are better in every dimension that affects your business outcomes.</BlogHighlight>
-                        </BlogText>
-
-                        <BlogHeader>What Happens to Your SEO When You Migrate?</BlogHeader>
-
-                        <BlogText>
-                            This is the concern we hear most: &quot;We&apos;ve spent years building our WordPress SEO. Won&apos;t switching destroy our rankings?&quot;
-                        </BlogText>
-
-                        <BlogText>
-                            When done correctly: no. Here&apos;s the exact process we use to protect your rankings:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Audit every URL on your WordPress site before migration begins",
-                            "Build the new site with identical URL structure (zero URL changes where possible)",
-                            "Map every changed URL to a 301 permanent redirect",
-                            "Migrate all meta titles, descriptions, canonical tags, and schema markup",
-                            "Run parallel: Keep WordPress live until new site passes all SEO checks",
-                            "Post-launch: Google Search Console monitoring for crawl issues (15 days on Starter, 30 days on Growth and above)"
-                        ]} />
-
-                        <BlogText>
-                            Most clients see their Google rankings recover within 30 to 60 days. Within 90 days, rankings improve because Google now sees <a href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">a faster site</a>, and faster sites rank higher than slower ones with identical content.
-                        </BlogText>
-
-                        <BlogText>
-                            See exactly how this worked for MyCustomPatches: a 200-page WordPress site with 10 years of content migrated with zero ranking drops. In our{" "}
-                            <Link href="/work/mycustompatches" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
-                                MyCustomPatches case study
-                            </Link>.
-                        </BlogText>
-
-                        <BlogHeader>What Does the Migration Process Look Like?</BlogHeader>
-
-                        <BlogText>
-                            We follow the same 6-week process for every WordPress migration:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Week 1: Full WordPress audit: every URL, page, image, plugin, and SEO tag catalogued",
-                            "Weeks 2 to 4: Build the new Next.js site. Same content, same structure, zero WordPress",
-                            "Week 5: Content migration, URL mapping, redirect configuration, PageSpeed testing",
-                            "Week 6: Zero-downtime launch. DNS cutover while old WordPress site stays live in parallel",
-                            "Post-launch: Google Search Console monitoring, crawl error fixes, ranking tracking (15 days on Starter, 1 month on Growth and above)"
-                        ]} />
-
-                        <BlogText>
-                            Throughout the process, your WordPress site stays fully live. Your visitors never see a maintenance page. When we flip the DNS, the new site is ready and tested. The transition takes minutes, not hours.
-                        </BlogText>
-
-                        <BlogText>
-                            Ready to see what your site looks like on Next.js? We offer a free WordPress audit where we analyse your current setup, show you what a migration would involve, and give you the honest 3-year cost comparison. See our{" "}
-                            <Link href="/services/wordpress-migration?ref=blog/why-we-chose-nextjs-over-wordpress-2026" className="text-charcoal font-bold underline hover:text-stone-600 transition-colors">
-                                WordPress Migration service
-                            </Link>{" "}
-                            page for more detail.
-                        </BlogText>
-                    </div>
-
-                    {/* Key Takeaways */}
-                    <section className="mb-10">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>The speed gap is structural, not fixable with plugins</strong>. WordPress loads in 3.8 seconds on average while Next.js loads in 0.9 seconds because they use fundamentally different architectures.</li>
-                            <li><strong>Hosting drops from $150-$400/month to $0, scaling to $20/month only when your business grows</strong>. Vercel&apos;s free tier handles most business sites from day one. Vercel Pro at $20/month is still 85 percent cheaper than managed WordPress.</li>
-                            <li><strong>Zero plugins means zero security vulnerabilities</strong>. 43% of all website hacks target WordPress through its plugin ecosystem, an attack surface that does not exist in custom Next.js builds.</li>
-                            <li><strong>You own the code, not a licence</strong>: Unlike WordPress where your site depends on third-party themes and plugins, a custom coded site is a portable asset any developer can maintain.</li>
-                            <li><strong>WordPress is still right for hobby blogs and small personal sites</strong>, if speed, SEO, and revenue are not priorities, WordPress's convenience still makes sense.</li>
-                        </ol>
+                        <QuoteModalButton cta="why_nextjs_wordpress_fit_audit" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
                     </section>
 
-                    {/* FAQ Section */}
-                    {nextjsFAQs.length > 0 && <FAQAccordion faqs={nextjsFAQs} />}
-
-                    {/* CTA Section */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4">Ready to Make the Switch to Next.js?</h3>
-                        <p className="text-stone-600 mb-6">
-                            Free audit. We&apos;ll show you what your site looks like on Next.js, what the migration would cost, and what rankings and revenue to expect within 90 days.
-                        </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
-                                Schedule Free WordPress Audit <ArrowRight className="w-5 h-5" />
-                            </CalModalButton>
-                    </div>
-
-                    {/* Related Posts */}
-                    <RelatedPosts currentPostId="why-we-chose-nextjs-over-wordpress-2026" />
-
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

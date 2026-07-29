@@ -33,12 +33,12 @@ export default function ServicesHub() {
         >
           <span className="text-cognac font-bold tracking-widest uppercase text-xs mb-4 block">Our Expertise</span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-            We don&apos;t just &ldquo;build websites.&rdquo;<br />
-            <span className="font-serif italic text-cognac">We engineer websites that make you money.</span>
+            Migrations engineered around{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">what can break.</span>
           </h2>
         </motion.div>
 
-        {/* BENTO GRID — top row: 2 big cards · bottom row: 3 small cards */}
+        {/* BENTO GRID: top row: 2 big cards · bottom row: 3 small cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
 
           {/* CARD 1: MIGRATIONS (large, 2 cols) */}
@@ -58,20 +58,20 @@ export default function ServicesHub() {
                 <div className="w-14 h-14 bg-stone-100 rounded-2xl flex items-center justify-center transition-colors duration-300 group-hover:bg-charcoal">
                   <Globe className="w-7 h-7 text-charcoal group-hover:text-white transition-colors duration-300" />
                 </div>
-                <span className="text-xs font-bold text-stone-500 bg-stone-100 border border-stone-200 rounded-full px-3 py-1.5">
-                  12+ migrations · 0 ranking drops
+                <span className="text-xs font-bold text-stone-600 bg-stone-100 border border-stone-300 rounded-full px-3 py-1.5">
+                  URL inventory &middot; Redirect mapping
                 </span>
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-charcoal mb-3 font-serif">Migrations {"&"} New Builds</h3>
                 <p className="text-stone-600 text-lg max-w-md leading-relaxed">
-                  Migrating off a slow platform or building from scratch, we deliver sites that load in under 1 second, with zero downtime and every ranking preserved.
+                  We inventory pages, content, analytics, forms, and integrations before build work begins, then test the cutover against written acceptance criteria.
                 </p>
               </div>
 
-              {/* Prominent "we migrate you off" platform block — fills the card */}
+              {/* Prominent "we migrate you off" platform block that fills the card */}
               <div className="mt-auto rounded-2xl bg-stone-50/80 border border-stone-200 p-5">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-stone-500 mb-3">We migrate you off</p>
+                <p className="text-[11px] font-bold uppercase tracking-widest text-stone-600 mb-3">We migrate you off</p>
                 <div className="flex flex-wrap items-center gap-2.5">
                   {platforms.map((p) => (
                     <Link
@@ -107,13 +107,13 @@ export default function ServicesHub() {
                 <Code2 className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-3xl font-bold mb-3 font-serif">Custom Engineering</h3>
-              <p className="text-stone-400 leading-relaxed mb-6">
+              <p className="text-stone-600 leading-relaxed mb-6">
                 SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
               </p>
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <p className="text-xs text-stone-400 uppercase tracking-widest font-bold mb-1">We run our own</p>
+                <p className="text-xs text-stone-600 uppercase tracking-widest font-bold mb-1">Scoped separately</p>
                 <p className="text-sm text-white leading-snug">
-                  Panda Patches, a store we built and operate, scaled from <span className="font-bold text-cognac">$38K/mo</span> to about <span className="font-bold text-cognac">$50K/mo</span> on about <span className="font-bold text-cognac">$55/mo</span> in tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                  Product and internal-tool engagements start with architecture, data, security, integration, and operating-cost requirements rather than a generic website package.
                 </p>
               </div>
             </div>
@@ -137,13 +137,13 @@ export default function ServicesHub() {
               <div className="w-12 h-12 bg-cognac/10 rounded-2xl flex items-center justify-center mb-5">
                 <Sparkles className="w-6 h-6 text-cognac" />
               </div>
-              <h3 className="text-xl font-bold text-charcoal mb-2 font-serif">Get Cited by AI</h3>
+              <h3 className="text-xl font-bold text-charcoal mb-2 font-serif">Search &amp; AI Foundations</h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                We build sites ChatGPT, Claude and Google AI recommend, so buyers find you in the AI answer, not your competitor.
+                Crawlable content, consistent entities, accurate structured data, and source-backed evidence for traditional and AI-assisted search. No citation guarantee.
               </p>
             </div>
-            <Link href="/ai-info" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
-              How it works <ArrowRight className="w-4 h-4" />
+            <Link href="/about" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
+              Review delivery standards <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function ServicesHub() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-2 font-serif">Faster E-commerce</h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Headless Shopify and WooCommerce stores that load in under 1 second. More sales, lower app bills, no platform tax.
+                Headless Shopify and WooCommerce storefronts when measured theme or integration constraints justify the added complexity. Keep the commerce backend where it remains the right fit.
               </p>
             </div>
             <Link href="/services/ecommerce" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
@@ -169,7 +169,7 @@ export default function ServicesHub() {
             </Link>
           </motion.div>
 
-          {/* CARD 5: SOFT CTA — opens chat (low friction) */}
+          {/* CARD 5: SOFT CTA that opens chat (low friction) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

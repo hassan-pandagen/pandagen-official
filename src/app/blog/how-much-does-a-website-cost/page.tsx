@@ -1,483 +1,496 @@
-import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, CheckCircle2, CircleDollarSign, FileCheck2, ReceiptText } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "how-much-does-a-website-cost")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
+const CostStackVisual = dynamicImport(() => import("@/components/blog/CostStackAnimation"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "how-much-does-a-website-cost";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "How Much Does a Website Cost in 2026? A Scope-First Guide";
+const description =
+    "Calculate website cost from a comparable scope, current vendor quotes, delivery, operations and exit, with PandaCodeGen's published starting tiers and payment terms.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "How Much Does a Website Cost in 2026? Real Pricing",
-    description: "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that make cheap platforms expensive long term.",
-    alternates: { canonical: "/blog/how-much-does-a-website-cost" },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
     keywords: [
         "how much does a website cost",
         "website cost 2026",
         "website pricing",
-        "how much to build a website",
-        "website development cost",
+        "custom website cost",
         "small business website cost",
         "ecommerce website cost",
-        "custom website cost",
-        "website cost breakdown",
-        "website builder cost",
-        "wordpress website cost",
-        "freelancer website cost"
+        "website migration cost",
     ],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
-        description: "Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-06-09T00:00:00-05:00",
+        publishedTime: "2026-05-12",
+        modifiedTime: "2026-07-28",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/how-much-does-a-website-cost",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
-        description: "Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const vendorSources = [
+    { name: "Wix pricing", url: "https://www.wix.com/plans" },
+    { name: "Squarespace pricing", url: "https://www.squarespace.com/pricing" },
+    { name: "Webflow pricing", url: "https://webflow.com/pricing" },
+    { name: "Shopify pricing", url: "https://www.shopify.com/pricing" },
+    { name: "Vercel pricing", url: "https://vercel.com/pricing" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost#article",
-            "headline": "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
-            "description": "A website costs $0 to $50,000+ in 2026. Real cost breakdown by build type, business size, and hidden fees that turn affordable platforms into expensive long-term commitments.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-05-12T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-05-12",
+            dateModified: "2026-07-28",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost" },
-            "articleSection": "Pricing",
-            "keywords": ["website cost 2026", "website pricing", "custom website cost", "website cost breakdown", "small business website cost"],
-            "timeRequired": "PT15M",
-            "wordCount": 3800,
-            "about": [
-                { "@type": "Thing", "name": "Website Development Pricing" },
-                { "@type": "Thing", "name": "Website Cost Breakdown" },
-                { "@type": "Thing", "name": "Custom Web Development" },
-                { "@type": "Thing", "name": "Website Platform Comparison" }
-            ],
-            "inLanguage": "en-US",
-            "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
-            "citation": [
-                { "@type": "CreativeWork", "name": "Vercel Pricing", "url": "https://vercel.com/pricing" },
-                { "@type": "CreativeWork", "name": "Wix Pricing Plans", "url": "https://www.wix.com/upgrade/website" },
-                { "@type": "CreativeWork", "name": "Squarespace Pricing", "url": "https://www.squarespace.com/pricing" },
-                { "@type": "CreativeWork", "name": "Google PageSpeed Insights", "url": "https://pagespeed.web.dev/" },
-                { "@type": "CreativeWork", "name": "Think With Google: Mobile Page Speed Benchmarks", "url": "https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" },
-                { "@type": "CreativeWork", "name": "Portent: Site Speed and Conversion Research", "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" }
-            ]
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "How Much Does a Website Cost", "item": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost#webpage",
-            "url": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost",
-            "name": "How Much Does a Website Cost in 2026? Real Pricing by Build Type",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-06-09T00:00:00-05:00",
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "email": "info@pandacodegen.com",
-            "foundingDate": "2026",
-            "areaServed": "Worldwide"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Pricing",
+            inLanguage: "en-US",
+            citation: vendorSources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/how-much-does-a-website-cost#faq",
-            "mainEntity": postFAQs.map((faq: { question: string; answer: string }) => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-        }
-    ]
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+        },
+    ],
 };
 
-export default function WebsiteCostPage() {
+const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+
+export default function WebsiteCostGuide() {
     return (
-        <main className="min-h-screen bg-paper text-charcoal overflow-x-hidden">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+        <>
             <Header />
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Website cost", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
+                    </Link>
 
-            <article className="pt-28 md:pt-32 pb-12 md:pb-24">
-                <div className="container mx-auto px-6">
-                    <div className="max-w-3xl mx-auto">
-                        <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "How Much Does a Website Cost" }]} />
-                        <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac transition mt-4 mb-8">
-                            <ArrowLeft className="w-4 h-4" /> Back to Blog
-                        </Link>
-                        <div className="mb-6">
-                            <span className="inline-block bg-cognac/10 text-cognac text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Pricing</span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight tracking-tight mb-6">
-                            How Much Does a Website Cost in 2026? <span className="font-serif italic text-cognac">Real Pricing by Build Type</span>
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website pricing</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            How Much Does a Website Cost in 2026? <span className="italic text-cognac">Price the Scope, Not the Label</span>
                         </h1>
-                        <BlogAuthor name="Hassan Jamal" role="Founder, PandaCodeGen" date="May 12, 2026" readTime="15 min read" />
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            There is no honest market-wide price for “a website.” A one-page campaign, a 30-route
+                            migration, a store, and an authenticated application are different products. Compare the
+                            same deliverables, vendor costs, acceptance, operations and exit rights.
+                        </p>
+                        <p className="mt-4 text-xs text-stone-500">
+                            PandaCodeGen offer and vendor links reviewed July 24, 2026. Vendor prices can change.
+                        </p>
+                    </header>
+
+                    <BlogAuthor
+                        name="Hassan Jamal"
+                        role="Co-founder and Lead Engineer"
+                        date="May 12, 2026"
+                        readTime="13 min read"
+                        bio="Hassan scopes migrations, integrations and measurable acceptance terms."
+                    />
+
+                    <div className="my-10">
+                        <CostStackVisual />
                     </div>
-                </div>
 
-                <div className="container mx-auto px-6 mt-8 md:mt-12">
-                    <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10">
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen&apos;s published starting points</h2>
+                        <BlogList
+                            items={[
+                                "Starter begins at $1,500 for a focused, clearly bounded scope.",
+                                "Growth begins at $3,500 for a broader migration, CMS or content-continuity scope.",
+                                "Scale normally falls between $5,000 and $10,000 for larger or integration-heavy work.",
+                                "Scale+ and unusual applications are quoted after discovery.",
+                                "Extra pages and features are discussed and written into the scope before implementation.",
+                            ]}
+                        />
+                    </section>
 
-                        <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">A website costs anywhere from $0 to $50,000+ in 2026, which is about as useful as saying a car costs between $500 and $500,000. The number that matters is what someone in your situation actually pays, and that depends on whether you DIY, hire a freelancer, or go custom. This guide breaks down real costs by build type, business size, and the hidden fees that turn &ldquo;affordable&rdquo; platforms into expensive long-term commitments.</p>
-
-                        <div className="mb-12"><FeatureVisual /></div>
-
-                        <div className="space-y-8">
-
-                            <BlogHeader>Quick Answer on Website Cost in 2026</BlogHeader>
-
-                            <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl" data-speakable="true">
-                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                                <p className="text-sm text-stone-700 leading-relaxed">A website in 2026 runs $0 to $450 for a DIY builder like Wix or Squarespace, $1,500 to $10,000 for a professionally built site, and $10,000 to $50,000+ for a custom agency build. Most small businesses pay $2,000 to $8,000 for a functional site. Ongoing costs, hosting, domain, maintenance, add $100 to $1,000+ per year on top of that.</p>
+                    <div className="my-8 grid gap-4 sm:grid-cols-3">
+                        {[
+                            { icon: FileCheck2, title: "Build", body: "Discovery, design, content, implementation, migration, integrations, QA and launch." },
+                            { icon: ReceiptText, title: "Operate", body: "Domain, platform, infrastructure, CMS, apps, email, analytics, support and internal time." },
+                            { icon: CircleDollarSign, title: "Change or exit", body: "Enhancements, vendor increases, data export, repository, licenses, handoff and replacement." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
                             </div>
-
-                            <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl" data-speakable="true">
-                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: MyCustomPatches</p>
-                                <p className="text-sm text-stone-700 leading-relaxed">Here is what the numbers look like in practice. We rebuilt MyCustomPatches (owner Matt Conner) from a slow WordPress and WooCommerce setup to a custom Next.js build. Mobile PageSpeed went from 45 to 90+, load time from 3.2 seconds to 0.7, and monthly hosting dropped from $150 to $0 because the site no longer pays platform or plugin fees. The fixed build cost paid for itself in months on hosting savings alone, before counting the traffic the speed recovered. You can verify the live site at mycustompatches.net and the review on our Clutch and GoodFirms profiles.</p>
-                            </div>
-
-                            <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl" data-speakable="true">
-                                <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Real Receipt: Panda Patches</p>
-                                <p className="text-sm text-stone-700 leading-relaxed">Panda Patches is our own e-commerce brand (owned by Imran, our co-founder), so we can show the full cost math, not just the before/after speed numbers. Three years on WordPress and WooCommerce ran roughly $200 a month in hosting, plugins, and app fees, on top of a 64 mobile PageSpeed ceiling. The rebuild onto Next.js, Sanity, Supabase, and Square runs about $55 a month in total tooling, a Scale-tier build cost that paid for itself within months once the $200/month platform spend disappeared. Revenue grew from roughly $38K to $50K a month in the period after launch. <Link href="/work/panda-patches" className="text-cognac hover:underline">Full case study here.</Link></p>
-                            </div>
-
-                            <BlogText>
-                                The spread is wide because &ldquo;website&rdquo; covers everything from a 5-page brochure site for a local plumber to a 500-product ecommerce store to a SaaS dashboard with user logins and payment processing. Your number depends on which category you fall into. The same scope that drives the price also drives <Link href="/blog/how-long-does-a-custom-website-take" className="text-cognac hover:underline font-medium">how long it takes to build</Link>, so it helps to think about both together.
-                            </BlogText>
-
-                            <div className="overflow-x-auto my-6">
-                                <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to see full table →</div>
-                                <table className="min-w-[560px] w-full border-collapse border border-stone-300 text-sm">
-                                    <thead>
-                                        <tr className="bg-stone-100">
-                                            <th className="p-3 text-left font-bold border border-stone-300">Build Type</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">One-Time Cost</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Ongoing Annual Cost</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">DIY Website Builder</td><td className="p-3 border border-stone-300">$0 to $450</td><td className="p-3 border border-stone-300">$100 to $500</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Freelancer</td><td className="p-3 border border-stone-300">$1,000 to $10,000</td><td className="p-3 border border-stone-300">$200 to $600</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Traditional Agency</td><td className="p-3 border border-stone-300">$10,000 to $50,000+</td><td className="p-3 border border-stone-300">$500 to $2,000+</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium text-cognac">Custom-Coded (Next.js)</td><td className="p-3 border border-stone-300 text-cognac">$1,500 to $30,000</td><td className="p-3 border border-stone-300 text-emerald-700">$0 to $300</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <BlogText>
-                                That last row, custom-coded, is where the math flips. Higher upfront cost, but ongoing fees drop to near zero because you own the code outright and skip the monthly platform subscription. See our <Link href="/pricing" className="text-cognac hover:underline">full fixed-price menu</Link> for exact tiers.
-                            </BlogText>
-
-                            <BlogHeader>Website Cost Breakdown by Build Type</BlogHeader>
-
-                            <BlogText>
-                                The build method you choose is the single biggest factor in what you pay. Five main paths exist, and each trades off cost against control and long-term ownership.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">DIY Website Builder</h3>
-                            <BlogText>
-                                <a href="https://www.wix.com/upgrade/website" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Wix</a>, <a href="https://www.squarespace.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Squarespace</a>, Weebly, and similar drag-and-drop platforms run $100 to $500 per year. You can launch a basic site in a weekend without touching code.
-                            </BlogText>
-                            <BlogText>
-                                The tradeoff is platform lock-in, your site lives inside that company&apos;s ecosystem. Cancel your subscription and the site vanishes. You cannot export your design or, in most cases, your content in any usable format. Load times on these platforms typically run 3 to 5 seconds because the platform injects its own JavaScript on every page, which drags down your <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google PageSpeed score</a> to 30 to 65 on mobile.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">WordPress and Self-Hosted Platforms</h3>
-                            <BlogText>
-                                WordPress.org (the self-hosted version, not WordPress.com) powers <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">roughly 43 percent of the web</a>. Hosting runs $50 to $300 per year, themes cost $0 to $200, and plugins add $0 to $500+ annually depending on what you stack.
-                            </BlogText>
-                            <BlogText>
-                                The hidden cost is maintenance. WordPress sites require constant <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">plugin updates, security patches</Link>, and compatibility checks. One plugin conflict can take down your entire site. Most WordPress owners either learn to manage updates themselves or pay $50 to $300 per month for managed hosting, adding $600 to $3,600 per year to the real cost. See our full <Link href="/blog/wordpress-killer" className="text-cognac hover:underline">3-year WordPress cost breakdown</Link>.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Freelancer-Built Website</h3>
-                            <BlogText>
-                                Hiring a freelancer typically costs $1,000 to $10,000 one-time. You get custom design on a template or theme, basic SEO setup, and contact forms. Quality varies wildly. Some freelancers deliver excellent work; others disappear after launch. The risk is no ongoing support, if something breaks six months later, you may start from scratch with a new developer who has to reverse-engineer what the first one built.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Traditional Agency Website</h3>
-                            <BlogText>
-                                Agency builds run $10,000 to $50,000+. The price includes discovery, design, development, and project management, typically over 8 to 16 weeks.
-                            </BlogText>
-
-                            <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Hourly billing:</strong> The longer the project takes, the more the agency earns. Incentives point the wrong direction. A 12-week project that could have shipped in 6 doubles the cost.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Code ownership:</strong> Clients rarely own the source code. The agency keeps the &ldquo;engine blueprints,&rdquo; which means you pay again if you ever want to move or make major changes.</span>
-                                </li>
-                            </ul>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Custom-Coded Website (Next.js)</h3>
-                            <BlogText>
-                                Custom-coded means built from scratch using modern frameworks like Next.js, no templates, no page builders. Upfront cost runs $1,500 to $30,000 depending on complexity, but ongoing costs drop to <a href="https://vercel.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">$0 to $300 per year on Vercel</a>.
-                            </BlogText>
-                            <BlogText>
-                                The performance difference is measurable: sub-1-second load times, <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">90+ PageSpeed scores</Link>, and infrastructure that scales without monthly platform fees. At PandaCodeGen, we build <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom-coded sites starting at $1,500</Link> with fixed pricing, a 90+ PageSpeed guarantee, and full code ownership from day one.
-                            </BlogText>
-                            <BlogText>
-                                Our own tiers break down by scope, not by padding a quote to see what a client will pay. <strong>Starter ($1,500)</strong> covers a brochure site in the 5 to 15 page range, similar to the MyCustomPatches rebuild before its product catalog grew. <strong>Growth ($3,500)</strong> adds a CMS, blog infrastructure, and more custom components, the tier most service businesses migrating off WordPress land in. <strong>Scale ($5,000 to $10,000)</strong> covers e-commerce with a headless backend, which is where Panda Patches sits: Next.js plus Sanity, Supabase, and Square, running about $55 a month in combined tooling instead of a $200/month WordPress plugin stack. <strong>Scale+ ($10,000+)</strong> is for multi-integration builds, custom dashboards, or non-standard backend work that goes beyond a standard storefront.
-                            </BlogText>
-
-                            <BlogHeader>Average Website Cost by Business Size and Type</BlogHeader>
-
-                            <div className="overflow-x-auto my-6">
-                                <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to see full table →</div>
-                                <table className="min-w-[560px] w-full border-collapse border border-stone-300 text-sm">
-                                    <thead>
-                                        <tr className="bg-stone-100">
-                                            <th className="p-3 text-left font-bold border border-stone-300">Business Type</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">Typical Cost Range</th>
-                                            <th className="p-3 text-left font-bold border border-stone-300">What&apos;s Included</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Small Business (5 to 15 pages)</td><td className="p-3 border border-stone-300">$2,000 to $8,000</td><td className="p-3 border border-stone-300">Brochure site, contact forms, basic SEO</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Ecommerce (under 100 products)</td><td className="p-3 border border-stone-300">$5,000 to $15,000</td><td className="p-3 border border-stone-300">Product pages, cart, checkout, payment</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">SaaS or Web App</td><td className="p-3 border border-stone-300">$15,000 to $75,000+</td><td className="p-3 border border-stone-300">Auth, dashboards, databases, APIs</td></tr>
-                                        <tr><td className="p-3 border border-stone-300 font-medium">Large Custom Site</td><td className="p-3 border border-stone-300">$30,000 to $100,000+</td><td className="p-3 border border-stone-300">Multi-language, complex integrations, CMS</td></tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Small Business Website Cost</h3>
-                            <BlogText>
-                                Most small businesses pay $2,000 to $8,000 for a 5 to 15 page brochure site, homepage, about page, services, contact form, and blog. The temptation is to go cheap. A $500 site that loads in 4 seconds and scores 35 on PageSpeed often costs more long-term through lost conversions than a $3,500 site that loads in under 1 second. See our <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">full website rebuild cost breakdown</Link> for what drives price at each tier.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Ecommerce Website Cost</h3>
-                            <BlogText>
-                                A standard online store runs $5,000 to $15,000. Shopify themes add $29 to $299 per month in platform fees, plus <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">app subscriptions</Link> that commonly stack to $100 to $1,500 per month for reviews, upsells, and email marketing. Custom-coded storefronts eliminate most recurring app fees by building functionality directly into the code, this architecture is called <Link href="/services/ecommerce" className="text-cognac hover:underline">headless commerce</Link>.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">SaaS and Web App Cost</h3>
-                            <BlogText>
-                                Web applications with user authentication, databases, and real-time features run $15,000 to $75,000+. MVP builds, minimum viable product, the simplest version that proves your concept works, can start lower with the right partner, often in the $5,000 to $15,000 range depending on scope.
-                            </BlogText>
-
-                            <BlogHeader>Factors That Drive Website Cost Up or Down</BlogHeader>
-
-                            <BlogList items={[
-                                "Number of pages: More pages means more design and development hours. A 50-page site costs significantly more than a 10-page site.",
-                                "Custom design vs template: Original design work adds $2,000 to $10,000+ over using a pre-made template.",
-                                "Functionality complexity: Booking systems, member portals, and payment processing each add scope and cost.",
-                                "Content creation: Professional copywriting runs $50 to $500 per page. Photography adds $500 to $5,000.",
-                                "Timeline: Rush jobs under 4 weeks often carry 20 to 50 percent premiums.",
-                                "Revisions: Unlimited revisions signal scope creep risk. Fixed-scope projects with defined revision rounds cost less."
-                            ]} />
-
-                            {/* Mid CTA */}
-                            <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                                <p className="font-bold text-charcoal mb-2">Want a fixed-price quote for your site?</p>
-                                <p className="text-stone-600 mb-4 text-sm">Drop your current site URL when you book. We scope your migration or rebuild live on the call and give you a fixed price before we hang up. No hourly estimates that balloon.</p>
-                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">Get a Free Fixed-Price Quote <ArrowRight className="w-4 h-4" /></CalModalButton>
-                            </div>
-
-                            <BlogHeader>Essential Website Costs Everyone Pays</BlogHeader>
-
-                            <BlogText>
-                                Regardless of build method, certain costs are non-negotiable.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Domain Name Cost</h3>
-                            <BlogText>
-                                Your domain (yoursite.com) costs $10 to $20 per year for standard extensions. Premium domains with short, memorable names can run $500 to $50,000+. You pay this annually to keep your web address active.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Web Hosting Cost</h3>
-                            <BlogText>
-                                Hosting is where your website files live. Shared hosting runs $50 to $300 per year. Custom-coded sites on Vercel can run on <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">free tiers</Link> that scale to 100,000+ monthly visits before any cost kicks in, this is one of the biggest financial advantages of custom-coded sites over platform-hosted ones.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">SSL and Security Cost</h3>
-                            <BlogText>
-                                SSL, the padlock icon that encrypts data between your site and visitors, costs $0 to $100+ per year. Most modern hosts include free SSL via Let&apos;s Encrypt. Custom-coded sites on Vercel include SSL automatically at no additional cost.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Business Email Cost</h3>
-                            <BlogText>
-                                Professional email (you@yourdomain.com) runs $5 to $12 per user per month through Google Workspace or Microsoft 365. Customers trust a domain email address more than a Gmail address for serious business communication.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Content and Copywriting Cost</h3>
-                            <BlogText>
-                                Most website quotes assume you provide the content. If you do not have it ready, budget $50 to $500 per page for professional copywriting. Photography ranges $500 to $5,000 depending on whether you need product shots, team photos, or location imagery.
-                            </BlogText>
-
-                            <BlogHeader>Hidden and Recurring Website Costs to Watch</BlogHeader>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Platform and Subscription Fees</h3>
-                            <BlogText>
-                                <a href="https://www.wix.com/upgrade/website" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Wix</a> runs $16 to $159 per month. <Link href="/blog/squarespace-vs-custom-website" className="text-cognac hover:underline">Squarespace runs $16 to $52</Link> per month. <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">Webflow runs $14 to $39</Link> per month for hosting alone, with additional workspace fees. These fees never stop, you are renting, not owning. See the full breakdown in our <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">Webflow true cost breakdown</Link>.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Plugin and App Fees</h3>
-                            <BlogText>
-                                WordPress plugins and Shopify apps commonly add $50 to $500+ per month. Examples: SEO tools, page builders, review widgets, upsell apps, email marketing integrations. Custom code eliminates most plugin fees by building functionality natively. See how <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline">Shopify app costs add up to $300 to $800 per month</Link>.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Transaction Fees on Ecommerce</h3>
-                            <BlogText>
-                                Payment processors like Stripe and PayPal charge 2.9% + $0.30 per transaction. Some platforms add their own fees on top, Squarespace Commerce charges an additional 3% on the Business plan, and Shopify charges 0.5 to 2% unless you use Shopify Payments.
-                            </BlogText>
-
-                            <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Maintenance and Developer Retainers</h3>
-                            <BlogText>
-                                Ongoing maintenance runs $30 to $1,000+ per month depending on platform and complexity. WordPress sites require regular updates, security patches, and backups, and the new wave of <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">AI plugins has added a fresh security risk</Link> to that workload. Custom-coded sites on modern stacks require far less maintenance because they have fewer dependencies and no plugin ecosystem to manage.
-                            </BlogText>
-
-                            <BlogHeader>The True Cost of a Slow or Rented Website</BlogHeader>
-
-                            <BlogText>
-                                A cheap website that loads slowly or locks you into a platform often costs more over 3 to 5 years than building correctly the first time.
-                            </BlogText>
-
-                            <ul className="space-y-3 my-4 text-stone-700 leading-relaxed">
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Lost conversions:</strong> <a href="https://www.portent.com/blog/analytics/research-site-speed-hurting-everyones-revenue.htm" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Portent&apos;s research</a> shows every second of load time above 1 second reduces conversions by 4.4 percent. <a href="https://electroiq.com/stats/website-load-time-statistics/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Pages taking 5 seconds have a bounce rate of 38%</a> versus 9% for fast-loading pages.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>Lower ad efficiency:</strong> Slow landing pages receive lower <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">Quality Scores in Google Ads</Link>, increasing your cost per click on every keyword you bid on.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong>SEO penalties:</strong> <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">Google&apos;s Core Web Vitals</Link> directly impact rankings. Slow sites get buried below faster competitors for identical keywords.</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <AlertTriangle className="w-4 h-4 text-cognac mt-1 flex-shrink-0" />
-                                    <span><strong><Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">Migration costs</Link>:</strong> Moving off a locked platform later costs more than building on an open stack from the start. Cancel Wix or Squarespace and your site disappears. You own nothing.</span>
-                                </li>
-                            </ul>
-
-                            <BlogHeader>How to Reduce Website Cost Without Cutting Quality</BlogHeader>
-
-                            <div className="space-y-4 my-6">
-                                {[
-                                    { num: "1", title: "Define Scope Before You Buy", body: "Write a simple requirements document before getting quotes. List your pages, features, and integrations. Knowing exactly what you want prevents scope creep and inflated estimates." },
-                                    { num: "2", title: "Skip Plugins You Do Not Need", body: "Every plugin adds cost, complexity, and security risk. Ask what can be built natively instead of bolted on with third-party tools." },
-                                    { num: "3", title: "Choose Fixed Pricing Over Hourly", body: "Hourly billing incentivizes slow work. Fixed-scope pricing aligns your vendor's incentives with fast delivery. Get a written fixed price before work starts, see our published pricing at pandacodegen.com/pricing." },
-                                    { num: "4", title: "Own Your Code From Day One", body: "Demand full source code handover. If you cannot take your code to another developer, you do not own it, you are renting. This is non-negotiable." },
-                                    { num: "5", title: "Optimize Performance Before Adding Features", body: "A fast, simple site converts better than a slow, feature-packed one. Prioritize sub-1-second load times and 90+ PageSpeed scores before stacking on extras." }
-                                ].map((step) => (
-                                    <div key={step.num} className="flex gap-4 p-4 bg-stone-50 rounded-xl border border-stone-200">
-                                        <span className="flex-shrink-0 w-8 h-8 bg-cognac text-white font-bold rounded-full flex items-center justify-center text-sm">{step.num}</span>
-                                        <div>
-                                            <p className="font-bold text-charcoal mb-1">{step.title}</p>
-                                            <p className="text-sm text-stone-700 leading-relaxed">{step.body}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <BlogHeader>When a Custom-Built Website Costs Less Than a Cheap One</BlogHeader>
-
-                            <BlogText>
-                                The 3-year math often favors custom builds over &ldquo;affordable&rdquo; platforms.
-                            </BlogText>
-
-                            <BlogQuote>
-                                A $200/month platform with $300/month in apps totals <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">$18,000 over 3 years</Link>, plus migration cost when you outgrow it. A $3,500 custom-coded site with $20/month hosting totals $4,220 over 3 years, and you own the code.
-                            </BlogQuote>
-
-                            <BlogText>
-                                At PandaCodeGen, we build custom Next.js websites with <Link href="/pricing" className="text-cognac hover:underline">fixed pricing starting at $1,500</Link>: sub-1-second load times guaranteed, 90+ PageSpeed or full refund, $0 monthly platform fees, and 100% code ownership. For a detailed cost comparison by project type, see our <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline">website rebuild cost breakdown</Link> and <Link href="/blog/website-redesign-cost" className="text-cognac hover:underline">website redesign cost guide</Link>.
-                            </BlogText>
-
-                            {/* Bottom CTA */}
-                            <div className="my-10 md:my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
-                                <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">PandaCodeGen Fixed Pricing</p>
-                                <h3 className="text-2xl md:text-3xl font-bold mb-3">A Number Before Work Starts. Not After.</h3>
-                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">Starter from $1,500. Growth from $3,500. Scale from $5,000. Fixed price, written 90+ PageSpeed guarantee, full code ownership, zero monthly platform fees. Book a call and we scope your site live.</p>
-                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Get a Free Fixed-Price Quote <ArrowRight className="w-5 h-5" /></CalModalButton>
-                            </div>
-
-                            <BlogHeader>FAQs About Website Cost</BlogHeader>
-
-                        </div>
-
-                        <FAQAccordion faqs={postFAQs} />
-
-                        <div className="mt-8 mb-4">
-                            <h2 className="text-xl font-bold text-charcoal mb-4">Related Articles</h2>
-                            <div className="grid gap-3">
-                                {[
-                                    { href: "/blog/website-rebuild-cost-2026", label: "How Much Does a Website Rebuild Cost in 2026? ($2K to $250K by Scope)" },
-                                    { href: "/blog/website-redesign-cost", label: "How Much Does a Website Redesign Cost in 2026?" },
-                                    { href: "/blog/website-migration-cost-2026", label: "How Much Does Website Migration Cost in 2026?" },
-                                    { href: "/blog/cheap-web-developer", label: "How Do You Find a Cheap Web Developer Without Getting Burned?" },
-                                    { href: "/pricing", label: "PandaCodeGen Fixed Pricing, Starter $1,500, Growth $3,500, Scale $5K+" }
-                                ].map(link => (
-                                    <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-cognac hover:underline">
-                                        <ArrowRight className="w-4 h-4 flex-shrink-0" />
-                                        {link.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        <RelatedPosts currentPostId="how-much-does-a-website-cost" />
-
+                        ))}
                     </div>
-                </div>
-            </article>
 
+                    <BlogHeader>Current PandaCodeGen pricing and payment split</BlogHeader>
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr>
+                                    <th className="p-4 font-bold">Planning tier</th>
+                                    <th className="p-4 font-bold">Starting price</th>
+                                    <th className="p-4 font-bold">30% onboarding</th>
+                                    <th className="p-4 font-bold">70% delivery</th>
+                                    <th className="p-4 font-bold">Support discussion</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-semibold">Starter</td><td className="p-4">$1,500</td><td className="p-4">$450</td><td className="p-4">$1,050</td><td className="p-4">15 business days</td></tr>
+                                <tr><td className="p-4 font-semibold">Growth</td><td className="p-4">$3,500</td><td className="p-4">$1,050</td><td className="p-4">$2,450</td><td className="p-4">30 business days</td></tr>
+                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">$1,500 to $3,000</td><td className="p-4">$3,500 to $7,000</td><td className="p-4">30 business days</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        These are planning anchors, not a promise that any page count, feature set or integration fits a
+                        tier. The accepted proposal and statement of work control final price, deliverables,
+                        dependencies, exclusions, schedule, acceptance, ownership, support and remedy. The tiers are
+                        also published on the <Link href="/pricing" className={sourceLinkClass}>pricing page</Link>, and
+                        the commercial conditions behind them are set out in the{" "}
+                        <Link href="/terms" className={sourceLinkClass}>terms</Link>.
+                    </BlogText>
+
+                    <BlogHeader>What belongs in a comparable website quote</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Discovery, inventory, information architecture, UX, visual design and responsive states.",
+                            "Copy, media, migration, CMS models, imports, localization and editorial workflow.",
+                            "Forms, CRM, calendars, search, authentication, commerce, payments and external APIs.",
+                            "Accessibility scope, security controls, browser and device coverage, and performance method.",
+                            "URL preservation, redirects, metadata, canonicals, structured data, analytics and consent.",
+                            "QA, cutover, rollback, monitoring, training, documentation, repository and account handoff.",
+                            "Revision rounds, change control, support period, response expectations and exclusions.",
+                        ]}
+                    />
+                    <InsightBox variant="warning" label="A page count is not a full scope">
+                        Ten repeated location pages and ten unique application screens have different design,
+                        development, data, security and test work. Count templates, states, roles, integrations and
+                        migration obligations before comparing prices.
+                    </InsightBox>
+
+                    <BlogHeader id="cost-drivers">What moves the price up or down</BlogHeader>
+                    <BlogText>
+                        Two quotes for the same page count can land a long way apart because the work behind each page
+                        is different. These are the levers that actually move a number. They move the schedule as well,
+                        so it is worth reading this next to{" "}
+                        <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom website takes to build</Link>.
+                    </BlogText>
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr>
+                                    <th className="p-4 font-bold">Cost driver</th>
+                                    <th className="p-4 font-bold">Pushes the price up</th>
+                                    <th className="p-4 font-bold">Pulls the price down</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr>
+                                    <td className="p-4 font-semibold">Templates and states</td>
+                                    <td className="p-4">Many unique templates plus empty, error, loading and role-specific states</td>
+                                    <td className="p-4">Repeated content flowing through one reviewed template</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Design origin</td>
+                                    <td className="p-4">Original art direction, custom illustration, motion work and a new design system</td>
+                                    <td className="p-4">Applying an existing brand system or an agreed component library</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Functionality</td>
+                                    <td className="p-4">Booking, accounts, authentication, payments, search, quoting and multi-step flows</td>
+                                    <td className="p-4">Published content with a contact form and analytics</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Content and migration</td>
+                                    <td className="p-4">Large URL inventories, inconsistent legacy content, redirect mapping and CMS modelling</td>
+                                    <td className="p-4">A small, clean content set you are willing to rewrite</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Integrations</td>
+                                    <td className="p-4">CRM, ERP, calendars, payment, tax, shipping and external APIs, each needing failure handling and tests</td>
+                                    <td className="p-4">No third-party systems in the first release</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Content readiness</td>
+                                    <td className="p-4">Copy, photography, video and translation produced by the vendor</td>
+                                    <td className="p-4">Final copy and assets supplied before build starts</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Compliance scope</td>
+                                    <td className="p-4">A named accessibility standard, security review, data-residency or regulated-industry obligations</td>
+                                    <td className="p-4">A stated baseline with no formal audit obligation</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Change control</td>
+                                    <td className="p-4">Open-ended revisions and undefined acceptance</td>
+                                    <td className="p-4">Defined revision rounds, written acceptance criteria and a change-order process</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 font-semibold">Schedule</td>
+                                    <td className="p-4">Compressed dates that need parallel staffing or out-of-hours work</td>
+                                    <td className="p-4">A date that matches normal delivery capacity</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogHeader id="cheap-quote">What a cheap quote usually leaves out</BlogHeader>
+                    <BlogText>
+                        A low number is often a narrow number. The work below still has to happen, so if it is not in the
+                        quote it arrives later as a change order, an internal task, or a job you pay a second vendor to
+                        finish. Read a lean quote for what is missing, not only for what is listed.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Content: most quotes assume you supply final copy, images and video. If you cannot, writing, photography, video and translation become separate line items.",
+                            "Migration: URL mapping, redirects, metadata, canonicals, structured data and CMS imports are frequently priced after the build is agreed.",
+                            "Integrations: a form is cheap. Connecting it to a CRM with validation, error handling, retries, notifications and reporting is not.",
+                            "Accessibility and coverage: a named standard and a browser and device matrix are scope. Looking correct on the developer's laptop is not.",
+                            "QA and cutover: staging, cross-device testing, launch rehearsal, rollback plan and post-launch monitoring.",
+                            "Training and documentation: someone on your side has to publish and edit without calling the developer.",
+                            "Support: what counts as a defect, the response expectation, the covered period, and what falls outside it.",
+                            "Ownership and handover: repository, domain, hosting, CMS and analytics accounts, and what happens to each if you leave.",
+                        ]}
+                    />
+                    <InsightBox variant="warning" label="Ask for the exclusions, not just the inclusions">
+                        A quote that lists only what is included tells you half of the story. Ask for the written
+                        exclusions list and the change-order process before you sign. When both are missing, the gap gets
+                        filled after signature at a price you never negotiated. The same pattern is what makes a{" "}
+                        <Link href="/blog/cheap-web-developer" className={sourceLinkClass}>cheap web developer</Link>{" "}
+                        expensive.
+                    </InsightBox>
+
+                    <div className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-center">
+                        <p className="mb-2 font-bold text-charcoal">Want the number for your actual scope?</p>
+                        <p className="mx-auto mb-5 max-w-xl text-sm leading-relaxed text-stone-600">
+                            Bring your current site URL and page list. We inventory templates, content, integrations,
+                            vendor costs and cutover work on the call, then come back with a written scope and a price
+                            you can compare against any other quote.
+                        </p>
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-stone-800">
+                            Book a scoping call <ArrowRight className="h-4 w-4" />
+                        </CalModalButton>
+                    </div>
+
+                    <BlogHeader>Recurring cost is more than hosting</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Domain, DNS, certificate and business-email services.",
+                            "Website or commerce plan, hosting, compute, bandwidth, storage, image processing and build usage.",
+                            "CMS seats, records, API usage, preview, localization and asset storage.",
+                            "Apps, plugins, extensions, licenses, payment fees, tax, shipping and messaging usage.",
+                            "Analytics, consent management, monitoring, backups, security, incident response and support.",
+                            "Internal publishing, campaign, training, vendor management and compliance time.",
+                        ]}
+                    />
+                    <BlogText>
+                        Save a dated vendor quote for the country, billing term, seats and expected usage. As one current
+                        example, Vercel&apos;s July 2026 public page labels Hobby for personal projects and lists Pro at
+                        $20 per month with included usage and additional usage-based charges. That does not make
+                        commercial hosting universally free or cap a production site at $20. We have written separately
+                        on{" "}
+                        <Link href="/blog/nextjs-hosting-zero-cost" className={sourceLinkClass}>what Next.js hosting actually costs</Link>{" "}
+                        and on how{" "}
+                        <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLinkClass}>store app subscriptions stack up on a monthly bill</Link>.
+                    </BlogText>
+
+                    <BlogHeader>DIY, managed platform and custom code</BlogHeader>
+                    <BlogText>
+                        A managed builder can reduce initial implementation and infrastructure work. It may be the best
+                        choice when its editor, templates, commerce, integrations, limits and exit path fit. Custom code
+                        can increase control and reduce some vendor constraints, but it still has infrastructure,
+                        software, maintenance, security and qualified-operator costs. Neither category is automatically
+                        cheaper, faster, safer or better for search. If you are weighing one specific platform, we have
+                        longer breakdowns of{" "}
+                        <Link href="/blog/webflow-true-cost" className={sourceLinkClass}>Webflow</Link>,{" "}
+                        <Link href="/blog/squarespace-vs-custom-website" className={sourceLinkClass}>Squarespace</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={sourceLinkClass}>WordPress against custom code over three years</Link>.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Open the vendor's official pricing page on the quote date and select the actual country and billing term.",
+                            "Add required seats, usage, apps, payment fees, tax, email, analytics and operational services.",
+                            "Record limits, renewal pricing, cancellation, export, account control and migration effort.",
+                            "Compare against a custom quote with the same features, content, QA, support and operating period.",
+                        ]}
+                    />
+
+                    <BlogHeader>Panda Patches: a first-party cost example</BlogHeader>
+                    <BlogText>
+                        Panda Patches is owned by PandaCodeGen&apos;s co-founder, so the owner has approved its cost
+                        figures for publication. The owner reports that the former WordPress and WooCommerce stack was
+                        approximately $200 per month and the replacement Next.js, Sanity, Supabase and Square tooling
+                        was approximately $55 per month for the referenced operating period.
+                    </BlogText>
+                    <BlogText>
+                        This is a related-party, first-party example, not a platform benchmark. It does not include every
+                        business&apos;s feature set, usage, labor, payment processing, tax, migration cost or risk. It
+                        also does not prove that the architecture caused revenue growth or that another store will
+                        achieve the same cost. A decision should use dated invoices and a comparable scope. The build is
+                        written up in full in the{" "}
+                        <Link href="/work/panda-patches" className={sourceLinkClass}>Panda Patches case study</Link>.
+                    </BlogText>
+
+                    <BlogHeader>How to calculate three-year total cost</BlogHeader>
+                    <BlogText>
+                        Use the same time horizon and scope for each option:
+                    </BlogText>
+                    <div className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-charcoal">
+                        Total cost = discovery and build + migration + vendor services + maintenance and support
+                        + internal time + expected change work + risk allowance + exit or replacement cost
+                    </div>
+                    <BlogList
+                        items={[
+                            "Use dated quotes and expected usage ranges instead of a best-case free tier.",
+                            "Separate required spend from optional marketing and feature spend.",
+                            "Create base, high-usage and change scenarios rather than one false-precision total.",
+                            "Do not subtract speculative ranking, conversion or revenue gains as guaranteed savings.",
+                            "After launch, replace assumptions with invoices and measured operating data.",
+                        ]}
+                    />
+
+                    <BlogText>
+                        If your project is a replacement rather than a first build, the same arithmetic is worked through
+                        in more detail in our guides to{" "}
+                        <Link href="/blog/website-rebuild-cost-2026" className={sourceLinkClass}>rebuild cost</Link>,{" "}
+                        <Link href="/blog/website-redesign-cost" className={sourceLinkClass}>redesign cost</Link> and{" "}
+                        <Link href="/blog/website-migration-cost-2026" className={sourceLinkClass}>migration cost</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="spend-less">How to spend less without shrinking the outcome</BlogHeader>
+                    <div className="my-8 space-y-4">
+                        {[
+                            {
+                                num: "1",
+                                title: "Write the requirement list before you ask for prices",
+                                body: "Pages, templates, features, integrations, who owns the content, and the date that matters. Send the same document to every vendor. Quotes only become comparable when the input is identical, and a defined brief removes most of the padding a vendor adds for unknowns.",
+                            },
+                            {
+                                num: "2",
+                                title: "Cut features, not craft",
+                                body: "A smaller first release built properly beats a larger one built badly. Decide what has to exist on launch day and put the rest in a written phase two. Deferred scope is cheaper than scope you pay for twice because it shipped half-finished.",
+                            },
+                            {
+                                num: "3",
+                                title: "Know which billing model you are buying",
+                                body: "Hourly billing puts schedule risk on you. Fixed scope puts it on the vendor and makes the exclusions list the document that matters. Neither is dishonest, but you should know which one you signed and what triggers a change order.",
+                            },
+                            {
+                                num: "4",
+                                title: "Reduce what you rent",
+                                body: "Every plugin, app, seat and add-on is a recurring bill, an update obligation and a dependency that can break. Ask what can be built into the site instead of subscribed to, then compare both options over the same three-year horizon rather than at month one.",
+                            },
+                            {
+                                num: "5",
+                                title: "Settle ownership in writing before onboarding",
+                                body: "Ask what transfers to you on final payment, what stays the vendor's reusable tooling, which third-party licences apply, and how the repository, domain, hosting, CMS and analytics accounts are handed over. Sorting this before work starts costs nothing. Sorting it during a dispute is expensive.",
+                            },
+                        ].map((step) => (
+                            <div key={step.num} className="flex gap-4 rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-cognac text-sm font-bold text-white">
+                                    {step.num}
+                                </span>
+                                <div>
+                                    <p className="mb-1 font-bold text-charcoal">{step.title}</p>
+                                    <p className="text-sm leading-relaxed text-stone-700">{step.body}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <BlogHeader>Refund, ownership and performance terms affect value</BlogHeader>
+                    <BlogText>
+                        PandaCodeGen&apos;s 100 percent contracted-scope protection applies when the accepted project
+                        terms include it, and it covers a failure to deliver the promised deliverables under that scope.
+                        It is not a change-of-mind refund. Approved refunds are normally initiated in 2 to 3 business
+                        days; settlement after that is controlled by the receiving bank or payment provider and can take
+                        up to 10 to 12 business days.
+                    </BlogText>
+                    <BlogText>
+                        Client content, data and brand assets remain the client&apos;s. Rights in fully paid custom
+                        deliverables, reusable PandaCodeGen tools or pre-existing code, and third-party components follow
+                        the accepted terms and original licenses. Domain, hosting, repository and business accounts can
+                        be client-controlled when agreed.
+                    </BlogText>
+                    <BlogText>
+                        A 90+ Lighthouse handover target applies only when the accepted terms identify representative
+                        pages, mobile and desktop profiles, the exact environment, three recorded passing runs per page
+                        and profile, exclusions and remedy. It is a lab acceptance condition, not a ranking, traffic,
+                        conversion, citation or revenue promise. The method behind it is described in{" "}
+                        <Link href="/blog/how-to-achieve-100-pagespeed" className={sourceLinkClass}>how we hit high PageSpeed scores</Link>.
+                    </BlogText>
+
+                    <BlogHeader>Current vendor pricing sources</BlogHeader>
+                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
+                        {vendorSources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>{source.name}</a>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
+                        <h2 className="mb-3 font-serif text-3xl">Get your migration price and plan</h2>
+                        <p className="mb-6 leading-relaxed text-stone-300">
+                            We will inventory the current site, pages, content, integrations, vendor costs, acceptance,
+                            cutover and handoff, then give you a project-specific written scope.
+                        </p>
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
+                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
+                        </CalModalButton>
+                    </section>
+
+                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <RelatedPosts currentPostId={postId} />
+                </article>
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

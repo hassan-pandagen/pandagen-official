@@ -1,41 +1,63 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
+import {
+    BlogAuthor,
+    BlogHeader,
+    BlogHighlight,
+    BlogList,
+    BlogQuote,
+    BlogText,
+    InsightBox,
+} from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
 
-const emdashFAQs = blogPosts.find(p => p.id === 'cloudflare-emdash-wordpress-replacement')?.faqs ?? [];
+const emdashFAQs = blogPosts.find((post) => post.id === "cloudflare-emdash-wordpress-replacement")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 export const dynamic = "force-static";
 
+const pageTitle = "Cloudflare EmDash vs WordPress in 2026: Readiness Guide";
+const pageDescription = "Is Cloudflare EmDash a WordPress replacement in 2026? Compare beta status, plugin security, portability, costs, SEO migration risks, and production readiness.";
+
 export const metadata: Metadata = {
-    title: "Cloudflare Emdash: WordPress Replacement in 2026?",
-    description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
+    title: pageTitle,
+    description: pageDescription,
     alternates: {
-        canonical: '/blog/cloudflare-emdash-wordpress-replacement',
+        canonical: "/blog/cloudflare-emdash-wordpress-replacement",
     },
-    keywords: ["Cloudflare Emdash", "Emdash CMS", "WordPress replacement 2026", "WordPress alternative", "Emdash vs WordPress", "Cloudflare CMS", "WordPress security issues plugins"],
+    keywords: [
+        "Cloudflare EmDash",
+        "EmDash CMS",
+        "WordPress replacement 2026",
+        "WordPress alternative",
+        "EmDash vs WordPress",
+        "Cloudflare CMS",
+        "WordPress migration",
+        "EmDash production ready",
+    ],
     openGraph: {
-        title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
-        description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
+        title: pageTitle,
+        description: pageDescription,
         type: "article",
         publishedTime: "2026-04-04",
+        modifiedTime: "2026-07-23",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/cloudflare-emdash-wordpress-replacement")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
-        description: "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
+        title: pageTitle,
+        description: pageDescription,
     },
 };
 
@@ -45,51 +67,94 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#article",
-            "headline": "Did Cloudflare Build a WordPress Replacement in 2026? What You Need to Know",
-            "description": "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "headline": pageTitle,
+            "description": pageDescription,
+            "image": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement"),
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-06-14T00:00:00-05:00",
+            "dateModified": "2026-07-23T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                "url": "https://www.pandacodegen.com/about",
+                "sameAs": [
+                    "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
+                    "https://github.com/hassan-pandagen",
+                ],
             },
             "publisher": {
                 "@type": "Organization",
                 "@id": "https://www.pandacodegen.com/#organization",
                 "name": "PandaCodeGen",
                 "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.pandacodegen.com/logo.png",
+                    "width": 655,
+                    "height": 113,
+                },
             },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement" },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
+            },
             "articleSection": "WordPress",
-            "keywords": ["Cloudflare Emdash", "Emdash CMS", "WordPress replacement", "WordPress alternative 2026", "WordPress security plugins"],
-            "timeRequired": "PT10M",
-            "wordCount": 2200,
+            "keywords": [
+                "Cloudflare EmDash",
+                "EmDash CMS",
+                "WordPress replacement 2026",
+                "EmDash vs WordPress",
+                "WordPress migration",
+            ],
             "about": [
-                { "@type": "Thing", "name": "Cloudflare Emdash", "description": "An open-source CMS launched by Cloudflare as a modern WordPress alternative built on TypeScript and Astro" },
-                { "@type": "Thing", "name": "WordPress", "description": "The world's most popular content management system powering approximately 42% of websites globally" },
-                { "@type": "Thing", "name": "Website Migration", "description": "The process of moving a website from one platform or technology stack to another" },
-                { "@type": "Thing", "name": "Web Performance Optimization", "description": "The practice of improving website speed, Core Web Vitals, and Google PageSpeed scores to improve rankings and conversions" }
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "EmDash",
+                    "applicationCategory": "Content management system",
+                    "operatingSystem": "Cloudflare Workers or compatible Node.js environment",
+                },
+                { "@type": "SoftwareApplication", "name": "WordPress", "applicationCategory": "Content management system" },
+                { "@type": "Thing", "name": "Website migration" },
+                { "@type": "Thing", "name": "Core Web Vitals" },
             ],
             "inLanguage": "en-US",
             "speakable": {
                 "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
+                "cssSelector": ["h1", "h2", "[data-speakable='true']"],
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Cloudflare Blog: Introducing Emdash", "url": "https://blog.cloudflare.com/emdash-wordpress/" },
-                { "@type": "CreativeWork", "name": "CMSWire: Right Architecture, Empty Ecosystem", "url": "https://www.cmswire.com/digital-experience/meet-emdash-the-cloudflare-cms-and-the-wordpress-spiritual-successor/" },
-                { "@type": "CreativeWork", "name": "Search Engine Journal: 6 Reasons Emdash Can't Compete With WordPress", "url": "https://www.searchenginejournal.com/6-reasons-why-cloudflares-emdash-cant-compete-with-wordpress/571053/" },
-                { "@type": "CreativeWork", "name": "Joost de Valk (Yoast SEO Creator): Emdash CMS Review", "url": "https://joost.blog/emdash-cms/" },
-                { "@type": "CreativeWork", "name": "TechRadar: Cloudflare Launches Emdash, the Spiritual Successor to WordPress", "url": "https://www.techradar.com/pro/cloudflare-launches-emdash-the-spiritual-successor-that-wants-to-take-on-wordpress" },
-                { "@type": "CreativeWork", "name": "Matt Mullenweg: Emdash Feedback", "url": "https://ma.tt/2026/04/emdash-feedback/" }
-            ]
+                {
+                    "@type": "CreativeWork",
+                    "name": "Cloudflare: Introducing EmDash",
+                    "url": "https://blog.cloudflare.com/emdash-wordpress/",
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "name": "EmDash official repository and status",
+                    "url": "https://github.com/emdash-cms/emdash",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Patchstack: State of WordPress Security 2025",
+                    "url": "https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Central: Understanding page experience",
+                    "url": "https://developers.google.com/search/docs/appearance/page-experience",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Central: Site moves with URL changes",
+                    "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Google Search Status Dashboard: March 2026 core update",
+                    "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y",
+                },
+            ],
         },
         {
             "@type": "BreadcrumbList",
@@ -97,21 +162,26 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Cloudflare Emdash WordPress Replacement", "item": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement" }
-            ]
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Cloudflare EmDash vs WordPress",
+                    "item": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
+                },
+            ],
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#webpage",
             "url": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
-            "name": "Cloudflare Built a WordPress Replacement in 2026: What to Know",
-            "description": "Cloudflare launched Emdash, calling it WordPress's spiritual successor. 96% of WordPress security issues come from plugins. Here is what this means for you.",
+            "name": pageTitle,
+            "description": pageDescription,
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement") },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-06-14T00:00:00-05:00",
+            "dateModified": "2026-07-23T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
-            "inLanguage": "en-US"
+            "inLanguage": "en-US",
         },
         {
             "@type": "Organization",
@@ -120,414 +190,306 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses frustrated with slow WordPress sites and expensive templates. We guarantee 90+ Google PageSpeed in writing or a full refund on every build.",
+            "description": "PandaCodeGen plans and builds SEO-conscious website migrations and custom web systems.",
             "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            "foundingDate": "2026-02",
         },
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#faq",
-            "mainEntity": emdashFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
-        }
-    ]
+            "mainEntity": emdashFAQs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+            })),
+        },
+    ],
 };
 
-export default function CloudflareEmdashPage() {
+const sourceLinkClass = "font-medium text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+const internalLinkClass = "text-charcoal underline decoration-stone-400 underline-offset-4 transition-colors hover:text-cognac";
+
+export default function CloudflareEmDashPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                {/* Global Noise Texture */}
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
+            <main className="relative min-h-screen overflow-x-hidden bg-paper pt-16 pb-10 text-charcoal selection:bg-stone-200 selection:text-stone-900 md:pt-32 md:pb-20">
+                <div className="pointer-events-none fixed inset-0 z-50 bg-noise opacity-[0.03]" />
 
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
+                <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-6 py-10 shadow-xs sm:px-8 md:px-14">
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    {/* Article Schema */}
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-                    />
-
-                    {/* Breadcrumb Navigation */}
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Cloudflare Emdash WordPress Replacement", href: "/blog/cloudflare-emdash-wordpress-replacement" }
+                            { label: "Cloudflare EmDash vs WordPress", href: "/blog/cloudflare-emdash-wordpress-replacement" },
                         ]}
                     />
 
-                    {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
+                    <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-charcoal transition-colors hover:text-cognac">
+                        <ArrowLeft className="h-4 w-4" />
                         Back to Blog
                     </Link>
 
-                    {/* Title & Meta */}
-                    <div className="mb-10">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-                            Cloudflare Just Built a{" "}
-                            <span className="whitespace-nowrap">WordPress <span className="font-serif italic text-cognac">Replacement</span></span>
+                    <header className="mb-10">
+                        <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cognac">Platform readiness</p>
+                        <h1 className="mb-5 text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
+                            Is Cloudflare EmDash a WordPress <span className="font-serif font-normal italic text-cognac">Replacement?</span>
                         </h1>
 
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Cloudflare says 96% of WordPress security issues come from plugins. If your business runs on WordPress, your site is either vulnerable, slow, or both. Here is what Cloudflare built, why the WordPress creator disagrees, and the option neither side is talking about.
+                        <p className="mb-6 text-xl leading-relaxed text-stone-600">
+                            Cloudflare calls EmDash the spiritual successor to WordPress. The project is real, open source, and ambitious. It is also a beta preview. Here is the evidence-based way to compare EmDash, WordPress, and a custom rebuild without treating a launch announcement as a migration order.
                         </p>
 
                         <BlogAuthor
                             date="Apr 4, 2026"
-                            readTime="10 min read"
-                            bio="Hassan builds custom-coded websites for businesses stuck on slow WordPress sites. Every site scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host. No templates, no plugins, no bloat."
+                            readTime="14 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                    </div>
+                        <p className="mt-2 text-xs text-stone-500">Reviewed July 23, 2026 against the official Cloudflare announcement, current EmDash repository, and Google Search documentation.</p>
+                    </header>
 
-                    {/* Short Hook (NOT executive summary) */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12">
-                        <p className="text-stone-700 leading-relaxed">
-                            On April 2, 2026, Cloudflare launched Emdash and called it the spiritual successor to WordPress. When a $30 billion infrastructure company builds a replacement for the platform your website runs on, it is worth paying attention. Here is what happened, what it means, and what you should do about it. Key takeaways at the bottom.
-                        </p>
-                    </div>
+                    <section className="mb-12 grid gap-3 sm:grid-cols-3" aria-label="Current EmDash status summary">
+                        {[
+                            ["Status", "Beta preview"],
+                            ["Core stack", "TypeScript and Astro"],
+                            ["Deployment", "Cloudflare or Node.js"],
+                        ].map(([label, value]) => (
+                            <div key={label} className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+                                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-cognac">{label}</p>
+                                <p className="font-semibold text-charcoal">{value}</p>
+                            </div>
+                        ))}
+                    </section>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Cloudflare announced an open-source CMS project in 2026 positioned as a modern alternative to WordPress, built on their Workers and Pages infrastructure. It is not a full WordPress replacement yet, but it signals where enterprise web infrastructure is heading. Businesses already migrating to Next.js are better positioned to adopt Cloudflare's stack than those stuck on WordPress.</p>
-
-                    {/* Content */}
                     <div className="space-y-8">
-
-                        <BlogHeader>A $30 Billion Company Just Said WordPress Is Broken</BlogHeader>
+                        <BlogHeader>What Cloudflare actually launched</BlogHeader>
 
                         <BlogText>
-                            On April 2, 2026, Cloudflare announced Emdash. They did not call it a content management system. They did not call it a website builder. They called it the &quot;spiritual successor to WordPress.&quot; If this is accelerating your WordPress exit decision, see the <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> first.
+                            Cloudflare announced EmDash on April 1, 2026 and described it as the &quot;spiritual successor to WordPress.&quot; That phrase is Cloudflare&apos;s positioning, not evidence that WordPress has been replaced. The launch post introduced an early developer beta, while the project&apos;s current official repository still labels EmDash a <BlogHighlight>beta preview</BlogHighlight>. Both details matter when a business is deciding whether to investigate, pilot, or migrate.
                         </BlogText>
 
                         <BlogText>
-                            That language matters. Cloudflare is not a startup chasing headlines. They are a $30 billion infrastructure company that sits in front of roughly 20% of the web. When they look at{" "}
-                            <Link href="/blog/wordpress-killer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                the state of WordPress
-                            </Link>{" "}
-                            and decide the right move is to build a replacement from scratch, that is not a trend piece. That is a verdict.
+                            The product itself is more substantial than a concept demo. According to the{" "}
+                            <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                official EmDash repository
+                            </a>
+                            , it is a full-stack TypeScript CMS built with Astro. The current feature list includes an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import paths. That is a meaningful foundation, but the repository&apos;s beta label is still the controlling status statement.
                         </BlogText>
-
-                        <BlogText>
-                            Emdash was built in roughly two months using AI-assisted development. It runs on TypeScript and Astro, deploys serverless on Cloudflare Workers, and scales to zero when nobody is visiting your site. The entire project is MIT open source.
-                        </BlogText>
-
-                        <ComparisonGrid
-                            left={{
-                                label: "WordPress",
-                                items: [
-                                    "96% of security issues come from plugins",
-                                    "Average site runs 20 to 30 plugins",
-                                    "Built on PHP",
-                                ],
-                            }}
-                            right={{
-                                label: "Cloudflare Emdash",
-                                items: [
-                                    "Plugins sandboxed in isolates to contain breaches",
-                                    "Serverless, scales to zero when idle",
-                                    "TypeScript and Astro, MIT open source",
-                                ],
-                            }}
-                        />
 
                         <BlogQuote>
-                            Cloudflare called Emdash the spiritual successor to WordPress. When a company that handles 20% of internet traffic builds a replacement for your platform, the message is clear.
+                            &quot;Spiritual successor&quot; describes Cloudflare&apos;s design ambition. &quot;Beta preview&quot; describes the current adoption risk. A serious platform decision has to hold both facts at once.
                         </BlogQuote>
 
                         <BlogText>
-                            But here is the part that matters most for business owners: Cloudflare did not build Emdash because they wanted to sell you a new product. They built it because they see what we have been saying for years. WordPress, as it exists today, is a liability for businesses that depend on their websites.
+                            EmDash uses Portable Text for structured content and provides import routes for WordPress WXR exports and the WordPress REST API. It can run on Cloudflare with D1, R2, KV, and Workers, or on a compatible Node.js setup with alternatives such as SQLite and S3-compatible storage. This makes it more accurate to call EmDash a new WordPress alternative than a completed one-for-one WordPress replacement.
                         </BlogText>
 
-                        <BlogHeader>96% of WordPress Security Issues Come From Plugins</BlogHeader>
+                        <BlogHeader>What the plugin-security claim means</BlogHeader>
 
                         <BlogText>
-                            This is Cloudflare&apos;s own data, and it is the most important number in their entire announcement. <BlogHighlight>96% of all WordPress security vulnerabilities come from plugins.</BlogHighlight> Not from WordPress itself. From the plugins you install to make it do what you need.
-                        </BlogText>
-
-                        <BlogText>
-                            Think about that for a moment. Every contact form plugin, every SEO tool, every caching plugin, every page builder. Each one is a potential door that hackers can walk through. The average WordPress site runs 20 to 30 plugins. That is 20 to 30 potential vulnerabilities sitting on your server right now.
-                        </BlogText>
-
-                        <BlogText>
-                            Emdash addresses this by running plugins inside sandboxed isolates on Cloudflare&apos;s runtime. If a plugin has a security flaw, it cannot reach the rest of your site. That is genuinely smart engineering. But it raises a bigger question that Cloudflare does not answer:{" "}
-                            <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                why are you running 30 plugins in the first place?
-                            </Link>
-                        </BlogText>
-
-                        <BlogList items={[
-                            "96% of WordPress security issues originate from third-party plugins",
-                            "The average WordPress site runs 20 to 30 plugins, each one a potential vulnerability",
-                            "WordPress sites are the target of 90% of all CMS-based hacking attempts",
-                            "A single compromised plugin can expose your entire database, customer data, and payment information",
-                            "Emdash sandboxes plugins to contain breaches, but custom-coded sites eliminate the plugin problem entirely"
-                        ]} />
-
-                        <BlogText>
-                            A custom-coded website does not need plugins. Forms, SEO, performance, security. All of it is built directly into the code. There is nothing to hack because there are no third-party dependencies running on your server. The plugin problem is not something you solve by sandboxing plugins better. You solve it by not needing plugins at all.
-                        </BlogText>
-
-                        <BlogHeader>What Emdash Gets Right (and What It Does Not)</BlogHeader>
-
-                        <BlogText>
-                            Credit where it is due. Emdash makes several smart architectural decisions that show Cloudflare genuinely understands what is wrong with WordPress.
+                            Cloudflare&apos;s{" "}
+                            <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                official launch article
+                            </a>{" "}
+                            cites the{" "}
+                            <a href="https://patchstack.com/whitepaper/state-of-wordpress-security-in-2025/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                2025 Patchstack security report
+                            </a>
+                            . That report says 96% of recorded WordPress vulnerabilities in its 2024 ecosystem dataset were found in plugins. This is not the same as saying 96% of WordPress sites are compromised, or that every installed plugin is vulnerable. The defensible conclusion is narrower: third-party extensions are a major part of the WordPress attack surface and require disciplined inventory, updates, access control, testing, and removal when they are no longer needed.
                         </BlogText>
 
                         <BlogText>
-                            <strong>What Emdash gets right:</strong> It is serverless, so there is no server to maintain or pay for when traffic is low. It uses TypeScript instead of PHP, which is a modern language that catches errors before they reach your visitors. Plugin isolation is genuinely innovative. And the AI-native approach, where the system was partly built with and designed for AI workflows, points toward where the industry is heading.
+                            Traditional WordPress plugins execute inside the application and can interact with sensitive site resources. EmDash takes a capability-based approach. On Cloudflare, plugins can run in isolated Dynamic Workers and request declared permissions through bindings. Limiting a plugin&apos;s authority can reduce blast radius if that plugin fails or is compromised.
+                        </BlogText>
+
+                        <InsightBox variant="warning" label="Security boundary">
+                            A sandbox helps. It does not make you safe. You still have to design and test who can log in, what your dependencies drag in with them, who is allowed to deploy, how data is handled, how it is configured, how you back it up, what you log, and what you do at 2am when something breaks.
+                        </InsightBox>
+
+                        <BlogText>
+                            The official repository also makes an important portability distinction. EmDash can run on Cloudflare or a Node.js server, but its isolated plugin execution depends on Cloudflare Dynamic Workers and a paid Cloudflare account. The Node.js path can host the CMS, yet it does not reproduce the same Worker-isolate boundary. A security review therefore needs to evaluate the exact deployment mode rather than assigning one blanket risk score to the product.
+                        </BlogText>
+
+                        <BlogHeader>EmDash vs WordPress is a requirements comparison</BlogHeader>
+
+                        <BlogText>
+                            WordPress and EmDash are at different stages. WordPress has a mature editor workflow, a large theme and extension market, broad hosting choice, and a deep pool of experienced operators. Those strengths can also create governance work: a business must know which plugins are installed, who maintains them, how updates are staged, which vendors can access data, and how recovery is tested.
                         </BlogText>
 
                         <BlogText>
-                            The detail worth flagging for 2026: Emdash ships with a built-in MCP server, which means AI agents can read and manage your content directly, with no plugins and no glue code. Cloudflare putting that at the core of a CMS is a signal, machine-readable content is becoming the default, not a nice-to-have. It is the same reason we build sites structured for AI search to read and cite, covered in our <Link href="/ai-info" className="text-cognac hover:underline font-medium">AI search reference</Link>. Under the hood Emdash runs on Astro and stores content as Portable Text rather than WordPress&apos;s HTML model, which is part of why you cannot simply migrate a WordPress site into it. The themes and plugins do not carry over. It is a rebuild either way, which is the same decision point you reach whether you move to Emdash or to a custom site.
+                            EmDash starts with a modern TypeScript and Astro architecture, structured content, serverless deployment options, scoped plugin permissions, and built-in tooling for developers and agents. Its tradeoffs come from being new: beta stability, a younger extension ecosystem, fewer experienced operators, and more responsibility for validating integrations that WordPress users may currently obtain from established plugins.
                         </BlogText>
 
-                        <BlogText>
-                            Matt Mullenweg, the co-creator of WordPress, responded publicly. He acknowledged the engineering quality but criticized Emdash for Cloudflare vendor lock-in, arguing that its plugin security model only works on Cloudflare&apos;s runtime and breaks down on any other host. Meanwhile, Joost de Valk, the creator of Yoast SEO (the most popular WordPress plugin with over 13 million installs), publicly endorsed Emdash. When the person who built the biggest WordPress plugin endorses the replacement, that tells you something about where the industry is heading.
-                        </BlogText>
-
-                        <BlogText>
-                            <strong>What Emdash gets wrong:</strong> Almost everything that matters for a business that needs a working website today.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Zero plugin ecosystem. WordPress has 60,000 plugins. Emdash has effectively none.",
-                            "CLI setup required. You need to use a command line terminal to get started. WordPress has a famous 5-minute install.",
-                            "Cloudflare lock-in. The plugin sandboxing only works on Cloudflare Workers. Move to another host and you lose the key security feature.",
-                            "No community. No forums, no tutorials, no agencies, no freelancers who specialize in Emdash. WordPress has millions of developers.",
-                            "Beta only. This is not production-ready software. Cloudflare says so themselves."
-                        ]} />
-
-                        <BlogText>
-                            Search Engine Journal listed six reasons Emdash cannot compete with WordPress today. CMSWire called it &quot;the right architecture with an empty ecosystem.&quot; Both assessments are fair. Emdash is a technically impressive proof of concept. It is not a platform you should bet your business on in 2026.
-                        </BlogText>
-
-                        {/* Mid-Article CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                            <p className="font-bold text-charcoal mb-2">Wondering what your WordPress site is really costing you?</p>
-                            <p className="text-stone-600 mb-4 text-sm">Book a free 15-minute audit. We will run your PageSpeed score live, identify your plugin vulnerabilities, and show you exactly what a modern website would look like for your business.</p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Schedule Free Audit <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
+                        <div className="my-10 overflow-hidden rounded-2xl border border-stone-200">
+                            <div className="grid grid-cols-1 bg-charcoal p-5 text-white sm:grid-cols-3">
+                                <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Decision area</p>
+                                <p className="mt-2 font-semibold sm:mt-0">WordPress</p>
+                                <p className="mt-2 font-semibold text-orange-200 sm:mt-0">EmDash beta</p>
+                            </div>
+                            {[
+                                ["Ecosystem", "Mature plugins, themes, hosts, and specialists", "Growing first-party foundation and early community"],
+                                ["Content model", "Flexible, often shaped by themes and plugins", "Structured content with Portable Text and typed collections"],
+                                ["Security", "Requires plugin governance, patching, and host controls", "Capability model with Cloudflare isolate option"],
+                                ["Portability", "Broad hosting support, with plugin and theme dependencies", "Cloudflare and Node.js paths, with deployment-specific differences"],
+                                ["Adoption risk", "Known operational patterns and legacy constraints", "Beta change risk and a smaller support market"],
+                            ].map(([area, wordpress, emdash]) => (
+                                <div key={area} className="grid grid-cols-1 gap-2 border-t border-stone-200 p-5 text-sm leading-relaxed sm:grid-cols-3 sm:gap-5">
+                                    <p className="font-bold text-charcoal">{area}</p>
+                                    <p className="text-stone-600">{wordpress}</p>
+                                    <p className="text-stone-700">{emdash}</p>
+                                </div>
+                            ))}
                         </div>
 
-                        <BlogHeader>Why This Matters Even If You Never Use Emdash</BlogHeader>
+                        <BlogHeader>Is EmDash production ready in 2026?</BlogHeader>
 
                         <BlogText>
-                            Emdash might never become a mainstream platform. That is beside the point. What matters is what Cloudflare&apos;s announcement signals about the direction of the entire industry.
+                            There is no honest universal yes or no. The project owners call it a beta preview, so a regulated portal, high-volume store, or mission-critical publishing operation should not infer production suitability from the feature list alone. A low-risk campaign site, internal prototype, or isolated content pilot may have a very different risk tolerance.
                         </BlogText>
 
                         <BlogText>
-                            <BlogHighlight>WordPress market share dropped from 43.6% to 42.6% in the past year. That is the first decline in over 20 years.</BlogHighlight> One percentage point might sound small, but at WordPress&apos;s scale, that represents millions of websites moving to other platforms.
+                            Production readiness is a property of a specific system and operating plan. Before approving EmDash for a business site, test the content model, editor permissions, preview workflow, publishing recovery, media behavior, forms, search, analytics, consent, email, CRM, localization, accessibility, backups, observability, and every integration that generates revenue or stores personal data. Record which features are stable, which require custom work, and who will maintain each dependency after launch.
+                        </BlogText>
+
+                        <BlogList
+                            items={[
+                                "Build a representative pilot with real content and the hardest integration, not only the homepage template.",
+                                "Review the current beta release, open issues, upgrade notes, and rollback path before setting a launch date.",
+                                "Threat-model the chosen deployment mode, including plugin permissions, secrets, roles, backups, logs, and recovery.",
+                                "Load-test the real application path and measure field data after launch instead of promising a lab score in advance.",
+                                "Document who owns the domain, repository, Cloudflare or hosting account, database, storage, and third-party services.",
+                                "Price engineering, platform usage, support, monitoring, and future upgrades together rather than calling hosting free.",
+                            ]}
+                        />
+
+                        <BlogText>
+                            This is also why early summaries describing no usable ecosystem or terminal-only operation are outdated. The current project includes starter templates, first-party plugin work, an admin experience, import tools, and multiple installation paths. The ecosystem is still young, and initial deployment remains developer-oriented, but those are more precise constraints than pretending nothing exists.
+                        </BlogText>
+
+                        <BlogHeader>Is EmDash locked to Cloudflare?</BlogHeader>
+
+                        <BlogText>
+                            Not in the absolute sense. The official project says EmDash runs on Cloudflare or a Node.js server and documents alternatives for database, object storage, and sessions. That portability is valuable. However, its flagship plugin-sandbox design uses Cloudflare Dynamic Workers. Moving the CMS to another runtime can therefore change a central security property even when the content and application remain portable.
                         </BlogText>
 
                         <BlogText>
-                            The reasons are piling up. Google&apos;s{" "}
-                            <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                March 2026 core update penalized slow sites harder than any previous update
-                            </Link>. 47% of slow sites lost rankings. Only 44% of WordPress sites pass Core Web Vitals on mobile.
+                            Treat vendor independence as an architecture test, not a slogan. Ask whether the code can run elsewhere, whether the data can be exported in a usable format, which services have equivalents, how long a move would take, and what behavior changes after the move. WordPress, EmDash, Next.js, and every managed service have dependencies. The practical goal is to make those dependencies visible, replaceable where it matters, and assigned to accounts the client controls.
                         </BlogText>
 
-                        <BlogText>
-                            Industry data shows that 61% of companies now use multiple content management systems, and roughly half of those are actively trying to escape legacy platforms. WordPress is the legacy platform they are leaving.
-                        </BlogText>
+                        <BlogHeader>Google updates do not turn this into an emergency migration</BlogHeader>
 
                         <BlogText>
-                            Cloudflare building a WordPress replacement is not an isolated event. It is part of a pattern. Vercel, Netlify, Deno, and now Cloudflare are all building tools that make WordPress unnecessary. They are not doing this for fun. They are doing it because they see the market shifting.
-                        </BlogText>
-
-                        <BlogText>
-                            For business owners, the question is not whether WordPress will decline. It already is. The question is how long you wait before the decline affects your revenue.
-                        </BlogText>
-
-                        <BlogHeader>Mullenweg (Automattic CEO, WordPress Co-Creator) Fired Back. And He Has a Point.</BlogHeader>
-
-                        <BlogText>
-                            Emdash is not perfect either. Mullenweg responded immediately with a detailed critique.
-                        </BlogText>
-
-                        <BlogText>
-                            His points: Emdash&apos;s plugin security only works on Cloudflare&apos;s runtime. Host it anywhere else and you lose the main selling point.
-                        </BlogText>
-                        <BlogText>
-                            The plugin sandboxing also restricts what plugins can do, breaking compatibility with 60,000 existing WordPress plugins. And the whole thing ties you to Cloudflare&apos;s ecosystem — the opposite of WordPress&apos;s open web mission.
-                        </BlogText>
-
-                        <BlogText>
-                            He is not wrong.
-                        </BlogText>
-
-                        <BlogText>
-                            Emdash solves the security problem by creating a new dependency. You are trading WordPress lock-in for Cloudflare lock-in.
-                        </BlogText>
-
-                        <InsightBox variant="warning">Emdash&apos;s plugin security only works on Cloudflare&apos;s runtime. Host it anywhere else and you lose the main selling point.</InsightBox>
-
-                        <BlogHeader>There Is a Third Option Nobody in This Debate Is Talking About</BlogHeader>
-
-                        <BlogText>
-                            No plugins at all. No sandboxing needed because there is nothing to sandbox. A standard open source stack that deploys anywhere. You own the code, the data, and the infrastructure. Move it to any host, hire any developer, change anything without permission from a platform.
-                        </BlogText>
-
-                        <BlogText>
-                            That is what we build. Not a WordPress successor. Not a Cloudflare product. Just clean architecture with zero dependencies you do not control.
-                        </BlogText>
-
-                        <BlogText>
-                            Think about what both sides of this debate are admitting. Mullenweg is defending a platform where{" "}
-                            <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                96% of security issues come from plugins
-                            </Link>. Cloudflare is selling a fix that only works if you pay them forever. Neither side is asking the obvious question: what if you just did not need plugins at all?
-                        </BlogText>
-
-                        <BlogText>
-                            A custom-coded site has forms, SEO, analytics, and performance built in from day one. No plugin marketplace. No sandboxing runtime. No vendor collecting monthly fees. Your{" "}
-                            <Link href="/blog/wordpress-vs-nextjs" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                WordPress site replaced with a modern framework
+                            Google&apos;s March 2026 core update ran from March 27 to April 8. Google did not announce a new speed threshold, a WordPress penalty, or a WordPress-specific loss rate. Our{" "}
+                            <Link href="/blog/google-march-2026-update" className={internalLinkClass}>
+                                March 2026 core update analysis
                             </Link>{" "}
-                            that scores 90+ on PageSpeed, loads in under 1 second, and costs $0 per month to host.
+                            separates the official record from those unsupported claims.
                         </BlogText>
 
-                        <BlogList items={[
-                            "90+ PageSpeed score from day one. Not 60 with optimization plugins.",
-                            "Under 1 second load time on mobile. Your visitors see your content instantly.",
-                            "$0 per month hosting. No server costs, no managed hosting fees, no scaling charges.",
-                            "You own every line of code. No lock-in to Cloudflare, WordPress, or anyone else.",
-                            "Zero plugins means zero vulnerabilities. Nothing to sandbox because there is nothing to exploit.",
-                            "Deploy anywhere. Move hosts, hire any developer, change anything. No permission needed."
-                        ]} />
-
                         <BlogText>
-                            <BlogHighlight>WordPress locks you into 23 years of technical debt. Emdash locks you into Cloudflare&apos;s ecosystem. A custom-coded site locks you into nothing.</BlogHighlight> That is what real ownership looks like.
+                            Google&apos;s current{" "}
+                            <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                page-experience guidance
+                            </a>{" "}
+                            says Core Web Vitals are used by its ranking systems, but good scores do not guarantee top rankings. Relevance and overall page experience still matter. A faster platform can improve user experience and remove technical constraints, but a Lighthouse score cannot prove that a migration caused a ranking change.
                         </BlogText>
 
-                        <BlogHeader>What a Post-WordPress Website Actually Looks Like</BlogHeader>
-
                         <BlogText>
-                            Numbers tell the story better than promises. Here is a direct comparison between a typical WordPress site and what we build for our clients.
+                            You should still keep track of what Google is doing so an update does not catch your team unprepared. The safe practice is to monitor the official Search Status Dashboard, annotate releases and site changes, watch Search Console by page and query, and compare performance with the same date ranges and devices. That discipline helps separate a core-update movement from a deployment bug, indexing problem, content change, seasonality, or Core Web Vitals regression. It protects decisions from rumor as much as it protects traffic from technical mistakes.
                         </BlogText>
 
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full text-left border-collapse min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="border-b-2 border-stone-300">
-                                        <th className="py-3 pr-4 text-charcoal font-bold">Metric</th>
-                                        <th className="py-3 px-4 text-charcoal font-bold">WordPress</th>
-                                        <th className="py-3 pl-4 text-charcoal font-bold">Custom Next.js</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-stone-700">
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Google PageSpeed (Mobile)</td>
-                                        <td data-label="WordPress" className="py-3 px-4">38 to 58</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">90+</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Load Time (Mobile)</td>
-                                        <td data-label="WordPress" className="py-3 px-4">3.5 to 4.2 seconds</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0.6 to 0.8 seconds</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Monthly Hosting Cost</td>
-                                        <td data-label="WordPress" className="py-3 px-4">$50 to $150+</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">$0</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Plugin Dependencies</td>
-                                        <td data-label="WordPress" className="py-3 px-4">20 to 30</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">0</td>
-                                    </tr>
-                                    <tr className="border-b border-stone-300">
-                                        <td className="py-3 pr-4 font-medium">Security Vulnerabilities</td>
-                                        <td data-label="WordPress" className="py-3 px-4">96% from plugins</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">No plugins, no attack surface</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="py-3 pr-4 font-medium">Code Ownership</td>
-                                        <td data-label="WordPress" className="py-3 px-4">Renting themes and plugins</td>
-                                        <td data-label="Custom Next.js" className="py-3 pl-4 font-bold text-charcoal">100% yours</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <BlogHeader>When keeping WordPress may be the right decision</BlogHeader>
 
                         <BlogText>
-                            These are not theoretical numbers. Every site we build at PandaCodeGen hits these benchmarks. Our{" "}
-                            <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                detailed guide on achieving 100 PageSpeed
+                            A platform migration has cost and risk. Staying on WordPress can be rational when its specialist plugins support essential workflows, editors are productive, updates are staged, backups and recovery are tested, access is controlled, performance meets user needs, and the team can maintain the system. Replacing a working membership, learning, booking, multilingual, or commerce stack without mapping its behavior can create more risk than it removes.
+                        </BlogText>
+
+                        <BlogText>
+                            Start with an inventory rather than an ideology. List every public URL, template, custom field, form, integration, scheduled job, user role, analytics event, consent rule, search feature, redirect, and plugin. Mark each item as required, replaceable, obsolete, or unknown. The resulting map will show whether maintenance is the problem, whether targeted remediation is enough, or whether a rebuild has a credible business case. The{" "}
+                            <Link href="/blog/wordpress-migration-cost" className={internalLinkClass}>
+                                WordPress migration cost guide
                             </Link>{" "}
-                            explains the exact process we use and why template-based platforms cannot match it.
+                            explains why page count alone is not a reliable scope.
+                        </BlogText>
+
+                        <BlogHeader>When to pilot EmDash or consider a custom rebuild</BlogHeader>
+
+                        <BlogText>
+                            An EmDash pilot is worth considering when a team wants structured content, TypeScript and Astro alignment, Cloudflare-native deployment, scoped plugin permissions, and a willingness to test beta software. Keep the pilot away from the most sensitive workflow until publishing, recovery, upgrades, and integrations have survived realistic use.
                         </BlogText>
 
                         <BlogText>
-                            This is not just a WordPress problem either. Businesses on{" "}
-                            <Link href="/services/webflow?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Webflow
-                            </Link>,{" "}
-                            <Link href="/services/squarespace?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Squarespace
-                            </Link>,{" "}
-                            <Link href="/services/wix?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                Wix
-                            </Link>, and{" "}
-                            <Link href="/services/gohighlevel?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                GoHighLevel
+                            A custom build may fit when the required workflows do not map cleanly to an off-the-shelf CMS, the organization wants an explicit dependency model, or a revenue-critical experience needs deeper integration than a theme and plugin stack can provide. Custom code is not automatically faster, safer, cheaper, or portable. Those outcomes depend on architecture, implementation, operating controls, contract terms, and continuing maintenance. A responsible{" "}
+                            <Link href="/blog/wordpress-vs-nextjs" className={internalLinkClass}>
+                                WordPress vs Next.js comparison
                             </Link>{" "}
-                            are hitting the same ceiling. Different platforms, same problem: you are renting someone else&apos;s infrastructure and paying the price in speed, security, and flexibility. The gap between template platforms and modern custom code is not closing. It is widening with every Google update.
+                            should make those tradeoffs visible.
+                        </BlogText>
+
+                        <BlogHeader>A migration plan that protects search visibility</BlogHeader>
+
+                        <BlogText>
+                            Moving from WordPress to EmDash, Next.js, or another CMS changes technical search signals and needs a controlled plan. Google&apos;s{" "}
+                            <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                site-move documentation
+                            </a>{" "}
+                            recommends preparing and testing the new site, mapping old URLs to their appropriate destinations, using permanent server-side redirects when URLs change, submitting a new sitemap, and monitoring Search Console. Google also notes that visibility can fluctuate temporarily while a move is processed.
+                        </BlogText>
+
+                        <BlogList
+                            items={[
+                                "Crawl the current site and combine that inventory with Search Console, analytics, sitemap, backlink, and server-log data.",
+                                "Give every old URL a documented outcome: keep it, redirect it to a relevant equivalent, or intentionally return 404 or 410.",
+                                "Preserve important content, titles, descriptions, canonicals, structured data, media references, hreflang, and internal links where appropriate.",
+                                "Validate forms, consent, analytics events, CRM handoffs, search, authentication, accessibility, and representative device journeys in staging.",
+                                "Test redirect status codes and destinations before cutover, remove accidental noindex or crawl blocks, and publish the production sitemap.",
+                                "Record a rollback plan, monitor crawling and indexing after launch, and keep migration redirects for at least the period Google recommends.",
+                            ]}
+                        />
+
+                        <BlogText>
+                            A migration specialist should define acceptance criteria before implementation. Performance targets need representative pages, devices, test conditions, and repeated runs. Ownership needs a written description of what transfers after payment, what pre-existing tools remain with the builder, and which third-party licenses continue to govern components. Support, pricing, refunds, and scope changes belong in the accepted proposal or statement of work, not in a universal blog promise.
+                        </BlogText>
+
+                        <BlogHeader>What Cloudflare EmDash means for WordPress in 2026</BlogHeader>
+
+                        <BlogText>
+                            EmDash is evidence that modern CMS architecture is still evolving. It combines structured content, a TypeScript and Astro foundation, portable deployment options, and a serious attempt to reduce plugin authority. It does not prove that WordPress has reached end of life, that every WordPress site is insecure, or that every business should rebuild immediately.
                         </BlogText>
 
                         <BlogText>
-                            If you are on WordPress today, you have three options. Wait for Emdash to mature (two to three years, minimum). Stay on WordPress and hope the next Google update does not hit you harder. Or move to a custom-coded site that is already built for where the industry is going.
-                        </BlogText>
-
-                        <BlogText>
-                            Our{" "}
-                            <Link href="/services/wordpress-migration?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                WordPress migration service
-                            </Link>{" "}
-                            takes 4 to 6 weeks from start to launch. We handle the entire process: design, build, content transfer, redirects, DNS, and post-launch monitoring. Your existing SEO equity is preserved with proper 301 redirects. And every site we deliver scores{" "}
-                            <Link href="/services/custom-engineering?ref=blog/cloudflare-emdash-wordpress-replacement" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
-                                90+ on Google PageSpeed
-                            </Link>, guaranteed.
-                        </BlogText>
-
-                        <BlogText>
-                            Cloudflare just confirmed what we have been building toward for years. The WordPress era is ending. The only question is whether you move now, while your rankings still have value, or wait until the next update forces the decision for you.
+                            The useful question is not &quot;Which platform won?&quot; It is &quot;Which system can satisfy our documented content, integration, security, performance, search, ownership, and operating requirements at an acceptable risk and total cost?&quot; EmDash deserves a place in that evaluation. Its beta status means it also deserves a pilot, evidence, and an exit plan before it receives production trust.
                         </BlogText>
                     </div>
 
-                    {/* Key Takeaways */}
-                    <section className="mt-6 md:mt-10 md:mt-16 mb-10" data-speakable="true">
-                        <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
-                        <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Cloudflare launched Emdash as a WordPress replacement</strong>: A $30 billion infrastructure company built a new CMS from scratch and called it the spiritual successor to WordPress. That signals where the industry is heading.</li>
-                            <li><strong>96% of WordPress security issues come from plugins</strong>: Every plugin you install is a potential vulnerability. Emdash sandboxes plugins, but custom-coded sites eliminate the plugin problem entirely.</li>
-                            <li><strong>Emdash is not ready for businesses today</strong>: Zero plugin ecosystem, CLI-only setup, Cloudflare lock-in, no community, and beta status. Technically impressive, but not production-ready.</li>
-                            <li><strong>WordPress market share is declining for the first time in 20 years</strong>: Down from 43.6% to 42.6%. Google&apos;s March 2026 update dropped 47% of slow sites. Only 44% of WordPress sites pass Core Web Vitals on mobile.</li>
-                            <li><strong>Custom Next.js sites are the proven alternative available today</strong>: 90+ PageSpeed, under 1 second load time, $0 monthly hosting, zero plugins, 100% code ownership, and no vendor lock-in to any platform.</li>
+                    <section className="mt-10 mb-10 rounded-2xl border border-cognac/20 bg-orange-50/60 p-7" data-speakable="true">
+                        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cognac">Decision summary</p>
+                        <h2 className="mb-5 text-2xl font-bold text-stone-900">Cloudflare EmDash vs WordPress in one minute</h2>
+                        <ol className="list-inside list-decimal space-y-3 leading-relaxed text-stone-700">
+                            <li><strong>EmDash is still a beta preview:</strong> the features underneath it are credible, but you would need to test it against your own project before trusting it in production.</li>
+                            <li><strong>The security model is real, but it only goes so far:</strong> plugins run isolated in Cloudflare Dynamic Workers, and you still have to secure everything around them yourself.</li>
+                            <li><strong>It is portable, with a catch:</strong> EmDash runs on Cloudflare or on Node.js, but how it behaves and how safe it is can change depending on which one you pick.</li>
+                            <li><strong>WordPress is not automatically the wrong answer:</strong> if it is looked after and it does what your team needs, it can still be the right call.</li>
+                            <li><strong>What protects your search traffic is discipline, not the framework:</strong> mapping every URL, getting the redirects right, checking the content came across, testing it, watching it afterwards, and being able to roll back.</li>
                         </ol>
                     </section>
 
-                    {/* Bottom CTA */}
-                    <div className="bg-charcoal rounded-2xl p-8 mt-6 md:mt-10 mb-16 text-center">
-                        <h3 className="text-2xl font-bold mb-4 text-white">Ready to Leave WordPress Behind?</h3>
-                        <p className="text-stone-300 mb-6">
-                            You do not need to wait for Emdash to mature. Get a free speed audit. We will show you your current PageSpeed score, identify your plugin vulnerabilities, and map out the fastest path to a site that scores 90+ and loads in under 1 second.
+                    <div className="mt-10 mb-16 rounded-2xl bg-charcoal p-8 text-center">
+                        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-orange-200">No-pressure fit check</p>
+                        <h2 className="mb-4 text-2xl font-bold text-white">Get a migration plan before choosing the platform</h2>
+                        <p className="mb-6 text-stone-300">
+                            We will inventory the current URLs, content model, integrations, search signals, operating constraints, and ownership requirements. Then we can tell you whether to maintain WordPress, pilot EmDash, or scope a different rebuild.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
-                            Schedule Free Audit <ArrowRight className="w-5 h-5" />
+                        <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-charcoal transition-all hover:bg-stone-100">
+                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
                     </div>
 
-                    {/* FAQ Section */}
                     {emdashFAQs.length > 0 && <FAQAccordion faqs={emdashFAQs} />}
-
-                    {/* Related Posts */}
                     <RelatedPosts currentPostId="cloudflare-emdash-wordpress-replacement" />
-
                 </article>
             </main>
             <Footer />

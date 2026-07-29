@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, type ElementType } from "react";
+import { useRef, useEffect, type ElementType } from "react";
 import { motion } from "@/components/ui/motion";
 import { Search, PenTool, Code2, Rocket } from "lucide-react";
 
@@ -9,29 +9,29 @@ const steps = [
     id: "01",
     title: "Discovery & Audit",
     icon: Search,
-    description: "We don't guess. We deep-dive into your current architecture, analyze competitor weaknesses, and map out a user journey that converts.",
-    tags: ["Market Analysis", "Tech Stack Selection", "User Personas"],
+    description: "We inventory the current architecture, users, content, data, integrations, constraints, and the outcome the project must support.",
+    tags: ["Current State", "Constraints", "User Journeys"],
   },
   {
     id: "02",
     title: "Architecture Strategy",
     icon: PenTool,
-    description: "Blueprints before bricklaying. We design the database schema, API routes, and component hierarchy to ensure scale.",
-    tags: ["System Design", "UI/UX Wireframes", "Database Schema"],
+    description: "We compare options and document the chosen architecture, responsibilities, data flows, interfaces, risks, and acceptance criteria.",
+    tags: ["System Design", "UI/UX", "Acceptance"],
   },
   {
     id: "03",
     title: "Execution (Sprint)",
     icon: Code2,
-    description: "The heavy lifting. We work in 1-week sprints with transparent updates. Using Next.js 16, we build components that are 100% type-safe.",
-    tags: ["Clean Code", "Weekly Sprints", "CI/CD Setup"],
+    description: "We implement the agreed scope in reviewable increments and test the journeys and non-functional requirements defined for the project.",
+    tags: ["Implementation", "Review", "CI/CD"],
   },
   {
     id: "04",
     title: "Launch & Scale",
     icon: Rocket,
-    description: "Deployment is just the beginning. We configure edge caching, set up analytics, and stress-test the server before handing over the keys.",
-    tags: ["Vercel Deployment", "SEO Tuning", "Performance Audit"],
+    description: "We follow the agreed cutover and rollback plan, validate production behavior, monitor launch signals, and complete the documented handover.",
+    tags: ["Cutover", "Monitoring", "Handover"],
   }
 ];
 
@@ -40,11 +40,8 @@ export default function MethodToCreativity() {
   const borderContainerRef = useRef<HTMLDivElement>(null);
   const progressLineRef = useRef<HTMLDivElement>(null);
   const progressHeadRef = useRef<HTMLDivElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-
     const updateProgress = () => {
       if (!timelineRef.current || !progressLineRef.current || !progressHeadRef.current || !borderContainerRef.current) return;
 
@@ -75,8 +72,6 @@ export default function MethodToCreativity() {
     };
   }, []);
 
-  if (!isMounted) return <section className="py-24 bg-transparent" style={{ minHeight: '100vh' }} />;
-
   return (
     <section className="relative py-12 md:py-24 bg-paper overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -89,15 +84,15 @@ export default function MethodToCreativity() {
                 The Protocol
               </div>
               <h2 className="text-5xl md:text-6xl font-bold text-charcoal mb-6 leading-tight">
-                From Concept <br />
-                <span className="font-serif italic text-cognac">to Empire.</span>
+                From Current State <br />
+                <span className="font-serif italic text-cognac">to Controlled Launch.</span>
               </h2>
               <p className="text-stone-600 text-lg max-w-sm leading-relaxed mb-8">
-                A proven development process designed to eliminate risk and guarantee speed.
+                A delivery sequence designed to expose assumptions, reduce avoidable risk, and make acceptance testable.
               </p>
 
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_your_build",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-8 py-4 bg-charcoal text-white rounded-full font-bold hover:bg-stone-800 transition-all w-fit">
-                Start Your Build
+                Get your migration plan
               </button>
             </div>
           </div>
@@ -143,7 +138,7 @@ function StepCard({ step, index }: { step: { id: string; title: string; icon: El
     >
       {/* Icon */}
       <span className="absolute -left-3 md:-left-12 top-8 flex h-6 w-6 md:h-24 md:w-24 items-center justify-center z-10">
-        <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-white border border-stone-200 text-stone-500 shadow-card group-hover:border-cognac/30 transition-all duration-500">
+        <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-white border border-stone-300 text-stone-600 shadow-card group-hover:border-cognac/50 transition-all duration-500">
           <step.icon size={20} />
         </div>
         <div className="md:hidden w-4 h-4 rounded-full bg-white border-2 border-cognac box-content shadow-[0_0_8px_rgba(234,88,12,0.3)]" />
@@ -165,7 +160,7 @@ function StepCard({ step, index }: { step: { id: string; title: string; icon: El
 
         <div className="flex flex-wrap gap-2">
           {step.tags.map((tag: string, i: number) => (
-            <span key={i} className="px-3 py-1 bg-stone-50 border border-stone-200 rounded-lg text-xs text-stone-500 font-mono group-hover:text-charcoal transition-colors">
+            <span key={i} className="px-3 py-1 bg-stone-50 border border-stone-300 rounded-lg text-xs text-stone-600 font-mono group-hover:text-charcoal transition-colors">
               {tag}
             </span>
           ))}

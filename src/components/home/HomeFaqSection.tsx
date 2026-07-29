@@ -36,7 +36,7 @@ export default function HomeFaqSection({ faqs }: { faqs: Faq[] }) {
                   {faq.q}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 text-stone-600 shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
                 />
               </button>
               {openFaq === i && (

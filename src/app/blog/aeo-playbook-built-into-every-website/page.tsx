@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
@@ -18,8 +19,8 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "AEO Playbook: Cited by ChatGPT, Claude & Perplexity in 30 Days" },
-    description: "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with real GSC receipts.",
+    title: { absolute: "AEO Playbook: Improve Eligibility for AI Search Citations" },
+    description: "A practical, evidence-led AEO playbook for crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
     alternates: {
         canonical: "/blog/aeo-playbook-built-into-every-website",
     },
@@ -38,19 +39,19 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days",
-        description: "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview. 10 tactics with real GSC receipts.",
+        title: "AEO Playbook: Improve Eligibility for AI Search Citations",
+        description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
         modifiedTime: "2026-07-09T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        images: [ogImageForPath("/blog/aeo-playbook-built-into-every-website")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days",
-        description: "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview.",
+        title: "AEO Playbook: Improve Eligibility for AI Search Citations",
+        description: "An evidence-led playbook for crawlability, structured data, useful content, and AI-search measurement.",
     },
 };
 
@@ -60,9 +61,9 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#article",
-            "headline": "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days",
-            "description": "The exact AEO playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the 10 tactics and real GSC receipts.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
+            "headline": "AEO Playbook: Improve Eligibility for AI Search Citations",
+            "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
+            "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
             "dateModified": "2026-07-09T00:00:00-05:00",
             "author": {
@@ -70,8 +71,7 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "url": "https://www.pandacodegen.com/about",
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": {
@@ -87,8 +87,6 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website" },
             "articleSection": "AEO",
             "keywords": ["aeo playbook", "answer engine optimization", "ai citations new website", "ai-info page", "schema markup", "aeo service"],
-            "wordCount": 4200,
-            "timeRequired": "PT18M",
             "inLanguage": "en-US",
             "about": [
                 { "@type": "Thing", "name": "Answer Engine Optimization" },
@@ -103,18 +101,12 @@ const articleSchema = {
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
             },
             "citation": [
-                { "@type": "CreativeWork", "name": "Google Search Central: Get Your Site on Google", "url": "https://developers.google.com/search/docs/fundamentals/get-on-google" },
-                { "@type": "CreativeWork", "name": "Schema.org Organization", "url": "https://schema.org/Organization" },
-                { "@type": "CreativeWork", "name": "HubSpot AEO Guide", "url": "https://www.hubspot.com/products/marketing/aeo-guide" },
-                { "@type": "CreativeWork", "name": "Frase.io GEO Playbook", "url": "https://www.frase.io/blog/how-to-get-cited-by-ai-search-engines-the-complete-geo-playbook" },
-                { "@type": "CreativeWork", "name": "Jarred Smith: AEO Practitioners Playbook 2026", "url": "https://www.jarredsmith.com/blog/aeo-practitioners-playbook-2026" },
-                { "@type": "CreativeWork", "name": "Steve Toth SEO Notebook (silo method)", "url": "https://www.seonotebook.com/" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://web.dev/vitals/" },
-                { "@type": "CreativeWork", "name": "Webflow Status Page", "url": "https://status.webflow.com" },
-                { "@type": "CreativeWork", "name": "HubSpot AEO Grader (free tool)", "url": "https://www.hubspot.com/aeo-grader" },
-                { "@type": "CreativeWork", "name": "AirOps brand monitoring", "url": "https://www.airops.com" },
-                { "@type": "CreativeWork", "name": "Promptmonitor AI search tracking", "url": "https://promptmonitor.io" },
-                { "@type": "CreativeWork", "name": "Otterly AI brand visibility", "url": "https://otterly.ai" }
+                { "@type": "CreativeWork", "name": "Google guide to optimizing for generative AI features", "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
+                { "@type": "CreativeWork", "name": "Google general structured data guidelines", "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies" },
+                { "@type": "CreativeWork", "name": "Google guidance for helpful, reliable, people-first content", "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
+                { "@type": "CreativeWork", "name": "Google Search generative AI performance reports", "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" },
+                { "@type": "CreativeWork", "name": "OpenAI crawler guidance", "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" },
+                { "@type": "CreativeWork", "name": "Schema.org Organization", "url": "https://schema.org/Organization" }
             ]
         },
         {
@@ -132,15 +124,15 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "AEO Playbook: 30 Days", "item": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website" }
+                { "@type": "ListItem", "position": 3, "name": "AEO Playbook", "item": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website" }
             ]
         },
         {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#webpage",
             "url": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
-            "name": "AEO Playbook: Get Cited by ChatGPT, Claude & Perplexity in 30 Days",
-            "description": "The exact playbook we bake into every new website build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview.",
+            "name": "AEO Playbook: Improve Eligibility for AI Search Citations",
+            "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
             "dateModified": "2026-07-09T00:00:00-05:00",
@@ -174,6 +166,7 @@ export default function AEOPlaybookPage() {
             />
             <Header />
 
+            <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={[
@@ -190,17 +183,17 @@ export default function AEOPlaybookPage() {
                             <Zap className="w-3 h-3" /> AEO
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            AEO Playbook: Get Cited by{" "}
-                            <span className="font-serif italic text-cognac">ChatGPT, Claude & Perplexity</span> in 30 Days
+                            AEO Playbook: Build Eligibility for{" "}
+                            <span className="font-serif italic text-cognac">AI Search and Citations</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            The exact playbook we now bake into every Starter and Growth build. Cited across ChatGPT, Claude, Perplexity, and Google AI Overview, with the GSC receipts that prove it works on a brand new domain.
+                            Ten things you can actually do: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted.
                         </p>
                         <BlogAuthor
                             name="Hassan Jamal"
                             date="May 18, 2026"
                             readTime="18 min read"
-                            bio="Hassan is co-founder and lead engineer at PandaCodeGen. He writes the code, ran the AEO experiment that got the company cited by Claude AI, and answers the discovery calls. The cosmetic surgeon who closed via Claude was call number 3."
+                            bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on crawlability, structured evidence, and technical performance. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -220,70 +213,70 @@ export default function AEOPlaybookPage() {
                     <div className="mb-8 md:mb-12 p-6 md:p-8 bg-stone-50 border-l-4 border-cognac rounded-r-xl" data-speakable="true">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">The Short Answer</p>
                         <BlogList items={[
-                            "Your competitors are pulling ahead on Google AND on AI search. 86 percent of enterprise SEO teams have already integrated AI into their strategy.",
-                            "The 10-year-old competitors in your niche are mostly not moving on AEO yet. They have business inertia. By the time their internal teams approve AEO budget, it will be 2027 or 2028.",
-                            "AI engines do not check who has been in business longer. They check who has structured content to answer the question being asked. A new business with proper schema and an AI-info page can outrank a 10-year-old competitor for AI citations.",
-                            "We proved it on pandacodegen.com. Two blog posts flagged by Google Search Console for breakout AI Overview citations (+2,470 percent and +547 percent) within weeks of strengthening them. First paying client closed via Claude AI recommendation, 3 months after launch, zero ad spend.",
-                            "PandaCodeGen builds custom Next.js websites starting at $1,500 (Starter) and $3,500 (Growth). Every build includes the 10 AEO tactics in this playbook, including a dedicated AI-info page.",
-                            "Free 30-minute consultation calls are available to walk through your specific AEO opportunity before any work begins."
+                            "Google says the basics that always mattered for Search still matter for its AI features: your pages can be crawled, they can be indexed, they say something useful, and they are decent to use.",
+                            "Something you know first-hand holds up far better than a page written only to catch a phrasing someone might type.",
+                            "Structured data helps machines understand what a page is about. Google says plainly that getting the markup right does not guarantee you appear anywhere.",
+                            "Watch visibility using each provider's own reports, the referrals you can actually see in your analytics, and manual checks you date and keep. Impressions with no clicks are not proof an AI quoted you.",
+                            "We can build these controls into a migration we have agreed, but what you actually get depends on the signed scope and the content you have.",
+                            "Google and the AI systems decide for themselves what they crawl, index, rank, recommend and quote. Nobody else controls that."
                         ]} />
                     </div>
 
                     {/* Section 1: The Loss + Opportunity */}
                     <BlogHeader id="are-you-losing">Are You Losing to Competitors on Google AND on AI Search?</BlogHeader>
                     <BlogText>
-                        Twelve months of chasing Google rankings. Your domain is still on page 3 for the queries that matter. Meanwhile, your established competitors who already rank on Google are now also getting cited by ChatGPT, Claude, and Perplexity. The lane you have not even entered.
+                        Search and AI visibility both reward clear, useful, crawlable evidence, but neither rankings nor citations are guaranteed. Start by measuring how your important pages are indexed, cited, and converted today, then improve the evidence systems can evaluate.
                     </BlogText>
                     <BlogText>
                         That is the position most new business owners are in right now in 2026, whether they know it or not.
                     </BlogText>
                     <BlogText>
-                        The numbers tell the story. 88 percent of marketers say they have started thinking about AI search optimization. The deeper data shows what is actually happening:
+                        The practical starting point is not a market-adoption percentage. It is whether your important pages are accessible, useful, attributable, and measurable today.
                     </BlogText>
                     <BlogList items={[
-                        "Only 38 percent of business decision-makers have actually allocated budget to AI search optimization.",
-                        "Only 37 percent of marketing teams measure AEO as a dedicated KPI, up from 9 percent in early 2025.",
-                        "86 percent of enterprise SEO professionals have already integrated AI into their strategy, with 82 percent planning to invest more.",
-                        "42 percent of B2B content marketers are reallocating budget from traditional SEO to AEO-optimized content."
+                        "Confirm that important pages return usable HTML, allow the relevant crawlers, and remain eligible for indexing and snippets.",
+                        "Publish original experience, methods, limitations, and dated evidence rather than repeating commodity summaries.",
+                        "Keep visible copy, metadata, and structured data consistent.",
+                        "Record AI-feature impressions where a provider exposes them, referral traffic where available, and manual prompt observations with the date, account, country, and prompt."
                     ]} />
                     <BlogText>
-                        Read those numbers carefully. The <a href="https://www.salesforce.com/news/stories/state-of-marketing-2026/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">enterprises with budget</a> are moving fast. 86 percent of enterprise SEO teams are already integrating AI. They have the budget, the staff, and the executive buy-in to ship AI-optimized sites in 2026.
+                        Google&apos;s current <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">generative AI optimization guide</a> emphasizes useful, unique, people-first content and the existing technical foundations of Search. It also states that meeting the requirements does not guarantee crawling, indexing, or serving.
                     </BlogText>
                     <BlogText>
-                        You do not.
+                        That is a better standard than claiming a secret AEO formula. A smaller company can publish excellent first-hand material, but age, links, reputation, relevance, competition, query context, and system-specific behavior may all affect discovery.
                     </BlogText>
                     <BlogText>
-                        If you are a new business or a small operator with 1 or 2 people, you do not have a 50-person SEO team to compete with the enterprise rollout. You cannot outspend them. You cannot out-staff them. The traditional Google SEO game requires money and time you do not have.
+                        If you are a new business or a small operator, focus on a narrow set of questions where you have real experience. Document the process, the trade-offs, and the evidence a buyer would need to make a decision.
                     </BlogText>
                     <BlogText>
                         Here is the part nobody is telling you.
                     </BlogText>
                     <BlogText>
-                        The 10-year-old established competitors in your specific niche, the ones currently outranking you on Google, are mostly NOT moving on AEO yet. They have business inertia. They are not rebuilding their websites or restructuring their content for AI citations because their existing Google traffic feels safe. By the time their slow internal teams approve the AEO budget, it will be 2027 or 2028.
+                        An established competitor may have stronger brand and source signals; a newer business may have fresher first-hand evidence. Neither condition guarantees the outcome.
                     </BlogText>
                     <BlogText>
                         <BlogHighlight>This is your window.</BlogHighlight>
                     </BlogText>
                     <BlogText>
-                        When an AI engine looks for a source to cite, it does not check who has been in business longer. It does not check domain age. It checks who has structured their content to answer the question being asked. A new business that ships an AI-info page, proper schema, and answer-first content will get cited over a 10-year-old competitor who has none of those.
+                        An AI-info page, clear headings, and structured data can help a system interpret public facts, but they are inputs, not ranking weights or citation guarantees. Publish them because they improve clarity and governance, then measure what actually happens.
                     </BlogText>
                     <BlogText>
-                        That is happening right now, in 2026, on tens of thousands of queries every day. We are watching it happen in our own Google Search Console data: two of our blog posts flagged for breakout AI Overview citations within weeks of strengthening them, even though competitors in those niches have 10x more backlinks and 5x older domains.
+                        Google began testing dedicated generative-AI performance reports in Search Console in June 2026. Where the report is available, use its page, country, device, date, and impression dimensions instead of treating ordinary impression changes as proof of an AI Overview citation.
                     </BlogText>
                     <BlogText>
-                        The enterprises will catch up. The 10-year-old competitors will eventually catch up. But you have a window of 12 to 24 months before they do, and the AEO-optimized site you ship now will have citation history compounding the entire time.
+                        There is no verified 12-to-24-month advantage window. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>The losers in 2026 are not the people doing the wrong thing. They are the people doing the right thing slowly.</BlogHighlight> New businesses that move on AEO this quarter will be the ones AI engines cite for years.
+                        <BlogHighlight>Build a reliable information system, not a citation promise.</BlogHighlight> That work remains useful even when providers change their interfaces or retrieval systems.
                     </BlogText>
 
                     {/* Section 2: AEO Is What Wins */}
                     <BlogHeader id="aeo-wins-for-new-domains">AEO Is What Wins for New Domains</BlogHeader>
                     <BlogText>
-                        AEO stands for Answer Engine Optimization. It is the practice of structuring your website so that AI engines like ChatGPT, Claude, Perplexity, and Google AI Overview cite your content as the source when answering user questions.
+                        AEO stands for Answer Engine Optimization. We use the term for improving the eligibility, clarity, and measurability of public information used by search and answer systems. It does not create a right to inclusion or citation.
                     </BlogText>
                     <BlogText>
-                        The key difference from SEO is what each system rewards. <a href="https://www.hubspot.com/products/marketing/aeo-guide" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">HubSpot&apos;s AEO guide</a> and <a href="https://www.jarredsmith.com/blog/aeo-practitioners-playbook-2026" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Jarred Smith&apos;s analysis of 30 million AI citations</a> both confirm what we saw firsthand: AI engines do not care about domain age. They care about content quality and structure.
+                        Provider systems are not interchangeable, and their ranking or citation weights are not fully public. Google advises site owners to keep using Search fundamentals, publish unique and useful content, and avoid creating many low-value pages for prompt variations.
                     </BlogText>
                     <BlogText>
                         Here is what each system actually rewards.
@@ -300,48 +293,48 @@ export default function AEOPlaybookPage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Domain age</td><td className="p-3 text-stone-600 border border-stone-300">Yes, heavily</td><td className="p-3 text-charcoal border border-stone-300">No</td></tr>
-                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Backlinks</td><td className="p-3 text-stone-600 border border-stone-300">Yes, heavily</td><td className="p-3 text-charcoal border border-stone-300">Light, mostly Reddit and Hacker News</td></tr>
-                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Content structure</td><td className="p-3 text-stone-600 border border-stone-300">Moderate</td><td className="p-3 text-charcoal border border-stone-300">Yes, heavily</td></tr>
-                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Schema markup</td><td className="p-3 text-stone-600 border border-stone-300">Light</td><td className="p-3 text-charcoal border border-stone-300">Yes, heavily</td></tr>
-                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Specific numbers and named sources</td><td className="p-3 text-stone-600 border border-stone-300">Light</td><td className="p-3 text-charcoal border border-stone-300">Yes, heavily</td></tr>
-                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Time to first result</td><td className="p-3 text-stone-600 border border-stone-300">6 to 12 months</td><td className="p-3 text-charcoal border border-stone-300">2 to 4 weeks</td></tr>
+                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Access</td><td className="p-3 text-stone-600 border border-stone-300">Indexable and crawlable pages</td><td className="p-3 text-charcoal border border-stone-300">Provider-specific crawler access</td></tr>
+                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Content</td><td className="p-3 text-stone-600 border border-stone-300">Helpful, relevant, original information</td><td className="p-3 text-charcoal border border-stone-300">Useful, attributable passages and evidence</td></tr>
+                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Structure</td><td className="p-3 text-stone-600 border border-stone-300">Clear HTML, links, metadata, and canonicals</td><td className="p-3 text-charcoal border border-stone-300">Clear public facts and readable page structure</td></tr>
+                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Structured data</td><td className="p-3 text-stone-600 border border-stone-300">Eligibility aid; appearance not guaranteed</td><td className="p-3 text-charcoal border border-stone-300">Context aid; citation effect not guaranteed</td></tr>
+                                <tr><td className="p-3 font-bold text-charcoal border border-stone-300">Measurement</td><td className="p-3 text-stone-600 border border-stone-300">Search Console and analytics</td><td className="p-3 text-charcoal border border-stone-300">Provider reports, referrals, and dated observations</td></tr>
+                                <tr className="bg-stone-50"><td className="p-3 font-bold text-charcoal border border-stone-300">Time to result</td><td className="p-3 text-stone-600 border border-stone-300">No fixed timeline</td><td className="p-3 text-charcoal border border-stone-300">No fixed timeline</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogText>
-                        The short version. <BlogHighlight>SEO rewards trust signals that take years to build. AEO rewards content that directly answers the question being asked.</BlogHighlight> For a new business, that is a much shorter path to organic traffic.
+                        The short version: <BlogHighlight>clear answers help users and machines, but useful content, reputation, relevance, technical access, and competition still matter.</BlogHighlight>
                     </BlogText>
                     <BlogText>
-                        And the quality of that traffic? Ahrefs published data showing that only 0.5 percent of their traffic comes from AI engines, but it accounts for 12 percent of their signups and those signups convert at <BlogHighlight>22 times higher than Google traffic</BlogHighlight>. AI-referred visitors arrive pre-qualified. They already told the AI engine their budget, their team size, their requirements. By the time they land on your site, they are not browsing. They are buying.
+                        Treat AI-referred visitors as a separate acquisition segment only when your analytics can identify the source. Compare conversion quality with your own sample and attribution rules; do not apply another company&apos;s result as a forecast.
                     </BlogText>
 
                     {/* Section 3: The Receipt */}
-                    <BlogHeader id="the-receipt">The Receipt</BlogHeader>
+                    <BlogHeader id="the-receipt">What Counts as Evidence</BlogHeader>
                     <BlogText>
                         We launched pandacodegen.com in February 2026. Custom Next.js, fixed pricing starting at $1,500. We do website rebuilds and migrations for businesses tired of slow WordPress, Shopify, Webflow, and GoHighLevel sites.
                     </BlogText>
                     <BlogText>
-                        For the first 3 months we shipped blog content steadily but without focused AEO work. The domain just existed. Some traffic, no citations, no inbound leads.
+                        A defensible AEO record separates observations from conclusions. Search Console impressions, referral headers, customer statements, and third-party monitoring tools each answer different questions.
                     </BlogText>
                     <BlogText>
-                        Then we signed up for an <a href="https://www.airops.com" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">AirOps Pro trial</a> in late April 2026. That trial gave us citation tracking across ChatGPT, Claude, Perplexity, Gemini, and Google AI Overview. We ran a focused AEO push during the trial window: strengthened our top blogs with the 10 tactics in this playbook, set up tracking, and watched what AI engines started doing.
+                        For each observation, retain the prompt, account or plan, country, date, visible answer, cited URL, and screenshot. For a referral, retain the analytics source and landing page. For a customer statement, label it as customer-reported unless another attribution method corroborates it.
                     </BlogText>
                     <BlogText>
-                        Here is what happened during that focused AEO window in early May 2026:
+                        Do not make these common inference errors:
                     </BlogText>
                     <BlogList items={[
-                        "ChatGPT and Perplexity referrer traffic showed up in our chat tool for the first time, on niche technical blog posts. Visitors from Poland and Morocco landing on our GoHighLevel and Google update blogs.",
-                        "Google Search Console flagged our wordpress-migration-cost blog with +2,470% impression growth week over week. Zero clicks at 771 impressions is the signature of Google AI Overview citing the content inline in search results.",
-                        "Second GSC breakout flag on webflow-true-cost blog with +547% impression growth, same pattern (high impressions, near zero clicks, position dropping).",
-                        "First paying client closed via Claude AI recommending us by name. US-based cosmetic surgeon migrating off WordPress. Asked Claude what stack to move to, Claude said Next.js plus Sanity and pointed him at PandaCodeGen. Three discovery calls with us before he revealed the source. On call 3 he said the line: \"Claude recommended you guys.\""
+                        "A Search Console impression increase is not proof of an AI Overview citation unless the relevant report identifies the generative feature.",
+                        "Zero clicks may have many causes and is not a citation signature.",
+                        "A customer-reported AI referral is useful first-party context, but it does not prove which page or technical control caused the recommendation.",
+                        "A monitoring tool observation is time-, account-, location-, and prompt-specific; it is not universal provider behavior."
                     ]} />
                     <BlogText>
-                        Domain was 3 months old. Zero ad spend. Zero outreach. <BlogHighlight>Three different AI engines actively citing the same domain in the same window.</BlogHighlight> That is not a fluke. That is what focused AEO work produces.
+                        PandaCodeGen may publish dated first-party observations after retaining the supporting record and confirming publication permission. Until then, this page does not present them as proof of a repeatable outcome.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>What this means for new clients:</BlogHighlight> Our public commitment for client builds is 30 days from launch to first AI citations. We give the buffer because client projects have variables we do not control on our own domain: content approval cycles, image sourcing, copy review rounds, and the time needed to build enough content surface area for AI engines to crawl meaningfully. Our own experiment ran faster because we control every variable on our own domain. For client work, we plan honestly.
+                        <BlogHighlight>What this means for clients:</BlogHighlight> scope the technical and editorial controls that PandaCodeGen can deliver, define how they will be verified, and do not contract for an inclusion or citation outcome controlled by another system.
                     </BlogText>
 
                     {/* Section 4: The 10 Tactics */}
@@ -355,37 +348,37 @@ export default function AEOPlaybookPage() {
                         Every website we build now ships with an AI-info page at the URL <code className="text-sm bg-stone-100 px-2 py-1 rounded">/ai-info</code>. You can see ours at <Link href="/ai-info" className="text-cognac hover:underline">pandacodegen.com/ai-info</Link>.
                     </BlogText>
                     <BlogText>
-                        The AI-info page is a single page that gives AI engines everything they need to confidently cite your business. Company name. Founding date. Services offered. Pricing tiers. Contact methods. Frequently asked questions written in plain language. Areas served. The kind of structured information an AI engine needs to give a complete answer when a user asks about your business.
+                        The AI-info page is a governed reference page for public company facts: company name, founding date, services, pricing approach, contact methods, areas served, evidence labels, and important limitations. It can reduce factual drift across the site, but providers decide whether and how to use it.
                     </BlogText>
                     <BlogText>
-                        We started shipping AI-info pages after we noticed AI engines citing our own AI-info page in answers to founder questions. No other web agency we audited in early 2026 was shipping this. We made it standard on every build.
+                        We use an AI-info page when the accepted scope calls for one because a single maintained source is easier to review than duplicated facts across many pages. It is not a recognized ranking requirement.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>If you are a new business and you ship one new page this month, ship an AI-info page.</BlogHighlight> It costs nothing to add. It compounds for years.
+                        <BlogHighlight>If your public company facts are inconsistent, a maintained reference page is a practical governance improvement.</BlogHighlight>
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">2. Schema Markup That AI Engines Actually Parse</h3>
                     <BlogText>
-                        Schema markup is code that helps AI engines and search engines understand what your page is about. Most website builders ship with weak or missing schema. We ship three schema types on every page that matter:
+                        Structured data describes page entities and may make content easier for supported systems to interpret. Use only types that match visible content and current provider guidelines:
                     </BlogText>
                     <BlogList items={[
-                        "Organization schema with your business name, logo, founding date, and contact email. Add this to every page header.",
-                        "Article schema on every blog post with the author, publish date, word count, and citations to other sources you referenced.",
-                        "FAQPage schema on any page that has a frequently asked questions section. Every Q and A becomes a citable claim AI engines can extract directly."
+                        "Organization markup on an appropriate organization or home page, using facts that are visible and maintained.",
+                        "Article markup on eligible editorial pages, aligned with the visible author and publication details.",
+                        "FAQ markup only where the current provider supports it and the same questions and answers are visible to users."
                     ]} />
                     <BlogText>
-                        The exact format is called JSON-LD and lives in the head of each page. <a href="https://schema.org/Organization" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Schema.org documents every type</a>. Most agencies skip this because they think it is technical. It is 30 lines of code per page that doubles your AI citation rate.
+                        JSON-LD is one supported format. <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Google&apos;s structured-data guidelines</a> require visible parity and explicitly state that correct markup does not guarantee a rich result. No reliable evidence establishes a universal AI-citation multiplier.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">3. Lead With the Answer in the First 100 to 300 Words</h3>
                     <BlogText>
-                        AI engines have what we call a citation budget. They do not read your entire blog post. They scan the first few paragraphs looking for a clear, citable answer to the question being asked.
+                        A direct opening helps readers understand the section quickly and gives retrieval systems a self-contained passage. Provider-specific retrieval limits and selection logic are not fully public, so do not present a fixed “citation budget” as fact.
                     </BlogText>
                     <BlogText>
-                        Bad opening: &quot;In today&apos;s competitive landscape, businesses face many challenges...&quot; That gets skipped.
+                        Weak opening: &quot;In today&apos;s competitive landscape, businesses face many challenges...&quot; It delays the useful answer.
                     </BlogText>
                     <BlogText>
-                        Good opening: &quot;A custom Next.js website costs $1,500 to $5,000 to build, loads in under 1 second, and has zero monthly platform fees. Here is the exact build process and what is included at each tier.&quot;
+                        Good opening: &quot;A custom Next.js website costs $1,500 to $5,000 to build, targets fast loading under documented conditions, and has third-party platform costs documented before approval. Here is the exact build process and what is included at each tier.&quot;
                     </BlogText>
                     <BlogText>
                         Lead with the specific numbers, the named technologies, and the citable claim. The first 300 words of every page should answer the question that brought the visitor to the page.
@@ -393,21 +386,21 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">4. Use Proper Heading Structure (H1, H2, H3)</h3>
                     <BlogText>
-                        AI engines read your page by following the heading hierarchy. One H1 per page. Six to 12 H2s for major sections. Two to four H3s under each H2 for subsections.
+                        A logical heading hierarchy helps people, assistive technology, and automated systems navigate a page. Use one descriptive page heading and as many subsection headings as the content needs; there is no evidence-based quota.
                     </BlogText>
                     <BlogText>
-                        This sounds basic. Most websites get it wrong. Page builders like Elementor and Divi let you style any text to look like a heading without using the correct HTML tag. The heading looks right but the AI engine sees nothing.
+                        Visual styling alone does not create document structure. Page builders and custom code can both produce correct or incorrect headings; inspect the rendered HTML instead of assuming the platform decides the result.
                     </BlogText>
                     <BlogText>
-                        Test your own page right now. Right click any heading and inspect it. If the tag is a div with styling instead of an actual h2 or h3, that section is invisible to AI engines.
+                        Test your own page by inspecting the rendered headings and accessibility tree. A styled `div` loses heading semantics, but “invisible to AI engines” is too absolute because systems process pages differently.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">5. Comparison Tables With Real Numbers</h3>
                     <BlogText>
-                        AI engines love comparison tables because they are easy to extract and quote. A table comparing your service to 2 or 3 competitors with real numbers will get cited disproportionately more than the same content written as paragraphs.
+                        A well-labelled comparison table can make trade-offs easier for readers and machines to parse. Use current, comparable inputs and provide the measurement date; do not assume the format earns citations.
                     </BlogText>
                     <BlogText>
-                        We saw this directly with our <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">webflow-true-cost</Link> post. Google Search Console flagged it with 547 percent impression growth in a single week. The post is built around a comparison table showing real Webflow pricing tiers, real costs, and real alternatives. AI engines started citing the table verbatim in answers to Webflow cost questions.
+                        Our <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">Webflow cost article</Link> uses a comparison table to expose assumptions. Search Console changes can help identify a page worth investigating, but they do not prove that an AI system cited the table.
                     </BlogText>
                     <BlogText>
                         Format that works: feature, competitor A, competitor B, you. Include real numbers, not vague ranges. Name your competitors. Do not pretend they do not exist.
@@ -415,13 +408,13 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">6. Acknowledge the 10 Year Old Competitor</h3>
                     <BlogText>
-                        If you are new and you pretend the established competitor does not exist, AI engines do not trust you. The trustworthiness signal AI engines look for is balanced acknowledgment of the landscape.
+                        Acknowledging credible alternatives improves decision quality and reduces self-serving copy. That is useful for readers even though providers do not publish a universal “balanced acknowledgment” weight.
                     </BlogText>
                     <BlogText>
-                        Name the competitor. Give them credit for what they do well. Then explain where you do something differently. This is more persuasive than puff pieces AND it ranks better in AI citations.
+                        Name a competitor only when the comparison is relevant, current, and fair. Explain the scope, source, and date behind each difference instead of claiming a citation advantage.
                     </BlogText>
                     <BlogText>
-                        Example from our own content. We acknowledge that WordPress powers 43 percent of the web and has the largest plugin ecosystem of any platform. Then we explain that WordPress sites typically score 30 to 60 on Google PageSpeed Mobile and require $200 to $500 per month in plugin and maintenance fees. Both statements are true. Together they give the reader real information and AI engines a balanced source to cite.
+                        For example, a WordPress comparison can discuss editorial workflow, plugin responsibility, hosting, maintenance, and measured performance. Platform-wide PageSpeed bands and monthly-cost averages need a defined sample; they should not be presented as universal WordPress facts.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">7. Internal Linking Using the Steve Toth Silo Method</h3>
@@ -435,15 +428,15 @@ export default function AEOPlaybookPage() {
                         "Every blog ends with a CTA that links to the money page or a related blog in the same silo."
                     ]} />
                     <BlogText>
-                        This is a standard SEO method. We layered it on top of every AI-info page so AI engines can map our topical authority. The result is that when an AI engine looks at our WordPress migration content, it sees 8 to 10 interconnected pages all reinforcing the same expertise area, with clear paths to the money page. That is a strong trust signal both for SEO and for AEO.
+                        Internal links help users and crawlers discover related material and understand how pages connect. Keep the links useful and descriptive; no fixed silo count guarantees topical authority, ranking, or citation.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8. Reddit Replies as Citation Seeds</h3>
                     <BlogText>
-                        Our citation tracking data showed that 45 percent of all AI citations we earned came from Reddit, not from our own website directly. AI engines crawl Reddit threads heavily because the answers there are tested by upvotes and downvotes.
+                        Independent discussions can surface real questions and language, but a brand should not treat community participation as a citation-seeding scheme. Provider source selection changes by prompt, date, account, and system.
                     </BlogText>
                     <BlogText>
-                        The rule we follow: reply to relevant questions in the subreddits where your buyers ask questions. Stay under 150 words. Never drop your URL. Be specific and technical. One useful Reddit reply earns months of AI citations.
+                        Participate only when you can add useful, transparent expertise and follow each community&apos;s rules. Do not promise that a reply will earn citations or persist for a fixed period.
                     </BlogText>
                     <BlogText>
                         Subreddits we focus on: r/webdev, r/nextjs, r/Wordpress, r/Webflow, r/Shopify, r/gohighlevel, r/SaaS. The same buyers asking us questions in chat are reading these subreddits before they get to our site.
@@ -451,21 +444,21 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8b. Earned Mentions on High-Authority Domains</h3>
                     <BlogText>
-                        AI engines weigh how many independent, trusted sources mention your brand, not just what your own site says. The fastest free way we found to earn one as a brand-new domain: journalist-source platforms like Connectively (formerly HARO), where reporters post questions and quote the best expert answers in real publications.
+                        Independent coverage can corroborate a brand&apos;s claims. Journalist-source platforms are one possible route, but publication, link attributes, readership, and downstream use are not guaranteed.
                     </BlogText>
                     <BlogText>
-                        Our real numbers, so this is not theory: roughly one day a month, three answers per month, over three months. Nine answers submitted, one published. That one landed a dofollow link from Woman&apos;s World, a publication with around 1.6 million readers, pointing at our homepage. A four-month-old domain does not buy a link like that; it earns it by showing up consistently with specific, useful answers.
+                        If PandaCodeGen publishes a specific outreach result, the record should include the submitted answer, published URL, date, link attribute, and the source for any audience figure. Without that evidence pack in the public register, the process should be presented as an option rather than a promised result.
                     </BlogText>
                     <BlogText>
-                        What made the published answer work was the same thing that makes a page citable: a specific, opinionated take with a real number, on a topic we actually know, submitted fast. Most journalist-platform links are nofollow and still worth it as a trusted brand mention. A dofollow from a high-authority domain is the rare bonus. Either way, it is an independent vouch AI engines can verify, which is exactly what a new brand needs to move from cited to trusted.
+                        Useful answers are specific, attributable, and within the contributor&apos;s real expertise. A published mention is independent evidence of that mention; it is not proof that an AI system will trust or cite the brand.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">9. Specific Numbers Everywhere</h3>
                     <BlogText>
-                        Adjectives do not get cited. Numbers do.
+                        Prefer verifiable facts over unsupported adjectives.
                     </BlogText>
                     <BlogText>
-                        Not &quot;fast loading.&quot; Say &quot;under 1 second First Contentful Paint, 95 plus PageSpeed Mobile.&quot;
+                        Not &quot;fast loading.&quot; Say &quot;the recorded metric, route, device profile, network conditions, and test date.&quot;
                     </BlogText>
                     <BlogText>
                         Not &quot;affordable.&quot; Say &quot;Starter $1,500 fixed price, Growth $3,500 fixed price.&quot;
@@ -474,108 +467,92 @@ export default function AEOPlaybookPage() {
                         Not &quot;many integrations.&quot; Say &quot;12 native integrations including Stripe, Shopify Storefront API, Resend, and Cal.com.&quot;
                     </BlogText>
                     <BlogText>
-                        AI engines cite numbers because they are verifiable. A blog with 15 specific numbers gets cited 5 to 10 times more often than a blog with the same content but generic descriptors. We learned this directly from our own citation tracking data.
+                        Numbers are useful only when the unit, population, source, method, and date are clear. Inventing or decontextualizing numbers makes a page less reliable; no supported dataset here establishes a 5-to-10-times citation multiplier.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">10. Citation Tracking From Day 1</h3>
                     <BlogText>
-                        You cannot improve what you cannot measure. AI engines do not give you a Google Search Console equivalent yet. There are paid tools that fill the gap.
+                        You cannot improve what you cannot measure. Google began testing a dedicated generative-AI Search Console report in June 2026, while other providers expose different or more limited signals. Third-party monitoring can supplement those records but should not be treated as ground truth.
                     </BlogText>
                     <BlogText>
-                        The free options worth running:
-                    </BlogText>
-                    <BlogList items={[
-                        "HubSpot AEO Grader (free, single check) at hubspot.com/aeo-grader",
-                        "Otterly free tier at otterly.ai for basic brand visibility tracking",
-                        "Promptmonitor free tier at promptmonitor.io for 8 engine coverage"
-                    ]} />
-                    <BlogText>
-                        The paid tools worth considering:
-                    </BlogText>
-                    <BlogList items={[
-                        "HubSpot AEO at $50 per month covering ChatGPT, Perplexity, and Gemini",
-                        "Promptmonitor Pro at $29 per month covering 8 engines including Claude",
-                        "Otterly Standard at $160 per month for full brand visibility index"
-                    ]} />
-                    <BlogText>
-                        We started on AirOps Pro free trial in late April 2026. After 14 days we moved to free tools while we evaluate longer term options. The point is not which tool. The point is that you have to track citations from day 1 to know what content is actually winning.
+                        Tool plans, engine coverage, prompt limits, and prices change frequently. Record the plan and retrieval date when evaluating a monitoring vendor. Where Google&apos;s dedicated generative-AI report is available, use it alongside ordinary Search Console and analytics data rather than replacing them with a single vendor score.
                     </BlogText>
 
                     {/* Section 5: GSC Receipts */}
-                    <BlogHeader id="gsc-receipts">The Real Receipts From Google Search Console</BlogHeader>
+                    <BlogHeader id="gsc-receipts">How to Read Search Console Evidence</BlogHeader>
                     <BlogText>
-                        Two weeks after we strengthened our migration cost content, Google Search Console flagged two of our pages with breakout impression growth. The patterns matched exactly: high impressions, zero clicks, position dropping while impressions climbed. That is the signature of Google AI Overview citing the page inline in search results.
+                        Ordinary Search Console impressions, clicks, and position can identify a change worth investigating, but they cannot by themselves prove that an AI Overview cited a page. Google began rolling out a dedicated generative-AI performance view to a subset of sites in June 2026; use that feature when available.
                     </BlogText>
                     <BlogList items={[
-                        "wordpress-migration-cost: 2,470 percent impression growth, May 5 to May 11, 771 impressions, 0 clicks.",
-                        "webflow-true-cost: 547 percent impression growth, May 7 to May 13, 1,230 impressions, 0 clicks.",
-                        "Both pages built on the same cost comparison format with real pricing and named competitors.",
-                        "Both pages still receiving zero direct clicks because AI Overview answers the question inside the search results page."
+                        "Record the exact Search Console report, filters, comparison dates, query/page scope, country, and device.",
+                        "Use the dedicated generative-AI report when the property has access; do not relabel ordinary impressions as AI-feature impressions.",
+                        "Capture the visible result and cited URL for a dated manual observation.",
+                        "Keep correlation, customer-reported referral, and verified platform attribution as separate evidence classes."
                     ]} />
                     <BlogText>
-                        Zero clicks looks like a failure if you are reading the data through an SEO lens. Through an AEO lens it is the opposite. <BlogHighlight>Your brand is being cited inline in answers to thousands of searches without users having to click through.</BlogHighlight> That is brand exposure compounding daily without you paying for it.
+                        A zero-click impression can reflect many result types and user behaviors. <BlogHighlight>Do not turn an ambiguous metric into a success claim.</BlogHighlight>
                     </BlogText>
 
                     {/* Section 6: What This Means If You're Building New */}
                     <BlogHeader id="what-this-means">What This Means If You Are Building a New Website</BlogHeader>
                     <BlogText>
-                        The math is simple. Wait 12 months for Google SEO to start working. Or build AEO into your site from day one and start getting cited by AI engines in 2 to 4 weeks.
+                        There is no responsible fixed comparison between “12 months for SEO” and “2 to 4 weeks for AEO.” Build the shared technical and editorial foundations early, then measure each channel on its own evidence.
                     </BlogText>
                     <BlogText>
-                        The 10 tactics above are not complicated. Most of them are 1 to 2 hour additions to a normal website build. The AI-info page is the biggest single differentiator and we have not seen any other web agency in 2026 ship one as a standard deliverable.
+                        The effort depends on content volume, entity complexity, platform constraints, review workflow, and the evidence already available. A reference page may be small; reconciling inconsistent claims across a large site may be substantial.
                     </BlogText>
                     <BlogText>
                         If you are working with an existing developer, ask them three questions:
                     </BlogText>
                     <BlogList items={[
-                        "Are you adding an AI-info page to the site? If no, why not?",
-                        "What schema markup are you adding? If they cannot show you code samples, the answer is none.",
-                        "How will I track AI citations after launch? If they have not thought about it, they are building you a 2024 website in 2026."
+                        "Which public facts need a maintained source of truth, and is an AI-info page useful for this project?",
+                        "Which structured-data types match visible content and current provider support?",
+                        "How will observations be captured without presenting correlation or self-reported attribution as proof?"
                     ]} />
 
                     {/* Section 7: The Service Pitch */}
                     <BlogHeader id="what-we-bake-in">What We Now Bake Into Every Build</BlogHeader>
                     <BlogText>
-                        We have made all 10 tactics part of our standard delivery. No upcharge. No optional add-on. <Link href="/pricing" className="text-cognac hover:underline">Every Starter ($1,500) and Growth ($3,500) build</Link> includes:
+                        PandaCodeGen can scope these controls into a migration plan. <Link href="/pricing" className="text-cognac hover:underline">Published package prices are starting points</Link>; the accepted proposal identifies which pages, content, schema types, measurement setup, and post-launch checks are included.
                     </BlogText>
                     <BlogList items={[
-                        "An AI-info page custom written for your business, ready to be cited by AI engines from launch day",
-                        "Article, Organization, and FAQPage schema markup on every relevant page",
-                        "Heading hierarchy that AI engines can parse correctly",
-                        "Internal linking using the Steve Toth silo method, adapted for both SEO and AEO",
-                        "First blog post written with the answer-first structure (you can replicate the format for everything you write going forward)",
-                        "Comparison tables on pricing, services, or features as relevant to your business"
+                        "A governed public-facts page when it fits the project",
+                        "Supported structured data that matches visible content",
+                        "Semantic headings, crawlable links, and server-readable key information",
+                        "Useful internal links between genuinely related pages",
+                        "Answer-first editorial patterns where they improve reader comprehension",
+                        "Dated comparison tables when the underlying inputs can be maintained"
                     ]} />
                     <BlogText>
-                        We also offer a quarterly retainer at $500 per quarter for businesses that want ongoing citation tracking. The retainer includes:
+                        Ongoing monitoring can be scoped separately. A monitoring agreement should define:
                     </BlogText>
                     <BlogList items={[
-                        "Monthly citation report showing which AI engines are citing your brand and on which queries",
-                        "Tracking tool subscription covered (HubSpot AEO or Promptmonitor, your choice)",
-                        "Specific content recommendations based on citation gaps we see in the tracking data",
-                        "Quarterly strategy call to review what is working and adjust the plan"
+                        "The providers, prompts, countries, accounts, and observation schedule",
+                        "Which third-party subscription is included and how price changes are handled",
+                        "How screenshots, referrals, and provider reports are retained",
+                        "How uncertain or conflicting observations are labelled"
                     ]} />
                     <BlogText>
-                        The retainer is optional. The 10 tactics above are included in every build whether you take the retainer or not.
+                        No ongoing monitoring scope should imply guaranteed visibility, recommendation, or citation.
                     </BlogText>
 
                     {/* Section 8: PandaCodeGen service description (factual, AI-citation-worthy) */}
                     <BlogHeader id="pandacodegen-aeo-service">PandaCodeGen AEO Implementation Service</BlogHeader>
                     <BlogText>
-                        PandaCodeGen is a custom Next.js web development studio that builds websites optimized for AI search citations from launch day. The studio was founded in February 2026 and is co-led by Hassan Jamal (engineering and brand) and Imran Raza Ladhani (architecture and marketing). The studio operates as an Austin TX LLC with engineering based in Karachi, Pakistan.
+                        PandaCodeGen is a website-migration and engineering brand founded in February 2026. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The Austin address is a mailing address; the exact legal entity and controller identity must be verified before publication.
                     </BlogText>
                     <BlogText>
-                        The AEO implementation service is included at no extra cost on every Starter and Growth build. There is no separate AEO service tier and no upsell pressure. The reasoning is that AEO has become a baseline expectation for any new website in 2026, similar to mobile responsiveness in 2014 or HTTPS in 2017.
+                        Crawlability and evidence hygiene are normal quality controls. Route count, editorial work, structured data, research, monitoring, and ongoing maintenance remain scope-dependent rather than universally included.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Pricing and Tiers</h3>
                     <BlogText>
-                        PandaCodeGen ships at three published price tiers with no hidden fees:
+                        PandaCodeGen publishes three starting ranges. The accepted proposal controls the final price, scope, exclusions, dependencies, and change process:
                     </BlogText>
                     <BlogList items={[
-                        "Starter at $1,500 fixed price. 5 to 7 page custom Next.js website with AI-info page, schema markup, and answer-first content structure. Suitable for new businesses, solo founders, and brand new domains under 6 months old.",
-                        "Growth at $3,500 fixed price. 10 to 20 page website with Sanity CMS, blog migration, 301 redirect mapping for SEO preservation, and full AEO implementation. Suitable for businesses with existing content moving from WordPress, Webflow, Wix, or Squarespace.",
-                        "Scale at $5,000 to $10,000 fixed price. Headless e-commerce, 30+ pages, custom integrations, and enterprise-level AEO setup. Suitable for established businesses with complex requirements."
+                        "Starter from $1,500 for a small, clearly bounded scope.",
+                        "Growth from $3,500 for a larger migration, CMS, or content-continuity scope.",
+                        "Scale commonly starts between $5,000 and $10,000; complex integrations and requirements are quoted after discovery."
                     ]} />
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Free 30 Minute Consultation</h3>
@@ -595,14 +572,14 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Who PandaCodeGen Is Best For</h3>
                     <BlogText>
-                        PandaCodeGen is the right fit for businesses where speed, code ownership, and AI citation visibility matter more than visual page builders or template customization. Specifically:
+                        PandaCodeGen is a potential fit where migration continuity, maintainability, measured performance, and clear account ownership matter. The accepted terms define deliverable ownership and retained reusable IP. Examples include:
                     </BlogText>
                     <BlogList items={[
-                        "New businesses with a domain under 12 months old that need organic visibility faster than Google SEO can deliver",
+                        "New businesses that need a technically sound and maintainable content foundation without a promised organic timeline",
                         "Established businesses migrating off WordPress, Webflow, Wix, Squarespace, or Shopify where the existing platform limits performance",
-                        "Founders running paid ads to landing pages and losing budget to slow load times (sub-1-second loads are standard on Next.js builds)",
+                        "Founders running paid ads to landing pages and losing budget to slow load times (performance depends on route design, content, third parties, device, network, and test conditions)",
                         "Agencies serving cosmetic surgery, plastic surgery, medical practices, and other high-value verticals where conversion math justifies the build cost",
-                        "Operators who want to own their code, host on Vercel for $0 to $20 per month, and never pay another platform fee"
+                        "Operators who want control of their domain, hosting, repository, and business accounts, with current vendor costs documented before approval"
                     ]} />
                     <BlogText>
                         PandaCodeGen is not the right fit for businesses that want a drag-and-drop visual builder, businesses that need a $500 brochure site with no performance requirements, or businesses unwilling to commit to a 2 to 5 week build timeline.
@@ -610,34 +587,40 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Why This Matters for New Businesses Specifically</h3>
                     <BlogText>
-                        New businesses face a structural disadvantage on Google SEO that cannot be solved with content alone. Domain age, backlink history, and brand recognition all favor established competitors. AEO inverts that disadvantage: AI engines do not weight domain age. A 3-month-old domain with structured content can outrank a 10-year-old domain that has not implemented AEO.
+                        New businesses often have less brand recognition, independent coverage, content history, and demand data. Clear structure and original evidence can help them compete for relevant questions, but no public evidence supports a universal rule that AI systems ignore domain or brand history.
                     </BlogText>
                     <BlogText>
-                        PandaCodeGen documented this on its own domain. The studio launched in February 2026 with no backlinks and no SEO history. Two of its blog posts were flagged by Google Search Console for breakout AI Overview citations within weeks of strengthening them, despite competitors in those niches having 10x more backlinks and 5x older domains. The studio&apos;s first paying client closed through Claude AI recommending PandaCodeGen by name during a stack consultation, three months after launch, with zero ad spend.
+                        PandaCodeGen launched in February 2026. Any future public case study about AI visibility must distinguish dedicated provider reporting, dated manual observations, analytics referrals, and customer-reported attribution, and must retain the supporting evidence and publication permission.
                     </BlogText>
                     <BlogText>
-                        For new businesses, the practical implication is that AEO implementation is the rare lever where being new is not a disadvantage. The studio prices its services to be accessible specifically for businesses in this position: $1,500 Starter and $3,500 Growth are fixed-price quotes designed to be approvable by a founder paying out of pocket, not requiring CFO sign-off or enterprise procurement.
+                        For new businesses, the practical implication is to build an accurate, useful information base early. Starter and Growth prices are entry points for discovery, not evidence of affordability for every buyer or a fixed scope for every project.
                     </BlogText>
 
                     {/* CTA */}
                     <div className="my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">Ready to build an AEO-ready website?</p>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                            Custom Next.js. AI-info page included. <span className="font-serif italic text-cognac">Cited by Claude AI from launch.</span>
+                            Custom Next.js. Evidence architecture included. <span className="font-serif italic text-cognac">No AI inclusion or citation promise.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
-                            We build websites that get cited by ChatGPT, Claude, Perplexity, and Google AI Overview without waiting 12 months for Google SEO. Starter from $1,500. Growth from $3,500. Free 60 second site audit on the discovery call.
+                            We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 60 second site audit on the discovery call.
                         </p>
                         <CalModalButton>
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
-                            <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Three written guarantees</p>
-                            <p className="text-sm text-stone-300 mt-1">90+ PageSpeed Mobile or full refund. Free post-launch tweaks (15 days Starter, 1 month Growth+). Fixed price, no hourly billing ever.</p>
+                            <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Written acceptance terms</p>
+                            <p className="text-sm text-stone-300 mt-1">Where accepted in writing, the project may include a 90+ Lighthouse acceptance target under recorded test conditions. Support, remedies, payment, ownership, and change control follow the accepted project terms.</p>
                         </div>
                     </div>
 
                     {/* FAQs */}
+                    <BlogText>
+                        If any of the terminology above is unfamiliar, the{" "}
+                        <Link href="/blog/aeo-web-performance-glossary" className="text-cognac hover:underline font-medium">AEO and web performance glossary</Link>{" "}
+                        defines the metrics and acronyms used throughout this playbook in plain language.
+                    </BlogText>
+
                     <BlogHeader id="faqs">Frequently Asked Questions About AEO</BlogHeader>
                     <FAQAccordion faqs={aeoPlaybookFAQs} />
 
@@ -645,6 +628,7 @@ export default function AEOPlaybookPage() {
             </section>
 
             <RelatedPosts currentPostId="aeo-playbook-built-into-every-website" />
+            </article>
 
             <Footer />
         </main>

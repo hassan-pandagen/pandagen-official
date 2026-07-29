@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "404: This Page Is Faster Than Most Sites We Rebuild",
-    description: "The page you are looking for doesn't exist. But hey, it loaded in under a second. That's more than most websites can say.",
+    title: "404: Page Not Found",
+    description: "The page you are looking for does not exist. Return home or choose one of the useful links on this page.",
     robots: { index: false, follow: true },
+    openGraph: { images: [] },
+    twitter: { images: [] },
 };
 
 export default function NotFound() {
@@ -23,11 +25,11 @@ export default function NotFound() {
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">This Page Doesn&apos;t Exist</p>
 
                 <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-                    But it loaded <span className="font-serif italic text-cognac">in under a second.</span>
+                    Let&apos;s get you <span className="font-serif italic text-cognac">back on track.</span>
                 </h2>
 
                 <p className="text-stone-600 max-w-lg mx-auto mb-10 text-base md:text-lg leading-relaxed">
-                    That&apos;s more than most websites we rebuild can say. If your current site is slower than a page that doesn&apos;t exist, we should probably talk.
+                    The address may have changed, or the page may no longer exist. Return home or choose a destination below.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -38,7 +40,7 @@ export default function NotFound() {
                         Return Home <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link
-                        href="/#audit-widget"
+                        href="/free-audit"
                         className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-stone-200 text-charcoal font-bold rounded-full hover:border-cognac/30 hover:shadow-card transition-all"
                     >
                         Run Free Audit on Your Site
@@ -52,7 +54,7 @@ export default function NotFound() {
                         <Link href="/services/ecommerce" className="text-stone-600 hover:text-cognac transition-colors">Shopify Migration</Link>
                         <Link href="/services/wordpress-migration" className="text-stone-600 hover:text-cognac transition-colors">WordPress Migration</Link>
                         <Link href="/pricing" className="text-stone-600 hover:text-cognac transition-colors">Pricing</Link>
-                        <Link href="/work" className="text-stone-600 hover:text-cognac transition-colors">Case Studies</Link>
+                        <Link href="/work" className="text-stone-600 hover:text-cognac transition-colors">Project Evidence</Link>
                         <Link href="/blog" className="text-stone-600 hover:text-cognac transition-colors">Blog</Link>
                         <Link href="/manifesto" className="text-stone-600 hover:text-cognac transition-colors">Manifesto</Link>
                     </div>

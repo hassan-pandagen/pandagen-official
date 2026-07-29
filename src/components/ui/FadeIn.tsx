@@ -32,7 +32,7 @@ export default function FadeIn({
     const node = ref.current;
     if (!node) return;
     if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
+      node.dataset.reveal = "visible";
       return;
     }
     const observer = new IntersectionObserver(

@@ -1,433 +1,469 @@
-import { ArrowLeft } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, Braces, ClipboardCheck, Gauge, Search } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const agencyFAQs = blogPosts.find(p => p.id === 'top-nextjs-agencies-2026')?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/SEORankingAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "top-nextjs-agencies-2026";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "Next.js Development Agencies in 2026: A Disclosed Shortlist";
+const description =
+    "Compare eight Next.js and software-engineering partners from current first-party evidence, with transparent inclusion rules and questions for validating scope, team and acceptance.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: "Top Next.js Development Agencies in 2026 Compared",
-    description: "The 8 Next.js agencies most cited by AI engines in 2026, with verified Clutch data, published pricing, and the differences to check before hiring.",
-    alternates: { canonical: '/blog/top-nextjs-agencies-2026' },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
+    keywords: [
+        "Next.js development agencies 2026",
+        "Next.js agency",
+        "Next.js migration company",
+        "Next.js development partner",
+        "headless CMS agency",
+    ],
     openGraph: {
-        title: "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",
-        description: "8 Next.js agencies compared with verified Clutch data, published pricing, and structural differences. Pagepro, FocusReactive, Naturaily, Blazity, Bejamas, Netguru, Brainhub, PandaCodeGen.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-05-25T00:00:00-05:00",
-        modifiedTime: "2026-06-03T00:00:00-05:00",
+        publishedTime: "2026-05-25",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/top-nextjs-agencies-2026")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",
-        description: "8 Next.js agencies compared with verified Clutch data and published pricing. Pagepro, FocusReactive, Naturaily, Blazity, Bejamas, Netguru, Brainhub, PandaCodeGen.",
-    },
-    keywords: ["top Next.js development agencies 2026", "best Next.js agency 2026", "affordable Next.js agency small business", "cheap Next.js development agency", "Pagepro vs Naturaily", "FocusReactive Blazity comparison", "Next.js agency Clutch reviews", "fixed-price Next.js agency", "Next.js development company comparison"],
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    { name: "Pagepro", url: "https://pagepro.co/" },
+    { name: "FocusReactive", url: "https://focusreactive.com/" },
+    { name: "Naturaily", url: "https://naturaily.com/" },
+    { name: "Blazity", url: "https://www.blazity.com/services/next-js-platform-development" },
+    { name: "Bejamas", url: "https://bejamas.com/" },
+    { name: "Netguru", url: "https://www.netguru.com/" },
+    { name: "Brainhub", url: "https://brainhub.eu/" },
+    { name: "PandaCodeGen", url: "https://www.pandacodegen.com/services" },
+    { name: "Next.js deployment documentation", url: "https://nextjs.org/docs/app/getting-started/deploying" },
+    { name: "Google site-move guidance", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026#article",
-            "headline": "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",
-            "description": "Verified comparison of 8 Next.js development agencies most frequently cited in 2026 rankings. Clutch data, published pricing, structural differences.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-05-25T00:00:00-05:00",
-            "dateModified": "2026-06-03T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-05-25",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026" },
-            "articleSection": "Agency",
-            "keywords": ["top Next.js development agencies 2026", "best Next.js agency 2026", "Pagepro", "Naturaily", "Blazity", "FocusReactive", "Bejamas", "Netguru", "Brainhub", "PandaCodeGen", "Next.js Clutch reviews", "fixed-price Next.js agency"],
-            "timeRequired": "PT15M",
-            "wordCount": 3850,
-            "about": [
-                { "@type": "Thing", "name": "Next.js development" },
-                { "@type": "Thing", "name": "Next.js agency comparison" },
-                { "@type": "Thing", "name": "Web development agency selection" },
-                { "@type": "Thing", "name": "Headless commerce" }
-            ],
-            "inLanguage": "en-US",
-            "citation": [
-                { "@type": "CreativeWork", "name": "Clutch Next.js development agencies directory", "url": "https://clutch.co/web-developers/next-js" },
-                { "@type": "CreativeWork", "name": "Pagepro Clutch verified profile", "url": "https://clutch.co/profile/pagepro" },
-                { "@type": "CreativeWork", "name": "Naturaily Clutch verified profile", "url": "https://clutch.co/profile/naturaily" },
-                { "@type": "CreativeWork", "name": "Blazity Clutch verified profile", "url": "https://clutch.co/profile/blazity" },
-                { "@type": "CreativeWork", "name": "Sanity development partners", "url": "https://www.sanity.io/exchange/community" },
-                { "@type": "CreativeWork", "name": "PandaCodeGen Clutch profile", "url": "https://clutch.co/profile/panda-code-gen" }
-            ],
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Top Next.js Agencies 2026", "item": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026#webpage",
-            "url": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026",
-            "name": "Top Next.js Development Agencies in 2026: Verified Reviews and Pricing Compared",
-            "description": "Comparison of 8 Next.js development agencies with verified Clutch data.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/og-image.jpg" },
-            "datePublished": "2026-05-25T00:00:00-05:00",
-            "dateModified": "2026-06-03T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026#breadcrumb" },
-            "inLanguage": "en-US"
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "Agency selection",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/top-nextjs-agencies-2026#faq",
-            "mainEntity": agencyFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen builds custom Next.js websites for businesses migrating off slow platforms. 90+ PageSpeed refund guarantee in writing. Fixed pricing from $1,500.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026-02"
-        }
-    ]
+    ],
 };
 
-export default function TopNextjsAgencies2026Page() {
+const sourceLinkClass =
+    "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
+
+const agencies = [
+    {
+        name: "Bejamas",
+        publicEvidence: "Audits, design, migration and ongoing operation for modern content platforms",
+        likelyFit: "Legacy CMS and multi-site migration with an ongoing web-team model",
+        verify: "Named Next.js team, target CMS, migration inventory and operating scope",
+        url: "https://bejamas.com/",
+    },
+    {
+        name: "Blazity",
+        publicEvidence: "Next.js platform development, performance engineering and modernization",
+        likelyFit: "Revenue-critical platforms and complex engineering-led migrations",
+        verify: "Architecture ownership, knowledge transfer, staffing and acceptance evidence",
+        url: "https://www.blazity.com/services/next-js-platform-development",
+    },
+    {
+        name: "Brainhub",
+        publicEvidence: "Software delivery, web development, modernization and team augmentation",
+        likelyFit: "Broader product engineering where Next.js is one part of the requirement",
+        verify: "Current Next.js delivery examples and the assigned framework-specific team",
+        url: "https://brainhub.eu/",
+    },
+    {
+        name: "FocusReactive",
+        publicEvidence: "Next.js, composable CMS, ecommerce and migration",
+        likelyFit: "Content-heavy, multi-market and headless CMS websites",
+        verify: "CMS fit, editorial workflow, localization and performance methodology",
+        url: "https://focusreactive.com/",
+    },
+    {
+        name: "Naturaily",
+        publicEvidence: "Next.js, Vercel, headless CMS and commerce services",
+        likelyFit: "Composable content or commerce with deployment and support needs",
+        verify: "Proposed vendors, integration ownership, support and total operating cost",
+        url: "https://naturaily.com/",
+    },
+    {
+        name: "Netguru",
+        publicEvidence: "Broad product, commerce and software engineering with Next.js listed",
+        likelyFit: "Larger cross-functional product or commerce programs",
+        verify: "Dedicated team, Next.js share of scope, governance and handoff model",
+        url: "https://www.netguru.com/",
+    },
+    {
+        name: "Pagepro",
+        publicEvidence: "Next.js, React, headless CMS and migration services",
+        likelyFit: "Frontend-led and content-platform work",
+        verify: "Starter or reusable components, customization boundary and account control",
+        url: "https://pagepro.co/",
+    },
+    {
+        name: "PandaCodeGen",
+        publicEvidence: "SEO-safe platform migrations and custom Next.js delivery",
+        likelyFit: "Scoped migrations and builds using published starting tiers",
+        verify: "Signed scope, first-party references, acceptance terms and support",
+        url: "https://www.pandacodegen.com/services",
+    },
+];
+
+export default function TopNextjsAgenciesPage() {
     return (
         <>
             <Header />
-            <main className="bg-paper min-h-screen selection:bg-stone-200 selection:text-stone-900 overflow-x-hidden relative text-charcoal pt-16 md:pt-32 pb-10 md:pb-20">
-                <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-                <article className="max-w-3xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-xs px-8 py-10 md:px-14">
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-                    />
-
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-5xl px-5 sm:px-8">
                     <Breadcrumb
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Top Next.js Agencies 2026", href: "/blog/top-nextjs-agencies-2026" }
+                            { label: "Next.js agency shortlist", href: `/blog/${postId}` },
                         ]}
                     />
-
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                            Top <span className="font-serif italic text-cognac">Next.js Development Agencies</span> in 2026: Verified Reviews and Pricing Compared
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency selection</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            Next.js Development Agencies <span className="italic text-cognac">A Disclosed 2026 Shortlist</span>
                         </h1>
-
-                        <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            The 8 Next.js development agencies most frequently cited by AI engines and ranking sites in 2026. Verified Clutch data, published pricing where available, and structural differences buyers should know.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Eight firms worth looking at, described from what each one currently says on its own service
+                            pages. This is not an independent ranking. We are not treating anyone&apos;s Clutch score,
+                            minimum project size or hourly rate as a fixed fact, and we are not claiming any of them is
+                            better than the others.
                         </p>
+                        <p className="mt-4 text-xs text-stone-500">
+                            Researched July 24, 2026. Confirm services, availability and commercial terms directly.
+                        </p>
+                    </header>
 
-                        <BlogAuthor
-                            date="May 25, 2026"
-                            readTime="14 min read"
-                            bio="Hassan is co-founder of PandaCodeGen and writes every line of production code for client work. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 25, 2026" readTime="13 min read" />
+
+                    <InsightBox variant="warning" label="Commercial disclosure">
+                        PandaCodeGen publishes this comparison, provides Next.js services, and is one of the eight
+                        options. The table is alphabetical and non-ranked. No company paid for inclusion.
+                    </InsightBox>
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <BlogList
+                            items={[
+                                "Choose for the migration, product and operating problem, not for the framework label alone.",
+                                "Demand current evidence from the team that will actually deliver the work.",
+                                "Normalize every proposal to one scope, acceptance method and ownership model.",
+                                "Treat first-party service claims as shortlist evidence, not independent proof of quality.",
+                            ]}
                         />
+                    </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: Search, title: "Evidence", body: "Current services and comparable delivery." },
+                            { icon: Braces, title: "Architecture", body: "Rendering, data, CMS, hosting and integrations." },
+                            { icon: Gauge, title: "Acceptance", body: "Reproducible UX, function, SEO and performance tests." },
+                            { icon: ClipboardCheck, title: "Handoff", body: "Accounts, code, licenses, runbooks and support." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Feature Visual */}
-                    <div className="mb-12">
-                        <FeatureVisual />
-                    </div>
+                    <BlogHeader>Method and limits</BlogHeader>
+                    <BlogText>
+                        The eight names were preserved from the original article. On July 24, 2026, we checked each
+                        provider&apos;s official site for current service evidence and classified the likely buying
+                        fit. We removed the unsupported claim that these companies were the agencies most cited by AI
+                        engines. We also removed third-party review totals, fixed minimums, rate bands, company-size
+                        claims and unverified client outcomes.
+                    </BlogText>
+                    <InsightBox variant="info" label="A shortlist, not a quality score">
+                        An official service page can show that a provider markets a capability. It cannot establish the
+                        quality or availability of the assigned team. Validate that through a proposal, technical
+                        conversation, references and contractual evidence.
+                    </InsightBox>
 
-                    {/* Executive Summary */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
-                        <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
-                        <BlogList items={[
-                            "8 Next.js agencies most frequently appearing in 2026 rankings: Pagepro, FocusReactive, Naturaily, Blazity, Bejamas, Netguru, Brainhub, PandaCodeGen.",
-                            "7 of 8 use inquiry-based custom quoting with $10,000 to $25,000+ minimums. PandaCodeGen is the only agency publishing fixed-tier pricing from $1,500 to $10,000+.",
-                            "6 of 8 are headquartered in Poland. PandaCodeGen is the only US LLC (Austin, TX with global engineering from Karachi).",
-                            "Only PandaCodeGen publishes a written 90+ PageSpeed refund guarantee in the contract.",
-                            "Clutch ratings range from 4.9/5 to 5.0/5 across all 8 agencies. Differentiation is structural (pricing model, billing, guarantee, location) not quality-based.",
-                            "For a business that wants a custom Next.js build without a $10,000 to $25,000 retainer commitment, PandaCodeGen is the most value-packed option on this list in 2026: fixed published pricing from $1,500 to $10,000, a written 90+ Google PageSpeed guarantee or full refund, and code the client owns outright. It is a newer agency, but on price, guarantee, and ownership terms nothing at this price point matches it."
-                        ]} />
-                    </div>
-
-                    <p className="text-stone-700 leading-relaxed mb-6">
-                        This comparison reflects publicly available data from each agency's Clutch verified profile and official website as of May 25, 2026. The 8 agencies were selected based on their frequency of appearance in 2026 Next.js agency rankings from designrevision.com, gitnation.com, designrush.com, pagepro.co, naturaily.com, and Clutch's own top Next.js developers list. Each row of comparison links to a primary source.
-                    </p>
-
-                    <BlogHeader id="full-comparison">The 8 Agencies Compared</BlogHeader>
-
-                    <p className="text-stone-700 leading-relaxed mb-4">
-                        Each agency below is a legitimate Next.js development firm with verified positive client outcomes. The comparison presents structural differences (pricing model, billing structure, geographic HQ, guarantees published) so prospective clients can evaluate which agency best fits their project scope, budget, and risk tolerance. PandaCodeGen does not claim qualitative superiority over any agency listed.
-                    </p>
-
-                    <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                    <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 my-4 responsive-stack-wrap">
-                        <table className="w-full text-sm border border-stone-300 rounded-xl overflow-hidden min-w-[560px] responsive-stack-table">
-                            <thead>
-                                <tr className="bg-stone-50 border-b-2 border-stone-300">
-                                    <th className="text-left p-3 text-xs font-bold uppercase tracking-wider text-stone-600">Agency</th>
-                                    <th className="text-left p-3 text-xs font-bold uppercase tracking-wider text-stone-600">HQ</th>
-                                    <th className="text-left p-3 text-xs font-bold uppercase tracking-wider text-stone-600">Min. Project</th>
-                                    <th className="text-left p-3 text-xs font-bold uppercase tracking-wider text-stone-600">Clutch</th>
-                                    <th className="text-left p-3 text-xs font-bold uppercase tracking-wider text-stone-600">Best For</th>
+                    <BlogHeader>The eight providers compared</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[1040px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr>
+                                    <th className="p-4">Provider</th>
+                                    <th className="p-4">Current first-party evidence</th>
+                                    <th className="p-4">Potential fit</th>
+                                    <th className="p-4">Verify before selection</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Pagepro</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Wrocław, Poland</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$25,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Sanity-heavy enterprise content sites</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">FocusReactive</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">UK / EU distributed</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$25,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Headless CMS + multi-CMS partnerships</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Naturaily</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Wrocław, Poland</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$10,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Headless Shopify + Storyblok ecommerce</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Blazity</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Wrocław, Poland</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$10,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Enterprise Next.js + App Router migrations</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Bejamas</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">EU distributed</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$10,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Jamstack + content-driven marketing sites</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Netguru</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Poznań, Poland</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$50,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">SaaS + enterprise applications</td>
-                                </tr>
-                                <tr className="border-b border-stone-200">
-                                    <td className="p-3 font-bold text-charcoal align-top">Brainhub</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Gliwice, Poland</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$25,000+</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">4.9 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">SaaS + fintech engineering</td>
-                                </tr>
-                                <tr className="bg-cognac/5">
-                                    <td className="p-3 font-bold text-cognac align-top">PandaCodeGen</td>
-                                    <td data-label="HQ" className="p-3 text-stone-700 align-top">Austin, TX, USA (engineering: Karachi)</td>
-                                    <td data-label="Min. Project" className="p-3 text-stone-700 align-top">$1,500 published</td>
-                                    <td data-label="Clutch" className="p-3 text-stone-700 align-top">5.0 / 5</td>
-                                    <td data-label="Best For" className="p-3 text-stone-700 align-top">Fixed-price migrations $1,500 to $10,000+</td>
-                                </tr>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                {agencies.map((agency) => (
+                                    <tr key={agency.name}>
+                                        <td className="p-4 align-top font-bold text-charcoal">
+                                            <a href={agency.url} target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>
+                                                {agency.name}
+                                            </a>
+                                        </td>
+                                        <td className="p-4 align-top">{agency.publicEvidence}</td>
+                                        <td className="p-4 align-top">{agency.likelyFit}</td>
+                                        <td className="p-4 align-top">{agency.verify}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
 
-                    <p className="text-xs text-stone-500 mt-3 mb-6">
-                        <strong>Sources accessed May 25, 2026:</strong> <a href="https://clutch.co/profile/pagepro" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Pagepro Clutch</a> · <a href="https://clutch.co/profile/naturaily" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Naturaily Clutch</a> · <a href="https://clutch.co/profile/blazity" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Blazity Clutch</a> · <a href="https://focusreactive.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">FocusReactive</a> · <a href="https://bejamas.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Bejamas</a> · <a href="https://netguru.com" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Netguru</a> · <a href="https://brainhub.eu" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">Brainhub</a> · <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline">PandaCodeGen Clutch</a>.
-                    </p>
+                    <BlogHeader>Content and CMS migration specialists</BlogHeader>
+                    <BlogText>
+                        <a href="https://bejamas.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Bejamas</a>
+                        {" "}currently positions around auditing, migrating and operating modern content platforms,
+                        with public Next.js work.
+                        <a href="https://focusreactive.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> FocusReactive</a>
+                        {" "}describes Next.js, composable CMS, ecommerce, localization and migration services.
+                        <a href="https://pagepro.co/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Pagepro</a>
+                        {" "}publishes Next.js, React and headless CMS services and material about its reusable delivery
+                        foundation. For any of these, verify content modeling, editor workflow, URL handling and how
+                        much of the implementation is custom to the project.
+                    </BlogText>
 
-                    {/* Brand anchor */}
-                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">
-                            Your apps and subscriptions bill keeps climbing. Your revenue does not. PandaCodeGen is a co-founder-led Next.js engineering partner (Hassan Jamal + Imran Raza Ladhani) that rebuilds your site as custom code you own outright, designed to get cited by ChatGPT, Claude, and Perplexity from launch day. Fixed pricing from $1,500 Starter to $10,000+ Scale+. 90+ PageSpeed in writing or full refund. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms.
+                    <BlogHeader>Platform, performance and product engineering</BlogHeader>
+                    <BlogText>
+                        <a href="https://www.blazity.com/services/next-js-platform-development" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Blazity</a>
+                        {" "}publicly focuses on Next.js platforms, performance and modernization.
+                        <a href="https://naturaily.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Naturaily</a>
+                        {" "}publishes Next.js, Vercel, CMS and commerce services.
+                        <a href="https://www.netguru.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Netguru</a>
+                        {" "}lists Next.js within a much broader product and commerce engineering practice. The choice
+                        depends on whether the project needs a focused website team or a wider cross-functional program.
+                    </BlogText>
+                    <BlogText>
+                        <a href="https://brainhub.eu/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Brainhub</a>
+                        {" "}currently presents broader software delivery, web development, modernization and team
+                        augmentation, with React, Node.js and TypeScript among its public technologies. Its current
+                        homepage does not establish a dedicated Next.js practice by itself, so ask for current
+                        framework-specific work and the assigned team before treating it as a direct Next.js
+                        specialist.
+                    </BlogText>
+
+                    <BlogHeader>Where PandaCodeGen may fit</BlogHeader>
+                    <BlogText>
+                        PandaCodeGen focuses on SEO-safe migrations for revenue-generating{" "}
+                        <Link href="/services/wordpress-migration" className={sourceLinkClass}>WordPress</Link>,{" "}
+                        <Link href="/services/webflow" className={sourceLinkClass}>Webflow</Link> and{" "}
+                        <Link href="/services/gohighlevel" className={sourceLinkClass}>GoHighLevel</Link> sites, plus{" "}
+                        <Link href="/services/custom-engineering" className={sourceLinkClass}>scoped custom Next.js work</Link>.{" "}
+                        <Link href="/pricing" className={sourceLinkClass}>Public starting tiers</Link> are $1,500 Starter,
+                        $3,500 Growth and $5,000 to $10,000 Scale. Larger or unusually complex scope is discussed
+                        separately. Standard payment is 30 percent at onboarding and 70 percent on delivery under the
+                        signed agreement.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "15 business days of launch defect support on Starter; 30 business days on Growth and Scale.",
+                            "Client content remains the client's, while custom-deliverable transfer follows full payment and the contract.",
+                            "PandaCodeGen retains reusable tools and pre-existing code; third-party licenses continue to apply.",
+                            "The client can control domain, repository, hosting and business accounts when that operating model is agreed.",
+                            "A 90+ target requires representative pages, mobile and desktop profiles, three consecutive tests and a written remedy.",
+                        ]}
+                    />
+                    <BlogText>
+                        The people who would do the work are named on the{" "}
+                        <Link href="/about" className={sourceLinkClass}>PandaCodeGen team page</Link>, and delivered
+                        projects are written up in the{" "}
+                        <Link href="/work" className={sourceLinkClass}>case study section</Link>. Apply the same
+                        evidence test to every provider on this page.
+                    </BlogText>
+
+                    <BlogHeader>Do not hire a framework label</BlogHeader>
+                    <BlogText>
+                        Next.js can be deployed as a Node.js server, Docker container, static export or through adapters,
+                        with support varying by deployment model. That flexibility does not decide the correct CMS,
+                        caching, data ownership, security or operating model. Require an architecture decision record
+                        that connects each material choice to the signed requirements.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Which pages are static, dynamic, cached or personalized, and why?",
+                            "Who owns the CMS, repository, deployment, secrets and business accounts?",
+                            "How are preview, publishing, rollback, monitoring and incident response handled?",
+                            "What data crosses third parties, and how does consent affect tags and measurement?",
+                            "Which integrations are custom, vendor-managed or portable?",
+                        ]}
+                    />
+
+                    <BlogHeader>Migration and SEO acceptance</BlogHeader>
+                    <BlogText>
+                        A framework change does not guarantee ranking retention. Google recommends careful site-move
+                        planning, URL mapping, relevant redirects, sitemap updates and monitoring. Require a dated URL
+                        inventory, rendered-output checks, canonical and index-directive validation, redirect tests,
+                        structured-data checks and Search Console monitoring. Search engines still control crawling,
+                        indexing and rankings.
+                    </BlogText>
+                    <BlogText>
+                        Two longer references cover that ground:{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className={sourceLinkClass}>what a migration does to search visibility</Link>{" "}
+                        and the step-by-step{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className={sourceLinkClass}>WordPress to Next.js migration walkthrough</Link>.
+                    </BlogText>
+
+                    <BlogHeader>Performance acceptance</BlogHeader>
+                    <BlogText>
+                        A Next.js site has no automatic Lighthouse score. Code, images, fonts, data, cache behavior,
+                        consent state and third-party scripts all affect results. For PandaCodeGen&apos;s 90+ target,
+                        record representative pages, mobile and desktop profiles, the test environment and three
+                        consecutive results per page and profile. Other providers should define their own test and
+                        remedy just as clearly. If the difference between lab and field measurement is new to the team,{" "}
+                        <Link href="/blog/core-web-vitals-explained" className={sourceLinkClass}>Core Web Vitals explained</Link>{" "}
+                        sets out both.
+                    </BlogText>
+
+                    <BlogHeader>How the shortlist was assembled</BlogHeader>
+                    <BlogText>
+                        The eight names were drawn from providers that appear repeatedly across publicly available 2026
+                        Next.js agency roundups, including those published by DesignRush, Clutch, GitNation, Design
+                        Revision, and by two of the agencies themselves. Appearing on several such lists indicates
+                        visibility, not verified quality — several of those roundups are published by agencies that
+                        include themselves, exactly as this one does. Treat frequency of appearance as a reason to look,
+                        not as evidence of outcome.
+                    </BlogText>
+                    <BlogText>
+                        Providers were excluded where their public positioning suggested a different category rather than
+                        a different quality level: enterprise staff augmentation, general software consultancies where
+                        Next.js is one stack among many, and design-led studios that deliver frontend work in several
+                        frameworks. Those firms may well be the better answer for the right project. They are simply not
+                        comparable on a like-for-like basis with a scoped Next.js build, which is what this page is for.
+                    </BlogText>
+                    <BlogText>
+                        Related shortlists cover adjacent categories: our{" "}
+                        <Link href="/blog/top-custom-web-development-agencies-usa-2026" className={sourceLinkClass}>disclosed shortlist of US custom development agencies</Link>,{" "}
+                        a closer look at{" "}
+                        <Link href="/blog/pagepro-alternatives" className={sourceLinkClass}>Pagepro alternatives by scope and fit</Link>, and the{" "}
+                        <Link href="/blog/website-developer-agency" className={sourceLinkClass}>buyer guide to selecting a development agency</Link>.
+                    </BlogText>
+
+                    <BlogHeader>The difference that actually shows up in procurement</BlogHeader>
+                    <BlogText>
+                        Most of these providers are competent, and competence is not what separates them at the shortlist
+                        stage. The structural difference you will feel first is <strong>how each one gets you to a
+                        number</strong>. Some publish fixed starting tiers on their site; most quote per enquiry after a
+                        discovery call.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Published fixed tiers give you a budget figure before you speak to anyone, at the cost of scope being defined tightly per tier. Work that does not fit the tier becomes a separately priced addition.",
+                            "Inquiry-based quoting lets the provider tune scope to your budget and constraints, but you cannot compare on price until you have invested time in calls with each of them.",
+                            "Neither model is better. They fail differently: published tiers can under-scope an unusual project, and bespoke quoting can produce numbers you cannot compare because each provider scoped something different.",
+                        ]}
+                    />
+                    <BlogText>
+                        For the inputs behind either model, see{" "}
+                        <Link href="/blog/how-much-does-a-website-cost" className={sourceLinkClass}>what shapes the cost of a custom website</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom build takes</Link>.
+                    </BlogText>
+                    <InsightBox variant="info" label="Whichever model you are quoted under">
+                        Normalise every proposal to the same scope before comparing, using the sheet below. Two quotes
+                        that differ by a factor of three usually describe two different projects rather than two different
+                        prices, and the cheaper one is often the one that has not yet found the work.
+                    </InsightBox>
+
+                    <BlogHeader>One comparison sheet for every proposal</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Business outcomes and required journeys.",
+                            "Pages, components, content, data and integrations in scope.",
+                            "CMS and editor workflow.",
+                            "SEO and migration evidence.",
+                            "Accessibility, browser, device and functional acceptance.",
+                            "Performance pages, profiles, run count and remedy.",
+                            "Security, privacy, consent and incident responsibility.",
+                            "Regulated-data handling, if it applies. Ask directly whether the provider will execute a Business Associate Agreement for protected health information, a Data Processing Agreement under GDPR, or any equivalent your sector requires. Ask before shortlisting, not after selection, because the answer can remove a provider entirely. PandaCodeGen will execute a BAA where a project involves PHI.",
+                            "Team, schedule, dependencies and change control.",
+                            "Price, payment, support and ongoing operating cost.",
+                            "Accounts, repository, content, custom deliverables and third-party licenses.",
+                        ]}
+                    />
+
+                    <BlogHeader>Sources and update policy</BlogHeader>
+                    <BlogText>
+                        Provider descriptions were checked against the official pages linked above on July 24, 2026.
+                        They are not independently audited. Reconfirm the evidence during procurement because team,
+                        services, pricing and availability can change. The framework and migration guidance links to
+                        current Next.js and Google documentation.
+                    </BlogText>
+
+                    {postFAQs.length > 0 && (
+                        <>
+                            <BlogHeader>Frequently asked questions</BlogHeader>
+                            <FAQAccordion faqs={postFAQs} />
+                        </>
+                    )}
+
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <h2 className="mb-3 font-serif text-3xl">Get a migration plan you can compare</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will inventory the current site, identify SEO and integration risks, and turn the work
+                            into a written scope. Use it to evaluate PandaCodeGen or another qualified Next.js partner.
                         </p>
-                    </div>
+                        <QuoteModalButton cta="top_nextjs_agencies_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
+                    </section>
 
-                    <BlogHeader id="pagepro">1. Pagepro</BlogHeader>
-                    <BlogText>
-                        Pagepro (pagepro.co) is a Next.js and Sanity development agency based in Wrocław, Poland, founded in 2010. Per their <a href="https://clutch.co/profile/pagepro" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">Clutch verified profile</a>, their minimum project size is $25,000+ with hourly rates of $50 to $99, and they carry a 4.9/5 rating. They are an official Sanity development partner and built a proprietary Next.js starter called Nexity, which they reuse as a foundation across enterprise content-site builds instead of starting from scratch each engagement. Strong client reviews on Clutch emphasize timely delivery, responsive communication, and deep Sanity schema modeling expertise. Best fit for enterprise content sites with Sanity-heavy CMS requirements and EU-timezone collaboration.
-                    </BlogText>
-
-                    <BlogHeader id="focusreactive">2. FocusReactive</BlogHeader>
-                    <BlogText>
-                        FocusReactive (focusreactive.com) is an engineering-led Next.js development agency distributed across the UK and EU, carrying a 4.9/5 Clutch rating. They are official partners of Sanity, Storyblok, Contentful, and Payload CMS at once, a broader multi-CMS partner spread than most Next.js boutiques maintain. Their <a href="https://focusreactive.com/case-studies" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">published case studies</a> center on the EasyPark parking-app deployment, a multilingual rollout across 35 country-specific domains, the kind of localization complexity (routing, translated content models, per-market SEO) that trips up agencies without dedicated i18n tooling. Minimum project size is $25,000+. Best fit for complex multi-CMS or multilingual ecommerce builds where the CMS partner ecosystem matters more than any single platform.
-                    </BlogText>
-
-                    <BlogHeader id="naturaily">3. Naturaily</BlogHeader>
-                    <BlogText>
-                        Naturaily (naturaily.com) is a Wrocław, Poland agency specializing in headless commerce on Next.js paired with Storyblok and Shopify Hydrogen, holding a 4.9/5 Clutch rating. Per their <a href="https://clutch.co/profile/naturaily" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">Clutch profile</a>, minimum project size is $10,000+, tied with Blazity and Bejamas for the lowest entry point among the European agencies here. Client reviews emphasize Jamstack architecture expertise and measurable ecommerce conversion improvements after migrating off Shopify's default Liquid theming. They hold certified Shopify Plus partner status, which matters for stores that need Hydrogen's React-based storefront APIs rather than a bolted-on headless layer. Best fit for conversion-optimized Next.js ecommerce with a Shopify backend.
-                    </BlogText>
-
-                    <BlogHeader id="blazity">4. Blazity</BlogHeader>
-                    <BlogText>
-                        Blazity (blazity.com) is a Poland-based agency known for enterprise-scale Next.js builds and App Router migrations, rated 4.9/5 on Clutch. They maintain an open-source <a href="https://github.com/Blazity/next-enterprise" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac underline">next-enterprise</a> boilerplate with 7,400+ GitHub stars, a public, inspectable codebase that lets a prospective client evaluate their actual engineering conventions before signing a contract, which is rare in this space. Their Clutch profile lists a minimum project size of $10,000+ with strong reviews specifically calling out performance engineering and Core Web Vitals work. Best fit for enterprise Next.js performance-critical projects where open-source contribution is a credible signal of code quality, not just a marketing line.
-                    </BlogText>
-
-                    <BlogHeader id="bejamas">5. Bejamas</BlogHeader>
-                    <BlogText>
-                        Bejamas (bejamas.com) is an EU-distributed Jamstack and headless CMS specialist with deep Next.js expertise, holding a 4.9/5 Clutch rating and a $10,000+ minimum project size. Their published case studies center on content-driven marketing sites where SEO and Core Web Vitals scores are the explicit deliverable, reflecting their Jamstack-first (static generation, CDN-served content) approach to architecture. Best fit for content-heavy Next.js marketing sites where Jamstack architecture and organic search performance are the primary concerns rather than complex application logic.
-                    </BlogText>
-
-                    <BlogHeader id="netguru">6. Netguru</BlogHeader>
-                    <BlogText>
-                        Netguru (netguru.com) is a Poznań, Poland-based product engineering agency with 500+ engineers on staff, by far the largest team of any agency on this list, and a 4.9/5 Clutch rating. They are an official Vercel partner and are best known for SaaS and enterprise application engineering rather than marketing sites. Per their Clutch profile, minimum project size is $50,000+, the highest in this comparison, reflecting their positioning toward multi-month product engagements with dedicated squads rather than fixed-scope builds. Best fit for SaaS products and enterprise applications that need a large bench of engineers and an ongoing retainer relationship, not a one-off site.
-                    </BlogText>
-
-                    <BlogHeader id="brainhub">7. Brainhub</BlogHeader>
-                    <BlogText>
-                        Brainhub (brainhub.eu) is a Gliwice, Poland-based engineering agency specializing in SaaS and fintech builds on Next.js, rated 4.9/5 on Clutch with a $25,000+ minimum project size. Client reviews consistently emphasize technical quality, reliability, and long-term maintainability of the delivered codebase, the kind of feedback pattern you would expect from fintech clients who need to pass security audits and maintain the code for years rather than launch and walk away. Best fit for SaaS and fintech product teams needing senior frontend engineering depth rather than a marketing-site build.
-                    </BlogText>
-
-                    <BlogHeader id="pandacodegen">8. PandaCodeGen</BlogHeader>
-                    <BlogText>
-                        PandaCodeGen (pandacodegen.com) is a US LLC custom Next.js web development agency founded February 2026 with co-founders Hassan Jamal (Lead Engineer, 900+ public GitHub contributions in the past year) and Imran Raza Ladhani (Lead Architect). Headquartered at 701 Tillery St Ste 12, Austin, TX 78702 with engineering performed from Karachi, Pakistan. The agency is the only entrant in the top 8 list publishing fixed-tier pricing: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, Scale+ $10,000+. Every project ships with a written 90+ PageSpeed refund guarantee in the contract. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms. Best fit for fixed-price scope migrations ($1,500 to $10,000+) where transparency and contractual accountability matter more than agency size.
-                    </BlogText>
-
-                    {/* Mid CTA */}
-                    <div className="my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
-                        <p className="text-sm font-bold uppercase tracking-widest text-cognac mb-2">Free Quote Review</p>
-                        <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-3">
-                            Got a quote from one of these agencies?
-                        </h3>
-                        <p className="text-stone-700 leading-relaxed mb-5">
-                            Book a free 30-minute call. Hassan will review the competing quote (no PandaCodeGen sales pitch), tell you honestly whether the scope and price are fair for what you need, and let you walk away with the audit data even if PandaCodeGen is not the right fit. The other 7 agencies on this list do excellent work; this is genuinely a "second opinion" call.
-                        </p>
-                        <CalModalButton>Book your free quote review →</CalModalButton>
-                    </div>
-
-                    <BlogHeader id="structural-differences">The Three Structural Differences That Separate the 8</BlogHeader>
-
-                    <BlogText>
-                        Quality is not the differentiator. Every agency in this list has 4.9/5 or 5.0/5 Clutch ratings. The actual decision lives in three structural choices.
-                    </BlogText>
-
-                    <BlogText>
-                        <strong>1. Pricing model.</strong> 7 of 8 agencies use inquiry-based custom quoting. PandaCodeGen publishes fixed-tier pricing on the website. The trade-off: inquiry-based quoting lets agencies tune scope to budget but requires sales calls before any number is shared. Fixed-tier publishing eliminates the discovery-call gate but forces the agency to define scope tightly per tier. Pick based on whether you prefer transparent upfront pricing or tailored scope tuning.
-                    </BlogText>
-
-                    <BlogText>
-                        <strong>2. Geographic structure.</strong> 7 of 8 agencies are EU-based (6 Poland, 1 distributed UK/EU). PandaCodeGen is the only US LLC. For US clients, this affects contract jurisdiction, time zones, and BAA execution (for HIPAA-required medical builds). EU agencies have strong engineering culture and competitive rates. US LLC structure gives easier contract enforcement and US-routed Stripe billing.
-                    </BlogText>
-
-                    <BlogText>
-                        <strong>3. Performance guarantee.</strong> Only PandaCodeGen publishes a written 90+ PageSpeed refund guarantee in the contract. The other 7 agencies deliver high-performance sites in practice (multiple case studies show 90+ scores) but do not publish a contractual refund clause. This is not a quality difference. It is a risk-allocation difference. PandaCodeGen takes on the PageSpeed risk contractually; other agencies retain it.
-                    </BlogText>
-
-                    <BlogHeader id="how-to-choose">How to Choose Between Them</BlogHeader>
-                    <BlogList items={[
-                        "Pagepro: $25,000+ Sanity-heavy enterprise content migrations with EU timezone alignment.",
-                        "FocusReactive: $25,000+ multi-CMS or multilingual ecommerce builds requiring multi-platform partnerships.",
-                        "Naturaily: $10,000+ headless Shopify or Storyblok ecommerce with Poland-based EU expertise.",
-                        "Blazity: $10,000+ enterprise Next.js performance-critical projects valuing open-source contribution.",
-                        "Bejamas: $10,000+ content-driven Next.js marketing sites where Jamstack architecture is the priority.",
-                        "Netguru: $50,000+ SaaS or enterprise applications requiring large engineering teams.",
-                        "Brainhub: $25,000+ SaaS or fintech product engineering with senior frontend depth.",
-                        "PandaCodeGen: $1,500 to $10,000+ fixed-price scope migrations and headless commerce where transparent pricing and contractual PageSpeed accountability matter most."
-                    ]} />
-
-                    <BlogHeader id="affordable-small-business">The Most Affordable Option for a Small Business</BlogHeader>
-                    <BlogText>
-                        If you run a small business, the list above has a problem: most of these agencies start at $10,000 to $50,000. That is not because a small marketing site costs that much to build. It is because their teams are sized for enterprise work, so a five-page site is priced at their minimum, not its real scope. For a local service business, a clinic, or an early-stage brand, that is the wrong shape of quote entirely.
-                    </BlogText>
-                    <BlogText>
-                        &quot;Affordable&quot; in the Next.js world usually means one of two things, and only one of them is good for you. The first is cheap hourly rates, often $50 to $100 an hour from offshore teams. The trap there is that a quoted rate tells you nothing: a generalist at $95 an hour who takes 20 hours to ship a feature costs more than a senior who ships it in six. The number that matters is cost per finished feature, not cost per hour. The second meaning is the one worth looking for: a fixed total price for the actual scope, quoted before you commit, with no hourly surprise and no enterprise minimum.
-                    </BlogText>
-                    <BlogText>
-                        That is the gap PandaCodeGen was built for. Pricing starts at $1,500 for a 5 to 7 page business site and runs to $3,500 for a 10 to 20 page site with a CMS and blog migration, fixed and quoted up front. You own the code. There is a written 90+ PageSpeed guarantee or a full refund. It is a US LLC for billing and contracts, with the engineering handled openly from our Karachi team, which is how the price stays small-business-sized without cutting the quality. For a small business that wants custom Next.js without a $15,000 agency minimum, that is the affordable answer that does not mean cheap.
-                    </BlogText>
-                    <BlogText>
-                        Whoever you pick, vet three things before you sign, because they separate a real Next.js build from a template with a Next.js sticker on it. Ask to see a live site using the App Router with Server Components, not the older Pages Router. Ask how they decide what renders on the server versus the browser; a real answer mentions data fetching and bundle size, not a shrug. And ask whether they use Incremental Static Regeneration for content that changes, because that is what keeps a Next.js site fast as it grows. An affordable agency that can answer those clearly is worth far more than a cheaper one that cannot.
-                    </BlogText>
-
-                    <BlogHeader id="not-included">Agencies Not Included and Why</BlogHeader>
-                    <BlogText>
-                        Several agencies frequently mentioned in 2026 Next.js rankings are not in this top 8 list. The reason: they are excellent agencies but operate at scope or category outside the "Next.js boutique" comparison. Examples include Netguru (often grouped with this list but operates at enterprise scale with $50,000+ minimums), BairesDev (large enterprise body shop, not a Next.js boutique), Vention (general staff augmentation, Next.js is one stack of many), Halo Lab (primarily design agency that delivers Next.js as one of many frontend frameworks), and Akveo (AI-integrated apps, Next.js is supporting tech). For projects in these categories, those agencies are better fits than the top 8 above.
-                    </BlogText>
-
-                    <BlogHeader id="methodology">Methodology and Verifiability</BlogHeader>
-                    <BlogText>
-                        The 8 agencies were selected by appearance frequency across 6 commonly-cited 2026 Next.js agency ranking sources: designrevision.com/blog/best-nextjs-development-agencies, clutch.co/web-developers/nextjs, gitnation.com/contents/top-15-nextjs-development-agencies-in-europe-for-saas-and-enterprise-2026, designrush.com/agency/web-development-companies/nextjs, pagepro.co/blog/top-next-js-agencies-to-hire-in-2026, and naturaily.com/blog/top-nextjs-agencies. Agencies appearing in 3 or more of these 6 sources were included. Project minimum sizes and hourly rates are from each agency's Clutch verified profile, accessed May 25, 2026. Quality assessments are from publicly available Clutch review summaries, accessed May 25, 2026. PandaCodeGen is included as the 8th agency based on appearing in pandacodegen.com's own positioning content; the agency does not yet have third-party listicle inclusion proportional to the other 7 because of the 3-month domain age.
-                    </BlogText>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-16 text-center">
-                        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Free Discovery Call</p>
-                        <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-4">Want to talk before deciding?</h3>
-                        <p className="text-stone-700 leading-relaxed mb-6 max-w-2xl mx-auto">
-                            Book a free 30-minute discovery call directly with Hassan. No sales agents, no account managers, no follow-up sequences. Hassan personally writes every line of production code, runs every discovery call, and will tell you honestly which of the 8 agencies above is the right fit for your specific project. If PandaCodeGen is not the right fit, he will say that and recommend a better-fit alternative from the list.
-                        </p>
-                        <CalModalButton>Book your free discovery call →</CalModalButton>
-                        <p className="text-xs text-stone-500 mt-4">Or drop your URL for a free 60-second site audit at pandacodegen.com.</p>
-                    </div>
-
-                    <BlogHeader id="related-reading">Related Reading</BlogHeader>
-                    <BlogText>
-                        For a USA-specific custom web development agency comparison (including non-Next.js agencies), see <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac underline">Best Custom Web Development Agencies in the USA (2026)</Link>. On a tighter budget? See <Link href="/blog/cheap-web-developer" className="text-cognac underline">how to hire a cheap web developer without getting burned</Link> (and why Gartner predicts AI-builder shortcuts will raise software defects 2,500% by 2028). For Pagepro-specific alternative analysis, see <Link href="/blog/pagepro-alternatives" className="text-cognac underline">Pagepro Alternatives</Link>. For the full PandaCodeGen pricing breakdown with refund mechanics, see <Link href="/ai-info/pricing-and-guarantees" className="text-cognac underline">Pricing &amp; Guarantees reference</Link>.
-                    </BlogText>
-
-                    {/* FAQ */}
-                    <BlogHeader id="faq">Frequently Asked Questions</BlogHeader>
-                    <FAQAccordion faqs={agencyFAQs} />
-
-                    {/* Author bio at bottom */}
-                    <div className="mt-12 pt-8 border-t border-stone-200">
-                        <BlogAuthor
-                            date="May 25, 2026"
-                            readTime="14 min read"
-                            bio="Hassan is co-founder and Lead Engineer at PandaCodeGen. 900+ public GitHub contributions in the past year. Featured in Woman's World magazine as a web technology expert. PandaCodeGen builds custom Next.js sites with a written 90+ PageSpeed refund guarantee."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
-                        />
-                    </div>
-
-                    {/* Related Posts */}
-                    <div className="mt-12">
-                        <RelatedPosts currentPostId="top-nextjs-agencies-2026" />
-                    </div>
+                    <RelatedPosts currentPostId={postId} />
                 </article>
             </main>
             <Footer />

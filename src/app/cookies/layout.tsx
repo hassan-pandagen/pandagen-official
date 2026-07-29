@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'PandaCodeGen LLC cookie policy. Learn about the cookies we use, how to manage preferences, and protect your privacy while browsing our website.',
+  description: 'How PandaCodeGen uses necessary storage and separately controls optional analytics, marketing, calendar, and chat services.',
   robots: {
     index: true,
     follow: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Cookie Policy | PandaCodeGen',
-    description: 'PandaCodeGen LLC cookie policy. Learn about the cookies we use, how to manage preferences, and protect your privacy while browsing our website.',
+    description: 'How PandaCodeGen uses necessary storage and separately controls optional analytics, marketing, calendar, and chat services.',
     url: 'https://www.pandacodegen.com/cookies',
     siteName: 'PandaCodeGen',
     type: 'website',

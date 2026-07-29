@@ -2,28 +2,40 @@
 
 import { useEffect } from 'react';
 import { trackGAEvent } from '@/components/GoogleAnalytics';
+import { useConsent } from '@/components/consent/ConsentProvider';
+
+const configuredTawkEmbedUrl = (() => {
+  const candidate = process.env.NEXT_PUBLIC_TAWK_EMBED_URL?.trim();
+  if (!candidate) return null;
+  try {
+    const url = new URL(candidate);
+    return url.protocol === 'https:' && url.hostname === 'embed.tawk.to' ? url.toString() : null;
+  } catch {
+    return null;
+  }
+})();
 
 // ─── Intent-Tiered Opener System ─────────────────────────────────────────────
 // Refactored June 2026 from a 40-entry per-page map to a 3-tier decision-stage
-// model. At ~70 clicks/mo the lever is founder-voice consistency matched to where
-// the buyer is in their decision, NOT per-page coverage breadth.
+// model. The aim is consistent, scope-first help matched to the visitor's
+// decision stage, without inventing prices, evidence, or delivery promises.
 //
 //   TIER 1 DECISION      → comparing us NOW. Scope-help + price anchor. (hottest)
 //   TIER 2 PROBLEM-AWARE → knows the pain, shopping the fix. Audit offer is native.
 //   TIER 3 LEARNING      → researching, not buying. Question-first, NO pitch.
 //
 // A referral overlay (see getReferralPrefix) prepends a warm line for AI-referred
-// visitors (ChatGPT/Claude/Perplexity) on ANY tier — they convert 6-10x.
+// visitors (ChatGPT/Claude/Perplexity) on any tier.
 //
-// The "greeting" is a Suggested Opener the agent (Hassan) sees in the Tawk
+// The "greeting" is a suggested opener the assigned operator sees in the Tawk
 // dashboard when a chat opens. It is NOT a proactive popup.
 
 type Tier = 'DECISION' | 'PROBLEM_AWARE' | 'LEARNING';
 
 // ── TIER 1: DECISION ─────────────────────────────────────────────────────────
 // Buyer is comparing us against a shortlist right now. Lead with scope-help and
-// the real price anchor (Growth $3,500). Never dodge price, never just quote —
-// help them place themselves. These pages convert; the opener earns the reply.
+// the inputs needed for a responsible estimate. No public rate card or outcome
+// promise is assumed here.
 const DECISION_PATTERNS: Array<string | RegExp> = [
   '/pricing',
   '/contact',
@@ -49,39 +61,39 @@ const DECISION_PATTERNS: Array<string | RegExp> = [
 // DECISION_DEFAULT.
 const DECISION_OPENERS: Record<string, { intent: string; greeting: string }> = {
   '/pricing': {
-    intent: 'Pricing page (hottest buyer) — nurture first, NO number until they describe scope',
-    greeting: 'Comparing quotes? Ask their platform + rough page count first, give a REAL fixed number once they describe it. Do not lead with $3,500 (sticker shock). Value first, price in conversation.',
+    intent: 'Pricing page (hottest buyer): nurture first, NO number until they describe scope',
+    greeting: 'Comparing quotes? Ask for the platform, URL and content scope, integrations, timeline, and acceptance needs before discussing a written estimate.',
   },
   '/contact': {
     intent: 'Contact page (ready now)',
-    greeting: 'Faster to just chat here. Ask what they want built + their platform, reply personally. Do not lead with price.',
+    greeting: 'Ask what they need, their current platform, timeline, and key constraints. Do not promise a price or response time before scope is understood.',
   },
   '/work': {
-    intent: 'Case studies (evaluating proof)',
-    greeting: 'That rebuild hit 98 PageSpeed. Want me to estimate what is realistic for your site? Tell me your platform and scale. — Hassan',
+    intent: 'Evidence standard (evaluating proof)',
+    greeting: 'Ask what evidence or acceptance criteria matter for their project, then gather the platform, scale, and main constraint.',
   },
   '/blog/build-vs-buy-software-2026-cost-comparison': {
     intent: 'Build vs buy decision',
-    greeting: 'Working the build-vs-buy math? Ask the tool + monthly cost, give the honest all-in number for their case. Value first, no cold price.',
+    greeting: 'Ask about the current tool, comparable costs, constraints, and decision horizon. Explain assumptions instead of giving a universal number.',
   },
   '/blog/cheap-web-developer': {
     intent: 'Budget developer search',
-    greeting: 'Comparing on price? Tell me your platform and page count and I will give you a real fixed number, no agency markup. — Hassan',
+    greeting: 'Ask for platform, content volume, integrations, and acceptance needs. Explain that a written estimate follows scope review.',
   },
   '/blog/pagepro-alternatives': {
     intent: 'Pagepro alternative search',
-    greeting: 'Comparing us against Pagepro? Happy to walk you through where we differ, same scope. What are you weighing? — Hassan',
+    greeting: 'Ask which selection criteria and scope they are comparing. Avoid unsupported claims about another provider.',
   },
 };
 
 const DECISION_DEFAULT: { intent: string; greeting: string } = {
-  intent: 'Decision-stage (comparing costs) — value first, fixed number once they describe scope',
-  greeting: 'Comparing quotes? Ask their platform + rough page count, then give a REAL fixed number, not a range. Value first, do not throw a price cold.',
+  intent: 'Decision-stage (comparing costs): value first, fixed number once they describe scope',
+  greeting: 'Comparing quotes? Ask for platform, content volume, integrations, timeline, and acceptance needs before discussing an estimate.',
 };
 
 // ── TIER 2: PROBLEM-AWARE ────────────────────────────────────────────────────
 // Visitor knows the pain (slow site, platform lock-in) and is shopping the fix.
-// This is the ONE tier where the audit/URL offer is native — they came in with
+// This is the ONE tier where the audit/URL offer is native because they came in with
 // a problem. Diagnostic empathy: name the platform issue, offer to check theirs.
 // Mirrors the 45s silo dashboard popups they already saw.
 const PROBLEM_AWARE_PATTERNS: Array<string | RegExp> = [
@@ -108,19 +120,19 @@ const PROBLEM_AWARE_PATTERNS: Array<string | RegExp> = [
 ];
 
 // Per-path overrides for PROBLEM-AWARE pages. The audit offer is native here, so
-// the note tells Hassan to lead diagnostic. Unmatched → PROBLEM_AWARE_DEFAULT.
+// the note tells the operator to lead with diagnosis. Unmatched → PROBLEM_AWARE_DEFAULT.
 const PROBLEM_AWARE_OPENERS: Record<string, { intent: string; greeting: string }> = {
   '/services/gohighlevel': {
     intent: 'GHL service (platform pain)',
-    greeting: 'GHL speed pain. Lead diagnostic: offer to pull their mobile PageSpeed and show the ad-cost impact. Audit offer is native here.',
+    greeting: 'Offer a point-in-time diagnostic and explain the difference between measured performance and possible business impact. Do not imply causation.',
   },
   '/services/ecommerce': {
     intent: 'E-commerce service (platform pain)',
-    greeting: 'Store rebuild. Offer to benchmark their speed vs top competitor. Audit/URL offer is native here.',
+    greeting: 'Ask what measured constraint is driving the store decision. Offer a point-in-time diagnostic with test conditions and limitations.',
   },
   '/blog/gohighlevel-website-speed': {
     intent: 'GHL speed (top converter blog)',
-    greeting: 'This is the winning converter page. Lead with the receipt (28→96 PageSpeed) then offer to check theirs. Audit offer native.',
+    greeting: 'Lead with diagnosis: offer to check their current mobile result, then explain the options and tradeoffs. Audit offer is native here.',
   },
 };
 
@@ -131,22 +143,14 @@ const PROBLEM_AWARE_DEFAULT: { intent: string; greeting: string } = {
 
 // ── TIER 3: LEARNING ─────────────────────────────────────────────────────────
 // Researching, not buying. Educational blogs, thought pieces, the SaaS pillar,
-// /ai-info, /about, /manifesto, /partners. The reader is learning — an audit
+// /ai-info, /about, /manifesto, /partners. The reader is learning, so an audit
 // pitch is premature and pushy. Be the expert in the room: question-first, tie
 // to the article, NO "drop your URL". This is the DEFAULT for anything Tier 1/2
 // did not catch, so it must be safe and soft.
 const LEARNING_OPENERS: Record<string, { intent: string; greeting: string }> = {
   '/partners': {
     intent: 'Agency partner (peer, NOT a B2C audit pitch)',
-    greeting: 'Agency-to-agency. They want white-label CAPACITY, not an audit. Ask their overflow pipeline. NEVER pitch "drop your URL" — it reads as "you don\'t get who I am".',
-  },
-  '/about/hassan': {
-    intent: 'Founder page (trust-checking)',
-    greeting: 'They are checking the founder. Be personal, zero pressure. "This is my actual inbox, ask me anything before reaching out." Authenticity is the lever.',
-  },
-  '/about/imran': {
-    intent: 'Co-founder page (trust-checking)',
-    greeting: 'Imran is architecture lead. Personal, no pitch. Offer to loop him in if their question is technical.',
+    greeting: 'Agency-to-agency. Ask about the delivery model, pipeline, confidentiality, client contact, acceptance, and capacity assumptions before proposing a pilot.',
   },
   '/manifesto': {
     intent: 'Manifesto (values-aligned reader)',
@@ -160,7 +164,7 @@ const LEARNING_OPENERS: Record<string, { intent: string; greeting: string }> = {
 
 const LEARNING_DEFAULT: { intent: string; greeting: string } = {
   intent: 'Learning / researching (not buying yet)',
-  greeting: 'They are researching, not shopping. Be the expert in the room: ask a question tied to the article, offer to clarify. Do NOT pitch an audit or "drop your URL" — premature here. Helpfulness earns the next step.',
+  greeting: 'They are researching, not shopping. Be the expert in the room: ask a question tied to the article, offer to clarify. Do NOT pitch an audit or "drop your URL"; that is premature here. Helpfulness earns the next step.',
 };
 
 function matchesAny(pathname: string, patterns: Array<string | RegExp>): boolean {
@@ -191,24 +195,21 @@ function getPageGreeting(pathname: string): { intent: string; greeting: string }
     return PROBLEM_AWARE_OPENERS[pathname] ?? PROBLEM_AWARE_DEFAULT;
   }
 
-  // Tier 3 LEARNING — the default for anything Tier 1/2 did not catch.
+  // Tier 3 LEARNING: the default for anything Tier 1/2 did not catch.
   // Specific overrides (partners, about, manifesto, SaaS pillar) win; else the
   // soft question-first default. Homepage uses its own warm line below.
   if (pathname === '/' || pathname === '') {
     return {
       intent: 'Homepage (mixed intent)',
-      greeting: 'Mixed intent. Light router: ask what brought them in — slow site, full rebuild, or partnering. Let their answer segment them. No pitch up front.',
+      greeting: 'Mixed intent. Light router: ask what brought them in: slow site, full rebuild, or partnering. Let their answer segment them. No pitch up front.',
     };
   }
   return LEARNING_OPENERS[pathname] ?? LEARNING_DEFAULT;
 }
 
 // ─── AI-Referral Overlay ──────────────────────────────────────────────────────
-// Visitors arriving from ChatGPT / Claude / Perplexity / Gemini / Copilot convert
-// 6-10x and arrive pre-vouched (they've already done their homework). When detected,
-// we PREPEND a warm acknowledgment to whatever tier opener applies and bump the
-// intent label so Hassan treats them as top priority. Uses document.referrer —
-// the same signal getTrafficSource() already reads.
+// When an AI-assistant referrer is visible, prepend a relevant acknowledgment
+// to the opener. Referrer-less sessions remain unclassified.
 const AI_REFERRERS: Array<{ host: string; name: string }> = [
   { host: 'chatgpt.com',     name: 'ChatGPT' },
   { host: 'chat.openai.com', name: 'ChatGPT' },
@@ -226,7 +227,7 @@ function getAIReferral(): { name: string } | null {
       if (ref.includes(host)) return { name };
     }
   } catch {
-    /* referrer unavailable — ignore */
+    /* Referrer unavailable; ignore. */
   }
   return null;
 }
@@ -238,13 +239,13 @@ function applyReferralOverlay(
   const ai = getAIReferral();
   if (!ai) return base;
   return {
-    intent: `⭐ AI-referred via ${ai.name} (6-10x converter — TOP PRIORITY) · ${base.intent}`,
-    greeting: `They found us through ${ai.name} — already did their homework, route to Hassan FAST. Acknowledge it warmly ("saw you came via ${ai.name}"), then: ${base.greeting}`,
+    intent: `AI-referred via ${ai.name} · ${base.intent}`,
+    greeting: `Referral source indicates ${ai.name}. Do not imply that the service endorsed PandaCodeGen; simply continue with the visitor's question. ${base.greeting}`,
   };
 }
 
 // Short "v-Source" label for the Tawk visitor LIST (e.g. v-Claude, v-Google, v-Referral),
-// paired with the landing page — gives at-a-glance triage in the dashboard, like Panda Patches.
+// paired with the landing page to give at-a-glance triage in the dashboard, like Panda Patches.
 function getVisitorLabel(): string {
   const ai = getAIReferral();
   if (ai) return `v-${ai.name}`;
@@ -329,60 +330,110 @@ function getDeviceInfo() {
   };
 }
 
-async function getGeoLocation(): Promise<{ country: string; city: string; region: string }> {
-  // Use sessionStorage to avoid hammering the API on every page navigation
-  const cached = sessionStorage.getItem('visitorGeo');
-  if (cached) return JSON.parse(cached);
-
-  try {
-    const res = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
-    if (!res.ok) throw new Error('geo fetch failed');
-    const data = await res.json();
-    const geo = {
-      country: data.country_name || 'Unknown',
-      city:    data.city         || 'Unknown',
-      region:  data.region       || 'Unknown',
-    };
-    sessionStorage.setItem('visitorGeo', JSON.stringify(geo));
-    return geo;
-  } catch {
-    return { country: 'Unknown', city: 'Unknown', region: 'Unknown' };
-  }
-}
-
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function TawkToChat() {
+  const { preferences, openPreferences } = useConsent();
+  const allowed = preferences?.functional === true;
+
   useEffect(() => {
+    let cancelled = false;
+    let stopVisibilitySync = () => {};
+    let syncTawkVisibility = () => {};
+
+    if (!configuredTawkEmbedUrl) {
+      (window as any).__openChat = () => {
+        window.location.assign('/contact#contact-quote-form');
+      };
+      return () => {
+        delete (window as any).__openChat;
+      };
+    }
+
+    if (!allowed) {
+      (window as any).__openChat = () => {
+        window.__tawkOpenPending = true;
+        openPreferences('chat');
+      };
+      return () => {
+        delete (window as any).__openChat;
+      };
+    }
+
     // Capture traffic source on first visit (persists across sessions)
     if (!localStorage.getItem('trafficSource')) {
       localStorage.setItem('trafficSource', JSON.stringify({
         ...getTrafficSource(),
         landingPage: window.location.pathname,
         timestamp:   new Date().toISOString(),
-        fullUrl:     window.location.href,
       }));
     }
 
-    const loadTawkTo = async () => {
+    const loadTawkTo = () => {
       const sourceData = JSON.parse(localStorage.getItem('trafficSource') || '{}');
       const deviceInfo = getDeviceInfo();
-      const geoData    = await getGeoLocation();
+      if (cancelled) return;
 
       // ⚠️ CRITICAL: Set Tawk_API.onLoad BEFORE injecting the script,
       // otherwise the callback fires before we can attach it.
       const tawkApi = (window as any).Tawk_API || {};
       (window as any).Tawk_API = tawkApi;
 
+      const startVisibilitySync = () => {
+        let animationFrame = 0;
+
+        syncTawkVisibility = () => {
+          const blockingOverlay = Boolean(
+            document.querySelector('[role="dialog"][aria-modal="true"]'),
+          );
+          const compactViewport = window.matchMedia('(max-width: 767px)').matches;
+          const maximized = typeof tawkApi.isChatMaximized === 'function'
+            && tawkApi.isChatMaximized();
+
+          if (blockingOverlay) {
+            if (maximized && typeof tawkApi.minimize === 'function') tawkApi.minimize();
+            if (typeof tawkApi.hideWidget === 'function') tawkApi.hideWidget();
+            return;
+          }
+
+          // On small screens the floating launcher stays hidden so it cannot
+          // cover navigation, forms, or content. Explicit chat buttons still
+          // reveal and maximize the panel.
+          if (compactViewport && !maximized) {
+            if (typeof tawkApi.hideWidget === 'function') tawkApi.hideWidget();
+          } else if (typeof tawkApi.showWidget === 'function') {
+            tawkApi.showWidget();
+          }
+        };
+
+        const scheduleSync = () => {
+          window.cancelAnimationFrame(animationFrame);
+          animationFrame = window.requestAnimationFrame(syncTawkVisibility);
+        };
+        const observer = new MutationObserver(scheduleSync);
+        observer.observe(document.body, { childList: true, subtree: true });
+        window.addEventListener('resize', scheduleSync, { passive: true });
+        syncTawkVisibility();
+
+        return () => {
+          window.cancelAnimationFrame(animationFrame);
+          observer.disconnect();
+          window.removeEventListener('resize', scheduleSync);
+        };
+      };
+
       const pageContext = applyReferralOverlay(getPageGreeting(window.location.pathname));
 
-      // At-a-glance label in the Tawk visitor list: source + landing page (e.g. "v-Claude | /ai-info")
+      // At-a-glance label in the Tawk visitor list: source + landing page.
       tawkApi.visitor = {
         ...(tawkApi.visitor || {}),
         name: `${getVisitorLabel()} | ${window.location.pathname}`,
       };
 
       tawkApi.onLoad = function () {
+        stopVisibilitySync();
+        stopVisibilitySync = startVisibilitySync();
+
         tawkApi.setAttributes(
           {
             // ── Traffic source ──────────────────────────────
@@ -392,11 +443,6 @@ export default function TawkToChat() {
             'Landing Page': sourceData.landingPage || '/',
             'First Visit':  sourceData.timestamp  || 'Unknown',
 
-            // ── Geographic location (via IP) ─────────────────
-            'Country': geoData.country,
-            'City':    geoData.city,
-            'Region':  geoData.region,
-
             // ── Device & browser ─────────────────────────────
             'Device':  deviceInfo.device,
             'Browser': deviceInfo.browser,
@@ -405,7 +451,7 @@ export default function TawkToChat() {
 
             // ── Current session ──────────────────────────────
             'Current Page': window.location.pathname,
-            'Full URL':     window.location.href,
+            'Page Path':    `${window.location.pathname}${window.location.search ? '?query-present' : ''}`,
 
             // ── Page-aware opener (suggested reply for the agent) ──
             'Visitor Intent':     pageContext.intent,
@@ -424,18 +470,19 @@ export default function TawkToChat() {
         // If an "Ask our experts" button requested the chat before it finished loading, open it now.
         if ((window as any).__tawkOpenPending) {
           (window as any).__tawkOpenPending = false;
+          if (typeof tawkApi.showWidget === 'function') tawkApi.showWidget();
           if (typeof tawkApi.maximize === 'function') tawkApi.maximize();
         }
 
-        // No auto-popup. Passive chat only. Our sticky bar handles mobile engagement.
+        // No auto-popup. On mobile, only an explicit first-party chat button
+        // reveals the vendor panel.
       };
 
       // ─── GA4 chat tracking ──────────────────────────────────────────────
       // Builds the shared attribution payload for every chat event. Answers the
       // core question: which SOURCE produced this conversation, and was it AI?
-      // 2026 hybrid approach: GA4's native "AI Assistant" channel under-counts
-      // (35-70% of AI sessions arrive referrer-less → land in Direct), so we
-      // capture our own ai_referral flag at the event level as the reliable signal.
+      // Capture the visible referrer classification at event level. Referrer-less
+      // sessions remain Direct and are never reclassified by assumption.
       const buildChatPayload = () => {
         const ai = getAIReferral();
         return {
@@ -451,11 +498,16 @@ export default function TawkToChat() {
 
       // onChatMaximized: visitor OPENED the panel (soft intent signal).
       tawkApi.onChatMaximized = function () {
+        if (typeof tawkApi.showWidget === 'function') tawkApi.showWidget();
         trackGAEvent('chat_open', buildChatPayload());
       };
 
-      // onChatStarted: visitor actually SENT a message (real lead signal —
-      // mark this as a Key Event in GA4 Admin). This is the conversion to watch.
+      tawkApi.onChatMinimized = function () {
+        syncTawkVisibility();
+      };
+
+      // onChatStarted: visitor actually SENT a message, which is the real lead signal.
+      // Mark this as a Key Event in GA4 Admin. This is the conversion to watch.
       tawkApi.onChatStarted = function () {
         trackGAEvent('chat_start', buildChatPayload());
       };
@@ -464,7 +516,7 @@ export default function TawkToChat() {
       const s1 = document.createElement('script');
       const s0 = document.getElementsByTagName('script')[0];
       s1.async = true;
-      s1.src = 'https://embed.tawk.to/69861ee219d9521c3a42fa82/1jgpuh9j5';
+      s1.src = configuredTawkEmbedUrl;
       s0.parentNode?.insertBefore(s1, s0);
     };
 
@@ -480,6 +532,7 @@ export default function TawkToChat() {
     (window as any).__openChat = () => {
       const api = (window as any).Tawk_API;
       if (api && typeof api.maximize === 'function') {
+        if (typeof api.showWidget === 'function') api.showWidget();
         api.maximize();
       } else {
         (window as any).__tawkOpenPending = true;
@@ -504,12 +557,17 @@ export default function TawkToChat() {
     };
     window.addEventListener('popstate', updatePage);
 
+    if (window.__tawkOpenPending) load();
+
     return () => {
+      cancelled = true;
+      stopVisibilitySync();
       clearTimeout(timer);
       window.removeEventListener('scroll', load);
       window.removeEventListener('popstate', updatePage);
+      delete (window as any).__openChat;
     };
-  }, []);
+  }, [allowed, openPreferences]);
 
   return null;
 }

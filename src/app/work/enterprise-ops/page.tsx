@@ -1,3 +1,4 @@
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, BarChart3, Lock, Users, Clock, Shield, Database, Zap, AlertTriangle, TrendingUp, FileText, PieChart, Plug, Receipt, LineChart } from "lucide-react";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
         description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/enterprise-ops",
-        images: [{ url: "https://www.pandacodegen.com/work/panda-operations.png", width: 1200, height: 630 }],
+        images: [ogImageForPath("/work/enterprise-ops")],
     },
     twitter: {
         card: "summary_large_image",
@@ -55,7 +56,7 @@ const caseStudySchema = {
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#article",
             "headline": "Enterprise Operations Platform: From Spreadsheets to Real-Time Business Intelligence",
             "description": "How we replaced spreadsheets, WhatsApp updates, and 3 separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
-            "image": "https://www.pandacodegen.com/work/panda-operations.png",
+            "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2025-11-01T00:00:00Z",
             "dateModified": "2026-06-26T00:00:00Z",
             "author": {
@@ -339,7 +340,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
                                     <div className="text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">{m.label}</div>
-                                    <div className="text-xs text-stone-400 leading-snug">{m.sub}</div>
+                                    <div className="text-xs text-stone-600 leading-snug">{m.sub}</div>
                                 </div>
                             ))}
                         </div>
@@ -395,7 +396,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         {/* Replaced tools table */}
                         <div className="bg-white border border-stone-300 rounded-2xl overflow-hidden shadow-xs">
-                            <div className="grid grid-cols-[2fr_1fr_2fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-400 uppercase tracking-widest">
+                            <div className="grid grid-cols-[2fr_1fr_2fr] bg-stone-50 border-b border-stone-200 px-5 py-3 text-xs font-black text-stone-600 uppercase tracking-widest">
                                 <div>Tool Being Replaced</div>
                                 <div className="text-center">Cost</div>
                                 <div>Problem</div>
@@ -425,7 +426,7 @@ export default function EnterpriseOpsCaseStudy() {
                             {orderStages.map((s, i) => (
                                 <div key={s.stage} className="flex items-start gap-4">
                                     <div className="flex items-center gap-3 shrink-0">
-                                        <div className="w-7 h-7 rounded-full bg-stone-100 text-stone-400 text-xs font-black flex items-center justify-center">{i + 1}</div>
+                                        <div className="w-7 h-7 rounded-full bg-stone-100 text-stone-600 text-xs font-black flex items-center justify-center">{i + 1}</div>
                                         {i < orderStages.length - 1 && (
                                             <div className="hidden" />
                                         )}
@@ -440,7 +441,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         {/* Branch / exception statuses — the other 4 of 13 */}
                         <div className="mb-8">
-                            <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3">Plus branch statuses (13 total)</p>
+                            <p className="text-xs font-bold text-stone-600 uppercase tracking-widest mb-3">Plus branch statuses (13 total)</p>
                             <div className="flex flex-wrap gap-2">
                                 {exceptionStates.map((s) => (
                                     <span key={s.stage} className={`px-3 py-1.5 rounded-lg text-xs font-black tracking-wider border ${s.color}`}>{s.stage}</span>
@@ -512,7 +513,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 <div key={d.label} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">
                                     <div className="flex items-baseline gap-2 mb-2">
                                         <span className="text-xl font-black text-cognac">{d.value}</span>
-                                        <span className="text-xs font-bold text-stone-400 uppercase tracking-widest">{d.label}</span>
+                                        <span className="text-xs font-bold text-stone-600 uppercase tracking-widest">{d.label}</span>
                                     </div>
                                     <p className="text-xs text-stone-500 leading-relaxed">{d.desc}</p>
                                 </div>
@@ -610,7 +611,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise level. Every layer.</h2>
                         <p className="text-stone-600 mb-8">
-                            100% TypeScript. Offline-first. APM monitoring. Rated 9.4/10 code quality and 9.3/10 architecture by independent senior developer review.
+                            100% TypeScript. Offline-first. APM monitoring. An internal senior-developer code review scored it 9.4/10 for code quality and 9.3/10 for architecture; that review was commissioned by us and is not an independent third-party audit or certification.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -665,7 +666,7 @@ export default function EnterpriseOpsCaseStudy() {
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>
-                                    <div className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-1">{item.label}</div>
+                                    <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-1">{item.label}</div>
                                     <div className="text-2xl font-black text-charcoal mb-2">{item.value}</div>
                                     <p className="text-sm text-stone-500 leading-relaxed">{item.detail}</p>
                                 </div>
@@ -729,7 +730,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 <div key={r.category} className="p-4 md:p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center min-w-0">
                                     <div className="text-2xl md:text-3xl font-black text-charcoal mb-1">{r.score}</div>
                                     <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-2">{r.category}</div>
-                                    <div className="text-xs text-stone-400 leading-snug">{r.notes}</div>
+                                    <div className="text-xs text-stone-600 leading-snug">{r.notes}</div>
                                 </div>
                             ))}
                         </div>

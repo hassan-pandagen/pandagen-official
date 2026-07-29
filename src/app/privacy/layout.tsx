@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'PandaCodeGen LLC privacy policy. Learn how we collect, use, and protect your personal information when you use our web development services.',
+  description: 'How PandaCodeGen handles personal information, inquiries, optional services, consent choices, retention, and privacy requests.',
   robots: {
     index: true,
     follow: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Privacy Policy | PandaCodeGen',
-    description: 'PandaCodeGen LLC privacy policy. Learn how we collect, use, and protect your personal information when you use our web development services.',
+    description: 'How PandaCodeGen handles personal information, inquiries, optional services, consent choices, retention, and privacy requests.',
     url: 'https://www.pandacodegen.com/privacy',
     siteName: 'PandaCodeGen',
     type: 'website',

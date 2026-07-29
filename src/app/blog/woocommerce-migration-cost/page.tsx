@@ -1,494 +1,389 @@
-import { ArrowLeft, ArrowRight, ShoppingCart } from "lucide-react";
+import { ogImageForPath } from "@/lib/seo/og";
+import { ArrowLeft, ArrowRight, CreditCard, Database, PackageSearch, Route } from "lucide-react";
 import Link from "next/link";
-import lazyLoad from "next/dynamic";
+import dynamicImport from "next/dynamic";
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import type { Metadata } from "next";
 
-const postFAQs = blogPosts.find(p => p.id === "woocommerce-migration-cost")?.faqs ?? [];
+const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
+const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
 
-const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
-const FeatureVisual = lazyLoad(() => import("@/components/blog/CostStackAnimation"));
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
+const postId = "woocommerce-migration-cost";
+const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
+const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
+const title = "WooCommerce Migration Cost in 2026: Data, Scope and Tiers";
+const description =
+    "Price a WooCommerce migration from products, orders, customers, payments, subscriptions, extensions, content, SEO, acceptance, cutover and operating responsibility.";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "WooCommerce Migration Cost 2026: $1,500 to $10K+ (Real Pricing)" },
-    description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and red flags in a $25K quote.",
-    alternates: {
-        canonical: "/blog/woocommerce-migration-cost",
-    },
+    title,
+    description,
+    alternates: { canonical: `/blog/${postId}` },
     keywords: [
         "WooCommerce migration cost",
-        "cost to migrate off WooCommerce",
-        "WooCommerce to custom website cost",
-        "WooCommerce to Next.js migration cost",
-        "headless WooCommerce migration cost",
-        "WooCommerce replatforming cost",
-        "is it worth migrating away from WooCommerce",
-        "WooCommerce migration without losing SEO",
-        "how long does a WooCommerce migration take"
+        "migrate WooCommerce store",
+        "WooCommerce to custom website",
+        "WooCommerce data migration",
+        "WooCommerce to Next.js cost",
     ],
-    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "WooCommerce Migration Cost in 2026: $1,500 to $10K+ (Real Pricing)",
-        description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
+        title,
+        description,
         type: "article",
-        publishedTime: "2026-06-30",
-        modifiedTime: "2026-07-08",
+        publishedTime: "2026-05-08",
+        modifiedTime: "2026-07-24",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/woocommerce-migration-cost",
-        images: [{ url: "https://www.pandacodegen.com/og-image.jpg", width: 1200, height: 630 }],
+        url: canonicalUrl,
+        images: [ogImageForPath("/blog/woocommerce-migration-cost")],
     },
-    twitter: {
-        card: "summary_large_image",
-        title: "WooCommerce Migration Cost in 2026: $1,500 to $10K+ (Real Pricing)",
-        description: "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
-    },
+    twitter: { card: "summary_large_image", title, description },
 };
+
+const sources = [
+    { name: "WooCommerce product CSV", url: "https://woocommerce.com/document/product-csv-importer-exporter/" },
+    { name: "WooCommerce product migration", url: "https://woocommerce.com/document/migrating-products-between-sites/" },
+    { name: "WooCommerce order and customer export", url: "https://woocommerce.com/document/ordercustomer-csv-export/" },
+    { name: "WooCommerce REST API", url: "https://developer.woocommerce.com/docs/apis/rest-api/" },
+    { name: "WooCommerce webhooks", url: "https://woocommerce.com/document/webhooks/" },
+    { name: "WooCommerce HPOS", url: "https://developer.woocommerce.com/docs/features/high-performance-order-storage" },
+    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+];
 
 const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-migration-cost#article",
-            "headline": "WooCommerce Migration Cost in 2026: $1,500 to $10K+ (Real Pricing)",
-            "description": "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
-            "image": "https://www.pandacodegen.com/og-image.jpg",
-            "datePublished": "2026-06-30T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "author": {
+            "@id": `${canonicalUrl}#article`,
+            headline: title,
+            description,
+            datePublished: "2026-05-08",
+            dateModified: "2026-07-24",
+            author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
-                "name": "Hassan Jamal",
-                "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about/hassan",
-                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
-                "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
+                name: "Hassan Jamal",
+                jobTitle: "Co-founder and Lead Engineer",
+                url: "https://www.pandacodegen.com/about",
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/woocommerce-migration-cost" },
-            "articleSection": "WooCommerce",
-            "keywords": ["WooCommerce migration cost", "cost to migrate off WooCommerce", "WooCommerce to Next.js migration cost", "headless WooCommerce migration cost", "WooCommerce migration without losing SEO"],
-            "wordCount": 1750,
-            "timeRequired": "PT8M",
-            "inLanguage": "en-US",
-            "about": [
-                { "@type": "Thing", "name": "WooCommerce" },
-                { "@type": "Thing", "name": "Website Migration" },
-                { "@type": "Thing", "name": "E-Commerce" },
-                { "@type": "Thing", "name": "Next.js" }
-            ],
-            "speakable": {
-                "@type": "SpeakableSpecification",
-                "cssSelector": ["h1", "h2", "[data-speakable='true']"]
-            }
+            publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+            mainEntityOfPage: { "@id": canonicalUrl },
+            articleSection: "WooCommerce migration",
+            inLanguage: "en-US",
+            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-migration-cost#faq",
-            "mainEntity": postFAQs.map(faq => ({
+            "@id": `${canonicalUrl}#faq`,
+            mainEntity: postFAQs.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
         },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-migration-cost#breadcrumb",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
-                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "WooCommerce Migration Cost", "item": "https://www.pandacodegen.com/blog/woocommerce-migration-cost" }
-            ]
-        },
-        {
-            "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/woocommerce-migration-cost#webpage",
-            "url": "https://www.pandacodegen.com/blog/woocommerce-migration-cost",
-            "name": "WooCommerce Migration Cost in 2026: What You'll Actually Pay",
-            "description": "What it really costs to migrate off WooCommerce to custom Next.js. Fixed-price tiers from $1,500, what drives the number up, and the red flags in a $25K agency quote.",
-            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "datePublished": "2026-06-30T00:00:00-05:00",
-            "dateModified": "2026-07-08T00:00:00-05:00",
-            "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
-            "description": "PandaCodeGen builds custom Next.js websites that replace slow WordPress and WooCommerce stores. Sites load under 1 second and cost about $0 a month to host.",
-            "areaServed": "Worldwide",
-            "sameAs": [
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://twitter.com/pandacodegen"
-            ]
-        }
-    ]
+    ],
 };
 
 export default function WooCommerceMigrationCostPage() {
     return (
-        <main className="bg-paper min-h-screen overflow-x-hidden">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-            />
+        <>
             <Header />
-
-            <section className="relative pt-24 md:pt-40 pb-10 px-6">
-                <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "WooCommerce Migration Cost" }
-                    ]} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
+            <main className="min-h-screen bg-white pb-24 pt-28">
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+                <article className="mx-auto max-w-4xl px-5 sm:px-8">
+                    <Breadcrumb
+                        items={[
+                            { label: "Home", href: "/" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "WooCommerce migration cost", href: `/blog/${postId}` },
+                        ]}
+                    />
+                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+                        <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <div className="mb-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-semibold mb-4">
-                            <ShoppingCart className="w-3 h-3" /> WooCommerce · Pricing
-                        </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
-                            WooCommerce Migration Cost in 2026:{" "}
-                            <span className="font-serif italic text-cognac">What You&apos;ll Actually Pay</span>
+                    <header className="mb-10 border-b border-stone-200 pb-8">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WooCommerce migration</p>
+                        <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
+                            WooCommerce Migration Cost <span className="italic text-cognac">Price the Store, Not Pages</span>
                         </h1>
-                        <p className="text-lg text-stone-500 leading-relaxed mb-6">
-                            Migrating off WooCommerce runs $1,500 for a small store, $3,500 for a mid-size store with a CMS and content pages, and $5,000 to $10,000 for full headless e-commerce. Agencies quote $15,000 to $25,000+ for the same work. Here is what each price actually buys.
+                        <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
+                            Moving a store is not just moving a website. Your products, customers, past orders,
+                            payments and extensions all have to line up afterwards, and the shop has to keep trading
+                            while it happens. That is what sets the price, far more than how many pages you have.
                         </p>
-                        <BlogAuthor
-                            date="Jun 30, 2026"
-                            readTime="8 min read"
-                            bio="Every second of slow load time costs you customers and Google rankings. Hassan has helped businesses double their conversions with custom coded websites that load under 1 second and rank on Google's first page."
-                            linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current WooCommerce and Google documentation on July 24, 2026.</p>
+                    </header>
+
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 8, 2026" readTime="17 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <BlogList
+                            items={[
+                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "If you run subscriptions, handle regulated data, or have a lot of systems talking to each other, expect a custom scope rather than a tier.",
+                                "WooCommerce exports products by CSV and has a REST API. Everything else may need an extension's own export, an API, or direct database work.",
+                                "The signed scope is where the final price sits, along with what counts as the data arriving correctly, how the switchover happens, who owns what afterwards, and what we do if something is wrong.",
+                            ]}
                         />
+                    </section>
+
+                    <div className="my-8 grid gap-4 sm:grid-cols-4">
+                        {[
+                            { icon: PackageSearch, title: "Catalog", body: "Everything you sell, with its options, photos, prices and stock." },
+                            { icon: Database, title: "Records", body: "Who bought from you, what they ordered, refunds and any subscriptions." },
+                            { icon: CreditCard, title: "Payments", body: "Your provider accounts, the tokens and webhooks, and making the numbers match." },
+                            { icon: Route, title: "Storefront", body: "The URLs, the content, how people buy, and the switchover itself." },
+                        ].map(({ icon: Icon, title: cardTitle, body }) => (
+                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+                                <Icon className="mb-3 h-5 w-5 text-cognac" />
+                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
+                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className="mb-12">
-                        <FeatureVisual />
+                    <BlogHeader id="tiers">PandaCodeGen migration tiers</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[900px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded catalog or storefront scope with limited data movement</td></tr>
+                                <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">More templates, catalog, content, integrations and migration controls</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Larger catalog, data, search, workflows or operational risk</td></tr>
+                                <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Subscriptions, complex payments, regulated data, multiple markets or applications</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <InsightBox variant="info" label="Before you judge a quote by its number">
+                        A higher quote is not automatically padded. It may cover more discovery, data work, design,
+                        compliance, integration, governance or support than the cheaper one beside it. Normalise the
+                        statements of work to the same scope first, then compare. Two quotes that differ by a wide margin
+                        usually describe two different projects, and the cheaper one is often the one that has not yet
+                        found the work.
+                    </InsightBox>
+                    <BlogText>
+                        What each tier covers is set out on our{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>, the store-side
+                        scope is described under{" "}
+                        <Link href="/services/woocommerce" className="text-cognac hover:underline">WooCommerce migration</Link>, and{" "}
+                        <Link href="/work" className="text-cognac hover:underline">our project work</Link>{" "}
+                        shows what a delivered build contains.
+                    </BlogText>
+
+                    <BlogHeader id="complexity">The WooCommerce migration complexity matrix</BlogHeader>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[980px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Domain</th><th className="p-4">Inventory</th><th className="p-4">Acceptance evidence</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Catalog</td><td className="p-4">Types, variants, attributes, media, taxonomies, pricing, inventory</td><td className="p-4">Counts, field mapping, exception report and sampled parity</td></tr>
+                                <tr><td className="p-4 font-bold">Customers</td><td className="p-4">Accounts, addresses, consent, roles, password strategy</td><td className="p-4">Authorized records, identity test and communication plan</td></tr>
+                                <tr><td className="p-4 font-bold">Orders</td><td className="p-4">Statuses, line items, tax, shipping, refunds, notes, HPOS state</td><td className="p-4">Counts, totals, samples, reconciliation and retention</td></tr>
+                                <tr><td className="p-4 font-bold">Payments</td><td className="p-4">Provider, tokens, subscriptions, refunds, disputes, webhooks</td><td className="p-4">Provider-approved path and end-to-end transaction tests</td></tr>
+                                <tr><td className="p-4 font-bold">Extensions</td><td className="p-4">Subscriptions, bookings, memberships, add-ons, bundles, feeds</td><td className="p-4">Feature-by-feature retain, replace or retire decision</td></tr>
+                                <tr><td className="p-4 font-bold">Storefront</td><td className="p-4">URLs, templates, search, cart, checkout, account, content</td><td className="p-4">Journey, SEO, accessibility, analytics and performance tests</td></tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    {/* Executive Summary */}
-                    <div
-                        className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12"
-                        data-speakable="true"
-                    >
-                        <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Key Facts</p>
-                        <ul className="space-y-2">
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Migrating off WooCommerce to custom Next.js runs $1,500 (small store), $3,500 (CMS + content), and $5,000 to $10,000 (full headless e-commerce); enterprise scope goes past $10,000
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                Traditional agencies quote $15,000 to $25,000+ for the exact same Scale-tier scope, usually with no performance number in writing
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                A complete 301 redirect map is what protects your SEO. Skip it and stores can lose 40%+ of traffic; map it properly and any dip usually recovers in 1 to 4 weeks
-                            </li>
-                            <li className="flex items-start gap-2 text-sm text-charcoal">
-                                <span className="text-cognac mt-0.5">•</span>
-                                If speed is your only problem and your catalog is small, better hosting can be the cheaper fix. A rebuild wins once you are also carrying plugin conflicts and monthly subscriptions
-                            </li>
-                        </ul>
+                    <BlogHeader id="effort">What is cheap to move and what is expensive</BlogHeader>
+                    <BlogText>
+                        Cost follows the mechanics of what has to move. Anything that maps one to one into the new
+                        system is fast. Anything that depends on live third-party state, plugin-owned fields or years of
+                        accumulated relationships is where the hours go.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Lower effort to move</th><th className="p-4">Higher effort to move</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4">Simple products with one price, one image and one SKU</td><td className="p-4">Variable products with attribute matrices, per-variant SKUs, stock and pricing</td></tr>
+                                <tr><td className="p-4">Static content pages and policies</td><td className="p-4">Custom fields and product meta added by plugins or a page builder</td></tr>
+                                <tr><td className="p-4">A single payment gateway with standard checkout</td><td className="p-4">Multiple gateways, stored payment methods or subscription billing</td></tr>
+                                <tr><td className="p-4">Flat-rate or free shipping</td><td className="p-4">Live carrier rate lookups and zone, weight or class based tables</td></tr>
+                                <tr><td className="p-4">Active customer accounts and a recent order window</td><td className="p-4">Years of order history with refunds, notes, reviews and cross-record relationships</td></tr>
+                                <tr><td className="p-4">A consistent, well-named media library</td><td className="p-4">Large image sets with inconsistent sizing, missing alternative text and no naming convention</td></tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <BlogText>
+                        Order history is the line item teams underestimate most. Products and content map one to one.
+                        Orders do not, because they carry relationships across customers, line items, refunds and notes,
+                        and reproducing those relationships is different work from exporting a spreadsheet. A defensible
+                        approach is to migrate active customer accounts and a defined recent window of orders in full,
+                        then keep older records in a read-only archive instead of rebuilding them into the new system.
+                        Whichever route is chosen, write the window and the archive location into the scope.
+                    </BlogText>
+                    <BlogText>
+                        Payment work deserves the same treatment. Reconnecting a standard gateway is bounded work:
+                        credentials, webhook endpoints, refund tests. Subscriptions, stored payment methods and
+                        processors with non-standard integrations have to be rebuilt and tested against real
+                        transactions before launch, which is a different order of effort from reconnecting keys.
+                    </BlogText>
 
-                    {/* Article body */}
-                    <div className="space-y-8">
+                    <BlogHeader id="exports">What WooCommerce exports actually cover</BlogHeader>
+                    <BlogText>
+                        WooCommerce core documents a built-in product CSV importer and exporter for supported core
+                        product data, with specific limits and mapping behavior. Woo also documents REST API access.
+                        Order and customer export can depend on an extension or a custom/API process. Extension-owned
+                        data such as subscriptions, bookings, memberships, add-ons or custom fields needs its own
+                        documented path. Export availability is not the same as target-system compatibility.
+                    </BlogText>
 
-                        <BlogText>
-                            Migrating off WooCommerce to a custom Next.js build runs <BlogHighlight>$1,500 for a small brochure store, $3,500 for a mid-size store with a CMS and content pages, and $5,000 to $10,000 for full headless e-commerce</BlogHighlight> with 30+ pages and integrations. Enterprise scope can go past $10,000. The same projects get quoted at $15,000 to $25,000+ by traditional agencies. That spread is the whole reason this post exists: the number you have been quoted may have very little to do with the work involved.
-                        </BlogText>
+                    <BlogHeader id="hpos">Why HPOS matters during discovery</BlogHeader>
+                    <BlogText>
+                        High-Performance Order Storage uses dedicated WooCommerce order tables and is enabled by default
+                        for new installations from WooCommerce 8.2. Existing stores may use legacy posts tables, HPOS or
+                        compatibility synchronization, and incompatible extensions can block the feature. Record the
+                        authoritative store, synchronization state and extension compatibility before extracting orders.
+                    </BlogText>
 
-                        <BlogText>
-                            I will show you what each price actually buys, what pushes the number up, and how to read a quote so you do not pay agency margins for freelancer-grade work.
-                        </BlogText>
+                    <BlogHeader id="payments">Payments and subscriptions</BlogHeader>
+                    <BlogText>
+                        Do not assume payment credentials or recurring tokens can be moved as ordinary CSV data. The
+                        path depends on the processor, merchant account, token portability, customer consent,
+                        subscription engine and security requirements. Prefer client-controlled provider accounts when
+                        agreed. Test authorization, capture, tax, shipping, refund, cancellation, webhook and
+                        reconciliation flows before cutover.
+                    </BlogText>
 
-                        <BlogHeader>How much does it cost to migrate off WooCommerce?</BlogHeader>
+                    <BlogHeader id="customers">Customer data and privacy</BlogHeader>
+                    <BlogText>
+                        Minimize exported personal data, define lawful purpose, encrypt transfers, restrict access,
+                        retain an audit trail and delete temporary copies on schedule. Decide whether existing password
+                        hashes are safely compatible or whether users need a secure reset. A migration plan should name
+                        controller and processor responsibilities, breach handling, retention and customer notices.
+                    </BlogText>
 
-                        <BlogText>
-                            Between $1,500 and $10,000+, and where you land depends almost entirely on product count, integrations, and whether you need a real checkout. As a quick anchor: we rebuilt <BlogHighlight>MyCustomPatches</BlogHighlight> off WooCommerce for a storefront-only scope (no custom checkout, no headless commerce), and it landed well below the headless-store tier because the catalog and integration count were both small. That is the pattern this whole post is about, the price follows the mechanics of what has to move, not a flat rate per store.
-                        </BlogText>
+                    <BlogHeader id="seo">SEO and URL continuity</BlogHeader>
+                    <BlogText>
+                        Inventory product, category, content and campaign URLs. Keep useful URLs stable where practical
+                        and map changed URLs to relevant successors. Preserve approved rendered content, titles,
+                        canonicals, internal links, status codes and structured data. Validate sitemaps and analytics,
+                        monitor Search Console and keep rollback conditions. Rankings, traffic and recovery timing are
+                        not guaranteed. We work through the same ground in{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">will migrating hurt my SEO</Link>, and
+                        the measurement side is covered in{" "}
+                        <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals explained</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            The rest of this section breaks down exactly which mechanics push a quote up or down, so you can predict your own number before anyone sends one.
-                        </BlogText>
+                    <BlogHeader id="cutover">How to migrate a live store</BlogHeader>
+                    <BlogList
+                        items={[
+                            "Record a baseline and freeze target schema and feature scope.",
+                            "Run an initial export and test migration on an isolated environment.",
+                            "Reconcile counts, money totals, samples and exceptions.",
+                            "Test storefront, account, transaction, refund and operational journeys.",
+                            "Plan the final data delta, content freeze and customer communication.",
+                            "Cut over with monitoring, rollback triggers and named decision-makers.",
+                            "Reconcile post-cutover orders, inventory, payments and analytics.",
+                        ]}
+                    />
+                    <BlogText>
+                        The old store can usually remain available during build and test, but no provider should promise
+                        universal zero interruption. Define the permitted write freeze, checkout behavior and cutover
+                        window in the accepted plan.
+                    </BlogText>
 
-                        <BlogHeader>What actually drives the number: catalog size and complexity</BlogHeader>
+                    <BlogHeader id="ownership">Ownership and accounts</BlogHeader>
+                    <BlogText>
+                        Client content and business data remain client property. Custom deliverables transfer after
+                        full payment under the signed agreement. PandaCodeGen retains reusable internal tools,
+                        templates and pre-existing code. Third-party components retain their licenses. Domain, hosting,
+                        repository and business accounts can remain under client control when agreed. The general
+                        version of this question is covered in{" "}
+                        <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>.
+                    </BlogText>
 
-                        <BlogText>
-                            Product count is the first lever, but it is not linear. A 40-product store and a 400-product store are not 10x apart in cost, because most of the work is building the template and the migration pipeline once, then running it. What does scale directly with catalog size:
-                        </BlogText>
+                    <BlogHeader id="business-case">Is the migration worth it?</BlogHeader>
+                    <BlogText>
+                        Compare WooCommerce repair, optimization, headless WooCommerce and full replacement across the
+                        same capabilities. Include build, migration, providers, payment fees, maintenance, security,
+                        support, internal time and exit. Attribute business benefits only from first-party evidence;
+                        there is no automatic ranking, conversion or payback result. If speed is the trigger, start with{" "}
+                        <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline">diagnosing a slow WooCommerce store</Link>{" "}
+                        before assuming a rebuild. If the question is architectural, compare the two operating models
+                        in{" "}
+                        <Link href="/blog/woocommerce-vs-custom-website" className="text-cognac hover:underline">WooCommerce versus a custom website</Link>. Work
+                        that goes beyond a storefront belongs under{" "}
+                        <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering</Link>.
+                    </BlogText>
 
-                        <BlogList items={[
-                            "Variable products and variants. A simple product (name, price, one image) migrates in seconds per item. A variable product with 6 size/color combinations, each with its own SKU, stock count, and sometimes its own price, needs its variant matrix rebuilt, not just copied.",
-                            "Custom fields and product meta. Anything added via Advanced Custom Fields, a page builder's product add-ons, or a custom plugin (warranty length, care instructions, a compatibility chart) lives outside WooCommerce's standard schema. It has to be mapped field-by-field into the new data model, because there is no generic export for a field nobody but your dev ever configured.",
-                            "Category and attribute structure. If your catalog uses nested categories, cross-sell rules, or attribute-based filtering (shop by size, material, color), that logic has to be rebuilt in the new front end, not just the raw data moved.",
-                            "Product images and galleries at scale. Ten products with five images each is a non-issue. Two thousand products with inconsistent image sizing, missing alt text, and no naming convention is real QA time, because every image needs to render correctly on the new site.",
-                        ]} />
+                    <BlogHeader id="quote">What a fair quote contains, and what to question</BlogHeader>
+                    <BlogText>
+                        A quote you can act on describes the whole job, including the parts nobody enjoys scoping. Read
+                        it as a list of deliverables rather than a total.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Design and build scope stated template by template, not as a theme reskin.",
+                            "Catalog, content and media migration with a documented URL disposition and redirect map.",
+                            "Metadata, canonicals, structured data and URL structure treated as deliverables with acceptance evidence.",
+                            "Test coverage across devices, browsers, checkout and every named integration.",
+                            "Launch support, a monitoring window and a written rollback plan with named owners.",
+                            "A performance target that names pages, profiles, method, exclusions and remedy.",
+                        ]}
+                    />
+                    <BlogText>Question a quote where any of the following appear.</BlogText>
+                    <BlogList
+                        items={[
+                            "Redirects, analytics handover or Search Console access listed as optional extras.",
+                            "An open-ended hourly estimate with no cap, no phase exits and no change-control process.",
+                            "A migration priced as a plugin run, which copies records without addressing URLs, templates, payments or acceptance.",
+                            "An ongoing retainer required before any build work can begin.",
+                            "A ranking, traffic or revenue promise, or a performance claim with no named pages, method or exclusions.",
+                            "No statement of who holds the domain, repository, hosting and provider accounts after launch.",
+                        ]}
+                    />
 
-                        <BlogText>
-                            This is why a 40-SKU store with simple products routinely fits the Starter or Growth tier, while a 500-SKU store with variants and custom fields pushes into Scale even if neither one needs a custom checkout.
-                        </BlogText>
+                    <BlogHeader id="terms">Payment, refund, support and performance</BlogHeader>
+                    <BlogText>
+                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
+                        failure to deliver the signed scope, not a preference change after starting. Starter includes 15
+                        business days of launch defect support; Growth and Scale include 30. A 90-plus Lighthouse target
+                        applies only when the contract names representative pages, profiles, environment, three passing
+                        runs per page and profile, exclusions and remedy. For the inputs behind a build or transition
+                        figure, see{" "}
+                        <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">what a website costs</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">what drives migration cost</Link>.
+                    </BlogText>
 
-                        <BlogHeader>What&apos;s cheap to migrate vs. what&apos;s expensive</BlogHeader>
+                    {postFAQs.length > 0 && (
+                        <>
+                            <BlogHeader id="faq">Frequently asked questions</BlogHeader>
+                            <FAQAccordion faqs={postFAQs} />
+                        </>
+                    )}
 
-                        <BlogText>
-                            Cheap: static content, simple products, and anything that maps one-to-one into the new system. Expensive: anything that depends on live third-party state or years of accumulated transaction history. Here is the actual split.
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Cheap to migrate</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Expensive to migrate</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Simple products (name, price, one image, one SKU)</td>
-                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Variable products with multiple attributes and per-variant stock</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Static pages (About, contact, policies)</td>
-                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Custom fields and product meta from page-builder plugins</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">A single payment gateway (Stripe or PayPal only)</td>
-                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Multiple gateways, saved cards, or a region-specific processor with its own API quirks</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">A handful of blog posts or landing pages</td>
-                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Years of order history with customer accounts, saved addresses, and reviews</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-stone-700">Flat-rate or free shipping</td>
-                                        <td data-label="Expensive to migrate" className="border border-stone-300 px-4 py-3 text-stone-700">Live carrier-calculated shipping (USPS/UPS/FedEx APIs) or zone-based tables</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            Payment gateway reconfiguration deserves its own callout because it surprises people. Swapping Stripe or PayPal into a new checkout is usually a day of engineering: reconnect the API keys, remap webhooks, test refunds. But if you run WooCommerce Subscriptions, saved payment methods on file, or a gateway with a non-standard integration, that logic has to be rebuilt and tested against real transactions before launch, not just reconnected. That is what turns a quick gateway swap into several days of dedicated QA.
-                        </BlogText>
-
-                        <BlogText>
-                            Order-history preservation is the other cost driver people underestimate. Keeping product and content data is straightforward. Keeping five years of orders, customer accounts, and their relationships to each other (which customer bought which product how many times) means the migration has to preserve foreign-key relationships across multiple tables, not just export a spreadsheet. Most stores do not need full historical orders live on the new site; a common approach is migrating active customer accounts and recent order history in full, then archiving older records for reference rather than paying to rebuild them into the new system.
-                        </BlogText>
-
-                        <BlogText>
-                            Here is the full pricing table.
-                        </BlogText>
-
-                        <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                            <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
-                            <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
-                                <thead>
-                                    <tr className="bg-stone-100">
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Tier</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">What&apos;s included</th>
-                                        <th className="border border-stone-300 px-4 py-3 text-left font-semibold text-charcoal">Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Starter</td>
-                                        <td data-label="What's included" className="border border-stone-300 px-4 py-3 text-stone-700">5-7 pages, custom design, contact forms, fast static build. Good for a small catalog or a storefront that sells through links/DMs.</td>
-                                        <td data-label="Price" className="border border-stone-300 px-4 py-3 text-stone-700 font-semibold">$1,500</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Growth</td>
-                                        <td data-label="What's included" className="border border-stone-300 px-4 py-3 text-stone-700">10-20 pages, CMS so you can edit content yourself, content migration with full 301 redirect mapping. The common &quot;I have a content-heavy WooCommerce site&quot; tier.</td>
-                                        <td data-label="Price" className="border border-stone-300 px-4 py-3 text-stone-700 font-semibold">$3,500</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Scale</td>
-                                        <td data-label="What's included" className="border border-stone-300 px-4 py-3 text-stone-700">Headless e-commerce, 30+ pages, custom checkout, product/order/customer data migration, third-party integrations. The real WooCommerce store rebuild.</td>
-                                        <td data-label="Price" className="border border-stone-300 px-4 py-3 text-stone-700 font-semibold">$5,000-$10,000</td>
-                                    </tr>
-                                    <tr className="bg-stone-50">
-                                        <td className="border border-stone-300 px-4 py-3 text-charcoal font-medium">Scale+</td>
-                                        <td data-label="What's included" className="border border-stone-300 px-4 py-3 text-stone-700">Enterprise scope: large catalogs, multiple integrations, complex business logic, ongoing engineering.</td>
-                                        <td data-label="Price" className="border border-stone-300 px-4 py-3 text-stone-700 font-semibold">$10,000+</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <BlogText>
-                            Every build ships with a written <BlogHighlight>90+ PageSpeed guarantee, or your money back</BlogHighlight>. If we cannot hit it, you do not pay. Traditional agencies quote $15,000-$25,000+ for the exact scope in the Scale row, and most will not put a performance number in writing at all.
-                        </BlogText>
-
-                        <BlogHeader>Is it worth leaving WooCommerce, or should I just fix my hosting?</BlogHeader>
-
-                        <InsightBox variant="info" label="Quick Answer">
-                            If your only problem is speed and you have a small catalog, better hosting can buy you real gains for far less money. If you are fighting plugin conflicts, paying a stack of monthly subscriptions, and watching your store crawl under traffic, a rebuild usually wins, and you feel it the first month, when the hosting and plugin bills disappear and the faster store starts converting better.
-                        </InsightBox>
-
-                        <BlogText>
-                            I will be straight about this, because plenty of people online are not: you do not need to leave WooCommerce just to get a fast page. Good hosting fixes a lot. If that is genuinely your whole issue, fix the hosting and keep your money.
-                        </BlogText>
-
-                        <BlogText>
-                            But that is rarely the whole issue. The pattern we see is a store carrying 25-40 plugins, each with its own renewal fee, each a candidate to break on the next update. The &quot;fast&quot; version of that site still depends on caching layers papering over a heavy stack. Speed is the symptom people notice first; the deeper cost is the maintenance tax and the fragility. When a single plugin update can take checkout down, you are not running a store, you are babysitting one.
-                        </BlogText>
-
-                        <BlogText>
-                            If you want the full speed argument before deciding, we wrote it up in <Link href="/blog/woocommerce-too-slow" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce too slow</Link>. And if you are weighing the platforms head to head rather than just the cost, <Link href="/blog/woocommerce-vs-custom-website" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce vs custom website</Link> lays out the trade-offs.
-                        </BlogText>
-
-                        <BlogText>
-                            Why speed is worth paying for: on a storefront, speed is not a vanity score, it is checkout friction. Every additional second before a product page becomes interactive is a point where a shopper on a mobile connection can bail before they ever see the &quot;Add to Cart&quot; button. That friction compounds at checkout, the one page in any store that cannot be cached and therefore feels every millisecond of server work. When you are already doing real revenue, the seconds a rebuild cuts turn into orders you were quietly losing, not a vanity metric on a report.
-                        </BlogText>
-
-                        <BlogHeader>Will I lose my SEO rankings when I migrate?</BlogHeader>
-
-                        <InsightBox variant="info" label="Quick Answer">
-                            Not if the migration includes a complete 301 redirect map. Skip the redirects and you can lose 40%+ of traffic within weeks. Map them properly and a temporary dip usually recovers in 1-4 weeks.
-                        </InsightBox>
-
-                        <BlogText>
-                            This is the single biggest risk in any migration, and it is also the most preventable. Every URL that changes needs a 301 redirect pointing the old address to the new one, so the SEO equity you have built transfers instead of evaporating. Proper URL mapping done before launch is what separates a clean migration from a traffic crater.
-                        </BlogText>
-
-                        <BlogText>
-                            This is also why a real quote and a cheap one diverge. A $200 &quot;migration plugin&quot; copies your products into a new database. It does not preserve your URL structure, your redirects, your metadata, or your schema. When the rankings drop, you pay a second time for someone to clean it up. Our Growth tier includes content migration with full 301 mapping for exactly this reason, it is not an upsell, it is the part that keeps your traffic alive.
-                        </BlogText>
-
-                        <BlogText>
-                            For the broader playbook on doing this without a traffic hit, <Link href="/blog/website-migration-cost-2026" className="text-cognac underline underline-offset-2 hover:text-amber-700">website migration cost</Link> covers the SEO-preservation steps in more detail.
-                        </BlogText>
-
-                        <BlogHeader>How long does a WooCommerce migration take?</BlogHeader>
-
-                        <InsightBox variant="info" label="Quick Answer">
-                            A small brochure migration takes days to a couple of weeks. A full headless store with data migration and integrations runs 4-8 weeks. Larger catalogs take longer. Either way, your current store stays live and selling the entire time. We build and test the new site on a separate staging setup and only switch over once it is 100% ready, so you never close, never go dark, and never lose a day of revenue.
-                        </InsightBox>
-
-                        <BlogText>
-                            Timeline tracks the tier:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Starter (5-7 pages): days to ~2 weeks.",
-                            "Growth (CMS + content + redirects): 2-4 weeks, most of it in content mapping and redirect QA.",
-                            "Scale (headless e-commerce + integrations): 4-8 weeks. The work is in checkout, data migration, and testing every integration.",
-                            "Scale+ (enterprise catalog): longer, depending on catalog size, including planning and SEO validation.",
-                        ]} />
-
-                        <BlogText>
-                            We do not pad timelines to justify a retainer. The slow part of any honest migration is data and QA, not billing.
-                        </BlogText>
-
-                        {/* Mid CTA */}
-                        <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-lg">
-                            <p className="text-sm font-bold text-charcoal mb-2">Want a real number for your store, not a range?</p>
-                            <p className="text-sm text-stone-500 mb-4">
-                                Drop your store URL when you book. We run your speed live on the call, scope your catalog and integrations, and give you a fixed price with a written 90+ PageSpeed guarantee, no open-ended hourly billing.
-                            </p>
-                            <CalModalButton className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-white font-semibold rounded-full text-sm hover:bg-stone-800 transition-all">
-                                Get Free WooCommerce Audit <ArrowRight className="w-4 h-4" />
-                            </CalModalButton>
-                        </div>
-
-                        <BlogHeader>What drives WooCommerce migration cost up?</BlogHeader>
-
-                        <BlogText>
-                            The base number moves on five things. Knowing them lets you predict your own quote before anyone sends one.
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Page and product count. A 6-page storefront and a 2,000-SKU catalog are different projects. More products means more data to migrate, more templates, and more QA.",
-                            "Integrations. Payment gateways, shipping calculators, ERP/inventory systems, email and CRM tools. Each integration is real engineering and the biggest single driver between the Growth and Scale tiers.",
-                            "Server-side tracking. If you run ads, you likely need server-side conversion tracking (Meta CAPI, GA4) so your data survives ad blockers and iOS privacy changes. It is worth it, and it is billable work.",
-                            "Custom checkout. A standard cart is straightforward. Subscriptions, multi-currency, B2B pricing tiers, or a bespoke checkout flow add scope.",
-                            "Data migration depth. Products alone is one thing. Products plus historical orders, customer accounts, reviews, and saved addresses is another. The more history you keep, the more careful the migration.",
-                        ]} />
-
-                        <BlogText>
-                            If you want the parallel breakdown for content sites specifically, <Link href="/blog/wordpress-migration-cost" className="text-cognac underline underline-offset-2 hover:text-amber-700">WordPress migration cost</Link> covers the non-commerce side of the same decision.
-                        </BlogText>
-
-                        <BlogHeader>What a fair quote includes (and the red flags to watch)</BlogHeader>
-
-                        <BlogText>
-                            A quote you can trust covers the whole job, not just the fun parts. Here is what should be in it.
-                        </BlogText>
-
-                        <BlogText>
-                            A fair migration quote includes:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "Custom design and build, not a theme reskin",
-                            "Full product/content migration with a documented 301 redirect map",
-                            "Preserved metadata, schema, and URL structure where possible",
-                            "QA across devices, browsers, and every integration",
-                            "Launch support and a rollback plan",
-                            "A written performance target you can hold them to",
-                        ]} />
-
-                        <BlogText>
-                            Red flags to watch:
-                        </BlogText>
-
-                        <BlogList items={[
-                            "No performance number in writing. If they will not commit to a PageSpeed score, they do not know if they can hit one. We guarantee 90+ or full refund.",
-                            "Redirects listed as \"optional\" or extra. Redirects are not optional. Treating them as an upsell tells you they cut corners on SEO.",
-                            "A vague hourly estimate with no cap. Open-ended hourly billing is how a \"$6,000\" project becomes $18,000.",
-                            "A mandatory monthly retainer to even start. Some agencies bury a $25K+ annual minimum in the contract. You are a store owner, not a recurring-revenue line item.",
-                            "A $200 plugin sold as a migration. That is a data copy, not a migration, and you will pay twice.",
-                        ]} />
-
-                        <BlogText>
-                            The honest version of this work is fixed-price, scoped up front, and tied to a result you can measure. If a quote does not read that way, the price is not your real problem, the structure is.
-                        </BlogText>
-
-                        <BlogText>
-                            When you are ready to scope your own number, our <Link href="/services/woocommerce" className="text-cognac underline underline-offset-2 hover:text-amber-700">WooCommerce migration service</Link> lays out exactly what is included at each tier.
-                        </BlogText>
-
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-12 md:mt-16 text-center">
-                        <h3 className="text-xl font-bold text-charcoal mb-2">Get a Fixed Price to Migrate Off WooCommerce</h3>
-                        <p className="text-stone-500 text-sm mb-6">
-                            Free WooCommerce audit. We will run your PageSpeed score, scope your catalog and integrations, and give you a fixed-price quote with a written 90+ PageSpeed guarantee, no hourly surprises.
+                    <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
+                        <h2 className="mb-3 font-serif text-3xl">Get a store-data inventory before a price</h2>
+                        <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
+                            We will map the catalog, customer, order, payment and extension scope before recommending a
+                            target or cutover plan.
                         </p>
-                        <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Get My Free Store Audit <ArrowRight className="w-4 h-4" />
-                        </CalModalButton>
-                    </div>
+                        <QuoteModalButton cta="woocommerce_migration_cost_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
+                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                        </QuoteModalButton>
+                    </section>
 
-                    {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
-
-                    <RelatedPosts currentPostId="woocommerce-migration-cost" />
-
-                </div>
-            </section>
-
+                    <RelatedPosts currentPostId={postId} />
+                </article>
+            </main>
             <Footer />
-        </main>
+        </>
     );
 }

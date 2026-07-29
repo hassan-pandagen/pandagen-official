@@ -3,18 +3,18 @@
 import { useEffect, useState } from "react";
 
 // Visual-semantics: a topic-matched hero for "platform vs custom" / migration /
-// sunset posts. A head-to-head scorecard reveals metric rows one by one, tallies
-// a winner per row, and lands on a verdict. Structurally distinct from the other
-// blog animations (animated scorecard with per-row winner toggles).
+// sunset posts. A requirements scorecard reveals comparison rows one by one and
+// lands on a neutral decision rule. Structurally distinct from the other blog
+// animations (animated scorecard with per-row requirement checks).
 // Type sizes and colors meet WCAG 2.1 AA: all text >= 4.5:1 contrast, rows at
 // 14-16px, labels at 11-12px.
 
-type Phase = "intro" | "scoring" | "verdict";
+type Phase = "intro" | "reviewing" | "verdict";
 const METRICS = [
-  { label: "Load time", them: "3.5s", us: "0.8s" },
-  { label: "Monthly cost", them: "$30–235", us: "~$0" },
-  { label: "SEO / schema control", them: "Limited", us: "Full" },
-  { label: "Code ownership", them: "Locked in", us: "100% yours" },
+  { label: "Publishing workflow", platform: "Built in", custom: "Must be designed" },
+  { label: "Platform operation", platform: "Vendor managed", custom: "Team managed" },
+  { label: "Extension model", platform: "Plan and integration limits", custom: "Code and API choices" },
+  { label: "Ownership and export", platform: "Check the terms", custom: "Define in the contract" },
 ];
 
 export default function PlatformComparisonAnimation() {
@@ -28,7 +28,7 @@ export default function PlatformComparisonAnimation() {
       setPhase("intro");
       setScored(0);
       timer = setTimeout(() => {
-        setPhase("scoring");
+        setPhase("reviewing");
         let r = 0;
         rowTimer = setInterval(() => {
           r++;
@@ -48,7 +48,7 @@ export default function PlatformComparisonAnimation() {
   }, []);
 
   return (
-    <div role="img" aria-label="Interactive animation scoring a hosted platform against a custom Next.js build across load time, cost, SEO control, and code ownership" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
+    <div role="img" aria-label="Interactive comparison of requirements to verify when choosing a hosted platform or a custom Next.js build" className="relative w-full aspect-[4/3] sm:aspect-2/1 bg-linear-to-br from-stone-50 to-white rounded-2xl border border-stone-200 overflow-hidden">
       <style>{`@keyframes rowReveal { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } } .cmp-row { animation: rowReveal 0.4s ease-out forwards; }`}</style>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(234,88,12,0.04),transparent_60%)]" />
 
@@ -75,10 +75,8 @@ export default function PlatformComparisonAnimation() {
                 className={`grid grid-cols-[1.3fr_1fr_1fr] gap-2 items-center px-2 md:px-3 py-1.5 md:py-2 rounded-lg border transition-all duration-500 ${show ? "cmp-row bg-white border-stone-200 opacity-100" : "border-transparent opacity-40"}`}
               >
                 <span className="text-sm md:text-base font-bold text-stone-700 truncate">{m.label}</span>
-                <span className="text-sm md:text-base font-mono text-stone-500 text-center line-through decoration-stone-400">{m.them}</span>
-                <span className="text-sm md:text-base font-mono font-bold text-cognac text-center flex items-center justify-center gap-1">
-                  {show && <span className="text-[10px] md:text-xs">✓</span>}{m.us}
-                </span>
+                <span className="text-xs md:text-sm text-stone-600 text-center">{m.platform}</span>
+                <span className="text-xs md:text-sm font-bold text-cognac text-center">{m.custom}</span>
               </div>
             );
           })}
@@ -88,8 +86,8 @@ export default function PlatformComparisonAnimation() {
         <div className="text-center mt-1">
           <p className={`text-[11px] md:text-sm font-bold uppercase tracking-wider transition-colors duration-500 ${phase === "verdict" ? "text-cognac" : "text-stone-600"}`}>
             {phase === "intro" && "Same business goals. Two very different foundations."}
-            {phase === "scoring" && `Scoring head-to-head · Custom wins ${scored}/${METRICS.length}`}
-            {phase === "verdict" && "✓ Custom Next.js wins on every metric that compounds over time"}
+            {phase === "reviewing" && `Reviewing requirement ${scored} of ${METRICS.length}`}
+            {phase === "verdict" && "Choose against requirements, ownership, and the operating model"}
           </p>
         </div>
       </div>

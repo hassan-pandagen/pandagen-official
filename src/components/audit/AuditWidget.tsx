@@ -9,26 +9,24 @@ import AuditEmailGate from "./AuditEmailGate";
 import { getScoreTextClass } from "@/lib/audit/scoring";
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { safeAuditAnalyticsSummary } from "@/lib/audit/analyticsSummary";
 
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 type WidgetState = "idle" | "loading" | "results";
 
-// The 11-point inspection, in display order. AI Readiness leads (it's the 2026 differentiator).
-const deepCheckNames = [
-  "AI Readiness", "Mobile First UX", "Visual Hierarchy", "CTA Placement",
-  "Heading Structure", "Structured Data", "Crawl Budget", "Indexing Speed",
-  "Trust Signals", "Security Headers", "Mobile Checkout",
-];
+const DESKTOP_URL_INPUT_ID = "audit-url-desktop";
+const DESKTOP_URL_ERROR_ID = "audit-url-desktop-error";
+const MOBILE_URL_INPUT_ID = "audit-url-mobile";
+const MOBILE_URL_ERROR_ID = "audit-url-mobile-error";
 
-// Honest sample of what a typical store scores. Backed by 2026 research:
-// Hyperspeed audit of 1,166 stores = 30/100 avg mobile PageSpeed; 58% fail CWV.
+// An explicitly illustrative preview of the checks, not a verdict about the visitor's site.
 const sampleScanLines = [
-  { name: "AI Readiness", verdict: "Invisible to ChatGPT & Claude", status: "fail" as const },
-  { name: "Mobile load time", verdict: "4.2s — most visitors leave before it loads", status: "fail" as const },
-  { name: "Core Web Vitals", verdict: "Poor — Google ranks it below faster sites", status: "fail" as const },
-  { name: "Structured data", verdict: "Missing — AI can't read the business", status: "fail" as const },
-  { name: "Security headers", verdict: "3 of 6 missing — flagged less secure", status: "warn" as const },
+  { name: "Search & AI foundations", verdict: "Crawl, content, and evidence signals need review", status: "warn" as const },
+  { name: "Mobile FCP (lab)", verdict: "4.2s in this illustrative sample", status: "fail" as const },
+  { name: "Core Web Vitals", verdict: "Needs improvement in this illustrative sample", status: "warn" as const },
+  { name: "Structured data", verdict: "No machine-readable entity context detected", status: "warn" as const },
+  { name: "Security headers", verdict: "3 of 6 recommended headers missing", status: "warn" as const },
   { name: "Heading structure", verdict: "OK", status: "pass" as const },
 ];
 
@@ -36,6 +34,7 @@ export default function AuditWidget() {
   const [state, setState] = useState<WidgetState>("idle");
   const [url, setUrl] = useState("");
   const [auditData, setAuditData] = useState<PageSpeedResult | null>(null);
+  const [leadToken, setLeadToken] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isEmailGateOpen, setIsEmailGateOpen] = useState(false);
 
@@ -68,15 +67,15 @@ export default function AuditWidget() {
 
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Analysis failed. Check the URL and try again.");
+      if (typeof result.leadToken !== "string" || !result.leadToken) {
+        throw new Error("The report session could not be created. Please run the audit again.");
+      }
 
       setAuditData(result.data);
+      setLeadToken(result.leadToken);
       setState("results");
 
-      trackGAEvent("audit_url_submit", {
-        url: trimmed,
-        performance_score: result.data?.performanceScore,
-        platform_detected: result.data?.platformDetected,
-      });
+      trackGAEvent("audit_url_submit", safeAuditAnalyticsSummary(result.data));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
       setState("idle");
@@ -91,6 +90,7 @@ export default function AuditWidget() {
     setState("idle");
     setUrl("");
     setAuditData(null);
+    setLeadToken("");
     setError(null);
   };
 
@@ -98,7 +98,7 @@ export default function AuditWidget() {
     if (window.location.hash === "#audit-widget") {
       setTimeout(() => {
         const el = document.getElementById("audit-widget");
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (el) el.scrollIntoView({ block: "start" });
       }, 500);
     }
   }, []);
@@ -111,6 +111,13 @@ export default function AuditWidget() {
 
   return (
     <div id="audit-widget">
+      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {state === "loading"
+          ? "Audit in progress."
+          : state === "results"
+            ? "Audit complete. Results are available below."
+            : ""}
+      </p>
       {/* ============ DESKTOP ============ */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -128,7 +135,7 @@ export default function AuditWidget() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit Engine</span>
+              <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">Technical Website Audit</span>
             </div>
           </div>
 
@@ -138,25 +145,25 @@ export default function AuditWidget() {
               {state === "idle" && (
                 <motion.div key="idle" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-5">
                   <div>
-                    <p className="text-xs text-stone-500 mb-2">276 sites audited in 2026 · average revenue leak found: $3,200/month</p>
+                    <p className="text-xs text-stone-600 mb-2">Automated technical review · results shown on screen</p>
                     <h2 className="text-xl font-bold text-charcoal leading-tight">
-                      Most sites we audit look like this.
+                      Illustrative example of the automated checks.
                     </h2>
-                    <p className="text-sm text-stone-600 mt-1">The three things that decide whether you win in 2026:</p>
+                    <p className="text-sm text-stone-600 mt-1">A focused look at access, evidence, and mobile lab performance:</p>
                   </div>
 
-                  {/* 3 hero diagnostics — shown failing on a typical site */}
+                  {/* 3 hero diagnostics shown failing on a typical site */}
                   <div className="space-y-2.5">
-                    <HeroDiag icon={Bot} q="Can ChatGPT, Claude & Google AI see you?" verdict="Invisible sites aren't in the answer when buyers ask AI" bad />
-                    <HeroDiag icon={Gauge} q="Does it load under 1 second on mobile?" verdict="Average is 4.2s. Past 3 seconds, most visitors leave" bad />
-                    <HeroDiag icon={TrendingDown} q="What is slow speed costing you?" verdict="~$3,200/mo leaking to faster competitors" bad />
+                    <HeroDiag icon={Bot} q="Are the page's search foundations clear?" verdict="Checks crawl access, indexability, content, and evidence" />
+                    <HeroDiag icon={Gauge} q="When does content first appear on mobile?" verdict="Illustrative mobile lab FCP: 4.2s" bad />
+                    <HeroDiag icon={TrendingDown} q="Can visitors verify who is behind the content?" verdict="Checks identity, policy, and provenance signals" />
                   </div>
 
                   {/* Live sample scan ticker */}
                   <div className="rounded-xl border border-stone-200 bg-stone-50/60 overflow-hidden">
                     <div className="px-4 py-2 border-b border-stone-100 flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-stone-500">Sample: typical store</span>
-                      <span className="text-[10px] font-bold font-mono text-red-600">31/100</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-stone-600">Illustrative sample</span>
+                      <span className="text-[10px] font-bold font-mono text-stone-600">Example only</span>
                     </div>
                     <div className="divide-y divide-stone-100">
                       {sampleScanLines.map((line, i) => (
@@ -167,7 +174,7 @@ export default function AuditWidget() {
                           transition={{ delay: 0.15 * i, duration: 0.4 }}
                           className="flex items-center gap-2.5 px-4 py-1.5"
                         >
-                          {line.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />}
+                          {line.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-700 shrink-0" />}
                           {line.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
                           {line.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
                           <span className="text-xs font-medium text-stone-700 flex-1">{line.name}</span>
@@ -180,26 +187,29 @@ export default function AuditWidget() {
                   {/* URL input + soft CTA */}
                   <div className="space-y-3">
                     <div className="relative">
-                      <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-600" />
                       <input
+                        id={DESKTOP_URL_INPUT_ID}
                         type="text"
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         onKeyDown={handleKeyDown}
                         placeholder="yourwebsite.com"
                         aria-label="Website URL to audit"
-                        className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
+                        aria-invalid={Boolean(error)}
+                        aria-describedby={error ? DESKTOP_URL_ERROR_ID : undefined}
+                        className="w-full bg-stone-50 border border-gray-300 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-600 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
                       />
                     </div>
-                    {error && <p className="text-red-600 text-sm">{error}</p>}
+                    {error && <p id={DESKTOP_URL_ERROR_ID} className="text-red-600 text-sm" role="alert">{error}</p>}
                     <button
                       onClick={handleAnalyze}
                       className="w-full py-4 bg-charcoal hover:bg-stone-800 text-white font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
                     >
-                      Find out how you look
+                      Run automated audit
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <p className="text-center text-xs text-stone-500">Full 11-point breakdown on screen. No email required.</p>
+                    <p className="text-center text-xs text-stone-600">Heuristic 11-check snapshot on screen. No email required.</p>
                   </div>
                 </motion.div>
               )}
@@ -217,30 +227,36 @@ export default function AuditWidget() {
                     <Search className="w-4 h-4 text-cognac" />
                     <span className="truncate">{url}</span>
                     {auditData.platformDetected && auditData.platformDetected !== "Unknown" && (
-                      <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-stone-500">{auditData.platformDetected}</span>
+                      <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-stone-600">{auditData.platformDetected}</span>
                     )}
                   </div>
 
                   {/* 3 hero answers, now personalized */}
                   <div className="space-y-2.5">
-                    <HeroResult icon={Bot} q="Can AI engines see & cite you?" score={aiCheck?.score ?? 0} suffix="/100" />
-                    <HeroResult icon={Gauge} q="Mobile load time" score={auditData.loadTime} suffix="s" lowerIsBetter goodUnder={1} okUnder={2.5} />
+                    <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck?.score ?? 0} suffix="/100" />
+                    <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} />
                     <HeroResult icon={Search} q="Performance score" score={auditData.performanceScore} suffix="/100" />
                   </div>
 
-                  {/* All 11 checks — UNBLURRED. Generosity beats the email wall. */}
+                  {/* All 11 checks are UNBLURRED. Generosity beats the email wall. */}
                   {auditData.deepChecks && (
                     <div className="border border-stone-200 rounded-xl overflow-hidden">
                       <div className="px-4 py-2.5 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-500">Full 11-Point Inspection</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-600">Heuristic technical snapshot</span>
                         <span className={`text-xs font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>
                           {auditData.deepChecks.overallScore}/100
                         </span>
                       </div>
-                      <div className="divide-y divide-stone-100 max-h-[200px] overflow-y-auto">
+                      <div
+                        data-lenis-prevent
+                        className="divide-y divide-stone-100 max-h-[200px] overflow-y-auto"
+                        role="region"
+                        aria-label="Detailed audit checks"
+                        tabIndex={0}
+                      >
                         {auditData.deepChecks.checks.map((check) => (
                           <div key={check.id} className="flex items-center gap-2.5 px-4 py-2">
-                            {check.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />}
+                            {check.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-700 shrink-0" />}
                             {check.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
                             {check.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
                             <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
@@ -248,29 +264,32 @@ export default function AuditWidget() {
                           </div>
                         ))}
                       </div>
+                      <p className="border-t border-stone-100 bg-stone-50 px-4 py-2 text-[10px] leading-relaxed text-stone-600">
+                        Proprietary automated average; not a certification, legal review, penetration test, ranking signal, or outcome guarantee.
+                      </p>
                     </div>
                   )}
 
                   {totalFails > 0 && (
                     <p className="text-sm text-stone-700">
-                      <span className="font-bold text-red-600">{totalFails} critical {totalFails === 1 ? "issue" : "issues"}</span> found. The average store scores 31 on mobile. Here is what to fix first.
+                      <span className="font-bold text-red-600">{totalFails} {totalFails === 1 ? "check needs" : "checks need"} attention.</span> Review the measured findings below before deciding what to fix first.
                     </p>
                   )}
 
-                  {/* DUAL CTA — primary: book teardown (Cal.com), secondary: email PDF */}
+                  {/* Optional follow-up paths */}
                   <CalModalButton className="w-full py-4 bg-cognac text-white font-bold rounded-xl hover:bg-amber-700 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group">
                     <Calendar className="w-5 h-5" />
-                    Book a 15-min teardown with Hassan
+                    Book an Optional Review
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </CalModalButton>
                   <button
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-3 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-sm"
                   >
-                    <Mail className="w-4 h-4 text-stone-500" />
-                    Or email me the 3 biggest fixes for my site + what each costs
+                    <Mail className="w-4 h-4 text-stone-600" />
+                    Email Me This Automated Audit Summary
                   </button>
-                  <button onClick={handleReset} className="w-full text-center text-sm text-gray-500 hover:text-cognac transition-colors">
+                  <button onClick={handleReset} className="w-full min-h-6 text-center text-sm text-gray-600 hover:text-cognac transition-colors">
                     Scan another site
                   </button>
                 </motion.div>
@@ -296,7 +315,7 @@ export default function AuditWidget() {
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[9px] font-bold text-[#c2410c] uppercase tracking-wider">AI Audit</span>
+              <span className="text-[9px] font-bold text-[#c2410c] uppercase tracking-wider">Technical Audit</span>
             </div>
           </div>
 
@@ -305,34 +324,37 @@ export default function AuditWidget() {
               {state === "idle" && (
                 <motion.div key="m-idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
                   <div>
-                    <p className="text-[10px] text-stone-500 mb-1">276 sites audited in 2026 · avg leak $3,200/mo</p>
-                    <h2 className="text-lg font-bold text-charcoal leading-tight">Most sites we audit look like this.</h2>
+                    <p className="text-[10px] text-stone-600 mb-1">Automated technical review · example below</p>
+                    <h2 className="text-lg font-bold text-charcoal leading-tight">Illustrative example of the automated checks.</h2>
                   </div>
                   <div className="space-y-2">
-                    <HeroDiag icon={Bot} q="Can ChatGPT & Google AI see you?" verdict="Most: invisible to AI" bad compact />
-                    <HeroDiag icon={Gauge} q="Loads under 1s on mobile?" verdict="Avg: 4.2s" bad compact />
-                    <HeroDiag icon={TrendingDown} q="What slow speed costs you" verdict="~$3,200/mo" bad compact />
+                    <HeroDiag icon={Bot} q="Are search foundations clear?" verdict="Checks access, content, and evidence" compact />
+                    <HeroDiag icon={Gauge} q="When does content first appear?" verdict="Example mobile lab FCP: 4.2s" bad compact />
+                    <HeroDiag icon={TrendingDown} q="Is content accountable?" verdict="Checks identity and provenance" compact />
                   </div>
                   <div className="relative">
-                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                     <input
+                      id={MOBILE_URL_INPUT_ID}
                       type="text"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder="yourwebsite.com"
                       aria-label="Website URL to audit"
-                      className="w-full bg-stone-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-400 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
+                      aria-invalid={Boolean(error)}
+                      aria-describedby={error ? MOBILE_URL_ERROR_ID : undefined}
+                      className="w-full bg-stone-50 border border-gray-300 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-600 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
                     />
                   </div>
-                  {error && <p className="text-red-600 text-sm">{error}</p>}
+                  {error && <p id={MOBILE_URL_ERROR_ID} className="text-red-600 text-sm" role="alert">{error}</p>}
                   <button
                     onClick={handleAnalyze}
                     className="w-full py-3 bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
                   >
-                    Find out how you look <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Run automated audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  <p className="text-center text-[10px] text-stone-500">Full breakdown on screen. No email required.</p>
+                  <p className="text-center text-[10px] text-stone-600">Full breakdown on screen. No email required.</p>
                 </motion.div>
               )}
 
@@ -346,20 +368,26 @@ export default function AuditWidget() {
                 <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-3">
                   <div className="text-sm text-stone-600 truncate">{url}</div>
                   <div className="space-y-2">
-                    <HeroResult icon={Bot} q="AI visibility" score={aiCheck?.score ?? 0} suffix="/100" compact />
-                    <HeroResult icon={Gauge} q="Mobile load" score={auditData.loadTime} suffix="s" lowerIsBetter goodUnder={1} okUnder={2.5} compact />
+                    <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck?.score ?? 0} suffix="/100" compact />
+                    <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} compact />
                     <HeroResult icon={Search} q="Performance" score={auditData.performanceScore} suffix="/100" compact />
                   </div>
                   {auditData.deepChecks && (
                     <div className="border border-stone-200 rounded-xl overflow-hidden">
                       <div className="px-3 py-2 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
-                        <span className="text-[9px] font-bold uppercase tracking-widest text-stone-500">Full 11-Point Inspection</span>
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-stone-600">Heuristic technical snapshot</span>
                         <span className={`text-[10px] font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>{auditData.deepChecks.overallScore}/100</span>
                       </div>
-                      <div className="divide-y divide-stone-100 max-h-[180px] overflow-y-auto">
+                      <div
+                        data-lenis-prevent
+                        className="divide-y divide-stone-100 max-h-[180px] overflow-y-auto"
+                        role="region"
+                        aria-label="Detailed audit checks"
+                        tabIndex={0}
+                      >
                         {auditData.deepChecks.checks.map((check) => (
                           <div key={check.id} className="flex items-center gap-2 px-3 py-1.5">
-                            {check.status === "pass" && <CheckCircle2 className="w-3 h-3 text-green-500 shrink-0" />}
+                            {check.status === "pass" && <CheckCircle2 className="w-3 h-3 text-green-700 shrink-0" />}
                             {check.status === "warn" && <AlertTriangle className="w-3 h-3 text-orange-700 shrink-0" />}
                             {check.status === "fail" && <XCircle className="w-3 h-3 text-red-600 shrink-0" />}
                             <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
@@ -367,18 +395,21 @@ export default function AuditWidget() {
                           </div>
                         ))}
                       </div>
+                      <p className="border-t border-stone-100 bg-stone-50 px-3 py-2 text-[9px] leading-relaxed text-stone-600">
+                        Proprietary automated average; not a certification or outcome guarantee.
+                      </p>
                     </div>
                   )}
                   <CalModalButton className="w-full py-3 bg-cognac text-white font-bold rounded-xl hover:bg-amber-700 transition-all flex items-center justify-center gap-2 text-sm group">
-                    <Calendar className="w-4 h-4" /> Book a teardown with Hassan <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Calendar className="w-4 h-4" /> Book an Optional Review <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </CalModalButton>
                   <button
                     onClick={() => setIsEmailGateOpen(true)}
                     className="w-full py-2.5 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-xs"
                   >
-                    <Mail className="w-3.5 h-3.5 text-stone-500" /> Or email me the 3 biggest fixes + costs
+                    <Mail className="w-3.5 h-3.5 text-stone-600" /> Email This Automated Summary
                   </button>
-                  <button onClick={handleReset} className="w-full text-center text-xs text-gray-500 hover:text-cognac transition-colors">
+                  <button onClick={handleReset} className="w-full min-h-6 text-center text-xs text-gray-600 hover:text-cognac transition-colors">
                     Scan another site
                   </button>
                 </motion.div>
@@ -388,12 +419,13 @@ export default function AuditWidget() {
         </div>
       </motion.div>
 
-      {/* Email Gate Modal — now the SOFT secondary path, not a wall */}
+      {/* Email summary modal: optional, never an audit wall */}
       <AuditEmailGate
         isOpen={isEmailGateOpen}
         onClose={() => setIsEmailGateOpen(false)}
         url={url}
         auditData={auditData}
+        leadToken={leadToken}
       />
     </div>
   );
@@ -415,10 +447,10 @@ function HeroDiag({
 }) {
   return (
     <div className={`flex items-start gap-3 rounded-xl border ${bad ? "border-red-100 bg-red-50/50" : "border-stone-200 bg-stone-50"} ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${bad ? "text-red-600" : "text-stone-500"} shrink-0 mt-0.5`} />
+      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${bad ? "text-red-600" : "text-stone-600"} shrink-0 mt-0.5`} />
       <div className="min-w-0 flex-1">
         <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>{q}</p>
-        <p className={`${compact ? "text-[10px]" : "text-xs"} ${bad ? "text-red-600" : "text-stone-500"} mt-0.5`}>{verdict}</p>
+        <p className={`${compact ? "text-[10px]" : "text-xs"} ${bad ? "text-red-600" : "text-stone-600"} mt-0.5`}>{verdict}</p>
       </div>
     </div>
   );
@@ -444,7 +476,7 @@ function HeroResult({
   okUnder?: number;
   compact?: boolean;
 }) {
-  // Color logic: score metrics use 90/50 thresholds; load-time uses goodUnder/okUnder
+  // Color logic: score metrics use 90/50 thresholds; FCP uses goodUnder/okUnder.
   let tone: "good" | "ok" | "bad";
   if (lowerIsBetter && goodUnder !== undefined && okUnder !== undefined) {
     tone = score <= goodUnder ? "good" : score <= okUnder ? "ok" : "bad";

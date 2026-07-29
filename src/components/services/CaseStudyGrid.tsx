@@ -28,7 +28,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 92,
     loadTime: "< 1s",
     saved: "~$55/mo",
-    note: "Our own store (co-founder Imran Raza's brand): migrated from WordPress + WooCommerce. The entire plugin and hosting stack now runs on about $55/mo total tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
+    note: "Founder-affiliated, not an independent client: owned and operated by co-founder Imran Raza Ladhani, with PandaCodeGen building and maintaining the platform but holding no ownership stake. Migrated from WordPress + WooCommerce. The owner reports the entire plugin and hosting stack now runs on about $55/mo total tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator), and over 1 million patches delivered to date.",
   },
   myCustomPatches: {
     name: "MyCustomPatches",
@@ -124,7 +124,7 @@ export default function CaseStudyGrid({
                   <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
                   <p className="text-sm text-stone-500 mt-1">{client.url}</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-cognac transition-colors shrink-0 mt-1" />
+                <ExternalLink className="w-4 h-4 text-stone-600 group-hover:text-cognac transition-colors shrink-0 mt-1" />
               </div>
 
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">

@@ -14,7 +14,7 @@ import PartnerPromise from "@/components/services/PartnerPromise";
 const faqs = [
   {
     q: "What is custom Shopify?",
-    a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, 4x faster store."
+    a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, with the storefront layer rebuilt for speed. The actual improvement depends on your current theme, apps and catalogue, so we measure your baseline before quoting."
   },
   {
     q: "Will my Shopify apps still work?",
@@ -110,7 +110,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 to $10,000 for headless commerce, load in under one second (roughly 4x faster than a standard theme), and ship with a written 90+ PageSpeed guarantee. The result replaces monthly app fees with owned code and recovers sales lost to slow load times.
+            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 to $10,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces monthly app fees with owned code. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
           </p>
         </div>
       </section>
@@ -210,7 +210,7 @@ export default function PageContent() {
                     <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
                     <p className="text-sm text-stone-500 mt-1">{client.url}</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-cognac transition-colors shrink-0 mt-1" />
+                  <ExternalLink className="w-4 h-4 text-stone-600 group-hover:text-cognac transition-colors shrink-0 mt-1" />
                 </div>
 
                 <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">
@@ -432,7 +432,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: ArrowRightLeft, title: "Theme to Custom", desc: "Safely migrate from Liquid to custom code. Zero data loss. Zero downtime. Your products, orders, and customers stay intact." },
+              { icon: ArrowRightLeft, title: "Theme to Custom", desc: "Safely migrate from Liquid to custom code with no downtime. Products, orders and customers are reconciled against a pre-migration export and any exceptions are reported before cutover." },
               { icon: Globe, title: "Global CDN Delivery", desc: "Serve your store from the Edge. Instant loading in Dubai, New York, and London. Every millisecond faster = more conversions." },
               { icon: CreditCard, title: "Custom Checkout", desc: "Bypass Shopify limitations. Integrate Stripe, custom upsells, and subscriptions exactly how you want them." },
             ].map((item, i) => (
@@ -484,7 +484,7 @@ export default function PageContent() {
                   "Custom Next.js storefront up to 20 products",
                   "Shopify Storefront API integration",
                   "Mobile-first responsive design",
-                  "90+ PageSpeed guaranteed",
+                  "90+ Lighthouse handover target",
                   "Sanity CMS for content",
                   "15 days of free post-launch support",
                 ],
@@ -596,7 +596,7 @@ export default function PageContent() {
                 A fully custom storefront that keeps Shopify&apos;s backend but eliminates all frontend limitations. The ultimate e-commerce upgrade.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90+ PageSpeed score", "Unique brand experience", "30-day money-back guarantee"].map((item, i) => (
+                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90+ PageSpeed score", "Unique brand experience", "Refund terms stated in the written scope"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -655,13 +655,13 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl bg-green-50 border border-green-200 rounded-[3rem] p-10 md:p-14 relative overflow-hidden">
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-[0.22em] mb-6">
-              <ShieldCheck className="w-4 h-4" /> Risk Reversal Guarantee
+              <ShieldCheck className="w-4 h-4" /> How we reduce your risk
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-              90+ PageSpeed <span className="font-serif italic text-cognac">or full refund.</span>
+              A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen build ships at 90+ on Google PageSpeed. If your new storefront does not hit that score on launch day, we refund 100% of your payment. Guaranteed, in writing.
+              Every PandaCodeGen build carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -679,7 +679,7 @@ export default function PageContent() {
       <section className="py-10 md:py-16 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl font-bold text-charcoal text-center mb-3">From the Blog</h2>
-          <p className="text-stone-400 text-center mb-10 text-sm">Research, case studies, and guides on headless e-commerce.</p>
+          <p className="text-stone-600 text-center mb-10 text-sm">Research, case studies, and guides on headless e-commerce.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { href: "/blog/shopify-headless", title: "Why Go Headless with Shopify?", desc: "The performance case for decoupling your Shopify storefront." },
@@ -691,7 +691,7 @@ export default function PageContent() {
             ].map((post) => (
               <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
-                <p className="text-stone-400 text-xs leading-relaxed flex-1">{post.desc}</p>
+                <p className="text-stone-600 text-xs leading-relaxed flex-1">{post.desc}</p>
                 <span className="text-cognac text-xs font-semibold flex items-center gap-1 mt-1">Read more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             ))}
@@ -732,7 +732,7 @@ export default function PageContent() {
       {/* Author Attribution */}
       <section className="py-10 border-t border-stone-200 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
-          <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-4">Built by</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-stone-600 mb-4">Built by</p>
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex items-start gap-4">
               <Link href="/about/hassan" className="shrink-0">
