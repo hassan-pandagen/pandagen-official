@@ -4,15 +4,28 @@ import { useEffect } from 'react';
 import { trackGAEvent } from '@/components/GoogleAnalytics';
 import { useConsent } from '@/components/consent/ConsentProvider';
 
+// The live property, previously hardcoded here and moved to an env var during the
+// July refactor. The variable was never set in hosting, so this component returned
+// null and the widget silently rendered nothing: live chat was dead from 29 Jul to
+// 3 Aug 2026 with no error anywhere. This ID ships to every browser in the embed
+// script, so it is not a secret and there is nothing to protect by omitting it.
+// The env var still wins when set; this is the floor, not the config.
+const DEFAULT_TAWK_EMBED_URL = 'https://embed.tawk.to/69861ee219d9521c3a42fa82/1jgpuh9j5';
+
 const configuredTawkEmbedUrl = (() => {
-  const candidate = process.env.NEXT_PUBLIC_TAWK_EMBED_URL?.trim();
-  if (!candidate) return null;
+  const candidate = process.env.NEXT_PUBLIC_TAWK_EMBED_URL?.trim() || DEFAULT_TAWK_EMBED_URL;
   try {
     const url = new URL(candidate);
-    return url.protocol === 'https:' && url.hostname === 'embed.tawk.to' ? url.toString() : null;
+    if (url.protocol === 'https:' && url.hostname === 'embed.tawk.to') return url.toString();
   } catch {
-    return null;
+    // fall through to the warning below
   }
+  // Never fail silently again. A chat widget that disappears without an error is
+  // indistinguishable from "nobody visited the site".
+  if (typeof console !== 'undefined') {
+    console.error('[TawkToChat] NEXT_PUBLIC_TAWK_EMBED_URL is invalid and the default was rejected. Live chat is DISABLED.');
+  }
+  return null;
 })();
 
 // ─── Intent-Tiered Opener System ─────────────────────────────────────────────
