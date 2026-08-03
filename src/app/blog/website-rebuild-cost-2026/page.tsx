@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, Layers3, RefreshCcw, Scale } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "website rebuild cost 2026",
         "website rebuild pricing",
@@ -47,11 +48,8 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-    { name: "Google SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
     { name: "WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
     { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard/" },
-    { name: "Google Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
 ];
 
 const articleSchema = {
@@ -61,6 +59,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
             dateModified: "2026-07-24",
@@ -69,13 +68,40 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Software cost analysis", "Website project scoping", "Vendor contracts", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website pricing",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
+            ],
+            wordCount: 1550,
+            timeRequired: "PT7M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website rebuild cost", item: "https://www.pandacodegen.com/blog/website-rebuild-cost-2026" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#webpage",
+            url: "https://www.pandacodegen.com/blog/website-rebuild-cost-2026",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/website-rebuild-cost-2026#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -122,14 +148,14 @@ export default function WebsiteRebuildCostPage() {
                         <p className="mt-4 text-xs text-stone-500">Reviewed July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="16 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
                                 "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
-                                "A rebuild can exceed those tiers when strategy, content, applications, data, compliance or governance expands.",
+                                "A rebuild goes past those tiers when the strategy work grows, or the content, or the applications, or the data, or what compliance and governance demand.",
                                 "Do not compare a rebuild quote with a visual redesign or like-for-like migration.",
                                 "Final price, schedule and remedies belong to a signed scope with acceptance evidence.",
                             ]}
@@ -152,10 +178,13 @@ export default function WebsiteRebuildCostPage() {
                     </div>
 
                     <BlogHeader id="cost-by-tier">How much does a website rebuild cost in 2026?</BlogHeader>
+                    <BlogText>
+                        The table below describes PandaCodeGen's own planning tiers and nothing else. We do not publish a market-wide rebuild range, because any single band has to average brochure sites, commerce platforms, regulated journeys and multi-market systems together. Price your own rebuild by writing the scope first, then asking two or three providers to quote that same scope.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
-                                <tr><th className="p-4">PandaCodeGen tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th></tr>
+                                <tr><th className="p-4">PandaCodeGen tier</th><th className="p-4">Planning range</th><th className="p-4">Potential fit</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded site with limited structure and integration change</td></tr>
@@ -184,6 +213,9 @@ export default function WebsiteRebuildCostPage() {
                     </BlogText>
 
                     <BlogHeader id="rebuild-vs-redesign-vs-migration">Rebuild vs redesign vs migration</BlogHeader>
+                    <BlogText>
+                        Two questions tell you which one you need. First, is the platform itself the problem? Second, has the business outgrown what the site says and how it is organized? If only the first is true, that is a migration. If both are true, that is a rebuild. If neither is true and only the look has gone stale, that is a redesign, and it costs a fraction of the other two.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[880px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -262,6 +294,9 @@ export default function WebsiteRebuildCostPage() {
                     </BlogText>
 
                     <BlogHeader id="red-flags">Proposal red flags without accusing a quote of padding</BlogHeader>
+                    <BlogText>
+                        A high quote may simply include more work or more risk. Six things in a proposal signal a scope problem rather than a pricing one, and the correct response to all six is the same: call the quotes non-comparable until the statements of work are normalized. Do not claim a provider padded it without evidence.
+                    </BlogText>
                     <BlogList
                         items={[
                             "No route, template, content, feature or integration inventory.",
@@ -285,7 +320,7 @@ export default function WebsiteRebuildCostPage() {
                             "Unlimited design revisions with no sign-off gate. Unlimited sounds generous, and it removes any reason for the project to converge. Ask instead for a defined number of structured rounds tied to named milestones, with extra rounds priced in advance.",
                             "No separate line for information architecture. A rebuild is meant to rethink structure, not just skin it. If no time is budgeted for a new sitemap and navigation model before design starts, you are paying rebuild prices for migration work.",
                             "Content strategy folded into copywriting. Deciding whether a page should still exist, be merged or be cut is a different task from writing the words. If there is no strategy line before the copywriting line, new words are being written for the old structure.",
-                            "Design deliverables described in adjectives. Ask what artefacts you receive: a sitemap, a design system, and signed-off layouts for the key page types before development starts. If none of that is itemized, the deliverable is undefined.",
+                            "Design deliverables described in adjectives. Ask what artifacts you receive: a sitemap, a design system, and signed-off layouts for the key page types before development starts. If none of that is itemized, the deliverable is undefined.",
                         ]}
                     />
                     <BlogText>
@@ -343,6 +378,9 @@ export default function WebsiteRebuildCostPage() {
                     />
 
                     <BlogHeader id="when-not-to-rebuild">When a rebuild does not make sense</BlogHeader>
+                    <BlogText>
+                        The most common wrong reason to rebuild is that the platform is the only real problem while the structure still describes the business accurately. That is a migration, and it is cheaper. Seven other conditions argue against buying a rebuild, and two of them are about you rather than the site: unresolved content or positioning will stall any build, and nobody having capacity for feedback and approvals will stall it twice.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The platform fits and a targeted repair addresses the measured problem.",
@@ -358,9 +396,9 @@ export default function WebsiteRebuildCostPage() {
 
                     <BlogHeader id="pandacodegen-pricing">PandaCodeGen terms</BlogHeader>
                     <BlogText>
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope, not a change of preference after starting. Starter includes
-                        15 business days of launch defect support; Growth and Scale include 30. Ownership, licenses,
+                        15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership, licenses,
                         accounts, acceptance and remedies follow the signed project terms. Work that falls outside the
                         standard tiers is scoped through our{" "}
                         <Link href="/services/custom-engineering" className={linkClass}>custom engineering service</Link>.
@@ -380,6 +418,17 @@ export default function WebsiteRebuildCostPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a rebuild decision and migration plan</h2>

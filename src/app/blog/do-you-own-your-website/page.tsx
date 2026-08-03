@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, ComparisonGrid } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -33,13 +33,18 @@ export const metadata: Metadata = {
         "website copyright transfer",
         "domain and hosting ownership",
         "website handover checklist",
+        "does my developer own my website",
+        "developer holding website hostage",
+        "what happens if my web developer disappears",
+        "website source code transfer contract",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/do-you-own-your-website")],
@@ -57,31 +62,48 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/do-you-own-your-website"),
             datePublished: "2026-06-03",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Guide",
             inLanguage: "en-US",
+            wordCount: 1700,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "Thing", name: "Copyright", sameAs: ["https://en.wikipedia.org/wiki/Copyright"] },
+                { "@type": "Thing", name: "Work for hire", sameAs: ["https://en.wikipedia.org/wiki/Work_for_hire"] },
+                { "@type": "Thing", name: "Domain name", sameAs: ["https://en.wikipedia.org/wiki/Domain_name"] },
+                { "@type": "Thing", name: "Website ownership" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: [
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "U.S. Copyright Office: Copyright Basics, Circular 1",
                     url: "https://www.copyright.gov/circs/circ01.pdf",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "U.S. Copyright Office: Works Made for Hire, Circular 30",
                     url: "https://www.copyright.gov/circs/circ30.pdf",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
+                    name: "17 U.S.C. 101: Definitions, including work made for hire",
+                    url: "https://www.law.cornell.edu/uscode/text/17/101",
+                },
+                {
+                    "@type": "CreativeWork",
                     name: "17 U.S.C. 204: Execution of transfers of copyright ownership",
                     url: "https://www.law.cornell.edu/uscode/text/17/204",
                 },
@@ -89,11 +111,23 @@ const articleSchema = {
         },
         {
             "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
                 { "@type": "ListItem", position: 3, name: "Do You Own Your Website?", item: canonicalUrl },
             ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-06-03",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -142,7 +176,7 @@ export default function DoYouOwnYourWebsitePage() {
                             different rights and controls. Put each one in writing.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026. General U.S.-first information, not legal advice. Ask qualified counsel to review your agreement and jurisdiction.
+                            Reviewed August 1, 2026. General U.S.-first information, not legal advice. Ask qualified counsel to review your agreement and jurisdiction.
                         </p>
                     </header>
 
@@ -152,6 +186,7 @@ export default function DoYouOwnYourWebsitePage() {
                         date="June 3, 2026"
                         readTime="9 min read"
                         bio="Hassan leads PandaCodeGen's engineering handover, account-control, and migration planning work."
+                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
@@ -161,9 +196,9 @@ export default function DoYouOwnYourWebsitePage() {
                                 "Do not assume payment alone transfers every copyright or grants every source-code right.",
                                 "Work-made-for-hire treatment is fact-specific and narrower for commissioned contractor work than many website articles suggest.",
                                 "A copyright transfer generally needs a signed writing in the United States.",
-                                "Control the domain, hosting, repository, CMS, analytics, email, commerce, CRM, and other business accounts named in the project.",
+                                "You control the domain, the hosting, the code, the CMS, analytics, email, the store, the CRM and every other account named in the project.",
                                 "Separate custom deliverables from agency pre-existing tools and third-party components that retain their own licenses.",
-                                "Define transfer timing, usually after full payment, plus cancellation, refund, support, data return, and exit assistance.",
+                                "Say when ownership transfers, normally on full payment, and what happens if you cancel: refunds, support, getting your data back, and help leaving.",
                             ]}
                         />
                     </section>
@@ -188,8 +223,68 @@ export default function DoYouOwnYourWebsitePage() {
                         slogan. It identifies the deliverables, rights, licenses, exclusions, payment condition, and
                         transfer event. Counsel should adapt that language to the parties and governing law.
                     </BlogText>
+                    <BlogText>
+                        It is worth being clear about which way that nuance cuts, because the correction can be read as
+                        reassurance and it is not one. The reason the popular sentence is too broad is that a website is
+                        many works at once, not that a client is likely to own the code by default. On the code an
+                        outside developer writes for you, the statutory route to work-made-for-hire treatment needs both
+                        a signed agreement and one of the categories the statute lists, and commissioned website code
+                        generally does not sit in those categories. That is precisely why the signed-writing requirement
+                        matters so much in practice: where a contract says nothing, the safe assumption is that the
+                        rights in that code did not move to you, whatever the invoice says.
+                    </BlogText>
+                    <BlogText>
+                        The practical consequence is small and unglamorous. If your agreement is silent on ownership, you
+                        do not have an argument to win later, you have a document to fix now, ideally before the next
+                        payment. That is a conversation, not a dispute, and it is far easier while everyone is still
+                        pleased with the work. This remains general information rather than advice on your situation.
+                    </BlogText>
+
+                    <BlogHeader id="work-for-hire">Does a &ldquo;work made for hire&rdquo; clause mean you own the website?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Usually not on its own, and this is the most repeated wrong answer on the topic. Under
+                            17 U.S.C. &sect;101 a specially commissioned work only qualifies as a work made for hire
+                            only if the parties expressly agree in a written instrument signed by both of them that it is a work made for hire, <em>and</em> it falls into one of nine listed categories.
+                            Commissioned website code generally does not sit in those categories, so a contract that
+                            simply calls the work &ldquo;work made for hire&rdquo; can fail to move anything. What
+                            reliably transfers copyright is a written assignment signed by the author, which is what
+                            17 U.S.C. &sect;204(a) requires. If ownership matters to you, look for the word
+                            <em> assignment</em> in your agreement, not the phrase work made for hire.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        This is general information about US copyright law rather than advice on your situation, and
+                        governing law varies. But it is worth knowing before you accept a reassurance, because the two
+                        phrases are treated as interchangeable almost everywhere and they are not. The practical move is
+                        the same either way: read what your agreement actually says about the code, and fix it now if it
+                        says nothing.
+                    </BlogText>
+
+                    <BlogHeader id="builders">Do website builders own your website?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            They own the platform, you own your content, and the thing in between, the site as it
+                            exists, is usually not portable rather than not yours. On a hosted builder the layouts,
+                            components and rendering belong to the platform, so what you can take with you is whatever
+                            it lets you export. That is why the ownership question on a builder is answered by the
+                            export documentation rather than by the contract: it does not matter who owns a template you
+                            cannot remove from the platform.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Check the specific limits before you commit, because they differ sharply. Our breakdowns of{" "}
+                        <Link href="/blog/webflow-true-cost" className={sourceLinkClass}>what Webflow does and does not export</Link>,{" "}
+                        <Link href="/blog/is-squarespace-bad-for-seo" className={sourceLinkClass}>Squarespace&apos;s structural limits</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/wix-migration-cost" className={sourceLinkClass}>what a Wix export actually contains</Link>{" "}
+                        each set out the real boundary for that platform.
+                    </BlogText>
 
                     <BlogHeader>Eight things to control or document</BlogHeader>
+                    <BlogText>
+                        Ownership is specific or it is nothing. Four categories have to be named rather than assumed: the custom deliverables themselves, the domain registration and its recovery path, the hosting and infrastructure accounts, and every business service the site depends on. The test is simple: can you sign in, can you pay the bill, and can you remove anyone including us?
+                    </BlogText>
                     <div className="my-8 grid gap-4 sm:grid-cols-2">
                         {[
                             { icon: FileCode2, title: "Custom deliverables", body: "Name the source files, designs, documentation, content models, configuration, and other project-specific work covered by the transfer or license." },
@@ -223,6 +318,27 @@ export default function DoYouOwnYourWebsitePage() {
                         <Link href="/blog/woocommerce-vs-custom-website" className="text-cognac hover:underline font-medium">WooCommerce</Link>{" "}
                         against a custom build each set out what stays with the platform in that arrangement.
                     </BlogText>
+
+                    <ComparisonGrid
+                        left={{
+                            label: "Renting the arrangement",
+                            items: [
+                                "The domain sits in the developer's registrar account",
+                                "The live environment is an account you cannot sign into",
+                                "Content lives in a proprietary system you can export text from, but not the working site",
+                                "No repository, build instructions or environment configuration, so leaving means rebuilding",
+                            ],
+                        }}
+                        right={{
+                            label: "Owning the arrangement",
+                            items: [
+                                "The domain is registered to your company, with your recovery email and MFA",
+                                "Hosting and services sit in accounts you can sign into and pay for",
+                                "You hold the administrator role and can remove anyone, including your agency",
+                                "Repository, build steps and configuration delivered and tested by someone else",
+                            ],
+                        }}
+                    />
 
                     <BlogHeader>Source code access is not the same as unlimited ownership</BlogHeader>
                     <BlogText>
@@ -262,9 +378,9 @@ export default function DoYouOwnYourWebsitePage() {
                         covers the part of the handover that has to be monitored afterwards.
                     </BlogText>
 
-                    <BlogHeader>Four ways lock-in actually happens</BlogHeader>
+                    <BlogHeader>Five ways lock-in actually happens</BlogHeader>
                     <BlogText>
-                        Each control above fails in a recognisable way. Naming the failure modes makes them easier to
+                        Each control above fails in a recognizable way. Naming the failure modes makes them easier to
                         write out of an agreement before work starts.
                     </BlogText>
                     <BlogList
@@ -339,6 +455,9 @@ export default function DoYouOwnYourWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>Questions to put in the SOW before onboarding</BlogHeader>
+                    <BlogText>
+                        Eight questions belong in the statement of work before any work starts, because after launch they become negotiations. What counts as a custom deliverable and when its rights transfer, what agency material is excluded and under what license, which third-party components carry their own terms, who controls each account, what is handed over, and what happens on nonpayment or termination.
+                    </BlogText>
                     <BlogList
                         items={[
                             "What exactly is a custom deliverable, and when do its rights transfer?",
@@ -366,6 +485,7 @@ export default function DoYouOwnYourWebsitePage() {
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         <li><a href="https://www.copyright.gov/circs/circ01.pdf" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>U.S. Copyright Office Circular 1: Copyright Basics</a></li>
                         <li><a href="https://www.copyright.gov/circs/circ30.pdf" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>U.S. Copyright Office Circular 30: Works Made for Hire</a></li>
+                        <li><a href="https://www.law.cornell.edu/uscode/text/17/101" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>17 U.S.C. 101: definitions, including work made for hire</a></li>
                         <li><a href="https://www.law.cornell.edu/uscode/text/17/204" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>17 U.S.C. 204: execution of copyright transfers</a></li>
                     </ul>
                     <BlogText>

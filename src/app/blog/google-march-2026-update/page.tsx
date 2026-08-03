@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/blog/google-march-2026-update",
     },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Google March 2026 core update",
         "Google algorithm update 2026",
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
         title: "Google March 2026 Core Update: What Google Confirmed",
         description: "The rollout ran from March 27 to April 8. Separate a core-update correlation from content, indexing, demand, and performance problems with an evidence-led workflow.",
         type: "article",
-        publishedTime: "2026-04-01T00:00:00-05:00",
-        modifiedTime: "2026-07-24T00:00:00-05:00",
+        publishedTime: "2026-04-09T00:00:00-05:00",
+        modifiedTime: "2026-08-02T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-march-2026-update",
         images: [ogImageForPath("/blog/google-march-2026-update")],
@@ -60,24 +61,20 @@ const articleSchema = {
             "headline": "Google March 2026 Core Update: What Google Confirmed",
             "description": "Google's March 2026 core update ran from March 27 to April 8. This guide separates Google's confirmed record from unsupported speed claims and explains how to investigate a traffic change responsibly.",
             "image": ogImageUrlForPath("/blog/google-march-2026-update"),
-            "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "datePublished": "2026-04-09T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "knowsAbout": ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-march-2026-update" },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#webpage" },
             "articleSection": "SEO",
             "keywords": ["Google March 2026 core update", "Google traffic drop", "Core Web Vitals SEO", "LCP threshold", "INP Core Web Vital", "Search Console"],
             "about": [
@@ -86,6 +83,8 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Search Console", "description": "Google's service for monitoring and troubleshooting a site's presence in Google Search" },
             ],
             "inLanguage": "en-US",
+            "wordCount": 2500,
+            "timeRequired": "PT10M",
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"],
@@ -93,11 +92,6 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "Google Search Status Dashboard: March 2026 core update", "url": "https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y" },
                 { "@type": "CreativeWork", "name": "Google Search's core updates and your website", "url": "https://developers.google.com/search/docs/appearance/core-updates" },
-                { "@type": "CreativeWork", "name": "Understanding Core Web Vitals and Google search results", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-                { "@type": "CreativeWork", "name": "Understanding page experience in Google Search results", "url": "https://developers.google.com/search/docs/appearance/page-experience" },
-                { "@type": "CreativeWork", "name": "Debugging drops in Google Search traffic", "url": "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" },
-                { "@type": "CreativeWork", "name": "Using Search Console and Google Analytics data for SEO", "url": "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console" },
-                { "@type": "CreativeWork", "name": "Search Console annotations", "url": "https://support.google.com/webmasters/answer/16530728" },
             ],
         },
         {
@@ -117,23 +111,10 @@ const articleSchema = {
             "description": "The rollout ran from March 27 to April 8. This page explains the confirmed record, unchanged Core Web Vitals thresholds, and a Search Console diagnostic process.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-march-2026-update") },
-            "datePublished": "2026-04-01T00:00:00-05:00",
-            "dateModified": "2026-07-22T00:00:00-05:00",
+            "datePublished": "2026-04-09T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb" },
             "inLanguage": "en-US",
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen plans and delivers SEO-safe migrations for revenue-generating WordPress, Webflow, and GoHighLevel websites. Scope, performance tests, acceptance criteria, and remedies are defined in accepted written terms.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026-02",
         },
         {
             "@type": "FAQPage",
@@ -179,9 +160,9 @@ export default function GoogleMarchUpdatePage() {
                         </p>
 
                         <BlogAuthor
-                            date="Apr 1, 2026, reviewed Jul 22, 2026"
-                            readTime="13 min read"
-                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He focuses on performance testing, technical SEO, and controlled website migrations with documented baselines and acceptance criteria."
+                            date="Apr 9, 2026, reviewed Aug 2, 2026"
+                            readTime="10 min read"
+                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the performance testing, the technical SEO, and runs controlled migrations with documented baselines and acceptance criteria."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -269,7 +250,7 @@ export default function GoogleMarchUpdatePage() {
                         <BlogHeader>How to Separate a Core-Update Change From a Performance Problem</BlogHeader>
 
                         <BlogText>
-                            Start with a controlled comparison, not a site-wide rewrite. Google recommends confirming that the rollout has finished, waiting at least a full week, and comparing a post-rollout week with a week before the rollout. Keep seasonality in mind, and use a year-over-year comparison when the business has enough history.
+                            Start with a controlled comparison, not a site-wide rewrite. Google&apos;s <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">traffic-drop guidance</a> recommends confirming that the rollout has finished, waiting at least a full week, and comparing a post-rollout week with a week before the rollout. Keep seasonality in mind, and use a year-over-year comparison when the business has enough history.
                         </BlogText>
 
                         <BlogText>
@@ -361,7 +342,7 @@ export default function GoogleMarchUpdatePage() {
                         </BlogText>
 
                         <BlogText>
-                            There is no universal core update recovery time. Google's guidance says some effects can appear within days, while broader reassessment can take several months. It also states that no improvement guarantees a visible ranking effect. Use a review schedule and decision gates, not a promised recovery date.
+                            There is no universal core update recovery time. Google&apos;s <a href="https://developers.google.com/search/docs/appearance/core-updates" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">core-update guidance</a> says some effects can appear within days, while broader reassessment can take several months. It also states that no improvement guarantees a visible ranking effect. Use a review schedule and decision gates, not a promised recovery date.
                         </BlogText>
 
                         <div className="my-8 md:my-10 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
@@ -372,18 +353,18 @@ export default function GoogleMarchUpdatePage() {
                             </CalModalButton>
                         </div>
 
-                        <BlogHeader>A Practical 30-Day Monitoring Plan</BlogHeader>
+                        <BlogHeader>A 30-Day Monitoring Plan, Counted From Your Own Release</BlogHeader>
 
                         <BlogText>
-                            During the first week, preserve exports from Search Console and analytics, record the official rollout dates, and list every relevant internal change. Build a page-by-query comparison for the pages with the largest click or position differences. Inspect representative URLs and rule out manual actions, security issues, indexation problems, server errors, robots directives, and canonical mistakes.
+                            In the first week after your own release, preserve exports from Search Console and analytics, record the official rollout dates, and list every relevant internal change. Build a page-by-query comparison for the pages with the largest click or position differences. Inspect representative URLs and rule out manual actions, security issues, indexation problems, server errors, robots directives, and canonical mistakes.
                         </BlogText>
 
                         <BlogText>
-                            During the second week, compare mobile and desktop field performance by template. Reproduce problems with lab tools, then trace them to images, fonts, JavaScript, rendering, server response, layouts, or third-party code. Separately review search intent, competing results, content accuracy, authorship, and the usefulness of each affected page.
+                            In the second week, compare mobile and desktop field performance by template. Reproduce problems with lab tools, then trace them to images, fonts, JavaScript, rendering, server response, layouts, or third-party code. Separately review search intent, competing results, content accuracy, authorship, and the usefulness of each affected page.
                         </BlogText>
 
                         <BlogText>
-                            During weeks three and four, prioritize changes by confidence, user impact, and reversibility. Release small groups when possible. Validate indexing and rendering, monitor errors and conversions, and document the outcome. Continue watching Search Console, but avoid interpreting daily noise as a verdict.
+                            In weeks three and four, prioritize changes by confidence, user impact, and reversibility. Release small groups when possible. Validate indexing and rendering, monitor errors and conversions, and document the outcome. Continue watching Search Console, but avoid interpreting daily noise as a verdict.
                         </BlogText>
 
                         <BlogText>

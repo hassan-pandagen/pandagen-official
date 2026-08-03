@@ -4,20 +4,20 @@ import { motion } from "@/components/ui/motion";
 import { Clock, Zap } from "lucide-react";
 
 const traditionalSteps = [
-  "Discovery & requirements (2 weeks)",
-  "Wireframes & design (3 weeks)",
-  "Front-end development (3 weeks)",
-  "Back-end development (2 weeks)",
-  "Testing & QA (1 week)",
-  "Launch & deployment (1 week)",
+  "Work out what you need (2 weeks)",
+  "Wireframe it, then design it (3 weeks)",
+  "Build the front end (3 weeks)",
+  "Build the back end (2 weeks)",
+  "Test it (1 week)",
+  "Launch it (1 week)",
 ];
 
 const pandagenSteps = [
-  "AI assisted discovery (2 days)",
-  "Design + prototype (1 week)",
-  "AI powered build (1 to 2 weeks)",
-  "Automated testing (2 days)",
-  "Global deployment (1 day)",
+  "Work out what you need, AI assisted (2 days)",
+  "Design it and prototype it (1 week)",
+  "Build it, AI assisted (1 to 2 weeks)",
+  "Run the automated tests (2 days)",
+  "Ship it (1 day)",
 ];
 
 export default function AIPowered() {
@@ -38,8 +38,8 @@ export default function AIPowered() {
             <span className="font-serif italic text-cognac">Weeks, not months.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-            We combine AI-assisted development tooling with senior engineers to ship
-            production-quality websites on a schedule stated in the written project terms.
+            Senior engineers using AI tooling, on the schedule in your written terms. Not a guess, and not a
+            junior learning on your budget.
           </p>
         </motion.div>
 
@@ -58,11 +58,11 @@ export default function AIPowered() {
               <div className="w-10 h-10 rounded-lg bg-stone-200 flex items-center justify-center">
                 <Clock className="w-5 h-5 text-gray-500" />
               </div>
-              <div className="text-xs text-stone-500 uppercase tracking-widest font-bold">Traditional Agency</div>
+              <div className="text-xs text-stone-500 uppercase tracking-widest font-bold">A sequential build</div>
             </div>
 
             <div className="text-4xl md:text-5xl font-black text-charcoal mb-8 tracking-tight">
-              8-12 <span className="text-2xl md:text-3xl font-bold">Weeks</span>
+              6 <span className="text-2xl md:text-3xl font-bold">phases, one after another</span>
             </div>
 
             <div className="space-y-3">
@@ -90,11 +90,11 @@ export default function AIPowered() {
               <div className="w-10 h-10 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-charcoal" />
               </div>
-              <div className="text-xs text-charcoal uppercase tracking-widest font-bold">PandaCodeGen AI-Powered</div>
+              <div className="text-xs text-charcoal uppercase tracking-widest font-bold">How we run it</div>
             </div>
 
             <div className="text-4xl md:text-5xl font-black text-charcoal mb-8 tracking-tight">
-              2-4 <span className="text-2xl md:text-3xl font-bold">Weeks</span>
+              5 <span className="text-2xl md:text-3xl font-bold">stages, several in parallel</span>
             </div>
 
             <div className="space-y-3">
@@ -122,6 +122,16 @@ export default function AIPowered() {
           <span className="w-1 h-1 rounded-full bg-gray-300 hidden sm:block" />
           <span>Automated testing pipelines</span>
         </motion.div>
+
+        {/* The left column used to read "Traditional Agency, 8-12 weeks" against our
+            "2-4 weeks". That was an unsourced timing claim about every unnamed
+            competitor, and the French and German versions of this page dropped it for
+            exactly that reason. Compare the shape of the process, never a benchmark
+            we cannot evidence. */}
+        <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-5 text-stone-500">
+          The left column is the shape of a phase-by-phase build, not a measured benchmark of any
+          particular agency. Your schedule is the one written into the accepted project terms.
+        </p>
 
       </div>
     </section>

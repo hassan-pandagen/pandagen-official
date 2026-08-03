@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, FileSearch, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "SaaS stack cost",
         "reduce software subscriptions",
         "build vs buy software",
+        "why is my software bill going up",
+        "software subscription audit checklist",
+        "SaaS renewal review",
+        "software spend register",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-software-pricing-audit-2026")],
@@ -64,7 +69,6 @@ const sources = [
         url: "https://help.shopify.com/en/manual/apps/uninstalling-apps",
     },
     { name: "Vercel pricing", url: "https://vercel.com/pricing" },
-    { name: "Vercel terms", url: "https://vercel.com/legal/terms" },
     { name: "Sanity pricing", url: "https://www.sanity.io/pricing" },
 ];
 
@@ -75,21 +79,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/saas-software-pricing-audit-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["SaaS cost management", "Software procurement", "Vendor contracts", "Subscription auditing"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1550,
+            timeRequired: "PT7M",
+            about: [
+                { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
+                { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
+                { "@type": "Thing", name: "Microsoft 365", sameAs: ["https://www.microsoft.com/microsoft-365"] },
+                { "@type": "Thing", name: "Software audit" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "SaaS pricing audit", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-31",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -135,30 +172,30 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             consolidate, replace or investigate without promising a universal savings rate.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current primary vendor sources.
+                            Reviewed August 2, 2026 against current primary vendor sources.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The audit deliverables</h2>
                         <BlogList
                             items={[
-                                "A reconciled register of vendors, products, owners, invoices, terms, usage and data.",
+                                "One list that reconciles: every vendor, what you buy, who owns it internally, the invoices, the terms, your actual usage, and what data sits there.",
                                 "A decision for every line: retain, right-size, consolidate, replace or investigate.",
-                                "A risk and dependency map covering security, privacy, integrations, continuity and exit.",
+                                "A map of what depends on what, and where the risk is: security, privacy, integrations, staying running, and getting out.",
                                 "Conservative, base and adverse cost scenarios for any material change.",
-                                "A dated evidence pack so finance, operations and engineering can review the same facts.",
+                                "A dated pack of evidence, so finance, operations and engineering are all looking at the same facts.",
                             ]}
                         />
                     </section>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: FileSearch, title: "Commercial", body: "Invoice, contract, SKU, discount, term, renewal, notice, tax and owner." },
-                            { icon: Gauge, title: "Usage", body: "Seats, roles, activity, storage, requests, contacts, messages, transactions and peaks." },
-                            { icon: ShieldCheck, title: "Risk", body: "Data, permissions, processors, integrations, recovery, support and exit." },
+                            { icon: FileSearch, title: "Commercial", body: "What you signed, what you pay, and when you can leave." },
+                            { icon: Gauge, title: "Usage", body: "What you actually use, including at peak." },
+                            { icon: ShieldCheck, title: "Risk", body: "What data sits there, who can reach it, and how you get it back." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -168,9 +205,24 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         ))}
                     </div>
 
+                    <BlogHeader id="the-pattern">The pattern this audit exists to catch</BlogHeader>
+                    <BlogText>
+                        The shape of the problem is familiar enough to describe without a statistic. You sign up at a
+                        modest monthly price. You do not add users, you do not change how you work, and the product does
+                        not noticeably improve. Two years later the same line item is several times larger. Nothing
+                        dramatic happened. A tier boundary moved, a definition of the billed unit changed, an
+                        introductory discount lapsed, a plan was restructured and you were migrated onto the nearest
+                        equivalent, and each of those arrived on a different date in a different email.
+                    </BlogText>
+                    <BlogText>
+                        That is why an audit built on remembered prices does not work. Nobody remembers four small
+                        changes across two years, and the vendor is under no obligation to summarize them for you. The
+                        invoice does. Everything below starts there.
+                    </BlogText>
+
                     <BlogHeader id="what-changed">What actually changed in 2026</BlogHeader>
                     <BlogText>
-                        The audit below is worth running this year specifically because several widely-used vendors moved
+                        The audit below is worth running in 2026 specifically because several widely-used vendors moved
                         price or packaging inside the same twelve months. Each item is linked to the vendor&apos;s own
                         announcement. Verify against the live page before you budget from it, because vendors revise these
                         notices and regional pricing differs. We follow the same vendor announcements in our{" "}
@@ -186,7 +238,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Microsoft 365</td>
-                                    <td className="p-4">Business Basic $6 to $7 per user/month; Business Standard $12.50 to $14. Enterprise and frontline tiers also rose, with Microsoft 365 F1 up from $2.25 to $3. Microsoft states existing customers stay on current pricing until renewal.</td>
+                                    <td className="p-4">Per user/month: Business Basic $6 to $7; Business Standard $12.50 to $14; E3 $36 to $39; E5 $57 to $60; F1 $2.25 to $3; F3 $8 to $10. Business Premium is unchanged at $22, so check your own SKU before assuming a rise. Microsoft states existing customers remain on current pricing until renewal, and that tenants get at least 30 days notice in Message Center before packaging changes become available. Figures from Microsoft&apos;s licensing news page, checked August 2, 2026.</td>
                                     <td className="p-4">July 1, 2026</td>
                                 </tr>
                                 <tr>
@@ -196,8 +248,8 @@ export default function SaasSoftwarePricingAudit2026Page() {
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Klaviyo</td>
-                                    <td className="p-4">Billing model change affecting how contacts and sends are counted. The practical effect varies by list size and sending pattern, so read your own invoice rather than a published percentage.</td>
-                                    <td className="p-4">2026</td>
+                                    <td className="p-4">Billing model change affecting how contacts and sends are counted. This is an earlier policy change rather than a 2026 price rise, and it can still be the reason a 2026 invoice looks different. The practical effect varies by list size and sending pattern, so read your own invoice rather than a published percentage.</td>
+                                    <td className="p-4">February 18, 2025</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -210,12 +262,18 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </InsightBox>
 
                     <BlogHeader>1. Reconcile finance, identity and vendor records</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The register everything else runs on, and it comes from three places rather than one. Twelve months of card, bank and AP charges tell you what you paid. The contracts tell you renewal dates and notice periods. The identity provider tells you what staff actually log into. Anything in that third list missing from the first is either free, personally expensed, or on a card nobody reconciles.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Export at least twelve months of card, bank, accounts-payable and app-marketplace charges.",
                             "Match each charge to a vendor account, product, workspace, business owner and technical owner.",
-                            "Record contract dates, renewal, notice period, auto-renewal, minimum commitment and termination path.",
+                            "Record contract dates, renewal, notice period, auto-renewal, minimum commitment and termination path. Set the reminder off the notice period the contract itself states, not a generic lead time, and add enough working days to get an approval through before the window shuts.",
                             "Identify externally billed subscriptions that will not appear in a platform's native billing page.",
+                            "Export the application list from your identity provider, such as Okta or Microsoft Entra ID, formerly Azure AD. Anything employees sign into but finance never paid for is either free, expensed personally, or billed to a card you have not reconciled yet.",
                             "Flag unknown, duplicate, former-employee and test accounts for investigation before cancellation.",
                         ]}
                     />
@@ -245,10 +303,15 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </BlogText>
 
                     <BlogHeader>3. Measure use without inventing a dormant-user benchmark</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Define what meaningful use means for each product before measuring anything, because a login does not prove value and silence does not prove idleness. State the observation window explicitly as well: a single quarter misses everything that only runs at month-end, quarter-end or year-end. Every change that follows this needs a rollback plan.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Define meaningful use for the product: login alone may not establish value, and absence of login may not mean unused automation.",
-                            "Review assigned seats, permission level, last activity, feature use, API calls and owned workflows.",
+                            "Review assigned seats, permission level, last activity, feature use, API calls and owned workflows over a window you state explicitly. A quarter misses anything that only runs at month-end, quarter-end or year-end, so record the window alongside the finding and let the next person re-run it.",
                             "Check seasonal and campaign peaks before downgrading a usage-based plan.",
                             "Ask the business owner what fails if the tool is removed and how that dependency was tested.",
                             "Retain a change and rollback plan for any seat, tier or integration adjustment.",
@@ -262,7 +325,26 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         activity records and invoices.
                     </InsightBox>
 
+                    <InsightBox variant="warning" label="Two things an average month will not show you">
+                        First, anything metered by ticket, contact, conversation, message or send does not have a
+                        stable monthly cost. A promotion, a seasonal peak or a paid campaign multiplies the units while
+                        the plan stays exactly the same, so an annual budget built from a quiet month will be wrong in
+                        the months that matter most. Pull twelve months rather than three, and look at the peaks
+                        specifically before you right-size anything usage-based.
+                    </InsightBox>
+                    <InsightBox variant="info" label="Check that the cheaper plan is available to you">
+                        Vendors frequently introduce lower entry pricing to attract new customers while existing
+                        accounts stay on the plan they signed. So a cheaper tier appearing on the pricing page is not
+                        yet a saving. Before you build it into a forecast, confirm in writing that your account can
+                        actually move onto it, because the answer is sometimes no and it is rarely stated on the page.
+                    </InsightBox>
+
                     <BlogHeader>4. Map capability and data dependencies</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the section that separates unused from quietly load-bearing. Five surfaces need inventorying before a subscription can safely be touched: what it does, what regulated data it holds, what it is wired into, what you could get out of it, and who knows how to run it. A tool nobody logs into can still be carrying a scheduled job the business depends on.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Authentication, roles, workflows, forms, approvals, notifications and scheduled jobs.",
@@ -277,7 +359,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     <BlogText>
                         Confirm the current vendor procedure before changing access. Shopify currently says uninstalling
                         an app cancels future Shopify-billed recurring charges, while pending charges from the current
-                        cycle can still appear and externally billed subscriptions must be cancelled with the provider.
+                        cycle can still appear and externally billed subscriptions must be canceled with the provider.
                         Other products use different timing. Capture confirmation, exports and effective dates. App
                         charges are easy to overlook at this step, so read our walkthrough of{" "}
                         <Link href="/blog/shopify-app-costs-real-monthly-bill" className="text-cognac hover:underline font-medium">where Shopify app charges appear on a monthly bill</Link>{" "}
@@ -287,6 +369,11 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </BlogText>
 
                     <BlogHeader>6. Decide line by line</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Five verdicts are available for any subscription, and each has to be earned with different evidence. Retain needs demonstrated use. Right-size needs proof a lower tier covers your peaks rather than your average. Consolidate needs one product genuinely covering the workflows. Replace needs the target to clear requirements at acceptable risk. Investigate is the honest verdict while an owner, a contract or a data location is still unknown.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -304,7 +391,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
 
                     <BlogHeader>7. Compare buy, switch and build on total cost</BlogHeader>
                     <BlogText>
-                        Put every option on the same list of inputs before you compare them. Our{" "}
+                        Compare buy, switch and build on one list of inputs: license or build cost, migration effort, the internal hours each option consumes, what it costs to run for three years, and what it costs to leave. An option often looks cheaper only because something was left off that list. Put every option on the same inputs before you compare them. Our{" "}
                         <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline font-medium">website cost guide</Link>{" "}
                         sets out how we break a scope into those inputs.
                     </BlogText>
@@ -331,6 +418,9 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </BlogText>
 
                     <BlogHeader>8. Set change and acceptance controls</BlogHeader>
+                    <BlogText>
+                        A decision to cancel is not the same as a saving that sticks. Six controls make it stick: a named owner and rollback trigger per change, exit evidence including deletion, acceptance testing where a replacement is involved, post-change monitoring against a dated baseline, contract-specific remedy for anything custom, and a procurement gate for the next purchase. Without that last one, the spend reappears on someone's expense claim within a quarter.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Named owner, approval, change window, test script, rollback trigger and communication path.",
@@ -338,6 +428,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             "Functional, security, accessibility, performance and integration acceptance where relevant.",
                             "Post-change monitoring and a dated comparison with the baseline.",
                             "Contract-specific support, cure and remedy for any custom replacement.",
+                            "An agreed route for buying the next tool: who approves it, which card it goes on, and who adds it to the register. Without that, the spend you just removed reappears on someone's expense claim within a quarter and the audit has to start again.",
                         ]}
                     />
                     <BlogText>
@@ -349,6 +440,11 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     </BlogText>
 
                     <BlogHeader>Primary sources</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Seven pages, all vendor-owned rather than third-party summaries, checked on the dates given above. Vendors revise these without notice, so treat the list as where to verify rather than as a substitute for verifying. Where a figure here disagrees with your own invoice, your invoice is the authority.
+                        </BlogText>
+                    </div>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         {sources.map((source) => (
                             <li key={source.url}>

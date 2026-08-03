@@ -52,7 +52,7 @@ export default function PageContent() {
             transition={{ delay: 0.2 }}
             className="text-lg text-stone-600 max-w-2xl mx-auto"
           >
-            Three core pillars. One goal: make your business faster, cheaper to run, and impossible to ignore.
+            Three things we build. All of them aim at the same result: a site you can measure, can afford to run, and actually own.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ export default function PageContent() {
             transition={{ delay: 0.3 }}
             className="text-base text-charcoal font-medium max-w-2xl mx-auto mt-4"
           >
-            PandaCodeGen rebuilt MyCustomPatches from 45 to 90+ PageSpeed in about 22 days.
+            MyCustomPatches is an independent client, and its owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, and the performance figures for that project are withdrawn pending reconciliation.
           </motion.p>
         </div>
       </section>
@@ -72,10 +72,10 @@ export default function PageContent() {
         <ServiceSection
           id="01"
           title="WordPress Migration"
-          subtitle="Make Your Site Instant & Secure"
-          description="Is your WordPress site slow, getting hacked, or constantly breaking? We move you to a modern custom coded platform that loads in 0.8 to 1.2 seconds."
-          tags={["Fix Slow Loading", "Bank Level Security", "Keep Your SEO Rankings"]}
-          features={["No More Plugin Updates", "90+ Google PageSpeed Scores", "Enterprise Level Security (No Plugin Vulnerabilities)", "We Handle All Data Transfer"]}
+          subtitle="Rebuild the Frontend, Keep the Content"
+          description="Slow, hard to maintain, or carrying more plugins than anyone can account for? We rebuild the frontend as custom code and measure the result on your own routes."
+          tags={["Fix Slow Loading", "Hardened Stack", "Redirect-Mapped URLs"]}
+          features={["No Plugin Update Treadmill", "90+ Lighthouse Handover Target", "Smaller Third-Party Attack Surface", "We Handle All Data Transfer"]}
           align="left"
           icon={Database}
           gradient="from-orange-500/20 to-red-600/5"
@@ -107,9 +107,9 @@ export default function PageContent() {
           id="03"
           title="High Performance Stores"
           subtitle="Custom Shopify (No Templates)"
-          description="Standard Shopify themes are slow. We build fully custom storefronts that load instantly, creating unique shopping experiences."
-          tags={["Custom Checkout", "3D Product Views", "Instant Loading"]}
-          features={["Stop Paying Monthly App Fees", "Better Google Rankings", "Custom Upsell Logic", "Connects to Shopify Inventory"]}
+          description="When a theme cannot deliver the experience you need, we build the storefront as custom code while Shopify stays the system of record for products, orders and checkout."
+          tags={["Custom Checkout", "3D Product Views", "Measured Performance"]}
+          features={["Fewer Monthly App Fees", "Crawlable Rendered Output", "Custom Upsell Logic", "Connects to Shopify Inventory"]}
           align="left"
           icon={ShoppingCart}
           gradient="from-green-500/20 to-emerald-600/5"
@@ -129,7 +129,7 @@ export default function PageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">
               Four tiers. <span className="font-serif italic text-cognac">No hourly billing.</span>
             </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price with the same promise in writing: 90+ Google PageSpeed on launch day or a full refund.</p>
+            <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price for a written scope. The performance target, how it is tested and what happens if we miss it are set out below.</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -173,10 +173,10 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-10 text-sm">Cost breakdowns and receipts behind our pricing.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { href: "/blog/website-migration-cost-2026", title: "Website Migration Cost in 2026", desc: "What a platform migration really costs this year." },
-              { href: "/blog/how-much-does-a-website-cost", title: "How Much Does a Website Cost?", desc: "Real pricing across freelancers, agencies, and builders." },
-              { href: "/blog/wordpress-migration-cost", title: "WordPress Migration Cost", desc: "The full price breakdown, tier by tier." },
-              { href: "/blog/nextjs-hosting-zero-cost", title: "Next.js Hosting at $0", desc: "How custom sites drop hosting bills to zero." },
+              { href: "/blog/website-migration-cost-2026", title: "Website Migration Cost in 2026", desc: "How to scope a migration before anyone quotes it." },
+              { href: "/blog/how-much-does-a-website-cost", title: "How Much Does a Website Cost?", desc: "What moves a quote up or down, and why no market average holds." },
+              { href: "/blog/wordpress-migration-cost", title: "WordPress Migration Cost", desc: "Our tiers, and the difference between a host change and a rebuild." },
+              { href: "/blog/nextjs-hosting-zero-cost", title: "Is Vercel Free? 2026 Pricing", desc: "What commercial Next.js hosting actually costs, and why the free tier does not apply." },
             ].map((post) => (
               <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>

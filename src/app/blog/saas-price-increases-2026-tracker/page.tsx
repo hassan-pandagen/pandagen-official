@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, BellRing, CalendarClock, CheckCircle2, ReceiptText } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "Microsoft 365 price increase 2026",
         "Webflow pricing 2026",
         "Klaviyo active profiles billing",
+        "Microsoft 365 July 2026 price change",
+        "Webflow plan restructure 2026",
+        "SaaS renewal price check",
+        "software billing unit change",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
@@ -69,21 +74,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/saas-price-increases-2026-tracker"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["SaaS cost management", "Software procurement", "Vendor contracts", "Subscription auditing"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1250,
+            timeRequired: "PT5M",
+            about: [
+                { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
+                { "@type": "Thing", name: "Microsoft 365", sameAs: ["https://www.microsoft.com/microsoft-365"] },
+                { "@type": "Thing", name: "Webflow", sameAs: ["https://webflow.com/"] },
+                { "@type": "Thing", name: "Klaviyo", sameAs: ["https://www.klaviyo.com/"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "2026 SaaS price changes", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-31",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -111,7 +149,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "2026 SaaS price changes", href: `/blog/${postId}` },
+                            { label: "2026 SaaS price changes" },
                         ]}
                     />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
@@ -129,12 +167,14 @@ export default function SaasPriceIncreases2026TrackerPage() {
                             standard, and says plainly what each one does and does not tell you about your own invoice.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Checked July 24, 2026. Vendor dashboards, contracts and invoices remain the source of truth
-                            for a specific account.
+                            Every vendor claim below carries its own read date at the claim. The Microsoft row was rechecked August 1, 2026;
+                            the Webflow and Klaviyo rows were last checked July 24, 2026 and are the older of the three. A tracker is only
+                            as current as its most recent check, so open the linked vendor page before acting on any figure here.
+                            Vendor dashboards, contracts and invoices remain the source of truth for a specific account.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="9 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The verified watchlist</h2>
@@ -151,7 +191,7 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
                             { icon: CalendarClock, title: "Effective date", body: "Announcement, new purchase, renewal and migration dates can differ." },
-                            { icon: ReceiptText, title: "Billing unit", body: "Seat, profile, contact, bandwidth, request, message or other measured unit." },
+                            { icon: ReceiptText, title: "Billing unit", body: "Whatever they meter you on." },
                             { icon: BellRing, title: "Account notice", body: "Dashboard, invoice, message center, renewal quote and contract amendments." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -162,14 +202,36 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         ))}
                     </div>
 
-                    <BlogHeader>Microsoft 365: July 1, 2026 commercial changes</BlogHeader>
+                    <BlogHeader>What has already taken effect, and what is still ahead</BlogHeader>
                     <BlogText>
-                        Microsoft&apos;s licensing page lists U.S. commercial price changes effective July 1, 2026 for
+                        Two of the three dates on this watchlist have passed, which changes what you should be
+                        doing about them. Microsoft&apos;s new commercial list prices took effect on July 1, 2026, and
+                        Webflow&apos;s first transition date for existing sites passed on June 29, 2026. Neither is something
+                        to prepare for. They are something to check for on the next invoice or renewal quote
+                        that lands.
+                    </BlogText>
+                    <BlogText>
+                        The November 16, 2026 date is the last of the three. Webflow lists November 16, 2026 for Freelancer, Agency and legacy-pricing
+                        accounts, so if you are on one of those the review is still worth doing before the date rather
+                        than after it. Everything dated before today is a reconciliation exercise rather than a warning.
+                    </BlogText>
+
+                    <BlogHeader>Microsoft 365: the July 1, 2026 change</BlogHeader>
+                    <BlogText>
+                        Microsoft&apos;s <a href="https://www.microsoft.com/en-us/licensing/news/2026-m365-packaging-pricing-updates" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">licensing and packaging update page</a>, read August 1, 2026, lists U.S. commercial price changes effective July 1, 2026 for
                         selected Enterprise, Business, Frontline and standalone products. It lists Business Basic with
                         Teams moving from $6 to $7 and Business Standard with Teams from $12.50 to $14, while Business
                         Premium remains listed at $22. Existing customers remain on their current price until the
                         applicable renewal, and country, currency, channel and product configuration can change the
                         result.
+                    </BlogText>
+                    <BlogText>
+                        The renewal condition is the part that matters most once the date has passed. Because existing
+                        customers hold their current price until renewal, nothing changed on July 1 for most accounts
+                        already under contract. What changed is the number your next renewal quote will be built from.
+                        So the useful action is not to check today&apos;s invoice, which will probably look normal. It is
+                        to find your renewal date, and to read the first quote issued after it against the published
+                        table rather than against last year&apos;s bill.
                     </BlogText>
                     <BlogText>
                         Do not apply one percentage to every Microsoft invoice. Export assigned licenses, identify the
@@ -181,16 +243,16 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <BlogHeader>Webflow: phased plan restructuring</BlogHeader>
                     <BlogText>
-                        Webflow&apos;s current help article says new Site-plan purchases changed May 13, 2026. It
+                        Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">May 2026 plan update article</a>, read July 24, 2026, says new Site-plan purchases changed May 13, 2026. It
                         combined CMS and Business into Premium, listed Premium at $25 per month billed yearly or $39
-                        monthly, and included 20,000 CMS items. Existing-site timing differs: June 29 for some accounts
+                        monthly, and included 20,000 CMS items. Existing-site timing differs: June 29, 2026 for some accounts
                         and November 16 for Freelancer, Agency or legacy-pricing accounts, then at renewal or a billable
                         change.
                     </BlogText>
                     <BlogText>
                         The impact is not uniformly an increase. Webflow&apos;s own scenarios show cases where a Business
                         customer pays less, the same or more after bandwidth add-ons. Record the current plan, renewal,
-                        bandwidth, workspace, add-ons and billable changes before modelling an alternative. We itemise
+                        bandwidth, workspace, add-ons and billable changes before modeling an alternative. We itemize
                         those lines in our{" "}
                         <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow cost breakdown</Link>. If the
                         review turns into a departure, our notes on{" "}
@@ -203,14 +265,14 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <BlogHeader>Klaviyo: a 2025 billing-unit change still relevant in 2026</BlogHeader>
                     <BlogText>
-                        Klaviyo&apos;s help center says that from February 18, 2025 credit-card customers had to use an
+                        Klaviyo&apos;s <a href="https://help.klaviyo.com/hc/en-us/articles/33136281415451" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">billing-change FAQ</a>, read July 24, 2026, says that from February 18, 2025 credit-card customers had to use an
                         email plan that matched or exceeded active-profile count. It also introduced optional flexible
-                        sending and auto-downgrade behavior. This is not a 2026 price increase, so it is labelled here
+                        sending and auto-downgrade behavior. This is not a 2026 price increase, so it is labeled here
                         as an earlier billing-policy change that can affect a 2026 invoice.
                     </BlogText>
                     <BlogText>
                         We do not publish a typical percentage for what this change costs, because the effect on any
-                        account depends on its own profile counts, plan and sending behaviour. Compare active profiles,
+                        account depends on its own profile counts, plan and sending behavior. Compare active profiles,
                         suppressions, sends, SMS, credits, selected preferences and the current invoice for the
                         specific account. Storefront owners tracking this alongside app subscriptions can use our
                         walkthrough of{" "}
@@ -227,10 +289,13 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     </InsightBox>
 
                     <BlogHeader>How to maintain a defensible internal tracker</BlogHeader>
+                    <BlogText>
+                        A tracker survives scrutiny at renewal only if each row carries its own evidence. Six field groups do that: the contract identity, the money as actually billed, the four dates each with its primary-source URL, the definition of the billed unit, the termination and notice obligations, and the invoice that proves what you paid rather than what you were quoted.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Vendor, product, exact SKU, region, currency, billing channel and contract owner.",
-                            "Current unit price, billed quantity, discounts, credits, taxes and total invoice.",
+                            "The vendor, the product, the exact SKU, your region, the currency, how you are billed, and who owns the contract.",
+                            "The unit price today, how many you are billed for, discounts, credits, tax, and the invoice total.",
                             "Announcement, effective, renewal and notice dates with the primary-source URL.",
                             "Definition of the billed unit and any threshold, overage or auto-upgrade behavior.",
                             "Termination, downgrade, export, deletion and renewal-notice requirements.",
@@ -257,6 +322,9 @@ export default function SaasPriceIncreases2026TrackerPage() {
                     />
 
                     <BlogHeader>Respond with usage evidence, not a migration reflex</BlogHeader>
+                    <BlogText>
+                        A price rise is not by itself a reason to leave. Strip duplicate and inactive seats through the supported process, right-size only after confirming which features and permissions you actually need, and check what your negotiated terms and notice periods already oblige. Alternatives get compared on migration, integration, security, support, training and exit cost, not on sticker price.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Remove duplicate, inactive or incorrectly assigned seats using the vendor's supported process.",

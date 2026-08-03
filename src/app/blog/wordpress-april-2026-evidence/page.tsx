@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { AlertTriangle, ArrowLeft, ArrowRight, CalendarDays, MessageSquareText, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "EssentialPlugin compromise",
         "WooCommerce plugin fatigue",
         "WordPress supply chain security",
+        "Smart Slider 3 Pro 3.5.1.35",
+        "WordPress plugin backdoor 2026",
+        "should I migrate off WordPress 2026",
+        "WordPress plugin update risk",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-04-23",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-april-2026-evidence")],
@@ -80,21 +85,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-april-2026-evidence"),
             description,
             datePublished: "2026-04-23",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress evidence",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1750,
+            timeRequired: "PT7M",
+            about: [
+                { "@type": "Thing", name: "WordPress", sameAs: ["https://wordpress.org/", "https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "WooCommerce", sameAs: ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },
+                { "@type": "Thing", name: "Supply chain attack", sameAs: ["https://en.wikipedia.org/wiki/Supply_chain_attack"] },
+                { "@type": "Thing", name: "Computer security", sameAs: ["https://en.wikipedia.org/wiki/Computer_security"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress April 2026", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-04-23",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -136,11 +174,12 @@ export default function WordPressAprilEvidencePage() {
                             They do not prove that every WordPress site is compromised or should migrate.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Sources and post-publication context rechecked July 24, 2026.
+                            Patchstack&apos;s Smart Slider analysis reverified August 1, 2026. Remaining sources and
+                            post-publication context last checked July 24, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 23, 2026" readTime="14 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 23, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What the record shows</h2>
@@ -153,6 +192,14 @@ export default function WordPressAprilEvidencePage() {
                             ]}
                         />
                     </section>
+
+                    <InsightBox variant="info" label="Every claim here opens its own record">
+                        This page reports on named companies, so each statement about one links to the specific record
+                        it comes from, at the point it is made. Nothing here is our finding. Where we say Patchstack
+                        reported something, the link goes to that analysis; where a vendor has published its own
+                        advisory, the vendor&apos;s wording governs. If a link and this page ever disagree, the source is
+                        right and we want to know about it.
+                    </InsightBox>
 
                     <InsightBox variant="info" label="How to weigh these three sources">
                         These records do not carry equal weight, so read each one for what it can actually support.
@@ -178,8 +225,9 @@ export default function WordPressAprilEvidencePage() {
 
                     <BlogHeader id="event-one">Record one: Smart Slider 3 Pro</BlogHeader>
                     <BlogText>
-                        Patchstack reported that an unauthorized party accessed Nextend&apos;s update infrastructure and
-                        distributed Smart Slider 3 Pro version 3.5.1.35 on April 7, 2026. Its analysis describes a
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Patchstack&apos;s published analysis</a> reports that an unauthorized party
+                        accessed Nextend&apos;s update infrastructure and
+                        distributed Smart Slider 3 Pro version 3.5.1.35 on April 7, 2026. That analysis describes a
                         fully attacker-authored remote-access toolkit in that release and says the affected build was
                         available for approximately six hours. It identifies 3.5.1.36 as the clean release.
                     </BlogText>
@@ -187,11 +235,18 @@ export default function WordPressAprilEvidencePage() {
                         The scope matters. Patchstack says the commercial Pro release was affected and the free
                         WordPress.org edition was not. It also says installing the malicious build, even briefly,
                         requires compromise response rather than treating an ordinary update as sufficient cleanup.
-                        Site owners should follow the vendor&apos;s current advisory and use qualified incident response
-                        for material systems.
+                        Site owners should follow{" "}
+                        <a href="https://smartslider.helpscoutdocs.com/article/2144-wordpress-security-advisory-smart-slider-3-pro-3-5-1-35-compromise" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Nextend&apos;s own security advisory</a>{" "}
+                        , because the vendor is the authority on what it shipped and what cleanup it requires, and
+                        use qualified incident response for material systems.
                     </BlogText>
 
                     <BlogHeader id="smart-slider-response">What a Smart Slider owner should verify</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Check whether 3.5.1.35 was ever installed, and check that first. The compromised build was available for roughly six hours, so most sites never received it, and the question is a version-history question rather than a judgement about the plugin. Five checks follow, and Nextend&apos;s own advisory is the authority on what cleanup its release requires.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Whether version 3.5.1.35 was ever installed, not merely which version is active today",
@@ -204,8 +259,9 @@ export default function WordPressAprilEvidencePage() {
 
                     <BlogHeader id="event-two">Record two: EssentialPlugin</BlogHeader>
                     <BlogText>
-                        Patchstack reported that EssentialPlugin had been sold in 2025 and that the new owner introduced
-                        malicious code across more than 20 plugins. Its analysis says the backdoor was activated on
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Patchstack&apos;s analysis of the EssentialPlugin portfolio</a> reports that the
+                        vendor changed hands in 2025 and that the new owner introduced
+                        malicious code across more than 20 plugins. That analysis says the backdoor was activated on
                         April 5, 2026. On April 7, the WordPress Plugin Review team confirmed the attack, closed the
                         affected directory listings and pushed a forced security update intended to remove the backdoor
                         and warn administrators.
@@ -219,6 +275,11 @@ export default function WordPressAprilEvidencePage() {
                     </BlogText>
 
                     <BlogHeader id="supply-chain">What the two incidents establish</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Both incidents arrived through an update channel rather than through anything a site owner did wrong, which is the part worth generalising. A maintained plugin on a current version was the attack path in each case. What that supports, and what it does not, are set out below and immediately afterwards.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "A trusted software update can be an initial-access path.",
@@ -234,6 +295,22 @@ export default function WordPressAprilEvidencePage() {
                         also depend on packages, build systems, hosting and service providers.
                     </InsightBox>
                     <BlogText>
+                        It is worth being precise about what does differ, because &ldquo;custom is more secure&rdquo; is
+                        the wrong summary and the real distinction is more useful. Both incidents above share a shape: a
+                        third party controlled an update channel that could place code on a live site without anyone at
+                        that business choosing to accept it. On a stack where dependencies are pinned in a lockfile, new
+                        code arrives only when someone runs a deploy, which means there is a moment where a human could
+                        look. That is a different distribution of control, not an absence of risk.
+                    </BlogText>
+                    <BlogText>
+                        The risk does not go to zero, and pretending otherwise would be the same mistake in the opposite
+                        direction. Package registries have had their own compromises, a build pipeline is itself a
+                        dependency, and a pinned version nobody ever reviews is just an old vulnerability with better
+                        paperwork. The honest version is that one model puts the update decision with the vendor by
+                        default and the other puts it with you, and whichever you are on, the controls that matter are
+                        the same: know what you depend on, know who maintains it, and be able to tell what changed.
+                    </BlogText>
+                    <BlogText>
                         A separate 2026 advisory covering an AI plugin is written up in{" "}
                         <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">our review of WordPress AI plugin security</Link>,
                         and the dependency-count question is examined with measurements in{" "}
@@ -242,8 +319,9 @@ export default function WordPressAprilEvidencePage() {
 
                     <BlogHeader id="event-three">Record three: WooCommerce public feedback</BlogHeader>
                     <BlogText>
-                        On April 20, a Reddit poster identifying themselves as a WooCommerce core team lead said they
-                        were seeking clearer public feedback and were not writing in an official capacity. The post
+                        On April 20, {" "}
+                        <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">a Reddit poster identifying themselves as a WooCommerce core team lead</a>{" "}
+                        said they were seeking clearer public feedback and were not writing in an official capacity. The post
                         summarized themes the author had observed: plugin fatigue, fear that updates may break a store
                         and performance complaints. It then asked users to turn those broad themes into specific,
                         actionable examples.
@@ -257,6 +335,11 @@ export default function WordPressAprilEvidencePage() {
                     </BlogText>
 
                     <BlogHeader id="questions">Questions the WooCommerce thread suggests</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A single public post is a prompt for questions, not evidence about your store. These are the questions worth putting to your own installation before treating one person&apos;s account of a platform as a finding about it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Which required capabilities are absent from core and which extensions provide them?",
@@ -277,13 +360,18 @@ export default function WordPressAprilEvidencePage() {
 
                     <BlogHeader id="release-context">Post-April release context</BlogHeader>
                     <BlogText>
-                        WordPress 7.0 shipped on May 20, 2026. That matters because an article about April product
+                        WordPress 7.0 shipped on <a href="https://wordpress.org/news/2026/05/armstrong/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">May 20, 2026</a>. That matters because an article about April product
                         concerns should not imply that the platform stopped shipping. Current platform decisions should
                         use the live WordPress release record, current plugin advisories and the actual site inventory,
                         not a frozen crisis narrative.
                     </BlogText>
 
                     <BlogHeader id="decision">How to use this evidence in a platform decision</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Three records do not decide a platform. What they can do is tell you which questions to price, and the table below pairs each with the decision it should actually inform. Read the right-hand column first: it is where a record stops being news and becomes a budget line.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[960px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -309,7 +397,7 @@ export default function WordPressAprilEvidencePage() {
                     <BlogText>
                         The question is not whether WordPress has problems. It is when the risk of staying exceeds the
                         cost and disruption of moving, for one specific site. Three situations regularly answer that
-                        question in favour of staying.
+                        question in favor of staying.
                     </BlogText>
                     <BlogList
                         items={[
@@ -352,6 +440,11 @@ export default function WordPressAprilEvidencePage() {
                     </BlogText>
 
                     <BlogHeader id="review">A quarterly evidence review</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Security evidence goes stale in a way cost evidence does not, so this belongs on a calendar rather than in a memory. Re-run these checks each quarter and record the date you ran them, because the value of the record is the date attached to it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Record WordPress, WooCommerce, theme, plugin and runtime versions.",
@@ -377,6 +470,22 @@ export default function WordPressAprilEvidencePage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader id="sources">Primary sources</BlogHeader>
+                    <BlogText>
+                        Every claim on this page about a named plugin, vendor or incident comes from one of these
+                        records. Open them rather than taking this page&apos;s word for any of it, and note that the
+                        vendors&apos; own advisories are the authority on what they shipped and when.
+                    </BlogText>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CalendarDays className="mb-4 h-7 w-7 text-cognac" />

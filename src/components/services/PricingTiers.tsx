@@ -31,9 +31,9 @@ type Props = {
 };
 
 const proposalItems = [
-  "Deliverables, exclusions, and required client inputs",
-  "Dependencies, acceptance method, and change process",
-  "Payment, support, ownership, licensing, and handover terms",
+  "What you get, what you do not, and what we need from you",
+  "What we are waiting on, how you sign it off, and how changes get approved",
+  "When you pay, what support you get, who owns it, which licences, and how it is handed over",
 ];
 
 export default function PricingTiers({ tiers }: Props) {
@@ -47,7 +47,7 @@ export default function PricingTiers({ tiers }: Props) {
             <span className="font-serif font-normal italic text-cognac md:block">Confirm the project in writing.</span>
           </h2>
           <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">
-            These options organize the discovery conversation; they are not quotes or delivery promises. Final scope, price, timing, acceptance tests, support, ownership, and remedies are stated in the accepted written project terms, which may be a concise quote or order summary or a more detailed agreement.
+            These are here to shape the first conversation. They are not quotes and not delivery promises. The scope, price, timing, tests, support, ownership and remedies are stated in the accepted written project terms, which may be a concise quote or order summary or a more detailed agreement.
           </p>
         </div>
 
@@ -55,12 +55,12 @@ export default function PricingTiers({ tiers }: Props) {
           <div className="p-5 md:p-6 rounded-2xl bg-white border border-stone-300 text-center">
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-stone-600 mb-2">Before Discovery</p>
             <p className="text-xl md:text-2xl font-black text-charcoal tracking-tight leading-none">Working assumptions</p>
-            <p className="text-xs text-stone-600 mt-2 leading-relaxed">Features, integrations, content, migration risk, and dependencies still need review.</p>
+            <p className="text-xs text-stone-600 mt-2 leading-relaxed">We still have to look at the features, the integrations, the content, what could go wrong in the migration, and what it depends on.</p>
           </div>
           <div className="p-5 md:p-6 rounded-2xl bg-[#faf7f2] border border-cognac/30 text-center shadow-card">
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-2">After Discovery</p>
             <p className="text-xl md:text-2xl font-black text-charcoal tracking-tight leading-none">Written proposal</p>
-            <p className="text-xs text-stone-600 mt-2 leading-relaxed">The approved scope records commitments, assumptions, exclusions, milestones, and acceptance.</p>
+            <p className="text-xs text-stone-600 mt-2 leading-relaxed">The approved scope is where we write down what we committed to, what we assumed, what is excluded, the milestones, and how you sign it off.</p>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export default function PricingTiers({ tiers }: Props) {
               <p className={`text-[11px] uppercase tracking-[0.22em] font-bold mb-2 ${tier.featured ? "text-orange-300" : "text-stone-600"}`}>Scope option</p>
               <h3 className={`text-2xl md:text-3xl font-black leading-tight tracking-tight mb-2 ${tier.featured ? "text-white" : "text-charcoal"}`}>{tier.tier}</h3>
               <p className={`text-sm mb-5 leading-relaxed ${tier.featured ? "text-stone-300" : "text-stone-600"}`}>
-                Requirements for this path are reviewed before any commercial or delivery commitment is made.
+                We review what this actually needs before committing to anything commercially or on delivery.
               </p>
               <ul className="space-y-2.5 mb-6">
                 {proposalItems.map((item) => (
@@ -102,7 +102,7 @@ export default function PricingTiers({ tiers }: Props) {
           ))}
         </div>
         <p className="text-center text-sm text-stone-600 mt-8 max-w-2xl mx-auto">
-          Public examples do not replace a quote. Third-party fees, client dependencies, migration risk, and out-of-scope work are identified during discovery and documented in the proposal.
+          Examples on a website are not a quote. Third-party fees, what we need from you, migration risk and anything out of scope get identified during discovery and documented in the proposal.
         </p>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Archive, CalendarClock, ClipboardCheck, Workflow } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Shopify Stocky sunset 2026",
         "Stocky discontinued",
@@ -68,6 +69,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/shopify-stocky-sunset-date-2026"),
             description,
             datePublished: "2026-04-25",
             dateModified: "2026-07-24",
@@ -76,13 +78,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Shopify", "Shopify themes", "Ecommerce performance", "Core Web Vitals", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify operations",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+            ],
+            wordCount: 1350,
+            timeRequired: "PT4M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Stocky sunset", item: "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026#webpage",
+            url: "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/shopify-stocky-sunset-date-2026#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -123,7 +153,7 @@ export default function ShopifyStockySunsetPage() {
                             Shopify Stocky Sunset <span className="italic text-cognac">August 31, 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Shopify says Stocky stops working for inventory management after August 31, 2026. Before then:
+                            Shopify says Stocky stops working for inventory management after August 31, 2026. That is read from its <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, checked July 24, 2026. Work backwards from that date rather than from when you happen to read this, and confirm the current position on that page before you plan against it. Before then:
                             export the history you are required to keep, write down what each of your workflows actually
                             does, test whatever you are moving to, fix anything that talked to Stocky, and show your team
                             how the new thing works.
@@ -133,17 +163,17 @@ export default function ShopifyStockySunsetPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="4 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-red-200 bg-red-50 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Confirmed timeline and impact</h2>
                         <BlogList
                             items={[
-                                "Shopify delisted Stocky from the App Store on February 2, 2026.",
+                                "Stocky is no longer listed in the Shopify App Store. Check Shopify's own transition documentation for the current status rather than relying on a date reported second-hand.",
                                 "Stocky inventory management stops after August 31, 2026.",
-                                "Shopify says read-only access will remain for a period of time but does not specify that period on the current migration page.",
+                                "Shopify says read-only access remains for at least 90 days after the date, for exporting your data on the current migration page.",
                                 "Historical purchase orders and stocktakes do not move into Shopify automatically.",
-                                "Stocky APIs stop working on August 31, so connected tools must be updated.",
+                                "Stocky APIs stop working on August 31, 2026, so connected tools must be updated.",
                             ]}
                         />
                     </section>
@@ -165,9 +195,11 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader id="sequence">What to do first, and what can wait</BlogHeader>
                     <BlogText>
-                        The seven steps below are ordered deliberately. Two of them are time-critical because they become
-                        impossible after August 31, 2026; the rest can run on a normal project schedule. If you are short
-                        on time, do the irreversible things first and make the reversible decisions later. If the sunset
+                        The seven steps below are ordered deliberately, and <strong>three of them stop being possible
+                        after August 31, 2026</strong>. If you are reading this with weeks rather than months left, the
+                        order matters more than the completeness: do the irreversible things now, compress the
+                        reversible ones, and accept that some of the later steps will run after the deadline rather
+                        than before it. Nothing below asks you to have chosen a replacement first. If the sunset
                         has also opened a wider platform question, that is covered separately in{" "}
                         <Link href="/blog/shopify-vs-custom-website" className="text-cognac hover:underline font-medium">Shopify compared with a custom storefront</Link>{" "}
                         and{" "}
@@ -175,16 +207,17 @@ export default function ShopifyStockySunsetPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Irreversible, do now: export everything (step 2). Purchase order history, supplier records, landed cost inputs and stocktakes do not migrate to Shopify automatically, and the APIs stop on the sunset date. An export you did not take is data you do not get back.",
-                            "Irreversible, do now: do not uninstall Stocky first (step 1). Uninstalling before exporting removes your own access to the data you are trying to preserve.",
-                            "Time-boxed: map the workflows (step 3) while Stocky is still running, so you are comparing against observed behaviour rather than memory.",
-                            "Reversible, decide later: choosing the replacement (step 4). This is the decision people rush first and should rush last, because the right answer depends on the workflow map from step 3.",
-                            "Post-decision: acceptance testing, cutover rehearsal and rollback (steps 5 and 6) run on your own schedule once a replacement is chosen.",
+                            "Irreversible, do now: export everything (step 2). Purchase order history, supplier records, landed cost inputs and stocktakes do not migrate to Shopify automatically, and the APIs stop on the sunset date. Treat anything you have not exported as work you will have to do inside a closing window.",
+                            "Irreversible, do now: do not uninstall Stocky first (step 1). Uninstalling before exporting removes the access you need to preserve the data, and Shopify says Stocky cannot be reinstalled.",
+                            "Irreversible, do now: settle what you keep from read-only access (step 7). Shopify says you keep read-only access to export your data for at least 90 days after that date, so treat anything you have not exported as unavailable rather than delayed.",
+                            "Time-boxed, do before the date: map the workflows (step 3) while Stocky is still running, so you are comparing against observed behavior rather than memory. This one becomes guesswork the moment the app stops.",
+                            "Reversible, and safe to do after the deadline: choosing the replacement (step 4). The right answer depends on the workflow map, so a short runway is a reason to compress this decision rather than to bring it forward.",
+                            "Can run after the date: acceptance testing, cutover rehearsal and rollback (steps 5 and 6). If the runway is short, these happen on the replacement rather than in parallel with Stocky, which is slower but not blocked.",
                         ]}
                     />
                     <InsightBox variant="warning" label="The ordering mistake that costs the most">
                         The common failure is selecting a replacement app in week one, migrating into it, and only then
-                        discovering which Stocky workflows it cannot reproduce — by which point the export window has
+                        discovering which Stocky workflows it cannot reproduce. By then the export window has
                         narrowed and the original system may already be uninstalled. Export first, map second, choose
                         third.
                     </InsightBox>
@@ -211,8 +244,8 @@ export default function ShopifyStockySunsetPage() {
                     <BlogList
                         items={[
                             "Purchase orders and their status, line items, dates and costs.",
-                            "Stocktake or stock-adjustment records required for operations, finance, tax or audit.",
-                            "Supplier names, contacts, terms, lead times, currencies and product associations from available business records.",
+                            "Any stocktake or stock-adjustment record you need for running the shop, for finance, for tax, or for an audit.",
+                            "Supplier names and contacts, the terms you agreed, lead times, currencies, and which products came from whom.",
                             "Inventory, SKU, barcode, location and cost references needed to reconcile the transition.",
                             "User, permission and process documentation for current Stocky work.",
                             "Copies of integration configuration, scheduled exports and downstream mappings.",
@@ -224,7 +257,41 @@ export default function ShopifyStockySunsetPage() {
                         records against Stocky and test that authorized users can retrieve it from the approved archive.
                     </InsightBox>
 
+                    <BlogHeader id="what-stops">What actually stops working</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the audit to run first, because it decides how much of the rest applies to you.
+                            Stocky carried a set of operations that Shopify&apos;s native inventory tools do not
+                            reproduce one for one, and the gap is where your replacement budget goes. Check each of
+                            these against how your team actually orders stock, rather than against the feature list.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "Demand forecasting and suggested reorder quantities driven by sales velocity.",
+                            "Purchase order creation, approval and receiving against those forecasts.",
+                            "Supplier records: contacts, terms, lead times and per-supplier cost history.",
+                            "Landed-cost calculation, which is what makes SKU-level margin real rather than estimated.",
+                            "Minimum and maximum reorder thresholds and the alerts built on them.",
+                            "Stocktakes, transfers and the barcode workflows used inside them.",
+                            "Multi-location coordination where stock moves between warehouses or stores.",
+                        ]}
+                    />
+                    <BlogText>
+                        Two consequences are worth naming because they surface later rather than on the day. Once
+                        landed-cost calculation stops, per-SKU margin becomes an estimate, which changes pricing and
+                        cash-flow forecasting rather than just reporting. And <strong>the supplier export is the line
+                        that scales with your business</strong>: twenty suppliers is an afternoon, two hundred is work
+                        that has to be scheduled, and it cannot be done after the date. Count yours before you plan the
+                        week. Confirm each item against{" "}
+                        <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Shopify&apos;s own transition documentation</a>{" "}
+                        rather than this list, because Shopify is the authority on what it is replacing.
+                    </BlogText>
+
                     <BlogHeader>3. Map the workflow differences</BlogHeader>
+                    <BlogText>
+                        Do this while Stocky is still running, because it becomes guesswork the moment the app stops. The middle column is Shopify's own guidance for each workflow, not our assessment of it. The right-hand column is what you have to prove works for your operation before accepting the replacement.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[800px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -236,12 +303,15 @@ export default function ShopifyStockySunsetPage() {
                                 <tr><td className="p-4 font-bold">Counts</td><td className="p-4">Shopify describes inventory adjustments and POS Quick count options</td><td className="p-4">Are barcode, partial count and audit requirements met?</td></tr>
                                 <tr><td className="p-4 font-bold">Forecasting</td><td className="p-4">Shopify documents inventory insights and Sidekick-assisted planning</td><td className="p-4">Are the method, access and review controls acceptable?</td></tr>
                                 <tr><td className="p-4 font-bold">Reporting</td><td className="p-4">Some Stocky reports differ or have no direct native equivalent</td><td className="p-4">Which decision or compliance output must be recreated?</td></tr>
-                                <tr><td className="p-4 font-bold">Integrations</td><td className="p-4">Stocky APIs cease on August 31</td><td className="p-4">What supported interface replaces every read and write?</td></tr>
+                                <tr><td className="p-4 font-bold">Integrations</td><td className="p-4">Stocky APIs cease on August 31, 2026</td><td className="p-4">What supported interface replaces every read and write?</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <BlogHeader>4. Choose the replacement by requirements</BlogHeader>
+                    <BlogText>
+                        There is no universal replacement price or best option. Obtain current vendor terms and a comparable scope, then include configuration, migration, integration, training, support, security, maintenance and exit in the decision. The four routes below are gated on requirements you have tested, not on which product looks closest.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Use Shopify's native inventory tools when tested workflows meet the operational and reporting requirements.",
@@ -261,6 +331,9 @@ export default function ShopifyStockySunsetPage() {
                     </BlogText>
 
                     <BlogHeader>5. Run workflow acceptance</BlogHeader>
+                    <BlogText>
+                        This is where a mapped workflow becomes evidence. Seven tests, and the ones people skip are the awkward ones: a partial receipt, a count run on the actual devices and roles used in stores, and every integration that previously called a Stocky API. This step can still run after the sunset date, slower but not blocked.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Create, approve, receive, partially receive and close a test purchase order.",
@@ -274,6 +347,9 @@ export default function ShopifyStockySunsetPage() {
                     />
 
                     <BlogHeader>6. Rehearse cutover and rollback</BlogHeader>
+                    <BlogText>
+                        Inventory truth is the thing you are protecting, so name the system of record and the freeze window for each field before anything moves. Six steps cover it. Note the timing constraint in the fifth: keeping current Stocky access until sign-off only works before the sunset date, after which Shopify's current transition page describes read-only export access for at least 90 days.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Name the system of record and freeze window for each inventory field.",
@@ -287,9 +363,8 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader>7. Treat read-only access as temporary</BlogHeader>
                     <BlogText>
-                        Shopify currently promises read-only access only “for a period of time.” Because no duration is
-                        specified on the current page, do not use it as the retention plan. Complete and validate your
-                        exports before August 31.
+                        Shopify states you keep read-only access to export your data for at least 90 days after that date, as specified on its current transition page. That window is finite, so do not use it as your retention plan. and validate your
+                        exports before August 31, 2026.
                     </BlogText>
                     <BlogText>
                         We scope transitions of this kind as part of{" "}

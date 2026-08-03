@@ -16,6 +16,8 @@ const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const FeatureVisual = lazyLoad(() => import("@/components/blog/MigrationControlAnimation"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
     title: { absolute: "WordPress to Next.js Migration Without Losing SEO (2026)" },
     description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
@@ -57,17 +59,13 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "knowsAbout": ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs" },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#webpage" },
             "articleSection": "WordPress",
             "keywords": ["WordPress migration", "Next.js migration", "WordPress to Next.js", "SEO migration", "301 redirects", "headless CMS migration"],
             "about": [
@@ -77,6 +75,8 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Search Engine Optimization" }
             ],
             "inLanguage": "en-US",
+            "wordCount": 1900,
+            "timeRequired": "PT11M",
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]
@@ -84,9 +84,7 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "Next.js Official Documentation", "url": "https://nextjs.org/docs" },
                 { "@type": "CreativeWork", "name": "Google Search Central. Site Move Guide", "url": "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-                { "@type": "CreativeWork", "name": "Google Search Console Help", "url": "https://support.google.com/webmasters/answer/9012289" },
                 { "@type": "CreativeWork", "name": "Vercel Deployment Documentation", "url": "https://vercel.com/docs/deployments/overview" },
-                { "@type": "CreativeWork", "name": "Google Core Web Vitals", "url": "https://developers.google.com/search/docs/appearance/core-web-vitals" },
                 { "@type": "CreativeWork", "name": "WordPress Export Tool Documentation", "url": "https://wordpress.org/documentation/article/tools-export-screen/" }
             ]
         },
@@ -119,7 +117,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.goodfirms.co/company/pandacodegen", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
+            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.goodfirms.co/company/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen plans and builds SEO-safe WordPress to Next.js migrations, with URL inventory, redirect validation, staged QA, performance targets, cutover, and handover defined in the signed scope.",
             "areaServed": "Worldwide",
@@ -171,15 +169,15 @@ export default function MigrateWordPressToNextJSPage() {
                             How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
                         </h1>
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed" data-speakable="true">
-                            PandaCodeGen&apos;s owner confirms that MyCustomPatches was delivered in 22 days. The
-                            previously published performance numbers have been withdrawn until their dated URLs,
-                            profiles, run count, cache and consent state are reconciled. Here is the SEO migration
-                            checklist behind the work.
+                            MyCustomPatches is an independent client, and its owner reports that the migration was
+                            completed in about 22 days. The performance numbers we previously published for it have
+                            been withdrawn until their dated URLs, profiles, run count, cache and consent state are
+                            reconciled. Here is the SEO migration checklist behind the work.
                         </p>
                         <BlogAuthor
                             date="Mar 11, 2026"
-                            readTime="10 min read"
-                            bio="Hassan plans WordPress to Next.js migrations around measurable performance, URL preservation, crawl QA, and a controlled production handover."
+                            readTime="11 min read"
+                            bio="Hassan plans WordPress to Next.js migrations around four things: performance you can measure, URLs that keep working, crawling the staged site before anyone sees it, and a handover that does not surprise you."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -214,11 +212,11 @@ export default function MigrateWordPressToNextJSPage() {
                         <div className="my-6 p-5 bg-cognac/5 border border-cognac/20 rounded-xl">
                             <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Owner-confirmed project: MyCustomPatches</p>
                             <p className="text-sm text-stone-700 leading-relaxed mb-2">
-                                The owner confirms a 22-day delivery. This article does not treat that number as a
+                                MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client&apos;s owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, so treat it as an owner statement rather than an audited figure. This article does not treat that number as a
                                 market average or as proof of the project&apos;s exact migration inventory. We publish performance
                                 figures only with the test profile, date and conditions attached, so none are quoted
                                 here. Commercial hosting is budgeted under the destination provider&apos;s
-                                business plan rather than presented as free. Project feedback is available on <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a> and <a href="https://www.goodfirms.co/company/pandacodegen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">GoodFirms</a>.
+                                business plan rather than presented as free.
                             </p>
                             <p className="text-xs text-stone-500">Site live at <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. See the <Link href="/work" className="text-cognac hover:underline font-medium">project evidence standard</Link>.</p>
                         </div>
@@ -228,7 +226,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <section className="mb-10">
                         <h2 className="text-3xl font-bold mb-4">The Pre-Migration Audit That Protects High-Value URLs</h2>
                         <BlogText>
-                            Do not start building until you have completed this SEO migration checklist. Missing the baseline, URL inventory, or integration map increases the chance of avoidable launch errors and search-visibility loss.
+                            Do not start building until you have worked through this checklist. If you skip the baseline, the list of URLs, or the map of what connects to what, you are far more likely to break something at launch and lose search traffic you did not need to lose.
                         </BlogText>
                         <BlogList items={[
                             "Crawl your full site with Screaming Frog (free up to 500 URLs) and export every URL, title tag, meta description, H1, and status code",
@@ -239,7 +237,7 @@ export default function MigrateWordPressToNextJSPage() {
                             "Set up Google Search Console for your domain if not already done. You will need it immediately after launch"
                         ]} />
                         <BlogText>
-                            A small business site may take half a day to inventory; a large editorial or ecommerce site can take much longer. The output should be a versioned source of truth for URLs, content, integrations, baselines, owners, and acceptance checks.
+                            A small business site might take half a day to inventory. A large publisher or shop takes much longer. What you end up with should be one file, kept under version control, that says: here are the URLs, here is the content, here is what connects to what, here are the numbers we started from, here is who owns each part, and here is how we will sign it off.
                         </BlogText>
                     </section>
 
@@ -282,7 +280,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     Scaffold your project with <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">npx create-next-app@latest --typescript</code>. Install Tailwind CSS for styling. Deploy an empty shell to Vercel immediately. This sets up your CI/CD pipeline so every commit deploys automatically. You will use preview URLs for QA throughout the build.
                                 </BlogText>
                                 <BlogText>
-                                    If you need a content management interface for blog posts or frequently updated pages, define the fields, relationships, roles, preview workflow, localization, and publishing approvals before choosing a headless CMS. Sanity and Contentful are established options, but plan eligibility, included usage, editor seats, and operating cost should be checked against the current project requirements.
+                                    If your team needs to edit blog posts or pages themselves, work out what they actually need before you pick a CMS: which fields, how content pieces relate to each other, who is allowed to do what, whether they can preview before publishing, whether you need other languages, and who signs a post off. Sanity and Contentful are both established choices. Check the plan you would be on, what usage is included, what editor seats cost, and what you would pay to run it.
                                 </BlogText>
                             </div>
 
@@ -364,7 +362,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     "All images loading with correct alt text and dimensions",
                                     "Google's Rich Results Test passing on key schema pages",
                                     "sitemap.xml rendering all expected URLs at /sitemap.xml",
-                                    "robots.txt and page-level robots directives match the approved indexation plan; sensitive API routes use authentication and authorization because robots.txt is not access control",
+                                    "robots.txt and your page-level robots tags match what you agreed to index. Anything sensitive sits behind a login and a permission check, because robots.txt asks crawlers politely and stops nobody",
                                     "No console errors in Chrome DevTools on any page",
                                     "Mobile layout tested on actual devices (not just browser devtools)"
                                 ]} />
@@ -390,7 +388,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     "Monitor Search Console daily for crawl errors in the first 2 weeks"
                                 ]} />
                                 <BlogText>
-                                    Ranking volatility can occur while Google recrawls URLs, follows redirects, and reprocesses canonical signals. There is no fixed recovery window and no agency can guarantee that rankings will rise. Compare clicks, impressions, average position, indexed URLs, crawl errors, and conversions with the pre-launch baseline. Core Web Vitals field data can update only after enough eligible Chrome user data is collected, so use lab tests for immediate debugging and Search Console for longer-term monitoring.
+                                    Ranking volatility can occur while Google recrawls URLs, follows redirects, and reprocesses canonical signals. There is no fixed recovery window and no agency can guarantee that rankings will rise. Compare clicks, impressions, average position, indexed URLs, crawl errors, and conversions with the pre-launch baseline. <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> field data can update only after enough eligible Chrome user data is collected, so use lab tests for immediate debugging and Search Console for longer-term monitoring.
                                 </BlogText>
                             </div>
                         </div>
@@ -420,7 +418,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 { period: "Launch to Day 7", title: "Technical Verification", desc: "Run the staged checklist again in production. Verify redirects, canonical tags, robots directives, sitemap coverage, analytics, forms, and the agreed PageSpeed test set. Log any ranking volatility without treating daily movement as a verdict." },
                                 { period: "First Weeks", title: "Crawl and Index Monitoring", desc: "Use Google Search Console's Page indexing and URL Inspection reports to check whether Google sees the intended status, canonical, and rendered page. Crawl timing varies by site, so investigate errors rather than promising a recovery date." },
                                 { period: "After Field Data", title: "Core Web Vitals Review", desc: "Compare lab measurements with the Core Web Vitals field report when enough real-user data becomes available. CrUX uses a rolling collection window and may not report every URL. Better field performance supports page experience, but it does not guarantee higher rankings." },
-                                { period: "Ongoing", title: "Search Baseline Review", desc: "Compare clicks, impressions, queries, landing pages, indexed URLs, and conversions with the dated pre-migration baseline. Separate technical migration issues from seasonality, content changes, competitors, and wider search updates." },
+                                { period: "Ongoing", title: "Search Baseline Review", desc: "Compare your clicks, impressions, searches, landing pages, indexed URLs and conversions against the baseline you recorded before the move. Then separate what the migration broke from what changed anyway: the time of year, content you edited, a competitor improving, or Google changing its ranking." },
                                 { period: "After Stability", title: "Content and Conversion Iteration", desc: "Once crawl and measurement signals are stable, prioritize content gaps, internal links, snippets, and conversion friction. Traffic growth should be reported from the site's own Search Console and analytics data, not from a universal percentage claim." },
                             ].map(({ period, title, desc }) => (
                                 <div key={period} className="flex gap-4 border border-stone-300 rounded-xl p-5">
@@ -445,10 +443,10 @@ export default function MigrateWordPressToNextJSPage() {
                             <div className="border border-stone-200 rounded-xl p-5">
                                 <p className="font-bold text-charcoal mb-3">DIY Migration</p>
                                 <BlogList items={[
-                                    "Timeline: Depends on your Next.js experience, available hours, page inventory, integrations, content migration, and QA scope",
+                                    "Timeline: depends on how well you know Next.js, how many hours a week you actually have, how many pages there are, what has to be reconnected, how much content moves, and how much you test",
                                     "Learning curve: React, Next.js, Tailwind, headless CMS",
                                     "Risk control: You own the URL inventory, redirect QA, launch checklist, and rollback plan",
-                                    "WordPress migration cost: Engineering time, paid commercial hosting, CMS, monitoring, and any specialist tools",
+                                    "WordPress migration cost: your engineering time, commercial hosting you have to pay for, a CMS, monitoring, and any specialist tools you end up buying",
                                     "PageSpeed result: Variable, depends on implementation and optimization knowledge",
                                     "Redirect mapping: Inventory-led mapping and validation for every changed or retired URL"
                                 ]} />
@@ -496,7 +494,7 @@ export default function MigrateWordPressToNextJSPage() {
                             We will audit your WordPress site, scope the migration, map every redirect, and give you a fixed-price quote before you commit to anything.
                         </p>
                         <p className="text-stone-600 mb-6 leading-relaxed">
-                            The assessment compares WordPress repair and optimization with a Next.js rebuild, then documents the URL inventory, migration cost, PageSpeed baseline, SEO acceptance checks, cutover responsibilities, and rollback plan. If migration is not justified by the evidence, improving the current WordPress site may be the better recommendation.
+                            The assessment puts fixing and speeding up your WordPress site side by side with rebuilding it in Next.js. Then it writes down every URL, what the migration would cost, where your PageSpeed scores start, how we would sign off the SEO side, who does what at cutover, and how we would reverse it. If the evidence does not justify moving, improving what you have is the better recommendation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
                             <CalModalButton className="inline-flex items-center justify-center gap-2 bg-stone-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-stone-700 transition-colors">
@@ -516,9 +514,9 @@ export default function MigrateWordPressToNextJSPage() {
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
                             <li><strong>Every old URL needs a deliberate disposition</strong>: Keep stable URLs unchanged where possible, map changed URLs to relevant successors with permanent redirects, and document intentional 404 or 410 retirements. Validate each decision before launch.</li>
-                            <li><strong>Timeline follows scope and dependencies</strong>: Page count, content cleanup, integrations, approvals, redirect exceptions, and QA determine how long the eight-step migration takes.</li>
+                            <li><strong>Timeline follows the work, not a template</strong>: how many pages there are, how much content needs tidying, what has to be reconnected, how long approvals take, how many URLs are awkward exceptions, and how much testing you do.</li>
                             <li><strong>No agency can guarantee rankings</strong>: Expect possible ranking volatility, preserve technical signals carefully, and use Google Search Console monitoring against a dated baseline. Better Core Web Vitals support page experience, but do not cause a guaranteed position gain.</li>
-                            <li><strong>The pre-migration audit creates the control set</strong>: A complete URL inventory, priority landing pages, canonical tags, sitemap, integrations, analytics, and acceptance criteria make staged crawl QA possible.</li>
+                            <li><strong>The audit before you start is what makes testing possible</strong>: every URL listed, the landing pages that matter most identified, canonical tags recorded, the sitemap captured, integrations mapped, analytics noted, and agreement on what counts as done.</li>
                             <li><strong>Plan a controlled cutover and rollback</strong>: Keep WordPress available until the Next.js release is accepted, lower DNS TTL when appropriate, verify production immediately, and define how to reverse the cutover if a critical check fails.</li>
                         </ol>
                     </section>

@@ -14,9 +14,9 @@ import { alternatesFor } from "@/lib/i18n/config";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+  title: "Custom Next.js Websites Cited by AI Search | PandaCodeGen",
   description:
-    "We move you off WordPress, Wix, Squarespace, Webflow or GoHighLevel onto custom Next.js you own outright, without losing the traffic you already have. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+    "Custom Next.js websites built so Google's AI Overviews, ChatGPT, Claude and Perplexity find a clear answer on your page and can quote it. You own the code outright. Migrations off WordPress, Wix, Squarespace, Webflow and GoHighLevel. Fixed pricing from $1,500.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -25,18 +25,18 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    title: "Custom Next.js Websites Cited by AI Search | PandaCodeGen",
     description:
-      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+      "Custom Next.js websites built to be quotable by AI search. You own the code outright. Fixed pricing from $1,500.",
     images: [
       ogImageForPath("/"),
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    title: "Custom Next.js Websites Cited by AI Search | PandaCodeGen",
     description:
-      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
+      "Custom Next.js websites built to be quotable by AI search. You own the code outright.",
     images: [ogImageForPath("/")],
   },
 };
@@ -140,8 +140,8 @@ export default function Home() {
         "sameAs": [
           "https://www.linkedin.com/company/pandacodegen",
           "https://clutch.co/profile/panda-code-gen",
+          "https://www.goodfirms.co/company/panda-code-gen",
           "https://www.trustpilot.com/review/pandacodegen.com",
-          "https://www.goodfirms.co/company/pandacodegen",
           "https://www.crunchbase.com/organization/pandacodegen",
           "https://www.designrush.com/agency/profile/pandacodegen",
           "https://www.sortlist.com/agency/pandacodegen",
@@ -202,7 +202,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+        "name": "Custom Next.js Websites Cited by AI Search | PandaCodeGen",
         "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"

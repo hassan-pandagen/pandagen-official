@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardList, GitPullRequest, Rocket } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "website development schedule",
         "website migration timeline",
         "how fast can a website be built",
+        "how long does it take to build a website",
+        "custom website timeline",
+        "can a website be built in a week",
+        "website redesign timeline",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-long-does-a-custom-website-take")],
@@ -53,19 +58,52 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/how-long-does-a-custom-website-take"),
             description,
             datePublished: "2026-06-03",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Project planning",
+            inLanguage: "en-US",
+            wordCount: 1800,
+            timeRequired: "PT7M",
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Project planning", sameAs: ["https://en.wikipedia.org/wiki/Project_planning"] },
+                { "@type": "Thing", name: "Website build timeline" },
+                { "@type": "Thing", name: "Content readiness" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website timeline", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-06-03",
+            dateModified: "2026-08-01",
             inLanguage: "en-US",
         },
         {
@@ -108,15 +146,16 @@ export default function WebsiteTimelineGuide() {
                             application do not share one honest duration. The reliable answer is a dependency-based
                             schedule attached to the signed scope.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Schedule and offer reviewed July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Schedule and offer reviewed August 1, 2026.</p>
                     </header>
 
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="June 3, 2026"
-                        readTime="9 min read"
-                        bio="Hassan scopes migrations, integrations and release acceptance."
+                        readTime="7 min read"
+                        bio="Hassan scopes the migrations, the integrations, and what has to be true before a release is accepted."
+                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
@@ -124,8 +163,8 @@ export default function WebsiteTimelineGuide() {
                         <BlogList
                             items={[
                                 "A small, content-ready site can be planned in focused weeks, not automatically in a fixed number of days.",
-                                "A migration adds inventory, redirect, output-parity, analytics, cutover and monitoring work.",
-                                "Commerce and custom applications add data, payment, role, integration, security and operational states.",
+                                "A migration adds work: listing every URL, mapping redirects, checking the new pages match the old, fixing analytics, the switchover itself, and watching it afterwards.",
+                                "Selling online or building an application adds more: the data, payments, who is allowed to do what, integrations, security, and every state the thing can be in.",
                                 "The contract should state dependencies, review windows, change control, acceptance and what moves the date.",
                                 "PandaCodeGen confirms the actual schedule only after the fit audit and accepted scope.",
                             ]}
@@ -134,9 +173,9 @@ export default function WebsiteTimelineGuide() {
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: ClipboardList, title: "Define", body: "Inventory, requirements, owners, evidence, deliverables and exclusions." },
+                            { icon: ClipboardList, title: "Define", body: "What you have, what you need, who owns each part, and what is not included." },
                             { icon: GitPullRequest, title: "Build and review", body: "Design, content, implementation, integrations and controlled approvals." },
-                            { icon: Rocket, title: "Prove and release", body: "QA, acceptance, migration, cutover, monitoring, handoff and rollback." },
+                            { icon: Rocket, title: "Prove and release", body: "Testing, sign-off, the switchover, monitoring, handover, and how to reverse it." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -146,6 +185,22 @@ export default function WebsiteTimelineGuide() {
                         ))}
                     </div>
 
+                    <BlogHeader>Why the quoted number is usually bigger than the work</BlogHeader>
+                    <BlogText>
+                        It helps to understand what a long quote is actually made of. A twelve-week project is rarely
+                        twelve weeks of building. It can be a smaller amount of building spread across a calendar, and
+                        the gaps are where the time goes: a queue in front of you, a review that takes four days to come
+                        back, an export nobody has requested from the old platform yet, a decision waiting on somebody
+                        who is in meetings all week. The design and the code are not usually what make a project slow.
+                        Waiting is.
+                    </BlogText>
+                    <BlogText>
+                        That is worth knowing for two reasons. It tells you which questions actually shorten your
+                        timeline, and none of them are about how fast anyone types. It also tells you what to look for
+                        in a schedule: one that names its dependencies and who owns each of them is describing real
+                        work, while one that offers a single headline duration is describing a hope.
+                    </BlogText>
+
                     <BlogHeader>The schedule formula</BlogHeader>
                     <BlogText>
                         Calendar duration is not developer hours divided by eight. It includes active work, dependency
@@ -154,10 +209,10 @@ export default function WebsiteTimelineGuide() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Active work: discovery, design, content, development, migration, integration, QA and documentation.",
-                            "Dependencies: credentials, accounts, source exports, copy, media, legal review, vendor access and stakeholder decisions.",
+                            "The work itself: discovery, design, content, development, migration, integrations, testing and documentation.",
+                            "What you are waiting on: logins, accounts, exports from the old system, copy, images, legal review, vendor access, and decisions from people who are busy.",
                             "Review: named approver, response window, consolidated feedback and permitted revision rounds.",
-                            "Release: freeze, backups, DNS, redirects, production credentials, smoke tests, rollback and monitoring.",
+                            "Release day: freeze changes, take backups, switch DNS, turn on redirects, load the production credentials, run the checks, keep the rollback ready, and watch it.",
                             "Change: how a new feature, page, integration or approval round changes price and schedule.",
                         ]}
                     />
@@ -210,11 +265,14 @@ export default function WebsiteTimelineGuide() {
                     </div>
 
                     <BlogHeader>Scope signals that change the clock</BlogHeader>
+                    <BlogText>
+                        What moves the date is unique templates and states, not raw page count, and after that it is content readiness rather than engineering. Seven signals are worth pricing separately. The two most often left out of a first estimate are redirect mapping and search continuity, and both get discovered late enough to hurt.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Unique templates and states, not only raw page count.",
-                            "Content creation, migration, cleanup, localization, permissions and subject-matter review.",
-                            "CMS models, preview, workflow, roles, import and editor training.",
+                            "Writing new content, moving the old, cleaning it up, translating it, setting who can edit what, and getting someone who knows the subject to check it.",
+                            "Setting up the content types, preview, the publishing flow, roles, the import, and training whoever will use it.",
                             "Forms, CRM, calendars, search, maps, authentication, payments, tax, shipping and external APIs.",
                             "Accessibility target, browser and device matrix, security review and performance acceptance.",
                             "URL changes, redirect mapping, structured data, analytics continuity and search monitoring.",
@@ -233,6 +291,9 @@ export default function WebsiteTimelineGuide() {
                     </BlogText>
 
                     <BlogHeader>A phase-based estimate is safer than one headline number</BlogHeader>
+                    <BlogText>
+                        Calendar duration is not developer hours divided by eight. A schedule that names its dependencies and its owners is describing real work; one that offers a single headline duration is describing a hope. Five phases, each with the evidence that closes it and the dependency that usually blocks it. Read the third column first, because that is where your own schedule will slip.
+                    </BlogText>
                     <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
                         <table className="w-full min-w-[680px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -252,10 +313,12 @@ export default function WebsiteTimelineGuide() {
                         </table>
                     </div>
 
-                    <BlogHeader>What the MyCustomPatches 22-day example proves</BlogHeader>
+                    <BlogHeader>What the MyCustomPatches example does and does not show</BlogHeader>
                     <BlogText>
-                        The owner has approved publication of a 22-day delivery time for MyCustomPatches. It is a
-                        first-party PandaCodeGen project example, not a market average or a promise for the next site.
+                        MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed
+                        and published with permission. Its owner reports a delivery of about 22 days. We do not hold a dated
+                        record of that confirmation, so treat it as an owner statement for one accepted scope rather than an
+                        audited figure, and not as a market average or a promise for the next site.
                         Without a public scope baseline, phase dates, paused-time policy and acceptance record, it
                         should not be used to infer that every project of a similar-looking size takes 22 days. The
                         scope behind it is written up on our{" "}
@@ -278,7 +341,28 @@ export default function WebsiteTimelineGuide() {
                         every dependency and owner instead of assigning blame in advance.
                     </BlogText>
 
+                    <BlogHeader>An example of a project that is slow for good reasons</BlogHeader>
+                    <BlogText>
+                        Not every long timeline is a failure of process, and it would be dishonest to imply otherwise on
+                        a page selling speed. One current build, a site for a medical practice, is
+                        taking a while, and every reason for it is a good one. We cannot use stock photography, because
+                        the whole proposition rests on this practitioner&apos;s own work and their own results. The owner
+                        sees patients all day, so each round of feedback realistically comes back the next day rather
+                        than the same afternoon. The copy is medically sensitive and has to be correct, which means it
+                        gets checked properly rather than quickly.
+                    </BlogText>
+                    <BlogText>
+                        That project should be slow. Compressing it would mean using someone else&apos;s photographs,
+                        accepting less review on clinical wording, or pretending an owner with a full clinic can turn
+                        feedback around in an hour. The useful question is never how fast a site can be built in the
+                        abstract. It is which parts of your particular project genuinely cannot be hurried, and whether
+                        the schedule in front of you is honest about them.
+                    </BlogText>
+
                     <BlogHeader>What “content ready” means</BlogHeader>
+                    <BlogText>
+                        Content readiness is the single input that moves a Growth-tier date more than anything on the engineering side. Ready means an approved page inventory, copy that is final or clearly staged with a named approver, licensed media, structured business data, decided SEO choices, and an agreed plan for what is still missing. The named approver is the part that is usually skipped and always needed.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Approved page inventory, navigation and target audience.",
@@ -290,15 +374,35 @@ export default function WebsiteTimelineGuide() {
                         ]}
                     />
 
+                    <BlogHeader>You do not need a finished design to start</BlogHeader>
+                    <BlogText>
+                        A common reason projects sit unstarted for months is the belief that you need a polished design
+                        before anyone can begin. You do not. You need your content and a direction, and the direction is
+                        allowed to be loose. Some clients arrive with a clear vision and we build to it. Some send a
+                        handful of references and say roughly this, and we design from there. Some say surprise us,
+                        which is also a workable brief. None of those change the price, and the last two are more common
+                        than people expect.
+                    </BlogText>
+                    <BlogText>
+                        What genuinely moves your date is whether the words and the images exist and whether someone can
+                        approve them. Waiting until the design is settled in your head before you start is usually just
+                        the waiting moved earlier, where it is less visible and nobody is tracking it.
+                    </BlogText>
+
                     <BlogHeader>Can a site launch in one week?</BlogHeader>
                     <BlogText>
                         A narrowly scoped site can sometimes move that quickly when content, design direction, access,
                         decisions and acceptance are ready, but PandaCodeGen does not publish a universal seven-day
                         promise. A rush plan must identify what is included, what is deferred, the review cadence,
-                        quality gates and whether the compressed schedule changes price or risk.
+                        quality gates and whether the compressed schedule changes price or risk. We do not refuse rush
+                        work. We price the additional hours it takes up front, because the alternative is pretending
+                        speed is free and then finding somewhere quieter to take it out of, which is usually testing.
                     </BlogText>
 
                     <BlogHeader>Quality gates that should not be removed to save time</BlogHeader>
+                    <BlogText>
+                        We do not refuse rush work. We price the additional hours it takes up front, because the alternative is pretending speed is free and then finding somewhere quieter to take it out of, which is usually testing. Six gates are the ones that get quietly dropped, and the performance gate is the one buyers most often assume is free.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Functional and failure-state tests for forms, integrations, calendars, payments and notifications.",

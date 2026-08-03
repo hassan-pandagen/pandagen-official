@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: "/blog/core-web-vitals-explained" },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "core web vitals explained",
         "core web vitals for business",
@@ -68,43 +69,48 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO",
             inLanguage: "en-US",
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+            ],
+            wordCount: 1350,
+            timeRequired: "PT7M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             keywords: ["Core Web Vitals", "LCP", "INP", "CLS", "PageSpeed Insights"],
             citation: [
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Google Search Central: Understanding Core Web Vitals and Google search results",
                     url: "https://developers.google.com/search/docs/appearance/core-web-vitals",
                 },
                 {
-                    "@type": "WebPage",
-                    name: "Google Search Central: Understanding page experience",
-                    url: "https://developers.google.com/search/docs/appearance/page-experience",
-                },
-                {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "web.dev: Web Vitals",
                     url: "https://web.dev/articles/vitals",
-                },
-                {
-                    "@type": "WebPage",
-                    name: "web.dev: Why lab and field data can be different",
-                    url: "https://web.dev/articles/lab-and-field-data-differences",
-                },
-                {
-                    "@type": "WebPage",
-                    name: "Google Search Console: Core Web Vitals report",
-                    url: "https://support.google.com/webmasters/answer/9205520",
                 },
             ],
         },
         {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#webpage",
+            url: "https://www.pandacodegen.com/blog/core-web-vitals-explained",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/core-web-vitals-explained#breadcrumb" },
+            inLanguage: "en-US",
+        },
+        {
             "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
@@ -172,7 +178,7 @@ export default function CoreWebVitalsExplainedPage() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan leads PandaCodeGen's engineering work on performance-sensitive website migrations and custom builds."
                         date="May 6, 2026"
-                        readTime="12 min read"
+                        readTime="7 min read"
                     />
 
                     <div className="my-10">
@@ -186,8 +192,8 @@ export default function CoreWebVitalsExplainedPage() {
                                 "Largest Contentful Paint (LCP) measures loading performance.",
                                 "Interaction to Next Paint (INP) measures responsiveness across user interactions.",
                                 "Cumulative Layout Shift (CLS) measures unexpected visual movement.",
-                                "Google recommends good field values of LCP within 2.5 seconds, INP under 200 milliseconds, and CLS under 0.1.",
-                                "Core Web Vitals contribute to page experience, but a passing assessment does not guarantee rankings, traffic, conversions, or revenue.",
+                                "Google recommends good field values of LCP of 2.5 seconds or less, INP of 200 milliseconds or less, and CLS of 0.1 or less, each assessed at the 75th percentile of real page loads.",
+                                "Core Web Vitals feed into page experience. Passing does not guarantee you rankings, traffic, conversions or revenue.",
                                 "Use field data to understand real visitors and lab data to reproduce and debug specific problems.",
                             ]}
                         />
@@ -242,7 +248,7 @@ export default function CoreWebVitalsExplainedPage() {
                         Thresholds are Google&apos;s published values; see the primary sources at the end of this article.
                         You are assessed at the 75th percentile of real page loads, separately for mobile and desktop, so
                         a page can pass in a lab test and still fail in the field. Passing all three is what counts as
-                        passing Core Web Vitals — two out of three is a fail.
+                        passing Core Web Vitals. Two out of three is a fail.
                     </BlogText>
 
                     <div className="my-8 grid gap-4">
@@ -258,14 +264,14 @@ export default function CoreWebVitalsExplainedPage() {
                                 icon: MousePointerClick,
                                 metric: "INP",
                                 name: "Interaction to Next Paint",
-                                target: "Good: under 200 milliseconds",
+                                target: "Good: 200 milliseconds or less",
                                 meaning: "How responsive the page is across a visitor's interactions. Long main-thread tasks, excessive JavaScript, expensive event handlers, and complex rendering can delay feedback.",
                             },
                             {
                                 icon: Activity,
                                 metric: "CLS",
                                 name: "Cumulative Layout Shift",
-                                target: "Good: under 0.1",
+                                target: "Good: 0.1 or less",
                                 meaning: "How much content moves unexpectedly while a visitor uses the page. Images without reserved dimensions, injected banners, late font changes, and dynamic content are common causes.",
                             },
                         ].map(({ icon: Icon, metric, name, target, meaning }) => (
@@ -321,8 +327,7 @@ export default function CoreWebVitalsExplainedPage() {
 
                     <BlogText>
                         If PageSpeed Insights says there is not enough real-user data, do not relabel the Lighthouse
-                        score as a field result. Record the exact URL, test time, device profile, consent state, and
-                        relevant release. Repeat lab tests to reduce one-run noise, then add real-user monitoring if
+                        score as a field result. Record the exact URL, the test time, the device profile, the consent state and the release you tested. Repeat lab tests to reduce one-run noise, then add real-user monitoring if
                         the decision warrants it.
                     </BlogText>
 
@@ -402,7 +407,7 @@ export default function CoreWebVitalsExplainedPage() {
                         operated badly.
                     </BlogText>
                     <BlogText>
-                        What each platform does give you is a recognisable set of places to look first. We keep a
+                        What each platform does give you is a recognizable set of places to look first. We keep a
                         diagnostic guide per platform:{" "}
                         <Link href="/blog/wix-too-slow" className={inlineLinkClass}>diagnosing a slow Wix site</Link>,{" "}
                         <Link href="/blog/squarespace-too-slow" className={inlineLinkClass}>diagnosing a slow Squarespace site</Link>,{" "}

@@ -33,13 +33,18 @@ export const metadata: Metadata = {
         "website migration scope",
         "custom website price 2026",
         "Next.js website cost",
+        "what do you get for a custom website",
+        "custom website what is included",
+        "fixed price web development",
+        "custom website vs agency quote",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title: pageTitle,
         description: pageDescription,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-07-31",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/custom-website-5000-whats-included")],
@@ -61,27 +66,50 @@ const articleSchema = {
             description: pageDescription,
             image: ogImageUrlForPath("/blog/custom-website-5000-whats-included"),
             datePublished: "2026-06-14",
-            dateModified: "2026-07-24",
+            dateModified: "2026-07-31",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Pricing",
             inLanguage: "en-US",
+            wordCount: 1750,
+            timeRequired: "PT9M",
             keywords: ["custom website cost", "website migration", "project scope", "Next.js development"],
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Next.js", sameAs: ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
+                { "@type": "Thing", name: "Website Migration" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
         },
         {
             "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
                 { "@type": "ListItem", position: 3, name: "Custom Website Starting at $5,000", item: canonicalUrl },
             ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: pageTitle,
+            description: pageDescription,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-06-14",
+            dateModified: "2026-07-31",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -134,7 +162,7 @@ export default function CustomWebsite5000Page() {
                             tests, support, ownership, exclusions, and remedy.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Offer terms reviewed July 24, 2026. A signed proposal or SOW controls if it differs from this guide.
+                            Offer terms reviewed July 31, 2026. A signed proposal or SOW controls if it differs from this guide.
                         </p>
                     </header>
 
@@ -142,8 +170,9 @@ export default function CustomWebsite5000Page() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="June 14, 2026"
-                        readTime="11 min read"
+                        readTime="9 min read"
                         bio="Hassan leads PandaCodeGen's engineering work on scoped, search-sensitive migrations and custom builds."
+                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
@@ -153,7 +182,7 @@ export default function CustomWebsite5000Page() {
                                 "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000.",
                                 "The tier is a planning anchor. Discovery and the written scope decide the actual price and deliverables.",
                                 "A common payment structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted terms.",
-                                "Performance, support, ownership, refunds, vendor costs, and out-of-scope work are written into the project agreement.",
+                                "Speed, support, ownership, refunds and anything out of scope are all written into the agreement.",
                                 "The recommended first step is a migration plan, not selecting a package from page count alone.",
                             ]}
                         />
@@ -182,14 +211,45 @@ export default function CustomWebsite5000Page() {
                         <StatCard stat="$5K-$10K" label="Scale" context="Larger or integration-heavy scope" />
                     </div>
 
-                    <BlogHeader>What can be included in a Scale SOW</BlogHeader>
+                    <BlogHeader id="how-many-pages">How many pages does $5,000 get you?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Wrong unit, and the answer changes by a factor of ten depending on which unit you use.
+                            Published answers to this question say ten to fifteen pages, which is only meaningful if
+                            every page is different. <strong>What costs money is the number of distinct templates, not
+                            the number of URLs.</strong> A hundred-page site running on six templates is a smaller build
+                            than a twelve-page site where every page is bespoke, and the second one is the project that
+                            blows a $5,000 budget while the first fits comfortably.
+                        </BlogText>
+                    </div>
                     <BlogText>
-                        The following work belongs in a Scale conversation, but none of it should be assumed until it
-                        appears in the accepted SOW. The project may include all, some, or a different combination:
+                        Before you compare any quote against this figure, count your templates rather than your pages:
+                        home, a service layout, a listing, a detail page, an article, contact. Six templates and a
+                        content model will carry almost any number of pages. If a vendor is quoting you by page count,
+                        they are either pricing bespoke design for every page, which is expensive and usually
+                        unnecessary, or they are about to build you six templates and charge by URL.
+                    </BlogText>
+
+                    <BlogHeader>What a Scale build normally contains</BlogHeader>
+                    <BlogText>
+                        Taking the question at face value first, because it is a fair one to ask before reading a
+                        contract. A Scale project normally means a custom Next.js front end, a content system your team
+                        can actually edit without a developer, a full URL inventory with page-by-page redirect
+                        decisions so existing search traffic survives the move, a staged launch rather than a flip of
+                        the switch, and the repository handed over to you at the end. Where paid advertising is in
+                        scope, it also means server-side conversion tracking rather than a browser tag alone. Hosting
+                        for this kind of site typically sits on usage-based infrastructure rather than a fixed monthly
+                        platform fee, so what you pay tracks what you use.
+                    </BlogText>
+                    <BlogText>
+                        The reason the rest of this article is careful rather than a package list is that two projects
+                        with the same headline scope routinely need different work, and a buyer who signs a list
+                        instead of a scope finds that out late. So the detail below is what belongs in the written
+                        scope, and none of it should be assumed until it is in there:
                     </BlogText>
                     <BlogList
                         items={[
-                            "A Next.js frontend and an agreed content editing system, with content types, roles, preview, and publishing workflow named.",
+                            "A Next.js frontend plus an agreed way to edit content, naming the content types, who can do what, how preview works and how things get published.",
                             "A dated inventory of URLs, templates, metadata, canonicals, structured data, media, internal links, and important search queries.",
                             "A page-level keep, replace, redirect, or retire decision for existing URLs, plus rendered-output and redirect-chain checks.",
                             "Forms, email, CRM, calendar, commerce, search, analytics, consent, and advertising integrations listed individually.",
@@ -204,7 +264,7 @@ export default function CustomWebsite5000Page() {
                     <BlogText>
                         Our{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering service</Link>{" "}
-                        page describes how that work is organised. Where the project starts on an existing platform, our{" "}
+                        page describes how that work is organized. Where the project starts on an existing platform, our{" "}
                         <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration service</Link>{" "}
                         and our{" "}
                         <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost assessment</Link>{" "}
@@ -215,16 +275,34 @@ export default function CustomWebsite5000Page() {
                         Conversion tracking is worth naming separately because it is one of the items buyers most often
                         assume is included. Browser-side tags and server-side event forwarding are different pieces of
                         work with different failure modes, and how much of the customer journey you want measured is
-                        its own scope driver. A single purchase or enquiry event is a smaller build than a set covering
+                        its own scope driver. A single purchase or inquiry event is a smaller build than a set covering
                         content views, cart, checkout start and pipeline stages, each one implemented, consent-aware
                         and verified. Decide how much of that funnel matters before the scope is written rather than
-                        after launch. What the server-side side of it involves is set out in our guide to{" "}
+                        after launch. What the server-side work involves is set out in our guide to{" "}
                         <Link href="/blog/meta-conversions-api-setup-cost" className="text-cognac hover:underline font-medium">Meta Conversions API setup</Link>.
+                    </BlogText>
+
+                    <BlogHeader>The part that is easy to miss when comparing quotes</BlogHeader>
+                    <BlogText>
+                        Most of what is above, another competent team can also deliver. The difference worth asking any
+                        provider about is what happens after the tracking is switched on. Plenty of setups hand you a
+                        dashboard and end the engagement there, and a dashboard nobody can interpret is just another
+                        bill. Because we build the conversion tracking rather than reselling a tool, we can sit with
+                        the data afterwards and say which campaigns are worth more budget, which are quietly spending
+                        it, and where the measurement itself is unreliable enough that you should not act on it yet.
+                    </BlogText>
+                    <BlogText>
+                        That is a service description rather than a promised outcome. Nobody can tell you in advance
+                        what your ads will do. But when you compare two quotes, it is worth asking each provider who
+                        reads the numbers with you once the build is finished, and what happens when the numbers
+                        disagree with each other. The mechanics of that work are in our guide to{" "}
+                        <Link href="/blog/fix-meta-ad-tracking-2026" className="text-cognac hover:underline font-medium">diagnosing a broken ad-tracking path</Link>.
                     </BlogText>
 
                     <BlogHeader>What the price does not automatically include</BlogHeader>
                     <BlogText>
-                        A clear quote also lists exclusions. Without them, two people can sign the same price while
+                        At $5,000 the exclusions matter as much as the inclusions, and a clear quote lists both.
+                        Without them, two people can sign the same price while
                         imagining different projects. Typical items that need an explicit decision include original
                         copywriting, brand identity, product photography, large data cleanup, paid third-party tools,
                         multilingual content, legal review, complex customer accounts, custom ERP work, ongoing SEO,
@@ -243,7 +321,7 @@ export default function CustomWebsite5000Page() {
 
                     <BlogHeader>How the 90+ performance target works</BlogHeader>
                     <BlogText>
-                        PandaCodeGen can include a 90 or higher Lighthouse performance acceptance target for the
+                        PandaCodeGen can include a 90 or higher <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> performance acceptance target for the
                         representative pages and environments named in the accepted terms. The test should specify
                         mobile and desktop profiles, tool and browser version, consent state, authentication state,
                         geography or runner, and any third-party conditions.
@@ -320,6 +398,9 @@ export default function CustomWebsite5000Page() {
                     </BlogText>
 
                     <BlogHeader>How to compare this quote with another provider</BlogHeader>
+                    <BlogText>
+                        These details make two offers comparable. Provider size, location, or a generic market average does not prove whether a quote is fair for your scope. Seven written details do the work: the exact inventory, the named deliverables and exclusions, the acceptance tests, the revision and change-order terms, the payment and ownership terms, the support definition, and the third-party costs sitting outside the fee.
+                    </BlogText>
                     <div className="my-8 rounded-xl border border-stone-200 bg-stone-50 p-6">
                         <h3 className="mb-4 flex items-center gap-2 text-xl font-bold text-charcoal">
                             <ClipboardCheck className="h-5 w-5 text-cognac" /> Compare these written details

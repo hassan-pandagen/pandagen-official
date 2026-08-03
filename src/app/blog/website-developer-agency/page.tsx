@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Accessibility, Code2, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "hire website development agency",
         "website agency cost",
         "custom web development company",
+        "what does a web development agency do",
+        "agency vs freelancer website",
+        "questions to ask a web agency",
+        "website agency red flags",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-developer-agency")],
@@ -49,8 +54,6 @@ export const metadata: Metadata = {
 const sources = [
     { name: "WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
     { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard/" },
-    { name: "Google SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
-    { name: "Google Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
     { name: "U.S. Copyright Office work made for hire", url: "https://www.copyright.gov/circs/circ30.pdf" },
     { name: "U.S. Copyright Office transfers", url: "https://www.copyright.gov/circs/circ01.pdf" },
 ];
@@ -62,21 +65,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/website-developer-agency"),
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Web development agencies", "Project scoping", "Vendor contracts", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1750,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Web design", sameAs: ["https://en.wikipedia.org/wiki/Web_design"] },
+                { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
+                { "@type": "Thing", name: "Vendor selection" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website developer agency", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-12",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -120,20 +156,20 @@ export default function WebsiteDeveloperAgencyPage() {
                             what they will put in writing, not on the word &ldquo;agency&rdquo;.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current W3C, OWASP, Google and U.S. Copyright Office guidance.
+                            Reviewed August 3, 2026 against current W3C, OWASP and U.S. Copyright Office guidance, all linked at the foot of this page.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 12, 2026" readTime="14 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 12, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "Hire an agency when several disciplines and one accountable delivery owner are required.",
+                                "Hire an agency when the job needs several different skills and one person answerable for delivering it.",
                                 "Define outcomes, scope, acceptance, ownership and support before comparing price.",
-                                "Require manual and automated evidence for accessibility, security, function, SEO and performance.",
-                                "Choose a freelancer or internal team when you already own the missing coordination and quality roles.",
+                                "Ask for evidence, both tested by hand and by tool, that it is accessible, secure, working, still ranking and fast.",
+                                "Use a freelancer or your own team when you already have someone doing the coordinating and the quality checking.",
                             ]}
                         />
                     </section>
@@ -154,6 +190,11 @@ export default function WebsiteDeveloperAgencyPage() {
                     </div>
 
                     <BlogHeader>What a full-service website developer agency does</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Seven phases, and what you buy from an agency rather than a contractor is one party answerable across all of them. Any of the seven can be bought separately, and often is. The reason to buy them together is that the seams between them are where projects fail, and a single accountable party owns those seams.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Discovery: goals, audiences, journeys, constraints, data and current evidence.",
@@ -161,7 +202,7 @@ export default function WebsiteDeveloperAgencyPage() {
                             "Design: research, flows, wireframes, responsive UI and design system.",
                             "Engineering: frontend, backend, CMS, integrations, data and infrastructure.",
                             "Quality: content, function, accessibility, security, SEO, analytics and performance.",
-                            "Release: migration, rollback, monitoring, Search Console and account handoff.",
+                            <>{"Release: migration, rollback, monitoring, "}Search Console{" and account handoff."}</>,
                             "Operation: defect support, maintenance, incidents, upgrades and change requests.",
                         ]}
                     />
@@ -182,6 +223,11 @@ export default function WebsiteDeveloperAgencyPage() {
                     />
 
                     <BlogHeader>Core services and their acceptance evidence</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Every service in this table has an artefact that proves it was delivered, and the second column is the one to read. A service with no named acceptance evidence is a line on an invoice rather than a deliverable. Ask for that column to appear in your own proposal, because it is what turns sign-off into a check rather than an opinion.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[930px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -221,8 +267,9 @@ export default function WebsiteDeveloperAgencyPage() {
                     <BlogHeader>Platforms a modern agency may support</BlogHeader>
                     <BlogText>
                         A platform is not automatically modern or legacy. An agency may deliver WordPress, Shopify,
-                        Webflow, headless CMS, Next.js or other application stacks. The right choice follows the
-                        editing workflow, requirements, data, team capability, security, performance, portability and
+                        Webflow, headless CMS, Next.js or other application stacks. What decides it is how your team wants to edit, what the site
+                        has to do, what data is involved, what your people can actually run, security, speed, whether
+                        you can take it elsewhere, and
                         operating model. Ask why the proposed platform fits and what would disqualify it.
                     </BlogText>
                     <BlogText>
@@ -238,24 +285,76 @@ export default function WebsiteDeveloperAgencyPage() {
                     </BlogText>
 
                     <BlogHeader>A four-stage delivery process</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four stages, each producing something you can inspect before the next begins. Define ends with an agreed scope. Design ends with approved templates. Build and verify ends with test evidence. Launch and operate ends with a handover you hold. A proposal that cannot say what each gate produces has not been planned to that level yet.
+                        </BlogText>
+                    </div>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
-                        <li><strong>Define:</strong> inventory, requirements, risks, measures, scope, assumptions and acceptance. The deliverable is written, and it includes what the current site actually does today, measured rather than described.</li>
-                        <li><strong>Design:</strong> information architecture, content, flows, UI, prototypes and technical decisions. Architecture is the planning that happens before code: URL structure, content model, integrations, environments. Deciding it upfront costs hours. Discovering it halfway through the build costs weeks.</li>
-                        <li><strong>Build and verify:</strong> implementation, migration, integrations, review and recorded quality evidence. Ask for working progress at a regular interval rather than a single reveal at the end, so a wrong direction surfaces in the second week instead of the third month.</li>
-                        <li><strong>Launch and operate:</strong> cutover, rollback, monitoring, handoff, support and maintenance. A low-risk cutover keeps the current site serving until the replacement has been tested on a staging URL, exports every indexed URL and maps it to its new path before anything moves, validates the map, then makes the switch at DNS with the TTL lowered in advance so propagation is quick and reversible.</li>
+                        <li><strong>Define.</strong> What you have, what you need, what could go wrong, how you will measure it, what is in scope, what you are assuming, and how you sign it off. The deliverable is written, and it includes what the current site actually does today, measured rather than described.</li>
+                        <li><strong>Design.</strong> How the site is organized, what the content is, how people move through it, what it looks like, prototypes, and the technical calls. Architecture is the planning that happens before code: URL structure, content model, integrations, environments. Deciding it upfront costs hours. Discovering it halfway through the build costs weeks.</li>
+                        <li><strong>Build and verify.</strong> Writing it, moving the data, wiring up the integrations, reviewing the work, and recording evidence that it is right. Ask for working progress at a regular interval rather than a single reveal at the end, so a wrong direction surfaces in the second week instead of the third month.</li>
+                        <li><strong>Launch and operate.</strong> The switchover, the ability to undo it, monitoring, handing it over, support and maintenance. A low-risk cutover keeps the current site serving until the replacement has been tested on a staging URL, exports every indexed URL and maps it to its new path before anything moves, validates the map, then makes the switch at DNS with the TTL lowered in advance so propagation is quick and reversible.</li>
                     </ol>
+
+                    <BlogHeader id="contract-gaps">Four contract lines the standard checklist always misses</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Search for what belongs in an agency contract and you get the same list everywhere: scope,
+                            deliverables, revision rounds, payment milestones, late fees, intellectual property. That
+                            list is correct and it is written for agency work in general, not for a website. Four things
+                            specific to websites are missing from it, and each one is expensive to discover after
+                            signing rather than before.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "Account ownership, named individually. Domain registrar, DNS, hosting, repository, CMS, analytics, tag manager, payment gateway. Intellectual property clauses cover code and rarely mention accounts, and accounts are where lock-in actually happens. Ask whose email address each one is registered under, today.",
+                            "The redirect map, if any URL changes. This is the single most commonly assumed line in a rebuild. It is real work, it protects existing search traffic, and if it is not itemized then nobody has priced it and nobody has been made responsible for it.",
+                            "Acceptance criteria with test conditions attached. Not \u201ca fast site\u201d but which pages, which device profiles, how many passing runs, measured how, and what happens if it fails. A performance number with no conditions is not a term, it is a slogan.",
+                            "What you receive if the project stops mid-way. Most contracts describe completion and cancellation and skip the state in between, which is the one you are most likely to be in if something goes wrong. Agree now whether partial work, designs and access transfer at that point.",
+                        ]}
+                    />
+                    <BlogText>
+                        None of these is adversarial and a competent vendor will have answers ready. The reason to raise
+                        them before signing rather than after is simply that all four are cheap to write down now and
+                        expensive to negotiate once the relationship is under strain. Our{" "}
+                        <Link href="/blog/do-you-own-your-website" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">guide to what you actually own</Link>{" "}
+                        works through the ownership side in detail, including why a &ldquo;work made for hire&rdquo;
+                        clause often does not do what people assume.
+                    </BlogText>
 
                     <BlogHeader>Performance terms to put in writing</BlogHeader>
                     <BlogText>
                         PandaCodeGen&apos;s 90-plus target is conditional on agreed representative pages, mobile and
-                        desktop profiles, recorded environment and three consecutive tests per page and profile. It is
-                        not a promise that every URL, device or future deployment permanently scores 90. The contract
+                        desktop profiles, recorded environment and three recorded runs per page and profile. It is not a promise that every URL, on every device,
+                        forever, scores 90. The contract
                         should state the target, test, evidence, exclusions, cure and remedy. For what the underlying
                         page metrics actually measure, see{" "}
                         <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals explained</Link>.
                     </BlogText>
 
+                    <BlogText>
+                        If you are reading this from the other side of the table &mdash; an agency deciding whether to
+                        offer custom development rather than a business buying it &mdash;{" "}
+                        <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the partner-side version of this guide</Link>{" "}
+                        covers the same ground from the delivery end.
+                    </BlogText>
                     <BlogHeader>In-house developer vs agency vs freelancer</BlogHeader>
+                    <BlogText>
+                        The reason coordination is worth paying for is that website problems rarely sit in one
+                        discipline. A page that loads slowly is often a hosting decision, a code decision and a content
+                        decision at the same time, and the search consequences belong to none of those three people
+                        individually. Someone who only writes frontend code will correctly report that the frontend is
+                        fine. They will be right, and the page will still be slow.
+                    </BlogText>
+                    <BlogText>
+                        So the question is not really agency versus freelancer. It is who is going to notice when a
+                        problem crosses a boundary, and who is answerable when it does. If you already have someone
+                        doing that job, a specialist is often the better and cheaper hire. If you do not, you are
+                        buying that role whether it appears on the invoice or not, and it is worth knowing which
+                        person it is.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[840px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -291,18 +390,23 @@ export default function WebsiteDeveloperAgencyPage() {
                     />
 
                     <BlogHeader>Seven questions before signing</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Seven questions, and the answers matter more than the asking. A usable answer names something specific enough to write into the scope and check later; a vague one tells you the work has not been thought through yet. Ask all seven of every finalist, including us, and compare the answers side by side.
+                        </BlogText>
+                    </div>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
                         <li>Who exactly will deliver the work, and what relevant project did they complete?</li>
                         <li>Which requirements, pages, data and integrations are excluded?</li>
                         <li>How will each acceptance target be reproduced?</li>
                         <li>What triggers a change order, and who approves it?</li>
                         <li>Who controls the domain, repository, hosting, CMS, analytics and business accounts?</li>
-                        <li>What will this cost to run every month once it is live, itemised by provider?</li>
+                        <li>What will this cost to run every month once it is live, itemized by provider?</li>
                         <li>What happens after launch, at termination and when another team takes over?</li>
                     </ol>
                     <BlogText>
-                        The answers matter more than the questions. What separates a usable answer from an evasive one
-                        is whether it names something specific enough to be written into the scope and checked later.
+                        A usable answer names something specific enough to write into the scope and check later. An
+                        evasive one does not.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[840px] border-collapse text-left text-sm">
@@ -311,7 +415,7 @@ export default function WebsiteDeveloperAgencyPage() {
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Who writes the code?</td><td className="p-4">Named people, with work you can look at</td><td className="p-4">&quot;Our team handles that&quot;</td></tr>
-                                <tr><td className="p-4 font-bold">What performance do you commit to?</td><td className="p-4">A stated target on named pages, a stated measurement method, and a stated remedy</td><td className="p-4">&quot;We prioritise performance&quot; or an unconditional promise with no method attached</td></tr>
+                                <tr><td className="p-4 font-bold">What performance do you commit to?</td><td className="p-4">A stated target on named pages, a stated measurement method, and a stated remedy</td><td className="p-4">&quot;We prioritize performance&quot; or an unconditional promise with no method attached</td></tr>
                                 <tr><td className="p-4 font-bold">Do I receive the source code?</td><td className="p-4">The repository transfers to an account you control, and you can deploy it elsewhere</td><td className="p-4">Access to a copy they host, contingent on staying a customer</td></tr>
                                 <tr><td className="p-4 font-bold">What will it cost monthly?</td><td className="p-4">A line per provider, with which ones are optional</td><td className="p-4">&quot;We can work that out after launch&quot;</td></tr>
                                 <tr><td className="p-4 font-bold">How do you protect search visibility?</td><td className="p-4">Every indexed URL exported and mapped before cutover, with the map validated first</td><td className="p-4">SEO quoted as a separate service to be bought later</td></tr>
@@ -345,7 +449,7 @@ export default function WebsiteDeveloperAgencyPage() {
                         This page gives you questions to ask rather than headline numbers, because hosting bills,
                         traffic capacity, store revenue and security outcomes all depend on the specific build,
                         stack and operating conditions behind them. Where we do commit, we commit in the scope
-                        document: our performance commitment is a 90+ Lighthouse handover target on mobile and
+                        document: our performance commitment is a 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> handover target on mobile and
                         desktop for the representative pages named in that scope, verified across three recorded runs.
                         Ask any agency to write its equivalent commitment the same way, with the pages, the devices
                         and the verification method stated.
@@ -366,6 +470,17 @@ export default function WebsiteDeveloperAgencyPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a migration plan and comparable scope</h2>

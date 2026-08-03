@@ -73,17 +73,17 @@ const responsibilities = [
   {
     icon: Route,
     title: "Migration implementation",
-    body: "Turn the approved URL, content, redirect, integration, analytics, and cutover plan into a testable production implementation.",
+    body: "Take the approved plan for URLs, content, redirects, integrations, analytics and cutover, and turn it into something in production you can actually test.",
   },
   {
     icon: Code2,
     title: "Engineering delivery",
-    body: "Build and review the Next.js application, content interfaces, forms, integrations, and repository handover defined in the project scope.",
+    body: "Build and review what the scope names: the Next.js application, the editing interfaces, the forms, the integrations, and handing over the code.",
   },
   {
     icon: Gauge,
     title: "Measured quality",
-    body: "Record the agreed devices, pages, runs, accessibility checks, and performance conditions instead of presenting a single lab score as a business outcome.",
+    body: "Record the devices, pages, runs, accessibility checks and conditions you agreed. One lab score is not a business outcome.",
   },
 ];
 
@@ -150,8 +150,8 @@ export default function HassanProfilePage() {
           </div>
           <ul className="space-y-4">
             {[
-              "URLs, redirects, canonicals, metadata, and structured data are checked against an inventory.",
-              "Performance is measured on the pages, profiles, and conditions agreed for acceptance.",
+              "Every URL, redirect, canonical, piece of metadata and structured-data block gets checked against the inventory.",
+              "Performance is measured on the pages, profiles and conditions you agreed to sign off against.",
               "Rankings, revenue, field traffic, and third-party behavior are monitored outcomes, not universal guarantees.",
               "The client receives the repository, accounts, documentation, and licenses described in the accepted terms.",
             ].map((item) => (

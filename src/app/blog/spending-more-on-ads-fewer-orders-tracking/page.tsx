@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, DatabaseZap, GitCompareArrows, ShieldCheck, Waypoints } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -33,13 +33,18 @@ export const metadata: Metadata = {
         "Meta pixel tracking",
         "Google enhanced conversions",
         "ecommerce conversion tracking",
+        "Meta enabled Conversions API",
+        "is Meta free Conversions API enough",
+        "why is my cost per order rising",
+        "Facebook ads not converting anymore",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/spending-more-on-ads-fewer-orders-tracking")],
@@ -61,16 +66,20 @@ const sources = [
         url: "https://www.facebook.com/legal/terms/dataprocessing",
     },
     {
+        name: "Meta: about Event Match Quality",
+        url: "https://www.facebook.com/business/help/765081237991954",
+    },
+    {
         name: "Google Ads: enhanced conversions for web",
         url: "https://support.google.com/google-ads/answer/15712870",
     },
     {
-        name: "Google: consent mode implementation",
-        url: "https://developers.google.com/tag-platform/security/guides/consent",
+        name: "Meta announcement: Pixel and Conversions API updates (April 15, 2026)",
+        url: "https://www.facebook.com/business/news/pixel-conversionsapi-updates",
     },
     {
-        name: "Google: consent mode overview",
-        url: "https://developers.google.com/tag-platform/security/concepts/consent-mode",
+        name: "Shopify: checkout.liquid and script tag sunset dates",
+        url: "https://shopify.dev/docs/storefronts/themes/architecture/layouts",
     },
 ];
 
@@ -81,21 +90,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/spending-more-on-ads-fewer-orders-tracking"),
             description,
             datePublished: "2026-06-04",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Conversion tracking", "Meta Conversions API", "Attribution", "Analytics"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Advertising measurement",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 2050,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "Thing", name: "Conversions API", sameAs: ["https://developers.facebook.com/docs/marketing-api/conversions-api/"] },
+                { "@type": "Thing", name: "Meta Pixel", sameAs: ["https://www.facebook.com/business/tools/meta-pixel"] },
+                { "@type": "Thing", name: "Conversion Tracking" },
+                { "@type": "Thing", name: "Online advertising", sameAs: ["https://en.wikipedia.org/wiki/Online_advertising"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Ad tracking audit", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-06-04",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -141,11 +183,11 @@ export default function SpendingMoreOnAdsTrackingPage() {
                             platform reporting before changing campaigns or promising that server events will fix them.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Meta and Google guidance.
+                            Reviewed August 1, 2026 against current Meta and Google guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 4, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 4, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Separate four questions</h2>
@@ -175,6 +217,9 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     </div>
 
                     <BlogHeader>1. Diagnose the business result before the tracking stack</BlogHeader>
+                    <BlogText>
+                        A lower platform-reported conversion count can reflect fewer orders, a measurement gap, an attribution change, or more than one at once. Do not treat the ad dashboard as the system of record for fulfilled commerce. Two things in particular are worth ruling out before anyone quotes you for tracking work: the auction moved, and the creative fatigued. Either can raise your cost per order while your account, your site and your measurement all sit unchanged.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Confirm orders, paid revenue, cancellations, refunds and contribution margin.",
@@ -185,6 +230,16 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         ]}
                     />
                     <BlogText>
+                        Two of those causes deserve naming, because they are common and neither one is your tracking.
+                        The first is the auction. What you pay is set partly by how many other advertisers are bidding
+                        for the same attention this month, so your cost per order can rise while your account, your
+                        site and your measurement all sit unchanged. Seasonality and a competitor deciding to spend do
+                        that to you. The second is creative fatigue. The same audience seeing the same ad for the
+                        seventh time responds less, and that shows up as rising cost per result rather than as anything
+                        obviously broken. Both are worth ruling out before anyone quotes you for tracking work, because
+                        neither is fixed by better measurement.
+                    </BlogText>
+                    <BlogText>
                         A lower platform-reported conversion count can reflect fewer orders, a measurement gap, an
                         attribution change or more than one at once. Do not treat the ad dashboard as the system of
                         record for fulfilled commerce. For the event-path side of the same investigation, work through{" "}
@@ -192,6 +247,9 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     </BlogText>
 
                     <BlogHeader>2. Define the event contract</BlogHeader>
+                    <BlogText>
+                        Every definition in this table has an evidence column, because a contract nobody can test is not a contract. Six fields have to be written down before anyone builds: what the event is, which identifiers are permitted, how value is counted, what consent state is required, how duplicates are collapsed, and who owns it. The deduplication row is where most implementations quietly double-count.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[800px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -243,6 +301,38 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         ]}
                     />
 
+                    <BlogHeader>Is Meta&apos;s free Conversions API enough on its own?</BlogHeader>
+                    <BlogText>
+                        Often it is a sensible first move, and it is worth understanding exactly what it changes. Meta
+                        announced a Meta-enabled Conversions API on April 15, 2026: a one-click setup inside Events
+                        Manager, free, hosted by Meta, needing no developer. It mirrors the events your Pixel is already
+                        sending and handles deduplication for you.
+                    </BlogText>
+                    <BlogText>
+                        That word <BlogHighlight>mirrors</BlogHighlight> is the part to sit with. It gives those events a
+                        second delivery path that does not depend on the browser finishing its work, which is a real
+                        improvement if your problem is events failing to arrive. It does not enrich them. If your Pixel
+                        currently sends an email address and little else, the mirrored server copy sends an email address
+                        and little else, only more reliably. Meta also documents narrower support for the harder cases,
+                        including subscription renewals, predicted lifetime value and custom deduplication logic, which
+                        still point to a partner or custom integration.
+                    </BlogText>
+                    <InsightBox variant="tip" label="How to decide between the free path and a build">
+                        Turn the free setup on first. It costs an afternoon at most. Then reconcile again using the
+                        method above. If your gap closes, you are finished and you have saved the money. If events are
+                        arriving but matching poorly, or the events that matter to you are the ones the mirrored setup
+                        does not cover well, that is the point where a custom integration earns its cost. Deciding in
+                        that order means you never pay for a build to fix a problem a free toggle would have closed.
+                    </InsightBox>
+                    <BlogText>
+                        On the numbers Meta publishes alongside it, its April 15, 2026 announcement states that
+                        &ldquo;advertisers with a Conversions API setup for web events saw an average 17.8% lower cost
+                        per result compared to those without Conversions API&rdquo;. Read that as Meta&apos;s own figure comparing two groups of advertisers,
+                        not as a before-and-after on a single account, and not as something you should write into a
+                        forecast. Advertisers who have implemented server-side tracking differ from those who have not
+                        in more ways than the tracking.
+                    </BlogText>
+
                     <BlogHeader>5. Treat Event Match Quality as a diagnostic</BlogHeader>
                     <BlogText>
                         Platform diagnostics can show whether identifiers and event parameters are useful for matching.
@@ -265,7 +355,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         </figcaption>
                     </figure>
 
-                    <InsightBox variant="info" label="How to read these two screenshots">
+                    <InsightBox variant="info" label="How to read this screenshot">
                         These are first-party captures from{" "}
                         <Link href="/work/panda-patches" className="text-cognac hover:underline font-medium">Panda Patches</Link>, which is owned by a PandaCodeGen co-founder, so
                         treat them as our own operating evidence rather than an independent client result. They show what
@@ -314,12 +404,15 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     </BlogText>
 
                     <BlogHeader>9. Compare implementation paths on total operation</BlogHeader>
+                    <BlogText>
+                        Compare the four routes on what it costs to operate, not on what it costs to set up. Native and partner integrations reduce custom work and bring their own supported scope and recurring charges. A gateway centralizes delivery and adds infrastructure you now run. A direct integration gives you control and hands you credentials, monitoring and API-change ownership. An agency implementation is only comparable once you know which events, tested how, documented where, and owned by whom.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Native or partner integration: supported scope, setup, recurring cost, data path and limits.",
                             "Gateway or managed server tagging: hosting, configuration, support, data path and exit.",
                             "Direct integration: engineering control plus credentials, monitoring, maintenance and API change ownership.",
-                            "Agency implementation: accepted events, systems, consent, testing, documentation, support and ownership.",
+                            "If an agency implements it: which events you agreed, which systems, how consent is handled, how it was tested, what is documented, what support you get, and who owns it.",
                         ]}
                     />
                     <InsightBox variant="info" label="PandaCodeGen scope">
@@ -334,7 +427,36 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>.
                     </InsightBox>
 
+                    <BlogHeader>Why bolt-on tracking keeps breaking</BlogHeader>
+                    <BlogText>
+                        There is a pattern worth recognizing, because it decides whether you are buying a fix or renting
+                        one. When tracking lives in an app or a tag layered on top of a platform you do not control, a
+                        change to that platform can take your measurement with it. Shopify&apos;s removal of
+                        checkout.liquid is the clearest recent example: stores that had been passing customer details to
+                        their tracking scripts from those pages stopped passing them, match quality fell, and nobody at
+                        those businesses had touched anything. Shopify&apos;s own documentation states it plainly:
+                        &ldquo;Script tags were sunset on those pages on August 28, 2025 for Plus stores, and are sunset
+                        for non-Plus stores on August 26, 2026.&rdquo;
+                    </BlogText>
+                    <InsightBox variant="warning" label="Time-critical: sunset dated August 26, 2026">
+                        That non-Plus date is <strong>August 26, 2026</strong>. If any of your Meta, Google or analytics measurement still runs
+                        through a script tag on the Thank you or Order status pages, it stops working on that date and
+                        nothing at your business will have changed to explain it. Open Shopify admin, check what is
+                        still installed on those pages, and move it before the deadline rather than diagnosing a drop
+                        in September.
+                    </InsightBox>
+                    <BlogText>
+                        This is not an argument that tracking apps are bad. Most of them do what they say. It is an
+                        argument about where the thing sits. An app treats the symptom perfectly well while the
+                        underlying condition, that you do not control the layer your measurement depends on, stays
+                        exactly as it was. That is worth knowing before you choose between renting the fix and owning it,
+                        and it is a different question from whether your tracking is currently broken.
+                    </BlogText>
+
                     <BlogHeader>10. Require acceptance evidence</BlogHeader>
+                    <BlogText>
+                        An implementation is accepted on artifacts, not on assurances. Six of them prove it works: a reconciliation against the source of truth for a defined period, browser and server traces with sensitive values redacted, deduplication and refund tests, platform receipts tied to named test events, results across consent states and regions, and a runbook naming owners and alerts. Ask for them before the invoice, not after.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A source-of-truth reconciliation for a defined test period.",

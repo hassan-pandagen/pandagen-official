@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Code2, FileArchive, LayoutTemplate, Users } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Webflow vs custom website",
         "custom code vs Webflow",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -52,8 +53,6 @@ const sources = [
     { name: "Webflow content editor", url: "https://help.webflow.com/hc/en-us/articles/33961251014931-Edit-site-content-as-a-content-editor" },
     { name: "Webflow code export", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
     { name: "Webflow CMS", url: "https://help.webflow.com/hc/en-us/articles/33961307099027-Intro-to-the-Webflow-CMS" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-    { name: "Google Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
 ];
 
 const articleSchema = {
@@ -63,21 +62,50 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Webflow", "Website migration", "Content management systems", "Technical SEO", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website platforms",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1350,
+            timeRequired: "PT7M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Webflow vs custom", item: "https://www.pandacodegen.com/blog/webflow-vs-custom-website" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#webpage",
+            url: "https://www.pandacodegen.com/blog/webflow-vs-custom-website",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/webflow-vs-custom-website#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -120,11 +148,11 @@ export default function WebflowVsCustomWebsitePage() {
                             editing, feature, ownership and lifecycle requirements, not a platform score.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Webflow and Google documentation.
+                            Reviewed August 3, 2026 against current Webflow and Google documentation.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -154,6 +182,11 @@ export default function WebflowVsCustomWebsitePage() {
                     </div>
 
                     <BlogHeader>The four-factor decision framework</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four factors decide this, and none of them is speed or design quality. Editing asks who ships a page change. Requirements ask whether the platform can express what you need. Control asks who holds the code and the accounts. Lifecycle asks who can afford to run it. Answer all four before you compare anything else.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -183,6 +216,18 @@ export default function WebflowVsCustomWebsitePage() {
                         page settings while protecting the site structure. A custom site can offer a structured CMS,
                         preview and reusable components, but layout changes may require development. Test the real
                         publishing workflow with the people who will use it.
+                    </BlogText>
+
+                    <BlogText>
+                        One dated change belongs in this factor rather than in a footnote. Webflow&apos;s{" "}
+                        <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">feature sunsets page</a>,
+                        read on August 3, 2026, states that the legacy Editor and legacy Editor whitelabeling become
+                        unavailable starting August 4, 2026, with existing legacy Editor users automatically given
+                        access to a free client seat or a limited seat. If the people who publish your content have
+                        been using the legacy Editor, the workflow you are comparing against a custom CMS is the seat
+                        and role model rather than the one they used last year. Test the comparison against what they
+                        will actually be using. The wider sequence is in{" "}
+                        <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline">our guide to the Webflow sunset dates</Link>.
                     </BlogText>
 
                     <BlogHeader>2. Features and integrations</BlogHeader>
@@ -242,6 +287,11 @@ export default function WebflowVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>What a custom website can give you</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Five controls, and every one of them is a control rather than an outcome. Custom code buys you the ability to decide the architecture, the providers and the release process. It does not buy speed, accessibility or maintainability, all of which still have to be designed, tested and paid for.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Architecture designed around the accepted experience and data requirements.",
@@ -260,8 +310,8 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <BlogHeader>Performance and SEO</BlogHeader>
                     <BlogText>
-                        Webflow does not have a universal 55-to-75 PageSpeed ceiling, and custom code does not guarantee
-                        90-plus. Measure representative routes with field{" "}
+                        Webflow has no universal PageSpeed ceiling, and custom code does not guarantee any particular
+                        score. Measure representative routes with field{" "}
                         <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals</Link>{" "}
                         where available and repeated
                         mobile and desktop lab tests. Google says Core Web Vitals support page experience, while
@@ -276,12 +326,17 @@ export default function WebflowVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>Match the business profile to the model</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four routes, and two of them keep you on Webflow. Read this alongside the table underneath, which maps common business shapes to where they usually land. The word usually is doing real work there: these are patterns drawn from the four factors, not rules that override them.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Webflow: visual marketing production is central and supported platform features cover the requirements.",
                             "Webflow optimization: the platform fits, while the current implementation has measured problems.",
                             "Hybrid: Webflow remains the marketing surface and custom systems handle bounded application workflows.",
-                            "Custom migration: portability, data, experience, integration or release needs exceed accepted platform boundaries.",
+                            "Migrate to custom when what you need on portability, data, experience, integrations or release process has outgrown what the platform allows.",
                         ]}
                     />
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
@@ -314,8 +369,13 @@ export default function WebflowVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>If the evidence points toward custom, what happens next?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Six steps, and the fourth is the one that protects you: build and migrate in parallel while the current site stays live, so the decision stays reversible until cutover. Nothing here is specific to Webflow. It is the same sequence any platform move needs if search traffic is at stake.
+                        </BlogText>
+                    </div>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
-                        <li>Inventory pages, CMS, forms, assets, scripts, integrations and owners.</li>
+                        <li>List every page, CMS collection, form, asset, script and integration, and who owns each.</li>
                         <li>Define target editing, account, data, architecture and operating requirements.</li>
                         <li>Preserve useful URLs and map every changed URL.</li>
                         <li>Build and migrate in parallel while the current site remains available.</li>
@@ -331,8 +391,7 @@ export default function WebflowVsCustomWebsitePage() {
 
                     <BlogHeader>PandaCodeGen commercial and acceptance terms</BlogHeader>
                     <BlogText>
-                        Planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. Standard
-                        payment is 30 percent at onboarding and 70 percent on delivery. Starter includes 15 business
+                        Planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Starter includes 15 business
                         days of launch defect support; Growth and Scale include 30. A 90-plus performance target must
                         name representative pages, mobile and desktop profiles, three consecutive tests and a written
                         remedy in the accepted project terms. The tiers and what sits inside each one are set out on
@@ -355,6 +414,17 @@ export default function WebflowVsCustomWebsitePage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a Webflow fit and migration plan</h2>

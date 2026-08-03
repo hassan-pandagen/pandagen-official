@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Code2, Gauge, Image as ImageIcon, Type } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Squarespace too slow",
         "speed up Squarespace",
@@ -60,13 +61,8 @@ const sources = [
         url: "https://status.squarespace.com/",
     },
     {
-        name: "Google PageSpeed Insights documentation",
-        url: "https://developers.google.com/speed/docs/insights/v5/about",
-    },
-    { name: "Google web.dev: Web Vitals", url: "https://web.dev/articles/vitals" },
-    {
-        name: "Google page experience guidance",
-        url: "https://developers.google.com/search/docs/appearance/page-experience",
+        name: "Squarespace: exporting your site",
+        url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
     },
 ];
 
@@ -77,6 +73,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/squarespace-too-slow"),
             description,
             datePublished: "2026-03-27",
             dateModified: "2026-07-24",
@@ -85,13 +82,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Squarespace", "Website migration", "Technical SEO", "Content management systems"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Squarespace performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+                { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
+            ],
+            wordCount: 1350,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Squarespace performance", item: "https://www.pandacodegen.com/blog/squarespace-too-slow" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#webpage",
+            url: "https://www.pandacodegen.com/blog/squarespace-too-slow",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/squarespace-too-slow#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -135,7 +160,7 @@ export default function SquarespaceTooSlowPage() {
                             Squarespace Too Slow in 2026? <span className="italic text-cognac">Diagnose Before Migrating</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Squarespace performance varies by route, content, fonts, custom code, third parties, device
+                            Squarespace speed varies page by page, and with your content, fonts, custom code, third-party scripts, the device
                             and network. Use field and lab evidence to find the constraint before treating the platform
                             name as the cause or migration as the only fix.
                         </p>
@@ -144,10 +169,18 @@ export default function SquarespaceTooSlowPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The diagnostic sequence</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            A Squarespace site is usually slow because of what was put on the page rather than because
+                            of Squarespace: oversized images, several font families, animations, and third-party
+                            blocks that open connections to hosts you do not control. All four are yours to fix in the
+                            editor. Work through them in the order below, measuring the same route before and after
+                            each change, and only treat the platform as the constraint once the controllable causes
+                            are gone.
+                        </p>
                         <BlogList
                             items={[
                                 "Check platform status and reproduce the issue on supported browsers and another network.",
@@ -158,6 +191,13 @@ export default function SquarespaceTooSlowPage() {
                         />
                     </section>
 
+                    <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">The four things that decide a Squarespace page&apos;s speed</h2>
+                    <p className="mb-2 leading-relaxed text-stone-700">
+                        Nearly every slow Squarespace route we have opened comes down to one of four things, and three
+                        of them are content decisions rather than technical ones. Measurement tells you which. Media
+                        weight is the most common single cause, fonts the most commonly overlooked, and injected code
+                        the one that breaks the site when you remove it carelessly.
+                    </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
                             { icon: Gauge, title: "Measure", body: "Field distribution plus repeatable lab diagnostics." },
@@ -174,13 +214,20 @@ export default function SquarespaceTooSlowPage() {
                     </div>
 
                     <BlogHeader>1. Name the problem correctly</BlogHeader>
+                    <BlogText>
+                        &ldquo;The site is slow&rdquo; describes five different problems with five different fixes.
+                        Decide which one you have before you touch anything: content that arrives late, a page that
+                        will not respond to a tap, layout that jumps under the reader, a function that hangs, or a
+                        single low score in one simulated test. The last of those is the weakest evidence on the list
+                        and the one that starts most migrations.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Slow initial content, measured through LCP and supporting network timing.",
                             "Delayed interaction, measured through INP and browser traces.",
                             "Unexpected movement, measured through CLS and layout-shift records.",
                             "A functional wait, error or failed third-party request.",
-                            "A low Lighthouse score in one simulated test.",
+                            <>{"A low "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" score in one simulated test."}</>,
                         ]}
                     />
                     <BlogText>
@@ -204,6 +251,12 @@ export default function SquarespaceTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader>2. Check platform and local conditions</BlogHeader>
+                    <BlogText>
+                        Rule out the platform and your own machine before attributing anything to the site. A live
+                        Squarespace incident, a browser extension rewriting the page, a saturated home connection or a
+                        DNS setup that only affects the custom domain will each produce a convincing slow result that
+                        has nothing to do with your content. Five checks, all of which take a minute.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Review Squarespace's status page for a current platform incident.",
@@ -232,7 +285,7 @@ export default function SquarespaceTooSlowPage() {
                     <BlogText>
                         Compress and resize before you upload rather than after. Squarespace generates its own derivative
                         sizes from what you give it, so a 6000-pixel camera original is a larger starting point than the
-                        page ever needs. Squoosh and TinyPNG both do the job in the browser at no cost. Check the result
+                        page ever needs. Squoosh and TinyPNG both do the job in the browser on a free tier. Check the result
                         in a network trace rather than by eye: what matters is the size of the file the page actually
                         requests at the viewport you are testing.
                     </BlogText>
@@ -281,6 +334,12 @@ export default function SquarespaceTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader>7. Compare representative routes</BlogHeader>
+                    <BlogText>
+                        Speed work is accepted per route, not per site, because a home page and a checkout fail in
+                        different ways. Test one real example of each template you have, in the state a visitor
+                        actually meets it, and carry a non-speed guardrail alongside each one. That guardrail is what
+                        stops a faster page from shipping with a broken form or a missing conversion event.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -296,11 +355,17 @@ export default function SquarespaceTooSlowPage() {
                     </div>
 
                     <BlogHeader>8. Decide whether to stay or migrate</BlogHeader>
+                    <BlogText>
+                        Stay on Squarespace when the platform still does what the business needs and the measured
+                        causes are ones you can change. Redesign inside it when the structure is the problem but the
+                        way your team publishes is not. Migrate only when a requirement you can name is impractical
+                        where you are. A better score on somebody else&apos;s demo site is not a requirement.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Stay and optimize when the platform meets feature and editorial requirements and measured issues are controllable.",
                             "Redesign within Squarespace when the content structure and experience need simplification but the operating model still fits.",
-                            "Migrate when required experience, data, integration, workflow or performance control is impractical in the current system.",
+                            "Migrate when the experience, data, integration, workflow or speed control you need is not practical where you are.",
                             "Do not migrate solely because another platform produced a better isolated demo score.",
                         ]}
                     />
@@ -316,9 +381,13 @@ export default function SquarespaceTooSlowPage() {
 
                     <BlogHeader>9. If you do move, plan the extraction early</BlogHeader>
                     <BlogText>
-                        Squarespace&apos;s built-in export does not cover everything a site contains, so confirm what it
-                        actually produces for your account and page types before you budget the work. Whatever it misses
-                        has to come out by hand or by script, and that is usually the largest line in a small migration.
+                        Squarespace&apos;s{" "}
+                        <a href="https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>own export documentation</a>{" "}
+                        describes a WordPress-format XML file and lists what it leaves out, which as of August 2, 2026
+                        includes store pages, portfolio and several other page types, product data and video. Confirm
+                        what it actually produces for your account and your page types before you budget the work,
+                        because that list changes. Whatever the export misses has to come out by hand or by script,
+                        and on the small migrations we have scoped that extraction has been the largest single line.
                     </BlogText>
                     <BlogList
                         items={[
@@ -369,6 +438,7 @@ export default function SquarespaceTooSlowPage() {
                         ))}
                     </ul>
 
+                    <BlogHeader id="faq">Frequently asked questions</BlogHeader>
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId={postId} />
                 </article>

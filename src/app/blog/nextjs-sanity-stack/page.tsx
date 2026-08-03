@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Database, FileText, Workflow } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -12,6 +12,7 @@ import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
+const PlatformComparisonAnimation = dynamicImport(() => import("@/components/blog/PlatformComparisonAnimation"));
 
 const postId = "nextjs-sanity-stack";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
@@ -38,12 +39,13 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-23",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/nextjs-sanity-stack")],
     },
     twitter: { card: "summary_large_image", title, description },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
 };
 
 const sources = [
@@ -53,7 +55,6 @@ const sources = [
     { name: "Sanity current pricing", url: "https://www.sanity.io/pricing" },
     { name: "Sanity technical limits", url: "https://www.sanity.io/docs/content-lake/technical-limits" },
     { name: "Next.js App Router documentation", url: "https://nextjs.org/docs/app" },
-    { name: "Google Search: JavaScript SEO basics", url: "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" },
 ];
 
 const articleSchema = {
@@ -64,20 +65,41 @@ const articleSchema = {
             "@id": `${canonicalUrl}#article`,
             headline: title,
             description,
+            image: ogImageUrlForPath("/blog/nextjs-sanity-stack"),
             datePublished: "2026-07-23",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "React", "Rendering strategies", "Web performance"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Next.js and content management",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1850,
+            timeRequired: "PT7M",
+            about: [
+                { "@type": "Thing", "name": "Next.js", "sameAs": ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
+                { "@type": "Thing", "name": "Sanity", "sameAs": ["https://www.sanity.io/"] },
+                { "@type": "Thing", "name": "Headless CMS", "sameAs": ["https://en.wikipedia.org/wiki/Headless_content_management_system"] },
+                { "@type": "Thing", "name": "Content Management", "sameAs": ["https://en.wikipedia.org/wiki/Content_management_system"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/nextjs-sanity-stack#webpage",
+            url: "https://www.pandacodegen.com/blog/nextjs-sanity-stack",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/nextjs-sanity-stack#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -87,6 +109,15 @@ const articleSchema = {
                 name: faq.question,
                 acceptedAnswer: { "@type": "Answer", text: faq.answer },
             })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Next.js and Sanity", item: canonicalUrl },
+            ],
         },
     ],
 };
@@ -124,11 +155,11 @@ export default function NextjsSanityStackPage() {
                             it is popular.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Assessed July 24, 2026 against current Sanity, Next.js and Google documentation.
+                            Assessed July 24, 2026 against current Sanity, Next.js and Google documentation. Pricing rechecked July 31, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 23, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 23, 2026" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>
@@ -141,6 +172,10 @@ export default function NextjsSanityStackPage() {
                             ]}
                         />
                     </section>
+
+                    <div className="my-10">
+                        <PlatformComparisonAnimation />
+                    </div>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
@@ -180,9 +215,20 @@ export default function NextjsSanityStackPage() {
                         scripts your visitors have consented to.
                     </BlogText>
                     <InsightBox variant="warning" label="No framework outcome guarantee">
-                        A Next.js and Sanity build does not guarantee 90-plus Lighthouse, rankings or AI citations.
+                        A Next.js and Sanity build does not guarantee 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>, rankings or AI citations.
                         When a 90-plus target is accepted, PandaCodeGen names representative pages, mobile and desktop
                         profiles and three recorded passing runs per page and profile in the signed terms.
+                    </InsightBox>
+                    <InsightBox variant="info" label="What 25 document types looks like in practice">
+                        Panda Patches runs on this stack. Its Sanity Studio carries 25 registered document types,
+                        covering products, blog posts, FAQs, location pages, patch styles and company facts, among
+                        others. That number is the honest answer to &ldquo;how much modeling is this?&rdquo; A brochure
+                        site does not need 25. A catalog with categories, guides and reusable company facts gets there
+                        faster than most people expect, and every one of those types is a decision someone has to make
+                        before an editor can touch it. Disclosure: Panda Patches is owned and operated by Imran Raza
+                        Ladhani, a PandaCodeGen co-founder. PandaCodeGen built and maintains its platform and holds no
+                        ownership stake, so treat this as operating experience rather than an independent client
+                        reference.
                     </InsightBox>
                     <BlogText>
                         How those numbers are gathered, and how lab runs differ from field data, is covered in{" "}
@@ -191,13 +237,80 @@ export default function NextjsSanityStackPage() {
                         <Link href="/services/custom-engineering" className={sourceLinkClass}>custom engineering service</Link> page.
                     </BlogText>
 
-                    <BlogHeader>Content modelling and editorial fit</BlogHeader>
+                    <BlogHeader id="moving-away">Why do people say they are moving away from Next.js?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Because it asks you to hold more decisions than a framework used to, and for some teams that
+                            trade is a bad one. The complaints that recur are consistent and worth taking seriously:
+                            caching behavior that changes between major versions and has to be relearned, a rendering
+                            model with enough options that two developers on one project can disagree about which to
+                            use, and a gravitational pull toward one hosting provider that is convenient until you want
+                            to leave. None of those makes it a bad choice. They make it a choice with an ongoing
+                            attention cost, and a team that wants a framework to be settled rather than evolving will
+                            feel that cost every upgrade.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Where that lands for this stack specifically: if your site is content-led and someone will own
+                        the upgrades, the flexibility is the reason you are here and the cost is fair. If nobody will
+                        own them, you are buying a system that decays quietly, and a simpler setup will serve you longer
+                        with less. That is the same judgement the section on when a simpler stack is better makes, and
+                        it is worth making before the build rather than at the first major version bump.
+                    </BlogText>
+
+                    <BlogHeader id="live-example">A build you can open and check</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            <a href="https://www.ladies4jesus.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Ladies 4 Jesus</a>{" "}
+                            went live on this stack and is public, so nothing below has to be taken on trust. It runs
+                            Next.js 16.2.7 on the App Router with React 19.2 and Tailwind v4, with Sanity v6 as the CMS
+                            and Vercel for hosting. The content model is nine schemas: two singletons for site settings
+                            and one page, and seven document types for devotionals, testimonies, questions, generic
+                            pages, comments, contact messages and content reports.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Two decisions in it are the ones this article has been describing, and they are worth seeing in
+                        a real project. <strong>The Studio is embedded in the application at <code>/studio</code> rather
+                        than deployed separately</strong>, which means schema changes ship with an ordinary git push and
+                        there is no second deploy step to forget. And <strong>content edits reach the live site in about
+                        sixty seconds through revalidation, with no code deploy at all</strong> &mdash; a non-technical
+                        administrator runs the site day to day without a developer in the loop. That is the whole
+                        argument for this pairing, and it either works in practice or it does not.
+                    </BlogText>
+                    <BlogText>
+                        The moderation model is worth noting because it is a content-modeling decision rather than a
+                        feature. Five of the seven document types are user-submitted &mdash; testimonies, questions,
+                        comments, messages and reports &mdash; and each carries a status field, so nothing a visitor
+                        submits is publicly readable until it is approved in the Studio. That is enforced in the queries
+                        rather than by a plugin, which is the difference between a workflow and a setting.
+                    </BlogText>
+                    <InsightBox variant="info" label="What we measured, and what it does not prove">
+                        Loaded on August 2, 2026 in headless Chromium 150, one unthrottled run from a single location:
+                        time to first byte 81 ms, 65 requests, 629 KB transferred in total. <strong>Of that, 273 KB is
+                        CSS and fonts and 216 KB is JavaScript</strong>, which is the honest weak spot &mdash; the
+                        typography choices on a design-led site cost real bytes, and we are not going to present that as
+                        a performance win. One lab run from one machine is not what visitors experience, and this figure
+                        is a starting point for the site&apos;s own field data rather than a score.
+                    </InsightBox>
+                    <BlogText>
+                        Two things it does not yet demonstrate, stated so the example is not read as more than it is.
+                        The site launched recently, so there is no traffic, ranking or conversion history to report and
+                        we will not invent one. And its structured data is currently Organization and WebSite only, so
+                        the article-level schema this site argues for elsewhere is not yet on it. Both are checkable
+                        today by anyone who opens the page source.
+                    </BlogText>
+
+                    <BlogHeader>Content modeling and editorial fit</BlogHeader>
+                    <BlogText>
+                        Model reusable business concepts rather than treating every page as an unstructured canvas, and put the rules in the schema itself. Structured content improves consistency and reuse, but an overly abstract model slows editors down, and a page builder can be the better answer when visual composition changes frequently. Fit depends on the operating team, not on a CMS leaderboard.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Model reusable business concepts such as services, locations, people, evidence and articles instead of treating every page as an unstructured canvas.",
-                            "Prototype the real editor tasks, including creating, reviewing, previewing, scheduling, localizing and retiring content.",
-                            "Define validation, references, slug ownership, image fields, portable rich text and required metadata in the schema.",
-                            "Test whether editors can complete common tasks without developer help and without gaining unnecessary infrastructure access.",
+                            "Prototype the jobs your editors really do: writing a piece, getting it reviewed, previewing it, scheduling it, translating it, and taking it down.",
+                            "Put the rules in the schema itself: what has to be filled in, how documents reference each other, who owns the slug, how images work, how rich text is stored, and which metadata is mandatory.",
+                            "Check an editor can do the everyday things without calling a developer, and without being handed access they do not need.",
                         ]}
                     />
                     <BlogText>
@@ -210,21 +323,24 @@ export default function NextjsSanityStackPage() {
                     <BlogHeader>Localization is a model, not a checkbox</BlogHeader>
                     <BlogText>
                         Sanity documents field-level and document-level localization patterns and optional plugins.
-                        Next.js can serve locale-specific routes, but the project must still define translation
-                        relationships, fallbacks, slugs, hreflang, canonicals, sitemaps, editor permissions, preview and
-                        publishing. Sanity does not automatically create a complete multilingual search implementation.
+                        Next.js will happily serve a route per locale. The project still has to decide which document is
+                        the translation of which, what happens when one is missing, how slugs work per language, the
+                        hreflang and canonical tags, the sitemaps, who is allowed to edit which language, and how
+                        preview and publishing behave for each. Sanity does not automatically create a complete multilingual search implementation.
                     </BlogText>
 
                     <BlogHeader>Current Sanity pricing needs careful reading</BlogHeader>
                     <BlogText>
-                        Sanity&apos;s July 24, 2026 pricing page lists Free at $0 for individuals experimenting or shipping
+                        Sanity&apos;s pricing page, rechecked on July 31, 2026, lists Free at $0 for individuals experimenting or shipping
                         smaller projects, with up to 20 seats, two permission roles and two public-only datasets. It
-                        lists Growth at $15 per seat per month with up to 50 seats, five roles, public or private
-                        datasets and pay-as-you-go capacity. Enterprise is custom-priced.
+                        lists Growth at $15 per seat per month with up to 50 seats and five roles. Growth does not
+                        raise the dataset count: it is still two, but they can be private rather than public only.
+                        Enterprise is custom-priced.
                     </BlogText>
                     <BlogText>
-                        The same pricing table publishes document, request, bandwidth, asset, webhook, role and feature
-                        limits. Free is not accurately described as covering “most business websites.” Match dataset
+                        The same table sets limits on how many documents you can hold, how many requests and how much
+                        bandwidth you get, how many assets and webhooks, how many roles, and which features are
+                        included. Free is not accurately described as covering “most business websites.” Match dataset
                         privacy, editor roles, document volume, usage, preview, scheduling, security and support needs
                         to the current plan before estimating cost.
                     </BlogText>
@@ -237,13 +353,16 @@ export default function NextjsSanityStackPage() {
                     </BlogText>
 
                     <BlogHeader>Security and governance boundaries</BlogHeader>
+                    <BlogText>
+                        Two systems means two credential surfaces, and the one that leaks is usually the CMS token rather than the site. Keep write and draft-read tokens server-side under least privilege, verify that a webhook genuinely came from Sanity, and watch for revalidation that failed silently. The last item is the one to settle in writing before the build starts, because it is about who holds the exports and the recovery steps.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Use separate production and non-production datasets and credentials where the risk model requires it.",
                             "Keep write and draft-read tokens server-side and apply least privilege.",
-                            "Validate webhook signatures, reject replays where applicable and monitor failed revalidation.",
-                            "Review dataset visibility, roles, CORS origins, preview access and retained editor accounts.",
-                            "Keep content exports, schema code, asset inventories and recovery instructions under the agreed ownership model.",
+                            "Check that a webhook really came from Sanity, make sure the same one cannot be replayed against you, and watch for revalidation that quietly failed.",
+                            "Go through who can see which dataset, who holds which role, which origins are allowed, who can reach preview, and which editor accounts are still active long after someone left.",
+                            "Keep the content exports, the schema code, a list of your assets and written recovery steps under whatever ownership you agreed.",
                         ]}
                     />
                     <BlogText>
@@ -255,18 +374,18 @@ export default function NextjsSanityStackPage() {
                     <BlogHeader>Compare alternatives on equivalent requirements</BlogHeader>
                     <BlogText>
                         WordPress, Contentful, Payload, Storyblok, Sanity and file-based content have different strengths,
-                        licensing, deployment and operating models. Do not state that Sanity is safer, cheaper, faster or
-                        more flexible without a dated scope-normalized comparison. Evaluate the exact current plan and
-                        implementation.
+                        licensing, deployment and operating models. If anyone tells you Sanity is safer, cheaper, faster or more flexible, ask what they compared it
+                        against, on what date, and whether both sides covered the same scope. Judge the plan you would
+                        actually be on and the way it would actually be built.
                     </BlogText>
                     <BlogList
                         items={[
-                            "Content types, relationships, locales, media and search.",
-                            "Roles, approval, preview, scheduling and audit history.",
+                            "How content is structured, how pieces relate, which languages, the media, and search.",
+                            "Who can do what, how work gets approved, preview, scheduling, and whether you can see who changed what.",
                             "Frontend freedom, page composition and developer workflow.",
-                            "API, webhook, migration, export and integration requirements.",
-                            "Security, privacy, residency, uptime, support and recovery.",
-                            "Three-year vendor, hosting, engineering and internal operating cost.",
+                            "The API, webhooks, moving your content in, getting it out, and everything it has to talk to.",
+                            "Security, privacy, where the data physically sits, uptime, support, and what happens when you need to recover.",
+                            "What three years costs you in vendor fees, hosting, engineering time and your own team's hours.",
                         ]}
                     />
                     <BlogText>
@@ -280,12 +399,15 @@ export default function NextjsSanityStackPage() {
                     </BlogText>
 
                     <BlogHeader>When a simpler stack is better</BlogHeader>
+                    <BlogText>
+                        If your site is small and rarely changes, you may not need a headless CMS at all. The deciding question is not capability but ownership: if nobody will own the two systems and the integration between them, you are buying something that decays quietly, and a simpler setup will serve you longer with less.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The site is small, rarely changes and has no non-technical editing requirement.",
-                            "The team needs a visual page-building workflow that the proposed Studio has not demonstrated.",
-                            "The budget cannot support two systems, custom integration and ongoing engineering ownership.",
-                            "A current managed platform already meets search, performance, integration, governance and exit requirements.",
+                            "Your team needs to build pages visually, and nobody has shown you the Studio doing that.",
+                            "The budget will not carry two systems, the work to connect them, and someone owning it afterwards.",
+                            "The managed platform you already pay for meets your needs on search, speed, integrations, governance and getting your data out.",
                         ]}
                     />
                     <BlogText>
@@ -297,13 +419,16 @@ export default function NextjsSanityStackPage() {
                     </BlogText>
 
                     <BlogHeader>Acceptance and handover</BlogHeader>
+                    <BlogText>
+                        Acceptance is a demonstration, not a document. Someone has to show published, draft and preview working, show what caching and revalidation actually do, and walk one real example of each page type through metadata, rendered output, accessibility and performance checks. The handover half is what people forget: tokens, roles, datasets, allowed origins, webhooks, deploy, monitoring, rollback, and who to call.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Approved content schema and editor-task test script.",
-                            "Published, draft, preview, cache and revalidation behavior demonstrated.",
-                            "Representative route metadata, rendered output, accessibility and performance checked.",
-                            "Tokens, roles, datasets, CORS, webhooks and environment ownership documented.",
-                            "Export, deployment, monitoring, rollback and support instructions handed over.",
+                            "Someone shows you published, draft and preview working, and shows you what caching and revalidation actually do.",
+                            "A real example of each page type checked for metadata, what actually renders, accessibility and speed.",
+                            "Written down: the tokens, the roles, the datasets, the allowed origins, the webhooks, and who owns each environment.",
+                            "Handed to you: how to export, how to deploy, what to monitor, how to roll back, and who to call.",
                         ]}
                     />
                     <BlogText>
@@ -328,9 +453,10 @@ export default function NextjsSanityStackPage() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map your content, editor tasks, locales, integrations and ownership needs before
-                            recommending Sanity or a simpler option. The proposal records current vendor costs and
-                            measurable acceptance.
+                            We map your content, what your editors actually have to do each week, the languages you need,
+                            what it connects to and who should own what. Only then do we tell you whether Sanity is
+                            right or whether something simpler is. The proposal carries the current vendor prices and
+                            an acceptance test you can measure.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-bold text-white transition hover:bg-cognac/90">
                             Get Your Migration Plan <ArrowRight className="h-5 w-5" />

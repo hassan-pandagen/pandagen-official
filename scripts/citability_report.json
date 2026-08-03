@@ -1,0 +1,750 @@
+[
+ {
+  "slug": "best-website-builder-for-gohighlevel-agencies",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 3,
+  "lists": 4,
+  "findings": []
+ },
+ {
+  "slug": "cloudflare-emdash-wordpress-replacement",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 0,
+  "lists": 2,
+  "findings": []
+ },
+ {
+  "slug": "core-web-vitals-explained",
+  "h2_total": 8,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 1,
+  "lists": 5,
+  "findings": []
+ },
+ {
+  "slug": "divi-theme-slow",
+  "h2_total": 11,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 6,
+  "findings": [
+   {
+    "h2": "How to estimate the business cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 41,
+    "opens": "Estimate it from your own analytics, not from a published average. A survey's mean"
+   }
+  ]
+ },
+ {
+  "slug": "elementor-kills-seo",
+  "h2_total": 9,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 0,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "for-agencies-offer-custom-web-development",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 0,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "gohighlevel-website-speed",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 10,
+  "findings": []
+ },
+ {
+  "slug": "google-march-2026-update",
+  "h2_total": 8,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 5,
+  "hedge_worst": 3,
+  "vague": 0,
+  "tables": 0,
+  "lists": 4,
+  "findings": []
+ },
+ {
+  "slug": "google-universal-commerce-protocol-what-it-means-for-your-store",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 0,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "how-to-achieve-100-pagespeed",
+  "h2_total": 12,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 0,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "how-to-fix-slow-wordpress",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 0,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "how-to-migrate-wordpress-to-nextjs",
+  "h2_total": 0,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 2,
+  "vague": 0,
+  "tables": 0,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "how-website-speed-affects-seo",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 5,
+  "hedge_worst": 3,
+  "vague": 3,
+  "tables": 0,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "leaving-webflow-2026",
+  "h2_total": 14,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 6,
+  "hedge_worst": 2,
+  "vague": 2,
+  "tables": 2,
+  "lists": 3,
+  "findings": [
+   {
+    "h2": "Timeline and Migration Cost Depend on the Inventory",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 60,
+    "opens": "Page count alone does not define Webflow migration cost or duration. Ten application-like pages"
+   }
+  ]
+ },
+ {
+  "slug": "nextjs-hosting-zero-cost",
+  "h2_total": 14,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 2,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "shopify-app-costs-real-monthly-bill",
+  "h2_total": 9,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "shopify-conversion-rate-speed-fix",
+  "h2_total": 18,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 1,
+  "lists": 15,
+  "findings": []
+ },
+ {
+  "slug": "shopify-dawn-theme-slow",
+  "h2_total": 18,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 3,
+  "lists": 11,
+  "findings": []
+ },
+ {
+  "slug": "shopify-headless",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 1,
+  "tables": 1,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "shopify-plus-still-slow",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "shopify-slow-losing-sales",
+  "h2_total": 14,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 0,
+  "tables": 1,
+  "lists": 12,
+  "findings": [
+   {
+    "h2": "Signals a rebuild is worth pricing",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 65,
+    "opens": "\"The field data shows the problem on templates you control, and it survives after"
+   }
+  ]
+ },
+ {
+  "slug": "shopify-stocky-sunset-date-2026",
+  "h2_total": 9,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "shopify-vs-custom-website",
+  "h2_total": 11,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 1,
+  "lists": 8,
+  "findings": [
+   {
+    "h2": "3. Build a comparable total-cost model",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 46,
+    "opens": "The right-hand column is where most estimates go wrong, because the build is only"
+   }
+  ]
+ },
+ {
+  "slug": "squarespace-migration-cost",
+  "h2_total": 13,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 1,
+  "tables": 1,
+  "lists": 9,
+  "findings": [
+   {
+    "h2": "2. Price page systems, not raw page count",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 29,
+    "opens": "The tiers above and what each includes are listed on our pricing page ,"
+   },
+   {
+    "h2": "7. Include current and future vendor cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 48,
+    "opens": "Squarespace is rolling current plan families and features by account and region. Transaction and"
+   }
+  ]
+ },
+ {
+  "slug": "squarespace-too-slow",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "squarespace-vs-custom-website",
+  "h2_total": 11,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 4,
+  "tables": 1,
+  "lists": 7,
+  "findings": [
+   {
+    "h2": "4. Compare current cost from invoices",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 44,
+    "opens": "Squarespace is rolling plan families and features by account and region. Commerce, digital product"
+   },
+   {
+    "h2": "5. Price custom ownership honestly",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 26,
+    "opens": "Custom does not mean zero recurring cost. It means the organization chooses and owns"
+   }
+  ]
+ },
+ {
+  "slug": "top-custom-web-development-agencies-usa-2026",
+  "h2_total": 12,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "webflow-migration-cost",
+  "h2_total": 17,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 3,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 3,
+  "lists": 7,
+  "findings": [
+   {
+    "h2": "Enterprise Webflow migration pricing",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 73,
+    "opens": "Enterprise work adds governance, not just pages: who someone is, what they are allowed"
+   }
+  ]
+ },
+ {
+  "slug": "webflow-true-cost",
+  "h2_total": 11,
+  "flagged": 3,
+  "num_promise_no_figure": 3,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 1,
+  "lists": 4,
+  "findings": [
+   {
+    "h2": "What does Webflow cost when you add everything up?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 96,
+    "opens": "Webflow is rolling out updated Website plans, and the available plan and features can"
+   },
+   {
+    "h2": "Performance is not a hidden platform fee",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 72,
+    "opens": "There is no fixed Webflow PageSpeed ceiling to enter as a line item in"
+   },
+   {
+    "h2": "Audit your Webflow cost in ten steps",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 0,
+    "opens": ""
+   }
+  ]
+ },
+ {
+  "slug": "webflow-user-accounts-sunset-date-2026",
+  "h2_total": 15,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 4,
+  "tables": 1,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "webflow-vs-custom-website",
+  "h2_total": 13,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 1,
+  "hedge_worst": 2,
+  "vague": 4,
+  "tables": 2,
+  "lists": 3,
+  "findings": [
+   {
+    "h2": "4. Lifecycle cost and operating responsibility",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 70,
+    "opens": "Reconcile the current Webflow Website and Workspace plans, add-ons, external tools, commerce fees and"
+   }
+  ]
+ },
+ {
+  "slug": "website-rebuild-cost-2026",
+  "h2_total": 14,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 6,
+  "tables": 2,
+  "lists": 6,
+  "findings": [
+   {
+    "h2": "Seven line items that drive rebuild cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 50,
+    "opens": "Two rebuild quotes for the same page count can sit a long way apart"
+   },
+   {
+    "h2": "How do you calculate rebuild ROI?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 64,
+    "opens": "Define the one-time and ongoing cost, then identify measurable cash flow, internal time, risk"
+   }
+  ]
+ },
+ {
+  "slug": "what-is-headless-commerce",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 2,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "why-competitor-outranks-you",
+  "h2_total": 8,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 0,
+  "lists": 4,
+  "findings": []
+ },
+ {
+  "slug": "why-we-chose-nextjs-over-wordpress-2026",
+  "h2_total": 13,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 0,
+  "lists": 4,
+  "findings": [
+   {
+    "h2": "Hosting and lifecycle cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 82,
+    "opens": "Build the comparison from current invoices and equivalent requirements. WordPress cost can include hosting,"
+   }
+  ]
+ },
+ {
+  "slug": "wix-too-slow",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 0,
+  "lists": 8,
+  "findings": []
+ },
+ {
+  "slug": "wix-vs-custom-website",
+  "h2_total": 14,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 8,
+  "tables": 1,
+  "lists": 5,
+  "findings": [
+   {
+    "h2": "Three-year cost without invented totals",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 42,
+    "opens": "Use current quotes, equivalent features and low, central and high usage scenarios. Free or"
+   }
+  ]
+ },
+ {
+  "slug": "woocommerce-too-slow",
+  "h2_total": 19,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 2,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "wordpress-ai-security-risk-2026",
+  "h2_total": 16,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "wordpress-killer",
+  "h2_total": 15,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 1,
+  "tables": 1,
+  "lists": 6,
+  "findings": [
+   {
+    "h2": "When WordPress may still be worth it",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 52,
+    "opens": "\"The content and editing workflow fits the team.\", \"Maintained extensions deliver required capability economically.\","
+   },
+   {
+    "h2": "When migration may be worth pricing",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 57,
+    "opens": "\"Core workflows or data models repeatedly conflict with the current stack.\", \"Required controls cannot"
+   }
+  ]
+ },
+ {
+  "slug": "wordpress-migration-cost",
+  "h2_total": 19,
+  "flagged": 3,
+  "num_promise_no_figure": 3,
+  "hedge_distinct": 6,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 8,
+  "findings": [
+   {
+    "h2": "What a cheap quote usually leaves out",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 89,
+    "opens": "The gap between a low quote and a realistic one is rarely the build."
+   },
+   {
+    "h2": "Price plugin capability, not plugin count",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 74,
+    "opens": "Inventory what each active component does, where it stores data and which customer or"
+   },
+   {
+    "h2": "Is migration financially worth it?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 77,
+    "opens": "Compare the target with a maintain-and-optimize WordPress option. Use current invoices, internal work, planned"
+   }
+  ]
+ },
+ {
+  "slug": "wordpress-plugins-destroy-speed",
+  "h2_total": 18,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 0,
+  "tables": 2,
+  "lists": 10,
+  "findings": [
+   {
+    "h2": "Patterns worth checking first",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 29,
+    "opens": "These are behaviours to look for in your own trace, not a ranking of"
+   }
+  ]
+ },
+ {
+  "slug": "wordpress-traffic-drop-speed",
+  "h2_total": 15,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 1,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "wordpress-vs-custom-code-real-cost-3-years",
+  "h2_total": 17,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "wordpress-vs-nextjs",
+  "h2_total": 20,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 2,
+  "lists": 7,
+  "findings": [
+   {
+    "h2": "Three-year cost comparison",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 73,
+    "opens": "Use current invoices and like-for-like quotes. A free hosting allowance is not a permanent"
+   }
+  ]
+ }
+]

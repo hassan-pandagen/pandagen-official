@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Database, FileOutput, Route, Scale } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -12,6 +12,7 @@ import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
+const ExportLockAnimation = dynamicImport(() => import("@/components/blog/ExportLockAnimation"));
 
 const postId = "wix-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
@@ -32,13 +33,18 @@ export const metadata: Metadata = {
         "move Wix to custom website",
         "Wix export limitations",
         "Wix to Next.js migration",
+        "how much does it cost to migrate off Wix",
+        "can you export your Wix website",
+        "migrate off Wix without losing SEO",
+        "cost to leave Wix",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-07-03",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-07-31",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-migration-cost")],
@@ -53,7 +59,6 @@ const sources = [
     { name: "Wix contacts export", url: "https://support.wix.com/en/article/wix-contacts-exporting-your-contacts" },
     { name: "Wix site transfer", url: "https://support.wix.com/en/article/transferring-a-premium-site-to-another-wix-account" },
     { name: "Wix Core Web Vitals", url: "https://support.wix.com/en/article/site-performance-about-core-web-vitals" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
 ];
 
 const articleSchema = {
@@ -64,20 +69,52 @@ const articleSchema = {
             "@id": `${canonicalUrl}#article`,
             headline: title,
             description,
+            image: ogImageUrlForPath("/blog/wix-migration-cost"),
             datePublished: "2026-07-03",
-            dateModified: "2026-07-24",
+            dateModified: "2026-07-31",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Wix", "Website migration", "Content management systems", "Technical SEO", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Wix migration",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1800,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "Thing", "name": "Wix", "sameAs": ["https://www.wix.com/", "https://en.wikipedia.org/wiki/Wix.com"] },
+                { "@type": "Thing", name: "Website Migration" },
+                { "@type": "Thing", "name": "Next.js", "sameAs": ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Wix migration cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-07-03",
+            dateModified: "2026-07-31",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -115,17 +152,24 @@ export default function WixMigrationCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Wix migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Wix Migration Cost <span className="italic text-cognac">Scope the Real Move</span>
+                            Wix Migration Cost: <span className="italic text-cognac">Scope the Real Move</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A Wix migration is not priced from page count alone. Inventory the rendered site plus each
-                            Wix data domain, app, business workflow and search control that must be retained, replaced
-                            or retired.
+                            A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix
+                            lets you export your data, but not the site itself, so the design, the page layouts and the
+                            page-level SEO settings are recreated by hand on the other side. Our own tiers start at
+                            $1,500 and run past $10,000. Page count on its own is a poor predictor of where you land.
+                            What actually moves the number is how many unique templates, data domains, apps and
+                            workflows have to come with you.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 31, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jul 3, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jul 3, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+
+                    <div className="my-10">
+                        <ExportLockAnimation />
+                    </div>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -155,6 +199,9 @@ export default function WixMigrationCostPage() {
                     </div>
 
                     <BlogHeader id="price">How much does a Wix migration cost?</BlogHeader>
+                    <BlogText>
+                        Our planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, and those are our own anchors rather than Wix migration market averages. There is no page-count formula behind them. Five pages with booking, payments, automations and member data can require more migration work than many static pages, so price unique templates, states, data and workflows alongside page count.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -179,7 +226,33 @@ export default function WixMigrationCostPage() {
                         works through the same scope questions outside a migration context.
                     </BlogText>
 
+                    <BlogHeader id="methods">The four ways people actually do this, cheapest first</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Published Wix migration costs disagree so wildly because they average four different jobs.
+                            <strong> Doing it yourself is $0 plus your own hours</strong>, and for a small static site
+                            that is genuinely the right answer. <strong>An automated migration tool runs roughly $50 to
+                            $500</strong> and moves your content: posts, products, customers. <strong>A freelancer is
+                            usually four figures</strong> and gets you a rebuilt site rather than transferred rows. An
+                            agency build is a different product again, and that is what our tiers below price. Pick the
+                            cheapest one that actually covers what you need, because paying agency prices for a data
+                            transfer is the most common way to overspend here.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        One thing is true of all four and it is the reason none of them is a copy-paste. Wix does not
+                        let you export its design or its underlying code, so the visual side is rebuilt on every route
+                        no matter which option you choose. An automated tool that moves a thousand blog posts flawlessly
+                        still leaves you with a thousand unstyled blog posts. That is the honest boundary between the
+                        cheap tiers and the expensive ones, and it is a boundary about design and templates rather than
+                        about content volume.
+                    </BlogText>
+
                     <BlogHeader id="export">What can you export from Wix?</BlogHeader>
+                    <BlogText>
+                        Wix documents several separate export paths rather than one complete site package. Checked
+                        against Wix&apos;s current support documentation on July 31, 2026:
+                    </BlogText>
                     <BlogList
                         items={[
                             "Wix CMS collections can be exported as CSV files; verify field types, references, slugs and media values.",
@@ -195,19 +268,51 @@ export default function WixMigrationCostPage() {
                         any target unchanged. Build a source-to-target mapping and validate record counts and samples.
                     </BlogText>
                     <BlogText>
+                        This is the part worth sitting with, because it is the answer to what you are actually paying
+                        for. Your products, contacts, orders and CMS entries come out as files. Your site does not. The
+                        layouts, the design, the way pages behave and the SEO settings you configured page by page stay
+                        where they are, in a format only Wix reads. Nobody imports those anywhere. Somebody rebuilds
+                        them. A quote for a Wix migration is a quote for that rebuild, which is why it does not look
+                        like the price of moving a WordPress site, where an importer does a meaningful share of the job.
+                    </BlogText>
+                    <InsightBox variant="tip" label="What actually eats the hours">
+                        We are finishing one of these now. Obare, a magazine that was published on Wix, is being
+                        rebuilt on Next.js with Sanity as the editor, and it runs eight content categories across
+                        culture, travel, beauty, mental health, music, movement, editorial and self improvement. It is
+                        in its final stages rather than launched, so treat this as a work note rather than a case
+                        study. The useful part is what the work turned out to be. The number of pages was never the
+                        problem. Wix lets you place elements freely on a canvas, which is exactly why it is pleasant to
+                        write in, and it means two pages that look like they share a layout frequently share nothing
+                        underneath. You keep opening pages that appear templated and finding each one is bespoke. So an
+                        estimate that starts as a page count becomes a count of genuinely distinct layouts, plus the
+                        work of deciding which of them should survive into a real template system. That is the honest
+                        way to price a Wix rebuild, and it is worth asking whoever quotes you whether they opened your
+                        pages or counted your sitemap.
+                    </InsightBox>
+
+                    <InsightBox variant="info" label="The upside of having to rebuild">
+                        Since the layouts have to be recreated anyway, you are not obliged to recreate them faithfully.
+                        Most Wix sites carry pages nobody visits and sections that made sense three years ago. A
+                        migration is the one moment when deleting them costs nothing extra, so decide what is worth
+                        moving before anyone prices moving it.
+                    </InsightBox>
+                    <BlogText>
                         The mapping method itself is platform-neutral. Our{" "}
                         <Link href="/blog/website-migration-cost-2026" className={inlineLinkClass}>website migration cost guide</Link>{" "}
                         sets out the same exercise across other builders and content systems.
                     </BlogText>
 
                     <BlogHeader id="scope">The migration scope checklist</BlogHeader>
+                    <BlogText>
+                        Eight domains have to be inventoried before anyone can price this, because a Wix export gives you your data rather than your site. Public routes and their metadata, templates and states, CMS structure, contacts and consent, commerce records, bookings and memberships, apps and Velo code, and the domain and legal records. Anything not on the list when the quote is written becomes a change order later.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Public URLs, dynamic routes, titles, descriptions, canonicals and structured data.",
+                            "Your public URLs and dynamic routes, with their titles, descriptions, canonicals and structured data.",
                             "Unique page templates, responsive behavior, components, forms and error states.",
-                            "CMS fields, relationships, media, drafts, permissions and editorial workflow.",
+                            "CMS fields and how they relate, the media, drafts, who can edit what, and how publishing works.",
                             "Contacts, consent state, submissions, email and CRM automation.",
-                            "Products, variants, inventory, orders, customers, discounts, tax, shipping and payments.",
+                            "Products and variants, stock, orders, customers, discounts, tax, shipping and payments.",
                             "Bookings, events, memberships, gated content and account journeys.",
                             "Apps, Velo code, webhooks, APIs, analytics, pixels and third-party services.",
                             "Domain, DNS, email, legal records, retention, archive and cancellation.",
@@ -217,6 +322,34 @@ export default function WixMigrationCostPage() {
                         If the decision to move is not settled yet, work through{" "}
                         <Link href="/blog/wix-vs-custom-website" className={inlineLinkClass}>Wix compared with a custom website</Link>{" "}
                         first. That comparison covers the requirements that decide whether an inventory is worth pricing at all.
+                    </BlogText>
+
+                    <BlogHeader id="drivers">What actually moves the number</BlogHeader>
+                    <BlogText>
+                        Roughly in order of how much they matter:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Unique templates, not page count. Forty blog posts sharing one layout is one template. Six pages that each look different is six. The second costs more than the first.",
+                            "Content that has to be recreated by hand. Anything the exports do not carry is somebody reading the old page and rebuilding it, and that scales with how much of it there is.",
+                            "Commerce. Products and variants, stock, tax, shipping, payments and the order history you need to keep. This is usually what moves a project from one tier to the next.",
+                            "Integrations. Each CRM, booking tool, email platform or custom form is a separate connection to rebuild and test. A couple are minor. A deeply wired stack is not.",
+                        ]}
+                    />
+                    <BlogText>
+                        Things that rarely move it much: a handful of contact forms, ordinary on-page SEO, which is
+                        standard work rather than an extra, and the domain, which is cheap and separate. If a quote
+                        prices those as headline items, ask what is actually in them.
+                    </BlogText>
+
+                    <BlogHeader id="quotes-vary">Why quotes vary by more than ten times</BlogHeader>
+                    <BlogText>
+                        You will see the same job offered for tens of dollars and for five figures. Usually they are not
+                        the same job. At the cheap end the work is moving your text and images into a ready-made
+                        template, which is a real service and a different one, and it frequently leaves out the URL
+                        mapping that protects the search traffic you already have. That omission does not show up on
+                        the invoice. It shows up six weeks later in Search Console. When you compare two quotes, compare
+                        what each one says about redirects before you compare the totals.
                     </BlogText>
 
                     <BlogHeader id="seo">How do you reduce Wix migration SEO risk?</BlogHeader>
@@ -265,7 +398,7 @@ export default function WixMigrationCostPage() {
                     <BlogText>
                         The domain and the mailboxes come with the business, but they are separate work from the
                         rebuild and they run on someone else&apos;s clock. If the domain is registered through Wix, moving
-                        it to another registrar means unlocking it, retrieving the authorisation code and completing the
+                        it to another registrar means unlocking it, retrieving the authorization code and completing the
                         transfer under current registrar and registry rules, including any lock period that applies
                         after a recent registration or transfer. Start that early rather than on cutover day.
                     </BlogText>
@@ -286,14 +419,30 @@ export default function WixMigrationCostPage() {
 
                     <BlogHeader id="timeline">How long does a Wix migration take?</BlogHeader>
                     <BlogText>
-                        Duration depends on inventory, templates, data, apps, integrations, content decisions, review,
-                        acceptance and cutover. Use phase exit evidence instead of a universal week range. Record client
-                        dependencies, launch window, rollback triggers and allowable interruption in the project plan.
-                        The phases themselves are described in{" "}
+                        Most Wix migrations we scope land somewhere between two and six weeks, and where a given project
+                        sits inside that is set by the same things that set the price:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "A small marketing site with few templates and little data: usually the short end.",
+                            "A content-heavy or blog-heavy site: longer, because recreation is the long pole.",
+                            "Commerce, memberships or bookings: usually the long end, and sometimes past it.",
+                        ]}
+                    />
+                    <BlogText>
+                        Treat that as a planning range rather than a commitment. What a schedule should actually be
+                        built on is phase exit evidence, plus the client dependencies, the launch window, the rollback
+                        triggers and how much interruption is acceptable, all written into the plan. The phases
+                        themselves are described in{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className={inlineLinkClass}>how long a custom website takes to build</Link>.
+                        Your existing site keeps running throughout, because the rebuild happens somewhere else and only
+                        the cutover is visible to customers.
                     </BlogText>
 
                     <BlogHeader id="quote">How to compare Wix migration quotes</BlogHeader>
+                    <BlogText>
+                        The higher quote is not automatically the padded one. Normalize the inventory first, then six checks make two quotes genuinely comparable: which exports and manual steps each provider assumes, what evidence they will produce, which vendor costs sit outside the fee, and who owns accounts, rollback and support afterwards.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Normalize the route, template, content, data and feature inventory.",
@@ -313,6 +462,9 @@ export default function WixMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader id="hidden-costs">Commonly missed line items</BlogHeader>
+                    <BlogText>
+                        These are the lines that arrive after signing rather than in the quote. Content cleanup and manual page recreation is the biggest, because a Wix export carries data and not layout. The rest are app data no CSV covers, customer identity and consent, recurring provider costs, internal review and training time, and the archive and cancellation work at the far end.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Content cleanup, missing assets and manual page recreation.",
@@ -326,9 +478,9 @@ export default function WixMigrationCostPage() {
 
                     <BlogHeader id="terms">PandaCodeGen terms</BlogHeader>
                     <BlogText>
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope, not a change of preference after starting. Starter includes
-                        15 business days of launch defect support; Growth and Scale include 30. Any 90-plus Lighthouse
+                        15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Any 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>
                         target applies only to named representative pages, mobile and desktop profiles, the recorded
                         environment, three passing runs per page and profile, exclusions and remedy.
                     </BlogText>
@@ -350,6 +502,17 @@ export default function WixMigrationCostPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a Wix migration inventory and plan</h2>

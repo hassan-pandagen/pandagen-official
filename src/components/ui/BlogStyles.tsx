@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export function BlogHeader({ children, id }: { children: React.ReactNode; id?: string }) {
@@ -16,7 +17,7 @@ export function BlogText({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function BlogList({ items }: { items: string[] }) {
+export function BlogList({ items }: { items: React.ReactNode[] }) {
   return (
     <ul className="space-y-3 mb-10">
       {items.map((item, i) => (
@@ -200,21 +201,21 @@ interface BlogAuthorProps {
 export function BlogAuthor({
   name = "Hassan Jamal",
   role = "Co-Founder & Lead Engineer · PandaCodeGen",
+  bio,
   linkedIn,
   date,
   readTime,
 }: BlogAuthorProps) {
-  const authorName = linkedIn ? (
-    <a
-      href={linkedIn}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="font-semibold text-charcoal transition-colors hover:text-cognac"
-    >
+  // The byline name links to the author page, not to LinkedIn. A reader asking "who wrote
+  // this?" should land on the background, not on a social profile. LinkedIn stays available
+  // as a separate labelled link below.
+  const authorHref = name.trim().toLowerCase().startsWith("imran")
+    ? "/about/imran"
+    : "/about/hassan";
+  const authorName = (
+    <Link href={authorHref} className="font-semibold text-charcoal transition-colors hover:text-cognac">
       {name}
-    </a>
-  ) : (
-    <span className="font-semibold text-charcoal">{name}</span>
+    </Link>
   );
 
   const authorInitial = name.trim().charAt(0).toUpperCase() || "P";
@@ -232,6 +233,9 @@ export function BlogAuthor({
           {!date && !readTime && <><span className="mx-1.5 text-stone-300">·</span><span className="text-xs">{role}</span></>}
         </p>
       </div>
+      {bio && (
+        <p className="mt-2 pl-[42px] text-sm leading-relaxed text-stone-500">{bio}</p>
+      )}
     </div>
   );
 }

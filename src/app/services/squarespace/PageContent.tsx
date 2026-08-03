@@ -22,7 +22,7 @@ const squarespaceComparison = [
 const faqs = [
   {
     q: "Will my Squarespace site design transfer to custom code?",
-    a: "We inventory the current design, content, components, responsive states, and accessibility requirements. The proposal then defines what is retained, redesigned, or excluded, along with the method used to review visual fidelity and performance."
+    a: "We list the design, the content, the components, how it behaves on each screen and what accessibility needs. The proposal then defines what is retained, redesigned, or excluded, along with the method used to review visual fidelity and performance."
   },
   {
     q: "Can I still use Squarespace for my online store?",
@@ -30,15 +30,15 @@ const faqs = [
   },
   {
     q: "How much does a Squarespace migration cost?",
-    a: "Price and timing depend on the page and content inventory, design, commerce, scheduling, member areas, integrations, data, redirects, and acceptance requirements. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies."
+    a: "Price and timing depend on how many pages and how much content there is, the design, whether you sell, scheduling, member areas, integrations, the data, redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies."
   },
   {
     q: "What if I have a blog on Squarespace?",
-    a: "We can inventory posts, media, authors, dates, URLs, metadata, and editor requirements. The migration plan records what can be exported, transformed, redirected, manually recreated, or excluded; performance is measured against an agreed baseline."
+    a: "We can list the posts, media, authors, dates, URLs, metadata and what your editors need. The migration plan records what can be exported, transformed, redirected, manually recreated, or excluded; performance is measured against an agreed baseline."
   },
   {
     q: "Is the migration disruptive to my business?",
-    a: "A parallel build and staged DNS cutover can reduce disruption, but no migration is risk free. The proposal defines backups, DNS responsibilities, verification, monitoring, rollback, and the maintenance window for the approved site."
+    a: "Building alongside the live site and switching DNS in stages cuts the disruption. No migration is risk free. The proposal defines backups, DNS responsibilities, verification, monitoring, rollback, and the maintenance window for the approved site."
   },
 ];
 
@@ -68,7 +68,7 @@ export default function SquarespacePageContent() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Squarespace can be a practical starting point. If design, content, commerce, performance, or integration needs have changed, we can compare the current site with a scoped custom implementation. <span className="text-charcoal font-medium">Search outcomes, commercial terms, support, access, licensing, ownership, and handover are not assumed.</span>
+            Squarespace is a practical starting point. If what you need from design, content, selling, speed or integrations has moved on, we can put your current site next to a scoped custom implementation. <span className="text-charcoal font-medium">We do not assume anything about search results, what you pay, your support, access, licences, ownership or handover. Those get agreed.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
@@ -96,7 +96,7 @@ export default function SquarespacePageContent() {
               Reassess the Platform as Requirements Change
             </h2>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Revenue does not determine the right platform by itself. Review the workflows, content, design, integrations, portability, operating cost, and maintenance model.
+              How much you turn over does not decide the right platform. Look at how you work, your content, the design, what it connects to, whether you can take it elsewhere, what it costs to run, and who maintains it.
             </p>
           </div>
 
@@ -138,9 +138,9 @@ export default function SquarespacePageContent() {
               </div>
               <ul className="space-y-5">
                 {[
-                  { title: "Performance:", body: "Measure representative pages and identify which scripts, media, templates, and integrations affect the baseline." },
-                  { title: "Design System:", body: "Document the responsive, component, content, and accessibility requirements the current editor must support." },
-                  { title: "Portability and Cost:", body: "Review exports, domain access, account terms, subscriptions, add-ons, and the costs of any proposed replacement." },
+                  { title: "Performance:", body: "Measure real example pages, then work out which scripts, images, templates and integrations are moving the number." },
+                  { title: "Design System:", body: "Write down what the editor has to handle: every screen size, the components, the content, and accessibility." },
+                  { title: "Portability and Cost:", body: "Check what you can export, who controls the domain, your account terms, the subscriptions and add-ons, and what a replacement would actually cost." },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-stone-700">
                     <Anchor className="w-4 h-4 text-cognac mt-1 shrink-0" />
@@ -216,7 +216,7 @@ export default function SquarespacePageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              A migration assessment should verify editor constraints, responsive behavior, domain control, exports, uptime dependencies, current performance, and third-party terms. The written proposal, not this page, defines price, timing, support, repository access, licensing, ownership, and remedies.
+              A migration assessment should check what the editor will not let you do, how it behaves on every screen, who controls the domain, what you can export, what your uptime depends on, how fast it is now, and any third-party terms. The written proposal, not this page, defines price, timing, support, repository access, licensing, ownership, and remedies.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               Get your migration plan →
@@ -234,9 +234,9 @@ export default function SquarespacePageContent() {
           <div className="space-y-8">
             {[
               { step: "01", title: "Inventory & Export Review", desc: "We inventory pages, posts, media, products, members, forms, scheduling, domains, metadata, and available exports, then record gaps or manual work.", icon: FileSearch, duration: "Phase 1" },
-              { step: "02", title: "Design & Content Mapping", desc: "We define what is retained, redesigned, transformed, or excluded, including responsive states and accessibility requirements.", icon: PenTool, duration: "Phase 2" },
+              { step: "02", title: "Design & Content Mapping", desc: "We say what is kept, what is redesigned, what is reshaped and what is dropped, including how it behaves on each screen and what accessibility needs.", icon: PenTool, duration: "Phase 2" },
               { step: "03", title: "Build & Redirect Plan", desc: "We implement the approved scope and prepare a source-to-destination URL map. Redirects reduce migration risk but do not guarantee rankings or traffic.", icon: Wrench, duration: "Phase 3" },
-              { step: "04", title: "Cutover & Verification", desc: "We follow the agreed DNS, content, functional, analytics, accessibility, monitoring, rollback, training, and handover checks.", icon: Rocket, duration: "Phase 4" },
+              { step: "04", title: "Cutover & Verification", desc: "We work through the agreed checks: DNS, content, does it work, analytics, accessibility, monitoring, rollback, training and handover.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn
                 key={i}

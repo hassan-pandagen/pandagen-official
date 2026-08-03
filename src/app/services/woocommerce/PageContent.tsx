@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Do I keep my Google rankings after migrating from WooCommerce?",
-    a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. Most clients see rankings recover within 2 to 4 weeks and improve within 60 days because the faster site gets rewarded."
+    a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed."
   },
   {
     q: "Can I still manage products and orders without being technical?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How long does a WooCommerce migration take?",
-    a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day is zero-downtime."
+    a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day runs as a staged cutover with a documented rollback path."
   },
   {
     q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "What about WooCommerce Subscriptions and my existing recurring billing?",
-    a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Zero payment interruption, zero customer re-auth. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions."
+    a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Payment continuity and re-authentication are tested before cutover. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions."
   },
   {
     q: "Do I keep my Stripe account and saved customer cards?",
@@ -55,16 +55,16 @@ const faqs = [
   },
   {
     q: "How do you handle tax (Avalara, TaxJar, WooCommerce Tax)?",
-    a: "We integrate Stripe Tax or TaxJar directly at checkout. Live nexus calculation across all US states plus VAT for UK/EU. No more $99/month WooCommerce Tax plugin, no more Avalara reconciliation. Stripe Tax handles filings in 30+ jurisdictions."
+    a: "We integrate Stripe Tax or TaxJar directly at checkout. Live nexus calculation across all US states plus VAT for UK/EU. Tax handling moves to your payment provider. Stripe Tax handles filings in 30+ jurisdictions."
   },
 ];
 
 const comparisonRows = [
-  { label: "Load Time",     woo: "2.5 to 5s average",              custom: "Under 1s target",        isPain: true  },
-  { label: "Monthly Cost",  woo: "$300 to $700/mo (hosting+plugins)", custom: "$0 to $50/mo at any scale",  isPain: true  },
-  { label: "Checkout",      woo: "Plugin-dependent, fragile",    custom: "Custom logic, bulletproof", isPain: true  },
-  { label: "Security",      woo: "Self-managed, plugin surface", custom: "Static, no attack surface", isPain: true  },
-  { label: "Scalability",   woo: "Crashes under traffic spikes", custom: "Edge CDN, handles millions",isPain: true  },
+  { label: "Load Time",     woo: "Measure your own routes",              custom: "Under 1s target",        isPain: true  },
+  { label: "Monthly Cost",  woo: "Read from your own invoices", custom: "Provider costs, read from your own plan",  isPain: true  },
+  { label: "Checkout",      woo: "Plugin-dependent",    custom: "Custom logic you own", isPain: true  },
+  { label: "Security",      woo: "Self-managed plugin surface", custom: "Smaller third-party surface", isPain: true  },
+  { label: "Scalability",   woo: "Scales with your hosting tier", custom: "Edge-cached where the route allows",isPain: true  },
   { label: "Ownership",     woo: "Locked into WordPress/plugins",custom: "100% your code, your IP",   isPain: false },
 ];
 
@@ -91,7 +91,7 @@ export default function PageContent() {
           >
             MyCustomPatches ran on WooCommerce. <br />
             <span className="font-serif italic text-cognac">
-              We took their PageSpeed from 45 to 90+. Yours is next.
+              We rebuilt it as a custom storefront. Yours could be next.
             </span>
           </motion.h1>
 
@@ -102,7 +102,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Last year I rebuilt MyCustomPatches for Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. 45 to 90+ PageSpeed. 3.2s to 0.7s checkout. Hosting bill from $150 a month to $0. Matt rated it 5 stars on Clutch and GoodFirms. We do the same for your store. You keep Stripe, PayPal, your orders, and your rankings. You drop the plugin bill.
+            MyCustomPatches is an independent client we rebuilt for its owner, Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. The performance and hosting figures for that project are withdrawn pending reconciliation of their test profiles, dates and conditions.  You keep Stripe, PayPal and your order history, and every URL is redirect-mapped. You drop the plugin bill.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -118,7 +118,7 @@ export default function PageContent() {
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We run your checkout speed live, calculate your monthly loss, and give you a fixed quote. <span className="text-charcoal font-medium">Best fit for stores doing $50K+/year.</span></p>
+          <p className="text-sm text-stone-500 mt-4 text-center max-w-xl mx-auto leading-relaxed">30-min call. Drop your store URL when you book. We run your checkout speed live, show you what the measurement does and does not establish, and give you a fixed quote. <span className="text-charcoal font-medium">Best fit for stores doing $50K+/year.</span></p>
 
           {/* Trust line */}
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xs text-stone-600 mt-4">
@@ -132,16 +132,16 @@ export default function PageContent() {
         badge="What Your Plugin Vendor Won't Tell You"
         headline="You're paying for plugins that"
         headlineAccent="don't integrate."
-        description="You're paying $49/mo for a plugin to sync Stripe. There's a native API that does it for free. You're paying $99/mo for WooCommerce Subscriptions. Stripe handles subscriptions natively with zero markup. You're paying $60/mo to stop spam from your contact form. A 10-line reCAPTCHA does it."
-        descriptionSecondary="We replace your ACF fields, Yoast meta, WP Rocket caching, Perfmatters tweaks, and LiteSpeed cache layer with native Next.js equivalents. No plugin stack. No Kinsta bill. Every piece lives in your codebase. Nobody tells you this because every WooCommerce plugin vendor depends on the monthly recurring. We're the agency that builds what replaces them. No pitch. Just receipts."
+        description="You're paying $49/mo for a plugin to sync Stripe. There's a native API that does it for free. You're paying a subscriptions extension. Stripe handles subscriptions natively with zero markup. You're paying a spam-filtering plugin from your contact form. A 10-line reCAPTCHA does it."
+        descriptionSecondary="We replace your ACF fields, Yoast meta, WP Rocket caching, Perfmatters tweaks, and LiteSpeed cache layer with native Next.js equivalents. No plugin stack. No Kinsta bill. Every piece lives in your codebase. Nobody tells you this because recurring licensing is the norm across the extension market. We're the agency that builds what replaces them. No pitch. Just receipts."
         comparisonTitle="WooCommerce vs Custom"
         themLabel="WooCommerce"
         metrics={[
-          { metric: "Load Speed",    themLabel: "3-6s",      usLabel: "< 1s",       themPct: 35, usPct: 98, icon: Gauge },
-          { metric: "Monthly Cost",  themLabel: "$500+",     usLabel: "$22",        themPct: 95, usPct: 5,  icon: DollarSign },
+          { metric: "Load Speed",    themLabel: "Measure yours", usLabel: "Measured at acceptance",       themPct: 35, usPct: 98, icon: Gauge },
+          { metric: "Monthly Cost",  themLabel: "From your invoices", usLabel: "Provider costs",        themPct: 95, usPct: 5,  icon: DollarSign },
           { metric: "Checkout",      themLabel: "Slow cart", usLabel: "Custom flow",themPct: 40, usPct: 100, icon: CreditCard },
-          { metric: "Security",      themLabel: "Vulnerable",usLabel: "Bank Level", themPct: 35, usPct: 100, icon: ShieldCheck },
-          { metric: "Maintenance",   themLabel: "Weekly",    usLabel: "Zero",       themPct: 85, usPct: 5,  icon: Wrench },
+          { metric: "Security",      themLabel: "Plugin surface to patch", usLabel: "Dependency surface to patch", themPct: 35, usPct: 100, icon: ShieldCheck },
+          { metric: "Maintenance",   themLabel: "Plugin updates", usLabel: "Dependency updates",       themPct: 85, usPct: 5,  icon: Wrench },
           { metric: "Ownership",     themLabel: "Rented",    usLabel: "100% Yours", themPct: 30, usPct: 100, icon: Lock },
         ]}
         savingsLines={[
@@ -150,22 +150,22 @@ export default function PageContent() {
           { label: "WP hosting + PHP workers",        amount: "$1,440" },
           { label: "Security + backup (Jetpack etc.)", amount: "$600" },
           { label: "Dev retainer + plugin fixes",     amount: "$3,600" },
-          { label: "Lost checkouts (slow cart)",      amount: "$7,200" },
+          
         ]}
-        totalPerYear="$14,520"
+        totalPerYear="Measured per store"
       />
 
       {/* 2a. BEFORE / AFTER RESULTS */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Real numbers from MyCustomPatches, a WooCommerce store we migrated.</p>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Figures withdrawn pending reconciliation.</p>
 
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { label: "Checkout Load Time", before: "3.2s", after: "0.7s", suffix: "", color: "#16a34a" },
-              { label: "PageSpeed Mobile", before: "45", after: "90+", suffix: "/100", color: "#b87a3d" },
-              { label: "Monthly Hosting Cost", before: "$150", after: "$0", suffix: "/mo", color: "#2563eb" },
+              { label: "Checkout Load Time", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
+              { label: "PageSpeed Mobile", before: "Withdrawn", after: "Withdrawn" },
+              { label: "Monthly Hosting Cost", before: "Withdrawn", after: "Withdrawn", suffix: "/mo", color: "#2563eb" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -187,7 +187,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Measured on MyCustomPatches (mycustompatches.net), a real client WooCommerce to Next.js migration. 5-star verified review on Clutch.</p>
+          <p className="text-center text-xs text-stone-600 font-medium mt-6">Client: MyCustomPatches (mycustompatches.net), an independent client. WooCommerce to Next.js migration.</p>
         </div>
       </section>
 
@@ -208,7 +208,7 @@ export default function PageContent() {
           <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What WooCommerce Operators Are Actually Saying Right Now</h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
-            Not curated testimonials. Real Reddit threads from r/woocommerce in the last 30 days, including a public admission from a WooCommerce Core team lead and an independent study of 10,000 stores. Click the links to verify every quote.
+            Not curated testimonials. Real Reddit threads from r/woocommerce in the last 30 days, including public discussion from a WooCommerce contributor and an independent study of 10,000 stores. Click the links to verify every quote.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -266,7 +266,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">When the WooCommerce Core team lead publicly admits the problem, you know it is structural.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a demonstrated supply-chain attack surface; see our dated write-up of the April 2026 incident for the sourced figures. Custom Next.js stores on Vercel have zero third-party plugins, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with a Shopify, BigCommerce, or Sanity backend, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.
+              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a demonstrated supply-chain attack surface; see our dated write-up of the April 2026 incident for the sourced figures. A custom Next.js store has no plugin layer, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with a Shopify, BigCommerce, or Sanity backend, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -279,7 +279,7 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-phase process, 2 to 6 weeks depending on scope. Zero downtime. Zero lost orders.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-phase process, 2 to 6 weeks depending on scope. Staged cutover with a documented rollback path.</p>
 
           <div className="grid md:grid-cols-5 gap-4">
             {[
@@ -287,7 +287,7 @@ export default function PageContent() {
               { step: "02", title: "Data Export & Mapping", desc: "Every product, order, customer account, review, and category is exported from your WooCommerce database and cleaned. All SEO URLs mapped for 301 redirects.", icon: Database, duration: "Phase 2" },
               { step: "03", title: "Custom Storefront Build", desc: "Your new Next.js storefront is built with native payment integrations (Stripe, PayPal, Apple Pay), your exact checkout flow, and any custom pricing logic.", icon: Wrench, duration: "Phase 3" },
               { step: "04", title: "Data Migration & Testing", desc: "We import all products, orders, and customer accounts into your new platform. Every checkout flow is tested across mobile and desktop before launch.", icon: Package, duration: "Phase 4" },
-              { step: "05", title: "Launch & Handoff", desc: "Zero-downtime launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Phase 5" },
+              { step: "05", title: "Launch & Handoff", desc: "Staged cutover launch. Every WooCommerce URL 301-redirected. DNS updated. SSL verified. You get full code ownership and admin access on day one.", icon: Rocket, duration: "Phase 5" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -369,21 +369,21 @@ export default function PageContent() {
               The Real Cost of WooCommerce
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Your Store Is Bleeding Revenue
+              What a Slow Checkout Actually Costs You
             </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              WooCommerce was built for blogs, not e-commerce at scale. Here&apos;s what that costs you.
+              WooCommerce runs on WordPress, so it inherits the WordPress request model. Here&apos;s what that costs you.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: DollarSign, title: "You're Paying $300 to $700/Month to Run Your Store", detail: "Managed WooCommerce hosting (Kinsta, WP Engine): $50 to $200/mo. WooCommerce extensions (subscriptions, bookings, B2B): $50 to $300/yr. Security plugin: $10 to $50/mo. Backups, CDN, caching. It never stops adding up." },
-              { icon: XCircle, title: "Checkout Abandonment Is Killing Your Conversions", detail: "Every extra second of load time costs you 7% in conversions. WooCommerce checkouts average 3 to 5 seconds. On a store doing $50K/month, that's $3,500+ in revenue you're leaving on the table every single month." },
-              { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. And it always happens on a Saturday during a sale campaign. Every minute offline is orders you never get back." },
-              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. WordPress is the #1 hacked CMS. A static custom coded store has no database to breach and no plugin attack surface." },
-              { icon: TrendingUp, title: "Google Penalizes Your Slow Checkout Pages", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Your competitors with faster sites outrank you before a single keyword is written." },
-              { icon: Code2, title: "You Can't Add Features Without Paying for Yet Another Plugin", detail: "Need a pricing calculator? $200/yr plugin. Need a custom B2B portal? Another plugin. Need loyalty points? Another plugin. Each one adds load time, maintenance risk, and another line on your monthly bill. On custom code, we build exactly what you need, once." },
+              { icon: XCircle, title: "A Slow Checkout Can Cost You Orders", detail: "Speed can obstruct a purchase, but no public per-second figure can be multiplied out into your monthly loss. Measure your own funnel: eligible sessions, your completion rate by step, and a tested change." },
+              { icon: AlertTriangle, title: "One Plugin Update Can Take Your Store Offline", detail: "Payment gateway plugin conflicts with your theme. WooCommerce updates break your custom checkout. Incidents tend to surface under load. Every minute offline is orders you never get back." },
+              { icon: Lock, title: "Your Store Is One Hack Away From Disaster", detail: "WooCommerce stores hold payment data, customer addresses, and order history, making them high-value targets. The WordPress install base makes it a common automated-attack target. A statically rendered storefront moves that risk into your dependencies and build pipeline instead." },
+              { icon: TrendingUp, title: "Page Experience Is One Input Among Many", detail: "Google's Core Web Vitals directly impact your organic rankings. A WooCommerce site running PHP on shared hosting fails LCP and TTFB benchmarks. Core Web Vitals feed Google ranking systems as one signal, and good scores do not guarantee rankings." },
+              { icon: Code2, title: "You Can't Add Features Without Paying for Yet Another Plugin", detail: "A pricing calculator is usually another extension. Need a custom B2B portal? Another plugin. Need loyalty points? Another plugin. Each one adds load time, maintenance risk, and another line on your monthly bill. On custom code, we build exactly what you need, once." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -437,7 +437,7 @@ export default function PageContent() {
             {/* Satellite plugin nodes — stack on mobile, web on md+ */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 relative z-10">
               {[
-                { icon: CreditCard, label: "Stripe Gateway", note: "v8.2 → breaks cart", broken: true },
+                { icon: CreditCard, label: "Stripe Gateway", note: "Version-pinned", broken: true },
                 { icon: RefreshCw, label: "Subscriptions", note: "depends on gateway", broken: true },
                 { icon: Truck, label: "Shipping Rates", note: "stable", broken: false },
                 { icon: LayoutTemplate, label: "Page Builder", note: "stable", broken: false },
@@ -484,11 +484,11 @@ export default function PageContent() {
 
       {/* PRICING TIERS */}
       <PricingTiers
-        heading="Agencies charge $15K to $40K."
+        heading="Compare on like-for-like scope."
         headingAccent="We meet you halfway."
         agencyComparison={{
-          agencyPrice: "$15K to $40K+",
-          agencyNote: "8-12 week timeline. Hourly billing. Plugin fees carry over.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare like-for-like scope, timeline and code ownership.",
           ourPrice: "From $1,500",
           ourNote: "2 to 6 week timeline depending on scope. Fixed price. No plugin taxes. You own the code.",
         }}
@@ -538,7 +538,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="All builds include: zero downtime migration, 301 redirect mapping, redirect and metadata carry-over, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
+        footnote="All builds include: staged cutover migration, 301 redirect mapping, redirect and metadata carry-over, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
       />
 
       {/* 6. DUAL CTA */}
@@ -573,7 +573,7 @@ export default function PageContent() {
                 A complete rebuild on custom Next.js. Faster checkout, zero platform fees, and a storefront you own forever.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second checkout load time", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "Refund terms stated in the written scope"].map((item, i) => (
+                {["Measured checkout performance", "All products, orders & accounts migrated", "Native Stripe + PayPal + Apple Pay", "Zero monthly plugin fees", "Custom pricing logic built in", "100% code & IP ownership", "Refund terms stated in the written scope"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -656,7 +656,7 @@ export default function PageContent() {
           <ul className="space-y-2 text-stone-700">
             <li>&rarr; <Link href="/blog/woocommerce-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce migration cost: what leaving WooCommerce really costs</Link></li>
             <li>&rarr; <Link href="/blog/woocommerce-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce vs custom website: the honest comparison</Link></li>
-            <li>&rarr; <Link href="/blog/woocommerce-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce too slow? How to speed it up (and when to migrate)</Link></li>
+            <li>&rarr; <Link href="/blog/woocommerce-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce too slow? A 2026 diagnosis and fix guide</Link></li>
             <li>&rarr; <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">How WordPress plugins destroy site speed</Link></li>
             <li>&rarr; <Link href="/blog/what-is-headless-commerce" className="text-charcoal hover:text-cognac underline underline-offset-2">What is headless commerce, and is it worth it?</Link></li>
           </ul>
@@ -677,7 +677,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. WooCommerce-to-Next.js migrations with sub-second checkouts, zero lost orders, and direct Stripe and PayPal integration. Headless storefronts that score 90+ on PageSpeed.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. WooCommerce-to-Next.js migrations with measured checkout performance and a staged cutover, and direct Stripe and PayPal integration. Headless storefronts that score 90+ on PageSpeed.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -686,7 +686,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes WooCommerce exits to protect order data, SEO rankings, and conversion rate. Eliminates hosting bills, plugin fees, and update maintenance. 8+ years in e-commerce architecture.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes WooCommerce exits around order data, redirect mapping and acceptance criteria. Eliminates hosting bills, plugin fees, and update maintenance. 8+ years in e-commerce architecture.</p>
               </div>
             </div>
           </div>

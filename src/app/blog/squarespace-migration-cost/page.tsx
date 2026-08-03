@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, FileInput, ReceiptText, SearchCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Squarespace migration cost",
         "migrate from Squarespace",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Squarespace pricing", url: "https://www.squarespace.com/pricing?locale=en" },
+    
     {
         name: "Squarespace: exporting your site",
         url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site",
@@ -60,10 +61,6 @@ const sources = [
         name: "Squarespace: transaction and processing fees",
         url: "https://support.squarespace.com/hc/en-us/articles/27853679334157-Transaction-fees-and-payment-processing-rates",
     },
-    {
-        name: "Google: site moves and migrations",
-        url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
-    },
 ];
 
 const articleSchema = {
@@ -73,6 +70,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/squarespace-migration-cost"),
             description,
             datePublished: "2026-04-09",
             dateModified: "2026-07-24",
@@ -81,13 +79,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Squarespace", "Website migration", "Technical SEO", "Content management systems"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Squarespace migration",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+                { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
+            ],
+            wordCount: 1200,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Squarespace migration cost", item: "https://www.pandacodegen.com/blog/squarespace-migration-cost" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#webpage",
+            url: "https://www.pandacodegen.com/blog/squarespace-migration-cost",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/squarespace-migration-cost#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -143,7 +169,7 @@ export default function SquarespaceMigrationCostPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 9, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 9, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
@@ -151,7 +177,7 @@ export default function SquarespaceMigrationCostPage() {
                             items={[
                                 "Starter from $1,500 for a small, well-defined presentation-site scope.",
                                 "Growth from $3,500 for a broader marketing site with agreed CMS and integration needs.",
-                                "Scale from $5,000 to $10,000-plus for larger, commerce, multi-system or complex migration scope.",
+                                "Scale from $5,000 to $10,000 for larger, commerce, multi-system or complex migration scope, with anything beyond that scoped separately.",
                                 "The accepted statement of work controls the final price, deliverables and exclusions.",
                             ]}
                         />
@@ -184,8 +210,8 @@ export default function SquarespaceMigrationCostPage() {
                             "Crawl every public URL and retain status, canonical, metadata, headings and structured data.",
                             "Inventory unlinked, draft, gated and localized content through authorized account access.",
                             "Export the available XML and independently capture excluded pages, products, media and settings.",
-                            "Record forms, submissions, newsletters, members, scheduling, commerce and payment dependencies.",
-                            "Confirm domain, DNS, email, analytics, advertising and third-party account ownership.",
+                            "Write down what depends on forms, past submissions, newsletters, members, scheduling, the store and payments.",
+                            "Confirm who owns the domain, the DNS, email, analytics, ad accounts and every third-party login.",
                         ]}
                     />
                     <InsightBox variant="warning" label="Export limitation">
@@ -201,6 +227,9 @@ export default function SquarespaceMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader>2. Price page systems, not raw page count</BlogHeader>
+                    <BlogText>
+                        Five drivers set the price, and each one has to be evidenced rather than asserted. Templates are priced from an annotated route and component inventory, content from a field map with an exception count, features from accepted requirements and workflow tests, integrations from a data-flow and responsibility map, and quality from an acceptance matrix with a named test profile. The third column is the point of the table.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[780px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -255,6 +284,9 @@ export default function SquarespaceMigrationCostPage() {
                     />
 
                     <BlogHeader>5. Preserve search signals without promising rankings</BlogHeader>
+                    <BlogText>
+                        Six controls protect search visibility across a Squarespace migration, and the first two carry most of the weight: keep existing URLs where practical, and map every changed one to a relevant destination with a permanent redirect tested on the new host. Google warns that significant moves can cause temporary ranking fluctuations while URLs are recrawled and reindexed, so no agency can guarantee unchanged rankings, complete reindexing or a fixed recovery date.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Keep existing URLs where practical.",
@@ -285,26 +317,29 @@ export default function SquarespaceMigrationCostPage() {
 
                     <BlogHeader>7. Include current and future vendor cost</BlogHeader>
                     <BlogText>
-                        Squarespace is rolling current plan families and features by account and region. Transaction and
+                        Squarespace plan families and features can differ by account and region, so read your own account rather than a published summary. Transaction and
                         processing fees also vary by plan, product type, payment method and country. Use the account&apos;s
                         current subscriptions and invoices. For the target stack, include hosting, CMS, email, database,
                         search, monitoring, security, backups and maintenance.
                     </BlogText>
 
                     <BlogHeader>8. Define PandaCodeGen commercial terms correctly</BlogHeader>
+                    <BlogText>
+                        The signed scope controls all of this; what follows is the starting position, not the contract. A 30/70 split is a common option rather than the only schedule, refunds attach to failure to deliver signed scope rather than to a change of preference, and support days apply only where the accepted terms record them. Anything not written down is not included.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Payment is normally 30 percent at onboarding and 70 percent on delivery.",
+                            "A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed.",
                             "A refund applies according to the accepted contract when PandaCodeGen fails to deliver the signed scope, not merely because preferences change.",
                             "Refund timing is contract-specific; PandaCodeGen normally initiates an approved refund promptly and publishes an outside expectation of 10 to 12 business days for bank processing.",
-                            "Starter includes 15 business days of post-launch defect support; Growth and Scale include 30 business days, unless the contract says otherwise.",
+                            "Where the accepted terms include it, Starter carries 15 business days of post-launch defect support and Growth and Scale carry 30.",
                             "Minor accepted fixes can be included; new or expanded scope follows written change control and agreed pricing.",
                         ]}
                     />
 
                     <BlogHeader>9. Define performance acceptance</BlogHeader>
                     <BlogText>
-                        Where contracted, PandaCodeGen targets a 90-plus Lighthouse score for agreed representative
+                        Where contracted, PandaCodeGen targets a 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score for agreed representative
                         pages under recorded mobile and desktop profiles, using three consecutive tests per page and
                         profile. The scope must record the environment and remedy. This is not a permanent guarantee for
                         every route, visitor, consent state or future third-party change.
@@ -328,6 +363,9 @@ export default function SquarespaceMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader>11. Build a TCO scenario, not a payback promise</BlogHeader>
+                    <BlogText>
+                        There is no universal second-year payback, so what you build is a scenario with visible inputs rather than a promise with a number on it. Six inputs go in, and two of them are the ones people leave out: internal time, and a risk range for schedule, data, SEO, integrations and adoption. Report measured post-launch benefits without assuming causation.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Current Squarespace subscriptions, add-ons, processing and internal administration.",
@@ -348,6 +386,9 @@ export default function SquarespaceMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader>12. Ask these before you sign anything</BlogHeader>
+                    <BlogText>
+                        Two quotes are only comparable once both providers have priced the same inventory. Normalize the scope first, then compare the numbers: a higher quote often describes more of the work rather than more margin, and a lower one frequently has not found the work yet. Six questions expose the difference.
+                    </BlogText>
                     <BlogList
                         items={[
                             "What is in scope, deliverable by deliverable? If redirect mapping, metadata migration, analytics and Search Console handover are not written down, treat them as excluded.",
@@ -355,12 +396,11 @@ export default function SquarespaceMigrationCostPage() {
                             "What performance target is in the contract, on which named pages, under which profiles, and what is the remedy if it is missed?",
                             "Who holds the domain, repository, hosting and business accounts on the day after launch?",
                             "What is the change-control process, and how is additional scope priced once work has started?",
-                            "Who monitors crawl, index and error behaviour after launch, for how long, and what triggers a rollback?",
+                            "Who monitors crawl, index and error behavior after launch, for how long, and what triggers a rollback?",
                         ]}
                     />
                     <BlogText>
-                        Two quotes are only comparable once both providers have priced the same inventory. Normalise the
-                        scope first, then compare the numbers. A higher quote often describes more of the work rather
+                        Two quotes are only comparable once both providers have priced the same inventory. Normalize the scope first, then compare the numbers. A higher quote often describes more of the work rather
                         than more margin, and a lower one frequently has not found the work yet.
                     </BlogText>
 
@@ -387,6 +427,7 @@ export default function SquarespaceMigrationCostPage() {
                         ))}
                     </ul>
 
+                    <BlogHeader id="faq">Frequently asked questions</BlogHeader>
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <RelatedPosts currentPostId={postId} />
                 </article>

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, FileSpreadsheet, Scale, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "software subscription audit",
         "reduce software costs",
         "build versus buy SaaS",
+        "cancel unused software subscriptions",
+        "Shopify app billing cancel",
+        "software license audit checklist",
+        "downgrade SaaS plan",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-cut-saas-bill-2026")],
@@ -59,21 +64,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/how-to-cut-saas-bill-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["SaaS cost management", "Software procurement", "Vendor contracts", "Subscription auditing"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software cost",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1100,
+            timeRequired: "PT5M",
+            about: [
+                { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
+                { "@type": "Thing", name: "Cost reduction", sameAs: ["https://en.wikipedia.org/wiki/Cost_reduction"] },
+                { "@type": "Thing", name: "Shopify", sameAs: ["https://www.shopify.com/"] },
+                { "@type": "Thing", name: "Software license audit" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "SaaS bill audit", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-31",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -107,25 +145,25 @@ export default function SaasBillAuditGuide() {
                             How to Cut a SaaS Bill in 2026 <span className="italic text-cognac">Without Inventing the Savings</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A SaaS audit usually finds real waste, but be sceptical of anyone promising a headline
+                            A SaaS audit usually finds real waste, but be skeptical of anyone promising a headline
                             percentage before they have seen your stack. What you can actually cut depends on your
                             contracts, renewal dates, seat counts and which tools hold data you cannot easily move.
                             Inventory the charges and obligations, verify actual use, model each decision, then measure
                             what the change really returned.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Billing guidance reviewed July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Billing guidance reviewed August 1, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="9 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The five-step audit</h2>
                         <BlogList
                             items={[
-                                "Inventory every charge, contract, owner, user, integration and renewal date.",
+                                "List every charge, every contract, who owns it, who uses it, what it connects to, and when it renews.",
                                 "Verify use and business value without treating login recency as the whole answer.",
-                                "Remove, reassign or downgrade only after data, workflow, legal, security and recovery checks.",
-                                "Compare consolidation and replacement options feature by feature under current quotes.",
+                                "Only cancel, reassign or downgrade after you have checked the data, the workflow it breaks, legal, security, and how you would recover.",
+                                "Compare consolidating against replacing, feature by feature, using quotes you have in hand today.",
                                 "Measure realized savings after switching cost, internal time, new operations and residual vendor spend.",
                             ]}
                         />
@@ -133,9 +171,9 @@ export default function SaasBillAuditGuide() {
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: FileSpreadsheet, title: "Ledger", body: "Charge, term, usage, owner, purpose, data, dependency and renewal." },
-                            { icon: ShieldCheck, title: "Offboard", body: "Export, retention, access, secrets, integrations and recovery." },
-                            { icon: Scale, title: "Decision", body: "Keep, right-size, consolidate, replace, build or retire with assumptions." },
+                            { icon: FileSpreadsheet, title: "Ledger", body: "What it costs, who owns it, and when it renews." },
+                            { icon: ShieldCheck, title: "Offboard", body: "How you get your data out, and what breaks when you do." },
+                            { icon: Scale, title: "Decision", body: "Keep it, shrink it, replace it, or switch it off." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -146,9 +184,12 @@ export default function SaasBillAuditGuide() {
                     </div>
 
                     <BlogHeader>Step 1: build the recurring-charge ledger</BlogHeader>
+                    <BlogText>
+                        You cannot cancel what you have not found. Five field groups make the ledger usable: who owns the account and the bill, the plan and its renewal and notice terms, every component of the charge, who and what depends on it, and the export and deletion obligations. Reconcile the result against bank and card statements, accounts payable, app stores and departmental purchases, because one vendor can appear under several merchant names.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Vendor, product, account owner, billing owner, payment source and invoice location.",
+                            "The vendor, the product, who owns the account, who owns the bill, which card pays it, and where the invoices land.",
                             "Plan, billing term, renewal date, notice period, auto-renewal, minimum seats and commitment.",
                             "Base fee, seats, usage, add-ons, tax, currency, discounts and expected price changes.",
                             "Users, service accounts, API keys, integrations, data classes and operational owner.",
@@ -179,6 +220,21 @@ export default function SaasBillAuditGuide() {
                             "Is the charge contractually reducible now, at renewal or only after notice?",
                         ]}
                     />
+
+                    <BlogText>
+                        One pattern is worth looking for specifically, because it is close to universal and it is easy
+                        to miss when you are only checking whether a tool is used. People buy the plan that matches
+                        where they expect the business to be in a year. Then the year happens differently, the plan
+                        never gets revisited, and the gap between what you provisioned and what you use quietly becomes
+                        a permanent line on the invoice. The question is not only whether a tool is used. It is whether
+                        it is being used at the size you are paying for.
+                    </BlogText>
+                    <BlogText>
+                        The same applies to a tier bought for one specific feature. If that feature turned out not to
+                        matter, the cost of dropping down is often reversible, but confirm it in your own contract before you downgrade rather than assuming you can move back up
+                        if the need returns, and you keep the difference in the meantime. That reversibility is what
+                        makes right-sizing a low-risk move rather than a decision worth deferring to the next renewal.
+                    </BlogText>
 
                     <BlogHeader>Step 3: right-size without breaking access</BlogHeader>
                     <BlogText>
@@ -229,7 +285,7 @@ export default function SaasBillAuditGuide() {
 
                     <BlogHeader>Shopify app billing needs a two-path check</BlogHeader>
                     <BlogText>
-                        Shopify&apos;s current help page says uninstalling a paid app stops future recurring charges
+                        Shopify&apos;s help page, checked August 1, 2026, says uninstalling a paid app stops future recurring charges
                         billed through Shopify, although a charge already generated for the current cycle may remain.
                         It separately warns that uninstalling does not cancel subscriptions charged externally by the
                         developer. Review the app&apos;s billing location, pending charges, data, theme changes and
@@ -249,6 +305,9 @@ export default function SaasBillAuditGuide() {
                     </InsightBox>
 
                     <BlogHeader>Step 5: calculate realized savings</BlogHeader>
+                    <BlogText>
+                        A cancellation is not a saving until the invoice changes. The formula subtracts replacement cost, migration and build, internal time, new maintenance, residual commitments and risk events from the avoided charge. Model base, high-usage and delayed cases rather than a single payback date, and replace the forecast with real invoices at 30, 90 and 365 days.
+                    </BlogText>
                     <div className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-charcoal">
                         Realized savings = avoided charges - replacement vendor cost - migration and build cost
                         - internal time - new maintenance and support - residual commitments - risk events
@@ -279,7 +338,7 @@ export default function SaasBillAuditGuide() {
                         <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline font-medium">website cost guide</Link>{" "}
                         and our{" "}
                         <Link href="/blog/website-rebuild-cost-2026" className="text-cognac hover:underline font-medium">rebuild cost assessment</Link>. A
-                        custom system carries its own recurring lines, which we itemise in{" "}
+                        custom system carries its own recurring lines, which we itemize in{" "}
                         <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline font-medium">what a Next.js hosting bill actually contains</Link>.
                         For choosing who does the work, read our notes on{" "}
                         <Link href="/blog/cheap-web-developer" className="text-cognac hover:underline font-medium">what a low quoted rate leaves out</Link>{" "}

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Bug, Gauge, ListChecks, Wrench } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "WordPress plugins slow site",
         "WordPress plugin performance",
@@ -51,8 +52,6 @@ const sources = [
     { name: "WordPress debugging", url: "https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/" },
     { name: "WordPress plugin dependencies", url: "https://developer.wordpress.org/plugins/wordpress-org/common-issues/#wordpress-plugin-dependencies" },
     { name: "WordPress performance resources", url: "https://make.wordpress.org/performance/handbook/" },
-    { name: "Google PageSpeed Insights data", url: "https://developers.google.com/speed/docs/insights/v5/about" },
-    { name: "Google Core Web Vitals", url: "https://web.dev/articles/vitals" },
 ];
 
 const articleSchema = {
@@ -62,6 +61,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-plugins-destroy-speed"),
             description,
             datePublished: "2026-02-05",
             dateModified: "2026-07-24",
@@ -70,13 +70,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1800,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress plugin performance", item: "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#webpage",
+            url: "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wordpress-plugins-destroy-speed#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -122,7 +150,7 @@ export default function WordPressPluginPerformancePage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 5, 2026" readTime="16 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 5, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -130,9 +158,9 @@ export default function WordPressPluginPerformancePage() {
                             items={[
                                 "Some plugins add no visitor-facing work on a given route; others can affect nearly every request.",
                                 "Performance depends on what executes, not only how many plugins are active.",
-                                "Profile representative public, signed-in, editor, search, cart and checkout journeys separately.",
+                                "Profile each journey on its own: a public visitor, a signed-in one, an editor, a search, the cart and checkout.",
                                 "Remove or replace a plugin only after mapping its capability, data and dependencies.",
-                                "Optimization, consolidation, custom replacement or migration are all possible remedies. None is universally permanent.",
+                                "You can optimize, consolidate, replace with something custom, or migrate. None of those stays fixed forever.",
                             ]}
                         />
                     </section>
@@ -160,6 +188,17 @@ export default function WordPressPluginPerformancePage() {
                             </div>
                         ))}
                     </div>
+                    <BlogText>
+                        Plugins cost you more than speed. In April 2026, Patchstack published analyses of two supply-chain
+                        compromises reaching WordPress sites through plugin update channels &mdash;{" "}
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-in-smart-slider-3-pro-full-malware-analysis/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">one affecting a commercial slider plugin</a>{" "}
+                        and{" "}
+                        <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">one affecting a portfolio of more than twenty</a>.
+                        Read those rather than this summary. Our{" "}
+                        <Link href="/blog/wordpress-april-2026-evidence" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">dated review of the April 2026 supply-chain incidents</Link>{" "}
+                        goes through what was actually documented, sources linked, including a case where the risk
+                        arrived through a plugin&apos;s own update channel rather than through anything the site owner did.
+                    </BlogText>
 
                     <BlogHeader id="count">Why plugin count misleads</BlogHeader>
                     <BlogText>
@@ -174,6 +213,11 @@ export default function WordPressPluginPerformancePage() {
                     </BlogText>
 
                     <BlogHeader id="inventory">Build a plugin inventory</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            You cannot decide anything about a plugin until you know what breaks without it, which is an inventory question rather than a performance one. Six fields answer it, and the last is the one most audits skip: what actually changes when the component is isolated. Fill this in before you measure, not after.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1020px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -205,11 +249,16 @@ export default function WordPressPluginPerformancePage() {
                             "Search, filtering, form submission and authenticated account journeys",
                             "Product, variation, add-to-cart, cart and checkout for commerce",
                             "Editor, media, order administration and reporting for staff",
-                            "Cron, queues, imports, feeds, backups and security scans",
+                            "Scheduled jobs, queues, imports, feeds, backups and security scans",
                         ]}
                     />
 
                     <BlogHeader id="frontend">Frontend impact</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            What a plugin costs the browser is almost always the files it loads on routes where its feature never appears. Five categories account for most of it, and all five are visible in a request waterfall with no WordPress-specific tooling at all. Look at what arrived, then at how much of it the page actually ran.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "CSS and JavaScript loaded on every route instead of only where needed",
@@ -226,7 +275,7 @@ export default function WordPressPluginPerformancePage() {
 
                     <BlogHeader id="patterns">Patterns worth checking first</BlogHeader>
                     <BlogText>
-                        These are behaviours to look for in your own trace, not a ranking of products. Any of them can
+                        These are behaviors to look for in your own trace, not a ranking of products. Any of them can
                         be present or absent depending on version, settings and theme.
                     </BlogText>
                     <BlogList
@@ -241,7 +290,8 @@ export default function WordPressPluginPerformancePage() {
                         ]}
                     />
                     <BlogText>
-                        Query Monitor is the practical instrument for the server side of this. It reports the database
+                        <a href="https://wordpress.org/plugins/query-monitor/" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Query Monitor</a>{" "}
+                        is the practical instrument for the server side of this, read August 3, 2026. It reports the database
                         queries fired during a single request with the component responsible for each, the hooks that
                         ran, HTTP API calls made during the request, and the scripts and styles enqueued. Load a
                         representative route with it enabled on staging, sort by component, and you have attribution
@@ -250,6 +300,11 @@ export default function WordPressPluginPerformancePage() {
                     </BlogText>
 
                     <BlogHeader id="server">Server and database impact</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Server-side plugin cost shows up as time before the first byte, so it stays invisible in a browser waterfall and gets blamed on hosting. Six things produce most of it, and repeated queries against unindexed tables lead the list. Query Monitor attributes each one to the component that fired it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Slow or repeated database queries and missing indexes",
@@ -271,11 +326,16 @@ export default function WordPressPluginPerformancePage() {
                     </BlogText>
 
                     <BlogHeader id="isolate">How to isolate a plugin safely</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Isolation means running the same test twice, once with the component active and once without, on a copy of production rather than on production. The safety comes from the environment, not from being careful. Six steps keep the comparison valid and keep customer data out of it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Use a current production-like copy with protected data and no public side effects.",
                             "Back up and document the starting version, configuration and test data.",
-                            "Map dependencies and the capability acceptance test before deactivation.",
+                            "Before you deactivate anything, map what depends on it and agree how you will prove the capability still works.",
                             "Run the same test with and without the component or suspected feature.",
                             "Repeat enough runs to distinguish a stable effect from test noise.",
                             "Check functional, visual, accessibility, analytics and data behavior after the change.",
@@ -287,7 +347,39 @@ export default function WordPressPluginPerformancePage() {
                         the business journey becomes incorrect.
                     </InsightBox>
 
+                    <BlogHeader id="scorecard">A keep, replace or remove scorecard</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Once Query Monitor has given you per-plugin server time, you can triage instead of guess.
+                            These bands are a working convention rather than a published standard, and they are read off
+                            your own numbers, so they say nothing about anybody&apos;s product in general.
+                        </BlogText>
+                    </div>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[620px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">What you measured</th><th className="p-4">Verdict</th><th className="p-4">What to do</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Under ~50ms server time, actively used</td><td className="p-4">Keep</td><td className="p-4">It is earning its place. Leave it alone</td></tr>
+                                <tr><td className="p-4 font-bold">~50 to 200ms, actively used</td><td className="p-4">Replace or scope</td><td className="p-4">Look for a lighter equivalent, or load it only on the routes that need it</td></tr>
+                                <tr><td className="p-4 font-bold">Over ~200ms, or unused for 30 days</td><td className="p-4">Remove</td><td className="p-4">Deactivate, retest, and delete once nothing depends on it</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        <strong>One prioritization rule does most of the work:</strong> anything sitting in the remove
+                        column on your homepage <em>and</em> your checkout at the same time is the highest-value removal
+                        on the list, because those are the two routes where cost compounds fastest per visitor. Start
+                        there rather than at the top of an alphabetical plugin list.
+                    </BlogText>
+
                     <BlogHeader id="fix-order">The plugin performance fix hierarchy</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Work down this list in order, because each step costs less and risks less than the one below it, and the cheap steps resolve more cases than their cost suggests. Migration sits at the bottom for that reason rather than because it fails. Stop as soon as the measured constraint is gone.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Update supported software and fix errors or failed jobs.",
@@ -301,7 +393,7 @@ export default function WordPressPluginPerformancePage() {
                         ]}
                     />
 
-                    <BlogHeader id="consolidate">Consolidation usually beats deleting one at a time</BlogHeader>
+                    <BlogHeader id="consolidate">Why consolidation often beats deleting one at a time</BlogHeader>
                     <BlogText>
                         Removing a rarely used plugin removes one feature. Collapsing several overlapping plugins into
                         one removes an entire framework: its stylesheet, its script, its options, its scheduled tasks
@@ -323,7 +415,7 @@ export default function WordPressPluginPerformancePage() {
                         </table>
                     </div>
                     <BlogText>
-                        Migrate the data before you remove anything. Form entries, SEO metadata, redirect maps and
+                        Migrate the data before you remove anything. Form entries, SEO metadata, <Link href="/blog/will-migrating-hurt-my-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">redirect map</Link>s and
                         subscriber lists usually live inside the plugin that owns them, and deleting the plugin can take
                         them with it.
                     </BlogText>
@@ -332,11 +424,16 @@ export default function WordPressPluginPerformancePage() {
                     <BlogText>
                         Caching can reduce repeated origin work and improve delivery for cacheable responses. It cannot
                         automatically remove long browser tasks, repair third-party latency, correct a slow interaction
-                        or safely cache user-specific pages. Verify cache keys, exclusions, hit rate and invalidation.
+                        or serve user-specific pages from a shared cache without per-user keys. Verify cache keys, exclusions, hit rate and invalidation.
                         Test guest and signed-in journeys separately.
                     </BlogText>
 
                     <BlogHeader id="remove">When removing a plugin is justified</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Removal is justified when the capability is genuinely not needed, or when something else already covers it in full including the data it holds. Slowness alone is not a reason to delete, because configuration and route-scoping resolve many cases without losing a feature. Five conditions, and the last is a plan rather than a finding.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "The business no longer needs the capability.",
@@ -352,7 +449,7 @@ export default function WordPressPluginPerformancePage() {
                         Custom code is appropriate when a narrow, stable, differentiated requirement is valuable enough
                         to own. Define its data model, permissions, tests, observability, update path and maintainer.
                         Replacing a supported plugin with undocumented custom code can increase lifecycle risk even if
-                        it reduces frontend bytes. The ownership side of that choice is modelled in our{" "}
+                        it reduces frontend bytes. The ownership side of that choice is modeled in our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline">three-year cost comparison of WordPress and custom code</Link>.
                     </BlogText>
 
@@ -383,6 +480,11 @@ export default function WordPressPluginPerformancePage() {
                     </BlogText>
 
                     <BlogHeader id="checklist">Plugin audit handoff</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Hand over the evidence rather than the verdict, so whoever picks this up can re-run the comparison instead of trusting it. An audit that survives one handover is worth more than a faster page nobody can reproduce. These six items are what make the work repeatable.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Versioned plugin, capability, data and dependency inventory",
@@ -407,6 +509,17 @@ export default function WordPressPluginPerformancePage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <ListChecks className="mb-4 h-7 w-7 text-cognac" />

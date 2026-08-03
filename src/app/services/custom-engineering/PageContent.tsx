@@ -14,21 +14,21 @@ import BuiltWith from "@/components/sections/BuiltWith";
 
 const comparisonData = [
   { feature: "Capacity Planning", nocode: "Capacity and scaling controls depend on the selected platform and plan", custom: "Load profile, capacity targets, and scaling controls are defined during discovery", icon: Users },
-  { feature: "Repository & Rights", nocode: "Export, access, and licensing terms vary by platform", custom: "Repository access, licensing, IP transfer, and handover are stated in the proposal", icon: Lock },
-  { feature: "Performance", nocode: "Results vary with templates, scripts, content, and integrations", custom: "The baseline, test conditions, and acceptance targets are agreed before implementation", icon: TrendingUp },
+  { feature: "Repository & Rights", nocode: "Export, access, and licensing terms vary by platform", custom: "Who gets the code, which licences apply, when the IP transfers, and how it is handed over. All in the proposal", icon: Lock },
+  { feature: "Performance", nocode: "Results vary with templates, scripts, content, and integrations", custom: "We agree the baseline, the test conditions and what counts as done before anyone builds", icon: TrendingUp },
   { feature: "Operating Costs", nocode: "Subscriptions, add-ons, and usage charges require a current account review", custom: "Hosting and service estimates are itemized against the proposed architecture", icon: DollarSign },
   { feature: "Customization", nocode: "Changes are limited by supported extension points and plan features", custom: "Custom workflows can be designed within the agreed scope and dependencies", icon: Palette },
-  { feature: "AI Integration", nocode: "Options depend on available APIs, add-ons, and data controls", custom: "Provider integrations are designed around approved data, security, and evaluation requirements", icon: Cpu },
+  { feature: "AI Integration", nocode: "Options depend on available APIs, add-ons, and data controls", custom: "Integrations get designed around the data you approved, the security you need, and how it will be judged", icon: Cpu },
 ];
 
 const faqData = [
   {
     q: "How long does it take to build a custom app?",
-    a: "Delivery timing depends on validated requirements, integrations, data migration, review availability, and acceptance criteria. Discovery produces a written proposal with milestones, dependencies, and the change process before work begins.",
+    a: "How long it takes depends on how firm the requirements are, what it connects to, how much data moves, how quickly you can review, and how you sign it off. Discovery produces a written proposal with milestones, dependencies, and the change process before work begins.",
   },
   {
     q: "How much does custom development cost?",
-    a: "Custom development is quoted after the team reviews requirements, integrations, data, security needs, and delivery dependencies. The accepted proposal states the price model, payment schedule, scope, exclusions, support, repository access, licensing, and IP terms.",
+    a: "We quote custom work after looking at what you need, what it connects to, the data, the security, and what we are waiting on. The accepted proposal states the price model, payment schedule, scope, exclusions, support, repository access, licensing, and IP terms.",
   },
   {
     q: "Can I add AI features to my app?",
@@ -36,11 +36,11 @@ const faqData = [
   },
   {
     q: "What if I already have a Bubble/no-code app?",
-    a: "We can assess the application logic, data model, authentication, and integrations, then propose a staged migration and cutover plan. Performance and continuity are measured against agreed baselines and acceptance checks rather than assumed in advance.",
+    a: "We can go through the application logic, the data model, how people sign in and what it connects to, then propose a staged migration and a cutover plan. Performance and continuity are measured against agreed baselines and acceptance checks rather than assumed in advance.",
   },
   {
     q: "Do I own the code?",
-    a: "Repository access, documentation, deployment access, licensing, third-party components, IP transfer, and handover timing are documented in the accepted proposal so both parties know exactly what is included.",
+    a: "The accepted proposal writes down who gets the code, the documentation, deployment access, the licences, which third-party components are involved, when IP transfers and when handover happens so both parties know exactly what is included.",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            We design SaaS platforms, internal dashboards, and AI-enabled tools around the workflows, integrations, and constraints discovered for each project. <span className="text-charcoal font-medium">Repository access, licensing, IP, support, and handover are defined in the written proposal.</span>
+            We design SaaS platforms, internal dashboards and AI-enabled tools around how you actually work, what they have to connect to, and what gets in the way. All of that comes out of discovery. <span className="text-charcoal font-medium">Who gets the code, which licences apply, who owns the IP, what support you get and how it is handed over are all in the written proposal.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -210,7 +210,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
             {[
-              { step: "01", title: "Discovery", duration: "Phase 1", desc: "We map requirements, user flows, constraints, and technical options. The resulting scope records assumptions, dependencies, milestones, and acceptance criteria." },
+              { step: "01", title: "Discovery", duration: "Phase 1", desc: "We map what you need, how people will use it, what constrains it and what the options are. The scope then records what we assumed, what it depends on, the milestones, and how you sign it off." },
               { step: "02", title: "Prototype & Validate", duration: "Phase 2", desc: "Where useful, we test important workflows or technical risks before committing to the full implementation path." },
               { step: "03", title: "Implementation", duration: "Phase 3", desc: "We build the approved features and integrations in reviewable increments using the architecture selected for the project." },
               { step: "04", title: "Verification & Handover", duration: "Phase 4", desc: "We run the agreed checks, prepare deployment and documentation, and complete support, access, licensing, and handover steps stated in the proposal." },

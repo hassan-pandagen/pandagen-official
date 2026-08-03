@@ -13,16 +13,16 @@ import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 
 const comparisonData = [
   { feature: "Performance", webflow: "Measure the current pages and scripts", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
-  { feature: "Access & Rights", webflow: "Review account, export, and hosting terms", custom: "State repository, licensing, IP, and handover terms", icon: Lock },
-  { feature: "Operating Cost", webflow: "Review the active plan, seats, add-ons, and usage", custom: "Estimate hosting, services, maintenance, and usage", icon: DollarSign },
-  { feature: "Application Logic", webflow: "Map supported native features and extensions", custom: "Scope APIs, authentication, and data requirements", icon: Server },
-  { feature: "Content Model", webflow: "Inventory collections, relationships, localization, and limits", custom: "Choose a CMS and model against validated requirements", icon: Database },
+  { feature: "Access & Rights", webflow: "Review account, export, and hosting terms", custom: "Say who gets the code, which licences apply, who owns the IP, and how it is handed over", icon: Lock },
+  { feature: "Operating Cost", webflow: "Check the plan you are on, the seats, the add-ons and what you actually use", custom: "Work out hosting, third-party services, maintenance and usage", icon: DollarSign },
+  { feature: "Application Logic", webflow: "Map supported native features and extensions", custom: "Scope the APIs, how people sign in, and what data is involved", icon: Server },
+  { feature: "Content Model", webflow: "List the collections, how they relate, which languages, and where Webflow stops you", custom: "Choose a CMS and model against validated requirements", icon: Database },
 ];
 
 const faqData = [
   {
     q: "Is custom code harder to use than Webflow's visual editor?",
-    a: "The editorial experience depends on the selected CMS, roles, previews, workflows, and content model. Discovery compares those requirements with Webflow's current editor and records any training, maintenance, or developer dependency in scope.",
+    a: "What editing feels like depends on which CMS you pick, who is allowed to do what, whether they can preview, how publishing flows, and how content is structured. Discovery compares those requirements with Webflow's current editor and records any training, maintenance, or developer dependency in scope.",
   },
   {
     q: "Can you recreate my Webflow animations in code?",
@@ -30,11 +30,11 @@ const faqData = [
   },
   {
     q: "What about Webflow's CMS?",
-    a: "We can map Webflow collections, fields, references, assets, localization, slugs, and editorial workflows to a suitable CMS. Export coverage, provider limits, data cleanup, API access, and migration verification vary by project and provider.",
+    a: "We can map your Webflow collections, fields, references, assets, languages, slugs and publishing flow onto a CMS that fits. Export coverage, provider limits, data cleanup, API access, and migration verification vary by project and provider.",
   },
   {
     q: "How much does it cost to migrate from Webflow?",
-    a: "Price and timing depend on the page inventory, design system, interactions, CMS data, localization, ecommerce, integrations, redirects, and acceptance requirements. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
+    a: "Price and timing depend on how many pages there are, the design system, the interactions, the CMS data, the languages, whether you sell, what it connects to, the redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
   },
   {
     q: "What if Webflow adds the features I need later?",
@@ -77,7 +77,7 @@ export default function WebflowPageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Webflow can be a strong visual-authoring tool. If content, interactions, application logic, performance, localization, or operating needs have changed, we can compare the current site with a scoped replacement. <span className="text-charcoal font-medium">Commercial terms, support, access, licensing, ownership, and handover are documented after discovery.</span>
+            Webflow is a strong visual tool. If what you need from content, interactions, application logic, speed, other languages or day-to-day running has moved on, we can compare the current site with a scoped replacement. <span className="text-charcoal font-medium">What you pay, what support you get, who has access, which licences, who owns it and how it is handed over all get written down after discovery.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 1, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,10 +107,10 @@ export default function WebflowPageContent() {
             Scope first, <span className="font-serif font-normal italic text-orange-300">then commit in writing.</span>
           </h2>
           <p className="text-base text-stone-400 leading-relaxed mb-6">
-            Review both the current account costs and the operational responsibilities of a replacement. Availability incidents should be checked against <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-orange-300 hover:underline">Webflow&apos;s current status history</a>; a different hosting architecture changes dependencies but does not eliminate outage risk. <Link href="/blog/webflow-true-cost" className="text-orange-300 hover:underline">See the Webflow cost-input guide</Link>.
+            Look at what the account costs you today, and at who would run the replacement day to day. Availability incidents should be checked against <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-orange-300 hover:underline">Webflow&apos;s current status history</a>; a different hosting architecture changes dependencies but does not eliminate outage risk. <Link href="/blog/webflow-true-cost" className="text-orange-300 hover:underline">See the Webflow cost-input guide</Link>.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            Compare vendors on equivalent page, design, CMS, localization, commerce, integration, testing, support, and handover scope, not headline prices or generic market benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
+            Compare vendors on the same scope: the same pages, design work, CMS, languages, commerce, integrations, testing, support and handover. Not on headline prices or generic benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Diagnostic discipline</p>
@@ -156,7 +156,7 @@ export default function WebflowPageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, signal: "Account Economics Need Review", detail: "Inventory the current site plan, workspace seats, localization, ecommerce, apps, bandwidth, support, and maintenance before comparing a replacement." },
+              { icon: DollarSign, signal: "Account Economics Need Review", detail: "Before comparing anything, list what you pay for now: the site plan, workspace seats, languages, the store, apps, bandwidth, support and maintenance." },
               { icon: Server, signal: "Required Logic Relies on Extensions", detail: "Map authentication, payments, databases, real-time data, and third-party tools, then compare supported Webflow paths with a custom architecture." },
               { icon: Database, signal: "Content Model Is Under Pressure", detail: "Review current collection limits, relationships, localization, editorial workflows, exports, and growth assumptions against current provider documentation." },
               { icon: Code2, signal: "Website and Application Needs Are Converging", detail: "Dashboards, portals, role-based access, and live data may require application architecture. Discovery should validate the exact workflows and security requirements." },

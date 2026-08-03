@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/blog/leaving-webflow-2026",
     },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "leaving webflow 2026",
         "webflow too expensive 2026",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
         description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [ogImageForPath("/blog/leaving-webflow-2026")],
@@ -69,36 +70,26 @@ const articleSchema = {
             "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
             "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-03T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "knowsAbout": ["Webflow", "Website migration", "Content management systems", "Technical SEO", "Next.js"],
                 "sameAs": [
                     "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                     "https://github.com/hassan-pandagen",
                 ],
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.pandacodegen.com/logo.png",
-                    "width": 655,
-                    "height": 113,
-                },
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026",
-            },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage" },
             "articleSection": "Webflow",
             "inLanguage": "en-US",
+            "wordCount": 3450,
+            "timeRequired": "PT17M",
             "keywords": [
                 "leaving webflow 2026",
                 "webflow too expensive 2026",
@@ -183,32 +174,11 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-03T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US",
         },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.pandacodegen.com/logo.png",
-                "width": 655,
-                "height": 113,
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "email": "info@pandacodegen.com",
-            },
-            "description": "PandaCodeGen plans and builds documented website migrations, custom Next.js sites, and commerce experiences.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026-02",
-        },
-        {
+                {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#faq",
             "mainEntity": postFAQs.map(faq => ({
@@ -283,7 +253,7 @@ export default function LeavingWebflow2026Page() {
                         </p>
 
                         <BlogAuthor
-                            date="Updated Jul 24, 2026"
+                            date="Updated Aug 3, 2026"
                             readTime="17 min read"
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -317,7 +287,7 @@ export default function LeavingWebflow2026Page() {
                     <div className="rounded-xl border border-stone-200 bg-stone-50 p-6 mb-10" data-speakable="true">
                         <p className="font-semibold text-charcoal mb-3">The short answer</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Stay on Webflow if the visual editor, the plan you are on and the features it supports will still cover what you need for the next two or three years. Fix things first if the problem is one template, one heavy asset, one script or one workflow. Start thinking about leaving when several documented problems stack up at once: the bill keeps climbing, you cannot export what you need, it will not run the application logic you want, you have governance rules it cannot meet, or it is still slow after you have properly measured and optimised it.
+                            Stay on Webflow if the visual editor, the plan you are on and the features it supports will still cover what you need for the next two or three years. Fix things first if the problem is one template, one heavy asset, one script or one workflow. Start thinking about leaving when several documented problems stack up at once: the bill keeps climbing, you cannot export what you need, it will not run the application logic you want, you have governance rules it cannot meet, or it is still slow after you have properly measured and optimized it.
                         </p>
                     </div>
 
@@ -346,6 +316,18 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
+                            A third deprecation lands sooner than either of those and attracts far less attention.
+                            Webflow&apos;s <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">feature sunsets page</a>, read on August 3, 2026, states that the legacy Editor and legacy
+                            Editor whitelabeling will no longer be available <strong>starting August 4, 2026</strong>,
+                            and that existing legacy Editor users are automatically given a free client seat or a
+                            limited seat as part of the migration. If clients or non-technical colleagues still publish
+                            through the legacy Editor, that workflow moves to seats, roles and permissions rather than
+                            vanishing. It is worth checking who on your side is affected before the date rather than
+                            after it. The full sequence of Webflow sunsets is set out in{" "}
+                            <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac underline underline-offset-2">our guide to the User Accounts sunset and the dates around it</Link>.
+                        </BlogText>
+
+                        <BlogText>
                             That change is material if your site depended on native authentication, access groups, gated content, or Logic workflows. It does not prove that Webflow is unsuitable for a brochure site, editorial site, or marketing team that never used those products. The correct question is narrower: which business capabilities are native today, which now depend on an app, and which should become separately owned services?
                         </BlogText>
 
@@ -369,6 +351,29 @@ export default function LeavingWebflow2026Page() {
                         <BlogText>
                             Then map the complete commerce operation, not only the storefront. Include products and variants, inventory, pricing, promotions, tax, shipping, payment methods, refunds, order notifications, customer service, analytics, feeds, subscriptions, and accounting. Webflow Ecommerce may remain appropriate for a straightforward catalog that fits its current plan. A headless commerce service or custom application becomes relevant when the business needs logic or integrations that the existing system cannot support cleanly. The destination should be chosen from those requirements, not from a belief that custom code automatically removes transaction fees or operational costs.
                         </BlogText>
+
+                        <BlogText>
+                            Webflow publishes the numbers that decide whether its Ecommerce plans still fit, and one
+                            interaction between them catches stores out. Read on Webflow&apos;s{" "}
+                            <a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">pricing page</a>{" "}
+                            on August 3, 2026: Standard is $29 per month billed yearly with 500 ecommerce items and a
+                            2% transaction fee, Plus is $74 with 5,000 items and no transaction fee, and Advanced is
+                            $212 with 15,000 items and no transaction fee, all quoted per site in USD before tax.
+                        </BlogText>
+
+                        <div className="my-6 rounded-xl border-l-4 border-cognac bg-stone-50 p-5" data-speakable="true">
+                            <p className="text-xs font-bold uppercase tracking-wide text-cognac mb-2">Count variants, not products</p>
+                            <p className="text-stone-700 leading-relaxed">
+                                Webflow&apos;s{" "}
+                                <a href="https://help.webflow.com/hc/en-us/articles/33961334531347-Create-product-options-and-variants" target="_blank" rel="noopener noreferrer" className="text-cognac underline underline-offset-2">product options and variants documentation</a>{" "}
+                                states two rules that compound: each product item can have a total of 50 variants, and
+                                <strong> each product variant counts towards the item limit for your site plan</strong>.
+                                So a catalogue of 40 shirts in five sizes and three colours is not 40 items against your
+                                allowance, it is 600, which is past the Standard plan before the store has a second
+                                product line. Count variants before you decide a plan fits, because the product count
+                                is the number that misleads.
+                            </p>
+                        </div>
 
                         <BlogText>
                             Membership sites need a similar map because Webflow User Accounts has already been disabled. Record how users sign up, verify email, reset passwords, manage consent, receive roles, access content, update billing, cancel, request data, and contact support. Confirm where identities and subscriptions live today. If Stripe or another billing system sits outside Webflow, do not assume an account migration automatically changes or stops those subscriptions. Authentication, authorization, billing, and the visible member experience are related systems with different data and failure modes.
@@ -468,7 +473,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            Start with real-user Core Web Vitals from Search Console or another field-data source. Then reproduce the issue with lab tests on agreed representative pages and devices. Separate server response, Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift, JavaScript execution, image weight, and third-party scripts. Test the current site after obvious fixes before pricing a replacement.
+                            Start with real-user <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> from Search Console or another field-data source. Then reproduce the issue with lab tests on agreed representative pages and devices. Separate server response, Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift, JavaScript execution, image weight, and third-party scripts. Test the current site after obvious fixes before pricing a replacement.
                         </BlogText>
 
                         <BlogText>
@@ -667,7 +672,7 @@ export default function LeavingWebflow2026Page() {
                         <BlogHeader>The Practical Conclusion for Leaving Webflow in 2026</BlogHeader>
 
                         <BlogText>
-                            Webflow remains a valid choice for teams that value visual production and fit its current plan and product boundaries. The 2024 bandwidth changes, 2026 plan restructure, and completed Logic and User Accounts sunsets are real inputs, but they are not a universal instruction to leave. Use your actual account terms, invoices, usage, field performance, roadmap, and governance requirements.
+                            Webflow remains a valid choice for teams that value visual production and fit its current plan and product boundaries. The 2024 bandwidth changes, the 2026 plan restructure, the completed Logic and User Accounts sunsets and the legacy Editor deprecation dated August 4, 2026 are real inputs, but none of them is a universal instruction to leave. Use your actual account terms, invoices, usage, field performance, roadmap, and governance requirements.
                         </BlogText>
 
                         <BlogText>
@@ -678,7 +683,7 @@ export default function LeavingWebflow2026Page() {
                     <section className="mt-12 mb-10" data-speakable="true">
                         <h2 className="text-2xl font-bold text-stone-900 mb-4">Key Takeaways</h2>
                         <ol className="list-decimal list-inside space-y-3 text-stone-700 leading-relaxed">
-                            <li><strong>Webflow changed plans and limits in 2024 and 2026, but transition rules vary.</strong> Check your current dashboard and official plan documentation before comparing costs.</li>
+                            <li><strong>Webflow changed plans and limits in 2024 and 2026, and deprecations are still landing.</strong> Check your current dashboard and official plan documentation before comparing costs, and note that the legacy Editor and its whitelabeling end on August 4, 2026.</li>
                             <li><strong>Stay, optimize, or migrate based on several constraints.</strong> One outage, bill, or lab score is not a complete business case.</li>
                             <li><strong>Code export is not a complete application export.</strong> CMS data, Ecommerce functionality, accounts, forms, search, localization, and other services require separate planning.</li>
                             <li><strong>Performance is measured, not inherited from a framework.</strong> Webflow has no universal ceiling, and Next.js does not guarantee a score or ranking outcome.</li>

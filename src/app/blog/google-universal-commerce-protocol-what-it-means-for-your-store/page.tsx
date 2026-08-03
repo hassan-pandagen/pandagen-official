@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, CircleDollarSign, PackageCheck, RadioTower } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Google Universal Commerce Protocol",
         "UCP commerce",
@@ -49,18 +50,6 @@ export const metadata: Metadata = {
 
 const sources = [
     {
-        name: "Google for Developers: getting started with UCP on Google",
-        url: "https://developers.google.com/merchant/ucp",
-    },
-    {
-        name: "Google for Developers: UCP frequently asked questions",
-        url: "https://developers.google.com/merchant/ucp/faq",
-    },
-    {
-        name: "Google Merchant API: latest updates",
-        url: "https://developers.google.com/merchant/api/latest-updates",
-    },
-    {
         name: "Universal Commerce Protocol specification and releases",
         url: "https://github.com/Universal-Commerce-Protocol/ucp",
     },
@@ -77,6 +66,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store"),
             description,
             datePublished: "2026-02-21",
             dateModified: "2026-07-24",
@@ -85,13 +75,42 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["E-commerce", "Commerce protocols", "Payment integrations", "Website migration", "Technical SEO"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agentic commerce",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "E-commerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Universal Commerce Protocol", sameAs: ["https://github.com/Universal-Commerce-Protocol/ucp"] },
+                { "@type": "Thing", name: "Communication protocol", sameAs: ["https://en.wikipedia.org/wiki/Communication_protocol"] },
+                { "@type": "Organization", name: "Google", sameAs: ["https://en.wikipedia.org/wiki/Google"] },
+            ],
+            wordCount: 1450,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Universal Commerce Protocol", item: "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#webpage",
+            url: "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -146,12 +165,18 @@ export default function UniversalCommerceProtocolGuide() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="February 21, 2026"
-                        readTime="12 min read"
+                        readTime="5 min read"
                         bio="Hassan evaluates commerce protocols, integrations and migration readiness."
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Status as of July 24, 2026</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            The protocol is real and published; your access to it probably is not yet. Those two facts
+                            get collapsed in most coverage, and the difference is what decides whether any of this is
+                            actionable for your store this quarter. Five points, read from the open UCP repository and
+                            from Google&apos;s merchant guide, FAQ and Merchant API updates on July 24, 2026.
+                        </p>
                         <BlogList
                             items={[
                                 "UCP is an open-source protocol. The specification is published, there are working examples, and it ships in versioned releases.",
@@ -163,6 +188,13 @@ export default function UniversalCommerceProtocolGuide() {
                         />
                     </section>
 
+                    <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">The three phases UCP defines</h2>
+                    <p className="mb-2 leading-relaxed text-stone-700">
+                        The protocol splits an agent-driven purchase into three phases, and knowing which one a claim
+                        refers to prevents most of the confusion around it. Discovery is a merchant advertising what it
+                        can do. Checkout is the money moving. Order is everything after, which is the phase most
+                        coverage skips and the one that generates the support tickets.
+                    </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
                             { icon: RadioTower, title: "Discover", body: "A merchant declares supported capabilities and service endpoints." },
@@ -185,25 +217,35 @@ export default function UniversalCommerceProtocolGuide() {
                         REST, Model Context Protocol and Agent-to-Agent as possible service transports.
                     </BlogText>
                     <BlogText>
-                        Transport compatibility is not automatic distribution. Implementing an MCP endpoint does not
-                        make a store available to Google, ChatGPT, Bing, or every agent. Each platform controls its own
-                        access, discovery, eligibility, safety, ranking, presentation and commercial requirements.
+                        Being able to connect does not mean anyone will send you traffic. Standing up an MCP endpoint does
+                        not put your store in front of Google, ChatGPT, Bing or any other agent. Each of them decides
+                        for itself who gets in, who gets found, who qualifies, what is safe to show, how it ranks, how
+                        it looks, and what the commercial terms are.
                     </BlogText>
 
-                    <BlogHeader>What Google currently documents</BlogHeader>
+                    <BlogHeader>What Google documents, as read on July 24, 2026</BlogHeader>
+                    <BlogText>
+                        Google has published a merchant guide, an FAQ and a set of Merchant API updates covering UCP,
+                        and five things in them decide whether this is relevant to you. The most consequential is the
+                        liability one: in the integration model Google describes, you stay Merchant of Record. The rest
+                        set out which surfaces are in scope, which checkout paths exist, what Merchant Center has to
+                        contain, and which capabilities are gated behind approval. Every item below was read from those
+                        documents on July 24, 2026, and the access position in particular can change without notice.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Google positions UCP for agentic actions across AI Mode in Google Search and Gemini, beginning with direct buying.",
-                            "The merchant remains Merchant of Record in Google's described integration model.",
+                            "The merchant remains Merchant of Record in Google's described integration model. That is a tax and liability position, not a technical detail, so confirm it against the current guide and your own advisers before you build against it.",
                             "Google describes native checkout as the default integration and an embedded checkout option for specific approved merchants.",
                             "The FAQ says Merchant Center remains central and product feeds, brand assets, return policies and business contact information must be complete and current.",
                             "Google's Merchant API updates include UCP checkout eligibility reporting contexts and some capabilities that are allowlisted or require a Google representative.",
                         ]}
                     />
                     <InsightBox variant="warning" label="Availability is not universal">
-                        “Announced,” “documented,” “waitlisted,” “allowlisted,” “approved,” and “generally available” are
-                        different states. Verify the merchant account, country, product, surface, payment provider and
-                        current Google instructions before promising a launch.
+                        Announced is not documented. Documented is not approved. And approved is not generally available.
+                        Before you promise anyone a launch date, check your own merchant account, your country, the
+                        products involved, the surface it runs on, your payment provider, and what Google's
+                        instructions say today.
                     </InsightBox>
 
                     <BlogHeader>Can someone buy without visiting the merchant website?</BlogHeader>
@@ -211,29 +253,31 @@ export default function UniversalCommerceProtocolGuide() {
                         Google&apos;s documented UCP direction includes checkout in Google surfaces, so a qualifying
                         transaction may not require the normal merchant-site journey. But it is inaccurate to say this
                         already applies to every shopper or store, or that the website receives no visit in every flow.
-                        Embedded, fallback, authentication, policy, support and post-purchase paths can differ.
+                        Some flows embed the purchase, some fall back to your site, and sign-in, policy, support and
+                        after-sale steps can each behave differently.
                     </BlogText>
                     <BlogText>
-                        The website still carries direct acquisition, brand, education, policies, accessibility,
-                        account, support, content and fallback responsibilities. UCP readiness is an additional commerce
-                        surface, not proof that the site no longer matters.
+                        Your website still does the work it always did. It is where people find you directly, where the
+                        brand lives, where you explain things, where your policies and accounts sit, where support
+                        happens, and where shoppers land when the other route fails. Being UCP-ready adds a place to
+                        sell. It does not retire the site.
                     </BlogText>
 
                     <BlogHeader>Platform readiness cannot be reduced to a ranking</BlogHeader>
                     <BlogText>
                         Shopify, WooCommerce, custom storefronts and other platforms have different official
                         integrations, partner paths and implementation options that can change quickly. Co-development
-                        or protocol compatibility does not mean a one-click setting exists for every merchant. A custom
-                        stack offers implementation control but also transfers more security, conformance, payment,
-                        monitoring and upgrade work to its owner.
+                        or protocol compatibility does not mean a one-click setting exists for every merchant. A custom stack gives you control over how it is
+                        built, and hands you the security, conformance, payment, monitoring and upgrade work that comes
+                        with it.
                     </BlogText>
                     <BlogList
                         items={[
                             "Check the platform vendor's current UCP statement and the exact merchant account, edition and country.",
                             "Confirm Google access, Merchant Center eligibility, required feeds and policy status.",
                             "Confirm the payment service provider can support the required token and transaction flow.",
-                            "List unsupported products, promotions, tax, shipping, identity, returns, subscriptions and account states.",
-                            "Price build, conformance, vendor services, operations, security review and protocol maintenance.",
+                            "Write down what will not work: which products, promotions, tax cases, shipping options, sign-in situations, returns, subscriptions and account states fall outside it.",
+                            "Price all of it: building it, proving it conforms, whatever your vendors charge, running it, having someone review the security, and keeping up as the protocol changes.",
                         ]}
                     />
                     <BlogText>
@@ -246,16 +290,23 @@ export default function UniversalCommerceProtocolGuide() {
                     </BlogText>
 
                     <BlogHeader>A merchant readiness audit</BlogHeader>
+                    <BlogText>
+                        Eight domains have to hold up before anyone can claim a store is UCP-ready, and this is an
+                        inventory rather than a sequence. Most of it is work you should already be able to evidence:
+                        catalog accuracy, Merchant Center standing, checkout correctness, payment lifecycle, identity,
+                        order handling, request security and data privacy. If a domain below has no owner today, that
+                        gap exists whether or not UCP ever reaches you.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Catalog: stable IDs, variants, price, availability, images, descriptions, identifiers and update latency.",
-                            "Merchant Center: feeds, business identity, brand assets, policies, contacts, diagnostics and account status.",
-                            "Checkout: cart rules, discounts, tax, shipping, currency, inventory reservation, totals and expiry.",
-                            "Payments: supported provider, token flow, authorization, failure, capture, refund, dispute and reconciliation.",
-                            "Identity: guest and linked-account behavior, authorization, account recovery, deletion and least privilege.",
-                            "Orders: confirmation, cancellation, fulfillment, tracking, return, refund and customer-service ownership.",
-                            "Security: request authentication, replay protection, idempotency, validation, rate limits, logs, secrets and incident response.",
-                            "Privacy: purposes, notices, choices, parties, data fields, regions, retention, access and deletion.",
+                            "Catalog: do your product IDs stay stable, are variants right, are price and availability current, are the images and descriptions there, and how quickly do changes show up.",
+                            "Merchant Center: are your feeds clean, is your business identity verified, are brand assets and policies in place, can Google reach you, and is the account in good standing.",
+                            "Checkout: how carts behave, how discounts apply, how tax and shipping are worked out, which currency, whether stock is held while someone pays, whether the total is right, and when a cart expires.",
+                            "Payments: whether your provider is supported, how tokens move, what happens when a payment is authorized, when it fails, when it captures, when you refund, when a customer disputes it, and whether the numbers match at the end.",
+                            "Identity: what a guest can do versus someone with a linked account, what each is allowed to do, how someone gets back into a locked account, how an account is deleted, and making sure nobody has more access than they need.",
+                            "Orders: confirming them, canceling them, shipping them, tracking them, taking returns, issuing refunds, and who answers the customer when something goes wrong.",
+                            "Security: proving each request is genuine, stopping the same one being replayed, making sure a repeat does not charge twice, checking what was sent, limiting how often, logging it, storing secrets properly, and knowing what to do when something breaks.",
+                            "Privacy: why you hold each thing, what you tell people, what they can choose, who else sees it, which fields travel, which countries are involved, how long you keep it, who can read it, and how it gets deleted.",
                         ]}
                     />
                     <BlogText>
@@ -266,7 +317,7 @@ export default function UniversalCommerceProtocolGuide() {
                         covers the equivalent work on that platform.
                     </BlogText>
 
-                    <BlogHeader>Where to start this week</BlogHeader>
+                    <BlogHeader>Where to start</BlogHeader>
                     <BlogText>
                         The audit above is the full picture. If it is more than a small team can take on at once, the
                         first five moves below are useful regardless of when or whether access arrives, because each one
@@ -278,7 +329,7 @@ export default function UniversalCommerceProtocolGuide() {
                             "Check the Merchant Center account itself: feed status, diagnostics, business identity, policies and contact details. Incomplete or stale account data limits what any Google surface can do with the catalog.",
                             "Establish what your current platform and payment provider actually support today, from their own documentation, and what would need building or buying rather than switching on.",
                             "Fix the measurable problems on the storefront you already have. Speed, reliability and correct structured data serve human buyers now and remain relevant to any agent-driven surface later.",
-                            "Keep the direct site funded. It carries acquisition, brand, policies, support, accounts and fallback journeys that a third-party surface does not replace.",
+                            "Keep spending on your own site. It is where you win customers, build the brand, publish your policies, handle support, hold accounts, and catch people when the third-party route fails. None of that moves across.",
                         ]}
                     />
                     <BlogText>
@@ -288,7 +339,8 @@ export default function UniversalCommerceProtocolGuide() {
 
                     <BlogHeader>Discovery and request verification</BlogHeader>
                     <BlogText>
-                        The open standard uses a well-known profile to declare capabilities. Google&apos;s FAQ also
+                        The open standard uses a well-known profile to declare capabilities. Google&apos;s FAQ, read
+                        July 24, 2026, also
                         describes signals for identifying UCP traffic and recommends authenticating requests using the
                         provided OAuth bearer token or other secure signatures instead of relying only on geographic IP
                         blocking. Use the current implementation guide, validate issuer and audience where applicable,
@@ -299,16 +351,17 @@ export default function UniversalCommerceProtocolGuide() {
                     <BlogText>
                         There is no published universal UCP conversion lift, cart-abandonment reduction, traffic loss,
                         revenue gain, recommendation advantage or adoption deadline that can be applied to a store.
-                        Separate eligibility, impressions, initiated checkouts, completed orders, cancellations,
-                        returns, refunds, fees and contribution margin. Compare a defined period and cohort while
+                        Measure the stages separately: who was eligible, who saw you, who started a checkout, who
+                        finished one, who cancelled, who returned, who was refunded, what the fees took, and what was
+                        left. Compare a defined period and cohort while
                         documenting campaigns, product mix, seasonality and other releases.
                     </BlogText>
                     <BlogList
                         items={[
                             "Define the merchant system of record and order identity across Google, payment provider and commerce backend.",
                             "Use documented channel markers and reporting contexts where available.",
-                            "Reconcile money and order state, not only attributed events.",
-                            "Report the integration's scope, date, limitations and confidence instead of assigning causation automatically.",
+                            "Reconcile the money and the order state, not just the events Google says it drove.",
+                            "Say what the integration covered, when you checked, what it could not do, and how sure you are. Do not assume it caused whatever happened next.",
                         ]}
                     />
                     <BlogText>
@@ -322,9 +375,9 @@ export default function UniversalCommerceProtocolGuide() {
                     <BlogHeader>Do you need to rebuild the website for UCP?</BlogHeader>
                     <BlogText>
                         Not by default. Improve catalog, Merchant Center, policy, payment and operational data first.
-                        Consider a platform change only when the current system cannot meet accepted UCP, performance,
-                        security, content, ownership or integration requirements and the total-cost case supports
-                        replacement. A headless CMS, Next.js, structured data or an MCP endpoint alone does not guarantee
+                        Only change platform when the one you have genuinely cannot meet the UCP, performance, security,
+                        content, ownership or integration requirements you have agreed, and the total cost still
+                        favors replacing it. A headless CMS, Next.js, structured data or an MCP endpoint alone does not guarantee
                         eligibility, discovery, recommendation or a sale.
                     </BlogText>
                     <BlogText>
@@ -350,8 +403,8 @@ export default function UniversalCommerceProtocolGuide() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get your commerce readiness plan</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will inventory your catalog, Merchant Center, checkout, payment, order, policy and
-                            security dependencies before recommending configuration, integration or migration.
+                            We go through your catalog, Merchant Center, checkout, payments, orders, policies and security
+                            first. Only then do we tell you whether to configure, integrate or migrate.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
                             Get Your Migration Plan <ArrowRight className="h-4 w-4" />

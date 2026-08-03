@@ -14,29 +14,29 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
   Starter: {
     name: "Starter",
     price: "$1,500",
-    tagline: "Small business site, 5 to 7 pages, fast launch.",
+    tagline: "A small business site, 5 to 7 pages, live quickly.",
     fits: [
       "Under 10 pages",
-      "Brochure or service site, no e-commerce",
-      "Next.js custom build, 90+ Lighthouse handover target",
+      "A brochure or service site. Nothing to buy.",
+      "Custom Next.js, with a 90+ Lighthouse target at handover",
       "1 to 2 weeks delivery",
     ],
   },
   Growth: {
     name: "Growth (Most Popular)",
     price: "$3,500",
-    tagline: "Full migration with blog, redirects, and SEO preserved.",
+    tagline: "A full move, blog and all, without losing your search traffic.",
     fits: [
       "10 to 20 pages",
       "Sanity CMS (you edit content yourself, no developer needed)",
-      "Blog migration plus 301 redirects to keep your Google rankings",
+      "Your blog moves with 301 redirects, so Google keeps finding it",
       "2 to 4 weeks delivery",
     ],
   },
   Scale: {
     name: "Scale",
     price: "$5,000 to $10,000",
-    tagline: "Headless e-commerce, custom integrations, 30+ pages.",
+    tagline: "A headless store, custom integrations, more than 30 pages.",
     fits: [
       "30 or more pages, or 50 to 100 page sites",
       "Shopify or WooCommerce headless rebuild",
@@ -50,9 +50,9 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
     tagline: "Enterprise scope, custom quote.",
     fits: [
       "100+ pages or enterprise replatform",
-      "Multi-region, multi-language, or compliance requirements",
-      "Custom engineering (SaaS dashboards, internal tools, AI integrations)",
-      "Timeline scoped during discovery",
+      "Several regions, several languages, or rules you have to meet",
+      "Custom engineering: SaaS dashboards, internal tools, AI integrations",
+      "We work out the timeline in discovery",
     ],
   },
 };
@@ -139,7 +139,7 @@ export default function TierQuiz() {
             <span className="font-serif italic text-cognac">right for me?</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            Answer 3 questions. We will recommend the tier that fits your scope and budget. No email required.
+            Three questions and we will tell you which tier fits. No email needed.
           </p>
         </div>
 

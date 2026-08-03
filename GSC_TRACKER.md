@@ -32,6 +32,58 @@
 
 | **13** | **Jul 7, 2026** | **146** | **63,800** | **0.2%** | **12** | **3-mo (Apr 6-Jul 6 CSV): 146 clicks / 63.8K imp. 28-day Insights: 63 clicks (+31%), 19.9K imp (-8%) = citation-impressions receding while real clicks GROW (Wk12 trend holding). Homepage still #1: 53 clicks / 707 imp / 7.5% / pos 4.9. divi-theme-slow +167% (14 clicks, #2 converter). RESCUE CONFIRMED: woocommerce-too-slow 0→8 clicks (May 31 info-gain + link fix worked; 3-mo avg pos 45 but clicks say recent position far better). gohighlevel-website-speed -67% 28d (21 clicks 3-mo) — WATCH (decline predates the Jul 6 title shortening). Volume engines: nextjs-hosting 9,866 imp / 1 click (NEW #1 volume page), webflow-migration-cost 8,609/1, webflow-user-accounts 5,744/2, webflow-true-cost 4,895/0/pos 18. INDEXING: 150 URLs "Crawled - currently not indexed" (mix: non-www variants [normal], one ?ref= param [proxy 301s it now], and flappers WITH real impressions: squarespace-migration-cost 658 imp, website-rebuild-cost 466, webflow-true-cost, website-migration-cost-2026); /services/webflow stuck "Discovered - never crawled" despite footer link + sitemap → needs manual Request Indexing. ACTIONS SHIPPED Jul 7: webflow-50-to-100 MERGED into webflow-migration-cost + 301 (Wk11 flag executed; 2 unique FAQs migrated; 4 inbound links retargeted; entry removed from blog.ts + topical map); webflow-migration-cost now links UP to /services/webflow pillar (the volume engine was missing its pillar link). CONTEXT: Bing serving restored Jul 5 (REQ00243285) — expect Bing/DDG/ChatGPT-search channel over 2-3 wks; all-blog Bing meta-length sweep shipped (65 pages). First blog-attributed quote request Jul 7 (Google organic → nextjs-hosting-zero-cost → form, Kenya). 107 AI-persona queries in fresh Queries.csv = original-research dataset confirmed.** |
 
+| **14** | **Aug 1, 2026** | **194** | **96,460** | **0.20%** | **~11.2** | **3-mo CSV (Apr 30-Jul 29): 194 clicks / 96,460 impressions / 0.20% CTR. 28-day Insights: 81 clicks (+45%), 53.8K impressions (+264%) — clicks AND impressions both growing, the healthiest combination recorded so far. Daily volume 1,400-1,840 imp/day. Desktop 143/90,622/0.16%/pos 11.21. Mobile 51/5,696/0.9%/pos 12.3 (5.6x desktop CTR). US 71/55,749/0.13%/pos 11.1. India 15/2,136/0.7%. Pakistan 12/842/1.43% (branded). UK 10/3,864/0.26%. Belgium 2.82% CTR on 213 imp. 1,053 queries in export. **HOMEPAGE STILL #1 CONVERTER:** 56 clicks / 786 imp / 7.12% / pos 7.25. **TOP BLOG RECOVERED:** gohighlevel-website-speed 27 clicks / 3,859 imp / 0.7% / pos 8.2 — reverses the -67% WATCH flagged at Wk13. divi-theme-slow 19/2,692/0.71%/pos 8.37. **WOOCOMMERCE RESCUE HOLDING:** woocommerce-too-slow 15 clicks (0 → 8 at Wk13 → 15 now) though 3-mo avg pos still 35.07. **THE VOLUME ENGINE IS NOW ONE PAGE:** nextjs-hosting-zero-cost 7 clicks / **46,009 impressions** / 0.02% CTR / pos 8.8 — that single post is **48% of all site impressions**, the clearest AI-Overview citation-tax page on the property. how-to-achieve-100-pagespeed has the best blog CTR at 2.61% (6/230/pos 19.98). Pages touched by the Aug 1 repair pass are all low-traffic: is-squarespace-bad-for-seo 2/647/pos 11.93, gohighlevel-keep-crm-replace-website 2/412/pos 8.07.** |
+
+> ### ⚠ Aug 1, 2026 — READ THIS BEFORE DEPLOYING
+>
+> **This data is from BEFORE the remediation went live.** The CSV ends 2026-07-29. Commit
+> `3e93feb` ("new fixes", 30 Jul) rewrote ~70 blog pages including **every one of the top six
+> traffic pages**, and it is already committed to `main`:
+>
+> | Page | 3-mo clicks | 3-mo impressions | Lines changed by `3e93feb` |
+> |---|---|---|---|
+> | gohighlevel-website-speed | 27 | 3,859 | +326 / −629 |
+> | divi-theme-slow | 19 | 2,692 | +402 / −454 |
+> | woocommerce-too-slow | 15 | 3,654 | +411 / −696 |
+> | nextjs-hosting-zero-cost | 7 | **46,009** | +223 / −134 |
+> | shopify-dawn-theme-slow | 7 | 844 | +461 / −505 |
+> | how-to-achieve-100-pagespeed | 6 | 230 | +299 / −680 |
+>
+> So the numbers above describe the **pre-remediation** site. The rewritten versions have not
+> been measured yet.
+>
+> **The repair pass (`BLOG_PASS_TRACKER.md`) has reached 32 of 77 posts and has touched NONE
+> of these six.** They sit at positions #41, #49, #52, #56, #60 and #75 in that order, so on
+> the current sequence the highest-traffic pages on the property would be the LAST to be
+> repaired.
+>
+> **Action: reorder the repair pass to do the top traffic pages first.** Priority order by
+> exposure: nextjs-hosting-zero-cost (48% of all impressions), gohighlevel-website-speed
+> (top-converting blog), woocommerce-too-slow (rescued once already, do not lose it again),
+> divi-theme-slow, shopify-dawn-theme-slow, how-to-achieve-100-pagespeed.
+>
+> **What the repair pass does NOT change, on any of the 32 posts done so far:** no URL or slug
+> changes, no redirects created, no `<title>` changes, no H1 changes, no meta-description
+> rewrites. The ranking-loss mechanism that actually resets a page — moving URLs — is absent.
+> Changes are additive schema, restored explanatory passages, removal of unverifiable claims,
+> verified facts with check dates, and honest `readTime` values.
+>
+> **The one deploy risk worth managing:** all 32 repaired posts carry `dateModified` of
+> 2026-08-01, so the sitemap will present 32 simultaneously-changed URLs. That is legitimate
+> (the content genuinely changed, so it is not red-flag-31 freshness faking) but it invites a
+> clustered re-crawl. **Ship in batches rather than all at once**, lowest-traffic first, and
+> watch GSC between batches.
+>
+> **The real tension to watch:** this property's volume comes from AI Overview citations, and
+> AI Overviews cite specific quotable facts. The remediation stripped a very large number of
+> specific figures. The repair pass has been replacing invented numbers with VERIFIED ones
+> (Shopify's published Lighthouse-60 Theme Store bar, Microsoft 365 list prices effective
+> 1 Jul 2026, Vercel's per-seat Pro pricing, the Core Web Vitals thresholds, Nielsen Norman's
+> "one in seven A/B tests wins", HighLevel's 1 Sep 2026 webhook deprecation). That is the
+> correct trade — a citable verified number beats both an invented number and no number — but
+> pages still carrying neither are the ones to prioritise.
+
+
 > **Week-over-week (Mar 7-13 vs Feb 28-Mar 6):** Impressions 115 vs 6 = **+1,817%** on shopify-dawn-theme-slow page alone.
 
 ---

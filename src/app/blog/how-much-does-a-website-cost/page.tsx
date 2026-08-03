@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, CircleDollarSign, FileCheck2, ReceiptText } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -35,13 +35,17 @@ export const metadata: Metadata = {
         "small business website cost",
         "ecommerce website cost",
         "website migration cost",
+        "what is included in a website quote",
+        "website cost breakdown",
+        "website cost per month",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-07-28",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -65,20 +69,53 @@ const articleSchema = {
             "@id": `${canonicalUrl}#article`,
             headline: title,
             description,
+            image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-07-28",
+            dateModified: "2026-08-01",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Software cost analysis", "Website project scoping", "Vendor contracts", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Pricing",
             inLanguage: "en-US",
-            citation: vendorSources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 2150,
+            timeRequired: "PT11M",
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
+                { "@type": "Thing", name: "Pricing", sameAs: ["https://en.wikipedia.org/wiki/Pricing"] },
+                { "@type": "Thing", name: "Website development pricing" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: vendorSources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-12",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -118,12 +155,18 @@ export default function WebsiteCostGuide() {
                             How Much Does a Website Cost in 2026? <span className="italic text-cognac">Price the Scope, Not the Label</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            There is no honest market-wide price for “a website.” A one-page campaign, a 30-route
-                            migration, a store, and an authenticated application are different products. Compare the
-                            same deliverables, vendor costs, acceptance, operations and exit rights.
+                            Our own work starts at $1,500 for a small, clearly bounded site and usually lands between
+                            $5,000 and $10,000 once a store or real integrations are involved. Those are our published
+                            numbers, not the market&apos;s. Nobody has the market&apos;s number, because a one-page
+                            campaign, a 30-route migration, a store and an application with logins are four different
+                            products that happen to share a word.
+                        </p>
+                        <p className="mt-3 text-base leading-relaxed text-stone-600">
+                            What you can price is a scope, and then check whether the quote beside it covers the same
+                            work. That is the difference between two numbers you can compare and two numbers you cannot.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            PandaCodeGen offer and vendor links reviewed July 24, 2026. Vendor prices can change.
+                            PandaCodeGen offer and vendor links reviewed August 1, 2026. Vendor prices can change.
                         </p>
                     </header>
 
@@ -131,8 +174,9 @@ export default function WebsiteCostGuide() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="May 12, 2026"
-                        readTime="13 min read"
-                        bio="Hassan scopes migrations, integrations and measurable acceptance terms."
+                        readTime="11 min read"
+                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
+                        bio="Hassan scopes the migrations and integrations, and writes acceptance terms you can actually measure."
                     />
 
                     <div className="my-10">
@@ -154,9 +198,9 @@ export default function WebsiteCostGuide() {
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: FileCheck2, title: "Build", body: "Discovery, design, content, implementation, migration, integrations, QA and launch." },
-                            { icon: ReceiptText, title: "Operate", body: "Domain, platform, infrastructure, CMS, apps, email, analytics, support and internal time." },
-                            { icon: CircleDollarSign, title: "Change or exit", body: "Enhancements, vendor increases, data export, repository, licenses, handoff and replacement." },
+                            { icon: FileCheck2, title: "Build", body: "Everything up to launch, including moving the content across." },
+                            { icon: ReceiptText, title: "Operate", body: "What you pay monthly, plus your own team's hours." },
+                            { icon: CircleDollarSign, title: "Change or exit", body: "Later changes, price rises, and what it costs to leave." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -167,6 +211,9 @@ export default function WebsiteCostGuide() {
                     </div>
 
                     <BlogHeader>Current PandaCodeGen pricing and payment split</BlogHeader>
+                    <BlogText>
+                        These are planning anchors, not a promise that any page count, feature set or integration fits a tier. Every tier splits 30 percent at onboarding and 70 percent at delivery. The accepted proposal and statement of work control the final price, the deliverables, the exclusions, the schedule, the acceptance criteria and the remedy.
+                    </BlogText>
                     <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -194,11 +241,32 @@ export default function WebsiteCostGuide() {
                         <Link href="/terms" className={sourceLinkClass}>terms</Link>.
                     </BlogText>
 
+                    <BlogHeader id="is-1500-good">Is $1,500 a good price for a website?</BlogHeader>
+                    <div data-speakable="true">
+                    <BlogText>
+                        It is a fair price for a small site with a settled scope, and a warning sign for anything larger.
+                        At that number the work has to be genuinely bounded: a handful of templates, content you supply,
+                        no migration of an existing set of URLs, and no integrations beyond a form and analytics. Priced
+                        honestly, that is a real project, and it is what our Starter tier is for.
+                    </BlogText>
+                    </div>
+                    <BlogText>
+                        The same number becomes a warning when the brief has grown and the price has not. If a quote
+                        still reads $1,500 once the conversation includes a store, logins, a CRM connection, or moving
+                        200 existing pages without losing their addresses, something has to give, and it is usually the
+                        part you cannot see from the outside: testing, redirect mapping, accessibility, or handing over
+                        the accounts at the end. Ask which of those sits inside the number. Anyone who has priced the
+                        work properly can answer that in a sentence.
+                    </BlogText>
+
                     <BlogHeader>What belongs in a comparable website quote</BlogHeader>
+                    <BlogText>
+                        Two quotes are only comparable once both contain the same seven groups of line items. Discovery, content and migration, integrations, quality scope, search continuity, launch and handover, and the change-control terms. A page count is not a scope: ten repeated location pages and ten unique application screens are different amounts of work.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Discovery, inventory, information architecture, UX, visual design and responsive states.",
-                            "Copy, media, migration, CMS models, imports, localization and editorial workflow.",
+                            "Discovery, listing what you have, how it is organized, how it works for people, how it looks, and how it behaves on every screen.",
+                            "The writing, the images, moving it all across, the content types, the import, translation, and how your team publishes.",
                             "Forms, CRM, calendars, search, authentication, commerce, payments and external APIs.",
                             "Accessibility scope, security controls, browser and device coverage, and performance method.",
                             "URL preservation, redirects, metadata, canonicals, structured data, analytics and consent.",
@@ -215,7 +283,10 @@ export default function WebsiteCostGuide() {
                     <BlogHeader id="cost-drivers">What moves the price up or down</BlogHeader>
                     <BlogText>
                         Two quotes for the same page count can land a long way apart because the work behind each page
-                        is different. These are the levers that actually move a number. They move the schedule as well,
+                        is different. Across our own tiers those levers span $1,500 to $10,000 for the same nominal
+                        page count: a bounded site with supplied content sits at the bottom, and templates, states,
+                        integrations, migration and compliance scope are what carry a project to the top. These are the
+                        levers that actually move a number. They move the schedule as well,
                         so it is worth reading this next to{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom website takes to build</Link>.
                     </BlogText>
@@ -246,7 +317,7 @@ export default function WebsiteCostGuide() {
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-semibold">Content and migration</td>
-                                    <td className="p-4">Large URL inventories, inconsistent legacy content, redirect mapping and CMS modelling</td>
+                                    <td className="p-4">Large URL inventories, inconsistent legacy content, redirect mapping and CMS modeling</td>
                                     <td className="p-4">A small, clean content set you are willing to rewrite</td>
                                 </tr>
                                 <tr>
@@ -317,22 +388,37 @@ export default function WebsiteCostGuide() {
                     </div>
 
                     <BlogHeader>Recurring cost is more than hosting</BlogHeader>
+                    <div data-speakable="true">
+                    <BlogText>
+                        People ask what a website costs to build and then get caught by what it costs to keep. The
+                        monthly figure is rarely one line. It is hosting or the platform plan, plus every seat, app and
+                        service attached to it, plus the hours someone on your side spends publishing and maintaining.
+                        Panda Patches, the founder-affiliated store disclosed further down this page, runs at roughly $55 a month in tooling, and
+                        that is a deliberately lean setup with no app subscriptions sitting behind it. Build the list
+                        before you assume a number.
+                    </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Domain, DNS, certificate and business-email services.",
+                            "Domain and DNS. Two registrars charge different prices for the same domain because the markup is the registrar's, not the registry's. Cloudflare Registrar states it adds no markup and passes through only the registry and ICANN fee. Compare renewal prices rather than promotional first-year ones, which is where the surprise usually lives.",
+                            "TLS certificate, normally included free by modern hosts through Let's Encrypt.",
+                            "Business email, charged per person. Microsoft's published US list prices took effect on July 1, 2026 at $7 per user per month for Business Basic, $14 for Business Standard and $22 for Business Premium, with existing customers held at their current price until renewal. Checked August 1, 2026.",
                             "Website or commerce plan, hosting, compute, bandwidth, storage, image processing and build usage.",
                             "CMS seats, records, API usage, preview, localization and asset storage.",
-                            "Apps, plugins, extensions, licenses, payment fees, tax, shipping and messaging usage.",
+                            "Apps, plugins, extensions, licenses, tax, shipping and messaging usage.",
+                            "Payment processing, which is two fees rather than one. The processor takes its cut, and some platforms add a further fee on top when you do not use their own payment product. Check for both before deciding a platform is the cheaper option.",
                             "Analytics, consent management, monitoring, backups, security, incident response and support.",
                             "Internal publishing, campaign, training, vendor management and compliance time.",
                         ]}
                     />
                     <BlogText>
                         Save a dated vendor quote for the country, billing term, seats and expected usage. As one current
-                        example, Vercel&apos;s July 2026 public page labels Hobby for personal projects and lists Pro at
-                        $20 per month with included usage and additional usage-based charges. That does not make
-                        commercial hosting universally free or cap a production site at $20. We have written separately
-                        on{" "}
+                        example, Vercel&apos;s public pricing page on August 1, 2026 describes Hobby as free for personal
+                        projects and lists Pro at $20 per user per month, with $20 of included usage and pay-as-you-go
+                        charges above that. Read the words &ldquo;per user&rdquo; closely, because that is where most
+                        hosting estimates go wrong. Three people who need access is $60 a month before the site has
+                        served a single page. None of which makes commercial hosting universally free, or caps a
+                        production site at $20. We have written separately on{" "}
                         <Link href="/blog/nextjs-hosting-zero-cost" className={sourceLinkClass}>what Next.js hosting actually costs</Link>{" "}
                         and on how{" "}
                         <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLinkClass}>store app subscriptions stack up on a monthly bill</Link>.
@@ -360,25 +446,50 @@ export default function WebsiteCostGuide() {
                         ]}
                     />
 
-                    <BlogHeader>Panda Patches: a first-party cost example</BlogHeader>
+                    <BlogHeader id="who-builds-it">Who builds it changes the price, and the bill afterwards</BlogHeader>
                     <BlogText>
-                        Panda Patches is owned by PandaCodeGen&apos;s co-founder, so the owner has approved its cost
-                        figures for publication. The owner reports that the former WordPress and WooCommerce stack was
-                        approximately $200 per month and the replacement Next.js, Sanity, Supabase and Square tooling
-                        was approximately $55 per month for the referenced operating period.
+                        The same scope costs different amounts depending on who does the work, and the gap is not only in
+                        the invoice. Driving a builder yourself moves the cost into your own hours, which is real money
+                        when those hours had another use. One person is usually the cheapest quote and carries the most
+                        continuity risk: if something breaks eight months later and they are unavailable, whoever picks
+                        it up has to work out how the site was built before they can safely change anything, and you pay
+                        for that reading time. A team costs more at the start and holds that knowledge in more than one
+                        head.
                     </BlogText>
                     <BlogText>
-                        This is a related-party, first-party example, not a platform benchmark. It does not include every
-                        business&apos;s feature set, usage, labor, payment processing, tax, migration cost or risk. It
-                        also does not prove that the architecture caused revenue growth or that another store will
-                        achieve the same cost. A decision should use dated invoices and a comparable scope. The build is
-                        written up in full in the{" "}
+                        Our published tiers, $1,500 to $10,000, assume a team doing the work and carrying it afterwards.
+                        A single freelancer may well quote less, and the difference is not padding on our
+                        side or a bargain on theirs. It is the continuity described above, priced or unpriced. None of
+                        that makes a freelancer the wrong choice, and plenty of them are excellent. It means the
+                        question worth asking any vendor is what happens to the site if they stop answering, and then
+                        pricing the answer instead of assuming it. We have covered the vetting side in{" "}
+                        <Link href="/blog/cheap-web-developer" className={sourceLinkClass}>how to hire a cheap web developer without getting burned</Link>{" "}
+                        and the individual-versus-team trade in{" "}
+                        <Link href="/blog/website-developer-agency" className={sourceLinkClass}>what a web development agency actually does</Link>.
+                    </BlogText>
+
+                    <BlogHeader>Panda Patches: a first-party cost example</BlogHeader>
+                    <BlogText>
+                        Panda Patches is owned by Imran, PandaCodeGen&apos;s co-founder. PandaCodeGen built and
+                        maintains the platform and holds no stake in the business, and the owner has approved these cost
+                        figures for publication. The owner reports that the former WordPress and WooCommerce stack ran
+                        at approximately $200 per month, and that the replacement Next.js, Sanity, Supabase and Square
+                        tooling runs at approximately $55 per month for the referenced operating period.
+                    </BlogText>
+                    <BlogText>
+                        Read that as one store&apos;s tooling bill rather than a benchmark. It covers the tooling and
+                        nothing else, so labor, payment processing, tax and the migration itself all sit outside the
+                        figure, and a store with a different feature set will land somewhere else entirely. Price your
+                        own decision against dated invoices for a comparable scope. The build is written up in full in
+                        the{" "}
                         <Link href="/work/panda-patches" className={sourceLinkClass}>Panda Patches case study</Link>.
                     </BlogText>
 
                     <BlogHeader>How to calculate three-year total cost</BlogHeader>
                     <BlogText>
-                        Use the same time horizon and scope for each option:
+                        Three-year total cost is the build plus everything that follows it: migration, vendor services,
+                        maintenance and support, your own team's time, the changes you will want, a risk allowance, and
+                        what it costs to leave. Use the same horizon and the same scope for every option you compare:
                     </BlogText>
                     <div className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-charcoal">
                         Total cost = discovery and build + migration + vendor services + maintenance and support
@@ -403,6 +514,9 @@ export default function WebsiteCostGuide() {
                     </BlogText>
 
                     <BlogHeader id="spend-less">How to spend less without shrinking the outcome</BlogHeader>
+                    <BlogText>
+                        The cheapest lever is the first one: write the requirement list before you ask for prices, and send the identical document to every vendor. Quotes become comparable and the padding for unknowns disappears. After that, cut features rather than craft, know whether you bought hourly or fixed scope, reduce what you rent, and settle ownership in writing before onboarding.
+                    </BlogText>
                     <div className="my-8 space-y-4">
                         {[
                             {
@@ -428,7 +542,7 @@ export default function WebsiteCostGuide() {
                             {
                                 num: "5",
                                 title: "Settle ownership in writing before onboarding",
-                                body: "Ask what transfers to you on final payment, what stays the vendor's reusable tooling, which third-party licences apply, and how the repository, domain, hosting, CMS and analytics accounts are handed over. Sorting this before work starts costs nothing. Sorting it during a dispute is expensive.",
+                                body: "Ask what transfers to you on final payment, what stays the vendor's reusable tooling, which third-party licenses apply, and how the repository, domain, hosting, CMS and analytics accounts are handed over. Sorting this before work starts costs nothing. Sorting it during a dispute is expensive.",
                             },
                         ].map((step) => (
                             <div key={step.num} className="flex gap-4 rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -476,13 +590,14 @@ export default function WebsiteCostGuide() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 font-serif text-3xl">Get your migration price and plan</h2>
+                        <h2 className="mb-3 font-serif text-3xl">Get a price for your actual scope</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will inventory the current site, pages, content, integrations, vendor costs, acceptance,
-                            cutover and handoff, then give you a project-specific written scope.
+                            New build or replacement, the process is the same. We inventory the pages, content,
+                            integrations, vendor costs, acceptance, cutover and handoff, then come back with a written
+                            scope and a number you can hold any other quote against.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
+                            Get Your Written Scope and Price <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 

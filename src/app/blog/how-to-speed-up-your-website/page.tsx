@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Network, ScanSearch } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -33,13 +33,17 @@ export const metadata: Metadata = {
         "PageSpeed optimization",
         "Core Web Vitals",
         "improve website loading speed",
+        "how to make my website faster",
+        "reduce page load time",
+        "website speed test",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-speed-up-your-website")],
@@ -48,12 +52,8 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "PageSpeed Insights documentation", url: "https://developers.google.com/speed/docs/insights/v5/about" },
     { name: "Google Search Central: Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
     { name: "Chrome: Lighthouse performance scoring", url: "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" },
-    { name: "web.dev: optimize LCP", url: "https://web.dev/articles/optimize-lcp" },
-    { name: "web.dev: optimize INP", url: "https://web.dev/articles/optimize-inp" },
-    { name: "web.dev: optimize CLS", url: "https://web.dev/articles/optimize-cls" },
 ];
 
 const articleSchema = {
@@ -65,19 +65,53 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Web performance", "Core Web Vitals", "Lighthouse", "Rendering strategies", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1950,
+            timeRequired: "PT8M",
+            about: [
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+                { "@type": "Thing", name: "Core Web Vitals" },
+                { "@type": "Thing", name: "Content delivery network", sameAs: ["https://en.wikipedia.org/wiki/Content_delivery_network"] },
+                { "@type": "Thing", name: "Website speed optimization" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Speed up your website", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-04-30",
+            dateModified: "2026-08-03",
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -91,7 +125,6 @@ const articleSchema = {
     ],
 };
 
-const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function WebsiteSpeedGuide() {
     return (
@@ -116,29 +149,29 @@ export default function WebsiteSpeedGuide() {
                             same page state after each change.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Google, Chrome and web.dev guidance.
+                            Reviewed August 3, 2026 against current Google and Chrome guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Before the 12 diagnostics</h2>
                         <BlogList
                             items={[
-                                "Name the route, visitor journey, device, region, consent state and business symptom.",
+                                "Name the page, what the visitor was doing, the device, the region, what they consented to, and what it is costing you.",
                                 "Separate Chrome field data from a Lighthouse lab result.",
                                 "Keep at least three comparable runs per agreed profile and preserve raw reports.",
                                 "Do not use a universal three-second rule, platform ceiling or sub-second promise.",
-                                "Retest function, accessibility, analytics and consent after performance work.",
+                                "After speed work, retest that it still works, is still accessible, still tracks, and still respects consent.",
                             ]}
                         />
                     </section>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: Network, title: "Delivery", body: "DNS, redirects, connection, cache, CDN, origin and document." },
-                            { icon: ScanSearch, title: "Rendering", body: "Discovery, media, CSS, fonts, layout and main-thread work." },
+                            { icon: Network, title: "Delivery", body: "Everything between the click and the first byte." },
+                            { icon: ScanSearch, title: "Rendering", body: "Everything between the first byte and a usable page." },
                             { icon: Gauge, title: "Experience", body: "Field LCP, INP and CLS plus the actual visitor journey." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -148,6 +181,65 @@ export default function WebsiteSpeedGuide() {
                             </div>
                         ))}
                     </div>
+
+                    <BlogHeader id="worked-example">A worked example, measured on this page</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Rather than describe the method, here is a run of it against this article, so you can see
+                            what the numbers look like and what they do and do not settle. <strong>Measured August 2,
+                            2026, headless Chromium 150.0.0.0 on Windows 11, one run, unthrottled connection, no CPU
+                            throttling, cold cache, from a single location.</strong> Those conditions are the whole
+                            point: change any of them and the numbers change, which is why one lab run is a diagnostic
+                            and never a verdict.
+                        </BlogText>
+                    </div>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Measurement</th><th className="p-4">Value</th><th className="p-4">What it tells you</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr><td className="p-4 font-bold">Time to first byte</td><td className="p-4">81 ms</td><td className="p-4">The server responded quickly. Whatever is slow here, it is not the origin</td></tr>
+                                <tr><td className="p-4 font-bold">DOMContentLoaded</td><td className="p-4">1,952 ms</td><td className="p-4">Nearly two seconds after an 81 ms first byte. The delay is entirely in what happens after the response arrives</td></tr>
+                                <tr><td className="p-4 font-bold">HTML over the wire</td><td className="p-4">58.8 KB</td><td className="p-4">Compressed. Uncompressed it is 644 KB, so compression is doing an 11x reduction</td></tr>
+                                <tr><td className="p-4 font-bold">Total requests</td><td className="p-4">33</td><td className="p-4">Count alone means little; what they weigh is the useful number</td></tr>
+                                <tr><td className="p-4 font-bold">Total transferred</td><td className="p-4">427 KB</td><td className="p-4">Everything the browser fetched to render an article</td></tr>
+                                <tr><td className="p-4 font-bold">JavaScript</td><td className="p-4">235 KB across 13 files</td><td className="p-4"><strong>55% of everything transferred, on a page that is mostly text</strong></td></tr>
+                                <tr><td className="p-4 font-bold">CSS</td><td className="p-4">93 KB across 3 files</td><td className="p-4">The second largest category</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Read the first two rows together, because that pairing is the most useful thing on this page. An
+                        81 ms first byte against a 1,952 ms DOMContentLoaded says the server did its job and the cost is
+                        downstream, so anyone selling us faster hosting would be selling a fix for a problem we do not
+                        have. That is the single most common misdiagnosis in this whole subject, and you can rule it in
+                        or out in about a minute on your own site.
+                    </BlogText>
+                    <BlogText>
+                        The JavaScript row is the uncomfortable one and it stays in. <strong>On an article that is largely
+                        text, JavaScript is 55% of what we ship.</strong> That is not a disaster and the page still
+                        renders its content in the initial HTML, but it is more than a text page needs, and publishing
+                        a speed guide does not exempt us from the finding. If you run the same check and see the same
+                        shape, the honest next step is the same for you as for us: find out what each of those files is
+                        for, and whether the ones that are not needed for first render can be deferred or dropped.
+                    </BlogText>
+                    <InsightBox variant="warning" label="What this run does not show">
+                        Two things, and they matter more than the numbers above. <strong>Largest Contentful Paint was
+                        not captured in this run</strong>, so nothing here tells you when the main content actually
+                        appeared, which is the metric a visitor experiences. And a single unthrottled run from one
+                        machine on a fast connection is not what your visitors have. Field data from Search Console at
+                        the 75th percentile is the only thing that describes them. Treat everything above as a way to
+                        find the constraint, never as a score.
+                    </InsightBox>
+                    <BlogText>
+                        You can reproduce this in your own browser without installing anything. Open the page, open
+                        developer tools, and in the console read{" "}
+                        <code>performance.getEntriesByType(&apos;navigation&apos;)[0]</code> for the timing rows and{" "}
+                        <code>performance.getEntriesByType(&apos;resource&apos;)</code> for the per-file weights. Group
+                        the second one by <code>initiatorType</code> and you have the table above for any site you can
+                        load, including your competitors&apos;.
+                    </BlogText>
 
                     <BlogHeader>1. Confirm the route and template</BlogHeader>
                     <BlogText>
@@ -161,7 +253,7 @@ export default function WebsiteSpeedGuide() {
 
                     <BlogHeader>2. Separate field and lab data</BlogHeader>
                     <BlogText>
-                        PageSpeed Insights can show eligible Chrome User Experience Report data and a Lighthouse lab
+                        Google&apos;s <a href="https://developers.google.com/speed/docs/insights/v5/about" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">PageSpeed Insights</a> can show eligible Chrome User Experience Report data and a Lighthouse lab
                         run. Field data describes real-user distributions; the lab result is a simulated diagnostic.
                         Use both for their intended purpose and state when URL data is unavailable and origin data is
                         substituted. Our{" "}
@@ -171,14 +263,19 @@ export default function WebsiteSpeedGuide() {
                         shows how we record lab runs.
                     </BlogText>
                     <BlogText>
-                        Google publishes a good threshold for each Core Web Vital: Largest Contentful Paint at or under
+                        Google <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">publishes a good threshold</a> for each Core Web Vital: Largest Contentful Paint at or under
                         2.5 seconds, Interaction to Next Paint at or under 200 milliseconds, and Cumulative Layout Shift
-                        at or under 0.1. Those are the numbers to design an acceptance test around. A Lighthouse
-                        performance score is a weighted summary of lab metrics, not a fourth vital and not a ranking
+                        at or under 0.1. Those are the numbers to design an acceptance test around. A <a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Lighthouse
+                        performance score</a> is a weighted summary of lab metrics, not a fourth vital and not a ranking
                         cutoff.
                     </BlogText>
 
                     <BlogHeader>Which tool answers which question</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            No single performance tool answers every question, and reaching for the wrong one is how a morning disappears into a metric that was never the constraint. Five tools cover the ground between them, and each has one question it is genuinely best at. Pick by the question you are holding rather than by the tab you already have open.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "PageSpeed Insights: eligible field data and a Lighthouse lab run for one URL in one place. Use it for the headline diagnosis and the shareable record.",
@@ -195,6 +292,11 @@ export default function WebsiteSpeedGuide() {
                     </BlogText>
 
                     <BlogHeader>3. Trace DNS, redirects and connection setup</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Everything in this step happens before your own code runs, which is why no amount of front-end work will shorten it. The browser has to resolve the hostname, follow any redirects, negotiate TLS and open a connection before the first byte of your document exists. Three checks cover the whole stage.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Remove accidental redirect chains and verify canonical host and protocol behavior.",
@@ -231,6 +333,11 @@ export default function WebsiteSpeedGuide() {
                     </BlogText>
 
                     <BlogHeader>6. Right-size images and video</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Most image weight on a slow page is dimensions nobody sees, because a file sized for a large desktop display costs a phone visitor the full download whatever slot it lands in. Serving dimensions close to the rendered size is the largest saving available in this step, and it changes nothing about how the page looks.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Serve dimensions close to the rendered slot with responsive candidates.",
@@ -250,6 +357,11 @@ export default function WebsiteSpeedGuide() {
                     </BlogText>
 
                     <BlogHeader>8. Reduce JavaScript and long tasks</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            JavaScript charges the visitor twice, once to download it and once to parse and execute it, and on a mid-range phone the second charge is usually the larger. That is why deleting a small file can beat compressing a large image. The work here is finding the code that ships to this route and is not needed by it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Use coverage and traces to identify unused and expensive code.",
@@ -282,6 +394,11 @@ export default function WebsiteSpeedGuide() {
                     </BlogText>
 
                     <BlogHeader>11. Verify cache and CDN behavior</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A cache is worth whatever its miss and invalidation behavior is worth, and that is the half nobody tests. A configuration that serves a fast hit and then serves yesterday&apos;s price after an inventory change has bought you nothing. Decide what is cacheable by route and user state, then prove each state behaves the way you decided.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Define what can be cached and for how long by route and user state.",
@@ -290,8 +407,20 @@ export default function WebsiteSpeedGuide() {
                             "Test cold and warm conditions and document which state the acceptance method uses.",
                         ]}
                     />
+                    <BlogText>
+                        The usual working convention is a long cache lifetime on fingerprinted static assets, where the
+                        filename changes whenever the contents do, and a short one on HTML, which has to be able to
+                        change without waiting for a cache to expire. That split is what lets a returning visitor reuse
+                        almost everything while still seeing today&apos;s content. It only holds if your build actually
+                        fingerprints those filenames, so check that before extending any lifetime.
+                    </BlogText>
 
                     <BlogHeader>12. Add release and regression controls</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Speed work that is not defended by a repeatable test gets undone by a later release, usually by someone who never knew the constraint existed. What defends it is a recorded baseline rather than a memory of a good afternoon. Four controls make the improvement survive the next deploy.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Repeat the agreed pages and profiles three times and retain reports.",
@@ -318,6 +447,11 @@ export default function WebsiteSpeedGuide() {
                     </BlogText>
 
                     <BlogHeader>When to optimize and when to rebuild</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Optimize unless the platform itself is blocking a requirement you have already accepted, which is a narrower condition than most rebuild conversations assume. The measured constraint decides this, not the age of the site and not a dislike of the current editor. Three positions cover almost every case.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Optimize when measured constraints are controllable and the current editor, commerce and integration model still fits.",
@@ -347,13 +481,6 @@ export default function WebsiteSpeedGuide() {
                         evidence does and does not support is covered in{" "}
                         <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">how website speed affects SEO</Link>.
                     </BlogText>
-
-                    <BlogHeader>Primary sources</BlogHeader>
-                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
-                        {sources.map((source) => (
-                            <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>{source.name}</a></li>
-                        ))}
-                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />

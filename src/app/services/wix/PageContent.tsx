@@ -68,7 +68,7 @@ export default function PageContent() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Wix can be a practical starting point. If design, content, commerce, performance, or integration needs have changed, we can compare the current site with a scoped custom implementation. <span className="text-charcoal font-medium">Search outcomes, commercial terms, support, access, licensing, ownership, and handover are not assumed.</span>
+            Wix is a practical starting point. If what you need from design, content, selling, speed or integrations has moved on, we can put your current site next to a scoped custom implementation. <span className="text-charcoal font-medium">We do not assume anything about search results, what you pay, your support, access, licences, ownership or handover. Those get agreed.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
@@ -161,7 +161,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              A migration assessment should verify editor constraints, exports, domains, content, apps, responsive behavior, current performance, account costs, and provider terms. The written proposal, not this page, defines price, timing, support, confidentiality, access, ownership, and remedies.
+              A migration assessment should check what the editor will not let you do, what you can export, the domains, the content, the apps, how it behaves on mobile, how fast it is now, what the account costs, and the provider terms. The written proposal, not this page, defines price, timing, support, confidentiality, access, ownership, and remedies.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               Get your migration plan <ArrowRight className="w-4 h-4" />
@@ -178,9 +178,9 @@ export default function PageContent() {
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Inventory & Export Review", desc: "We inventory pages, media, posts, forms, products, bookings, members, domains, metadata, apps, and available exports, then record gaps or manual work.", icon: FileSearch, duration: "Phase 1" },
-              { step: "02", title: "Design & Workflow Mapping", desc: "We define what is retained, redesigned, transformed, or excluded, including responsive states, accessibility, content, and integrations.", icon: Wrench, duration: "Phase 2" },
-              { step: "03", title: "Build & Redirect Plan", desc: "We implement the approved scope and prepare a source-to-destination URL map. Redirects reduce migration risk but do not guarantee rankings or traffic.", icon: Search, duration: "Phase 3" },
+              { step: "01", title: "Inventory & Export Review", desc: "We list your pages, media, posts, forms, products, bookings, members, domains, metadata, apps and whatever Wix will let you export. Then we write down the gaps and what has to be done by hand.", icon: FileSearch, duration: "Phase 1" },
+              { step: "02", title: "Design & Workflow Mapping", desc: "We say what is kept, what is redesigned, what is reshaped and what is dropped. That covers how it behaves on every screen, accessibility, the content and the integrations.", icon: Wrench, duration: "Phase 2" },
+              { step: "03", title: "Build & Redirect Plan", desc: "We build the agreed scope and map every old URL to its new home. Redirects cut the risk. They do not guarantee your rankings or your traffic.", icon: Search, duration: "Phase 3" },
               { step: "04", title: "Cutover & Handover", desc: "We follow the agreed DNS, content, functional, analytics, accessibility, monitoring, rollback, training, access, and support checks.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn

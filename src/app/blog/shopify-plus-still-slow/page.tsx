@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Building2, Gauge, Network, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Shopify Plus speed",
         "Shopify Plus performance",
@@ -77,6 +78,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/shopify-plus-still-slow"),
             description,
             datePublished: "2026-02-06",
             dateModified: "2026-07-24",
@@ -85,13 +87,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Shopify", "Shopify themes", "Ecommerce performance", "Core Web Vitals", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Enterprise Shopify",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+            ],
+            wordCount: 1300,
+            timeRequired: "PT4M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Shopify Plus performance", item: "https://www.pandacodegen.com/blog/shopify-plus-still-slow" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#webpage",
+            url: "https://www.pandacodegen.com/blog/shopify-plus-still-slow",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/shopify-plus-still-slow#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -142,7 +172,7 @@ export default function ShopifyPlusStillSlowPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="4 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The correct starting point</h2>
@@ -194,7 +224,33 @@ export default function ShopifyPlusStillSlowPage() {
                         the evidence on the route that is actually slow.
                     </InsightBox>
 
+                    <BlogHeader id="plus-specific">What is actually different about a Plus store</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four things, and none of them is the plan price. A Plus storefront usually carries more integration surface than a smaller one, and that surface is where the time goes, and knowing which of the four
+                            applies to you changes where you look first.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "The integration load is heavier as a result. Plus merchants commonly run classes of system a smaller store does not: ERP or inventory sync, loyalty, subscriptions, personalisation, tax and compliance. Each tends to contribute its own script to the storefront, and the theme layer gives you no built-in way to isolate or defer them per route.",
+                            "Checkout customisation moved. Merchants who built deep custom logic under checkout.liquid rebuild it as checkout UI extensions and Functions. Extensions that are not scoped carefully reintroduce script and network work into the checkout flow, which is the one place a Plus store can be slow in a way a smaller store cannot.",
+                            "Catalogue scale is a per-request cost. Collection and search templates get more expensive as SKU and variant counts grow, because that markup is produced per request rather than served pre-built. It is why benchmarks taken on small catalogues describe a different store than yours.",
+                            "Multi-market and multi-currency add work to the same templates. Every additional locale or currency is more logic on the routes that already do the most.",
+                        ]}
+                    />
+                    <BlogText>
+                        And one thing worth knowing before headless is proposed as the fix: <strong>Plus features
+                        survive a custom storefront.</strong> Flow, Checkout Extensibility, multi-location inventory and
+                        multi-currency all continue to work behind a separately built frontend, because they live in the
+                        commerce layer rather than the theme. Whatever the argument for or against rebuilding, losing
+                        what you pay Plus for is not part of it.
+                    </BlogText>
+
                     <BlogHeader>1. Define the incident or objective</BlogHeader>
+                    <BlogText>
+                        Do not collapse all five into the site is slow. Each one requires different evidence, different owners and different acceptance criteria, and starting work before you know which you have is how a team spends a month on the wrong layer.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A Core Web Vital is Moderate or Poor for a meaningful real-user segment.",
@@ -221,11 +277,14 @@ export default function ShopifyPlusStillSlowPage() {
                             "Prioritize routes with both poor experience and material traffic or business importance.",
                             "Compare mobile and desktop rather than averaging them together.",
                             "Separate templates and markets that carry different content or integrations.",
-                            "Allow for the documented reporting delay before closing the investigation.",
+                            "Allow for Shopify's documented reporting delay before closing the investigation: the web performance report lags real traffic, so a change made today does not appear in it today. Check the current delay in your own dashboard rather than assuming it.",
                         ]}
                     />
 
                     <BlogHeader>3. Trace the production page</BlogHeader>
+                    <BlogText>
+                        Trace the real page, not a staging copy, because apps and tags behave differently in production. Five areas account for most of what you will find, and each row pairs what to inspect with what to do about it. Refactor only the bottleneck the trace actually named.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -259,6 +318,9 @@ export default function ShopifyPlusStillSlowPage() {
                     </BlogText>
 
                     <BlogHeader>5. Optimize with enterprise controls</BlogHeader>
+                    <BlogText>
+                        At Plus scale the constraint is rarely the technique, it is governance. Five controls make an improvement stick: an owner and a business justification for every app and tag, route-level budgets enforced before release, phased rollouts with named rollback criteria, guardrails that keep accessibility, analytics and consent intact, and vendor changes tracked on the same timeline as your field data.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Assign an owner and business justification to every app, tag and customer-facing feature.",
@@ -290,6 +352,9 @@ export default function ShopifyPlusStillSlowPage() {
                     />
 
                     <BlogHeader>7. Use credible acceptance criteria</BlogHeader>
+                    <BlogText>
+                        A 90-plus Lighthouse target can be an accepted delivery term under recorded conditions. It should not be restated as a permanent guarantee for every route, visitor, app state or future release. Six things make the term enforceable, and the run count and the recorded conditions are what separate a criterion from a screenshot.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Name representative routes, devices and required page states.",

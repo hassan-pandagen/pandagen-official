@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileArchive, LayoutTemplate, Wrench } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Squarespace vs custom website",
         "Squarespace alternative",
@@ -64,10 +65,6 @@ const sources = [
         name: "Squarespace performance guidance",
         url: "https://support.squarespace.com/hc/en-us/articles/360022529371-Reducing-your-page-size-for-faster-loading",
     },
-    {
-        name: "Google site-move guidance",
-        url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
-    },
 ];
 
 const articleSchema = {
@@ -77,6 +74,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/squarespace-vs-custom-website"),
             description,
             datePublished: "2026-04-14",
             dateModified: "2026-07-24",
@@ -85,13 +83,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Squarespace", "Website migration", "Technical SEO", "Content management systems"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website platforms",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+                { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
+            ],
+            wordCount: 1400,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Squarespace vs custom", item: "https://www.pandacodegen.com/blog/squarespace-vs-custom-website" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#webpage",
+            url: "https://www.pandacodegen.com/blog/squarespace-vs-custom-website",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/squarespace-vs-custom-website#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -144,7 +170,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -182,14 +208,17 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </BlogText>
                     <BlogText>
                         One workflow question deserves a separate answer: what the next redesign costs. Squarespace 7.1
-                        has no template-swap action, so a change of layout direction is rebuilt page by page in the
+                        may offer no template-swap action, and where it does not, a change of layout direction is rebuilt page by page in the
                         editor and the cost scales with the number of pages. On a custom build the design layer is
                         separate from the content store, so templates and components can change while the content stays
-                        where it is. Confirm the current behaviour in Squarespace&apos;s documentation before planning a
+                        where it is. Confirm the current behavior in Squarespace&apos;s documentation before planning a
                         rebrand around either assumption.
                     </BlogText>
 
                     <BlogHeader>2. Compare features and boundaries</BlogHeader>
+                    <BlogText>
+                        The answer to “can the platform do it” is usually yes, so the useful question is what it costs to run. Read the add-on model as part of the feature set: scheduling, email campaigns, member areas, review displays and chat are separate products with their own billing, and each one that renders on a page typically loads its own script there. The table below asks the question from both sides rather than declaring a winner.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -206,8 +235,8 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </div>
                     <BlogText>
                         Read the add-on model as part of the feature set. Scheduling, email campaigns, member areas,
-                        review displays and chat are separate products with their own billing, and most of them place
-                        their own script on every page that shows them. A feature added this way changes the recurring
+                        review displays and chat are separate products with their own billing, and each one that renders on a
+                        page typically loads its own script there. A feature added this way changes the recurring
                         bill and the page weight at the same time, which is why the answer to &ldquo;can the platform do
                         it&rdquo; is usually yes and the useful question is what it costs to run.
                     </BlogText>
@@ -242,7 +271,7 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                     <BlogHeader>4. Compare current cost from invoices</BlogHeader>
                     <BlogText>
-                        Squarespace is rolling plan families and features by account and region. Commerce, digital
+                        Squarespace plan families and features can differ by account and region, so read your own account rather than a published summary. Commerce, digital
                         product and payment-processing fees depend on plan, product type, processor and country. Record
                         the current site, domain, email, scheduling, campaigns, digital products, extensions and
                         transaction costs from actual subscriptions and statements.
@@ -257,10 +286,13 @@ export default function SquarespaceVsCustomWebsitePage() {
                     />
 
                     <BlogHeader>5. Price custom ownership honestly</BlogHeader>
+                    <BlogText>
+                        Custom does not mean zero recurring cost. It means the organization chooses and owns more of the system, under whatever account, code and licensing terms it accepts. Six categories make up that ownership, and the build is only the first of them.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Discovery, design, engineering, content and migration.",
-                            "Hosting, CMS, forms, email, database, search and monitoring.",
+                            "Hosting, the CMS, forms, email, a database, search and monitoring.",
                             "Security updates, framework and vendor upgrades.",
                             "Accessibility, SEO, analytics, consent and browser testing.",
                             "Support, incident response, backups and recovery.",
@@ -301,6 +333,9 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>7. Compare SEO controls</BlogHeader>
+                    <BlogText>
+                        Check who controls each of these on the platform you are on. Those answers decide whether an SEO problem is an implementation task or a platform boundary, which is the only version of the question worth arguing about. Five control areas settle it.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Crawlability, index directives, canonicals and sitemaps.",
@@ -327,6 +362,9 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>8. Choose Squarespace when</BlogHeader>
+                    <BlogText>
+                        Stay when the supported editor and feature set meet the requirements you have accepted, and when the team genuinely values managed hosting and a single vendor. The condition that decides it most often is the last one: an organization that does not want ongoing engineering ownership should not buy ongoing engineering ownership.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The supported editor and feature set meet the accepted requirements.",
@@ -338,6 +376,9 @@ export default function SquarespaceVsCustomWebsitePage() {
                     />
 
                     <BlogHeader>9. Evaluate custom when</BlogHeader>
+                    <BlogText>
+                        Evaluate, not choose. Custom earns a costing exercise when a required interaction, content structure or integration is impractical on the current platform, or when a measured performance constraint cannot be resolved acceptably where you are. The last two conditions fail quietly: the team has to fund the extra lifecycle, and the business case has to survive conservative assumptions.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Required interaction, content structure or integration is impractical in the current platform.",
@@ -357,7 +398,7 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                     <BlogHeader>10. Use contract-specific migration terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen publishes $1,500, $3,500 and $5,000 to $10,000-plus planning tiers. The accepted
+                        PandaCodeGen publishes $1,500, $3,500 and $5,000 to $10,000 planning tiers. The accepted
                         scope controls final price, support, refund, ownership, performance and change terms. Payment is
                         normally 30 percent at onboarding and 70 percent on delivery. There is no universal second-year
                         payback or outcome guarantee. How we run the move itself is described on our{" "}

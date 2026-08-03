@@ -41,7 +41,7 @@ export default function AntiAgency() {
             We are not a &ldquo;Digital Agency.&rdquo;
           </h2>
           <p className="text-xl text-stone-600 leading-relaxed">
-            Agencies sell hours. We sell engineered outcomes. We removed every layer of bloat that makes B2B projects fail on time and over budget.
+            Agencies sell hours. We sell a working system. We stripped out the layers that make B2B projects run late.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export default function AntiAgency() {
         >
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-lg">Ready to work with engineers, not account managers?</p>
-            <p className="text-stone-600 text-sm mt-1">Book a 30-minute technical discovery call. No sales pitch.</p>
+            <p className="text-stone-600 text-sm mt-1">Book 30 minutes with an engineer. No sales pitch.</p>
           </div>
           <button
             data-cal-namespace="discovery"

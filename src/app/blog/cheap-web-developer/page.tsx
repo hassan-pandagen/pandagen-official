@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     title: "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
-    publishedTime: "2026-01-10T00:00:00-06:00",
-    modifiedTime: "2026-07-24T00:00:00-05:00",
+    publishedTime: "2026-04-30T00:00:00-05:00",
+    modifiedTime: "2026-08-03T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -57,35 +57,35 @@ const articleSchema = {
       headline: "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
-      datePublished: "2026-01-10T00:00:00-06:00",
-      dateModified: "2026-07-24T00:00:00-05:00",
+      datePublished: "2026-04-30T00:00:00-05:00",
+      dateModified: "2026-08-03T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
         name: "Hassan Jamal",
         jobTitle: "Co-founder and Lead Engineer",
-        url: "https://www.pandacodegen.com/about",
+        url: "https://www.pandacodegen.com/about/hassan",
+        knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+        image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
         sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
       },
-      publisher: {
-        "@type": "Organization",
-        "@id": "https://www.pandacodegen.com/#organization",
-        name: "PandaCodeGen",
-        url: "https://www.pandacodegen.com",
-        logo: { "@type": "ImageObject", url: "https://www.pandacodegen.com/logo.png", width: 655, height: 113 },
-      },
-      mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/cheap-web-developer" },
+      publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#webpage" },
       articleSection: "Pricing",
       inLanguage: "en-US",
+      wordCount: 2950,
+      timeRequired: "PT11M",
+      about: [
+        { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+        { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
+        { "@type": "Thing", name: "Due diligence", sameAs: ["https://en.wikipedia.org/wiki/Due_diligence"] },
+        { "@type": "Thing", name: "Web development pricing" },
+      ],
       speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
       citation: [
-        "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
-        "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
-        "https://web.dev/articles/vitals",
-        "https://www.w3.org/TR/WCAG22/",
-        "https://owasp.org/www-project-application-security-verification-standard/",
-        "https://www.upwork.com/hire/web-developers/",
-        "https://www.fiverr.com/categories/programming-tech",
+        { "@type": "CreativeWork", name: "Google: site moves with URL changes", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
+        { "@type": "CreativeWork", name: "W3C: WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
+        { "@type": "CreativeWork", name: "OWASP Application Security Verification Standard", url: "https://owasp.org/www-project-application-security-verification-standard/" },
       ],
     },
     {
@@ -96,6 +96,18 @@ const articleSchema = {
         name: faq.question,
         acceptedAnswer: { "@type": "Answer", text: faq.answer },
       })),
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#webpage",
+      url: "https://www.pandacodegen.com/blog/cheap-web-developer",
+      name: "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
+      description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
+      isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      datePublished: "2026-04-30T00:00:00-05:00",
+      dateModified: "2026-08-03T00:00:00-05:00",
+      breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
+      inLanguage: "en-US",
     },
     {
       "@type": "BreadcrumbList",
@@ -141,9 +153,9 @@ export default function CheapWebDeveloperPage() {
             ask and the evidence to request before you pay a deposit.
           </p>
           <BlogAuthor
-            date="Updated Jul 24, 2026"
-            readTime="14 min read"
-            bio="Hassan scopes SEO-conscious WordPress, Webflow, and GoHighLevel migrations and records acceptance conditions before development begins."
+            date="Apr 30, 2026, updated Aug 3, 2026"
+            readTime="9 min read"
+            bio="Hassan scopes WordPress, Webflow and GoHighLevel migrations with your search traffic in mind, and writes down the acceptance conditions before anyone starts building."
             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
           />
         </div>
@@ -157,19 +169,19 @@ export default function CheapWebDeveloperPage() {
               items={[
                 "Compare identical scope. A five-page template setup and a migration with URL mapping, CMS work, analytics, and integrations are not the same product.",
                 "Verify live work, your candidate's role, and permission to publish the example. A screenshot alone is not proof.",
-                "Put acceptance, payment, ownership, licenses, support, change control, and refund remedies in the signed proposal or SOW.",
-                "Use repeatable page-level tests. No framework, platform, developer, or price band guarantees speed, ranking, conversion, or security.",
-                "Price the full operating path, including hosting, CMS, email, analytics, maintenance, support, usage, and future changes.",
+                "Get it in the signed proposal: how you sign off, when you pay, who owns it, what licences you get, what support looks like, how changes are handled, and what happens if you want money back.",
+                "Test page by page, the same way each time. No framework, platform, developer or price bracket guarantees you speed, rankings, conversions or security.",
+                "Price what it costs to run, not just to build: hosting, the CMS, email, analytics, maintenance, support, usage, and the changes you will want later.",
               ]}
             />
           </div>
 
           <BlogHeader>What Does “Cheap Web Developer” Mean in 2026?</BlogHeader>
           <BlogText>
-            The search phrase covers freelance marketplaces, individual contractors, template specialists, fixed-price studios, agencies, website builders, and AI-assisted services. Their prices are not directly comparable until the scope is normalized. Marketplace listings are also mutable and self-selected, so a search-result price is not a market benchmark.
+            The search phrase covers freelance web developers on marketplaces, individual contractors, template specialists, fixed-price studios, agencies, website builders, and AI-assisted services. Their prices are not directly comparable until the scope is normalized. Marketplace listings are also mutable and self-selected, so a search-result price is not a market benchmark.
           </BlogText>
           <BlogText>
-            Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 to $10,000+ Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
+            Hiring a web developer generally lands between a few hundred dollars for a narrow repair and five figures for a migration with commerce or a portal, and the spread is caused by scope rather than by rate. Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 to $10,000+ Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
             <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>{" "}
             lists those anchors, and our{" "}
             <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">website cost guide</Link>{" "}
@@ -199,10 +211,13 @@ export default function CheapWebDeveloperPage() {
             If two proposals do not use the same page and feature inventory, migration controls, acceptance tests, vendor assumptions, and support boundary, their totals are not yet comparable.
           </InsightBox>
 
-          <BlogHeader>Where the Quotes Come From</BlogHeader>
+          <BlogHeader>Where Affordable Website Developers Advertise</BlogHeader>
           <BlogText>
             Low-cost quotes arrive through a handful of channels, and each one changes what due diligence has to cover rather than what the work is worth. Identify the channel before you read the number.
           </BlogText>
+          <InsightBox variant="info" label="Before you ask anyone for a price">
+            The first thing an experienced developer asks a stranger with a budget question is what kind of site it is and what the budget is. Send these six lines with the first message and you will get comparable numbers instead of a range: the current site URL and platform, or that there is no site yet; the page count, and how many are one-off layouts rather than repeats of a template; who writes and supplies the content; every form, booking, payment or CRM integration the site has to connect to; whether existing URLs and search traffic have to survive the move; and the budget band you are actually working inside. Withholding the budget does not get you a lower number, it gets you a scope nobody can price.
+          </InsightBox>
           <BlogList
             items={[
               "Gig marketplaces. Fast to buy from and suited to narrow, well-defined tasks. Listings are self-authored, so verify live work and the seller's actual role rather than the profile copy.",
@@ -221,6 +236,34 @@ export default function CheapWebDeveloperPage() {
           </BlogText>
           <BlogText>
             Most marketing sites, brochure sites and content sites are front-end work with a content management layer. If nothing on your list stores or processes data beyond a contact form, say so in the brief, because it changes who should be quoting.
+          </BlogText>
+
+          <BlogHeader>Developer, Website Builder, or an AI Site Generator?</BlogHeader>
+          <div data-speakable="true">
+            <BlogText>
+              Three routes compete for the same budget in 2026, and they differ less in what they produce
+              than in who is answerable when it is wrong. A website builder sells you a subscription and a
+              system to assemble inside. An AI site generator sells you a starting point in minutes. A
+              developer sells you someone accountable for the result. Work out which of the three you are
+              actually buying before you compare a single price.
+            </BlogText>
+          </div>
+          <BlogList
+            items={[
+              "A website builder fits a genuinely standard site where you would rather pay monthly than once. The cost recurs, the work stays yours, and the platform decides what is possible. What you are not buying is accountability.",
+              "An AI site generator is the quickest route to a first draft and does nothing for the part that takes the time: real content, forms that deliver, analytics, redirects from whatever you had before, and whether search engines can read what it produced.",
+              "A developer earns the fee when something has to be true after launch day. Existing URLs survive. A form reaches your CRM. A checkout takes money. Somebody is contractually answerable when one of those fails.",
+              "The three are not exclusive. Generating a draft and paying someone to make it production-ready is a legitimate route, as long as the quote prices the rework rather than treating the draft as a head start.",
+            ]}
+          />
+          <BlogText>
+            Ask it in the other direction if you are undecided. If nothing on your list has to keep working
+            after launch and no existing search traffic is at stake, a builder or a generator is very likely
+            enough, and hiring anybody is the expensive option. The moment the answer involves traffic you
+            already have, money changing hands, or data going somewhere, you have stopped buying pages and
+            started buying accountability. Where a generated site is already live and missing from search,{" "}
+            <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">why an AI-built site may not appear in Google</Link>{" "}
+            covers what to check before paying anyone to rebuild it.
           </BlogText>
 
           <BlogHeader>How to Verify a Cheap Web Developer’s Portfolio</BlogHeader>
@@ -247,7 +290,7 @@ export default function CheapWebDeveloperPage() {
                 <p className="font-bold text-cognac mb-1">
                   <Link href="/work/mycustompatches" className="hover:underline">MyCustomPatches</Link>
                 </p>
-                <p className="text-sm text-stone-300">The owner reports a 22-day migration. Exact before-and-after performance, hosting, traffic, and commercial figures require the dated receipts and test profiles before publication as outcome proof.</p>
+                <p className="text-sm text-stone-300">An independent client. The owner reports a 22-day migration. We are not publishing before-and-after performance, hosting or commercial figures for this build, because we hold the owner&apos;s account of the timeline but not the dated test records those numbers would need to stand behind them.</p>
               </div>
               <div className="rounded-xl border border-white/15 p-4">
                 <p className="font-bold text-cognac mb-1">
@@ -281,13 +324,13 @@ export default function CheapWebDeveloperPage() {
 
           <BlogHeader>Performance, SEO, Accessibility, and Security Checks</BlogHeader>
           <BlogText>
-            A Lighthouse score is a lab result, not a promise about every visitor. PandaCodeGen uses a 90+ Lighthouse acceptance target only when the accepted terms name representative pages, mobile and desktop profiles, and three recorded passing runs for each agreed page and profile. Field{" "}
+            A <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score is a lab result, not a promise about every visitor. PandaCodeGen uses a 90+ Lighthouse acceptance target only when the accepted terms name representative pages, mobile and desktop profiles, and three recorded passing runs for each agreed page and profile. Field{" "}
             <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals</Link>, when available, answer a different question about real-user experience. If the
             existing site is the problem rather than the quote, start with{" "}
             <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">how to speed up a website</Link>.
           </BlogText>
           <BlogText>
-            For an SEO-sensitive migration, Google recommends URL mapping, permanent redirects, updated canonicals and internal links, sitemaps, and monitoring. Rankings, indexing, traffic, and recovery timing remain controlled by search engines. No developer can guarantee unchanged rankings.
+            For an SEO-sensitive migration, Google recommends URL mapping, permanent redirects, updated canonicals and internal links, sitemaps, and monitoring. Google&apos;s site-move documentation is specific about three things a cheap quote often leaves out: use server-side permanent redirects such as 301 or 308 rather than client-side ones; keep those redirects, in Google&apos;s words, &ldquo;for as long as possible, generally at least 1 year&rdquo;, so signals transfer to the new URLs; and avoid redirect chains, ideally no more than three hops. Google also states that a small to medium-sized site can take a few weeks for most pages to move, and that larger sites take longer, so a quote that ends at launch day has priced only part of the job. Rankings, indexing, traffic, and recovery timing remain controlled by search engines. No developer can guarantee unchanged rankings.
           </BlogText>
           <BlogText>
             Use WCAG 2.2 as the accessibility reference selected in the scope and the OWASP Application Security Verification Standard as a security-requirements source where relevant. A passing automated scan is not a complete accessibility or security review.
@@ -308,7 +351,7 @@ export default function CheapWebDeveloperPage() {
 
           <BlogHeader>Fixed Price vs Hourly Billing</BlogHeader>
           <BlogText>
-            Neither model is automatically more honest or cheaper. Fixed price works well when deliverables and acceptance can be defined. Hourly or time-and-materials can be better for uncertain discovery, inherited defects, ongoing maintenance, or rapidly changing requirements. A capped discovery phase followed by a fixed implementation is often a useful hybrid.
+            We quote fixed, from $1,500, because our scopes are defined before work starts. That is a statement about how we work, not a verdict on the other model: neither is automatically more honest or cheaper. Fixed price works well when deliverables and acceptance can be defined. Hourly or time-and-materials can be better for uncertain discovery, inherited defects, ongoing maintenance, or rapidly changing requirements. A capped discovery phase followed by a fixed implementation is often a useful hybrid.
           </BlogText>
           <BlogList
             items={[
@@ -348,6 +391,14 @@ export default function CheapWebDeveloperPage() {
           />
 
           <BlogHeader>Red Flags When Hiring an Affordable Developer</BlogHeader>
+          <div data-speakable="true">
+            <BlogText>
+              Any one of these is a reason to slow down and ask a question. Two of them together is usually a
+              reason to stop. Notice that none of the eight is about the price: a cheap quote with a defined
+              scope, an inspectable milestone and a named owner is a better risk than an expensive one
+              without them.
+            </BlogText>
+          </div>
           <div className="grid gap-4 my-6">
             {[
               ["Unverifiable portfolio", "The candidate cannot explain their role, show a live result, or provide permissioned evidence."],
@@ -392,15 +443,12 @@ export default function CheapWebDeveloperPage() {
           <section className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
             <div className="flex items-center gap-2 mb-3">
               <ShieldCheck className="w-5 h-5 text-cognac" />
-              <h2 className="text-xl font-bold text-charcoal">Primary references checked July 24, 2026</h2>
+              <h2 className="text-xl font-bold text-charcoal">Primary references checked August 3, 2026</h2>
             </div>
             <ul className="space-y-2 text-sm">
               <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" target="_blank" rel="noreferrer">Google: site moves with URL changes</a></li>
-              <li><a className="text-cognac underline underline-offset-4" href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noreferrer">Google: JavaScript SEO basics</a></li>
-              <li><a className="text-cognac underline underline-offset-4" href="https://web.dev/articles/vitals" target="_blank" rel="noreferrer">web.dev: Core Web Vitals</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noreferrer">W3C: WCAG 2.2</a></li>
               <li><a className="text-cognac underline underline-offset-4" href="https://owasp.org/www-project-application-security-verification-standard/" target="_blank" rel="noreferrer">OWASP: Application Security Verification Standard</a></li>
-              <li><a className="text-cognac underline underline-offset-4" href="https://www.upwork.com/hire/web-developers/" target="_blank" rel="noreferrer">Upwork web-developer marketplace</a> and <a className="text-cognac underline underline-offset-4" href="https://www.fiverr.com/categories/programming-tech" target="_blank" rel="noreferrer">Fiverr programming marketplace</a></li>
             </ul>
           </section>
 

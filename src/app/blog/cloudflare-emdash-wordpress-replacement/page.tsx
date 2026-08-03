@@ -26,7 +26,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 const pageTitle = "Cloudflare EmDash vs WordPress in 2026: Readiness Guide";
-const pageDescription = "Is Cloudflare EmDash a WordPress replacement in 2026? Compare beta status, plugin security, portability, costs, SEO migration risks, and production readiness.";
+const pageDescription = "Cloudflare announced EmDash on April 1, 2026, so people reasonably ask whether it is a joke. Repository figures read on August 2, 2026, plus what the beta status, plugin sandbox and Cloudflare dependency mean for a real migration decision.";
 
 export const metadata: Metadata = {
     title: pageTitle,
@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "/blog/cloudflare-emdash-wordpress-replacement",
     },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Cloudflare EmDash",
         "EmDash CMS",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-04-04",
-        modifiedTime: "2026-07-23",
+        modifiedTime: "2026-08-02",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
         images: [ogImageForPath("/blog/cloudflare-emdash-wordpress-replacement")],
@@ -71,34 +72,24 @@ const articleSchema = {
             "description": pageDescription,
             "image": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement"),
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-07-23T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "knowsAbout": ["Content management systems", "WordPress", "Cloudflare Workers", "Astro", "TypeScript", "Website migration", "Technical SEO"],
                 "sameAs": [
                     "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
                     "https://github.com/hassan-pandagen",
                 ],
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.pandacodegen.com/logo.png",
-                    "width": 655,
-                    "height": 113,
-                },
-            },
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
-            },
+            "wordCount": 2050,
+            "timeRequired": "PT13M",
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#webpage" },
             "articleSection": "WordPress",
             "keywords": [
                 "Cloudflare EmDash",
@@ -179,21 +170,9 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement") },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-07-23T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
             "inLanguage": "en-US",
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen plans and builds SEO-conscious website migrations and custom web systems.",
-            "areaServed": "Worldwide",
-            "foundingDate": "2026-02",
         },
         {
             "@type": "FAQPage",
@@ -245,10 +224,10 @@ export default function CloudflareEmDashPage() {
 
                         <BlogAuthor
                             date="Apr 4, 2026"
-                            readTime="14 min read"
+                            readTime="13 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                        <p className="mt-2 text-xs text-stone-500">Reviewed July 23, 2026 against the official Cloudflare announcement, current EmDash repository, and Google Search documentation.</p>
+                        <p className="mt-2 text-xs text-stone-500">Repository figures on this page were read from GitHub&apos;s public API on August 2, 2026 and are reproducible by anyone.</p>
                     </header>
 
                     <section className="mb-12 grid gap-3 sm:grid-cols-3" aria-label="Current EmDash status summary">
@@ -286,6 +265,41 @@ export default function CloudflareEmDashPage() {
                         <BlogText>
                             EmDash uses Portable Text for structured content and provides import routes for WordPress WXR exports and the WordPress REST API. It can run on Cloudflare with D1, R2, KV, and Workers, or on a compatible Node.js setup with alternatives such as SQLite and S3-compatible storage. This makes it more accurate to call EmDash a new WordPress alternative than a completed one-for-one WordPress replacement.
                         </BlogText>
+
+                        <BlogHeader id="april-fools">Is EmDash an April Fools joke?</BlogHeader>
+
+                        <div data-speakable="true">
+                            <BlogText>
+                                No, and the announcement date is the only reason to wonder. Cloudflare published EmDash on
+                                April 1, 2026, which is a fair thing to be suspicious about, so here is the check anyone
+                                can repeat rather than an assurance. Read from GitHub&apos;s public API on August 2, 2026,
+                                four months after the announcement, the <BlogHighlight>emdash-cms/emdash</BlogHighlight>{" "}
+                                repository was created on April 1, 2026, was last pushed to on July 31, 2026, and carries
+                                11,486 stars, 1,071 forks and 258 open issues under an MIT license. A joke repository does not keep receiving commits, and it does not accumulate a thousand forks. What those figures show is that the project is alive, not that it is adopted, stable or production-ready.
+                            </BlogText>
+                        </div>
+
+                        <BlogText>
+                            The same query shows two more first-party repositories still moving:{" "}
+                            <a href="https://github.com/emdash-cms/wp-emdash" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                emdash-cms/wp-emdash
+                            </a>
+                            , the WordPress-side transition plugins, last pushed July 6, 2026 and licensed GPL-3.0 rather
+                            than MIT because a WordPress plugin has to be, and{" "}
+                            <a href="https://github.com/emdash-cms/templates" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                emdash-cms/templates
+                            </a>
+                            , the starter templates, last pushed July 24, 2026. Note the organization name while you are there: the code lives under <BlogHighlight>emdash-cms</BlogHighlight>, not under Cloudflare&apos;s own GitHub organization, which is a detail worth knowing before you write a dependency into
+                            an architecture document.
+                        </BlogText>
+
+                        <InsightBox variant="info" label="What the version numbers say that the marketing does not">
+                            Every published EmDash package is still on a 0.x version. The most recent release on 2 August
+                            2026 was <code>@emdash-cms/plugin-embeds@0.1.39</code>, published 24 July, pulling in{" "}
+                            <code>@emdash-cms/blocks@0.31.1</code>. That is a healthy release cadence and it is also, in
+                            the project&apos;s own numbering, pre-1.0. &ldquo;Beta preview&rdquo; is not a hedge somebody
+                            added to a blog post. It is what the package registry says.
+                        </InsightBox>
 
                         <BlogHeader>What the plugin-security claim means</BlogHeader>
 
@@ -366,7 +380,28 @@ export default function CloudflareEmDashPage() {
                         />
 
                         <BlogText>
-                            This is also why early summaries describing no usable ecosystem or terminal-only operation are outdated. The current project includes starter templates, first-party plugin work, an admin experience, import tools, and multiple installation paths. The ecosystem is still young, and initial deployment remains developer-oriented, but those are more precise constraints than pretending nothing exists.
+                            This is also why early summaries describing no usable ecosystem or terminal-only operation are outdated. The current project includes starter templates, first-party plugin work, an admin experience, import tools, and multiple installation paths.
+                        </BlogText>
+
+                        <BlogText>
+                            More usefully, the extensions are no longer all first-party, which is the real test of whether
+                            a plugin API works. A GitHub API search on August 2, 2026 returns independent projects built
+                            against it and still being maintained: <BlogHighlight>dashcommerce</BlogHighlight>, described
+                            by its authors as the WooCommerce-equivalent commerce plugin for EmDash, created 16 April and
+                            last pushed 9 July; <BlogHighlight>emdashlearn</BlogHighlight>, an open-source LMS plugin
+                            created on 2 April, the day after the announcement, and pushed on 27 July; an EmDash email
+                            plugin delivering through Cloudflare Email; and Astro starter kits pairing EmDash with SQLite
+                            and R2 storage. None of them is large. All of them are third parties who read the plugin API
+                            and shipped against it, which is more informative than a star count.
+                        </BlogText>
+
+                        <BlogText>
+                            Hold that against WordPress honestly. A handful of maintained community plugins is not a
+                            marketplace, and the gap between the two ecosystems is the single largest practical
+                            difference between them. What the check does tell you is the direction of travel and that the
+                            extension model is usable by people outside the project, which is the question that actually
+                            matters if you are considering building on it. Re-run the search yourself before you decide;
+                            it takes a minute and the answer will have moved.
                         </BlogText>
 
                         <BlogHeader>Is EmDash locked to Cloudflare?</BlogHeader>
@@ -394,7 +429,7 @@ export default function CloudflareEmDashPage() {
                             <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 page-experience guidance
                             </a>{" "}
-                            says Core Web Vitals are used by its ranking systems, but good scores do not guarantee top rankings. Relevance and overall page experience still matter. A faster platform can improve user experience and remove technical constraints, but a Lighthouse score cannot prove that a migration caused a ranking change.
+                            says <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> are used by its ranking systems, but good scores do not guarantee top rankings. Relevance and overall page experience still matter. A faster platform can improve user experience and remove technical constraints, but a Lighthouse score cannot prove that a migration caused a ranking change.
                         </BlogText>
 
                         <BlogText>

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, DatabaseZap, Gauge, PlugZap } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "how to fix slow WordPress",
         "WordPress site slow",
@@ -48,10 +49,8 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "WordPress: performance optimization", url: "https://developer.wordpress.org/advanced-administration/performance/optimization/" },
-    { name: "WordPress: performance monitoring", url: "https://developer.wordpress.org/advanced-administration/security/monitoring/" },
+    { name: "WordPress: site monitoring guidance", url: "https://developer.wordpress.org/advanced-administration/security/monitoring/" },
     { name: "WordPress: theme administration and performance", url: "https://developer.wordpress.org/advanced-administration/themes/" },
-    { name: "Google Search Central: Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-    { name: "PageSpeed Insights documentation", url: "https://developers.google.com/speed/docs/insights/v5/about" },
 ];
 
 const articleSchema = {
@@ -61,6 +60,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/how-to-fix-slow-wordpress"),
             description,
             datePublished: "2026-02-17",
             dateModified: "2026-07-24",
@@ -69,13 +69,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1650,
+            timeRequired: "PT7M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Fix slow WordPress", item: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#webpage",
+            url: "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/how-to-fix-slow-wordpress#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -110,16 +138,15 @@ export default function SlowWordPressGuide() {
                             How to Fix a Slow WordPress Site <span className="italic text-cognac">Without Guessing</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            WordPress does not have one speed ceiling. Hosting, configuration, versions, cache, theme,
-                            plugins, queries, media, fonts and third parties can all contribute. Profile the affected
-                            route, fix the measured layer and retest.
+                            Profile the affected route, fix the measured layer, then retest under the same conditions. WordPress does not have a single speed ceiling. Your hosting, how it is configured, the versions you run, caching, the theme,
+                            plugins, queries, media, fonts and third parties can all contribute. That order matters: fixing an unmeasured layer is how an afternoon disappears.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current WordPress and Google primary guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The eight-method ladder</h2>
@@ -132,15 +159,15 @@ export default function SlowWordPressGuide() {
                                 "Isolate theme and plugin cost by measured component, not raw plugin count.",
                                 "Optimize media, fonts, CSS and document discovery.",
                                 "Govern JavaScript, embeds, analytics, chat and other third parties.",
-                                "Compare continued optimization, a lighter rebuild and migration from residual evidence.",
+                                "Then compare three options against what the evidence still shows: keep optimizing, rebuild lighter, or migrate.",
                             ]}
                         />
                     </section>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: Gauge, title: "Browser", body: "LCP, INP, CLS, requests, rendering and main-thread work." },
-                            { icon: DatabaseZap, title: "Origin", body: "Server response, PHP, queries, cache, external calls and load." },
+                            { icon: Gauge, title: "Browser", body: "LCP, INP and CLS, plus what is blocking the main thread." },
+                            { icon: DatabaseZap, title: "Origin", body: "How fast the server answers, and what is slowing it down." },
                             { icon: PlugZap, title: "Extensions", body: "Theme and plugin behavior measured on real templates and states." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -152,12 +179,17 @@ export default function SlowWordPressGuide() {
                     </div>
 
                     <BlogHeader>1. Measure the right pages under repeatable conditions</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A measurement you cannot repeat is not a baseline, and a homepage result cannot speak for a cart or an archive. Four rules make the numbers comparable across the whole job. The last one saves the most time later: record the WordPress, PHP, database, theme and plugin versions beside the run, so a future comparison has something to compare against.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Group pages by template and behavior: home, service, article, archive, product, cart and form.",
+                            "Group pages by template and how they behave: home, service, article, archive, product, cart and form.",
                             "Use URL-level field Core Web Vitals where available and origin data only with that limitation stated.",
                             "Preserve at least three lab runs for each agreed device profile with date, version, network, cache and consent state.",
-                            "Record WordPress, PHP, database, theme, plugin and release versions with the baseline.",
+                            "Record the WordPress, PHP, database, theme and plugin versions alongside the baseline.",
                         ]}
                     />
                     <BlogText>
@@ -178,7 +210,7 @@ export default function SlowWordPressGuide() {
                         walks the same layers from the visitor&apos;s side.
                     </BlogText>
                     <BlogText>
-                        Measure the document response on its own before you touch the front end. Time the request from
+                        Measure the document response on its own before you touch the front end, and read it against a scale rather than a feeling: under about 200ms is healthy, 200 to 600ms usually points at an underpowered or oversold plan, and consistently above 600ms makes hosting the first thing to fix rather than the last. Time the request from
                         the command line or read it off a request waterfall, then repeat it with a warm cache, with a
                         cold cache, and from a region your visitors actually use. A slow document response is a server,
                         cache or network problem, and no amount of image compression or script deferral recovers it.
@@ -196,6 +228,11 @@ export default function SlowWordPressGuide() {
                     </BlogText>
 
                     <BlogHeader>3. Verify cache layers</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A cache that reports hits you never receive is worse than no cache, because it hides the constraint behind a number that looks healthy. Five checks confirm what is actually being stored and served. Test the miss and invalidation paths as carefully as the hit path, since that is where correctness problems live.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Confirm anonymous HTML can be cached where business and identity rules permit it.",
@@ -249,6 +286,11 @@ export default function SlowWordPressGuide() {
                     </BlogText>
 
                     <BlogHeader>Tools that make the WordPress layer measurable</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Browser tools stop at the response, so everything WordPress did to produce it stays invisible until you instrument the server. Five tools close that gap, and Query Monitor is the one that changes the conversation, because it attributes each query, hook and HTTP call to the component responsible instead of leaving you to guess.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Query Monitor: per-request database queries with the component that fired them, hooks, HTTP API calls made during the request, enqueued scripts and styles, and PHP notices. This is what turns plugin blame into plugin evidence.",
@@ -264,9 +306,7 @@ export default function SlowWordPressGuide() {
                         serve rendered HTML without re-running PHP. Asset plugins such as Autoptimize combine and defer
                         CSS and JavaScript, which can break a builder or a form if applied blindly, so change one option
                         at a time. Image plugins such as ShortPixel or Imagify convert and resize on upload. Database
-                        tools such as WP-Optimize clear revisions, spam and expired transients. A lightweight theme
-                        such as GeneratePress or Astra ships far less markup and CSS than a multipurpose theme bundled
-                        with a builder. Measure each change in your own trace rather than trusting a vendor figure.
+                        tools such as WP-Optimize clear revisions, spam and expired transients. A lightweight theme generally ships less markup and CSS than a multipurpose theme bundled with a builder, and the comparison worth making is on your own templates rather than on any recommendation. Measure each change in your own trace rather than trusting a vendor figure.
                     </BlogText>
 
                     <InsightBox variant="warning" label="Do not debug production by random deactivation">
@@ -277,6 +317,11 @@ export default function SlowWordPressGuide() {
                     </InsightBox>
 
                     <BlogHeader>6. Optimize media, fonts and render path</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the step where most measurable time comes back on a content site, and the most common mistake in it is lazy-loading the very image the page is judged on. Five checks cover media, fonts and whatever blocks the first paint. Do them after the server and cache work, or you will be optimizing around a slow response.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Serve correctly sized images with efficient formats and quality appropriate to the content.",
@@ -301,6 +346,11 @@ export default function SlowWordPressGuide() {
                     </BlogText>
 
                     <BlogHeader>8. Decide when optimization is no longer the best investment</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Optimization stops being the right spend when the constraint is the structure rather than the settings, and that is a measurement result rather than a feeling. Three positions cover it: keep tuning, rebuild inside WordPress, or move. Each needs the evidence named in the steps above before it is worth quoting.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Keep optimizing when measured constraints are controllable and the editorial or plugin workflow remains valuable.",

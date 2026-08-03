@@ -8,9 +8,9 @@ import Footer from "@/components/layout/Footer";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 const comparisonRows = [
-  { label: "Scope", agency: "May be described at a high level", pandagen: "URLs, content, integrations, and exclusions listed", isPain: false },
+  { label: "Scope", agency: "May be described at a high level", pandagen: "Every URL, all the content, what it connects to, and what is not included", isPain: false },
   { label: "Performance", agency: "Target may be unspecified", pandagen: "90+ Lighthouse target, pages, profile, and three-run handover check written into scope", isPain: false },
-  { label: "Migration", agency: "Redirect and cutover detail varies", pandagen: "Inventory, redirect map, QA, and rollback plan", isPain: false },
+  { label: "Migration", agency: "Redirect and cutover detail varies", pandagen: "A full inventory, a redirect map, the testing, and a way back", isPain: false },
   { label: "Ownership", agency: "Depends on the contract", pandagen: "Ownership and license terms stated in the proposal", isPain: false },
   { label: "Ongoing cost", agency: "Platform and vendor charges vary", pandagen: "Known third-party costs documented before approval", isPain: false },
   { label: "Changes", agency: "Process varies", pandagen: "Out-of-scope work requires a separate written quote", isPain: false },
@@ -161,7 +161,7 @@ export default function PricingPageClient() {
 
             <ul className="space-y-3 mb-8 grow">
               <Feature text="5 to 7 custom pages, with the exact templates and content responsibilities listed in scope" />
-              <Feature text="Next.js deployment with repository, environment, and handover responsibilities documented" />
+              <Feature text="A Next.js deployment, with the code, the environments and who does what at handover all written down" />
               <Feature text="90+ Lighthouse performance target on both mobile and desktop for the agreed representative pages" />
               <Feature text="Three recorded pre-handover runs per agreed page/profile; every run must meet the target" />
               <Feature text="Mobile-First Build (designed on mobile screen first, then scaled up, not the other way around)" />
@@ -211,7 +211,7 @@ export default function PricingPageClient() {
             <ul className="space-y-3 mb-6 grow">
               <Feature dark text="10 to 20 Page Custom Site (full marketing site with service pages, case studies, and resources)" />
               <Feature dark text="Sanity CMS Integration (your team updates content without touching code)" />
-              <Feature dark text="Blog migration with a URL inventory, redirect map, metadata preservation, and post-launch monitoring" />
+              <Feature dark text="Blog migration with every URL listed, a redirect map, metadata carried across, and monitoring after launch" />
               <Feature dark text="90+ Lighthouse performance target on mobile and desktop, with three passing runs per agreed page/profile" />
               <Feature dark text="Hosting and third-party service costs listed before approval" />
               <Feature dark text="30 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
@@ -222,7 +222,7 @@ export default function PricingPageClient() {
             </button>
 
             <p className="text-xs text-center text-stone-600 mt-4">
-              Final scope, payment, warranty, and remedy terms are confirmed in accepted written project terms.
+              The scope, when you pay, what is warranted and what happens if something is wrong are all confirmed in the written project terms.
             </p>
 
             <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-600 hover:text-orange-300 transition-colors mt-3 underline underline-offset-2">

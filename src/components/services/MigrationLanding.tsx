@@ -18,19 +18,19 @@ type MigrationLandingProps = {
 const phases = [
   {
     title: "Inventory",
-    body: "Map URLs, templates, content, data, forms, integrations, analytics, consent, roles, infrastructure, and ownership.",
+    body: "Map every URL, template, piece of content, data set, form, integration, analytics tag, consent rule, user role, server and account, and say who owns each.",
   },
   {
     title: "Baseline and scope",
-    body: "Record the current behavior and define deliverables, exclusions, dependencies, acceptance criteria, cost, schedule, and responsibilities.",
+    body: "Record how it behaves today, then agree what you get, what you do not, what it depends on, how you sign it off, what it costs, when it happens, and who does what.",
   },
   {
     title: "Build and verify",
-    body: "Develop away from the live site and test representative journeys, redirects, metadata, accessibility, performance, security, and data handling.",
+    body: "Build it away from your live site, then test real journeys, the redirects, the metadata, accessibility, speed, security and how data is handled.",
   },
   {
     title: "Cut over and observe",
-    body: "Use a written launch and rollback plan, validate production, monitor failures and search signals, then complete handover.",
+    body: "Launch from a written plan that says how to reverse it, check production properly, watch for failures and search signals, then hand it over.",
   },
 ];
 
@@ -233,7 +233,7 @@ export default function MigrationLanding({
       <section className="border-t border-stone-300 bg-white px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold">Start with your current site and the decision you need to make.</h2>
-          <p className="mt-5 max-w-3xl leading-7 text-stone-700">We will outline the next diagnostic step. A binding estimate follows only after the scope and dependencies are understood.</p>
+          <p className="mt-5 max-w-3xl leading-7 text-stone-700">We will tell you the next thing to check. A firm price only comes after we understand the scope and what it depends on.</p>
           <Link href="/contact#contact-quote-form" className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
             Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>

@@ -8,7 +8,6 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import {
   BlogAuthor,
   BlogHeader,
-  BlogHighlight,
   BlogList,
   BlogText,
   InsightBox,
@@ -46,14 +45,17 @@ export const metadata: Metadata = {
     "PageSpeed Insights",
     "website performance audit",
     "slow website causes",
+    "why does my website seem fast to me but slow to visitors",
+    "how to test website speed",
   ],
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   openGraph: {
     title: "Why Is My Website Loading So Slow? 12 Causes and Fixes",
     description:
       "A measurement-first guide to slow websites: field data, lab traces, 12 causes, practical fixes and an optimize-versus-rebuild decision framework.",
     type: "article",
     publishedTime: "2026-05-13T00:00:00-05:00",
-    modifiedTime: "2026-07-23T00:00:00-05:00",
+    modifiedTime: "2026-08-01T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
     images: [ogImageForPath("/blog/why-is-my-website-loading-so-slow")],
@@ -78,13 +80,20 @@ const articleSchema = {
         "A measurement-first guide to diagnosing slow websites with field data, lab traces, twelve common causes, practical fixes and a rebuild decision framework.",
       image: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
       datePublished: "2026-05-13T00:00:00-05:00",
-      dateModified: "2026-07-23T00:00:00-05:00",
+      dateModified: "2026-08-01T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
         name: "Hassan Jamal",
         jobTitle: "Co-founder and Lead Engineer",
         url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+        image: {
+          "@type": "ImageObject",
+          url: "https://www.pandacodegen.com/team/hassan.png",
+          width: 400,
+          height: 400,
+        },
         sameAs: [
           "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
           "https://github.com/hassan-pandagen",
@@ -105,7 +114,7 @@ const articleSchema = {
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id":
-          "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
+          "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#webpage",
       },
       articleSection: "Performance",
       keywords: [
@@ -117,6 +126,8 @@ const articleSchema = {
         "website performance audit",
       ],
       inLanguage: "en-US",
+            wordCount: 1750,
+            timeRequired: "PT8M",
       about: [
         {
           "@type": "Thing",
@@ -144,38 +155,13 @@ const articleSchema = {
       citation: [
         {
           "@type": "CreativeWork",
-          name: "Understanding page experience in Google Search results",
-          url: "https://developers.google.com/search/docs/appearance/page-experience",
-        },
-        {
-          "@type": "CreativeWork",
           name: "Core Web Vitals threshold methodology",
           url: "https://web.dev/articles/defining-core-web-vitals-thresholds",
         },
         {
           "@type": "CreativeWork",
-          name: "PageSpeed Insights field and lab data",
-          url: "https://web.dev/articles/whats-new-pagespeed-insights",
-        },
-        {
-          "@type": "CreativeWork",
           name: "Optimize Largest Contentful Paint",
           url: "https://web.dev/articles/optimize-lcp",
-        },
-        {
-          "@type": "CreativeWork",
-          name: "Efficiently load third-party JavaScript",
-          url: "https://web.dev/articles/efficiently-load-third-party-javascript",
-        },
-        {
-          "@type": "CreativeWork",
-          name: "Content delivery networks",
-          url: "https://web.dev/articles/content-delivery-networks",
-        },
-        {
-          "@type": "CreativeWork",
-          name: "Evaluate Google Ads landing pages",
-          url: "https://support.google.com/google-ads/answer/7543502",
         },
       ],
     },
@@ -219,7 +205,7 @@ const articleSchema = {
         url: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
       },
       datePublished: "2026-05-13T00:00:00-05:00",
-      dateModified: "2026-07-23T00:00:00-05:00",
+      dateModified: "2026-08-01T00:00:00-05:00",
       breadcrumb: {
         "@id":
           "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#breadcrumb",
@@ -368,15 +354,20 @@ export default function SlowWebsitePage() {
               </span>
             </h1>
             <p className="mb-6 text-xl leading-relaxed text-stone-600" data-speakable="true">
-              A slow site rarely has one cause. The delay can start with the network, with your server, in the
-              browser, in the template, or in something a third party loaded. This guide shows you how to
-              measure the pages that are actually affected, work out which layer is holding things up, and
-              only then decide whether to optimise what you have or rebuild it.
+              First, which of the two questions is yours? <strong>If every site is slow for you, the problem is
+              your side</strong> and the fixes are a different article: a browser with too many extensions, a
+              saturated network, or DNS. <strong>If your own site is slow for the people visiting it</strong>,
+              this is the page. That second problem rarely has one cause: the delay can start with the network,
+              with your server, in the browser, in the template, or in something a third party loaded. Here you
+              measure the pages that are actually affected, work out which layer is holding things up, and only
+              then decide whether to optimize what you have or rebuild it.
             </p>
             <BlogAuthor
-              date="May 13, 2026, reviewed Jul 23, 2026"
-              readTime="14 min read"
-              bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He works on performance diagnostics, technical SEO and controlled website migrations with documented baselines and acceptance criteria."
+              name="Hassan Jamal"
+              role="Co-founder and Lead Engineer"
+              date="May 13, 2026, reviewed Aug 1, 2026"
+              readTime="8 min read"
+              bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He diagnoses slow sites, does the technical SEO, and runs migrations with recorded baselines and acceptance criteria."
               linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
             />
           </div>
@@ -389,10 +380,11 @@ export default function SlowWebsitePage() {
             <h2 className="mb-4 text-base font-bold text-charcoal">Short answer</h2>
             <BlogList
               items={[
+                "Most slow pages come down to four things: the server answers late, the largest thing on the screen is discovered late, too much JavaScript runs before the page is usable, or a third-party tool blocks it. Which one it is decides the fix.",
                 "Use PageSpeed Insights to separate available real-user field data from the controlled Lighthouse lab test. One score is not a complete diagnosis.",
                 "Google's good Core Web Vitals thresholds remain LCP at 2.5 seconds or less, INP at 200 milliseconds or less and CLS at 0.1 or less, evaluated at the 75th percentile of visits.",
                 "Test multiple page templates on mobile and desktop. A homepage, service page, product page and article can fail for different reasons.",
-                "Performance can affect user experience, Search success and paid landing-page quality, but there is no universal traffic, revenue or ranking loss per second.",
+                "Speed affects how people experience your site, how it does in Search, and the quality score on your paid landing pages. There is no fixed amount of traffic, revenue or ranking you lose per second.",
                 "Rebuild only when repeated measurement shows a required platform or architecture constraint that optimization cannot responsibly remove.",
               ]}
             />
@@ -422,7 +414,11 @@ export default function SlowWebsitePage() {
               0.1 or less as good at the 75th percentile. Poor begins above 4 seconds for LCP,
               above 500 milliseconds for INP and above 0.25 for CLS. These are real-user
               experience categories, not a promise that crossing one line changes a ranking or
-              conversion by a fixed amount.
+              conversion by a fixed amount. If the three metrics are new to you, we cover what each
+              one measures and why it exists in{" "}
+              <Link href="/blog/core-web-vitals-explained" className="text-charcoal underline underline-offset-2">
+                Core Web Vitals explained
+              </Link>.
             </BlogText>
 
             <div className="overflow-x-auto rounded-xl border border-stone-200">
@@ -459,9 +455,29 @@ export default function SlowWebsitePage() {
             </div>
 
             <InsightBox variant="info">
-              First Input Delay is no longer a Core Web Vital. INP replaced it in March 2024.
-              A current performance report or visual should use LCP, INP and CLS.
+              First Input Delay is no longer a Core Web Vital. Google replaced it with INP on
+              March 12, 2024 and removed FID from the program. Any current performance
+              report or dashboard should be showing you LCP, INP and CLS.
             </InsightBox>
+
+            <BlogHeader>Why It Seems Fast to You and Slow to Everyone Else</BlogHeader>
+
+            <BlogText>
+              This is usually where an owner starts doubting the report. You open your own site on
+              a good phone, on your own network, with the images already sitting in your browser
+              cache from the last time you looked. Someone arriving for the first time on a
+              mid-range Android over mobile data downloads all of it from scratch. Those are not
+              the same page load, and only one of them is being measured.
+            </BlogText>
+
+            <BlogText>
+              The 75th percentile in the table above is what settles the argument. Your site is not
+              graded on its average visit. It is graded at roughly the slowest quarter of visits,
+              which is why a site can feel fine every single time you check it and still be
+              assessed as poor. To see what your visitors see, test on a throttled mobile profile
+              with an empty cache, and when your impression and the field data disagree, the field
+              data is the one describing your customers.
+            </BlogText>
 
             <BlogHeader>How to Test a Slow Website Without Misreading the Score</BlogHeader>
 
@@ -493,12 +509,62 @@ export default function SlowWebsitePage() {
               ]}
             />
 
+            <div className="overflow-x-auto rounded-xl border border-stone-200">
+              <table className="w-full min-w-[620px] border-collapse text-sm">
+                <thead className="bg-stone-100">
+                  <tr>
+                    <th className="border-b border-stone-200 p-3 text-left">Tool</th>
+                    <th className="border-b border-stone-200 p-3 text-left">What it shows you</th>
+                    <th className="border-b border-stone-200 p-3 text-left">Reach for it when</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">PageSpeed Insights</td>
+                    <td className="border-b border-stone-200 p-3">Field data where enough exists, plus one Lighthouse lab run</td>
+                    <td className="border-b border-stone-200 p-3">You are starting out and want both views of a single URL</td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">Search Console</td>
+                    <td className="border-b border-stone-200 p-3">Core Web Vitals grouped across similar URLs</td>
+                    <td className="border-b border-stone-200 p-3">You need to know which page groups are affected, not one page</td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">Chrome DevTools</td>
+                    <td className="border-b border-stone-200 p-3">A performance trace of one exact load or interaction</td>
+                    <td className="border-b border-stone-200 p-3">You have found the slow page and need the code path</td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-stone-200 p-3 font-bold">WebPageTest</td>
+                    <td className="border-b border-stone-200 p-3">A filmstrip and waterfall from chosen locations and devices</td>
+                    <td className="border-b border-stone-200 p-3">You want to see what appears on screen, and in what order</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-bold">GTmetrix</td>
+                    <td className="p-3">A request waterfall in a readable summary</td>
+                    <td className="p-3">You want the slowest requests without reading a full trace</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <BlogText>
               Search Console&apos;s Core Web Vitals report groups similar URLs and is useful for
               prioritizing affected page groups. Chrome DevTools and Lighthouse are useful for
               reproducing and tracing a particular page. Your analytics and business systems show
               whether the affected visitors also experienced lower engagement or conversion.
               Keep those measurements related, but do not treat correlation as proof of one cause.
+            </BlogText>
+
+            <BlogText>
+              If you want to see what a properly recorded run looks like before doing your own, our{" "}
+              <Link href="/blog/agentic-browsing-pagespeed-score" className="text-charcoal underline underline-offset-2">
+                agentic browsing write-up
+              </Link>{" "}
+              publishes its Lighthouse and Chromium versions, the date, and what the two screenshots
+              in it do and do not jointly prove. That is the standard worth holding your own
+              before-and-after numbers to, and the standard to expect from anyone quoting you for
+              performance work.
             </BlogText>
 
             <BlogHeader>12 Common Reasons Your Website Loads So Slowly</BlogHeader>
@@ -550,7 +616,11 @@ export default function SlowWebsitePage() {
               <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2">
                 March 2026 core-update guide
               </Link>{" "}
-              shows how to separate an update correlation from a performance problem.
+              shows how to separate an update correlation from a performance problem, and{" "}
+              <Link href="/blog/how-website-speed-affects-seo" className="text-charcoal underline underline-offset-2">
+                how website speed affects SEO
+              </Link>{" "}
+              covers what Google has and has not said about the relationship.
             </BlogText>
 
             <BlogText>
@@ -595,6 +665,17 @@ export default function SlowWebsitePage() {
               cache behavior instead of assuming installation alone creates a fixed improvement.
             </BlogText>
 
+            <BlogText>
+              For the tactic-level version of these eight steps, see{" "}
+              <Link href="/blog/how-to-speed-up-your-website" className="text-charcoal underline underline-offset-2">
+                how to speed up your website
+              </Link>. For what it actually takes to reach a 90-plus lab score, and what that score
+              does and does not tell you, see{" "}
+              <Link href="/blog/how-to-achieve-100-pagespeed" className="text-charcoal underline underline-offset-2">
+                our PageSpeed method
+              </Link>.
+            </BlogText>
+
             <BlogHeader>When Should You Optimize, and When Should You Rebuild?</BlogHeader>
 
             <BlogText>
@@ -631,9 +712,9 @@ export default function SlowWebsitePage() {
                 <BlogList
                   items={[
                     "Required platform code or architecture repeatedly dominates the measured delay.",
-                    "Optimization conflicts with essential features, security or editorial operations.",
+                    "Making it faster would mean breaking a feature you need, weakening security, or stopping your team from publishing.",
                     "Maintenance and vendor costs are modeled against a comparable replacement scope.",
-                    "URL, content, analytics, integration, cutover and rollback controls can be documented.",
+                    "You can write down how URLs, content, analytics and integrations will be handled, plus the switchover and how to reverse it.",
                   ]}
                 />
               </section>

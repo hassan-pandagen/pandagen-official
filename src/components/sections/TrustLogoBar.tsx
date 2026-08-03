@@ -61,7 +61,7 @@ export default function TrustLogoBar() {
               </span>
             </h2>
             <p className="mt-6 max-w-lg text-base leading-7 text-stone-300 md:text-lg md:leading-8">
-              Before cutover, we document what must survive the move and how each item will be checked. That is what SEO-safe means here: risk controls, not a ranking promise.
+              Before we switch anything over, we write down what has to survive the move and how we will check each one. That is what we mean by SEO-safe: controls on the risk, not a promise about rankings.
             </p>
 
             <Link
@@ -120,14 +120,14 @@ export default function TrustLogoBar() {
             </ul>
 
             <figcaption className="border-t border-white/10 bg-black/15 px-5 py-4 text-xs leading-5 text-stone-400 md:px-7">
-              Illustrative handover structure. Your accepted scope defines the actual systems, checks, owners, and acceptance evidence.
+              This is an example of the structure. Your signed scope names the actual systems, the checks, who owns each, and what evidence you sign off against.
             </figcaption>
           </figure>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-stone-400 lg:flex-row lg:items-center lg:justify-between">
           <p>Custom Next.js and commerce work remains available when the migration requires it.</p>
-          <p className="font-semibold text-stone-200">Scope, exclusions, acceptance, ownership, and launch responsibilities are confirmed in writing.</p>
+          <p className="font-semibold text-stone-200">What is included, what is not, how you sign it off, who owns it, and who does what at launch. All in writing.</p>
         </div>
       </div>
     </section>

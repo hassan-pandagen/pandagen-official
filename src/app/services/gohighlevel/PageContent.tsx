@@ -13,16 +13,16 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 
 const comparisonData = [
   { feature: "Performance Review", ghl: "Measure the current pages with a defined device, network, and test run", custom: "Set a baseline, budget, and acceptance method for the approved frontend", icon: Gauge },
-  { feature: "Access & Rights", ghl: "Account, export, and licensing rights follow GHL's current terms", custom: "Repository access, licensing, IP, and handover follow the proposal", icon: Lock },
-  { feature: "Operating Cost", ghl: "Review the active plan, add-ons, messaging, and usage charges", custom: "Estimate hosting, services, maintenance, and usage for the proposed design", icon: DollarSign },
+  { feature: "Access & Rights", ghl: "Account, export, and licensing rights follow GHL's current terms", custom: "Who gets the code, which licences apply, who owns the IP and how it is handed over all follow the proposal", icon: Lock },
+  { feature: "Operating Cost", ghl: "Check the plan you are on, the add-ons, what messaging costs and what you get charged for usage", custom: "Work out hosting, third-party services, maintenance and usage for the design being proposed", icon: DollarSign },
   { feature: "Design System", ghl: "Uses the platform's supported builder and components", custom: "Design flexibility depends on the approved scope and accessibility requirements", icon: Palette },
-  { feature: "Search Readiness", ghl: "Audit rendering, metadata, content, links, and structured data", custom: "Implement agreed technical controls; search visibility remains third-party controlled", icon: TrendingUp },
+  { feature: "Search Readiness", ghl: "Check what actually renders, the metadata, the content, the links and the structured data", custom: "We implement the controls we agreed. Whether you show up in search is still Google’s call, not ours", icon: TrendingUp },
 ];
 
 const faqs = [
   {
     q: "Will my GHL automations break during migration?",
-    a: "We first inventory the relevant forms, triggers, pipelines, webhooks, and account settings. A parallel build and staged cutover can reduce risk, but continuity depends on GHL's APIs, account configuration, third-party services, and the acceptance checks documented for the project."
+    a: "First we list the forms, triggers, pipelines, webhooks and account settings that matter. A parallel build and staged cutover can reduce risk, but continuity depends on GHL's APIs, account configuration, third-party services, and the acceptance checks documented for the project."
   },
   {
     q: "Do I need to cancel GHL?",
@@ -111,7 +111,7 @@ export default function PageContent() {
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6 text-center">Assess GHL as a CRM and Website Stack</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">GoHighLevel can support CRM, automation, and public-page workflows. The right architecture depends on your account, content, integrations, design needs, and measured frontend baseline.</p>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">GoHighLevel handles CRM, automation and public pages perfectly well. What the right setup looks like depends on your account, your content, what it connects to, what the design has to do, and the frontend numbers you actually measure.</p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Common GHL uses */}

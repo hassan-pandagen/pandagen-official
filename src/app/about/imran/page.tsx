@@ -105,7 +105,7 @@ export default function ImranProfilePage() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Architect</p>
               <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Imran Raza Ladhani</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                Imran leads architecture at PandaCodeGen. He reviews whether a migration is justified, defines the system and data boundaries, and makes sure the approved solution can be operated and handed over without hidden platform or agency lock-in.
+                Imran leads architecture at PandaCodeGen. He decides whether a migration is actually justified, draws the lines between systems and data, and makes sure what we agreed can be operated and handed over without hidden platform or agency lock-in.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
@@ -144,10 +144,10 @@ export default function ImranProfilePage() {
           </div>
           <ul className="space-y-4">
             {[
-              "Which parts of the current platform should stay, and which constraints justify replacement?",
-              "What data, content, commerce, identity, and integration behavior must survive cutover?",
-              "Which third-party accounts belong to the client, and what recurring services remain after launch?",
-              "What acceptance, rollback, documentation, support, licensing, and ownership terms belong in writing?",
+              "What is worth keeping, and what is genuinely holding you back enough to replace?",
+              "Which data, content, commerce, logins and integrations have to still work the morning after?",
+              "Which accounts are yours, and what are you still paying for once it is live?",
+              "How you sign it off, how we reverse it, what gets documented, what support you get, which licences, and who owns it. All of that in writing.",
             ].map((item) => (
               <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileInput, ListChecks, Route } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -12,6 +12,7 @@ import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
+const MigrationVisual = dynamicImport(() => import("@/components/blog/MigrationControlAnimation"));
 
 const postId = "website-migration-cost-2026";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
@@ -32,13 +33,17 @@ export const metadata: Metadata = {
         "WordPress migration cost",
         "Webflow migration cost",
         "Shopify migration cost",
+        "how much does it cost to migrate a website",
+        "website replatforming cost",
+        "Squarespace migration cost",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-02",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -47,11 +52,10 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
     { name: "WordPress export", url: "https://wordpress.org/documentation/article/tools-export-screen/" },
     { name: "WooCommerce product CSV", url: "https://woocommerce.com/document/product-csv-importer-exporter/" },
     { name: "Webflow code export", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
-    { name: "Wix CMS export", url: "https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-cms-collection" },
+    { name: "Wix support: CMS and content export", url: "https://support.wix.com/en" },
     { name: "Squarespace export", url: "https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site" },
     { name: "Shopify product export", url: "https://help.shopify.com/en/manual/products/import-export/export-products" },
     { name: "HighLevel API", url: "https://marketplace.gohighlevel.com/docs/" },
@@ -66,19 +70,54 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-02",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Website migration", "WordPress", "WooCommerce", "Webflow", "Shopify", "Squarespace", "URL redirection", "Technical SEO", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website migration",
+            keywords: ["website migration cost", "how long does a website migration take", "website replatforming cost", "WordPress migration cost", "Shopify migration cost", "change web host"],
+            wordCount: 1850,
+            timeRequired: "PT11M",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Data migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "URL redirection", sameAs: ["https://en.wikipedia.org/wiki/URL_redirection"] },
+                { "@type": "Thing", name: "Website migration cost" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website migration cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-06",
+            dateModified: "2026-08-02",
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -122,11 +161,15 @@ export default function WebsiteMigrationCostPage() {
                             and how much testing the launch needs.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current platform and Google documentation.
+                            Reviewed August 2, 2026 against current platform and Google documentation. Every export link below was re-checked on August 1, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="18 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+
+                    <div className="my-10">
+                        <MigrationVisual />
+                    </div>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
@@ -156,6 +199,9 @@ export default function WebsiteMigrationCostPage() {
                     </div>
 
                     <BlogHeader id="cost-table">The seven-platform migration matrix</BlogHeader>
+                    <BlogText>
+                        No platform hands you a complete, portable site. What each one exports sets the floor on what a migration costs, because whatever the export misses has to be rebuilt by hand. The right-hand column is where acceptance usually fails, and it is different for every source platform.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1100px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -184,67 +230,171 @@ export default function WebsiteMigrationCostPage() {
                         Our own tiers are at the top of this page. Which one a migration lands in is driven by page count,
                         content volume, custom functionality and integrations rather than by which platform you are
                         leaving, so the same source platform can land in any of the three. The price is fixed for the scope
-                        written into the accepted project terms, and every build carries a 90+ Lighthouse handover target
+                        written into the accepted project terms, and every build carries a 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> handover target
                         on mobile and desktop for the agreed representative pages, verified across three recorded runs.
                         Current tiers are always on the{" "}
                         <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>;
                         if this article and that page ever disagree, the pricing page is correct.
                     </BlogText>
 
+                    <BlogHeader id="host-vs-platform">Are you changing hosts, or changing platforms?</BlogHeader>
+
+                    <div data-speakable="true">
+                        <BlogText>
+                            These are two different jobs and only one of them is worth paying an agency for. Moving a
+                            WordPress site from one host to another host keeps the same software, the same theme, the
+                            same plugins and the same database. Nothing is rebuilt. Most hosting companies will do that
+                            transfer for you when you buy a plan, frequently at no charge or for a small fixed fee, and
+                            that is the first place to ask. <strong>If all you need is a host change, do not pay
+                            migration prices for it.</strong>
+                        </BlogText>
+                    </div>
+
+                    <BlogText>
+                        A platform migration is the other job: the content comes out of one system and has to be rebuilt
+                        in another that works differently. Templates, plugins, forms, search, checkout and editor
+                        workflow do not transfer, they get reproduced, and the URLs have to be mapped so the search
+                        traffic survives. That is what the rest of this page prices. Published figures that mix the two
+                        jobs into one range are the reason migration quotes look wildly inconsistent: a $0 host transfer
+                        and a five-figure replatform are both truthfully called a &ldquo;website migration&rdquo;.
+                    </BlogText>
+
+                    <BlogText>
+                        A third case sits between them. Staying on the same platform but rebuilding the design is a
+                        redesign, not a migration, and it is priced differently again; our{" "}
+                        <Link href="/blog/website-redesign-cost" className="text-cognac hover:underline font-medium">website redesign cost guide</Link>{" "}
+                        covers that scope, and{" "}
+                        <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline font-medium">what a website costs to build from scratch</Link>{" "}
+                        covers the case where replacing beats moving.
+                    </BlogText>
+
+                    <BlogHeader id="which-platform">Go straight to your platform</BlogHeader>
+                    <BlogText>
+                        The rest of this page is the shared method. If you already know which platform you are leaving,
+                        the dedicated guide will be faster: {" "}
+                        <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress</Link>,{" "}
+                        <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce</Link>,{" "}
+                        <Link href="/blog/webflow-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow</Link>,{" "}
+                        <Link href="/blog/wix-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix</Link>,{" "}
+                        <Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace</Link>, or{" "}
+                        <Link href="/blog/leaving-webflow-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the triggers that usually start a Webflow move</Link>.
+                        If you are moving to Next.js specifically,{" "}
+                        <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the WordPress to Next.js walkthrough</Link>{" "}
+                        covers the mechanics, and{" "}
+                        <Link href="/blog/will-migrating-hurt-my-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">what a migration does to your search traffic</Link>{" "}
+                        covers the risk everyone actually asks about first.
+                    </BlogText>
+
+                    <BlogHeader id="how-long">How long does a website migration take?</BlogHeader>
+
+                    <div data-speakable="true">
+                        <BlogText>
+                            Long enough that the schedule is set by approvals and content, not by build time. The
+                            technical work on a bounded brochure migration is the smaller half of the calendar; the
+                            larger half is inventorying what exists, deciding what does not come across, getting content
+                            reviewed and signed off, and testing every journey before the switch. A store adds
+                            reconciliation of orders, customers and payments, which cannot be rushed because the
+                            numbers have to match.
+                        </BlogText>
+                    </div>
+
+                    <BlogText>
+                        The parts that reliably take longer than people plan for: finding every URL that exists rather
+                        than every URL someone remembers, waiting on content decisions, and the freeze-and-cutover window
+                        where data must stop changing. The parts that go faster than expected are usually templates,
+                        because a site with forty pages often has six real layouts. Ask any provider for the schedule
+                        broken into inventory, build, content, testing and cutover, with the dependencies named, rather
+                        than a single duration. A quote that gives one number for the whole thing has not been planned.
+                    </BlogText>
+
                     <BlogHeader id="whats-inside-price">What is inside a migration price?</BlogHeader>
+                    <BlogText>
+                        Seven workstreams, and only two of them look like building a website. Discovery, content extraction and reshaping, rebuilding the things that were features rather than pages, search continuity, testing, and the launch and handover work. A quote that names only design and development has not priced the other five.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Discovery, inventory, requirements and target architecture.",
-                            "Information architecture, component system and responsive implementation.",
-                            "Content model, extraction, transformation, media and validation.",
-                            "Forms, search, users, commerce, analytics, consent and integrations.",
-                            "SEO inventory, metadata, canonicals, structured data, redirects and sitemap.",
-                            "Accessibility, security, browser, device, functional and performance QA.",
-                            "Deployment, data freeze, cutover, monitoring, rollback, handoff and support.",
+                            "Working out what you have, what you need, and what you are building.",
+                            "Deciding how the site is organised, building the reusable pieces, and making it work on every screen.",
+                            "Getting your content out of the old system, reshaping it to fit the new one, moving the images, and checking nothing was lost.",
+                            "Rebuilding the things people use: forms, search, logins, checkout, analytics, the cookie banner, and whatever else you connect to.",
+                            "Protecting your search traffic: listing every URL, carrying the metadata across, setting canonicals, keeping the structured data, mapping redirects, and regenerating the sitemap.",
+                            "Testing it properly: can everyone use it, is it secure, does it work in every browser and on every device, does it do what it should, and is it fast.",
+                            "Going live: shipping it, freezing the data, making the switch, watching it, being able to undo it, handing it over, and supporting you afterwards.",
                         ]}
                     />
 
+                    <BlogText>
+                        The seven sections below give the starting figure for each source platform. They are
+                        PandaCodeGen&apos;s own published tiers, listed in full on the{" "}
+                        <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>,
+                        and the accepted scope sets the final number. They are not a market rate for the industry.
+                    </BlogText>
+
                     <BlogHeader id="wordpress-migration-cost">WordPress migration cost</BlogHeader>
                     <BlogText>
-                        WordPress scope depends on themes, templates, blocks, plugins, shortcodes, custom post types,
-                        fields, users, forms, search, media and hosting behavior. WordPress can export content, but a
+                        Most WordPress migrations we scope start at $1,500 for a bounded brochure site and $3,500 once
+                        there is structured content or a real plugin footprint. Plugin-heavy and multi-template sites
+                        run $5,000 to $10,000. What moves it is themes, templates, blocks, plugins, shortcodes, custom
+                        post types, fields, users, forms, search, media and hosting behavior. WordPress can export content, but a
                         replacement must reproduce accepted functions and editorial workflows. A brochure site may fit
-                        Starter; structured or plugin-heavy sites may fit Growth, Scale or custom scope.
+                        Starter; structured or plugin-heavy sites may fit Growth, Scale or custom scope. The full
+                        breakdown, including why a host change is a different job entirely, is in our{" "}
+                        <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress migration cost guide</Link>.
                     </BlogText>
 
                     <BlogHeader id="woocommerce-migration-cost">WooCommerce migration cost</BlogHeader>
                     <BlogText>
-                        WooCommerce adds products, variants, pricing, inventory, customer and order records, tax,
-                        shipping, payments, fraud, refunds, subscriptions and extensions. Reconcile record counts and
-                        financial flows before and after migration. Commerce complexity can exceed the standard tiers.
+                        WooCommerce migrations start at $5,000 and are the most likely of the seven to exceed the
+                        published tiers, because commerce carries obligations a brochure site does not. WooCommerce
+                        adds products, variants, pricing, inventory, customer and order records, tax, shipping,
+                        payments, fraud, refunds, subscriptions and extensions. Reconcile record counts and
+                        financial flows before and after migration. Before you price a rebuild, check whether you need
+                        one: our{" "}
+                        <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration cost guide</Link>{" "}
+                        separates moving the data from rebuilding the store, and they are not the same purchase.
                     </BlogText>
 
                     <BlogHeader id="webflow-migration-cost">Webflow migration cost</BlogHeader>
                     <BlogText>
-                        Webflow code export covers HTML, CSS, JavaScript and assets on eligible paid Workspaces, while
+                        Webflow migrations start at $1,500 and typically land at $3,500, because the export gives you
+                        less than people expect and the gap is rebuild work. Webflow code export covers HTML, CSS,
+                        JavaScript and assets on eligible paid Workspaces, while
                         current documentation excludes working CMS, ecommerce, User Accounts, localized content beyond
                         the primary locale, forms, search, password protection and code components. Page count must be
-                        normalized into templates and systems before choosing a tier.
+                        normalized into templates and systems before choosing a tier, which is the whole subject of our{" "}
+                        <Link href="/blog/webflow-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow migration cost guide</Link>. What Webflow
+                        charges you while you stay is covered separately in{" "}
+                        <Link href="/blog/webflow-true-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">what Webflow actually costs</Link>.
                     </BlogText>
 
                     <BlogHeader id="wix-migration-cost">Wix migration cost</BlogHeader>
                     <BlogText>
-                        Wix scope depends on the editor generation, CMS collections, blog, media, forms, bookings,
-                        members, stores, apps and custom code. The CMS can export collections, but that does not
+                        Wix migrations start at $1,500 and are usually the cheapest of the seven, because Wix sites are
+                        smaller on average and the export gives you almost nothing, so the work is a linear content
+                        rebuild rather than a data conversion. Scope depends on the editor generation, CMS collections,
+                        blog, media, forms, bookings, members, stores, apps and custom code. The CMS can export collections, but that does not
                         establish a complete whole-site export. Inventory each feature and choose an extraction and
-                        replacement method.
+                        replacement method. Our{" "}
+                        <Link href="/blog/wix-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix migration cost guide</Link>{" "}
+                        works through the four routes people actually take, cheapest first.
                     </BlogText>
 
                     <BlogHeader id="squarespace-migration-cost">Squarespace migration cost</BlogHeader>
                     <BlogText>
+                        Squarespace migrations start at $1,500, reach $3,500 with a blog or Commerce, and $5,000 to
+                        $10,000 for a store with Member Areas or scheduling. The reason the range is wide is that
                         Squarespace&apos;s current export is partial. Store and portfolio pages, product and video
                         blocks, drafts, style settings and custom CSS are among the documented exclusions. Price the
-                        design, content and systems that must be recreated separately.
+                        design, content and systems that must be recreated separately, and see our{" "}
+                        <Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Squarespace migration cost guide</Link>{" "}
+                        for the redirect problem specifically, which is the line most Squarespace quotes miss.
                     </BlogText>
 
                     <BlogHeader id="shopify-migration-cost">Shopify and headless Shopify migration cost</BlogHeader>
                     <BlogText>
-                        Decide whether Shopify remains the commerce backend or is replaced. A headless migration still
+                        Headless Shopify migrations start at $5,000 and reach $10,000 or more, because the storefront is
+                        only part of the job. The first decision is whether Shopify remains the commerce backend or is
+                        replaced. A headless migration still
                         needs search, accounts, analytics, consent, localization, app compatibility, preview,
                         deployment and monitoring. A fully custom commerce system also assumes responsibility for
                         checkout, tax, fraud, orders and operations.
@@ -252,44 +402,54 @@ export default function WebsiteMigrationCostPage() {
 
                     <BlogHeader id="gohighlevel-migration-cost">GoHighLevel website migration cost</BlogHeader>
                     <BlogText>
-                        A hybrid can keep GoHighLevel for CRM, calendars, automation and pipelines while replacing the
-                        public site. Define forms, contacts, attribution, webhooks, OAuth, failure handling and
+                        GoHighLevel migrations start at $1,500 for a hybrid that keeps the CRM and replaces only the
+                        public site, which is what most operators want, and $3,500 once there are several funnels and
+                        form integrations. A hybrid keeps GoHighLevel for CRM, calendars, automation and pipelines
+                        while replacing the public site. Define forms, contacts, attribution, webhooks, OAuth, failure handling and
                         ownership. Do not promise an unchanged CRM bill or uninterrupted workflow without testing the
                         accepted implementation.
                     </BlogText>
 
-                    <BlogHeader id="roi-math">Calculate the business case without universal loss math</BlogHeader>
+                    <BlogHeader id="roi-math">Is a migration worth it? How to build the business case</BlogHeader>
                     <BlogText>
-                        Compare current direct costs, internal hours, incidents and measured limitations with migration
-                        cost, target providers, maintenance, support and risk. Build low, central and high scenarios.
+                        A migration is worth it when the measured cost of staying exceeds the cost of moving plus the
+                        cost of running the replacement, over a horizon you pick in advance. Compare current direct
+                        costs, internal hours, incidents and measured limitations with migration cost, target
+                        providers, maintenance, support and risk. Build low, central and high scenarios.
                         Do not multiply an assumed speed loss or promise a predetermined commercial or search outcome.
                     </BlogText>
 
                     <BlogHeader id="hidden-costs">Costs that must be visible in the proposal</BlogHeader>
+                    <BlogText>
+                        These six belong in the proposal rather than in discovery, because each one is a decision someone has to fund. Content cleanup, vendor charges, compliance and accessibility work, your own team time, ongoing maintenance, and exiting the old platform. If a proposal is silent on one, assume it is excluded and ask what happens when it appears.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Content cleanup, rewriting, missing assets and data exceptions.",
-                            "Vendor plans, licenses, usage, payment and messaging fees.",
-                            "Accessibility remediation, security review and compliance work.",
-                            "Internal review, legal approval, training and change management.",
-                            "Post-launch maintenance, monitoring, incident response and upgrades.",
-                            "Exit, archive, old-platform cancellation and data retention.",
+                            "Tidying up the content, rewriting what needs it, replacing images nobody can find, and dealing with the records that do not fit.",
+                            "What your vendors charge: the plan, the licences, what you use, and fees on payments and messages.",
+                            "Fixing accessibility problems, having someone review the security, and any compliance work you are required to do.",
+                            "Your own team's time: reviewing it, getting legal to approve it, learning the new system, and helping everyone adjust.",
+                            "Keeping it running after launch: maintenance, monitoring, someone on call when it breaks, and upgrades.",
+                            "Leaving the old platform properly: archiving it, cancelling the plan, and keeping whatever you are required to keep.",
                         ]}
                     />
 
                     <BlogHeader id="how-to-budget">How to budget the migration</BlogHeader>
+                    <BlogText>
+                        Build the number before you request quotes, so you can tell which quote is wrong. Six ordered steps: inventory, define the target and the responsibilities, agree what done means, separate one-time from recurring, write down the assumptions and exclusions, and hold contingency against identified unknowns rather than an arbitrary percentage.
+                    </BlogText>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
-                        <li>Inventory routes, templates, content, data, integrations and users.</li>
+                        <li>List everything you have: pages, templates, content, data, integrations and user accounts.</li>
                         <li>Define target journeys, editor workflow and operating responsibilities.</li>
-                        <li>Set functional, SEO, accessibility, security and performance acceptance.</li>
+                        <li>Agree what &ldquo;done&rdquo; means: it works, it still ranks, everyone can use it, it is secure, and it is fast.</li>
                         <li>Separate one-time agency work from third-party and ongoing costs.</li>
-                        <li>Record assumptions, exclusions, change control, dependencies and schedule.</li>
+                        <li>Write down what you assumed, what is not included, how changes get approved, what you are waiting on, and when each part happens.</li>
                         <li>Keep a contingency tied to identified unknowns, not an arbitrary percentage.</li>
                     </ol>
 
                     <BlogHeader>PandaCodeGen terms</BlogHeader>
                     <BlogText>
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. A refund is tied to
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. A refund is tied to
                         failure to deliver the signed scope, not a change of preference after work starts. Starter
                         includes 15 business days of launch defect support; Growth and Scale include 30. Ownership,
                         licenses and accounts follow the accepted project terms.
@@ -301,6 +461,17 @@ export default function WebsiteMigrationCostPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a platform-specific migration plan</h2>

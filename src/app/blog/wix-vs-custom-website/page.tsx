@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Code2, Pencil, Scale } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Wix vs custom website",
         "Wix or custom website",
@@ -47,14 +48,11 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Wix pricing", url: "https://www.wix.com/plans" },
     { name: "Wix CMS overview", url: "https://support.wix.com/en/article/cms-content-management-system-an-overview" },
     { name: "Wix Core Web Vitals", url: "https://support.wix.com/en/article/site-performance-about-core-web-vitals" },
     { name: "Wix Velo APIs", url: "https://dev.wix.com/docs/velo/apis" },
     { name: "Wix product export", url: "https://support.wix.com/en/article/wix-stores-exporting-your-product-list" },
     { name: "Wix site transfer", url: "https://support.wix.com/en/article/transferring-a-premium-site-to-another-wix-account" },
-    { name: "Google SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
 ];
 
 const articleSchema = {
@@ -64,6 +62,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
             dateModified: "2026-07-24",
@@ -72,13 +71,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Wix", "Website migration", "Content management systems", "Technical SEO", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Platform comparison",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Wix", sameAs: ["https://en.wikipedia.org/wiki/Wix.com"] },
+                { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1500,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Wix vs custom website", item: "https://www.pandacodegen.com/blog/wix-vs-custom-website" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#webpage",
+            url: "https://www.pandacodegen.com/blog/wix-vs-custom-website",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wix-vs-custom-website#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -127,14 +154,14 @@ export default function WixVsCustomWebsitePage() {
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="14 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>
                         <BlogList
                             items={[
                                 "Choose Wix when its current editor, CMS, apps, commerce and managed operations satisfy the requirements.",
-                                "Consider custom when verified experience, integration, portability or platform-control needs remain blocked.",
+                                "Go custom when you have proved that Wix will not give you the experience, the integration, the portability or the control you need.",
                                 "Compare current invoices and equivalent scope instead of generic three-year totals.",
                                 "Treat migration as a controlled business-system change, not a guaranteed upgrade.",
                             ]}
@@ -144,8 +171,8 @@ export default function WixVsCustomWebsitePage() {
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
                             { icon: Pencil, title: "Editing", body: "Visual tools, roles, preview and publishing workflow." },
-                            { icon: Boxes, title: "Capabilities", body: "CMS, commerce, bookings, members, apps and data." },
-                            { icon: Code2, title: "Control", body: "Rendering, integrations, deployment and operations." },
+                            { icon: Boxes, title: "Capabilities", body: "Your content, the store, bookings, members, apps and data." },
+                            { icon: Code2, title: "Control", body: "How pages render, what they connect to, and who ships changes." },
                             { icon: Scale, title: "Lifecycle", body: "Build, providers, maintenance, support and exit." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -157,6 +184,9 @@ export default function WixVsCustomWebsitePage() {
                     </div>
 
                     <BlogHeader id="matrix">Wix vs custom website comparison</BlogHeader>
+                    <BlogText>
+                        Across all five rows the trade is the same one: Wix hands you a working system and keeps the decisions, custom hands you the decisions and the engineering work that comes with them. Editing, features and hosting all arrive ready on one side and have to be designed on the other. The two rows people skip are change surface and exit, and those are the ones that matter three years in.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[940px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -191,14 +221,12 @@ export default function WixVsCustomWebsitePage() {
                     <BlogText>
                         Wix offers managed capabilities and a documented Velo API surface. Confirm the live plan and
                         product behavior for CMS, forms, booking, events, stores, members, payments, automation and
-                        integrations. A custom site can implement requirements outside those boundaries, but every new
-                        system adds delivery, security, testing and maintenance responsibility.
+                        integrations. A custom site can do things Wix will not, and every system you add is another thing to build, secure, test and maintain.
                     </BlogText>
                     <BlogText>
                         How a capability arrives matters as much as whether it exists. A native Wix feature is part of
                         the page; a third-party app from the App Market generally arrives as an embedded component with
-                        its own bundle and its own vendor. Wix&apos;s own guidance is to prefer a native app where one
-                        covers the need. So the practical test for each requirement is: native feature, supported app,
+                        its own bundle and its own vendor. Wix&apos;s own documentation is where to confirm whether a native feature already covers the need. So the practical test for each requirement is: native feature, supported app,
                         Velo code, or not available on this plan. Answer that per requirement and the platform question
                         mostly answers itself.
                     </BlogText>
@@ -235,7 +263,7 @@ export default function WixVsCustomWebsitePage() {
                         items={[
                             "Media: Wix serves images from its own CDN with generated file names. You control alt text and surrounding content; check what else you can influence if image search matters to the business.",
                             "Structured data: confirm what the platform outputs for each page type, what you can add, and what you cannot remove.",
-                            "Sitemaps and index controls: check how much of the generated sitemap and robots behaviour you can change.",
+                            "Sitemaps and index controls: check how much of the generated sitemap and robots behavior you can change.",
                             "URLs and redirects: check the URL patterns the platform imposes and the redirect controls it gives you, since both decide how a future move is executed.",
                             "Multi-language: check how translated content is addressed and how much of that structure you can set.",
                         ]}
@@ -251,7 +279,7 @@ export default function WixVsCustomWebsitePage() {
 
                     <BlogHeader id="export">Export, portability and ownership</BlogHeader>
                     <BlogText>
-                        Wix documents separate CSV exports for CMS collections, contacts, physical products and orders,
+                        Checked against Wix&apos;s support documentation on July 31, 2026: Wix documents separate CSV exports for CMS collections, contacts, physical products and orders, says digital-product export is unsupported, and limits each product CSV to 5,000 rows,
                         plus transfer of eligible sites and services between Wix accounts. Those paths do not establish
                         one complete importable application for another stack. A custom contract should define the
                         repository, deliverables, data, domain, provider accounts, pre-existing code and licenses.
@@ -268,6 +296,9 @@ export default function WixVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader id="cost">Three-year cost without invented totals</BlogHeader>
+                    <BlogText>
+                        There is no published three-year total here because the inputs are yours. Collect six categories from current quotes and equivalent features, then model low, central and high usage. Free or included allowances can change and may not fit a commercial workload, and a lower recurring bill does not prove a payback without measured benefits and every transition cost included.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Current Wix plan, apps, transactions, email and external-service invoices.",
@@ -300,6 +331,9 @@ export default function WixVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader id="when-wix">When Wix is enough</BlogHeader>
+                    <BlogText>
+                        Stay on Wix when the editing and managed workflow serve the team, and when the features you need exist and behave correctly on the live plan rather than on the pricing page. The deciding condition is the last one: if migration value does not justify the cost and the risk, the honest answer is that you already have what you need.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The current editing and managed business workflow serves the team.",
@@ -311,6 +345,9 @@ export default function WixVsCustomWebsitePage() {
                     />
 
                     <BlogHeader id="when-custom">When custom deserves a serious look</BlogHeader>
+                    <BlogText>
+                        Custom earns evaluation once you have proved, not assumed, that a specific requirement stays blocked on Wix. The word doing the work is proved: a verified experience or integration requirement, a rendering or content model the platform will not give you, or an accessibility target that platform-controlled work prevents. The last condition is organizational rather than technical, and it decides the outcome more often than the first four.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A verified experience or integration requirement remains blocked.",
@@ -352,9 +389,8 @@ export default function WixVsCustomWebsitePage() {
                     <BlogHeader id="offer">PandaCodeGen terms</BlogHeader>
                     <BlogText>
                         PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
-                        failure to deliver the signed scope. Starter includes 15 business days of launch defect
-                        support; Growth and Scale include 30. Ownership and performance acceptance follow the signed
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
+                        failure to deliver the signed scope. Starter includes 15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership and performance acceptance follow the signed
                         terms, not the framework name.
                     </BlogText>
 
@@ -364,6 +400,17 @@ export default function WixVsCustomWebsitePage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Compare Wix and custom on the same requirements</h2>

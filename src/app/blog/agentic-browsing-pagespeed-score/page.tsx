@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "What the experimental Lighthouse category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
         type: "article",
         publishedTime: "2026-06-19T00:00:00-05:00",
-        modifiedTime: "2026-07-24T00:00:00-05:00",
+        modifiedTime: "2026-07-31T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
         images: [ogImageForPath("/blog/agentic-browsing-pagespeed-score")],
@@ -62,32 +62,30 @@ const articleSchema = {
             "description": "A source-linked guide to Lighthouse's experimental Agentic Browsing category, its pass ratio, WebMCP requirements, and a dated PandaCodeGen snapshot.",
             "image": ogImageUrlForPath("/blog/agentic-browsing-pagespeed-score"),
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-07-31T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "knowsAbout": ["Web performance", "Core Web Vitals", "Lighthouse", "Rendering strategies", "Next.js"],
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 }
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score" },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score#webpage" },
             "articleSection": "AEO",
             "keywords": ["agentic browsing", "webmcp", "agent ready website", "llms.txt", "agentic commerce readiness"],
             "inLanguage": "en-US",
+            "wordCount": 1700,
+            "timeRequired": "PT9M",
             "about": [
                 { "@type": "Thing", "name": "Agentic Browsing" },
                 { "@type": "Thing", "name": "WebMCP" },
-                { "@type": "Thing", "name": "Google PageSpeed Insights" },
+                { "@type": "Thing", "name": "Google PageSpeed Insights", "sameAs": ["https://pagespeed.web.dev/"] },
                 { "@type": "Thing", "name": "Agentic Commerce" },
-                { "@type": "Thing", "name": "AI Agents" }
+                { "@type": "Thing", "name": "AI Agents", "sameAs": ["https://en.wikipedia.org/wiki/Intelligent_agent"] }
             ],
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
             "citation": [
@@ -111,7 +109,7 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Is Your Website Ready for AI Agents?", "item": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score" }
+                { "@type": "ListItem", "position": 3, "name": "Lighthouse agentic browsing checks", "item": "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score" }
             ]
         },
         {
@@ -122,26 +120,9 @@ const articleSchema = {
             "description": "What Lighthouse's experimental Agentic Browsing category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-07-31T00:00:00-05:00",
             "inLanguage": "en-US"
         },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026-02",
-            "description": "PandaCodeGen builds and migrates websites with documented accessibility, rendering, layout-stability, and performance checks. Experimental audit results are recorded with their date and environment and are not presented as ranking or sales guarantees.",
-            "areaServed": ["United States", "Worldwide"],
-            "email": "info@pandacodegen.com",
-            "sameAs": [
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://github.com/hassan-pandagen"
-            ]
-        }
     ]
 };
 
@@ -156,7 +137,7 @@ export default function AgenticBrowsingPage() {
                     <Breadcrumb items={[
                         { label: "Home", href: "/" },
                         { label: "Blog", href: "/blog" },
-                        { label: "Is Your Website Ready for AI Agents?" }
+                        { label: "Lighthouse agentic browsing checks" }
                     ]} />
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
@@ -174,9 +155,9 @@ export default function AgenticBrowsingPage() {
                             In May 2026 the Chrome team documented an experimental Lighthouse category called Agentic Browsing. It does not give you a 0-to-100 score. It tells you how many checks passed out of how many, and what each one found. This guide covers what those checks actually measure, and what they cannot tell you: whether you will rank, whether an AI will recommend you, whether people will complete a purchase, or whether you will sell more.
                         </p>
                         <BlogAuthor
-                            date="Updated Jul 24, 2026"
+                            date="Updated Jul 31, 2026"
                             readTime="9 min read"
-                            bio="Hassan builds and migrates Next.js sites with documented rendering, accessibility, stability, and performance acceptance checks."
+                            bio="Hassan builds and migrates Next.js sites, and writes down how rendering, accessibility, layout stability and performance get signed off."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -193,7 +174,7 @@ export default function AgenticBrowsingPage() {
                             <li className="flex items-start gap-2"><Sparkles className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Chrome documents Agentic Browsing as an experimental Lighthouse category based on proposed standards.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> It reports a pass ratio and individual results for WebMCP, agent-relevant accessibility, layout stability, and llms.txt discoverability.</li>
                             <li className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> Chrome&apos;s current documentation requires Chrome 150 or later; WebMCP audits also require the WebMCP origin trial.</li>
-                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A June 20 PandaCodeGen screenshot recorded 3/3 under Lighthouse 13.4.0 and HeadlessChromium 146.0.7680.177. That is a historical snapshot, not a current universal result.</li>
+                            <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A June 20, 2026 PandaCodeGen screenshot recorded 3/3 under Lighthouse 13.4.0 and HeadlessChromium 146.0.7680.177. That is a historical snapshot, not a current universal result.</li>
                             <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" /> A separate Panda Patches dashboard recorded $7,419.18 across 27 internally AI-tagged orders. The owner-approved screenshot is first-party, not independently audited, and does not connect those orders to this Lighthouse result.</li>
                         </ul>
                     </div>
@@ -205,7 +186,7 @@ export default function AgenticBrowsingPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen migrations can include recorded checks for rendered content, semantic HTML, accessible names, layout stability, and agreed Lighthouse profiles. Experimental results are dated with their browser and tool versions and do not create a ranking, citation, transaction, or revenue promise.
+                            Our migrations can include recorded checks on what actually renders, whether the HTML is semantic, whether controls have accessible names, whether the layout holds still, and the Lighthouse profiles you agreed. Experimental results are dated with their browser and tool versions and do not create a ranking, citation, transaction, or revenue promise.
                         </p>
                     </div>
 
@@ -217,7 +198,7 @@ export default function AgenticBrowsingPage() {
                     </div>
 
                     <BlogText>
-                        The category matters as an engineering signal: accessible names, valid relationships, stable layouts, and explicit tools can reduce ambiguity for automated interaction. The official documentation does not call it a search ranking factor and does not forecast adoption or commerce volume. Business investment should follow a named user journey and measurable demand, not a market projection alone.
+                        It is useful as an engineering signal. If controls have proper names, relationships are valid, the layout holds still and tools are declared, software has less to guess at. The official documentation does not call it a search ranking factor and does not forecast adoption or commerce volume. Business investment should follow a named user journey and measurable demand, not a market projection alone.
                     </BlogText>
 
                     <BlogHeader id="what-google-scores">What Google Actually Scores Today</BlogHeader>
@@ -229,6 +210,12 @@ export default function AgenticBrowsingPage() {
 
                     <BlogText>
                         The accessibility tree is one machine-readable view of interactive content. OpenAI also says its Atlas agent uses ARIA labels and roles to interpret structure and controls. Correct semantic HTML and accessible names therefore help people and supported agents, but do not guarantee that every agent uses the same model or that search systems quote the page.
+                    </BlogText>
+                    <BlogText>
+                        There is a point buried in that worth saying plainly. An agent reads your page through much the same structure a screen reader uses for a blind visitor: the headings, the roles, the accessible names on your controls, the labels on your form fields. Semantic markup used to be filed under accessibility, and treated by plenty of teams as a compliance chore. It is now also the interface a machine reads your page through. That is the honest reason these checks exist, and it is why the work overlaps so heavily with things you should have been doing anyway.
+                    </BlogText>
+                    <BlogText>
+                        It also helps to keep two different questions apart. The first is whether an agent can <BlogHighlight>read and navigate</BlogHighlight> your page. That is what the accessibility, layout-stability and discoverability audits look at, and those run today. The second is whether an agent can <BlogHighlight>reliably act</BlogHighlight> on it, submit the form, complete the purchase, change the booking. That is what WebMCP is for, and it is the part that is not settled. Almost all the confusion about this category comes from treating those two as one question.
                     </BlogText>
 
                     <figure className="my-8">
@@ -247,7 +234,7 @@ export default function AgenticBrowsingPage() {
                     </figure>
 
                     <BlogQuote>
-                        A dated audit result proves only what that tool checked on that page, under that recorded environment. It does not certify every route, browser, agent, task, or future version.
+                        A dated audit result proves only what that tool checked on that page, under that recorded environment. It certifies nothing about your other pages, other browsers, other agents, other tasks, or the next version.
                     </BlogQuote>
 
                     <BlogHeader id="does-it-lead-to-sales">Does Being AI-Readable Actually Lead to Sales?</BlogHeader>
@@ -300,7 +287,10 @@ export default function AgenticBrowsingPage() {
                     </BlogText>
 
                     <BlogText>
-                        A production decision should name the supported browser or agent, user journey, origin-trial requirements, data exposure, security review, fallback, maintenance owner, and acceptance test. A prototype may be justified for a real use case; a blanket &ldquo;build now&rdquo; or &ldquo;never build now&rdquo; rule is not.
+                        Before you ship this, say which browser or agent you support, which journey it covers, what the origin trial requires, what data is exposed, who reviewed the security, what happens when it fails, who maintains it, and what acceptance test it has to pass.
+                    </BlogText>
+                    <BlogText>
+                        For most sites, though, the practical answer is to wait, and the requirement itself is the reason. Those audits only run on Chrome 150 or later and only for origins registered in the WebMCP origin trial. A capability gated behind an origin trial is a capability that is still being changed, and building production integration against it means committing engineering time to a moving specification that almost nothing consumes yet. That is a real cost with a speculative return. Prototype it if you have a specific journey and a specific agent in mind. Otherwise the browsability layer is where the same effort pays off today, for people as well as for software.
                     </BlogText>
 
                     <BlogHeader id="llms-txt-truth">The Honest Truth About llms.txt</BlogHeader>
@@ -334,14 +324,15 @@ export default function AgenticBrowsingPage() {
 
                     <BlogHeader id="what-to-do-now">What to Do Now</BlogHeader>
                     <BlogText>
-                        The trap with anything labelled &ldquo;the future of the web&rdquo; is overbuilding for a standard that has not landed. So here is the honest sequence, in order.
+                        The trap with anything labeled &ldquo;the future of the web&rdquo; is overbuilding for a standard that has not landed. So here is the honest sequence, in order.
                     </BlogText>
                     <BlogList items={[
-                        "Record the current Chrome and Lighthouse versions, URL, page state, consent state, viewport, and individual audit output.",
+                        <>{"Record the current Chrome and "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" versions, URL, page state, consent state, viewport, and individual audit output."}</>,
                         "Fix semantic and accessibility defects because they affect people and supported agents, then regression-test the actual controls.",
                         "Treat llms.txt as a maintainable discovery file for named consumers, not a ranking or citation lever.",
                         "Prototype WebMCP only for a defined journey with security, privacy, fallback, origin-trial, and acceptance requirements.",
                         "Measure agent task completion, referrals, and sales separately from the Lighthouse pass ratio.",
+                        "Watch for one specific trigger: the point at which the WebMCP audits stop reporting Not Applicable for ordinary sites and start being scored. That is the signal that the action layer is worth building, and it costs nothing to wait for.",
                     ]} />
 
                     <BlogHeader id="bottom-line">The Bottom Line</BlogHeader>
@@ -363,7 +354,7 @@ export default function AgenticBrowsingPage() {
                     </div>
 
                     <section className="mb-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-                        <h2 className="text-xl font-bold text-charcoal mb-3">Primary references checked July 24, 2026</h2>
+                        <h2 className="text-xl font-bold text-charcoal mb-3">Primary references checked July 31, 2026</h2>
                         <ul className="space-y-2 text-sm">
                             <li><a className="text-cognac underline underline-offset-4" href="https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring" target="_blank" rel="noreferrer">Chrome: Lighthouse Agentic Browsing scoring</a></li>
                             <li><a className="text-cognac underline underline-offset-4" href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq" target="_blank" rel="noreferrer">OpenAI: publishers and developers FAQ</a></li>

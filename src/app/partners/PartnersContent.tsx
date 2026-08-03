@@ -381,7 +381,7 @@ export default function PartnersContent() {
               "Accounts, source, licenses, data, and handover",
               "Support, warranty, incident, and escalation process",
               "Capacity, response targets, dependencies, and holidays",
-              "Termination, retention, deletion, and ongoing obligations",
+              "How it ends, what we keep, what we delete, and what carries on",
             ].map((item) => (
               <li key={item} className="flex gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-stone-700">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />

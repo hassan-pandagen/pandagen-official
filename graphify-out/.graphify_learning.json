@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T16:15:11.018956+00:00",
+  "generated_at": "2026-07-31T16:02:09.479461+00:00",
   "nodes": {
     "docs_audit_2026_07_20_blog_article_audit": {
       "code_fingerprint": "73bcd8a36a3e1f23550d7f9054b1d951e66a09cc3e7b6bc0859b5009151d23d9",
@@ -18,7 +18,7 @@
           "q": "Is the external audit correct that all blog articles were not actually cleared despite the 77 PASS banner?"
         }
       ],
-      "score": 0.013631175,
+      "score": 0.012430446,
       "source_file": "docs/audit-2026-07-20/BLOG_ARTICLE_AUDIT.md",
       "status": "contested",
       "uses": 1,
@@ -41,11 +41,43 @@
           "q": "Is the external audit correct that all blog articles were not actually cleared despite the 77 PASS banner?"
         }
       ],
-      "score": 0.013631175,
+      "score": 0.012430446,
       "source_file": "docs/audit-2026-07-20/BLOG_CLAIM_DECISION_LEDGER.md",
       "status": "contested",
       "uses": 1,
       "verdict": "useful"
+    },
+    "src_app_opengraph_image": {
+      "code_fingerprint": "4fc74bb90d175e77a365ba0957a747753b1e282ee80cb61b4c7ff9fc52846cf2",
+      "label": "app/opengraph-image.tsx",
+      "last": "2026-07-27T20:12:18.173363+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-27T20:12:18.173363+00:00",
+          "outcome": "useful",
+          "q": "ok one more thing my OG images are not good so can you make for each one a proper one You have my logo and you know my code base so with Alt text etc what you say this will be good right ??"
+        }
+      ],
+      "score": 0.915389125,
+      "source_file": "src/app/opengraph-image.tsx",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_data_blog_blogposts": {
+      "code_fingerprint": "0bf44df19ad78cec7685050532f93e4be9d0b718f27b36b0db8d9f051d4155d5",
+      "label": "blogPosts",
+      "last": "2026-07-27T20:12:18.173363+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-27T20:12:18.173363+00:00",
+          "outcome": "useful",
+          "q": "ok one more thing my OG images are not good so can you make for each one a proper one You have my logo and you know my code base so with Alt text etc what you say this will be good right ??"
+        }
+      ],
+      "score": 0.915389125,
+      "source_file": "src/data/blog.ts",
+      "status": "tentative",
+      "uses": 1
     }
   },
   "version": 1

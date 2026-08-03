@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Blocks, Database, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Next.js vs WordPress 2026",
         "why migrate WordPress to Next.js",
@@ -52,10 +53,8 @@ const sources = [
     { name: "WordPress hardening", url: "https://developer.wordpress.org/advanced-administration/security/hardening/" },
     { name: "WordPress plugins", url: "https://wordpress.org/documentation/article/manage-plugins/" },
     { name: "WordPress performance", url: "https://make.wordpress.org/performance/handbook/measuring-performance/" },
-    { name: "Vercel pricing", url: "https://vercel.com/pricing" },
     { name: "Vercel terms", url: "https://vercel.com/legal/terms" },
     { name: "Sanity Visual Editing", url: "https://www.sanity.io/docs/visual-editing" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
 ];
 
 const articleSchema = {
@@ -65,6 +64,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
             dateModified: "2026-07-24",
@@ -73,13 +73,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Platform strategy",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1200,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Why we choose Next.js", item: "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#webpage",
+            url: "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/why-we-chose-nextjs-over-wordpress-2026#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -123,14 +151,20 @@ export default function WhyWeChooseNextJsPage() {
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The honest reason</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            We moved for engineering control over how pages are rendered and delivered, not because
+                            WordPress is bad at what it does. That distinction matters, because the second framing
+                            would make this a recommendation and the first makes it a fit decision. Four things
+                            followed from it, and each one cost us something in exchange.
+                        </p>
                         <BlogList
                             items={[
                                 "Next.js gives our engineering team explicit rendering, caching, component and integration choices.",
-                                "WordPress gives many teams a familiar editor and a broad managed ecosystem.",
+                                "WordPress gives a team a familiar editor and a broad managed ecosystem, which is a real advantage when nobody wants to learn a new publishing workflow.",
                                 "Neither platform guarantees performance, security, SEO, low cost or ownership by itself.",
                                 "We recommend migration only when measured requirements remain blocked after realistic WordPress repairs.",
                             ]}
@@ -168,7 +202,7 @@ export default function WhyWeChooseNextJsPage() {
                     <BlogText>
                         Next.js supports server and client components plus multiple caching and revalidation patterns.
                         Those tools can help an experienced team send less work and control data freshness. They can
-                        also be implemented poorly. WordPress performance depends on hosting, cache, theme, plugins,
+                        also be implemented poorly. WordPress speed comes down to the hosting, the caching, the theme, the plugins,
                         content, media, database work and third parties. Measure representative routes with field data
                         where available and repeated lab tests before naming the cause. Our method for the WordPress
                         side is in{" "}
@@ -177,7 +211,7 @@ export default function WhyWeChooseNextJsPage() {
                         <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals explained</Link>.
                     </BlogText>
                     <InsightBox variant="info" label="Why there are no platform score ranges here">
-                        We do not publish a Lighthouse score range for either platform. A score belongs to a specific
+                        We do not publish a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score range for either platform. A score belongs to a specific
                         page, build, hosting setup and test condition rather than to the platform name, so a range
                         quoted without that context tells you nothing about what your own site would score. Test your
                         representative routes yourself and compare them against themselves over time. Our 90+ Lighthouse
@@ -199,6 +233,13 @@ export default function WhyWeChooseNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="security">Plugins, packages and security</BlogHeader>
+                    <BlogText>
+                        Moving off WordPress relocated our dependency risk rather than removing it. Our{" "}
+                        <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">review of WordPress AI plugin security</Link>{" "}
+                        works through the runtime side of that, and it applies the same standard to the stack we run
+                        now: a custom build still carries packages, a build pipeline and service providers, and
+                        somebody still has to own patching.
+                    </BlogText>
                     <BlogText>
                         WordPress advises keeping software current, limiting access, using trusted sources, backups and
                         defense in depth. Plugin risk depends on the installed software, versions, configuration and
@@ -231,7 +272,7 @@ export default function WhyWeChooseNextJsPage() {
 
                     <BlogHeader id="first-party-example">What we can say about MyCustomPatches</BlogHeader>
                     <BlogText>
-                        The owner confirmed a 22-day delivery for the MyCustomPatches project. That is a first-party
+                        MyCustomPatches is an independent client, not a PandaCodeGen property, and its figures are owner-confirmed and published with permission. The client's owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, so treat it as an owner statement rather than an audited figure. That is a first-party
                         timeline for one scope, not a market benchmark or promise. We do not attach performance, ranking,
                         conversion, hosting or revenue figures to it. Numbers like those mean something only with the
                         measurement period, method and comparable baseline stated beside them, and one site&apos;s
@@ -240,10 +281,13 @@ export default function WhyWeChooseNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="when-wordpress-fits">When WordPress is still the right choice</BlogHeader>
+                    <BlogText>
+                        Five conditions, and any one of them is usually enough to stay. The strongest is the third: an organization with reliable WordPress operations and someone who owns updates already has the thing most migrations are really bought to fix. Adding engineering responsibility without enough business value in return is not an upgrade.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The team relies on mature WordPress editing, theme or extension workflows.",
-                            "The current site meets performance, security and integration requirements after repair.",
+                            "Once repaired, the site you have is fast enough, secure enough, and connects to what it needs to.",
                             "The organization has reliable WordPress operations and update ownership.",
                             "A custom application would add engineering responsibility without enough business value.",
                             "The budget or deadline supports a focused improvement but not a controlled migration.",
@@ -251,6 +295,9 @@ export default function WhyWeChooseNextJsPage() {
                     />
 
                     <BlogHeader id="when-nextjs-fits">When we consider Next.js</BlogHeader>
+                    <BlogText>
+                        Consider, not recommend. These five conditions describe requirements that survived realistic repair, not preferences about tooling. The last one is the gate that decides most engagements: the client has to be able to own the target providers, the maintenance, the security and the release process afterwards.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The design system and rendered output need deliberate engineering control.",
@@ -278,9 +325,12 @@ export default function WhyWeChooseNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="process">Our migration process</BlogHeader>
+                    <BlogText>
+                        Six steps, and the first two happen before anyone writes code. Inventory everything the current site contains, then define the target architecture, the content workflow, the ownership and the acceptance evidence. Building while the current site stays live is what makes the rollback in step five real rather than theoretical.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Inventory URLs, templates, content, data, forms, accounts and integrations.",
+                            "List every URL, template, piece of content, data set, form, account and integration.",
                             "Define target architecture, content workflow, ownership and acceptance evidence.",
                             "Build and validate the replacement while the current site remains available.",
                             "Test redirects, rendered output, analytics, consent, accessibility, security and performance.",
@@ -299,7 +349,7 @@ export default function WhyWeChooseNextJsPage() {
                     <BlogText>
                         We start with a free fit audit and prepare an SEO-safe migration plan when migration is
                         justified. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to
-                        $10,000 Scale. Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund
+                        $10,000 Scale. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
                         is tied to failure to deliver the signed scope. Starter includes 15 business days of launch
                         defect support; Growth and Scale include 30. The inputs behind a migration figure are broken
                         down in{" "}
@@ -312,6 +362,17 @@ export default function WhyWeChooseNextJsPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Decide from your requirements, not platform slogans</h2>

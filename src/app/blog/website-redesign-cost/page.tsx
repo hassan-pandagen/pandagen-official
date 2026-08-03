@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Eye, Layers3, Scale, Split } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,17 @@ export const metadata: Metadata = {
         "redesign vs rebuild",
         "same platform website redesign",
         "website redesign scope",
+        "how much does a website redesign cost",
+        "website redesign hidden costs",
+        "design system cost",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-01",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-redesign-cost")],
@@ -48,10 +52,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "WCAG 2.2", url: "https://www.w3.org/TR/WCAG22/" },
-    { name: "Google SEO Starter Guide", url: "https://developers.google.com/search/docs/fundamentals/seo-starter-guide" },
-    { name: "Google page experience guidance", url: "https://developers.google.com/search/docs/appearance/page-experience" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-    { name: "OWASP ASVS", url: "https://owasp.org/www-project-application-security-verification-standard/" },
+    { name: "Nielsen Norman Group: A/B testing", url: "https://www.nngroup.com/articles/ab-testing/" },
 ];
 
 const articleSchema = {
@@ -63,19 +64,52 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-01",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Software cost analysis", "Website project scoping", "Vendor contracts", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website pricing",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 2350,
+            timeRequired: "PT10M",
+            about: [
+                { "@type": "Thing", name: "Web design", sameAs: ["https://en.wikipedia.org/wiki/Web_design"] },
+                { "@type": "Thing", name: "Design system", sameAs: ["https://en.wikipedia.org/wiki/Design_system"] },
+                { "@type": "Thing", name: "A/B testing", sameAs: ["https://en.wikipedia.org/wiki/A/B_testing"] },
+                { "@type": "Thing", name: "Website redesign pricing" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website redesign cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-04-30",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -117,10 +151,10 @@ export default function WebsiteRedesignCostPage() {
                             design system, content work, implementation, validation and rollout rather than a broad
                             market average.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed August 1, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 30, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 30, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -150,6 +184,11 @@ export default function WebsiteRedesignCostPage() {
                     </div>
 
                     <BlogHeader id="cost">How much does a website redesign cost?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            We quote redesigns from $1,500 for a bounded template set, $3,500 once a reusable design system is part of the work, and $5,000 to $10,000 where content volume, integrations or a staged rollout are involved. Those are PandaCodeGen&apos;s own planning tiers rather than a market survey, and what moves a project between them is scope rather than page count.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -178,24 +217,69 @@ export default function WebsiteRedesignCostPage() {
                     </BlogText>
                     <BlogText>
                         Before comparing any two redesign quotes, check they are quoting the same project. A proposal
-                        labelled redesign that also moves you to a different CMS, a different host or a different
+                        labeled redesign that also moves you to a different CMS, a different host or a different
                         framework is a rebuild, and it should be compared against rebuild proposals rather than
                         redesign ones. The reverse happens too: a quote that leaves out the design system, the content
                         work or the rollout is cheaper because it is smaller, not because it is better value.
                     </BlogText>
 
+                    <BlogHeader id="update-vs-redesign">What does it cost to update an existing website instead?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Far less, and most people who ask for a redesign want an update. An update changes content,
+                            images, a section, a color, a page or two, inside the templates you already have. It is
+                            hours or days, it often sits inside a support retainer, and it needs no discovery, no design
+                            round and no approval cycle. A redesign changes the templates themselves, which is why it
+                            costs what it costs. <strong>Before you buy the larger thing, write down the specific
+                            changes you want.</strong> If that list is items on existing pages rather than new page
+                            types, you are describing an update and you should not be paying redesign prices for it.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        There is a genuine middle case too. Restyling a design system you already own, meaning typography,
+                        spacing, color and component states, refreshes every page at once without rebuilding any of them,
+                        and it is a fraction of a redesign. That option only exists if the current site was built on a
+                        consistent system in the first place, which is exactly what the design-system section below is
+                        about, and it is the strongest argument for building one even when it costs more upfront.
+                    </BlogText>
+
+                    <BlogHeader id="how-often">How often should a website be redesigned?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            On no schedule at all. The two-to-three year rule that circulates is a sales cycle, not a
+                            finding, and redesigning a site that is working is the most expensive way to change nothing.
+                            Redesign when something specific is broken and you can name it: the site cannot do a thing
+                            the business now needs, editors cannot ship without a developer, the brand has genuinely
+                            moved, or the underlying build is unmaintainable. If none of those is true, spend the budget
+                            on content and let the site keep earning.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The honest version of the age argument is narrower than it sounds. Sites do decay, but usually in
+                        specific places rather than all over: a stack nobody patches, an accessibility standard that has
+                        moved on, a checkout that no longer matches how people pay. Those are repairs with names and
+                        prices. &ldquo;It looks dated&rdquo; is a real problem too, and it is a reason for a restyle
+                        before it is a reason for a rebuild.
+                    </BlogText>
+
                     <BlogHeader id="variables">The four variables to price first</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four variables set the price of a redesign, and page count is not one of them: how deep the experience work goes, how much design system you are buying, how much content has to be written or restructured, and how much delivery work sits behind the finished templates. Settle those four before anyone counts pages.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Experience depth: journey research, information architecture, accessibility and user testing.",
+                            "How deep the experience work goes: researching journeys, restructuring the site, accessibility, and testing with real people.",
                             "Design-system depth: visual direction, components, states, responsive rules and documentation.",
-                            "Content scope: inventory, rewrite, media, structured content, localization and approval.",
-                            "Delivery scope: templates, integrations, analytics, QA, experiment design, rollout and training.",
+                            "How much content work: listing what exists, rewriting it, the media, structuring it, translation, and getting it approved.",
+                            "How much delivery work: the templates, integrations, analytics, testing, any experiments, the rollout, and training your team.",
                         ]}
                     />
                     <BlogText>
-                        Raw page count is useful but incomplete. Ten pages using ten templates can be more work than
-                        one hundred pages generated from a stable content model. Ask each provider to expose the
+                        Those four variables are what carry a redesign from $1,500 to $10,000 across our own tiers, and
+                        raw page count is the weakest predictor of where it lands. Ten pages using ten templates can be
+                        more work than one hundred pages generated from a stable content model. Ask each provider to expose the
                         templates, components, content responsibilities and review process behind the price.
                     </BlogText>
                     <BlogText>
@@ -218,6 +302,16 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="testing">A/B testing and staged rollout</BlogHeader>
                     <BlogText>
+                        The reason to test at all is that a redesign is not automatically an improvement. A new layout
+                        can bury an action that used to be obvious, and a navigation that looks cleaner can make the
+                        pages people actually came for harder to reach. Nielsen Norman Group reports that{" "}
+                        <a href="https://www.nngroup.com/articles/ab-testing/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">
+                            only one in every seven A/B tests is a winning test
+                        </a>. That figure covers design changes in general rather than redesigns specifically, but it is
+                        the right expectation to carry into the project: plan to find out whether the new version is
+                        better, instead of treating the question as settled because it looks better.
+                    </BlogText>
+                    <BlogText>
                         A valid experiment needs enough eligible traffic, a defined primary outcome, guardrails,
                         assignment logic, instrumentation and a pre-agreed decision rule. Low-traffic sites may learn
                         more from moderated tasks, prototype tests or a staged page release. Do not promise a fixed
@@ -225,6 +319,11 @@ export default function WebsiteRedesignCostPage() {
                     </BlogText>
 
                     <BlogHeader id="project-type">Redesign vs rebuild vs migration</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            These are three different projects with three different prices, so the first job is naming which one you are actually buying. A redesign changes the experience on the platform you already have. A migration changes the platform and keeps the approved structure. A rebuild changes both, which is why it is the most expensive of the three.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -250,6 +349,11 @@ export default function WebsiteRedesignCostPage() {
                     </BlogText>
 
                     <BlogHeader id="hidden-costs">Hidden costs to put in the proposal</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            What overruns a redesign budget is rarely design. It is the content nobody had written, the extra template that appeared in the second round, and review cycles that ran longer than the schedule assumed. Six items belong in the proposal in writing, so they arrive as scope rather than as a variation later.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Content cleanup, missing assets, copy approval and localization.",
@@ -273,7 +377,7 @@ export default function WebsiteRedesignCostPage() {
                         redesign restyles an existing theme or page-builder preset: new palette, new type, new
                         photography, same underlying components. It is quick, and it is also why so many sites in the
                         same sector resemble each other. A system designed for the business costs more upfront because
-                        someone has to make deliberate decisions about type, spacing, colour roles and component
+                        someone has to make deliberate decisions about type, spacing, color roles and component
                         states instead of accepting defaults. The return arrives later, when a new page type in month
                         eight is an application of the existing system rather than a fresh round of design. Neither
                         route touches your platform. The question is how distinct and how durable the result needs to
@@ -287,10 +391,12 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="billing">Fixed price vs hourly work</BlogHeader>
                     <BlogText>
-                        Fixed price can work when deliverables, assumptions and review boundaries are defined. Hourly
-                        or weekly work can fit discovery, uncertain legacy systems or client-directed changes. Neither
-                        model guarantees quality. PandaCodeGen uses fixed project tiers for an agreed scope and prices
-                        out-of-scope work according to the client-approved change request.
+                        We quote redesigns fixed, at $1,500, $3,500 or $5,000 to $10,000 depending on scope, and price
+                        anything outside that scope through an approved change request. Fixed price works when
+                        deliverables, assumptions and review boundaries are defined. Hourly or weekly work fits
+                        discovery, uncertain legacy systems or client-directed changes. Neither model guarantees
+                        quality on its own, so the question is which one matches how well-defined your project actually
+                        is.
                     </BlogText>
 
                     <BlogHeader id="provider">Agency, freelancer or in-house team?</BlogHeader>
@@ -306,8 +412,10 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="cost-of-delay">How to evaluate the cost of no redesign</BlogHeader>
                     <BlogText>
-                        Use first-party evidence. Quantify support contacts, task failure, accessibility defects,
-                        content publishing time, abandoned form steps and measured funnel loss. Separate observed facts
+                        The cost of leaving it alone is whatever the current site makes harder, measured on your own
+                        numbers rather than an industry average: support contacts, task failure, accessibility defects,
+                        the time it takes your team to publish, abandoned form steps and measured funnel loss. Quantify
+                        those. Separate observed facts
                         from assumptions, calculate a range, and compare it with the least expensive intervention that
                         could address the problem. Where the complaint is speed rather than design, the{" "}
                         <Link href="/blog/how-to-speed-up-your-website" className="text-cognac hover:underline">route-level speed diagnostics</Link>{" "}
@@ -332,6 +440,11 @@ export default function WebsiteRedesignCostPage() {
                     </BlogText>
 
                     <BlogHeader id="stakeholders">How to justify the budget internally</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            An internal case is won on evidence about your own site, not on a benchmark drawn from someone else&apos;s. Seven items make the argument reviewable by people who will never open an analytics report, and the last one carries more weight than it looks: naming what the redesign will not fix is what makes the rest of it credible.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "State the current problem and attach the evidence. Use findings from your own audit and analytics rather than a generic benchmark that may not describe your traffic.",
@@ -345,6 +458,11 @@ export default function WebsiteRedesignCostPage() {
                     />
 
                     <BlogHeader id="reduce-cost">How to reduce redesign cost safely</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Cost comes out of a redesign by removing decisions and duplication, not by removing quality. Nine moves do that safely, and the two with the largest effect are settling who approves the work and merging thin pages before design starts, rather than paying to redesign pages you were going to consolidate anyway.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Assign one accountable approver and schedule feedback windows.",
@@ -388,14 +506,13 @@ export default function WebsiteRedesignCostPage() {
                     <BlogText>
                         We start with a <Link href="/contact" className="text-cognac hover:underline">free fit audit</Link> and use it to
                         prepare a migration or redesign plan. Recent{" "}
-                        <Link href="/work" className="text-cognac hover:underline">project pages</Link> show the scope behind each build. Standard
-                        payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to failure to
+                        <Link href="/work" className="text-cognac hover:underline">project pages</Link> show the scope behind each build. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to failure to
                         deliver the signed scope, not a preference change after work starts. Starter includes 15
-                        business days of launch defect support; Growth and Scale include 30. Minor tweaks may be
+                        business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Minor tweaks may be
                         included when agreed, while larger changes require an approved scope change.
                     </BlogText>
                     <InsightBox variant="info" label="Performance acceptance">
-                        A 90+ Lighthouse target applies only when the signed terms name representative pages, mobile
+                        A 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target applies only when the signed terms name representative pages, mobile
                         and desktop profiles, the environment, three passing runs per page and profile, exclusions and
                         remedy. It is not a platform-wide, ranking or revenue guarantee.
                     </InsightBox>
@@ -407,6 +524,17 @@ export default function WebsiteRedesignCostPage() {
                         </>
                     )}
 
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get the right project type and scope</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
@@ -414,7 +542,7 @@ export default function WebsiteRedesignCostPage() {
                             to named deliverables and acceptance evidence.
                         </p>
                         <QuoteModalButton cta="website_redesign_cost_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Get your redesign plan <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

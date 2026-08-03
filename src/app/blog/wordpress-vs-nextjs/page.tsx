@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Blocks, Braces, FileText, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "WordPress vs Next.js",
         "Next.js vs WordPress",
@@ -56,8 +57,6 @@ const sources = [
     { name: "Next.js caching guide", url: "https://nextjs.org/docs/app/guides/caching" },
     { name: "Next.js production checklist", url: "https://nextjs.org/docs/app/guides/production-checklist" },
     { name: "Next.js data security guide", url: "https://nextjs.org/docs/app/guides/data-security" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
-    { name: "Google page experience", url: "https://developers.google.com/search/docs/appearance/page-experience" },
 ];
 
 const articleSchema = {
@@ -67,6 +66,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
             dateModified: "2026-07-24",
@@ -75,13 +75,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Platform comparison",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 2100,
+            timeRequired: "PT8M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress vs Next.js", item: "https://www.pandacodegen.com/blog/wordpress-vs-nextjs" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#webpage",
+            url: "https://www.pandacodegen.com/blog/wordpress-vs-nextjs",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-nextjs#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -119,18 +147,30 @@ export default function WordPressVsNextJsPage() {
                             WordPress vs Next.js <span className="italic text-cognac">Choose the Operating Model</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            WordPress is an integrated publishing platform. Next.js is an application framework that
-                            must be paired with content, hosting and services. Compare complete implementations.
+                            Choose WordPress when its publishing workflow fits and your team can operate the stack;
+                            choose Next.js when application-level rendering, data or interface control justifies
+                            assembling and maintaining a custom one. The decision is about operating capability, not
+                            about which platform is better. WordPress is an integrated publishing platform. Next.js is
+                            an application framework that must be paired with content, hosting and services, so compare
+                            complete implementations rather than the two names.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current WordPress, Next.js and Google documentation on July 24, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="20 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="8 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            What decides this is your operating capability and the constraints you can document, not
+                            platform quality. Neither product is better in the abstract, and neither carries a score, a
+                            cost or a security level that travels with its name. Four tests, in the order they usually
+                            settle it. Disclosure worth having up front: PandaCodeGen builds custom Next.js sites and
+                            sells WordPress migrations, so we have a commercial interest in one side of this comparison.
+                            That is also why the sections below refuse to publish platform-level numbers.
+                        </p>
                         <BlogList
                             items={[
                                 "Choose WordPress when its publishing workflow and maintained ecosystem fit and the team can operate the stack.",
@@ -165,6 +205,18 @@ export default function WordPressVsNextJsPage() {
                             </div>
                         ))}
                     </div>
+                    <BlogText>
+                        Worth knowing before you treat this as a two-way choice: it is not the only alternative on the
+                        table in 2026. Cloudflare announced EmDash on April 1, 2026, describing it in{" "}
+                        <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">its own launch post</a>{" "}
+                        as the spiritual successor to WordPress. Read from{" "}
+                        <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the project repository</a>{" "}
+                        on August 2, 2026 it was still being committed to, and every published package was still on a
+                        0.x version, so it is a pilot rather than a production decision. Our{" "}
+                        <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">full review of EmDash</Link>{" "}
+                        has the dated figures. A comparison written as WordPress against Next.js is already narrower
+                        than the field.
+                    </BlogText>
 
                     <BlogHeader id="different">They are different product categories</BlogHeader>
                     <BlogText>
@@ -175,6 +227,9 @@ export default function WordPressVsNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="architecture">Architecture comparison</BlogHeader>
+                    <BlogText>
+                        The six rows below all resolve to one thing: where the responsibility sits. WordPress ships content, rendering, features, updates, deploys and exit as one product; Next.js requires you to choose and assemble each of them. That is not better or worse, it is a different amount of ownership. The row most comparisons skip is the last one, because exit is where the difference actually costs money.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1060px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -212,15 +267,15 @@ export default function WordPressVsNextJsPage() {
                     <BlogHeader id="performance">Performance comparison</BlogHeader>
                     <BlogText>
                         <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">A well-implemented WordPress site can be fast</Link>, and a poorly implemented Next.js site can be
-                        slow. WordPress performance depends on theme, plugins, hosting, database, cache, media and third
+                        slow. WordPress speed comes down to the theme, the plugins, the hosting, the database, caching, your media and third
                         parties. Next.js performance depends on rendering choices, data fetching, caching, JavaScript,
                         media, providers and third parties. Compare representative routes with the same content and
                         features.
                     </BlogText>
                     <InsightBox variant="info" label="Field and lab answer different questions">
                         Use available Chrome UX Report data for <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">real-user Core Web Vitals</Link> and controlled Lighthouse or
-                        DevTools runs for diagnosis. Record page, device, network, region, consent and account state. A
-                        score of 90 is a Lighthouse band, not a Google ranking threshold.
+                        DevTools runs for diagnosis. Record which page, which device, what connection, which region, what you consented to, and whether you were signed in. A
+                        score of 90 is a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> band, not a Google ranking threshold.
                     </InsightBox>
 
                     <BlogHeader id="rendering">What Next.js rendering control can offer</BlogHeader>
@@ -269,24 +324,28 @@ export default function WordPressVsNextJsPage() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Third-party code on the server</td><td className="p-4">Plugins and themes execute PHP with database access</td><td className="p-4">npm packages execute at build time; only your own server code runs per request</td></tr>
-                                <tr><td className="p-4 font-bold">Public admin endpoint</td><td className="p-4">Login route exposed by default; a standing brute-force and credential-stuffing target</td><td className="p-4">No application login unless you build one; CMS auth sits with the CMS provider</td></tr>
-                                <tr><td className="p-4 font-bold">Writable directories</td><td className="p-4">Uploads and cache paths are writable at runtime</td><td className="p-4">Build output is typically immutable; uploads handled by a storage provider</td></tr>
+                                <tr><td className="p-4 font-bold">Third-party code on the server</td><td className="p-4">Plugins and themes execute PHP with database access</td><td className="p-4">npm packages execute at build time; at request time it is your own server code, route handlers and middleware</td></tr>
+                                <tr><td className="p-4 font-bold">Public admin endpoint</td><td className="p-4">A login route is reachable by default unless you move or restrict it</td><td className="p-4">No application login unless you build one; CMS auth sits with the CMS provider</td></tr>
+                                <tr><td className="p-4 font-bold">Writable directories</td><td className="p-4">Uploads and cache paths are writable at runtime</td><td className="p-4">Static build output is immutable; uploads handled by a storage provider</td></tr>
                                 <tr><td className="p-4 font-bold">Dependency risk</td><td className="p-4">Core, theme and every plugin, each on its own release schedule</td><td className="p-4">Framework and the full transitive npm tree, pinned by lockfile</td></tr>
-                                <tr><td className="p-4 font-bold">Supply chain</td><td className="p-4">Plugin updates pulled into a live site</td><td className="p-4">Build pipeline and CI credentials — compromise happens before deploy</td></tr>
+                                <tr><td className="p-4 font-bold">Supply chain</td><td className="p-4">Plugin updates pulled into a live site</td><td className="p-4">Build pipeline and CI credentials: compromise happens before deploy</td></tr>
                                 <tr><td className="p-4 font-bold">Secrets</td><td className="p-4">Config file on the server</td><td className="p-4">Host environment variables and provider tokens</td></tr>
-                                <tr><td className="p-4 font-bold">Blast radius of one bad update</td><td className="p-4">Can affect the live site immediately</td><td className="p-4">Usually caught at build; a broken build fails to deploy rather than breaking production</td></tr>
+                                <tr><td className="p-4 font-bold">Blast radius of one bad update</td><td className="p-4">Can affect the live site immediately</td><td className="p-4">A build-breaking change fails to deploy; a change that builds cleanly still ships</td></tr>
                             </tbody>
                         </table>
                     </div>
                     <InsightBox variant="warning" label="Read this honestly">
-                        Neither column is &ldquo;secure.&rdquo; They carry different shapes of risk. WordPress&apos;s is
-                        larger by default because third-party code runs on your server with database access, and because
-                        the admin route is public. Next.js moves most of that risk earlier — into dependencies and the
-                        build pipeline — where a bad update usually fails a build instead of defacing a live site. That is
-                        a real advantage, but it is not the same as having no attack surface, and anyone telling you a
-                        static site cannot be compromised is selling something. Both models require someone to own
-                        patching. If nobody owns it, both end up vulnerable.
+                        Neither column is &ldquo;secure.&rdquo; They carry different shapes of risk, and where the risk
+                        sits is the difference worth understanding. On WordPress it sits at runtime, in third-party code
+                        executing on your server against your database. On Next.js it sits earlier, in dependencies and
+                        the build pipeline, so a change that breaks the build never reaches production. Which of those
+                        is safer depends entirely on which one your team is set up to watch, and we sell the second, so
+                        weigh that sentence accordingly. What is not in dispute: this is not the same as having no
+                        attack surface, and anyone telling you a static site cannot be compromised is selling something.
+                        Both models require someone to own patching. If nobody owns it, both end up vulnerable.
+                        Our <Link href="/blog/wordpress-ai-security-risk-2026" className="text-cognac hover:underline">review of WordPress security risk in 2026</Link> and
+                        the <Link href="/blog/wordpress-april-2026-evidence" className="text-cognac hover:underline">April 2026 evidence behind it</Link> go
+                        through the runtime side in detail.
                     </InsightBox>
 
                     <BlogHeader id="features">Plugin ecosystem versus assembled services</BlogHeader>
@@ -298,6 +357,9 @@ export default function WordPressVsNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="cost">Three-year cost comparison</BlogHeader>
+                    <BlogText>
+                        Neither platform has a three-year cost until you fill in seven line items from your own invoices and like-for-like quotes. A free hosting allowance is not a permanent commercial-cost promise, a WordPress maintenance retainer is not universal, and a custom build does not have zero maintenance. Do not publish a saving or a payback period until every input and assumption is visible and approved.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Initial repair, rebuild or migration",
@@ -339,6 +401,9 @@ export default function WordPressVsNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="choose-wordpress">Choose WordPress when</BlogHeader>
+                    <BlogText>
+                        Stay on WordPress when its editor and content model fit the team, maintained plugins cover the capability economically, and a named person owns updates, security, backup and support. The condition people skip is the third one: a stack nobody owns degrades regardless of which platform it runs on.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Its editor and content model fit the team.",
@@ -350,6 +415,9 @@ export default function WordPressVsNextJsPage() {
                     />
 
                     <BlogHeader id="choose-next">Choose Next.js when</BlogHeader>
+                    <BlogText>
+                        Move to Next.js only when application-level control is genuinely required, the target CMS and editorial workflow have been selected and tested, and the team can own the build, deploy, dependency and provider lifecycle. All five conditions below are usually true together, and the migration and operating scope has to be funded, not assumed.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The required experience, rendering or data integration needs application-level control.",
@@ -369,6 +437,9 @@ export default function WordPressVsNextJsPage() {
                     </BlogText>
 
                     <BlogHeader id="migration">WordPress to Next.js migration controls</BlogHeader>
+                    <BlogText>
+                        Seven controls, in this order, are what turn a migration into a managed change rather than a gamble: crawl and classify the URLs, inventory what the site actually contains, choose the target CMS and workflow, keep valuable URLs stable and map the rest, validate the rendered output, test the journeys, then cut over with monitoring and a rollback path. They reduce avoidable technical risk. They do not guarantee ranking continuity, because processing depends on the site and on search systems.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Crawl and classify every current URL.",
@@ -391,20 +462,21 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogHeader id="case">What the MyCustomPatches migration shows</BlogHeader>
                     <BlogText>
-                        <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link> is an owner-confirmed PandaCodeGen migration completed in 22 days. That gives a
-                        dated delivery example for an accepted scope, which is the part of the work a reader can hold us
-                        to. We attach no speed or conversion figures to it, because one site&apos;s numbers depend on its
-                        own hosting, content, traffic and tracking setup, and they would not predict what your migration
-                        produces. Judge the example on what it is: a defined scope delivered on a recorded timeline. The
-                        same scope structure is described on our{" "}
+                        <Link href="/work/mycustompatches" className="text-cognac hover:underline">MyCustomPatches</Link> is an independent client, not a PandaCodeGen property, and its figures are
+                        owner-confirmed and published with permission. The owner reports a delivery of about 22 days.
+                        We do not hold a dated record of that confirmation, so treat it as an owner statement for one
+                        accepted scope rather than an audited figure. We attach no speed or conversion figures to it,
+                        because one site&apos;s numbers depend on its own hosting, content, traffic and tracking setup,
+                        and they would not predict what your migration produces. Judge the example on what it is: one
+                        defined scope, delivered. The same scope structure is described on our{" "}
                         <Link href="/services/wordpress-migration" className="text-cognac hover:underline">WordPress migration service page</Link>.
                     </BlogText>
 
                     <BlogHeader id="offer">PandaCodeGen terms</BlogHeader>
                     <BlogText>
                         <Link href="/pricing" className="text-cognac hover:underline">Planning tiers</Link> start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with custom
-                        scope where needed. Standard payment is 30 percent at onboarding and 70 percent on delivery.
-                        Starter includes 15 business days of launch defect support; Growth and Scale include 30. A
+                        scope where needed. A common payment option is 30 percent at onboarding and 70 percent on delivery, and another written schedule may be agreed.
+                        Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it. A
                         90-plus Lighthouse target applies only under the representative pages, profiles, environment,
                         repeated runs, exclusions and remedy named in the signed scope.
                     </BlogText>
@@ -422,6 +494,17 @@ export default function WordPressVsNextJsPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Compare a complete WordPress and Next.js stack</h2>

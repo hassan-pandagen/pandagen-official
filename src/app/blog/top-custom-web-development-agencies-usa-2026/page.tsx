@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Building2, ClipboardCheck, Scale, Search } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "top custom web development agencies USA 2026",
         "custom web development company USA",
@@ -66,6 +67,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/top-custom-web-development-agencies-usa-2026"),
             description,
             datePublished: "2026-04-08",
             dateModified: "2026-07-24",
@@ -74,13 +76,40 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Web development agencies", "Project scoping", "Vendor contracts", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
+            ],
+            wordCount: 900,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "US agency shortlist", item: "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026#webpage",
+            url: "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/top-custom-web-development-agencies-usa-2026#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -195,7 +224,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             This is a shortlist to help you buy, not a league table. It keeps ten options worth
-                            considering, keeps agencies and talent marketplaces in separate groups because they are not
+                            considering, marks agencies and talent marketplaces with a Model column because they are not
                             the same thing, and describes each company using only what that company currently says about
                             itself.
                         </p>
@@ -204,12 +233,11 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="14 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
 
                     <InsightBox variant="warning" label="Commercial disclosure">
                         PandaCodeGen publishes this article, sells web-development services, and appears in the
-                        shortlist. We do not rank ourselves first or claim independent superiority. The companies are
-                        ordered alphabetically within the main comparison, and no placement was purchased.
+                        shortlist. We do not rank ourselves first or claim independent superiority. Agencies are listed first in alphabetical order, then the two talent marketplaces, because they are different things to buy. Position within each group carries no ranking, and no placement was purchased.
                     </InsightBox>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
@@ -249,6 +277,9 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     </BlogText>
 
                     <BlogHeader>The ten options compared without a hidden ranking</BlogHeader>
+                    <BlogText>
+                        Read the fourth column first. Every entry in the third column is the provider's own public self-description, which tells you what they sell rather than how well they deliver it. The verification column is the part that does work for you, because it names what you would have to establish yourself before shortlisting any of them.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -289,7 +320,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     </BlogText>
                     <BlogText>
                         <a href="https://huemor.rocks/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Huemor</a>
-                        {" "}currently focuses its homepage on B2B redesigns and publishes a typical rebuild range for
+                        {" "}currently focuses its homepage on B2B redesigns and publishes pricing information for
                         its own scope. That is first-party pricing, not a market benchmark or quote for your project.
                         <a href="https://www.loungelizard.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Lounge Lizard</a>
                         {" "}and <a href="https://www.bigdropinc.com/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Big Drop</a>
@@ -315,7 +346,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         {" "}is a WordPress specialist marketplace.
                         <a href="https://lemon.io/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Lemon.io</a>
                         {" "}matches companies with software developers. Either can be a sensible choice when the buyer
-                        already owns product direction, design, project management, security review, QA and release.
+                        already has people doing product direction, design, project management, security review, testing and release.
                         They should not be compared with a full-service agency as if accountability were identical. Our
                         guide to{" "}
                         <Link href="/blog/website-developer-agency" className="text-cognac hover:underline">what a website developer agency should own</Link>{" "}
@@ -339,7 +370,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogList
                         items={[
                             "A refund is tied to failure to deliver the signed scope, not a change of preference after work begins.",
-                            "Starter includes 15 business days of launch defect support; Growth and Scale include 30 business days.",
+                            "Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale, and support applies only where the accepted project terms record it.",
                             "Custom deliverables transfer after full payment under the contract; client content remains the client's.",
                             "PandaCodeGen retains reusable tools and pre-existing code; third-party components keep their licenses.",
                             "A 90+ performance target requires agreed representative pages, mobile and desktop profiles, three consecutive tests and a written remedy.",
@@ -361,7 +392,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         items={[
                             "Change orders. Anything discussed verbally but never written down, plus revisions beyond the agreed round count, is normally billed separately. Ask what triggers a change order, who approves one, how it is priced and how quickly you will be told before work proceeds.",
                             "Post-launch work. Many contracts end at launch. Establish what is covered afterwards, for how long, what counts as a defect versus a new request, and what the response commitment is.",
-                            "Recurring vendor and licence fees. Platform plans, premium extensions, form and email services and CMS subscriptions are usually the buyer's cost, not the builder's, and rarely appear on the quote. Ask for the itemised annual figure and which lines are optional.",
+                            "Recurring vendor and license fees. Platform plans, premium extensions, form and email services and CMS subscriptions are usually the buyer's cost, not the builder's, and rarely appear on the quote. Ask for the itemized annual figure and which lines are optional.",
                             "Training and internal time. Somebody on your side has to learn the editing system, supply content and approve work. Ask whether training is included and how many hours of your team's time the plan assumes.",
                             "Switching cost later. If the build sits on bespoke or proprietary layers, a future team may need to redo work rather than continue it. Ask what a different qualified developer would need in order to take it over, and confirm the answer is compatible with the ownership terms you are signing.",
                         ]}
@@ -408,6 +439,9 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     />
 
                     <BlogHeader>Questions that expose material proposal gaps</BlogHeader>
+                    <BlogText>
+                        A polished proposal hides gaps in staffing, assumptions and exclusions rather than in price. Seven questions surface them, and the first is the one most often left unanswered: who is actually assigned after the sale, and what comparable work has that team delivered. The last one matters at handover, when you find out whether another qualified team could operate the result.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Who is assigned after the sale, and what comparable work did that team deliver?",
@@ -422,9 +456,10 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
 
                     <BlogHeader>Sources and limitations</BlogHeader>
                     <BlogText>
-                        Company descriptions were checked against the official pages linked in the table on July 24,
-                        2026. We did not independently verify unpublished staffing, pricing, availability, review
-                        authenticity or delivery quality. Ask each provider for a dated proposal and directly
+                        Two entries are not United States providers. Codeable and Lemon.io are talent marketplaces
+                        headquartered outside the US, included because American buyers routinely use them rather than
+                        because they meet the geography in this article&apos;s title. The rest position themselves as US providers on their own sites; we did not independently verify any company&apos;s headquarters. Company descriptions were checked against the official pages linked in the
+                        table on July 24, 2026. We did not independently verify unpublished staffing, pricing, availability, delivery quality. Ask each provider for a dated proposal and directly
                         contactable references for comparable work.
                     </BlogText>
 
@@ -444,6 +479,17 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a migration plan before choosing a vendor</h2>

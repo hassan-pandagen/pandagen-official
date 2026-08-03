@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardCheck, Scale, Users } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,17 @@ export const metadata: Metadata = {
         "Next.js agencies",
         "Next.js migration agency",
         "Pagepro vs PandaCodeGen",
+        "Naturaily alternatives",
+        "Blazity alternatives",
+        "how to compare Next.js agencies",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-02",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/pagepro-alternatives")],
@@ -63,19 +67,54 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-02",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1400,
+            timeRequired: "PT5M",
+            about: [
+                { "@type": "Thing", name: "Next.js", sameAs: ["https://nextjs.org"] },
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Request for proposal", sameAs: ["https://en.wikipedia.org/wiki/Request_for_proposal"] },
+                { "@type": "Thing", name: "Vendor selection" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Pagepro alternatives", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-02",
+            dateModified: "2026-08-03",
+            primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -120,22 +159,24 @@ export default function PageproAlternativesPage() {
                             the lists of services look similar. They take on different kinds of work. You cannot tell
                             what any of them will charge, how good the work is, what support you get, or what the
                             contract says from a category label. Ask all of them to quote the same requirements in
-                            writing, with a date on it, and compare those.
+                            writing, with a date on it, and compare those. This page is about Pagepro the
+                            Next.js, Sanity and Expo development agency at pagepro.co, not the separate
+                            landing-page software product also sold under the PagePro name.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026. Disclosure: PandaCodeGen wrote this page and is one of the providers
+                            Reviewed August 3, 2026. Disclosure: PandaCodeGen wrote this page and is one of the providers
                             discussed, so our commercial interest is explicit.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 2, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 2, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">A defensible shortlist</h2>
                         <BlogList
                             items={[
-                                "Pagepro currently emphasizes Next.js, Expo and Sanity work.",
-                                "Naturaily currently lists custom web, headless, Shopify, ecommerce, design and Jamstack services.",
+                                "Pagepro presents itself as a Next.js, Sanity and Expo development agency focused on replatforming, CMS migration and SEO preservation. Confirm its current engagement types and how each is scoped directly with Pagepro.",
+                                "Naturaily currently lists custom web, headless, Shopify, ecommerce, design and support services.",
                                 "Blazity currently lists AI engineering, performance, modernization, applications and technical consulting.",
                                 "PandaCodeGen's primary offer is SEO-conscious migration planning and delivery for revenue-generating sites.",
                                 "All that tells you is what each firm says it does. It does not tell you they cost the same, work to the same standard, or get the same results.",
@@ -157,7 +198,39 @@ export default function PageproAlternativesPage() {
                         ))}
                     </div>
 
+                    <BlogHeader id="why-alternatives">Why buyers look for an alternative at all</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Almost always because the engagement model does not fit the job, and almost never
+                            because anything is wrong with the provider. Agencies build themselves around a shape
+                            of work: a long-running embedded team, a bounded project, a discovery phase, one deep
+                            specialism. When your scope is a different shape, the mismatch arrives as a quote that
+                            feels wrong rather than as anything anybody did badly.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "You need a bounded project with an end date and the provider is built around an ongoing team, or you need the ongoing team and they are set up for bounded projects.",
+                            "You want a fixed price before committing, and the work genuinely cannot be fixed-priced until a discovery phase has happened. Both positions are defensible and they do not meet.",
+                            "You need one specialism deeply, and the shortlist is made up of firms that cover everything competently.",
+                            "The smallest engagement a firm can run well is larger than your job. That is a focus and capacity decision, and it says nothing about quality in either direction.",
+                            "Time zones, contracting jurisdiction, or who you would actually be speaking to on a Tuesday afternoon do not fit how your team works.",
+                        ]}
+                    />
+                    <BlogText>
+                        None of those is a criticism, and reading them as criticism is how buyers end up comparing
+                        the wrong things. Ask each provider directly which shape of work they are set up for and
+                        take the answer at face value. A firm that tells you honestly your project is not their
+                        shape has done you a larger favour than one that stretches to fit it, because the stretch
+                        is what you pay for later.
+                    </BlogText>
+
                     <BlogHeader>What the official sites currently say</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four rows, each taken from the provider&apos;s own site rather than a directory, and the column that matters is the third: what the page cannot tell you. A service list establishes what a firm says it does. It does not establish price, availability, who would be assigned, or what the contract says, and those are the four things that decide the outcome.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -170,12 +243,12 @@ export default function PageproAlternativesPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
                                     <td className="p-4 font-bold">Pagepro</td>
-                                    <td className="p-4">Next.js, Expo, Sanity and related platform work</td>
+                                    <td className="p-4">Next.js and Sanity replatforming, CMS migration and SEO preservation, plus Expo</td>
                                     <td className="p-4">Exact team, scope, model, price, timeline, evidence and terms</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 font-bold">Naturaily</td>
-                                    <td className="p-4">Custom web, headless, Shopify, ecommerce, design and Jamstack</td>
+                                    <td className="p-4">Custom web, headless, Shopify, ecommerce, design and support</td>
                                     <td className="p-4">Which disciplines are included, exact stack, price and support</td>
                                 </tr>
                                 <tr>
@@ -192,9 +265,19 @@ export default function PageproAlternativesPage() {
                         </table>
                     </div>
                     <BlogText>
-                        This table was checked against official provider pages on July 24, 2026. It intentionally does
-                        not repeat third-party profile prices, review counts, ratings, minimums or partner badges as
-                        current facts. Those values can change and do not make unlike scopes comparable. Our own side of
+                        All four rows were re-read on their owners&apos; own pages on August 1, 2026, and two of our
+                        descriptions needed correcting. Naturaily no longer uses the Jamstack wording we had carried; its own service page now says the architecture &ldquo;used to be called Jamstack&rdquo; and that &ldquo;the name faded; the approach won.&rdquo;
+                        Pagepro presents three named engagement types it describes as fixed-scope and predictably
+                        priced, and describes itself as dedicated to Next.js, Sanity and CMS migration with SEO and
+                        <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> at the core, which is consistent with how it described itself earlier in the
+                        year. Both corrections are to our summaries, not to anything either firm did wrong.
+                    </BlogText>
+                    <BlogText>
+                        We are showing this working because a comparison page is only as good as the date on each
+                        individual row, and one review date stamped across a whole table implies more than anyone
+                        actually checked. The table still does not repeat third-party profile prices, review counts,
+                        ratings, minimums or partner badges as current facts. Those values change, and they do not make
+                        unlike scopes comparable. Our own side of
                         the table is documented in our <Link href="/work" className={sourceLinkClass}>project work</Link> and on
                         our <Link href="/about" className={sourceLinkClass}>team page</Link>, so you can hold it to the same
                         standard.
@@ -208,6 +291,11 @@ export default function PageproAlternativesPage() {
                     </InsightBox>
 
                     <BlogHeader>Start with the engagement you actually need</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Name the engagement before you name the shortlist, because six different things get bought under the words &ldquo;Next.js agency&rdquo; and they are not substitutes. A firm can be excellent at one of these and a poor fit for another. Comparing a retainer price against a project price is the most common way a comparison goes wrong before it starts.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "A fixed-scope migration with an existing content inventory and design.",
@@ -231,6 +319,11 @@ export default function PageproAlternativesPage() {
                     </BlogText>
 
                     <BlogHeader>Use one request for proposal</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Send every provider the same seven-part brief and their quotes become comparable, which is the only condition under which price means anything. Writing it once also forces the decisions you were going to have to make anyway: who owns the content, what counts as done, and who holds the accounts at the end.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Business objective, users, countries, accessibility and compliance requirements.",
@@ -286,13 +379,18 @@ export default function PageproAlternativesPage() {
                         items={[
                             "30% onboarding payment and 70% at delivery under the accepted agreement.",
                             "15 business days of support for Starter and 30 for Growth or Scale, with scope defined in the terms.",
-                            "A 90-plus Lighthouse target only when representative pages, mobile and desktop profiles, three passing runs and remedy are written into the accepted terms.",
+                            <>{"A 90-plus "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" target only when representative pages, mobile and desktop profiles, three passing runs and remedy are written into the accepted terms."}</>,
                             "The client controls its domain, hosting, repository and business accounts under the agreed account model.",
                             "Project deliverables, pre-existing tools and third-party licenses follow the signed ownership and licensing terms.",
                         ]}
                     />
 
                     <BlogHeader>Questions to ask every finalist</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Seven questions, and none of them is about price. Ask them of every finalist including us, in writing, and compare the answers side by side. The gap between two quotes usually turns out to live in questions three and six: what counts as acceptance, and what support actually covers once the invoice is paid.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Who will do the work, and what happens if that person becomes unavailable?",

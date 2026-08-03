@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Cable, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -18,7 +18,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "What Is Headless Commerce? A 2026 Store Owner Guide";
 const description =
-    "Understand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified.";
+    "What headless commerce is, what headless Shopify actually costs against Shopify's own published plan prices checked August 2, 2026, what Hydrogen and Oxygen do and do not cost, and when a custom storefront is justified.";
 
 export const dynamic = "force-static";
 
@@ -26,19 +26,23 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "what is headless commerce",
         "headless commerce 2026",
         "Shopify headless storefront",
         "Medusa headless commerce",
         "headless commerce cost",
+        "headless Shopify cost",
+        "Shopify headless pricing",
+        "is Shopify headless free",
     ],
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-03-14",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-02",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/what-is-headless-commerce")],
@@ -53,8 +57,9 @@ const sources = [
     { name: "Medusa storefront development", url: "https://docs.medusajs.com/resources/storefront-development" },
     { name: "Medusa production optimization", url: "https://docs.medusajs.com/resources/storefront-development/production-optimizations" },
     { name: "Sanity Visual Editing", url: "https://www.sanity.io/docs/visual-editing" },
-    { name: "Google product structured data", url: "https://developers.google.com/search/docs/appearance/structured-data/product" },
-    { name: "Google Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
+    { name: "Shopify plan pricing", url: "https://www.shopify.com/pricing" },
+    { name: "Hydrogen license (MIT)", url: "https://github.com/Shopify/hydrogen/blob/main/LICENSE.md" },
+    { name: "Shopify Hydrogen deployments", url: "https://shopify.dev/docs/storefronts/headless/hydrogen/deployments" },
 ];
 
 const articleSchema = {
@@ -66,19 +71,55 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-14",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-02",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Headless commerce", "Shopify Storefront API", "Shopify Hydrogen", "Medusa", "Next.js", "Content management systems", "Ecommerce architecture"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
+            image: ogImageUrlForPath(`/blog/${postId}`),
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
-            articleSection: "E-commerce architecture",
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
+            articleSection: "Ecommerce",
+            keywords: ["what is headless commerce", "headless Shopify cost", "is Shopify headless free", "Hydrogen and Oxygen pricing", "Medusa versus headless Shopify"],
+            wordCount: 2300,
+            timeRequired: "PT11M",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Headless commerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
+                { "@type": "Thing", name: "Application programming interface", sameAs: ["https://en.wikipedia.org/wiki/API"] },
+                { "@type": "Thing", name: "Headless Shopify cost" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Headless commerce", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            datePublished: "2026-03-14",
+            dateModified: "2026-08-02",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -124,17 +165,28 @@ export default function WhatIsHeadlessCommercePage() {
                             systems. It also leaves you with another application to secure, test and keep
                             running.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against official documentation on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Every Shopify figure on this page was read from Shopify&apos;s own pricing page and developer documentation on August 2, 2026.</p>
+                    <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                        Disclosure: PandaCodeGen builds headless storefronts, so we have a commercial interest in
+                        one side of this question. That is why this page publishes no speed uplift, no conversion
+                        figure and no market cost band, and why it puts the case for staying on a theme first.
+                    </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Headless commerce in plain English</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            The commerce platform stays the system of record for products, inventory, orders,
+                            customers and checkout. What moves to you is the storefront: its code, its hosting, its
+                            release process, and any customer-facing feature a theme or an app used to provide. Four
+                            parts, and the fourth is the one that gets left out of quotes.
+                        </p>
                         <BlogList
                             items={[
                                 "The storefront renders the shopping experience.",
-                                "Commerce services manage products, pricing, inventory, carts, customers, orders or checkout according to the chosen platform.",
+                                "The commerce service keeps hold of your products, prices, stock, carts, customers, orders and checkout, depending which platform you pick.",
                                 "APIs and webhooks connect those parts with content, search, payments, analytics and operations.",
                                 "Headless is an architecture choice, not an automatic speed, conversion or SEO result.",
                             ]}
@@ -157,6 +209,9 @@ export default function WhatIsHeadlessCommercePage() {
                     </div>
 
                     <BlogHeader id="traditional-vs-headless">Traditional vs headless commerce</BlogHeader>
+                    <BlogText>
+                        Four questions separate the two, and none of them is about speed. Rendering moves from a platform theme to an app you build and deploy. Commerce goes from native features to APIs exposing selected capabilities. The change surface splits, so frontend, APIs and providers now move independently. And responsibility for security, testing and operations transfers to your team.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -172,12 +227,15 @@ export default function WhatIsHeadlessCommercePage() {
                     </div>
 
                     <BlogHeader id="when-you-need-it">When headless commerce can be justified</BlogHeader>
+                    <BlogText>
+                        These are six conditions that usually hold together, not a menu to pick one from. The first five describe a requirement the current platform genuinely cannot meet; the sixth asks whether your organization can own the engineering and operations that follow. A slow or visually limited store does not automatically need headless, and optimizing what you have is the cheaper answer when it can satisfy the requirement.
+                    </BlogText>
                     <BlogList
                         items={[
                             "The required experience cannot be delivered reliably through the current theme or extension model.",
                             "Multiple customer touchpoints need one governed commerce layer.",
                             "Content, product and campaign workflows require a separate content system.",
-                            "Complex merchandising, localization or integration requirements exceed the current implementation.",
+                            "Your merchandising, translation or integration needs have outgrown what you have now.",
                             "Measured performance work remains constrained after realistic theme, media, app and infrastructure repairs.",
                             "The organization can own the additional engineering and operational responsibilities.",
                         ]}
@@ -211,6 +269,9 @@ export default function WhatIsHeadlessCommercePage() {
                     </InsightBox>
 
                     <BlogHeader id="examples">Examples of headless commerce patterns</BlogHeader>
+                    <BlogText>
+                        These are architecture examples, not outcome claims. Each pairs a commerce backend with a separately deployed storefront, and each carries its own versioning and support model. Current product behavior and plan limits still need checking when you scope a project, because these move.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A Shopify backend with a Hydrogen storefront and Shopify-hosted Oxygen deployment.",
@@ -276,20 +337,50 @@ export default function WhatIsHeadlessCommercePage() {
                         </table>
                     </div>
                     <InsightBox variant="info" label="&ldquo;No platform fee&rdquo; is not &ldquo;no cost&rdquo;">
-                        The MIT license removes a licence fee, not the work. Someone still has to run the commerce
+                        The MIT license removes a license fee, not the work. Someone still has to run the commerce
                         server, patch it, back it up, and answer the phone when checkout breaks at midnight. Compare total
-                        operating cost and who is accountable for uptime — not the licence label.
+                        operating cost and who is accountable for uptime, not the license label.
                     </InsightBox>
 
                     <BlogHeader id="content">Where a headless CMS fits</BlogHeader>
                     <BlogText>
                         Product truth can remain in the commerce system while campaign pages, guides and editorial
-                        modules live in a content platform. Sanity&apos;s current visual-editing documentation describes
+                        modules live in a content platform. Sanity&apos;s visual-editing documentation, read August 2, 2026, describes
                         live previews and direct editing from the rendered page. Define which system owns each field,
                         how product references resolve, who can publish and what happens when one system is unavailable.
                     </BlogText>
 
+                    <BlogHeader id="what-each-benefit-costs">Design freedom, omnichannel and faster updates: what each one actually costs</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Those three are the benefits almost every headless explainer leads with, and all three are
+                            real. None of them is free, and the cost is rarely in the same sentence as the benefit.
+                            Design freedom means the storefront is now code you own, so a visual change that used to be
+                            a theme setting becomes a development task and a deploy. Omnichannel means the commerce
+                            layer serves several surfaces, which is genuine leverage once you have a second surface and
+                            an overhead until you do.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The third one is worth reading carefully, because it is often stated backwards. Headless does
+                        not remove a release process, it adds one. A themed storefront publishes from the platform; a
+                        headless storefront builds, deploys and has to be rolled back by somebody. That can absolutely
+                        be faster, and on a team with continuous deployment it usually is, but the speed comes from
+                        the pipeline you now operate rather than from the architecture itself. If nobody owns that
+                        pipeline, updates get slower, not quicker.
+                    </BlogText>
+                    <BlogText>
+                        Worth knowing where the usual answer comes from: the explainers that rank for this question are
+                        mostly published by commerce platforms that sell headless products. That does not make them
+                        wrong, and we sell headless builds too, which is why the disclosure sits at the top of this
+                        page. It does mean the cost column is the part you will have to go looking for, so here it is
+                        in the same place as the benefits.
+                    </BlogText>
+
                     <BlogHeader id="pros-cons">Pros and cons</BlogHeader>
+                    <BlogText>
+                        Read the two columns at different confidence levels. Everything on the left is something headless makes possible; everything on the right is something it makes certain. The advantages depend on how well you build, and the added responsibilities arrive regardless.
+                    </BlogText>
                     <div className="my-6 grid gap-5 md:grid-cols-2">
                         <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6">
                             <h3 className="mb-3 font-bold text-charcoal">Potential advantages</h3>
@@ -325,24 +416,106 @@ export default function WhatIsHeadlessCommercePage() {
                         <Link href="/blog/will-migrating-hurt-my-seo" className={linkClass}>what happens to search visibility during a migration</Link>.
                     </BlogText>
 
-                    <BlogHeader id="cost">How much does headless commerce cost?</BlogHeader>
+                    <BlogHeader id="cost">How much does headless Shopify cost?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Going headless on Shopify does not replace your Shopify bill, it adds a storefront to it.
+                            Read from Shopify&apos;s own pricing page on August 2, 2026, the plan lineup is Basic at
+                            US$19/mo, Grow at US$49/mo, Advanced at US$299/mo and Plus from US$2,300/mo, with third-party
+                            payment provider fees of 2%, 1%, 0.6% and 0.2% respectively. The page carries a yearly and
+                            monthly toggle and regional pricing, so read it in your own market on the day you budget. On
+                            top of that plan you pay for the storefront build, then for hosting, a content system and
+                            search if you use them, then for whoever keeps the storefront running afterwards.
+                        </BlogText>
+                    </div>
                     <BlogText>
-                        PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale,
-                        but a headless commerce system may require custom scope. Price discovery, storefront templates,
-                        commerce capabilities, content, search, accounts, checkout, integrations, migration, QA,
-                        launch and operations. Add current vendor plans, usage, payment, hosting and support costs from
-                        the buyer&apos;s actual configuration. The full tier detail sits on the{" "}
-                        <Link href="/pricing" className={linkClass}>pricing page</Link>, and the line items that push a project
-                        past a standard tier are set out in the{" "}
+                        Two things are worth correcting before you use any published breakdown. Several of the cost articles ranking for this query still quote Shopify&apos;s entry
+                            plan at $29 a month, where Shopify&apos;s own page said US$19 when read on
+                            August 2, 2026. Several also skip the Grow plan at US$49 entirely, which is the tier a store outgrowing Basic actually
+                        lands on. If a cost article gets the platform line wrong, treat its build ranges with the same
+                        suspicion.
+                    </BlogText>
+
+                    <BlogHeader id="hydrogen-free">Is Shopify headless free?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The framework is, the hosting is not documented, and the store plan definitely is not.
+                            Hydrogen, Shopify&apos;s own React storefront framework, ships under the MIT license
+                            (Copyright 2023-present, Shopify Inc.), so you can read it, fork it and run it anywhere at no
+                            license cost. Oxygen is the part most often repeated without a source. The widely published claim that &ldquo;Hydrogen and Oxygen are free&rdquo; does not appear on Shopify&apos;s pricing page or in its Hydrogen and Oxygen developer documentation, both read August 2, 2026, neither of which stated an Oxygen price. What it does document is
+                            that deployments are tied to a Shopify store, and that shareable deployment links require the
+                            Basic plan or above.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        That gap matters when you are building a three-year budget, because the one line you cannot look
+                        up is the one every summary assures you is zero. Ask Shopify directly what Oxygen costs on your
+                        plan and at your traffic before you commit to it, and get the answer in writing. If you host the
+                        storefront yourself instead, the cost moves to your own provider and becomes checkable again;{" "}
+                        <Link href="/blog/nextjs-hosting-zero-cost" className={linkClass}>what it takes to host a Next.js frontend</Link>{" "}
+                        sets out what that line actually looks like.
+                    </BlogText>
+
+                    <BlogHeader id="what-you-lose">What you give up when you go headless</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The editing experience, and it is the loss teams most often underestimate. A headless storefront is
+                            your own application, not a Liquid theme, so Shopify&apos;s theme editor does not apply to
+                            it. Neither do theme app extensions or any app that works by injecting itself into a theme.
+                            Anything a merchandiser used to change by dragging a section now needs either a content
+                            system wired up for the purpose or a developer. Checkout stays on Shopify, which is the part
+                            you want to keep, but everything in front of it becomes code you own.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Price that before you price the build. A storefront nobody on the marketing team can edit will
+                        get edited by the engineering team, and that is a recurring cost dressed up as a one-off. The
+                        honest version of this project includes whatever it takes to give the people who run campaigns
+                        their controls back.
+                    </BlogText>
+
+                    <BlogHeader id="our-tiers">What we charge for this work</BlogHeader>
+                    <BlogText>
+                        A headless commerce build is normally custom scope rather than a standard tier. Our published
+                        tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, and a storefront with
+                        its own commerce integration, content system, search, accounts and migration usually sits beyond
+                        Scale. Those are our prices, not a market average, and we would rather say so than anchor you on
+                        an entry figure that does not apply to this job. The full tier detail sits on the{" "}
+                        <Link href="/pricing" className={linkClass}>pricing page</Link>, and the line items that push a
+                        project past a standard tier are set out in the{" "}
                         <Link href="/blog/website-rebuild-cost-2026" className={linkClass}>rebuild scoping guide</Link>.
                     </BlogText>
 
+                    <BlogHeader id="worth-it">Is headless Shopify worth it?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            For most stores, no, and the reason is specific rather than cautious. Headless buys you
+                            control of the storefront and costs you the theme editor, an ongoing engineering commitment
+                            and a hosting line Shopify does not publish a price for. It is worth it when you can name a
+                            requirement the theme demonstrably cannot meet after you have actually tried, when you have
+                            somebody who will own the storefront application after launch, and when the people who run
+                            campaigns will still be able to change a page without filing a ticket. Two out of three is
+                            not enough; the third one is where these projects quietly fail.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The version of this question worth asking is not whether headless is better but what you are
+                        buying instead. The same budget spent on the existing theme, its images, its app load and its
+                        data layer usually moves the numbers that matter further, and it does not add an application to
+                        your maintenance. Run that comparison honestly before you commit;{" "}
+                        <Link href="/blog/shopify-store-speed-optimization" className={linkClass}>the Shopify speed diagnostics</Link>{" "}
+                        are the cheaper half of it, and if they close the gap you have saved a rebuild.
+                    </BlogText>
+
                     <BlogHeader id="decision">A headless decision checklist</BlogHeader>
+                    <BlogText>
+                        Seven questions, and the first two decide the rest: what requirement is blocked today, what evidence proves it, and could a theme, app, content or infrastructure change solve it more safely. If you cannot answer those with something specific, the remaining five are premature.
+                    </BlogText>
                     <BlogList
                         items={[
                             "What requirement is blocked today, and what evidence proves it?",
                             "Can a theme, app, content or infrastructure change solve it more safely?",
-                            "Which system owns products, content, customers, orders, payments and search?",
+                            "Which system is the source of truth for products, content, customers, orders, payments and search?",
                             "Which platform capabilities are available through the chosen APIs?",
                             "Who owns security, releases, incident response and API upgrades?",
                             "What are the baseline, acceptance profiles, rollback plan and business guardrails?",
@@ -361,9 +534,8 @@ export default function WhatIsHeadlessCommercePage() {
                         to the signed terms.
                     </BlogText>
                     <BlogText>
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
-                        failure to deliver the signed scope. Starter includes 15 business days of launch defect
-                        support; Growth and Scale include 30. Performance acceptance applies only to the named pages,
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
+                        failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30. Performance acceptance applies only to the named pages,
                         profiles, environment, repeated runs, exclusions and remedy in the contract.
                     </BlogText>
 
@@ -373,6 +545,17 @@ export default function WhatIsHeadlessCommercePage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Find out whether headless is justified</h2>

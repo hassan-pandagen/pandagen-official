@@ -19,11 +19,11 @@ import { Gauge, Shield, RefreshCcw, Eye } from "lucide-react";
 const faqs = [
   {
     q: "Will I lose my Google rankings during migration?",
-    a: "No. We map every single URL from your old WordPress site to your new site with 301 redirects. Google treats it as the same page at a new address. Most clients see rankings recover within 2-4 weeks and improve within 60 days because the new site is faster."
+    a: "No. We map every single URL from your old WordPress site to your new site with 301 redirects. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed."
   },
   {
     q: "How long does a WordPress migration take?",
-    a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: launch with zero downtime. Larger sites can run to four weeks. Agencies still quote 8-12 weeks because they bill hourly. AI tooling collapses that timeline without cutting corners."
+    a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: staged cutover with a documented rollback path. Larger sites can run to four weeks. Compare any quote on like-for-like scope rather than on headline timeline. AI tooling collapses that timeline without cutting corners."
   },
   {
     q: "What happens to my blog posts and content?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "How much does a WordPress to Next.js migration cost?",
-    a: "Typical agencies charge $15,000 to $40,000 and take 8 to 12 weeks. We meet you halfway. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15 to 50 pages, custom features). Scale is $5,000 to $10,000 (complex WordPress or WooCommerce sites, 30+ pages, custom integrations). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. Most clients recover the investment within 3 to 6 months through eliminated hosting, plugin licenses, and maintenance fees."
+    a: "Compare quotes on like-for-like scope. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15 to 50 pages, custom features). Scale is $5,000 to $10,000 (complex WordPress or WooCommerce sites, 30+ pages, custom integrations). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. Whether it pays back, and over what period, depends on your own invoices and your own measured results."
   },
   {
     q: "Can I still edit my website after migration?",
@@ -60,7 +60,7 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            Your WordPress site is 3x slower than your competitor. <br />
+            How fast is your WordPress site, really? <br />
             <span className="font-serif italic text-cognac">
               We rebuild it on Next.js in 2 to 4 weeks.
             </span>
@@ -72,25 +72,13 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            We don&apos;t just &apos;redesign&apos; your site. We surgically extract your data from WordPress and rebuild your frontend with custom code. <span className="text-charcoal font-medium">Zero plugins. Instant load times.</span>
+            We don&apos;t just &apos;redesign&apos; your site. We surgically extract your data from WordPress and rebuild your frontend with custom code. <span className="text-charcoal font-medium">Zero plugins. Performance you can measure.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
               <span className="text-cognac font-black">90+</span>
               <span className="text-stone-500">PageSpeed</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-cognac font-black">4.2s → 0.8s</span>
-              <span className="text-stone-500">Load Time</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-yellow-500 font-black">★★★★★</span>
-              <span className="text-stone-500">Clutch Verified</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-stone-200 shadow-xs text-sm">
-              <span className="text-[#00b67a] font-black">★★★★★</span>
-              <span className="text-stone-500">Trustpilot</span>
             </div>
           </motion.div>
 
@@ -115,7 +103,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks with zero downtime, and include a full 301-redirect map built to carry existing SEO equity across. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, one client dropped from $150/month to $0.
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks behind a staged cutover, and include a full 301-redirect map for every URL you agree to keep. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, hosting costs are quoted from the destination provider plan.
           </p>
         </div>
       </section>
@@ -127,13 +115,13 @@ export default function PageContent() {
           headline="You're paying $200/mo to"
           headlineAccent="keep a broken thing alive."
           description="You're paying $100/mo for premium hosting. There's $0/mo Vercel hosting that's faster. You're paying $80/mo for plugin licenses that keep breaking. A custom build has zero plugins. You're paying $200/mo for a dev retainer because WordPress updates keep breaking your site. Custom Next.js doesn't need a retainer."
-          descriptionSecondary="Nobody tells you this because WordPress is a $1B industry built on patches and retainers. Not the hosts. Not the plugin companies. Not the agencies who bill to fix the breaks. We're the agency that replaces it honestly. No pitch. Just receipts."
+          descriptionSecondary="Nobody tells you this because Patches and retainers are how the WordPress services market is structured. Not the hosts. Not the plugin companies. Not the agencies who bill to fix the breaks. We're the agency that replaces it honestly. No pitch. Just receipts."
           comparisonTitle="WordPress vs Custom"
           themLabel="WordPress"
           metrics={[
-            { metric: "Load Speed",   themLabel: "2-5s",         usLabel: "< 1s",         themPct: 30, usPct: 98, icon: Gauge },
+            { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at acceptance",         themPct: 30, usPct: 98, icon: Gauge },
             { metric: "Monthly Cost", themLabel: "$150+",        usLabel: "$0",           themPct: 95, usPct: 2,  icon: DollarSign },
-            { metric: "Security",     themLabel: "Vulnerable",   usLabel: "Bank Level",   themPct: 40, usPct: 100, icon: Shield },
+            { metric: "Security",     themLabel: "Vulnerable",   usLabel: "Smaller third-party surface",   themPct: 40, usPct: 100, icon: Shield },
             { metric: "Maintenance",  themLabel: "Daily",        usLabel: "Zero",         themPct: 90, usPct: 5,  icon: RefreshCcw },
             { metric: "Ownership",    themLabel: "Rented",       usLabel: "100% Yours",   themPct: 30, usPct: 100, icon: Lock },
             { metric: "AI Search",    themLabel: "Invisible",    usLabel: "Optimized",    themPct: 15, usPct: 98, icon: Eye },
@@ -144,23 +132,23 @@ export default function PageContent() {
             { label: "Security & backup tools",          amount: "$600" },
             { label: "Monthly maintenance retainer",     amount: "$2,400" },
             { label: "Dev fixes & downtime incidents",   amount: "$2,400" },
-            { label: "Lost conversions (slow speed)",    amount: "$5,040" },
+            
           ]}
-          totalPerYear="$12,600"
+          totalPerYear="Measured per site"
         />
       </div>
 
       {/* 3. BEFORE / AFTER RESULTS */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Real Results. Not Promises.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">What We Can and Cannot Evidence</h2>
           <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Here&apos;s what happens when you migrate from WordPress to custom code.</p>
 
           <div className="grid md:grid-cols-3 gap-5">
             {[
-              { label: "PageSpeed Mobile", before: "45", after: "90+", suffix: "", color: "#b87a3d" },
-              { label: "Load Time", before: "3.2s", after: "0.7s", suffix: "", color: "#16a34a" },
-              { label: "Hosting Cost", before: "$150", after: "$0", suffix: "/mo", color: "#2563eb" },
+              { label: "PageSpeed Mobile", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
+              { label: "Load Time", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
+              { label: "Hosting Cost", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -182,7 +170,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Real client result: MyCustomPatches (mycustompatches.net), migrated from WordPress to custom Next.js. 5-star reviews on Clutch and GoodFirms.</p>
+          <p className="text-center text-xs text-stone-600 font-medium mt-6">Real client result: MyCustomPatches (mycustompatches.net), migrated from WordPress to custom Next.js. </p>
         </div>
       </section>
 
@@ -191,7 +179,7 @@ export default function PageContent() {
         highlight="myCustomPatches"
         label="Real WordPress Migrations"
         heading="WordPress to Next.js, done"
-        subheading="Four sites we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers."
+        subheading="Four sites we built or migrated. Live URLs. Performance figures are published only with their test profile, date and conditions."
       />
 
       {/* 3b. SOCIAL PROOF — moved up to stack with Results for concentrated proof flow */}
@@ -207,27 +195,27 @@ export default function PageContent() {
             Cheaper than market, <span className="font-serif italic text-cognac">not cheap.</span>
           </h2>
           <p className="text-base text-stone-400 leading-relaxed mb-6">
-            For WordPress migration specifically: WordPress sites cluster at 30 to 60 mobile PageSpeed. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> is cited by Google AI Overview with 2,470 percent impression growth in a single week.
+            For WordPress migration specifically: WordPress sites have no universal score; measure your own routes. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> has appeared in Google AI Overview citations.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen ships the same scope traditional agencies quote at $15,000 to $40,000 at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            PandaCodeGen ships the same scope, priced against a written inventory at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Austin LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
             <p className="text-stone-300 leading-relaxed">
-              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a real PageSpeed and revenue-leak analysis in minutes. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
+              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a PageSpeed reading and a list of things worth investigating. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Emerging quality challenger</p>
             <p className="text-stone-300 leading-relaxed">
-              Launched February 2026. All four public reviews 5 stars across Clutch, Trustpilot, and GoodFirms within 90 days. 900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (PageSpeed 45 to 90+, hosting $150 to $0) and Panda Patches (revenue scaled from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)). Younger than established competitors, already verified across more independent review platforms than most agencies achieve in 2 to 3 years.
+              Launched February 2026.  900+ public GitHub contributions in the past year at github.com/hassan-pandagen across live client projects. Real case studies: MyCustomPatches (figures withdrawn pending reconciliation) and Panda Patches (revenue scaled from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator)). Younger than established competitors, .
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
-              <p className="text-sm text-stone-600">Refund-backed in writing on every project.</p>
+              <p className="text-sm text-stone-600">Refund terms are stated in the written scope.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
@@ -245,14 +233,14 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How Our WordPress to Next.js Migration Works</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-phase process, 2 to 4 weeks for most sites. No surprises. No downtime.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-phase process, 2 to 4 weeks for most sites. No surprises. Staged cutover.</p>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Phase 1" },
               { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Phase 2" },
-              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Every page loads in under 1 second.", icon: Wrench, duration: "Phase 3" },
-              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Zero rankings lost. Zero downtime. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Phase 4" },
+              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Performance is measured against the pages named in your scope.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Redirect-mapped URLs. Staged cutover. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -295,11 +283,11 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google Ads factors landing page experience, including speed, into Quality Score, and a lower Quality Score generally means a higher cost per click than a faster competitor bidding on the same term. The size of that gap depends on your account, auction and competition. Every slow load is direct revenue loss." },
-              { icon: XCircle, title: "One Update Crashes Your Revenue", detail: "WordPress sites run 20-30 plugins on average. A single bad update can take your site offline during a campaign launch, a sale, or Black Friday. Every minute of downtime is orders you'll never recover." },
-              { icon: AlertTriangle, title: "AI Search Sends Buyers to Competitors", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'which brand should I buy' directly. They only cite fast, clean-coded sites. WordPress page builder bloat makes you invisible to AI-driven traffic." },
-              { icon: Lock, title: "A Single Hack Can End Your Business", detail: "WordPress is the #1 target for automated attacks. A breach means days offline, legal liability, potential GDPR fines, and customers who never return. A custom static site has no database at all. Nothing to inject." },
-              { icon: TrendingUp, title: "You're Bleeding $3,600 to $9,600/Year", detail: "Managed hosting, security plugins, premium theme licenses, maintenance retainers. It adds up silently. That's real margin leaving your business every single month with nothing to show for it." },
+              { icon: DollarSign, title: "Your Ad Spend Is Being Wasted", detail: "Google Ads factors landing page experience, including speed, into Quality Score, and a lower Quality Score generally means a higher cost per click than a faster competitor bidding on the same term. The size of that gap depends on your account, auction and competition. How much that is worth depends on your own funnel." },
+              { icon: XCircle, title: "One Update Crashes Your Revenue", detail: "Plugin counts vary widely; what matters is what each one executes. A single bad update can take your site offline during a campaign launch, a sale, or Black Friday. Downtime costs are specific to your order volume." },
+              { icon: AlertTriangle, title: "AI Search Sends Buyers to Competitors", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'which brand should I buy' directly. What they cite is not something anyone can guarantee. WordPress page builder bloat makes you invisible to AI-driven traffic." },
+              { icon: Lock, title: "A Single Hack Can End Your Business", detail: "The WordPress install base makes it a common automated-attack target. A breach means days offline, legal liability, potential GDPR fines, and customers who never return. A statically rendered site has no database on the request path, which removes that specific class of injection." },
+              { icon: TrendingUp, title: "Add Up What You Actually Pay Each Year", detail: "Managed hosting, security plugins, premium theme licenses, maintenance retainers. It adds up silently. That's real margin leaving your business every single month with nothing to show for it." },
               { icon: Code2, title: "Trapped: Can't Scale, Can't Sell", detail: "Your content lives inside a theme. Your traffic depends on plugins. Try to move platforms and you lose rankings, content, and data. Investors and acquirers discount WordPress-dependent businesses heavily." },
             ].map((item, i) => (
               <motion.div
@@ -378,7 +366,7 @@ export default function PageContent() {
                 I would highly recommend wpengine. As one of my clients began to grow rapidly, we had innumerable issues with godaddy hosting being able to scale up properly... there were an equal amount of issues when I moved the site to Amazon S3.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">bobobobobobooo</strong> · WordPress dev · WPEngine = $200+/mo</span>
+                <span><strong className="text-charcoal">bobobobobobooo</strong> · WordPress dev · managed hosting billed monthly</span>
                 <a href="https://www.reddit.com/r/Wordpress/comments/y7c71u/how_do_i_go_around_rebuilding_my_wordpress_website/isulxnp/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -386,7 +374,7 @@ export default function PageContent() {
 
           {/* Bridging CTA */}
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
-            <p className="text-lg font-bold mb-2">Stuck between $1K Upwork templates and $100K agency quotes? That is the gap we built PandaCodeGen for.</p>
+            <p className="text-lg font-bold mb-2">Comparing quotes that describe different amounts of work? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
               We migrate WordPress sites to custom Next.js for $1,500 to $10,000, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
@@ -407,14 +395,14 @@ export default function PageContent() {
             What If Your Website Was an Asset, Not a Liability?
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
-            A custom coded website loads in under 1 second, can&apos;t be hacked, costs $0 to start hosting, and you own every line of code. No plugins. No monthly fees. No surprises.
+            A custom coded website is measured against your agreed pages, has a smaller third-party surface, and starts on a free hosting tier for non-commercial use, and you own every line of code. No plugins. No monthly fees. No surprises.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: Database, title: "Clean Data Migration", desc: "We clean your WordPress database, remove bloat, and migrate to a modern backend. Migrated content is reconciled against a pre-migration inventory and the exceptions are reported." },
-              { icon: Server, title: "Static Edge Rendering", desc: "Your site is pre-built as static HTML. It loads instantly worldwide and cannot be hacked. No server to attack." },
-              { icon: Lock, title: "SEO Preservation", desc: "We map every single old URL to the new site. You won't lose a single ounce of Google rankings or traffic." },
+              { icon: Server, title: "Static Edge Rendering", desc: "Your site is pre-built as static HTML. It is served from an edge network, and the risk moves into your dependencies and build pipeline rather than disappearing." },
+              { icon: Lock, title: "SEO Preservation", desc: "We map every single old URL to the new site. Every URL is redirect-mapped, and search engines still control rankings and timing." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white border border-stone-200 shadow-card hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -434,7 +422,7 @@ export default function PageContent() {
           <div className="text-center mb-8 md:mb-10">
             <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Plugin Extinction List</p>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">The 7 WordPress Plugins We Replace With Zero Code</h2>
-            <p className="text-stone-600 text-base max-w-2xl mx-auto">Every WordPress site we migrate drops this plugin bill permanently. Next.js native replacements cost $0/year and load faster.</p>
+            <p className="text-stone-600 text-base max-w-2xl mx-auto">A rebuild removes the plugin licence line and adds a dependency-maintenance line. Next.js native replacements cost $0/year and load faster.</p>
           </div>
 
           <div className="responsive-stack-wrap md:overflow-visible">
@@ -478,11 +466,11 @@ export default function PageContent() {
 
       {/* PRICING TIERS — foot-in-the-door with agency comparison */}
       <PricingTiers
-        heading="Agencies charge $15K to $40K."
+        heading="Compare on like-for-like scope."
         headingAccent="We meet you halfway."
         agencyComparison={{
-          agencyPrice: "$15K to $40K+",
-          agencyNote: "8-12 week timeline. Hourly billing. Plugin bloat carries over.",
+          agencyPrice: "Not assessed",
+          agencyNote: "Compare like-for-like scope, timeline and code ownership.",
           ourPrice: "From $1,500",
           ourNote: "2 to 4 week timeline. Fixed price. You own 100% of the code.",
         }}
@@ -497,7 +485,7 @@ export default function PageContent() {
               "Custom Next.js build up to 15 pages",
               "Sanity CMS so your team can edit",
               "90+ Lighthouse handover target",
-              "301 redirect mapping (no SEO loss)",
+              "301 redirect mapping for every agreed URL",
               "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
@@ -569,7 +557,7 @@ export default function PageContent() {
                 Complete migration from WordPress to a custom coded platform you own forever. Faster, more secure, and cheaper to maintain long-term.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "Refund terms stated in the written scope"].map((item, i) => (
+                {["Measured performance at acceptance", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "Refund terms stated in the written scope"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -652,14 +640,14 @@ export default function PageContent() {
           <p className="text-stone-600 text-center mb-10 text-sm">Deep dives on WordPress, migration, and performance.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { href: "/blog/how-to-migrate-wordpress-to-nextjs", title: "How to Migrate WordPress to Next.js", desc: "Step-by-step migration guide with zero downtime." },
-              { href: "/blog/wordpress-vs-nextjs", title: "WordPress vs Next.js", desc: "The honest comparison every site owner needs." },
-              { href: "/blog/wordpress-plugins-destroy-speed", title: "How Plugins Destroy Your Speed", desc: "Why plugin bloat is costing you rankings." },
-              { href: "/blog/wordpress-ai-security-risk-2026", title: "WordPress AI Security Risk 2026", desc: "New attack vectors targeting WordPress in 2026." },
-              { href: "/blog/wordpress-killer", title: "The WordPress Killer", desc: "Why Next.js is replacing WordPress for good." },
-              { href: "/blog/elementor-kills-seo", title: "Elementor Kills SEO", desc: "The hidden cost of page builders on Core Web Vitals." },
-              { href: "/blog/wordpress-traffic-drop-speed", title: "WordPress Traffic Drop Fix", desc: "How site speed directly causes ranking drops." },
-              { href: "/blog/how-to-fix-slow-wordpress", title: "How to Fix Slow WordPress", desc: "Practical fixes that actually move the needle." },
+              { href: "/blog/how-to-migrate-wordpress-to-nextjs", title: "How to Migrate WordPress to Next.js", desc: "The eight-step sequence, and where the irreversible point sits." },
+              { href: "/blog/wordpress-vs-nextjs", title: "WordPress vs Next.js", desc: "Choose by operating capability, not by which platform is better." },
+              { href: "/blog/wordpress-plugins-destroy-speed", title: "How Plugins Destroy Your Speed", desc: "Why plugin count proves nothing, and what to measure instead." },
+              { href: "/blog/wordpress-ai-security-risk-2026", title: "WordPress AI Security Risk 2026", desc: "Reading the AI-plugin advisories precisely, and what to patch." },
+              { href: "/blog/wordpress-killer", title: "The WordPress Killer", desc: "Build the three-year cost from your own invoices, not from an average." },
+              { href: "/blog/elementor-kills-seo", title: "Elementor Kills SEO", desc: "How to test whether your own Elementor templates are the problem." },
+              { href: "/blog/wordpress-traffic-drop-speed", title: "WordPress Traffic Drop Fix", desc: "Find the cause before the fix, and check speed last rather than first." },
+              { href: "/blog/how-to-fix-slow-wordpress", title: "How to Fix Slow WordPress", desc: "An evidence-led order: environment, caching, assets, then code." },
             ].map((post) => (
               <Link key={post.href} href={post.href} className="group flex flex-col gap-2 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">
                 <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors leading-snug">{post.title}</h3>
@@ -694,7 +682,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. 8+ years in enterprise architecture. Scopes every migration to protect your ROI, timeline, and existing SEO rankings.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. 8+ years in enterprise architecture. Scopes every migration around redirect mapping, acceptance criteria and cutover.</p>
               </div>
             </div>
           </div>

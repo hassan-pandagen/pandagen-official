@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardCheck, Handshake, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: "/blog/for-agencies-offer-custom-web-development" },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "white label web development",
         "web development partner for agencies",
@@ -53,6 +54,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
             dateModified: "2026-07-24",
@@ -61,11 +63,38 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Web development agencies", "Project scoping", "Vendor contracts", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency partnerships",
+            inLanguage: "en-US",
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
+            ],
+            wordCount: 1800,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "White-label development", item: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#webpage",
+            url: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development#breadcrumb" },
             inLanguage: "en-US",
         },
         {
@@ -117,7 +146,7 @@ export default function WhiteLabelDevelopmentGuide() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="March 6, 2026"
-                        readTime="9 min read"
+                        readTime="5 min read"
                         bio="Hassan scopes search-sensitive migrations and partner delivery systems."
                     />
 
@@ -126,9 +155,9 @@ export default function WhiteLabelDevelopmentGuide() {
                         <BlogList
                             items={[
                                 "Choose referral, co-delivery, or white-label delivery and document what the client is told.",
-                                "Qualify the opportunity before quoting: inventory, integrations, content, migration risk, acceptance, and support.",
+                                "Before you quote, find out what they have, what it connects to, who writes the content, what could go wrong in the migration, how it gets signed off, and who supports it afterwards.",
                                 "Use a partner quote as an input. Your retail price and margin remain your own commercial decision.",
-                                "Define who signs with the client, controls accounts, approves changes, owns deliverables, and responds after launch.",
+                                "Agree who signs the contract, who holds the accounts, who approves changes, who owns the work, and who answers the phone after launch.",
                                 "Confirm capacity and schedule for each project. A general partnership is not a reserved production slot.",
                             ]}
                         />
@@ -142,7 +171,7 @@ export default function WhiteLabelDevelopmentGuide() {
                     <BlogList
                         items={[
                             "Decline the work: no delivery risk, but the client goes looking for a full-service provider and may take the rest of the account with them.",
-                            "Place it with an individual freelancer: lowest cost, least structure. Availability, scope and accountability rest on one person, and the agency still carries the client relationship.",
+                            "Place it with an individual freelancer: usually the lowest cost, and the least structure. Availability, scope and accountability rest on one person, so ask how each is covered, and the agency still carries the client relationship.",
                             "Hire in-house: most control and the highest fixed cost, with recruitment time and the question of what the role does between projects.",
                             "Work with a delivery partner under written terms: the agency keeps the client relationship and sets its own price, while scope, capacity and accountability are documented rather than assumed.",
                         ]}
@@ -152,11 +181,36 @@ export default function WhiteLabelDevelopmentGuide() {
                         one that needs the most paperwork to work properly.
                     </BlogText>
 
+                    <BlogHeader id="what-you-can-sell">What you can actually offer once you have a delivery partner</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four things, and they behave differently in a quote, so it is worth knowing which one you are
+                            being asked for before you price it. Each has a scope driver that moves it between tiers, and
+                            none of them is priced by page count.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "WordPress or platform migrations. The scope driver is distinct template count and integration complexity, not URL count. A hundred pages on six templates is a smaller job than twelve bespoke layouts, and the redirect map is a line item rather than an assumption.",
+                            "Custom ecommerce and headless commerce. The driver is whether there is a real backend behind the storefront: catalogue, variants, orders, tax, fulfilment and the reconciliation obligations that come with money moving. This is the one we see under-scoped most often.",
+                            "CRM-connected builds, including GoHighLevel. The driver is a defined funnel and booking flow plus the integration contract behind it. The frontend is usually the smaller half; the field mapping, consent capture and failure handling are the work.",
+                            "Internal tools and dashboards. The driver is data-model design, multi-user authentication and client-specific business logic, which is exactly why these cannot be fixed-tiered honestly. Price them after a discovery call, not from a rate card.",
+                        ]}
+                    />
+                    <BlogText>
+                        Two of those are the reason agencies bring in a partner at all: commerce and internal tools are where a request most commonly exceeds what a design-led team can deliver alone. The other two are
+                        usually within reach if you have someone to hand the engineering to. Knowing which of the four
+                        a client is describing is the difference between quoting confidently and quoting defensively.
+                    </BlogText>
+
                     <BlogHeader>White-label, co-delivery, and referral are different</BlogHeader>
+                    <BlogText>
+                        The axis that separates the three is who signs the client contract. White-label keeps the client relationship with the agency, co-delivery makes both teams visible, and referral has the developer contracting directly. Do not promise a client will never know a partner exists; the appropriate disclosure depends on the accepted agreements, procurement requirements and the access the work needs.
+                    </BlogText>
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: ShieldCheck, title: "White-label", body: "The agency leads the client relationship. Branding, disclosure, access, confidentiality, and support are defined in partner terms." },
-                            { icon: Handshake, title: "Co-delivery", body: "Both teams are visible and responsibilities are divided in the proposal, statement of work, and communication plan." },
+                            { icon: ShieldCheck, title: "White-label", body: "The agency owns the client. Partner terms cover the rest." },
+                            { icon: Handshake, title: "Co-delivery", body: "Both teams are visible, and the paperwork says who does what." },
                             { icon: ClipboardCheck, title: "Referral", body: "The developer contracts directly with the client. Referral fees, if any, require a separate written agreement." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -173,10 +227,13 @@ export default function WhiteLabelDevelopmentGuide() {
                     </BlogText>
 
                     <BlogHeader>Run a fit check before the agency quotes</BlogHeader>
+                    <BlogText>
+                        Six things have to be established before a number goes out, because a quote written without them is a guess with a decimal point. Who controls the platform, domain, hosting, code and vendor accounts; the full inventory; which URLs carry search value; the design and accessibility inputs; how performance will be measured; and who owns launch, support and change control.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Current platform, domain, hosting, repository, CMS, analytics, consent, and vendor-account control.",
-                            "Page, template, locale, content, media, product, user-role, and integration inventory.",
+                            "Who currently controls the platform, domain, hosting, code, CMS, analytics, consent tool and vendor accounts.",
+                            "A list of every page, template, language, piece of content, image, product, user role and integration.",
                             "URLs and search-sensitive assets that must remain stable or receive page-level redirects.",
                             "Design source, copy, accessibility level, browser and device coverage, and editor workflow.",
                             "Performance method, representative pages, mobile and desktop profiles, and acceptance remedy.",
@@ -207,7 +264,7 @@ export default function WhiteLabelDevelopmentGuide() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "The agency brings the brief: client type, requirement, hard deadlines, existing assets and platform, and a budget range if one exists. A mutual NDA before project detail is shared is normal practice.",
+                            "The agency brings the brief: client type, requirement, hard deadlines, existing assets and platform, and a budget range if one exists. A mutual NDA before project detail is shared is worth asking for.",
                             "The partner returns a scoped quote: what is included, what is explicitly excluded, assumptions, milestones, and what the agency must supply. Quote turnaround is agreed per opportunity rather than assumed.",
                             "The agency sets its own retail price and quotes the client. The client signs the agency's contract, so the agency stays the accountable party.",
                             "Build and review: the agency reviews each milestone before it reaches the client, the partner handles technical revisions, and client communication runs through whichever party the terms name.",
@@ -221,6 +278,9 @@ export default function WhiteLabelDevelopmentGuide() {
                     </BlogText>
 
                     <BlogHeader>Put this responsibility matrix in writing</BlogHeader>
+                    <BlogText>
+                        Six lanes need a named owner before the project starts: sales, discovery, delivery, communication, acceptance and aftercare. This belongs in one reusable document rather than a fresh email thread per project, because the lane nobody claimed is the one that fails at handover.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Sales: who makes claims, sends the proposal, signs the client, and collects payment.",
@@ -241,7 +301,7 @@ export default function WhiteLabelDevelopmentGuide() {
 
                     <BlogHeader>What to check in a delivery partner</BlogHeader>
                     <BlogText>
-                        Most bad outsourcing experiences trace back to something that was never written down. These are
+                        The outsourcing failures we have been called in to repair traced back to something that was never written down. These are
                         the items worth confirming before an agency puts its own name on the delivery.
                     </BlogText>
                     <BlogList
@@ -279,11 +339,19 @@ export default function WhiteLabelDevelopmentGuide() {
                     </BlogText>
 
                     <BlogHeader>Commercial terms for a PandaCodeGen project</BlogHeader>
+                    <BlogText>
+                        These are the terms a partner agency is quoting on top of, reviewed July 24, 2026. Read them as
+                        the starting position rather than the final one: every line below is subject to the signed
+                        contract, and the full wording lives on our{" "}
+                        <Link href="/terms" className="text-cognac hover:underline">terms page</Link>, which governs if
+                        this page and that page ever disagree. What a partner pays is quoted per project and is not
+                        assumed to equal our public retail tiers.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "The normal payment structure is 30 percent at onboarding and 70 percent on delivery, subject to the signed contract.",
-                            "A 100 percent refund applies when PandaCodeGen does not deliver the signed scope under the contract, not merely because preferences change after work starts.",
-                            "Refund timing is governed by the agreement. PandaCodeGen normally initiates an approved refund in 2 to 3 business days and publishes a maximum of 10 to 12 business days for processing.",
+                            "A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed, subject to the signed contract.",
+                            "Where the accepted project terms include it, a refund covers fees paid under that scope if the promised deliverables are not delivered, not merely because preferences change after work starts.",
+                            "Refund timing is governed by the agreement. PandaCodeGen normally initiates an approved refund in 2 to 3 business days; the receiving bank or payment provider controls settlement after that, which can take up to 10 to 12 business days.",
                             "Starter includes 15 business days of agreed support; Growth and Scale include 30 business days. Start date and coverage belong in the accepted terms.",
                             "Minor agreed tweaks may be handled in support. New features and out-of-scope work use written change control and an agreed fixed, hourly, or other billing model.",
                         ]}
@@ -298,7 +366,7 @@ export default function WhiteLabelDevelopmentGuide() {
 
                     <BlogHeader>Quality acceptance without universal guarantees</BlogHeader>
                     <BlogText>
-                        Where the signed scope includes PandaCodeGen&apos;s 90+ Lighthouse target, name the representative
+                        Where the signed scope includes PandaCodeGen&apos;s 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target, name the representative
                         pages, mobile and desktop profiles, environment, exclusions, three-run method, acceptance
                         threshold, and remedy. A lab score is not a ranking, traffic, conversion, or revenue guarantee.
                     </BlogText>
@@ -344,7 +412,7 @@ export default function WhiteLabelDevelopmentGuide() {
                         white-label engagement.
                     </BlogText>
                     <BlogText>
-                        Agencies weighing outsourcing options usually read around first. Our{" "}
+                        Agencies weighing outsourcing options tend to read around first. Our{" "}
                         <Link href="/blog/top-custom-web-development-agencies-usa-2026" className="text-cognac hover:underline">shortlist of US custom development agencies</Link>{" "}
                         and the{" "}
                         <Link href="/blog/pagepro-alternatives" className="text-cognac hover:underline">comparison of Pagepro alternatives</Link>{" "}

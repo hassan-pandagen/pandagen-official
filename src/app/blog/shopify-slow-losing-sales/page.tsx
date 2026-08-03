@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, ChartNoAxesCombined, Gauge, Scale } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "slow Shopify losing sales",
         "Shopify speed revenue",
@@ -65,7 +66,6 @@ const sources = [
         name: "Shopify: overview of web performance",
         url: "https://help.shopify.com/en/manual/online-store/web-performance/overview",
     },
-    { name: "Google web.dev: Web Vitals", url: "https://web.dev/articles/vitals" },
 ];
 
 const articleSchema = {
@@ -75,6 +75,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/shopify-slow-losing-sales"),
             description,
             datePublished: "2026-02-10",
             dateModified: "2026-07-24",
@@ -83,13 +84,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Shopify", "Shopify themes", "Ecommerce performance", "Core Web Vitals", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify economics",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+            ],
+            wordCount: 1400,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Shopify speed and sales", item: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#webpage",
+            url: "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -139,14 +168,14 @@ export default function ShopifySlowLosingSalesPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 10, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 10, 2026" readTime="5 min read" />
 
                     <div className="my-10">
                         <SalesImpactAnimation />
                     </div>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Three different numbers</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Four different numbers</h2>
                         <BlogList
                             items={[
                                 "Observed revenue is what completed under the recorded conditions.",
@@ -226,9 +255,14 @@ export default function ShopifySlowLosingSalesPage() {
                     />
 
                     <BlogHeader>3. Rule out competing explanations</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Before you attribute a drop in orders to speed, rule out the six things that move a conversion rate far more reliably than milliseconds do. Price, assortment, traffic mix and seasonality all shift the same number a slow page would. If any of them changed inside your comparison window, the speed hypothesis is not testable yet.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Price, promotion, shipping, tax, returns and payment changes.",
+                            "Changes to price, promotions, shipping, tax, returns or how people pay.",
                             "Inventory, assortment, product mix and merchandising.",
                             "Traffic quality, campaign mix, attribution model and market mix.",
                             "Seasonality, holidays, competitor activity and demand.",
@@ -266,6 +300,11 @@ export default function ShopifySlowLosingSalesPage() {
                     </BlogText>
 
                     <BlogHeader>6. Test a defined intervention</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Change one thing, decide what would count as an effect before you release it, and report the result even when it is neutral. Five rules make an intervention readable afterwards. The last one is the easiest to skip, and an unreported neutral result is how a team ends up running the same experiment twice.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Name the target route, segment, mechanism and expected funnel step.",
@@ -277,9 +316,14 @@ export default function ShopifySlowLosingSalesPage() {
                     />
 
                     <BlogHeader>7. Choose the least disruptive remedy</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Pick the smallest change that addresses the measured problem, because every larger option carries risk the evidence has not yet justified. Four positions run from fixing what is on the page to replacing the frontend entirely. No score, revenue figure or app count moves you down that list on its own.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Fix media, scripts, apps, tags, errors and theme code when the measured issue is local.",
+                            "When the problem is on the page itself, fix the images, the scripts, the apps, the tags, the errors and the theme code.",
                             "Re-theme when tested platform-native capability better fits the requirements.",
                             "Use headless when accepted experience, integration or channel needs justify the separate frontend.",
                             "Do not use a PageSpeed score, revenue threshold or app count as an automatic architecture trigger.",
@@ -289,7 +333,7 @@ export default function ShopifySlowLosingSalesPage() {
                     <BlogHeader>8. Define commercial acceptance</BlogHeader>
                     <BlogText>
                         PandaCodeGen&apos;s published tiers are scope anchors, not a payback promise. A project can include
-                        a documented 90-plus Lighthouse delivery target for agreed representative routes, mobile and
+                        a documented 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> delivery target for agreed representative routes, mobile and
                         desktop profiles, and three consecutive tests per page and profile. Functional, SEO, analytics,
                         accessibility and error checks remain guardrails, with the remedy written into the scope.
                     </BlogText>
@@ -320,9 +364,9 @@ export default function ShopifySlowLosingSalesPage() {
                     <BlogList
                         items={[
                             "Admin stays the same. Staff add products, run discounts and fulfill orders in the Shopify dashboard they already use.",
-                            "Checkout stays on Shopify, so payment, tax, fraud controls and compliance remain the platform's responsibility rather than yours.",
+                            "Checkout stays on Shopify, so payments, tax, fraud checks and compliance stay their problem, not yours.",
                             "The frontend becomes yours. What ships to the browser is decided by your code instead of by the theme and whatever app blocks were installed into it.",
-                            "Catalogue, pricing and inventory are fetched through the Storefront API, so nothing is copied into a second system that can drift.",
+                            "Catalog, pricing and inventory are fetched through the Storefront API, so nothing is copied into a second system that can drift.",
                             "Images and static assets are served from a CDN and generated at the sizes each layout actually requests.",
                         ]}
                     />
@@ -335,7 +379,7 @@ export default function ShopifySlowLosingSalesPage() {
 
                     <BlogHeader>Common Shopify speed mistakes that do not need a rebuild</BlogHeader>
                     <BlogText>
-                        The same avoidable problems appear in most stores we look at, and none of them require replacing
+                        These are the avoidable problems worth ruling out first, and none of them requires replacing
                         the frontend. Work through these before pricing anything larger. Our{" "}
                         <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline">Shopify speed optimization guide</Link>{" "}
                         covers the diagnostic detail.
@@ -352,6 +396,11 @@ export default function ShopifySlowLosingSalesPage() {
                     />
 
                     <BlogHeader>Signals a rebuild is worth pricing</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A rebuild is worth pricing when the constraint survived the cleanup and lives in something the theme layer cannot express. Four signals point that way, and the fourth is commercial rather than technical: someone has to maintain a frontend application after handover, and if that person does not exist yet, the build is only half the decision.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "The field data shows the problem on templates you control, and it survives after apps, media and third-party code have been cleaned up.",
@@ -362,6 +411,11 @@ export default function ShopifySlowLosingSalesPage() {
                     />
 
                     <BlogHeader>When not to rebuild</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Five situations make a rebuild the wrong call, and the simplest is the one to rule out first: nobody has looked at the field data yet. A rebuild chosen from a lab score can move the problem instead of removing it, and it does that at the full price of a rebuild.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Traffic is low enough that no test could detect a change. Demand is the constraint, not rendering.",
@@ -375,7 +429,7 @@ export default function ShopifySlowLosingSalesPage() {
                     <InsightBox variant="info" label="How we label our own evidence">
                         We do not have a published Shopify headless rebuild with verified before-and-after commercial
                         figures, and we are not going to present a model as one. MyCustomPatches is an independent
-                        client and its figures are owner-confirmed and published with permission. Panda Patches is
+                        client whose project we publish with permission. Panda Patches is
                         owned and operated by PandaCodeGen co-founder Imran Raza Ladhani, so anything from it is
                         founder-affiliated evidence rather than independent client proof. Any dated performance result
                         we publish carries the URL, test profile, run count and reporting period, or it does not get
@@ -400,7 +454,7 @@ export default function ShopifySlowLosingSalesPage() {
                                 Or book a call
                             </CalModalButton>
                         </div>
-                        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-stone-600">
+                        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-stone-300">
                             The audit form captures your pages and sends them to us. It does not score your store or
                             diagnose anything on its own. A person reads the results and replies with a written view of
                             what is actually slow and what it would take to fix.

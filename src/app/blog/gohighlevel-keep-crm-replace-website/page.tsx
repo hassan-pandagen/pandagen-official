@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Database, Globe2, Workflow } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -32,13 +32,17 @@ export const metadata: Metadata = {
         "HighLevel API website",
         "GoHighLevel hybrid website",
         "GoHighLevel webhook integration",
+        "GoHighLevel headless website",
+        "replace GoHighLevel website builder",
+        "GoHighLevel custom frontend",
     ],
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-04",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-keep-crm-replace-website")],
@@ -62,19 +66,52 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-04",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["GoHighLevel", "HighLevel API", "CRM integration", "Landing page performance", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "GoHighLevel",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 2350,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "Thing", name: "GoHighLevel" },
+                { "@type": "Thing", name: "Customer relationship management", sameAs: ["https://en.wikipedia.org/wiki/Customer_relationship_management"] },
+                { "@type": "Thing", name: "Next.js", sameAs: ["https://nextjs.org"] },
+                { "@type": "Thing", name: "Webhook", sameAs: ["https://en.wikipedia.org/wiki/Webhook"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Keep HighLevel, replace website", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-04",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -114,14 +151,16 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             Keep Your GoHighLevel CRM. <span className="italic text-cognac">Replace Just the Website.</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            You can keep HighLevel running your operations and put a separate frontend in
-                            front of the public site. Whether that is the right fix depends on what you have
-                            measured, whether the integrations actually cover what you need, who is
-                            responsible for which data, what your editors need to be able to do, and whether
-                            you have tested the switchover.
+                            Yes, you can keep GoHighLevel as your CRM and replace only the website it builds.
+                            Keep HighLevel doing the thing it is genuinely good at, and put a faster public
+                            website in front of it. The contacts, workflows, calendars and pipeline stay exactly
+                            where they are. Only the pages your customers and search engines actually see move.
+                            Whether that trade is worth making comes down to what you have measured on the
+                            current site, and to who will own the integration once it exists, because that part
+                            does not end at launch.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current HighLevel developer and support documentation.
+                            Reviewed August 3, 2026 against current HighLevel developer and support documentation.
                         </p>
                     </header>
 
@@ -129,7 +168,8 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="May 4, 2026"
-                        readTime="12 min read"
+                        readTime="9 min read"
+                        linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan designs CRM-connected websites and search-sensitive migrations."
                     />
 
@@ -137,9 +177,9 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The architecture in one minute</h2>
                         <BlogList
                             items={[
-                                "Public frontend: pages, navigation, content, metadata, forms and consent behavior.",
+                                "The public site: the pages, navigation, content, metadata, forms and how consent works.",
                                 "Integration layer: server endpoints that validate input, apply abuse controls and call HighLevel under scoped credentials.",
-                                "HighLevel: contacts, calendars, workflows, opportunities, conversations and other accepted CRM functions.",
+                                "HighLevel keeps your contacts, calendars, workflows, pipeline and conversations, plus whatever else you agreed it handles.",
                                 "Webhooks: signed event notifications for the approved synchronization paths.",
                                 "Observability: request IDs, safe logs, alerts, reconciliation and a failure-recovery procedure.",
                             ]}
@@ -163,7 +203,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     <BlogHeader>What stays, what moves, what crosses between them</BlogHeader>
                     <BlogText>
                         The split is the first thing to agree, because it decides how much integration you are taking
-                        on. Anything the public sees and search engines read moves to the frontend. Anything that runs
+                        on. Anything the public sees and search engines read moves to the frontend, whether that frontend is Next.js, WordPress or Webflow. The integration questions below are the same in all three; only the build effort differs. Anything that runs
                         the business stays in HighLevel. Anything that crosses between the two is an integration
                         somebody has to own after launch.
                     </BlogText>
@@ -178,7 +218,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                                 <li>Calendars, reminders and no-show handling</li>
                                 <li>Reputation and review request flows</li>
                                 <li>Sub-accounts, snapshots and agency reporting</li>
-                                <li>White-label and rebilling arrangements where used</li>
+                                <li>White-label and rebilling arrangements where used. Check the billing unit before you model this: several HighLevel add-ons are priced per sub-account rather than per agency, so the line grows with the number of clients you onboard</li>
                                 <li>Membership areas that remain hosted in HighLevel</li>
                             </ul>
                         </div>
@@ -201,16 +241,22 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     </InsightBox>
 
                     <BlogHeader>When a hybrid build is worth considering</BlogHeader>
+                    <BlogText>
+                        A hybrid is worth considering once you have fixed what you realistically can inside HighLevel and real pages still miss what you agreed, while your team still runs on HighLevel for contacts, workflows and calendars. Stay native when the current website meets the business requirements, or when budget, traffic, content maturity, capacity and integration risk do not justify a separate frontend. Framework preference alone is not a migration case.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Representative public pages fail agreed performance, accessibility, content, design, or search-output requirements after realistic in-platform fixes.",
-                            "The team still depends on HighLevel contacts, workflows, calendars, pipelines, conversations, or sub-account operations.",
+                            "You fixed what you realistically could inside HighLevel, and real example pages still miss what you agreed on speed, accessibility, content, design or search.",
+                            "Your team still runs on HighLevel for contacts, workflows, calendars, pipelines, conversations or sub-accounts.",
                             "The organization accepts the added integration ownership, monitoring, vendor-change work, and incident surface.",
                             "A documented total-cost and risk comparison supports replacement instead of another native-site optimization pass.",
                         ]}
                     />
                     <BlogText>
-                        Stay native when the current website meets business requirements or when budget, traffic,
+                        A hybrid is worth considering once you have fixed what you realistically can inside HighLevel
+                        and real pages still miss what you agreed on speed, search or design, and your team still
+                        runs on HighLevel for contacts, workflows and calendars. Our hybrid builds start at $1,500.
+                        Stay native when the current website meets business requirements, or when budget, traffic,
                         content maturity, operational capacity, and integration risk do not justify a separate frontend.
                         Framework preference alone is not a migration case.
                     </BlogText>
@@ -238,11 +284,11 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Work arrives through referral and repeat business</td><td className="p-4">Stay native. The constraint you would be paying to remove is not the one limiting the business.</td></tr>
                                 <tr><td className="p-4 font-bold">The account is new, with no traffic or content yet</td><td className="p-4">Stay native and publish. There is nothing to preserve or measure yet, so a frontend rebuild is premature.</td></tr>
-                                <tr><td className="p-4 font-bold">No capacity to own an integration, monitoring and vendor changes</td><td className="p-4">Stay native. A hybrid adds responsibility the organisation has to carry every month, not just at launch.</td></tr>
+                                <tr><td className="p-4 font-bold">No capacity to own an integration, monitoring and vendor changes</td><td className="p-4">Stay native. A hybrid adds responsibility the organization has to carry every month, not just at launch.</td></tr>
                                 <tr><td className="p-4 font-bold">Organic search or AI answer surfaces are a main acquisition route</td><td className="p-4">Investigate a hybrid, and confirm it by crawling the rendered output of the current pages rather than assuming.</td></tr>
-                                <tr><td className="p-4 font-bold">Paid traffic lands on pages you need full control over</td><td className="p-4">Investigate a hybrid using your own account data on landing-page behaviour, not a general claim about the platform.</td></tr>
+                                <tr><td className="p-4 font-bold">Paid traffic lands on pages you need full control over</td><td className="p-4">Investigate a hybrid using your own account data on landing-page behavior, not a general claim about the platform. Google lists landing page experience as one of three Quality Score components, so the evidence you need is your own Quality Score diagnostics, not a platform reputation.</td></tr>
                                 <tr><td className="p-4 font-bold">Many location or service pages need distinct URLs, metadata and schema</td><td className="p-4">Investigate a hybrid, and price the content model and editorial workflow, not just the templates.</td></tr>
-                                <tr><td className="p-4 font-bold">An agency wants control of its own marketing site</td><td className="p-4">Consider a hybrid for the agency site while keeping sub-account builds native, where standardisation is worth more than control.</td></tr>
+                                <tr><td className="p-4 font-bold">An agency wants control of its own marketing site</td><td className="p-4">Consider a hybrid for the agency site while keeping sub-account builds native, where standardization is worth more than control.</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -251,9 +297,17 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     <BlogText>
                         HighLevel&apos;s current developer portal documents programmatic access to resources including
                         contacts, conversations, calendars, appointments, payments, and webhooks. It documents OAuth
-                        2.0 with scoped access for marketplace applications and also describes private integration
-                        credentials. Available resources, versions, scopes, and limits must be checked for the target
-                        account when the project is scoped.
+                        2.0 with scoped access for marketplace applications and also describes Private Integration
+                        Tokens, sent as a bearer token alongside a Version header such as 2021-07-28, with scopes
+                        chosen at creation. HighLevel&apos;s support documentation states that legacy API keys run on
+                        API v1.0, which has reached end-of-life, that new v1 key creation is no longer supported, and
+                        that keys unused for 90 days are deleted automatically. If a tutorial tells you to paste an
+                        API key into your website, that instruction is out of date. HighLevel&apos;s OAuth FAQ
+                        currently publishes marketplace-app limits of 100 requests per 10 seconds and 200,000
+                        requests per day, per app per resource, and returns X-RateLimit-Max, X-RateLimit-Remaining,
+                        X-RateLimit-Limit-Daily and X-RateLimit-Daily-Remaining headers so you can see where you
+                        stand. Available resources, versions, scopes and limits must still be checked for the target
+                        account when the project is scoped, because these numbers are the vendor&apos;s to change.
                     </BlogText>
                     <BlogText>
                         HighLevel&apos;s support documentation also shows its website builder includes SEO metadata,
@@ -262,13 +316,16 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     </BlogText>
 
                     <BlogHeader>Forms and contact creation</BlogHeader>
+                    <BlogText>
+                        A custom form has to create the contact as reliably as the native one did, which means the work is mostly server-side rather than in the markup. Collect only approved fields with accurate consent, validate and normalize on the server, use the current approved endpoint and duplicate policy, and record a correlation ID so support can trace a submission that went missing.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Collect only approved fields and show accurate notice and consent behavior before submission.",
                             "Validate and normalize data on the server. Rate-limit, apply bot controls, and reject unexpected fields.",
                             "Use the current approved HighLevel endpoint, integration type, scope, and duplicate-contact policy.",
                             "Return a safe visitor state while recording a correlation ID for support and reconciliation.",
-                            "Test contact creation, source, tags, custom fields, duplicate rules, workflow enrollment, errors, retries, and notifications.",
+                            "Test that a contact is created with the right source, tags and custom fields, that duplicates are handled, that the workflow fires, and that errors, retries and notifications all behave.",
                         ]}
                     />
                     <InsightBox variant="warning" label="Do not promise that every workflow remains untouched">
@@ -276,6 +333,26 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         dependency and run accepted end-to-end tests. A contact write, a form submission, an appointment,
                         and a tag change are not interchangeable events.
                     </InsightBox>
+
+                    <BlogHeader id="lead-path">What actually happens when someone fills in the form</BlogHeader>
+                    <BlogText>
+                        This is worth walking through end to end, because it is the part operators are nervous about and it
+                        is simpler than it sounds. A visitor lands on the new site and completes the contact form. The
+                        form is yours, so it looks how you want and is not a slow embedded widget. When they submit, a
+                        spam check runs invisibly, your server validates what was sent, and the lead is written into
+                        HighLevel under scoped credentials.
+                    </BlogText>
+                    <BlogText>
+                        HighLevel then does what it always did. The workflow you already built fires, the same message
+                        goes out, the same pipeline stage gets set, and the lead appears in the same place your team
+                        already looks. Nobody has to be retrained and no automation is rebuilt. That is the whole point
+                        of the arrangement: the front door changes and the building behind it does not.
+                    </BlogText>
+                    <BlogText>
+                        The honest caveat is the one in the box above. This holds only for the events you actually
+                        mapped and tested. A workflow triggered by something the new form no longer produces will stop
+                        firing silently, and nobody notices until a month of leads has gone cold.
+                    </BlogText>
 
                     <BlogHeader>Calendar choices</BlogHeader>
                     <BlogText>
@@ -286,18 +363,32 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         adds availability, time-zone, conflict, cancellation, rescheduling, retry, and accessibility
                         responsibilities.
                     </BlogText>
+                    <BlogText>
+                        Treat the embed as the default and make the custom interface earn its place. The embed is a
+                        paste-in that HighLevel keeps working. The custom build buys you design control and a faster
+                        booking interaction, and in exchange you inherit every edge case the embed was quietly handling
+                        for free. That is a reasonable trade for a brand where booking is the experience, and a poor one
+                        almost everywhere else.
+                    </BlogText>
 
                     <BlogHeader>Webhooks need authentication and recovery</BlogHeader>
                     <BlogText>
                         HighLevel&apos;s current webhook guide says to verify authenticity. It identifies{" "}
                         <code className="rounded bg-stone-100 px-1.5 py-0.5 text-sm">X-GHL-Signature</code>{" "}
-                        with Ed25519 as the current header and says the legacy RSA header is scheduled for deprecation
-                        on September 1, 2026. Recheck the guide before release because vendor dates can change.
+                        with Ed25519 as the current header, to be used whenever it is present. The legacy
+                        RSA-SHA256 header{" "}
+                        <code className="rounded bg-stone-100 px-1.5 py-0.5 text-sm">X-WH-Signature</code>{" "}
+                        is documented as deprecated on September 1, 2026, after which webhooks are signed with
+                        the Ed25519 header only. That date is fixed,
+                        so this is a live deadline rather than a future one. If you have inherited a HighLevel
+                        integration, search the codebase for that legacy string now: anything still verifying
+                        against it alone will start rejecting or, worse, silently accepting unverified webhooks
+                        once the switch happens. Recheck the guide before release, because vendor dates move.
                     </BlogText>
                     <BlogList
                         items={[
                             "Verify the signature against the unmodified request body before processing.",
-                            "Acknowledge according to the current vendor contract and move slow work to a durable queue.",
+                            "HighLevel's webhook guide says to return 200 OK immediately and process asynchronously, so acknowledge first and move slow work to a durable queue.",
                             "Make handlers idempotent so retries do not duplicate actions.",
                             "Record a safe event identifier, type, result and retry state without leaking secrets or unnecessary personal data.",
                             "Alert on failures and reconcile missed events; do not treat a 2xx response as business completion.",
@@ -323,9 +414,13 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
 
                     <BlogHeader>SEO migration controls</BlogHeader>
                     <BlogText>
-                        Google can render JavaScript; it is inaccurate to say that crawlers never execute it. The
-                        relevant question is what each route returns, renders, links, and exposes under actual status,
-                        robots, canonical, content, and script conditions. A hybrid frontend can make those outputs more
+                        Google can render JavaScript; it is inaccurate to say that crawlers never execute it. Answer
+                        engines are a separate question from Google, and the honest position is narrower than the one
+                        usually sold: Vercel&apos;s crawler analysis, published in December 2024, found that GPTBot and
+                        Claude&apos;s crawler request JavaScript files but do not execute them. That is a dated
+                        observation about specific bots rather than a permanent rule, and it is worth re-checking
+                        rather than repeating. The relevant question either way is what each route returns, renders,
+                        links, and exposes under actual status, robots, canonical, content, and script conditions. A hybrid frontend can make those outputs more
                         controllable, but it does not guarantee indexing, rankings, AI citations, traffic, or leads.
                     </BlogText>
                     <BlogList
@@ -353,12 +448,15 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         where eligible data exists and repeat lab tests for diagnosis.
                     </BlogText>
                     <BlogText>
-                        PandaCodeGen accepts a 90+ Lighthouse target only when the signed terms name representative
+                        PandaCodeGen accepts a 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target only when the signed terms name representative
                         pages, mobile and desktop profiles, the exact environment, three passing runs per page and
                         profile, exclusions, and remedy. It is not a ranking, traffic, conversion, or revenue guarantee.
                     </BlogText>
 
                     <BlogHeader>Cutover and handoff checklist</BlogHeader>
+                    <BlogText>
+                        The account-transfer step is the one teams tend to leave vague, and it is the one that matters six months later. Five items: freeze the inventory and record DNS, certificates, redirects and rollback owners; test contacts, workflows, calendars and consent with disposable records; verify the failure behavior as well as the happy path; transfer the repository, deployment and business accounts under the accepted terms; then monitor before closing.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Freeze the approved inventory and record DNS, certificates, redirects, vendors and rollback owners.",

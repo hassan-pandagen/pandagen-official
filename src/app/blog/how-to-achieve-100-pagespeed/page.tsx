@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Repeat2, TestTube2 } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -12,6 +12,7 @@ import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
+const PageSpeedAnimation = dynamicImport(() => import("@/components/blog/PageSpeedAnimation"));
 
 const postId = "how-to-achieve-100-pagespeed";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "how to achieve 100 PageSpeed",
         "90 PageSpeed score",
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-achieve-100-pagespeed")],
@@ -49,11 +51,9 @@ export const metadata: Metadata = {
 const sources = [
     { name: "Chrome: Lighthouse performance scoring", url: "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" },
     { name: "Chrome: Lighthouse performance audits", url: "https://developer.chrome.com/docs/lighthouse/performance/" },
-    { name: "Google Search Central: Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-    { name: "PageSpeed Insights documentation", url: "https://developers.google.com/speed/docs/insights/v5/about" },
-    { name: "web.dev: optimize LCP", url: "https://web.dev/articles/optimize-lcp" },
-    { name: "web.dev: optimize INP", url: "https://web.dev/articles/optimize-inp" },
-    { name: "web.dev: optimize CLS", url: "https://web.dev/articles/optimize-cls" },
+    // Google Search and PageSpeed Insights documentation is verified before publication but is
+    // deliberately not listed here and not emitted into citation[]. Those claims are attributed in
+    // prose. Do not reintroduce developers.google.com URLs into this array.
 ];
 
 const articleSchema = {
@@ -65,19 +65,54 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
+            image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Web performance optimization", "Core Web Vitals", "Lighthouse", "PageSpeed Insights", "Next.js", "Technical SEO"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1750,
+            timeRequired: "PT7M",
+            about: [
+                { "@type": "Thing", name: "PageSpeed Insights" },
+                { "@type": "Thing", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },
+                { "@type": "Thing", name: "Core Web Vitals" },
+                { "@type": "Thing", name: "Web performance", sameAs: "https://en.wikipedia.org/wiki/Web_performance" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "90+ PageSpeed process", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
+            datePublished: "2026-02-17",
+            dateModified: "2026-08-03",
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -91,7 +126,6 @@ const articleSchema = {
     ],
 };
 
-const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function PageSpeedProcessGuide() {
     return (
@@ -117,17 +151,27 @@ export default function PageSpeedProcessGuide() {
                             nobody can hold that.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Chrome, Google and web.dev primary guidance.
+                            Every threshold and metric definition here was re-checked against Chrome&apos;s primary Lighthouse documentation on August 3, 2026. Where a claim can be verified in your own browser, this page tells you how to verify it rather than asking you to take a citation on trust.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+
+                    <div className="my-10">
+                        <PageSpeedAnimation />
+                    </div>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First understand the number</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            A Lighthouse score is a weighted summary of one simulated test, under one device profile,
+                            at one moment. It is not a property your site owns and not a threshold Google publishes.
+                            Read it as a diagnostic that points at work, then verify the work against what real
+                            visitors experienced. Five things follow from that.
+                        </p>
                         <BlogList
                             items={[
-                                "Lighthouse currently labels 90 to 100 as good, 50 to 89 as needing improvement, and below 50 as poor.",
+                                "Lighthouse labels 90 to 100 as good, 50 to 89 as needing improvement, and below 50 as poor. That band is Lighthouse's own verdict on its own weighted diagnostic, and that is the whole of what it means. Google does not publish 70, 90 or 100 as a direct ranking requirement.",
                                 "The score is a weighted lab calculation and can vary with tool version, device, network, CPU, cache, content, consent and third parties.",
                                 "Core Web Vitals are field metrics: LCP, INP and CLS, evaluated at the 75th percentile where eligible data exists.",
                                 "A 100 lab score does not guarantee a Core Web Vitals pass, ranking, traffic, conversion or revenue.",
@@ -162,6 +206,20 @@ export default function PageSpeedProcessGuide() {
                         . This page is about the work itself.
                     </BlogText>
 
+                    <BlogHeader id="run-the-test">Run the test before you read the rest</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            PageSpeed Insights is free and needs no account. Open{" "}
+                            <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">pagespeed.web.dev</a>,
+                            enter the exact public URL of the page you care about, and press Analyze. Read the Mobile
+                            tab first, because that is the profile most reporting is based on. Two numbers come back
+                            and they are not the same thing: the field data at the top, drawn from real Chrome visitors
+                            over a trailing window, and the Lighthouse lab result below it, simulated on one throttled
+                            device in one moment. A page with no eligible field data shows the lab result only. Note
+                            which of the two you are looking at before you quote a score to anyone.
+                        </BlogText>
+                    </div>
+
                     <BlogHeader>Step 1: define representative pages and journeys</BlogHeader>
                     <BlogText>
                         Group the site by template and behavior: homepage, long service page, article, location, product,
@@ -175,6 +233,9 @@ export default function PageSpeedProcessGuide() {
                     </BlogText>
 
                     <BlogHeader>Step 2: record field and lab baselines</BlogHeader>
+                    <BlogText>
+                        A mobile cold-cache run with consent accepted is not comparable to a desktop warm-cache run before tags load. Keep profiles separate and report variation instead of selecting the best run. Four things go in the baseline, and the run count is the one that makes a later comparison mean anything.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Save PageSpeed Insights field origin and URL data where available, including assessment date.",
@@ -201,14 +262,25 @@ export default function PageSpeedProcessGuide() {
                     </BlogText>
 
                     <BlogHeader>Step 4: make the LCP resource discoverable and efficient</BlogHeader>
+                    <BlogText>
+                        Identify the actual LCP element in the trace instead of assuming it is the hero image. Once you know what it is, the work is making it discoverable early and delivering it efficiently: right size, modern format, never lazy-loaded when it is above the fold, and nothing render-blocking sitting in front of it.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Identify the actual LCP element in the trace instead of assuming it is the hero image.",
-                            "Serve an appropriately sized, compressed asset and preserve visual quality.",
+                            "Serve an appropriately sized, compressed asset in a modern format such as AVIF or WebP, and preserve visual quality.",
                             "Avoid lazy-loading the above-the-fold LCP image and ensure the browser can discover it promptly.",
                             "Reduce render-blocking work that delays the element and verify responsive candidates.",
                         ]}
                     />
+                    <BlogText>
+                        Render-blocking is worth measuring rather than guessing at. Open the Coverage panel in
+                        devtools, record a reload, and read the unused-bytes column for each stylesheet and script.
+                        That gives you your own number for your own page, which is more useful than any published
+                        average: it tells you whether the win is splitting a stylesheet, inlining what the first screen
+                        actually needs, or deleting a file nobody has referenced in a year. Re-record after the change
+                        and compare against the figure you wrote down.
+                    </BlogText>
                     <BlogText>
                         On WordPress the LCP element is usually decided by the theme or the page builder, which is where{" "}
                         <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">
@@ -227,8 +299,25 @@ export default function PageSpeedProcessGuide() {
                         Remove unused code, split non-critical work, yield during long processing and keep interaction
                         handlers small. Test the real menu, form, filter, cart and modal, not only initial load.
                     </BlogText>
+                    <BlogList
+                        items={[
+                            "Code splitting: ship the JavaScript this route needs, not the bundle every route needs.",
+                            "Tree shaking: drop library exports the build can prove are never reached.",
+                            "Dynamic imports: load a modal, editor, map or carousel when it is opened, not on first paint.",
+                            "Server rendering: send HTML for anything that does not need to be interactive on the client.",
+                        ]}
+                    />
+                    <BlogText>
+                        Each of these is checkable in your own build output rather than on someone&apos;s word. Print
+                        the per-route bundle sizes your framework reports at build time, note them, make one change,
+                        and print them again. If the number did not move, the technique was not applied where you
+                        thought it was.
+                    </BlogText>
 
                     <BlogHeader>Step 6: stabilize layout</BlogHeader>
+                    <BlogText>
+                        Layout shifts come from space that was not reserved and content that arrived late. Reserve dimensions for images, video, embeds and dynamic components, never insert banners or consent UI above existing content without reserved space, and exercise the late states deliberately while recording CLS.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Reserve dimensions or aspect ratio for images, video, embeds and dynamic components.",
@@ -237,6 +326,16 @@ export default function PageSpeedProcessGuide() {
                             "Exercise late content, validation, loading, success and error states while recording CLS.",
                         ]}
                     />
+                    <BlogText>
+                        Fonts are worth checking yourself rather than taking on trust. Open the Network panel, filter
+                        to Font, and reload. If the request goes to an origin you do not control, the browser has to
+                        resolve and connect to that host before a single glyph arrives, and it cannot start until the
+                        stylesheet referencing the font has parsed. Self-hosting the file removes that dependency
+                        chain and lets you preload it. Then watch the text on a throttled reload: if it is invisible
+                        until the font lands you have a flash of invisible text, and if it appears in a fallback and
+                        then reflows you have a layout shift. Which of the two you get is decided by font-display, and
+                        the second is usually the better trade, provided the fallback is metric-matched.
+                    </BlogText>
 
                     <BlogHeader>Step 7: govern third parties and consent</BlogHeader>
                     <BlogText>
@@ -251,6 +350,9 @@ export default function PageSpeedProcessGuide() {
                     </BlogText>
 
                     <BlogHeader>Step 8: repeat, regress and release</BlogHeader>
+                    <BlogText>
+                        Re-run the unchanged acceptance profiles three times per named page before anything ships, then check that the score work did not break functionality, accessibility, analytics or consent. Record the release version, the tool version, the reports, the exclusions and the known variance, because a number without those is not reproducible.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Run the unchanged acceptance profiles three times for every named page and profile.",
@@ -259,6 +361,32 @@ export default function PageSpeedProcessGuide() {
                             "Add budget or regression checks appropriate to the project and monitor field data after release.",
                         ]}
                     />
+
+                    <BlogHeader id="is-70-good-enough">Is 70 good enough? And is the tool even reliable?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            There is no score you are required to reach. The band is Lighthouse grading its own
+                            weighted diagnostic, and Google publishes no number as a ranking requirement, so
+                            &ldquo;is 70 good enough&rdquo; cannot be answered from the score alone. The question that
+                            can be answered is whether your real visitors are having a good experience, and that is a
+                            different measurement: field Core Web Vitals at the 75th percentile, not a lab run.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The two can disagree in both directions, which is the part that confuses people. A page can
+                        sit at 70 in the lab and pass its field vitals, because the simulated device and network in
+                        the test are harsher than what your actual audience uses. A page can also score in the
+                        nineties and fail in the field, because the lab run never met your cookie banner, your logged
+                        in state, your third-party chat widget or your slowest market. If you have to choose which
+                        number to act on, act on the field data and use the lab score to find out why.
+                    </BlogText>
+                    <BlogText>
+                        That also answers the reliability question. The tool is reliable at what it does, which is
+                        running one simulated test and telling you what it found. It is not measuring your visitors,
+                        and it will move between runs on the same unchanged page, which is why this guide asks for
+                        three runs per profile and reports the variation rather than the best result. A single score
+                        screenshot, yours or a vendor&apos;s, is one sample of a distribution presented as a fact.
+                    </BlogText>
 
                     <BlogHeader>Why 100 is not the right universal promise</BlogHeader>
                     <BlogText>
@@ -317,15 +445,6 @@ export default function PageSpeedProcessGuide() {
                         </Link>{" "}
                         is covered on its own page.
                     </BlogText>
-
-                    <BlogHeader>Primary sources</BlogHeader>
-                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
-                        {sources.map((source) => (
-                            <li key={source.url}>
-                                <a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>{source.name}</a>
-                            </li>
-                        ))}
-                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />

@@ -10,17 +10,17 @@ const decisions = [
   {
     icon: ShoppingCart,
     title: "Keep the commerce backend when it fits",
-    body: "A headless storefront can retain Shopify or WooCommerce for catalog, checkout, payment, and operations. Replacing the backend is a separate decision with a separate risk and cost model.",
+    body: "A headless storefront can keep Shopify or WooCommerce running your catalog, checkout, payments and operations. Replacing the backend is a separate decision, with its own risks and its own cost.",
   },
   {
     icon: Gauge,
     title: "Measure the actual bottleneck",
-    body: "Collect field and lab performance by template, then identify theme code, apps, tags, images, checkout constraints, and operational dependencies before recommending a rebuild.",
+    body: "Measure real-user and lab performance for each template. Then find out what the theme code, apps, tags, images, checkout limits and day-to-day dependencies are doing, before anyone recommends a rebuild.",
   },
   {
     icon: Receipt,
     title: "Price the whole operating model",
-    body: "Compare plan, app, payment, hosting, database, email, analytics, monitoring, maintenance, support, and engineering costs using current provider terms and realistic usage.",
+    body: "Compare the whole bill: the plan, the apps, payment fees, hosting, database, email, analytics, monitoring, maintenance, support and engineering time. Use current provider terms and usage you can actually justify.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function ShopifyKiller({ onOpenQuote }: ShopifyKillerProps) {
           <div>
             <h3 className="text-2xl font-bold">Evidence to bring to discovery</h3>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-              {["Representative URLs and field metrics", "Current plan and app invoices", "Catalog, checkout, and account requirements", "Analytics, consent, and integration map", "Content and merchandising workflow", "Traffic, timeline, budget, and acceptance criteria"].map((item) => (
+              {["Real example URLs, with real-user numbers", "Current plan and app invoices", "What the catalog, checkout and accounts have to do", "A map of your analytics, consent and integrations", "Content and merchandising workflow", "Your traffic, your timeline, your budget, and how you sign it off"].map((item) => (
                 <li key={item} className="flex gap-3 text-stone-200">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
                   {item}

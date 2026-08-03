@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Braces, Calculator, FileSpreadsheet, Scale, Workflow } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "WordPress vs custom code cost",
         "WordPress three year cost",
@@ -52,7 +53,6 @@ const sources = [
     { name: "WordPress export documentation", url: "https://wordpress.org/documentation/article/tools-export-screen/" },
     { name: "Next.js deployment documentation", url: "https://nextjs.org/docs/app/getting-started/deploying" },
     { name: "Vercel current pricing", url: "https://vercel.com/pricing" },
-    { name: "Google site moves", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
 ];
 
 const articleSchema = {
@@ -62,6 +62,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-vs-custom-code-real-cost-3-years"),
             description,
             datePublished: "2026-02-20",
             dateModified: "2026-07-24",
@@ -70,13 +71,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website economics",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1600,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress vs custom cost", item: "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#webpage",
+            url: "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wordpress-vs-custom-code-real-cost-3-years#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -114,20 +143,29 @@ export default function WordPressVsCustomCostPage() {
                             WordPress vs Custom Code <span className="italic text-cognac">Model Both Honestly</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A fair three-year comparison uses the same capabilities, demand, service level and internal
-                            labor. It exposes inputs instead of presenting a stacked scenario as a market fact.
+                            There is no single three-year total for either option, because the answer is built from
+                            your invoices, your internal hours and the service level you actually need. WordPress can
+                            cost less, more, or about the same as custom code depending on those inputs. What this
+                            page gives you instead is the arithmetic: the same capabilities, demand and labor on both
+                            sides, with every term visible so the result can be checked rather than taken on trust.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="17 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            Neither option wins in the abstract, and the total is whatever your own invoices and time
+                            records say it is. That is why this page publishes formulas rather than figures: the
+                            inputs are yours, and a headline three-year total that hides them cannot be checked
+                            against your situation. Five things settle it.
+                        </p>
                         <BlogList
                             items={[
                                 "WordPress can cost less, more or about the same as custom code depending on the requirements and operating model.",
-                                "Custom code does not mean zero hosting, software, dependency, maintenance, security or support cost.",
+                                "Custom code still costs you hosting, software, dependencies, maintenance, security and support.",
                                 "WordPress plugin and maintenance cost must come from the site's current invoices and work records.",
                                 "Payback and lost-revenue claims require approved inputs and first-party evidence.",
                                 "Choose architecture after capability and risk fit, not from a universal three-year winner.",
@@ -172,12 +210,17 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="requirements">Freeze a shared capability baseline</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Fix what both options have to deliver before you price either one, because the misleading comparisons we get asked to referee are nearly always two quotes that were never for the same thing. Six areas make up the baseline. If a custom scope quietly drops a capability a WordPress plugin currently supplies, the lower number is not a saving, it is a smaller project.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Page templates, content types, preview, approval and localization",
-                            "Forms, search, accounts, commerce, payments and subscriptions",
+                            "Forms, search, customer accounts, the store, payments and subscriptions",
                             "CRM, email, analytics, consent and operational integrations",
-                            "SEO, accessibility, privacy, security and performance acceptance",
+                            "Sign-off on search, accessibility, privacy, security and speed",
                             "Environments, monitoring, backups, recovery and response time",
                             "Repository, data, domain, provider and documentation handoff",
                         ]}
@@ -189,6 +232,11 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="model">The three-year model</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Three years is the horizon where these two options separate, because a build price lands once and everything else recurs. The model carries four columns for a reason: every input needs a WordPress source, a custom source, and one rule applied identically to both. Where a figure cannot be sourced, record the assumption instead of guessing.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1080px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -207,6 +255,12 @@ export default function WordPressVsCustomCostPage() {
                     </div>
 
                     <BlogHeader id="formula">Use visible formulas</BlogHeader>
+                    <BlogText>
+                        The arithmetic is shown here instead of the result, because the result is yours and depends on
+                        six inputs only you hold. A three-year total published without those six terms cannot be
+                        checked by the reader, which is what makes most of the ones you will find useless. Fill these
+                        in from your own invoices and your own time records.
+                    </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Three-year cost = initial work
                         <br />+ recurring providers and software
@@ -221,13 +275,18 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="wordpress-inputs">WordPress inputs</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Six inputs make up the WordPress column and only the first arrives as an invoice. Renewals, update review, release work and recovery readiness are the lines that get left out, and each one scales with the size of the plugin list. Take them from your own contracts and your own logged hours.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Hosting, CDN, backups, staging, domains and email",
+                            "Hosting, the CDN, backups, a staging site, domains and email",
                             "Theme, builder, plugin and extension renewals",
                             "Update review, staging, regression testing and releases",
                             "Content, product, user and integration operations",
-                            "Performance, accessibility, security and recovery work",
+                            "Work on speed, accessibility, security and being able to recover",
                             "Expected theme, runtime, plugin or workflow replacement",
                         ]}
                     />
@@ -240,10 +299,15 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="custom-inputs">Custom-code inputs</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Six inputs make up the custom column and the build is only the first. Framework updates, provider API changes and the handoff to a future developer run for as long as the site does, which is what an optimistic custom estimate tends to leave out. Price the maintenance, not only the delivery.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Discovery, design, build, content and data migration",
-                            "Hosting, bandwidth, builds, CMS, database and storage",
+                            "Hosting, bandwidth, builds, the CMS, a database and storage",
                             "Search, email, analytics, monitoring, backup and security services",
                             "Framework and package updates, QA and deployment",
                             "Custom integration maintenance and provider API changes",
@@ -287,6 +351,13 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="payback">Payback and break-even</BlogHeader>
+                    <BlogText>
+                        Payback is not a number anyone can hand you. It is the incremental investment divided by the
+                        annual savings you have actually verified, which means it does not exist until you have
+                        verified a saving. If your verified annual saving is zero or negative, there is no payback
+                        period to compute, and any published month number you have read was computed from someone
+                        else&apos;s inputs.
+                    </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Incremental investment = custom three-year initial and transition cost
                         <br />- WordPress work avoided during transition
@@ -303,6 +374,11 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="scenarios">Run low, expected and high scenarios</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Run four scenarios rather than one number, because a single figure hides which assumption the decision is really resting on. Low uses contracted costs, expected uses approved growth, high uses documented capacity and contingency, and stress asks what happens if a critical vendor or maintainer disappears. Apply the same confidence rules to both columns.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Low: contracted costs, stable usage and only committed roadmap work",
@@ -324,6 +400,11 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
 
                     <BlogHeader id="nonfinancial">Non-financial decision criteria</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Some of what decides this never enters the model at all. Six criteria carry weight a spreadsheet cannot hold: how fast your editors can publish, whether the workflow fits, what the regulations require, what recovery has to look like, who you can hire, and how hard it would be to leave. Weigh these alongside the number rather than after it.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Editorial usability and time to publish",
@@ -361,8 +442,8 @@ export default function WordPressVsCustomCostPage() {
 
                     <BlogHeader id="terms">PandaCodeGen as one quote input</BlogHeader>
                     <BlogText>
-                        PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale,
-                        with custom work scoped separately. Standard payment is 30 percent at onboarding and 70 percent
+                        PandaCodeGen planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale,
+                        with custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent
                         on delivery. Use the accepted statement of work as the quote input and compare it with a
                         like-for-like WordPress option. These starting tiers do not prove three-year savings. The tier
                         detail sits on our{" "}
@@ -377,6 +458,17 @@ export default function WordPressVsCustomCostPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <Scale className="mb-4 h-7 w-7 text-cognac" />

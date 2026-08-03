@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Calculator, ShoppingBag, Wrench } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Shopify vs custom website",
         "custom Shopify storefront",
@@ -62,10 +63,6 @@ const sources = [
         url: "https://www.shopify.com/enterprise/blog/what-is-headless-commerce",
     },
     { name: "Shopify Storefront API", url: "https://shopify.dev/docs/api/storefront/latest" },
-    {
-        name: "Google site-move guidance",
-        url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes",
-    },
 ];
 
 const articleSchema = {
@@ -75,6 +72,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/shopify-vs-custom-website"),
             description,
             datePublished: "2026-03-30",
             dateModified: "2026-07-24",
@@ -83,13 +81,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Shopify", "Shopify themes", "Ecommerce performance", "Core Web Vitals", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Commerce architecture",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+            ],
+            wordCount: 1500,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Shopify vs custom", item: "https://www.pandacodegen.com/blog/shopify-vs-custom-website" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#webpage",
+            url: "https://www.pandacodegen.com/blog/shopify-vs-custom-website",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/shopify-vs-custom-website#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -141,10 +167,20 @@ export default function ShopifyVsCustomWebsitePage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The three real options</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">The four real options</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            Stay on a Shopify theme when the theme and its supported extensions already deliver the
+                            customer experience you have agreed to, and the performance problems you can measure are
+                            fixable without changing the architecture. Move to a headless storefront when a
+                            differentiated experience is impractical inside those theme constraints and you have a team
+                            that can own a release process. Replace the commerce back end only when a documented
+                            business, regulatory or data requirement makes Shopify unworkable, because that is the
+                            largest of the four moves. Most stores land on the first option or on the fourth, which is
+                            optimizing what already exists.
+                        </p>
                         <BlogList
                             items={[
                                 "Shopify theme: platform-native storefront, checkout and merchant workflow.",
@@ -171,13 +207,20 @@ export default function ShopifyVsCustomWebsitePage() {
                     </div>
 
                     <BlogHeader>1. Compare commerce requirements first</BlogHeader>
+                    <BlogText>
+                        Write down what the store has to do before you compare any platform against any other. Six
+                        domains cover most of it: what you sell and how it is priced and taxed, how money is taken,
+                        how orders are fulfilled and returned, what the customer sees and searches, how the store is
+                        measured and fed to ad platforms, and what has to integrate with everything else. A platform
+                        comparison run without that inventory compares marketing pages instead of requirements.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Catalog, variants, inventory, markets, pricing, discounts and tax.",
-                            "Cart, checkout, payments, fraud, accounts, subscriptions and B2B.",
+                            "What you sell, its variants, stock levels, the markets you sell into, prices, discounts and tax.",
+                            "The cart, checkout, taking payment, fraud checks, customer accounts, subscriptions and selling to businesses.",
                             "Orders, fulfillment, returns, customer service and retail operations.",
-                            "Content, search, recommendations, personalization and accessibility.",
-                            "Analytics, consent, advertising, feeds, structured data and SEO.",
+                            "The content, search, recommendations, anything personalized, and whether people with disabilities can use it.",
+                            "Analytics, the consent banner, ad platforms, product feeds, structured data, and protecting your search traffic.",
                             "Integrations, data ownership, security, recovery and support.",
                         ]}
                     />
@@ -220,6 +263,13 @@ export default function ShopifyVsCustomWebsitePage() {
                     </InsightBox>
 
                     <BlogHeader>3. Build a comparable total-cost model</BlogHeader>
+                    <BlogText>
+                        Five cost lines have to appear on both sides of the comparison for it to mean anything: what
+                        you pay providers, what implementation costs, what it costs to operate once it is live, what
+                        it costs to change or leave, and what you are carrying in risk. A comparison that prices the
+                        build on one side and the monthly plan on the other is not a comparison. Fill the table below
+                        from your own contract and invoices rather than from published list prices.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -245,13 +295,17 @@ export default function ShopifyVsCustomWebsitePage() {
                     <BlogText>
                         Shopify&apos;s Web Performance reports show real-user LCP, INP and CLS by URL, page type, device
                         and time. Use them with repeated lab traces to identify the responsible work. A theme does not
-                        have one permanent score ceiling, and a custom storefront is not automatically fast.
+                        have one permanent score ceiling, and a custom storefront is not automatically fast. That
+                        applies at every plan level, including Plus, where the entitlements change but the storefront
+                        still runs the theme, the apps and the scripts you installed. Our{" "}
+                        <Link href="/blog/shopify-plus-still-slow" className={inlineLinkClass}>diagnostic for a slow Shopify Plus store</Link>{" "}
+                        works through that case.
                     </BlogText>
                     <BlogList
                         items={[
-                            "Test representative home, collection, product, search, cart and campaign routes.",
-                            "Record device, network, geography, cache, authentication and consent state.",
-                            "Trace media, JavaScript, apps, analytics, data requests and theme or frontend code.",
+                            "Test a real example of each page type: home, a collection, a product, search, the cart and a campaign page.",
+                            "Note the device, the connection, where you tested from, whether the cache was warm, whether you were logged in, and what you had consented to.",
+                            "Then trace where the time went: images and video, JavaScript, apps, analytics, data requests, and the theme or frontend code itself.",
                             "Preserve functional, accessibility, SEO, analytics and error guardrails.",
                         ]}
                     />
@@ -261,6 +315,10 @@ export default function ShopifyVsCustomWebsitePage() {
                         <Link href="/blog/shopify-dawn-theme-slow" className={inlineLinkClass}>diagnosing a slow Dawn theme</Link>{" "}
                         and the wider{" "}
                         <Link href="/blog/shopify-store-speed-optimization" className={inlineLinkClass}>Shopify store speed optimization guide</Link>.
+                        To connect those measurements to the funnel rather than to a score, see{" "}
+                        <Link href="/blog/shopify-conversion-rate-speed-fix" className={inlineLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/shopify-slow-losing-sales" className={inlineLinkClass}>how to build a revenue-side evidence model</Link>.
                     </BlogText>
 
                     <BlogHeader>5. Compare ownership precisely</BlogHeader>
@@ -274,6 +332,13 @@ export default function ShopifyVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>6. Know when Shopify remains the right choice</BlogHeader>
+                    <BlogText>
+                        Stay on Shopify when the theme and its supported extensions already meet the customer
+                        experience you signed off, and when the merchant team would rather keep editing the store
+                        natively than operate a separate frontend. The performance test matters here: if the slow
+                        pages can be traced to images, apps and theme code, the fix is work inside the platform, not a
+                        replatform. Five conditions, all of which usually hold together:
+                    </BlogText>
                     <BlogList
                         items={[
                             "The theme and supported extensions meet the accepted customer experience.",
@@ -285,13 +350,20 @@ export default function ShopifyVsCustomWebsitePage() {
                     />
 
                     <BlogHeader>7. Know when headless deserves evaluation</BlogHeader>
+                    <BlogText>
+                        Headless earns evaluation when the experience you need cannot be built inside the theme
+                        constraints you have accepted, or when several content and commerce systems have to appear in
+                        one interface you control. The second test is organizational rather than technical: a
+                        headless storefront needs a team that can own a release process and a deployment target. If
+                        either half is missing, the extra integration work will not pay back.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A differentiated experience is impractical in the accepted theme constraints.",
                             "Multiple content, commerce or product systems must appear in one controlled interface.",
                             "The business needs a consistent experience across supported channels.",
                             "An established product and engineering operation needs frontend release independence.",
-                            "The accepted benefit justifies additional integration and maintenance responsibility.",
+                            "The benefit you agreed on is worth the extra integration work and the maintenance that follows it.",
                         ]}
                     />
                     <BlogText>
@@ -299,8 +371,10 @@ export default function ShopifyVsCustomWebsitePage() {
                         customers and checkout stay where they are, so the storefront changes without a product or
                         order-data migration and the merchant team keeps the interface it already knows. What moves to
                         your side is the storefront code, its hosting and its release process, plus any customer-facing
-                        feature that a theme or an app used to provide. Price that transfer before deciding, because it
-                        is the part that keeps costing after launch.
+                        feature that a theme or an app used to provide. The storefront reads commerce data through
+                        Shopify&apos;s Storefront API, so the integration surface you take on is that API plus whatever
+                        else the page needs. Price that transfer before deciding, because it is the part that keeps
+                        costing after launch.
                     </BlogText>
                     <BlogText>
                         Our{" "}
@@ -320,6 +394,13 @@ export default function ShopifyVsCustomWebsitePage() {
                     </BlogText>
 
                     <BlogHeader>9. Make migration SEO-safe</BlogHeader>
+                    <BlogText>
+                        Search visibility survives a replatform when the URL inventory is captured before anything
+                        moves, every changed address is mapped to a permanent redirect, and the new storefront renders
+                        navigation and product information in a form a crawler can read. Product structured data and
+                        merchant feeds have to keep matching the offers a shopper sees. Everything else in the list
+                        below is verification.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Inventory current URLs, status codes, canonicals, metadata, content, internal links and structured data.",
@@ -337,10 +418,12 @@ export default function ShopifyVsCustomWebsitePage() {
 
                     <BlogHeader>10. Use project-specific commercial terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen&apos;s public planning tiers start at $1,500, $3,500 and $5,000 to $10,000-plus.
-                        Final scope may add or remove features. Payment is normally 30 percent at onboarding and 70
-                        percent on delivery. Refund, ownership, performance, support and change-control rights follow
-                        the accepted contract, not a generic platform comparison. The{" "}
+                        PandaCodeGen&apos;s public planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to
+                        $10,000 Scale. Those are entry points for a defined scope, not quotes, and final scope may add
+                        or remove features. A common payment option is 30 percent at onboarding and 70 percent at the
+                        delivery milestone, and another written schedule may be agreed. Refund, ownership,
+                        performance, support and change-control rights follow the accepted contract, not a generic
+                        platform comparison. The{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link> lists what each tier covers.
                     </BlogText>
 

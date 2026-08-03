@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, BarChart3, FlaskConical, Gauge, Route } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Shopify conversion rate",
         "Shopify speed conversion",
@@ -72,7 +73,6 @@ const sources = [
         name: "Shopify: theme performance guidance",
         url: "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
     },
-    { name: "Google web.dev: Web Vitals", url: "https://web.dev/articles/vitals" },
 ];
 
 const articleSchema = {
@@ -82,6 +82,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/shopify-conversion-rate-speed-fix"),
             description,
             datePublished: "2026-02-11",
             dateModified: "2026-07-24",
@@ -90,13 +91,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Shopify", "Shopify themes", "Ecommerce performance", "Core Web Vitals", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify analytics",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
+                { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+            ],
+            wordCount: 1550,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Shopify conversion and speed", item: "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#webpage",
+            url: "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -142,18 +171,18 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             intervention before assigning revenue to speed.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                            Reviewed July 24, 2026 against current Shopify documentation.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Do not diagnose from one average</h2>
                         <BlogList
                             items={[
-                                "Conversion rate changes with device, market, traffic source, product, price, inventory, promotion and customer intent.",
-                                "Performance changes with route, device, connection, geography, consent state, apps, media and release.",
+                                "Conversion rate moves with the device, the market, where traffic came from, the product, the price, whether it is in stock, any promotion, and what the customer came to do.",
+                                "Speed moves with the page, the device, the connection, where they are, what they consented to, your apps, your media, and whatever you last shipped.",
                                 "A useful analysis joins those dimensions and preserves the reporting definitions.",
                                 "A useful test changes one defined system, checks guardrails and records uncertainty.",
                             ]}
@@ -192,6 +221,9 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     />
 
                     <BlogHeader>2. Find the funnel stage that changed</BlogHeader>
+                    <BlogText>
+                        Locate the stage first, then look at performance for that stage only. Each row pairs the business causes worth ruling out with the performance evidence that belongs to that step, because a drop between cart and checkout has a different explanation set from a drop between landing and product.
+                    </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -207,6 +239,9 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     </div>
 
                     <BlogHeader>3. Segment before attributing</BlogHeader>
+                    <BlogText>
+                        A channel mix shift can change the store average even when every segment is stable, which is why the average is the last number to trust. Cut by six dimensions before attributing anything to speed. Record which attribution model you used, because the model changes how credit is assigned across the journey.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Device type and browser.",
@@ -233,7 +268,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         items={[
                             "Use field data to identify which real users and routes experience a problem.",
                             "Use repeated lab tests and traces to isolate media, JavaScript, app, theme and network work.",
-                            "Record device profile, throttling, location, cache, login, consent and test account state.",
+                            "Record the device profile, the throttling, where you tested from, the cache state, whether you were logged in, what you consented to, and which test account.",
                             "Track errors and functional failures alongside performance metrics.",
                         ]}
                     />
@@ -273,7 +308,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         modify it, which also means you are rarely the cause of its behavior. What you do control is
                         everything a shopper passes through immediately before it: the cart drawer, the shipping and
                         tax estimator, upsell and bundle widgets on the cart page, and any script that fires on the way
-                        to the handoff. A slow cart step functions as a slow checkout, because the shopper has to clear
+                        to the handoff. A slow cart step is a slow checkout, because the shopper has to clear
                         both to buy.
                     </BlogText>
                     <BlogList
@@ -312,6 +347,9 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     </BlogText>
 
                     <BlogHeader>9. Choose the least disruptive intervention</BlogHeader>
+                    <BlogText>
+                        The list is ordered by how much it disrupts, cheapest and most reversible first. Media work, then removing what is unused after a dependency review, then deferring what is not critical. Theme replacement or headless sits at the bottom for a reason: it belongs there only when the measured constraint and the operating model both justify it.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Compress, resize and correctly prioritize route-critical media.",
@@ -341,6 +379,9 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     />
 
                     <BlogHeader>11. Validate the release</BlogHeader>
+                    <BlogText>
+                        Define the primary and guardrail metrics before launch, not after you like the chart. Six controls make a result readable, and the failure mode they exist to prevent is stopping at the first favorable movement. Report the estimate with its uncertainty, including neutral and negative results.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Define primary and guardrail metrics before launch.",
@@ -361,7 +402,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <BlogHeader>13. Repair or rebuild</BlogHeader>
                     <BlogText>
-                        Most stores that ask us for a rebuild need a repair. The distinction is not a matter of taste,
+                        Stores that ask us for a rebuild regularly turn out to need a repair, and we would rather say so before you spend. The distinction is not a matter of taste,
                         and it is not decided by a score. It is decided by whether the constraint is local to a few
                         routes or built into the layer itself, and by whether your business can carry a frontend of its
                         own after launch.
@@ -424,7 +465,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <BlogHeader>15. What to check before you accept a Shopify speed quote</BlogHeader>
                     <BlogText>
-                        Disappointing speed engagements are usually scoping failures rather than engineering failures.
+                        Disappointing speed engagements tend to be scoping failures rather than engineering failures.
                         A cheap quote is often cheap because it leaves these out, and you find out at handover.
                     </BlogText>
                     <BlogList
@@ -448,14 +489,13 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     <div className="my-6 grid gap-4 sm:grid-cols-3">
                         <StatCard stat="$1,500" label="Starter" context="Small, clearly bounded scope" />
                         <StatCard stat="$3,500" label="Growth" context="Larger migration, CMS or content-continuity scope" />
-                        <StatCard stat="$5,000+" label="Scale" context="$5,000 to $10,000 for integration-heavy commerce work" />
+                        <StatCard stat="$5,000" label="Scale" context="$5,000 to $10,000 for integration-heavy commerce work" />
                     </div>
                     <BlogText>
-                        Where a 90-plus Lighthouse result is included, it is written as a handover target on mobile and
+                        Where a 90-plus <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> result is included, it is written as a handover target on mobile and
                         desktop for the representative pages named in the scope, verified across three recorded runs
                         under stated conditions before handover. It is a lab acceptance target. It is not a promise
-                        about rankings, traffic, conversion rate or revenue, and no honest supplier can give you one of
-                        those.
+                        about rankings, traffic, conversion rate or revenue, none of which anyone controls.
                     </BlogText>
 
                     <div className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6 text-center">
@@ -495,7 +535,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <Link href="/blog/shopify-store-speed-optimization" className="text-cognac hover:underline">
                             Shopify speed optimization guide
                         </Link>
-                        . For why a default theme still hits a ceiling, see{" "}
+                        . For how a default theme actually performs once apps and media are added, see{" "}
                         <Link href="/blog/shopify-dawn-theme-slow" className="text-cognac hover:underline">
                             the Dawn theme performance breakdown
                         </Link>

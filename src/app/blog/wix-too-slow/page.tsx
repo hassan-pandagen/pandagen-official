@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Activity, Gauge, Layers3, Wrench } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "why is my Wix site slow",
         "Wix site speed",
@@ -50,9 +51,6 @@ const sources = [
     { name: "Wix Core Web Vitals", url: "https://support.wix.com/en/article/site-performance-about-core-web-vitals" },
     { name: "Wix Site Speed dashboard", url: "https://support.wix.com/en/article/understanding-your-site-speed-dashboard" },
     { name: "Wix performance guidance", url: "https://support.wix.com/en/site-performance" },
-    { name: "Google Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-    { name: "Google page experience", url: "https://developers.google.com/search/docs/appearance/page-experience" },
-    { name: "PageSpeed Insights documentation", url: "https://developers.google.com/speed/docs/insights/v5/about" },
 ];
 
 const articleSchema = {
@@ -62,6 +60,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wix-too-slow"),
             description,
             datePublished: "2026-04-10",
             dateModified: "2026-07-24",
@@ -70,13 +69,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Wix", "Website migration", "Content management systems", "Technical SEO", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Wix performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "Wix", sameAs: ["https://en.wikipedia.org/wiki/Wix.com"] },
+                { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1300,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wix-too-slow#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Slow Wix site", item: "https://www.pandacodegen.com/blog/wix-too-slow" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wix-too-slow#webpage",
+            url: "https://www.pandacodegen.com/blog/wix-too-slow",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wix-too-slow#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -117,21 +144,21 @@ export default function WixTooSlowPage() {
                             Why Is My Wix Site So Slow? <span className="italic text-cognac">Measure Before Migrating</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Wix performance varies by route, content, visitors, apps, scripts and design. Use the
+                            Wix speed varies page by page. It depends on your content, who is visiting, which apps you run, what scripts load and how the page is designed. Use the
                             property&apos;s real-user and lab evidence to identify the slow layer before paying for a fix.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 10, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 10, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "Check Wix's Real Visitor Experience and page-level data before relying on one Lighthouse run.",
+                                <>{"Check Wix's Real Visitor Experience and page-level data before relying on one "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" run."}</>,
                                 "Test representative homepage, content, dynamic, product and conversion routes separately.",
-                                "Investigate media, fonts, animations, apps, third-party code, layout and dynamic data.",
+                                "Look at the images and video, the fonts, animations, apps, third-party code, the layout, and anything loaded on the fly.",
                                 "Migrate only when verified requirements remain blocked after realistic Wix fixes.",
                             ]}
                         />
@@ -161,7 +188,7 @@ export default function WixTooSlowPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Record URL, template, device, network, region, cache, consent and page state.",
+                            "Note the URL, the template, the device, the connection, where you tested from, whether the cache was warm, what you consented to, and what state the page was in.",
                             "Check mobile and desktop separately.",
                             "Use field Core Web Vitals where enough real-user data exists.",
                             "Run at least three comparable lab tests for diagnosis instead of choosing the best result.",
@@ -192,6 +219,9 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader id="causes">Eight common Wix performance contributors</BlogHeader>
+                    <BlogText>
+                        These are hypotheses until a trace or a controlled change supports them. A visible Wix script is not automatically waste, and an app count is not a performance diagnosis. Work down the list against your own worst route and let the waterfall decide which of the eight is actually costing you time.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Large hero images, galleries, video and media loaded before they are needed.",
@@ -209,25 +239,24 @@ export default function WixTooSlowPage() {
                         not automatically waste, and an app count is not a performance diagnosis.
                     </BlogText>
 
-                    <BlogHeader id="apps">The app pattern that catches most stores</BlogHeader>
+                    <BlogHeader id="apps">The app pattern worth checking first</BlogHeader>
                     <BlogText>
-                        The single most common finding on a slow Wix site is not one heavy page. It is a set of apps that
+                        The finding worth ruling out first on a slow Wix site is not one heavy page. It is a set of apps that
                         each load on <em>every</em> page, whether or not the feature is visible there. A chat widget that
                         nobody opens still ships its JavaScript on your product pages. A booking app loads scheduling code
-                        on your About page. Individually each is small; stacked, they set a floor you cannot optimise
-                        below while they remain installed.
+                        on your About page. Individually each is small; stacked, they set a floor you cannot optimize below while they remain installed.
                     </BlogText>
                     <BlogList
                         items={[
-                            "Live chat (Wix Chat, Tidio and similar): typically loads site-wide, including on pages where the widget is never opened.",
-                            "Pop-up and email-capture apps (Privy and similar): load early because they need to decide whether to display, which puts them on the critical path.",
+                            "Live chat widgets: check whether yours loads site-wide or only where it is used. A chat launcher that renders on every page ships its JavaScript to readers who never open it.",
+                            "Pop-up and email-capture apps: these often need to load early to decide whether to display, which can put them on the critical path. Check when yours executes.",
                             "Social feed widgets: call an external API on pages that do not show a feed.",
-                            "Third-party widget suites (Elfsight reviews, counters and similar): each widget is usually a separate external script request.",
+                            "Third-party widget suites: each embedded widget is typically its own external script request, so count them rather than counting the suite as one item.",
                             "Bookings and Events: scheduling code often loads across the site rather than only on the booking route.",
                         ]}
                     />
                     <InsightBox variant="info" label="Measure it on your own site in five minutes">
-                        Open a page that does <em>not</em> use the feature — a blog post or an About page. Open the
+                        Open a page that does <em>not</em> use the feature, such as a blog post or an About page. Open the
                         browser Network panel, filter to JS, and hard-reload. Sort by size and look for scripts belonging
                         to apps that page has no reason to load. That list, ranked by transfer size, is your removal
                         order. We deliberately do not publish per-app kilobyte figures or prices here: both change with
@@ -235,6 +264,9 @@ export default function WixTooSlowPage() {
                     </InsightBox>
 
                     <BlogHeader id="fixes">What can you fix inside Wix?</BlogHeader>
+                    <BlogText>
+                        Most of what slows a Wix page is repairable without leaving Wix: media sizing, font variants, unused apps and widgets, heavy sections and effects, and how much sits above the fold. The discipline that makes it work is one controlled change at a time, retested on the same route, with field data given its collection period before you judge the result. Escalate to Wix support only for the parts the platform controls.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Use appropriately sized image formats and remove unnecessary above-the-fold media.",
@@ -288,6 +320,9 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader id="migrate">When should you consider migration?</BlogHeader>
+                    <BlogText>
+                        Migration becomes the right answer only after the realistic fixes are done and the route still fails a requirement you wrote down. Five gates have to clear together, and the third and fourth are commercial rather than technical: the operating-cost case has to support replacement, and someone has to own security, releases, monitoring and maintenance afterwards.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Representative routes still fail agreed performance requirements after realistic fixes.",
@@ -306,6 +341,9 @@ export default function WixTooSlowPage() {
                     </BlogText>
 
                     <BlogHeader id="not-migrate">When should you stay on Wix?</BlogHeader>
+                    <BlogText>
+                        Stay when a measured media, font, app, script or layout fix already meets the requirement, and when the editor and business apps fit how the team works. Two cases in particular argue against moving: a case resting only on an unrepeatable lab score or a generic platform claim, and content, brand or ownership that is not ready for a rebuild.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A measured media, font, app, script or layout fix meets the requirement.",
@@ -317,6 +355,9 @@ export default function WixTooSlowPage() {
                     />
 
                     <BlogHeader id="migration-process">What does a controlled Wix migration include?</BlogHeader>
+                    <BlogText>
+                        Six phases, and the first one decides the price of the other five. Inventory everything the site actually contains, validate what Wix will and will not export per data domain, then design the target, the URL dispositions and the acceptance criteria before anyone writes code. Cutover monitoring and rollback triggers belong in the scope, not in the launch-day conversation.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Route, template, content, CMS, contact, product, order, app and integration inventory.",
@@ -338,9 +379,8 @@ export default function WixTooSlowPage() {
                     <BlogText>
                         We start with a free fit audit and recommend repair before migration when repair satisfies the
                         requirements. PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to
-                        $10,000 Scale. Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund
-                        is tied to failure to deliver the signed scope. Starter includes 15 business days of launch
-                        defect support; Growth and Scale include 30. The full terms sit on our{" "}
+                        $10,000 Scale. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund
+                        is tied to failure to deliver the signed scope. Where the accepted terms include it, Starter carries 15 business days of launch defect support and Growth and Scale carry 30. The full terms sit on our{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link>, and{" "}
                         <Link href="/work" className={inlineLinkClass}>our project work</Link>{" "}
                         shows what those tiers produce.
@@ -352,6 +392,17 @@ export default function WixTooSlowPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Find the slow layer before choosing the fix</h2>

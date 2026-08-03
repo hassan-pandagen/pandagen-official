@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: "/blog/divi-theme-slow" },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Divi theme slow",
         "Divi performance 2026",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-02",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/divi-theme-slow")],
@@ -63,59 +64,80 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/divi-theme-slow"),
             datePublished: "2026-04-08",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-02",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Divi", "WordPress", "WordPress page builders", "Core Web Vitals", "Web performance optimization", "Next.js", "Website migration"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress",
             inLanguage: "en-US",
+            wordCount: 1900,
+            timeRequired: "PT9M",
+            about: [
+                { "@type": "SoftwareApplication", name: "Divi", sameAs: ["https://www.elegantthemes.com/gallery/divi/"] },
+                { "@type": "Organization", name: "Elegant Themes", sameAs: ["https://www.elegantthemes.com"] },
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress", "https://wordpress.org"] },
+                { "@type": "Thing", name: "Core Web Vitals", sameAs: "https://web.dev/articles/vitals" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable=\'true\']"] },
             keywords: ["Divi", "Divi 5", "WordPress performance", "Core Web Vitals", "website migration"],
             citation: [
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Elegant Themes: Divi 5 official release",
                     url: "https://www.elegantthemes.com/blog/theme-releases/divi-5-official",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Elegant Themes: Divi 5 Update Status",
                     url: "https://help.elegantthemes.com/en/articles/9973580-divi-5-update-status",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Elegant Themes: Divi 5 Migrator System",
                     url: "https://help.elegantthemes.com/en/articles/9799364-what-is-the-divi-5-migrator-system",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Elegant Themes: Divi performance options",
                     url: "https://www.elegantthemes.com/documentation/divi/theme-options/",
                 },
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Google Search Central: Core Web Vitals",
                     url: "https://developers.google.com/search/docs/appearance/core-web-vitals",
-                },
-                {
-                    "@type": "WebPage",
-                    name: "Google Search Central: Page experience",
-                    url: "https://developers.google.com/search/docs/appearance/page-experience",
                 },
             ],
         },
         {
             "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
                 { "@type": "ListItem", position: 3, name: "Divi Theme Slow", item: canonicalUrl },
             ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath("/blog/divi-theme-slow") },
+            datePublished: "2026-04-08",
+            dateModified: "2026-08-02",
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -163,12 +185,16 @@ export default function DiviThemeSlowPage() {
                             Divi Theme Slow? A <span className="italic text-cognac">2026 Diagnostic and Fix Guide</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Divi sites do not share one PageSpeed score, conversion loss, or migration answer. Measure
-                            the real routes, identify the responsible work, test Divi 5 and in-place fixes, then compare
-                            the remaining cost with a lighter WordPress build or controlled migration.
+                            A Divi page is usually slow for a reason you can name and locate: Divi generates styling for
+                            the modules and features a site uses and, with its Performance options left at their
+                            defaults, sends more of that to every page than the page needs; the server still assembles
+                            uncached pages per request; and media, fonts, plugins and third-party tags add to whichever
+                            of those is already hurting. Elegant Themes ships a Performance tab specifically to control
+                            the first of those. Find which layer is responsible on your site before buying another
+                            plugin or committing to a rebuild.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Elegant Themes and Google primary documentation.
+                            Reviewed August 2, 2026 against current Elegant Themes and Google primary documentation.
                         </p>
                     </header>
 
@@ -176,7 +202,7 @@ export default function DiviThemeSlowPage() {
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="April 8, 2026"
-                        readTime="11 min read"
+                        readTime="9 min read"
                         bio="Hassan works on measured WordPress migrations, performance diagnostics, and testable delivery criteria."
                     />
 
@@ -188,9 +214,10 @@ export default function DiviThemeSlowPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The answer in one minute</h2>
                         <BlogList
                             items={[
-                                "Do not diagnose Divi from one Lighthouse score or a generic theme benchmark.",
+                                "Divi's side contributor worth checking first is styling and scripts sent to pages that do not need them, which its Performance options exist to control. Check their state before anything else.",
+                                <>{"Do not diagnose Divi from one "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" score or a generic theme benchmark."}</>,
                                 "Check field Core Web Vitals where available, then repeat controlled lab tests on representative templates.",
-                                "Separate theme and compatibility-mode work from hosting, plugins, media, fonts, tags, database, cache, and application behavior.",
+                                "Keep theme and compatibility-mode work separate from the hosting, plugins, media, fonts, tags, database, caching and the application itself.",
                                 "Divi 5 officially left beta on February 26, 2026, but legacy or unsupported modules can still load backward compatibility mode.",
                                 "Optimize first when measured bottlenecks are removable. Migrate when required outcomes remain blocked or the continuing workaround cost is no longer sensible.",
                             ]}
@@ -206,6 +233,16 @@ export default function DiviThemeSlowPage() {
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={sourceLinkClass}>WordPress plugin audit guide</Link>{" "}
                         covers how to attribute that work to a named component.
                     </BlogText>
+                    <BlogText>
+                        Divi&apos;s own contribution has a specific shape. Design choices are stored and turned into
+                        CSS at request time, so a site that has used many modules across many templates can send
+                        styling to pages where those modules never appear. Elegant Themes documents the controls for
+                        exactly this: its Dynamic Module Framework is described as loading &ldquo;only the modules that
+                        are used on the page,&rdquo; and Dynamic CSS as generating &ldquo;only the assets necessary for
+                        the features and modules you use.&rdquo; Both are settings, which means their state on your
+                        install is a fact to check rather than assume. Animations, layered shadows and deeply nested
+                        rows add rendering and interaction work on top, independently of file size.
+                    </BlogText>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-2">
                         {[
@@ -217,12 +254,12 @@ export default function DiviThemeSlowPage() {
                             {
                                 icon: Wrench,
                                 title: "Interaction path",
-                                body: "Long JavaScript tasks, event handlers, animations, plugin behavior, DOM complexity, and application logic can affect INP.",
+                                body: "INP suffers from long JavaScript tasks, heavy event handlers, animations, plugin behavior, a complicated DOM, and your own application logic.",
                             },
                             {
                                 icon: Search,
                                 title: "Visual stability",
-                                body: "Missing dimensions, late fonts, injected banners, embeds, ads, and dynamic modules can contribute to CLS.",
+                                body: "CLS comes from images without dimensions, fonts arriving late, banners injected after load, embeds, ads and modules that appear as you scroll.",
                             },
                             {
                                 icon: CheckCircle2,
@@ -244,12 +281,34 @@ export default function DiviThemeSlowPage() {
                         theme demo, a client route, and a plugin-heavy store are different test subjects.
                     </BlogText>
 
+                    <BlogHeader id="how-many-divi-sites">How many websites use Divi?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Elegant Themes publishes a customer count, not a website count. On{" "}
+                            <a href="https://www.elegantthemes.com/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>elegantthemes.com</a>{" "}
+                            on August 2, 2026, that counter read 974,872 customers, and the same figure appears on its
+                            membership page. Because a Divi license covers unlimited installs, the customer figure is
+                            not the number of live Divi websites. On its showcase page the company describes the site
+                            total only in words, saying that &ldquo;hundreds of thousands of Divi users have built
+                            millions of Divi websites,&rdquo; without giving a number.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        So the specific install counts that circulate for Divi, whether 1.58 million or 4 million, do
+                        not come from Elegant Themes. They come from third-party technology detectors that scan a
+                        sample of the web and extrapolate, and each one uses a different sample, a different detection
+                        method and a different refresh date. If you need a figure for a proposal or a slide, cite the
+                        detector by name and date rather than presenting it as the vendor&apos;s own. The counter above
+                        is live and increases, so it is only accurate as of the date we checked it.
+                    </BlogText>
+
                     <BlogHeader>What changed with Divi 5</BlogHeader>
                     <BlogText>
                         Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of this article&apos;s
-                        July 24 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
-                        newer framework and has continued to receive features, improvements, and bug fixes. That
-                        current status replaces the old claim that Divi 5 is still a beta preview.
+                        August 2 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
+                        newer framework and has continued to receive features, improvements, and bug fixes. Elegant
+                        Themes also stated at release that it would continue supporting Divi 4 for at least twelve
+                        months, so an upgrade is a decision to schedule rather than an emergency.
                     </BlogText>
                     <BlogText>
                         Existing sites still need a careful upgrade. Elegant Themes instructs owners to back up the
@@ -297,7 +356,7 @@ export default function DiviThemeSlowPage() {
                         items={[
                             "Update WordPress, Divi, the child theme, and required extensions through a staged and recoverable process.",
                             "If moving to Divi 5, run its compatibility scan and inventory every legacy or unsupported module before migration.",
-                            "Review Divi's documented Dynamic Module Framework, Dynamic CSS, Critical CSS, Dynamic JavaScript Libraries, icons, fonts, and stylesheet settings.",
+                            "Open Divi > Theme Options > Performance and record the state of every documented toggle: Dynamic Module Framework, Dynamic CSS, Dynamic Icons, Load Dynamic Stylesheet In-line, Critical CSS and its threshold height, Dynamic JavaScript Libraries, Disable WordPress Emojis, Defer Gutenberg Block CSS, the two Google Fonts options, Defer jQuery and Migrate with its compatibility script, and Defer Additional Third Party Scripts.",
                             "Measure server response, cache hit behavior, database queries, background work, and PHP resource constraints before blaming frontend code.",
                             "Resize and encode images for their rendered use, give media dimensions, and avoid loading the largest asset late.",
                             "Remove unused plugins and tags only after confirming ownership, business purpose, data flow, and rollback.",
@@ -332,11 +391,11 @@ export default function DiviThemeSlowPage() {
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Caching plugin (WP Rocket, LiteSpeed)</td><td className="p-4">~$49 to $199/year</td><td className="p-4">Repeated server assembly on cacheable pages. Does nothing for logged-in views, cart or checkout, or for the size of what you ship.</td></tr>
-                                <tr><td className="p-4 font-bold">CDN (Cloudflare, BunnyCDN)</td><td className="p-4">~$20 to $200/month</td><td className="p-4">Distance between user and server. Helps most for geographically distant traffic; does not reduce page weight or script execution.</td></tr>
-                                <tr><td className="p-4 font-bold">Image optimisation plugin</td><td className="p-4">~$50 to $150/year</td><td className="p-4">Oversized media and missing modern formats. Often the single biggest win on a Divi site, and the easiest to verify.</td></tr>
+                                <tr><td className="p-4 font-bold">Caching plugin (WP Rocket, LiteSpeed)</td><td className="p-4">~$49 to $199/year</td><td className="p-4">Repeated server assembly on cacheable pages. Check how yours is configured for logged-in views, cart and checkout, because caching does not reduce the size of what you ship in the first place.</td></tr>
+                                <tr><td className="p-4 font-bold">CDN (Cloudflare, BunnyCDN)</td><td className="p-4">~$20 to $200/month</td><td className="p-4">Distance between user and server. Helps most for geographically distant traffic; does not by itself reduce script execution, and whether it changes transferred weight depends on which features you enable.</td></tr>
+                                <tr><td className="p-4 font-bold">Image optimization plugin</td><td className="p-4">~$50 to $150/year</td><td className="p-4">Oversized media and missing modern formats. Worth checking early because the measurement is unambiguous: compare the transferred bytes of the LCP image with its rendered size.</td></tr>
                                 <tr><td className="p-4 font-bold">Faster hosting plan</td><td className="p-4">~$50 to $300/month</td><td className="p-4">Server response time and database query speed. Only helps if your measurement shows a slow TTFB.</td></tr>
-                                <tr><td className="p-4 font-bold">Developer optimisation work</td><td className="p-4">~$500 to $2,000</td><td className="p-4">Module bloat, nesting depth, render-blocking assets and third-party sequencing — the causes a plugin cannot reach.</td></tr>
+                                <tr><td className="p-4 font-bold">Developer optimization work</td><td className="p-4">~$500 to $2,000</td><td className="p-4">Module bloat, nesting depth, render-blocking assets and third-party sequencing: the causes a plugin cannot reach.</td></tr>
                                 <tr><td className="p-4 font-bold">Frontend rebuild</td><td className="p-4">Quoted per scope</td><td className="p-4">The rendering and delivery model itself. Justified only when the measurement shows the ceiling is architectural, not incidental.</td></tr>
                             </tbody>
                         </table>
@@ -348,6 +407,14 @@ export default function DiviThemeSlowPage() {
                     </InsightBox>
 
                     <BlogHeader>Should you keep Divi, rebuild in WordPress, or migrate?</BlogHeader>
+                    <BlogText>
+                        Keep Divi when the measurement points at removable causes and your editors are productive in
+                        it. Upgrade to Divi 5 when you are still on Divi 4 and the compatibility scan comes back clean
+                        enough to schedule. Rebuild inside WordPress when the builder or template is the constraint but
+                        the plugins and workflows around it still earn their place. Migrate only when a required
+                        outcome stays blocked after that work and the cost of continuing to work around it is no
+                        longer sensible. The table below is the evidence to demand for each.
+                    </BlogText>
                     <div className="my-8 overflow-hidden rounded-xl border border-stone-200">
                         <div className="grid bg-stone-100 text-sm font-bold text-charcoal sm:grid-cols-3">
                             <div className="p-4">Option</div>
@@ -395,9 +462,9 @@ export default function DiviThemeSlowPage() {
 
                     <BlogHeader>How to estimate the business cost</BlogHeader>
                     <BlogText>
-                        Do not apply a survey&apos;s average loss or another brand&apos;s conversion lift to your
-                        business. The deleted version of this page used an unsupported fixed annual-loss estimate and
-                        third-party case-study percentages. Those sources did not prove what one Divi site was losing.
+                        Estimate it from your own analytics, not from a published average. A survey&apos;s mean annual
+                        loss and another brand&apos;s conversion lift were measured on other businesses, other traffic
+                        and other checkouts; neither tells you what a slow route is costing you.
                     </BlogText>
                     <BlogText>
                         Use first-party evidence instead. Define the affected journey, baseline sessions, conversion

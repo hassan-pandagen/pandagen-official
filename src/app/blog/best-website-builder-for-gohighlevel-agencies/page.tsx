@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description: "Compare six GHL agency website options by fit, integration, ownership, current vendor terms, and repeatable performance tests.",
         type: "article",
         publishedTime: "2026-05-13T00:00:00-05:00",
-        modifiedTime: "2026-07-24T00:00:00-05:00",
+        modifiedTime: "2026-08-02T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies",
         images: [ogImageForPath("/blog/best-website-builder-for-gohighlevel-agencies")],
@@ -66,26 +66,21 @@ const articleSchema = {
             "description": "A source-linked framework for comparing GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js by fit, integration, ownership, cost, and measured performance.",
             "image": ogImageUrlForPath("/blog/best-website-builder-for-gohighlevel-agencies"),
             "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
+                "knowsAbout": ["GoHighLevel", "HighLevel API", "Website builders", "White-label software", "Next.js", "Agency operations", "Technical SEO"],
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "alternateName": "Panda Code Gen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-                "foundingDate": "2026-02",
-                "email": "info@pandacodegen.com"
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies" },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "wordCount": 3550,
+            "timeRequired": "PT17M",
+            "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#webpage" },
             "articleSection": "GoHighLevel",
             "keywords": ["best website builder for gohighlevel agencies", "ghl agency website builder", "white label website builder", "saas mode website builder", "custom website for gohighlevel"],
             "inLanguage": "en-US",
@@ -104,8 +99,8 @@ const articleSchema = {
             "citation": [
                 { "@type": "CreativeWork", "name": "GoHighLevel Official Pricing", "url": "https://www.gohighlevel.com/pricing" },
                 { "@type": "CreativeWork", "name": "HighLevel Page Speed Guidance", "url": "https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed" },
-                { "@type": "CreativeWork", "name": "Simvoly White Label Pricing", "url": "https://simvoly.com/pricing" },
-                { "@type": "CreativeWork", "name": "SiteSwan Pricing", "url": "https://www.siteswan.com/pricing" },
+                { "@type": "CreativeWork", "name": "Simvoly reseller registration and plans", "url": "https://simvoly.com/register" },
+                { "@type": "CreativeWork", "name": "SiteSwan Pricing", "url": "https://siteswan.com/pricing" },
                 { "@type": "CreativeWork", "name": "Duda Pricing", "url": "https://www.duda.co/pricing" },
                 { "@type": "CreativeWork", "name": "Webflow Pricing", "url": "https://webflow.com/pricing" },
                 { "@type": "CreativeWork", "name": "Webflow May 2026 Pricing Update", "url": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" },
@@ -127,7 +122,7 @@ const articleSchema = {
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Best Website Builder for GoHighLevel Agencies", "item": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies" }
+                { "@type": "ListItem", "position": 3, "name": "Best Website Builder for GHL Agencies", "item": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies" }
             ]
         },
         {
@@ -137,25 +132,11 @@ const articleSchema = {
             "name": "Best Website Builder for GoHighLevel Agencies in 2026",
             "description": "Six GHL agency website options compared by fit, integration, ownership, current vendor terms, and repeatable performance testing.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/best-website-builder-for-gohighlevel-agencies") },
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#breadcrumb" },
             "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-02T00:00:00-05:00",
             "inLanguage": "en-US"
-        },
-        {
-            "@type": "Organization",
-            "@id": "https://www.pandacodegen.com/#organization",
-            "name": "PandaCodeGen",
-            "alternateName": "Panda Code Gen",
-            "url": "https://www.pandacodegen.com",
-            "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026-02",
-            "email": "info@pandacodegen.com",
-            "areaServed": ["United States", "Worldwide"],
-            "sameAs": [
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://twitter.com/pandacodegen"
-            ]
         }
     ]
 };
@@ -190,12 +171,12 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             <span className="font-serif italic text-cognac">GoHighLevel Agencies</span> in 2026
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            This guide compares GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js without assigning invented platform-wide speed scores. Vendor facts were rechecked against primary pages on July 24, 2026. Performance and cost still require a representative site, recorded test profile, current quote, and defined ownership requirements.
+                            This guide compares GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js without assigning invented platform-wide speed scores. HighLevel&apos;s own pricing page was reread on August 2, 2026; the other vendor pages were last checked July 24. Performance and cost still require a representative site, recorded test profile, current quote, and defined ownership requirements.
                         </p>
                         <BlogAuthor
                             name="Hassan Jamal"
-                            date="Updated Jul 24, 2026"
-                            readTime="16 min read"
+                            date="Updated Aug 2, 2026"
+                            readTime="17 min read"
                             bio="Hassan builds GHL-connected Next.js frontends with scope-defined integrations, repository terms, and repeatable performance acceptance tests."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -228,23 +209,23 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     {/* What GHL Agencies Need */}
                     <BlogHeader id="what-ghl-agencies-need">What GoHighLevel Agencies Need from a Website Builder</BlogHeader>
 
-                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
-                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen&apos;s published planning anchors are $1,500 Starter, $3,500 Growth, and $5,000 to $10,000+ Scale. A GHL-connected migration can use supported APIs, inbound webhooks, or embedded components according to the accepted scope. A 90+ Lighthouse target applies only when the accepted terms name the pages, mobile and desktop profiles, three-run protocol, environment, and remedy.
-                        </p>
-                    </div>
-
                     <BlogText>
                         A GoHighLevel agency may use GHL as its CRM and automation layer while choosing a separate public-site frontend. Compare six things: editor workflow, integration path, rendering and performance under the real workload, white-label controls, total operating cost, and what can be transferred when the relationship ends.
                     </BlogText>
+
+                    <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Where we sit in this comparison</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">
+                            PandaCodeGen sells one of the six options compared here: we build custom Next.js frontends, so read our assessment of that row with that in mind. Our published planning anchors are $1,500 Starter, $3,500 Growth, and $5,000 to $10,000+ Scale. A GHL-connected migration can use supported APIs, inbound webhooks, or embedded components according to the accepted scope. A 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target applies only when the accepted terms name the pages, mobile and desktop profiles, three-run protocol, environment, and remedy. Our <Link href="/services/gohighlevel" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">GoHighLevel service page</Link> sets out what that engagement contains.
+                        </p>
+                    </div>
                     <BlogText>
                         <BlogHighlight>Do not convert a slow lab run directly into a dollar-loss claim.</BlogHighlight> Segment landing-page field data, ad-platform metrics, device, campaign, and conversion history before attributing wasted spend to speed. Platform fees and performance are separate inputs in the decision.
                     </BlogText>
 
                     <h3 id="sub-second-load-times" className="text-xl font-bold text-charcoal mt-6 mb-3">Documented Landing-Page Performance Tests</h3>
                     <BlogText>
-                        Landing-page experience can affect campaign outcomes, but there is no universal 20-to-40-percent cost reduction for one load-time change. Record field Core Web Vitals where available, repeat Lighthouse runs under named conditions, and compare ad metrics before and after while noting other campaign changes.
+                        Landing-page experience can affect campaign outcomes, but there is no universal cost reduction attached to one load-time change. Record field <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> where available, repeat Lighthouse runs under named conditions, and compare ad metrics before and after while noting other campaign changes.
                     </BlogText>
                     <BlogText>
                         If a 90+ Lighthouse performance target matters, put it in the accepted terms for agreed representative pages, mobile and desktop profiles, and three recorded passing runs per page and profile. Do not assign a score ceiling to a platform without a dated sample of comparable URLs and test conditions.
@@ -273,7 +254,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="predictable-cost-per-site" className="text-xl font-bold text-charcoal mt-6 mb-3">Predictable Cost Per Client Site at Scale</h3>
                     <BlogText>
-                        Most GHL agency owners think about pricing at one client first, not 50. The realistic question is what the current plan, build, hosting, maintenance, and usage will cost for that client. Native GHL capability may add no separate website charge to an existing subscription, while other builders and a custom Next.js implementation use different one-time and recurring cost models. Validate the current vendor quote and commercial-use terms before comparing totals.
+                        Most GHL agency owners think about pricing at one client first, not 50. The realistic question is what the current plan, build, hosting, maintenance, and usage will cost for that client. Native GHL capability adds no separate website charge to an existing subscription, which is genuinely the cheapest starting point, but several HighLevel add-ons are billed per sub-account rather than per agency, so the native option does not stay flat as the client list grows. Other builders and a custom Next.js implementation use different one-time and recurring cost models again. Validate the current vendor quote and commercial-use terms before comparing totals.
                     </BlogText>
 
                     {/* Why GHL Native Falls Short */}
@@ -323,7 +304,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     {/* GHL Native */}
                     <BlogHeader id="ghl-native">GoHighLevel Native Builder for Lead-Gen and Automation Agencies</BlogHeader>
                     <BlogText>
-                        HighLevel&apos;s public pricing page lists the Website &amp; Funnel Builder among core features. The July 2026 public plan prices are $97 Starter, $297 Unlimited, and $497 Agency Pro per month, subject to change and add-on charges. Confirm the required plan and in-app billing before quoting a client.
+                        HighLevel&apos;s public pricing page lists the Website &amp; Funnel Builder among core features. Reread on August 2, 2026, the public plan prices are unchanged at $97 Starter, $297 Unlimited and $497 Agency Pro per month, with a 14-day free trial on any plan and a monthly-or-annual toggle. Add-ons and usage are billed separately and are covered below. Confirm the required plan and in-app billing before quoting a client.
                     </BlogText>
 
                     <h3 id="ghl-strengths" className="text-xl font-bold text-charcoal mt-6 mb-3">Strengths Inside the GHL Ecosystem</h3>
@@ -338,7 +319,25 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="ghl-pricing" className="text-xl font-bold text-charcoal mt-6 mb-3">Pricing Inside SaaS Mode</h3>
                     <BlogText>
-                        As checked July 24, 2026, HighLevel lists Starter at $97 per month with three sub-accounts, Unlimited at $297 with unlimited sub-accounts, and Agency Pro at $497 with SaaS Mode and advanced API access. Usage services and add-ons may be billed separately. Save the official quote and define which costs the agency or client pays.
+                        As reread on August 2, 2026, HighLevel lists Starter at $97 per month with three sub-accounts, Unlimited at $297 with unlimited sub-accounts and Basic API access, and Agency Pro at $497 with SaaS Mode, automated sub-account creation and Advanced API access. Contacts and users are unlimited on all three. Usage services and add-ons are billed separately, several of them per sub-account. Save the official quote and define which costs the agency or client pays.
+                    </BlogText>
+
+                    <h3 id="ghl-per-subaccount" className="text-xl font-bold text-charcoal mt-6 mb-3">The Add-Ons That Are Billed Per Sub-Account</h3>
+                    <div data-speakable="true">
+                        <BlogText>
+                            <BlogHighlight>This is the line that breaks an agency margin model, and it is on HighLevel&apos;s own pricing page.</BlogHighlight> The plan fee is flat, but several add-ons are not: read on August 2, 2026, <a href="https://www.gohighlevel.com/pricing" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">HighLevel&apos;s pricing page</a> lists the Branded Client Portal App at $49/month <em>per sub-account</em>, the AI Employee Growth Plan at $50/month per sub-account, and the AI Employee Unlimited Plan at $97/month per sub-account, plus dedicated email IPs at $59/month per IP. A thirty-client agency that enables the branded portal for everyone is adding $1,470 a month to a $297 plan, and the plan price is the number most comparisons stop at.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The same page marks Conversation AI, Voice AI, Reviews AI, email and SMS marketing, and inbound and outbound calling with an asterisk for usage-based charges. Those scale with client activity rather than client count, which is a different curve again. Also read from <a href="https://www.gohighlevel.com/pricing" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">that page</a> on August 2, 2026: Agency Pro at $497 is the plan that lets you rebill phone and email <em>with markup</em>, while Unlimited at $297 rebills them at cost, so the right plan depends on whether you intend to make margin on usage or simply pass it through. Decide that before you price a retainer, not after the first invoice.
+                    </BlogText>
+                    <BlogText>
+                        The practical test: list the add-ons you will actually enable, multiply the per-sub-account ones by your real client count rather than by one, and add a usage estimate from a month of a representative client. Then compare that total against a builder&apos;s per-site fee. Native is frequently still cheaper, and now you can show the client why rather than assert it.
+                    </BlogText>
+
+                    <h3 id="ghl-ai-features" className="text-xl font-bold text-charcoal mt-6 mb-3">What HighLevel&apos;s AI Features Actually Are</h3>
+                    <BlogText>
+                        Community summaries, YouTube videos and AI answers about GoHighLevel describe an &ldquo;AI Studio&rdquo; or &ldquo;Vibe Code&rdquo; website builder that clones an existing client site from a URL or generates pages from a text prompt. <BlogHighlight>Neither name appears on HighLevel&apos;s own pricing page, re-read August 3, 2026.</BlogHighlight> What that page did list among core features on that date was Funnel AI, Content AI, Conversation AI, Voice AI and Reviews AI, with asterisks marking usage-based charges on several of them. URL cloning and prompt-to-site generation are the two capabilities most often attributed to HighLevel in third-party summaries, and they are the two we could not find named on the vendor&apos;s own pricing page. Check the capability inside your own sub-account before you promise site generation to a client, and price the usage line while you are there.
                     </BlogText>
 
                     <h3 id="ghl-best-fit" className="text-xl font-bold text-charcoal mt-6 mb-3">Best-Fit Agency Profile</h3>
@@ -380,7 +379,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="siteswan-white-label" className="text-xl font-bold text-charcoal mt-6 mb-3">White-Label Branding Control</h3>
                     <BlogText>
-                        SiteSwan says the platform can operate under the reseller&apos;s brand. Confirm the login domain, editor, client emails, invoices, support surfaces, and transfer process in the selected plan. Its official FAQ also says sites go offline after cancellation unless they are rebuilt or another arrangement is made.
+                        SiteSwan says the platform can operate under the reseller&apos;s brand. Confirm the login domain, editor, client emails, invoices, support surfaces, and transfer process in the selected plan. The FAQ on its <a href="https://siteswan.com/pricing" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">pricing page</a>, read July 24, 2026, also addressed what happens to a site after cancellation. Read that answer as it stands today and get the transfer position in writing before you promise a client their site is portable.
                     </BlogText>
 
                     <h3 id="siteswan-prospecting" className="text-xl font-bold text-charcoal mt-6 mb-3">Built-In Prospecting and Sales Tools</h3>
@@ -455,7 +454,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="webflow-bandwidth-ceiling" className="text-xl font-bold text-charcoal mt-6 mb-3">The Bandwidth Ceiling for Paid-Ad Landing Pages</h3>
                     <BlogText>
-                        Webflow&apos;s current Basic plan lists 10 GB monthly bandwidth, while Premium provides selectable higher tiers. Estimate transfer from measured page weight, cache behavior, bot traffic, downloads, and visit forecasts; then include growth and surge rules. Do not assume every landing page is 2 MB or that every paid campaign exceeds the Basic allowance.
+                        Read from <a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Webflow&apos;s pricing page</a> on July 24, 2026, the Basic plan lists 10 GB monthly bandwidth, while Premium provides selectable higher tiers. Estimate transfer from measured page weight, cache behavior, bot traffic, downloads, and visit forecasts; then include growth and surge rules. Do not assume every landing page is 2 MB or that every paid campaign exceeds the Basic allowance.
                     </BlogText>
 
                     <h3 id="webflow-best-fit" className="text-xl font-bold text-charcoal mt-6 mb-3">Best-Fit Agency Profile</h3>
@@ -556,6 +555,9 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     {/* How to Choose */}
                     <BlogHeader id="how-to-choose">How to Choose the Right Website Builder for Your GHL Agency</BlogHeader>
+                    <BlogText>
+                        Choose by service mix first, then confirm by test. What an agency sells decides which builder fits, because the constraint is almost never the editor and almost always the commercial model underneath it: who owns the site, what happens at handoff, and what the per-client cost curve looks like at fifty clients rather than one. The mapping below is the shortcut. The audit steps after it are the proof, and the mapping is worth nothing without them.
+                    </BlogText>
 
                     <h3 id="match-builder-to-service" className="text-xl font-bold text-charcoal mt-6 mb-3">Match the Builder to Your Service Mix</h3>
                     <BlogList items={[
@@ -566,6 +568,11 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         "Design-forward brands, accepting per-site fees: Webflow",
                         "Premium performance clients with serious ad spend: Custom Next.js"
                     ]} />
+                    <BlogText>
+                        One option is missing from that list on purpose, and it is worth saying why. AI answers for this query routinely name WordPress as the third choice for GHL agencies, connected back to the CRM through forms or the API. That is a real pattern and it can be the right one for a client whose value is in a large content library. It is left out of the comparison above because self-hosted WordPress puts hosting, core and plugin updates, and security patching on whoever runs the site, and on a reseller model that is the agency, once per client site, for as long as the client stays. That is a different operating commitment from the hosted options above rather than a worse product. If you are considering it, price the maintenance per site per year first, and read{" "}
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">how to keep the HighLevel CRM while replacing the website</Link>{" "}
+                        for the integration mechanics, which are the same whichever frontend you choose.
+                    </BlogText>
 
                     <h3 id="audit-speed-before-commit" className="text-xl font-bold text-charcoal mt-6 mb-3">Audit Speed and SEO Before You Commit</h3>
                     <BlogText>
@@ -578,9 +585,30 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     </BlogText>
 
                     {/* Verdict + CTA */}
-                    <BlogHeader id="verdict">The Verdict on the Best Website Builder for GoHighLevel Agencies</BlogHeader>
+                    <BlogHeader id="related">Before you decide, three adjacent questions</BlogHeader>
                     <BlogText>
-                        There is no universal best builder. GHL Native may be the lowest-complexity choice for GHL-centered funnels. Reseller platforms may fit a high-volume white-label model. Duda or Webflow may fit teams that value managed visual workflows. Custom Next.js fits requirements that justify controlled architecture and engineering ownership.
+                        Most agencies arriving here are really asking one of three narrower things, and each has its own
+                        answer. If client sites are slow and you are blaming the builder,{" "}
+                        <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline">measure a representative HighLevel page first</Link>{" "}
+                        &mdash; the in-platform fixes are same-week and often close the gap. If you want to keep the CRM
+                        and replace only the public site,{" "}
+                        <Link href="/blog/gohighlevel-keep-crm-replace-website" className="text-cognac hover:underline">the hybrid architecture guide</Link>{" "}
+                        covers the integration mechanics, the rate limits and the webhook contract. And if the question
+                        underneath all of it is what a custom frontend costs,{" "}
+                        <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">our pricing breakdown</Link>{" "}
+                        and{" "}
+                        <Link href="/blog/custom-website-5000-whats-included" className="text-cognac hover:underline">what a $5,000 build contains</Link>{" "}
+                        answer it without a discovery call.
+                    </BlogText>
+
+                    <BlogHeader id="verdict">The Verdict on the Best Website Builder for GoHighLevel Agencies</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            <BlogHighlight>Start with the native HighLevel builder, because it is already paid for and it removes an integration boundary.</BlogHighlight> That is the default and most agencies should not move off it. Three conditions overturn it, and only these three: the client&apos;s pages carry organic search revenue that the native implementation demonstrably cannot serve after you have applied HighLevel&apos;s own speed guidance; the agency needs branded management surfaces that HighLevel does not brand, which is where Duda&apos;s White Label plan earns its price; or the site needs bespoke frontend engineering that no builder&apos;s extension points reach, which is where a custom build starts. If none of those describes your client, the honest recommendation is the one you are already paying for.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Beyond that default: reseller platforms fit a high-volume white-label model, Webflow fits design- and CMS-led client work, and custom Next.js fits requirements that justify controlled architecture and engineering ownership. What none of them fit is a decision made from a comparison table alone, which is why the rest of this page is a test protocol rather than a scoreboard.
                     </BlogText>
                     <BlogText>
                         Choose after a dated plan comparison, prototype, integration test, content and URL inventory, ownership review, and three-year cost worksheet. Record which requirements each option passes, fails, or makes scope-dependent.
@@ -608,7 +636,10 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     </div>
 
                     <section className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-                        <h2 className="text-xl font-bold text-charcoal mb-3">Primary vendor references checked July 24, 2026</h2>
+                        <h2 className="text-xl font-bold text-charcoal mb-3">Primary vendor references, HighLevel reread August 2, 2026</h2>
+                        <p className="mb-4 text-sm leading-relaxed text-stone-700">
+                            Every price, plan limit and capability claim on this page comes from one of the vendor pages below. The HighLevel pages were reread on August 2, 2026; the Simvoly, SiteSwan, Duda and Webflow pages were checked on July 24, 2026 and have not been rechecked since. Vendor pricing changes without notice, so open the page rather than quoting this one in a proposal.
+                        </p>
                         <ul className="space-y-2 text-sm">
                             <li><a className="text-cognac underline underline-offset-4" href="https://www.gohighlevel.com/pricing" target="_blank" rel="noreferrer">HighLevel pricing</a> and <a className="text-cognac underline underline-offset-4" href="https://help.gohighlevel.com/support/solutions/articles/155000006268-how-to-improve-funnel-website-page-speed" target="_blank" rel="noreferrer">page-speed guidance</a></li>
                             <li><a className="text-cognac underline underline-offset-4" href="https://simvoly.com/register" target="_blank" rel="noreferrer">Simvoly white-label registration</a></li>

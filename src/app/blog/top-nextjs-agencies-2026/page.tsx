@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Braces, ClipboardCheck, Gauge, Search } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -32,13 +32,18 @@ export const metadata: Metadata = {
         "Next.js migration company",
         "Next.js development partner",
         "headless CMS agency",
+        "best Next.js agency 2026",
+        "Next.js agency comparison",
+        "how to choose a Next.js agency",
+        "fixed price Next.js agency",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-05-25",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-nextjs-agencies-2026")],
@@ -55,8 +60,8 @@ const sources = [
     { name: "Netguru", url: "https://www.netguru.com/" },
     { name: "Brainhub", url: "https://brainhub.eu/" },
     { name: "PandaCodeGen", url: "https://www.pandacodegen.com/services" },
+    { name: "Vercel solution partners directory", url: "https://vercel.com/partners/solution-partners" },
     { name: "Next.js deployment documentation", url: "https://nextjs.org/docs/app/getting-started/deploying" },
-    { name: "Google site-move guidance", url: "https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes" },
 ];
 
 const articleSchema = {
@@ -66,21 +71,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/top-nextjs-agencies-2026"),
             description,
             datePublished: "2026-05-25",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Web development agencies", "Project scoping", "Vendor contracts", "Next.js"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 1600,
+            timeRequired: "PT8M",
+            about: [
+                { "@type": "Thing", name: "Next.js", sameAs: ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Headless CMS", sameAs: ["https://en.wikipedia.org/wiki/Headless_content_management_system"] },
+                { "@type": "Thing", name: "Vendor selection" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Next.js agency shortlist", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-05-25",
+            dateModified: "2026-08-01",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -190,7 +228,7 @@ export default function TopNextjsAgenciesPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 25, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 25, 2026" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <InsightBox variant="warning" label="Commercial disclosure">
                         PandaCodeGen publishes this comparison, provides Next.js services, and is one of the eight
@@ -238,7 +276,26 @@ export default function TopNextjsAgenciesPage() {
                         conversation, references and contractual evidence.
                     </InsightBox>
 
+                    <BlogText>
+                        One signal you can check yourself, without asking anyone: Vercel runs a partner program and
+                        publishes a{" "}
+                        <a href="https://vercel.com/partners/solution-partners" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>public Solution Partner directory</a>.
+                        Vercel defines Solution Partners as agencies, consultancies and system integrators, sorts them
+                        into Platinum, Gold and Silver tiers, and lets you filter by expertise, framework, budget, tier,
+                        certification and region. It listed 114 partners when we checked it on August 2, 2026. Read it
+                        for what it is: a record of a commercial relationship with one hosting vendor. A listing is not
+                        a quality verdict and an absence is not a defect, because plenty of capable Next.js teams deploy
+                        to AWS, Cloudflare or a client&apos;s own infrastructure and never join. PandaCodeGen is not
+                        listed in it. It is still a dated, first-party register you can open in one click, which is more
+                        than any roundup on this topic gives you.
+                    </BlogText>
+
                     <BlogHeader>The eight providers compared</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1040px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -276,7 +333,10 @@ export default function TopNextjsAgenciesPage() {
                         <a href="https://pagepro.co/" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}> Pagepro</a>
                         {" "}publishes Next.js, React and headless CMS services and material about its reusable delivery
                         foundation. For any of these, verify content modeling, editor workflow, URL handling and how
-                        much of the implementation is custom to the project.
+                        much of the implementation is custom to the project, and get the CMS named before you compare
+                        quotes. Sanity, Storyblok, Contentful, Payload, DatoCMS, Directus, Hygraph and WordPress in
+                        headless mode all sit behind the phrase &ldquo;headless CMS&rdquo;, and they price, model
+                        content and handle localization differently.
                     </BlogText>
 
                     <BlogHeader>Platform, performance and product engineering</BlogHeader>
@@ -307,7 +367,7 @@ export default function TopNextjsAgenciesPage() {
                         <Link href="/services/custom-engineering" className={sourceLinkClass}>scoped custom Next.js work</Link>.{" "}
                         <Link href="/pricing" className={sourceLinkClass}>Public starting tiers</Link> are $1,500 Starter,
                         $3,500 Growth and $5,000 to $10,000 Scale. Larger or unusually complex scope is discussed
-                        separately. Standard payment is 30 percent at onboarding and 70 percent on delivery under the
+                        separately. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed under the
                         signed agreement.
                     </BlogText>
                     <BlogList
@@ -330,7 +390,11 @@ export default function TopNextjsAgenciesPage() {
                     <BlogHeader>Do not hire a framework label</BlogHeader>
                     <BlogText>
                         Next.js can be deployed as a Node.js server, Docker container, static export or through adapters,
-                        with support varying by deployment model. That flexibility does not decide the correct CMS,
+                        with support varying by deployment model. The difference is not cosmetic. The Next.js
+                        documentation states that Incremental Static Regeneration is supported on a Node.js server and
+                        in Docker, is not supported with a static export, and is platform-specific through adapters, so
+                        the hosting decision constrains how content gets updated. A provider who proposes one without
+                        the other has not finished the design. That flexibility does not decide the correct CMS,
                         caching, data ownership, security or operating model. Require an architecture decision record
                         that connects each material choice to the signed requirements.
                     </BlogText>
@@ -361,7 +425,7 @@ export default function TopNextjsAgenciesPage() {
 
                     <BlogHeader>Performance acceptance</BlogHeader>
                     <BlogText>
-                        A Next.js site has no automatic Lighthouse score. Code, images, fonts, data, cache behavior,
+                        A Next.js site has no automatic <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score. Code, images, fonts, data, cache behavior,
                         consent state and third-party scripts all affect results. For PandaCodeGen&apos;s 90+ target,
                         record representative pages, mobile and desktop profiles, the test environment and three
                         consecutive results per page and profile. Other providers should define their own test and
@@ -375,7 +439,7 @@ export default function TopNextjsAgenciesPage() {
                         The eight names were drawn from providers that appear repeatedly across publicly available 2026
                         Next.js agency roundups, including those published by DesignRush, Clutch, GitNation, Design
                         Revision, and by two of the agencies themselves. Appearing on several such lists indicates
-                        visibility, not verified quality — several of those roundups are published by agencies that
+                        visibility, not verified quality. Several of those roundups are published by agencies that
                         include themselves, exactly as this one does. Treat frequency of appearance as a reason to look,
                         not as evidence of outcome.
                     </BlogText>
@@ -415,12 +479,50 @@ export default function TopNextjsAgenciesPage() {
                         <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom build takes</Link>.
                     </BlogText>
                     <InsightBox variant="info" label="Whichever model you are quoted under">
-                        Normalise every proposal to the same scope before comparing, using the sheet below. Two quotes
+                        Normalize every proposal to the same scope before comparing, using the sheet below. Two quotes
                         that differ by a factor of three usually describe two different projects rather than two different
                         prices, and the cheaper one is often the one that has not yet found the work.
                     </InsightBox>
 
+                    <BlogHeader>If the quotes are coming back too big for the project</BlogHeader>
+                    <BlogText>
+                        A pattern worth recognizing rather than taking personally: a team sized for enterprise work will
+                        price a small site at its minimum engagement rather than at the project&apos;s real scope. That
+                        is not overcharging. It is what happens when a five-page brief meets a delivery model built for
+                        multi-month programs. If the numbers coming back look unrelated to the size of what you asked
+                        for, you are probably talking to the wrong shape of provider rather than being quoted unfairly.
+                    </BlogText>
+                    <BlogText>
+                        The other trap sits at the opposite end. A low hourly rate tells you almost nothing on its own,
+                        because the rate is not the price. A generalist at a modest rate who needs twenty hours for a
+                        feature costs more than a senior who needs six, and you will not find that out until the
+                        invoice. <BlogHighlight>The number worth comparing is cost per finished feature, not cost per
+                        hour.</BlogHighlight> Ask what a specific piece of your scope will cost in total, and compare
+                        those totals.
+                    </BlogText>
+
+                    <BlogHeader>Three questions that separate a Next.js build from a Next.js label</BlogHeader>
+                    <BlogText>
+                        You do not need to be technical to ask these, and the quality of the answer tells you more than
+                        any portfolio page. Ask them of every provider on your shortlist, including us.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Show me a live site you built on the App Router using Server Components. Not a description, a URL. The framework has had two very different routing models and the older one is still widely shipped.",
+                            "How do you decide what renders on the server versus in the browser? A real answer talks about where the data comes from and what it costs to send JavaScript to the visitor. A shrug, or \u201cwhatever the project needs\u201d, is the answer you are testing for.",
+                            "What happens to content that changes after launch? The mechanism has a name: Incremental Static Regeneration. The Next.js documentation describes ISR as a way to update static content without rebuilding the entire site, serve prerendered pages for most requests, and handle large numbers of content pages without long build times. You are listening for whether they can say which routes revalidate on a timer, which revalidate on demand, and what triggers it.",
+                        ]}
+                    />
+                    <BlogText>
+                        None of those questions require you to evaluate the answer technically. They require the
+                        provider to have one. A team that answers all three clearly is worth more than a cheaper team
+                        that cannot, and that holds whichever name on this page you end up choosing.
+                    </BlogText>
+
                     <BlogHeader>One comparison sheet for every proposal</BlogHeader>
+                    <BlogText>
+                        Force every proposal onto the same eleven line items and the quotes become comparable. Scope inventory and the named CMS, migration and acceptance evidence, performance stated as pages and profiles and run count rather than as a score, commercial terms, and handover. Ask the regulated-data question early rather than late, because the answer can eliminate a provider before you have spent time on them.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Business outcomes and required journeys.",
@@ -439,10 +541,13 @@ export default function TopNextjsAgenciesPage() {
 
                     <BlogHeader>Sources and update policy</BlogHeader>
                     <BlogText>
-                        Provider descriptions were checked against the official pages linked above on July 24, 2026.
-                        They are not independently audited. Reconfirm the evidence during procurement because team,
-                        services, pricing and availability can change. The framework and migration guidance links to
-                        current Next.js and Google documentation.
+                        Provider descriptions were checked against the official pages linked above on July 24, 2026,
+                        and every provider link on this page was reconfirmed as reachable on August 2, 2026. Those are
+                        two different checks and it is worth keeping them apart: a working link is not evidence that
+                        the description beneath it is still current. The descriptions are not independently audited.
+                        Reconfirm the evidence during procurement, because team, services, pricing and availability can
+                        all change without the URL changing. The framework and migration guidance links to
+                        current Next.js documentation, cited in this page&apos;s structured data.
                     </BlogText>
 
                     {postFAQs.length > 0 && (
@@ -451,6 +556,17 @@ export default function TopNextjsAgenciesPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Get a migration plan you can compare</h2>

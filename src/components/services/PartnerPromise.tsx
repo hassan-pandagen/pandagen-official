@@ -6,18 +6,18 @@ import { motion } from "@/components/ui/motion";
 const reviewRows = [
     {
         area: "Scope and exclusions",
-        discovery: "Inventory the current system, dependencies, and assumptions",
-        proposal: "List deliverables, exclusions, responsibilities, and change handling",
+        discovery: "List what they have today, what it depends on, and what we are assuming",
+        proposal: "Say what is included, what is not, who does what, and how changes get handled",
     },
     {
         area: "Performance and acceptance",
-        discovery: "Record a dated baseline and identify client-controlled variables",
-        proposal: "Define the target, pages, tools, test conditions, and acceptance method",
+        discovery: "Record a dated baseline, and name what only the client can change",
+        proposal: "Agree the target, which pages, which tools, the test conditions, and how it gets signed off",
     },
     {
         area: "Commercial and handover terms",
-        discovery: "Discuss payment, support, ownership, access, and transition needs",
-        proposal: "State milestones, support coverage, licenses, handover, and remedies",
+        discovery: "Talk through payment, support, ownership, access, and what happens at handover",
+        proposal: "State the milestones, what support covers, the licences, the handover, and what happens if something is wrong",
     },
 ];
 
@@ -76,11 +76,11 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                     {[
                         {
                             title: "Scope before certainty",
-                            desc: "The proposal records what is included, what is excluded, required client inputs, dependencies, and how changes are approved.",
+                            desc: "The proposal says what is included, what is not, what we need from the client, what it depends on, and how changes get approved.",
                         },
                         {
                             title: "Targets need a method",
-                            desc: "If a performance or visibility target is included, its measurement conditions and any agreed response are documented with it.",
+                            desc: "If there is a performance or visibility target, we write down how it gets measured and what happens if it is missed.",
                         },
                         {
                             title: "Terms belong in the proposal",

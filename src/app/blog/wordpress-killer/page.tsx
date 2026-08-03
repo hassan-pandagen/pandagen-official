@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileSpreadsheet, ReceiptText, Scale } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "WordPress cost",
         "WordPress total cost of ownership",
@@ -62,6 +63,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-killer"),
             description,
             datePublished: "2026-02-08",
             dateModified: "2026-07-24",
@@ -70,13 +72,43 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website total cost",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1600,
+            timeRequired: "PT6M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-killer#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress three-year cost", item: "https://www.pandacodegen.com/blog/wordpress-killer" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-killer#webpage",
+            url: "https://www.pandacodegen.com/blog/wordpress-killer",
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wordpress-killer#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -124,10 +156,15 @@ export default function WordPressCostPage() {
                         <p className="mt-4 text-xs text-stone-500">Commercial and platform references checked July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 8, 2026" readTime="15 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 8, 2026" readTime="6 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            WordPress can be cheap or expensive, and no published average tells you which case you are
+                            in. The number that matters is the one you build from your own paid invoices, your own
+                            internal hours and the incidents you have actually had. Five things go into it.
+                        </p>
                         <BlogList
                             items={[
                                 "There is no defensible average three-year cost for every WordPress business site.",
@@ -141,10 +178,10 @@ export default function WordPressCostPage() {
 
                     <InsightBox variant="info" label="Why there is no average WordPress cost here">
                         This guide gives no single three-year total, no multiplier for hidden cost and no standard
-                        payback period. What a site costs depends on its hosting plan, software subscriptions,
-                        integrations, traffic, service level and how much internal time goes into editing, updates,
-                        support and recovery, so a figure drawn from someone else&apos;s sample tells you nothing about
-                        your own bill. Build the number from your paid invoices, contracts and time records, and price
+                        payback period. What your site costs depends on the hosting plan you are on, what you
+                        subscribe to, what it connects to, how much traffic it takes, the service level you pay for,
+                        and how many of your own hours go into editing, updating, supporting and fixing it. A number
+                        from someone else's sample tells you nothing about your bill. Build the number from your paid invoices, contracts and time records, and price
                         custom operation as a real cost line rather than as zero.
                     </InsightBox>
 
@@ -164,6 +201,12 @@ export default function WordPressCostPage() {
                     </div>
 
                     <BlogHeader id="formula">The three-year TCO formula</BlogHeader>
+                    <BlogText>
+                        Seven lines make up the total, and only committed or observed cost belongs in the base case.
+                        If a line is a forecast rather than something you have paid or measured, keep it out of the
+                        base and put it in a scenario instead. The formula is written out so every term is visible and
+                        the result can be checked against your own records.
+                    </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Three-year TCO = current annual recurring cost x 3
                         <br />+ planned renewals and usage growth
@@ -182,25 +225,35 @@ export default function WordPressCostPage() {
                     </BlogText>
 
                     <BlogHeader id="invoices">Collect the recurring invoices</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Start with what you are already paying, because the real number is almost never the one people quote from memory. Six categories catch nearly all of it, and the lines that get forgotten are the annual renewals and the retainer that has been running quietly since launch. Work from invoices rather than from a list of plugins.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Hosting, CDN, storage, backups, staging and domain services",
-                            "Themes, page builders, forms, SEO, security, cache and media tools",
+                            "Hosting, the CDN, storage, backups, a staging site and your domain",
+                            "Your theme, the page builder, and the plugins doing forms, SEO, security, caching and media",
                             "Commerce, subscriptions, bookings, memberships and payment-related extensions",
-                            "Search, email, analytics, consent, chat, monitoring and integration services",
+                            "Search, email sending, analytics, the consent banner, chat, monitoring, and anything wiring them together",
                             "Agency, freelancer, care-plan and emergency-support retainers",
                             "Taxes, currency, overages, seats and annual renewal changes",
                         ]}
                     />
                     <BlogText>
                         Use current invoices and renewal notices. Public list prices may differ from a contracted,
-                        grandfathered, promotional or usage-based amount. Record billing owner, renewal date, usage,
-                        dependency and cancellation effect for every line. An extension-heavy stack can also carry an
+                        grandfathered, promotional or usage-based amount. For every line, note who is billed, when it renews, how much you actually
+                        use, what depends on it, and what breaks if you cancel. An extension-heavy stack can also carry an
                         operating cost that never appears on a licence line, which is what{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>our guide to WordPress plugins and site speed</Link> works through.
                     </BlogText>
 
                     <BlogHeader id="labor">Count internal operating work</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The largest line in a WordPress bill is usually the one nobody invoices: your own people. Six categories of work happen whether or not anyone logs them, and they surface as slower releases and interrupted afternoons instead of as a cost. Count those hours before you compare any two platforms on price.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Core, theme and extension update review, staging and release",
@@ -208,7 +261,7 @@ export default function WordPressCostPage() {
                             "Performance, accessibility, analytics and search checks",
                             "User access, vendor reviews, security monitoring and backup tests",
                             "Plugin conflicts, failed jobs, integration changes and support coordination",
-                            "Procurement, finance and management time tied to the website",
+                            "Time your procurement, finance and management people spend on the website",
                         ]}
                     />
                     <BlogText>
@@ -222,8 +275,9 @@ export default function WordPressCostPage() {
 
                     <BlogHeader id="incidents">Handle incidents without a fake average</BlogHeader>
                     <BlogText>
-                        For prior incidents, record response labor, external invoices, downtime, failed transactions,
-                        data recovery, customer support, legal review and notification work. For future scenarios, use a
+                        For incidents you have already had, write down the hours spent responding, what outside help
+                        invoiced, how long you were down, the transactions that failed, what it took to recover the
+                        data, the support load, any legal review, and who you had to notify. For future scenarios, use a
                         separately labelled contingency or risk-adjusted model approved by the business. One public
                         breach-cost statistic does not predict this site&apos;s loss. For the exposure that sits behind
                         that contingency line, read our review of{" "}
@@ -232,8 +286,9 @@ export default function WordPressCostPage() {
 
                     <BlogHeader id="change">Include roadmap and technical debt</BlogHeader>
                     <BlogText>
-                        List changes the business expects within three years: new markets, products, subscriptions,
-                        design, content models, CRM, search, payments, reporting or compliance. Estimate each option
+                        Write down what the business expects to do over the three-year window you are modeling. New markets. New products.
+                        Subscriptions. A redesign. Different content structures. A CRM, search, payments, reporting, or
+                        a compliance requirement. Estimate each option
                         against the same capability matrix. A platform that is inexpensive today may require costly
                         work for a future requirement, while a migration may replace mature features unnecessarily. If
                         the roadmap includes a store, scope the commerce path on its own terms against our{" "}
@@ -241,6 +296,11 @@ export default function WordPressCostPage() {
                     </BlogText>
 
                     <BlogHeader id="maintain">Scenario A: maintain WordPress</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Maintaining means funding the site properly rather than leaving it alone, which is the version of this scenario most comparisons quietly skip. Five commitments make it a genuine option: current software, retired duplication, funded QA and security, evidence-led integration repair, and a forecast built from your actual contracts rather than from list prices.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Keep the current architecture and required capabilities.",
@@ -279,6 +339,11 @@ export default function WordPressCostPage() {
                     </BlogText>
 
                     <BlogHeader id="comparison">Normalize the comparison</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Two options can only be compared if they were quoted against the same assumptions, and most platform comparisons fail here rather than on the arithmetic. Fix the capability list, the demand you are planning for, the quality bar and the time horizon first, then apply all four identically to every option on the table.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -297,9 +362,10 @@ export default function WordPressCostPage() {
 
                     <BlogHeader id="benefits">How to handle performance and revenue benefits</BlogHeader>
                     <BlogText>
-                        Measure field performance and business events on the current site. If work is released, compare
-                        affected cohorts while controlling for campaign, price, stock, content, device, geography and
-                        seasonality where possible. Report observed association and experiment design honestly.
+                        Measure field performance and business events on the current site. If work is released, compare the groups
+                        affected and hold the other variables still where you can: campaigns, price, stock levels,
+                        content, device, location and time of year. Then say what you observed and how you tested it,
+                        without dressing up a correlation as a cause.
                         Performance improvements do not automatically create a ranking, conversion or revenue result.{" "}
                         <Link href="/blog/core-web-vitals-explained" className={inlineLinkClass}>Core Web Vitals explained</Link>{" "}
                         sets out which of those measurements are field data and which are lab diagnostics before you
@@ -319,33 +385,42 @@ export default function WordPressCostPage() {
                     </BlogText>
 
                     <BlogHeader id="worth-it">When WordPress may still be worth it</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            WordPress stays the right answer when the editing workflow fits your team and somebody in the building genuinely owns the updates, the security and the recovery. Five conditions describe that position. Where all five hold, a migration mostly recreates features that already work, which is an expensive way to end up where you started.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "The content and editing workflow fits the team.",
                             "Maintained extensions deliver required capability economically.",
-                            "Measured performance and reliability meet requirements or are repairable.",
-                            "The organization can own updates, security, monitoring and recovery.",
+                            "It is fast enough and reliable enough, or it can be fixed.",
+                            "Someone in your organization can own the updates, the security, the monitoring and the recovery.",
                             "A migration would recreate mature features without a material business benefit.",
                         ]}
                     />
 
                     <BlogHeader id="migration-fit">When migration may be worth pricing</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Migration is worth pricing once repair has been attempted and the constraint survived it, not because the recurring bill looks high. Five conditions apply, and the last is the one that gets skipped: the risks around data, search traffic, ownership, sign-off and switchover need a budget line of their own before anybody quotes the build.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Core workflows or data models repeatedly conflict with the current stack.",
                             "Required controls cannot be reached through a reasonable repair plan.",
                             "Direct recurring and operating costs are verified and materially reducible.",
                             "The target capability and lifecycle model is fully scoped.",
-                            "Data, SEO, ownership, acceptance, cutover and support risk are funded.",
+                            "You have budgeted for the risks: the data, your search traffic, ownership, sign-off, the switchover and support.",
                         ]}
                     />
 
                     <BlogHeader id="offer">PandaCodeGen planning terms</BlogHeader>
                     <BlogText>
                         PandaCodeGen tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with
-                        custom work scoped separately. Standard payment is 30 percent at onboarding and 70 percent on
-                        delivery. Refund, deliverables, acceptance and remedy follow the signed scope. Starter includes
-                        15 business days of launch defect support; Growth and Scale include 30. These terms are inputs
+                        custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent on
+                        delivery, and another written schedule may be agreed. Where the accepted project terms include it, a refund covers fees paid under that scope if the promised deliverables are not delivered. It is not a change-of-mind refund, and deliverables, acceptance and remedy all follow the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30. These terms are inputs
                         to a comparison, not proof that migration is the lower-cost choice. What sits inside each tier
                         is listed on the <Link href="/pricing" className={inlineLinkClass}>pricing page</Link>, and{" "}
                         <Link href="/services/custom-engineering" className={inlineLinkClass}>custom engineering</Link>{" "}
@@ -368,6 +443,17 @@ export default function WordPressCostPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Bring invoices, not assumptions</h2>

@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Database, Server, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Meta Conversions API Setup Cost: A Scope-Based Guide";
 const description =
-    "Plan Meta Conversions API cost from events, systems, consent, matching, deduplication, QA and monitoring, with a carefully labelled Panda Patches screenshot.";
+    "Plan Meta Conversions API cost from events, systems, consent, matching, deduplication, QA and monitoring, with a carefully labeled Panda Patches screenshot.";
 
 export const dynamic = "force-static";
 
@@ -33,13 +33,18 @@ export const metadata: Metadata = {
         "server-side event tracking",
         "Meta event deduplication",
         "Event Match Quality",
+        "Meta CAPI cost",
+        "server side tracking cost",
+        "conversions API vs pixel",
+        "is conversions API worth it",
     ],
+    robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-07-28",
+        modifiedTime: "2026-07-31",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/meta-conversions-api-setup-cost")],
@@ -67,21 +72,54 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/meta-conversions-api-setup-cost"),
             description,
             datePublished: "2026-06-14",
-            dateModified: "2026-07-28",
+            dateModified: "2026-07-31",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
                 url: "https://www.pandacodegen.com/about/hassan",
+                knowsAbout: ["Meta Conversions API", "Conversion tracking", "Consent and privacy", "Analytics"],
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Measurement",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            wordCount: 3200,
+            timeRequired: "PT10M",
+            about: [
+                { "@type": "Thing", name: "Conversions API", sameAs: ["https://developers.facebook.com/docs/marketing-api/conversions-api/"] },
+                { "@type": "Thing", name: "Meta Pixel", sameAs: ["https://www.facebook.com/business/tools/meta-pixel"] },
+                { "@type": "Thing", name: "Conversion Tracking" },
+                { "@type": "Thing", name: "Web Analytics", sameAs: ["https://en.wikipedia.org/wiki/Web_analytics"] },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Meta CAPI cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            datePublished: "2026-06-14",
+            dateModified: "2026-07-31",
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -130,11 +168,11 @@ export default function MetaCAPISetupCostPage() {
                             or extra sales.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 28, 2026 against current Meta documentation and founder-affiliated first-party evidence.
+                            Reviewed July 31, 2026 against current Meta documentation and founder-affiliated first-party evidence.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="12 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What a responsible estimate covers</h2>
@@ -142,7 +180,7 @@ export default function MetaCAPISetupCostPage() {
                             items={[
                                 "Which system is the source of truth, and exactly which business events you are sending.",
                                 "What you have lawful consent to collect, and which customer details you are allowed to include.",
-                                "How a browser event and a server event are recognised as the same event, so nothing counts twice, and what happens when a send fails.",
+                                "How a browser event and a server event are recognized as the same event, so nothing counts twice, and what happens when a send fails.",
                                 "Testing it with Test Events, checking the live numbers against your own records, and naming who watches it afterwards.",
                                 "What your partner, payment gateway, cloud provider and ongoing maintenance cost, not just the hours to build it.",
                             ]}
@@ -179,7 +217,46 @@ export default function MetaCAPISetupCostPage() {
                         that matters. Meta&apos;s Business Tools and Data Processing Terms apply on top of all of that.
                     </BlogText>
 
+                    <InsightBox variant="tip" label="If you are not the person who will build this">
+                        The short version, before the detail. Your Meta pixel runs in your customer&apos;s browser, so it
+                        only reports what that browser manages to send. Conversions API is the other half: your own
+                        systems report the sale directly to Meta from the record that knows it happened. You normally run
+                        both, and you give Meta a shared reference so one sale is not counted twice. What you are buying
+                        is not a product with a price on it, it is the work of deciding which events matter, where the
+                        truth about each one lives, what you are allowed to send about the customer, and how anyone
+                        proves afterwards that it works. That is why the rest of this article talks about scope rather
+                        than quoting you a number.
+                    </InsightBox>
+
+                    <BlogHeader id="routes">Is the Conversions API free, and what are you actually paying for?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The API itself is free. What costs money is the route you take to it, and there are four.
+                            <strong> Start at the top of this list and stop at the first one that works for you</strong>,
+                            because the cheapest route that covers your events is the right answer and most stores never
+                            need to go past the second.
+                        </BlogText>
+                    </div>
+                    <BlogList
+                        items={[
+                            "Meta-enabled Conversions API. Meta announced this on April 15, 2026 and describes it as a one-click option requiring \u201cno technical expertise, no costs, no ongoing maintenance\u201d. It mirrors what your Pixel already sends, so it fixes delivery rather than payload. It is free, it takes minutes, and it post-dates most cost articles you will find. Turn it on before you price anything.",
+                            "A platform or partner integration. If you are on Shopify, WooCommerce or a similar platform, the native integration is included in what you already pay and is usually a setting rather than a project. Same rule: free first.",
+                            "Meta's Conversions API Gateway, or a hosted server-side container. A monthly service fee plus whatever infrastructure it runs on. Worth it when you need to send events the Pixel cannot see, or to control payload across several destinations at once.",
+                            "A custom server-side build. This is the only route with real engineering in it, and the only one where a four-figure number is honest. You are paying for event mapping, identifier handling, consent, deduplication, retries, logging and the tests that prove it works.",
+                        ]}
+                    />
+                    <BlogText>
+                        The reason published ranges disagree so violently is that they average those four routes into one
+                        number. A $0 toggle and a bespoke integration are both truthfully called &ldquo;setting up the
+                        Conversions API&rdquo;. Establish which route you need before you accept any figure, including
+                        ours, and re-run your reconciliation after the free options are on. If the gap closes, you are
+                        finished and you have spent nothing.
+                    </BlogText>
+
                     <BlogHeader>Why cost ranges without scope are misleading</BlogHeader>
+                    <BlogText>
+                        We do not publish a market price range for a Conversions API build, and we would treat one you find elsewhere with caution. Published ranges disagree so violently because they average unlike routes into one number. Five variables move the real figure, and the first is the one most quotes never establish: how many events, across how many systems, with what data quality already in place.
+                    </BlogText>
                     <BlogList
                         items={[
                             "One lead form and one thank-you event is not equivalent to catalog, checkout, refunds, subscriptions and offline sales.",
@@ -199,6 +276,9 @@ export default function MetaCAPISetupCostPage() {
                     </InsightBox>
 
                     <BlogHeader>A practical discovery worksheet</BlogHeader>
+                    <BlogText>
+                        Acceptance, cure, support and change-control terms get written before a price is attached, not after. Six things fill in first: each event with its trigger and authoritative record, the shared event ID used for deduplication, every customer parameter mapped to source and permission, the delivery route with its recurring charges named, and the reconciliation tolerance you will accept. A quote produced without these is pricing a different project.
+                    </BlogText>
                     <BlogList
                         items={[
                             "List each event, its trigger and its authoritative record, including cancellation, refund and test-event rules.",
@@ -223,7 +303,7 @@ export default function MetaCAPISetupCostPage() {
                             "Generate the event ID at the business action, not in the browser and again on the server, so both channels can carry the same value.",
                             "Send the same event name on both channels. Meta matches on event name plus event ID, so a browser Purchase and a server purchase_completed will not deduplicate.",
                             "Store the event ID against the order or lead record. A retry hours later must reuse the original ID, not mint a new one.",
-                            "Test the awkward paths explicitly: a refund, a cancelled order, a duplicate form submission, a delayed webhook and a manually created order.",
+                            "Test the awkward paths explicitly: a refund, a canceled order, a duplicate form submission, a delayed webhook and a manually created order.",
                         ]}
                     />
 
@@ -334,6 +414,9 @@ export default function MetaCAPISetupCostPage() {
                     </figure>
 
                     <BlogHeader>Direct, partner and gateway approaches</BlogHeader>
+                    <BlogText>
+                        Each route trades a different thing away. “No middleware subscription” is not the same as zero ongoing cost or no third party, because a direct integration still depends on Meta and on your own hosting, databases or queues. A native or partner integration reduces custom work and brings its own supported-event set and recurring charges. A gateway centralizes delivery and adds infrastructure you now operate.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A native or partner integration may reduce custom work but introduces its own supported-event set, terms, data path and recurring charges.",
@@ -349,7 +432,7 @@ export default function MetaCAPISetupCostPage() {
 
                     <BlogHeader>What actually moves the price</BlogHeader>
                     <BlogText>
-                        We will not print a market range we cannot stand behind. What we can give you is the set of
+                        A Conversions API integration sits in our Scale tier at $5,000 to $10,000; our Starter and Growth tiers, at $1,500 and $3,500, do not include one. What moves a quote within Scale is scope rather than the platform. We will not print a market range we cannot stand behind. What we can give you is the set of
                         variables that decide whether a build sits at the bottom or the top of whatever quote you are
                         given, so you can push a vendor on the ones that apply to you.
                     </BlogText>
@@ -444,6 +527,9 @@ export default function MetaCAPISetupCostPage() {
                     />
 
                     <BlogHeader>Acceptance evidence</BlogHeader>
+                    <BlogText>
+                        Never double-counts is not a responsible guarantee, so acceptance is demonstrated rather than asserted. Six artifacts do it: a signed event matrix matching what was deployed, consent and suppression tested per region, browser and server examples visible in Test Events, production events reconciling to the source of truth within a written tolerance, duplicate and refund behavior shown working, and the secrets, monitoring and change ownership handed over.
+                    </BlogText>
                     <BlogList
                         items={[
                             "A signed event matrix and data-flow diagram match the deployed implementation.",

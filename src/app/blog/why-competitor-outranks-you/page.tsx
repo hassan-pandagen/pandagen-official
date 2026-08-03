@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, BarChart3, Bot, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "why does my competitor outrank me",
         "SEO competitor analysis",
@@ -47,13 +48,6 @@ export const metadata: Metadata = {
 };
 
 const sources = [
-    { name: "Google Search Essentials", url: "https://developers.google.com/search/docs/essentials" },
-    { name: "Google ranking systems guide", url: "https://developers.google.com/search/docs/appearance/ranking-systems-guide" },
-    { name: "Google people-first content guidance", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
-    { name: "Google page experience guidance", url: "https://developers.google.com/search/docs/appearance/page-experience" },
-    { name: "Google Search Console and Analytics", url: "https://developers.google.com/search/docs/monitor-debug/google-analytics-search-console" },
-    { name: "Google AI features and websites", url: "https://developers.google.com/search/docs/appearance/ai-features" },
-    { name: "Google spam policies", url: "https://developers.google.com/search/docs/essentials/spam-policies" },
     { name: "Bing AI Performance", url: "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview" },
 ];
 
@@ -64,6 +58,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
             dateModified: "2026-07-24",
@@ -72,13 +67,41 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Next.js", "Website migration", "Web performance", "Technical SEO", "Content management systems"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+            ],
+            wordCount: 1300,
+            timeRequired: "PT7M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Competitor ranking gap", item: "https://www.pandacodegen.com/blog/why-competitor-outranks-you" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#webpage",
+            url: "https://www.pandacodegen.com/blog/why-competitor-outranks-you",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/why-competitor-outranks-you#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -116,15 +139,14 @@ export default function WhyCompetitorOutranksYouPage() {
                             Why Does My Competitor Outrank Me? <span className="italic text-cognac">Find the Actual Gap</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Ranking below someone tells you that something is different. It does not tell you what is
-                            wrong. Hold everything steady and change one thing at a time: the same search, the same
+                            A competitor outranks you because of a gap in one of seven comparable areas: query intent, content depth, crawl and indexing health, links, page experience, entity signals, or something that changed outside your site. Ranking below someone tells you that a difference exists; it does not tell you which of the seven it is. Hold everything steady and change one thing at a time: the same search, the same
                             place, the same device, the same day, the same kind of result. Then make the smallest fix
                             your evidence actually supports.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="16 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -141,9 +163,9 @@ export default function WhyCompetitorOutranksYouPage() {
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
                             { icon: Search, title: "Query", body: "Intent, result type, locale, device and date." },
-                            { icon: BarChart3, title: "Evidence", body: "Owned data separated from outside estimates." },
-                            { icon: ShieldCheck, title: "Quality", body: "Helpful content, technical access and reputation." },
-                            { icon: Bot, title: "AI", body: "Eligibility, citations, controls and separate measurement." },
+                            { icon: BarChart3, title: "Evidence", body: "Your own numbers, kept apart from anyone else's guesses." },
+                            { icon: ShieldCheck, title: "Quality", body: "Is it useful, can it be crawled, and is it trusted." },
+                            { icon: Bot, title: "AI", body: "Can you be quoted, and can you tell when you were." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -154,9 +176,12 @@ export default function WhyCompetitorOutranksYouPage() {
                     </div>
 
                     <BlogHeader id="evidence-first">Start with evidence, not a platform verdict</BlogHeader>
+                    <BlogText>
+                        Record what you actually saw before you theorize about why. The query, the locale, the device, the date and the result type, then your own Search Console and analytics data, then the indexing and manual-action checks. Label every competitor visibility, link or traffic number as an estimate, because nobody outside their analytics can see the real figure.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Save the exact query, language, country, device, date and visible result type.",
+                            "Write down the exact search you ran, in which language and country, on which device, on what date, and what kind of result came back.",
                             "Record the competing URLs, titles, snippets and search features.",
                             "Use Search Console for your queries, pages, clicks, impressions and average position.",
                             "Use analytics for on-site behavior and outcomes, while accounting for attribution differences.",
@@ -165,8 +190,7 @@ export default function WhyCompetitorOutranksYouPage() {
                         ]}
                     />
                     <InsightBox variant="info" label="Why we do not quote a competitor traffic multiple">
-                        Nobody outside a competitor&apos;s analytics can see their real traffic. Third-party tools model
-                        it from sampled clickstream and estimated click-through rates, so treat any multiple you read as
+                        Nobody outside a competitor&apos;s own analytics can see their actual traffic. Third-party tools typically model it from sampled clickstream and estimated click-through rates, so treat any multiple you read as
                         an estimate rather than a measurement. It also cannot tell you why they are ahead: a tool showing
                         a gap does not establish which factor caused it. Work from your own Search Console data for
                         queries and positions you can verify, and use competitor estimates only to decide where to look
@@ -187,8 +211,9 @@ export default function WhyCompetitorOutranksYouPage() {
                     <BlogText>
                         Google&apos;s people-first guidance asks whether content adds original information or analysis,
                         demonstrates expertise, is trustworthy and leaves the reader able to achieve the task.
-                        Strengthen first-hand examples, definitions, decision criteria, limitations, dates and
-                        source-linked evidence. Remove exaggerated titles and unsupported numbers.
+                        Add what only you can add: your own examples, plain definitions, how you decide, where the
+                        advice stops working, when you checked, and a link for anything you assert. Then delete the
+                        inflated headlines and any number you cannot source.
                     </BlogText>
 
                     <h3 id="technical" className="mb-4 mt-8 text-2xl font-bold text-charcoal">3. Crawl, index and rendered-output health</h3>
@@ -206,7 +231,7 @@ export default function WhyCompetitorOutranksYouPage() {
                             "Rendered main content and crawlable internal links.",
                             "Sitemaps, duplicate URLs, pagination and parameter behavior.",
                             "Accurate titles, descriptions and structured data that matches the visible page.",
-                            "Security issues, manual actions and unintended staging or migration artifacts.",
+                            "Security warnings, manual penalties, and anything left behind from a staging site or an old migration.",
                         ]}
                     />
 
@@ -220,9 +245,10 @@ export default function WhyCompetitorOutranksYouPage() {
 
                     <h3 id="reputation" className="mb-4 mt-8 text-2xl font-bold text-charcoal">5. External reputation, links and local or entity evidence</h3>
                     <BlogText>
-                        Relevant editorial references, accurate business profiles, reviews, expert recognition and
-                        consistent entity information can distinguish otherwise similar pages. Audit source quality and
-                        relevance. Google identifies links created mainly to manipulate rankings as link spam, so a
+                        Two similar pages can separate on reputation: who writes about you, whether your business
+                        listings are accurate, your reviews, recognition from people who know the field, and saying
+                        the same things about yourself everywhere. Check whether each source is any good and whether
+                        it is actually about your topic. Google identifies links created mainly to manipulate rankings as link spam, so a
                         gap analysis is not permission to buy or automate links.
                     </BlogText>
 
@@ -258,8 +284,9 @@ export default function WhyCompetitorOutranksYouPage() {
 
                     <h3 id="market" className="mb-4 mt-8 text-2xl font-bold text-charcoal">7. Demand, competition and measurement changes</h3>
                     <BlogText>
-                        Seasonality, news, competitor launches, changing language, algorithm updates, tracking changes
-                        and result-page features can change traffic without a defect on your page. Compare query and
+                        Traffic moves for reasons that have nothing to do with your page. The season changed. Something
+                        was in the news. A competitor launched. People started phrasing the search differently. Google
+                        updated. Your tracking broke. Or the results page itself changed shape. Compare query and
                         page trends, annotate releases and updates, and avoid assigning causation from one before-and-
                         after chart. Our write-up of the{" "}
                         <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">
@@ -295,13 +322,13 @@ export default function WhyCompetitorOutranksYouPage() {
                     <BlogText>
                         Google&apos;s July 2026 guidance says its existing SEO fundamentals apply to AI Overviews and AI
                         Mode, with no additional technical requirement or special schema needed. Eligible pages must be
-                        indexed and able to show a snippet, but inclusion is not guaranteed. Google recommends
-                        crawlable content, internal links, good page experience, important information in text,
-                        supporting media, and structured data that matches visible content.
+                        indexed and able to show a snippet, but inclusion is not guaranteed. Google's advice is ordinary: let crawlers reach the page, link to it from your own site, make it
+                        decent to use, put the important things in text rather than an image, support them with media,
+                        and keep your structured data matching what a visitor can actually see.
                     </BlogText>
                     <BlogText>
-                        Bing introduced AI Performance in Webmaster Tools public preview in February 2026. Its citation
-                        counts and cited-page data do not represent placement, authority or page importance. Use that
+                        Bing introduced AI Performance in Webmaster Tools public preview in February 2026. Its citation counts do not tell you where you appeared, how much
+                        authority you have, or how important the page is. Use that
                         product for supported Microsoft surfaces and keep ordinary search, AI citation and business
                         outcome metrics separate. How we structure those signals is set out in our{" "}
                         <Link href="/blog/aeo-playbook-built-into-every-website" className="text-cognac hover:underline">
@@ -319,6 +346,9 @@ export default function WhyCompetitorOutranksYouPage() {
                     </InsightBox>
 
                     <BlogHeader id="audit-workflow">A practical competitor-gap workflow</BlogHeader>
+                    <BlogText>
+                        One query-page pair at a time, with a dated snapshot. Validate it in Search Console, inspect the rendered URL, classify the gap against the seven evidence groups, then separate what you observed from what you estimated, inferred and still do not know. One bounded change, one primary metric, guardrails, and an evidence-appropriate wait before you judge it.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Choose the highest-value query-page pair and save a dated result snapshot.",
@@ -348,8 +378,9 @@ export default function WhyCompetitorOutranksYouPage() {
                     <BlogHeader id="our-offer">PandaCodeGen&apos;s SEO-safe migration offer</BlogHeader>
                     <BlogText>
                         We start with a free fit audit, separate repair from migration, and prepare a plan for
-                        revenue-generating WordPress, Webflow or GoHighLevel sites. A migration recommendation includes
-                        the route inventory, acceptance evidence, search safeguards and rollback conditions. We do not
+                        revenue-generating WordPress, Webflow or GoHighLevel sites. If we recommend migrating, that comes with every URL listed, the evidence
+                        you sign off against, what protects your search traffic, and the conditions under which we
+                        roll it back. We do not
                         promise ranking retention, a traffic multiplier, revenue lift or AI citations. Service detail
                         sits under{" "}
                         <Link href="/services/wordpress-migration" className="text-cognac hover:underline">
@@ -370,9 +401,8 @@ export default function WhyCompetitorOutranksYouPage() {
                             PandaCodeGen planning tiers
                         </Link>{" "}
                         start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.
-                        Standard payment is 30 percent at onboarding and 70 percent on delivery. Refund is tied to
-                        failure to deliver the signed scope. Starter includes 15 business days of launch defect
-                        support; Growth and Scale include 30.
+                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
+                        failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30.
                     </BlogText>
 
                     {postFAQs.length > 0 && (
@@ -381,6 +411,17 @@ export default function WhyCompetitorOutranksYouPage() {
                             <FAQAccordion faqs={postFAQs} />
                         </>
                     )}
+
+                    <BlogHeader>Primary sources</BlogHeader>
+                    <ul className="mb-12 space-y-3 text-sm text-stone-600">
+                        {sources.map((source) => (
+                            <li key={source.url}>
+                                <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                                    {source.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <h2 className="mb-3 font-serif text-3xl">Find the gap before changing platforms</h2>

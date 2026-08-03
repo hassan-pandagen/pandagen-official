@@ -79,6 +79,33 @@ export const viewport: Viewport = {
   themeColor: '#B8410C',
 };
 
+
+const siteGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pandacodegen.com/#website",
+      url: "https://www.pandacodegen.com",
+      name: "PandaCodeGen",
+      publisher: { "@id": "https://www.pandacodegen.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.pandacodegen.com/#organization",
+      name: "PandaCodeGen",
+      alternateName: "Panda Code Gen",
+      url: "https://www.pandacodegen.com",
+      logo: { "@type": "ImageObject", url: "https://www.pandacodegen.com/logo.png", width: 655, height: 113 },
+      contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com" },
+      description: "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+      areaServed: "Worldwide",
+      foundingDate: "2026",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,6 +122,10 @@ export default function RootLayout({
     <HtmlShell
       bodyClassName={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-charcoal`}
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
+      />
       <ConsentProvider>
           {/* Skip-navigation for keyboard + screen reader users (WCAG 2.4.1) */}
           <a

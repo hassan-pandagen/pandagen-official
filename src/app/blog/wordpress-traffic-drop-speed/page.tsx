@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { Activity, ArrowLeft, ArrowRight, BarChart3, Gauge, SearchCheck, Wrench } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "WordPress traffic drop",
         "WordPress SEO traffic down",
@@ -46,15 +47,9 @@ export const metadata: Metadata = {
     twitter: { card: "summary_large_image", title, description },
 };
 
-const sources = [
-    { name: "Google debugging traffic drops", url: "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" },
-    { name: "Google Search status dashboard", url: "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history" },
-    { name: "Google core update guidance", url: "https://developers.google.com/search/updates/core-updates" },
-    { name: "Google page experience guidance", url: "https://developers.google.com/search/docs/appearance/page-experience" },
-    { name: "Google Core Web Vitals", url: "https://web.dev/articles/vitals" },
-    { name: "Search Console performance report", url: "https://support.google.com/webmasters/answer/7576553" },
-    { name: "Google Analytics data collection", url: "https://developers.google.com/analytics/devguides/collection/ga4" },
-];
+// Google and web.dev documentation is verified before publication but is deliberately not listed
+// as a page source and not emitted into citation[]. Claims drawn from it are attributed in prose.
+// Do not reintroduce a `sources` array of Google URLs here.
 
 const articleSchema = {
     "@context": "https://schema.org",
@@ -63,6 +58,7 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/wordpress-traffic-drop-speed"),
             description,
             datePublished: "2026-01-28",
             dateModified: "2026-07-24",
@@ -71,13 +67,40 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["WordPress", "Website migration", "Technical SEO", "Web performance", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO diagnostics",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "SoftwareApplication", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
+                { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1250,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "WordPress traffic drop", item: "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#webpage",
+            url: "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/wordpress-traffic-drop-speed#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -115,17 +138,17 @@ export default function WordPressTrafficDropPage() {
                             WordPress Traffic Drop <span className="italic text-cognac">Find the Cause Before the Fix</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Traffic can fall for a lot of reasons. Your analytics broke. Google stopped crawling or
+                            Speed is one possible cause of a traffic drop, and it is rarely the first one to check. Traffic falls for a lot of reasons. Your analytics broke. Google stopped crawling or
                             indexing pages. Something shipped and changed the site. Fewer people are searching for it.
                             A competitor got better. The content was thin. Google changed its ranking. Or the page is
-                            unpleasant to use. Speed is one possible cause on that list, not the answer.
+                            unpleasant to use. Work the list in order and let the evidence name the cause.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed against current Google documentation on July 24, 2026.
+                            Reviewed against current Google Search guidance on July 24, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jan 28, 2026" readTime="17 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jan 28, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First response</h2>
@@ -142,8 +165,7 @@ export default function WordPressTrafficDropPage() {
 
                     <InsightBox variant="info" label="Why no percentage is attached to speed here">
                         This guide gives no fixed share of traffic lost to a given delay, and it does not treat speed as
-                        the cause of a ranking change. Clicks move with demand, competition, content, indexing, releases,
-                        measurement and page experience at the same time, so a percentage taken from another site cannot
+                        the cause of a ranking change. Clicks move when demand shifts, when a competitor improves, when content changes, when indexing changes, and when you ship changes to content, measurement and page experience at the same time, so a percentage taken from another site cannot
                         explain what happened on yours. Nothing here presents free hosting, AI citations or a traffic
                         recovery as an automatic result of moving off WordPress either. Work the evidence in order and
                         let it name the cause.
@@ -165,6 +187,11 @@ export default function WordPressTrafficDropPage() {
                     </div>
 
                     <BlogHeader id="define">Define the drop precisely</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Before you diagnose anything, pin down what actually moved. A drop in clicks, a drop in impressions and a drop in conversions have different causes, and treating them as one number is how investigations go wrong in the first hour.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Start and end date, comparison period and timezone",
@@ -182,6 +209,11 @@ export default function WordPressTrafficDropPage() {
                     </BlogText>
 
                     <BlogHeader id="measurement">Path one: measurement changed</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Start here, because it is the cheapest to rule out and the most common false alarm. If the traffic did not really fall and only the counting changed, everything downstream of this is wasted work.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Analytics tag, container, property, stream or consent configuration changed",
@@ -198,6 +230,11 @@ export default function WordPressTrafficDropPage() {
                     </BlogText>
 
                     <BlogHeader id="technical">Path two: a technical or release problem</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Technical breakage tends to be sudden and page-specific rather than a slow decline across the site. If the fall has a sharp edge and clusters on particular templates, look here before you look at content.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Noindex, robots, authentication or firewall behavior changed",
@@ -224,6 +261,11 @@ export default function WordPressTrafficDropPage() {
                     </BlogText>
 
                     <BlogHeader id="search">Path four: search systems, content or competition changed</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the slowest path to confirm and the one most often blamed first. Work through it only after measurement and technical causes are ruled out, because the evidence here is inferential and the other two are not.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Compare the dates with the Google Search status dashboard.",
@@ -240,7 +282,7 @@ export default function WordPressTrafficDropPage() {
                         Google says <Link href="/blog/core-web-vitals-explained" className="text-cognac hover:underline">Core Web Vitals</Link> are used by its ranking systems, but page experience is not one
                         signal and good scores do not guarantee top rankings. Use field data for the affected page group
                         where available. Check whether performance changed before the decline and whether the pages,
-                        devices and countries align. A Lighthouse score taken after the event does not prove causation.
+                        devices and countries align. A <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score taken after the event does not prove causation.
                         The wider evidence on{" "}
                         <Link href="/blog/how-website-speed-affects-seo" className="text-cognac hover:underline">how website speed affects SEO</Link>{" "}
                         sets out what page experience can and cannot explain.
@@ -252,6 +294,11 @@ export default function WordPressTrafficDropPage() {
                     </InsightBox>
 
                     <BlogHeader id="console">A Search Console investigation sequence</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Search Console answers most of these questions faster than any third-party tool, if you know which report holds which answer. Work through them in this order.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Open the Performance report and set the exact decline and comparison periods.",
@@ -265,6 +312,11 @@ export default function WordPressTrafficDropPage() {
                     />
 
                     <BlogHeader id="patterns">How to read common patterns</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Most drops match one of a small number of shapes, and the shape narrows the cause before you open a single report. Find the row that matches what your graph is doing.
+                        </BlogText>
+                    </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
                         <table className="w-full min-w-[1020px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -289,10 +341,15 @@ export default function WordPressTrafficDropPage() {
                     </BlogText>
 
                     <BlogHeader id="actions">Match the action to the cause</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Match the fix to the cause you confirmed, not to the cause you suspected at the start. The most expensive mistake here is rebuilding for a problem that measurement or a broken tag had already explained.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
-                            "Measurement: repair collection, consent and event definitions.",
-                            "Technical: restore crawl, index, render, link, status and server correctness.",
+                            "Measurement: fix what is being collected, how consent is handled, and what each event actually means.",
+                            "Technical: get crawling, indexing, rendering, links, status codes and the server behaving correctly again.",
                             "Demand: adjust forecast, content and acquisition strategy to observed intent.",
                             "Content: improve usefulness, accuracy, structure and differentiation for affected tasks.",
                             "Performance: repair measured route and interaction bottlenecks.",
@@ -327,11 +384,16 @@ export default function WordPressTrafficDropPage() {
                     <BlogText>
                         Do not use anecdotal prompt tests as a traffic-recovery guarantee. Keep content crawlable,
                         accurate, source-linked and clear about entities and evidence. Follow current crawler and product
-                        documentation. No framework, schema type, `llms.txt` file or performance score guarantees
+                        documentation. No framework, schema type, llms.txt file or performance score guarantees
                         inclusion, citation or recommendation by an AI system.
                     </BlogText>
 
                     <BlogHeader id="handoff">Investigation handoff</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Whoever picks this up next needs the evidence, not the conclusion. Hand over these items so the investigation can continue rather than restart.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Defined metric, date, magnitude and affected cohorts",

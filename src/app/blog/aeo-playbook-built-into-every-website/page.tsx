@@ -28,9 +28,6 @@ export const metadata: Metadata = {
         "aeo playbook",
         "answer engine optimization",
         "ai citations new website",
-        "get cited by chatgpt",
-        "get cited by claude",
-        "get cited by perplexity",
         "ai-info page",
         "schema markup for ai",
         "new domain seo alternative",
@@ -43,7 +40,7 @@ export const metadata: Metadata = {
         description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-07-09T00:00:00-05:00",
+        modifiedTime: "2026-08-01T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [ogImageForPath("/blog/aeo-playbook-built-into-every-website")],
@@ -65,35 +62,30 @@ const articleSchema = {
             "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
             "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-07-09T00:00:00-05:00",
+            "dateModified": "2026-08-01T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 "name": "Hassan Jamal",
                 "jobTitle": "Co-founder and Lead Engineer",
-                "url": "https://www.pandacodegen.com/about",
+                "url": "https://www.pandacodegen.com/about/hassan",
+                "knowsAbout": ["Answer engine optimization", "Structured data", "Technical SEO", "AI crawlers"],
+                "image": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/team/hassan.png", "width": 400, "height": 400 },
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
-            "publisher": {
-                "@type": "Organization",
-                "@id": "https://www.pandacodegen.com/#organization",
-                "name": "PandaCodeGen",
-                "alternateName": "Panda Code Gen",
-                "url": "https://www.pandacodegen.com",
-                "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-                "foundingDate": "2026",
-                "email": "info@pandacodegen.com"
-            },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website" },
+            "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#webpage" },
             "articleSection": "AEO",
             "keywords": ["aeo playbook", "answer engine optimization", "ai citations new website", "ai-info page", "schema markup", "aeo service"],
             "inLanguage": "en-US",
+            "wordCount": 2950,
+            "timeRequired": "PT15M",
             "about": [
                 { "@type": "Thing", "name": "Answer Engine Optimization" },
                 { "@type": "Thing", "name": "AI Citations" },
                 { "@type": "Thing", "name": "New Domain SEO" },
-                { "@type": "Thing", "name": "ChatGPT Citations" },
-                { "@type": "Thing", "name": "Claude AI Recommendations" },
+                { "@type": "Thing", "name": "Answer engine optimization" },
+                { "@type": "Thing", "name": "Structured data" },
                 { "@type": "Thing", "name": "Google AI Overview" }
             ],
             "speakable": {
@@ -102,8 +94,6 @@ const articleSchema = {
             },
             "citation": [
                 { "@type": "CreativeWork", "name": "Google guide to optimizing for generative AI features", "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" },
-                { "@type": "CreativeWork", "name": "Google general structured data guidelines", "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies" },
-                { "@type": "CreativeWork", "name": "Google guidance for helpful, reliable, people-first content", "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
                 { "@type": "CreativeWork", "name": "Google Search generative AI performance reports", "url": "https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" },
                 { "@type": "CreativeWork", "name": "OpenAI crawler guidance", "url": "https://help.openai.com/en/articles/20001243-advertiser-guidance-for-allowing-openai-web-crawlers" },
                 { "@type": "CreativeWork", "name": "Schema.org Organization", "url": "https://schema.org/Organization" }
@@ -135,7 +125,7 @@ const articleSchema = {
             "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-07-09T00:00:00-05:00",
+            "dateModified": "2026-08-01T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -192,7 +182,7 @@ export default function AEOPlaybookPage() {
                         <BlogAuthor
                             name="Hassan Jamal"
                             date="May 18, 2026"
-                            readTime="18 min read"
+                            readTime="15 min read"
                             bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on crawlability, structured evidence, and technical performance. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
@@ -215,7 +205,7 @@ export default function AEOPlaybookPage() {
                         <BlogList items={[
                             "Google says the basics that always mattered for Search still matter for its AI features: your pages can be crawled, they can be indexed, they say something useful, and they are decent to use.",
                             "Something you know first-hand holds up far better than a page written only to catch a phrasing someone might type.",
-                            "Structured data helps machines understand what a page is about. Google says plainly that getting the markup right does not guarantee you appear anywhere.",
+                            "Structured data helps machines understand what a page is about. Google treats correct markup as a precondition for eligibility, not a trigger for it.",
                             "Watch visibility using each provider's own reports, the referrals you can actually see in your analytics, and manual checks you date and keep. Impressions with no clicks are not proof an AI quoted you.",
                             "We can build these controls into a migration we have agreed, but what you actually get depends on the signed scope and the content you have.",
                             "Google and the AI systems decide for themselves what they crawl, index, rank, recommend and quote. Nobody else controls that."
@@ -223,19 +213,16 @@ export default function AEOPlaybookPage() {
                     </div>
 
                     {/* Section 1: The Loss + Opportunity */}
-                    <BlogHeader id="are-you-losing">Are You Losing to Competitors on Google AND on AI Search?</BlogHeader>
+                    <BlogHeader id="are-you-losing">Where to Start if You Are Behind on Both</BlogHeader>
                     <BlogText>
                         Search and AI visibility both reward clear, useful, crawlable evidence, but neither rankings nor citations are guaranteed. Start by measuring how your important pages are indexed, cited, and converted today, then improve the evidence systems can evaluate.
-                    </BlogText>
-                    <BlogText>
-                        That is the position most new business owners are in right now in 2026, whether they know it or not.
                     </BlogText>
                     <BlogText>
                         The practical starting point is not a market-adoption percentage. It is whether your important pages are accessible, useful, attributable, and measurable today.
                     </BlogText>
                     <BlogList items={[
                         "Confirm that important pages return usable HTML, allow the relevant crawlers, and remain eligible for indexing and snippets.",
-                        "Publish original experience, methods, limitations, and dated evidence rather than repeating commodity summaries.",
+                        "Publish what you actually did, how you did it, where it stops working, and when you checked. Do not rewrite what everyone else already published.",
                         "Keep visible copy, metadata, and structured data consistent.",
                         "Record AI-feature impressions where a provider exposes them, referral traffic where available, and manual prompt observations with the date, account, country, and prompt."
                     ]} />
@@ -249,13 +236,12 @@ export default function AEOPlaybookPage() {
                         If you are a new business or a small operator, focus on a narrow set of questions where you have real experience. Document the process, the trade-offs, and the evidence a buyer would need to make a decision.
                     </BlogText>
                     <BlogText>
-                        Here is the part nobody is telling you.
-                    </BlogText>
-                    <BlogText>
-                        An established competitor may have stronger brand and source signals; a newer business may have fresher first-hand evidence. Neither condition guarantees the outcome.
-                    </BlogText>
-                    <BlogText>
-                        <BlogHighlight>This is your window.</BlogHighlight>
+                        The honest position on being new is narrower than the usual pitch, and more useful. An
+                        established competitor generally has stronger brand and source signals. A newer business often
+                        has fresher first-hand evidence and can publish it faster, because there is nobody to get
+                        approval from. Neither of those decides the outcome on its own. What you get from being small
+                        is speed, and the only thing worth spending that speed on is publishing things you actually
+                        know that nobody else has written down.
                     </BlogText>
                     <BlogText>
                         An AI-info page, clear headings, and structured data can help a system interpret public facts, but they are inputs, not ranking weights or citation guarantees. Publish them because they improve clarity and governance, then measure what actually happens.
@@ -264,14 +250,14 @@ export default function AEOPlaybookPage() {
                         Google began testing dedicated generative-AI performance reports in Search Console in June 2026. Where the report is available, use its page, country, device, date, and impression dimensions instead of treating ordinary impression changes as proof of an AI Overview citation.
                     </BlogText>
                     <BlogText>
-                        There is no verified 12-to-24-month advantage window. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
+                        There is no verified advantage window of any particular length. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
                         <BlogHighlight>Build a reliable information system, not a citation promise.</BlogHighlight> That work remains useful even when providers change their interfaces or retrieval systems.
                     </BlogText>
 
-                    {/* Section 2: AEO Is What Wins */}
-                    <BlogHeader id="aeo-wins-for-new-domains">AEO Is What Wins for New Domains</BlogHeader>
+                    {/* Section 2: what AEO means and does not mean */}
+                    <BlogHeader id="aeo-wins-for-new-domains">What AEO Actually Means, and What It Does Not</BlogHeader>
                     <BlogText>
                         AEO stands for Answer Engine Optimization. We use the term for improving the eligibility, clarity, and measurability of public information used by search and answer systems. It does not create a right to inclusion or citation.
                     </BlogText>
@@ -338,12 +324,14 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     {/* Section 4: The 10 Tactics */}
-                    <BlogHeader id="the-10-tactics">The 10 Tactics We Bake Into Every Website</BlogHeader>
+                    <BlogHeader id="the-10-tactics">The Controls We Build In, and When Each One Applies</BlogHeader>
                     <BlogText>
-                        These are the 10 specific things we now do on every Starter and Growth build. None of them require external tools your clients have to pay for. None of them add to the build cost. Every one of them is something a competent web developer can implement, but almost none of them are standard at agencies in 2026.
+                        These are the eleven controls we work through on a build. None of them require a tool you have to
+                        subscribe to, and all of them are things a competent developer can implement. Which of them
+                        apply, and how much work each one is, depends on the site and the accepted scope.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">1. The AI-Info Page (Our Unique Selling Point)</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">1. A Governed Page for Your Public Facts</h3>
                     <BlogText>
                         Every website we build now ships with an AI-info page at the URL <code className="text-sm bg-stone-100 px-2 py-1 rounded">/ai-info</code>. You can see ours at <Link href="/ai-info" className="text-cognac hover:underline">pandacodegen.com/ai-info</Link>.
                     </BlogText>
@@ -397,7 +385,7 @@ export default function AEOPlaybookPage() {
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">5. Comparison Tables With Real Numbers</h3>
                     <BlogText>
-                        A well-labelled comparison table can make trade-offs easier for readers and machines to parse. Use current, comparable inputs and provide the measurement date; do not assume the format earns citations.
+                        A well-labeled comparison table can make trade-offs easier for readers and machines to parse. Use current, comparable inputs and provide the measurement date; do not assume the format earns citations.
                     </BlogText>
                     <BlogText>
                         Our <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">Webflow cost article</Link> uses a comparison table to expose assumptions. Search Console changes can help identify a page worth investigating, but they do not prove that an AI system cited the table.
@@ -417,9 +405,9 @@ export default function AEOPlaybookPage() {
                         For example, a WordPress comparison can discuss editorial workflow, plugin responsibility, hosting, maintenance, and measured performance. Platform-wide PageSpeed bands and monthly-cost averages need a defined sample; they should not be presented as universal WordPress facts.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">7. Internal Linking Using the Steve Toth Silo Method</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">7. Internal Linking That Keeps a Topic Together</h3>
                     <BlogText>
-                        Steve Toth (<a href="https://www.seonotebook.com/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">SEO Notebook</a>) popularized a specific internal linking pattern that we now adapt for AEO. We call it the silo method. Here is how it works:
+                        Topical siloing is long-established SEO practice rather than any one person&apos;s invention, and it adapts cleanly to AEO. Here is the version we use:
                     </BlogText>
                     <BlogList items={[
                         "Pick 5 to 10 topic silos for your business (we use WordPress, Webflow, Shopify, Squarespace, Wix, GoHighLevel, WooCommerce, Pricing, Performance).",
@@ -431,7 +419,7 @@ export default function AEOPlaybookPage() {
                         Internal links help users and crawlers discover related material and understand how pages connect. Keep the links useful and descriptive; no fixed silo count guarantees topical authority, ranking, or citation.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8. Reddit Replies as Citation Seeds</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8. Taking Part in the Places Your Buyers Already Ask</h3>
                     <BlogText>
                         Independent discussions can surface real questions and language, but a brand should not treat community participation as a citation-seeding scheme. Provider source selection changes by prompt, date, account, and system.
                     </BlogText>
@@ -442,7 +430,7 @@ export default function AEOPlaybookPage() {
                         Subreddits we focus on: r/webdev, r/nextjs, r/Wordpress, r/Webflow, r/Shopify, r/gohighlevel, r/SaaS. The same buyers asking us questions in chat are reading these subreddits before they get to our site.
                     </BlogText>
 
-                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">8b. Earned Mentions on High-Authority Domains</h3>
+                    <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">9. Earned Mentions on High-Authority Domains</h3>
                     <BlogText>
                         Independent coverage can corroborate a brand&apos;s claims. Journalist-source platforms are one possible route, but publication, link attributes, readership, and downstream use are not guaranteed.
                     </BlogText>
@@ -458,7 +446,7 @@ export default function AEOPlaybookPage() {
                         Prefer verifiable facts over unsupported adjectives.
                     </BlogText>
                     <BlogText>
-                        Not &quot;fast loading.&quot; Say &quot;the recorded metric, route, device profile, network conditions, and test date.&quot;
+                        Not &quot;fast loading.&quot; Say &quot;the product page scored 94 on mobile in <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> 13, throttled 4G, on August 1, 2026&quot;, because the second one can be checked and the first one cannot.
                     </BlogText>
                     <BlogText>
                         Not &quot;affordable.&quot; Say &quot;Starter $1,500 fixed price, Growth $3,500 fixed price.&quot;
@@ -467,7 +455,7 @@ export default function AEOPlaybookPage() {
                         Not &quot;many integrations.&quot; Say &quot;12 native integrations including Stripe, Shopify Storefront API, Resend, and Cal.com.&quot;
                     </BlogText>
                     <BlogText>
-                        Numbers are useful only when the unit, population, source, method, and date are clear. Inventing or decontextualizing numbers makes a page less reliable; no supported dataset here establishes a 5-to-10-times citation multiplier.
+                        Numbers are useful only when the unit, population, source, method, and date are clear. Inventing or decontextualizing numbers makes a page less reliable; no supported dataset here establishes any citation multiplier at all.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">10. Citation Tracking From Day 1</h3>
@@ -479,6 +467,47 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     {/* Section 5: GSC Receipts */}
+                    <BlogHeader id="can-you-pay">Can you pay ChatGPT to recommend your business?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            No, and anyone offering to arrange it is selling you something that does not exist. There is
+                            no placement product, no submission form and no paid inclusion tier for being named in an
+                            assistant&apos;s answer. What advertising does exist on these surfaces is labelled
+                            advertising and sits beside the answer rather than inside it. The practical consequence is
+                            unglamorous but freeing: the only lever anyone actually has is being the source worth
+                            quoting, which is slower than buying placement and cannot be bought by a competitor either.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Treat any pitch built on privileged access, an insider route or a guaranteed mention as
+                        disqualifying, including ours if we ever make one. The same applies to the AI-visibility audits
+                        that promise to &ldquo;get you into&rdquo; a named assistant. Nobody controls the output, and a
+                        vendor who says otherwise is either misinformed or counting on you not checking.
+                    </BlogText>
+
+                    <BlogHeader id="js-myth">Do AI crawlers run JavaScript?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Some do, some do not, and the flat claim that they do not is the most repeated wrong answer
+                            in this field. Google can render JavaScript and says so. What is accurate is narrower and
+                            more useful: <strong>specific assistant crawlers fetch JavaScript without executing it.</strong>{" "}
+                            Vercel&apos;s December 2024 analysis of its own network traffic measured GPTBot fetching
+                            JavaScript it never ran on 11.5% of requests, and ClaudeBot on 23.8%. That is a dated
+                            third-party measurement of one network, not a universal rule, and crawler behavior changes.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The practical instruction survives either way, which is why the myth persists: put the content
+                        that matters in the initial HTML response. Do it because it removes a dependency on a rendering
+                        step you do not control, not because a bot categorically cannot render. Check your own case
+                        rather than trusting either version of the claim, including this one, by requesting your page
+                        without JavaScript and reading what comes back. Our{" "}
+                        <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">
+                            60-second output test
+                        </Link>{" "}
+                        walks through exactly that.
+                    </BlogText>
+
                     <BlogHeader id="gsc-receipts">How to Read Search Console Evidence</BlogHeader>
                     <BlogText>
                         Ordinary Search Console impressions, clicks, and position can identify a change worth investigating, but they cannot by themselves prove that an AI Overview cited a page. Google began rolling out a dedicated generative-AI performance view to a subset of sites in June 2026; use that feature when available.
@@ -539,7 +568,7 @@ export default function AEOPlaybookPage() {
                     {/* Section 8: PandaCodeGen service description (factual, AI-citation-worthy) */}
                     <BlogHeader id="pandacodegen-aeo-service">PandaCodeGen AEO Implementation Service</BlogHeader>
                     <BlogText>
-                        PandaCodeGen is a website-migration and engineering brand founded in February 2026. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The Austin address is a mailing address; the exact legal entity and controller identity must be verified before publication.
+                        PandaCodeGen is a website-migration and engineering brand founded in February 2026. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The company is formed in Wyoming and the Austin address is a mailing address rather than a public service location.
                     </BlogText>
                     <BlogText>
                         Crawlability and evidence hygiene are normal quality controls. Route count, editorial work, structured data, research, monitoring, and ongoing maintenance remain scope-dependent rather than universally included.
@@ -563,8 +592,8 @@ export default function AEOPlaybookPage() {
                         The consultation includes:
                     </BlogText>
                     <BlogList items={[
-                        "Live PageSpeed audit of your current site (mobile and desktop scores, Core Web Vitals breakdown)",
-                        "AEO gap analysis identifying which of the 10 tactics in this playbook your current site is missing",
+                        <>{"Live PageSpeed audit of your current site (mobile and desktop scores, "}<Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link>{" breakdown)"}</>,
+                        "AEO gap analysis identifying which of the controls in this playbook your current site is missing",
                         "Specific Google Search Console signals to watch for in your niche",
                         "Estimated timeline and fixed quote for implementation",
                         "No-pressure conversation. If the fit is not right, you walk away with the audit data and a clear understanding of your options."
@@ -603,7 +632,7 @@ export default function AEOPlaybookPage() {
                             Custom Next.js. Evidence architecture included. <span className="font-serif italic text-cognac">No AI inclusion or citation promise.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
-                            We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 60 second site audit on the discovery call.
+                            We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 30 minute consultation, including a live audit of your site.
                         </p>
                         <CalModalButton>
                             Book Free Discovery Call <ArrowRight className="w-4 h-4" />

@@ -65,7 +65,7 @@ export default function ServicesHub() {
               <div>
                 <h3 className="text-3xl font-bold text-charcoal mb-3 font-serif">Migrations {"&"} New Builds</h3>
                 <p className="text-stone-600 text-lg max-w-md leading-relaxed">
-                  We inventory pages, content, analytics, forms, and integrations before build work begins, then test the cutover against written acceptance criteria.
+                  We list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ export default function ServicesHub() {
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
                 <p className="text-xs text-stone-600 uppercase tracking-widest font-bold mb-1">Scoped separately</p>
                 <p className="text-sm text-white leading-snug">
-                  Product and internal-tool engagements start with architecture, data, security, integration, and operating-cost requirements rather than a generic website package.
+                  Product and internal-tool work starts with how it should be built, what data it holds, how it stays secure, what it connects to and what it will cost to run. Not a generic website package.
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function ServicesHub() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-2 font-serif">Search &amp; AI Foundations</h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Crawlable content, consistent entities, accurate structured data, and source-backed evidence for traditional and AI-assisted search. No citation guarantee.
+                Pages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.
               </p>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
@@ -161,7 +161,7 @@ export default function ServicesHub() {
               </div>
               <h3 className="text-xl font-bold text-charcoal mb-2 font-serif">Faster E-commerce</h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Headless Shopify and WooCommerce storefronts when measured theme or integration constraints justify the added complexity. Keep the commerce backend where it remains the right fit.
+                Headless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.
               </p>
             </div>
             <Link href="/services/ecommerce" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">

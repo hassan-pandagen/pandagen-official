@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, CreditCard, Gauge, Layers3 } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Webflow true cost",
         "Webflow pricing 2026",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-18",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-true-cost")],
@@ -65,19 +66,53 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-18",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Webflow", "Webflow pricing", "Webflow code export", "Software cost analysis", "Website migration", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
+            image: ogImageUrlForPath(`/blog/${postId}`),
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
-            articleSection: "Webflow pricing",
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
+            articleSection: "Webflow",
+            wordCount: 1900,
+            timeRequired: "PT7M",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },
+                { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
+                { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
+                { "@type": "Thing", name: "Webflow pricing" },
+            ],
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+            citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Webflow true cost", item: canonicalUrl },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            description,
+            primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
+            datePublished: "2026-03-18",
+            dateModified: "2026-08-03",
+            breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -123,17 +158,20 @@ export default function WebflowTrueCostPage() {
                             and internal operating time for a defined period.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Webflow documentation.
+                            Every Webflow figure on this page was re-checked against Webflow&apos;s own pricing page and help center on August 2, 2026.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="13 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="7 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "Start with the live account and invoice because plan access and transition status can differ.",
+                                "Webflow's published floor on August 2, 2026: Basic $15/mo billed yearly with no CMS, Premium $25/mo billed yearly with CMS. Per site, USD, before tax.",
+                                "Add a Workspace plan if you need code export or more than one seat: Core $19/mo billed yearly, Growth $49/mo billed yearly.",
+                                "Add-ons are priced by usage, not bundled: Optimize from $299/mo, Analyze from $9/mo, Localize $9 or $29/mo.",
+                                "Selling adds an Ecommerce plan: Standard $29/mo with a 2% transaction fee, Plus $74/mo and Advanced $212/mo at 0%, plus whatever Stripe or PayPal charge you.",
                                 "Separate mandatory platform cost from optional apps, internal labor and one-time projects.",
                                 "Model usage and fees from actual traffic, content, submissions, seats and commerce.",
                                 "Compare alternatives over the same period and requirements; custom operation is not free.",
@@ -144,7 +182,7 @@ export default function WebflowTrueCostPage() {
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
                             { icon: CreditCard, title: "Direct", body: "Site, Workspace, add-ons and provider invoices." },
-                            { icon: Layers3, title: "Usage", body: "Visits, bandwidth, CMS, seats, forms and commerce." },
+                            { icon: Layers3, title: "Usage", body: "Visits, bandwidth, CMS items, seats, forms and the store." },
                             { icon: Gauge, title: "Operation", body: "Design, content, engineering, support and incidents." },
                             { icon: Calculator, title: "Period", body: "One-time plus recurring cost over a fixed horizon." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
@@ -158,10 +196,14 @@ export default function WebflowTrueCostPage() {
 
                     <BlogHeader>What does Webflow cost when you add everything up?</BlogHeader>
                     <BlogText>
-                        Webflow is rolling out updated Website plans, and the available plan and features can depend on
-                        the site and account. The current help center distinguishes Starter, Basic and Premium Website
-                        plans and separate Ecommerce plans. A Workspace plan can also be required for collaboration or
-                        code export. Use the live dashboard and
+                        Checked against Webflow&apos;s own pricing page on August 2, 2026: Site plans are Starter at $0,
+                        Basic at $15/mo billed yearly and Premium at $25/mo billed yearly, all quoted per site in USD
+                        before tax. Basic carries 300 static pages and 10 GB of monthly bandwidth but no CMS at all;
+                        Webflow states Basic is &ldquo;specifically for sites that do not use any CMS or Ecommerce
+                        features&rdquo;, so a single Collection puts the site on Premium. Platform plans are Team at
+                        $2,500/mo on an annual contract and Enterprise, for which Webflow publishes no figure. A paid
+                        Workspace plan is separate again, from $19/mo billed yearly for Core. Those are the plan
+                        numbers; the rest of this page is what your invoice adds on top. Verify against the
                         {" "}<a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>current pricing page</a>
                         {" "}rather than copying an old annual price table. If you are also pricing the other side of
                         the decision, our{" "}
@@ -188,23 +230,73 @@ export default function WebflowTrueCostPage() {
                     </div>
 
                     <BlogHeader>The recurring line items teams miss</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Seven lines, and not one of them appears on the Webflow invoice, which is exactly why a cost review built from that invoice alone comes out low. Each gets bought separately and remembered separately. Added up once, the total usually surprises whoever signed off the plan price.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Domain, email and DNS, which are separate from the website plan.",
                             "Additional Workspace access, roles or client collaboration.",
                             "Localization, analytics, experimentation and consent tooling.",
-                            "Forms, file storage, email delivery, search, membership and automation.",
+                            "Forms, file storage, sending email, search, memberships and automation.",
                             "Ecommerce apps, payment processing, transaction costs and customer support.",
                             "Agency retainers, freelance work or internal design and engineering time.",
-                            "Accessibility, security, QA, backups, incident response and compliance work.",
+                            "Accessibility work, security, testing, backups, someone on call, and anything compliance requires.",
                         ]}
                     />
                     <BlogText>
-                        Webflow&apos;s current form documentation, for example, lists unlimited submissions for Site
-                        plans but separate file-storage limits and overage pricing. That does not make forms costless:
+                        Forms are the clearest example of a figure the summaries get wrong. Webflow&apos;s form
+                        documentation states that the free Starter Site plan is capped at 50 submissions in total, that
+                        the cap does not reset, and that submissions are unlimited on every other Site plan. There is no
+                        per-block overage. The cost sits in storage instead: form file uploads are free to 10 GB, then
+                        $0.50 per GB per month, with a hard limit at 100 GB. Checked August 2, 2026. That does not make forms costless either:
                         spam handling, routing, CRM integration, consent, retention and operations can still create
                         work or vendor spend.
                     </BlogText>
+
+                    <BlogHeader id="workspace-seats">What a Workspace and its seats actually cost</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the half of the bill that sits behind a tab on Webflow&apos;s pricing page and gets
+                            left out of most cost comparisons, including the AI-generated ones. Read on August 2, 2026:
+                            every account includes a free Starter Workspace with one full seat and two staging sites.
+                            Core is $19/mo billed yearly and Growth is $49/mo billed yearly. On top of the plan,
+                            <strong> extra seats are charged per person</strong>: a Full seat, which designs sites or
+                            manages admin settings, is $39/mo billed yearly; a Limited seat, which edits content and
+                            builds pages from components, is $15/mo; reviewer and commenter seats are free. Webflow AI
+                            usage is metered separately, with 2,000 credits a month at $20/mo billed yearly.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Two features hide inside those plan tiers and both change a migration budget. <strong>Code export
+                        requires Core</strong>, so $19/mo is the floor for getting your own markup out. And{" "}
+                        <strong>301 redirects are a Growth feature</strong>, which means the plan that lets you preserve
+                        search traffic when URLs change is $49/mo, not $19. If you are moving a site into Webflow and
+                        mapping old URLs, price Growth from the start rather than discovering it at cutover. Growth also
+                        carries site-level roles, publishing permissions and password protection, which is usually what
+                        an agency actually needs rather than more staging.
+                    </BlogText>
+                    <BlogText>
+                        The arithmetic that catches teams: a five-person marketing team on Growth is $49 plus four
+                        additional seats. Put them all on Full seats and that is $49 + $156 = $205 a month before a
+                        single Site plan is paid for. Put the three who only write copy on Limited seats and it is $49 +
+                        $39 + $45 = $133. Auditing who genuinely needs a Full seat is the fastest saving on this whole
+                        page, and it takes about ten minutes in the members list.
+                    </BlogText>
+
+                    <InsightBox variant="warning" label="A seat change lands on August 4, 2026">
+                        Webflow&apos;s{" "}
+                        <a href="https://help.webflow.com/hc/en-us/articles/36046081578515-Feature-sunsets-deprecations" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>feature sunsets page</a>,
+                        read on August 3, 2026, states that the legacy Editor and legacy Editor whitelabeling become
+                        unavailable starting August 4, 2026, and that existing legacy Editor users are automatically
+                        given access to a free client seat or a limited seat as part of the migration. Those two
+                        outcomes are not the same line on your bill: reviewer and commenter seats are free, while a
+                        Limited seat is $15/mo billed yearly. If clients or colleagues have been publishing through
+                        the legacy Editor, check which seat each of them was actually assigned before you finish this
+                        calculation.
+                    </InsightBox>
 
                     <BlogHeader>How the bill changes as the site grows</BlogHeader>
                     <BlogText>
@@ -216,7 +308,10 @@ export default function WebflowTrueCostPage() {
 
                     <BlogHeader>Code export changes the exit calculation</BlogHeader>
                     <BlogText>
-                        Webflow says code export is available on paid Workspace plans. Exported HTML, CSS, JavaScript
+                        Webflow&apos;s help center puts it directly: &ldquo;Code export is only available on Workspace
+                        plans &mdash; that is, Site plans do not include the ability to export your site&apos;s
+                        code.&rdquo; The cheapest paid Workspace plan that includes it is Core at $19/mo billed yearly,
+                        on top of whatever the Site plan costs. Exported HTML, CSS, JavaScript
                         and assets do not include working CMS, ecommerce, User Accounts, localized content beyond the
                         primary locale, code components, password protection, native form processing or site search.
                         A future move therefore includes replacement and migration work, not merely hosting the ZIP.
@@ -226,7 +321,7 @@ export default function WebflowTrueCostPage() {
                         <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline">do you own your website</Link>.
                     </BlogText>
 
-                    <BlogHeader>Performance is not a hidden platform fee</BlogHeader>
+                    <BlogHeader>Does Webflow have a PageSpeed ceiling you should budget for?</BlogHeader>
                     <BlogText>
                         There is no fixed Webflow PageSpeed ceiling to enter as a line item in your cost model, because
                         no such platform-wide number exists. Measure the live site by representative route, field{" "}
@@ -236,7 +331,41 @@ export default function WebflowTrueCostPage() {
                         decision model without claiming the platform caused a ranking or revenue result.
                     </BlogText>
 
-                    <BlogHeader>Availability is a risk input, not a stale incident count</BlogHeader>
+                    <BlogHeader id="actually-free">Is Webflow actually free?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Free to build with, not free to launch. The Starter Site plan is $0 and it publishes to a
+                            webflow.io subdomain with two static pages, 1 GB of bandwidth, a limited CMS and a hard cap
+                            of 50 form submissions that never resets. The free Starter Workspace is genuinely useful for
+                            designing and staging, and it includes one full seat. What $0 does not buy is a custom
+                            domain, which is where a real site starts, so the honest floor for anything public is $15/mo
+                            on Basic, and $25/mo on Premium the moment you want a CMS. Read from Webflow&apos;s pricing
+                            page on August 2, 2026.
+                        </BlogText>
+                    </div>
+
+                    <BlogHeader id="worth-it">Is Webflow worth it in 2026?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            For a marketing site that one or two people edit and nobody needs to export, yes, and the
+                            total above is a fair price for not employing a developer. It stops being worth it at three
+                            specific thresholds, all of which you can check today rather than guess at. The first is the
+                            seat count, because a Full Workspace seat is $39/mo per person and a Limited one is $15/mo,
+                            so that line grows with your team rather than with your traffic. The second is the add-on mix, because Optimize from
+                            $299/mo and Localize can each cost more than the site plan they sit on. The third is the
+                            moment somebody asks for the code, at which point a paid Workspace plan is the entry fee and
+                            what you get back still excludes the CMS, the store and anything behind a login.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Notice that none of those thresholds is about design or speed, which is where the argument
+                        usually gets had. Webflow is a good product and the reason teams leave it is almost never that it
+                        stopped working. It is that the bill grew along an axis nobody priced at the start. Run the
+                        ten-step audit below on your own account and you will know which of the three you are closest to,
+                        which is a more useful answer than anyone else&apos;s verdict.
+                    </BlogText>
+
+                    <BlogHeader>How to price downtime risk without an outage count</BlogHeader>
                     <BlogText>
                         Use Webflow&apos;s current status history and your monitoring to document incidents affecting
                         the site. Price the business requirement through service levels, dependencies, recovery,
@@ -245,11 +374,16 @@ export default function WebflowTrueCostPage() {
                     </BlogText>
 
                     <BlogHeader>Audit your Webflow cost in ten steps</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Ten steps, and the first three take about ten minutes because the information is already sitting in your account. The rest is the actual work: mapping each dependency to a business workflow, which is what tells you whether a line is removable or load-bearing. Keep the order, because step ten is only answerable once step eight is.
+                        </BlogText>
+                    </div>
                     <ol className="my-6 list-decimal space-y-3 pl-6 leading-relaxed text-stone-700">
                         <li>Export the last twelve months of Webflow and connected-vendor invoices.</li>
                         <li>Record the live Website and Workspace plan, renewal date and billing period.</li>
                         <li>List every enabled Webflow add-on and responsible owner.</li>
-                        <li>List external tools for forms, search, membership, automation, analytics and commerce.</li>
+                        <li>List the outside tools doing your forms, search, memberships, automation, analytics and selling.</li>
                         <li>Capture billed units and actual use for each service.</li>
                         <li>Record internal and external hours for content, design, engineering and support.</li>
                         <li>Map each dependency to a required business workflow.</li>
@@ -258,7 +392,12 @@ export default function WebflowTrueCostPage() {
                         <li>Choose retain, right-size, consolidate, replace or investigate with an owner and date.</li>
                     </ol>
 
-                    <BlogHeader>What to do with the number</BlogHeader>
+                    <BlogHeader>What to do once you have your total</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Four routes, and three of them keep you on Webflow. That is the honest distribution: most cost reviews end in right-sizing a plan and removing tools nobody owns rather than in a migration. Pick the route your total actually supports, not the one you suspected before you started counting.
+                        </BlogText>
+                    </div>
                     <BlogList
                         items={[
                             "Retain Webflow when the managed editor and features justify the complete cost.",
@@ -296,7 +435,7 @@ export default function WebflowTrueCostPage() {
                         You will not find an unnamed client bill or a ranking anecdote used as proof on this page. When
                         we publish a result, it comes with the relationship it came from, the date, how it was
                         measured and what the measurement does not tell you. Projects connected to our own founders are
-                        labelled as founder-affiliated rather than presented as independent client proof. Apply the same
+                        labeled as founder-affiliated rather than presented as independent client proof. Apply the same
                         test to any figure you are shown while comparing platforms: if the source, date and method are
                         missing, it is not a number you can plan a budget around.
                     </InsightBox>

@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 };
 
 const controls = [
-  ["Mutable facts", "Prices, product limits, policies, market data, incidents, and other changing facts should cite a primary source and state the date checked and relevant region, plan, currency, or version."],
-  ["First-party results", "A case-study metric should identify the subject, period, measurement source, baseline, method, material limitations, and permission to publish. Results are not presented as typical or guaranteed."],
-  ["Estimates and illustrations", "Forecasts, example budgets, and calculators are labeled as estimates, disclose important assumptions, and are not represented as quotes or promised outcomes."],
+  ["Mutable facts", "Anything that changes, prices, product limits, policies, market data, incidents, should cite a primary source and say when we checked it and which region, plan currency, or version."],
+  ["First-party results", "A case-study number should say who it is about, over what period, where it was measured, what it started from, how it was measured, where it stops being reliable, and that we have permission to publish it. Results are not presented as typical or guaranteed."],
+  ["Estimates and illustrations", "Forecasts, example budgets and calculators are labelled as estimates, state what they assume, and are never presented as quotes or promises."],
   ["Search and performance", "Lab tests are distinguished from field data. Search rankings, indexing, traffic, AI citations, PageSpeed scores under all conditions, conversions, and revenue are not guaranteed."],
-  ["Comparisons", "Named-company comparisons should disclose selection criteria, sources, checked-on dates, material differences in scope, and PandaCodeGen's commercial interest."],
+  ["Comparisons", "When we compare named companies we say how we picked them, where the information came from, when we checked, where the scope genuinely differs, and what PandaCodeGen's commercial interest in the comparison is."],
   ["Corrections", "Material errors are corrected in the page and its metadata. A correction note should be added when the change affects the conclusion or a reader's commercial decision."],
 ];
 
@@ -67,9 +67,9 @@ export default function EditorialPolicyPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-cognac">Editorial governance</p>
           <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">Editorial & Evidence Policy</h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700">
-            We aim to make it clear what is an externally sourced fact, a first-party observation, an estimate, an opinion, or a commercial term. A page is not evidence for its own claims, and a hyperlink alone is not a completed fact-check.
+            We try to make it obvious which is which: a fact from someone else, something we saw ourselves, an estimate, an opinion, or a commercial term. A page is not evidence for its own claims, and a hyperlink alone is not a completed fact-check.
           </p>
-          <p className="mt-5 text-sm text-stone-600">Effective: 20 July 2026 · Last reviewed: 23 July 2026</p>
+          <p className="mt-5 text-sm text-stone-600">Effective: July 20, 2026 · Last reviewed: July 23, 2026</p>
         </div>
       </section>
 
@@ -100,6 +100,15 @@ export default function EditorialPolicyPage() {
             <h2 className="text-3xl font-bold">Content review status</h2>
             <p className="mt-5 leading-7 text-stone-700">
               The July 2026 release review covered every current blog route and its shared search-card and FAQ data. Universal ranking, revenue, performance, hosting, cutover, ownership, refund, and AI-citation promises were removed or bounded, and a repository release gate now checks those prohibited patterns. Mutable vendor, product, price, incident, market, security, and legal facts still require a dated primary-source check whenever an article is materially updated. Readers should never treat an example as a PandaCodeGen quote, guarantee, or prediction for their project.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">How this content is produced</h2>
+            <p className="mt-5 leading-7 text-stone-700">
+              Articles on this site are researched, drafted and edited by a named person with AI assistance, and every one carries a byline that resolves to that person&apos;s background page. AI tools are used the way a research assistant and a copy editor are used: to gather candidate sources, draft and restructure passages, and check prose for clarity. They are not used to publish unreviewed output, and no article is generated and posted without a human reading it in full.
+            </p>
+            <p className="mt-5 leading-7 text-stone-700">
+              Every factual claim, price, date, limit and quotation is verified against the primary source by a person before publication, and the date of that check is written into the page rather than implied by the timestamp. Where a figure cannot be verified against a primary source, we say so and leave it out rather than repeat it from a secondary summary. Where we publish an observation of our own, it carries the method and the date so a reader can repeat it. We disclose this because we recommend readers ask vendors the same question, and it would be inconsistent to ask it without answering it here.
             </p>
           </div>
           <div>

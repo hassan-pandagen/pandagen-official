@@ -1,4 +1,4 @@
-import { ogImageForPath } from "@/lib/seo/og";
+import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ChartNoAxesCombined, Gauge, SearchCheck } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: `/blog/${postId}` },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "how website speed affects SEO",
         "website speed ranking factor",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-09",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-website-speed-affects-seo")],
@@ -46,14 +47,9 @@ export const metadata: Metadata = {
     twitter: { card: "summary_large_image", title, description },
 };
 
-const sources = [
-    { name: "Google Search Central: Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
-    { name: "Google Search Central: page experience", url: "https://developers.google.com/search/docs/appearance/page-experience" },
-    { name: "Google Search Central: debugging Search traffic drops", url: "https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" },
-    { name: "PageSpeed Insights documentation", url: "https://developers.google.com/speed/docs/insights/v5/about" },
-    { name: "Google Search Central: mobile-first indexing", url: "https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing" },
-    { name: "web.dev case study: Swappie", url: "https://web.dev/case-studies/swappie" },
-];
+// Google and web.dev documentation is verified before publication but is deliberately not listed
+// as a page source and not emitted into citation[]. Claims drawn from it are attributed in prose.
+// Do not reintroduce a `sources` array of Google URLs here.
 
 const articleSchema = {
     "@context": "https://schema.org",
@@ -62,21 +58,49 @@ const articleSchema = {
             "@type": "Article",
             "@id": `${canonicalUrl}#article`,
             headline: title,
+            image: ogImageUrlForPath("/blog/how-website-speed-affects-seo"),
             description,
             datePublished: "2026-03-09",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Web performance", "Core Web Vitals", "Lighthouse", "Rendering strategies", "Next.js"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO and performance",
             inLanguage: "en-US",
-            citation: sources.map((source) => ({ "@type": "WebPage", ...source })),
+            about: [
+                { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
+                { "@type": "Thing", name: "Core Web Vitals", sameAs: ["https://en.wikipedia.org/wiki/Core_Web_Vitals"] },
+                { "@type": "SoftwareApplication", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },
+            ],
+            wordCount: 1550,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
+                { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
+                { "@type": "ListItem", position: 3, name: "Website speed and SEO", item: "https://www.pandacodegen.com/blog/how-website-speed-affects-seo" },
+            ],
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#webpage",
+            url: "https://www.pandacodegen.com/blog/how-website-speed-affects-seo",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/how-website-speed-affects-seo#breadcrumb" },
+            inLanguage: "en-US",
         },
         {
             "@type": "FAQPage",
@@ -90,7 +114,6 @@ const articleSchema = {
     ],
 };
 
-const sourceLinkClass = "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 
 export default function SpeedAndSeoGuide() {
     return (
@@ -115,14 +138,22 @@ export default function SpeedAndSeoGuide() {
                             fundamental. There is no universal “100 milliseconds equals one percent” rule.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Google Search, PageSpeed and web.dev guidance.
+                            Reviewed August 3, 2026 against current Google Search and PageSpeed guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="March 9, 2026" readTime="11 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="March 9, 2026" readTime="5 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The defensible answer</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            Yes, site speed affects SEO, and it does so through one narrow channel: Core Web Vitals
+                            feed Google&apos;s ranking systems as one input among many. What it does not do is set a
+                            score you have to clear. There is no Lighthouse number that guarantees a position or
+                            triggers a penalty, and a fast page that answers the query badly still loses to a slower
+                            page that answers it well. Five propositions hold up; everything else you will read on
+                            this topic is inference from them.
+                        </p>
                         <BlogList
                             items={[
                                 "Core Web Vitals contribute to Google's broader ranking systems; they are not the whole ranking algorithm.",
@@ -134,11 +165,19 @@ export default function SpeedAndSeoGuide() {
                         />
                     </section>
 
+                    <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">Three evidence streams, and why you need all three</h2>
+                    <p className="mb-2 leading-relaxed text-stone-700">
+                        A speed-and-search argument is only as good as the evidence behind it, and no single stream
+                        settles it. Search data tells you what changed in rankings and impressions but not why.
+                        Experience data tells you what real visitors met and what a lab trace blames it on. Business
+                        data tells you whether any of it was worth money. Read one stream alone and you will attribute
+                        a traffic change to speed that a competitor&apos;s new page actually caused.
+                    </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: SearchCheck, title: "Search", body: "Pages, queries, impressions, clicks, positions, indexing and SERP context." },
+                            { icon: SearchCheck, title: "Search", body: "What Search Console shows, and what else was on the page." },
                             { icon: Gauge, title: "Experience", body: "Field LCP, INP and CLS plus repeated lab diagnostics." },
-                            { icon: ChartNoAxesCombined, title: "Business", body: "Journey, traffic source, device, conversion, value and confounders." },
+                            { icon: ChartNoAxesCombined, title: "Business", body: "What people did, what it was worth, and what else changed." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
                             <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
                                 <Icon className="mb-3 h-5 w-5 text-cognac" />
@@ -150,7 +189,7 @@ export default function SpeedAndSeoGuide() {
 
                     <BlogHeader>What Google confirms about Core Web Vitals</BlogHeader>
                     <BlogText>
-                        Google&apos;s current guidance defines Core Web Vitals as real-user metrics for loading,
+                        Google&apos;s guidance, as read on August 3, 2026, defines Core Web Vitals as real-user metrics for loading,
                         responsiveness and visual stability. At the 75th percentile, the published “good” thresholds are
                         LCP within 2.5 seconds, INP within 200 milliseconds and CLS at or below 0.1. Google says its
                         ranking systems use these metrics, while also stating that strong page experience does not
@@ -169,8 +208,10 @@ export default function SpeedAndSeoGuide() {
                     <BlogText>
                         PageSpeed Insights can show eligible field data and a Lighthouse lab result. The 0-to-100
                         Lighthouse performance score is a weighted diagnostic generated under a synthetic profile. It
-                        changes with page state, test conditions and tool versions. Google does not publish 70, 90 or
-                        100 as a direct ranking requirement. Our{" "}
+                        changes with page state, test conditions and tool versions. The 90-to-100 range is Lighthouse&apos;s
+                        own &ldquo;good&rdquo; band, meaning the tool&apos;s verdict on its own weighted diagnostic, and
+                        that is the whole of what it means. Google does not publish 70, 90 or 100 as a direct ranking
+                        requirement. Our{" "}
                         <Link href="/blog/how-to-achieve-100-pagespeed" className="text-cognac hover:underline">
                             repeatable process for improving a Lighthouse score
                         </Link>{" "}
@@ -206,8 +247,8 @@ export default function SpeedAndSeoGuide() {
                         items={[
                             "Core Web Vitals are one part of Google's broader systems.",
                             "Server failure, blocked resources or broken rendering can affect crawl and usable content as well as performance.",
-                            "A redesign or migration often changes content, internal links, metadata, layout, tracking and platform behavior at the same time.",
-                            "Demand, competition, SERP presentation, links, seasonality and Google updates can move while performance changes.",
+                            "A redesign or migration usually changes the content, the internal links, the metadata, the layout, the tracking and the platform all at once.",
+                            "Demand, competitors, how results are displayed, your links, the season and Google itself can all shift while you are changing speed.",
                         ]}
                     />
                     <BlogText>
@@ -216,12 +257,56 @@ export default function SpeedAndSeoGuide() {
                         change, or speed alone moves a page a fixed number of positions exceed Google&apos;s guidance.
                     </BlogText>
 
+                    <BlogHeader id="grading-the-claims">Four things you will be told, graded</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Search this question and four claims come back almost every time. They are not equally
+                            true, and the weakest one is usually stated with the most confidence. Taking them in order
+                            of how well they hold up.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        <strong>Core Web Vitals are used by ranking systems. True.</strong> Google says so directly,
+                        and also says good scores do not guarantee top rankings and that relevance remains
+                        fundamental. Both halves are the claim; quoting only the first half is where the trouble
+                        starts.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Mobile-first indexing means mobile speed matters most. Half true, and the wrong
+                        half is usually the one repeated.</strong> Google primarily uses the mobile version of
+                        content for indexing, which is about the content being present and crawlable on mobile. It
+                        does not mean a mobile Lighthouse score decides rank.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Faster pages get crawled more, so speed helps via crawl budget. Overstated for
+                        almost every site that asks.</strong> Crawl budget is real and server response time does
+                        affect it, but Google has said it is not something most sites need to think about; it becomes
+                        a live concern at large URL counts or on sites generating pages faster than they can be
+                        crawled. If you have a few hundred pages, this is not your problem.
+                    </BlogText>
+                    <BlogText>
+                        <strong>Visitors leave after three seconds, and that bounce signals poor quality to search
+                        engines. This is the myth.</strong> The first half is a usability observation that varies
+                        enormously by intent, device and what the visitor came for. The second half is the part to
+                        reject: your analytics bounce rate is not a ranking input, and a specific second-count
+                        threshold is not something Google publishes. The claim survives because it sounds like it
+                        should be true, and because it is repeated in forum answers that predate the current guidance
+                        entirely.
+                    </BlogText>
+
                     <BlogHeader>How to measure a search effect</BlogHeader>
+                    <BlogText>
+                        Proving that a search change came from speed means ruling out everything else that shipped with
+                        it, which is why the release log comes first and the performance data comes fourth. Six steps
+                        do that. The last one is the one that gets skipped: report the competing explanations you could
+                        not eliminate, because a finding that names its own uncertainty is the only kind worth acting
+                        on.
+                    </BlogText>
                     <BlogList
                         items={[
-                            "Annotate the exact release and list all material content, link, design, tracking, URL and technical changes.",
+                            "Note the exact release, and list every content, link, design, tracking, URL and technical change that went with it.",
                             "Compare Search Console pages and queries by country, device and search type across sensible periods.",
-                            "Check indexing, crawl, statuses, robots, canonicals, rendered content, sitemaps and server errors.",
+                            "Check indexing, crawling, status codes, robots rules, canonicals, what actually renders, the sitemaps, and server errors.",
                             "Compare URL or template field Core Web Vitals where eligible data exists and retain lab traces for diagnosis.",
                             "Use unaffected pages or staged rollouts as a comparison where the site and risk permit it.",
                             "Report uncertainty and competing explanations instead of assigning the full change to speed.",
@@ -241,6 +326,16 @@ export default function SpeedAndSeoGuide() {
                     </BlogText>
 
                     <BlogHeader>How to measure business impact</BlogHeader>
+                    <BlogText>
+                        Value a speed change from your own funnel rather than by borrowing somebody else&apos;s
+                        multiplier. Define the journey, segment it, watch the failure signals rather than only the
+                        conversions, and control for everything else that moved. Then state the result as a range with
+                        a confidence level. A single number with no range is the shape of a claim that was not
+                        measured. The evidentiary standard behind all of this is set out in our{" "}
+                        <Link href="/editorial-policy" className="text-cognac hover:underline">editorial policy</Link>, and{" "}
+                        <Link href="/blog/aeo-web-performance-glossary" className="text-cognac hover:underline">the performance glossary</Link>{" "}
+                        defines the terms precisely.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Define the affected journey and event, including test, refund and attribution treatment.",
@@ -253,7 +348,7 @@ export default function SpeedAndSeoGuide() {
 
                     <BlogHeader>How to read performance case studies</BlogHeader>
                     <BlogText>
-                        A web.dev case study can show that a named company changed particular metrics and observed
+                        A vendor-published case study can show that a named company changed particular metrics and observed
                         particular outcomes during a stated period. It does not establish the same multiplier for
                         another industry, traffic mix, implementation or experiment. Use it to generate hypotheses and
                         study methods, then measure your own property.
@@ -265,17 +360,19 @@ export default function SpeedAndSeoGuide() {
                             Panda Patches
                         </Link>{" "}
                         is owned by a PandaCodeGen co-founder, so this is founder-affiliated evidence rather
-                        than an independent client result. It ran on WordPress and WooCommerce for three years at roughly
-                        64 mobile PageSpeed with an LCP near 5.8 seconds. We rebuilt it on Next.js, Sanity, Supabase and
-                        Square, and the mobile lab scores moved into the 90s.
+                        than an independent client result. It ran on WordPress and WooCommerce before we rebuilt it on
+                        Next.js, Sanity, Supabase and Square. <strong>We are not publishing before-and-after scores for
+                        it here</strong>, because we do not hold dated test records with the device profile, network
+                        conditions and run count that would make those numbers mean anything. A figure without its
+                        method is not evidence, and separating those two things is what this page is about.
                     </BlogText>
-                    <InsightBox variant="warning" label="Read this the way we just told you to read case studies">
-                        The paragraph above is exactly the kind of evidence the previous section warns about, so hold it to
-                        the same standard. It is a lab measurement on one property, taken before and after a rebuild that
-                        changed the platform, the hosting, the templates and the images all at once. It does not isolate
-                        which change produced the result, it does not establish a multiplier for your site, and it is not
-                        a search-ranking claim. We publish it because it is our own property and we can state the
-                        conditions, not because it proves what a rebuild will do for you.
+                    <InsightBox variant="warning" label="Why there is no number in the paragraph above">
+                        Hold us to the standard we just set. We own a rebuilt property and we still cannot show you a
+                        defensible before-and-after for it, which is a worse position for us than having one. Even with
+                        clean records the figure would not isolate anything, because that rebuild changed the platform,
+                        the hosting, the templates and the images in the same release. The number is missing on purpose,
+                        and it is the same reason to distrust any single-property figure handed to you without its
+                        conditions attached.
                     </InsightBox>
 
                     <BlogHeader>Framework and platform choice</BlogHeader>
@@ -339,13 +436,6 @@ export default function SpeedAndSeoGuide() {
                         </Link>
                         .
                     </BlogText>
-
-                    <BlogHeader>Primary sources</BlogHeader>
-                    <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
-                        {sources.map((source) => (
-                            <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>{source.name}</a></li>
-                        ))}
-                    </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />

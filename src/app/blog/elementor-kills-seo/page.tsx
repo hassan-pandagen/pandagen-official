@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title,
     description,
     alternates: { canonical: "/blog/elementor-kills-seo" },
+    robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "Elementor SEO",
         "Elementor slow",
@@ -63,32 +64,44 @@ const articleSchema = {
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
                 name: "Hassan Jamal",
                 jobTitle: "Co-founder and Lead Engineer",
-                url: "https://www.pandacodegen.com/about",
+                url: "https://www.pandacodegen.com/about/hassan",
+                image: { "@type": "ImageObject", url: "https://www.pandacodegen.com/team/hassan.png", width: 400, height: 400 },
+                knowsAbout: ["Technical SEO", "Search Console", "Structured data", "Website migration"],
+                sameAs: ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
-            mainEntityOfPage: { "@id": canonicalUrl },
+            mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress",
             inLanguage: "en-US",
+            about: [
+                { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
+                { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
+            ],
+            wordCount: 1250,
+            timeRequired: "PT5M",
+            speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: [
                 {
-                    "@type": "WebPage",
+                    "@type": "CreativeWork",
                     name: "Elementor: Improve performance features",
                     url: "https://elementor.com/help/what-are-performance-experiments/",
                 },
-                {
-                    "@type": "WebPage",
-                    name: "Google Search Central: Core Web Vitals",
-                    url: "https://developers.google.com/search/docs/appearance/core-web-vitals",
-                },
-                {
-                    "@type": "WebPage",
-                    name: "Google Search Central: Page experience",
-                    url: "https://developers.google.com/search/docs/appearance/page-experience",
-                },
+                // Google and web.dev documentation is verified before publication but is deliberately
+                // not listed as a page source and not emitted here. Those claims are attributed in
+                // prose instead. Do not reintroduce developers.google.com URLs into this array.
             ],
         },
         {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#webpage",
+            url: "https://www.pandacodegen.com/blog/elementor-kills-seo",
+            isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+            breadcrumb: { "@id": "https://www.pandacodegen.com/blog/elementor-kills-seo#breadcrumb" },
+            inLanguage: "en-US",
+        },
+        {
             "@type": "BreadcrumbList",
+            "@id": `${canonicalUrl}#breadcrumb`,
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
@@ -140,24 +153,36 @@ export default function ElementorSeoPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Elementor and Google primary guidance.
                         </p>
+                        <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                            Disclosure: PandaCodeGen sells migrations off WordPress and page-builder sites, so we have
+                            a commercial interest in the migrate side of this question. That is why the sections below
+                            put optimizing in place ahead of rebuilding, and publish no score, penalty or traffic
+                            figure for Elementor.
+                        </p>
                     </header>
 
                     <BlogAuthor
                         name="Hassan Jamal"
                         role="Co-founder and Lead Engineer"
                         date="March 10, 2026"
-                        readTime="8 min read"
+                        readTime="5 min read"
                         bio="Hassan leads measured WordPress performance diagnostics and search-sensitive migrations."
                     />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            Does Elementor hurt SEO? Not by itself, and not in a way that shows up as a penalty. It
+                            adds work to the page, which can affect performance, and performance is one input among
+                            many in how a page ranks. What decides your result is what your own templates ship, which
+                            is measurable. Five things follow from that.
+                        </p>
                         <BlogList
                             items={[
                                 "Elementor does not automatically kill SEO, and one demo test cannot establish platform-wide ranking damage.",
-                                "Inspect the initial and rendered page, indexing controls, content, metadata, links, structured data, and field Core Web Vitals.",
-                                "Elementor now documents stable and experimental performance features for code, DOM, caching, image loading, and unused Gutenberg assets.",
-                                "Measure actual route and visitor conditions before deciding whether optimization, a lighter WordPress rebuild, or migration is justified.",
+                                "Look at what arrives before JavaScript runs and what arrives after, then the indexing rules, the content, the metadata, the links, the structured data, and your real-user Core Web Vitals.",
+                                "Elementor documents stable and experimental performance features for code, DOM, caching, image loading, and unused Gutenberg assets.",
+                                "Measure the actual pages under the conditions real visitors have, then decide whether to optimize, rebuild lighter on WordPress, or move.",
                                 "A faster replacement does not guarantee rankings, traffic, conversions, or revenue.",
                             ]}
                         />
@@ -165,7 +190,7 @@ export default function ElementorSeoPage() {
 
                     <BlogHeader>Why “Elementor kills SEO” is the wrong diagnosis</BlogHeader>
                     <BlogText>
-                        Search performance depends on whether Google can crawl, render, index, understand, and rank a
+                        Search performance depends on whether Google can reach the page, render it, index it, work out what it is about, and rank a
                         useful page for a query. Elementor can affect the generated markup and frontend workload, but it
                         does not decide the content&apos;s relevance, backlinks, canonical choice, internal linking,
                         search demand, competition, or every plugin&apos;s behavior. Plugin work has its own method in
@@ -211,16 +236,16 @@ export default function ElementorSeoPage() {
                     <BlogHeader>How a builder adds work to a page</BlogHeader>
                     <BlogText>
                         The useful question is not whether Elementor is heavy in the abstract but which of these
-                        behaviours your own pages exhibit. Each one is observable in a browser trace on your site, and
+                        behaviors your own pages exhibit. Each one is observable in a browser trace on your site, and
                         each has a different fix.
                     </BlogText>
                     <BlogList
                         items={[
                             "Framework assets requested regardless of route: the builder stylesheet and script, plus the libraries behind carousels, dialogs, scroll effects and share buttons, can be enqueued on pages that contain none of those widgets. Load a plain text page, open the network panel and see which builder handles are still fetched.",
-                            "Generated per-element CSS: styling is emitted per element and per breakpoint rather than as reusable classes, which makes unused-CSS removal and tree shaking far less effective than on a hand-written stylesheet.",
-                            "Nested container markup: each section, column and widget adds wrapper elements, so the same visual result carries more DOM nodes. Count them with document.querySelectorAll on a builder template and on a plain template of the same site and compare.",
+                            "Generated per-element CSS: styling can be emitted per element and per breakpoint rather than as reusable classes, which is worth checking because it changes how much unused CSS removal can recover.",
+                            "Nested container markup: each section, column and widget adds wrapper elements, so count the nodes on your own template rather than assuming a figure. Count them with document.querySelectorAll on a builder template and on a plain template of the same site and compare.",
                             "Competing specificity layers: builder defaults, theme styles, kit settings and per-element overrides all resolving on every render, which shows up as style and layout time in the Performance panel rather than as bytes.",
-                            "Add-on packs and Pro widgets: third-party widget libraries register their own assets on top of the builder, and are the part of the stack most often forgotten in an audit.",
+                            "Add-on packs and Pro widgets: third-party widget libraries register their own assets on top of the builder, and are easy to miss in an audit because they are not listed with the builder.",
                         ]}
                     />
                     <BlogText>
@@ -239,7 +264,7 @@ export default function ElementorSeoPage() {
                     <BlogList
                         items={[
                             "Check whether the initial response and rendered DOM contain the main content, links, metadata, canonical, and schema.",
-                            "Record URL-level or origin-level CrUX field data where available and do not relabel a Lighthouse run as field evidence.",
+                            <>{"Record URL-level or origin-level CrUX field data where available and do not relabel a "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" run as field evidence."}</>,
                             "Repeat lab tests with the same device, network, cache, consent, location, authentication, and browser version.",
                             "Identify the actual LCP element, long tasks and slow interactions, layout-shift sources, request waterfall, and server response.",
                             "Measure DOM depth and element count by template, then inspect nesting and widgets rather than assigning one generic Elementor multiplier.",
@@ -264,8 +289,7 @@ export default function ElementorSeoPage() {
                     <BlogText>
                         If the builder itself turns out to be the constraint on a given template, the ladder between
                         keeping it and leaving WordPress has rungs on it. Core blocks with no builder loaded is the
-                        smallest step and often enough for a static page. A lightweight theme such as GeneratePress or
-                        Astra ships less markup and CSS than a multipurpose theme bundled with a builder. A custom theme
+                        smallest step and often enough for a static page. A lightweight theme generally ships less markup and CSS than a multipurpose theme bundled with a builder, and the comparison worth making is on your own templates rather than on any recommendation.  A custom theme
                         or block templates give full control of the output while keeping the editorial workflow. Each of
                         those is cheaper and lower risk than a platform change, and each should be measured on your own
                         templates rather than assumed.
@@ -296,6 +320,12 @@ export default function ElementorSeoPage() {
                     </BlogText>
 
                     <BlogHeader>SEO controls if you leave Elementor</BlogHeader>
+                    <BlogText>
+                        These six controls are what keeps search performance intact across a rebuild, and they reduce
+                        avoidable technical risk rather than guaranteeing anything. Nobody controls whether rankings
+                        hold, how fast a site is recrawled, or when traffic returns, so treat the list as the work you
+                        can be held to and not as an outcome you have been promised.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Export the current URL, status, canonical, metadata, headings, content, internal-link, media, schema, and sitemap inventory.",
