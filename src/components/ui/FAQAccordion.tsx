@@ -1,16 +1,34 @@
-'use client';
-
-import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 interface FAQ {
   question: string;
   answer: string;
 }
 
+/**
+ * FAQ block. Answers are ALWAYS VISIBLE. Do not reintroduce a collapse.
+ *
+ * History, so this does not get "improved" back into a bug:
+ *   1. Originally the answer was rendered only when `openIndex === i`, so every
+ *      answer was absent from the served HTML until a human clicked. The FAQPage
+ *      JSON-LD asserted text that did not exist on the page.
+ *   2. That was fixed by always rendering the answer and collapsing it with CSS
+ *      (`grid-rows-[0fr]` + `overflow-hidden`). The text was now in the HTML, so
+ *      raw-HTML crawlers could read it.
+ *   3. On 4 Aug 2026 an external extraction sweep still scored 0 of 26 answers
+ *      across the money pages. A CSS-collapsed container computes to ZERO HEIGHT,
+ *      so any pipeline that filters on computed visibility drops the text, even
+ *      though it is present in the markup. The same fetcher scored 8/8 on the
+ *      pricing page, whose FAQ renders answers as plain visible text.
+ *
+ * So the requirement is not "in the DOM", it is "visible". This site's positioning
+ * is that answer engines can quote its pages; a FAQ answer no extractor can read is
+ * the most expensive place to fail that. Visible by default also removes the
+ * hydration cost and any collapse-driven layout shift.
+ *
+ * Deliberately a server component: no state, no 'use client', no JS shipped.
+ */
 export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section className="mt-10 md:mt-20 mb-0" aria-labelledby="faq-heading">
       <h2
@@ -23,41 +41,15 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-cognac/30 transition-all duration-200"
+            className="border border-gray-200 rounded-2xl bg-white p-6 transition-colors duration-200 hover:border-cognac/30"
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex items-center justify-between gap-4 p-6 text-left text-charcoal font-semibold text-lg hover:bg-stone-50 transition-colors"
-              aria-expanded={openIndex === i}
-              aria-controls={`faq-answer-${i}`}
-            >
+            <h3 className="flex items-start gap-3 text-lg font-semibold text-charcoal">
+              <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
               <span>{faq.question}</span>
-              <ChevronDown
-                className={`w-5 h-5 text-cognac shrink-0 transition-transform duration-200 ${
-                  openIndex === i ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
-            {/*
-              The answer is ALWAYS rendered and collapsed with CSS, never gated behind
-              `openIndex === i`. Conditional rendering kept every answer out of the served
-              HTML until a click, which meant the FAQPage JSON-LD asserted text that did not
-              exist on the page, and any reader that does not click — every crawler, every
-              answer engine — saw a question with no answer.
-            */}
-            <div
-              id={`faq-answer-${i}`}
-              role="region"
-              className={`grid transition-[grid-template-rows] duration-200 ease-out ${
-                openIndex === i ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-              }`}
-            >
-              <div className="overflow-hidden">
-                <div className="px-6 pb-6 text-stone-600 text-base leading-relaxed border-t border-gray-200 pt-4">
-                  {faq.answer}
-                </div>
-              </div>
-            </div>
+            </h3>
+            <p className="mt-3 border-t border-gray-200 pt-4 text-base leading-relaxed text-stone-600">
+              {faq.answer}
+            </p>
           </div>
         ))}
       </div>

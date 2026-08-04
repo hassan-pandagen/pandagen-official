@@ -65,7 +65,7 @@ export default function WebflowPageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            The Webflow Migration Service{" "}
+            The Webflow migration service:{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
               Preserve the design intent. Reassess the architecture.
             </span>
@@ -518,7 +518,6 @@ export default function WebflowPageContent() {
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    hidden={!isOpen}
                     className="border-t border-stone-200 px-5 py-4"
                   >
                     <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>

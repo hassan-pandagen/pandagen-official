@@ -563,7 +563,6 @@ export default function PageContent() {
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    hidden={!isOpen}
                     className="border-t border-stone-200 px-5 py-4"
                   >
                     <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>

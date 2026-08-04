@@ -809,7 +809,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-03",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
@@ -1129,7 +1129,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-07-23",
+    lastModified: "2026-08-03",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "Webflow can still be a strong fit when a marketing team values visual editing, the current Site and Workspace plans fit the budget, and the platform supports the next two to three years of content and integration needs. Review your actual account terms, bandwidth usage, add-ons, roadmap, performance data, and governance requirements instead of deciding from one plan change or incident." },
       { question: "When should a business leave Webflow?", answer: "Consider leaving when several structural constraints overlap: recurring cost no longer matches value, product logic or integrations exceed the supported model, export limitations create unacceptable dependency, governance requires client-controlled infrastructure, or measured performance problems remain after a focused optimization pass. One low PageSpeed score or one outage is not a complete migration case." },

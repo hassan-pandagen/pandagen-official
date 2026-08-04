@@ -58,12 +58,12 @@ export default function Hero() {
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem" }}
           >
-            Get in front of AI search{" "}
+            Outgrown WordPress, Wix or Webflow?{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              before your competitor does.
+              Move to a site built for the way AI picks its answers.
             </span>
           </h1>
 
@@ -73,11 +73,11 @@ export default function Hero() {
             className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
             style={{ color: "#44403c" }}
           >
-            We build custom Next.js sites that put a clear, quotable answer on the questions your
-            buyers actually ask, in the place{" "}
+            We move you off WordPress, Wix, Squarespace, Webflow or GoHighLevel onto{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own outright</span>, without
+            losing the traffic you already have. Your pages load fast and put a clear answer where{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude, Perplexity and Google AI</span>{" "}
-            go looking. Moving off WordPress, Wix, Squarespace, Webflow or GoHighLevel is how most
-            clients start, and you own the code outright.
+            can find it and quote you.
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}

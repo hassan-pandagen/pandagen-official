@@ -125,7 +125,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-03",
             inLanguage: "en-US",
         },
         {

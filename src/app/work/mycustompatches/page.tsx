@@ -376,7 +376,7 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Pages Built</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-6">13 pages. One shared template.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-6">200+ URLs on 13 page templates.</h2>
                         <p className="text-stone-500 text-sm mb-6 max-w-2xl">
                             All 8 product category pages use a single <code className="text-xs bg-stone-100 px-1 py-0.5 rounded-sm">ProductPageTemplate</code> component. Add a new product: one file, no duplicated code.
                         </p>
@@ -405,7 +405,7 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Tech Stack</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Replaced 45 plugins with 12 purpose built tools.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">45 WordPress plugins to 0, replaced by 12 purpose-built tools.</h2>
                         <p className="text-stone-600 mb-8">
                             Every tool in the stack does one job, does it well, and doesn&apos;t add unnecessary overhead. No plugin conflicts. No update anxiety. No security surface area from unmaintained code.
                         </p>

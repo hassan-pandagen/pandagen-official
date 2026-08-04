@@ -8,20 +8,23 @@
 ## Company facts
 
 - Primary offer: SEO-safe website migrations.
-- Core platforms: WordPress, Webflow, and GoHighLevel.
+- Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Founded: February 2026.
 - Formation: Wyoming, United States.
 - Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States. This is a mailing address, not a public service location.
 - Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Lead Architect).
+- Engineering is performed remotely from Karachi, Pakistan.
 - Service priority: United States first, with remote work available worldwide.
+- Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
+- Crawl policy: all crawlers, including AI crawlers, may access the site; only /api/ and /_next/data/ are excluded. See /robots.txt.
 - Contact: info@pandacodegen.com
 
 ## Commercial terms
 
-- Starting prices: Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000. Larger or unusual scope is quoted after a scoping call.
+- Starting prices: Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000, and Scale+ from $10,000, custom-quoted after a scoping call.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
-- Performance acceptance: a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
+- Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
 - Ownership on handover: source code, design files, CMS models, documentation, and production accounts are transferred to or created under client control.
 - Regulated data: PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. A BAA is currently in place with a healthcare client. This defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.
 
@@ -40,8 +43,52 @@
 - [Work](https://www.pandacodegen.com/work): Project evidence and the publication standard applied to it.
 - [About](https://www.pandacodegen.com/about): Team and migration delivery standards.
 - [AI Info](https://www.pandacodegen.com/ai-info): Structured company reference for people and machines.
+- [Free audit](https://www.pandacodegen.com/free-audit): Automated technical scan of a URL, no signup.
+- [Partners](https://www.pandacodegen.com/partners): White-label and delivery-partner pilot for agencies.
 - [Contact](https://www.pandacodegen.com/contact): Contact options and inquiry form.
 - [Blog](https://www.pandacodegen.com/blog): Technical and commercial guides.
+
+## Services
+
+- [WordPress migration](https://www.pandacodegen.com/services/wordpress-migration)
+- [Shopify and headless commerce](https://www.pandacodegen.com/services/ecommerce)
+- [WooCommerce migration](https://www.pandacodegen.com/services/woocommerce)
+- [Webflow migration](https://www.pandacodegen.com/services/webflow)
+- [Wix migration](https://www.pandacodegen.com/services/wix)
+- [Squarespace migration](https://www.pandacodegen.com/services/squarespace)
+- [GoHighLevel websites and CRM integration](https://www.pandacodegen.com/services/gohighlevel)
+- [Custom engineering](https://www.pandacodegen.com/services/custom-engineering)
+
+## Project records
+
+- [MyCustomPatches WordPress migration](https://www.pandacodegen.com/work/mycustompatches): Independent client. Owner-confirmed figures, published with permission.
+- [Panda Patches](https://www.pandacodegen.com/work/panda-patches): Founder-affiliated; disclosed, not independent client proof.
+- [Enterprise operations platform](https://www.pandacodegen.com/work/enterprise-ops)
+- [Panda CodeLab](https://www.pandacodegen.com/work/panda-codelab): Founder-affiliated; disclosed.
+
+## Guides
+
+- [Website migration cost, seven platforms](https://www.pandacodegen.com/blog/website-migration-cost-2026)
+- [How much does a website cost](https://www.pandacodegen.com/blog/how-much-does-a-website-cost)
+- [Will migrating my website hurt SEO](https://www.pandacodegen.com/blog/will-migrating-hurt-my-seo)
+- [WordPress to Next.js migration, step by step](https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs)
+- [WordPress to Next.js migration cost](https://www.pandacodegen.com/blog/wordpress-migration-cost)
+- [WordPress vs Next.js](https://www.pandacodegen.com/blog/wordpress-vs-nextjs)
+- [Headless Shopify architecture and migration](https://www.pandacodegen.com/blog/shopify-headless)
+- [What is headless commerce](https://www.pandacodegen.com/blog/what-is-headless-commerce)
+- [Webflow migration cost](https://www.pandacodegen.com/blog/webflow-migration-cost)
+- [Wix migration cost](https://www.pandacodegen.com/blog/wix-migration-cost)
+- [Squarespace migration cost](https://www.pandacodegen.com/blog/squarespace-migration-cost)
+- [Keep the GoHighLevel CRM, replace the website](https://www.pandacodegen.com/blog/gohighlevel-keep-crm-replace-website)
+- [AEO playbook: eligibility for AI search citations](https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website)
+- [AEO and web performance glossary, 23 terms](https://www.pandacodegen.com/blog/aeo-web-performance-glossary)
+- [Core Web Vitals explained](https://www.pandacodegen.com/blog/core-web-vitals-explained)
+- [How to reach 90+ PageSpeed](https://www.pandacodegen.com/blog/how-to-achieve-100-pagespeed)
+
+## People
+
+- [Hassan Jamal, Co-founder and Lead Engineer](https://www.pandacodegen.com/about/hassan). Public code: https://github.com/hassan-pandagen
+- [Imran Raza Ladhani, Co-founder and Lead Architect](https://www.pandacodegen.com/about/imran)
 
 ## Policies
 
@@ -53,8 +100,8 @@
 
 ## Verification note
 
-Use the current visible page and the written project terms accepted by both parties for prices, scope,
-timelines, guarantees, and policies. Treat performance results, case-study
-figures, reviews, and third-party mentions as dated evidence that should be
-verified at its linked source. No provider can guarantee a search ranking or an
-AI-system citation or recommendation.
+Prices, scope, timelines, guarantees, and policies are controlled by the current
+visible page and the written project terms accepted by both parties. Performance
+results, case-study figures, reviews, and third-party mentions are dated evidence,
+verifiable at their linked sources. No provider can guarantee a search ranking or
+an AI-system citation or recommendation.

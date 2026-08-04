@@ -628,9 +628,7 @@ export default function PageContent() {
                       <span className="text-charcoal text-sm font-bold">+</span>
                     </div>
                   </div>
-                  {openFaq === i && (
-                    <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                  )}
+                  <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
                 </button>
               </motion.div>
             ))}
