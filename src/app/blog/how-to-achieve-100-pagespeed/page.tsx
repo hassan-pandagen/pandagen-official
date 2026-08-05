@@ -81,8 +81,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            wordCount: 1750,
-            timeRequired: "PT7M",
+            wordCount: 2174,
+            timeRequired: "PT11M",
             about: [
                 { "@type": "Thing", name: "PageSpeed Insights" },
                 { "@type": "Thing", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },

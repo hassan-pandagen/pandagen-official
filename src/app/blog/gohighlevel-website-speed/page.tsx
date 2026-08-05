@@ -89,8 +89,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "GoHighLevel performance",
             keywords: ["GoHighLevel site slow", "GoHighLevel PageSpeed", "why is my GoHighLevel funnel slow", "GoHighLevel Core Web Vitals", "speed up GoHighLevel website", "GoHighLevel Next.js hybrid"],
-            wordCount: 2300,
-            timeRequired: "PT11M",
+            wordCount: 3390,
+            timeRequired: "PT17M",
             inLanguage: "en-US",
             about: [
                 { "@type": "SoftwareApplication", name: "HighLevel", alternateName: "GoHighLevel", sameAs: "https://www.gohighlevel.com" },

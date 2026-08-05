@@ -82,8 +82,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Webflow",
             keywords: ["Webflow migration cost", "Webflow code export limits", "Webflow migration cost 50 to 100 pages", "factors that increase Webflow migration cost"],
-            wordCount: 2750,
-            timeRequired: "PT12M",
+            wordCount: 3831,
+            timeRequired: "PT19M",
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },

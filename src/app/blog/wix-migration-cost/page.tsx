@@ -86,8 +86,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Wix migration",
             inLanguage: "en-US",
-            wordCount: 1800,
-            timeRequired: "PT9M",
+            wordCount: 2776,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", "name": "Wix", "sameAs": ["https://www.wix.com/", "https://en.wikipedia.org/wiki/Wix.com"] },
                 { "@type": "Thing", name: "Website Migration" },

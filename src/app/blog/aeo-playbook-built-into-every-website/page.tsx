@@ -78,8 +78,8 @@ const articleSchema = {
             "articleSection": "AEO",
             "keywords": ["aeo playbook", "answer engine optimization", "ai citations new website", "ai-info page", "schema markup", "aeo service"],
             "inLanguage": "en-US",
-            "wordCount": 2950,
-            "timeRequired": "PT15M",
+            "wordCount": 3975,
+            "timeRequired": "PT20M",
             "about": [
                 { "@type": "Thing", "name": "Answer Engine Optimization" },
                 { "@type": "Thing", "name": "AI Citations" },

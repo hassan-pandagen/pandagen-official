@@ -82,8 +82,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software cost",
             inLanguage: "en-US",
-            wordCount: 1100,
-            timeRequired: "PT5M",
+            wordCount: 1512,
+            timeRequired: "PT8M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Cost reduction", sameAs: ["https://en.wikipedia.org/wiki/Cost_reduction"] },

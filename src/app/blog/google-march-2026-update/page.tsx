@@ -84,7 +84,7 @@ const articleSchema = {
             ],
             "inLanguage": "en-US",
             "wordCount": 2500,
-            "timeRequired": "PT10M",
+            "timeRequired": "PT12M",
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"],

@@ -86,8 +86,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website migration",
             keywords: ["website migration cost", "how long does a website migration take", "website replatforming cost", "WordPress migration cost", "Shopify migration cost", "change web host"],
-            wordCount: 1850,
-            timeRequired: "PT11M",
+            wordCount: 2524,
+            timeRequired: "PT13M",
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "Data migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },

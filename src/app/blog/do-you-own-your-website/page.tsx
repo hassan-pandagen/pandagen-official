@@ -77,8 +77,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Guide",
             inLanguage: "en-US",
-            wordCount: 1700,
-            timeRequired: "PT9M",
+            wordCount: 2495,
+            timeRequired: "PT12M",
             about: [
                 { "@type": "Thing", name: "Copyright", sameAs: ["https://en.wikipedia.org/wiki/Copyright"] },
                 { "@type": "Thing", name: "Work for hire", sameAs: ["https://en.wikipedia.org/wiki/Work_for_hire"] },

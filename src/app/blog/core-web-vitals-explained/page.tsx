@@ -83,8 +83,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
             ],
-            wordCount: 1350,
-            timeRequired: "PT7M",
+            wordCount: 1758,
+            timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             keywords: ["Core Web Vitals", "LCP", "INP", "CLS", "PageSpeed Insights"],
             citation: [

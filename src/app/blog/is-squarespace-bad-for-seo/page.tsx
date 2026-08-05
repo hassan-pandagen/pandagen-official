@@ -97,8 +97,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO",
             inLanguage: "en-US",
-            wordCount: 2150,
-            timeRequired: "PT9M",
+            wordCount: 2890,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", name: "Squarespace", sameAs: ["https://en.wikipedia.org/wiki/Squarespace"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },

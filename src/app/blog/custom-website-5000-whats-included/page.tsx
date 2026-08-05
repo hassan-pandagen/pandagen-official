@@ -81,8 +81,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Pricing",
             inLanguage: "en-US",
-            wordCount: 1750,
-            timeRequired: "PT9M",
+            wordCount: 2279,
+            timeRequired: "PT11M",
             keywords: ["custom website cost", "website migration", "project scope", "Next.js development"],
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },

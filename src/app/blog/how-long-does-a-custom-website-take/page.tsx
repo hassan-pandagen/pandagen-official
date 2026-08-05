@@ -76,8 +76,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Project planning",
             inLanguage: "en-US",
-            wordCount: 1800,
-            timeRequired: "PT7M",
+            wordCount: 2107,
+            timeRequired: "PT11M",
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Project planning", sameAs: ["https://en.wikipedia.org/wiki/Project_planning"] },

@@ -68,8 +68,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#webpage" },
             "articleSection": "Performance",
             "keywords": ["is Vercel free", "Vercel Hobby plan", "Vercel free tier bandwidth 100GB 2026", "free Next.js hosting", "Next.js hosting cost", "Vercel Pro pricing"],
-            "timeRequired": "PT22M",
-            "wordCount": 3750,
+            "timeRequired": "PT26M",
+            "wordCount": 5184,
             "about": [
                 {"@type": "Thing", "name": "Website Hosting Costs", "sameAs": "https://en.wikipedia.org/wiki/Web_hosting_service"},
                 {"@type": "SoftwareApplication", "name": "Vercel", "sameAs": ["https://en.wikipedia.org/wiki/Vercel", "https://vercel.com"]},

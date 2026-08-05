@@ -94,7 +94,7 @@ const articleSchema = {
             ],
             "inLanguage": "en-US",
             "wordCount": 3950,
-            "timeRequired": "PT17M",
+            "timeRequired": "PT20M",
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
             "citation": [
                 { "@type": "CreativeWork", "name": "Shopify: Improving online store performance", "url": "https://help.shopify.com/en/manual/online-store/web-performance/improving-web-performance" },

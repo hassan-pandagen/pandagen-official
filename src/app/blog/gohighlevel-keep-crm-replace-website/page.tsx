@@ -82,8 +82,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "GoHighLevel",
             inLanguage: "en-US",
-            wordCount: 2350,
-            timeRequired: "PT9M",
+            wordCount: 2635,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", name: "GoHighLevel" },
                 { "@type": "Thing", name: "Customer relationship management", sameAs: ["https://en.wikipedia.org/wiki/Customer_relationship_management"] },

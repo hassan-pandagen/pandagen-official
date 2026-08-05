@@ -87,8 +87,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Ecommerce",
             keywords: ["what is headless commerce", "headless Shopify cost", "is Shopify headless free", "Hydrogen and Oxygen pricing", "Medusa versus headless Shopify"],
-            wordCount: 2300,
-            timeRequired: "PT11M",
+            wordCount: 2985,
+            timeRequired: "PT15M",
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "Headless commerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },

@@ -92,8 +92,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            wordCount: 1250,
-            timeRequired: "PT5M",
+            wordCount: 1537,
+            timeRequired: "PT8M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Microsoft 365", sameAs: ["https://www.microsoft.com/microsoft-365"] },

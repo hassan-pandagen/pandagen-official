@@ -72,8 +72,8 @@ const articleSchema = {
             "articleSection": "Pricing",
             "keywords": ["build vs buy software 2026", "custom software vs saas", "custom crm cost vs hubspot", "when to build custom software", "3 year cost of saas"],
             "inLanguage": "en-US",
-            "wordCount": 1450,
-            "timeRequired": "PT7M",
+            "wordCount": 1636,
+            "timeRequired": "PT8M",
             "about": [
                 { "@type": "Thing", "name": "Build vs Buy" },
                 { "@type": "Thing", "name": "Custom software", "sameAs": ["https://en.wikipedia.org/wiki/Custom_software"] },

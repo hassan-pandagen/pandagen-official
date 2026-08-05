@@ -86,8 +86,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WooCommerce migration",
             inLanguage: "en-US",
-            wordCount: 2400,
-            timeRequired: "PT10M",
+            wordCount: 2686,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", "name": "WooCommerce", "sameAs": ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },
                 { "@type": "Thing", name: "Website Migration" },

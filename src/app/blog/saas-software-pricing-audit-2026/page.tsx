@@ -97,8 +97,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            wordCount: 1550,
-            timeRequired: "PT7M",
+            wordCount: 2303,
+            timeRequired: "PT12M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },

@@ -103,8 +103,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress evidence",
             inLanguage: "en-US",
-            wordCount: 1750,
-            timeRequired: "PT7M",
+            wordCount: 2212,
+            timeRequired: "PT11M",
             about: [
                 { "@type": "Thing", name: "WordPress", sameAs: ["https://wordpress.org/", "https://en.wikipedia.org/wiki/WordPress"] },
                 { "@type": "Thing", name: "WooCommerce", sameAs: ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },

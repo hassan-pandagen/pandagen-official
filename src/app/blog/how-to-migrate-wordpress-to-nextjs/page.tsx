@@ -75,8 +75,8 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Search Engine Optimization" }
             ],
             "inLanguage": "en-US",
-            "wordCount": 2248,
-            "timeRequired": "PT11M",
+            "wordCount": 3499,
+            "timeRequired": "PT17M",
             "speakable": {
                 "@type": "SpeakableSpecification",
                 "cssSelector": ["h1", "h2", "[data-speakable='true']"]

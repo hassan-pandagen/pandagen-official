@@ -93,8 +93,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "SEO and AEO",
             inLanguage: "en-US",
-            wordCount: 1500,
-            timeRequired: "PT7M",
+            wordCount: 2081,
+            timeRequired: "PT10M",
             about: [
                 { "@type": "Thing", "name": "Lovable", "sameAs": ["https://lovable.dev/"] },
                 { "@type": "Thing", "name": "Server-Side Rendering", "sameAs": ["https://en.wikipedia.org/wiki/Server-side_scripting"] },

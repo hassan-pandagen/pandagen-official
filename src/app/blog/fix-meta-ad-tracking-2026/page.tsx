@@ -80,8 +80,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Measurement",
             inLanguage: "en-US",
-            wordCount: 2300,
-            timeRequired: "PT8M",
+            wordCount: 2862,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", "name": "Meta Pixel", "sameAs": ["https://www.facebook.com/business/tools/meta-pixel"] },
                 { "@type": "Thing", "name": "Conversions API", "sameAs": ["https://developers.facebook.com/docs/marketing-api/conversions-api/"] },

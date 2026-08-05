@@ -79,8 +79,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress",
             inLanguage: "en-US",
-            wordCount: 2097,
-            timeRequired: "PT10M",
+            wordCount: 2755,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "SoftwareApplication", name: "Divi", sameAs: ["https://www.elegantthemes.com/gallery/divi/"] },
                 { "@type": "Organization", name: "Elegant Themes", sameAs: ["https://www.elegantthemes.com"] },

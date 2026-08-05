@@ -126,8 +126,8 @@ const articleSchema = {
         "website performance audit",
       ],
       inLanguage: "en-US",
-            wordCount: 1750,
-            timeRequired: "PT8M",
+            wordCount: 2883,
+            timeRequired: "PT14M",
       about: [
         {
           "@type": "Thing",

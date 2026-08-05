@@ -83,8 +83,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WooCommerce performance",
             keywords: ["WooCommerce slow", "WooCommerce add to cart slow", "WooCommerce checkout slow", "WooCommerce backend slow", "speed up WooCommerce", "WooCommerce Core Web Vitals", "headless WooCommerce"],
-            wordCount: 2200,
-            timeRequired: "PT17M",
+            wordCount: 3169,
+            timeRequired: "PT16M",
             inLanguage: "en-US",
             about: [
                 { "@type": "SoftwareApplication", name: "WooCommerce", sameAs: ["https://en.wikipedia.org/wiki/WooCommerce", "https://woocommerce.com"] },

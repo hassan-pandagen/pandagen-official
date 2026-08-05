@@ -94,8 +94,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify performance",
             inLanguage: "en-US",
-            wordCount: 2100,
-            timeRequired: "PT9M",
+            wordCount: 3427,
+            timeRequired: "PT17M",
             about: [
                 { "@type": "SoftwareApplication", name: "Shopify Dawn", sameAs: ["https://github.com/Shopify/dawn"] },
                 { "@type": "Organization", name: "Shopify", sameAs: ["https://www.shopify.com"] },

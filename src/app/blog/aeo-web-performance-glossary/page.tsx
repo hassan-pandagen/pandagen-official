@@ -185,8 +185,8 @@ const articleSchema = {
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#webpage" },
       "articleSection": "AEO",
       "inLanguage": "en-US",
-            "wordCount": 2600,
-            "timeRequired": "PT19M",
+            "wordCount": 4297,
+            "timeRequired": "PT21M",
       "about": [
         { "@type": "Thing", "name": "Answer Engine Optimization" },
         { "@type": "Thing", "name": "Web Performance", "sameAs": ["https://en.wikipedia.org/wiki/Web_performance"] },

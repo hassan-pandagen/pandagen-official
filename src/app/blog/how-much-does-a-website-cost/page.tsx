@@ -86,8 +86,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Pricing",
             inLanguage: "en-US",
-            wordCount: 2454,
-            timeRequired: "PT12M",
+            wordCount: 3443,
+            timeRequired: "PT17M",
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },

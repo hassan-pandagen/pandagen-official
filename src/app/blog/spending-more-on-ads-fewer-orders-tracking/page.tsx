@@ -108,8 +108,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Advertising measurement",
             inLanguage: "en-US",
-            wordCount: 2050,
-            timeRequired: "PT9M",
+            wordCount: 2376,
+            timeRequired: "PT12M",
             about: [
                 { "@type": "Thing", name: "Conversions API", sameAs: ["https://developers.facebook.com/docs/marketing-api/conversions-api/"] },
                 { "@type": "Thing", name: "Meta Pixel", sameAs: ["https://www.facebook.com/business/tools/meta-pixel"] },

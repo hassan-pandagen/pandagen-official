@@ -81,8 +81,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Core Web Vitals", sameAs: ["https://en.wikipedia.org/wiki/Core_Web_Vitals"] },
                 { "@type": "SoftwareApplication", name: "Lighthouse", sameAs: ["https://en.wikipedia.org/wiki/Lighthouse_(software)"] },
             ],
-            wordCount: 1550,
-            timeRequired: "PT5M",
+            wordCount: 2013,
+            timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
         },
         {

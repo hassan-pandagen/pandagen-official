@@ -78,8 +78,8 @@ const articleSchema = {
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"]
             },
             "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
-            "wordCount": 3550,
-            "timeRequired": "PT17M",
+            "wordCount": 4533,
+            "timeRequired": "PT23M",
             "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#webpage" },
             "articleSection": "GoHighLevel",
             "keywords": ["best website builder for gohighlevel agencies", "ghl agency website builder", "white label website builder", "saas mode website builder", "custom website for gohighlevel"],

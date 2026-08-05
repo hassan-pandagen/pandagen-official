@@ -81,8 +81,8 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Webflow",
-            wordCount: 1900,
-            timeRequired: "PT7M",
+            wordCount: 2363,
+            timeRequired: "PT12M",
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "Webflow", sameAs: ["https://en.wikipedia.org/wiki/Webflow"] },

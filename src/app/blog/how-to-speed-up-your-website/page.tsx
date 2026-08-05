@@ -81,8 +81,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            wordCount: 1950,
-            timeRequired: "PT8M",
+            wordCount: 2619,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
                 { "@type": "Thing", name: "Core Web Vitals" },

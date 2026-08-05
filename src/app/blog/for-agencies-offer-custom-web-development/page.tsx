@@ -76,8 +76,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
             ],
-            wordCount: 1800,
-            timeRequired: "PT5M",
+            wordCount: 2407,
+            timeRequired: "PT12M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
         },
         {

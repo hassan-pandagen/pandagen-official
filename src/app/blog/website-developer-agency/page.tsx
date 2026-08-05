@@ -83,8 +83,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            wordCount: 1750,
-            timeRequired: "PT9M",
+            wordCount: 2585,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Web design", sameAs: ["https://en.wikipedia.org/wiki/Web_design"] },

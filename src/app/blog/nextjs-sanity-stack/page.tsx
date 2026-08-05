@@ -82,8 +82,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Next.js and content management",
             inLanguage: "en-US",
-            wordCount: 1850,
-            timeRequired: "PT7M",
+            wordCount: 2684,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", "name": "Next.js", "sameAs": ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
                 { "@type": "Thing", "name": "Sanity", "sameAs": ["https://www.sanity.io/"] },

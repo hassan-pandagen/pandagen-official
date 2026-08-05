@@ -88,8 +88,8 @@ const articleSchema = {
             "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#webpage" },
             "articleSection": "Webflow",
             "inLanguage": "en-US",
-            "wordCount": 3450,
-            "timeRequired": "PT17M",
+            "wordCount": 4009,
+            "timeRequired": "PT20M",
             "keywords": [
                 "leaving webflow 2026",
                 "webflow too expensive 2026",

@@ -98,8 +98,8 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify",
-            wordCount: 2187,
-            timeRequired: "PT11M",
+            wordCount: 2891,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", name: "Shopify app costs" },
                 { "@type": "Thing", name: "Software subscription auditing" },

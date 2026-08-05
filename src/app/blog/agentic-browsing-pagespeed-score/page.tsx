@@ -78,7 +78,7 @@ const articleSchema = {
             "articleSection": "AEO",
             "keywords": ["agentic browsing", "webmcp", "agent ready website", "llms.txt", "agentic commerce readiness"],
             "inLanguage": "en-US",
-            "wordCount": 1700,
+            "wordCount": 1886,
             "timeRequired": "PT9M",
             "about": [
                 { "@type": "Thing", "name": "Agentic Browsing" },

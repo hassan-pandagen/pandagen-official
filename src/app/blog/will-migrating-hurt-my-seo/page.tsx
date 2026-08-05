@@ -79,8 +79,8 @@ const articleSchema = {
             "articleSection": "Guide",
             "keywords": ["will migrating my website hurt my seo", "website migration seo", "301 redirects migration", "preserve seo during migration", "traffic drop after redesign", "website migration without losing rankings"],
             "inLanguage": "en-US",
-            "wordCount": 1400,
-            "timeRequired": "PT7M",
+            "wordCount": 1691,
+            "timeRequired": "PT8M",
             "about": [
                 { "@type": "Thing", "name": "Website migration SEO" },
                 { "@type": "Thing", "name": "301 redirects" },

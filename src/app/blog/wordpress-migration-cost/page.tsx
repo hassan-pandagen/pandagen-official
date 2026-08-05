@@ -80,8 +80,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress",
             keywords: ["WordPress migration cost", "WordPress to Next.js migration cost", "host transfer versus platform migration", "average price to move a WordPress site"],
-            wordCount: 2750,
-            timeRequired: "PT8M",
+            wordCount: 3566,
+            timeRequired: "PT18M",
             inLanguage: "en-US",
             about: [
                 { "@type": "Thing", name: "WordPress", sameAs: ["https://en.wikipedia.org/wiki/WordPress"] },
