@@ -63,6 +63,7 @@ CAPTURED = {
     "shopify-dawn-theme-slow",
     "webflow-true-cost",
     "squarespace-migration-cost",
+    "how-to-migrate-wordpress-to-nextjs",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container
@@ -73,6 +74,7 @@ CITED = {
     "best-website-builder-for-gohighlevel-agencies": "best website builder for gohighlevel agencies (3 Aug)",
     "shopify-app-costs-real-monthly-bill": "how much do shopify apps cost per month (5 Aug, 21 sites)",
     "shopify-dawn-theme-slow": "shopify dawn theme pagespeed score (5 Aug, 7 sites)",
+    "how-to-migrate-wordpress-to-nextjs": "how to migrate wordpress to nextjs (5 Aug, 21 sites) - INLINE, twice, inside the Overview body",
 }
 
 # Verified stale by grepping the live SERP snippet against src/ — Google is serving
