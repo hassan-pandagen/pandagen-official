@@ -66,6 +66,7 @@ CAPTURED = {
     "how-to-migrate-wordpress-to-nextjs",
     "how-much-does-a-website-cost",
     "wix-migration-cost",
+    "wix-too-slow",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container

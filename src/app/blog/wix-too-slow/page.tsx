@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-10",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-too-slow")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-too-slow"),
             description,
             datePublished: "2026-04-10",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-06",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -83,8 +83,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1300,
-            timeRequired: "PT5M",
+            wordCount: 1563,
+            timeRequired: "PT8M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -178,6 +178,34 @@ export default function WixTooSlowPage() {
                             </div>
                         ))}
                     </div>
+
+                    <BlogHeader id="editor-or-site">First: is the site slow, or is the editor slow?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            These are different problems with different fixes, and most advice on this question blends
+                            them. <BlogHighlight>Editor lag affects you. Site slowness affects your visitors.</BlogHighlight>{" "}
+                            A laggy Wix Editor or Wix Studio while you are building changes nothing about what a
+                            customer experiences, because visitors never load the editor — they load the published
+                            site.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Separate them in about two minutes before you change anything:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Open your published URL in a private or incognito window, signed out of Wix, on a different device or network. That is what a visitor gets, with no editor, no session and no cache of yours.",
+                            "If the published page loads acceptably and only the editor drags, it is an editing-environment problem: browser memory, open tabs, extensions, or a large page open in the builder. Nothing your customers see is affected, and nothing on the rest of this page will fix it.",
+                            "If the published page is slow too, it is a site problem, and the measurement section below is where to start.",
+                            "Check both on mobile as well as desktop. Editor lag is desktop-only by definition, so a page that is slow on a phone is always a site problem.",
+                        ]}
+                    />
+                    <BlogText>
+                        This matters because the two get answered with the same advice and only one of them is about
+                        your business. Closing browser tabs and disabling extensions is real advice for a laggy editor
+                        and does nothing for a slow site. The rest of this page is about the published site — the one
+                        that costs you customers.
+                    </BlogText>
 
                     <BlogHeader id="is-it-slow">How do you know whether the Wix site is slow?</BlogHeader>
                     <BlogText>
