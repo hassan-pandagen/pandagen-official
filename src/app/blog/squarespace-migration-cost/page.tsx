@@ -16,9 +16,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "squarespace-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Squarespace Migration Cost in 2026: Scope and Pricing";
+const title = "Squarespace Migration Cost 2026: What Leaving Costs";
 const description =
-    "Price a Squarespace migration from a complete inventory of URLs, content, commerce, scheduling, members, forms, integrations, SEO controls, testing and operating needs.";
+    "What it costs to move OFF Squarespace, not onto it. Price the migration from a complete inventory of URLs, content, commerce, scheduling, members, forms, integrations, SEO controls, testing and operating needs.";
 
 export const dynamic = "force-static";
 

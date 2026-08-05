@@ -17,9 +17,9 @@ const CostStackAnimation = dynamicImport(() => import("@/components/blog/CostSta
 const postId = "woocommerce-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "WooCommerce Migration Cost in 2026: Data, Scope and Tiers";
+const title = "WooCommerce Migration Cost 2026: What Leaving Costs";
 const description =
-    "Price a WooCommerce migration from products, orders, customers, payments, subscriptions, extensions, content, SEO, acceptance, cutover and operating responsibility.";
+    "What it costs to move OFF WooCommerce, not onto it. Price the migration from products, orders, customers, payments, subscriptions, extensions, content, SEO, acceptance, cutover and operating responsibility.";
 
 export const dynamic = "force-static";
 

@@ -17,9 +17,9 @@ const ExportLockAnimation = dynamicImport(() => import("@/components/blog/Export
 const postId = "wix-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Wix Migration Cost in 2026: Scope, Tiers and Export Guide";
+const title = "Wix Migration Cost 2026: What Leaving Wix Costs";
 const description =
-    "Price a Wix migration from routes, templates, CMS, products, orders, contacts, media, apps, SEO controls, acceptance and cutover using current Wix export documentation.";
+    "What it costs to move OFF Wix, not onto it. Price the migration from routes, templates, CMS, products, orders, contacts, media, apps, SEO controls, acceptance and cutover using current Wix export documentation.";
 
 export const dynamic = "force-static";
 

@@ -62,6 +62,7 @@ CAPTURED = {
     "cloudflare-emdash-wordpress-replacement",
     "shopify-dawn-theme-slow",
     "webflow-true-cost",
+    "squarespace-migration-cost",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container
