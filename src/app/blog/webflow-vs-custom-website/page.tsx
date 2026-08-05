@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-06",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-06",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -85,8 +85,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1350,
-            timeRequired: "PT7M",
+            wordCount: 1664,
+            timeRequired: "PT8M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -268,6 +268,49 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline">building Webflow cost from the invoice</Link>, and
                         the transition side is in{" "}
                         <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline">what a Webflow migration involves</Link>.
+                    </BlogText>
+
+                    <BlogText>
+                        Most comparisons of this pair describe Webflow&apos;s cost as &quot;monthly subscription fees&quot;
+                        and stop there, which is not a number you can put in a budget. These are Webflow&apos;s published
+                        list prices, <strong>read from webflow.com/pricing on 5 August 2026</strong>, annual billing:
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <thead>
+                                <tr className="border-b border-stone-300">
+                                    <th className="py-2 pr-4 font-semibold text-charcoal">Plan or add-on</th>
+                                    <th className="py-2 pr-4 font-semibold text-charcoal">Price</th>
+                                    <th className="py-2 font-semibold text-charcoal">What it covers</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-stone-600">
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4">Starter</td><td className="py-2 pr-4">Free</td><td className="py-2">webflow.io subdomain, 2 static pages, 1 GB bandwidth, 50 form submissions</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4">Basic</td><td className="py-2 pr-4">$15/mo</td><td className="py-2">Custom domain, 300 static pages, 10 GB bandwidth, no CMS</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4">Premium</td><td className="py-2 pr-4">$25/mo</td><td className="py-2">Adds Webflow CMS, selectable bandwidth, site search, code components</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4"><strong>Team</strong> (Platform plan)</td><td className="py-2 pr-4"><strong>$2,500/mo</strong></td><td className="py-2">Annual contract required. Adds Localize, AEO agents, publishing workflows, governance</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4">Optimize add-on</td><td className="py-2 pr-4">$299/mo</td><td className="py-2">Scales on page views</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4">Analyze add-on</td><td className="py-2 pr-4">$9/mo</td><td className="py-2">Scales on sessions</td></tr>
+                                <tr><td className="py-2 pr-4">Localize</td><td className="py-2 pr-4">$9 or $29/mo</td><td className="py-2">$9 covers 1-3 locales, $29 covers 1-10</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        Two things to take from that table rather than from the headline number. The jump that decides
+                        most comparisons is <strong>$25 to $2,500</strong>: there is no tier between Premium and Team, so
+                        the moment you need governance, publishing workflows or localization at scale, the platform line
+                        stops being a rounding error in the comparison. And the add-ons are priced on usage — page views
+                        for Optimize, sessions for Analyze, locale count for Localize — so a growing site&apos;s Webflow
+                        bill grows with it, which is the opposite of how the fixed custom-build cost behaves after
+                        launch. Prices are per site and exclude tax. <strong>Re-check them before quoting: this table is
+                        dated on purpose.</strong>
+                    </BlogText>
+                    <BlogText>
+                        The custom side of the comparison starts at a build price rather than a subscription, and the
+                        question people actually ask about it is whether the entry number is real. We answer that
+                        directly in{" "}
+                        <Link href="/blog/how-much-does-a-website-cost#is-1500-good" className="text-cognac hover:underline">whether $1,500 is a good price for a website</Link>,
+                        including what has to be true of the scope for it to be honest at that number.
                     </BlogText>
                     <BlogText>
                         Two lifecycle details are worth pricing explicitly. First, editor seats: count the people who
