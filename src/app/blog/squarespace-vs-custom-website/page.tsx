@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-14",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-06",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-vs-custom-website")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-vs-custom-website"),
             description,
             datePublished: "2026-04-14",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-06",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -97,8 +97,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
             ],
-            wordCount: 1400,
-            timeRequired: "PT6M",
+            wordCount: 1711,
+            timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -246,6 +246,36 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <Link href="/blog/webflow-vs-custom-website" className={inlineLinkClass}>Webflow and a custom website</Link>{" "}
                         and{" "}
                         <Link href="/blog/shopify-vs-custom-website" className={inlineLinkClass}>Shopify and a custom website</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="completely-custom">Can you make a completely custom website on Squarespace?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Visually, close to it. Structurally, no — and the boundary is specific enough to check
+                            against your own requirements rather than argue about. Custom CSS and code injection let you
+                            change how a Squarespace site looks and behaves to a degree most visitors would never
+                            identify as a template. What you cannot change is the layer underneath the design.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Four limits decide whether &quot;completely custom&quot; is true for your project. Each is a
+                        published platform behaviour, not an opinion about the builder:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "robots.txt is generated and not editable. You get two checkboxes, not a file. If your crawl strategy needs directives beyond those, it cannot be expressed.",
+                            "Squarespace emits six schema types automatically and they cannot be edited or removed. You can add markup through code injection, but you cannot stop the platform's own from being emitted, so a conflict is resolved in the platform's favour.",
+                            "Redirects are entered line by line with no file import. That is an ergonomic limit at ten URLs and a project cost at a thousand.",
+                            "The export is partial. Layout pages, one blog and selected blocks come out; store pages, portfolio and other page types, product and video blocks, drafts, style settings and your custom CSS do not.",
+                        ]}
+                    />
+                    <BlogText>
+                        Read that list against what you actually need rather than as a verdict. A 40-page marketing site
+                        that is not migrating and does not need schema beyond what the platform emits is genuinely
+                        unconstrained by any of the four. A site with a large URL history, a compliance requirement for
+                        specific structured data, or a plan to leave later is constrained by all of them.{" "}
+                        <strong>&quot;Completely custom&quot; is a question about the last 10% of control, and the
+                        honest answer is that Squarespace gives you the first 90% and keeps the rest.</strong>
                     </BlogText>
 
                     <BlogHeader>3. Compare performance by implementation</BlogHeader>

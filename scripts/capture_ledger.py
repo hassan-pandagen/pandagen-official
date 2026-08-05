@@ -68,6 +68,7 @@ CAPTURED = {
     "wix-migration-cost",
     "wix-too-slow",
     "webflow-vs-custom-website",
+    "squarespace-vs-custom-website",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container
