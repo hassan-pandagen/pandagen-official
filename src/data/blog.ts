@@ -1202,7 +1202,7 @@ export const blogPosts: BlogPost[] = [
     title: "Webflow vs Custom Website in 2026: A Four-Factor Decision",
     excerpt: "Choose using editing, requirements, ownership and lifecycle responsibility, with current export, pricing, SEO and performance limits.",
     category: "Webflow",
-    readTime: "8 min",
+    readTime: "9 min",
     date: "Mar 27",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",

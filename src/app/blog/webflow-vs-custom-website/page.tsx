@@ -85,8 +85,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1664,
-            timeRequired: "PT8M",
+            wordCount: 1877,
+            timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -306,9 +306,27 @@ export default function WebflowVsCustomWebsitePage() {
                         dated on purpose.</strong>
                     </BlogText>
                     <BlogText>
-                        The custom side of the comparison starts at a build price rather than a subscription, and the
-                        question people actually ask about it is whether the entry number is real. We answer that
-                        directly in{" "}
+                        The custom side behaves differently after launch, and it is worth stating precisely rather than
+                        as a win. <strong>A custom build does not become free once it ships.</strong> Hosting still
+                        meters — bandwidth, function invocations, database rows — and the bill still moves with
+                        traffic. What changes is <em>what</em> you are metered on and who you pay: infrastructure you
+                        can price, move or re-architect, rather than a plan tier whose feature set and price are both
+                        set by one vendor. The Team-tier jump above has no equivalent on the custom side, because there
+                        is no tier to jump to; adding governance or another locale is engineering work you scope and
+                        schedule.
+                    </BlogText>
+                    <BlogText>
+                        That cuts both ways, which is the part most comparisons skip. Engineering work has to be
+                        bought, from staff or an agency, and if nobody owns the site after launch a custom build decays
+                        in ways a managed platform does not — dependencies age, security patches stop, and the cost
+                        arrives later as a rebuild rather than monthly as a subscription. <strong>The honest framing is
+                        not cheaper versus more expensive. It is a predictable subscription with a ceiling on what you
+                        can change, against a variable engineering cost with no ceiling on what you can change.</strong>{" "}
+                        Which is better depends entirely on whether you have someone to do the changing.
+                    </BlogText>
+                    <BlogText>
+                        The custom side starts at a build price rather than a subscription, and the question people
+                        actually ask is whether the entry number is real. We answer that directly in{" "}
                         <Link href="/blog/how-much-does-a-website-cost#is-1500-good" className="text-cognac hover:underline">whether $1,500 is a good price for a website</Link>,
                         including what has to be true of the scope for it to be honest at that number.
                     </BlogText>
