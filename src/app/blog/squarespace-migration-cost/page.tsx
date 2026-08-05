@@ -315,6 +315,28 @@ export default function SquarespaceMigrationCostPage() {
                         <Link href="/blog/how-long-does-a-custom-website-take" className={inlineLinkClass}>how long a custom website takes to build</Link>.
                     </BlogText>
 
+                    <BlogText>
+                        Budget the domain move as its own line, and know the rule before someone quotes it at you as a
+                        penalty. Moving a domain between registrars is free, but{" "}
+                        <strong>ICANN&apos;s transfer policy requires a one-year extension of the registration</strong>,
+                        bought from whichever registrar you are moving to. Squarespace states this in its own words:{" "}
+                        <em>&quot;The transfer is free, but ICANN requires a one-year extension of your domain
+                        registration, which you&apos;ll purchase through Squarespace.&quot;</em> The two things usually
+                        left out of that sentence when it is repeated: <strong>it is an industry rule, not a Squarespace
+                        one</strong>, so it applies in whichever direction you move and to whichever registrar you land
+                        on — and <strong>you keep the time already left on your registration, added on top of the extra
+                        year</strong>. So it is a year brought forward, not a year lost. Squarespace also notes that
+                        regular rather than promotional rates apply.
+                    </BlogText>
+
+                    <BlogText>
+                        What we deliberately do not publish is a dollar figure. Squarespace&apos;s pricing page says only
+                        that the cost depends on the TLD and sends you to a live lookup; the &quot;$20 to $70&quot; range
+                        circulating in AI answers and forum threads is not stated on that page.{" "}
+                        <strong>Price your own TLD at the registrar you are moving to, on the day you move.</strong> A
+                        .com and a .io are not the same line item, and a range copied from a summary is not a quote.
+                    </BlogText>
+
                     <BlogHeader>7. Include current and future vendor cost</BlogHeader>
                     <BlogText>
                         Squarespace plan families and features can differ by account and region, so read your own account rather than a published summary. Transaction and
