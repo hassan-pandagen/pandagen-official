@@ -65,6 +65,7 @@ CAPTURED = {
     "squarespace-migration-cost",
     "how-to-migrate-wordpress-to-nextjs",
     "how-much-does-a-website-cost",
+    "wix-migration-cost",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container
@@ -76,6 +77,7 @@ CITED = {
     "shopify-app-costs-real-monthly-bill": "how much do shopify apps cost per month (5 Aug, 21 sites)",
     "shopify-dawn-theme-slow": "shopify dawn theme pagespeed score (5 Aug, 7 sites)",
     "how-to-migrate-wordpress-to-nextjs": "how to migrate wordpress to nextjs (5 Aug, 21 sites) - INLINE, twice, inside the Overview body",
+    "wix-migration-cost": "wix migration cost (6 Aug, 9 sites)",
 }
 
 # Verified stale by grepping the live SERP snippet against src/ — Google is serving
@@ -84,6 +86,7 @@ STALE_INDEX = {
     "nextjs-hosting-zero-cost",
     "shopify-app-costs-real-monthly-bill",
     "shopify-dawn-theme-slow",
+    "wix-migration-cost",  # SERP title "Real Price by Site Size" is in no current revision
 }
 
 
