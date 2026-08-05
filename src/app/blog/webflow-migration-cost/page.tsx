@@ -16,9 +16,9 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "webflow-migration-cost";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Webflow Migration Cost in 2026: Scope, Tiers and Evidence";
+const title = "Webflow Migration Cost 2026: What Leaving Webflow Costs";
 const description =
-    "Price a Webflow migration from the actual pages, CMS, exports, forms, localization, integrations, SEO, acceptance and operating scope, including 50 to 100 page sites.";
+    "What it costs to move OFF Webflow, not onto it. Price the migration from the actual pages, CMS, exports, forms, localization, integrations, SEO, acceptance and operating scope, including 50 to 100 page sites.";
 
 export const dynamic = "force-static";
 
@@ -152,7 +152,7 @@ export default function WebflowMigrationCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Webflow migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Webflow Migration Cost <span className="italic text-cognac">Scope, Tiers and Evidence</span>
+                            Webflow Migration Cost: <span className="italic text-cognac">Scope, Tiers and Evidence</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Moving a site off Webflow onto a custom build starts at $1,500 with us, $3,500 for a larger

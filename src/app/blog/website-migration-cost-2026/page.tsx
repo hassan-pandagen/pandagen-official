@@ -19,7 +19,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Website Migration Cost in 2026: Seven-Platform Scope Guide";
 const description =
-    "Price WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify and GoHighLevel migrations from current inventory, export limits, integrations, SEO, acceptance and operation.";
+    "What it costs to move OFF WordPress, WooCommerce, Webflow, Wix, Squarespace, Shopify or GoHighLevel. Price the migration from current inventory, export limits, integrations, SEO, acceptance and operation.";
 
 export const dynamic = "force-static";
 
@@ -152,7 +152,7 @@ export default function WebsiteMigrationCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Website Migration Cost <span className="italic text-cognac">Seven-Platform Scope Guide</span>
+                            Website Migration Cost: <span className="italic text-cognac">Seven-Platform Scope Guide</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             What a migration costs comes down to what you already have and what it has to do once it

@@ -150,7 +150,7 @@ export default function WebflowTrueCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Webflow pricing</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Webflow True Cost <span className="italic text-cognac">Build It From Your Invoice</span>
+                            Webflow True Cost: <span className="italic text-cognac">Build It From Your Invoice</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Webflow has no single &quot;real monthly cost.&quot; The defensible total is the combination

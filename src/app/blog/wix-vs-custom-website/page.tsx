@@ -143,7 +143,7 @@ export default function WixVsCustomWebsitePage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Platform comparison</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Wix vs Custom Website <span className="italic text-cognac">Choose From Requirements</span>
+                            Wix vs Custom Website: <span className="italic text-cognac">Choose From Requirements</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Wix gives you the editor, the hosting and a set of business tools in one place. A custom site

@@ -150,7 +150,7 @@ export default function ShopifyStockySunsetPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify operations</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Shopify Stocky Sunset <span className="italic text-cognac">August 31, 2026</span>
+                            Shopify Stocky Sunset: <span className="italic text-cognac">August 31, 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Shopify says Stocky stops working for inventory management after August 31, 2026. That is read from its <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, checked July 24, 2026. Work backwards from that date rather than from when you happen to read this, and confirm the current position on that page before you plan against it. Before then:

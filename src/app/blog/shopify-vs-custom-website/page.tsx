@@ -154,7 +154,7 @@ export default function ShopifyVsCustomWebsitePage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Commerce architecture</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Shopify vs Custom Website <span className="italic text-cognac">A 2026 Decision Framework</span>
+                            Shopify vs Custom Website: <span className="italic text-cognac">A 2026 Decision Framework</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Shopify, a headless Shopify storefront and a separate custom commerce stack each

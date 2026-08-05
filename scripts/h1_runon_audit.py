@@ -22,6 +22,24 @@ H1 = re.compile(r"<h1[^>]*>(.*?)</h1>", re.DOTALL)
 SPAN = re.compile(r"<span[^>]*>(.*?)</span>", re.DOTALL)
 CLEAN_END = re.compile(r"[:—–?!,\-]\s*$")
 
+# Read individually on 6 Aug 2026 and confirmed CORRECT. The tail span continues
+# the sentence grammatically, so a colon would break it: "How to Fix a Slow
+# WordPress Site Without Guessing" is one clause, not two. The detector cannot
+# make this call -- it is grammar, not punctuation. Do NOT "fix" these.
+KNOWN_GOOD = {
+    "aeo-web-performance-glossary",
+    "cloudflare-emdash-wordpress-replacement",
+    "for-agencies-offer-custom-web-development",
+    "gohighlevel-keep-crm-replace-website",
+    "how-to-achieve-100-pagespeed",
+    "how-to-cut-saas-bill-2026",
+    "how-to-fix-slow-wordpress",
+    "how-to-speed-up-your-website",
+    "how-website-speed-affects-seo",
+    "meta-conversions-api-setup-cost",
+    "why-we-chose-nextjs-over-wordpress-2026",
+}
+
 
 def main() -> int:
     flagged, checked = [], 0
@@ -58,7 +76,7 @@ def main() -> int:
         if re.search(r"\b(a|an|the|of|for|to|in|on|with|and|or|from|your|is)$", before, re.I):
             continue
 
-        if not CLEAN_END.search(before):
+        if not CLEAN_END.search(before) and d.name not in KNOWN_GOOD:
             flagged.append((d.name, before, clean(sm.group(1))))
 
     print(f"{checked} H1s with a styled span checked | {len(flagged)} flagged\n")

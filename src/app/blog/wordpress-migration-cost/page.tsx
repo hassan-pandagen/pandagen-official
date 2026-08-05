@@ -149,7 +149,7 @@ export default function WordPressMigrationCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress migration pricing</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            WordPress to Next.js Migration Cost <span className="italic text-cognac">Scope Before Price</span>
+                            WordPress to Next.js Migration Cost: <span className="italic text-cognac">Scope Before Price</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Rebuilding a WordPress site as a custom Next.js build starts at $1,500 with us, $3,500 for

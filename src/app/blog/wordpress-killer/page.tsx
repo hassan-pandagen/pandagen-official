@@ -145,7 +145,7 @@ export default function WordPressCostPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Total cost of ownership</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            WordPress 3-Year Cost <span className="italic text-cognac">Use Your Invoices</span>
+                            WordPress 3-Year Cost: <span className="italic text-cognac">Use Your Invoices</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             WordPress can be cheap or expensive, and the invoice does not tell you which. Add up what
