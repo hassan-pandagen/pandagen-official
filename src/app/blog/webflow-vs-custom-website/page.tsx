@@ -140,7 +140,7 @@ export default function WebflowVsCustomWebsitePage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website platforms</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Webflow vs Custom Website <span className="italic text-cognac">A Four-Factor Decision</span>
+                            Webflow vs Custom Website: <span className="italic text-cognac">A Four-Factor Decision</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Webflow combines visual design, CMS and managed hosting. Custom code gives an organization

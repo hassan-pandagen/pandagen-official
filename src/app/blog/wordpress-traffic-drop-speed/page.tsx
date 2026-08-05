@@ -135,7 +135,7 @@ export default function WordPressTrafficDropPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Search diagnostics</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            WordPress Traffic Drop <span className="italic text-cognac">Find the Cause Before the Fix</span>
+                            WordPress Traffic Drop: <span className="italic text-cognac">Find the Cause Before the Fix</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Speed is one possible cause of a traffic drop, and it is rarely the first one to check. Traffic falls for a lot of reasons. Your analytics broke. Google stopped crawling or

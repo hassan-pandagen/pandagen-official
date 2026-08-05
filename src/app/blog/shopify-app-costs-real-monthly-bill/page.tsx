@@ -168,7 +168,7 @@ export default function ShopifyAppCostsPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify operations</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Shopify App Costs in 2026 <span className="italic text-cognac">Audit the Real Bill</span>
+                            Shopify App Costs in 2026: <span className="italic text-cognac">Audit the Real Bill</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Published entry prices for the apps Shopify stores most often run sit between $0 and about
@@ -257,6 +257,17 @@ export default function ShopifyAppCostsPage() {
                             structures, and combined plans that pair the two.
                         </BlogText>
                     </div>
+                    <BlogText>
+                        One line confuses more merchants than the rest of the invoice combined, and it is not an app at
+                        all. Your Shopify bill carries the <strong>platform subscription for the store itself</strong>
+                        {" "}alongside the four app charge types above. If a charge appears that you cannot match to
+                        anything in the register, check the plan line before hunting for a rogue app subscription. That
+                        amount also moves when you switch between monthly and annual billing, or when a trial or an
+                        introductory discount ends, which is usually what has happened when a familiar bill changes size
+                        without anyone installing anything. Match every line to either the platform plan or a named app
+                        before drawing conclusions, because an audit that files the plan fee under app spend will go
+                        looking for savings that were never there.
+                    </BlogText>
                     <BlogText>
                         Usage meters are limited to five active meters per plan and six pricing tiers per meter, they
                         bill monthly, and Shopify notes that usage caps are not currently supported. That last point is

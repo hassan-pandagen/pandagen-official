@@ -255,7 +255,7 @@ export default function CloudflareEmDashPage() {
                             <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 official EmDash repository
                             </a>
-                            , it is a full-stack TypeScript CMS built with Astro. The current feature list includes an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import paths. That is a meaningful foundation, but the repository&apos;s beta label is still the controlling status statement.
+                            , it is a full-stack TypeScript CMS built with Astro 6.0. The current feature list includes an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import paths. That is a meaningful foundation, but the repository&apos;s beta label is still the controlling status statement.
                         </BlogText>
 
                         <BlogQuote>
@@ -264,6 +264,26 @@ export default function CloudflareEmDashPage() {
 
                         <BlogText>
                             EmDash uses Portable Text for structured content and provides import routes for WordPress WXR exports and the WordPress REST API. It can run on Cloudflare with D1, R2, KV, and Workers, or on a compatible Node.js setup with alternatives such as SQLite and S3-compatible storage. This makes it more accurate to call EmDash a new WordPress alternative than a completed one-for-one WordPress replacement.
+                        </BlogText>
+
+                        <BlogText>
+                            The billing model is the part a WordPress owner should look at hardest, because it is the one
+                            that changes the monthly number rather than the feature list. Workers spins up an isolate when
+                            a request arrives, scales back to zero when traffic stops, and{" "}
+                            <BlogHighlight>bills for CPU time</BlogHighlight> rather than for a server that runs whether
+                            anyone visits or not. On a site with uneven traffic that is a genuinely different cost shape
+                            from a VPS. It is a shape, though, not a discount: usage pricing rewards a quiet site and
+                            charges more for inefficient code, so the saving depends on what you run, not on the platform
+                            you picked.
+                        </BlogText>
+
+                        <BlogText>
+                            One capability here has no equivalent on the other side of the comparison. EmDash ships
+                            built-in support for <BlogHighlight>x402</BlogHighlight>, which lets a publisher charge for a
+                            single article without putting the reader through a subscription or an account. Whether that
+                            matters depends entirely on whether you sell content; for most business sites it will not,
+                            and it is listed here because it is real and specific rather than because it is a reason to
+                            move.
                         </BlogText>
 
                         <BlogHeader id="april-fools">Is EmDash an April Fools joke?</BlogHeader>
@@ -381,6 +401,25 @@ export default function CloudflareEmDashPage() {
 
                         <BlogText>
                             This is also why early summaries describing no usable ecosystem or terminal-only operation are outdated. The current project includes starter templates, first-party plugin work, an admin experience, import tools, and multiple installation paths.
+                        </BlogText>
+
+                        <BlogText>
+                            Two specifics are worth having before anyone schedules a pilot. The release is{" "}
+                            <BlogHighlight>v0.1.0 preview</BlogHighlight>, which is the number sitting behind the words
+                            &quot;beta preview&quot; and a more useful thing to put in front of a stakeholder than the
+                            label. And the admin can be tried before anything is installed: Cloudflare runs an EmDash
+                            Playground, so the person who will actually write on the site can judge the editing
+                            experience without a deployment or a migration decision attached to it.
+                        </BlogText>
+
+                        <BlogText>
+                            The gap most likely to decide this for a WordPress owner is what is absent.{" "}
+                            <BlogHighlight>There is no page builder and no theme marketplace.</BlogHighlight> If the
+                            people who maintain your site work by dragging sections around a canvas and buying a theme
+                            when the design needs to change, a migration does not fail on infrastructure. It fails on the
+                            first afternoon somebody needs to move a section and finds that the job now belongs to a
+                            developer. That is a staffing and budget question, and it should be answered before any
+                            technical pilot rather than after one.
                         </BlogText>
 
                         <BlogText>

@@ -152,7 +152,7 @@ export default function PageproAlternativesPage() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency selection</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Pagepro Alternatives <span className="italic text-cognac">Compare the Actual Scope</span>
+                            Pagepro Alternatives: <span className="italic text-cognac">Compare the Actual Scope</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Pagepro, Naturaily, Blazity and PandaCodeGen all say they build Next.js sites, and on paper

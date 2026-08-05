@@ -304,6 +304,24 @@ export default function DiviThemeSlowPage() {
 
                     <BlogHeader>What changed with Divi 5</BlogHeader>
                     <BlogText>
+                        Is Divi 5 slow? Not by design, and the version number is the wrong variable to argue about.
+                        Elegant Themes describes the Divi 5 framework as loading only the modules a page actually uses.
+                        What produces a slow Divi 5 site is a <em>partial</em> migration: the vendor states that pages
+                        left in backward compatibility mode do not receive all Divi 5 performance improvements. A site
+                        can therefore be &quot;on Divi 5&quot; and still behave like Divi 4 on exactly the complicated
+                        pages that were already the slowest ones.
+                    </BlogText>
+                    <BlogText>
+                        There is also a practical trap in most Divi speed advice published elsewhere, including Google&apos;s
+                        own AI summary for this question: it tells you to enable{" "}
+                        <strong>Static CSS File Generation</strong>. That setting belongs to <strong>Divi 4</strong>,
+                        under Theme Options &gt; Builder &gt; Advanced. Elegant Themes&apos; Divi 5 Theme Options
+                        documentation puts the performance controls at <strong>Divi &gt; Theme Options &gt; General &gt;
+                        Performance</strong> and describes them as dynamic CSS, dynamic icons, critical CSS and deferring
+                        scripts. It does not mention Static CSS File Generation. If you are on Divi 5 and cannot find the
+                        toggle every guide tells you to switch on, that is the reason, and nothing is broken.
+                    </BlogText>
+                    <BlogText>
                         Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of this article&apos;s
                         August 2 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
                         newer framework and has continued to receive features, improvements, and bug fixes. Elegant
