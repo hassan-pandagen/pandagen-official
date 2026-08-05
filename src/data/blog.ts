@@ -803,13 +803,13 @@ export const blogPosts: BlogPost[] = [
     title: "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
     excerpt: "Compare affordable web proposals by scope, live evidence, security, accessibility, SEO migration controls, ownership, support, and full operating cost.",
     category: "Pricing",
-    readTime: "9 min",
+    readTime: "16 min",
     date: "Apr 30",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-06",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {

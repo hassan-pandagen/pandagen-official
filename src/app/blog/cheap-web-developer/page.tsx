@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Compare low-cost web proposals by evidence, scope, security, accessibility, SEO controls, ownership, support, and total cost.",
     type: "article",
     publishedTime: "2026-04-30T00:00:00-05:00",
-    modifiedTime: "2026-08-03T00:00:00-05:00",
+    modifiedTime: "2026-08-06T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/cheap-web-developer",
     images: [ogImageForPath("/blog/cheap-web-developer")],
@@ -58,7 +58,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       image: ogImageUrlForPath("/blog/cheap-web-developer"),
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-08-03T00:00:00-05:00",
+      dateModified: "2026-08-06T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -73,8 +73,8 @@ const articleSchema = {
       mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#webpage" },
       articleSection: "Pricing",
       inLanguage: "en-US",
-      wordCount: 2950,
-      timeRequired: "PT11M",
+      wordCount: 3228,
+      timeRequired: "PT16M",
       about: [
         { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
         { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
@@ -105,7 +105,7 @@ const articleSchema = {
       description: "A due-diligence guide for comparing affordable web-development proposals without assuming price determines quality.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       datePublished: "2026-04-30T00:00:00-05:00",
-      dateModified: "2026-08-03T00:00:00-05:00",
+      dateModified: "2026-08-06T00:00:00-05:00",
       breadcrumb: { "@id": "https://www.pandacodegen.com/blog/cheap-web-developer#breadcrumb" },
       inLanguage: "en-US",
     },
@@ -264,6 +264,36 @@ export default function CheapWebDeveloperPage() {
             started buying accountability. Where a generated site is already live and missing from search,{" "}
             <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">why an AI-built site may not appear in Google</Link>{" "}
             covers what to check before paying anyone to rebuild it.
+          </BlogText>
+
+          <BlogHeader id="can-chatgpt-build-a-website">Can ChatGPT build me a website?</BlogHeader>
+          <div data-speakable="true">
+            <BlogText>
+              It can produce the code for one, and that is a smaller claim than it sounds. Ask{" "}
+              <strong>ChatGPT</strong>, <strong>Claude</strong> or a purpose-built generator like{" "}
+              <strong>Lovable</strong> or <strong>v0</strong> for a business site and you will get working
+              pages quickly. What you will not get by default is the part that decides whether the site
+              earns anything: someone accountable for it after launch.
+            </BlogText>
+          </div>
+          <BlogText>
+            Four things are yours to solve whichever model generated the pages, and they are the same four
+            that make up most of a real quote:
+          </BlogText>
+          <BlogList
+            items={[
+              "Hosting, a domain and a deploy pipeline. Generated code is a repository, not a live website, and nothing in the chat transcript pays a hosting bill.",
+              "Whether search engines can read it. This is the failure we see most often on generated sites, and it is why the Lovable case above exists as its own article.",
+              "Redirects from whatever you had before. A model does not know your old URLs, so if you already have search traffic, nothing preserves it unless somebody maps it deliberately.",
+              "Forms, payments and data. A form that renders is not a form that delivers, and the difference only shows up after a customer has used it.",
+            ]}
+          />
+          <BlogText>
+            The honest recommendation is a split rather than a verdict. <strong>If nothing has to keep
+            working after launch day and no existing traffic is at stake, generating the site yourself is a
+            sensible way to spend nothing.</strong> If money, data or existing rankings are involved,
+            generate the draft by all means, then price the work of making it production-ready — and price
+            it as rework, not as a discount for having a head start.
           </BlogText>
 
           <BlogHeader>How to Verify a Cheap Web Developer’s Portfolio</BlogHeader>

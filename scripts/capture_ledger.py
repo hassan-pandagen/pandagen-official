@@ -18,10 +18,11 @@ BLOG_DIR = ROOT / "src" / "app" / "blog"
 
 # Captured with the WEAKER pre-3-Aug method: searched `main` only, did not expand
 # PAA. Two of these returned "no AI Overview" and that reading is not trustworthy.
-NEEDS_RECHECK = {
-    "cheap-web-developer",          # recorded "no AI Overview served"
-    "shopify-store-speed-optimization",  # recorded "no PAA"
-}
+# Both pre-3-Aug "absence" readings were re-checked on 6 Aug with the corrected
+# method. cheap-web-developer: the "no AI Overview" reading is now WRONG -- an
+# Overview with 8 sources and a PAA block are both present. shopify-store-speed-
+# optimization: "no PAA" CONFIRMED, still none. Nothing outstanding.
+NEEDS_RECHECK: set[str] = set()
 
 CAPTURED = {
     # 2 Aug — batch 1, serial
