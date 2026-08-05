@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-19",
-        modifiedTime: "2026-08-02",
+        modifiedTime: "2026-08-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-app-costs-real-monthly-bill")],
@@ -83,7 +83,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-19",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-06T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -98,8 +98,8 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify",
-            wordCount: 2050,
-            timeRequired: "PT9M",
+            wordCount: 2187,
+            timeRequired: "PT11M",
             about: [
                 { "@type": "Thing", name: "Shopify app costs" },
                 { "@type": "Thing", name: "Software subscription auditing" },
@@ -129,7 +129,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-19",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-06T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
         type: "article",
         publishedTime: "2026-03-11",
-        modifiedTime: "2026-07-24T00:00:00-05:00",
+        modifiedTime: "2026-08-06T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [ogImageForPath("/blog/how-to-migrate-wordpress-to-nextjs")],
@@ -53,7 +53,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
             "image": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs"),
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-06T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -75,7 +75,7 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Search Engine Optimization" }
             ],
             "inLanguage": "en-US",
-            "wordCount": 1900,
+            "wordCount": 2248,
             "timeRequired": "PT11M",
             "speakable": {
                 "@type": "SpeakableSpecification",
@@ -106,7 +106,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs") },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-07-24T00:00:00-05:00",
+            "dateModified": "2026-08-06T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -220,6 +220,37 @@ export default function MigrateWordPressToNextJSPage() {
                             </p>
                             <p className="text-xs text-stone-500">Site live at <a href="https://www.mycustompatches.net" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">mycustompatches.net</a>. See the <Link href="/work" className="text-cognac hover:underline font-medium">project evidence standard</Link>.</p>
                         </div>
+                    </section>
+
+                    {/* Architecture fork */}
+                    <section className="mb-10">
+                        <h2 className="text-3xl font-bold mb-4">First Decide Whether WordPress Stays: Headless or Full Migration</h2>
+                        <BlogText>
+                            Every other decision on this page depends on this one, and it is the step most guides skip.
+                            There are two destinations, not one. <strong>Headless</strong> keeps WordPress running as the
+                            content backend and replaces only the front end with Next.js, so editors keep working in
+                            wp-admin exactly as they do today. <strong>Full migration</strong> takes the content out of
+                            WordPress altogether, into Markdown/MDX files in the repository or into a separate headless
+                            CMS, and WordPress is switched off at the end.
+                        </BlogText>
+                        <BlogText>
+                            Choose by who edits the site and how often, not by which stack sounds more modern:
+                        </BlogText>
+                        <BlogList
+                            items={[
+                                "Choose HEADLESS when non-technical people publish regularly, when editorial workflow, roles, scheduling or preview matter, or when existing plugins own real functionality you are not ready to rebuild. Next.js reads the content over the WordPress REST API at /wp-json/wp/v2/, or over GraphQL if you install the WPGraphQL plugin.",
+                                "Choose FULL MIGRATION when the site is a marketing or documentation site that changes rarely, when developers are the people who edit it, or when you want the WordPress hosting, updates and plugin-security surface gone permanently. Content lands as MDX in the repo, or in a CMS such as Sanity or Payload.",
+                                "Count the ongoing bill before choosing. Headless keeps you paying for WordPress hosting and maintenance on top of the new front end, so it is two systems to run, not one. Full migration removes that line but moves editing further from non-technical staff.",
+                                "Decide this before the URL audit below, because it changes what you have to export and what you can leave in place.",
+                            ]}
+                        />
+                        <BlogText>
+                            Neither is the advanced option. A five-person marketing team publishing twice a week is
+                            usually worse off on MDX, and a documentation site with two developer maintainers is usually
+                            worse off paying to keep WordPress alive behind it. The one combination that reliably
+                            disappoints is choosing headless to avoid a content migration and then discovering the
+                            plugins you kept WordPress for are the same plugins slowing the site down.
+                        </BlogText>
                     </section>
 
                     {/* Pre-migration checklist */}
