@@ -64,6 +64,7 @@ CAPTURED = {
     "webflow-true-cost",
     "squarespace-migration-cost",
     "how-to-migrate-wordpress-to-nextjs",
+    "how-much-does-a-website-cost",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container

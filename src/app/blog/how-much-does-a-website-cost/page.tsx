@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-06",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -71,7 +71,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-06",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,8 +86,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Pricing",
             inLanguage: "en-US",
-            wordCount: 2150,
-            timeRequired: "PT11M",
+            wordCount: 2454,
+            timeRequired: "PT12M",
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-06",
             inLanguage: "en-US",
         },
         {
@@ -257,6 +257,38 @@ export default function WebsiteCostGuide() {
                         part you cannot see from the outside: testing, redirect mapping, accessibility, or handing over
                         the accounts at the end. Ask which of those sits inside the number. Anyone who has priced the
                         work properly can answer that in a sentence.
+                    </BlogText>
+
+                    <BlogHeader id="free-website">Can you run a website for free?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Yes, and the free tiers are real rather than trials, but they are bounded in ways that
+                            decide whether free is viable for you. Webflow&apos;s Starter plan, read from its pricing
+                            page on August 5, 2026, costs nothing and gives you a <BlogHighlight>webflow.io
+                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight>.
+                            That is a genuine free website. It is also not a business website, because the limit that
+                            bites first is not bandwidth: it is that you cannot put your own domain on it.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The reliable pattern is that free hosting stays free and everything a business needs is what
+                        you pay for. Check these four before assuming a free tier fits:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Custom domain: usually the first paid upgrade. A free plan almost always means a vendor subdomain, which is why free tiers suit prototypes and portfolios rather than a business people search for by name.",
+                            "Page and content limits: two static pages on Webflow Starter is the shape of the constraint. Count your actual pages before you plan around a free tier.",
+                            "Commercial-use terms: some free tiers permit personal projects only. Read the terms rather than assuming, because this is the limit that gets discovered late.",
+                            "What happens at the ceiling: find out whether you are throttled, billed automatically, or taken offline. The answer differs by vendor and it belongs in the decision, not in the incident.",
+                        ]}
+                    />
+                    <BlogText>
+                        Developer hosting is the case where free genuinely scales further, and we priced it in detail
+                        in{" "}
+                        <Link href="/blog/nextjs-hosting-zero-cost" className={sourceLinkClass}>what Vercel actually costs on the free tier</Link>.
+                        The honest summary for this page: free hosting removes one line from the budget. It does not
+                        remove design, content, migration, integrations or the person maintaining it, which is where
+                        the money in every quote below actually goes.
                     </BlogText>
 
                     <BlogHeader>What belongs in a comparable website quote</BlogHeader>
