@@ -108,6 +108,23 @@ const nextConfig = {
   // routes; overriding them can break development and framework revalidation.
   async headers() {
     return [
+      // Build output is a rendering resource, not a document. Vercel appends a
+      // per-deployment `?dpl=` id to every asset URL, so each deploy mints a fresh
+      // set of chunk URLs and Google re-crawls them as new: GSC showed the same
+      // `05hvb86hjw22i.js` under two deployment ids on consecutive days, and 199 of
+      // the 224 URLs under "Crawled - currently not indexed" were build assets.
+      // noindex removes them as index candidates and makes that report readable
+      // again. It does NOT reduce crawling, and it is not meant to.
+      //
+      // NEVER disallow /_next/static/ in robots.txt to achieve this. Googlebot must
+      // fetch the JS and CSS to render the page; blocking it breaks rendering
+      // outright. noindex is the correct control precisely because it still permits
+      // the fetch. Keep this source pattern narrow - applied to '/(.*)' it would
+      // deindex the entire site.
+      {
+        source: '/_next/static/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
       {
         source: '/(.*)',
         headers: [
