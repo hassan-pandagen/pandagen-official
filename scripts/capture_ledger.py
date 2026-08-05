@@ -70,6 +70,7 @@ CAPTURED = {
     "wix-too-slow",
     "webflow-vs-custom-website",
     "squarespace-vs-custom-website",
+    "squarespace-too-slow",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container

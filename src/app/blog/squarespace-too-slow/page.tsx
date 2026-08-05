@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-06",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-too-slow")],
@@ -76,7 +76,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-too-slow"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-06",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -96,8 +96,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
             ],
-            wordCount: 1350,
-            timeRequired: "PT5M",
+            wordCount: 1607,
+            timeRequired: "PT8M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -228,6 +228,7 @@ export default function SquarespaceTooSlowPage() {
                             "Unexpected movement, measured through CLS and layout-shift records.",
                             "A functional wait, error or failed third-party request.",
                             <>{"A low "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" score in one simulated test."}</>,
+                            "A slow editor rather than a slow site: the dashboard drags while the published page is fine.",
                         ]}
                     />
                     <BlogText>
@@ -235,6 +236,17 @@ export default function SquarespaceTooSlowPage() {
                         Lighthouse lab data, which reproduces a controlled environment. A page can have one without the
                         other.
                     </BlogText>
+                    <div data-speakable="true">
+                        <BlogText>
+                            The last one on that list deserves its own test, because it is the one most advice blurs.{" "}
+                            <strong>Editor lag affects you. Site slowness affects your visitors.</strong> A visitor
+                            never loads the Squarespace dashboard, so a laggy editor changes nothing about what a
+                            customer experiences. Separate them in two minutes: open the published URL in a private
+                            window, signed out, on a different device or network. If that loads acceptably and only the
+                            editor drags, nothing else on this page applies to your problem — and checking on a phone
+                            settles it either way, because editor lag is desktop-only by definition.
+                        </BlogText>
+                    </div>
                     <InsightBox variant="info" label="Why there is no platform score ceiling here">
                         We do not publish a fixed score range that Squarespace sites supposedly cannot beat. What a
                         given site scores depends on its template, blocks, fonts, media weight, injected code and
@@ -269,9 +281,22 @@ export default function SquarespaceTooSlowPage() {
 
                     <BlogHeader>3. Reduce page weight</BlogHeader>
                     <BlogText>
-                        Squarespace currently recommends keeping a page at 5 MB or less whenever possible. That is
-                        vendor guidance, not a guarantee of a particular LCP or Lighthouse score. Use a network trace to
-                        identify the content that matters on the actual route.
+                        Squarespace publishes four specific budgets on its page-size guidance, and they are worth having
+                        in front of you before you start deleting things. Verbatim, it says to{" "}
+                        <strong>keep each page to 5 MB or less</strong>, that{" "}
+                        <strong>1 MB is the safest size for cellular connections</strong>, to{" "}
+                        <strong>ensure there are no more than 60 blocks per page</strong>, and to{" "}
+                        <strong>keep images below 500 KB with a width of 1500px to 2500px</strong>.
+                    </BlogText>
+                    <BlogText>
+                        Those four are the fastest audit available on this platform because every one of them is
+                        countable without a tool: open the page, count the blocks, check the largest image.{" "}
+                        <strong>They are vendor guidance, not a guarantee of any particular LCP or Lighthouse
+                        score</strong>, and a page can sit
+                        inside all four and still be slow for a reason further down this list. But a page that breaks
+                        them has an explanation before you measure anything, and the 60-block ceiling in particular
+                        catches long single-page designs that look fine in the editor and load nothing like it.
+                        Use a network trace to confirm which content actually matters on the real route.
                     </BlogText>
                     <BlogList
                         items={[
