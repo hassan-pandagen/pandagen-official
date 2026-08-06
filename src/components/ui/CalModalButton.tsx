@@ -18,11 +18,18 @@ interface CalModalButtonProps {
   fallbackHref?: string;
 }
 
+// The booking handle is not a secret and it was already hardcoded in two page
+// files, so the env var is an override rather than a requirement. Leaving it
+// required meant NEXT_PUBLIC_CAL_LINK being unset silently downgraded every
+// "Book a discovery call" button to a new browser tab -- which is the behaviour
+// the modal exists to replace.
+const DEFAULT_CAL_LINK = 'pandagen/discovery';
+
 const CAL_LINK = (() => {
   const candidate = process.env.NEXT_PUBLIC_CAL_LINK?.trim();
   return candidate && /^[a-z0-9][a-z0-9_-]*\/[a-z0-9][a-z0-9_-]*$/i.test(candidate)
     ? candidate
-    : null;
+    : DEFAULT_CAL_LINK;
 })();
 
 export default function CalModalButton({ children, className, fallbackHref }: CalModalButtonProps) {

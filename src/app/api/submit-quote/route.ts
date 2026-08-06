@@ -16,8 +16,21 @@ import {
   validateQuoteScalarFields,
 } from "@/lib/forms/quoteRequest";
 
+class QuoteEmailNotConfiguredError extends Error {
+  constructor() {
+    super("RESEND_API_KEY is not set, so quote emails cannot be sent.");
+    this.name = "QuoteEmailNotConfiguredError";
+  }
+}
+
 let resendClient: Resend | null = null;
 function getResend(): Resend {
+  // Fail with a named error rather than constructing a client around `undefined`
+  // and letting the send throw into the generic 500 handler. A missing key is a
+  // deployment problem and should say so in the logs, not surface to the visitor
+  // as "Internal server error" -- which is what sent this form's last outage
+  // undiagnosed for as long as it was.
+  if (!process.env.RESEND_API_KEY) throw new QuoteEmailNotConfiguredError();
   if (!resendClient) resendClient = new Resend(process.env.RESEND_API_KEY);
   return resendClient;
 }
@@ -121,7 +134,7 @@ export async function POST(request: NextRequest) {
             ${detailRow("Name", fields.name)}
             ${detailRow("Reply language", replyLanguage)}
             <p style="margin:10px 0"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></p>
-            <p style="margin:10px 0"><strong>Phone:</strong> ${safePhone ? `<a href="tel:${safePhone}">${safePhone}</a>` : "Not provided"}</p>
+            ${safePhone ? `<p style="margin:10px 0"><strong>Phone:</strong> <a href="tel:${safePhone}">${safePhone}</a></p>` : ""}
             ${detailRow("Current website", fields.currentUrl)}
             ${detailRow("Current platform", fields.currentPlatform)}
             ${detailRow("Primary goal", fields.primaryGoal)}
@@ -182,6 +195,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: "Quote submission is temporarily unavailable. Please try again later." },
         { status: 503, headers: { "Cache-Control": "no-store", "Retry-After": "60" } }
+      );
+    }
+
+    if (error instanceof QuoteEmailNotConfiguredError) {
+      console.error(
+        "Quote email is not configured: set RESEND_API_KEY (and optionally " +
+          "RESEND_FROM_EMAIL and QUOTE_RECIPIENT_EMAIL) in this environment."
+      );
+      return NextResponse.json(
+        { error: "We could not send your request. Please email info@pandacodegen.com and we will reply the same day." },
+        { status: 503, headers: { "Cache-Control": "no-store" } }
       );
     }
 

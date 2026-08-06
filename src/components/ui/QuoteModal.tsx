@@ -1,5 +1,7 @@
 "use client";
 
+import { getAttribution } from "@/lib/analytics/trafficSource";
+
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { CheckCircle2, Send, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -11,32 +13,6 @@ interface QuoteModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const platforms = [
-  "WordPress",
-  "Webflow",
-  "GoHighLevel",
-  "Wix",
-  "Squarespace",
-  "Shopify",
-  "WooCommerce",
-  "Custom / Other",
-  "No current website",
-];
-
-const goals = [
-  "SEO-safe migration",
-  "Performance / Core Web Vitals",
-  "Reduce platform costs",
-  "Rebuild or redesign",
-  "Headless ecommerce",
-  "Custom app or integration",
-  "Other",
-];
-
-const trafficBands = ["Under 1,000", "1,000–10,000", "10,000–50,000", "50,000+", "Unknown"];
-const timelines = ["Within 30 days", "1–3 months", "3–6 months", "Researching"];
-const budgets = ["Under $3,500", "$3,500–$7,500", "$7,500–$15,000", "$15,000+", "Not sure"];
 
 async function responseMessage(response: Response): Promise<string> {
   try {
@@ -173,6 +149,15 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
 
     try {
+      const attribution = getAttribution();
+      formData.append("trafficSource", attribution.source);
+      formData.append("trafficMedium", attribution.medium);
+      if (attribution.campaign && attribution.campaign !== "none") {
+        formData.append("trafficCampaign", attribution.campaign);
+      }
+      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
+      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!response.ok) throw new Error(await responseMessage(response));
 
@@ -296,14 +281,6 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         <Field label="Phone" id="quote-phone" hint="optional">
                           <input type="tel" id="quote-phone" name="phone" autoComplete="tel" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
                         </Field>
-                        <Field label="Current website" id="quote-current-url" hint="optional">
-                          <input type="url" id="quote-current-url" name="currentUrl" autoComplete="url" placeholder="https://example.com" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
-                        </Field>
-                        <SelectField label="Current platform" id="quote-platform" name="currentPlatform" options={platforms} />
-                        <SelectField label="Primary goal" id="quote-goal" name="primaryGoal" options={goals} />
-                        <SelectField label="Monthly traffic" id="quote-traffic" name="trafficBand" options={trafficBands} />
-                        <SelectField label="Timeline" id="quote-timeline" name="timeline" options={timelines} />
-                        <SelectField label="Indicative budget" id="quote-budget" name="budget" options={budgets} />
                       </div>
 
                       <Field label="Project details" id="quote-details" hint="optional">
@@ -377,14 +354,3 @@ function Field({
   );
 }
 
-function SelectField({ label, id, name, options }: { label: string; id: string; name: string; options: string[] }) {
-  return (
-    <label htmlFor={id} className="block text-xs font-bold uppercase tracking-wider text-stone-700">
-      {label} <span className="font-medium normal-case text-stone-500">(optional)</span>
-      <select id={id} name={name} defaultValue="" className="mt-2 w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac">
-        <option value="">Select an option</option>
-        {options.map((option) => <option key={option} value={option}>{option}</option>)}
-      </select>
-    </label>
-  );
-}

@@ -214,13 +214,40 @@ function clientAddress(request: NextRequest): string {
   return 'unknown';
 }
 
+/**
+ * Per-process fallback secret, generated once when the module loads.
+ *
+ * Never a hardcoded string: this secret keys the HMAC that turns a visitor IP
+ * into a rate-limit bucket, so a value an attacker can guess lets them compute
+ * another visitor's bucket key. A random per-process value cannot be guessed.
+ *
+ * The cost is that keys do not match across instances or restarts, which is
+ * exactly why this is only acceptable in memory mode -- an in-memory limiter is
+ * per-process anyway, so nothing is lost. Redis mode still demands a real
+ * configured secret below, because there the keys must agree across instances.
+ */
+const EPHEMERAL_HASHING_SECRET = randomBytes(32).toString('hex');
+let warnedAboutEphemeralSecret = false;
+
 function hashingSecret(): string {
   const secret = process.env.AUDIT_RATE_LIMIT_SECRET;
   if (secret && secret.length >= 32) return secret;
+
+  // This threw in production, and it was the second reason both lead forms
+  // returned 503: selectMode() was fixed to degrade, then privateKey() reached
+  // here a line later and threw the same error class. AUDIT_RATE_LIMIT_SECRET was
+  // never configured on this project either. A marketing site's contact form must
+  // not depend on a secret whose only job is to salt a rate-limit key.
   if (process.env.NODE_ENV === 'production') {
-    throw new AuditRateLimitConfigurationError(
-      'AUDIT_RATE_LIMIT_SECRET must be at least 32 characters in production.'
-    );
+    if (!warnedAboutEphemeralSecret) {
+      warnedAboutEphemeralSecret = true;
+      console.warn(
+        'AUDIT_RATE_LIMIT_SECRET is not configured; using an ephemeral per-process secret. ' +
+          'Rate-limit buckets will not be shared across instances or survive a restart. ' +
+          'Set a value of 32+ characters for durable, cross-instance limiting.'
+      );
+    }
+    return EPHEMERAL_HASHING_SECRET;
   }
   return 'development-only-audit-rate-limit-secret';
 }

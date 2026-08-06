@@ -1,7 +1,9 @@
 "use client";
 
+import { getAttribution } from "@/lib/analytics/trafficSource";
+
 import { useRef, useState } from "react";
-import { Check, CheckCircle2, Copy, Send } from "lucide-react";
+import { CheckCircle2, Send } from "lucide-react";
 import CalModalButton from "@/components/ui/CalModalButton";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
@@ -64,7 +66,6 @@ export default function HeroLeadForm({
   locale?: string;
 }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [emailCopied, setEmailCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const formLoadedAtRef = useRef(0);
@@ -95,6 +96,15 @@ export default function HeroLeadForm({
     if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
 
     try {
+      const attribution = getAttribution();
+      formData.append("trafficSource", attribution.source);
+      formData.append("trafficMedium", attribution.medium);
+      if (attribution.campaign && attribution.campaign !== "none") {
+        formData.append("trafficCampaign", attribution.campaign);
+      }
+      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
+      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!response.ok) throw new Error(await responseMessage(response, copy.errorFallback));
 
@@ -144,13 +154,6 @@ export default function HeroLeadForm({
               className="mt-5 space-y-3"
               noValidate={false}
             >
-              {/* The API only accepts a fixed field list, so the locale rides along
-                  here to tell us which language to reply in. */}
-              <input
-                type="hidden"
-                name="service"
-                value={locale === "en" ? "Website enquiry" : `Website enquiry (${locale.toUpperCase()})`}
-              />
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
@@ -228,35 +231,19 @@ export default function HeroLeadForm({
         <p className="text-xs font-bold uppercase tracking-wider text-stone-700">{copy.directHeading}</p>
         <p className="mt-1.5 text-sm leading-6 text-stone-600">{copy.directBody}</p>
         <div className="mt-2.5 flex flex-wrap items-center gap-x-5 gap-y-1.5">
-          {/* Copy rather than mailto. A mailto hands the visitor to an app that may
-              not be configured, and if it fails we never learn the lead existed.
-              Copying keeps them on the page with the address in hand. */}
+          {/* Opens the quote modal rather than a mail client. A mailto hands the
+              visitor to an app that may not be configured, and if it fails the lead
+              is lost with no record it existed. Keeping them on-site captures it. */}
           <button
             type="button"
-            onClick={async () => {
-              try {
-                await navigator.clipboard.writeText(CONTACT_EMAIL);
-                setEmailCopied(true);
-                window.setTimeout(() => setEmailCopied(false), 2500);
-              } catch {
-                window.location.href = `mailto:${CONTACT_EMAIL}`;
-              }
+            onClick={() => {
+              trackGAEvent("cta_click", { cta: "email_founders", location: "hero_lead_form" });
+              window.dispatchEvent(new Event("open-quote-modal"));
             }}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
+            className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
           >
-            {emailCopied ? (
-              <>
-                <Check className="h-3.5 w-3.5" aria-hidden="true" /> Copied
-              </>
-            ) : (
-              <>
-                <Copy className="h-3.5 w-3.5" aria-hidden="true" /> {CONTACT_EMAIL}
-              </>
-            )}
+            {CONTACT_EMAIL}
           </button>
-          <span aria-live="polite" className="sr-only">
-            {emailCopied ? `${CONTACT_EMAIL} copied to clipboard` : ""}
-          </span>
           <CalModalButton
             fallbackHref="https://cal.com/pandagen/discovery"
             className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"

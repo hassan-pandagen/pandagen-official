@@ -1,5 +1,7 @@
 "use client";
 
+import { captureFirstTouch } from "@/lib/analytics/trafficSource";
+
 import {
   createContext,
   useCallback,
@@ -176,6 +178,13 @@ function clearDeniedVendorData(choices: ConsentChoices) {
 }
 
 export function ConsentProvider({ children }: { children: ReactNode }) {
+  // First-touch attribution, recorded before the referrer is lost to
+  // in-site navigation. Storage only; no network call and no consent
+  // implication, so it runs regardless of preferences.
+  useEffect(() => {
+    captureFirstTouch();
+  }, []);
+
   const [preferences, setPreferences] = useState<ConsentPreferences | null>(readStoredConsent);
   const ready = useSyncExternalStore(
     subscribeToHydration,

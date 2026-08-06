@@ -58,12 +58,20 @@ const ALLOWED_FIELDS = new Set([
   "_t",
 ]);
 
+// The hero lead form posts a hidden `service` of "Website enquiry", localised as
+// "Website enquiry (FR)" / "(DE)". Those values were never added here, so every
+// submission from the homepage form failed the allowlist with "Invalid service
+// selection." Any new entry point that sets `service` must be added to this set,
+// because an unlisted value is rejected rather than ignored.
 const ALLOWED_SERVICES = new Set([
   "",
   "WordPress Migration",
   "Web Apps & Dashboards",
   "High Performance Stores",
   "Other",
+  "Website enquiry",
+  "Website enquiry (FR)",
+  "Website enquiry (DE)",
 ]);
 
 const ALLOWED_PLATFORMS = new Set([
