@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-11",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-conversion-rate-speed-fix")],
@@ -49,6 +49,10 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    {
+        name: "Shopify: store speed and conversion, what the data shows",
+        url: "https://www.shopify.com/enterprise/blog/store-speed-conversion",
+    },
     {
         name: "Shopify: conversion rate breakdown report",
         url: "https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/behaviour-reports",
@@ -85,7 +89,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-conversion-rate-speed-fix"),
             description,
             datePublished: "2026-02-11",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -105,8 +109,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 2778,
-            timeRequired: "PT14M",
+            wordCount: 3198,
+            timeRequired: "PT16M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -203,6 +207,46 @@ export default function ShopifyConversionRateSpeedFixPage() {
                             </div>
                         ))}
                     </div>
+
+                    <BlogHeader id="does-speed-affect-conversion">Does site speed actually affect Shopify conversion rate?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Speed and conversion move together, and that is not the same as speed causing conversion.
+                            Shopify analysed Core Web Vitals against conversion across actively-selling stores and
+                            published the result in its own words: <strong>&quot;for every 100 milliseconds slower a
+                            store loads, conversion tends to be about 3.5% lower&quot;</strong>, and{" "}
+                            <strong>&quot;stores with 2.5 second LCP report roughly 30% lower conversion than stores
+                            with 1.5 second LCP&quot;</strong>.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Read Shopify&apos;s verbs, because they are doing real work.{" "}
+                        <strong>&quot;Tends to be.&quot; &quot;Report.&quot; &quot;Speed and sales move
+                        together.&quot;</strong> Shopify also states plainly that{" "}
+                        <strong>&quot;conversion depends on many factors beyond speed&quot;</strong>. That is a
+                        correlation across a population of stores, described carefully. Most repetitions of this
+                        statistic — including Google&apos;s own AI summary for this question, which renders it as
+                        &quot;conversion rates drop by about 3.5%&quot; — quietly convert it into a causal promise the
+                        source never made.
+                    </BlogText>
+                    <BlogText>
+                        The difference decides whether the number is useful to you:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "As a correlation, it says fast stores and high-converting stores are the same stores. It does not say your store converts 3.5% better for each 100ms you remove, because the stores that are fast also tend to be the ones with fewer apps, cleaner themes, better merchandising and more competent operators.",
+                            "It is a population figure, not a per-store coefficient. You cannot multiply your own latency saving by 3.5% and forecast revenue from it. Anyone who quotes it that way in a proposal is selling you arithmetic that the underlying study does not support.",
+                            "It is still a reason to act. A relationship that survives across a large population of real stores is evidence that speed belongs on the list of things worth fixing -- it just is not evidence of what fixing it will pay you.",
+                            "The only figure that predicts YOUR outcome is your own measurement. That is what the rest of this page is for: a before-and-after on a segmented funnel, with the intervention isolated, so the number you end up quoting is one you actually observed.",
+                        ]}
+                    />
+                    <BlogText>
+                        We do not publish a projected revenue gain from a speed improvement, on this page or in a
+                        proposal, for exactly this reason. <strong>The honest version is: speed is worth fixing,
+                        the size of the payoff is unknown until you measure it on your own store, and any agency
+                        quoting you a percentage before touching your data has produced a sales figure rather than
+                        an estimate.</strong>
+                    </BlogText>
 
                     <BlogHeader>1. Lock the metric definitions</BlogHeader>
                     <BlogText>

@@ -694,6 +694,25 @@ export default function PandaPatchesCaseStudy() {
 
                     {/* RELATED SERVICES */}
                     <section className="mb-20">
+                        <h2 className="text-2xl font-bold text-charcoal mb-4">The method behind this, written up</h2>
+                        <p className="text-stone-700 leading-relaxed mb-4">The reasoning behind each decision in this build is documented in the guides, if you want the method rather than the result:</p>
+                        <ul className="space-y-2 text-stone-700">
+                            <li>
+                                <Link href="/blog/nextjs-sanity-stack" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Next.js and Sanity: fit, cost and tradeoffs</Link>{" "}— the CMS pairing this storefront runs on, including where it is the wrong choice.
+                            </li>
+                            <li>
+                                <Link href="/blog/will-migrating-hurt-my-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Will migrating hurt my SEO?</Link>{" "}— what actually causes ranking loss in a move, and what preserved the equity here.
+                            </li>
+                            <li>
+                                <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress versus custom code over three years</Link>{" "}— the cost model behind replacing a platform that could not quote a price.
+                            </li>
+                            <li>
+                                <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Build versus buy for business software</Link>{" "}— the decision that produced the operations layer rather than another subscription.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Related Services</span>

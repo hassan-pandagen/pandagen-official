@@ -7,6 +7,15 @@ import { trackGAEvent } from "@/components/GoogleAnalytics";
 interface CalModalButtonProps {
   children: ReactNode;
   className?: string;
+  /**
+   * Where to send the visitor when NEXT_PUBLIC_CAL_LINK is not configured.
+   *
+   * Without this the component dispatches `open-quote-modal`, which is the right
+   * fallback on a blog post but wrong when the button already lives INSIDE the
+   * quote modal -- the visitor asked to talk to someone and would be handed back
+   * the form they just declined. Pass the booking URL there instead.
+   */
+  fallbackHref?: string;
 }
 
 const CAL_LINK = (() => {
@@ -16,7 +25,7 @@ const CAL_LINK = (() => {
     : null;
 })();
 
-export default function CalModalButton({ children, className }: CalModalButtonProps) {
+export default function CalModalButton({ children, className, fallbackHref }: CalModalButtonProps) {
   const { preferences, openPreferences } = useConsent();
   const allowed = preferences?.functional === true;
 
@@ -64,6 +73,10 @@ export default function CalModalButton({ children, className }: CalModalButtonPr
 
   const openModal = useCallback(async () => {
     if (!CAL_LINK) {
+      if (fallbackHref) {
+        window.open(fallbackHref, "_blank", "noopener,noreferrer");
+        return;
+      }
       window.dispatchEvent(new Event("open-quote-modal"));
       return;
     }
@@ -78,7 +91,7 @@ export default function CalModalButton({ children, className }: CalModalButtonPr
       calLink: CAL_LINK,
       config: { layout: "month_view" },
     });
-  }, [allowed, openPreferences]);
+  }, [allowed, openPreferences, fallbackHref]);
 
   return (
     <button type="button" onClick={openModal} className={className}>

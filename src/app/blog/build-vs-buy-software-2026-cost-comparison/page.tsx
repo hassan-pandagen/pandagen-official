@@ -298,6 +298,14 @@ export default function BuildVsBuySoftware2026Page() {
                         Code an AI wrote carries every obligation code a person wrote carries. Someone still has to think about how it could be attacked, review it, test it, make it accessible, watch it in production, protect the data, keep the dependencies patched, be able to roll it back, and own it next year. Every one of those is still your responsibility. Judge the system you were handed and the process behind it, rather than treating either &ldquo;AI-built&rdquo; or &ldquo;human-built&rdquo; as a quality verdict.
                     </BlogText>
 
+                    <BlogText>
+                        A worked example of the build side is on our{" "}
+                        <Link href="/work/enterprise-ops" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Enterprise Operations record</Link>: a custom
+                        operations platform with order tracking, role-based dashboards and reporting that replaced a
+                        spreadsheet process. It is the shape this decision takes when building wins, including the parts
+                        that were harder than expected.
+                    </BlogText>
+
                     <BlogHeader id="when-buy-wins">When Buying Still Wins (Be Honest About This)</BlogHeader>
                     <BlogText>
                         Building is not always right, and I tell clients when it is not. Buy when:

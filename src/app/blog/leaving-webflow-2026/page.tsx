@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [ogImageForPath("/blog/leaving-webflow-2026")],
@@ -70,7 +70,7 @@ const articleSchema = {
             "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
             "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-03T00:00:00-05:00",
+            "dateModified": "2026-08-07T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -174,7 +174,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-03T00:00:00-05:00",
+            "dateModified": "2026-08-07T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -473,7 +473,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            Start with real-user <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> from Search Console or another field-data source. Then reproduce the issue with lab tests on agreed representative pages and devices. Separate server response, Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift, JavaScript execution, image weight, and third-party scripts. Test the current site after obvious fixes before pricing a replacement.
+                            Start with real-user <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> from Search Console or another field-data source. Then reproduce the issue with lab tests on agreed representative pages and devices. Separate server response time (TTFB), Largest Contentful Paint (LCP), Interaction to Next Paint (INP), Cumulative Layout Shift (CLS), JavaScript execution, image weight, and third-party scripts. Test the current site after obvious fixes before pricing a replacement.
                         </BlogText>
 
                         <BlogText>

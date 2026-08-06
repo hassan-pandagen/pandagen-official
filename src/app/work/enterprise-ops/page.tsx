@@ -715,7 +715,26 @@ export default function EnterpriseOpsCaseStudy() {
                     </section>
 
                     {/* DEV RATING CALLOUT */}
-                    <section className="mb-12 md:mb-20 p-5 md:p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
+                                        <section className="mb-20">
+                        <h2 className="text-2xl font-bold text-charcoal mb-4">The method behind this, written up</h2>
+                        <p className="text-stone-700 leading-relaxed mb-4">The decisions behind this platform are written up in the guides, if the reasoning is more useful than the outcome:</p>
+                        <ul className="space-y-2 text-stone-700">
+                            <li>
+                                <Link href="/blog/build-vs-buy-software-2026-cost-comparison" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Build versus buy for business software</Link>{" "}— the scenario test that decides whether a platform like this is worth building at all.
+                            </li>
+                            <li>
+                                <Link href="/blog/how-to-cut-saas-bill-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">How to cut a SaaS bill without inventing the savings</Link>{" "}— how to price the five tools a custom platform replaces, honestly.
+                            </li>
+                            <li>
+                                <Link href="/blog/saas-software-pricing-audit-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Auditing SaaS pricing with evidence</Link>{" "}— the reconciliation that shows what the old stack actually cost.
+                            </li>
+                            <li>
+                                <Link href="/blog/do-you-own-your-website" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Do you own your website?</Link>{" "}— what ownership means for custom software, and what to get in writing.
+                            </li>
+                        </ul>
+                    </section>
+
+<section className="mb-12 md:mb-20 p-5 md:p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
                         <div className="flex items-center gap-3 mb-6">
                             <div className="h-px w-8 bg-blue-400" />
                             <span className="text-blue-500 text-sm font-bold uppercase tracking-widest">Independent Review</span>

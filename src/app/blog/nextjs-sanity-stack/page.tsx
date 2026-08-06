@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-23",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/nextjs-sanity-stack")],
@@ -67,7 +67,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/nextjs-sanity-stack"),
             datePublished: "2026-07-23",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -279,6 +279,18 @@ export default function NextjsSanityStackPage() {
                         argument for this pairing, and it either works in practice or it does not.
                     </BlogText>
                     <BlogText>
+                        There are two live records of it working, and they are worth reading against each other because
+                        their disclosure status differs.{" "}
+                        <Link href="/work/ladies-4-jesus" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Ladies 4 Jesus</Link>{" "}
+                        is an independent client: a migration onto this exact pairing where the deciding requirement was
+                        that the owner run everything herself, and where nine content types and five moderated
+                        submission paths are managed from the embedded Studio without a developer.{" "}
+                        <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>{" "}
+                        is the same stack under commerce load, and it is founder-affiliated rather than independent —
+                        operating experience, labelled as such. <strong>Read the independent record first if what you
+                        are assessing is whether this holds for someone who is not us.</strong>
+                    </BlogText>
+                    <BlogText>
                         The moderation model is worth noting because it is a content-modeling decision rather than a
                         feature. Five of the seven document types are user-submitted &mdash; testimonies, questions,
                         comments, messages and reports &mdash; and each carries a status field, so nothing a visitor
@@ -287,7 +299,7 @@ export default function NextjsSanityStackPage() {
                     </BlogText>
                     <InsightBox variant="info" label="What we measured, and what it does not prove">
                         Loaded on August 2, 2026 in headless Chromium 150, one unthrottled run from a single location:
-                        time to first byte 81 ms, 65 requests, 629 KB transferred in total. <strong>Of that, 273 KB is
+                        time to first byte (TTFB) 81 ms, 65 requests, 629 KB transferred in total. <strong>Of that, 273 KB is
                         CSS and fonts and 216 KB is JavaScript</strong>, which is the honest weak spot &mdash; the
                         typography choices on a design-led site cost real bytes, and we are not going to present that as
                         a performance win. One lab run from one machine is not what visitors experience, and this figure

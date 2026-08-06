@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-fix-slow-wordpress")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-to-fix-slow-wordpress"),
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -210,7 +210,13 @@ export default function SlowWordPressGuide() {
                         walks the same layers from the visitor&apos;s side.
                     </BlogText>
                     <BlogText>
-                        Measure the document response on its own before you touch the front end, and read it against a scale rather than a feeling: under about 200ms is healthy, 200 to 600ms usually points at an underpowered or oversold plan, and consistently above 600ms makes hosting the first thing to fix rather than the last. Time the request from
+                        Measure the document response — the metric every tool labels{" "}
+                        <strong>TTFB, or Time to First Byte</strong> — on its own before you touch the front end, and
+                        read it against a scale rather than a feeling: <strong>under about 200ms is healthy, 200 to
+                        600ms usually points at an underpowered or oversold plan, and consistently above 600ms makes
+                        hosting the first thing to fix rather than the last.</strong> You will find TTFB reported under
+                        that name in PageSpeed Insights, WebPageTest and your browser&apos;s network panel, so it is the
+                        one number you can compare across tools without translating it. Time the request from
                         the command line or read it off a request waterfall, then repeat it with a warm cache, with a
                         cold cache, and from a region your visitors actually use. A slow document response is a server,
                         cache or network problem, and no amount of image compression or script deferral recovers it.

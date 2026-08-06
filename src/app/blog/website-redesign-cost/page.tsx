@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-redesign-cost")],
@@ -64,7 +64,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-07",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -108,7 +108,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-07",
             inLanguage: "en-US",
         },
         {
@@ -351,11 +351,12 @@ export default function WebsiteRedesignCostPage() {
                     <BlogHeader id="hidden-costs">Hidden costs to put in the proposal</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            What overruns a redesign budget is rarely design. It is the content nobody had written, the extra template that appeared in the second round, and review cycles that ran longer than the schedule assumed. Six items belong in the proposal in writing, so they arrive as scope rather than as a variation later.
+                            What overruns a redesign budget is rarely design. It is the redirect map nobody scoped, the content nobody had written, the extra template that appeared in the second round, and review cycles that ran longer than the schedule assumed. Six items belong in the proposal in writing, so they arrive as scope rather than as a variation later.
                         </BlogText>
                     </div>
                     <BlogList
                         items={[
+                            "The URL map and 301 redirects. If any address changes, every old URL needs a destination, and this is the line most often left out of a redesign quote entirely. It is scoped by URL count rather than page count, so a 40-page site with a decade of blog archive and campaign URLs can carry thousands of them.",
                             "Content cleanup, missing assets, copy approval and localization.",
                             "Additional template, component, state and breakpoint work.",
                             "Accessibility review, analytics changes and regression testing.",

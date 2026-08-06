@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-23",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-ai-security-risk-2026")],
@@ -89,7 +89,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-ai-security-risk-2026"),
             description,
             datePublished: "2026-06-23",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -351,6 +351,7 @@ export default function WordPressAiSecurityRiskPage() {
                     </BlogText>
                     <BlogList
                         items={[
+                            "Check where the key is actually stored. WordPress plugins commonly persist third-party provider keys in the wp_options table, and a value written there in plain text is readable by anything that reaches the database -- which is what makes an ordinary SQL injection elsewhere on the site a credential disclosure rather than a data read.",
                             "Do not place secrets in public URLs, source control, analytics, chat transcripts or support screenshots.",
                             "Store secrets in an appropriate server-side secret mechanism and limit who can read them.",
                             "Use separate credentials for development, staging and production.",
@@ -366,6 +367,21 @@ export default function WordPressAiSecurityRiskPage() {
                         server-side request forgery. Enforce authorization at the server for every action. Rate-limit
                         expensive or abuse-prone operations, constrain file handling, encode output for its context and
                         design safe failure behavior. Model instructions are not an authorization boundary.
+                    </BlogText>
+                    <BlogText>
+                        That last sentence has a name worth knowing, because it is how the failure is reported when it
+                        happens. <strong>Prompt injection</strong> is the class where text a model reads is treated as
+                        instruction rather than data, so a visitor-supplied message, an uploaded document or a fetched
+                        page can talk the model out of the rules it was given. It sits at the top of the OWASP list for
+                        LLM applications, and it matters most on anything public-facing: a chatbot or content tool that
+                        reads untrusted input and holds a capability worth abusing.
+                    </BlogText>
+                    <BlogText>
+                        There is no prompt that fixes it. <strong>The control is that the model never holds an
+                        authority you would not hand the visitor directly.</strong> Enforce permissions at the server
+                        for every action the model can trigger, scope its credentials to the minimum, and treat any
+                        output it produces as untrusted input to the next step. A system prompt asking the model to
+                        refuse is a preference, not a boundary.
                     </BlogText>
 
                     <BlogHeader id="privacy">Content, privacy and model providers</BlogHeader>

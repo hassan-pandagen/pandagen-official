@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-competitor-outranks-you")],
@@ -61,7 +61,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,8 +81,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
             ],
-            wordCount: 1786,
-            timeRequired: "PT9M",
+            wordCount: 2158,
+            timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -293,6 +293,41 @@ export default function WhyCompetitorOutranksYouPage() {
                             March 2026 core update
                         </Link>{" "}
                         shows how to check a rollout window against your own release dates.
+                    </BlogText>
+
+                    <BlogHeader id="links">Links: the gap most likely to explain it, and the metric that will not</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            If a competitor consistently outranks you on commercial queries and your content and
+                            technical evidence are comparable, <strong>who links to them is the most common remaining
+                            explanation</strong>. Links are still among the strongest signals Google uses. What will
+                            not explain it is the number most tools put in front of you:{" "}
+                            <strong>&quot;Domain Authority&quot; is a third-party estimate, not a Google metric.</strong>{" "}
+                            Google has said repeatedly that it does not use domain authority, and that its ranking
+                            systems work at the level of individual pages rather than assigning a site-wide authority
+                            score.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        That distinction changes what you should actually go and look at. Comparing DA 43 against DA 51
+                        tells you how two vendors guess Google works. Comparing link profiles page by page tells you
+                        something you can act on:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Compare the RANKING PAGE, not the domain. Pull the referring domains pointing at the specific competitor URL that outranks you, not at their homepage. A site-wide total says nothing about why one page wins.",
+                            "Count distinct referring domains rather than total links. Fifty links from one directory are one relationship; five links from five industry publications are five.",
+                            "Read what the linking pages are about. A link from a page on the same topic carries context a footer link on an unrelated site does not.",
+                            "Check whether the links were earned by something specific -- original data, a tool, a case study with numbers -- because that tells you what you would have to build rather than who you would have to email.",
+                            "Note the ones you cannot replicate. A competitor with a decade of press coverage or a parent company's link equity is not a gap you close this quarter, and recognising that is more useful than a plan that assumes you can.",
+                        ]}
+                    />
+                    <BlogText>
+                        Two honest cautions. <strong>Buying links is a link-spam policy violation</strong>, and the
+                        pitch usually arrives quoting exactly the third-party score described above, which is a
+                        reliable signal about the seller. And a link gap is the slowest of the seven groups to close
+                        — which is precisely why it is worth diagnosing early rather than discovering after six months
+                        of rewriting content that was never the problem.
                     </BlogText>
 
                     <BlogHeader id="cms">Does framework choice create an automatic Google advantage?</BlogHeader>

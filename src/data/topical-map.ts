@@ -45,6 +45,19 @@ export interface Cluster {
   entityIds: string[];
   /** Supporting blog post ids (a post may live in multiple clusters). */
   postIds: string[];
+  /**
+   * Case-study hrefs that serve as EVIDENCE for this cluster.
+   *
+   * Kept separate from `postIds` on purpose: `postIds` are keys into `blogPosts`
+   * and `getRelatedPostIds` resolves them there, so putting a /work slug in that
+   * array would silently fail to resolve. These are full hrefs and are consumed
+   * by prose links rather than by RelatedPosts.
+   *
+   * In Koray's model these are the proof layer under a commercial cluster: the
+   * cluster argues, the case study demonstrates. A cluster with no case study is
+   * a cluster making claims it cannot evidence, which is worth being able to see.
+   */
+  caseStudyHrefs?: string[];
   /** Topically adjacent clusters that drive horizontal internal-link flow. */
   relatedClusterIds: string[];
 }
@@ -289,6 +302,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/custom-engineering',
     entityIds: ['custom-engineering', 'nextjs'],
     relatedClusterIds: ['wordpress', 'shopify', 'pricing', 'agency'],
+    caseStudyHrefs: ['/work/emblematic-studio', '/work/ladies-4-jesus', '/work/panda-patches', '/work/panda-codelab'],
     postIds: [
       'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',
@@ -333,6 +347,7 @@ export const clusters: Cluster[] = [
     label: 'Migration (cross-platform)',
     entityIds: ['nextjs'],
     relatedClusterIds: ['wordpress', 'webflow', 'seo-aeo', 'pricing'],
+    caseStudyHrefs: ['/work/ladies-4-jesus', '/work/mycustompatches'],
     postIds: ['will-migrating-hurt-my-seo', 'website-migration-cost-2026', 'woocommerce-migration-cost', 'lovable-site-not-showing-on-google'],
   },
   {

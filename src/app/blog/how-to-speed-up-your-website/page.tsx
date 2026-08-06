@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-speed-up-your-website")],
@@ -65,7 +65,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-07",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -109,7 +109,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-07",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -199,7 +199,7 @@ export default function WebsiteSpeedGuide() {
                                 <tr><th className="p-4">Measurement</th><th className="p-4">Value</th><th className="p-4">What it tells you</th></tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Time to first byte</td><td className="p-4">81 ms</td><td className="p-4">The server responded quickly. Whatever is slow here, it is not the origin</td></tr>
+                                <tr><td className="p-4 font-bold">Time to first byte (TTFB)</td><td className="p-4">81 ms</td><td className="p-4">The server responded quickly. Whatever is slow here, it is not the origin</td></tr>
                                 <tr><td className="p-4 font-bold">DOMContentLoaded</td><td className="p-4">1,952 ms</td><td className="p-4">Nearly two seconds after an 81 ms first byte. The delay is entirely in what happens after the response arrives</td></tr>
                                 <tr><td className="p-4 font-bold">HTML over the wire</td><td className="p-4">58.8 KB</td><td className="p-4">Compressed. Uncompressed it is 644 KB, so compression is doing an 11x reduction</td></tr>
                                 <tr><td className="p-4 font-bold">Total requests</td><td className="p-4">33</td><td className="p-4">Count alone means little; what they weigh is the useful number</td></tr>
@@ -317,7 +317,7 @@ export default function WebsiteSpeedGuide() {
                         images or main-thread JavaScript, and no list price predicts the page result.
                     </BlogText>
                     <BlogText>
-                        Time to first byte sets the floor for everything after it. Nothing you do in the browser starts
+                        Time to first byte (TTFB) sets the floor for everything after it. Nothing you do in the browser starts
                         until the document response arrives, so measure it directly with a request trace or a timed
                         request from the command line before you rewrite front-end code. Compare a cold cache with a
                         warm one, and a request from near the origin with one from a region your visitors actually use.

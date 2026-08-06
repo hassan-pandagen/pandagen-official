@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-      lastModified: "2026-08-03",
+      lastModified: "2026-08-07",
       faqs: [
         { question: "Is Sanity better than WordPress for Next.js?", answer: "Not universally. Compare the current products on the same content model, editor tasks, preview, localization, permissions, integrations, portability, security, support and three-year operating cost. The correct choice depends on the team and accepted requirements." },
         { question: "Do I need to know code to edit a Sanity website?", answer: "Editors can use a configured Sanity Studio without changing application code, but a developer normally designs and maintains the content schema, integrations, preview, validation and deployment. Test the real editor tasks before accepting the workflow." },
@@ -785,7 +785,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "How long does a website redesign take from start to launch?", answer: "A redesign is usually faster than a migration because the platform, the data and most of the URLs stay put. What sets the schedule is the number of distinct templates and the number of people who have to approve them. Two approvers and four templates is a different project from six approvers and fourteen templates, at the same page count." },
       { question: "How often should a business redesign its website?", answer: "There is no universal redesign cycle. Act when evidence shows the experience, accessibility, content system or brand no longer meets current requirements and a redesign is the smallest sufficient intervention. Site age alone is not a business case." },
@@ -839,7 +839,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a Google requirement or universal abandonment point. Different routes, devices, networks, audiences and tasks behave differently. Use the property's field performance and funnel evidence rather than applying one cutoff to every visitor." },
       { question: "Does website speed affect Google rankings?", answer: "Google uses Core Web Vitals in broader ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Lighthouse is a lab diagnostic, not a direct ranking cutoff. Diagnose search changes with Search Console, content, links, indexing and release evidence." },
@@ -1133,7 +1133,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "Webflow can still be a strong fit when a marketing team values visual editing, the current Site and Workspace plans fit the budget, and the platform supports the next two to three years of content and integration needs. Review your actual account terms, bandwidth usage, add-ons, roadmap, performance data, and governance requirements instead of deciding from one plan change or incident." },
       { question: "When should a business leave Webflow?", answer: "Consider leaving when several structural constraints overlap: recurring cost no longer matches value, product logic or integrations exceed the supported model, export limitations create unacceptable dependency, governance requires client-controlled infrastructure, or measured performance problems remain after a focused optimization pass. One low PageSpeed score or one outage is not a complete migration case." },
@@ -1686,7 +1686,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       {
         question: "What are WordPress Abilities and the MCP Adapter?",
@@ -1738,13 +1738,13 @@ export const blogPosts: BlogPost[] = [
     title: "Headless Shopify in 2026: Architecture and Migration Guide",
     excerpt: "Compare Shopify themes, Hydrogen and custom Storefront API builds across requirements, integrations, SEO, analytics, ownership, testing and total cost.",
     category: "Shopify",
-    readTime: "12 min",
+    readTime: "14 min",
     date: "Feb 15",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "What is headless Shopify?", answer: "Headless Shopify uses Shopify as the commerce back end while a separate storefront controls rendering and customer experience through supported APIs. The team also assumes more responsibility for frontend delivery, integrations, analytics, SEO, security and maintenance." },
       { question: "How much faster is headless Shopify than a theme?", answer: "There is no universal speed difference. A headless build can support strong performance, but outcomes depend on rendering, caching, media, JavaScript, third parties, data access and implementation quality. Compare representative routes using the same recorded conditions." },
@@ -1759,13 +1759,13 @@ export const blogPosts: BlogPost[] = [
     title: "Does Elementor Hurt SEO? A 2026 Evidence Guide",
     excerpt: "Test rendering, Core Web Vitals, DOM, assets, plugins, content, and Search Console evidence before optimizing or migrating.",
     category: "Performance",
-    readTime: "8 min",
+    readTime: "10 min",
     date: "Mar 10",
     author: "Hassan",
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'code',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "Does Elementor hurt SEO?", answer: "Elementor does not carry one Google penalty or ranking outcome. Audit crawlability, initial and rendered content, indexing controls, metadata, canonicals, internal links, structured data, content quality, and field Core Web Vitals. Then compare Search Console around releases while accounting for other changes." },
       { question: "Does Elementor slow down WordPress?", answer: "Elementor contributes markup and assets, but site performance also depends on theme structure, plugins, media, fonts, third parties, hosting, cache, consent, page state, and visitor conditions. Measure representative routes and identify the actual contributor instead of using a universal platform score." },
@@ -1787,7 +1787,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'plugins',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
@@ -1897,17 +1897,17 @@ export const blogPosts: BlogPost[] = [
     title: "Low Shopify Conversion Rate? Measure Speed in the Funnel",
     excerpt: "Segment the Shopify funnel by route, device, traffic source, and field performance before attributing conversion changes to speed or choosing a rebuild.",
     category: "Shopify",
-    readTime: "14 min",
+    readTime: "16 min",
     date: "Feb 11",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       { question: "Why is my Shopify conversion rate low?", answer: "A store-wide average does not identify a cause. Segment the funnel by route, device, market, product, traffic source, customer type and period, then investigate offer, pricing, inventory, merchandising, errors, checkout and performance within the affected segment." },
       { question: "What is a good conversion rate for Shopify?", answer: "Use your own historical conversion rate segmented by traffic source, device, market, product, new versus returning visitors, and funnel step. Public averages mix unlike stores. Performance can contribute to friction, but it does not explain the whole conversion difference or guarantee a multiplier." },
-      { question: "How does website speed affect conversion rate?", answer: "Performance can create friction, but a correlation does not establish the effect for your store. Join route-level field performance with segmented funnel data, test a defined intervention and report the estimate and uncertainty without promising a universal uplift." },
+      { question: "How does website speed affect conversion rate?", answer: "Speed and conversion move together, which is not the same as speed causing conversion. Shopify analysed Core Web Vitals against conversion across actively-selling stores and reported that for every 100 milliseconds slower a store loads, conversion tends to be about 3.5% lower, and that stores with 2.5 second LCP report roughly 30% lower conversion than stores with 1.5 second LCP. Shopify's verbs there are correlational, and it states that conversion depends on many factors beyond speed. So it is a population correlation, not a per-store coefficient: you cannot multiply your own latency saving by 3.5% and forecast revenue from it. Join route-level field performance with segmented funnel data, test a defined intervention, and report the estimate and its uncertainty without promising a universal uplift." },
       { question: "How do I increase my Shopify conversion rate?", answer: "Find the funnel stage and segment that changed, form a testable hypothesis, choose the least disruptive intervention and measure it with pre-defined primary and guardrail metrics. Do not treat speed, design or one public benchmark as the automatic answer." }
     ]
   },
@@ -1918,13 +1918,13 @@ export const blogPosts: BlogPost[] = [
     title: "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis",
     excerpt: "Compare intent, content, crawlability, internal links, reputation, page experience and first-party search data without blaming a CMS or promising rankings.",
     category: "SEO",
-    readTime: "9 min",
+    readTime: "11 min",
     date: "Feb 15",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       {
         question: "Why does my competitor rank higher on Google than me?",
@@ -2002,7 +2002,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-07",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",

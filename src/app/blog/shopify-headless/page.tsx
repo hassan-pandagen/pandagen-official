@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-headless")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-headless"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -97,8 +97,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 2495,
-            timeRequired: "PT12M",
+            wordCount: 2844,
+            timeRequired: "PT14M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -227,6 +227,43 @@ export default function ShopifyHeadlessPage() {
                         Shopify has confirmed it is unavailable after August 31, 2026 &mdash; see{" "}
                         <Link href="/blog/shopify-stocky-sunset-date-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">our guide to that deadline</Link>{" "}
                         for what stops working. Export what you need before you start a replatform, not during it.
+                    </BlogText>
+
+                    <BlogHeader id="is-it-worth-it">Is headless Shopify worth it?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            For most stores, no — and we build headless storefronts, so read that as a filter rather
+                            than modesty. <strong>Headless converts a configurable store into a software project.</strong>{" "}
+                            The build is the smaller half; the part that decides whether it was worth it is who
+                            maintains it, deploys it and is on call for it in year two.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Before costing a headless build, price the alternative honestly.{" "}
+                        <strong>Online Store 2.0</strong> — sections on every template, app blocks and metafields —
+                        closed a large part of the gap that originally justified going headless. A well-built 2.0
+                        theme on a disciplined app stack is the right answer for a great many stores that are
+                        currently being quoted for Hydrogen.
+                    </BlogText>
+                    <BlogText>
+                        What you give up is specific, and it is worth writing down before anyone signs:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "The theme editor. Merchandisers lose drag-and-drop layout control over the storefront. Every layout change becomes a developer ticket and a deploy, which is a staffing change disguised as a technical one.",
+                            "One-click app installs for storefront features. Apps that inject storefront UI through theme app extensions do not simply work; reviews, loyalty, upsell and search widgets each need an integration decision rather than an install.",
+                            "Native previews and the safety of theme duplication. Testing moves into your own staging and release process, which you now own.",
+                            "Shopify's own defaults for storefront analytics and consent. These become architecture you configure rather than settings you toggle -- covered in section 4 below.",
+                        ]}
+                    />
+                    <BlogText>
+                        The revenue threshold you will see quoted — usually &quot;not under a few million a year&quot;
+                        — comes from practitioner forums rather than from Shopify, and we do not repeat it as a rule.
+                        <strong> The threshold that actually matters is not revenue, it is whether you employ or
+                        retain someone who will own the frontend after launch.</strong> A ten-million-dollar store
+                        without that person is a worse candidate than a two-million-dollar store with an engineering
+                        team. If the honest answer is that nobody owns it, the correct recommendation is a better 2.0
+                        theme, and the sections below will tell you when it genuinely is not.
                     </BlogText>
 
                     <BlogHeader>What headless changes</BlogHeader>

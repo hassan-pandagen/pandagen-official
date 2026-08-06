@@ -73,6 +73,16 @@ CAPTURED = {
     "squarespace-too-slow",
     # 7 Aug
     "wordpress-vs-nextjs",
+    "shopify-conversion-rate-speed-fix",
+    "elementor-kills-seo",
+    "why-competitor-outranks-you",
+    "shopify-headless",
+    "wordpress-plugins-destroy-speed",
+    "how-to-fix-slow-wordpress",
+    "website-redesign-cost",
+    "wordpress-killer",
+    "wordpress-ai-security-risk-2026",
+    "wordpress-traffic-drop-speed",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container
@@ -85,6 +95,7 @@ CITED = {
     "shopify-dawn-theme-slow": "shopify dawn theme pagespeed score (5 Aug, 7 sites)",
     "how-to-migrate-wordpress-to-nextjs": "how to migrate wordpress to nextjs (5 Aug, 21 sites) - INLINE, twice, inside the Overview body",
     "wix-migration-cost": "wix migration cost (6 Aug, 9 sites)",
+    "wordpress-traffic-drop-speed": "wordpress traffic dropped suddenly (7 Aug, 8 sites) - INLINE, in the Overview body",
 }
 
 # Verified stale by grepping the live SERP snippet against src/ — Google is serving

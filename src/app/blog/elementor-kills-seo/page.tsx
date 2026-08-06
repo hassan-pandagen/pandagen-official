@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-10",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/elementor-kills-seo")],
@@ -58,7 +58,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/elementor-kills-seo"),
             datePublished: "2026-03-10",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -77,8 +77,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1677,
-            timeRequired: "PT8M",
+            wordCount: 2025,
+            timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: [
                 {
@@ -253,6 +253,40 @@ export default function ElementorSeoPage() {
                         performance features Elementor documents exist precisely to make asset loading more conditional,
                         so check what your version exposes and what state each feature is in before concluding that the
                         overhead is fixed.
+                    </BlogText>
+
+                    <BlogHeader id="heading-structure">The one SEO defect that has nothing to do with speed</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Almost every argument about builders and SEO is an argument about page weight. There is a
+                            second defect that visual builders make easy and that no amount of caching will fix:{" "}
+                            <BlogHighlight>broken heading hierarchy</BlogHighlight>. In a visual editor you choose a
+                            heading by how large it looks, so a designer who wants smaller text picks H4, and the page
+                            ships with an outline that reads H1 → H4 → H2. The page looks correct and its structure is
+                            not.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        This matters more in 2026 than it did when the advice was written, because extractive systems
+                        read the outline to decide what a section answers. A heading level is a claim about what
+                        contains what. Check it in about a minute, on your five most important routes:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Open the page and view the outline, not the design: in Chrome DevTools, run document.querySelectorAll('h1,h2,h3,h4,h5,h6') in the console and read the tag names in order.",
+                            "Confirm exactly one H1 per page, and that it says what the page is about rather than repeating the site name.",
+                            "Look for skipped levels. H2 followed by H4 is the common one, and it is nearly always a font-size decision rather than a structural one.",
+                            "Check that section headings describe the section. A heading that reads as a design label rather than an answer gives an extractor nothing to lift.",
+                            "Fix by changing the tag and restyling with CSS, not by changing the tag to match the size you wanted.",
+                        ]}
+                    />
+                    <BlogText>
+                        Two reasons this belongs near the top of an Elementor audit rather than the bottom. It is{" "}
+                        <strong>free to fix and does not require touching the builder&apos;s output or the theme</strong>,
+                        unlike most of the weight problems below. And it is the part of the &quot;builders hurt
+                        SEO&quot; claim that is actually true — not because Elementor emits bad markup, but because a
+                        visual canvas invites a structural decision to be made on visual grounds. That is a workflow
+                        problem, and workflow problems survive a migration if nobody names them.
                     </BlogText>
 
                     <BlogHeader>Run a route-level Elementor audit</BlogHeader>

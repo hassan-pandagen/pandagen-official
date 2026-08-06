@@ -142,6 +142,8 @@ export default function WorkPageClient() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
               { href: "/work/mycustompatches", name: "MyCustomPatches", kind: "Independent client", desc: "WordPress to Next.js migration. Owner-confirmed: 22 days, 3.2s to 0.7s, $150/mo to $0/mo hosting." },
+              { href: "/work/ladies-4-jesus", name: "Ladies 4 Jesus", kind: "Independent client", desc: "Community site migration. Nine content types, five moderated submission paths, owner-run CMS. No before/after claimed: no baseline was captured." },
+              { href: "/work/emblematic-studio", name: "Emblematic Studio", kind: "Independent client", desc: "Product catalogue and quote experience. 20 product types from one typed registry; one runtime route on the whole site. Build record, no traffic claims." },
               { href: "/work/panda-patches", name: "Panda Patches", kind: "Founder-affiliated", desc: "Headless Next.js, Sanity, Supabase and Square build with a real-time pricing calculator and ops platform." },
               { href: "/work/enterprise-ops", name: "Enterprise Operations", kind: "Client project", desc: "Custom operations platform: order tracking, role-based dashboards and reporting replacing spreadsheets." },
               { href: "/work/panda-codelab", name: "Panda CodeLab", kind: "Founder-affiliated", desc: "Agency site build. Sub-second load times and an accessibility-first component system." },

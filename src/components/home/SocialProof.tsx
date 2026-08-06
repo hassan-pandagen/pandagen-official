@@ -3,6 +3,12 @@ import { ArrowRight, ArrowUpRight, Building2, Clock, Quote } from "lucide-react"
 
 const reviews = [
   {
+    quote: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
+    source: "Waqas Ahmed on Trustpilot",
+    detail: "August 2026",
+    href: "https://www.trustpilot.com/review/pandacodegen.com",
+  },
+  {
     quote: "Hassan was super helpful and communicative throughout the process.",
     source: "Marshall James on Trustpilot",
     detail: "March 2026",

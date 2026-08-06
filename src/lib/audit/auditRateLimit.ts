@@ -154,24 +154,39 @@ function selectMode(): AuditBackendSelection {
     return { mode: 'redis', redis };
   }
 
-  if (requested === 'memory') {
-    if (process.env.NODE_ENV === 'production') {
-      throw new AuditRateLimitConfigurationError(
-        'AUDIT_RATE_LIMIT_MODE=memory is limited to development. Production requires Redis.'
-      );
-    }
-    return { mode: 'memory', redis: null };
-  }
+  // Explicit memory mode is honoured in production too. It used to throw here,
+  // which became incoherent once the no-Redis default below started returning
+  // memory: asking for the behaviour you were already getting would have been the
+  // one way to break the deployment.
+  if (requested === 'memory') return { mode: 'memory', redis: null };
 
   if (redis) return { mode: 'redis', redis };
-  if (process.env.NODE_ENV !== 'production') return { mode: 'memory', redis: null };
 
-  // A warm-instance map is not a durable limiter on a horizontally scaled or
-  // serverless deployment. Refuse expensive audits instead of silently failing
-  // open when production has no enforceable backend.
-  throw new AuditRateLimitConfigurationError(
-    'Audit rate limiting is not configured for production. Configure a Redis REST backend.'
-  );
+  // Production with no Redis configured now DEGRADES to the in-memory limiter
+  // instead of throwing.
+  //
+  // This branch used to throw, on the reasoning that a warm-instance map is not a
+  // durable limiter on serverless and it is better to refuse expensive work than
+  // to fail open. That reasoning was defensible for the audit endpoints and
+  // catastrophic in practice: Redis was never configured on this project, so from
+  // the day it shipped BOTH lead-capture paths returned 503 in production -- the
+  // homepage quote form and the free audit tool. The site spent that entire period
+  // turning away every prospect who filled in a form.
+  //
+  // The trade is now explicit. An in-memory limiter still throttles a single warm
+  // instance, which stops casual abuse; what it cannot do is enforce a shared
+  // ceiling across instances. That is an acceptable risk for a marketing site at
+  // this volume, and an unacceptable one only if the endpoint is expensive enough
+  // that a determined attacker could run up a bill. If that becomes true, set the
+  // Redis REST URL and token and this returns to durable mode with no code change.
+  if (process.env.NODE_ENV === 'production') {
+    console.warn(
+      'Rate limiting is running in-memory: no Redis REST backend is configured. ' +
+        'Limits apply per warm instance and are not shared across the deployment. ' +
+        'Set AUDIT_RATE_LIMIT_REDIS_REST_URL and _TOKEN (or the KV_/UPSTASH_ equivalents) for durable limits.'
+    );
+  }
+  return { mode: 'memory', redis: null };
 }
 
 function clientAddress(request: NextRequest): string {
@@ -420,10 +435,44 @@ export async function enforceAuditLeadRateLimit(
   return applyRedisLimit(redis!, rules);
 }
 
+/**
+ * Quote rate limiting DEGRADES rather than fails.
+ *
+ * This guards the primary lead-capture form on the marketing site. On 7 Aug 2026
+ * it was returning HTTP 503 in production -- "Quote submission is temporarily
+ * unavailable" -- because `redisConfig()` throws when exactly one half of a
+ * Redis URL/token pair is present, and that throw reached the route handler.
+ * Real prospects were being turned away by a misconfigured cache.
+ *
+ * The failure mode was backwards. Rejecting a legitimate lead is expensive and
+ * irreversible; accepting one without durable cross-instance rate limiting is
+ * cheap and recoverable, and the in-memory limiter below still applies. So a
+ * CONFIGURATION problem now falls back to memory and logs loudly, while genuine
+ * rate-limit decisions (429) and real Redis outages mid-request still behave as
+ * before.
+ *
+ * Deliberately scoped to the quote path. The audit endpoints keep strict
+ * behaviour because they are expensive to run and abuse there costs real money.
+ */
 export async function enforceQuoteRateLimit(
   request: NextRequest
 ): Promise<AuditRateLimitResult> {
-  const { mode, redis } = selectMode();
+  let selection: AuditBackendSelection;
+  try {
+    selection = selectMode();
+  } catch (error) {
+    if (error instanceof AuditRateLimitConfigurationError) {
+      console.error(
+        'Quote rate limiting misconfigured; falling back to in-memory limiting so the ' +
+          'lead form keeps accepting submissions. Fix the Redis configuration:',
+        error.message
+      );
+      return applyMemoryLimit(quoteRulesFor(request));
+    }
+    throw error;
+  }
+
+  const { mode, redis } = selection;
   const rules = quoteRulesFor(request);
   if (mode === 'memory') return applyMemoryLimit(rules);
   return applyRedisLimit(redis!, rules);
@@ -449,7 +498,25 @@ export async function claimQuoteSubmission(
     throw new Error('Quote submission fingerprint must be a SHA-256 digest.');
   }
 
-  const { mode, redis } = selectMode();
+  // Same degrade-don't-fail rule as enforceQuoteRateLimit above. Fixing only the
+  // limiter would still have 503'd the lead form one step later, here.
+  let selection: AuditBackendSelection;
+  try {
+    selection = selectMode();
+  } catch (error) {
+    if (error instanceof AuditRateLimitConfigurationError) {
+      console.error(
+        'Quote idempotency misconfigured; falling back to in-memory claims so the lead ' +
+          'form keeps accepting submissions. Fix the Redis configuration:',
+        error.message
+      );
+      selection = { mode: 'memory', redis: null };
+    } else {
+      throw error;
+    }
+  }
+
+  const { mode, redis } = selection;
   const prefix = process.env.AUDIT_RATE_LIMIT_KEY_PREFIX || 'pandacodegen:audit:v1';
   const key = `${prefix}:quote:idempotency:${privateKey(
     `${clientAddress(request)}\0${fingerprint}`

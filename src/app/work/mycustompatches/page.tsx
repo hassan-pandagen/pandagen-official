@@ -538,6 +538,32 @@ export default function MyCustomPatchesCaseStudy() {
                         </div>
                     </section>
 
+                    <section className="mb-16">
+                        <h2 className="text-2xl font-bold text-charcoal mb-4">The method behind this, written up</h2>
+                        <p className="text-stone-700 leading-relaxed mb-4">
+                            The decisions in this project are documented in more depth across the guides, if you want the
+                            reasoning rather than the outcome:
+                        </p>
+                        <ul className="space-y-2 text-stone-700">
+                            <li>
+                                <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">How to migrate WordPress to Next.js</Link>
+                                {" "}— the URL audit and redirect mapping that protects rankings during a move.
+                            </li>
+                            <li>
+                                <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">What a WordPress to Next.js migration costs</Link>
+                                {" "}— how scope is priced, and what pushes a project up a tier.
+                            </li>
+                            <li>
+                                <Link href="/blog/wordpress-plugins-destroy-speed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Auditing WordPress plugins by measured impact</Link>
+                                {" "}— the method behind removing 45 plugins without guessing which ones mattered.
+                            </li>
+                            <li>
+                                <Link href="/blog/will-migrating-hurt-my-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Will migrating hurt my SEO?</Link>
+                                {" "}— what actually causes ranking loss in a migration, and what does not.
+                            </li>
+                        </ul>
+                    </section>
+
                     {/* CTA */}
                     <section className="mb-20 p-8 md:p-12 bg-linear-to-br from-stone-900 to-stone-800 text-white rounded-3xl text-center">
                         <h2 className="text-3xl font-bold mb-4">Want results like this for your site?</h2>

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-05",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-plugins-destroy-speed")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-plugins-destroy-speed"),
             description,
             datePublished: "2026-02-05",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -293,9 +293,12 @@ export default function WordPressPluginPerformancePage() {
                         <a href="https://wordpress.org/plugins/query-monitor/" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Query Monitor</a>{" "}
                         is the practical instrument for the server side of this, read August 3, 2026. It reports the database
                         queries fired during a single request with the component responsible for each, the hooks that
-                        ran, HTTP API calls made during the request, and the scripts and styles enqueued. Load a
-                        representative route with it enabled on staging, sort by component, and you have attribution
-                        instead of suspicion. Pair it with the DevTools Coverage panel for the browser side, which shows
+                        ran, HTTP API calls made during the request, and the scripts and styles enqueued.{" "}
+                        <strong>The panel that answers the question directly is Queries → Queries by Component:</strong>{" "}
+                        it attributes query count and query time to each plugin, theme or core component for the
+                        request you just loaded, which turns &quot;something is slow&quot; into a named row you can act
+                        on. Load a representative route with it enabled on staging, read that panel, and you have
+                        attribution instead of suspicion. Pair it with the DevTools Coverage panel for the browser side, which shows
                         how much of each delivered stylesheet and script the page actually executed.
                     </BlogText>
 

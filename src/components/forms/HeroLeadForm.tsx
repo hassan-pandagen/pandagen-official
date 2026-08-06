@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { CheckCircle2, Send } from "lucide-react";
+import { Check, CheckCircle2, Copy, Send } from "lucide-react";
+import CalModalButton from "@/components/ui/CalModalButton";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
@@ -53,6 +54,8 @@ async function responseMessage(response: Response, fallback: string): Promise<st
  * write an email yet. The direct email and call links below it are the path for
  * everyone who is.
  */
+const CONTACT_EMAIL = "info@pandacodegen.com";
+
 export default function HeroLeadForm({
   copy = englishCopy,
   locale = "en",
@@ -61,6 +64,7 @@ export default function HeroLeadForm({
   locale?: string;
 }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const formLoadedAtRef = useRef(0);
@@ -224,21 +228,41 @@ export default function HeroLeadForm({
         <p className="text-xs font-bold uppercase tracking-wider text-stone-700">{copy.directHeading}</p>
         <p className="mt-1.5 text-sm leading-6 text-stone-600">{copy.directBody}</p>
         <div className="mt-2.5 flex flex-wrap items-center gap-x-5 gap-y-1.5">
-          <a
-            href="mailto:info@pandacodegen.com"
-            className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
+          {/* Copy rather than mailto. A mailto hands the visitor to an app that may
+              not be configured, and if it fails we never learn the lead existed.
+              Copying keeps them on the page with the address in hand. */}
+          <button
+            type="button"
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(CONTACT_EMAIL);
+                setEmailCopied(true);
+                window.setTimeout(() => setEmailCopied(false), 2500);
+              } catch {
+                window.location.href = `mailto:${CONTACT_EMAIL}`;
+              }
+            }}
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
           >
-            info@pandacodegen.com
-          </a>
-          <a
-            href="https://cal.com/pandagen/discovery"
-            target="_blank"
-            rel="noopener noreferrer"
+            {emailCopied ? (
+              <>
+                <Check className="h-3.5 w-3.5" aria-hidden="true" /> Copied
+              </>
+            ) : (
+              <>
+                <Copy className="h-3.5 w-3.5" aria-hidden="true" /> {CONTACT_EMAIL}
+              </>
+            )}
+          </button>
+          <span aria-live="polite" className="sr-only">
+            {emailCopied ? `${CONTACT_EMAIL} copied to clipboard` : ""}
+          </span>
+          <CalModalButton
+            fallbackHref="https://cal.com/pandagen/discovery"
             className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
           >
             {copy.bookLabel}
-            <span className="sr-only"> (opens in a new tab)</span>
-          </a>
+          </CalModalButton>
         </div>
         {copy.replyNote ? <p className="mt-3 text-xs leading-5 text-stone-500">{copy.replyNote}</p> : null}
       </div>
