@@ -71,6 +71,8 @@ CAPTURED = {
     "webflow-vs-custom-website",
     "squarespace-vs-custom-website",
     "squarespace-too-slow",
+    # 7 Aug
+    "wordpress-vs-nextjs",
 }
 
 # Confirmed present in an AI Overview source panel, by querying the AIO container

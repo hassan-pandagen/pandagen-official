@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-07",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -57,6 +57,7 @@ const sources = [
     { name: "Next.js caching guide", url: "https://nextjs.org/docs/app/guides/caching" },
     { name: "Next.js production checklist", url: "https://nextjs.org/docs/app/guides/production-checklist" },
     { name: "Next.js data security guide", url: "https://nextjs.org/docs/app/guides/data-security" },
+    { name: "W3Techs: WordPress usage statistics", url: "https://w3techs.com/technologies/details/cm-wordpress" },
 ];
 
 const articleSchema = {
@@ -69,7 +70,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-07",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -89,8 +90,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 2547,
-            timeRequired: "PT13M",
+            wordCount: 2965,
+            timeRequired: "PT15M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -224,6 +225,49 @@ export default function WordPressVsNextJsPage() {
                         extension system. Next.js provides routing, rendering and application capabilities, but the team
                         chooses the CMS, database, identity, forms, search, email, analytics, hosting and operational
                         tooling. A useful comparison names the complete Next.js stack and the complete WordPress stack.
+                    </BlogText>
+
+                    <BlogHeader id="is-wordpress-outdated">Is WordPress outdated in 2026?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            No, and we build in Next.js, so take that as evidence rather than modesty.{" "}
+                            <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">W3Techs</a>{" "}
+                            reported in <strong>August 2026</strong> that WordPress is used by{" "}
+                            <strong>41.2% of all websites</strong>, and by <strong>59.1% of websites whose content
+                            management system is known</strong>. A platform running two-fifths of the web is not
+                            obsolete, and any argument that starts by assuming it is has skipped the part where you
+                            check.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Those two percentages are the ones most often confused, including by summaries of this
+                        question. <strong>41.2% is the share of every site on the web. 59.1% is the share of sites
+                        where a CMS could be detected at all.</strong> Quoting the second as though it were the first
+                        overstates WordPress by half, and quoting a rounded &quot;43% of the web&quot; — as several
+                        widely-repeated answers currently do — is not the figure W3Techs publishes. If you cite a
+                        share number, name the measurer and the month, because these are detector estimates from a
+                        sample rather than a census.
+                    </BlogText>
+
+                    <BlogHeader id="why-people-leave">Why do people move away from WordPress?</BlogHeader>
+                    <BlogText>
+                        Rarely because it stopped working. In the projects we are asked to quote, the trigger is
+                        almost always one of four specific situations rather than a general dissatisfaction:
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "The plugin stack became the architecture. What began as five plugins is now thirty, several are unmaintained, and no one can say what breaks if one is removed. The cost of that is paid in every future change, not in the monthly bill.",
+                            "Editing stopped being the constraint. When a marketing team no longer needs to restructure pages weekly, the visual builder that justified WordPress is buying less than the performance and maintenance overhead it costs.",
+                            "The site outgrew request-time rendering. A page assembled from database queries on every visit behaves differently under load than one pre-rendered at build time, and that difference becomes visible at a specific traffic level rather than gradually.",
+                            "Ownership and security responsibility moved. A team that must answer a security questionnaire, or evidence what runs in production, finds a large third-party plugin surface harder to attest to than a dependency list they control.",
+                        ]}
+                    />
+                    <BlogText>
+                        None of those is an argument that WordPress is bad, and three of the four are reasons a
+                        specific site outgrew a specific setup. The honest test is whether any of them describes your
+                        situation in particular. If none does, the platform is not your problem, and{" "}
+                        <Link href="/blog/how-to-fix-slow-wordpress" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">fixing a slow WordPress site</Link>{" "}
+                        is a far cheaper answer than replacing it.
                     </BlogText>
 
                     <BlogHeader id="architecture">Architecture comparison</BlogHeader>
