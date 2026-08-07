@@ -10,7 +10,7 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
 
-const marchUpdateFAQs = blogPosts.find(p => p.id === "google-march-2026-update")?.faqs ?? [];
+const marchUpdateFAQs = blogPosts.find(p => p.id === "google-algorithm-updates")?.faqs ?? [];
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Google March 2026 Core Update: What Google Confirmed",
     description: "Google's March 2026 core update ran from March 27 to April 8. Learn what Google confirmed, whether speed thresholds changed, and how to diagnose a traffic drop with Search Console.",
     alternates: {
-        canonical: "/blog/google-march-2026-update",
+        canonical: "/blog/google-algorithm-updates",
     },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
         publishedTime: "2026-04-09T00:00:00-05:00",
         modifiedTime: "2026-08-02T00:00:00-05:00",
         authors: ["Hassan Jamal"],
-        url: "https://www.pandacodegen.com/blog/google-march-2026-update",
-        images: [ogImageForPath("/blog/google-march-2026-update")],
+        url: "https://www.pandacodegen.com/blog/google-algorithm-updates",
+        images: [ogImageForPath("/blog/google-algorithm-updates")],
     },
     twitter: {
         card: "summary_large_image",
@@ -57,10 +57,10 @@ const articleSchema = {
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#article",
+            "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#article",
             "headline": "Google March 2026 Core Update: What Google Confirmed",
             "description": "Google's March 2026 core update ran from March 27 to April 8. This guide separates Google's confirmed record from unsupported speed claims and explains how to investigate a traffic change responsibly.",
-            "image": ogImageUrlForPath("/blog/google-march-2026-update"),
+            "image": ogImageUrlForPath("/blog/google-algorithm-updates"),
             "datePublished": "2026-04-09T00:00:00-05:00",
             "dateModified": "2026-08-02T00:00:00-05:00",
             "author": {
@@ -74,7 +74,7 @@ const articleSchema = {
                 "sameAs": ["https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen"],
             },
             "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
-            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#webpage" },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#webpage" },
             "articleSection": "SEO",
             "keywords": ["Google March 2026 core update", "Google traffic drop", "Core Web Vitals SEO", "LCP threshold", "INP Core Web Vital", "Search Console"],
             "about": [
@@ -96,29 +96,29 @@ const articleSchema = {
         },
         {
             "@type": "BreadcrumbList",
-            "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb",
+            "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb",
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
                 { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", "position": 3, "name": "Google March 2026 Update", "item": "https://www.pandacodegen.com/blog/google-march-2026-update" },
+                { "@type": "ListItem", "position": 3, "name": "Google March 2026 Update", "item": "https://www.pandacodegen.com/blog/google-algorithm-updates" },
             ],
         },
         {
             "@type": "WebPage",
-            "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#webpage",
-            "url": "https://www.pandacodegen.com/blog/google-march-2026-update",
+            "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#webpage",
+            "url": "https://www.pandacodegen.com/blog/google-algorithm-updates",
             "name": "Google March 2026 Core Update: What Google Confirmed",
             "description": "The rollout ran from March 27 to April 8. This page explains the confirmed record, unchanged Core Web Vitals thresholds, and a Search Console diagnostic process.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
-            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-march-2026-update") },
+            "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-algorithm-updates") },
             "datePublished": "2026-04-09T00:00:00-05:00",
             "dateModified": "2026-08-02T00:00:00-05:00",
-            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#breadcrumb" },
+            "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb" },
             "inLanguage": "en-US",
         },
         {
             "@type": "FAQPage",
-            "@id": "https://www.pandacodegen.com/blog/google-march-2026-update#faq",
+            "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#faq",
             "mainEntity": marchUpdateFAQs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } })),
         },
     ],
@@ -141,7 +141,7 @@ export default function GoogleMarchUpdatePage() {
                         items={[
                             { label: "Home", href: "/" },
                             { label: "Blog", href: "/blog" },
-                            { label: "Google March 2026 Update", href: "/blog/google-march-2026-update" },
+                            { label: "Google March 2026 Update", href: "/blog/google-algorithm-updates" },
                         ]}
                     />
 
@@ -400,7 +400,7 @@ export default function GoogleMarchUpdatePage() {
 
                     {marchUpdateFAQs.length > 0 && <FAQAccordion faqs={marchUpdateFAQs} />}
 
-                    <RelatedPosts currentPostId="google-march-2026-update" />
+                    <RelatedPosts currentPostId="google-algorithm-updates" />
                 </article>
             </main>
             <Footer />

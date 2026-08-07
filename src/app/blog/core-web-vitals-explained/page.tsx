@@ -331,6 +331,30 @@ export default function CoreWebVitalsExplainedPage() {
                         the decision warrants it.
                     </BlogText>
 
+                    <BlogHeader id="still-relevant">Are Core Web Vitals still relevant in 2026?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Yes, and less powerfully than most SEO advice implies. Google still publishes them, still
+                            reports them in Search Console, and still describes good page experience as helpful for
+                            Search. What it has never published is a weighting — and its own guidance says there is no
+                            single page-experience signal and that relevance remains important.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        The practical reading, which survives both the hype and the backlash:{" "}
+                        <strong>good scores rarely win you a position, and bad ones can cost you one.</strong> A page
+                        that answers the query better will outrank a faster page that answers it worse, so performance
+                        work does not substitute for the content being right. But when two pages are comparably
+                        relevant, the slower one has given away an advantage it did not need to.
+                    </BlogText>
+                    <BlogText>
+                        Two things have genuinely changed since the metrics launched, and both argue for treating them
+                        as live rather than settled. <strong>INP replaced First Input Delay in March 2024</strong>, so
+                        any guide still optimising for FID is measuring something Google no longer collects. And the
+                        set is explicitly versioned — Google has changed the metrics before and has said it will again,
+                        which is a reason to re-read the thresholds each year rather than to memorise them once.
+                    </BlogText>
+
                     <BlogHeader>What Core Web Vitals mean for SEO</BlogHeader>
                     <BlogText>
                         Google recommends good Core Web Vitals for Search success and user experience. Its current page

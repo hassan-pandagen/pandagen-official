@@ -357,7 +357,7 @@ export const clusters: Cluster[] = [
     entityIds: ['aeo', 'core-web-vitals'],
     relatedClusterIds: ['performance', 'migration'],
     postIds: [
-      'agentic-browsing-pagespeed-score', 'aeo-playbook-built-into-every-website', 'google-march-2026-update',
+      'agentic-browsing-pagespeed-score', 'aeo-playbook-built-into-every-website', 'google-algorithm-updates',
       'why-competitor-outranks-you', 'will-migrating-hurt-my-seo', 'how-website-speed-affects-seo',
       'lovable-site-not-showing-on-google', 'aeo-web-performance-glossary',
     ],

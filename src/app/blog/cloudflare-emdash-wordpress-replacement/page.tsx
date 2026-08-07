@@ -457,7 +457,7 @@ export default function CloudflareEmDashPage() {
 
                         <BlogText>
                             Google&apos;s March 2026 core update ran from March 27 to April 8. Google did not announce a new speed threshold, a WordPress penalty, or a WordPress-specific loss rate. Our{" "}
-                            <Link href="/blog/google-march-2026-update" className={internalLinkClass}>
+                            <Link href="/blog/google-algorithm-updates" className={internalLinkClass}>
                                 March 2026 core update analysis
                             </Link>{" "}
                             separates the official record from those unsupported claims.

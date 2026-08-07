@@ -415,7 +415,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
-                                If visibility does move, compare the dates, affected queries, pages, countries, devices, indexing state, releases and Core Web Vitals trend before blaming speed. A core update, a seasonal dip, a competitor change, a broken tracking tag and a genuine performance regression all look identical in a traffic graph, and each needs a different response. Our <Link href="/blog/google-march-2026-update" className={sourceLink}>Google update diagnostic guide</Link> walks through telling them apart.
+                                If visibility does move, compare the dates, affected queries, pages, countries, devices, indexing state, releases and Core Web Vitals trend before blaming speed. A core update, a seasonal dip, a competitor change, a broken tracking tag and a genuine performance regression all look identical in a traffic graph, and each needs a different response. Our <Link href="/blog/google-algorithm-updates" className={sourceLink}>Google update diagnostic guide</Link> walks through telling them apart.
                             </BlogText>
 
                             <BlogHeader>Theme Optimization, Theme Refresh, or Headless Shopify?</BlogHeader>
@@ -522,7 +522,7 @@ export default function ShopifySpeedOptimizationPage() {
                                     { href: "/blog/shopify-headless", label: "When a Headless Shopify Storefront Makes Sense" },
                                     { href: "/blog/shopify-dawn-theme-slow", label: "Diagnosing Shopify Theme Performance" },
                                     { href: "/blog/shopify-app-costs-real-monthly-bill", label: "How to Audit Shopify App Cost and Storefront Impact" },
-                                    { href: "/blog/google-march-2026-update", label: "How to Diagnose a Google Update Without Inventing a Cause" },
+                                    { href: "/blog/google-algorithm-updates", label: "How to Diagnose a Google Update Without Inventing a Cause" },
                                     { href: "/services/ecommerce", label: "PandaCodeGen Ecommerce Engineering" },
                                 ].map((link) => (
                                     <Link key={link.href} href={link.href} className="flex items-center gap-2 text-sm text-cognac hover:underline">

@@ -1174,7 +1174,7 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
-    id: "google-march-2026-update",
+    id: "google-algorithm-updates",
     cardStat: "12d 4h",
     cardStatLabel: "Official rollout duration",
     title: "Google March 2026 Core Update: What Google Confirmed",

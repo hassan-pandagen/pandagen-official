@@ -519,7 +519,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         tracking changes and site releases. Google&apos;s <a href="https://developers.google.com/search/docs/monitor-debug/debugging-search-traffic-drops" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>traffic-drop guidance</a> recommends examining the
                         shape, timing and affected segments before deciding on a cause. Where the timing overlaps a
                         rollout, compare it against the{" "}
-                        <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">
+                        <Link href="/blog/google-algorithm-updates" className="text-cognac hover:underline">
                             record of the March 2026 core update
                         </Link>{" "}
                         before changing anything.

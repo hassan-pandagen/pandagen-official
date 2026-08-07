@@ -289,7 +289,7 @@ export default function WhyCompetitorOutranksYouPage() {
                         updated. Your tracking broke. Or the results page itself changed shape. Compare query and
                         page trends, annotate releases and updates, and avoid assigning causation from one before-and-
                         after chart. Our write-up of the{" "}
-                        <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">
+                        <Link href="/blog/google-algorithm-updates" className="text-cognac hover:underline">
                             March 2026 core update
                         </Link>{" "}
                         shows how to check a rollout window against your own release dates.

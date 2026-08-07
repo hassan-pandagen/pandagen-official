@@ -315,7 +315,7 @@ export default function SpeedAndSeoGuide() {
                     <BlogText>
                         If the timing lines up with a Google rollout rather than one of your releases, check the dates
                         against the{" "}
-                        <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">
+                        <Link href="/blog/google-algorithm-updates" className="text-cognac hover:underline">
                             record of the March 2026 core update
                         </Link>{" "}
                         before acting. Where the site runs on WordPress and the change followed a speed regression, the{" "}

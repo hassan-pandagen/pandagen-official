@@ -613,7 +613,7 @@ export default function SlowWebsitePage() {
               also says good scores do not guarantee top rankings and relevant content can still
               rank with a weaker experience. That is why speed is worth improving without calling
               it a penalty or a fixed tie-breaker. Our{" "}
-              <Link href="/blog/google-march-2026-update" className="text-charcoal underline underline-offset-2">
+              <Link href="/blog/google-algorithm-updates" className="text-charcoal underline underline-offset-2">
                 March 2026 core-update guide
               </Link>{" "}
               shows how to separate an update correlation from a performance problem, and{" "}

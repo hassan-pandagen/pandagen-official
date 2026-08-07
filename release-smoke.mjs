@@ -74,7 +74,7 @@ try {
   await checkStatus("/manifest.json", 200);
   await checkStatus("/site.webmanifest", 404);
   await checkStatus("/ai.txt", 404);
-  await checkStatus("/yandex_059f4080fe1cdf8a.html", 404);
+  await checkStatus("/yandex_059f4080fe1cdf8a.html", 200);
   await checkStatus("/demo/featured-products", 404);
   await checkStatus("/api/google-index", 404);
   await checkStatus("/api/indexnow", 404);

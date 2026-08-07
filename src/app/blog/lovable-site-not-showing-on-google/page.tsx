@@ -352,7 +352,7 @@ export default function LovableSiteNotShowingPage() {
                         competition, links, location or SERP presentation work against it. Compare pages and queries in
                         Search Console. Do not diagnose a rendering failure from “zero traffic” alone. If the change
                         overlaps a Google rollout, check the dates against the{" "}
-                        <Link href="/blog/google-march-2026-update" className="text-cognac hover:underline">
+                        <Link href="/blog/google-algorithm-updates" className="text-cognac hover:underline">
                             record of the March 2026 core update
                         </Link>
                         .
