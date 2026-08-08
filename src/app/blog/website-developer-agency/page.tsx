@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-developer-agency")],
@@ -68,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-developer-agency"),
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -83,7 +83,7 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Agency selection",
             inLanguage: "en-US",
-            wordCount: 2585,
+            wordCount: 2939,
             timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
@@ -111,7 +111,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -389,6 +389,48 @@ export default function WebsiteDeveloperAgencyPage() {
                         ]}
                     />
 
+                    <BlogHeader id="verify">How to verify what an agency tells you</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Shortlisting three to five agencies and checking reviews is the standard advice and it is
+                            fine as far as it goes. The part usually left out is what to actually check, because most
+                            of what an agency publishes about itself cannot be falsified by reading it more carefully.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Portfolios show sites at launch, not today.</strong> Open every portfolio link and
+                            check three things: that it still resolves rather than 404s, that it still looks like the
+                            case study, and that the agency&apos;s own footer credit or the underlying stack is still
+                            there. A portfolio piece that has since been rebuilt by somebody else is not evidence of a
+                            lasting result, and it is a fair question to ask about. Run the live URLs through{" "}
+                            <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">PageSpeed Insights</a>{" "}
+                            yourself rather than accepting a screenshot of a score, which is a lab result from an
+                            unknown date and device.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Third-party reviews are worth checking and worth reading properly.</strong>{" "}
+                            Clutch, Trustpilot and the relevant subreddits are where feedback sits that the agency does
+                            not control. Read the three-star reviews before the five-star ones, because they are where
+                            scope disputes, delays and communication problems actually get described. Check whether the
+                            reviews mention the people you have been meeting: a strong record earned by a team that has
+                            since left tells you about the past, not about your project. Treat review volume in this
+                            industry with some perspective too, since most small studios have very few reviews and an
+                            absence of them is weak evidence either way.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>Ask what happens after launch, in writing.</strong> Who holds the domain, the
+                            repository, the hosting account and the analytics property. Whether you receive
+                            documentation and a walkthrough for your own team, or whether every future change routes
+                            back through the agency. Whether the stack is portable or the site only runs on their
+                            proprietary hosting. Those answers decide what your options look like in year two, and they
+                            are cheap to get before signing and expensive to discover afterwards. What that looks like
+                            in a contract is set out under{" "}
+                            <a href="#ownership" className="text-cognac hover:underline">ownership and licensing</a> below.
+                        </BlogText>
+                    </div>
+
                     <BlogHeader>Seven questions before signing</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -434,7 +476,7 @@ export default function WebsiteDeveloperAgencyPage() {
                         <Link href="/about" className="text-cognac hover:underline">PandaCodeGen team page</Link>.
                     </BlogText>
 
-                    <BlogHeader>Ownership and licensing</BlogHeader>
+                    <BlogHeader id="ownership">Ownership and licensing</BlogHeader>
                     <BlogText>
                         U.S. copyright ownership does not automatically follow payment in every contractor
                         relationship. Put transfer or licensing in a signed writing and separate custom deliverables

@@ -23,7 +23,10 @@ export default function HtmlShell({
   const locale = localeFromPathname(usePathname() ?? "/");
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#"
+    >
       <body className={bodyClassName} suppressHydrationWarning>
         {children}
       </body>

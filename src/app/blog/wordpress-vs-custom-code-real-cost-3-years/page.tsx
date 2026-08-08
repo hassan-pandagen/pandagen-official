@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-20",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-custom-code-real-cost-3-years")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-custom-code-real-cost-3-years"),
             description,
             datePublished: "2026-02-20",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -85,8 +85,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1948,
-            timeRequired: "PT10M",
+            wordCount: 2415,
+            timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -152,7 +152,7 @@ export default function WordPressVsCustomCostPage() {
                         <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="6 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="11 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -332,6 +332,82 @@ export default function WordPressVsCustomCostPage() {
                         deployment and integration work. Both need content operations, access, vendor management,
                         monitoring and recovery. Measure or sample the work using the same fully loaded labor rate.
                     </BlogText>
+
+                    <BlogHeader id="worked-model">A worked three-year model, with the numbers filled in</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            A method you cannot see run is hard to trust, so here is the model above with figures in it.
+                            <strong> These are illustrative inputs for one scenario, not a quote</strong>, and the whole
+                            point of the exercise is that you replace them with yours. The scenario: a 15-page marketing
+                            site for a small business, a CMS the team edits themselves, no ecommerce, and someone
+                            in-house spending a couple of hours a month on the site either way.
+                        </BlogText>
+
+                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+                            <table className="w-full min-w-[34rem] border-collapse text-sm">
+                                <caption className="sr-only">
+                                    Illustrative three-year cost model for a 15-page marketing site: managed WordPress
+                                    compared with a custom build, including internal labour on both sides.
+                                </caption>
+                                <thead>
+                                    <tr className="bg-stone-100 text-left">
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">Line</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">WordPress</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">Custom build</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {[
+                                        ["Build or setup", "$500 – $3,000", "$3,500 (our Growth package)"],
+                                        ["Hosting, 3 years", "$300 – $900", "$0 – $600"],
+                                        ["Plugins, themes, licences, 3 years", "$150 – $600", "$0"],
+                                        ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 – $4,500", "$0 – $1,500"],
+                                        ["Internal time, 2 hrs/month at $50", "$3,600", "$3,600"],
+                                        ["Three-year total", "$4,550 – $12,600", "$7,100 – $9,200"],
+                                    ].map(([line, wp, custom], idx, arr) => (
+                                        <tr key={line} className={`border-t border-stone-200 align-top ${idx === arr.length - 1 ? "bg-stone-50 font-bold text-charcoal" : ""}`}>
+                                            <td className="px-4 py-3">{line}</td>
+                                            <td className="px-4 py-3">{wp}</td>
+                                            <td className="px-4 py-3">{custom}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            Two things fall out of that, and neither is the answer people expect. <strong>The ranges
+                            overlap.</strong> Over three years these are not obviously different purchases, which is
+                            why published comparisons reach opposite conclusions so easily: pick the bottom of one
+                            column and the top of the other and you can prove whichever you already believed.
+                        </BlogText>
+
+                        <BlogText>
+                            The second is that <strong>the largest single line on both sides is internal time</strong>,
+                            and it is the line almost every published comparison sets to zero. A three-year total that
+                            says WordPress costs nothing to maintain is really saying somebody in your business is doing
+                            the updates, the compatibility checks and the recovery when a plugin breaks, and that their
+                            hours are free. They are not free. Put the same fully loaded rate in both columns and the
+                            comparison changes shape, which is the point made at{" "}
+                            <a href="#labor" className="text-cognac hover:underline">internal labour belongs in both columns</a>.
+                        </BlogText>
+
+                        <InsightBox variant="info">
+                            Published figures for a custom build usually start around $5,000 and run past $20,000, which
+                            is why custom looks like the expensive column. Our Growth package is $3,500 for a comparable
+                            10 to 20 page scope with a CMS, so in this scenario the custom column lands inside the
+                            WordPress range rather than above it. That is a statement about our pricing, not about
+                            custom builds in general — plug your own quotes in, because a $15,000 build changes the
+                            conclusion completely.
+                        </InsightBox>
+
+                        <BlogText>
+                            Run it with your own numbers before deciding. The inputs that move the answer most are the
+                            build price, the internal hourly rate and how many hours the site really takes each month.
+                            If you have never measured that last one, it is the first thing to go and measure, because
+                            every conclusion on this page rests on it.
+                        </BlogText>
+                    </div>
 
                     <BlogHeader id="incidents">Security and incident scenarios</BlogHeader>
                     <BlogText>

@@ -43,29 +43,12 @@ const nextConfig = {
   // 8. Catch malformed URLs (e.g. pandacodegen.com/$ from broken external links)
   async redirects() {
     return [
-      // Consolidate narrow legacy reference pages into the canonical visible
-      // business pages. The factual /ai-info hub remains available and links
-      // these same human-facing sources instead of maintaining duplicate facts.
-      {
-        source: '/ai-info/pricing-and-guarantees',
-        destination: '/pricing',
-        permanent: true,
-      },
-      {
-        source: '/ai-info/migration-services',
-        destination: '/services',
-        permanent: true,
-      },
-      {
-        source: '/ai-info/case-studies',
-        destination: '/work',
-        permanent: true,
-      },
-      {
-        source: '/ai-info/team-and-company',
-        destination: '/about',
-        permanent: true,
-      },
+      // The four granular /ai-info reference pages were RESTORED on 8 Aug 2026.
+      // They were consolidated in July to stop the same fact drifting across pages;
+      // that risk is now handled by src/data/company-facts.ts holding each fact once
+      // and every page importing it, so the surface is back without the drift.
+      // competitor-comparison stays redirected: a factual page about other companies
+      // would need vendor pricing this environment cannot verify.
       {
         source: '/ai-info/competitor-comparison',
         destination: '/pricing',
@@ -94,6 +77,15 @@ const nextConfig = {
       {
         source: '/blog/gohighlevel-migration',
         destination: '/blog/gohighlevel-keep-crm-replace-website',
+        permanent: true,
+      },
+      // Renamed google-march-2026-update -> google-algorithm-updates (Aug 2026):
+      // the page was a dated news post about one core update, but Google shipped
+      // two more (May 2026 core, June 2026 spam) and the slug would have gone on
+      // mislabelling an evergreen register forever. 301 preserves link equity.
+      {
+        source: '/blog/google-march-2026-update',
+        destination: '/blog/google-algorithm-updates',
         permanent: true,
       },
       {

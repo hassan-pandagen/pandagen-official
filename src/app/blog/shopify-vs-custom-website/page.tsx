@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-30",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-vs-custom-website")],
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-vs-custom-website"),
             description,
             datePublished: "2026-03-30",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -163,11 +163,43 @@ export default function ShopifyVsCustomWebsitePage() {
                             figures or PageSpeed targets.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                            Reviewed August 8, 2026 against current Shopify and Google documentation.
                         </p>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="5 min read" />
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-7">
+                        <h2 className="mb-3 text-xl font-bold text-charcoal">First: which &ldquo;custom website&rdquo; do you mean?</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            The phrase covers two completely different projects, and most comparisons quietly pick one
+                            without telling you which.
+                        </p>
+                        <ul className="mb-4 space-y-3 text-stone-700">
+                            <li>
+                                <strong>Self-hosted open-source, usually WooCommerce on WordPress.</strong> You rent
+                                hosting, install free software, and assemble the store from plugins. Cheap to start,
+                                and you own the updates, the security patching and the plugin conflicts. If this is
+                                what you meant, our{" "}
+                                <Link href="/blog/woocommerce-vs-custom-website" className="text-cognac hover:underline font-medium">WooCommerce comparison</Link>{" "}
+                                is the closer read, and{" "}
+                                <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="text-cognac hover:underline font-medium">the three-year cost model</Link>{" "}
+                                puts numbers on the maintenance side.
+                            </li>
+                            <li>
+                                <strong>A commerce experience built for you in code</strong>, either a headless
+                                storefront in front of Shopify&apos;s checkout or a separate custom stack. Higher to
+                                build, no plugin marketplace holding it together. <strong>This page is about that
+                                one.</strong>
+                            </li>
+                        </ul>
+                        <p className="leading-relaxed text-stone-700">
+                            The distinction matters because the two options fail differently. Self-hosted breaks through
+                            plugin conflicts and deferred updates. Custom code breaks through dependency drift and
+                            whoever built it becoming unavailable. Comparing either one to Shopify without naming which
+                            you mean produces an argument that cannot be checked.
+                        </p>
+                    </section>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The four real options</h2>

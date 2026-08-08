@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-price-increases-2026-tracker"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -92,8 +92,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Software procurement",
             inLanguage: "en-US",
-            wordCount: 1537,
-            timeRequired: "PT8M",
+            wordCount: 1804,
+            timeRequired: "PT9M",
             about: [
                 { "@type": "Thing", name: "Software as a service", sameAs: ["https://en.wikipedia.org/wiki/Software_as_a_service"] },
                 { "@type": "Thing", name: "Microsoft 365", sameAs: ["https://www.microsoft.com/microsoft-365"] },
@@ -120,7 +120,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -215,6 +215,37 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         accounts, so if you are on one of those the review is still worth doing before the date rather
                         than after it. Everything dated before today is a reconciliation exercise rather than a warning.
                     </BlogText>
+
+                    <BlogHeader id="industry-numbers">Why there is no industry-wide percentage on this page</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Search this topic and you will be given a single number: SaaS prices are up some
+                            percentage this year, a share of buyers face increases at renewal, a share of price rises
+                            blame AI. Those figures are not on this page, and the reason is worth stating.
+                        </BlogText>
+                        <BlogText>
+                            <strong>They are almost all published by companies that sell SaaS spend management or
+                            price-tracking software.</strong> That does not make them false, and it does mean the
+                            organisation reporting the inflation rate is the organisation selling the cure. The
+                            methodology behind them is rarely public in enough detail to check: which vendors were
+                            sampled, which tiers, which contract sizes, whether a repackaging counts as an increase,
+                            and whether the sample was renewals only, which would tilt it upward by construction. A
+                            number you cannot audit is not evidence about your bill.
+                        </BlogText>
+                        <BlogText>
+                            The number that actually matters is yours, and it takes about an hour to produce. Export
+                            twelve months of card or bank transactions for software. Group them by vendor. For each
+                            one, put last year&apos;s monthly figure next to this year&apos;s and note whether the seat
+                            count changed, because a rise driven by hiring is not a price rise. Then total both
+                            columns. <strong>That percentage is auditable, it is about your business, and it is the
+                            only one you can take into a renewal conversation.</strong>
+                        </BlogText>
+                        <BlogText>
+                            The entries below are the opposite of an aggregate: three specific vendors, with the dates
+                            and terms read from each vendor&apos;s own announcement, so you can check them yourself
+                            rather than take ours.
+                        </BlogText>
+                    </div>
 
                     <BlogHeader>Microsoft 365: the July 1, 2026 change</BlogHeader>
                     <BlogText>

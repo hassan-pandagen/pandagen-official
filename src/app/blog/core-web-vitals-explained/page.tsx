@@ -83,7 +83,7 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
             ],
-            wordCount: 1758,
+            wordCount: 1967,
             timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             keywords: ["Core Web Vitals", "LCP", "INP", "CLS", "PageSpeed Insights"],
@@ -178,7 +178,7 @@ export default function CoreWebVitalsExplainedPage() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan leads PandaCodeGen's engineering work on performance-sensitive website migrations and custom builds."
                         date="May 6, 2026"
-                        readTime="7 min read"
+                        readTime="9 min read"
                     />
 
                     <div className="my-10">

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -62,7 +62,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -81,8 +81,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Total cost of ownership", sameAs: ["https://en.wikipedia.org/wiki/Total_cost_of_ownership"] },
             ],
-            wordCount: 2445,
-            timeRequired: "PT12M",
+            wordCount: 3077,
+            timeRequired: "PT13M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -145,10 +145,10 @@ export default function WebsiteRebuildCostPage() {
                             or content system. Price it as a coordinated strategy, design, engineering and migration
                             project, not as a universal market band.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed August 8, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="7 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="13 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -273,6 +273,55 @@ export default function WebsiteRebuildCostPage() {
                         and the questions to put to a shortlist are in our{" "}
                         <Link href="/blog/website-developer-agency" className={linkClass}>guide to choosing a web development agency</Link>.
                     </BlogText>
+                    <BlogText>
+                        Published market rates cluster in fairly predictable places: freelancers are usually quoted
+                        somewhere around $25 to $100 per hour, and agencies around $100 to $250 or more. Those numbers
+                        are worth knowing and close to useless on their own. <strong>You are buying rate multiplied by
+                        hours, and the buyer can see the rate but not the hours.</strong> A $40 per hour engagement that
+                        needs constant direction, redoes work after each review round and has no defined acceptance can
+                        cost more in fees and considerably more in your own time than a $150 per hour team that scoped
+                        the work properly and finished it. Compare total quoted cost against a written scope. A rate
+                        card compared against nothing tells you which provider is cheaper per hour, which is not the
+                        question you are trying to answer.
+                    </BlogText>
+
+                    <BlogHeader id="published-ranges">Why published rebuild ranges are higher than our packages</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            If you have read any other guide on this, or the summary Google puts above the results, you
+                            have been told a small-business rebuild of 10 to 20 pages costs somewhere between $15,000
+                            and $40,000. Our comparable package for that page count starts at $3,500. That gap is large
+                            enough that it deserves an explanation rather than a boast, because a number well below the
+                            stated market is just as likely to mean a smaller job as a better deal.
+                        </BlogText>
+
+                        <BlogText>
+                            First, the like-for-like. Our <strong>Growth</strong> package is the one that matches that
+                            description: 10 to 20 custom pages, Sanity CMS so the team edits content without touching
+                            code, blog migration with every URL listed and a redirect map, a 90+ Lighthouse target on
+                            mobile and desktop evidenced by three passing runs per agreed page, third-party costs listed
+                            before approval, and 30 business days of support. <strong>Our $1,500 Starter is not that
+                            job</strong> — it is 5 to 7 pages and no CMS, and comparing it to a 20-page agency rebuild
+                            is the same scope error this page warns about everywhere else.
+                        </BlogText>
+
+                        <BlogText>
+                            Second, what the published band contains that ours does not. Those ranges generally bundle
+                            work that is genuinely expensive and genuinely optional: original photography and video,
+                            UX research with recruited participants, brand and identity development, copywriting for
+                            pages that do not exist yet, and the account-management layer that coordinates all of it.
+                            Those are real costs. If your rebuild needs them, they will push any provider&apos;s number
+                            up, including ours, and a quote that omits them is not cheaper so much as narrower.
+                        </BlogText>
+
+                        <InsightBox variant="info">
+                            The honest comparison is never price against price. It is <strong>scope against scope at
+                            the same page count, with the exclusions written down on both sides.</strong> Ask any
+                            provider quoting you what happens to the number if you supply the copy and the photography,
+                            and what it does if you do not. If the answer does not change the price in either direction,
+                            the quote was never itemised.
+                        </InsightBox>
+                    </div>
 
                     <BlogHeader id="platform-cost">What it costs to leave WordPress, Webflow, Squarespace, Wix or Shopify</BlogHeader>
                     <BlogText>
@@ -376,6 +425,22 @@ export default function WebsiteRebuildCostPage() {
                             "Archive, retention, cancellation and old-system decommissioning.",
                         ]}
                     />
+                    <BlogText>
+                        Two of those have a rough number attached that is worth budgeting against. Content work is
+                        commonly quoted somewhere in the region of <strong>$100 to $300 per page</strong> to rewrite or
+                        port existing copy, which is why a 30-page site and a 300-page site diverge on content long
+                        before they diverge on build. And <strong>ongoing maintenance is usually estimated at 15 to 20
+                        percent of the original build cost per year</strong>, covering hosting, security patching,
+                        dependency updates and small changes.
+                    </BlogText>
+                    <BlogText>
+                        Run that second one before you sign anything. A $30,000 build carrying 18 percent annual
+                        maintenance is roughly $5,400 a year, which is another $16,000 across three years, and it is
+                        the line most often left out of the comparison entirely. If you are weighing options over that
+                        horizon rather than at the point of purchase,{" "}
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={linkClass}>the three-year cost comparison</Link>{" "}
+                        works the same arithmetic through in full.
+                    </BlogText>
 
                     <BlogHeader id="when-not-to-rebuild">When a rebuild does not make sense</BlogHeader>
                     <BlogText>

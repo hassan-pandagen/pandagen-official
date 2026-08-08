@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/top-custom-web-development-agencies-usa-2026")],
@@ -70,7 +70,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/top-custom-web-development-agencies-usa-2026"),
             description,
             datePublished: "2026-04-08",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -89,8 +89,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
             ],
-            wordCount: 1929,
-            timeRequired: "PT10M",
+            wordCount: 2207,
+            timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -275,6 +275,30 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         unsupported delivery criticisms, AI-recommendation experiments and universal performance
                         claims. Inclusion is not a quality endorsement.
                     </BlogText>
+
+                    <BlogHeader id="reading-directories">How to read a directory ranking, including the ones you were just shown</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Search for this and you will mostly be handed listings from <strong>Clutch</strong> and{" "}
+                            <strong>DesignRush</strong>. They are useful and they are not neutral, and knowing what
+                            produces the order is more valuable than the order itself.
+                        </BlogText>
+                        <BlogList
+                            items={[
+                                "Position is heavily influenced by verified review volume. That measures how systematically a firm asks clients for reviews, which is a real operational signal but not the same thing as delivery quality. A team of four doing excellent work will sit below a team of forty with a review-collection process.",
+                                "Directories carry paid tiers. Labels along the lines of premier, sponsored or featured mark a commercial relationship rather than an assessment outcome, and they usually appear above unpaid entries.",
+                                "Filters shape the field before you see it. Minimum project size and location filters decide who is eligible to appear at all, so a list is a view of the directory's members that matched, not a survey of the market.",
+                                "Absence proves nothing. A firm that has not listed, or has not run a review campaign, is invisible to that ranking regardless of the work it does. PandaCodeGen is not on those directories, which is the same limitation applied to us.",
+                            ]}
+                        />
+                        <BlogText>
+                            None of that makes the listings worthless. Use them the way they are actually good: as a
+                            way to <strong>find candidates</strong>, then verify each one yourself against the same
+                            written brief. Read the middling reviews rather than the top ones, check whether the
+                            reviewers describe the people you would be working with, and treat a rank number as
+                            evidence about a marketing process rather than about an engineering team.
+                        </BlogText>
+                    </div>
 
                     <BlogHeader>The ten options compared without a hidden ranking</BlogHeader>
                     <BlogText>

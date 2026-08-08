@@ -5,6 +5,7 @@ import { CheckCircle2, Boxes, ShieldCheck, Accessibility, Code2, Gauge } from "l
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import OtherReviews from "@/components/work/OtherReviews";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
@@ -454,7 +455,10 @@ export default function EmblematicStudioCaseStudy() {
                             </Link>
                         </div>
                     </section>
-                </article>
+                
+                    <OtherReviews excludeId="emblematic-studio" />
+
+                    </article>
             </main>
             <Footer />
         </>

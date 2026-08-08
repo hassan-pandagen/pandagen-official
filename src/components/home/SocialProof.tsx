@@ -1,26 +1,15 @@
 import Link from "next/link";
+import { CLIENT_REVIEWS } from "@/data/reviews";
 import { ArrowRight, ArrowUpRight, Building2, Clock, Quote } from "lucide-react";
 
-const reviews = [
-  {
-    quote: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
-    source: "Waqas Ahmed on Trustpilot",
-    detail: "August 2026",
-    href: "https://www.trustpilot.com/review/pandacodegen.com",
-  },
-  {
-    quote: "Hassan was super helpful and communicative throughout the process.",
-    source: "Marshall James on Trustpilot",
-    detail: "March 2026",
-    href: "https://www.trustpilot.com/review/pandacodegen.com",
-  },
-  {
-    quote: "They worked with me to make a website that I could afford.",
-    source: "James Peace on Trustpilot",
-    detail: "March 2026",
-    href: "https://www.trustpilot.com/review/pandacodegen.com",
-  },
-];
+// Reviews live in src/data/reviews.ts so the home page and the case-study
+// strips cannot drift apart on what someone actually said.
+const reviews = CLIENT_REVIEWS.map(r => ({
+  quote: r.quote,
+  source: `${r.name} on ${r.platform}`,
+  detail: r.date,
+  href: r.href,
+}));
 
 export default function SocialProof() {
   return (

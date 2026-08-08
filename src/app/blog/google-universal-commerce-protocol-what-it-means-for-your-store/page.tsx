@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-21",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store")],
@@ -69,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store"),
             description,
             datePublished: "2026-02-21",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -90,8 +90,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Communication protocol", sameAs: ["https://en.wikipedia.org/wiki/Communication_protocol"] },
                 { "@type": "Organization", name: "Google", sameAs: ["https://en.wikipedia.org/wiki/Google"] },
             ],
-            wordCount: 2113,
-            timeRequired: "PT11M",
+            wordCount: 2354,
+            timeRequired: "PT12M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -221,6 +221,50 @@ export default function UniversalCommerceProtocolGuide() {
                         not put your store in front of Google, ChatGPT, Bing or any other agent. Each of them decides
                         for itself who gets in, who gets found, who qualifies, what is safe to show, how it ranks, how
                         it looks, and what the commercial terms are.
+                    </BlogText>
+
+                    <BlogHeader id="ucp-vs-mcp-vs-ap2">UCP, MCP, A2A and AP2 are four different things</BlogHeader>
+                    <BlogText>
+                        These arrive together in the same announcements and get used interchangeably, which is why two
+                        of the most common questions on this topic are what separates UCP from MCP and what separates
+                        UCP from AP2. They sit at different layers and none of them replaces another.
+                    </BlogText>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <table className="w-full min-w-[36rem] border-collapse text-sm">
+                            <caption className="sr-only">
+                                How the Universal Commerce Protocol relates to the Model Context Protocol,
+                                Agent-to-Agent and the Agent Payments Protocol.
+                            </caption>
+                            <thead>
+                                <tr className="bg-stone-100 text-left">
+                                    <th scope="col" className="px-4 py-3 font-bold text-charcoal">Protocol</th>
+                                    <th scope="col" className="px-4 py-3 font-bold text-charcoal">Answers the question</th>
+                                    <th scope="col" className="px-4 py-3 font-bold text-charcoal">Layer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    ["UCP", "What is this product, what is in the cart, how does an order get placed and handled?", "The commerce vocabulary"],
+                                    ["MCP", "How does a model reach a tool or data source at all?", "One of the transports UCP can travel over"],
+                                    ["A2A", "How do two agents coordinate with each other?", "Also listed as a possible transport"],
+                                    ["AP2", "How does an agent prove it is authorised to pay?", "Payment authorisation, alongside rather than inside UCP"],
+                                ].map(([p, q, layer]) => (
+                                    <tr key={p} className="border-t border-stone-200 align-top">
+                                        <td className="px-4 py-3 font-bold text-charcoal">{p}</td>
+                                        <td className="px-4 py-3 text-stone-600">{q}</td>
+                                        <td className="px-4 py-3 text-stone-600">{layer}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <BlogText>
+                        The practical consequence is that <strong>&ldquo;we support MCP&rdquo; and &ldquo;we are UCP
+                        ready&rdquo; are not the same claim.</strong> MCP is a pipe. UCP is what you say down it. A
+                        vendor telling you an MCP endpoint makes your catalogue agent-ready has described the
+                        connection and skipped the part where your product data, availability, pricing and checkout
+                        have to be expressed in a form an agent can act on. When someone quotes you for this work, ask
+                        which of the four they mean and what they are delivering in each.
                     </BlogText>
 
                     <BlogHeader>What Google documents, as read on July 24, 2026</BlogHeader>

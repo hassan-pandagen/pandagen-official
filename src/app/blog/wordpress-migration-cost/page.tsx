@@ -152,7 +152,7 @@ export default function WordPressMigrationCostPage() {
                             WordPress to Next.js Migration Cost: <span className="italic text-cognac">Scope Before Price</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Rebuilding a WordPress site as a custom Next.js build starts at $1,500 with us, $3,500 for
+                            Rebuilding a WordPress site as a custom Next.js build starts at $1,500 with PandaCodeGen, $3,500 for
                             a broader marketing site, and $5,000 to $10,000 where templates, data or integrations
                             multiply. Those are our prices, not a market average. Before you use any of them: if you
                             only want the same WordPress site on a different host, that is a different job and it is

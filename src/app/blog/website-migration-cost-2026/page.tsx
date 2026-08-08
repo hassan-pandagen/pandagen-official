@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-08-02",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -70,7 +70,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -86,7 +86,7 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Website migration",
             keywords: ["website migration cost", "how long does a website migration take", "website replatforming cost", "WordPress migration cost", "Shopify migration cost", "change web host"],
-            wordCount: 2524,
+            wordCount: 2906,
             timeRequired: "PT13M",
             inLanguage: "en-US",
             about: [
@@ -115,7 +115,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -165,7 +165,7 @@ export default function WebsiteMigrationCostPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <div className="my-10">
                         <MigrationVisual />
@@ -245,8 +245,9 @@ export default function WebsiteMigrationCostPage() {
                             WordPress site from one host to another host keeps the same software, the same theme, the
                             same plugins and the same database. Nothing is rebuilt. Most hosting companies will do that
                             transfer for you when you buy a plan, frequently at no charge or for a small fixed fee, and
-                            that is the first place to ask. <strong>If all you need is a host change, do not pay
-                            migration prices for it.</strong>
+                            that is the first place to ask. <strong>A host-only move should cost you between $0 and
+                            about $150. If all you need is a host change, do not pay migration prices for it, and do
+                            not hire us to do it.</strong>
                         </BlogText>
                     </div>
 
@@ -267,6 +268,41 @@ export default function WebsiteMigrationCostPage() {
                         <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline font-medium">what a website costs to build from scratch</Link>{" "}
                         covers the case where replacing beats moving.
                     </BlogText>
+
+                    <BlogHeader id="what-changes-the-number">The three things a quote actually depends on</BlogHeader>
+
+                    <div data-speakable="true">
+                        <BlogText>
+                            Every published migration range is wide because it is averaging jobs that have nothing in
+                            common. Three answers collapse most of that range, and any quote given without them is a
+                            guess wearing a number.
+                        </BlogText>
+
+                        <BlogList
+                            items={[
+                                "The platform pair, not just the destination. WordPress to Next.js and Wix to Next.js are different jobs: WordPress exposes its database and a REST API, so content extraction is scriptable. Wix does not give you the same access, so more content is moved by hand and the same page count costs more.",
+                                "The countable unit, and which one applies. Brochure sites price per page or per template; stores price per product, per variant and per historical order. A 40-page site and a 4,000-product catalogue can carry the same design work and differ by an order of magnitude on data.",
+                                "Whether URLs have to survive. If the site has search traffic worth keeping, someone has to inventory every live URL, map each to its new path and ship 301 redirects, then verify them after cutover. On an established site this is often the single largest line item, and it is the one most commonly missing from a cheap quote.",
+                            ]}
+                        />
+
+                        <BlogText>
+                            That third one is where cheap migrations turn expensive. A 301 redirect tells Google the page
+                            moved permanently and passes its ranking signals to the new URL. Skip the mapping and the old
+                            URLs return 404s, the accumulated signals are lost, and the traffic does not come back on its
+                            own. Recovering it afterwards costs more than mapping it correctly would have, because by
+                            then the rankings have to be re-earned rather than transferred. What that looks like in
+                            practice is covered in{" "}
+                            <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline font-medium">what a migration does to search visibility</Link>.
+                        </BlogText>
+
+                        <InsightBox variant="info">
+                            Before asking anyone for a number, write down three things: the platform you are on and the
+                            one you are moving to, your page count or product count, and whether you need existing URLs
+                            and rankings preserved. A quote given without those is not a quote. A quote that omits the
+                            redirect mapping is not cheaper than one that includes it, it is just deferring the cost.
+                        </InsightBox>
+                    </div>
 
                     <BlogHeader id="which-platform">Go straight to your platform</BlogHeader>
                     <BlogText>

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-10",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-slow-losing-sales")],
@@ -78,7 +78,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-slow-losing-sales"),
             description,
             datePublished: "2026-02-10",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -98,7 +98,7 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 2223,
+            wordCount: 2456,
             timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
@@ -164,15 +164,41 @@ export default function ShopifySlowLosingSalesPage() {
                             change and separate observed results from planning scenarios.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                            Reviewed August 8, 2026 against current Shopify and Google documentation.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 10, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 10, 2026" readTime="11 min read" />
 
                     <div className="my-10">
                         <SalesImpactAnimation />
                     </div>
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-7">
+                        <h2 className="mb-3 text-xl font-bold text-charcoal">The short answer, and the number we will not give you</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            <strong>Probably yes, and nobody can tell you how much from a statistic.</strong> A slow
+                            store can obstruct purchases at several points, and that is worth fixing. But the figure
+                            you have almost certainly been quoted while researching this — that around half of mobile
+                            visitors abandon a site loading longer than three seconds — was measured on somebody
+                            else&apos;s traffic, in a different year, for different products, at a different price
+                            point, with different buying intent. It cannot tell you what your store is losing.
+                        </p>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            You will find that number, and per-second conversion formulas alongside it, repeated across
+                            theme vendors, agency blogs and social posts. We removed all of them from this site during
+                            a claims review, because none could be traced to a source that supports the way it is
+                            being used. <strong>A statistic borrowed from another business is not evidence about
+                            yours</strong>, and a quote built on one is a quote built on nothing.
+                        </p>
+                        <p className="leading-relaxed text-stone-700">
+                            The useful version of this question is answerable, just not from an article. Your own
+                            analytics already contain the relationship between speed and completed orders on your
+                            store, and the rest of this page is the method for getting it out: confirm a real
+                            performance problem exists, find which funnel stage it affects, rule out the competing
+                            explanations, then test one defined change and measure what moved.
+                        </p>
+                    </section>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Four different numbers</h2>

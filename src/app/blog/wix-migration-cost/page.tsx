@@ -157,7 +157,7 @@ export default function WixMigrationCostPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             A Wix migration is a rebuild rather than a transfer, and that one fact sets the price. Wix
                             lets you export your data, but not the site itself, so the design, the page layouts and the
-                            page-level SEO settings are recreated by hand on the other side. Our own tiers start at
+                            page-level SEO settings are recreated by hand on the other side. PandaCodeGen&apos;s tiers start at
                             $1,500 and run past $10,000. Page count on its own is a poor predictor of where you land.
                             What actually moves the number is how many unique templates, data domains, apps and
                             workflows have to come with you.

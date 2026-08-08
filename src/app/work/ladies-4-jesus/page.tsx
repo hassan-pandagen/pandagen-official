@@ -5,6 +5,7 @@ import { CheckCircle2, ShieldCheck, Search, Video, Users, Code2 } from "lucide-r
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import OtherReviews from "@/components/work/OtherReviews";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/ladies-4-jesus";
@@ -185,6 +186,45 @@ export default function Ladies4JesusCaseStudy() {
                             .
                         </p>
                     </header>
+
+                    <section className="mb-14">
+                        <div className="rounded-3xl border border-cognac/30 bg-gradient-to-br from-cognac/5 to-transparent p-8 md:p-10">
+                            <div className="mb-4 flex items-center gap-3">
+                                <span className="text-lg tracking-widest text-cognac" aria-hidden="true">★★★★★</span>
+                                <span className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">
+                                    Verified client review
+                                </span>
+                            </div>
+                            <blockquote className="font-serif text-2xl leading-relaxed text-charcoal md:text-3xl">
+                                &ldquo;I was hesitant to use them at first because the price seemed more than
+                                reasonable and I had never heard of them but I am so glad I chose to work with
+                                them.&rdquo;
+                            </blockquote>
+                            <p className="mt-5 leading-relaxed text-stone-700">
+                                &ldquo;Hassan and his team were wonderful to work with. They created a phenomenal
+                                website for me. I couldn&apos;t be happier. I highly recommend.&rdquo;
+                            </p>
+                            <p className="mt-6 text-sm text-stone-600">
+                                — Etoy McDaniel.{" "}
+                                <a
+                                    href="https://www.trustpilot.com/review/pandacodegen.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
+                                >
+                                    Unprompted review on Trustpilot
+                                </a>
+                                , August 2026.
+                            </p>
+                            <p className="mt-5 border-t border-stone-300 pt-5 text-sm leading-relaxed text-stone-600">
+                                <strong>That is one client&apos;s experience and it is worth reading for the
+                                hesitation rather than the praise.</strong> A price below what someone expects, from a
+                                company they have not heard of, is a reasonable thing to be cautious about. It is a
+                                fair reaction to a real signal, and the only useful answer to it is finished work
+                                somebody can go and look at.
+                            </p>
+                        </div>
+                    </section>
 
                     <section className="mb-14">
                         <h2 className="mb-4 text-3xl font-bold text-charcoal">What this record does and does not prove</h2>
@@ -376,7 +416,10 @@ export default function Ladies4JesusCaseStudy() {
                             </Link>
                         </div>
                     </section>
-                </article>
+                
+                    <OtherReviews excludeId="ladies-4-jesus" />
+
+                    </article>
             </main>
             <Footer />
         </>

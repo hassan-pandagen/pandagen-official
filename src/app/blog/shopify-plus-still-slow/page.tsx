@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-06",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-plus-still-slow")],
@@ -81,7 +81,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-plus-still-slow"),
             description,
             datePublished: "2026-02-06",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -101,8 +101,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 1645,
-            timeRequired: "PT8M",
+            wordCount: 1945,
+            timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -172,7 +172,7 @@ export default function ShopifyPlusStillSlowPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="4 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="10 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The correct starting point</h2>
@@ -299,6 +299,29 @@ export default function ShopifyPlusStillSlowPage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogText>
+                        The table tells you what to look at. Attributing a slowdown to <em>one named app</em> takes a
+                        procedure, and this is the part most audits skip because the obvious version of it is unsafe.
+                        Work on a <strong>duplicate of the live theme</strong> and test through its preview URL.
+                        Nothing you do there is visible to customers.
+                    </BlogText>
+                    <BlogList
+                        items={[
+                            "Duplicate the published theme. In the theme editor for the duplicate, open App embeds: this is where most apps inject their global script, and it is toggleable per theme, so switching one off affects the preview only.",
+                            "Record a baseline on the preview URL first: three runs of the same template, same device profile, same network setting. One run is noise.",
+                            "Turn off one app embed, re-run the same three, write the number down, turn it back on. Changing two at once tells you the pair matters and not which one.",
+                            "In Chrome DevTools, use the Coverage panel to see how much of each script is actually executed on that route, and the network waterfall to see what blocks rendering. An app costing 200KB that runs on every page but only functions on the cart is a routing problem, not a removal decision.",
+                            "Rank what you found by cost per route, not by total weight, because the template your traffic lands on is the one that matters.",
+                        ]}
+                    />
+                    <InsightBox variant="warning">
+                        App embeds are per-theme; <strong>uninstalling an app is store-wide and affects the live
+                        storefront immediately.</strong> Never uninstall to test. If an app injects through theme code
+                        rather than an app embed, it may have left snippets behind that a toggle will not disable, and
+                        those need finding in the duplicate before you conclude the app is innocent. Removing an app
+                        that another workflow depends on is also how a speed audit turns into an outage.
+                    </InsightBox>
 
                     <BlogText>
                         Each row above has a longer write-up. Inventorying what the store carries is covered in our

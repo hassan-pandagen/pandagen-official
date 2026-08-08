@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/spending-more-on-ads-fewer-orders-tracking")],
@@ -93,7 +93,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/spending-more-on-ads-fewer-orders-tracking"),
             description,
             datePublished: "2026-06-04",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -136,7 +136,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-04",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -229,6 +229,28 @@ export default function SpendingMoreOnAdsTrackingPage() {
                             "Check pricing, shipping, promotion, payment and site-error changes.",
                         ]}
                     />
+                    <InsightBox variant="info">
+                        <strong>The test that splits this in one sitting.</strong> Count the orders in your own system
+                        of record — the store admin, the ERP, the payment processor — for an exact date range, then
+                        compare that count against what the ad platform reports as conversions for the same range and
+                        the same campaigns. If real orders held steady while platform-reported conversions fell,{" "}
+                        <strong>you have fewer recorded orders, not fewer orders</strong>, and the problem is
+                        measurement. If real orders genuinely fell, the tracking stack is not your first problem and
+                        nothing on the rest of this page will fix it. Run this before paying anyone to touch your
+                        pixel, because the two answers send you to completely different work.
+                    </InsightBox>
+
+                    <BlogText>
+                        That distinction is missing from most advice on this symptom. The usual explanations —{" "}
+                        <strong>audience saturation</strong>, creative fatigue, broad or colder{" "}
+                        <strong>targeting</strong> as budget rises, and disrupting the{" "}
+                        <strong>learning phase</strong> by scaling too fast — are all real, all common, and all
+                        assume the orders genuinely are not happening. They are the right answers to a demand problem.
+                        None of them can explain a case where the orders arrived, the money cleared, and the platform
+                        simply never heard about it. That case looks identical from the ad dashboard, and it is the
+                        one this page is about.
+                    </BlogText>
+
                     <BlogText>
                         Two of those causes deserve naming, because they are common and neither one is your tracking.
                         The first is the auction. What you pay is set partly by how many other advertisers are bidding

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-20",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-vs-custom-website")],
@@ -71,7 +71,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-vs-custom-website"),
             datePublished: "2026-05-20",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -86,7 +86,7 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Commerce platform strategy",
             inLanguage: "en-US",
-            wordCount: 2851,
+            wordCount: 3182,
             timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", "name": "WooCommerce", "sameAs": ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },
@@ -114,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-20",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -484,6 +484,44 @@ export default function WooCommerceVsCustomWebsitePage() {
                         we scope that work under{" "}
                         <Link href="/services/wordpress-migration" className="text-cognac hover:underline font-medium">WordPress migration</Link>.
                     </BlogText>
+
+                    <BlogHeader id="how-long">How long does a custom build actually take?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Published comparisons tend to say custom development runs to &ldquo;several months&rdquo;
+                            against days or weeks for a plugin-based store. That is true of some custom projects and it
+                            is not a property of custom code. Timeline follows scope, integration count and how fast
+                            the client can make decisions, so the honest version is a range with the drivers named.
+                        </BlogText>
+
+                        <BlogText>
+                            Two of our own projects mark out that range, and both are published with their details so
+                            you can check the claim rather than take it. <Link href="/work/mycustompatches" className="text-cognac hover:underline font-medium">MyCustomPatches</Link>{" "}
+                            moved every page, product and blog post onto a custom Next.js build in <strong>about 22
+                            days</strong>, with a full crawl validation before DNS cutover and rankings stable within
+                            two weeks of launch. At the other end,{" "}
+                            <Link href="/work/enterprise-ops" className="text-cognac hover:underline font-medium">an operations platform</Link>{" "}
+                            with twenty Supabase Edge Functions, live profit calculations and real user roles took{" "}
+                            <strong>10 weeks</strong>. Same team, same stack, a five-fold difference in elapsed time,
+                            driven entirely by what was being built.
+                        </BlogText>
+
+                        <BlogList
+                            items={[
+                                "A marketing site or catalogue migration with a settled design is usually weeks, not months. Content volume moves the number far less than people expect, because extraction is scripted rather than retyped.",
+                                "Every live integration adds real time: payment providers, ERP or inventory sync, CRM, subscription logic and anything with its own sandbox and approval process.",
+                                "Decision latency is the most underestimated input. A build waiting three days for each round of feedback is a slower project than a harder build with a decision-maker available.",
+                                "A store migration also carries the URL inventory, redirect mapping and post-launch monitoring, which run alongside the build rather than after it.",
+                            ]}
+                        />
+
+                        <InsightBox variant="info">
+                            When a provider quotes you a timeline, ask what it assumes about your side: how quickly
+                            feedback comes back, who signs off, and whether content and assets already exist. Most
+                            overruns are not engineering overruns. If the answer to those three does not change the
+                            estimate at all, the estimate was not built from your project.
+                        </InsightBox>
+                    </div>
 
                     <BlogHeader id="decision">A practical decision sequence</BlogHeader>
                     <div data-speakable="true">

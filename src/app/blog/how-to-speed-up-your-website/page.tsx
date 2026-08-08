@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-speed-up-your-website")],
@@ -65,7 +65,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-08",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -81,8 +81,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            wordCount: 2619,
-            timeRequired: "PT13M",
+            wordCount: 3119,
+            timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
                 { "@type": "Thing", name: "Core Web Vitals" },
@@ -109,7 +109,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-08",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -149,11 +149,11 @@ export default function WebsiteSpeedGuide() {
                             same page state after each change.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 3, 2026 against current Google and Chrome guidance.
+                            Reviewed August 8, 2026 against current Google and Chrome guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Before the 12 diagnostics</h2>
@@ -180,6 +180,78 @@ export default function WebsiteSpeedGuide() {
                                 <p className="text-sm leading-relaxed text-stone-600">{body}</p>
                             </div>
                         ))}
+                    </div>
+
+                    <BlogHeader id="where-to-start">Where to start, based on your current score</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Twelve diagnostics is the full sweep. You rarely need all twelve, and which ones matter
+                            depends on where you are starting from. Get a number first, then jump to the step that
+                            fits it.
+                        </BlogText>
+
+                        <BlogText>
+                            <strong>If you do not have a score yet:</strong> run{" "}
+                            <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">PageSpeed Insights</a>{" "}
+                            on one specific URL, not your homepage by habit. Read the top panel first, not the score.
+                            That panel is Chrome field data: real visits, the slowest quarter of them, over the last 28
+                            days. The coloured score underneath is a lab simulation of a single load on a throttled
+                            mid-range phone. When the two disagree, the field data is the one describing your visitors.
+                        </BlogText>
+
+                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+                            <table className="w-full min-w-[32rem] border-collapse text-sm">
+                                <caption className="sr-only">
+                                    Which of the twelve diagnostics to start with, by current PageSpeed Insights result.
+                                </caption>
+                                <thead>
+                                    <tr className="bg-stone-100 text-left">
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">Where you are</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">What it usually means</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal whitespace-nowrap">Start at</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {[
+                                        ["Below 50", "One or two things dominate everything else. Almost always an oversized LCP image or render-blocking CSS and JavaScript in the head.", "Steps 5 to 7"],
+                                        ["50 to 89", "No single cause left. Script execution, long tasks and third-party tags are usually splitting the remaining time between them.", "Steps 8 and 10"],
+                                        ["90 or above", "The lab score is no longer your constraint. Check field INP and CLS, which a lab run measures poorly or not at all.", "Steps 2 and 9"],
+                                        ["Field data says “insufficient data”", "Not enough Chrome traffic to report. You are not being penalised for this. Test on a real mid-range phone on cellular instead.", "Step 2"],
+                                        ["Fast for you, slow for visitors", "You are testing on better hardware, a better network, and a warm cache. The 75th percentile is the number that matters.", "Steps 1 and 2"],
+                                    ].map(([where, means, start]) => (
+                                        <tr key={where} className="border-t border-stone-200 align-top">
+                                            <td className="px-4 py-3 font-semibold text-charcoal">{where}</td>
+                                            <td className="px-4 py-3 text-stone-600">{means}</td>
+                                            <td className="px-4 py-3 text-stone-600 whitespace-nowrap">{start}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <BlogText>
+                            The standard advice list, the one you have already read a dozen times, is not wrong. Compress
+                            images to WebP or AVIF. Minify CSS and JavaScript. Put a CDN in front of static assets.
+                            Enable caching. Defer non-critical scripts. Cut redirect chains. Every item on it is real
+                            work that helps some sites.
+                        </BlogText>
+
+                        <BlogText>
+                            The problem is the order. That list is sorted by how easy each item is to write down, not by
+                            how much time it will give you back. Minification saves kilobytes on a site whose actual
+                            problem is a 2MB hero image. A CDN does nothing for a page that is slow because it runs 400ms
+                            of JavaScript before it renders. Running the list top to bottom means doing five things that
+                            change nothing before reaching the one that mattered.
+                        </BlogText>
+
+                        <InsightBox variant="warning">
+                            Two items on that list get blamed by name before anyone measures them. <strong>Shared
+                            hosting</strong> and <strong>plugins</strong> are both real causes of slow sites and neither
+                            is a diagnosis on its own. Measure TTFB by template and by region before you conclude hosting
+                            is the constraint, and measure what each plugin actually adds to the critical path before you
+                            remove it. Moving host or deleting plugins on suspicion is how sites get slower and lose
+                            functionality in the same afternoon.
+                        </InsightBox>
                     </div>
 
                     <BlogHeader id="worked-example">A worked example, measured on this page</BlogHeader>

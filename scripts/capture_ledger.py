@@ -25,6 +25,57 @@ BLOG_DIR = ROOT / "src" / "app" / "blog"
 NEEDS_RECHECK: set[str] = set()
 
 CAPTURED = {
+    "saas-price-increases-2026-tracker",  # 8 Aug -- EXPERIMENT TREATMENT, edited 8 Aug; refused vendor-marketing stats, gave the DIY method
+
+    "wix-vs-custom-website",           # 8 Aug -- EXPERIMENT TREATMENT, edited 8 Aug; added launch timeline + removed dup paragraph
+
+    "leaving-webflow-2026",            # 8 Aug -- EXPERIMENT TREATMENT, edited 8 Aug; named Framer/AI-tools/headless destinations
+
+    "aeo-web-performance-glossary",    # 8 Aug -- glossary had NO individual LCP/INP/CLS entries; CLS threshold absent entirely
+
+    "aeo-playbook-built-into-every-website",  # 8 Aug -- published the citable-passage template derived from an observed citation
+
+    "for-agencies-offer-custom-web-development",  # 8 Aug -- added the after-launch/retainer gap
+
+    "top-custom-web-development-agencies-usa-2026",  # 8 Aug -- answer is 100% directories; added how to read a directory ranking
+
+    "wordpress-april-2026-evidence",   # 8 Aug -- added the "updated != clean" residual-risk section; refused unverified AIO incidents
+
+    "google-universal-commerce-protocol-what-it-means-for-your-store",  # 8 Aug -- added UCP/MCP/A2A/AP2 disambiguation, the two PAA questions
+
+    "why-we-chose-nextjs-over-wordpress-2026",  # 8 Aug -- AIO argues our side with claims we reject; corrected the no-admin one
+
+    "agentic-browsing-pagespeed-score", # 8 Aug -- NO EDIT NEEDED; page already ahead of the AIO. llms.txt is no longer inert
+
+    "shopify-plus-still-slow",         # 8 Aug -- AIO agrees with us; gap was the app-isolation procedure
+
+    "shopify-stocky-sunset-date-2026", # 8 Aug -- 23 days to sunset; added Feb 2 delist, POS Pro, irreversibility triage
+
+    "shopify-slow-losing-sales",       # 8 Aug -- AIO repeats the exact claims our July remediation deleted
+
+    "meta-conversions-api-setup-cost", # 8 Aug -- AIO ranks paths by price; we rank by what each can carry
+
+    "spending-more-on-ads-fewer-orders-tracking",  # 8 Aug -- AIO never mentions tracking as a cause; added the recorded-vs-real test
+
+    "website-developer-agency",        # 8 Aug -- AIO names Clutch/Reddit as the verification step; we had zero coverage of it
+
+    "woocommerce-vs-custom-website",   # 8 Aug -- AIO says custom takes "several months"; answered with our own published 22d / 10wk receipts
+
+    "shopify-vs-custom-website",       # 8 Aug -- AIO reads "custom website" as self-hosted WooCommerce, not a bespoke build
+
+    "wordpress-vs-custom-code-real-cost-3-years",  # 8 Aug -- AIO concludes WP is cheaper; our page was method-only with no numbers
+
+    "website-rebuild-cost-2026",       # 8 Aug -- AIO bands sit far above our tiers; added hourly/per-page/annual units
+
+    "why-is-my-website-loading-so-slow",  # 2 Aug -- logged retroactively 8 Aug; capture recorded in prose, not the structured header, so the ledger missed it
+
+    "website-migration-cost-2026",     # 8 Aug -- AIO top source is a Reddit thread; gap was 301 + host-only price + scoping units
+
+    "how-to-speed-up-your-website",    # 8 Aug -- AIO is the generic checklist; gap was ordering + missing terms
+
+    "core-web-vitals-explained",       # 7 Aug -- AIO is 9/9 Google-owned docs; competed on interpretation, not definition
+    "google-algorithm-updates",        # 7 Aug -- capture exposed 2 missed updates; page rewritten as evergreen register 8 Aug
+
     # 2 Aug — batch 1, serial
     "nextjs-hosting-zero-cost",
     "gohighlevel-website-speed",

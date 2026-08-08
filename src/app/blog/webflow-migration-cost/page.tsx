@@ -155,7 +155,7 @@ export default function WebflowMigrationCostPage() {
                             Webflow Migration Cost: <span className="italic text-cognac">Scope, Tiers and Evidence</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Moving a site off Webflow onto a custom build starts at $1,500 with us, $3,500 for a larger
+                            Moving a site off Webflow onto a custom build starts at $1,500 with PandaCodeGen, $3,500 for a larger
                             marketing site, and $5,000 to $10,000 where templates, CMS or integrations multiply. Those
                             are our prices, not a market average. What decides which one you land in is rarely page
                             count. It is how many distinct templates hide behind those pages, how your CMS collections

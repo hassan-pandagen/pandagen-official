@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-23",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-april-2026-evidence")],
@@ -88,7 +88,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-april-2026-evidence"),
             description,
             datePublished: "2026-04-23",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -103,8 +103,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WordPress evidence",
             inLanguage: "en-US",
-            wordCount: 2212,
-            timeRequired: "PT11M",
+            wordCount: 2590,
+            timeRequired: "PT13M",
             about: [
                 { "@type": "Thing", name: "WordPress", sameAs: ["https://wordpress.org/", "https://en.wikipedia.org/wiki/WordPress"] },
                 { "@type": "Thing", name: "WooCommerce", sameAs: ["https://woocommerce.com/", "https://en.wikipedia.org/wiki/WooCommerce"] },
@@ -131,7 +131,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-23",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -316,6 +316,42 @@ export default function WordPressAprilEvidencePage() {
                         and the dependency-count question is examined with measurements in{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">the plugin audit guide</Link>.
                     </BlogText>
+
+                    <BlogHeader id="already-updated">&ldquo;I already updated the plugin&rdquo; is not the same as &ldquo;I am clean&rdquo;</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            This is the part that gets missed, and it follows directly from the shape above. When a
+                            malicious release is discovered, the fix that arrives is a corrected version of the
+                            plugin. <strong>That repairs the code. It does not undo what the code did while it was
+                            running.</strong> If a site received a compromised release and it executed, anything it
+                            established — an added administrator, a file dropped outside the plugin directory, a
+                            scheduled task, a modified core file — survives the update, because none of it lives in
+                            the plugin that just got replaced.
+                        </BlogText>
+                        <BlogText>
+                            So the update is necessary and it is not evidence. The question a site owner actually
+                            needs answered is whether a malicious version ever ran on their install, and that is
+                            answered from the site, not from the version number now showing in the dashboard.
+                        </BlogText>
+                        <BlogList
+                            items={[
+                                "Compare the update history against the dates in the disclosure. If the site pulled that plugin during the affected window, treat it as exposed until checked rather than patched.",
+                                "List every administrator account and when it was created. An account you cannot attribute to a person is the single clearest indicator, and it is the first thing these attacks add.",
+                                "Look for files with recent modification times outside the plugin's own directory, particularly in uploads, and for core files whose checksums no longer match the release.",
+                                "Check scheduled tasks and any code that re-adds users or re-writes files, since persistence is usually what makes a cleanup fail the second time.",
+                                "Review logs for the window rather than for today. The interesting activity is around the compromise, not around the moment you started looking.",
+                            ]}
+                        />
+                        <InsightBox variant="warning">
+                            If any of those turn up something, the honest advice is that <strong>this stops being a
+                            plugin problem and becomes an incident.</strong> Confirmed persistence is not reliably
+                            fixed by deleting what you found, because you are working from the indicators you happened
+                            to notice. Restoring from a backup taken before the affected window, or bringing in someone
+                            who does remediation for a living, is the appropriate response. We do not offer incident
+                            response, and a rebuild is not a substitute for it — <strong>migrating a compromised site
+                            can carry the compromise across.</strong>
+                        </InsightBox>
+                    </div>
 
                     <BlogHeader id="event-three">Record three: WooCommerce public feedback</BlogHeader>
                     <BlogText>

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-12",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-vs-custom-website")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -310,16 +310,37 @@ export default function WixVsCustomWebsitePage() {
                         ]}
                     />
                     <BlogText>
-                        Use current quotes, equivalent features and low, central and high usage scenarios. Free or
-                        included allowances can change and may not fit the commercial workload. A lower recurring bill
-                        does not prove a migration payback without measured benefits and all transition costs.
-                    </BlogText>
-                    <BlogText>
                         For the build side of that arithmetic, see{" "}
                         <Link href="/blog/how-much-does-a-website-cost" className={inlineLinkClass}>what a website costs to build</Link>{" "}
                         and our published{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing tiers</Link>. For the transition side, see{" "}
                         <Link href="/blog/website-migration-cost-2026" className={inlineLinkClass}>the website migration cost guide</Link>.
+                    </BlogText>
+
+                    <BlogHeader id="timeline">How long each one takes to launch</BlogHeader>
+                    <BlogText>
+                        This is the difference people feel first, and it is real. <strong>Wix can have something
+                        live the same afternoon.</strong> You pick a template, replace the content, connect a
+                        domain, and the hosting, certificates and updates are somebody else&apos;s problem from
+                        then on. Nothing in a custom build competes with that, and if speed to launch is the
+                        binding constraint, the honest recommendation is the builder.
+                    </BlogText>
+                    <BlogText>
+                        A custom build is measured in weeks, and on a Wix migration specifically the reason is worth
+                        knowing: <strong>Wix exports your content but not your site.</strong> The design, the page
+                        layouts and the page-level SEO settings are recreated on the other side rather than
+                        transferred, so the work scales with how many distinct templates sit behind your pages, not
+                        with the page count itself.
+                    </BlogText>
+                    <BlogText>
+                        For a sense of the actual range rather than &ldquo;weeks or months&rdquo;, two of our own
+                        projects are published with their details:{" "}
+                        <Link href="/work/mycustompatches" className={inlineLinkClass}>MyCustomPatches</Link>{" "}
+                        moved every page, product and blog post to a custom build in <strong>about 22 days</strong>,
+                        and <Link href="/work/enterprise-ops" className={inlineLinkClass}>an operations platform</Link>{" "}
+                        with twenty edge functions and live profit calculations took <strong>10 weeks</strong>. The
+                        spread between them is scope and integration count, not the choice of custom code. Decision
+                        latency on your side moves it more than most people expect.
                     </BlogText>
 
                     <BlogHeader id="scale">Scale</BlogHeader>

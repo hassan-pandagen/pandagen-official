@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-06",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/for-agencies-offer-custom-web-development")],
@@ -57,7 +57,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -76,8 +76,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Web development", sameAs: ["https://en.wikipedia.org/wiki/Web_development"] },
                 { "@type": "Thing", name: "Outsourcing", sameAs: ["https://en.wikipedia.org/wiki/Outsourcing"] },
             ],
-            wordCount: 2407,
-            timeRequired: "PT12M",
+            wordCount: 2751,
+            timeRequired: "PT14M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
         },
         {
@@ -139,7 +139,7 @@ export default function WhiteLabelDevelopmentGuide() {
                             Write down how the commercial side and the delivery side will work before anyone
                             sells the project.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Offer and terms reviewed July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Offer and terms reviewed August 8, 2026.</p>
                     </header>
 
                     <BlogAuthor
@@ -363,6 +363,37 @@ export default function WhiteLabelDevelopmentGuide() {
                         and{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className="text-cognac hover:underline">how long a custom build takes</Link>.
                     </BlogText>
+
+                    <BlogHeader id="after-launch">The part most partnerships get wrong: what happens after launch</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Build scope gets negotiated carefully and the month after launch usually gets a sentence.
+                            That is the wrong way round, because the build ends and the relationship does not. A client
+                            who emails at nine in the evening about a broken contact form is emailing{" "}
+                            <strong>the agency</strong>, not the delivery partner they have never heard of.
+                        </BlogText>
+                        <BlogText>
+                            Ongoing maintenance is also where a reseller relationship becomes worth having. A one-off
+                            build is a one-off margin; a monthly retainer covering hosting oversight, dependency and
+                            security updates, content changes and small improvements is recurring revenue the agency
+                            owns. Agree three things in writing before launch, not after the first incident.
+                        </BlogText>
+                        <BlogList
+                            items={[
+                                "Who triages, and who fixes. These are different jobs. An agency can reasonably own first response — reproduce it, establish urgency, tell the client something true within an hour — while the partner owns the code fix. Agreeing that split is most of the value, because it decides what the agency has to be able to do itself.",
+                                "What counts as a defect versus a change. A form that never worked is a defect. A form that now needs a new field is a change, and it is billable. Without that line written down, every request arrives as a warranty claim and the margin quietly disappears.",
+                                "Response expectations, in hours, and who is on the hook outside working days. Publish something you can actually meet rather than something that sounds reassuring, because the first missed response is what a client remembers.",
+                            ]}
+                        />
+                        <InsightBox variant="info">
+                            The support included with a build is a defined window, not an open-ended arrangement, and it
+                            is stated in the project terms rather than assumed. <strong>Decide before launch what happens
+                            the day after it ends</strong> — whether the agency sells its own retainer and calls on the partner for
+                            code work, whether ongoing work is quoted separately each time, or whether the client is
+                            handed over entirely. All three are legitimate. Not choosing is the one that damages the
+                            client relationship the agency spent the project protecting.
+                        </InsightBox>
+                    </div>
 
                     <BlogHeader>Quality acceptance without universal guarantees</BlogHeader>
                     <BlogText>

@@ -14,7 +14,7 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { BlogHeader, BlogText, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogHeader, BlogText, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [ogImageForPath("/blog/leaving-webflow-2026")],
@@ -70,7 +70,7 @@ const articleSchema = {
             "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
             "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-07T00:00:00-05:00",
+            "dateModified": "2026-08-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -174,7 +174,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-07T00:00:00-05:00",
+            "dateModified": "2026-08-08T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -592,6 +592,36 @@ export default function LeavingWebflow2026Page() {
                         <BlogText>
                             If the primary requirement is visual autonomy for a small marketing team, another managed builder may be a better answer than custom code. If the site is becoming an application with controlled data, roles, APIs, transactions, and frequent product releases, a custom architecture may justify its engineering cost. If commerce operations already work well on a specialist platform, keeping that system and replacing only the front end may reduce migration risk. The decision is strongest when each requirement has a testable acceptance condition.
                         </BlogText>
+
+                        <BlogText>
+                            In practice most teams leaving Webflow in 2026 are choosing between three destinations,
+                            and each one answers a different row of that table. <strong>Framer</strong> is where
+                            designers most often go, because the Figma-adjacent workflow is a shorter trip than
+                            Webflow&apos;s and visual autonomy survives the move. It is another managed platform
+                            though, so the portability and cost rows read much the same afterwards: you are choosing
+                            a different vendor, not leaving the vendor model.
+                        </BlogText>
+                        <BlogText>
+                            The second is <strong>AI-assisted custom code</strong>, standing a site up quickly with
+                            tools like Cursor or Claude Code. Generating the first version is genuinely fast now. The
+                            row that catches people is reliability: <strong>producing a site and owning a maintainable
+                            one are different things</strong>, and somebody still has to hold dependency updates,
+                            hosting, monitoring and the second year of changes. That is a real option with a real
+                            owner attached, not a way to avoid having one.
+                        </BlogText>
+                        <BlogText>
+                            The third is a <strong>headless CMS with a custom front end</strong>, which is the heaviest
+                            to build and the one that answers editorial control and integrations properly when a team
+                            publishes constantly and the site is closer to an application than a brochure. It earns
+                            its cost on the rows above, or it does not earn it at all.
+                        </BlogText>
+                        <InsightBox variant="info">
+                            Worth saying plainly, because the discussion around this gets loud: <strong>none of this
+                            means Webflow is finished.</strong> A platform can be a poor fit for your requirements and
+                            a good fit for plenty of others at the same time, and the questions above are about your
+                            site rather than about the company. If your exit criteria come back satisfied by what you
+                            already have, the correct answer is to stay and stop reading migration content.
+                        </InsightBox>
 
                         <BlogHeader>How to Migrate From Webflow Without Treating SEO as a Guarantee</BlogHeader>
 

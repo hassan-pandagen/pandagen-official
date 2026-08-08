@@ -39,6 +39,9 @@ const TERMS: { id: string; term: string; group: string }[] = [
   { id: "knowledge-graph", term: "Knowledge Graph & entities", group: "Structured Data & Entities" },
   { id: "eeat", term: "E-E-A-T", group: "Structured Data & Entities" },
   { id: "core-web-vitals", term: "Core Web Vitals (LCP, INP, CLS)", group: "Web Performance" },
+  { id: "lcp", term: "LCP (Largest Contentful Paint)", group: "Web Performance" },
+  { id: "inp", term: "INP (Interaction to Next Paint)", group: "Web Performance" },
+  { id: "cls", term: "CLS (Cumulative Layout Shift)", group: "Web Performance" },
   { id: "pagespeed", term: "PageSpeed & Lighthouse", group: "Web Performance" },
   { id: "ttfb", term: "TTFB (Time to First Byte)", group: "Web Performance" },
   { id: "redirect-301", term: "301 redirect", group: "Web Performance" },
@@ -68,6 +71,9 @@ const DEFS: Record<string, string> = {
   "schema": "Schema.org structured data, usually written as JSON-LD, describes what a page is about in a form machines read cleanly. Supported markup can make you eligible for Google search features. Valid markup on its own gets you neither the feature nor the citation.",
   "knowledge-graph": "A map of things and how they relate to each other. Saying consistent, checkable things about yourself leaves less ambiguity. Whether you get recognised, ranked or quoted is still each product's decision, not yours.",
   "core-web-vitals": "Google's user-experience metrics: Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift. Google uses Core Web Vitals in its ranking systems, alongside many other signals.",
+  "lcp": "Largest Contentful Paint: how long until the biggest thing in the viewport — usually a hero image, video poster or headline block — has actually rendered. It measures loading, and it is the metric a heavy unoptimised hero image ruins on its own. Google's good threshold is 2.5 seconds or less, measured at the 75th percentile of real visits.",
+  "inp": "Interaction to Next Paint: how long the page takes to visibly respond after someone clicks, taps or types, assessed across the interactions in a visit rather than just the first one. It measures responsiveness, and heavy JavaScript is the usual cause when it is poor. Google's good threshold is 200 milliseconds or less at the 75th percentile. INP replaced First Input Delay as a Core Web Vital in March 2024.",
+  "cls": "Cumulative Layout Shift: how much the page moves under the reader while it is still loading — the ad or image that arrives late and pushes everything down, so you tap the wrong thing. It measures visual stability, is a unitless score rather than a time, and is usually caused by images or embeds without reserved space. Google's good threshold is 0.1 or less at the 75th percentile.",
   "pagespeed": "PageSpeed Insights shows two different things side by side: what real Chrome users experienced, and a lab test run by Lighthouse. A 90+ Lighthouse score can be an acceptance target. It is not proof that every real visit passes Core Web Vitals.",
   "ttfb": "Time to First Byte: how long from asking for something until the first byte comes back. Everything after it waits on it. Before you blame anything, separate the network, the cache, the edge, your application and your origin server.",
   "redirect-301": "An HTTP permanent redirect from one URL to another. Google treats it as a strong signal about which URL is the real one. A safe migration also needs the content to match, the internal links updated, someone watching afterwards, and time.",
@@ -132,7 +138,7 @@ export const metadata: Metadata = {
     description: "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, with practical limits.",
     type: "article",
     publishedTime: "2026-07-16",
-    modifiedTime: "2026-07-31",
+    modifiedTime: "2026-08-08",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
     images: [ogImageForPath("/blog/aeo-web-performance-glossary")],
@@ -154,7 +160,7 @@ const articleSchema = {
       "description": "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, including practical limitations.",
       "image": ogImageUrlForPath("/blog/aeo-web-performance-glossary"),
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-07-31T00:00:00-05:00",
+      "dateModified": "2026-08-08T00:00:00-05:00",
       "citation": [
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
         "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
@@ -233,7 +239,7 @@ const articleSchema = {
       "description": "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, including practical limitations.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-07-31T00:00:00-05:00",
+      "dateModified": "2026-08-08T00:00:00-05:00",
       "inLanguage": "en-US"
     }
   ]

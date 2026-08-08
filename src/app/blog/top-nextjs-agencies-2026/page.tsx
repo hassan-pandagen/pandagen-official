@@ -219,7 +219,7 @@ export default function TopNextjsAgenciesPage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Eight firms worth looking at, described from what each one currently says on its own service
-                            pages. This is not an independent ranking. We are not treating anyone&apos;s Clutch score,
+                            pages. PandaCodeGen compiled this shortlist, and it is not an independent ranking. We are not treating anyone&apos;s Clutch score,
                             minimum project size or hourly rate as a fixed fact, and we are not claiming any of them is
                             better than the others.
                         </p>

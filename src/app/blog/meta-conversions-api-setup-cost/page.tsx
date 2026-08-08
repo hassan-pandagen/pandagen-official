@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/meta-conversions-api-setup-cost")],
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/meta-conversions-api-setup-cost"),
             description,
             datePublished: "2026-06-14",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -90,7 +90,7 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Measurement",
             inLanguage: "en-US",
-            wordCount: 3637,
+            wordCount: 4066,
             timeRequired: "PT18M",
             about: [
                 { "@type": "Thing", name: "Conversions API", sameAs: ["https://developers.facebook.com/docs/marketing-api/conversions-api/"] },
@@ -118,7 +118,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-08",
             inLanguage: "en-US",
         },
         {
@@ -172,7 +172,7 @@ export default function MetaCAPISetupCostPage() {
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="10 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="18 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What a responsible estimate covers</h2>
@@ -429,6 +429,43 @@ export default function MetaCAPISetupCostPage() {
                         application still depends on Meta and its hosting, databases or queues. Compare current vendor
                         terms, commercial-use permissions, included usage and support before accepting an option.
                     </BlogText>
+
+                    <BlogHeader id="which-path">Which of the four paths is actually enough for you</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            There are four routes to a working Conversions API, and most published comparisons rank them
+                            by price. Price is the wrong sort order, because three of the four are cheap and the
+                            question that matters is which one still works for your setup. Ranked instead by what they
+                            can carry:
+                        </BlogText>
+
+                        <BlogList
+                            items={[
+                                "Meta's own one-click setup or a commerce partner integration, in Events Manager. Free, no infrastructure, and genuinely the right answer for a standard Shopify, WooCommerce, Wix or BigCommerce store sending standard events. If this covers you, stop here. Anything else is money spent on capability you will not use.",
+                                "A hosted CAPI gateway, such as Stape. You deploy Meta's packaged container on someone else's infrastructure for a monthly fee that scales with pixels or event volume. Reasonable when you want server-side delivery without operating a server, and when your events are still close to standard.",
+                                "Server-side Google Tag Manager, on your own cloud instance. Worth it mainly when you are already running server-side GTM for other destinations, because then Meta is one more tag rather than a new system. On its own, for Meta only, you are renting and maintaining infrastructure to solve a problem the free path may already solve.",
+                                "A direct integration written against your own system of record. The only route that fits when the conversion is not a standard ecommerce event, when the value is calculated after the fact, when refunds and cancellations must flow back, or when the event lives in a CRM or ERP rather than a checkout.",
+                            ]}
+                        />
+
+                        <InsightBox variant="warning">
+                            The order above is also the order to try them in. The most common expensive mistake on this
+                            is not choosing the wrong vendor, it is <strong>buying a custom integration for a store
+                            whose events the free partner integration already supports.</strong> Before commissioning
+                            any work, open Events Manager and check whether your platform is on Meta&apos;s supported
+                            partner list and whether the events you care about are in its standard set. That check
+                            costs nothing and rules out the most expensive option first.
+                        </InsightBox>
+
+                        <BlogText>
+                            This also explains why our own number sits above the figure usually quoted for
+                            &ldquo;a developer to set up CAPI&rdquo;. A cheap integration ends when events start
+                            arriving. The scope below ends when deduplication has been tested against real traffic,
+                            match keys have been validated through Event Match Quality, consent behaviour has been
+                            proven, and acceptance evidence exists. Those are different deliverables, and the gap
+                            between them is where most of the disappointing CAPI projects live.
+                        </BlogText>
+                    </div>
 
                     <BlogHeader>What actually moves the price</BlogHeader>
                     <BlogText>

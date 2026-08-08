@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-08-01T00:00:00-05:00",
+        modifiedTime: "2026-08-08T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [ogImageForPath("/blog/aeo-playbook-built-into-every-website")],
@@ -62,7 +62,7 @@ const articleSchema = {
             "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
             "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-08-08T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -125,7 +125,7 @@ const articleSchema = {
             "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-08-08T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -324,6 +324,43 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     {/* Section 4: The 10 Tactics */}
+                    <BlogHeader id="passage-shape">What a Citable Passage Actually Looks Like</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Most AEO advice describes the container: answer-first paragraphs of roughly 40 to 60 words
+                            under question-shaped headings, sometimes called BLUF, and atomic sections that still make
+                            sense when a chunking algorithm lifts them away from everything around them. That advice is
+                            correct and it is not sufficient, because it tells you the shape of the box and not what to
+                            put in it.
+                        </BlogText>
+                        <BlogText>
+                            We derived the following from a passage of ours that we watched get lifted into an AI
+                            answer, rather than from reasoning about what ought to work. Four things were present
+                            together:
+                        </BlogText>
+                        <BlogList
+                            items={[
+                                "A named action. Not 'improve your tracking' but the specific thing to do, in a verb the reader can carry out today.",
+                                "A named tool, with its constraint stated. Not 'use analytics' but the actual product, and the limit that matters — the window it reports over, the percentile it uses, what it cannot see.",
+                                "Enumerated fields. The specific things to record or check, listed rather than summarised. A list of five named items survives extraction; 'gather the relevant data' does not.",
+                                "A stated purpose. Why this step exists and what it rules out, so the passage carries its own justification when it appears without the paragraphs around it.",
+                            ]}
+                        />
+                        <BlogText>
+                            All four inside a numbered step. The reason this works is the same reason atomic content
+                            works, taken one level further: an extracted passage has to survive without its neighbours,
+                            and a passage that names its action, its tool, its fields and its purpose is
+                            self-sufficient. One that says &ldquo;then optimise accordingly&rdquo; is not.
+                        </BlogText>
+                        <BlogText>
+                            The same logic applies to <strong>pronouns</strong>, which is the cheapest mistake on this
+                            list. A sentence beginning &ldquo;we recommend&rdquo; or &ldquo;our approach is&rdquo;
+                            loses its subject the moment it is quoted. Name the company, the product or the person in
+                            the sentence that carries the claim, not three paragraphs above it where the extractor will
+                            not look.
+                        </BlogText>
+                    </div>
+
                     <BlogHeader id="the-10-tactics">The Controls We Build In, and When Each One Applies</BlogHeader>
                     <BlogText>
                         These are the eleven controls we work through on a build. None of them require a tool you have to

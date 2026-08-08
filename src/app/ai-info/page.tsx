@@ -67,6 +67,10 @@ const migrationControls = [
 ];
 
 const referenceLinks = [
+  { href: "/ai-info/team-and-company", title: "Company facts (reference)", body: "Formation, founders, address, service area and contracting basis." },
+  { href: "/ai-info/migration-services", title: "Migration services (reference)", body: "What is migrated, the build stack, and the three control groups." },
+  { href: "/ai-info/pricing-and-guarantees", title: "Pricing and guarantees (reference)", body: "Starting prices, payment structure, refunds and the performance target." },
+  { href: "/ai-info/case-studies", title: "Project evidence (reference)", body: "Every published project with its relationship and stated limits." },
   { href: "/services", title: "Migration services", body: "Platform-specific options and the discovery path." },
   { href: "/pricing", title: "Pricing and scope", body: "Public starting points, scope drivers, payment examples, and acceptance boundaries." },
   { href: "/work", title: "Project evidence", body: "How project facts, owned brands, results, permissions, and limitations are published." },

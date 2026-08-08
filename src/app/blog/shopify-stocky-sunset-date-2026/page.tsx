@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-25",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-stocky-sunset-date-2026")],
@@ -72,7 +72,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-stocky-sunset-date-2026"),
             description,
             datePublished: "2026-04-25",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -92,8 +92,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 1867,
-            timeRequired: "PT9M",
+            wordCount: 2123,
+            timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -153,29 +153,66 @@ export default function ShopifyStockySunsetPage() {
                             Shopify Stocky Sunset: <span className="italic text-cognac">August 31, 2026</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Shopify says Stocky stops working for inventory management after August 31, 2026. That is read from its <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, checked July 24, 2026. Work backwards from that date rather than from when you happen to read this, and confirm the current position on that page before you plan against it. Before then:
+                            Shopify says Stocky stops working for inventory management after August 31, 2026. That is read from its <a href="https://help.shopify.com/en/manual/products/inventory/transitioning-from-stocky" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">transition documentation</a>, checked August 8, 2026. Work backwards from that date rather than from when you happen to read this, and confirm the current position on that page before you plan against it. Before then:
                             export the history you are required to keep, write down what each of your workflows actually
                             does, test whatever you are moving to, fix anything that talked to Stocky, and show your team
                             how the new thing works.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Status verified July 24, 2026 against Shopify&apos;s current migration guidance.
+                            Status verified August 8, 2026 against Shopify&apos;s current migration guidance.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="4 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="10 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-red-200 bg-red-50 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Confirmed timeline and impact</h2>
                         <BlogList
                             items={[
-                                "Stocky is no longer listed in the Shopify App Store. Check Shopify's own transition documentation for the current status rather than relying on a date reported second-hand.",
+                                "Stocky was delisted from the Shopify App Store on February 2, 2026. No new installs and no re-installs, so if you remove it from a store you cannot put it back. Check Shopify's own transition documentation for the current status rather than relying on a date reported second-hand.",
+                                "Stocky ships with Shopify POS Pro rather than as a separate purchase, which is why many merchants have it running without having chosen it.",
                                 "Stocky inventory management stops after August 31, 2026.",
                                 "Shopify says read-only access remains for at least 90 days after the date, for exporting your data on the current migration page.",
                                 "Historical purchase orders and stocktakes do not move into Shopify automatically.",
                                 "Stocky APIs stop working on August 31, 2026, so connected tools must be updated.",
                             ]}
                         />
+                    </section>
+
+                    <section data-speakable="true" className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-7">
+                        <h2 className="mb-3 text-xl font-bold text-charcoal">If you are reading this close to the date</h2>
+                        <p className="mb-4 leading-relaxed text-stone-700">
+                            The full sequence below assumes you have time to map workflows and trial a replacement. If
+                            you do not, order the work by what is <strong>permanently lost</strong> rather than by what
+                            is most urgent-feeling, because those are different lists and only one of them matters
+                            after the date passes.
+                        </p>
+                        <ol className="mb-4 list-decimal space-y-2 pl-5 text-stone-700">
+                            <li>
+                                <strong>Supplier records first.</strong> Shopify&apos;s own transition guidance states
+                                suppliers cannot be exported from Stocky. Everything else has a file format; this does
+                                not. Copy supplier names, contacts, terms, lead times and per-supplier costs out by
+                                hand into a spreadsheet today, before anything else on this page.
+                            </li>
+                            <li>
+                                <strong>Close and receive open purchase orders.</strong> A purchase order still open
+                                when the app stops is a reconciliation problem you inherit, not a record you can
+                                re-open later.
+                            </li>
+                            <li>
+                                <strong>Export purchase order history and stocktakes.</strong> These do not move into
+                                Shopify automatically, and read-only access is a window rather than a permanent
+                                archive.
+                            </li>
+                            <li>
+                                <strong>List anything that calls the Stocky API.</strong> Those integrations fail on
+                                the date rather than degrading, so they need an owner before it, not after.
+                            </li>
+                        </ol>
+                        <p className="leading-relaxed text-stone-700">
+                            Choosing the replacement is the one step that is safe to do afterwards. Inventory tooling
+                            can be swapped again later; supplier history you did not copy out is gone.
+                        </p>
                     </section>
 
                     <div className="my-8 grid gap-4 sm:grid-cols-4">

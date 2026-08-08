@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-04",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-08",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-08",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -87,8 +87,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Content management system", sameAs: ["https://en.wikipedia.org/wiki/Content_management_system"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1559,
-            timeRequired: "PT8M",
+            wordCount: 1757,
+            timeRequired: "PT9M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -145,13 +145,14 @@ export default function WhyWeChooseNextJsPage() {
                             Why We Choose Next.js <span className="italic text-cognac">for Some WordPress Migrations</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            We use Next.js when a client needs a deliberately engineered presentation layer and can
-                            own its operating model. We do not treat WordPress as automatically slow, insecure or wrong.
+                            PandaCodeGen builds Next.js websites and migrates existing sites onto them. We choose
+                            Next.js when a client needs a deliberately engineered presentation layer and can own its
+                            operating model. We do not treat WordPress as automatically slow, insecure or wrong.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 4, 2026" readTime="9 min read" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The honest reason</h2>
@@ -248,6 +249,24 @@ export default function WhyWeChooseNextJsPage() {
                         surface, not a vulnerability-free or maintenance-free system. The same inventory has a
                         performance dimension, which we cover in{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className="text-cognac hover:underline">how plugins affect front-end performance</Link>.
+                    </BlogText>
+
+                    <BlogText>
+                        One argument gets made in our favour that we will not use, because on our own stack it is not
+                        true. You will read that a Next.js site has <strong>no exposed database and no admin URL to
+                        attack</strong> — no <code className="rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wp-admin</code>{" "}
+                        to brute-force. The first half is fair: there is no PHP plugin runtime and no database sitting
+                        behind the web tier where a plugin can reach it.
+                    </BlogText>
+                    <BlogText>
+                        The second half is wrong for any site with a CMS, which is most of them. We run Sanity, so
+                        there is an admin: it is Sanity Studio, reached with real credentials, and it holds the content
+                        for the site. There are also API tokens, a Git repository, a deploy pipeline that can push code
+                        to production, and a hosting account. <strong>The attack surface moved. It did not
+                        disappear</strong>, and in some ways it got more interesting, because a leaked deploy token is
+                        a worse afternoon than a leaked editor password. If someone selling you a rebuild tells you the
+                        new site cannot be attacked, they are describing a diagram rather than a system, and the
+                        honest question to ask them is where the admin went, not whether it exists.
                     </BlogText>
 
                     <BlogHeader id="editing">Will editors miss WordPress?</BlogHeader>
