@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { clientIdentity } from "@/data/case-study-facts";
 
 export const metadata: Metadata = {
     // Metadata renders the same verified facts as the body. Do not type a metric
@@ -69,6 +70,19 @@ const caseStudySchema = {
             "wordCount": 1800,
             "timeRequired": "PT8M",
             "about": [
+                // The client as an entity, not just the topics. The Clutch review is
+                // signed "Executive, MC Patches LLC" while this page is titled
+                // MyCustomPatches; without legalName + sameAs, nothing tells a
+                // grounding model those are one company, and the only
+                // third-party-VERIFIED review on this site stays orphaned from the
+                // case study it is about.
+                {
+                    "@type": "Organization",
+                    "name": "MyCustomPatches",
+                    "legalName": "MC Patches LLC",
+                    "url": "https://www.mycustompatches.net",
+                    "sameAs": ["https://clutch.co/profile/panda-code-gen#reviews"]
+                },
                 { "@type": "Thing", "name": "WordPress to Next.js Migration" },
                 { "@type": "Thing", "name": "E-Commerce Speed Optimization" },
                 { "@type": "Thing", "name": "WordPress Hosting Cost Reduction" },
@@ -232,7 +246,7 @@ export default function MyCustomPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A custom patch business running an aging WordPress site carrying 45 active plugins, managed hosting, and a decade of accumulated templates. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. No ranking losses were recorded in the monitored post-launch period.
+                            {clientIdentity("mycustompatches")} is a custom patch business that was running an aging WordPress site carrying 45 active plugins, managed hosting, and a decade of accumulated templates. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. No ranking losses were recorded in the monitored post-launch period.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">

@@ -35,9 +35,32 @@ export interface CaseStudyMetric {
 
 export interface CaseStudy {
     name: string;
+    /**
+     * The legal entity behind the trading name, where they differ.
+     *
+     * This exists because the proof and the story were filed under two different
+     * names with nothing joining them: the Clutch review is signed "Executive,
+     * MC Patches LLC" and the case study is titled "MyCustomPatches". A reader
+     * or a grounding model arriving at one had no stated route to the other,
+     * which quietly weakens the only third-party-verified review on the site.
+     * State the identity once, here, and let every surface render it.
+     */
+    legalEntity?: string;
     relationship: string;
     href: string;
+    /** Public domain, also the anchor scripts/metrics_guard.py scopes card checks to. */
+    url?: string;
     metrics: CaseStudyMetric[];
+}
+
+/**
+ * "MyCustomPatches (operated by MC Patches LLC)" — or just the name when there
+ * is no separate legal entity. Use this anywhere the client is introduced, so
+ * the Clutch review and the case study resolve to the same organisation.
+ */
+export function clientIdentity(slug: string): string {
+    const study = caseStudy(slug);
+    return study.legalEntity ? `${study.name} (operated by ${study.legalEntity})` : study.name;
 }
 
 const STUDIES = raw.caseStudies as unknown as Record<string, CaseStudy>;

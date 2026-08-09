@@ -24,6 +24,7 @@
   "caseStudies": {
     "mycustompatches": {
       "name": "MyCustomPatches",
+      "legalEntity": "MC Patches LLC",
       "relationship": "Independent client",
       "href": "/work/mycustompatches",
       "url": "mycustompatches.net",
