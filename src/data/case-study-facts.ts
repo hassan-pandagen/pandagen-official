@@ -73,6 +73,25 @@ export function withdrawnMetrics(slug: string): CaseStudyMetric[] {
     return caseStudy(slug).metrics.filter(m => m.status === 'withdrawn');
 }
 
+/**
+ * A single metric's value, or null when it is withdrawn or does not exist.
+ *
+ * Renderers must treat null as "print an em-dash", never as 0 and never as the
+ * word "Withdrawn" in a slot sized for a number. Both of those have shipped:
+ * `pagespeed: 0` rendered a bold zero next to a withdrawal note, and a card on
+ * /services/ecommerce printed "Withdrawn" as a value beside a fabricated 95.
+ *
+ * Use this instead of hardcoding a figure. A card that reads its number from
+ * here cannot invent one, which is the failure metrics_guard could not catch:
+ * it searches for the real withdrawn values leaking, and 95 was never a real
+ * value of anything.
+ */
+export function metricValue(slug: string, id: string): string | null {
+    const metric = caseStudy(slug).metrics.find(m => m.id === id);
+    if (!metric || metric.status !== 'verified') return null;
+    return metric.value ?? null;
+}
+
 /** True when anything is withdrawn, so surfaces know to show the disclosure. */
 export function hasWithdrawn(slug: string): boolean {
     return withdrawnMetrics(slug).length > 0;

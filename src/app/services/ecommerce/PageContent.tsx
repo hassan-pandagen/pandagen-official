@@ -10,6 +10,7 @@ import SocialProof from "@/components/home/SocialProof";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import ShopifyKiller from "@/components/sections/ShopifyKiller";
 import PartnerPromise from "@/components/services/PartnerPromise";
+import CaseStudyGrid from "@/components/services/CaseStudyGrid";
 
 const faqs = [
   {
@@ -123,115 +124,15 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 3. OUR WORK - Real Client Case Studies */}
-      <section id="our-work" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-10 md:mb-14">
-            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Real Clients. Real Migrations.</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-              We ship what we <span className="font-serif italic text-cognac">promise.</span>
-            </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            {[
-              {
-                name: "Panda Patches",
-                url: "pandapatches.com",
-                href: "https://pandapatches.com",
-                category: "Custom Patches E-Commerce",
-                platform: "WordPress → Custom",
-                pagespeed: 92,
-                loadTime: "< 1s",
-                saved: "$145+/mo",
-                note: "Owned by co-founder Imran Raza, built and operated by PandaCodeGen. Migrated from WordPress + WooCommerce to a custom Next.js storefront with Square payments. Cut monthly tool bill from $200+ to about $55 (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). 1 Million+ patches delivered.",
-              },
-              {
-                name: "MyCustomPatches",
-                url: "mycustompatches.net",
-                href: "https://mycustompatches.net",
-                category: "Custom Patches (US Market)",
-                platform: "WordPress → Custom",
-                pagespeed: 95,
-                loadTime: "Withdrawn",
-                saved: "Withdrawn",
-                note: "Migrated from a slow WordPress + WooCommerce store. WordPress to custom Next.js migration. Performance figures withdrawn pending reconciliation of test profile, date and conditions.",
-              },
-              {
-                name: "Saforne",
-                url: "saforne.com",
-                href: "https://saforne.com",
-                category: "Luxury Leather DTC",
-                platform: "Custom Next.js Build",
-                pagespeed: 96,
-                loadTime: "< 1s",
-                saved: "Premium UX",
-                note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Built in 2 weeks.",
-              },
-              {
-                name: "Obare Magazine",
-                url: "obare.vercel.app",
-                href: "https://obare.vercel.app",
-                category: "Editorial Magazine",
-                platform: "Wix → Custom",
-                pagespeed: 95,
-                loadTime: "< 1s",
-                saved: "225K IG",
-                note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js.",
-              },
-            ].map((client, i) => (
-              <motion.a
-                key={i}
-                href={client.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="group block p-6 md:p-7 rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-all"
-              >
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div className="min-w-0">
-                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-1">{client.category}</p>
-                    <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
-                    <p className="text-sm text-stone-500 mt-1">{client.url}</p>
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-stone-600 group-hover:text-cognac transition-colors shrink-0 mt-1" />
-                </div>
-
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">
-                  <ArrowRightLeft className="w-3 h-3" /> {client.platform}
-                </div>
-
-                <p className="text-sm text-stone-600 leading-relaxed mb-5">{client.note}</p>
-
-                <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-100">
-                  <div>
-                    <p className="text-2xl font-black text-emerald-600 leading-none tracking-tight">{client.pagespeed}</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">PageSpeed</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-black text-charcoal leading-none tracking-tight">{client.loadTime}</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Load Time</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-black text-cognac leading-none tracking-tight">{client.saved}</p>
-                    <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Outcome</p>
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link href="/work" className="inline-flex items-center gap-2 text-cognac font-semibold hover:underline">
-              View all case studies <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* 3. OUR WORK - Real Client Case Studies.
+          Was an inlined copy of CaseStudyGrid, roster and markup both. The copy
+          drifted: its MyCustomPatches card carried pagespeed 95, a figure that
+          appears in no facts file and was never a real measurement, sitting
+          beside two tiles reading "Withdrawn". metrics_guard did not catch it
+          because it searches for the REAL withdrawn values leaking, and an
+          invented number matches nothing on that list.
+          One roster, one renderer, numbers read from case-study-facts.json. */}
+      <CaseStudyGrid highlight="myCustomPatches" />
 
       {/* 3b. SOCIAL PROOF — moved up to stack with Our Work for concentrated proof flow */}
       <SocialProof />

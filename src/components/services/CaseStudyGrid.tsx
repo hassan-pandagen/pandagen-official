@@ -3,6 +3,31 @@
 import { motion } from "@/components/ui/motion";
 import { ExternalLink, ArrowRight, ArrowRightLeft } from "lucide-react";
 import Link from "next/link";
+import { metricValue, withdrawalNotice } from "@/data/case-study-facts";
+
+/** A metric that must render as a number, or null when we do not have it. */
+function numericMetric(slug: string, id: string): number | null {
+  const raw = metricValue(slug, id);
+  if (!raw) return null;
+  const n = Number(raw.replace(/[^0-9.]/g, ""));
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+/**
+ * One stat tile. Absent renders as a muted em-dash, never as a zero, never as
+ * the word describing why it is absent, and never as an empty bold slot.
+ */
+function Stat({ value, label, tone }: { value: string | number | null; label: string; tone: string }) {
+  const present = value !== null && value !== undefined && value !== "";
+  return (
+    <div>
+      <p className={`text-2xl font-black leading-none tracking-tight ${present ? tone : "text-stone-400"}`}>
+        {present ? value : "—"}
+      </p>
+      <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">{label}</p>
+    </div>
+  );
+}
 
 export type CaseStudyClient = {
   name: string;
@@ -10,10 +35,18 @@ export type CaseStudyClient = {
   href: string;
   category: string;
   platform: string;
-  /** Numeric score, or 0 when the figure is withdrawn (renders as a dash, never as a zero). */
-  pagespeed: number;
-  loadTime: string;
-  saved: string;
+  /**
+   * The three stat tiles. `null` means "we do not have this figure" and renders
+   * as a muted em-dash.
+   *
+   * These were `pagespeed: number` and `loadTime: string` until 10 Aug 2026, and
+   * both encodings produced a lie. `0` rendered as a bold zero next to a
+   * withdrawal note; the string "Withdrawn" rendered as though it were the
+   * measurement. Absent is its own state and has to be representable as one.
+   */
+  pagespeed: number | null;
+  loadTime: string | null;
+  saved: string | null;
   note: string;
 };
 
@@ -37,10 +70,13 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     href: "https://mycustompatches.net",
     category: "Custom Patches (US Market)",
     platform: "WordPress → Custom",
-    pagespeed: 0,
-    loadTime: "Withdrawn",
-    saved: "Independent client",
-    note: "Independent client. WordPress to custom Next.js migration. Performance figures withdrawn pending reconciliation.",
+    // Read from case-study-facts.json, not declared here. Every withdrawn metric
+    // resolves to null and renders as an em-dash; restoring one after
+    // reconciliation is a one-file edit that reaches this card automatically.
+    pagespeed: numericMetric("mycustompatches", "pagespeed"),
+    loadTime: metricValue("mycustompatches", "load-time"),
+    saved: metricValue("mycustompatches", "hosting-cost"),
+    note: `Independent client. WordPress to custom Next.js migration. ${withdrawalNotice("mycustompatches") ?? ""}`.trim(),
   },
   saforne: {
     name: "Saforne",
@@ -146,20 +182,9 @@ export default function CaseStudyGrid({
               <p className="text-sm text-stone-600 leading-relaxed mb-5">{client.note}</p>
 
               <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-100">
-                <div>
-                  <p className={`text-2xl font-black leading-none tracking-tight ${client.pagespeed ? "text-emerald-600" : "text-stone-400"}`}>
-                    {client.pagespeed || "—"}
-                  </p>
-                  <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">PageSpeed</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-black text-charcoal leading-none tracking-tight">{client.loadTime}</p>
-                  <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Load Time</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-black text-cognac leading-none tracking-tight">{client.saved}</p>
-                  <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">Outcome</p>
-                </div>
+                <Stat value={client.pagespeed} label="PageSpeed" tone="text-emerald-600" />
+                <Stat value={client.loadTime} label="Load Time" tone="text-charcoal" />
+                <Stat value={client.saved} label="Outcome" tone="text-cognac" />
               </div>
             </motion.a>
           ))}

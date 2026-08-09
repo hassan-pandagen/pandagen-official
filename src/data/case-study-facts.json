@@ -26,6 +26,7 @@
       "name": "MyCustomPatches",
       "relationship": "Independent client",
       "href": "/work/mycustompatches",
+      "url": "mycustompatches.net",
       "metrics": [
         {
           "id": "delivery-days",

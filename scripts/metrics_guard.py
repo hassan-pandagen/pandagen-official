@@ -4,7 +4,10 @@ WHAT THIS CATCHES
   1. A metric marked "withdrawn" whose value still appears in rendered HTML,
      anywhere on the site, including <title>, meta description and OG tags.
      This is the exact failure that put four surfaces in conflict with five.
-  2. A metric marked "verified" that renders its number with no method visible
+  2. A withdrawn metric's LABEL rendering next to a numeral. Check 1 knows the
+     real values; it is blind to an INVENTED one. See the note on check 2 below
+     for the card that shipped "95" and passed this guard cleanly.
+  3. A metric marked "verified" that renders its number with no method visible
      on the page. A number without a method is how 90+ became 97/100.
 
 WHY IT READS THE JSON DIRECTLY
@@ -136,7 +139,95 @@ def main() -> int:
                     })
                     break
 
-    # 2. A verified metric that renders must show its method on that page.
+    # 2. A withdrawn metric's LABEL may not render next to a numeral.
+    #
+    #    Check 1 searches for the real withdrawn values leaking. It cannot catch
+    #    an INVENTED one. On 10 Aug 2026 /services/ecommerce rendered a
+    #    MyCustomPatches card with PageSpeed "95" -- a number that was never a
+    #    measurement of anything, sitting beside two tiles reading "Withdrawn".
+    #    It matched nothing on the withdrawn-values list, so the guard passed it,
+    #    and the same page carried our sentence promising these figures are "not
+    #    stated anywhere on this site".
+    #
+    #    So this checks the shape instead of the value: if a withdrawn metric's
+    #    label appears near the client's name, no digit may appear beside it.
+    #    An em-dash is the only correct rendering of an absent figure.
+    #    A stat tile flattens to "<value> <caption>", so the value is whatever
+    #    sits immediately BEFORE the caption:
+    #        "95 PageSpeed Withdrawn Load Time"   <- both failures, one tile apart
+    #        "— PageSpeed Withdrawn Load Time"    <- pagespeed correct, load time not
+    #    Tuned to 16 chars deliberately. At 60 it reported the digits from the
+    #    NEXT CLIENT'S card, naming '92' and '145+' on a page whose actual defect
+    #    was '95'. Right page, wrong evidence, which is worse than silence
+    #    because it sends the reader to the wrong component.
+    VALUE_SLOT = 16
+    for m in withdrawn:
+        name = studies_by_slug[m["slug"]]["name"]
+        label = m.get("label")
+        if not label:
+            continue
+        # A caption is often the label minus its qualifier: the facts file says
+        # "Mobile PageSpeed" and the tile says "PageSpeed".
+        captions = {label}
+        head, _, tail = label.partition(" ")
+        if tail and head.lower() in {"mobile", "desktop", "average", "median"}:
+            captions.add(tail)
+
+        for page, text in pages:
+            hit_found = False
+            # Anchor on the card's DOMAIN, not the client's name.
+            #
+            # Three anchors were tried against real output before this one held:
+            #   proximity to the name  -> reported Panda Patches' 92 as this
+            #                             client's PageSpeed on a four-card grid
+            #   forward window on name -> matched "WordPress 3.8s Load Time", a
+            #                             generic illustration, and the "90+
+            #                             PageSpeed" acceptance target
+            #   forward window on URL  -> lands 205 chars from the real defect
+            #                             and nothing else
+            # The domain appears in the card and essentially nowhere else, which
+            # is exactly the property an anchor needs.
+            #
+            # KNOWN LIMIT, on purpose: pages that render figures without the
+            # domain (/work, the homepage) are not covered by THIS check. They
+            # are still covered by check 1, which knows the real values. Narrow
+            # and right beats broad and noisy -- a guard that fires on correct
+            # copy gets switched off, and then it catches nothing at all.
+            url = studies_by_slug[m["slug"]].get("url")
+            if not url:
+                continue
+            CARD = 600
+            regions = [(m0.end(), text[m0.end(): m0.end() + CARD])
+                       for m0 in re.finditer(re.escape(url), text, re.I)]
+            for caption in captions:
+                if hit_found:
+                    break
+                for offset, region in regions:
+                    hit = re.search(re.escape(caption), region, re.I)
+                    if not hit:
+                        continue
+                    slot = region[max(0, hit.start() - VALUE_SLOT): hit.start()]
+                    digits = [d for d in re.findall(r"(?<![\w-])\d[\d.,]*\+?(?![\w-])", slot)
+                              if not re.fullmatch(r"20\d\d", d)]
+                    # "Withdrawn" is a status, never a measurement. Rendered in a
+                    # slot sized for a number it reads as one.
+                    word_as_value = re.search(r"\bwithdrawn\b\s*$", slot, re.I)
+                    if not digits and not word_as_value:
+                        continue
+                    shown = ", ".join(digits) if digits else "the word 'Withdrawn'"
+                    failures.append({
+                        "type": "withdrawn-label-beside-number",
+                        "metric": m["id"], "slug": m["slug"], "value": shown,
+                        "page": page,
+                        "fix": f'"{caption}" on {page} renders {shown} as its value, near '
+                               f'"{name}", but metric "{m["id"]}" is withdrawn. An absent figure '
+                               f'renders as an em-dash. If that number is real it belongs in '
+                               f'case-study-facts.json with a method, not in a component.',
+                    })
+                    hit_found = True
+                    break
+
+    # 3. A verified metric that renders must show its method on that page.
     for m in verified:
         if not m.get("method"):
             failures.append({

@@ -124,6 +124,35 @@ const nextConfig = {
         source: '/_next/static/:path*',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
       },
+      // HTML documents must revalidate. Assets must not.
+      //
+      // WHY THIS EXISTS: five consecutive deploys shipped to origin and the edge
+      // kept serving old HTML, path by path, from DIFFERENT weeks -- July's build
+      // on /work, early August's on a blog post, yesterday's on the homepage.
+      // That patchwork is the signature of long-TTL document caching where each
+      // path expires on its own clock, not of a deploy that failed.
+      //
+      // THE EVIDENCE THIS IS THE RIGHT LAYER: /llms.txt was the ONE surface that
+      // recovered on its own. It is also the one route that sets its own
+      // cache-control (see src/app/llms.txt/route.ts). Every stale path was an
+      // HTML document sending no cache directive at all. That is as close to a
+      // controlled experiment as this repo is going to produce.
+      //
+      // THE LOOKAHEAD IS LOAD-BEARING: applied to '/(.*)' this would override the
+      // immutable, year-long caching Next.js sets on /_next/static and turn every
+      // hashed chunk into a revalidation round-trip. Excluding the build output
+      // and the crawler files keeps this to documents only.
+      //
+      // NOT SUFFICIENT ON ITS OWN: this governs what the origin SAYS about new
+      // responses. Anything already sitting in an edge cache stays there until it
+      // is purged, and a CDN configured to cache everything for a fixed TTL can
+      // ignore this entirely. The deploy pipeline still needs a purge step.
+      {
+        source: '/((?!_next/|api/|.*\\.(?:js|css|png|jpg|jpeg|gif|webp|avif|svg|ico|woff|woff2|txt|xml|json)$).*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [
