@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -149,13 +151,7 @@ export default function MigrateWordPressToNextJSPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "How to Migrate WordPress to Next.js", href: "/blog/how-to-migrate-wordpress-to-nextjs" }
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs("how-to-migrate-wordpress-to-nextjs", "How to Migrate WordPress to Next.js")} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
@@ -554,6 +550,8 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* FAQ */}
                     <FAQAccordion faqs={migrateFAQs} />
+
+                    <TopicUpLink postId="how-to-migrate-wordpress-to-nextjs" />
 
                     {/* Related Posts */}
                     <RelatedPosts

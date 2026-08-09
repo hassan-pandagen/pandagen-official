@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const pageFaqs: { question: string; answer: string }[] = [
     {
         question: "Why does this case study have no before-and-after performance numbers?",
-        answer: "This was a migration, but nobody recorded the previous platform's load times or hosting costs before it was replaced, so there is no baseline to compare a launch reading against. Our MyCustomPatches record quotes 3.2s to 0.7s and $150/mo to $0 because those figures were measured on the old site while it was still running. Here they were not, and inventing a plausible 'before' after the fact is exactly the kind of number this firm spent a month removing from its own writing. The lesson generalises: capture load time, PageSpeed and the actual monthly bill before you migrate, because the day the old site is switched off is the day that evidence stops existing.",
+        answer: "This was a migration, but nobody recorded the previous platform's load times or hosting costs before it was replaced, so there is no baseline to compare a launch reading against. Our MyCustomPatches record captured a before-and-after because those readings were taken on the old site while it was still running, though the performance figures from that project are themselves withdrawn pending reconciliation, which makes the same point twice over. Here they were not, and inventing a plausible 'before' after the fact is exactly the kind of number this firm spent a month removing from its own writing. The lesson generalises: capture load time, PageSpeed and the actual monthly bill before you migrate, because the day the old site is switched off is the day that evidence stops existing.",
     },
     {
         question: "How does the moderation workflow actually work?",

@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import {
   BlogAuthor,
   BlogHeader,
@@ -324,16 +326,7 @@ export default function SlowWebsitePage() {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
           />
 
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Blog", href: "/blog" },
-              {
-                label: "Why Is My Website Loading So Slow?",
-                href: "/blog/why-is-my-website-loading-so-slow",
-              },
-            ]}
-          />
+          <Breadcrumb items={postCrumbs("why-is-my-website-loading-so-slow", "Why Is My Website Loading So Slow?")} />
 
           <Link
             href="/blog"
@@ -789,6 +782,8 @@ export default function SlowWebsitePage() {
           </section>
 
           {slowWebsiteFAQs.length > 0 && <FAQAccordion faqs={slowWebsiteFAQs} />}
+
+          <TopicUpLink postId="why-is-my-website-loading-so-slow" />
 
           <RelatedPosts currentPostId="why-is-my-website-loading-so-slow" />
         </article>

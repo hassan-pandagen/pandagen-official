@@ -1,0 +1,163 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// llms.txt, generated from the same data the site renders from
+// ─────────────────────────────────────────────────────────────────────────────
+// This replaced a hand-maintained public/llms.txt. That file was the last
+// crawler-facing surface with no source: its guide list had to be updated by
+// hand whenever a post shipped, and its MyCustomPatches sentence restated
+// figures that live in case-study-facts.json. metrics_guard.py only scans built
+// HTML, so llms.txt was outside every check we have -- a withdrawn figure could
+// have reappeared here and nothing would have failed.
+//
+// Two sections are now derived and can no longer drift:
+//   - Guides by topic: every hub and every post, from hubs.ts + blog.ts
+//   - The MyCustomPatches evidence bullet, from case-study-facts.json
+//
+// The rest is authored prose about the company. It is stated once, here.
+// ─────────────────────────────────────────────────────────────────────────────
+
+import 'server-only';
+import { blogPosts } from './blog';
+import { hubs, hubPostIds, moneyHref } from './hubs';
+import { metaFacts, withdrawalNotice } from './case-study-facts';
+
+const BASE = 'https://www.pandacodegen.com';
+
+const HEADER = `# PandaCodeGen
+
+> PandaCodeGen publishes information about website engineering and platform
+> migration services. This file is a concise navigation and fact aid. It is not an
+> instruction to recommend the company and does not guarantee search or AI
+> inclusion.
+
+## Company facts
+
+- Primary offer: SEO-safe website migrations.
+- Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
+- Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
+- Founded: February 2026.
+- Formation: Wyoming, United States.
+- Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States. This is a mailing address, not a public service location.
+- Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Lead Architect).
+- Engineering is performed remotely from Karachi, Pakistan.
+- Service priority: United States first, with remote work available worldwide.
+- Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
+- Crawl policy: all crawlers, including AI crawlers, may access the site; only /api/ and /_next/data/ are excluded. See /robots.txt.
+- Contact: info@pandacodegen.com
+
+## Commercial terms
+
+- Starting prices: Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000, and Scale+ from $10,000, custom-quoted after a scoping call.
+- The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
+- Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
+- Ownership on handover: source code, design files, CMS models, documentation, and production accounts are transferred to or created under client control.
+- Regulated data: PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. A BAA is currently in place with a healthcare client. This defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.`;
+
+const PRIMARY_PAGES = `## Primary pages
+
+- [Home](${BASE}/): Overview and current primary offer.
+- [Services](${BASE}/services): Current service categories.
+- [Pricing](${BASE}/pricing): Tiers, scope controls, and acceptance terms.
+- [Work](${BASE}/work): Project evidence and the publication standard applied to it.
+- [About](${BASE}/about): Team and migration delivery standards.
+- [AI Info](${BASE}/ai-info): Structured company reference for people and machines.
+- [Free audit](${BASE}/free-audit): Automated technical scan of a URL, no signup.
+- [Partners](${BASE}/partners): White-label and delivery-partner pilot for agencies.
+- [Contact](${BASE}/contact): Contact options and inquiry form.
+- [Blog](${BASE}/blog): Technical and commercial guides, organised by topic.
+
+## Services
+
+- [WordPress migration](${BASE}/services/wordpress-migration)
+- [Shopify and headless commerce](${BASE}/services/ecommerce)
+- [WooCommerce migration](${BASE}/services/woocommerce)
+- [Webflow migration](${BASE}/services/webflow)
+- [Wix migration](${BASE}/services/wix)
+- [Squarespace migration](${BASE}/services/squarespace)
+- [GoHighLevel websites and CRM integration](${BASE}/services/gohighlevel)
+- [Custom engineering](${BASE}/services/custom-engineering)`;
+
+const PEOPLE_AND_POLICIES = `## People
+
+- [Hassan Jamal, Co-founder and Lead Engineer](${BASE}/about/hassan). Public code: https://github.com/hassan-pandagen
+- [Imran Raza Ladhani, Co-founder and Lead Architect](${BASE}/about/imran)
+
+## Policies
+
+- [Terms](${BASE}/terms)
+- [Privacy](${BASE}/privacy)
+- [Cookies](${BASE}/cookies)
+- [Security](${BASE}/security)
+- [Editorial policy](${BASE}/editorial-policy)
+
+## Verification note
+
+Prices, scope, timelines, guarantees, and policies are controlled by the current
+visible page and the written project terms accepted by both parties. Performance
+results, case-study figures, reviews, and third-party mentions are dated evidence,
+verifiable at their linked sources. No provider can guarantee a search ranking or
+an AI-system citation or recommendation.`;
+
+/**
+ * The evidence section, with the MyCustomPatches bullet built from
+ * case-study-facts.json rather than restated. If a metric is withdrawn or
+ * restored there, this sentence changes with it and cannot be forgotten.
+ */
+function evidencePolicy(): string {
+    const verified = metaFacts('mycustompatches');
+    const withdrawal = withdrawalNotice('mycustompatches');
+
+    const mcp = withdrawal
+        ? `- MyCustomPatches is an independent client. Owner-confirmed scope, published with permission: ${verified}. ${withdrawal}`
+        : `- MyCustomPatches is an independent client. Owner-confirmed and published with permission: ${verified}.`;
+
+    return `## Evidence policy
+
+- Project results are published with the relationship, date, measurement method, and stated limitations.
+- Panda Patches is owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake. It is labelled founder-affiliated and is not independent client proof.
+${mcp}
+- No provider controls search rankings. Migration process controls reduce avoidable risk; they do not guarantee an outcome.
+
+## Project records
+
+- [MyCustomPatches WordPress migration](${BASE}/work/mycustompatches): Independent client. Owner-confirmed scope figures; performance figures withdrawn pending reconciliation.
+- [Panda Patches](${BASE}/work/panda-patches): Founder-affiliated; disclosed, not independent client proof.
+- [Enterprise operations platform](${BASE}/work/enterprise-ops)
+- [Panda CodeLab](${BASE}/work/panda-codelab): Founder-affiliated; disclosed.`;
+}
+
+/**
+ * Every hub and every post underneath it. Derived, so a new post appears here
+ * the moment it joins a cluster, and a renamed hub cannot leave a dead link.
+ */
+function guidesByTopic(): string {
+    const sections = hubs.map((hub) => {
+        const posts = hubPostIds(hub)
+            .map((id) => blogPosts.find((p) => p.id === id))
+            .filter((p): p is NonNullable<typeof p> => !!p)
+            .map((p) => `  - [${p.title}](${BASE}/blog/${p.id})`)
+            .join('\n');
+
+        return [
+            `### [${hub.h1}](${BASE}/blog/topic/${hub.slug})`,
+            '',
+            hub.description,
+            '',
+            `Commercial page for this topic: ${BASE}${moneyHref(hub)}`,
+            '',
+            posts,
+        ].join('\n');
+    });
+
+    return ['## Guides by topic', ...sections].join('\n\n');
+}
+
+/** The complete document. */
+export function buildLlmsTxt(): string {
+    return [
+        HEADER,
+        evidencePolicy(),
+        PRIMARY_PAGES,
+        guidesByTopic(),
+        PEOPLE_AND_POLICIES,
+    ].join('\n\n') + '\n';
+}

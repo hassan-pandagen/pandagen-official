@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -142,11 +144,7 @@ export default function WillMigratingHurtSeoPage() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Will Migrating Hurt My SEO?" }
-                    ]} />
+                    <Breadcrumb items={postCrumbs("will-migrating-hurt-my-seo", "Will Migrating Hurt My SEO?")} />
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
@@ -414,6 +412,8 @@ export default function WillMigratingHurtSeoPage() {
 
                 </article>
             </section>
+
+            <TopicUpLink postId="will-migrating-hurt-my-seo" />
 
             <RelatedPosts currentPostId="will-migrating-hurt-my-seo" />
             <Footer />

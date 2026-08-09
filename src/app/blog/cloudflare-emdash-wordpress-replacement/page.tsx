@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import {
     BlogAuthor,
     BlogHeader,
@@ -199,13 +201,7 @@ export default function CloudflareEmDashPage() {
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-6 py-10 shadow-xs sm:px-8 md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Cloudflare EmDash vs WordPress", href: "/blog/cloudflare-emdash-wordpress-replacement" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs("cloudflare-emdash-wordpress-replacement", "Cloudflare EmDash vs WordPress")} />
 
                     <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-charcoal transition-colors hover:text-cognac">
                         <ArrowLeft className="h-4 w-4" />
@@ -563,6 +559,8 @@ export default function CloudflareEmDashPage() {
                     </div>
 
                     {emdashFAQs.length > 0 && <FAQAccordion faqs={emdashFAQs} />}
+                    <TopicUpLink postId="cloudflare-emdash-wordpress-replacement" />
+
                     <RelatedPosts currentPostId="cloudflare-emdash-wordpress-replacement" />
                 </article>
             </main>

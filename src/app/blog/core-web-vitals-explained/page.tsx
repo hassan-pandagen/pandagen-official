@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -143,13 +145,7 @@ export default function CoreWebVitalsExplainedPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Core Web Vitals Explained", href: "/blog/core-web-vitals-explained" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs(postId, "Core Web Vitals Explained")} />
 
                     <Link
                         href="/blog"
@@ -506,6 +502,8 @@ export default function CoreWebVitalsExplainedPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <TopicUpLink postId={postId} />
+
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>

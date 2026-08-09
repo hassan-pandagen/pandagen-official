@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -184,13 +186,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Google Algorithm Updates", href: "/blog/google-algorithm-updates" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs("google-algorithm-updates", "Google Algorithm Updates")} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
@@ -502,6 +498,8 @@ export default function GoogleAlgorithmUpdatesPage() {
                     </section>
 
                     {updateFAQs.length > 0 && <FAQAccordion faqs={updateFAQs} />}
+
+                    <TopicUpLink postId="google-algorithm-updates" />
 
                     <RelatedPosts currentPostId="google-algorithm-updates" />
                 </article>

@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -164,13 +166,7 @@ export default function DiviThemeSlowPage() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Divi Theme Slow", href: "/blog/divi-theme-slow" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs(postId, "Divi Theme Slow")} />
 
                     <Link
                         href="/blog"
@@ -554,6 +550,8 @@ export default function DiviThemeSlowPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <TopicUpLink postId={postId} />
+
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>

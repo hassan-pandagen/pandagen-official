@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -129,13 +131,7 @@ export default function ElementorSeoPage() {
             <main className="min-h-screen overflow-x-hidden bg-paper pb-10 pt-16 text-charcoal md:pb-20 md:pt-32">
                 <article className="mx-auto max-w-3xl rounded-2xl border border-stone-200 bg-white px-8 py-10 shadow-xs md:px-14">
                     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Does Elementor Hurt SEO?", href: "/blog/elementor-kills-seo" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs(postId, "Does Elementor Hurt SEO?")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
@@ -413,6 +409,8 @@ export default function ElementorSeoPage() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <TopicUpLink postId={postId} />
+
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>

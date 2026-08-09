@@ -54,6 +54,13 @@ const nextConfig = {
         destination: '/pricing',
         permanent: true,
       },
+      // /blog/topic has no index of its own: the hub list lives above the fold
+      // on /blog. Anything that truncates a hub URL lands there instead of a 404.
+      {
+        source: '/blog/topic',
+        destination: '/blog',
+        permanent: true,
+      },
       // NOTE: the four /work/* case-study routes were briefly redirected to /work
       // during the July 2026 claim remediation. They have since been rebuilt with
       // dated sources, ownership disclosures and bounded claims, so the redirects

@@ -1,6 +1,7 @@
 import "server-only";
 
 import { blogPosts } from "@/data/blog";
+import { hubBySlug } from "@/data/hubs";
 
 const SITE_URL = "https://www.pandacodegen.com";
 const OG_VERSION = "og-v3-2026-07-28";
@@ -183,6 +184,21 @@ export function ogContentForPath(inputPath: string): OgContent {
 
   if (staticContent) {
     return { ...staticContent, path, version: OG_VERSION };
+  }
+
+  // Topic hubs, before the post branch: "/blog/topic/website-speed" would
+  // otherwise fall through to the generic path-derived title.
+  if (path.startsWith("/blog/topic/")) {
+    const hub = hubBySlug(path.slice("/blog/topic/".length));
+    if (hub) {
+      return {
+        title: hub.h1,
+        label: "PandaCodeGen Journal · Topic",
+        description: hub.description,
+        path,
+        version: OG_VERSION,
+      };
+    }
   }
 
   if (path.startsWith("/blog/")) {

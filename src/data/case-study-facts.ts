@@ -1,0 +1,106 @@
+import raw from './case-study-facts.json';
+
+/**
+ * Typed access to the case-study metrics.
+ *
+ * The data lives in case-study-facts.json rather than in this file so that the
+ * TypeScript render path and scripts/metrics_guard.py read the exact same bytes.
+ * A guard that reparsed a .ts file could drift from what the site renders, which
+ * is the failure mode this whole structure exists to remove.
+ *
+ * Read the $comment block in the JSON before changing anything here.
+ */
+
+export type MetricStatus = 'verified' | 'withdrawn';
+
+export interface MetricMethod {
+    kind: 'lab' | 'field' | 'invoice' | 'record';
+    date: string;
+    note: string;
+}
+
+export interface CaseStudyMetric {
+    id: string;
+    label: string;
+    value?: string;
+    before?: string;
+    after?: string;
+    status: MetricStatus;
+    method?: MetricMethod;
+    approvedBy?: string;
+    approvedDate?: string;
+    withdrawnDate?: string;
+    withdrawnReason?: string;
+}
+
+export interface CaseStudy {
+    name: string;
+    relationship: string;
+    href: string;
+    metrics: CaseStudyMetric[];
+}
+
+const STUDIES = raw.caseStudies as unknown as Record<string, CaseStudy>;
+
+export function caseStudy(slug: string): CaseStudy {
+    const study = STUDIES[slug];
+    if (!study) throw new Error(`No case-study facts for "${slug}". Add it to case-study-facts.json.`);
+    return study;
+}
+
+/**
+ * Metrics safe to state as fact.
+ *
+ * Throws if a verified metric has no method. A number without a method is the
+ * thing that drifted last time, so this is a hard failure at build rather than a
+ * convention someone has to remember.
+ */
+export function verifiedMetrics(slug: string): CaseStudyMetric[] {
+    return caseStudy(slug).metrics.filter(m => {
+        if (m.status !== 'verified') return false;
+        if (!m.method) {
+            throw new Error(
+                `Metric "${m.id}" on "${slug}" is verified but has no method. ` +
+                `Add { kind, date, note } or set status to "withdrawn".`
+            );
+        }
+        return true;
+    });
+}
+
+/** Metrics currently pulled. Every surface renders the note instead of the number. */
+export function withdrawnMetrics(slug: string): CaseStudyMetric[] {
+    return caseStudy(slug).metrics.filter(m => m.status === 'withdrawn');
+}
+
+/** True when anything is withdrawn, so surfaces know to show the disclosure. */
+export function hasWithdrawn(slug: string): boolean {
+    return withdrawnMetrics(slug).length > 0;
+}
+
+/** One dated sentence for any surface that needs the disclosure inline. */
+export function withdrawalNotice(slug: string): string | null {
+    const pulled = withdrawnMetrics(slug);
+    if (pulled.length === 0) return null;
+    const date = pulled[0].withdrawnDate;
+    const labels = pulled.map(m => m.label.toLowerCase()).join(', ');
+    return `Performance figures for this project (${labels}) were withdrawn on ${date} pending reconciliation of the original test records. They are not stated anywhere on this site until they are re-measured with a documented method.`;
+}
+
+/**
+ * Short factual phrase for titles and meta descriptions, built only from
+ * verified metrics. Metadata is where the drift was worst, because nobody
+ * re-reads a <title> when they correct the body.
+ */
+export function metaFacts(slug: string): string {
+    return verifiedMetrics(slug)
+        .filter(m => ['delivery-days', 'urls-migrated', 'templates', 'downtime'].includes(m.id))
+        .map(m => {
+            if (m.id === 'delivery-days') return `migrated in ${m.value}`;
+            if (m.id === 'urls-migrated') return `${m.value} URLs`;
+            if (m.id === 'templates') return `${m.value} templates`;
+            if (m.id === 'downtime') return `${m.value} downtime`;
+            return `${m.label} ${m.value}`;
+        })
+        .join(', ');
+}

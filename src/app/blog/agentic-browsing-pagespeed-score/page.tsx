@@ -6,6 +6,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor, StatCard, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -134,11 +136,7 @@ export default function AgenticBrowsingPage() {
 
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Lighthouse agentic browsing checks" }
-                    ]} />
+                    <Breadcrumb items={postCrumbs("agentic-browsing-pagespeed-score", "Lighthouse agentic browsing checks")} />
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
@@ -371,6 +369,8 @@ export default function AgenticBrowsingPage() {
                             For an adjacent commerce protocol, see our review of <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className="text-cognac hover:underline font-medium">Google&apos;s Universal Commerce Protocol</Link>. For a separate measurement problem, read <Link href="/blog/spending-more-on-ads-fewer-orders-tracking" className="text-cognac hover:underline font-medium">how to investigate ad-tracking gaps</Link>. For the terminology used across these pieces, see the <Link href="/blog/aeo-web-performance-glossary" className="text-cognac hover:underline font-medium">AEO and web performance glossary</Link>. And for our bounded approach to AI-search eligibility, see <Link href="/ai-info" className="text-cognac hover:underline font-medium">how PandaCodeGen approaches AI search</Link>.
                         </p>
                     </section>
+
+                    <TopicUpLink postId="agentic-browsing-pagespeed-score" />
 
                     <RelatedPosts currentPostId="agentic-browsing-pagespeed-score" />
 

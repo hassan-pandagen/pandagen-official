@@ -840,7 +840,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-08",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a Google requirement or universal abandonment point. Different routes, devices, networks, audiences and tasks behave differently. Use the property's field performance and funnel evidence rather than applying one cutoff to every visitor." },
       { question: "Does website speed affect Google rankings?", answer: "Google uses Core Web Vitals in broader ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Lighthouse is a lab diagnostic, not a direct ranking cutoff. Diagnose search changes with Search Console, content, links, indexing and release evidence." },
@@ -1233,7 +1233,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-08",
     faqs: [
       { question: "When should I switch from Shopify to a custom website?", answer: "Do not switch from a headline threshold. Compare required experience, checkout, integrations, data, performance, current cost and operating capability. A theme optimization may solve implementation problems; headless can change the storefront while retaining Shopify commerce; fully custom transfers more responsibility." },
       { question: "How much does a custom ecommerce website cost compared to Shopify?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, but commerce scope can exceed those ranges. Compare current Shopify plans, apps, fees and internal work with migration, providers, maintenance, security, support and team time." },

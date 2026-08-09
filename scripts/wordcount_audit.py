@@ -52,7 +52,15 @@ DROP_BLOCKS = [
 # inflated every count by 30-130% on the first attempt. Cut there.
 # NB: ">Related Articles<" is the component. "Related reading" is an H2 some authors
 # wrote as real body copy -- do not confuse them.
-END_MARKERS = [">Related Articles<", ">Keep reading<", ">More from the blog<"]
+# data-topic-uplink is the TopicUpLink aside, added with the hub layer on 9 Aug
+# 2026. It renders inside <article>, immediately above RelatedPosts, and is
+# navigation rather than article prose -- the same argument that excludes the
+# related-posts cards. Listed first because it appears first; the cut takes the
+# earliest marker found, so this also removes RelatedPosts below it.
+# Left in, it added ~45 words to all 77 counts: under the 10% tolerance for long
+# posts and over it for the shortest, which is the worst kind of drift because
+# it looks like nothing is wrong until one post trips.
+END_MARKERS = ["data-topic-uplink", ">Related Articles<", ">Keep reading<", ">More from the blog<"]
 
 
 def article_words(html: str) -> int:

@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -144,13 +146,7 @@ export default function NextjsHostingZeroCostPage() {
                     />
 
                     {/* Breadcrumb Navigation */}
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Is Vercel Free? 2026 Hobby Limits and Business Pricing", href: "/blog/nextjs-hosting-zero-cost" }
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs("nextjs-hosting-zero-cost", "Is Vercel Free? 2026 Hobby Limits and Business Pricing")} />
 
                     {/* Back Button */}
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
@@ -753,6 +749,8 @@ export default function NextjsHostingZeroCostPage() {
                     {hostingFAQs.length > 0 && <FAQAccordion faqs={hostingFAQs} />}
 
                     {/* Related Posts */}
+                    <TopicUpLink postId="nextjs-hosting-zero-cost" />
+
                     <RelatedPosts currentPostId="nextjs-hosting-zero-cost" />
 
                 </article>

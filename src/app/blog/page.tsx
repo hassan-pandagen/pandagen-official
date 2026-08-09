@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import BlogPageClient from "./BlogPageClient";
 import { blogPosts } from "@/data/blog";
+import { hubs, hubPostIds, parentForPost } from "@/data/hubs";
 
 const HUB_TITLE = "Website Migration, SEO & Performance Blog | PandaCodeGen";
 const HUB_DESCRIPTION = "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds.";
@@ -72,6 +73,26 @@ export default function BlogPage() {
             return dateB.getTime() - dateA.getTime();
         });
 
+    // Topic hubs, flattened for the client. The hub module carries ~2,500 words of
+    // intro prose that only the hub pages render; sending it here would put all of
+    // it in the blog index RSC payload for no visible benefit. Same reasoning as
+    // stripping faqs above.
+    const topics = hubs.map((hub) => ({
+        slug: hub.slug,
+        shortLabel: hub.shortLabel,
+        h1: hub.h1,
+        count: hubPostIds(hub).length,
+    }));
+
+    // Every post's topical parent: its hub, or for the three service-owned
+    // clusters, the /services page that owns the intent. Resolved on the server so
+    // a card label can never disagree with the breadcrumb on the post itself.
+    const parents: Record<string, { label: string; href: string }> = {};
+    for (const post of blogPosts) {
+        const parent = parentForPost(post.id);
+        if (parent.href) parents[post.id] = { label: parent.label, href: parent.href };
+    }
+
     // Schema is built on the server and passed as a prop so the client doesn't recompute.
     const blogSchema = {
         "@context": "https://schema.org",
@@ -132,5 +153,5 @@ export default function BlogPage() {
         ]
     };
 
-    return <BlogPageClient articles={articles} blogSchema={blogSchema} />;
+    return <BlogPageClient articles={articles} blogSchema={blogSchema} topics={topics} parents={parents} />;
 }

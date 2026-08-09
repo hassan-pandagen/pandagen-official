@@ -41,6 +41,17 @@ export interface Cluster {
   label: string;
   /** Service pillar this cluster supports (commercial intent anchor). */
   pillarHref?: string;
+  /**
+   * True when a live /services/* page already owns this cluster's search intent.
+   *
+   * These clusters get NO generated hub. Minting /blog/topic/wix for three posts
+   * would put a second page of ours in front of the same query /services/wix is
+   * built to win, which is cannibalisation, not coverage. The rule is not "merge
+   * anything under four posts" -- it is NEVER MINT A HUB THAT COMPETES WITH A
+   * MONEY PAGE THAT ALREADY EXISTS. Posts in these clusters still get an UP-link
+   * and a breadcrumb parent; both point at the service page instead of a hub.
+   */
+  serviceOwned?: boolean;
   /** Entities this cluster is about. */
   entityIds: string[];
   /** Supporting blog post ids (a post may live in multiple clusters). */
@@ -257,6 +268,7 @@ export const clusters: Cluster[] = [
     id: 'woocommerce',
     label: 'WooCommerce Migration',
     pillarHref: '/services/woocommerce',
+    serviceOwned: true,
     entityIds: ['woocommerce', 'wordpress'],
     relatedClusterIds: ['wordpress', 'shopify', 'performance'],
     postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow', 'woocommerce-migration-cost'],
@@ -276,6 +288,7 @@ export const clusters: Cluster[] = [
     id: 'wix',
     label: 'Wix Migration',
     pillarHref: '/services/wix',
+    serviceOwned: true,
     entityIds: ['wix', 'nextjs'],
     relatedClusterIds: ['webflow', 'squarespace', 'custom'],
     postIds: ['wix-too-slow', 'wix-vs-custom-website', 'wix-migration-cost'],
@@ -292,6 +305,7 @@ export const clusters: Cluster[] = [
     id: 'gohighlevel',
     label: 'GoHighLevel Front-end',
     pillarHref: '/services/gohighlevel',
+    serviceOwned: true,
     entityIds: ['gohighlevel', 'nextjs'],
     relatedClusterIds: ['custom', 'agency', 'performance'],
     postIds: ['gohighlevel-keep-crm-replace-website', 'gohighlevel-website-speed', 'best-website-builder-for-gohighlevel-agencies'],
@@ -324,6 +338,10 @@ export const clusters: Cluster[] = [
   {
     id: 'performance',
     label: 'Speed & Core Web Vitals',
+    // No /services page sells "speed" on its own. The commercial next step for a
+    // reader diagnosing a slow site is a measurement of their own site, so the
+    // free audit is this cluster's money page.
+    pillarHref: '/free-audit',
     entityIds: ['core-web-vitals', 'nextjs'],
     relatedClusterIds: ['seo-aeo', 'wordpress', 'shopify'],
     postIds: [
@@ -335,6 +353,7 @@ export const clusters: Cluster[] = [
   {
     id: 'pricing',
     label: 'Cost & SaaS Spend',
+    pillarHref: '/pricing',
     entityIds: ['saas-cost', 'custom-engineering'],
     relatedClusterIds: ['custom', 'migration', 'agency'],
     postIds: [
@@ -345,6 +364,10 @@ export const clusters: Cluster[] = [
   {
     id: 'migration',
     label: 'Migration (cross-platform)',
+    // Shares a money page with the `wordpress` cluster on purpose: the
+    // cross-platform migration questions still convert into the same service.
+    // Declaration order matters -- see getRelatedServiceHrefs.
+    pillarHref: '/services/wordpress-migration',
     entityIds: ['nextjs'],
     relatedClusterIds: ['wordpress', 'webflow', 'seo-aeo', 'pricing'],
     caseStudyHrefs: ['/work/ladies-4-jesus', '/work/mycustompatches'],
@@ -363,21 +386,21 @@ export const clusters: Cluster[] = [
     ],
   },
   {
+    // MERGED 9 Aug 2026: absorbed the former `tracking-ads` cluster (3 posts).
+    // It was the only thin cluster with no /services page able to absorb it, and
+    // "my ads spend more and return less" is the same reader as "my storefront
+    // leaks conversions" -- one operator looking at one funnel, not two topics.
     id: 'ecommerce-strategy',
-    label: 'E-commerce Strategy',
-    entityIds: ['headless-commerce', 'shopify'],
-    relatedClusterIds: ['shopify', 'performance'],
+    label: 'E-commerce Strategy & Ad Tracking',
+    pillarHref: '/services/ecommerce',
+    entityIds: ['headless-commerce', 'shopify', 'custom-engineering'],
+    relatedClusterIds: ['shopify', 'performance', 'custom'],
     postIds: [
       'what-is-headless-commerce', 'google-universal-commerce-protocol-what-it-means-for-your-store',
       'shopify-slow-losing-sales', 'shopify-conversion-rate-speed-fix',
+      'meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking',
+      'fix-meta-ad-tracking-2026',
     ],
-  },
-  {
-    id: 'tracking-ads',
-    label: 'Ad Tracking & Attribution',
-    entityIds: ['custom-engineering'],
-    relatedClusterIds: ['custom', 'ecommerce-strategy'],
-    postIds: ['meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking', 'fix-meta-ad-tracking-2026'],
   },
 ];
 

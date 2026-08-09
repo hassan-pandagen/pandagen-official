@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -153,11 +155,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
             <article>
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <Breadcrumb items={[
-                        { label: "Home", href: "/" },
-                        { label: "Blog", href: "/blog" },
-                        { label: "Best Website Builder for GHL Agencies" }
-                    ]} />
+                    <Breadcrumb items={postCrumbs("best-website-builder-for-gohighlevel-agencies", "Best Website Builder for GHL Agencies")} />
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" /> Back to Blog
                     </Link>
@@ -655,6 +653,8 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                 </div>
             </section>
+
+            <TopicUpLink postId="best-website-builder-for-gohighlevel-agencies" />
 
             <RelatedPosts currentPostId="best-website-builder-for-gohighlevel-agencies" />
             </article>

@@ -178,7 +178,8 @@ export default function PageContent() {
       <CaseStudyGrid
         highlight="myCustomPatches"
         label="Real WordPress Migrations"
-        heading="WordPress to Next.js, done"
+        heading="WordPress to Next.js, done properly"
+        headingTail=""
         subheading="Four sites we built or migrated. Live URLs. Performance figures are published only with their test profile, date and conditions."
       />
 

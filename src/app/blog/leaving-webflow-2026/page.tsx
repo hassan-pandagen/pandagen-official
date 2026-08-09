@@ -14,6 +14,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -226,13 +228,7 @@ export default function LeavingWebflow2026Page() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Leaving Webflow in 2026", href: "/blog/leaving-webflow-2026" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs("leaving-webflow-2026", "Leaving Webflow in 2026")} />
 
                     <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
                         <ArrowLeft className="w-4 h-4" />
@@ -741,6 +737,8 @@ export default function LeavingWebflow2026Page() {
                             Compare current recurring inputs in the <Link href="/blog/webflow-true-cost" className="text-cognac hover:underline font-medium">Webflow true-cost guide</Link>, review scope drivers in the <Link href="/blog/webflow-migration-cost" className="text-cognac hover:underline font-medium">Webflow migration cost guide</Link>, or see the <Link href="/services/webflow" className="text-cognac hover:underline font-medium">Webflow migration service</Link> for the delivery framework.
                         </p>
                     </section>
+
+                    <TopicUpLink postId="leaving-webflow-2026" />
 
                     <RelatedPosts currentPostId="leaving-webflow-2026" />
                 </article>

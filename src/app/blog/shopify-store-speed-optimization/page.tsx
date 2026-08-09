@@ -5,6 +5,8 @@ import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -146,7 +148,7 @@ export default function ShopifySpeedOptimizationPage() {
             <article className="pt-28 md:pt-32 pb-12 md:pb-24">
                 <div className="container mx-auto px-6">
                     <div className="max-w-3xl mx-auto">
-                        <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: "Shopify Store Speed Optimization" }]} />
+                        <Breadcrumb items={postCrumbs("shopify-store-speed-optimization", "Shopify Store Speed Optimization")} />
                         <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac transition mt-4 mb-8">
                             <ArrowLeft className="w-4 h-4" /> Back to Blog
                         </Link>
@@ -532,6 +534,8 @@ export default function ShopifySpeedOptimizationPage() {
                                 ))}
                             </div>
                         </div>
+
+                        <TopicUpLink postId="shopify-store-speed-optimization" />
 
                         <RelatedPosts currentPostId="shopify-store-speed-optimization" />
                     </div>

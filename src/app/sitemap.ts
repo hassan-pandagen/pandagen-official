@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/data/blog'
+import { hubs, hubPostIds } from '@/data/hubs'
 import { localizedPages, routes as localeRoutes, type LocalizedPage } from '@/lib/i18n/config'
 
 type RouteConfig = {
@@ -84,6 +85,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // Topic hub entries, generated from the taxonomy alongside the routes
+  // themselves, so a hub can never exist without being discoverable.
+  //
+  // lastModified is the newest lastModified among the hub's own posts: a hub
+  // page changes exactly when its membership changes or one of its posts is
+  // updated. A date that moves without content moving is worse than no date,
+  // so this is computed rather than declared.
+  const hubEntries = hubs.map((hub) => {
+    const memberDates = hubPostIds(hub)
+      .map((id) => blogPosts.find((p) => p.id === id)?.lastModified)
+      .filter((d): d is string => !!d)
+      .sort()
+
+    return {
+      url: `${baseUrl}/blog/topic/${hub.slug}`,
+      ...(memberDates.length ? { lastModified: new Date(memberDates[memberDates.length - 1]) } : {}),
+      changeFrequency: 'weekly' as MetadataRoute.Sitemap[number]['changeFrequency'],
+      // Above individual posts (0.7): a hub is the cluster's canonical page and
+      // the intended entry point. Below /blog itself (0.8) is deliberate.
+      priority: 0.75,
+    }
+  })
+
   // French and German entries for the five translated pages. The English
   // entries above are untouched; these are appended, never substituted.
   const localePriority: Record<LocalizedPage, number> = {
@@ -102,5 +126,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...staticEntries, ...localeEntries, ...blogEntries]
+  return [...staticEntries, ...hubEntries, ...localeEntries, ...blogEntries]
 }

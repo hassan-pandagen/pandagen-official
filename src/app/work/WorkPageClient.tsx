@@ -105,10 +105,16 @@ export default function WorkPageClient() {
                 <div className="border-t border-white/15 pt-5 sm:border-l sm:border-t-0 sm:pl-7 sm:pt-0">
                   <h2 className="text-2xl font-bold">MyCustomPatches WordPress migration</h2>
                   <div className="mt-3 leading-7 text-stone-300">
-                    Owner-confirmed July 21, 2026: approximately 3.2-second and 45 Mobile PageSpeed legacy baseline; 0.7-second lab result and 90+ Mobile PageSpeed after the rebuild; $150 legacy monthly hosting invoice versus a $0 hosting invoice in the recorded target period.
+                    Owner-confirmed July 21, 2026: a decade-old WordPress site moved to custom Next.js in 22 days.
+                    200+ URLs across 13 distinct templates, zero downtime at cutover, and no rankings lost in the
+                    30 days of Search Console monitoring after launch.
                   </div>
                   <div className="mt-3 text-sm leading-6 text-stone-400">
-                    These are first-party project records, not an independent benchmark. Publish the original dated test profiles and invoice periods with any standalone comparison. Hosting eligibility and future cost are usage-dependent; no ranking or conversion result is implied.
+                    Performance and hosting figures for this project were withdrawn on August 4, 2026 pending
+                    reconciliation of the original test records, and are not stated anywhere on this site until they
+                    are re-measured with a documented method. What remains above is scope and outcome, which the
+                    owner confirmed. These are first-party project records, not an independent benchmark, and no
+                    ranking or conversion result is implied.
                   </div>
                 </div>
               </div>
@@ -141,7 +147,7 @@ export default function WorkPageClient() {
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { href: "/work/mycustompatches", name: "MyCustomPatches", kind: "Independent client", desc: "WordPress to Next.js migration. Owner-confirmed: 22 days, 3.2s to 0.7s, $150/mo to $0/mo hosting." },
+              { href: "/work/mycustompatches", name: "MyCustomPatches", kind: "Independent client", desc: "WordPress to Next.js migration. Owner-confirmed: 22 days, 200+ URLs on 13 templates, zero downtime, no rankings lost. Performance figures withdrawn pending reconciliation." },
               { href: "/work/ladies-4-jesus", name: "Ladies 4 Jesus", kind: "Independent client", desc: "Community site migration. Nine content types, five moderated submission paths, owner-run CMS. No before/after claimed: no baseline was captured." },
               { href: "/work/emblematic-studio", name: "Emblematic Studio", kind: "Independent client", desc: "Product catalogue and quote experience. 20 product types from one typed registry; one runtime route on the whole site. Build record, no traffic claims." },
               { href: "/work/panda-patches", name: "Panda Patches", kind: "Founder-affiliated", desc: "Headless Next.js, Sanity, Supabase and Square build with a real-time pricing calculator and ops platform." },

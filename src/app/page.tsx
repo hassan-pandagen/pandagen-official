@@ -73,7 +73,7 @@ const homeFaqs = [
   },
   {
     q: "Will I lose SEO rankings when migrating from WordPress?",
-    a: "No provider controls search rankings, so nobody can honestly guarantee they hold. What reduces avoidable risk is a documented process: a complete URL inventory, a one-to-one 301 redirect map, schema and metadata migration, sitemap regeneration, canonical consistency, a phased DNS cutover and Search Console monitoring afterwards. Your old site stays live until the new one is verified, and a rollback path is documented before cutover. Our MyCustomPatches migration is an owner-confirmed record: 22 days, rankings held, and hosting cost moved from $150/month to $0/month in the recorded period.",
+    a: "No provider controls search rankings, so nobody can honestly guarantee they hold. What reduces avoidable risk is a documented process: a complete URL inventory, a one-to-one 301 redirect map, schema and metadata migration, sitemap regeneration, canonical consistency, a phased DNS cutover and Search Console monitoring afterwards. Your old site stays live until the new one is verified, and a rollback path is documented before cutover. Our MyCustomPatches migration is an owner-confirmed record: 22 days, 200+ URLs across 13 templates, zero downtime at cutover, and no rankings lost in the 30 days after launch. Performance and hosting figures for that project are withdrawn pending reconciliation of the original test records.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",

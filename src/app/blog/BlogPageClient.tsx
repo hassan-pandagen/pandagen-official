@@ -13,6 +13,12 @@ import type { IllustrationType, BlogPost } from "@/data/blog";
 // in the listing UI. Keeping faqs server-only saves ~20-40KB gzipped on the client bundle.
 type BlogPostMeta = Omit<BlogPost, "faqs">;
 
+/** Slim hub summary. The hub prose stays server-side; see blog/page.tsx. */
+type Topic = { slug: string; shortLabel: string; h1: string; count: number };
+
+/** postId -> its topical parent (a hub, or a service page for service-owned clusters). */
+type ParentMap = Record<string, { label: string; href: string }>;
+
 // Pagefind-powered blog search: lazy-loaded, opens a Cmd+K modal with instant results.
 // ssr: false because pagefind loads /_pagefind/pagefind.js from the runtime assets.
 const BlogSearch = lazyLoad(() => import("@/components/ui/BlogSearch"), { ssr: false });
@@ -52,8 +58,32 @@ function getCardDisplay(article: BlogPostMeta) {
   };
 }
 
+// Topic label on a card is deliberately NOT a link: the whole card is already an
+// <a>, and an anchor inside an anchor is invalid HTML that browsers silently
+// restructure. The linked route into each hub is the strip above the fold.
+function CardMeta({ article, parents }: { article: BlogPostMeta; parents: ParentMap }) {
+  const parent = parents[article.id];
+  return (
+    <>
+      {parent ? (
+        <>
+          <span className="text-stone-700 text-xs font-semibold">{parent.label}</span>
+          <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
+        </>
+      ) : null}
+      <span className="text-stone-600 text-xs">Published {article.date}</span>
+      {article.lastModified ? (
+        <>
+          <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
+          <span className="text-stone-600 text-xs">Updated {article.lastModified}</span>
+        </>
+      ) : null}
+    </>
+  );
+}
+
 // Interactive filter + article list, wrapped in Suspense because it calls useSearchParams()
-function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
+function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; parents: ParentMap }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const activeCategory = searchParams.get("cat") ?? "All";
@@ -145,7 +175,7 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4">
                     <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: heroDisplay.statColor }}>{heroArticle.category}</span>
                     <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
-                    <span className="text-stone-600 text-xs">{heroArticle.date}</span>
+                    <CardMeta article={heroArticle} parents={parents} />
                     <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
                     <span className="text-stone-600 text-xs">{heroArticle.readTime} read</span>
                   </div>
@@ -185,10 +215,10 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
                           </div>
                         </div>
                         <div className="p-7 flex flex-col justify-center">
-                          <div className="flex items-center gap-2 mb-3">
+                          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
                             <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: sd.statColor }}>{article.category}</span>
                             <span aria-hidden="true" className="text-stone-600 text-xs">·</span>
-                            <span className="text-stone-600 text-xs">{article.date}</span>
+                            <CardMeta article={article} parents={parents} />
                           </div>
                           <h2 className="text-lg md:text-xl font-bold text-charcoal leading-snug line-clamp-3 group-hover:text-stone-700 transition-colors">
                             {article.title}
@@ -261,8 +291,8 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
 
                 {/* Card body */}
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 mb-4 text-xs text-stone-600">
-                    <span>{article.date}</span>
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4 text-xs text-stone-600">
+                    <CardMeta article={article} parents={parents} />
                     <span aria-hidden="true">·</span>
                     <span>{article.readTime} read</span>
                   </div>
@@ -283,7 +313,17 @@ function BlogArticlesSection({ articles }: { articles: BlogPostMeta[] }) {
   );
 }
 
-export default function BlogPageClient({ articles, blogSchema }: { articles: BlogPostMeta[]; blogSchema: object }) {
+export default function BlogPageClient({
+  articles,
+  blogSchema,
+  topics,
+  parents,
+}: {
+  articles: BlogPostMeta[];
+  blogSchema: object;
+  topics: Topic[];
+  parents: ParentMap;
+}) {
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden relative">
       {/* Schema.org JSON-LD for SEO, rendered server-side (not inside Suspense) */}
@@ -296,18 +336,44 @@ export default function BlogPageClient({ articles, blogSchema }: { articles: Blo
 
       {/* Hero with h1, rendered server-side so Bingbot and Googlebot see it in initial HTML */}
       <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
-        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">The Journal</p>
+        {/* The old H1 kept as the strapline: it is house voice, not query language. */}
+        <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">
+          Insights from the Engine Room
+        </p>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-charcoal relative z-10 leading-[1.08] text-balance">
-          Insights from the <span className="font-serif font-normal italic text-cognac">Engine Room.</span>
+          Website Migration, Speed and <span className="font-serif font-normal italic text-cognac">SEO Guides.</span>
         </h1>
         <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
-          Practical guides on Next.js, website migration, commerce architecture, analytics, and web performance from the PandaCodeGen editorial team.
+          {articles.length} practical guides on website migration, platform cost, Core Web Vitals,
+          commerce architecture and search, from the PandaCodeGen engineering team.
         </p>
       </section>
 
+      {/* Topic hubs, above the fold and in the initial HTML. Each hub is the
+          canonical page for its cluster, so this is the main entry point into
+          the blog for both readers and crawlers. */}
+      <nav aria-label="Browse by topic" className="container mx-auto px-6 pt-10 md:pt-14">
+        <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-stone-500">
+          Browse by topic
+        </h2>
+        <ul className="flex flex-wrap gap-2.5">
+          {topics.map((topic) => (
+            <li key={topic.slug}>
+              <Link
+                href={`/blog/topic/${topic.slug}`}
+                className="inline-flex min-h-11 items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-charcoal transition-colors hover:border-cognac/50 hover:text-cognac"
+              >
+                {topic.shortLabel}
+                <span className="text-xs font-normal text-stone-500">{topic.count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
       {/* Interactive filter + article list is isolated in Suspense (uses useSearchParams) */}
       <Suspense fallback={<div className="min-h-[400px]" />}>
-        <BlogArticlesSection articles={articles} />
+        <BlogArticlesSection articles={articles} parents={parents} />
       </Suspense>
 
       <nav aria-label="All articles" className="container mx-auto px-6 pb-16">

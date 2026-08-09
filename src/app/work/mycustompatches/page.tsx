@@ -8,19 +8,24 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
-    title: { absolute: "MyCustomPatches Case Study, WordPress Migration, 90+ PageSpeed | PandaCodeGen" },
-    description: "How we migrated an aging WordPress patch business to Next.js 14. Load time dropped from 3.2s to 0.7s. PageSpeed went from ~45 to 90+. Hosting cost dropped from $150/mo to $0. Zero downtime. All 200+ pages and SEO rankings fully preserved.",
+    // Metadata renders the same verified facts as the body. Do not type a metric
+    // in here by hand: performance and hosting figures are withdrawn in
+    // src/data/case-study-facts.json and scripts/metrics_guard.py fails the build
+    // if one reappears. Metadata is where the last drift survived longest,
+    // because nobody re-reads a <title> after correcting the body.
+    title: { absolute: "MyCustomPatches Case Study: 200+ URLs Off WordPress in 22 Days | PandaCodeGen" },
+    description: "A decade on WordPress, migrated to custom Next.js in 22 days. 200+ URLs on 13 templates, zero downtime, zero rankings lost. Performance figures temporarily withdrawn pending reconciliation. Full scope record and method inside.",
     openGraph: {
-        title: "MyCustomPatches, WordPress to Next.js Migration. 90+ PageSpeed.",
-        description: "3.2s to 0.7s load time. PageSpeed ~45 to 90+. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated. Full case study.",
+        title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
+        description: "A decade-old WordPress site rebuilt in custom Next.js in 22 days. 200+ URLs across 13 templates, zero downtime at cutover, no rankings lost. Performance figures withdrawn pending reconciliation.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
         images: [ogImageForPath("/work/mycustompatches")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "MyCustomPatches, WordPress to Next.js Migration. 90+ PageSpeed.",
-        description: "3.2s to 0.7s load time. PageSpeed ~45 to 90+. $150/mo to $0 hosting. Zero downtime. 200+ pages migrated.",
+        title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
+        description: "200+ URLs on 13 templates, zero downtime, no rankings lost. Performance figures withdrawn pending reconciliation.",
     },
     alternates: { canonical: "/work/mycustompatches" },
 };
@@ -31,12 +36,12 @@ const pageFaqs: { question: string; answer: string }[] = [
         answer: "We mapped every existing WordPress URL to its identical path in the new Next.js build. Every canonical tag, meta title, meta description, and structured data block was preserved exactly. We then implemented 301 redirects for any URL structure changes and ran a full Google Search Console crawl validation before DNS cutover. Rankings were stable within 2 weeks post-launch.",
     },
     {
-        question: "How did load time drop from 3.2s to 0.7s?",
-        answer: "Three main factors: First, eliminating WordPress plugin overhead (removed ~45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages, no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift.",
+        question: "What made the rebuilt site faster than the WordPress original?",
+        answer: "The performance figures for this project are withdrawn pending reconciliation, so no before-and-after numbers are quoted here. The engineering reasons the rebuild is faster are still worth stating. Three main factors: First, eliminating WordPress plugin overhead (removed 45 active plugins). Second, switching to Next.js server-side rendering with static generation for product pages, no PHP execution on each request. Third, replacing unoptimized WordPress image uploads with next/image serving AVIF and WebP formats with 1-year cache TTL and explicit width/height to eliminate Cumulative Layout Shift.",
     },
     {
-        question: "How did hosting costs drop from $150/mo to $0?",
-        answer: "The original site ran on managed WordPress hosting ($150/mo) plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level.",
+        question: "How does the hosting model differ from managed WordPress?",
+        answer: "The specific hosting figures for this project are withdrawn pending reconciliation of the original invoices. The structural difference is unchanged: the original site ran on managed WordPress hosting plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level.",
     },
     {
         question: "Was there any downtime during the migration?",
@@ -54,8 +59,8 @@ const caseStudySchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/mycustompatches#article",
-            "headline": "MyCustomPatches: WordPress Migration to Next.js 14, 90+ PageSpeed, $0 Hosting",
-            "description": "An aging WordPress e-commerce site running on $150/mo hosting with a 3.2s load time and ~45 PageSpeed score. We migrated every page, product, and blog post to a custom Next.js 14 build in about 22 days. Result: 0.7s load time, 90+ PageSpeed, $0/mo hosting, zero SEO rankings lost.",
+            "headline": "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
+            "description": "A decade-old WordPress ecommerce site migrated to a custom Next.js build in about 22 days: 200+ URLs across 13 distinct templates, zero downtime at cutover, and no rankings lost in the 30 days of Search Console monitoring after launch. Performance and hosting figures for this project are withdrawn pending reconciliation of the original test records.",
             "image": ogImageUrlForPath("/work/mycustompatches"),
             "datePublished": "2025-10-01T00:00:00Z",
             "dateModified": "2026-02-01T00:00:00Z",
@@ -217,7 +222,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 WordPress Migration
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 text-xs font-bold uppercase tracking-widest">
-                                90+ PageSpeed
+                                22 days, zero downtime
                             </span>
                         </div>
 
@@ -227,14 +232,14 @@ export default function MyCustomPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A custom patch business running an aging WordPress site: 3.2s load time, ~45 PageSpeed score, $150/mo in managed hosting, and 45 active plugins. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. No ranking losses were recorded in the monitored post-launch period.
+                            A custom patch business running an aging WordPress site carrying 45 active plugins, managed hosting, and a decade of accumulated templates. We rebuilt every page in Next.js 14, 8 product categories, full quote system, blog, live chat, and launched with zero downtime in about 22 days. No ranking losses were recorded in the monitored post-launch period.
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                             {[
-                                { value: "0.7s", label: "Load Time", sub: "was 3.2s" },
-                                { value: "90+", label: "PageSpeed", sub: "was ~45" },
-                                { value: "$0/mo", label: "Hosting Cost", sub: "was $150/mo" },
+                                { value: "22 days", label: "Migration", sub: "owner-confirmed" },
+                            { value: "200+", label: "URLs migrated", sub: "13 templates" },
+                            { value: "zero", label: "Downtime", sub: "at cutover" },
                                 { value: "200+", label: "Pages Migrated", sub: "zero rankings lost" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
@@ -270,7 +275,7 @@ export default function MyCustomPatchesCaseStudy() {
                                     Speed killing conversions
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    3.2 second load time. Google research shows every 1-second delay in mobile page load reduces conversions by up to 20%. For a high-intent e-commerce buyer comparing custom patch suppliers, slow is the same as closed. Competitors loading in under 1 second were winning the click.
+                                    A slow storefront. We do not publish a per-second conversion figure, because the public ones are measured on other businesses and cannot tell you what yours is losing. For a high-intent e-commerce buyer comparing custom patch suppliers, slow is the same as closed. Competitors loading in under 1 second were winning the click.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -285,10 +290,10 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
                                     <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
-                                    $150/mo for a problem
+                                    Paying monthly for a problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Managed WordPress hosting at $150/month, on top of premium plugins, theme licenses, and security scanning fees. Total monthly cost exceeded $200. None of it was improving the site. It was just keeping a slow site alive.
+                                    Managed WordPress hosting, on top of premium plugins, theme licenses, and security scanning fees. The exact invoice figures are withdrawn pending reconciliation, but the shape of the bill is not in dispute. None of it was improving the site. It was just keeping a slow site alive.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -340,9 +345,9 @@ export default function MyCustomPatchesCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Performance</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">90+ with real content. Not a blank page.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Optimised with real content loaded, not a blank page.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            The 90+ Lighthouse score runs on the live production site, with gallery images, Facebook Pixel, live chat, and form scripts loaded. Every optimization was deliberate.
+                            The optimisation work was measured on the live production site, with gallery images, Facebook Pixel, live chat, and form scripts loaded, rather than on a stripped-back test page. Every optimization was deliberate.
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-4">
@@ -422,8 +427,7 @@ export default function MyCustomPatchesCaseStudy() {
                     {/* RESULTS SUMMARY, speakable for AI */}
                     <section className="mb-10" data-speakable="true">
                         <p className="text-lg text-stone-700 leading-relaxed bg-stone-50 border border-stone-200 rounded-2xl p-6">
-                            MyCustomPatches migrated from an aging WordPress site to a custom Next.js 14 build in about 22 days. Load time dropped from 3.2 seconds to 0.7 seconds. Google PageSpeed score went from approximately 45 to 90+ out of 100. Monthly hosting costs dropped from $150 to $0 by deploying on Vercel&apos;s free tier with Cloudflare CDN. All 200+ pages were migrated with zero downtime and zero SEO rankings lost. The site eliminated 45 WordPress plugins and replaced them with 12 purpose built integrations.
-                        </p>
+                            MyCustomPatches migrated from an aging WordPress site to a custom Next.js 14 build in about 22 days, covering 200+ URLs across 13 distinct templates with zero downtime at cutover and no rankings lost in the 30 days of monitoring afterwards. Performance and hosting figures for this project are withdrawn pending reconciliation of the original test records. </p>
                     </section>
 
                     {/* BEFORE vs AFTER TABLE */}
@@ -439,9 +443,9 @@ export default function MyCustomPatchesCaseStudy() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-100">
-                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Load Time</td><td className="px-4 py-3 text-red-600">3.2 seconds</td><td className="px-4 py-3 text-emerald-600">0.7 seconds</td></tr>
-                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">PageSpeed Score</td><td className="px-4 py-3 text-red-600">~45/100</td><td className="px-4 py-3 text-emerald-600">90+</td></tr>
-                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Monthly Hosting Cost</td><td className="px-4 py-3 text-red-600">$150/month</td><td className="px-4 py-3 text-emerald-600">$0/month</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Load Time</td><td className="px-4 py-3 text-stone-500" colSpan={2}>Withdrawn pending reconciliation</td></tr>
+                                    <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">PageSpeed Score</td><td className="px-4 py-3 text-stone-500" colSpan={2}>Withdrawn pending reconciliation</td></tr>
+                                    <tr><td className="px-4 py-3 font-medium text-stone-700">Monthly Hosting Cost</td><td className="px-4 py-3 text-stone-500" colSpan={2}>Withdrawn pending reconciliation</td></tr>
                                     <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Active Plugins</td><td className="px-4 py-3 text-red-600">45 plugins</td><td className="px-4 py-3 text-emerald-600">0 plugins</td></tr>
                                     <tr><td className="px-4 py-3 font-medium text-stone-700">Security Vulnerabilities</td><td className="px-4 py-3 text-red-600">45 attack surfaces</td><td className="px-4 py-3 text-emerald-600">Zero attack surface</td></tr>
                                     <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Core Web Vitals</td><td className="px-4 py-3 text-red-600">Failing</td><td className="px-4 py-3 text-emerald-600">All green</td></tr>
@@ -462,9 +466,9 @@ export default function MyCustomPatchesCaseStudy() {
                         <h2 className="text-3xl font-bold text-white mb-10">Before → After. Every metric.</h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
-                                { before: "3.2s load time, competitors winning on speed", after: "0.7s load time. Fastest custom patches site in search results." },
-                                { before: "~45 PageSpeed, Google flagging every page as slow", after: "90+ PageSpeed. Core Web Vitals all green." },
-                                { before: "$150/mo managed WordPress hosting", after: "$0/mo. Vercel free tier + Cloudflare. No monthly platform cost." },
+                                { before: "A decade of accumulated templates and 45 active plugins", after: "13 rebuilt templates, no plugin update treadmill." },
+                                { before: "Every change needed a developer or a plugin", after: "The team edits content directly, no deploy required." },
+                                { before: "Managed hosting plus plugin and theme licences", after: "Vercel and Cloudflare. Figures withdrawn pending reconciliation." },
                                 { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
                                 { before: "200+ pages of SEO equity at risk during migration", after: "No ranking losses recorded in the monitored period. No pages dropped and no 404s observed post-launch." },
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
@@ -490,7 +494,7 @@ export default function MyCustomPatchesCaseStudy() {
                         <p className="text-stone-500 mb-8 max-w-2xl">The numbers look impressive on paper. But here&apos;s what they mean in real life for the owner.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "💰", label: "Annual Savings", value: "$1,800/yr", detail: "Was paying $150/mo for WP Engine hosting. Now paying $0. That&apos;s money back in the business every single month, forever." },
+                                { icon: "💰", label: "Hosting model", value: "Withdrawn", detail: "Cost figures for this project are withdrawn pending reconciliation of the original invoices. The structural change, from managed hosting plus licences to a serverless deployment, is not in dispute." },
                                 { icon: "⚡", label: "Zero Migration Stress", value: "0 Downtime", detail: "200+ pages, all products, all blog posts, all SEO rankings — moved without losing a single order or dropping a single position in Google." },
                                 { icon: "😌", label: "Headache Eliminated", value: "0 Plugins", detail: "No more plugin update anxiety. No more security patches at 2am. No more site going down before a big sale. It just works." },
                             ].map((item) => (

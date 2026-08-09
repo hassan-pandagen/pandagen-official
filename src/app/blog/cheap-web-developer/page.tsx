@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -129,13 +131,7 @@ export default function CheapWebDeveloperPage() {
 
       <section className="relative pt-24 md:pt-40 pb-10 px-6">
         <div className="max-w-3xl mx-auto">
-          <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Blog", href: "/blog" },
-              { label: "Cheap Web Developer" },
-            ]}
-          />
+          <Breadcrumb items={postCrumbs("cheap-web-developer", "Cheap Web Developer")} />
           <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
@@ -492,6 +488,8 @@ export default function CheapWebDeveloperPage() {
 
           <BlogHeader>Frequently Asked Questions</BlogHeader>
           <FAQAccordion faqs={cheapDevFAQs} />
+          <TopicUpLink postId="cheap-web-developer" />
+
           <RelatedPosts currentPostId="cheap-web-developer" />
         </article>
       </section>

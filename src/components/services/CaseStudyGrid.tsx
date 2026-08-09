@@ -10,6 +10,7 @@ export type CaseStudyClient = {
   href: string;
   category: string;
   platform: string;
+  /** Numeric score, or 0 when the figure is withdrawn (renders as a dash, never as a zero). */
   pagespeed: number;
   loadTime: string;
   saved: string;
@@ -68,8 +69,10 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
 type Props = {
   /** Which client key to feature first (most relevant to this service page). */
   highlight?: keyof typeof ALL_CLIENTS;
-  /** Optional override for the section heading. */
+  /** Optional override for the section heading. Pass the WHOLE heading. */
   heading?: string;
+  /** Styled tail rendered after the heading. Pass "" to render none. */
+  headingTail?: string;
   /** Optional override for the subheading text. */
   subheading?: string;
   /** Optional override for the small caps label above heading. */
@@ -78,7 +81,15 @@ type Props = {
 
 export default function CaseStudyGrid({
   highlight,
+  // `heading` is the WHOLE heading. The styled tail used to be a hardcoded
+  // "promise." appended after it, which read correctly for the default
+  // ("We ship what we" + "promise.") and produced "WordPress to Next.js, done
+  // promise." on any page that overrode it. That bug survived three audits
+  // because the broken string exists in neither the source nor the HTML: it is
+  // split across a <span>, so it is ungreppable from either end.
+  // If a caller wants a styled tail, it passes one via `headingTail`.
   heading = "We ship what we",
+  headingTail = "promise.",
   subheading = "Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers.",
   label = "Real Clients. Real Migrations.",
 }: Props) {
@@ -100,7 +111,8 @@ export default function CaseStudyGrid({
         <div className="text-center mb-10 md:mb-14">
           <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">{label}</p>
           <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
-            {heading} <span className="font-serif italic text-cognac">promise.</span>
+            {heading}
+            {headingTail ? <> <span className="font-serif italic text-cognac">{headingTail}</span></> : null}
           </h2>
           <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">{subheading}</p>
         </div>
@@ -135,7 +147,9 @@ export default function CaseStudyGrid({
 
               <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-100">
                 <div>
-                  <p className="text-2xl font-black text-emerald-600 leading-none tracking-tight">{client.pagespeed}</p>
+                  <p className={`text-2xl font-black leading-none tracking-tight ${client.pagespeed ? "text-emerald-600" : "text-stone-400"}`}>
+                    {client.pagespeed || "—"}
+                  </p>
                   <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">PageSpeed</p>
                 </div>
                 <div>

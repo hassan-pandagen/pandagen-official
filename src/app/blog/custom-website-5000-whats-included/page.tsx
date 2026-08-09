@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -134,13 +136,7 @@ export default function CustomWebsite5000Page() {
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                     />
 
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Custom Website Starting at $5,000", href: "/blog/custom-website-5000-whats-included" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs(postId, "Custom Website Starting at $5,000")} />
 
                     <Link
                         href="/blog"
@@ -457,6 +453,8 @@ export default function CustomWebsite5000Page() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <TopicUpLink postId={postId} />
+
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>

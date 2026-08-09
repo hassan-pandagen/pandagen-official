@@ -7,6 +7,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import { postCrumbs } from "@/data/hubs";
+import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
@@ -166,13 +168,7 @@ export default function MetaAdTrackingGuide() {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
                 />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Blog", href: "/blog" },
-                            { label: "Meta ad tracking diagnostic", href: "/blog/fix-meta-ad-tracking-2026" },
-                        ]}
-                    />
+                    <Breadcrumb items={postCrumbs(postId, "Meta ad tracking diagnostic")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
@@ -563,6 +559,8 @@ export default function MetaAdTrackingGuide() {
                     </section>
 
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
+                    <TopicUpLink postId={postId} />
+
                     <RelatedPosts currentPostId={postId} />
                 </article>
             </main>

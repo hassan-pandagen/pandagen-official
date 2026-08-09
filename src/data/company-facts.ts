@@ -78,7 +78,11 @@ export const MIGRATION_CONTROLS: readonly { title: string; body: string }[] = [
  * distinction between a client and a founder-owned property is the whole point.
  */
 export const PROJECTS: readonly { name: string; relationship: string; href: string; fact: string }[] = [
-    { name: 'MyCustomPatches', relationship: 'Independent client', href: '/work/mycustompatches', fact: 'Every page, product and blog post migrated to a custom Next.js build in about 22 days, with Search Console crawl validation before DNS cutover. Figures are owner-confirmed and published with permission.' },
+    // The 22-day delivery figure is separately owner-approved and is safe to state.
+    // The PERFORMANCE figures (load time, PageSpeed, hosting cost) are withdrawn
+    // pending reconciliation as of 4 Aug 2026 and must not be restated here until
+    // that reconciliation is finished. See the tracker entry dated 8 Aug 2026.
+    { name: 'MyCustomPatches', relationship: 'Independent client', href: '/work/mycustompatches', fact: 'Every page, product and blog post migrated to a custom Next.js build in about 22 days, with Search Console crawl validation before DNS cutover. Performance and hosting-cost figures for this project are withdrawn pending reconciliation of the original test records.' },
     { name: 'Panda Patches', relationship: 'Founder-owned property, not independent client proof', href: '/work/panda-patches', fact: 'Migrated to a custom Next.js storefront. Owned by co-founder Imran Raza Ladhani, so it is labelled as a founder-affiliated project rather than presented as client evidence.' },
     { name: 'Enterprise Ops', relationship: 'Client project', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and twenty Supabase Edge Functions, built in 10 weeks.' },
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'Custom build. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
