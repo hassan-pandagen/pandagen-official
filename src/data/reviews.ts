@@ -20,7 +20,7 @@
 export interface ClientReview {
     /** Stable key, and the /work slug when the reviewer has a case study. */
     id: string;
-    /** Verbatim from Trustpilot. */
+    /** Verbatim from the source platform. Never tidied, never paraphrased. */
     quote: string;
     /** A shorter pull for compact strips. Must say the same thing as `quote`, never a paraphrase that changes it. */
     snippet: string;
@@ -66,6 +66,21 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         platform: 'Trustpilot',
         date: 'March 2026',
         href: 'https://www.trustpilot.com/review/pandacodegen.com',
+    },
+    {
+        // The MyCustomPatches review. Attributed exactly as CLUTCH SHOWS IT --
+        // "Executive, MC Patches LLC", not by personal name. Clutch publishes this
+        // reviewer as Anonymous, so naming him here would make the link disagree
+        // with the page it points at, and a checkable citation that does not check
+        // out is worse than a vaguer one that does. If he confirms in writing that
+        // he is happy to be named, change it then and not before.
+        id: 'mycustompatches',
+        quote: 'Hassan was available to me at any time, and his response time was always less than an hour. And he suggested me to go route that will help me in business i.e. Seo, UI, UX etc',
+        snippet: 'Hassan was available to me at any time, and his response time was always less than an hour.',
+        name: 'Executive, MC Patches LLC',
+        platform: 'Clutch',
+        date: 'March 2026',
+        href: 'https://clutch.co/profile/panda-code-gen#reviews',
     },
 ];
 
