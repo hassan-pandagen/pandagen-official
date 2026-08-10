@@ -68,16 +68,19 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         href: 'https://www.trustpilot.com/review/pandacodegen.com',
     },
     {
-        // The MyCustomPatches review. Attributed exactly as CLUTCH SHOWS IT --
-        // "Executive, MC Patches LLC", not by personal name. Clutch publishes this
-        // reviewer as Anonymous, so naming him here would make the link disagree
-        // with the page it points at, and a checkable citation that does not check
-        // out is worse than a vaguer one that does. If he confirms in writing that
-        // he is happy to be named, change it then and not before.
+        // The MyCustomPatches review. Named with the reviewer's permission,
+        // confirmed by the owner on 10 Aug 2026.
+        //
+        // NOTE FOR WHOEVER CHECKS THIS: Clutch currently publishes this reviewer
+        // as "Anonymous", so the linked page shows a role and company rather than
+        // a name. The name here is authorised directly by him, not read off
+        // Clutch. If he updates his Clutch profile to show it, the two agree and
+        // this note can go. If he ever withdraws it, the name comes off here
+        // first -- consent is the reason it is published, not the link.
         id: 'mycustompatches',
         quote: 'Hassan was available to me at any time, and his response time was always less than an hour. And he suggested me to go route that will help me in business i.e. Seo, UI, UX etc',
         snippet: 'Hassan was available to me at any time, and his response time was always less than an hour.',
-        name: 'Executive, MC Patches LLC',
+        name: 'Matt Conner, owner, MC Patches LLC',
         platform: 'Clutch',
         date: 'March 2026',
         href: 'https://clutch.co/profile/panda-code-gen#reviews',
