@@ -66,7 +66,7 @@ const caseStudySchema = {
             description,
             image: ogImageUrlForPath("/work/ladies-4-jesus"),
             datePublished: "2026-08-07T00:00:00-05:00",
-            dateModified: "2026-08-07T00:00:00-05:00",
+            dateModified: "2026-08-10T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const caseStudySchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-08-07T00:00:00-05:00",
-            dateModified: "2026-08-07T00:00:00-05:00",
+            dateModified: "2026-08-10T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
