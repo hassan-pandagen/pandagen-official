@@ -58,8 +58,8 @@ const caseStudySchema = {
             "headline": "Panda CodeLab: Building Our Agency Site on the Tech We Sell",
             "description": "How we built our own agency website using Next.js 16, React 19, Framer Motion 12 spring physics, Spline 3D scenes, and full WCAG 2.1 AA accessibility compliance. Zero TypeScript errors. Zero ESLint errors. Live proof we practice what we sell.",
             "image": ogImageUrlForPath("/work/panda-codelab"),
-            "datePublished": "2025-12-01T00:00:00Z",
-            "dateModified": "2026-02-01T00:00:00Z",
+            "datePublished": "2026-03-04T00:00:00Z",
+            "dateModified": "2026-08-10T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",

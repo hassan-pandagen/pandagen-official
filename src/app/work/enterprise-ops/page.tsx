@@ -58,8 +58,8 @@ const caseStudySchema = {
             "headline": "Enterprise Operations Platform: From Spreadsheets to Real-Time Business Intelligence",
             "description": "How we replaced spreadsheets, WhatsApp updates, and 3 separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
             "image": ogImageUrlForPath("/work/enterprise-ops"),
-            "datePublished": "2025-11-01T00:00:00Z",
-            "dateModified": "2026-06-26T00:00:00Z",
+            "datePublished": "2026-03-04T00:00:00Z",
+            "dateModified": "2026-08-10T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
