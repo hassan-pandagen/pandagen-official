@@ -31,6 +31,18 @@ export interface CaseStudyMetric {
     approvedDate?: string;
     withdrawnDate?: string;
     withdrawnReason?: string;
+    /**
+     * True when the figure can never return, as distinct from awaiting evidence.
+     *
+     * A withdrawal defaults to "pending reconciliation", which tells the reader
+     * the number is coming back. For the MyCustomPatches hosting cost that stopped
+     * being true on 10 Aug 2026: no invoices were ever kept, and the client does
+     * not recall the amount. There is nothing to reconcile against, so continuing
+     * to say "pending" would be a false promise repeated on every surface.
+     *
+     * A permanent metric must never be restored from anyone's memory.
+     */
+    permanent?: boolean;
 }
 
 export interface CaseStudy {
@@ -153,13 +165,41 @@ export function hasWithdrawn(slug: string): boolean {
     return withdrawnMetrics(slug).length > 0;
 }
 
-/** One dated sentence for any surface that needs the disclosure inline. */
+/**
+ * One dated sentence for any surface that needs the disclosure inline.
+ *
+ * Splits pending from permanent. "Withdrawn pending reconciliation" is a promise
+ * that the number is coming back, and for the hosting figure that promise became
+ * false on 10 Aug 2026: no invoices were ever kept, and the only person who could
+ * attest to it does not recall it. Saying "pending" about a figure that can never
+ * return is a small lie told on every surface at once, which is exactly the shape
+ * of problem this file exists to prevent.
+ */
 export function withdrawalNotice(slug: string): string | null {
     const pulled = withdrawnMetrics(slug);
     if (pulled.length === 0) return null;
     const date = pulled[0].withdrawnDate;
-    const labels = pulled.map(m => m.label.toLowerCase()).join(', ');
-    return `Performance figures for this project (${labels}) were withdrawn on ${date} pending reconciliation of the original test records. They are not stated anywhere on this site until they are re-measured with a documented method.`;
+
+    const pending = pulled.filter(m => !m.permanent);
+    const permanent = pulled.filter(m => m.permanent);
+    const list = (ms: CaseStudyMetric[]) => ms.map(m => m.label.toLowerCase()).join(', ');
+
+    const parts: string[] = [];
+    if (pending.length) {
+        parts.push(
+            `Performance figures for this project (${list(pending)}) were withdrawn on ${date} ` +
+            `pending reconciliation of the original test records. They are not stated anywhere ` +
+            `on this site until they are re-measured with a documented method.`
+        );
+    }
+    if (permanent.length) {
+        parts.push(
+            `The ${list(permanent)} figure${permanent.length > 1 ? 's are' : ' is'} retired ` +
+            `permanently rather than pending: no records were kept and the client does not ` +
+            `recall the amount, so there is nothing to reconcile against and it will not return.`
+        );
+    }
+    return parts.join(' ');
 }
 
 /**

@@ -128,7 +128,8 @@
           "after": "$0/mo",
           "status": "withdrawn",
           "withdrawnDate": "2026-08-04",
-          "withdrawnReason": "Withdrawn with the other performance figures pending reconciliation. This one is an invoice fact rather than a lab result, so it is the most likely to return first once the owner supplies the original hosting invoices."
+          "withdrawnReason": "RETIRED, not pending. Established 10 Aug 2026: the client has no hosting invoices and never kept any, and when asked directly he does not recall the figure. There is therefore no document to reconcile against and no attestation to quote. This number cannot return by any honest route and must not be restored from memory, ours or his. The structural claim -- managed hosting plus plugin and theme licences replaced by a serverless deployment -- is not in dispute and does not need a figure.",
+          "permanent": true
         }
       ],
       "disclosure": "Independent client. MyCustomPatches is operated by MC Patches LLC. PandaCodeGen has no ownership or financial stake in the business."
