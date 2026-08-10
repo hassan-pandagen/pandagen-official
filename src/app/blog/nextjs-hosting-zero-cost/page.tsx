@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { asOf, spec } from "@/data/spec-facts";
 import type { Metadata } from "next";
 
 const hostingFAQs = blogPosts.find(p => p.id === 'nextjs-hosting-zero-cost')?.faqs ?? [];
@@ -161,7 +162,11 @@ export default function NextjsHostingZeroCostPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Short answer: Vercel Hobby is free in 2026 for personal, non-commercial projects, with a published fair-use guideline of up to 100 GB of Fast Data Transfer a month. A production business website should use Vercel Pro, which currently starts with a $20 monthly platform fee, one deploying seat, and metered usage. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.
+                            {/* Each spec carries its own date, rendered from src/data/spec-facts.json.
+                                69% of this cluster's search demand is year-qualified, so a lifted
+                                sentence has to be independently dateable or it answers the wrong
+                                question. Never type a vendor's number in here by hand. */}
+                            {`Short answer: as of ${asOf("vercel-hobby-fast-data-transfer")}, Vercel's Hobby plan costs ${spec("vercel-hobby-price").value} for eligible personal, non-commercial projects, with a published fair-use guideline of ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer. A production business website should use Vercel Pro, which as of ${asOf("vercel-pro-price")} starts at ${spec("vercel-pro-price").value}, including one deploying seat, with metered usage on top. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.`}
                         </p>
 
                         <BlogAuthor
@@ -181,8 +186,8 @@ export default function NextjsHostingZeroCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            "Vercel Hobby is a $0 plan for eligible personal, non-commercial projects. Vercel publishes up to 100 GB of Fast Data Transfer a month as a fair-use guideline, not as an itemised plan allowance.",
-                            "Vercel Pro is the starting point for commercial production websites and currently begins with a $20 monthly platform fee, one deploying seat, and metered usage.",
+                            `Vercel's Hobby plan is a ${spec("vercel-hobby-price").value} plan for eligible personal, non-commercial projects, as of ${asOf("vercel-hobby-price")}. Vercel publishes ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer as a fair-use guideline, not as an itemised plan allowance.`,
+                            `Vercel Pro is the starting point for commercial production websites and begins at ${spec("vercel-pro-price").value}, including one deploying seat, with metered usage on top, as of ${asOf("vercel-pro-price")}.`,
                             "A Next.js rebuild can reduce server administration and request-time rendering without making infrastructure free.",
                             "Use this guide to compare Vercel Hobby vs Pro and estimate a realistic Next.js hosting cost for a business website."
                         ]} />
@@ -352,8 +357,8 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogList items={[
-                            "Fast Data Transfer: up to 100 GB a month.",
-                            "Fast Origin Transfer: up to 10 GB a month. This is the cap that gets left out of the comparisons, and on an uncached or image-heavy site it is reached long before the 100 GB figure.",
+                            `Fast Data Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-data-transfer").value}, as of ${asOf("vercel-hobby-fast-data-transfer")}.`,
+                            `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons, and on an uncached or image-heavy site it is reached long before the ${spec("vercel-hobby-fast-data-transfer").value.replace(/^up to /, "")} figure.`,
                             "Edge Requests: up to 1,000,000 a month.",
                             "Function Invocations: 1,000,000 included.",
                             "Active CPU: 4 CPU-hours. Provisioned Memory: 360 GB-hours.",
