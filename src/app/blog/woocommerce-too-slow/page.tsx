@@ -347,7 +347,7 @@ export default function WooCommerceTooSlowPage() {
 
                     <BlogHeader id="add-to-cart">Why is WooCommerce add to cart slow?</BlogHeader>
                     <BlogText>
-                        Add to cart is slow because the click is not a local update. It is a server round trip that runs
+                        WooCommerce add to cart is slow because the click is not a local update. It is a server round trip that runs
                         WordPress, resolves the product, checks stock and pricing, writes the cart to the session, and
                         then hands back a fragment for the mini-cart to redraw. In a browser network panel you will see
                         it as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=get_refreshed_fragments</code>. On a variable product it also has to
@@ -372,7 +372,7 @@ export default function WooCommerceTooSlowPage() {
 
                     <BlogHeader id="checkout">Why is WooCommerce checkout slow?</BlogHeader>
                     <BlogText>
-                        Checkout is the slowest page in most stores because it is the one page that can never be
+                        WooCommerce checkout is the slowest page in most stores because it is the one page that can never be
                         full-page cached. WooCommerce&apos;s own caching guidance is explicit that Cart, Checkout and My
                         Account must stay dynamic, since they carry customer and session-specific data. So every load
                         runs the full stack: it holds customer state, calculates shipping and tax, checks stock, calls
@@ -392,7 +392,7 @@ export default function WooCommerceTooSlowPage() {
 
                     <BlogHeader id="admin">Why is the WooCommerce backend (wp-admin) slow?</BlogHeader>
                     <BlogText>
-                        A slow admin is a different problem from a slow storefront, and it usually comes from the
+                        A slow WooCommerce admin is a different problem from a slow storefront, and it usually comes from the
                         database rather than the frontend. Two causes account for most of it: options in
                         <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wp_options</code>
                         set to autoload, which are read on every single request and accumulate as extensions come and
