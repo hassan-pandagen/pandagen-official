@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Zap, Shield, Smartphone, Code2, BarChart3, Layers, Eye } from "lucide-react";
 import Header from "@/components/layout/Header";
+import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -210,6 +211,8 @@ export default function PandaCodelabCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "Panda CodeLab", href: "/work/panda-codelab" },
                     ]} />
+
+                    <RelationshipDisclosure slug="panda-codelab" />
 
                     {/* HERO */}
                     <div className="mb-20">

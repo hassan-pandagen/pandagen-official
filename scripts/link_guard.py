@@ -215,6 +215,38 @@ def main() -> int:
                            f'needs a parent: add it to a cluster in topical-map.ts.',
                 })
 
+    # 5. Every /work page must render its relationship disclosure.
+    #
+    #    Added after an audit found 3 of 6 carrying none at all: the
+    #    independent-client case study that never said so on its own page, a
+    #    founder-affiliated project disclosed in llms.txt but not on the page,
+    #    and an "enterprise operations platform" that is our own internal CRM
+    #    presented as though it were client work. Undisclosed founder-affiliated
+    #    work is the most damaging thing this site could publish, so it fails
+    #    the build rather than waiting for the next person to notice.
+    facts_path = ROOT / "src" / "data" / "case-study-facts.json"
+    if facts_path.exists():
+        studies = json.loads(facts_path.read_text(encoding="utf-8"))["caseStudies"]
+        work_dir = BUILD / "work"
+        for slug, study in studies.items():
+            page = work_dir / f"{slug}.html"
+            if not page.exists():
+                failures.append({
+                    "type": "case-study-not-built", "page": f"work/{slug}.html",
+                    "fix": f'"{slug}" is in case-study-facts.json but has no built page.',
+                })
+                continue
+            text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", read(page)))
+            # Compare on the first clause: the full sentence survives rendering,
+            # but entity-escaping makes an exact whole-string match brittle.
+            probe = re.sub(r"\s+", " ", study["disclosure"].split(".")[0]).strip()
+            if probe.lower() not in text.lower():
+                failures.append({
+                    "type": "missing-relationship-disclosure", "page": f"work/{slug}.html",
+                    "fix": f'"{slug}" renders no relationship disclosure. Expected "{probe}". '
+                           f'Add <RelationshipDisclosure slug="{slug}" /> to the page.',
+                })
+
     if as_json:
         print(json.dumps({"failures": failures, "hubs": len(hubs), "posts": checked}, indent=2))
     else:

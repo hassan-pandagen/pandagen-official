@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, BarChart3, Lock, Users, Clock, Shield, Database, Zap, AlertTriangle, TrendingUp, FileText, PieChart, Plug, Receipt, LineChart } from "lucide-react";
 import Header from "@/components/layout/Header";
+import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -305,6 +306,8 @@ export default function EnterpriseOpsCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "Enterprise Operations", href: "/work/enterprise-ops" },
                     ]} />
+
+                    <RelationshipDisclosure slug="enterprise-ops" />
 
                     {/* HERO */}
                     <div className="mb-20">

@@ -47,6 +47,17 @@ export interface CaseStudy {
      */
     legalEntity?: string;
     relationship: string;
+    /**
+     * The verbatim sentence every surface renders to declare this relationship.
+     *
+     * Required. An audit on 10 Aug 2026 found 3 of 6 /work pages with no
+     * disclosure at all — including the independent-client case study that never
+     * said so on its own page, and an "enterprise operations platform" that is
+     * actually our own internal CRM. Undisclosed founder-affiliated work
+     * presented as a case study is the single most damaging thing this site
+     * could publish, so it is a build failure rather than a convention.
+     */
+    disclosure: string;
     href: string;
     /** Public domain, also the anchor scripts/metrics_guard.py scopes card checks to. */
     url?: string;
@@ -94,6 +105,28 @@ export function verifiedMetrics(slug: string): CaseStudyMetric[] {
 /** Metrics currently pulled. Every surface renders the note instead of the number. */
 export function withdrawnMetrics(slug: string): CaseStudyMetric[] {
     return caseStudy(slug).metrics.filter(m => m.status === 'withdrawn');
+}
+
+/** Every case-study slug, so surfaces and guards iterate the same list. */
+export function allCaseStudySlugs(): string[] {
+    return Object.keys(STUDIES);
+}
+
+/** The relationship sentence for a study. Throws rather than render nothing. */
+export function disclosure(slug: string): string {
+    const text = caseStudy(slug).disclosure;
+    if (!text) {
+        throw new Error(
+            `Case study "${slug}" has no disclosure. Every /work page must state its ` +
+            `relationship; add one to case-study-facts.json.`
+        );
+    }
+    return text;
+}
+
+/** True when the work is founder-affiliated rather than an outside client. */
+export function isFounderAffiliated(slug: string): boolean {
+    return caseStudy(slug).relationship.toLowerCase().startsWith('founder');
 }
 
 /**

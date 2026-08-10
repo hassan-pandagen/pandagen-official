@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, ShieldCheck, Search, Video, Users, Code2 } from "lucide-react";
 import Header from "@/components/layout/Header";
+import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import OtherReviews from "@/components/work/OtherReviews";
@@ -159,6 +160,8 @@ export default function Ladies4JesusCaseStudy() {
                             { label: "Ladies 4 Jesus", href: "/work/ladies-4-jesus" },
                         ]}
                     />
+
+                    <RelationshipDisclosure slug="ladies-4-jesus" />
 
                     <header className="mb-10 mt-6 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">

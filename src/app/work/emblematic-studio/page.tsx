@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Boxes, ShieldCheck, Accessibility, Code2, Gauge } from "lucide-react";
 import Header from "@/components/layout/Header";
+import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import OtherReviews from "@/components/work/OtherReviews";
@@ -178,6 +179,8 @@ export default function EmblematicStudioCaseStudy() {
                             { label: "Emblematic Studio", href: "/work/emblematic-studio" },
                         ]}
                     />
+
+                    <RelationshipDisclosure slug="emblematic-studio" />
 
                     <header className="mb-10 mt-6 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">

@@ -18,7 +18,7 @@
 import 'server-only';
 import { blogPosts } from './blog';
 import { hubs, hubPostIds, moneyHref } from './hubs';
-import { metaFacts, withdrawalNotice } from './case-study-facts';
+import { allCaseStudySlugs, caseStudy, disclosure, metaFacts, withdrawalNotice } from './case-study-facts';
 
 const BASE = 'https://www.pandacodegen.com';
 
@@ -117,12 +117,25 @@ function evidencePolicy(): string {
 ${mcp}
 - No provider controls search rankings. Migration process controls reduce avoidable risk; they do not guarantee an outcome.
 
-## Project records
+${projectRecords()}`;
+}
 
-- [MyCustomPatches WordPress migration](${BASE}/work/mycustompatches): Independent client. Owner-confirmed scope figures; performance figures withdrawn pending reconciliation.
-- [Panda Patches](${BASE}/work/panda-patches): Founder-affiliated; disclosed, not independent client proof.
-- [Enterprise operations platform](${BASE}/work/enterprise-ops)
-- [Panda CodeLab](${BASE}/work/panda-codelab): Founder-affiliated; disclosed.`;
+/**
+ * Every case study with its relationship, generated.
+ *
+ * This was a hardcoded list of four until 10 Aug 2026, and it was already wrong:
+ * it omitted emblematic-studio and ladies-4-jesus — the two newest independent
+ * clients, the ones carrying reviews — and it listed the enterprise operations
+ * platform with no relationship at all, when that platform is our own internal
+ * CRM. A hand-maintained list of records is exactly the thing this file was
+ * created to stop.
+ */
+function projectRecords(): string {
+    const lines = allCaseStudySlugs().map((slug) => {
+        const study = caseStudy(slug);
+        return `- [${study.name}](${BASE}${study.href}): ${disclosure(slug)}`;
+    });
+    return ['## Project records', '', ...lines].join('\n');
 }
 
 /**

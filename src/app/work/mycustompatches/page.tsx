@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CheckCircle2, Zap, BarChart3, Globe, ShoppingBag, Code2, Clock, TrendingUp } from "lucide-react";
 import Header from "@/components/layout/Header";
+import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
@@ -225,6 +226,8 @@ export default function MyCustomPatchesCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "MyCustomPatches", href: "/work/mycustompatches" },
                     ]} />
+
+                    <RelationshipDisclosure slug="mycustompatches" />
 
                     {/* HERO */}
                     <div className="mb-20">
