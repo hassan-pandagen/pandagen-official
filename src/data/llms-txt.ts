@@ -50,7 +50,7 @@ const HEADER = `# PandaCodeGen
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
 - Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.
 - Ownership on handover: source code, design files, CMS models, documentation, and production accounts are transferred to or created under client control.
-- Regulated data: PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. A BAA is currently in place with a healthcare client. This defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.`;
+- Regulated data: PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. This defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.`;
 
 const PRIMARY_PAGES = `## Primary pages
 

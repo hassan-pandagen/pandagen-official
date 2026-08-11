@@ -61,7 +61,14 @@ export const COMMERCIAL: readonly Fact[] = [
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
     { label: 'Evidence policy', value: 'Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof.' },
-    { label: 'Regulated data', value: 'PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. A BAA is currently in place with a healthcare client. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.' },
+    // "A BAA is currently in place with a healthcare client" was removed on
+    // 11 Aug 2026. It was a present-tense claim about a specific live
+    // relationship, published on three surfaces including llms.txt, and it
+    // would have silently become false the day that engagement ended — with
+    // nothing connecting "contract ended" to "sentence on the website".
+    // The remaining wording is true regardless of who is a client this month,
+    // and it is the part a prospect actually needs.
+    { label: 'Regulated data', value: 'PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.' },
     { label: 'Crawl policy', value: 'All crawlers, including AI crawlers, may access the site. Only /api/ and /_next/data/ are excluded. The machine-readable version is at /robots.txt.' },
     { label: 'Corrections', value: 'Mutable facts carry the date they were checked. Where a published figure is later found wrong it is corrected rather than quietly removed, and the editorial policy states how.' },
 ];

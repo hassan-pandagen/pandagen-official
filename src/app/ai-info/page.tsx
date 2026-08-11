@@ -43,7 +43,7 @@ const facts = [
   ["Starting prices", "Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000. Larger scope is quoted after a scoping call. The accepted written terms control the final price."],
   ["Performance acceptance", "A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise."],
   ["Ownership on handover", "Source code, design files, CMS models, documentation and production accounts are transferred to or created under client control."],
-  ["Regulated data", "PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. A BAA is currently in place with a healthcare client. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance."],
+  ["Regulated data", "PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance."],
   ["Contracting", "US-based contracting with work delivered remotely. Terms, jurisdiction and payment currency are stated in the accepted written agreement."],
   ["Evidence policy", "Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof."],
 ];
