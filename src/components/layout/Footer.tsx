@@ -127,6 +127,23 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 title="About"
                 desc="Migration delivery standards."
               />
+              {/* The founder pages live here as well as in the nav because the
+                  About dropdown is conditionally rendered — its links only enter
+                  the DOM once a user opens it, so crawlers never see them. The
+                  footer renders on every page unconditionally, which is what
+                  actually gives /about/imran internal link support: it had 5
+                  inbound pages against Hassan's 82, purely because Hassan gets an
+                  author byline on all 77 blog posts and Imran writes none. */}
+              <FeaturedLink
+                href="/about/hassan"
+                title="Hassan Jamal"
+                desc="Co-founder and Lead Engineer."
+              />
+              <FeaturedLink
+                href="/about/imran"
+                title="Imran Raza Ladhani"
+                desc="Co-founder and Lead Architect."
+              />
               <FeaturedLink
                 href="/blog"
                 title="Engineering Blog"
