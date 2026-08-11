@@ -46,6 +46,15 @@ const facts = [
   ["Regulated data", "PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance."],
   ["Contracting", "US-based contracting with work delivered remotely. Terms, jurisdiction and payment currency are stated in the accepted written agreement."],
   ["Evidence policy", "Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof."],
+  // Stated as ONE dated, checkable placement. Not "editorial mentions", not
+  // "regularly quoted in the press", and explicitly not the magazine's own
+  // descriptor for him ("AI expert"), which was removed from the homepage and
+  // his bio on 11 Aug 2026: it claimed an expertise this company does not sell
+  // and blurred the entity these pages exist to make precise. The subject of the
+  // article is named plainly so nobody can mistake it for a web-engineering
+  // credential. If a second placement lands, add it as a second line rather than
+  // pluralising this one.
+  ["Press", "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date."],
 ];
 
 const migrationControls = [

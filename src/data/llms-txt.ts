@@ -79,6 +79,7 @@ const PRIMARY_PAGES = `## Primary pages
 const PEOPLE_AND_POLICIES = `## People
 
 - [Hassan Jamal, Co-founder and Lead Engineer](${BASE}/about/hassan). Public code: https://github.com/hassan-pandagen
+- Press: Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work: https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay . This is the company's only press placement to date, and the article's subject is unrelated to the migration and engineering work PandaCodeGen sells.
 - [Imran Raza Ladhani, Co-founder and Lead Architect](${BASE}/about/imran)
 
 ## Policies
