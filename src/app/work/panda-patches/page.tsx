@@ -182,18 +182,21 @@ const caseStudySchema = {
                 "https://dev.to/pandacodegen"
             ]
         },
-        {
-            "@type": "Product",
-            "@id": "https://pandapatches.com/#product",
-            "name": "Panda Patches E-Commerce Platform",
-            "description": "Custom embroidered patches e-commerce site built on Next.js, Sanity, Supabase, and Square, with an AI patch generator and server-side conversion tracking. Flagship case study for PandaCodeGen.",
-            "url": "https://pandapatches.com",
-            "brand": {
-                "@type": "Brand",
-                "name": "Panda Patches"
-            },
-            "manufacturer": { "@id": "https://www.pandacodegen.com/#organization" }
-        },
+        // A "Product" node for the Panda Patches platform was removed on 11 Aug
+        // 2026. Search Console flagged it: "Either 'offers', 'review' or
+        // 'aggregateRating' should be specified".
+        //
+        // All three ways of satisfying that are wrong here, which is the tell that
+        // the node itself was wrong:
+        //   offers          - the platform is not for sale; it is a website we built
+        //   review          - a self-authored review of a founder-owned property,
+        //                     and Google dropped rich results for self-serving reviews
+        //   aggregateRating - banned outright by this site's evidence policy, and on
+        //                     an affiliated asset it is the entity liability the July
+        //                     audit named first
+        //
+        // This page is a case study, not a product listing. The work is already
+        // described by the Article node and the visible copy. Do not re-add it.
         {
             "@type": "FAQPage",
             "@id": "https://www.pandacodegen.com/work/panda-patches#faq",
