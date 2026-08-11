@@ -69,7 +69,13 @@ export default function SocialProof() {
                   Woman&rsquo;s World
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>{" "}
-                quoted co-founder Hassan Jamal as an AI expert on remote AI-training work.
+                {/* States what happened, not the label the magazine used. This read
+                    "as an AI expert" until 11 Aug 2026 — on the homepage, which is
+                    the single strongest signal on the site about what this company
+                    is. PandaCodeGen sells website migration and custom engineering;
+                    an AI-expertise claim here blurs the entity these pages exist to
+                    make precise, and it is not something we could evidence. */}
+                quoted co-founder Hassan Jamal on how remote AI-training work operates.
               </p>
             </div>
           </div>

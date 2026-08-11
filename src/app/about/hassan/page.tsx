@@ -170,7 +170,14 @@ export default function HassanProfilePage() {
       <section className="px-6 pt-16 md:pt-24" aria-labelledby="hassan-press">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Press</p>
-          <h2 id="hassan-press" className="mt-3 text-3xl font-bold md:text-4xl">Quoted as an AI expert</h2>
+          {/* Heading states the PLACEMENT, not a credential. It read "Quoted as an
+              AI expert" until 11 Aug 2026 — the magazine's descriptor, adopted as
+              our own H2 on the founder's bio page. Two problems: it claimed an
+              expertise we do not sell and cannot evidence, and it contradicted the
+              careful paragraph directly beneath it, which says only that he was
+              quoted on how that work operates. An H2 on an entity page is a strong
+              signal about what this company IS, and "AI expert" is not it. */}
+          <h2 id="hassan-press" className="mt-3 text-3xl font-bold md:text-4xl">Quoted in Woman&rsquo;s World</h2>
           <div className="mt-6 rounded-2xl border border-stone-300 bg-stone-50 p-6 md:p-8">
             <p className="text-lg leading-8 text-stone-700">
               <a
