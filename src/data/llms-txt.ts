@@ -42,7 +42,7 @@ const HEADER = `# PandaCodeGen
 - Service priority: United States first, with remote work available worldwide.
 - Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
 - Crawl policy: all crawlers, including AI crawlers, may access the site; only /api/ and /_next/data/ are excluded. See /robots.txt.
-- Contact: info@pandacodegen.com
+- Contact: info@pandacodegen.com, +1 (302) 773-8982
 
 ## Commercial terms
 

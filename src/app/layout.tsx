@@ -9,6 +9,7 @@ import { blogPosts } from "@/data/blog";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import ConsentManagedServices from "@/components/consent/ConsentManagedServices";
 import CookieConsent from "@/components/consent/CookieConsent";
+import { PHONE } from "@/data/company-facts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,7 +88,12 @@ const siteGraph = {
       alternateName: "Panda Code Gen",
       url: "https://www.pandacodegen.com",
       logo: { "@type": "ImageObject", url: "https://www.pandacodegen.com/logo.png", width: 655, height: 113 },
-      contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com" },
+      // telephone added 11 Aug 2026, from PHONE in company-facts.ts. NAP facts
+      // (name, address, phone) only corroborate an entity when they are identical
+      // everywhere, so this renders from the same constant as the header rather
+      // than being retyped here.
+      telephone: PHONE.e164,
+      contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com", telephone: PHONE.e164 },
       description: "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
       areaServed: "Worldwide",
       foundingDate: "2026",

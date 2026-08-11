@@ -4,9 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
+import { PHONE } from "@/data/company-facts";
 
 // Lazy load: QuoteModal pulls in framer-motion (~80kb).
 // Only load when user actually opens the modal.
@@ -253,6 +254,20 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           </nav>
 
           <div className="hidden xl:flex items-center gap-4 z-[61]">
+            {/* Restored 11 Aug 2026. It was in this exact position until 3e93feb
+                (30 Jul) removed it as collateral in a nav rewrite, and because it
+                lived only here it vanished from the site entirely. It now renders
+                from PHONE in company-facts.ts, so it exists in one place and can
+                be dropped into schema and the footer without diverging.
+                Not decoration: A Step Above Medical called this number and the
+                meeting converted. */}
+            <a
+              href={`tel:${PHONE.e164}`}
+              className="flex items-center gap-1.5 text-sm font-medium text-stone-600 hover:text-cognac transition-colors tracking-wide"
+            >
+              <Phone aria-hidden="true" className="w-4 h-4" />
+              {PHONE.display}
+            </a>
             {/* Renders only on pages that have a French and German version. */}
             <LocaleSwitcher label="Language" className="text-sm" />
             <button

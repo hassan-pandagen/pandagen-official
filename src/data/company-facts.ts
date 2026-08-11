@@ -26,6 +26,28 @@ export interface Fact {
     value: string;
 }
 
+/**
+ * The public phone number, in both the forms every surface needs.
+ *
+ * Declared here because it is a NAP fact — name, address, phone — and those have
+ * to be byte-identical everywhere they appear or they stop corroborating the
+ * entity and start confusing it. It was previously hardcoded in the header only,
+ * which is how it disappeared entirely in 3e93feb (30 Jul 2026) during a nav
+ * rewrite: nobody removed it on purpose, it just was not anywhere else.
+ *
+ * Restored 11 Aug 2026. A Step Above Medical called this number and the meeting
+ * converted, so it is not decoration.
+ *
+ * The repo history also contains +1 (302) 250-4340 from an earlier commit. That
+ * number is NOT current. Do not reinstate it from git history.
+ */
+export const PHONE = {
+    /** For humans. */
+    display: '+1 (302) 773-8982',
+    /** For tel: hrefs and schema.org telephone. */
+    e164: '+13027738982',
+} as const;
+
 /** Identity, formation and contracting. */
 export const COMPANY: readonly Fact[] = [
     { label: 'Legal and trading name', value: 'PandaCodeGen' },
@@ -33,6 +55,7 @@ export const COMPANY: readonly Fact[] = [
     { label: 'Formation', value: 'Wyoming, United States' },
     { label: 'Mailing address', value: '701 Tillery St Ste 12, Austin, TX 78702, United States' },
     { label: 'Founders', value: 'Hassan Jamal and Imran Raza Ladhani' },
+    { label: 'Phone', value: PHONE.display },
     { label: 'Service priority', value: 'United States first, with remote work available worldwide' },
     { label: 'Contracting', value: 'US-based contracting with work delivered remotely. Terms, jurisdiction and payment currency are stated in the accepted written agreement.' },
 ];
