@@ -52,8 +52,16 @@ const workLinks = [
   { name: "Get your migration plan", href: "/contact" },
 ];
 
+// The two founder links were removed in 3e93feb (30 Jul 2026) when the nav was
+// rewritten, along with the phone number and the case-study dropdown. Restored
+// 11 Aug 2026 because the imbalance had become severe: /about/hassan is linked
+// from 82 pages (an author byline on every blog post) while /about/imran had
+// only 5. Founder pages are entity pages — they carry the credentials that
+// support everything else on the site — and one of them was effectively orphaned.
 const aboutLinks = [
   { name: "About PandaCodeGen", href: "/about" },
+  { name: "Hassan Jamal, Lead Engineer", href: "/about/hassan" },
+  { name: "Imran Raza Ladhani, Lead Architect", href: "/about/imran" },
   { name: "Our Manifesto", href: "/manifesto" },
   { name: "Editorial Policy", href: "/editorial-policy" },
   { name: "Security", href: "/security" },
