@@ -65,6 +65,14 @@
       "qualifier": "platform fee including one deploying seat and a usage credit; added seats and usage are extra",
       "verifiedAt": "2026-08-02",
       "source": "https://vercel.com/pricing"
+    },
+    "googlebot-crawl-size-limit": {
+      "vendor": "Google",
+      "label": "Googlebot crawl size limit",
+      "value": "the first 2MB of a supported file type",
+      "qualifier": "reduced from 15MB; past the cutoff Googlebot stops the fetch and only the downloaded part is considered for indexing. Each referenced resource is fetched separately under the same cap. PDFs: 64MB",
+      "verifiedAt": "2026-08-11",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/googlebot"
     }
   }
 }
