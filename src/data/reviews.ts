@@ -28,6 +28,13 @@ export interface ClientReview {
     platform: string;
     date: string;
     href: string;
+    /**
+     * Path under public/reviews/, only when the reviewer has given us a photo
+     * FOR THIS PURPOSE. Never sourced from a social profile: a review grants no
+     * rights to someone's image. Omit it and ReviewerAvatar renders a monogram,
+     * which is why a half-collected set still looks deliberate.
+     */
+    photo?: string;
 }
 
 export const CLIENT_REVIEWS: readonly ClientReview[] = [

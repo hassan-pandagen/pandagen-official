@@ -1,4 +1,5 @@
 import { otherReviews } from "@/data/reviews";
+import ReviewerAvatar from "@/components/ui/ReviewerAvatar";
 
 /**
  * Compact review strip for a case-study page.
@@ -27,9 +28,12 @@ export default function OtherReviews({ excludeId }: { excludeId: string }) {
                 read it in full rather than take the excerpt on trust.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
-                {reviews.map(({ id, snippet, name, platform, date, href }) => (
+                {reviews.map(({ id, snippet, name, platform, date, href, photo }) => (
                     <figure key={id} className="flex flex-col rounded-xl border border-stone-200 bg-stone-50 p-5">
-                        <span className="mb-3 text-sm tracking-widest text-cognac" aria-hidden="true">★★★★★</span>
+                        <div className="mb-3 flex items-center gap-3">
+                            <ReviewerAvatar name={name} photo={photo} size={40} />
+                            <span className="text-sm tracking-widest text-cognac" aria-hidden="true">★★★★★</span>
+                        </div>
                         <blockquote className="grow text-sm leading-relaxed text-stone-700">
                             &ldquo;{snippet}&rdquo;
                         </blockquote>
