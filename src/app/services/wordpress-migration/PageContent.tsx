@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
+import { verifiedMetrics, withdrawalNotice } from "@/data/case-study-facts";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -138,39 +139,43 @@ export default function PageContent() {
         />
       </div>
 
-      {/* 3. BEFORE / AFTER RESULTS */}
+      {/* 3. WHAT IS ACTUALLY EVIDENCED
+          This was three tiles reading "Withdrawn" above "was Withdrawn", because
+          the withdrawal was applied to the DATA by hand and the renderer kept
+          printing it as a value. Third instance of that bug class on this site.
+          The heading was always right; the content was the problem. It now shows
+          the figures that ARE owner-confirmed, and states the withdrawal once, in
+          a sentence, instead of as three struck-through non-numbers. Both halves
+          render from case-study-facts.json, so restoring a figure after
+          reconciliation reaches this page automatically. */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">What We Can and Cannot Evidence</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Here&apos;s what happens when you migrate from WordPress to custom code.</p>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">
+            One independent client migration, owner-confirmed and published with permission.
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              { label: "PageSpeed Mobile", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
-              { label: "Load Time", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
-              { label: "Hosting Cost", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
-            ].map((stat, i) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {verifiedMetrics("mycustompatches").map((m, i) => (
               <motion.div
-                key={i}
+                key={m.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="relative overflow-hidden rounded-2xl bg-white border border-stone-200 shadow-xs hover:shadow-md transition-shadow"
+                transition={{ delay: i * 0.08 }}
+                className="rounded-2xl border border-stone-200 bg-white p-6 text-center shadow-xs transition-shadow hover:shadow-md"
               >
-                <div className="h-1 w-full" style={{ backgroundColor: stat.color }} />
-                <div className="p-6 text-center">
-                  <p className="text-[11px] text-stone-600 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-black" style={{ color: stat.color }}>{stat.after}</span>
-                    {stat.suffix && <span className="text-sm font-medium text-stone-600">{stat.suffix}</span>}
-                  </div>
-                  <p className="text-xs text-stone-600 mt-2">was <span className="line-through">{stat.before}</span></p>
-                </div>
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-stone-600">{m.label}</p>
+                <p className="font-serif text-3xl italic leading-tight text-cognac">{m.value}</p>
               </motion.div>
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Real client result: MyCustomPatches (mycustompatches.net), migrated from WordPress to custom Next.js. </p>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-stone-600">
+            {withdrawalNotice("mycustompatches")}
+          </p>
+          <p className="mt-4 text-center text-xs font-medium text-stone-600">
+            MyCustomPatches (mycustompatches.net), migrated from WordPress to custom Next.js.
+          </p>
         </div>
       </section>
 

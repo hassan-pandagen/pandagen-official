@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
 import DeliveryRail, { type DeliveryStage } from "@/components/about/DeliveryRail";
 import FounderSplit, { type Founder } from "@/components/about/FounderSplit";
+import OriginStory from "@/components/about/OriginStory";
 
 const aboutSchema = {
   "@context": "https://schema.org",
@@ -178,6 +179,8 @@ export default function AboutPageClient() {
           </div>
         </div>
       </section>
+
+      <OriginStory />
 
       <section className="px-6 py-16 md:py-24" aria-labelledby="company-facts">
         <div className="mx-auto max-w-6xl">
