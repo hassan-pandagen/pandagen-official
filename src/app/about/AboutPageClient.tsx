@@ -3,11 +3,13 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Code2, FileCheck2, Route, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false });
+import DeliveryRail, { type DeliveryStage } from "@/components/about/DeliveryRail";
+import FounderSplit, { type Founder } from "@/components/about/FounderSplit";
 
 const aboutSchema = {
   "@context": "https://schema.org",
@@ -53,27 +55,61 @@ const aboutSchema = {
 
 const standards = [
   {
-    icon: Route,
     title: "Migration continuity",
     body: "The scope identifies current URLs, content, integrations, redirects, analytics, cutover responsibilities, and rollback conditions.",
   },
   {
-    icon: FileCheck2,
     title: "Written acceptance",
     body: "Deliverables, exclusions, test pages, browser support, performance methodology, ownership, warranty, and remedies belong in the accepted written project terms.",
   },
   {
-    icon: ShieldCheck,
     title: "Documented access and handover",
     body: "Repository, hosting, domains, accounts, licenses, and handover timing are documented so control is not implied or left until launch.",
   },
 ];
 
-const process = [
-  "Review the current platform, URL set, content model, integrations, traffic profile, business goal, timeline, and budget range.",
-  "Document assumptions, open questions, dependencies, exclusions, acceptance criteria, and third-party costs before implementation.",
-  "Build and test representative templates, then validate redirects, forms, analytics, accessibility, and launch responsibilities.",
-  "Cut over against a written checklist, retain a rollback path, and complete the evidence and handover defined in the accepted project terms.",
+// Stage bodies are unchanged from the original four sentences. Only titles were
+// added, so the rail can be scanned without reading all four in full — the copy
+// itself was never the problem.
+const process: DeliveryStage[] = [
+  {
+    title: "Discovery",
+    body: "Review the current platform, URL set, content model, integrations, traffic profile, business goal, timeline, and budget range.",
+  },
+  {
+    title: "Written scope",
+    body: "Document assumptions, open questions, dependencies, exclusions, acceptance criteria, and third-party costs before implementation.",
+  },
+  {
+    title: "Build and test",
+    body: "Build and test representative templates, then validate redirects, forms, analytics, accessibility, and launch responsibilities.",
+  },
+  {
+    title: "Cutover and handover",
+    body: "Cut over against a written checklist, retain a rollback path, and complete the evidence and handover defined in the accepted project terms.",
+  },
+];
+
+// What each founder is accountable for. Concrete, and true of this company
+// specifically — anything that would read the same on any agency's about page is
+// not worth the space.
+const founders: Founder[] = [
+  {
+    discipline: "Engineering",
+    name: "Hassan Jamal",
+    role: "Co-founder and Lead Engineer",
+    accountableFor:
+      "Writes the migration and application code, runs the performance work against the acceptance criteria in your scope, and is the person who answers when something breaks after launch.",
+    href: "/about/hassan",
+  },
+  {
+    discipline: "Architecture",
+    name: "Imran Raza Ladhani",
+    role: "Co-founder and Lead Architect",
+    accountableFor:
+      "Decides the platform and data model before a line is written, and owns the operations side — the internal systems that run a business day to day rather than the pages a visitor sees.",
+    href: "/about/imran",
+  },
 ];
 
 export default function AboutPageClient() {
@@ -120,23 +156,12 @@ export default function AboutPageClient() {
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-widest text-cognac">Company facts</p>
           <h2 id="company-facts" className="mt-3 text-3xl font-bold md:text-5xl">The people accountable for the work</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl border border-stone-300 bg-white p-7">
-              <p className="text-sm font-bold uppercase tracking-widest text-cognac">Engineering</p>
-              <h3 className="mt-3 text-2xl font-bold">Hassan Jamal</h3>
-              <p className="mt-2 text-stone-700">Co-founder and Lead Engineer</p>
-              <Link href="/about/hassan" className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
-                View Hassan&apos;s profile <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </article>
-            <article className="rounded-3xl border border-stone-300 bg-white p-7">
-              <p className="text-sm font-bold uppercase tracking-widest text-cognac">Architecture</p>
-              <h3 className="mt-3 text-2xl font-bold">Imran Raza Ladhani</h3>
-              <p className="mt-2 text-stone-700">Co-founder and Lead Architect</p>
-              <Link href="/about/imran" className="mt-5 inline-flex min-h-11 items-center gap-2 font-bold hover:text-cognac">
-                View Imran&apos;s profile <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </article>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
+            Two co-founders scope the project and two co-founders build it. There is no account
+            manager relaying messages, and no junior team you were not told about.
+          </p>
+          <div className="mt-10">
+            <FounderSplit founders={founders} />
           </div>
           <dl className="mt-6 grid gap-4 rounded-3xl border border-stone-300 bg-stone-50 p-7 sm:grid-cols-2">
             <div>
@@ -160,9 +185,20 @@ export default function AboutPageClient() {
             </h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {standards.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
-                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
+            {/* The icons here were Route, FileCheck2 and ShieldCheck — a road, a
+                document and a shield, standing in for continuity, acceptance and
+                handover. None of them told the reader anything the heading did not,
+                and three cards each opening with a different pictogram is what makes
+                a page read as templated. A rule and the standard's own index do the
+                same structural job without pretending to mean something. */}
+            {standards.map(({ title, body }, i) => (
+              <article key={title} className="group rounded-3xl border border-stone-300 bg-white p-7 transition-colors hover:border-cognac/40">
+                <div className="flex items-baseline gap-3">
+                  <span className="font-serif text-2xl italic text-cognac/60 tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span aria-hidden="true" className="h-px flex-1 bg-stone-200 transition-colors group-hover:bg-cognac/30" />
+                </div>
                 <h3 className="mt-5 text-xl font-bold">{title}</h3>
                 <p className="mt-3 leading-7 text-stone-700">{body}</p>
               </article>
@@ -254,24 +290,19 @@ export default function AboutPageClient() {
       </section>
 
       <section className="bg-midnight px-6 py-16 text-white md:py-24" aria-labelledby="working-process">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        {/* Stacked, not the old two-column split: the rail runs four across on
+            wide screens and needs the full measure to breathe. */}
+        <div className="mx-auto max-w-6xl">
           <div>
-            <Code2 className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-300">Four stages</p>
             <h2 id="working-process" className="mt-5 text-3xl font-bold md:text-5xl">How the work is governed</h2>
             <p className="mt-5 leading-7 text-stone-300">
               Architecture and implementation stay connected to the commercial scope. If discovery shows that the current platform is the better option, the recommendation should say so.
             </p>
           </div>
-          <ol className="space-y-5">
-            {process.map((item, index) => (
-              <li key={item} className="flex gap-4 rounded-2xl border border-stone-700 bg-stone-900 p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-300 font-bold text-midnight">
-                  {index + 1}
-                </span>
-                <span className="leading-7 text-stone-200">{item}</span>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-14 md:mt-20">
+            <DeliveryRail stages={process} />
+          </div>
         </div>
       </section>
 
@@ -284,8 +315,10 @@ export default function AboutPageClient() {
           </p>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {["Visible copy and structured data must agree", "Lab results must name the tested profile", "Third-party costs must include assumptions", "Commercial remedies belong in accepted written project terms"].map((item) => (
-              <li key={item} className="flex gap-3 text-stone-700">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+              // Was a green-tick list. Ticks read as marketing reassurance, and
+              // these four are constraints we hold ourselves to, not benefits.
+              // A left rule states the same thing without the sales grammar.
+              <li key={item} className="border-l-2 border-cognac/30 pl-4 leading-7 text-stone-700">
                 {item}
               </li>
             ))}
