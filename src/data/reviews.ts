@@ -98,3 +98,18 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
 export function otherReviews(excludeId: string): readonly ClientReview[] {
     return CLIENT_REVIEWS.filter(r => r.id !== excludeId);
 }
+
+/**
+ * A review's verbatim quote, by id.
+ *
+ * Exists because the French and German dictionaries had retyped Matt Conner's
+ * words, so a correction in reviews.ts would have left two copies wrong. A
+ * verbatim quote is the single string on this site that must never differ
+ * between surfaces: the moment two versions exist, at least one of them is
+ * something the person did not say.
+ */
+export function reviewQuote(id: string): string {
+    const review = CLIENT_REVIEWS.find(r => r.id === id);
+    if (!review) throw new Error(`No review "${id}" in reviews.ts.`);
+    return review.quote;
+}

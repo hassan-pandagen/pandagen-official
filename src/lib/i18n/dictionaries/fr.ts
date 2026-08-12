@@ -7,6 +7,7 @@
 // or a revenue outcome.
 
 import type { Dictionary } from "./types";
+import { reviewQuote } from "@/data/reviews";
 
 const fr: Dictionary = {
   nav: {
@@ -363,7 +364,11 @@ const fr: Dictionary = {
       },
       quotes: [
         {
-          quote: "Hassan was available to me at any time, and his response time was always less than an hour.",
+          // Sourced from reviews.ts, not retyped. A verbatim quote is the one
+          // string on the site that must never differ between surfaces, and it
+          // stays in English on the translated pages because translating what
+          // someone said turns a quotation into a paraphrase.
+          quote: reviewQuote("mycustompatches"),
           source: "Avis Clutch vérifié",
           detail: "Mars 2026",
           href: "https://clutch.co/profile/panda-code-gen#reviews",

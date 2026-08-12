@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE } from "@/data/company-facts";
+import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -44,35 +44,23 @@ export const metadata: Metadata = {
 const facts: [string, string][] = [...COMPANY, ...SERVICES, ...COMMERCIAL, ...GOVERNANCE]
   .map((f) => [f.label, f.value]);
 
-const migrationControls = [
-  {
-    icon: Search,
-    title: "Search continuity",
-    body: "Inventory indexable URLs, metadata, canonicals, redirects, internal links, structured data, robots rules, sitemaps, and measurement before cutover.",
-  },
-  {
-    icon: Route,
-    title: "Operational continuity",
-    body: "Map forms, CRM, analytics, consent, editorial workflows, accounts, integrations, launch ownership, rollback, and post-launch monitoring.",
-  },
-  {
-    icon: FileCheck2,
-    title: "Written acceptance",
-    body: "Record deliverables, exclusions, dependencies, test pages, payment, support, ownership, licenses, remedies, and handover in the accepted project terms.",
-  },
-];
+// Bodies come from MIGRATION_CONTROLS in company-facts.ts. Only the icon is
+// local, because an icon is presentation and the sentence is a fact.
+const migrationControls = MIGRATION_CONTROLS.map((c, i) => ({
+  icon: [Search, Route, FileCheck2][i],
+  title: c.title,
+  body: c.body,
+}));
 
+// The four /ai-info/* rows are navigation between this page and its children,
+// so they live here. Everything else is REFERENCE_LINKS from company-facts.ts,
+// where three of these descriptions were already duplicated word for word.
 const referenceLinks = [
   { href: "/ai-info/team-and-company", title: "Company facts (reference)", body: "Formation, founders, address, service area and contracting basis." },
   { href: "/ai-info/migration-services", title: "Migration services (reference)", body: "What is migrated, the build stack, and the three control groups." },
   { href: "/ai-info/pricing-and-guarantees", title: "Pricing and guarantees (reference)", body: "Starting prices, payment structure, refunds and the performance target." },
   { href: "/ai-info/case-studies", title: "Project evidence (reference)", body: "Every published project with its relationship and stated limits." },
-  { href: "/services", title: "Migration services", body: "Platform-specific options and the discovery path." },
-  { href: "/pricing", title: "Pricing and scope", body: "Public starting points, scope drivers, payment examples, and acceptance boundaries." },
-  { href: "/work", title: "Project evidence", body: "How project facts, owned brands, results, permissions, and limitations are published." },
-  { href: "/about", title: "Team and delivery standard", body: "Founder roles, company facts, and project governance." },
-  { href: "/editorial-policy", title: "Editorial policy", body: "How mutable facts, technical claims, comparisons, and corrections are handled." },
-  { href: "/security", title: "Security reporting", body: "How to report a suspected vulnerability privately." },
+  ...REFERENCE_LINKS,
 ];
 
 const faqs = [

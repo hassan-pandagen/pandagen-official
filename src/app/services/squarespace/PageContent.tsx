@@ -1,6 +1,7 @@
 "use client";
 
 import FadeIn from "@/components/ui/FadeIn";
+import { SEARCH_IMPLEMENTATION_AUDIT, AI_DISCOVERABILITY_AUDIT } from "@/data/assessment-controls";
 import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Search, HelpCircle, FileSearch, Wrench, Rocket, PenTool, Heart, AlertOctagon, Anchor, Wallet, Layout, Smartphone, Check, ChevronDown, Unlock } from "lucide-react";
 import Link from "next/link";
@@ -408,9 +409,9 @@ export default function SquarespacePageContent() {
               { icon: Gauge, pain: "Performance Baseline", detail: "Measure representative pages across agreed devices, networks, cache states, and consent states. Identify scripts, media, templates, and integrations before setting targets." },
               { icon: Palette, pain: "Design and Accessibility", detail: "Check whether the current component system supports the required brand expression, content hierarchy, responsive states, keyboard use, and accessibility criteria." },
               { icon: DollarSign, pain: "Account and Operating Costs", detail: "Review the actual subscription, commerce, scheduling, member, domain, integration, and maintenance costs, then compare them with a complete migration estimate." },
-              { icon: Search, pain: "Search Implementation", detail: "Audit rendering, indexability, canonicals, metadata, content, internal links, redirects, and structured data. Search engines control crawling, indexing, and rankings." },
+              { icon: Search, pain: "Search Implementation", detail: SEARCH_IMPLEMENTATION_AUDIT },
               { icon: Code2, pain: "Workflow Fit", detail: "Map portals, bookings, forms, commerce, APIs, and editorial workflows to determine what the current platform supports and what a replacement would require." },
-              { icon: TrendingUp, pain: "AI Discoverability", detail: "Review crawlability, entity clarity, structured data, content quality, and source credibility. Inclusion and citation by AI systems remain controlled by third parties." },
+              { icon: TrendingUp, pain: "AI Discoverability", detail: AI_DISCOVERABILITY_AUDIT },
             ].map((item, i) => (
               <FadeIn
                 key={i}

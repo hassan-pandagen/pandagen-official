@@ -201,7 +201,6 @@ export default function PageContent() {
         highlight="pandaPatches"
         label="Real WooCommerce Migrations"
         heading="WooCommerce to custom, done"
-        subheading="Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers."
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
