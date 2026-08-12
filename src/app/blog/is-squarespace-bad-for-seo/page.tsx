@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { finding } from "@/data/research-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -414,6 +415,35 @@ export default function IsSquarespaceBadForSEOPage() {
                             AI information page
                         </Link>
                         .
+                    </BlogText>
+
+                    {/* Placed deliberately, 13 Aug 2026. This finding is INCONVENIENT for a
+                        company that sells migrations off Squarespace, which is exactly why it is
+                        here and stated plainly rather than omitted. A site that only publishes
+                        third-party data when the data flatters it is not publishing evidence. */}
+                    <BlogHeader id="accessibility">Where Squarespace measurably beats WordPress</BlogHeader>
+                    <BlogText>
+                        {finding("cms-errors-2026").statement}. Squarespace sat near the bottom of that
+                        table, well below WordPress, and Wix was barely behind it.
+                    </BlogText>
+                    <BlogText>
+                        The likely reason is the thing this article otherwise treats as a limitation. A
+                        hosted builder decides your markup, and constrained markup is harder to break. The
+                        same boundary that stops you controlling schema output also stops a site owner
+                        shipping an unlabelled form or a contrast failure in a custom template. If you are
+                        not going to change anything structural, that constraint is protecting you.
+                    </BlogText>
+                    <BlogText>
+                        Read it carefully though: {finding("cms-errors-2026").limitation}{" "}
+                        {finding("cms-errors-2026").method} Source:{" "}
+                        <a
+                            href={finding("cms-errors-2026").source}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
+                        >
+                            The WebAIM Million 2026
+                        </a>.
                     </BlogText>
 
                     <BlogHeader id="when-squarespace-is-fine">When Squarespace is genuinely good enough</BlogHeader>

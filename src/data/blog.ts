@@ -1227,7 +1227,7 @@ export const blogPosts: BlogPost[] = [
     title: "Shopify vs Custom Website in 2026: A Decision Framework",
     excerpt: "Compare a Shopify theme, headless Shopify and a fully custom commerce system across requirements, cost, performance, ownership, SEO and operational responsibility.",
     category: "Shopify",
-    readTime: "11 min",
+    readTime: "12 min",
     date: "Mar 30",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",

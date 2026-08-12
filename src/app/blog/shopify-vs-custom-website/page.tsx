@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { finding } from "@/data/research-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -97,8 +98,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 2121,
-            timeRequired: "PT11M",
+            wordCount: 2499,
+            timeRequired: "PT12M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -317,6 +318,36 @@ export default function ShopifyVsCustomWebsitePage() {
                         Our <Link href="/services/ecommerce" className={inlineLinkClass}>ecommerce development service</Link>{" "}
                         page sets out what a custom storefront engagement actually contains, which is the figure that
                         belongs in this table rather than a build price alone.
+                    </BlogText>
+
+                    {/* Third-party measurement, 13 Aug 2026. Sits beside the performance
+                        section because it makes the same argument with a different metric:
+                        measure the platform you have rather than accept a reputation. */}
+                    <BlogHeader>Accessibility is measurable too, and Shopify scores badly</BlogHeader>
+                    <BlogText>
+                        {finding("ecommerce-errors-2026").statement}. That is the highest error average
+                        of any platform group in the study apart from Magento and Prestashop.
+                    </BlogText>
+                    <BlogText>
+                        Before treating it as a reason to leave: {finding("ecommerce-errors-2026").limitation}{" "}
+                        A storefront home page carries product grids, filters, carousels and cart widgets
+                        that a brochure home page does not, and every one of those is somewhere an error can
+                        occur. The number describes the category as much as the platform.
+                    </BlogText>
+                    <BlogText>
+                        It still matters commercially, because the most common failures in that data are
+                        also the cheapest to fix. {finding("top-failure-types-2026").statement}. Contrast
+                        and alt text are theme-level decisions on Shopify, which means they are usually
+                        fixable without leaving the platform at all.{" "}
+                        {finding("ecommerce-errors-2026").method} Source:{" "}
+                        <a
+                            href={finding("ecommerce-errors-2026").source}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
+                        >
+                            The WebAIM Million 2026
+                        </a>.
                     </BlogText>
 
                     <BlogHeader>4. Measure performance instead of assigning platform scores</BlogHeader>
