@@ -93,21 +93,48 @@ const process: DeliveryStage[] = [
 // What each founder is accountable for. Concrete, and true of this company
 // specifically — anything that would read the same on any agency's about page is
 // not worth the space.
+// Credentials render on this page rather than behind the profile link. Each one
+// is countable or checkable and carries the link that proves it — "77 guides"
+// links to the blog, the GitHub link goes to the account, the press line goes to
+// the article. Anything that could not be checked in one click does not belong
+// in this list.
+//
+// The counts are facts about the current site, not marketing figures: all 77
+// posts in blog.ts carry author "Hassan".
 const founders: Founder[] = [
   {
     discipline: "Engineering",
     name: "Hassan Jamal",
     role: "Co-founder and Lead Engineer",
+    photo: "/team/hassan.png",
     accountableFor:
       "Writes the migration and application code, runs the performance work against the acceptance criteria in your scope, and is the person who answers when something breaks after launch.",
+    credentials: [
+      { label: "Author of all 77 engineering guides published here", href: "/blog" },
+      { label: "Public code at github.com/hassan-pandagen", href: "https://github.com/hassan-pandagen", external: true },
+      {
+        label: "Quoted in Woman's World, May 2026",
+        href: "https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay",
+        external: true,
+      },
+    ],
     href: "/about/hassan",
   },
   {
     discipline: "Architecture",
     name: "Imran Raza Ladhani",
     role: "Co-founder and Lead Architect",
+    photo: "/team/imran.png",
     accountableFor:
-      "Decides the platform and data model before a line is written, and owns the operations side — the internal systems that run a business day to day rather than the pages a visitor sees.",
+      "Decides the platform and data model before a line is written, and owns the operations side: the internal systems that run a business day to day rather than the pages a visitor sees.",
+    credentials: [
+      // Stated as ownership, not as a client win. Panda Patches is
+      // founder-affiliated and the disclosure travels with the fact everywhere
+      // it appears, including here.
+      { label: "Owns and operates Panda Patches, which we built and maintain", href: "/work/panda-patches" },
+      { label: "Designed the internal operations platform that runs it", href: "/work/enterprise-ops" },
+      { label: "Architecture and data-model decisions on every build" },
+    ],
     href: "/about/imran",
   },
 ];
