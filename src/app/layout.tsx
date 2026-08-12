@@ -46,6 +46,20 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: "/manifest.json",
+  // Domain-ownership proofs for third-party directories. `verification.other`
+  // is Next's escape hatch for providers it has no first-class field for; it
+  // emits a plain <meta name="..." content="..."> in <head>.
+  //
+  // These are proofs, not claims — they assert only that we control this domain,
+  // so they carry none of the evidence obligations the rest of the site does.
+  // Keep them here rather than hand-writing a <meta> into the document: the tag
+  // then survives any head refactor and cannot be duplicated on a child route.
+  verification: {
+    other: {
+      // Verified Agencies Index (vai.me), added 12 Aug 2026.
+      "vaime-verify": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw",
+    },
+  },
   authors: [{ name: "PandaCodeGen" }],
   creator: "PandaCodeGen",
   publisher: "PandaCodeGen",
