@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, ShieldCheck, Users, Code2, CheckCircle2, Lock, Zap, FileSearch, Wrench, Rocket, HelpCircle } from "lucide-react";
+import { ArrowRight, ShieldCheck, Users } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import PricingTiers from "@/components/services/PricingTiers";
+import PartnerModels from "@/components/partners/PartnerModels";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
@@ -228,74 +228,65 @@ export default function PartnersContent() {
       </section>
 
       {/* 4. PARTNERSHIP TIERS — published commission/margin rates */}
-      <PricingTiers
-        heading="Three ways to partner."
-        headingAccent="All transparent. All published."
-        subheading="Most partner programs hide their commission rates until you apply. We publish them. Because if you don't know the math, you can't sell it to your client."
-        agencyComparison={{
-          agencyPrice: "$50-120/hr + overhead",
-          agencyNote: "Offshore or freelancer. Unclear delivery. Client blames you when it breaks.",
-          ourPrice: "Fixed-scope pricing",
-          ourNote: "3-week timeline. NDA signed. White-label by default. Your brand, our engineering.",
-        }}
-        tiers={[
+      {/* Was <PricingTiers>, which discards everything below: it renders one
+          hardcoded sentence and a shared generic list for every tier, so all three
+          partnership models appeared identical and the rates never rendered. That
+          gutting was correct for the service pages it protects, and wrong here —
+          this page's whole job is to distinguish three ways of working together.
+          A commission rate is an offer we control, not an outcome we predict, so
+          it belongs in the same category as the published price tiers. The
+          competitor hourly comparison PricingTiers also strips is NOT reinstated. */}
+      <PartnerModels
+        models={[
           {
-            tier: "Referral Partner",
-            price: "15% commission",
-            timeline: "zero commitment",
-            fit: "Freelancers, designers, marketing agencies who occasionally hit dev needs.",
+            name: "Referral Partner",
+            rate: "15% commission",
+            commitment: "Zero commitment",
+            fit: "Freelancers, designers and marketing agencies who occasionally hit development needs.",
             includes: [
-              "Send us a qualified lead via email",
+              "Send us a qualified lead by email",
               "We handle everything from there",
               "15% commission on the final sale, paid net-14 after client payment",
               "Standard NDA protects your relationship",
-              "No minimum leads required",
-              "No contract, no quota",
+              "No minimum leads, no contract, no quota",
             ],
-            cta: "Join as Referral",
           },
           {
-            tier: "White-Label Partner",
-            price: "35% margin",
-            timeline: "1 project minimum",
-            fit: "Full-service agencies wanting to add dev capacity without hiring engineers.",
+            name: "White-Label Partner",
+            rate: "35% margin",
+            commitment: "One pilot project to start",
+            fit: "Full-service agencies adding development capacity without hiring engineers.",
             includes: [
-              "We stay 100% invisible to your clients",
-              "Your GitHub, Vercel, domain, branding",
-              "Our internal cost + your 35% markup = your client quote",
-              "Mutual NDA signed before any project",
-              "1 pilot project to start, no minimums after",
+              "We stay invisible to your clients",
+              "Your GitHub, Vercel, domain and branding",
+              "Our fixed scope plus your 35% markup becomes your client quote",
+              "Mutual NDA signed before any project detail is shared",
+              "No minimums after the pilot",
               "Priority scheduling over non-partners",
             ],
-            featured: true,
-            cta: "Become a White-Label Partner",
           },
           {
-            tier: "Joint Venture Partner",
-            price: "50/50 revenue split",
-            timeline: "ongoing relationship",
-            fit: "Established shops wanting a tech partner for combined offerings and shared growth.",
+            name: "Joint Venture Partner",
+            rate: "50/50 split",
+            commitment: "Ongoing relationship",
+            fit: "Established shops wanting a technical partner for a combined offering.",
             includes: [
               "Combined offering with co-branded deliverables",
-              "50/50 revenue split on jointly-sourced clients",
-              "Dedicated Slack/Discord channel with us",
-              "Sales collateral + pitch decks provided",
-              "Quarterly strategy sync with Hassan",
-              "Co-invested marketing (mutual case studies)",
+              "50/50 revenue split on jointly sourced clients",
+              "A shared channel with us rather than a ticket queue",
+              "Sales collateral and pitch decks provided",
+              "Quarterly strategy session with Hassan",
+              "Co-invested marketing, including mutual case studies",
             ],
-            cta: "Start Joint Venture",
           },
         ]}
-        footnote="All partnerships include: mutual NDA, full source code handoff, 15 to 30 days of post-launch support depending on the client's tier, and your agency brand on all deliverables. Commissions and margins paid net-14 after client payment."
+        footnote="Every partnership includes a mutual NDA, full source-code handoff, and your agency's brand on the delivery. Post-launch support is 15 to 30 days depending on the client's tier. These are the terms we open with, not a quote: scope, price, timing, tests, ownership and remedies are set in the accepted written project terms for each project."
       />
 
       {/* 5. FAQ */}
       <section className="py-12 md:py-20 px-6 bg-white border-y border-stone-200">
         <div className="container mx-auto max-w-3xl">
-          <div className="flex items-center gap-3 justify-center mb-4">
-            <HelpCircle className="w-6 h-6 text-cognac" />
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal">Partner Questions</h2>
-          </div>
+          <h2 className="mb-4 text-center text-3xl font-bold text-charcoal md:text-4xl">Partner Questions</h2>
           <p className="text-stone-600 text-center mb-10 md:mb-12">The specific stuff agency owners ask before they sign.</p>
 
           <div className="space-y-3">
@@ -383,8 +374,8 @@ export default function PartnersContent() {
               "Capacity, response targets, dependencies, and holidays",
               "How it ends, what we keep, what we delete, and what carries on",
             ].map((item) => (
-              <li key={item} className="flex gap-3 rounded-2xl border border-stone-200 bg-white p-4 text-stone-700">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+              <li key={item} className="rounded-2xl border border-stone-200 bg-white p-4 leading-7 text-stone-700">
+                <span aria-hidden="true" className="mr-3 inline-block h-px w-5 translate-y-[-4px] bg-cognac/40" />
                 {item}
               </li>
             ))}
