@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -30,32 +31,18 @@ export const metadata: Metadata = {
   },
 };
 
-const facts = [
-  ["Primary offer", "SEO-safe website migrations"],
-  ["Core platforms", "WordPress, Webflow, and GoHighLevel"],
-  ["Custom work", "Next.js, commerce, integrations, and internal tools when the scope requires them"],
-  ["Founded", "February 2026"],
-  ["Formation", "Wyoming, United States"],
-  ["Mailing address", "701 Tillery St Ste 12, Austin, TX 78702, United States"],
-  ["Founders", "Hassan Jamal and Imran Raza Ladhani"],
-  ["Service priority", "United States first, with remote work available worldwide"],
-  ["Crawl policy", "All crawlers, including AI crawlers, may access the site. Only /api/ and /_next/data/ are excluded. The machine-readable version is at /robots.txt."],
-  ["Starting prices", "Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000. Larger scope is quoted after a scoping call. The accepted written terms control the final price."],
-  ["Performance acceptance", "A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise."],
-  ["Ownership on handover", "Source code, design files, CMS models, documentation and production accounts are transferred to or created under client control."],
-  ["Regulated data", "PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance."],
-  ["Contracting", "US-based contracting with work delivered remotely. Terms, jurisdiction and payment currency are stated in the accepted written agreement."],
-  ["Evidence policy", "Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof."],
-  // Stated as ONE dated, checkable placement. Not "editorial mentions", not
-  // "regularly quoted in the press", and explicitly not the magazine's own
-  // descriptor for him ("AI expert"), which was removed from the homepage and
-  // his bio on 11 Aug 2026: it claimed an expertise this company does not sell
-  // and blurred the entity these pages exist to make precise. The subject of the
-  // article is named plainly so nobody can mistake it for a web-engineering
-  // credential. If a second placement lands, add it as a second line rather than
-  // pluralising this one.
-  ["Press", "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date."],
-];
+// Rendered from src/data/company-facts.ts rather than retyped here.
+//
+// That module's docblock has always said it is "the single source of truth for
+// every machine-readable company fact... rendered by whichever pages need it, so
+// two pages cannot disagree". This page — its primary consumer, the reference
+// page built for machines — never imported it and kept 16 hardcoded copies. So
+// the premise was false, which is exactly why the BAA sentence had to be
+// corrected in three separate files on 11 Aug 2026.
+//
+// Now 25 facts instead of 16, because the source carries more than the copy did.
+const facts: [string, string][] = [...COMPANY, ...SERVICES, ...COMMERCIAL, ...GOVERNANCE]
+  .map((f) => [f.label, f.value]);
 
 const migrationControls = [
   {

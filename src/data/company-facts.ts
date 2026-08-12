@@ -83,6 +83,7 @@ export const COMMERCIAL: readonly Fact[] = [
 
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
+    { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date." },
     { label: 'Evidence policy', value: 'Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof.' },
     // "A BAA is currently in place with a healthcare client" was removed on
     // 11 Aug 2026. It was a present-tense claim about a specific live
