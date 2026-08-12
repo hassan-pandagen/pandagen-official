@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { cite, finding } from "@/data/research-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -333,6 +334,43 @@ export default function WordPressVsNextJsPage() {
                         plugins and appropriate hosting. Profile server, database, frontend and background work before
                         assuming PHP or a database is the limiting factor. Dynamic, authenticated and commerce journeys
                         need their own tests.
+                    </BlogText>
+
+                    {/* Third-party measurement, added 13 Aug 2026. Both figures render from
+                        research-facts.json with their method and limitation attached, because a
+                        platform-vs-platform error average is the kind of number that gets stripped
+                        of its caveats the moment someone quotes it. */}
+                    <BlogHeader id="accessibility">Accessibility comparison</BlogHeader>
+                    <BlogText>
+                        {finding("cms-errors-2026").statement}. On the same sample,{" "}
+                        {finding("framework-errors-2026").statement.replace("By JavaScript framework, ", "")}.
+                        Both figures come from {finding("cms-errors-2026").study},{" "}
+                        {finding("cms-errors-2026").publisher.split(",")[0]}.
+                    </BlogText>
+                    <BlogText>
+                        Two things that comparison does not establish. It is an association rather than a
+                        cause: platform choice travels with site age, budget and the skill of whoever built
+                        it, and none of those were controlled for. And it describes sites neither of us
+                        built, so it is context for a platform decision, not evidence about any particular
+                        agency&apos;s work, including ours.
+                    </BlogText>
+                    <BlogText>
+                        The result that cuts against the usual pitch is worth stating plainly: Squarespace
+                        averaged 33.0 detected errors and Wix 33.3, both well below WordPress. A hosted
+                        builder limits what a site owner can break, and that constraint shows up in this
+                        data. {finding("cms-errors-2026").limitation}
+                    </BlogText>
+                    <BlogText>
+                        Method, so the numbers can be checked rather than taken:{" "}
+                        {finding("cms-errors-2026").method} Full report:{" "}
+                        <a
+                            href={finding("cms-errors-2026").source}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac"
+                        >
+                            The WebAIM Million 2026
+                        </a>.
                     </BlogText>
 
                     <BlogHeader id="seo">SEO comparison</BlogHeader>

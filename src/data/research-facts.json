@@ -1,0 +1,110 @@
+{
+  "$comment": [
+    "THIRD-PARTY RESEARCH FINDINGS we cite, each with its source and method.",
+    "",
+    "SEPARATE FROM spec-facts.json ON PURPOSE. That file holds vendor pricing and",
+    "limits, which change without notice and carry a 90/180-day staleness clock.",
+    "These are published studies. A study does not go stale in 90 days; it is",
+    "superseded when the next edition appears. Different lifecycle, different file.",
+    "",
+    "THE RULE. Every figure here was read off the source page and verified, not",
+    "taken from a research summary. Two figures in the dossier these came from",
+    "were nearly rejected as fabricated during verification, and both turned out",
+    "correct: one number coincidentally matched an unrelated row, and one differed",
+    "only by a thousands separator. Check against the source itself, and check",
+    "carefully, because a wrong rejection is as bad as a wrong acceptance.",
+    "",
+    "CORRELATION IS NOT OUR RESULT. The framework and CMS breakdowns describe",
+    "sites built on those technologies across a million-page sample. They are not",
+    "statements about work we did, and must never be written as though they were.",
+    "Nothing here may be phrased as evidence that our builds are more accessible.",
+    "",
+    "WHAT IS DELIBERATELY ABSENT. Anything the source did not state a method for.",
+    "Roughly a third of the research dossier these came from was flagged",
+    "UNVERIFIED METHOD by its own author; none of that is here."
+  ],
+  "findings": {
+    "wcag-failure-rate-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Institute for Disability Research, Policy and Practice, Utah State University",
+      "value": "95.9%",
+      "statement": "95.9% of the top one million home pages had detected WCAG 2 failures, up from 94.8% in 2025",
+      "note": "The rise reversed six consecutive years of small improvements, which is the finding rather than the headline number.",
+      "method": "Automated evaluation with the WAVE stand-alone API against the rendered DOM after scripting and styles were applied. Sample: 1,000,000 home pages, tested February 2026.",
+      "limitation": "Automated testing detects a subset of WCAG failures. A page with no detected errors is not necessarily conformant.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "errors-per-page-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Utah State University",
+      "value": "56.1",
+      "statement": "56,114,377 distinct errors were detected across the sample, an average of 56.1 per home page",
+      "method": "Same sample and tooling as the conformance figure. 1,000,000 home pages, February 2026.",
+      "limitation": "Counts detected errors, not user impact. One error can affect many users and many errors can affect none.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "cms-errors-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Utah State University",
+      "value": "WordPress 52.8, Drupal 41.2, Wix 33.3, Squarespace 33.0",
+      "statement": "By content management system, WordPress home pages (252,302 sampled) averaged 52.8 detected errors, Drupal (18,222) 41.2, Wix (3,183) 33.3 and Squarespace (2,669) 33.0",
+      "note": "Squarespace and Wix scored BETTER than WordPress here. Publish that as readily as the rest: a hosted builder constrains what a site owner can break, and pretending otherwise would be the kind of selective citation this site exists not to do.",
+      "method": "CMS detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
+      "limitation": "Association, not causation. CMS choice correlates with site age, budget and builder skill, none of which were controlled for.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "framework-errors-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Utah State University",
+      "value": "Next.js 40.9, 27.1% below average",
+      "statement": "By JavaScript framework, Next.js home pages (23,863 sampled) averaged 40.9 detected errors, 27.1% below the sample average, with Astro at 9.0 and React at 43.5",
+      "note": "DO NOT write this as evidence that our builds are more accessible. It describes 23,863 sites we did not build, and almost certainly reflects that Next.js sites skew newer and better resourced. It is context for a platform choice, not proof about our work.",
+      "method": "Framework detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
+      "limitation": "Association, not causation, and the sample is home pages only.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "ecommerce-errors-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Utah State University",
+      "value": "Shopify 75.1, 33.9% above average",
+      "statement": "Among ecommerce platforms, Shopify home pages (42,516 sampled) averaged 75.1 detected errors, 33.9% above the sample average, with Magento at 75.8",
+      "method": "Platform detected per home page, errors averaged within each group. 1,000,000 home page sample, February 2026.",
+      "limitation": "Association, not causation. Ecommerce home pages are more complex than the sample average, which alone raises error counts.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "top-failure-types-2026": {
+      "study": "The WebAIM Million 2026",
+      "publisher": "WebAIM, Utah State University",
+      "value": "83.9% low contrast text",
+      "statement": "Six failure types accounted for 96% of all detected errors. Low contrast text appeared on 83.9% of home pages, missing alternative text on 53.1%, and missing form input labels on 52.8%",
+      "note": "The useful part for a site owner is that the most common failures are also the cheapest to fix.",
+      "method": "Failure types counted across the 1,000,000 home page sample, February 2026.",
+      "limitation": "Automated detection. Contrast and missing alt text are reliably machine-detectable; many other failure types are not.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-13",
+      "source": "https://webaim.org/projects/million/"
+    },
+    "ada-federal-filings-fy2025": {
+      "study": "Federal Judicial Caseload Statistics",
+      "publisher": "Administrative Office of the United States Courts",
+      "value": "9,718",
+      "statement": "Federal district courts recorded 9,718 civil filings under the nature-of-suit code ADA-Other in the twelve months ending 30 September 2025, up from 9,030",
+      "note": "Filings, not judgments, and the code covers more than website accessibility. Report it as filing volume and never as legal advice or as a prediction that any given business will be sued.",
+      "method": "Case counts by nature-of-suit code, twelve months ending 30 September 2025.",
+      "limitation": "ADA-Other is a broad code. It is not a count of web accessibility lawsuits specifically.",
+      "publishedYear": "2025",
+      "verifiedAt": "2026-08-13",
+      "source": "https://www.uscourts.gov/statistics-reports"
+    }
+  }
+}
