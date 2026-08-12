@@ -67,7 +67,8 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            Turn a product idea into an engineering plan.{" "}
+            {/* Named no problem for 2,939 characters, the worst of the eight. */}
+            The tool you need does not exist, so you are running it on spreadsheets.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">Validate the scope before committing to delivery.</span>
           </motion.h1>
 

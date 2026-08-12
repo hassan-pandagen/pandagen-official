@@ -61,7 +61,9 @@ export default function SquarespacePageContent() {
           </div>
 
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
-            Has your Squarespace site outgrown its current setup?{" "}
+            {/* Same abstraction as Wix. The real Squarespace boundary is control:
+                markup, schema and template behaviour are the platform's to decide. */}
+            The change you need on your Squarespace site is one the platform decides.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
               Start with a measured migration assessment.
             </span>

@@ -65,7 +65,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            Keep the useful GHL workflows. Review the frontend.{" "}
+            {/* Led with the remedy. The reader's situation is that the site is slow
+                and they cannot leave without losing the CRM they depend on. */}
+            Your GoHighLevel site is slow, and the CRM is why you cannot just leave.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
               Start with an inventory, baseline, and integration plan.
             </span>

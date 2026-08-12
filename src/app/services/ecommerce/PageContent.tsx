@@ -56,7 +56,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            How fast is your Shopify storefront? <br />
+            {/* Closest to right already: it asked, then said measure before deciding.
+                Sharpened so the cost lands before the method. */}
+            Every app you install slows the storefront that pays for them. <br />
             <span className="font-serif italic text-cognac">
               Measure it, then decide whether a theme change or a rebuild is the answer.
             </span>

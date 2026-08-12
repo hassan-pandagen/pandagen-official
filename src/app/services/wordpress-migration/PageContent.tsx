@@ -61,9 +61,14 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            How fast is your WordPress site, really? <br />
+            {/* Problem before pitch. This read "How fast is your WordPress site,
+                really? We rebuild it on Next.js in 2 to 4 weeks" — a question
+                answered by what we sell, 41 characters in, before the reader's own
+                situation was named once. Measured across all 8 service pages on
+                12 Aug 2026: every one sold before naming a problem. */}
+            Your WordPress site got slower every year you kept it. <br />
             <span className="font-serif italic text-cognac">
-              We rebuild it on Next.js in 2 to 4 weeks.
+              Here is what that actually costs, and when a rebuild is worth it.
             </span>
           </motion.h1>
 
@@ -73,7 +78,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            We don&apos;t just &apos;redesign&apos; your site. We surgically extract your data from WordPress and rebuild your frontend with custom code. <span className="text-charcoal font-medium">Zero plugins. Performance you can measure.</span>
+            Twenty plugins you cannot remove. A page builder shipping a megabyte before the first paragraph. A maintenance bill that grows while the site gets slower. If that is your site, the first job is measuring which of those is actually costing you, because a rebuild only fixes some of them. <span className="text-charcoal font-medium">Zero plugins. Performance you can measure.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">

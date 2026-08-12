@@ -65,7 +65,9 @@ export default function WebflowPageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            The Webflow migration service:{" "}
+            {/* Opened by naming our own service. The reader's situation is a plan
+                boundary they cannot move, which is why teams actually leave Webflow. */}
+            You have hit a Webflow limit that no plan tier removes.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
               Preserve the design intent. Reassess the architecture.
             </span>

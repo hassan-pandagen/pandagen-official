@@ -90,9 +90,13 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            MyCustomPatches ran on WooCommerce. <br />
+            {/* Opened with a client's name a stranger has never heard of, then
+                pitched at character 74. Named the reader's problem 458 characters
+                in, below the fold. The client proof still appears, further down,
+                where it belongs: as evidence rather than as the opening line. */}
+            Your WooCommerce checkout is the slowest page you own. <br />
             <span className="font-serif italic text-cognac">
-              We rebuilt it as a custom storefront. Yours could be next.
+              Here is why, and what actually fixes it.
             </span>
           </motion.h1>
 
@@ -103,8 +107,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            MyCustomPatches is an independent client we rebuilt for its owner, Matt Conner. WooCommerce plugin treadmill to a custom Next.js storefront. The performance and hosting figures for that project are withdrawn pending reconciliation of their test profiles, dates and conditions.  You keep Stripe, PayPal and your order history, and every URL is redirect-mapped. You drop the plugin bill.
-          </motion.p>
+            Cart and checkout cannot be full-page cached, because they carry customer and session data. So every load runs the whole stack: WordPress, the theme, and every extension hooked into that request. That is why the page your revenue depends on is the one that gets slowest first, and why adding a caching plugin rarely touches it.</motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

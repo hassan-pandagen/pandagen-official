@@ -61,7 +61,9 @@ export default function PageContent() {
           </div>
 
           <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
-            Has your Wix site outgrown its current setup?{" "}
+            {/* Already reader-facing, but "outgrown its current setup" is abstract.
+                Names the specific wall people actually hit on Wix. */}
+            The change you need on your Wix site is one Wix will not let you make.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
               Start with a measured migration assessment.
             </span>
