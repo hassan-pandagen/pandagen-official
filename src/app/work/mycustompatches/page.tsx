@@ -511,7 +511,10 @@ export default function MyCustomPatchesCaseStudy() {
                         <p className="text-stone-500 mb-8 max-w-2xl">The numbers look impressive on paper. But here&apos;s what they mean in real life for the owner.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "💰", label: "Hosting model", value: "Withdrawn", detail: "Cost figures for this project are withdrawn pending reconciliation of the original invoices. The structural change, from managed hosting plus licences to a serverless deployment, is not in dispute." },
+                                // Was value: "Withdrawn" — my own hand-patch from the 10 Aug rewire, and the
+                                // same word-as-value mistake it was meant to fix. An em dash is the
+                                // only correct rendering of an absent figure; the detail carries the why.
+                                { icon: "—", label: "Hosting model", value: "—", detail: "Cost figures for this project are retired rather than pending: no invoices were kept and the client does not recall the amount. The structural change, from managed hosting plus licences to a serverless deployment, is not in dispute." },
                                 { icon: "⚡", label: "Zero Migration Stress", value: "0 Downtime", detail: "200+ pages, all products, all blog posts, all SEO rankings — moved without losing a single order or dropping a single position in Google." },
                                 { icon: "😌", label: "Headache Eliminated", value: "0 Plugins", detail: "No more plugin update anxiety. No more security patches at 2am. No more site going down before a big sale. It just works." },
                             ].map((item) => (

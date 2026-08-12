@@ -227,7 +227,43 @@ def main() -> int:
                     hit_found = True
                     break
 
-    # 3. A verified metric that renders must show its method on that page.
+    # 3. No status word may render as a VALUE, anywhere on the site.
+    #
+    #    This is the bug class that keeps coming back, because each instance
+    #    looks like a fix. Someone withdraws a figure, edits the data by hand,
+    #    and writes the status into the slot the number used to occupy:
+    #
+    #        before: "Withdrawn", after: "Withdrawn"   ->  "Withdrawn / was Withdrawn"
+    #        value: "Withdrawn", suffix: "/mo"         ->  "Withdrawn/mo"
+    #        pagespeed: 0                              ->  a bold zero
+    #
+    #    Four instances so far, on /work/mycustompatches, /services/ecommerce,
+    #    /services/wordpress-migration and /services/woocommerce. One of them was
+    #    mine, written while fixing another one.
+    #
+    #    Checks 1 and 2 cannot see any of it: the value is not a withdrawn figure
+    #    and it is not a numeral, so nothing on their lists matches. This tests
+    #    the SHAPE instead — a status word standing alone as the entire text of an
+    #    element is never a measurement.
+    #
+    #    An absent figure renders as an em dash. That is the whole rule.
+    STATUS_WORDS = ["Withdrawn", "Pending", "Retired", "TBD", "Coming soon", "Not available"]
+    for f in BUILD.rglob("*.html"):
+        html = re.sub(r"<script[\s\S]*?</script>", " ", f.read_text(encoding="utf-8", errors="ignore"))
+        page = str(f.relative_to(BUILD))
+        for word in STATUS_WORDS:
+            # The element's entire text content is the status word.
+            if re.search(r">\s*" + re.escape(word) + r"\s*<", html):
+                failures.append({
+                    "type": "status-word-as-value",
+                    "metric": "-", "slug": "-", "value": word, "page": page,
+                    "fix": f'"{word}" renders as the entire text of an element on {page}. '
+                           f'A status is not a measurement. Render an em dash for an absent '
+                           f'figure and put the explanation in prose beside it.',
+                })
+                break
+
+    # 4. A verified metric that renders must show its method on that page.
     for m in verified:
         if not m.get("method"):
             failures.append({

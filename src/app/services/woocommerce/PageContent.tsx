@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
+import { verifiedMetrics, withdrawalNotice } from "@/data/case-study-facts";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package, Network, Truck, RefreshCw, LayoutTemplate, Unplug } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -155,39 +156,40 @@ export default function PageContent() {
         totalPerYear="Measured per store"
       />
 
-      {/* 2a. BEFORE / AFTER RESULTS */}
+      {/* 2a. WHAT IS ACTUALLY EVIDENCED
+          Was three tiles reading "Withdrawn" over "was Withdrawn", including a
+          hosting tile that rendered "Withdrawn/mo" because the suffix was applied
+          to a word. Same hand-patch as /services/wordpress-migration carried.
+          Renders from case-study-facts.json now, so a reconciliation reaches both
+          pages without either being edited. */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Speed Optimization: What You Get</h2>
-          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">Figures withdrawn pending reconciliation.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">WooCommerce Migration: What We Can Evidence</h2>
+          <p className="text-stone-600 text-center mb-12 max-w-2xl mx-auto">
+            One independent client migration off WordPress and WooCommerce, owner-confirmed and published with permission.
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              { label: "Checkout Load Time", before: "Withdrawn", after: "Withdrawn", suffix: "", color: "#78716c" },
-              { label: "PageSpeed Mobile", before: "Withdrawn", after: "Withdrawn" },
-              { label: "Monthly Hosting Cost", before: "Withdrawn", after: "Withdrawn", suffix: "/mo", color: "#2563eb" },
-            ].map((stat, i) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {verifiedMetrics("mycustompatches").map((m, i) => (
               <motion.div
-                key={i}
+                key={m.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="relative overflow-hidden rounded-2xl bg-white border border-stone-200 shadow-xs hover:shadow-md transition-shadow"
+                transition={{ delay: i * 0.08 }}
+                className="rounded-2xl border border-stone-200 bg-white p-6 text-center shadow-xs transition-shadow hover:shadow-md"
               >
-                <div className="h-1 w-full" style={{ backgroundColor: stat.color }} />
-                <div className="p-6 text-center">
-                  <p className="text-[11px] text-stone-600 uppercase tracking-widest font-bold mb-3">{stat.label}</p>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-black" style={{ color: stat.color }}>{stat.after}</span>
-                    {stat.suffix && <span className="text-sm font-medium text-stone-600">{stat.suffix}</span>}
-                  </div>
-                  <p className="text-xs text-stone-600 mt-2">was <span className="line-through">{stat.before}</span></p>
-                </div>
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-stone-600">{m.label}</p>
+                <p className="font-serif text-3xl italic leading-tight text-cognac">{m.value}</p>
               </motion.div>
             ))}
           </div>
 
-          <p className="text-center text-xs text-stone-600 font-medium mt-6">Client: MyCustomPatches (mycustompatches.net), an independent client. WooCommerce to Next.js migration.</p>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-stone-600">
+            {withdrawalNotice("mycustompatches")}
+          </p>
+          <p className="mt-4 text-center text-xs font-medium text-stone-600">
+            MyCustomPatches (mycustompatches.net), an independent client.
+          </p>
         </div>
       </section>
 
