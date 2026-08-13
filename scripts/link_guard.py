@@ -86,6 +86,38 @@ def href_present(html: str, href: str) -> bool:
     return bool(pattern.search(html))
 
 
+FOOTER = re.compile(r"<footer\b.*?</footer>", re.S)
+HEADER = re.compile(r"<header\b.*?</header>", re.S)
+
+
+def without_chrome(html: str) -> str:
+    """The page with its sitewide navigation and footer removed.
+
+    TWO BUGS LIVED HERE, AND BOTH MADE THE MONEY-PAGE CHECK PASS ON NOTHING.
+
+    1. The footer links every /services page, /partners, /pricing and
+       /editorial-policy on every page of the site. So check 2 -- "this post
+       offers its cluster's commercial next step" -- could be satisfied by
+       boilerplate for 13 of the 14 clusters. Only `performance` was immune,
+       because /free-audit is the one money page the footer omits.
+
+    2. Worse: load_hubs() took the FIRST money-page href in the hub document,
+       and the site header's "Pricing" nav link sits ~6,000 characters above
+       the hub's own intro prose. So every one of the 11 hubs resolved to
+       /pricing, and check 2 spent its life asserting that all 79 posts link
+       /pricing rather than that each links its own cluster's money page.
+
+    A guard that cannot fail is worse than no guard: it prints OK and stops
+    anyone from looking. Same class as metrics_guard searching only for
+    known-bad values, and invisible for the same reason.
+
+    Only a <header> containing a <nav> is stripped, which is the site chrome. A
+    post's own <header> is its title block, carries no nav, and is left alone.
+    """
+    html = FOOTER.sub("", html)
+    return HEADER.sub(lambda m: "" if "<nav" in m.group(0) else m.group(0), html)
+
+
 def structural_blocks(html: str) -> list[str]:
     """The two blocks that carry a post's deliberate sibling links.
 
@@ -119,9 +151,16 @@ def load_hubs() -> dict[str, dict]:
                 members.append(post)
 
         # The money page is the one non-blog internal link the hub renders twice:
-        # once in the intro prose and once in the closing section. Taking it from
-        # the CTA href keeps this independent of the prose.
-        cta = re.search(r'href="(/(?:services/[a-z-]+|partners|pricing|free-audit|editorial-policy))/?"', html)
+        # once in the intro prose and once in the closing section.
+        #
+        # SEARCHED ON THE CHROME-STRIPPED PAGE, NOT THE WHOLE DOCUMENT. The site
+        # header's "Pricing" nav link precedes the hub's own content, so the
+        # unscoped version of this resolved all 11 hubs to /pricing. See
+        # without_chrome().
+        cta = re.search(
+            r'href="(/(?:services/[a-z-]+|partners|pricing|free-audit|editorial-policy))/?"',
+            without_chrome(html),
+        )
         hubs[slug] = {
             "file": f.name,
             "members": members,
@@ -178,10 +217,12 @@ def main() -> int:
                            f'TopicUpLink or the breadcrumb is not rendering.',
                 })
 
-            # 2. Money page of a hub this post actually links up to.
+            # 2. Money page of a hub this post actually links up to, and the
+            #    link has to be in the body -- see without_chrome() for why.
+            body = without_chrome(html)
             for slug in (linked or candidates):
                 money = hubs[slug]["money"]
-                if money and not href_present(html, money):
+                if money and not href_present(body, money):
                     failures.append({
                         "type": "missing-money-link", "post": post_id, "page": f.name,
                         "fix": f'"{post_id}" never links {money}, the money page its hub '
