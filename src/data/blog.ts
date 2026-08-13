@@ -59,18 +59,18 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "aeo-web-performance-glossary",
-    cardStat: "23 terms",
+    cardStat: "26 terms",
     cardStatLabel: "AI-search, rendering & performance jargon defined in plain English",
-    title: "AEO & Web Performance Glossary: 23 Terms Defined (2026)",
+    title: "AEO & Web Performance Glossary: 26 Terms Defined (2026)",
     excerpt: "A source-linked map of 23 AI-search, rendering, structured-data, and web-performance terms, including what each term does and does not prove.",
     category: "AEO",
-    readTime: "21 min",
+    readTime: "24 min",
     date: "Jul 16",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-13",
     faqs: [
       { question: "What is the difference between AEO and GEO?", answer: "AEO and GEO are overlapping industry labels for work intended to improve eligibility and clarity in search and generative answers. There is no universally settled boundary. The practical foundation remains crawlable, useful, evidence-led content, clear entities, and accurate technical implementation; none guarantees inclusion or citation." },
       { question: "What is the difference between CSR and SSR?", answer: "Client-Side Rendering uses browser JavaScript to create some or all content after the initial response; Server-Side Rendering returns rendered HTML from the server. Rendering support varies across crawlers and products, so important public content is safer when present in initial or server-rendered HTML. CSR alone does not prove that a site will be invisible." },
@@ -953,6 +953,30 @@ export const blogPosts: BlogPost[] = [
       { question: "How do I know if my rebuild quote is fair?", answer: "Normalize each quote across strategy, information architecture, design, content, engineering, migration, integrations, accessibility, security, SEO, analytics, QA, launch, ownership and support. A higher quote may include more work or risk; do not call it padded without evidence." },
       { question: "How often should I rebuild my website?", answer: "There is no universal cycle. Rebuild when both the foundation and site experience no longer satisfy verified requirements and repair, redesign or migration alone is insufficient. Review evidence and operating capability rather than site age." },
       { question: "What platform is cheapest to rebuild on in 2026?", answer: "There is no universal cheapest platform. Compare current provider quotes and the same requirements across build, content, hosting, usage, payments, licenses, maintenance, security, support, internal time and exit. Free or low-cost tiers may not fit a commercial workload." }
+    ]
+  },
+  {
+    id: "web-accessibility-glossary",
+    cardStat: "29",
+    cardStatLabel: "accessibility terms defined, with what each does not prove",
+    title: "Web Accessibility Glossary: 29 Terms Defined (2026)",
+    excerpt: "Plain-English definitions of the accessibility terms that appear in audits, quotes and procurement forms, with what each one does not prove and what to ask the person selling it to you.",
+    category: "Accessibility",
+    readTime: "23 min",
+    date: "Aug 13",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'code',
+    lastModified: "2026-08-13",
+    faqs: [
+      { question: "What does WCAG AA mean?", answer: "WCAG success criteria are graded A, AA and AAA, and the levels are cumulative. Level A is the minimum, level AA is the practical target that almost every accessibility law and procurement rule points at, and level AAA is an enhancement the W3C states is not required as a general policy for whole sites because some content cannot satisfy it." },
+      { question: "Is WCAG a law?", answer: "No. WCAG is a technical standard published by the World Wide Web Consortium. It feels like a law because nearly every accessibility law, procurement rule and audit points at it, but the adopting law decides which version, which conformance level and who it applies to." },
+      { question: "Does a perfect Lighthouse accessibility score mean my site is accessible?", answer: "No. The Lighthouse accessibility score is a weighted result from a set of automated axe-core checks, and Google's own documentation states that a perfect score does not mean the page is accessible. Automated checks cover only what can be automated, so the score is a useful smoke test and a poor acceptance criterion." },
+      { question: "Is a placeholder the same as a form label?", answer: "No. A placeholder disappears the moment someone types, is often rendered in grey too light to read, and is not reliably announced by assistive technology. A visible label programmatically associated with the input is the accessible version, and it also helps every other user of the form." },
+      { question: "Do accessibility overlays make a website compliant?", answer: "An overlay is a third-party script that tries to correct problems in the browser after the page loads. It sits on top of markup it did not author, so it does not change the contrast ratio a designer chose or write the alternative text nobody wrote. Those remain decisions about your own content." },
+      { question: "Is skipping a heading level a WCAG failure?", answer: "Not in itself at level AA, despite how often it is reported as one. The genuine problems are headings that are missing, inaccurate, or applied for visual size rather than structure. An audit that leads with skipped heading levels is usually a tool export being presented as an assessment." },
+      { question: "What is a VPAT?", answer: "A Voluntary Product Accessibility Template is the form a vendor completes to describe how their product meets accessibility standards, and the completed document is an Accessibility Conformance Report. It is useful because it forces specific claims criterion by criterion, but it is self-reported, so it evidences a claim rather than an independent test." }
     ]
   },
   {

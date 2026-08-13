@@ -51,6 +51,12 @@ const TERMS: { id: string; term: string; group: string }[] = [
 
 const GROUPS = ["AI Search & Answer Engines", "Rendering & Crawlability", "Structured Data & Entities", "Web Performance"];
 
+// Counts are derived, never typed. The hardcoded versions drifted: the Web
+// Performance header said 4 while TERMS held 7, and the title said 23 while
+// TERMS held 26, because three terms were folded into one card and left in
+// the array. glossary_guard.py now fails the build on the same class of drift.
+const countIn = (group: string) => TERMS.filter(t => t.group === group).length;
+
 // Plain-text definitions for the DefinedTerm JSON-LD (same facts as the visible cards).
 const DEFS: Record<string, string> = {
   "aeo": "Answer Engine Optimization: writing and structuring a page so that an answer engine like ChatGPT, Claude, Perplexity or Google's AI Overviews can find it, read it and quote from it, rather than aiming only at a ranked list of blue links. None of it guarantees you get crawled, included, ranked, recommended or quoted.",
@@ -126,8 +132,8 @@ function Term({ id, name, href, hrefLabel, example, ask, children }: { id: strin
 }
 
 export const metadata: Metadata = {
-  title: "AEO & Web Performance Glossary: 23 Terms Defined (2026)",
-  description: "A current, source-linked glossary of 23 AI-search, rendering, structured-data, and web-performance terms, including their limits.",
+  title: `AEO & Web Performance Glossary: ${TERMS.length} Terms Defined (2026)`,
+  description: `A current, source-linked glossary of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, including their limits.`,
   alternates: { canonical: "/blog/aeo-web-performance-glossary" },
   keywords: [
     "aeo glossary", "geo vs aeo", "what is answer engine optimization", "csr vs ssr", "core web vitals explained",
@@ -136,11 +142,11 @@ export const metadata: Metadata = {
   ],
   robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   openGraph: {
-    title: "AEO & Web Performance Glossary: 23 Terms Defined (2026)",
-    description: "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, with practical limits.",
+    title: `AEO & Web Performance Glossary: ${TERMS.length} Terms Defined (2026)`,
+    description: `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, with practical limits.`,
     type: "article",
     publishedTime: "2026-07-16",
-    modifiedTime: "2026-08-08",
+    modifiedTime: "2026-08-13",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
     images: [ogImageForPath("/blog/aeo-web-performance-glossary")],
@@ -158,11 +164,11 @@ const articleSchema = {
     {
       "@type": "Article",
       "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#article",
-      "headline": "AEO & Web Performance Glossary: 23 Terms Defined (2026)",
-      "description": "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, including practical limitations.",
+      "headline": `AEO & Web Performance Glossary: ${TERMS.length} Terms Defined (2026)`,
+      "description": `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, including practical limitations.`,
       "image": ogImageUrlForPath("/blog/aeo-web-performance-glossary"),
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-08-08T00:00:00-05:00",
+      "dateModified": "2026-08-13T00:00:00-05:00",
       "citation": [
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
         "https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics",
@@ -193,8 +199,8 @@ const articleSchema = {
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#webpage" },
       "articleSection": "AEO",
       "inLanguage": "en-US",
-            "wordCount": 4297,
-            "timeRequired": "PT21M",
+            "wordCount": 4771,
+            "timeRequired": "PT24M",
       "about": [
         { "@type": "Thing", "name": "Answer Engine Optimization" },
         { "@type": "Thing", "name": "Web Performance", "sameAs": ["https://en.wikipedia.org/wiki/Web_performance"] },
@@ -237,11 +243,11 @@ const articleSchema = {
       "@type": "WebPage",
       "@id": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary#webpage",
       "url": "https://www.pandacodegen.com/blog/aeo-web-performance-glossary",
-      "name": "AEO & Web Performance Glossary: 23 Terms Defined (2026)",
-      "description": "Source-linked definitions of 23 AI-search, rendering, structured-data, and web-performance terms, including practical limitations.",
+      "name": `AEO & Web Performance Glossary: ${TERMS.length} Terms Defined (2026)`,
+      "description": `Source-linked definitions of ${TERMS.length} AI-search, rendering, structured-data, and web-performance terms, including practical limitations.`,
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "datePublished": "2026-07-16T00:00:00-05:00",
-      "dateModified": "2026-08-08T00:00:00-05:00",
+      "dateModified": "2026-08-13T00:00:00-05:00",
       "inLanguage": "en-US"
     }
   ]
@@ -270,7 +276,7 @@ export default function GlossaryPage() {
               <span className="font-serif italic text-cognac">Glossary</span>
             </h1>
             <p className="text-lg md:text-xl text-stone-500 leading-relaxed mb-6 max-w-2xl">
-              Search, AI answers, rendering, Core Web Vitals, and crawlability are often discussed as if one tactic controls all of them. It does not. This source-linked glossary explains 23 terms, how they connect, and where the evidence stops.
+              Search, AI answers, rendering, Core Web Vitals, and crawlability are often discussed as if one tactic controls all of them. It does not. This source-linked glossary explains {TERMS.length} terms, how they connect, and where the evidence stops.
             </p>
             <BlogAuthor
               date="Jul 16, 2026"
@@ -310,7 +316,7 @@ export default function GlossaryPage() {
           </nav>
 
           {/* ─────────── AI Search & Answer Engines ─────────── */}
-          <GroupHeader title="AI Search & Answer Engines" count={10} />
+          <GroupHeader title="AI Search & Answer Engines" count={countIn("AI Search & Answer Engines")} />
           <div className="space-y-4">
             <Term
               id="aeo"
@@ -419,7 +425,7 @@ export default function GlossaryPage() {
           </div>
 
           {/* ─────────── Rendering & Crawlability ─────────── */}
-          <GroupHeader title="Rendering & Crawlability" count={6} />
+          <GroupHeader title="Rendering & Crawlability" count={countIn("Rendering & Crawlability")} />
           <div className="space-y-4">
             <Term
               id="csr"
@@ -479,7 +485,7 @@ export default function GlossaryPage() {
           </div>
 
           {/* ─────────── Structured Data & Entities ─────────── */}
-          <GroupHeader title="Structured Data & Entities" count={3} />
+          <GroupHeader title="Structured Data & Entities" count={countIn("Structured Data & Entities")} />
           <div className="space-y-4">
             <Term
               id="schema"
@@ -510,7 +516,7 @@ export default function GlossaryPage() {
           </div>
 
           {/* ─────────── Web Performance ─────────── */}
-          <GroupHeader title="Web Performance" count={4} />
+          <GroupHeader title="Web Performance" count={countIn("Web Performance")} />
           <div className="space-y-4">
             <Term
               id="core-web-vitals"
@@ -521,6 +527,39 @@ export default function GlossaryPage() {
               ask={<>&ldquo;What are our 75th-percentile LCP, INP, and CLS for mobile and desktop field data, and what does the lab trace show?&rdquo; Use both where available for different purposes.</>}
             >
               <BlogHighlight>Core Web Vitals are LCP for loading, INP for responsiveness, and CLS for visual stability.</BlogHighlight> Google recommends evaluating the 75th percentile separately for mobile and desktop and uses Core Web Vitals in its ranking systems alongside many other signals. Better performance can help users, but revenue, bounce, and ranking effects must be measured on the specific property rather than inferred from the thresholds. <BlogHighlight>Why it matters:</BlogHighlight> each one is a moment where a real buyer gets annoyed and leaves: waiting on a blank screen, tapping a button that does nothing, or tapping the wrong thing because the page moved under them.
+            </Term>
+
+            <Term
+              id="lcp"
+              name="LCP (Largest Contentful Paint)"
+              href="/blog/core-web-vitals-explained"
+              hrefLabel="How LCP is measured"
+              example={<>Usually your hero image. A 4MB photograph served at full resolution and scaled down in CSS will ruin LCP on its own, no matter how well the rest of the page is built.</>}
+              ask={<>&ldquo;What is our 75th-percentile LCP on mobile, from field data?&rdquo; A lab number from a developer&apos;s laptop on office wifi is not an answer to that question.</>}
+            >
+              <BlogHighlight>Largest Contentful Paint measures how long until the biggest thing in the viewport has actually rendered</BlogHighlight>, usually a hero image, video poster or headline block. It measures loading. Google&apos;s good threshold is 2.5 seconds or less, assessed at the 75th percentile of real visits. <BlogHighlight>Why it matters:</BlogHighlight> it is the closest metric to the thing a visitor actually experiences as &ldquo;this site is slow,&rdquo; because it marks the moment the page stops looking empty.
+            </Term>
+
+            <Term
+              id="inp"
+              name="INP (Interaction to Next Paint)"
+              href="/blog/core-web-vitals-explained"
+              hrefLabel="How INP replaced FID"
+              example={<>You tap Add to cart and nothing visibly happens for half a second, so you tap it again and end up with two. That gap is INP, and heavy JavaScript is almost always the cause.</>}
+              ask={<>&ldquo;Which interactions are our worst for INP?&rdquo; It is assessed across a visit, so the answer should name specific controls rather than give one site-wide number.</>}
+            >
+              <BlogHighlight>Interaction to Next Paint measures how long the page takes to visibly respond after someone clicks, taps or types</BlogHighlight>, assessed across the interactions in a visit rather than only the first one. Google&apos;s good threshold is 200 milliseconds or less at the 75th percentile. INP replaced First Input Delay as a Core Web Vital in March 2024. <BlogHighlight>Why it matters:</BlogHighlight> it is the metric that catches a site which loads beautifully and then feels dead under the finger, which is the common failure mode of a heavy JavaScript build.
+            </Term>
+
+            <Term
+              id="cls"
+              name="CLS (Cumulative Layout Shift)"
+              href="/blog/core-web-vitals-explained"
+              hrefLabel="What causes layout shift"
+              example={<>An image or ad without reserved space loads late and pushes the content down as you reach for a link. You tap the wrong thing. That is CLS, and it is the one every reader has felt without knowing its name.</>}
+              ask={<>&ldquo;Do our images and embeds reserve their space before they load?&rdquo; Width and height attributes, or an aspect ratio, fix most of this permanently.</>}
+            >
+              <BlogHighlight>Cumulative Layout Shift measures how much the page moves under the reader while it is still loading.</BlogHighlight> It measures visual stability, is a unitless score rather than a time, and is usually caused by images, ads or embeds that arrive without reserved space. Google&apos;s good threshold is 0.1 or less at the 75th percentile. <BlogHighlight>Why it matters:</BlogHighlight> it is the only Core Web Vital that actively causes mistakes rather than delay, and on a checkout a mistake costs more than a wait.
             </Term>
 
             <Term

@@ -353,7 +353,7 @@ export const clusters: Cluster[] = [
       // step is a measurement rather than a purchase. It moves to its own cluster
       // once the accessibility glossary and the sector scan exist, because a
       // one-post cluster cannot satisfy link_guard's 2-4 sibling rule.
-      'web-accessibility-statistics-2026',
+      'web-accessibility-statistics-2026', 'web-accessibility-glossary',
     ],
   },
   {
