@@ -111,7 +111,7 @@ export default function ServicesHub() {
                 SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
               </p>
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <p className="text-xs text-stone-600 uppercase tracking-widest font-bold mb-1">Scoped separately</p>
+                <p className="text-xs text-stone-400 uppercase tracking-widest font-bold mb-1">Scoped separately</p>
                 <p className="text-sm text-white leading-snug">
                   Product and internal-tool work starts with how it should be built, what data it holds, how it stays secure, what it connects to and what it will cost to run. Not a generic website package.
                 </p>

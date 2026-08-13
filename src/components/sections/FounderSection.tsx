@@ -40,7 +40,7 @@ export default function FounderSection() {
           transition={{ duration: 0.5 }}
           className="mb-14"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">The Team</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac-light mb-3">The Team</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
             Founder-built,{" "}
             <span className="font-serif italic text-cognac">not farmed out.</span>
@@ -74,7 +74,7 @@ export default function FounderSection() {
                 </div>
                 <div>
                   <div className="text-lg font-bold text-white leading-tight">{founder.name}</div>
-                  <div className="text-sm text-cognac font-semibold">{founder.title}</div>
+                  <div className="text-sm text-cognac-light font-semibold">{founder.title}</div>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export default function FounderSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${founder.name} on LinkedIn`}
-                    className="flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-[#0077B5] transition-colors"
+                    className="flex items-center gap-1.5 text-sm font-bold text-stone-400 hover:text-[#0077B5] transition-colors"
                   >
                     <Linkedin className="w-4 h-4" />
                     LinkedIn
@@ -120,7 +120,7 @@ export default function FounderSection() {
                     href={founder.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm font-bold text-gray-500 hover:text-white transition-colors"
+                    className="flex items-center gap-1.5 text-sm font-bold text-stone-400 hover:text-white transition-colors"
                   >
                     <Github className="w-4 h-4" />
                     GitHub
@@ -143,7 +143,7 @@ export default function FounderSection() {
             href="https://github.com/hassan-pandagen"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-sm text-gray-500 hover:text-white transition-colors group/gh"
+            className="inline-flex items-center gap-3 text-sm text-stone-400 hover:text-white transition-colors group/gh"
           >
             <Github className="w-4 h-4" />
             <span>900+ GitHub contributions in the last year. All public. All verifiable.</span>

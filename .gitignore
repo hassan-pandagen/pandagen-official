@@ -84,3 +84,6 @@ remotion/assets/*.mov
 GSC/
 airops/
 exports/
+
+# Scanner deps (see scripts/scan/README.md)
+scripts/scan/node_modules/

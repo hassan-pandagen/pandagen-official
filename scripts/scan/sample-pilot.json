@@ -1,0 +1,19 @@
+{
+  "frame": "PILOT ONLY. Website builders, CMS vendors and developer-platform companies, selected because they are the vendors this site writes about and their URLs are stable. This is NOT a probability sample and NOTHING measured here may be published as a study. Its purpose is to validate the harness: does the intent-page finder work, what proportion of real sites block or fail to load, and is the home-vs-intent delta measurable at all.",
+  "definedAt": "2026-08-14",
+  "notPublishable": true,
+  "sites": [
+    { "url": "https://www.pandacodegen.com/", "label": "PandaCodeGen (our own, as a control)" },
+    { "url": "https://webaim.org/", "label": "WebAIM" },
+    { "url": "https://www.w3.org/", "label": "W3C" },
+    { "url": "https://wordpress.org/", "label": "WordPress.org" },
+    { "url": "https://www.shopify.com/", "label": "Shopify" },
+    { "url": "https://www.squarespace.com/", "label": "Squarespace" },
+    { "url": "https://www.wix.com/", "label": "Wix" },
+    { "url": "https://webflow.com/", "label": "Webflow" },
+    { "url": "https://vercel.com/", "label": "Vercel" },
+    { "url": "https://www.hubspot.com/", "label": "HubSpot" },
+    { "url": "https://basecamp.com/", "label": "Basecamp" },
+    { "url": "https://www.mozilla.org/", "label": "Mozilla" }
+  ]
+}

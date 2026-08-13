@@ -307,6 +307,22 @@
   color: #b8410c;
 }
 
+/*
+ * Cognac for DARK surfaces only.
+ *
+ * The brand cognac (#b8410c) measures 3.05:1 to 3.47:1 against the six dark
+ * backgrounds used on the home page, so every use of it on dark failed WCAG AA
+ * (4.5:1 for normal text). This value measures 5.69:1 to 6.48:1 across the same
+ * six. It is the closest colour to the brand that clears the requirement on the
+ * lightest of those backgrounds (#211c18), which is the binding constraint.
+ *
+ * Do not use it on the paper background. There it is the light-on-light problem
+ * in the other direction; keep text-cognac for that.
+ */
+@utility text-cognac-light {
+  color: #e8763a;
+}
+
 @utility bg-cognac {
   background-color: #b8410c;
 }

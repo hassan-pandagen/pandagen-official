@@ -1,0 +1,14 @@
+{
+  "name": "pandacodegen-a11y-scan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone accessibility scanner. Deliberately NOT a dependency of the site: it must never affect the Vercel build or npm ci at the root.",
+  "scripts": {
+    "scan": "node scan.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.62.1",
+    "axe-core": "^4.11.1"
+  }
+}

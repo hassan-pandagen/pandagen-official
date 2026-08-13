@@ -33,7 +33,7 @@ export default function RevenueCalculator() {
             <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 leading-tight">
               What could <span className="font-serif italic text-cognac">faster</span> be worth to you?
             </h2>
-            <p className="text-lg text-stone-500 mb-8 leading-relaxed">
+            <p className="text-lg text-stone-600 mb-8 leading-relaxed">
               Page speed and conversion rate are correlated across published retail research. This tool models what that relationship could be worth on your own numbers.
             </p>
 

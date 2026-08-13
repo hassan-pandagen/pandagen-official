@@ -34,13 +34,13 @@ export default function AntiAgency() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-stone-600 text-xs font-bold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-stone-400 text-xs font-bold uppercase tracking-widest mb-6">
             The Engineering Standard
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             We are not a &ldquo;Digital Agency.&rdquo;
           </h2>
-          <p className="text-xl text-stone-600 leading-relaxed">
+          <p className="text-xl text-stone-400 leading-relaxed">
             Agencies sell hours. We sell a working system. We stripped out the layers that make B2B projects run late.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function AntiAgency() {
         >
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-lg">Ready to work with engineers, not account managers?</p>
-            <p className="text-stone-600 text-sm mt-1">Book 30 minutes with an engineer. No sales pitch.</p>
+            <p className="text-stone-400 text-sm mt-1">Book 30 minutes with an engineer. No sales pitch.</p>
           </div>
           <button
             data-cal-namespace="discovery"

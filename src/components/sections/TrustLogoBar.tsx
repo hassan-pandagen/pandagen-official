@@ -85,7 +85,7 @@ export default function TrustLogoBar() {
               </div>
             </div>
 
-            <div className="hidden grid-cols-[1fr_1.35fr_1.15fr] gap-5 border-b border-white/10 px-7 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-500 md:grid">
+            <div className="hidden grid-cols-[1fr_1.35fr_1.15fr] gap-5 border-b border-white/10 px-7 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400 md:grid">
               <span>Continuity</span>
               <span>Control surface</span>
               <span>Client-readable evidence</span>
@@ -100,16 +100,16 @@ export default function TrustLogoBar() {
                   <div className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cognac shadow-[0_0_0_5px_rgba(184,65,12,0.18)]" aria-hidden="true" />
                     <div>
-                      <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Continuity</span>
+                      <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-400 md:hidden">Continuity</span>
                       <span className="font-semibold text-white">{item.area}</span>
                     </div>
                   </div>
                   <div>
-                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Control surface</span>
+                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-400 md:hidden">Control surface</span>
                     <span className="text-sm leading-6 text-stone-300">{item.control}</span>
                   </div>
                   <div>
-                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-500 md:hidden">Client-readable evidence</span>
+                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-stone-400 md:hidden">Client-readable evidence</span>
                     <span className="inline-flex items-start gap-2 text-sm font-semibold leading-6 text-[#ffc2a6]">
                       <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
                       {item.artifact}
