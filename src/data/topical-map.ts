@@ -348,6 +348,12 @@ export const clusters: Cluster[] = [
       'why-is-my-website-loading-so-slow', 'how-to-speed-up-your-website', 'how-to-achieve-100-pagespeed',
       'nextjs-hosting-zero-cost', 'core-web-vitals-explained', 'how-website-speed-affects-seo',
       'aeo-web-performance-glossary',
+      // Accessibility sits here for now because it shares this cluster's premise:
+      // a page quality you can measure on your own site with a tool, whose next
+      // step is a measurement rather than a purchase. It moves to its own cluster
+      // once the accessibility glossary and the sector scan exist, because a
+      // one-post cluster cannot satisfy link_guard's 2-4 sibling rule.
+      'web-accessibility-statistics-2026',
     ],
   },
   {

@@ -956,6 +956,29 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "web-accessibility-statistics-2026",
+    cardStat: "95.9%",
+    cardStatLabel: "of top million home pages failed automated WCAG testing",
+    title: "Web Accessibility Statistics 2026: What the Data Actually Shows",
+    excerpt: "The web got measurably less accessible in 2026, ending six years of improvement. What the measured data says about failure types, platforms and legal exposure, and what it cannot tell you.",
+    category: "Accessibility",
+    readTime: "9 min",
+    date: "Aug 13",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'traffic',
+    lastModified: "2026-08-13",
+    faqs: [
+      { question: "What percentage of websites are accessible?", answer: "In the 2026 WebAIM Million, 95.9% of the top one million home pages had detected WCAG 2 failures, up from 94.8% in 2025. That is automated testing of home pages only, so it detects a subset of failures and a page with no detected errors is not necessarily conformant." },
+      { question: "Is web accessibility getting better or worse?", answer: "It got worse in 2026. The 95.9% failure rate reversed six consecutive years of small improvements. Average page element counts rose 22.5% in the same year, so growing page complexity is the likeliest mechanism rather than a decline in effort." },
+      { question: "What are the most common accessibility errors?", answer: "Six failure types accounted for 96% of all detected errors in the 2026 WebAIM Million. Low contrast text appeared on 83.9% of home pages, missing alternative text on 53.1% and missing form input labels on 52.8%. These are also among the cheapest failures to fix." },
+      { question: "Which CMS or platform has the fewest accessibility errors?", answer: "In the 2026 WebAIM Million, Squarespace home pages averaged 33.0 detected errors and Wix 33.3, both better than WordPress at 52.8 and Drupal at 41.2. Shopify averaged 75.1, well above the sample average. These figures are association rather than causation, because platform choice correlates with site age, budget and builder skill, none of which were controlled for." },
+      { question: "How many website accessibility lawsuits are filed each year?", answer: "Federal district courts recorded 9,718 civil filings under the nature-of-suit code ADA-Other in the twelve months ending 30 September 2025, up from 9,030. That code is broader than web accessibility and counts filings rather than judgments, so it is an indicator of volume and not legal advice about any specific business." },
+      { question: "Does passing an automated accessibility test mean my site is compliant?", answer: "No. Automated testing detects a subset of WCAG failures. A page can pass every automated check and still be unusable with a screen reader, because judgements like whether alternative text is accurate or whether a reading order makes sense cannot be made by a machine." }
+    ]
+  },
+  {
     id: "core-web-vitals-explained",
     cardStat: "3",
     cardStatLabel: "Field metrics evaluated at the 75th percentile",
