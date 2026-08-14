@@ -112,7 +112,7 @@ export function CodeWindow({ children, filename = "code" }: { children: string; 
         <span className="ml-3 text-[11px] text-white/30 font-mono">{filename}</span>
       </div>
       {/* Code body */}
-      <div className="p-5 overflow-x-auto">
+      <div className="p-5 overflow-x-auto" tabIndex={0} role="region" aria-label={filename ? `Code: ${filename}` : "Code sample"}>
         <pre className="font-mono text-sm leading-relaxed">
           {lines.map((line, i) => (
             <div key={i} className="flex gap-4">

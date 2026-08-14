@@ -395,7 +395,7 @@ function HomeContinuity({ block }: { block: HomeContent["continuity"] }) {
             </div>
           </div>
 
-          <div className="hidden grid-cols-[1fr_1.35fr_1.15fr] gap-5 border-b border-white/10 px-7 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-500 md:grid">
+          <div className="hidden grid-cols-[1fr_1.35fr_1.15fr] gap-5 border-b border-white/10 px-7 py-3 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400 md:grid">
             <span>{block.columns.area}</span>
             <span>{block.columns.control}</span>
             <span>{block.columns.evidence}</span>
@@ -591,7 +591,7 @@ function HomeFounders({ block }: { block: HomeContent["founders"] }) {
                 {person.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-stone-600"
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-stone-400"
                   >
                     {tag}
                   </li>

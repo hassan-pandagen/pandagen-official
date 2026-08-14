@@ -128,15 +128,15 @@ export default function WebflowPageContent() {
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Measured baseline</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">Measured baseline</div>
               <p className="text-sm text-stone-600">Record the page set, tool, device, network, date, and repeated runs.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Written proposal</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">Written proposal</div>
               <p className="text-sm text-stone-600">Define scope, assumptions, exclusions, price model, and changes.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Defined handover</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">Defined handover</div>
               <p className="text-sm text-stone-600">State support, access, licensing, ownership, and remedies explicitly.</p>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function WebflowPageContent() {
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-charcoal font-bold text-lg mb-2">{item.signal}</h3>
-                <p className="text-stone-600 leading-relaxed text-sm">{item.detail}</p>
+                <p className="text-stone-400 leading-relaxed text-sm">{item.detail}</p>
               </motion.div>
             ))}
           </div>

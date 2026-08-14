@@ -225,15 +225,15 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">90+ PageSpeed</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">90+ PageSpeed</div>
               <p className="text-sm text-stone-600">Refund terms are stated in the written scope.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Fixed price</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">Fixed price</div>
               <p className="text-sm text-stone-600">No hourly billing. No surprise invoices. Published tiers.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
-              <div className="text-2xl font-bold text-cognac mb-1">Free support</div>
+              <div className="text-2xl font-bold text-cognac-light mb-1">Free support</div>
               <p className="text-sm text-stone-600">15 to 30 days of post-launch tweaks included, depending on tier.</p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function PageContent() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-stone-200 transition-all group"
               >
-                <span className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
+                <span aria-hidden="true" className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
                 <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
                   <item.icon className="w-5 h-5 text-cognac" />
                 </div>

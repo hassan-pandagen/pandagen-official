@@ -602,7 +602,7 @@ export default function PandaPatchesCaseStudy() {
                             {techStack.map((t) => (
                                 <div key={t.name} className={`px-4 py-2 rounded-xl ${t.color}`}>
                                     <div className="text-sm font-bold">{t.name}</div>
-                                    <div className="text-xs opacity-70">{t.role}</div>
+                                    <div className="text-xs opacity-90">{t.role}</div>
                                 </div>
                             ))}
                         </div>

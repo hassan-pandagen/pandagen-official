@@ -284,7 +284,7 @@ export default function PageContent() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">{item.pain}</h3>
-                    <p className="text-stone-600 leading-relaxed text-sm">{item.detail}</p>
+                    <p className="text-stone-400 leading-relaxed text-sm">{item.detail}</p>
                   </div>
                 </div>
               </FadeIn>

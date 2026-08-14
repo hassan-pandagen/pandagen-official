@@ -224,7 +224,7 @@ export default function AboutPageClient() {
             {standards.map(({ title, body }, i) => (
               <article key={title} className="group rounded-3xl border border-stone-300 bg-white p-7 transition-colors hover:border-cognac/40">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-serif text-2xl italic text-cognac/60 tabular-nums">
+                  <span aria-hidden="true" className="font-serif text-2xl italic text-cognac/60 tabular-nums">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span aria-hidden="true" className="h-px flex-1 bg-stone-200 transition-colors group-hover:bg-cognac/30" />

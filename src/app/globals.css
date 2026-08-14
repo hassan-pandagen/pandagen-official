@@ -36,12 +36,23 @@
   /* Keep the semantic Tailwind neutral scale intact. Components choose a
      surface-aware step: stone-600 on light surfaces, stone-400 on dark. */
   --color-stone-400: #a8a29e;
-  --color-stone-500: #78716c;
+  /* Was #78716c, which measures 4.39:1 on the paper background (#f5f5f4) and
+     so failed WCAG AA by 0.11 in 57 places. This measures 5.02:1 on paper and
+     5.48:1 on white. Only used on light surfaces; on dark, use stone-400. */
+  --color-stone-500: #6f6862;
   --color-stone-600: #57534e;
   --color-stone-700: #44403c;
   --color-stone-800: #292524;
   --color-stone-900: #1c1917;
   --color-stone-950: #0c0a09;
+
+  /* Accent scales overridden for contrast, 14 Aug 2026.
+     red-500   #fb2c36 measured 3.81:1 on white AND for white text on it (used
+               both ways in "Other quotes" callouts and badges). #d70008 gives
+               5.39:1 in both directions and 4.93:1 on the red-50 surface.
+     emerald-600 #009966 measured 3.65:1 on white. #008055 gives 4.98:1. */
+  --color-red-500: #d70008;
+  --color-emerald-600: #008055;
 
   --text-heading-1: 72px;
   --text-heading-1--line-height: 1.05;
@@ -575,4 +586,32 @@ body {
   footer .group:hover .text-cognac {
     color: var(--color-cognac) !important;
   }
+}
+
+/* ---------------------------------------------------------------------------
+ * Accessibility fixes found by scripts/scan/selfscan.mjs on 14 Aug 2026.
+ * First run: 740 detected violation nodes across 70 of 134 pages.
+ * ------------------------------------------------------------------------- */
+
+/*
+ * Inline links in prose must not be distinguished by colour alone.
+ *
+ * 329 of the 740 nodes were axe's `link-in-text-block`, across 34 pages. Every
+ * one was the same pattern: `text-cognac hover:underline`, so a link inside a
+ * paragraph was cognac-on-paper against stone-700 body text with less than
+ * 3:1 between them, and nothing but colour to mark it until the mouse arrived.
+ * A keyboard user, a colour-blind reader and anyone reading on a poor screen
+ * gets no signal at all.
+ *
+ * Scoped to <p> and <li> children inside prose containers so that button-style
+ * CTAs, cards and nav links inside an <article> keep their own treatment.
+ */
+:is(article, .prose) :is(p, li) > a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+:is(article, .prose) :is(p, li) > a:hover {
+  text-decoration-thickness: 2px;
 }
