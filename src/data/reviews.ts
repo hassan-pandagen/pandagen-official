@@ -35,11 +35,26 @@ export interface ClientReview {
      * which is why a half-collected set still looks deliberate.
      */
     photo?: string;
+    /**
+     * The case study for this reviewer's project, when one is published.
+     *
+     * EXPLICIT, NOT DERIVED FROM `id`. Three of the five ids happen to match a
+     * /work slug and two do not, so "the id looks like a slug" is not evidence
+     * that a page exists. Deriving it would 404 for Marshall James and James
+     * Peace the moment anyone renamed a route.
+     *
+     * ONLY SET THIS WHERE WE ALREADY PUBLISH THE RELATIONSHIP. A review posted
+     * on Trustpilot is that person's decision on Trustpilot's property. It is
+     * not permission for us to name their business on ours, and a case study
+     * is the record that they agreed to that. No case study, no link.
+     */
+    caseStudy?: string;
 }
 
 export const CLIENT_REVIEWS: readonly ClientReview[] = [
     {
         id: 'ladies-4-jesus',
+        caseStudy: '/work/ladies-4-jesus',
         quote: 'I was hesitant to use them at first because the price seemed more than reasonable and I had never heard of them but I am so glad I chose to work with them.',
         snippet: 'I was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.',
         name: 'Etoy McDaniel',
@@ -49,6 +64,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
     },
     {
         id: 'emblematic-studio',
+        caseStudy: '/work/emblematic-studio',
         quote: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
         snippet: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
         name: 'Waqas Ahmed',
@@ -85,6 +101,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         // this note can go. If he ever withdraws it, the name comes off here
         // first -- consent is the reason it is published, not the link.
         id: 'mycustompatches',
+        caseStudy: '/work/mycustompatches',
         quote: 'Hassan was available to me at any time, and his response time was always less than an hour. And he suggested me to go route that will help me in business i.e. Seo, UI, UX etc',
         snippet: 'Hassan was available to me at any time, and his response time was always less than an hour.',
         name: 'Matt Conner, owner, MC Patches LLC',

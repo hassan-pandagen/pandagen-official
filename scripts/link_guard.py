@@ -256,6 +256,26 @@ def main() -> int:
                            f'needs a parent: add it to a cluster in topical-map.ts.',
                 })
 
+    # 4b. Every caseStudy link in reviews.ts must resolve to a built page.
+    #
+    #     These are rendered on the home page next to a named person's words, so
+    #     a 404 here sends a reader who is checking our proof to a dead end,
+    #     which is worse than not offering the link at all. The field is
+    #     deliberately explicit rather than derived from the review id (three of
+    #     five ids match a /work slug and two do not), and this is what keeps
+    #     that explicit list honest when a route gets renamed.
+    reviews_path = ROOT / "src" / "data" / "reviews.ts"
+    if reviews_path.exists():
+        for slug in re.findall(r"caseStudy:\s*'/work/([a-z0-9-]+)'", read(reviews_path)):
+            if not (BUILD / "work" / f"{slug}.html").exists():
+                failures.append({
+                    "type": "review-case-study-404", "page": "src/data/reviews.ts",
+                    "fix": f'A review links /work/{slug}, which is not in the build. '
+                           f'Either the case study was renamed or removed; fix the '
+                           f'caseStudy field rather than leaving a reader who is '
+                           f'checking our proof at a 404.',
+                })
+
     # 5. Every /work page must render its relationship disclosure.
     #
     #    Added after an audit found 3 of 6 carrying none at all: the

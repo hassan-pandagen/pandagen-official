@@ -9,6 +9,8 @@ const reviews = CLIENT_REVIEWS.map(r => ({
   source: `${r.name} on ${r.platform}`,
   detail: r.date,
   href: r.href,
+  caseStudy: r.caseStudy,
+  name: r.name,
 }));
 
 export default function SocialProof() {
@@ -134,6 +136,16 @@ export default function SocialProof() {
                     <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                   <span className="block text-xs text-stone-600">{review.detail}</span>
+                  {review.caseStudy && (
+                    <Link
+                      href={review.caseStudy}
+                      className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac"
+                    >
+                      See the project
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      <span className="sr-only"> for {review.name}</span>
+                    </Link>
+                  )}
                 </figcaption>
               </figure>
             ))}
