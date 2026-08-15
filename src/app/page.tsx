@@ -14,9 +14,9 @@ import { alternatesFor } from "@/lib/i18n/config";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+  title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
   description:
-    "We move you off WordPress, Wix, Squarespace, Webflow or GoHighLevel onto custom Next.js you own outright, without losing the traffic you already have. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+    "Move off WordPress, Wix, Squarespace or Webflow onto custom Next.js you own from the start, without losing the traffic you already have. Fixed pricing from $1,500.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
     description:
       "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
     description:
       "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
     images: [ogImageForPath("/")],
@@ -202,7 +202,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "Outgrown WordPress or Wix? Migrate to Custom Next.js | PandaCodeGen",
+        "name": "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
         "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
