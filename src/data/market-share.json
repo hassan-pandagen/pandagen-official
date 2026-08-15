@@ -1,0 +1,56 @@
+{
+  "$comment": [
+    "CMS MARKET SHARE, A TIME SERIES. Third file of its kind, and separate on purpose.",
+    "",
+    "spec-facts.json  vendor prices and limits, 90/180-day staleness clock.",
+    "research-facts.json  published studies, superseded by their next edition.",
+    "market-share.json  a series that GROWS. Each reading is appended, never",
+    "edited, so the shape of the trend is the asset and a correction to one",
+    "year cannot silently rewrite the story of another.",
+    "",
+    "READ OFF THE SOURCE TABLE, NOT A SUMMARY. The figures below were parsed",
+    "from the rendered table on the source URL. The flattened page text was",
+    "parsed first and produced a WRONG alignment: rows with fewer values were",
+    "assumed to be left-aligned, which put Adobe Systems and Google Systems in",
+    "2015-2019 when the table actually places them from 2023. Empty cells carry",
+    "the meaning. Parse the cells, never the text.",
+    "",
+    "WHY ADOBE SYSTEMS AND GOOGLE SYSTEMS ARE EXCLUDED. Both appear abruptly in",
+    "2023 at 1.7% and 1.2% with no prior history and decline from there. A series",
+    "that begins mid-way at a high value is far more likely a reclassification on",
+    "the publisher's side than real adoption, and we will not narrate a taxonomy",
+    "change as a market movement.",
+    "",
+    "WHAT THIS MEASURES. Share of the top 10 million websites, of sites whose CMS",
+    "is known. It is not share of new builds, not share of revenue, and not share",
+    "of the market you sell into. A platform can lose share while growing.",
+    "",
+    "THE SERIES STARTS 2015 because that is where the source's yearly report",
+    "starts. Do not extrapolate backwards; earlier figures exist elsewhere on",
+    "different methods and splicing them would produce a fake trend."
+  ],
+  "source": {
+    "publisher": "W3Techs",
+    "study": "Market share yearly trends for content management systems",
+    "url": "https://w3techs.com/technologies/history_overview/content_management/ms/y",
+    "method": "Share of the top 10 million websites, among sites whose content management system is identified. Surveyed by W3Techs; readings are taken 1 January of each year, plus a current reading.",
+    "limitation": "Identification is by detectable signature, so sites that hide or strip their CMS fingerprint are absent. Share of existing sites is not share of new builds, and the top 10 million skews toward established sites.",
+    "verifiedAt": "2026-08-15"
+  },
+  "periods": [
+    "2015-01", "2016-01", "2017-01", "2018-01", "2019-01", "2020-01",
+    "2021-01", "2022-01", "2023-01", "2024-01", "2025-01", "2026-01", "2026-08"
+  ],
+  "platforms": [
+    { "name": "WordPress", "group": "self-hosted", "series": [60.7, 58.8, 58.5, 60.0, 59.7, 62.1, 64.1, 65.2, 63.7, 62.9, 62.0, 60.2, 59.0] },
+    { "name": "Shopify", "group": "hosted-commerce", "series": [0.7, 1.0, 1.3, 1.8, 2.6, 3.4, 5.2, 6.6, 5.7, 6.0, 6.7, 7.0, 7.7] },
+    { "name": "Wix", "group": "hosted-builder", "series": [0.3, 0.4, 0.6, 0.9, 1.8, 2.3, 2.4, 2.9, 3.6, 3.8, 4.6, 5.8, 6.1] },
+    { "name": "Squarespace", "group": "hosted-builder", "series": [0.5, 0.8, 1.1, 1.5, 2.6, 2.7, 2.3, 2.7, 3.0, 3.0, 3.2, 3.4, 3.5] },
+    { "name": "Joomla", "group": "self-hosted", "series": [8.6, 7.5, 7.2, 6.5, 5.4, 4.6, 3.6, 2.6, 2.7, 2.5, 2.2, 1.9, 1.7] },
+    { "name": "Tilda", "group": "hosted-builder", "series": [null, null, null, null, 0.1, 0.2, 0.4, 0.5, 0.5, 0.6, 0.8, 1.1, 1.2] },
+    { "name": "Webflow", "group": "hosted-builder", "series": [null, null, null, null, 0.2, 0.2, 0.4, 0.7, 0.9, 1.0, 1.1, 1.2, 1.2] },
+    { "name": "Duda", "group": "hosted-builder", "series": [0.2, 0.2, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.5, 0.6, 0.8, 1.0, 1.1] },
+    { "name": "Drupal", "group": "self-hosted", "series": [5.1, 4.9, 4.8, 4.6, 3.5, 3.0, 2.5, 2.0, 1.8, 1.6, 1.3, 1.1, 1.0] },
+    { "name": "GoDaddy Website Builder", "group": "hosted-builder", "series": [0.2, 0.1, 0.1, 0.1, 0.3, 0.4, 0.4, 0.4, 0.5, 0.6, 0.8, 0.9, 0.9] }
+  ]
+}

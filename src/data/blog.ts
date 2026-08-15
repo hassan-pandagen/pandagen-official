@@ -956,6 +956,28 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "cms-market-share-2026",
+    cardStat: "65.2% → 59.0%",
+    cardStatLabel: "WordPress share, 2022 peak to today",
+    title: "CMS Market Share 2015 to 2026: WordPress Peaked in 2022",
+    excerpt: "Twelve years of measured CMS market share. WordPress peaked at 65.2% in 2022 and is at 59.0% today, self-hosted platforms lost 12.7 points while hosted builders gained 12.8, and Webflow has not moved in three readings.",
+    category: "Research",
+    readTime: "9 min",
+    date: "Aug 15",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'traffic',
+    lastModified: "2026-08-15",
+    faqs: [
+      { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 59.0% of the top ten million websites with an identified CMS, read on 15 August 2026. That is its lowest reading since 2017 and 6.2 points below its peak of 65.2% in January 2022." },
+      { question: "Is WordPress losing market share?", answer: "Yes, and it has been since 2022. WordPress rose from 60.7% in 2015 to a peak of 65.2% in January 2022, then declined in every subsequent yearly reading to 59.0%. It remains more than three times the size of the entire hosted site-builder category combined, so it is a declining incumbent with a very large lead rather than a collapsing one." },
+      { question: "Who took WordPress's market share?", answer: "Mostly nobody, because the losses in the self-hosted category were concentrated elsewhere. Joomla fell from 8.6% to 1.7% and Drupal from 5.1% to 1.0%, each losing about four fifths of their share. Across the period self-hosted platforms lost 12.7 points and hosted site builders gained 12.8, which is close to a straight transfer." },
+      { question: "What is Webflow's market share?", answer: "Webflow is at 1.2% of measured sites and has recorded the same figure in three consecutive readings. Tilda is at the same 1.2% and Duda at 1.1%, so the builder share is more spread across small platforms than design-industry discussion suggests." },
+      { question: "Does market share tell you which CMS to choose?", answer: "No. Share of existing sites is a lagging indicator, because the denominator is full of sites built years ago that nobody has touched, so a platform every new project chose from tomorrow would take years to show up. Platform choice turns on your content model, team, integrations and what you are willing to operate." }
+    ]
+  },
+  {
     id: "web-accessibility-glossary",
     cardStat: "29",
     cardStatLabel: "accessibility terms defined, with what each does not prove",
