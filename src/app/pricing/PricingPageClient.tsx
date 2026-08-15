@@ -221,11 +221,11 @@ export default function PricingPageClient() {
                 Get your migration plan <ArrowRight className="w-5 h-5" />
             </button>
 
-            <p className="text-xs text-center text-stone-600 mt-4">
+            <p className="text-xs text-center text-stone-400 mt-4">
               The scope, when you pay, what is warranted and what happens if something is wrong are all confirmed in the written project terms.
             </p>
 
-            <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-600 hover:text-orange-300 transition-colors mt-3 underline underline-offset-2">
+            <Link href="/services/wordpress-migration" className="block text-center text-xs text-stone-400 hover:text-orange-300 transition-colors mt-3 underline underline-offset-2">
               Moving off WordPress? See the full migration scope
             </Link>
           </motion.div>

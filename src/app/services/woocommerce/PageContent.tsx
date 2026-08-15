@@ -300,7 +300,7 @@ export default function PageContent() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition-shadow group"
               >
-                <span aria-hidden="true" className="text-4xl font-black text-stone-200 block mb-3 leading-none">{item.step}</span>
+                <span aria-hidden="true" className="text-4xl font-black text-stone-500 block mb-3 leading-none">{item.step}</span>
                 <div className="w-9 h-9 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-3">
                   <item.icon className="w-4 h-4 text-cognac" />
                 </div>

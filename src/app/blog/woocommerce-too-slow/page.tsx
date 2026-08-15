@@ -260,7 +260,7 @@ export default function WooCommerceTooSlowPage() {
                         anything, because each layer produces a different symptom and the wrong fix costs you time
                         without moving the number.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Layer</th><th className="p-4">What to inspect</th><th className="p-4">Evidence before changing it</th></tr>
@@ -451,7 +451,7 @@ export default function WooCommerceTooSlowPage() {
                         because that is the option that costs a data migration and a retraining exercise on top of the
                         build.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Option</th><th className="p-4">Potential fit</th><th className="p-4">Main tradeoff to test</th></tr>

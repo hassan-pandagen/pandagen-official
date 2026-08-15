@@ -197,7 +197,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                         are rules of thumb rather than thresholds anyone can prove, but in our experience they predict
                         the answer better than any feature comparison does.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">What to look at</th><th className="p-4">Staying is probably right</th><th className="p-4">A custom build starts to earn its place</th></tr>
@@ -249,7 +249,7 @@ export default function WooCommerceVsCustomWebsitePage() {
                             Compare these three on what each one asks of your team, because on raw capability they converge and the table stops telling you anything. WooCommerce keeps editing, features and operations in one place. Headless splits the storefront off and leaves the back office where it is. Custom commerce moves every one of those decisions onto whoever builds and runs it.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1050px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">WooCommerce</th><th className="p-4">Headless WooCommerce</th><th className="p-4">Custom commerce</th></tr>

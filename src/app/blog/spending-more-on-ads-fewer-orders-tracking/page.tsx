@@ -268,7 +268,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     <BlogText>
                         Every definition in this table has an evidence column, because a contract nobody can test is not a contract. Six fields have to be written down before anyone builds: what the event is, which identifiers are permitted, how value is counted, what consent state is required, how duplicates are collapsed, and who owns it. The deduplication row is where most implementations quietly double-count.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[800px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Field</th><th className="p-4">Definition</th><th className="p-4">Acceptance evidence</th></tr>

@@ -266,7 +266,7 @@ export default function AEOPlaybookPage() {
                         Here is what each system actually rewards.
                     </BlogText>
 
-                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto">
+                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="text-xs text-stone-500 px-6 md:px-0 mb-2 md:hidden">Swipe to see all columns</p>
                         <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>

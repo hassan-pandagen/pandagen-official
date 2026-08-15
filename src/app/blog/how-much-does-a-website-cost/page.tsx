@@ -210,7 +210,7 @@ export default function WebsiteCostGuide() {
                     <BlogText>
                         These are planning anchors, not a promise that any page count, feature set or integration fits a tier. Every tier splits 30 percent at onboarding and 70 percent at delivery. The accepted proposal and statement of work control the final price, the deliverables, the exclusions, the schedule, the acceptance criteria and the remedy.
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>
@@ -318,7 +318,7 @@ export default function WebsiteCostGuide() {
                         so it is worth reading this next to{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom website takes to build</Link>.
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

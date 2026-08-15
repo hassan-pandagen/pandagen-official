@@ -287,7 +287,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         {/* Comparison Table */}
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">← Swipe to see more →</p>
-                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full border-collapse text-sm min-w-[560px] responsive-stack-table">
                                 <thead>
                                     <tr className="bg-stone-100">
@@ -390,7 +390,7 @@ export default function NextjsHostingZeroCostPage() {
                             not a meter that trips the instant you pass it.
                         </BlogText>
 
-                        <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                        <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[680px] border-collapse text-left text-sm">
                                 <thead className="bg-stone-100 text-charcoal">
                                     <tr>

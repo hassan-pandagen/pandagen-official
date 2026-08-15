@@ -176,7 +176,7 @@ export default function WebflowPageContent() {
                   <item.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-charcoal font-bold text-lg mb-2">{item.signal}</h3>
-                <p className="text-stone-400 leading-relaxed text-sm">{item.detail}</p>
+                <p className="text-stone-600 leading-relaxed text-sm">{item.detail}</p>
               </motion.div>
             ))}
           </div>

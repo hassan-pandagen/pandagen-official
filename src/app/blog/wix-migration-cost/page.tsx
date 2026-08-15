@@ -198,7 +198,7 @@ export default function WixMigrationCostPage() {
                     <BlogText>
                         Our planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, and those are our own anchors rather than Wix migration market averages. There is no page-count formula behind them. Five pages with booking, payments, automations and member data can require more migration work than many static pages, so price unique templates, states, data and workflows alongside page count.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">PandaCodeGen tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th></tr>

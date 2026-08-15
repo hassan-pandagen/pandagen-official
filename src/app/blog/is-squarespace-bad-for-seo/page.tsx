@@ -289,7 +289,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         review. It is worth reading as three rows rather than a verdict, because only one of them is likely
                         to describe your situation.
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>
@@ -486,7 +486,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         </Link>
                         .
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

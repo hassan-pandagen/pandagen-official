@@ -211,15 +211,15 @@ const caseStudySchema = {
 
 const techStack = [
     { name: "Next.js 16", role: "Frontend + API routes", color: "bg-stone-900 text-white" },
-    { name: "React 19", role: "UI runtime", color: "bg-sky-600 text-white" },
+    { name: "React 19", role: "UI runtime", color: "bg-sky-700 text-white" },
     { name: "TypeScript", role: "Type safety", color: "bg-blue-600 text-white" },
-    { name: "Tailwind CSS 3", role: "Styling", color: "bg-sky-500 text-white" },
-    { name: "Sanity CMS", role: "25 doc types · ISR content", color: "bg-red-500 text-white" },
-    { name: "Supabase", role: "DB + Auth + Storage (shared)", color: "bg-emerald-600 text-white" },
+    { name: "Tailwind CSS 3", role: "Styling", color: "bg-sky-700 text-white" },
+    { name: "Sanity CMS", role: "25 doc types · ISR content", color: "bg-red-700 text-white" },
+    { name: "Supabase", role: "DB + Auth + Storage (shared)", color: "bg-emerald-700 text-white" },
     { name: "Square", role: "Checkout · Apple/Google Pay · Cash App · Afterpay", color: "bg-stone-800 text-white" },
     { name: "FAL", role: "AI patch image generation", color: "bg-violet-600 text-white" },
     { name: "Meta Pixel + CAPI", role: "Deduped server-side tracking", color: "bg-blue-600 text-white" },
-    { name: "GA4 + GTM + Google Ads", role: "Conversion measurement", color: "bg-amber-600 text-white" },
+    { name: "GA4 + GTM + Google Ads", role: "Conversion measurement", color: "bg-amber-700 text-white" },
     { name: "React Hook Form + Zod", role: "Validated forms + calculator", color: "bg-pink-600 text-white" },
     { name: "ZeptoMail", role: "Transactional + abandoned-cart email", color: "bg-indigo-600 text-white" },
     { name: "Vercel", role: "Hosting + CDN + Cron", color: "bg-stone-700 text-white" },
@@ -366,7 +366,7 @@ export default function PandaPatchesCaseStudy() {
                         {/* Brand names */}
                         <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-8">
                             {["Google", "Microsoft", "Coca-Cola", "Nissan", "Wise"].map((b) => (
-                                <span key={b} className="text-lg md:text-2xl font-bold text-stone-400 tracking-tight">{b}</span>
+                                <span key={b} className="text-lg md:text-2xl font-bold text-stone-500 tracking-tight">{b}</span>
                             ))}
                         </div>
 
@@ -471,7 +471,7 @@ export default function PandaPatchesCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6 mb-8">
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     No Calculator. Every Sale Was a Waiting Game.
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -480,7 +480,7 @@ export default function PandaPatchesCaseStudy() {
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     7 Disconnected Tools
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -602,7 +602,7 @@ export default function PandaPatchesCaseStudy() {
                             {techStack.map((t) => (
                                 <div key={t.name} className={`px-4 py-2 rounded-xl ${t.color}`}>
                                     <div className="text-sm font-bold">{t.name}</div>
-                                    <div className="text-xs opacity-90">{t.role}</div>
+                                    <div className="text-xs">{t.role}</div>
                                 </div>
                             ))}
                         </div>

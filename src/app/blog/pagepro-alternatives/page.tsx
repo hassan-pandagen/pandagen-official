@@ -227,7 +227,7 @@ export default function PageproAlternativesPage() {
                             Four rows, each taken from the provider&apos;s own site rather than a directory, and the column that matters is the third: what the page cannot tell you. A service list establishes what a firm says it does. It does not establish price, availability, who would be assigned, or what the contract says, and those are the four things that decide the outcome.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

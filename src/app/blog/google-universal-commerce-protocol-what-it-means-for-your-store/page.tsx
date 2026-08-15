@@ -225,7 +225,7 @@ export default function UniversalCommerceProtocolGuide() {
                         of the most common questions on this topic are what separates UCP from MCP and what separates
                         UCP from AP2. They sit at different layers and none of them replaces another.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[36rem] border-collapse text-sm">
                             <caption className="sr-only">
                                 How the Universal Commerce Protocol relates to the Model Context Protocol,

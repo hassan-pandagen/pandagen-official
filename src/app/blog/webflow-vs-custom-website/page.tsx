@@ -183,7 +183,7 @@ export default function WebflowVsCustomWebsitePage() {
                             Four factors decide this, and none of them is speed or design quality. Editing asks who ships a page change. Requirements ask whether the platform can express what you need. Control asks who holds the code and the accounts. Lifecycle asks who can afford to run it. Answer all four before you compare anything else.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Factor</th><th className="p-4">Webflow question</th><th className="p-4">Custom question</th></tr>
@@ -271,7 +271,7 @@ export default function WebflowVsCustomWebsitePage() {
                         and stop there, which is not a number you can put in a budget. These are Webflow&apos;s published
                         list prices, <strong>read from webflow.com/pricing on 5 August 2026</strong>, annual billing:
                     </BlogText>
-                    <div className="my-6 overflow-x-auto">
+                    <div className="my-6 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full border-collapse text-left text-sm">
                             <thead>
                                 <tr className="border-b border-stone-300">
@@ -396,7 +396,7 @@ export default function WebflowVsCustomWebsitePage() {
                             "Migrate to custom when what you need on portability, data, experience, integrations or release process has outgrown what the platform allows.",
                         ]}
                     />
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Business profile</th><th className="p-4">Technical capacity</th><th className="p-4">Content operation</th><th className="p-4">Usually points to</th></tr>

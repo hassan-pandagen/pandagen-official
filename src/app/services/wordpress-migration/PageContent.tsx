@@ -260,7 +260,7 @@ export default function PageContent() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md hover:border-stone-200 transition-all group"
               >
-                <span aria-hidden="true" className="text-5xl font-black text-stone-300 block mb-4 leading-none group-hover:text-stone-200 transition-colors">{item.step}</span>
+                <span aria-hidden="true" className="text-5xl font-black text-stone-500 block mb-4 leading-none group-hover:text-stone-600 transition-colors">{item.step}</span>
                 <div className="w-10 h-10 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
                   <item.icon className="w-5 h-5 text-cognac" />
                 </div>
@@ -543,7 +543,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-3xl bg-white border border-stone-200 shadow-card hover:border-orange-300 transition-colors">
-              <div className="text-orange-500 text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
+              <div className="text-orange-600 text-sm font-bold uppercase tracking-wider mb-4">Option A</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">WordPress Optimization</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
                 Not ready to migrate yet? We&apos;ll optimize your current WordPress site to get the most performance possible within the platform&apos;s limitations.

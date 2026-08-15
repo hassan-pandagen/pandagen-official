@@ -264,7 +264,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     <BlogText>
                         Locate the stage first, then look at performance for that stage only. Each row pairs the business causes worth ruling out with the performance evidence that belongs to that step, because a drop between cart and checkout has a different explanation set from a drop between landing and product.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Drop</th><th className="p-4">Investigate</th><th className="p-4">Performance evidence</th></tr>

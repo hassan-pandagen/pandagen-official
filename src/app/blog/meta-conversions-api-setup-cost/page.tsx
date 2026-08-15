@@ -469,7 +469,7 @@ export default function MetaCAPISetupCostPage() {
                         variables that decide whether a build sits at the bottom or the top of whatever quote you are
                         given, so you can push a vendor on the ones that apply to you.
                     </BlogText>
-                    <div className="responsive-stack-wrap my-8 overflow-x-auto">
+                    <div className="responsive-stack-wrap my-8 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="responsive-stack-table w-full min-w-[560px] border-collapse text-sm">
                             <thead>
                                 <tr className="border-b border-stone-300 bg-stone-50">

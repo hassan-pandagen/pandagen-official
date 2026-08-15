@@ -269,7 +269,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         of the four layers travel with the store, not with the theme.
                     </BlogText>
 
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Layer</th><th className="p-4">Who controls it</th><th className="p-4">What to do about it</th></tr>
@@ -425,7 +425,7 @@ export default function ShopifyDawnThemeSlowPage() {
                         doing. That last guardrail is the strictest: measure what changed, and do not convert it into a
                         causal revenue claim you cannot support.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Layer</th><th className="p-4">Before and after</th><th className="p-4">Guardrail</th></tr>
@@ -447,7 +447,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     </BlogText>
 
                     <p className="mb-2 mt-4 text-xs font-bold text-cognac md:hidden">Swipe to see more</p>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Action</th><th className="p-4">Worth doing</th><th className="p-4">How to verify on your store</th></tr>

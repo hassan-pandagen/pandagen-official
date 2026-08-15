@@ -164,21 +164,21 @@ const caseStudySchema = {
 };
 
 const techStack = [
-    { name: "React 18", role: "Frontend UI", color: "bg-sky-500 text-white" },
+    { name: "React 18", role: "Frontend UI", color: "bg-sky-700 text-white" },
     { name: "TypeScript 5", role: "100% type safety (strict)", color: "bg-blue-600 text-white" },
-    { name: "Vite 5", role: "Build + code-split HMR", color: "bg-violet-500 text-white" },
-    { name: "Tailwind CSS 3", role: "Design system + dark mode", color: "bg-sky-400 text-white" },
-    { name: "Supabase", role: "Postgres + Auth + RLS", color: "bg-emerald-600 text-white" },
-    { name: "TanStack Query 5", role: "Server state + caching", color: "bg-red-500 text-white" },
-    { name: "React Router 6", role: "Protected + nested routes", color: "bg-rose-500 text-white" },
+    { name: "Vite 5", role: "Build + code-split HMR", color: "bg-violet-700 text-white" },
+    { name: "Tailwind CSS 3", role: "Design system + dark mode", color: "bg-sky-700 text-white" },
+    { name: "Supabase", role: "Postgres + Auth + RLS", color: "bg-emerald-700 text-white" },
+    { name: "TanStack Query 5", role: "Server state + caching", color: "bg-red-700 text-white" },
+    { name: "React Router 6", role: "Protected + nested routes", color: "bg-rose-700 text-white" },
     { name: "React Hook Form + Zod", role: "Validated forms", color: "bg-pink-600 text-white" },
-    { name: "Recharts", role: "Analytics charts", color: "bg-indigo-500 text-white" },
+    { name: "Recharts", role: "Analytics charts", color: "bg-indigo-700 text-white" },
     { name: "@react-pdf/renderer", role: "Invoices / PDFs", color: "bg-stone-600 text-white" },
-    { name: "Framer Motion", role: "UI animations", color: "bg-pink-500 text-white" },
+    { name: "Framer Motion", role: "UI animations", color: "bg-pink-700 text-white" },
     { name: "Row-Level Security", role: "Per-table DB policies", color: "bg-emerald-700 text-white" },
     { name: "Edge Functions (Deno)", role: "20 serverless functions", color: "bg-emerald-800 text-white" },
     { name: "Square + Stripe", role: "Checkout + payouts", color: "bg-blue-800 text-white" },
-    { name: "Meta CAPI", role: "Server-side ad tracking", color: "bg-blue-500 text-white" },
+    { name: "Meta CAPI", role: "Server-side ad tracking", color: "bg-blue-700 text-white" },
     { name: "Sentry", role: "APM + error tracking", color: "bg-violet-700 text-white" },
 ];
 
@@ -235,7 +235,7 @@ const roles = [
     {
         role: "ADMIN",
         color: "bg-red-50 border-red-200",
-        badge: "bg-red-500 text-white",
+        badge: "bg-red-700 text-white",
         access: [
             "Full order pipeline, all stages, all agents",
             "Profit calculations and margin analytics",
@@ -259,7 +259,7 @@ const roles = [
     {
         role: "PRODUCTION",
         color: "bg-amber-50 border-amber-200",
-        badge: "bg-amber-600 text-white",
+        badge: "bg-amber-700 text-white",
         access: [
             "Pending production orders (IN_PRODUCTION)",
             "Mark orders as READY_TO_SHIP",
@@ -379,7 +379,7 @@ export default function EnterpriseOpsCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6 mb-8">
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     Spreadsheet Hell
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -388,7 +388,7 @@ export default function EnterpriseOpsCaseStudy() {
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     No Single Source of Truth
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -620,7 +620,7 @@ export default function EnterpriseOpsCaseStudy() {
                             {techStack.map((t) => (
                                 <div key={t.name} className={`px-4 py-2 rounded-xl ${t.color}`}>
                                     <div className="text-sm font-bold">{t.name}</div>
-                                    <div className="text-xs opacity-90">{t.role}</div>
+                                    <div className="text-xs">{t.role}</div>
                                 </div>
                             ))}
                         </div>

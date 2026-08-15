@@ -262,7 +262,7 @@ export default function SaasBillAuditGuide() {
                         becomes visible once the register is grouped by purpose rather than by vendor. Where two
                         products cover one accepted requirement, decide which one stays before you price a third.
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Requirement</th><th className="p-4">Current</th><th className="p-4">Candidate</th><th className="p-4">Migration evidence</th></tr>

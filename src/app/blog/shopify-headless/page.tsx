@@ -312,7 +312,7 @@ export default function ShopifyHeadlessPage() {
                             Three paths are available, and what separates them is not capability but how much integration work your team owns afterwards. A Shopify theme leaves almost all of it with Shopify, Hydrogen splits it, and your own Storefront API client puts every decision on your side. Pick by the team you have rather than the stack you admire.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Path</th><th className="p-4">Best fit</th><th className="p-4">Responsibility</th></tr>

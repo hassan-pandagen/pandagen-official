@@ -226,7 +226,7 @@ export default function WebsiteTimelineGuide() {
                         Commerce scope is set out on our{" "}
                         <Link href="/services/ecommerce" className="text-cognac hover:underline font-medium">ecommerce engineering</Link> page.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto">
+                    <div className="my-6 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[560px] border-collapse text-sm">
                             <thead>
                                 <tr className="bg-stone-100 text-left">
@@ -290,7 +290,7 @@ export default function WebsiteTimelineGuide() {
                     <BlogText>
                         Calendar duration is not developer hours divided by eight. A schedule that names its dependencies and its owners is describing real work; one that offers a single headline duration is describing a hope. Five phases, each with the evidence that closes it and the dependency that usually blocks it. Read the third column first, because that is where your own schedule will slip.
                     </BlogText>
-                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
+                    <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[680px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

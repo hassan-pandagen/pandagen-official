@@ -115,7 +115,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
           <BlogSearch />
 
           {/* Category Filters: horizontal scroll on mobile, wrap on desktop */}
-          <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none">
+          <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none" tabIndex={0} role="region" aria-label="Scrollable table">
             <Filter aria-hidden="true" className="w-4 h-4 text-stone-600 shrink-0" />
             {categories.map((category) => (
               <button

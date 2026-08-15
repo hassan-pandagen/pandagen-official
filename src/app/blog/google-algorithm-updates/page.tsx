@@ -235,7 +235,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                             Google began publishing this history in {REGISTER_START}. Updates before that date were announced through blog posts and social accounts rather than a structured record, so they are not included here. Two entries are labelled &ldquo;ranking issue&rdquo; rather than an update, which is how Google logs a bug it later corrected.
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[34rem] border-collapse text-sm">
                                 <caption className="sr-only">
                                     Confirmed Google Search ranking updates from {REGISTER_START} onward, with rollout start dates and durations, as recorded on the Google Search Status Dashboard.

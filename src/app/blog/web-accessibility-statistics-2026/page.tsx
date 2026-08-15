@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-13",
-        modifiedTime: "2026-08-13",
+        modifiedTime: "2026-08-15",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/web-accessibility-statistics-2026")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/web-accessibility-statistics-2026"),
             datePublished: "2026-08-13",
-            dateModified: "2026-08-13",
+            dateModified: "2026-08-15",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -94,8 +94,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Web Content Accessibility Guidelines", sameAs: ["https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines"] },
                 { "@type": "Thing", name: "Americans with Disabilities Act of 1990", sameAs: ["https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990"] },
             ],
-            wordCount: 1850,
-            timeRequired: "PT9M",
+            wordCount: 2112,
+            timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             keywords: ["web accessibility statistics", "WCAG", "WebAIM Million", "ADA", "accessibility errors"],
             // Citations generated from the same data the body renders, so the
@@ -317,6 +317,45 @@ export default function WebAccessibilityStatistics2026Page() {
                         And it cannot tell you about people. Every number on this page counts machine-detectable defects
                         in markup. Not one of them counts a person who gave up on a form. That measurement exists, but
                         it is made by watching people use your site, and no million-page scan is a substitute for it.
+                    </BlogText>
+
+                    <BlogHeader>So we measured our own site</BlogHeader>
+                    <BlogText>
+                        Writing the paragraphs above put us in an awkward position. This article argues that low
+                        contrast is the most common failure on the web, that it is a hex value, and that the reason it
+                        is everywhere is that nobody checked. It would be reasonable for you to ask whether we had.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>We had not.</BlogHighlight> We scanned all 134 pages of this site with axe-core
+                        on 14 August 2026 and found 740 detected violation nodes across 70 of them. The home page alone
+                        carried 15 contrast failures. Three rules accounted for everything: 388 contrast, 329 links in
+                        body text distinguished by colour alone, and 23 scrollable tables that could not be reached
+                        with a keyboard.
+                    </BlogText>
+                    <BlogText>
+                        Almost all of it came from a handful of decisions rather than a hundred mistakes. One neutral
+                        token measured 4.39:1 against our page background, failing by 0.11 in 57 places. Inline links
+                        were cognac and only underlined on hover, which is one CSS rule and 329 of the nodes. The
+                        accent colour worked on white and failed on charcoal, and no single value could fix both:
+                        clearing 4.5:1 against white caps relative luminance at 0.183, and clearing it against our dark
+                        panels needs at least 0.233. That one needed a surface-aware token rather than a find and
+                        replace, which we learned by trying the find and replace first and adding 51 new failures.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>All 134 pages now report zero detected violations</BlogHighlight>, confirmed on
+                        three consecutive runs. The scanner is in our repository and runs against a local build before
+                        anything ships.
+                    </BlogText>
+                    <BlogText>
+                        Two things that number is not. It is not comparable to the 95.9% above, because that study uses
+                        WAVE and we used axe-core, and comparing counts across tools is a measurement error rather than
+                        a result. And zero detected violations is not conformance, for the same reason it is not
+                        conformance for anybody else on this page. It means the machine-checkable part is clean.
+                    </BlogText>
+                    <BlogText>
+                        We are publishing the before number because the 95.9% figure includes sites built by people who
+                        know all of this. We were one of them. The useful part is not that we are now at zero, it is
+                        that finding out took one afternoon and a free tool, on a site nobody had ever scanned.
                     </BlogText>
 
                     <BlogHeader>Sources</BlogHeader>

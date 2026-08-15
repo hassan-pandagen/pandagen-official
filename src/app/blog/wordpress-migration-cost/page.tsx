@@ -215,7 +215,7 @@ export default function WordPressMigrationCostPage() {
                             Our migrations start at $1,500 for a small site on a few repeatable templates, and rise with the number of distinct templates, the state of the data and the integrations that have to survive the move. URL count is rarely what sends a quote up a tier. Read the fourth column, because that is where most quotes actually move.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Tier</th><th className="p-4">Planning range</th><th className="p-4">Potential fit</th><th className="p-4">Common scope expansion</th></tr>

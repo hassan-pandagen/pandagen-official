@@ -120,7 +120,7 @@ export default function FeaturedProductHero() {
       </div>
 
       {/* --- THUMBNAIL STRIP (click to feature) --- */}
-      <div className="mt-7 md:mt-9 flex gap-3 overflow-x-auto pb-1 -mx-1 px-1 snap-x">
+      <div className="mt-7 md:mt-9 flex gap-3 overflow-x-auto pb-1 -mx-1 px-1 snap-x" tabIndex={0} role="region" aria-label="Scrollable table">
         {PRODUCTS.map((p) => {
           const isActive = p.id === active.id;
           return (

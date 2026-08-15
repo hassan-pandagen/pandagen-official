@@ -361,7 +361,7 @@ export default function SquarespaceTooSlowPage() {
                         actually meets it, and carry a non-speed guardrail alongside each one. That guardrail is what
                         stops a faster page from shipping with a broken form or a missing conversion event.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Route</th><th className="p-4">State to test</th><th className="p-4">Business guardrail</th></tr>

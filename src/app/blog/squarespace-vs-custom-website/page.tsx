@@ -215,7 +215,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     <BlogText>
                         The answer to “can the platform do it” is usually yes, so the useful question is what it costs to run. Read the add-on model as part of the feature set: scheduling, email campaigns, member areas, review displays and chat are separate products with their own billing, and each one that renders on a page typically loads its own script there. The table below asks the question from both sides rather than declaring a winner.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">Squarespace question</th><th className="p-4">Custom question</th></tr>

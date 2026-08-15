@@ -271,7 +271,7 @@ export default function WordPressVsNextJsPage() {
                     <BlogText>
                         The six rows below all resolve to one thing: where the responsibility sits. WordPress ships content, rendering, features, updates, deploys and exit as one product; Next.js requires you to choose and assemble each of them. That is not better or worse, it is a different amount of ownership. The row most comparisons skip is the last one, because exit is where the difference actually costs money.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1060px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">WordPress</th><th className="p-4">Next.js implementation</th></tr>
@@ -392,7 +392,7 @@ export default function WordPressVsNextJsPage() {
                         input validation, logs, backups, recovery and incident response. Static output can reduce some
                         runtime exposure but does not create a zero-attack-surface site.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

@@ -184,7 +184,7 @@ export default function CheapWebDeveloperPage() {
             explains which inputs move a quote from one bucket to the next.
           </BlogText>
 
-          <div className="my-8 overflow-x-auto">
+          <div className="my-8 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
             <table className="w-full min-w-[650px] border-collapse text-sm">
               <thead>
                 <tr className="bg-stone-100">

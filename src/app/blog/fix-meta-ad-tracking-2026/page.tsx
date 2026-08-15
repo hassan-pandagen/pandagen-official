@@ -335,7 +335,7 @@ export default function MetaAdTrackingGuide() {
                     </BlogText>
 
                     <p className="swipe-hint mb-2 mt-4 text-xs font-bold text-cognac md:hidden">← Swipe to see more →</p>
-                    <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:px-0">
+                    <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="responsive-stack-table w-full min-w-[560px] border-collapse text-sm">
                             <thead>
                                 <tr className="bg-stone-100">

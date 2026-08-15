@@ -273,7 +273,7 @@ export default function WillMigratingHurtSeoPage() {
                         Search behavior after a migration varies. Monitor from the launch baseline and investigate material changes rather than promising a standard dip or recovery curve.
                     </BlogText>
 
-                    <div className="my-8 overflow-x-auto">
+                    <div className="my-8 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="text-xs text-stone-500 mb-2 md:hidden">Swipe to see the full table &rarr;</p>
                         <table className="w-full min-w-[560px] border-collapse text-sm">
                             <thead>

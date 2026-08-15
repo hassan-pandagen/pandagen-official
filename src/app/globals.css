@@ -27,7 +27,10 @@
   --color-paper: #f5f5f4;
   --color-charcoal: #1c1917;
   --color-midnight: #0c0a09;
-  --color-cognac: #b8410c;
+  --color-cognac: #ad3d0b;
+  /* Cognac for dark surfaces. #b8410c measures 2.78:1 to 3.47:1 on the dark
+     panels this site uses; this measures 5.69:1 to 6.48:1 on the same set. */
+  --color-cognac-light: #e8763a;
 
   --color-stone-50: #fafaf9;
   --color-stone-100: #f5f5f4;
@@ -53,6 +56,13 @@
      emerald-600 #009966 measured 3.65:1 on white. #008055 gives 4.98:1. */
   --color-red-500: #d70008;
   --color-emerald-600: #008055;
+  /* red-600 #e7000b measured 4.36:1 on the red-50 callout and 4.37:1 on paper.
+     green-600 #00a63e measured 3.08:1 on green-50. orange-600 #f54900
+     measured 3.39:1 on orange-50. All three sit on tinted callout surfaces
+     where the default scale is tuned for white and falls just short. */
+  --color-red-600: #d70008;
+  --color-green-600: #008236;
+  --color-orange-600: #ca3500;
 
   --text-heading-1: 72px;
   --text-heading-1--line-height: 1.05;
@@ -314,8 +324,12 @@
 }
 
 @utility text-cognac {
-  /* Cognac accent helpers */
-  color: #b8410c;
+  /* Cognac accent helpers.
+     #b8410c measured 4.39:1 on the #efe3dd badge surface (bg-cognac/10 over
+     paper), failing by 0.11 in 15 places. #ad3d0b measures 4.84:1 there and
+     6.09:1 on white. bg-cognac and border-cognac keep the exact brand value;
+     only text moves, and the two are indistinguishable side by side. */
+  color: #ad3d0b;
 }
 
 /*
@@ -331,7 +345,7 @@
  * in the other direction; keep text-cognac for that.
  */
 @utility text-cognac-light {
-  color: #e8763a;
+  color: var(--color-cognac-light);
 }
 
 @utility bg-cognac {
@@ -606,12 +620,67 @@ body {
  * Scoped to <p> and <li> children inside prose containers so that button-style
  * CTAs, cards and nav links inside an <article> keep their own treatment.
  */
-:is(article, .prose) :is(p, li) > a {
+/* Widened from article/.prose after the scan showed the same failure on the
+ * legal pages and two service pages, which are prose but not <article>. */
+:is(article, .prose, main) :is(p, li) > a:not([class*="rounded"]):not([class*="bg-"]) {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
 }
 
-:is(article, .prose) :is(p, li) > a:hover {
+:is(article, .prose, main) :is(p, li) > a:not([class*="rounded"]):not([class*="bg-"]):hover {
   text-decoration-thickness: 2px;
+}
+
+/*
+ * SURFACE-AWARE ACCENT AND NEUTRAL TOKENS
+ *
+ * The problem this solves, stated precisely: no single cognac clears 4.5:1 on
+ * both surfaces. Clearing it against white caps relative luminance at 0.183;
+ * clearing it against #1c1917 requires at least 0.233. There is no such colour,
+ * so the token has to know what it is sitting on.
+ *
+ * A find-and-replace cannot do this, and we proved it the expensive way: the
+ * same class string (`text-cognac text-sm font-bold uppercase tracking-widest`)
+ * appears on paper in /work and on charcoal in /services. Swapping it by string
+ * introduced 51 new failures. Only the surface can decide.
+ *
+ * 147 files use a dark background, so tagging each section by hand was not
+ * sensible either. This keys off the background classes the site already uses.
+ * The substring matches cover Tailwind arbitrary values such as bg-[#161b27],
+ * whose escaped class selectors are unreadable.
+ *
+ * Specificity: these are (0,2,0) or higher and beat the (0,1,0) utilities.
+ *
+ * VERIFY WITH THE SCANNER, NEVER BY EYE:
+ *   npm run build && npx next start -p 3111
+ *   cd scripts/scan && node selfscan.mjs --base http://localhost:3111
+ */
+@layer utilities {
+  :is(
+    .bg-charcoal, .bg-midnight, .theme-midnight,
+    .bg-stone-800, .bg-stone-900, .bg-stone-950,
+    [class*="bg-[#0"], [class*="bg-[#1"], [class*="bg-[#2"], [class*="bg-[#3"]
+  ) {
+    :is(.text-cognac, .text-accent) { color: var(--color-cognac-light); }
+    :is(.text-stone-500, .text-stone-600, .text-stone-700, .text-gray-500, .text-gray-600) {
+      color: var(--color-stone-400);
+    }
+  }
+
+  /*
+   * A light card nested inside a dark section must go back to the light values,
+   * or the rule above lightens text that is sitting on white again. This is the
+   * failure mode the /work revert was caused by, so it is guarded explicitly.
+   */
+  :is(
+    .bg-charcoal, .bg-midnight, .theme-midnight,
+    .bg-stone-800, .bg-stone-900, .bg-stone-950,
+    [class*="bg-[#0"], [class*="bg-[#1"], [class*="bg-[#2"], [class*="bg-[#3"]
+  ) :is(.bg-white, .bg-paper, .bg-stone-50, .bg-stone-100, .bg-stone-200) {
+    :is(.text-cognac, .text-accent) { color: var(--color-cognac); }
+    .text-stone-600 { color: var(--color-stone-600); }
+    .text-stone-700 { color: var(--color-stone-700); }
+    .text-stone-500 { color: var(--color-stone-500); }
+  }
 }

@@ -371,7 +371,7 @@ export default function WebflowUserAccountsSunsetPage() {
                             Replace what the old system did, not what the new vendor sells. Five areas cover it, and each needs acceptance evidence rather than a feature tick, because &ldquo;supports login&rdquo; and &ldquo;handles your reset, verification, MFA and session rules correctly&rdquo; are different claims. Fill the middle column from your own site before you read anybody&apos;s feature list.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">Inventory</th><th className="p-4">Acceptance evidence</th></tr>

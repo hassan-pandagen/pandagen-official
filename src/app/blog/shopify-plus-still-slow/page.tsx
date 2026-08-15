@@ -281,7 +281,7 @@ export default function ShopifyPlusStillSlowPage() {
                     <BlogText>
                         Trace the real page, not a staging copy, because apps and tags behave differently in production. Five areas account for most of what you will find, and each row pairs what to inspect with what to do about it. Refactor only the bottleneck the trace actually named.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">Inspect</th><th className="p-4">Common action</th></tr>

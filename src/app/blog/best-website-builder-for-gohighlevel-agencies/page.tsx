@@ -275,7 +275,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Vendor pages were checked July 24, 2026. Mutable prices and features still need a dated quote or saved plan page before a proposal is signed.
                     </BlogText>
 
-                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto">
+                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="text-xs text-stone-500 px-6 md:px-0 mb-2 md:hidden">Swipe to see all columns</p>
                         <table className="w-full text-sm border-collapse min-w-[700px]">
                             <thead>
@@ -484,7 +484,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Custom development lets the team choose components and vendors, but each choice brings quotas, licenses, usage billing, maintenance, and security obligations. Compare the exact constraints that matter instead of describing either option as unlimited.
                     </BlogText>
 
-                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto">
+                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="text-xs text-stone-500 px-6 md:px-0 mb-2 md:hidden">Swipe to see all columns</p>
                         <table className="w-full text-sm border-collapse min-w-[560px]">
                             <thead>
@@ -524,7 +524,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         A defensible three-year comparison uses the current quote plus the client&apos;s actual scope. Include build and migration labor, subscription and site plans, seats, bandwidth, integrations, support, maintenance, security, change requests, and exit work. Do not freeze July 2026 prices for three future years.
                     </BlogText>
 
-                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto">
+                    <div className="my-6 -mx-6 md:mx-0 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="text-xs text-stone-500 px-6 md:px-0 mb-2 md:hidden">Swipe to see all columns</p>
                         <table className="w-full text-sm border-collapse min-w-[640px]">
                             <thead>

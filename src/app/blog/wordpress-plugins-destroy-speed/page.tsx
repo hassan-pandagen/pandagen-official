@@ -214,7 +214,7 @@ export default function WordPressPluginPerformancePage() {
                             You cannot decide anything about a plugin until you know what breaks without it, which is an inventory question rather than a performance one. Six fields answer it, and the last is the one most audits skip: what actually changes when the component is isolated. Fill this in before you measure, not after.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1020px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Field</th><th className="p-4">Question</th><th className="p-4">Why it matters</th></tr>
@@ -354,7 +354,7 @@ export default function WordPressPluginPerformancePage() {
                             your own numbers, so they say nothing about anybody&apos;s product in general.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[620px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">What you measured</th><th className="p-4">Verdict</th><th className="p-4">What to do</th></tr>
@@ -399,7 +399,7 @@ export default function WordPressPluginPerformancePage() {
                         and its database tables in a single change. That is why a consolidation pass is normally the
                         higher-yield use of an afternoon, provided every capability and its data survives the move.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Overlap to look for</th><th className="p-4">Consolidated outcome</th></tr>

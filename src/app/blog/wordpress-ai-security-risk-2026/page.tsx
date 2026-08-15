@@ -243,7 +243,7 @@ export default function WordPressAiSecurityRiskPage() {
                         not a complete replacement for a current vulnerability scan. Read the authoritative record
                         before acting because affected versions, conditions and remediation can differ.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1100px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Advisory</th><th className="p-4">Affected version</th><th className="p-4">Prerequisite in the record</th><th className="p-4">Published remediation</th></tr>

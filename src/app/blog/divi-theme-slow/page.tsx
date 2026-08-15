@@ -395,7 +395,7 @@ export default function DiviThemeSlowPage() {
                         column: the gain depends entirely on which bottleneck your site actually has, and a fix aimed at
                         the wrong bottleneck returns close to nothing.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

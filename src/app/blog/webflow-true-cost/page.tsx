@@ -209,7 +209,7 @@ export default function WebflowTrueCostPage() {
                         set out the same layers for a move away from the platform.
                     </BlogText>
 
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Cost layer</th><th className="p-4">Evidence</th><th className="p-4">Calculation</th></tr>

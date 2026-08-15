@@ -190,7 +190,7 @@ export default function CookiesPage() {
                 only when the deployment has a verified configuration and you allow its category.
               </p>
 
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                 <table className="w-full min-w-[760px] text-sm border border-stone-200 rounded-lg overflow-hidden">
                   <caption className="sr-only">Current cookie and browser-storage technology inventory</caption>
                   <thead className="bg-stone-50">

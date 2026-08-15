@@ -449,7 +449,7 @@ export default function HighLevelSpeedGuide() {
                         </BlogText>
                     </div>
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">&larr; Swipe to see more &rarr;</p>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

@@ -292,7 +292,7 @@ export default function TopNextjsAgenciesPage() {
                             Eight providers, listed alphabetically and not ranked, each described only from what its own site publishes as of the check date below. The middle column is deliberately thin: it records what a firm demonstrates about itself, not what a directory says about it. Everything in the right-hand column is what you still have to establish by asking.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1040px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

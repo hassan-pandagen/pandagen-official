@@ -208,7 +208,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 There is no single Shopify speed number that explains every visitor&apos;s experience. Shopify&apos;s Web Performance reports use real-user monitoring data and show loading, interactivity, and visual stability over time. PageSpeed Insights can show Chrome User Experience Report field data for the previous 28-day period when a URL or origin has enough eligible traffic. It also runs Lighthouse in a simulated lab environment. Those views answer different questions.
                             </BlogText>
 
-                            <div className="overflow-x-auto my-6">
+                            <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
                                 <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to see the full table</div>
                                 <table className="min-w-[650px] w-full border-collapse border border-stone-300 text-sm">
                                     <thead>
@@ -426,7 +426,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 A Liquid theme does not have one universal PageSpeed ceiling. Results depend on the template, theme implementation, apps, media, third-party code, traffic mix, and test conditions. A headless storefront is also not automatically fast. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce actually means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
                             </BlogText>
 
-                            <div className="overflow-x-auto my-6">
+                            <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
                                 <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to compare options</div>
                                 <table className="min-w-[680px] w-full border-collapse border border-stone-300 text-sm">
                                     <thead>

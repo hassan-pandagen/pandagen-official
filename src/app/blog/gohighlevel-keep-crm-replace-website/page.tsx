@@ -272,7 +272,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         can actually feel. These are the situations we see most often and the direction each one points
                         in before any measurement is taken.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Situation</th><th className="p-4">Where the evidence usually points</th></tr>

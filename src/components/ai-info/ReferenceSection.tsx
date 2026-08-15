@@ -9,7 +9,7 @@ import type { Fact } from "@/data/company-facts";
  */
 export function FactTable({ facts, caption }: { facts: readonly Fact[]; caption: string }) {
     return (
-        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
             <table className="w-full min-w-[34rem] border-collapse text-sm">
                 <caption className="sr-only">{caption}</caption>
                 <tbody>

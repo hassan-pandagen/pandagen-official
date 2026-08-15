@@ -312,7 +312,7 @@ export default function EmblematicStudioCaseStudy() {
                                 object in the order the studio actually works.
                             </p>
                         </div>
-                        <div className="my-8 overflow-x-auto">
+                        <div className="my-8 overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full border-collapse text-left text-sm">
                                 <thead>
                                     <tr className="border-b border-stone-300">
@@ -411,7 +411,7 @@ export default function EmblematicStudioCaseStudy() {
 
                     <section className="mb-14">
                         <h2 className="mb-6 text-3xl font-bold text-charcoal">What was built</h2>
-                        <div className="overflow-x-auto">
+                        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full border-collapse text-left">
                                 <thead>
                                     <tr className="border-b border-stone-300">

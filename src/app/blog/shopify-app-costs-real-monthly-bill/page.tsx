@@ -301,7 +301,7 @@ export default function ShopifyAppCostsPage() {
                         We log vendor price movements in our{" "}
                         <Link href="/blog/saas-price-increases-2026-tracker" className={sourceLinkClass}>running log of software price changes</Link>.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Category</th><th className="p-4">App</th><th className="p-4">Published price, August 2, 2026</th><th className="p-4">Source</th></tr>
@@ -383,7 +383,7 @@ export default function ShopifyAppCostsPage() {
                         satisfies, the people and routes that use it, the data it owns, its integrations and the failure
                         mode if it disappears. Then compare candidates against the same acceptance criteria.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Area</th><th className="p-4">Evidence</th><th className="p-4">Decision question</th></tr>

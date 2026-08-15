@@ -177,7 +177,7 @@ export default function WebsiteRebuildCostPage() {
                     <BlogText>
                         The table below describes PandaCodeGen's own planning tiers and nothing else. We do not publish a market-wide rebuild range, because any single band has to average brochure sites, commerce platforms, regulated journeys and multi-market systems together. Price your own rebuild by writing the scope first, then asking two or three providers to quote that same scope.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">PandaCodeGen tier</th><th className="p-4">Planning range</th><th className="p-4">Potential fit</th></tr>
@@ -212,7 +212,7 @@ export default function WebsiteRebuildCostPage() {
                     <BlogText>
                         Two questions tell you which one you need. First, is the platform itself the problem? Second, has the business outgrown what the site says and how it is organized? If only the first is true, that is a migration. If both are true, that is a rebuild. If neither is true and only the look has gone stale, that is a redesign, and it costs a fraction of the other two.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[880px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Project</th><th className="p-4">What changes</th><th className="p-4">What usually stays</th></tr>

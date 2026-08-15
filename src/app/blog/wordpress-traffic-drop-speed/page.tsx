@@ -313,7 +313,7 @@ export default function WordPressTrafficDropPage() {
                             Most drops match one of a small number of shapes, and the shape narrows the cause before you open a single report. Find the row that matches what your graph is doing.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1020px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Pattern</th><th className="p-4">Possible explanations</th><th className="p-4">Next check</th></tr>

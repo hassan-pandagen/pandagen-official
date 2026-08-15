@@ -114,7 +114,7 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                     </div>
 
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 px-4 swipe-hint">← Swipe to see more →</p>
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full text-sm border-collapse min-w-[640px]">
                             <thead>
                                 <tr className="bg-stone-50">

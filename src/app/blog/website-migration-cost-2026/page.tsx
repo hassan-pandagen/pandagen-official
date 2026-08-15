@@ -198,7 +198,7 @@ export default function WebsiteMigrationCostPage() {
                     <BlogText>
                         No platform hands you a complete, portable site. What each one exports sets the floor on what a migration costs, because whatever the export misses has to be rebuilt by hand. The right-hand column is where acceptance usually fails, and it is different for every source platform.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1100px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Source</th><th className="p-4">Export or extraction</th><th className="p-4">Common replacement work</th><th className="p-4">Key acceptance risk</th></tr>

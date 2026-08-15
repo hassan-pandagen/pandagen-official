@@ -217,7 +217,7 @@ export default function WebflowMigrationCostPage() {
                             Four tiers, and the column that decides which one you land in is the last one: what can move it. A Webflow migration climbs a tier when the CMS reference graph gets complicated, when something has to be rebuilt because Webflow will not export it, or when more systems have to keep talking to each other after launch. It rarely climbs because there are more pages.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th><th className="p-4">What can move it</th></tr>
@@ -476,7 +476,7 @@ export default function WebflowMigrationCostPage() {
                             Four delivery models, and the column worth reading is the third: what stays your problem in each case. An independent specialist leaves you owning project management and continuity. A studio or an agency absorbs that and charges you for it. An internal team owns all of it, including the cost of whatever they stop doing while the migration runs.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Model</th><th className="p-4">Useful when</th><th className="p-4">Buyer must own or verify</th></tr>
@@ -528,7 +528,7 @@ export default function WebflowMigrationCostPage() {
                         Webflow reorganizes this lineup more often than most vendors, so re-read every figure above on
                         the day you budget, with the monthly and yearly toggle set the way you actually intend to pay.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[680px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

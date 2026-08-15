@@ -180,7 +180,7 @@ export default function PartnersContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-xs text-stone-500 mt-4 italic">Numbers as of July 2026. Honest, not inflated.</p>
+          <p className="text-center text-xs text-stone-600 mt-4 italic">Numbers as of July 2026. Honest, not inflated.</p>
           <p className="text-center text-sm text-stone-600 mt-3">
             The proof is public: <Link href="/work" className="text-cognac font-bold hover:underline underline-offset-2">see the builds in our work portfolio</Link>.
           </p>
@@ -380,7 +380,7 @@ export default function PartnersContent() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 max-w-3xl text-sm leading-6 text-stone-500">
+          <p className="mt-8 max-w-3xl text-sm leading-6 text-stone-600">
             No commission, margin, delivery window, response time, exclusivity, support period, or ownership transfer applies unless it appears in the signed terms for that engagement.
           </p>
         </div>

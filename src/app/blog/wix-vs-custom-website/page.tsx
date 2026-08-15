@@ -183,7 +183,7 @@ export default function WixVsCustomWebsitePage() {
                     <BlogText>
                         Across all five rows the trade is the same one: Wix hands you a working system and keeps the decisions, custom hands you the decisions and the engineering work that comes with them. Editing, features and hosting all arrive ready on one side and have to be designed on the other. The two rows people skip are change surface and exit, and those are the ones that matter three years in.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[940px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Decision area</th><th className="p-4">Wix</th><th className="p-4">Custom website</th></tr>

@@ -224,7 +224,7 @@ export default function WebsiteDeveloperAgencyPage() {
                             Every service in this table has an artefact that proves it was delivered, and the second column is the one to read. A service with no named acceptance evidence is a line on an invoice rather than a deliverable. Ask for that column to appear in your own proposal, because it is what turns sign-off into a check rather than an opinion.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[930px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Service</th><th className="p-4">Deliverable</th><th className="p-4">Evidence</th></tr>
@@ -351,7 +351,7 @@ export default function WebsiteDeveloperAgencyPage() {
                         buying that role whether it appears on the invoice or not, and it is worth knowing which
                         person it is.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[840px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Model</th><th className="p-4">Strength</th><th className="p-4">Buyer must cover</th></tr>
@@ -446,7 +446,7 @@ export default function WebsiteDeveloperAgencyPage() {
                         A usable answer names something specific enough to write into the scope and check later. An
                         evasive one does not.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[840px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">You asked</th><th className="p-4">A usable answer</th><th className="p-4">An answer to press on</th></tr>

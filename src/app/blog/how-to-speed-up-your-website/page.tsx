@@ -201,7 +201,7 @@ export default function WebsiteSpeedGuide() {
                             mid-range phone. When the two disagree, the field data is the one describing your visitors.
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[32rem] border-collapse text-sm">
                                 <caption className="sr-only">
                                     Which of the twelve diagnostics to start with, by current PageSpeed Insights result.
@@ -267,7 +267,7 @@ export default function WebsiteSpeedGuide() {
                             and never a verdict.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[560px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Measurement</th><th className="p-4">Value</th><th className="p-4">What it tells you</th></tr>

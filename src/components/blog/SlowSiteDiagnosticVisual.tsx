@@ -57,7 +57,7 @@ export default function SlowSiteDiagnosticVisual() {
                 <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${stage.tone}`}>
                   {stage.label}
                 </span>
-                <span aria-hidden="true" className="font-serif text-2xl italic text-stone-300">
+                <span aria-hidden="true" className="font-serif text-2xl italic text-stone-500">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>

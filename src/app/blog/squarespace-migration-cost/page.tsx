@@ -226,7 +226,7 @@ export default function SquarespaceMigrationCostPage() {
                     <BlogText>
                         Five drivers set the price, and each one has to be evidenced rather than asserted. Templates are priced from an annotated route and component inventory, content from a field map with an exception count, features from accepted requirements and workflow tests, integrations from a data-flow and responsibility map, and quality from an acceptance matrix with a named test profile. The third column is the point of the table.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[780px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Scope driver</th><th className="p-4">Questions</th><th className="p-4">Evidence</th></tr>

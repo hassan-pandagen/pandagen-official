@@ -300,7 +300,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogText>
                         Read the fourth column first. Every entry in the third column is the provider's own public self-description, which tells you what they sell rather than how well they deliver it. The verification column is the part that does work for you, because it names what you would have to establish yourself before shortlisting any of them.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

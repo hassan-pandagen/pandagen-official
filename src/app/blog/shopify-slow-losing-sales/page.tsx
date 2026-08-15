@@ -298,7 +298,7 @@ export default function ShopifySlowLosingSalesPage() {
                         A planning model can help size a decision before an experiment. Keep every input editable and
                         state that the result is not realized loss.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Input</th><th className="p-4">Source</th><th className="p-4">Caution</th></tr>

@@ -226,7 +226,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         practical response once a change is confirmed on your own invoice is set out in our{" "}
                         <Link href="/blog/how-to-cut-saas-bill-2026" className="text-cognac hover:underline font-medium">guide to reducing a software bill</Link>.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[680px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Vendor</th><th className="p-4">Change</th><th className="p-4">Effective</th></tr>
@@ -370,7 +370,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                             Five verdicts are available for any subscription, and each has to be earned with different evidence. Retain needs demonstrated use. Right-size needs proof a lower tier covers your peaks rather than your average. Consolidate needs one product genuinely covering the workflows. Replace needs the target to clear requirements at acceptable risk. Investigate is the honest verdict while an owner, a contract or a data location is still unknown.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Decision</th><th className="p-4">Evidence required</th><th className="p-4">Common risk</th></tr>

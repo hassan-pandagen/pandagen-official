@@ -282,7 +282,7 @@ export default function Ladies4JesusCaseStudy() {
                             site in about a minute through incremental regeneration — no deploy, no developer, no waiting
                             on anyone&apos;s availability:
                         </p>
-                        <div className="overflow-x-auto">
+                        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full border-collapse text-left text-sm">
                                 <thead>
                                     <tr className="border-b border-stone-300">
@@ -371,7 +371,7 @@ export default function Ladies4JesusCaseStudy() {
 
                     <section className="mb-14">
                         <h2 className="mb-6 text-3xl font-bold text-charcoal">What was built</h2>
-                        <div className="overflow-x-auto">
+                        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full border-collapse text-left">
                                 <thead>
                                     <tr className="border-b border-stone-300">

@@ -279,7 +279,7 @@ export default function MigrateWordPressToNextJSPage() {
 
                         <div className="space-y-6 mt-6">
                             <div className="border border-stone-200 rounded-xl p-6">
-                                <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 1</p>
+                                <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">Step 1</p>
                                 <h3 className="text-lg font-bold mb-3">Audit Your WordPress Site</h3>
                                 <BlogText>
                                     Crawl every URL using Screaming Frog or Sitebulb. Export the URL, title tag, meta description, H1, canonical URL, indexability, and HTTP status. This becomes the SEO migration source of truth. Each indexable WordPress URL should remain at the same path, receive a validated 301 redirect to a relevant replacement, or be intentionally retired with the decision documented.
@@ -290,7 +290,7 @@ export default function MigrateWordPressToNextJSPage() {
                             </div>
 
                             <div className="border border-stone-200 rounded-xl p-6">
-                                <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-1">Step 2</p>
+                                <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">Step 2</p>
                                 <h3 className="text-lg font-bold mb-3">Export Your WordPress Content</h3>
                                 <BlogText>
                                     Go to <strong>WordPress Admin → Tools → Export → All Content</strong>. Download the XML file: it contains every post, page, category, tag, and custom field. For images, download your full <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">wp-content/uploads</code> folder via FTP or your host's file manager.
@@ -335,7 +335,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <BlogText>
                                     Redirect decisions are a critical part of SEO preservation. Each changed URL with a relevant successor should normally receive a server-side permanent redirect. An intentionally removed URL with no useful replacement can return 404 or 410 instead of sending users to an unrelated page. Record that decision for every URL in the inventory. In <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next.config.js</code>, add a redirects array:
                                 </BlogText>
-                                <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto">
+                                <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                                     <pre>{`async redirects() {
   return [
     {
@@ -360,7 +360,7 @@ export default function MigrateWordPressToNextJSPage() {
                                 <BlogText>
                                     Transfer every title tag, meta description, Open Graph tag, and canonical URL from WordPress (via Yoast or RankMath) to Next.js. In Next.js 14+, use the metadata API in each <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">page.tsx</code>:
                                 </BlogText>
-                                <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto">
+                                <div className="bg-stone-900 text-stone-100 rounded-lg p-4 my-4 text-sm font-mono overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                                     <pre>{`export const metadata = {
   title: "Your Page Title",
   description: "Your meta description",
@@ -423,7 +423,7 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* Mid CTA */}
                     <div className="bg-stone-900 text-white rounded-2xl p-8 mb-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Scope, Test, Cut Over</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-2">Scope, Test, Cut Over</p>
                         <h3 className="text-2xl font-bold mb-3">Want Us to Handle the Migration?</h3>
                         <p className="text-stone-300 mb-6 leading-relaxed">
                             We handle the URL inventory, build, staged crawl QA, 301 redirect mapping and validation, DNS cutover, rollback plan, and post-launch Google Search Console monitoring. Support days, representative test pages, measurement conditions, and any 90+ PageSpeed acceptance target are written into the signed scope. A performance target is not a ranking guarantee.
@@ -510,12 +510,12 @@ export default function MigrateWordPressToNextJSPage() {
                             with the before and after numbers.
                         </BlogText>
 
-                        <div className="flex items-center gap-2 text-xs text-stone-400 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
+                        <div className="flex items-center gap-2 text-xs text-stone-500 mt-8"><RefreshCw className="w-3 h-3" />Published: Mar 11, 2026</div>
                     </section>
 
                     {/* Bottom CTA */}
                     <div className="border-2 border-stone-900 rounded-2xl p-8 mb-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400 mb-2">Ready to Migrate?</p>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-2">Ready to Migrate?</p>
                         <h3 className="text-2xl font-bold mb-3">Get a Free WordPress Migration Assessment</h3>
                         <p className="text-stone-600 mb-3 leading-relaxed">
                             We will audit your WordPress site, scope the migration, map every redirect, and give you a fixed-price quote before you commit to anything.

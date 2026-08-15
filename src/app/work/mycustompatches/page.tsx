@@ -174,15 +174,15 @@ const caseStudySchema = {
 const techStack = [
     { name: "Next.js 14", role: "App Router + SSG", color: "bg-stone-900 text-white" },
     { name: "TypeScript", role: "Type safety", color: "bg-blue-600 text-white" },
-    { name: "Tailwind CSS v3", role: "Styling", color: "bg-sky-500 text-white" },
-    { name: "React Hook Form", role: "Quote + contact forms", color: "bg-red-500 text-white" },
+    { name: "Tailwind CSS v3", role: "Styling", color: "bg-sky-700 text-white" },
+    { name: "React Hook Form", role: "Quote + contact forms", color: "bg-red-700 text-white" },
     { name: "Zod", role: "Form validation", color: "bg-indigo-600 text-white" },
-    { name: "Cloudinary", role: "Design file uploads", color: "bg-blue-400 text-white" },
-    { name: "Web3Forms", role: "Email delivery", color: "bg-emerald-600 text-white" },
-    { name: "Cloudflare", role: "CDN + DNS", color: "bg-orange-500 text-white" },
+    { name: "Cloudinary", role: "Design file uploads", color: "bg-blue-700 text-white" },
+    { name: "Web3Forms", role: "Email delivery", color: "bg-emerald-700 text-white" },
+    { name: "Cloudflare", role: "CDN + DNS", color: "bg-orange-700 text-white" },
     { name: "Vercel", role: "Hosting (free tier)", color: "bg-stone-700 text-white" },
-    { name: "Tawk.to", role: "Live chat", color: "bg-teal-600 text-white" },
-    { name: "Swiper + Lightbox", role: "Image gallery", color: "bg-violet-500 text-white" },
+    { name: "Tawk.to", role: "Live chat", color: "bg-teal-700 text-white" },
+    { name: "Swiper + Lightbox", role: "Image gallery", color: "bg-violet-700 text-white" },
     { name: "Facebook Pixel", role: "Analytics", color: "bg-blue-700 text-white" },
 ];
 
@@ -288,7 +288,7 @@ export default function MyCustomPatchesCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6 mb-8">
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     Speed killing conversions
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -297,7 +297,7 @@ export default function MyCustomPatchesCaseStudy() {
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     45 plugins. Zero accountability.
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -306,7 +306,7 @@ export default function MyCustomPatchesCaseStudy() {
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     Paying monthly for a problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -315,7 +315,7 @@ export default function MyCustomPatchesCaseStudy() {
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     SEO rankings at risk
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -435,7 +435,7 @@ export default function MyCustomPatchesCaseStudy() {
                             {techStack.map((t) => (
                                 <div key={t.name} className={`px-4 py-2 rounded-xl ${t.color}`}>
                                     <div className="text-sm font-bold">{t.name}</div>
-                                    <div className="text-xs opacity-90">{t.role}</div>
+                                    <div className="text-xs">{t.role}</div>
                                 </div>
                             ))}
                         </div>
@@ -450,7 +450,7 @@ export default function MyCustomPatchesCaseStudy() {
                     {/* BEFORE vs AFTER TABLE */}
                     <section className="mb-20">
                         <h2 className="text-2xl font-bold text-charcoal mb-4">Before vs After: Full Comparison</h2>
-                        <div className="overflow-x-auto">
+                        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden">
                                 <thead>
                                     <tr className="bg-stone-50 text-left">

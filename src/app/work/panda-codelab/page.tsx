@@ -164,14 +164,14 @@ const caseStudySchema = {
 
 const techStack = [
     { name: "Next.js 16", role: "App Router + RSC", color: "bg-stone-900 text-white" },
-    { name: "React 19", role: "Latest stable", color: "bg-sky-500 text-white" },
+    { name: "React 19", role: "Latest stable", color: "bg-sky-700 text-white" },
     { name: "TypeScript", role: "Strict mode, 0 errors", color: "bg-blue-600 text-white" },
-    { name: "Tailwind CSS 4", role: "Styling", color: "bg-sky-400 text-white" },
-    { name: "Framer Motion 12", role: "Spring physics", color: "bg-pink-500 text-white" },
-    { name: "Lenis 1.1", role: "Momentum scroll", color: "bg-violet-500 text-white" },
-    { name: "Spline", role: "3D hero scene", color: "bg-indigo-500 text-white" },
-    { name: "Web3Forms", role: "Form API", color: "bg-emerald-600 text-white" },
-    { name: "React Hook Form", role: "Form state + Zod", color: "bg-red-500 text-white" },
+    { name: "Tailwind CSS 4", role: "Styling", color: "bg-sky-700 text-white" },
+    { name: "Framer Motion 12", role: "Spring physics", color: "bg-pink-700 text-white" },
+    { name: "Lenis 1.1", role: "Momentum scroll", color: "bg-violet-700 text-white" },
+    { name: "Spline", role: "3D hero scene", color: "bg-indigo-700 text-white" },
+    { name: "Web3Forms", role: "Form API", color: "bg-emerald-700 text-white" },
+    { name: "React Hook Form", role: "Form state + Zod", color: "bg-red-700 text-white" },
     { name: "Lucide React", role: "Icon system", color: "bg-stone-600 text-white" },
 ];
 
@@ -267,7 +267,7 @@ export default function PandaCodelabCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-3 flex items-center gap-2">
-                                    <span className="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-black">✕</span>
+                                    <span className="w-5 h-5 rounded-full bg-red-700 text-white text-xs flex items-center justify-center font-black">✕</span>
                                     The credibility problem
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
@@ -431,7 +431,7 @@ export default function PandaCodelabCaseStudy() {
                             {techStack.map((t) => (
                                 <div key={t.name} className={`px-4 py-2 rounded-xl ${t.color}`}>
                                     <div className="text-sm font-bold">{t.name}</div>
-                                    <div className="text-xs opacity-90">{t.role}</div>
+                                    <div className="text-xs">{t.role}</div>
                                 </div>
                             ))}
                         </div>

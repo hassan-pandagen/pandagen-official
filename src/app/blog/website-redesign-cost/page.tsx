@@ -185,7 +185,7 @@ export default function WebsiteRedesignCostPage() {
                             We quote redesigns from $1,500 for a bounded template set, $3,500 once a reusable design system is part of the work, and $5,000 to $10,000 where content volume, integrations or a staged rollout are involved. Those are PandaCodeGen&apos;s own planning tiers rather than a market survey, and what moves a project between them is scope rather than page count.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">PandaCodeGen tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th></tr>
@@ -320,7 +320,7 @@ export default function WebsiteRedesignCostPage() {
                             These are three different projects with three different prices, so the first job is naming which one you are actually buying. A redesign changes the experience on the platform you already have. A migration changes the platform and keeps the approved structure. A rebuild changes both, which is why it is the most expensive of the three.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Project</th><th className="p-4">Main change</th><th className="p-4">Use it when</th></tr>

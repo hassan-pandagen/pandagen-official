@@ -271,7 +271,7 @@ export default function LeavingWebflow2026Page() {
                                         <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-cognac text-white">
                                             <Icon className="h-5 w-5" aria-hidden="true" />
                                         </span>
-                                        <span aria-hidden="true" className="font-serif text-3xl italic text-white/25">0{index + 1}</span>
+                                        <span aria-hidden="true" className="font-serif text-3xl italic text-white/60">0{index + 1}</span>
                                     </div>
                                     <h3 className="font-bold text-white">{title}</h3>
                                     <p className="mt-1 text-sm leading-relaxed text-stone-300">{text}</p>
@@ -396,7 +396,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">Scroll horizontally to compare</p>
-                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[620px] border-collapse text-left responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">
@@ -557,7 +557,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">Scroll horizontally to compare</p>
-                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+                        <div className="my-4 overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[620px] border-collapse text-left responsive-stack-table">
                                 <thead>
                                     <tr className="border-b-2 border-stone-300">

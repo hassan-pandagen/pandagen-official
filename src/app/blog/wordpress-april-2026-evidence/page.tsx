@@ -404,7 +404,7 @@ export default function WordPressAprilEvidencePage() {
                             Three records do not decide a platform. What they can do is tell you which questions to price, and the table below pairs each with the decision it should actually inform. Read the right-hand column first: it is where a record stops being news and becomes a budget line.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[960px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Question</th><th className="p-4">Evidence to collect</th><th className="p-4">Possible response</th></tr>

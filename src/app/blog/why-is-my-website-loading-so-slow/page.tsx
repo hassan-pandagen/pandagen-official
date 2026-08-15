@@ -414,7 +414,7 @@ export default function SlowWebsitePage() {
               </Link>.
             </BlogText>
 
-            <div className="overflow-x-auto rounded-xl border border-stone-200">
+            <div className="overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
               <table className="w-full min-w-[620px] border-collapse text-sm">
                 <thead className="bg-stone-100">
                   <tr>
@@ -502,7 +502,7 @@ export default function SlowWebsitePage() {
               ]}
             />
 
-            <div className="overflow-x-auto rounded-xl border border-stone-200">
+            <div className="overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
               <table className="w-full min-w-[620px] border-collapse text-sm">
                 <thead className="bg-stone-100">
                   <tr>

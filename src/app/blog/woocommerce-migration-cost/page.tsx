@@ -219,7 +219,7 @@ export default function WooCommerceMigrationCostPage() {
                     <BlogText>
                         These are our own planning anchors, not a market rate. Which row you land in is decided by catalog size, how much data has to move, how many templates are genuinely different, and how many connected systems have to keep working. Subscriptions, regulated data and multiple markets fall out of the tiers entirely and get scoped separately.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Tier</th><th className="p-4">Starting point</th><th className="p-4">Potential fit</th></tr>
@@ -253,7 +253,7 @@ export default function WooCommerceMigrationCostPage() {
                     <BlogText>
                         Complexity is set by how many domains have to move and what evidence each one needs to be accepted, not by catalog size. Every row pairs an inventory with the proof that it arrived intact: counts, field mapping, an exception report and sampled parity. A quote that prices the inventory but not the acceptance evidence has priced half the job.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Domain</th><th className="p-4">Inventory</th><th className="p-4">Acceptance evidence</th></tr>
@@ -287,7 +287,7 @@ export default function WooCommerceMigrationCostPage() {
                         forty-SKU store with simple products and a five-hundred-SKU store with variants and custom
                         fields can sit in different tiers even though neither needs a custom checkout.
                     </InsightBox>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[760px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Lower effort to move</th><th className="p-4">Higher effort to move</th></tr>

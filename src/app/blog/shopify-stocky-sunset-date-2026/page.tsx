@@ -325,7 +325,7 @@ export default function ShopifyStockySunsetPage() {
                     <BlogText>
                         Do this while Stocky is still running, because it becomes guesswork the moment the app stops. The middle column is Shopify's own guidance for each workflow, not our assessment of it. The right-hand column is what you have to prove works for your operation before accepting the replacement.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[800px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Workflow</th><th className="p-4">Current Shopify guidance</th><th className="p-4">Acceptance question</th></tr>

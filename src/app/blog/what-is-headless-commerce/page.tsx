@@ -208,7 +208,7 @@ export default function WhatIsHeadlessCommercePage() {
                     <BlogText>
                         Four questions separate the two, and none of them is about speed. Rendering moves from a platform theme to an app you build and deploy. Commerce goes from native features to APIs exposing selected capabilities. The change surface splits, so frontend, APIs and providers now move independently. And responsibility for security, testing and operations transfers to your team.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[900px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Question</th><th className="p-4">Coupled storefront</th><th className="p-4">Headless storefront</th></tr>
@@ -314,7 +314,7 @@ export default function WhatIsHeadlessCommercePage() {
                         and on our <Link href="/services/woocommerce" className={linkClass}>WooCommerce service</Link> page.
                     </BlogText>
 
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[720px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr>

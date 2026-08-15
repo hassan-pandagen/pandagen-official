@@ -109,7 +109,7 @@ export function CodeWindow({ children, filename = "code" }: { children: string; 
         <div className="w-3 h-3 rounded-full bg-red-500/80" />
         <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
         <div className="w-3 h-3 rounded-full bg-green-500/80" />
-        <span className="ml-3 text-[11px] text-white/30 font-mono">{filename}</span>
+        <span className="ml-3 text-[11px] text-white/60 font-mono">{filename}</span>
       </div>
       {/* Code body */}
       <div className="p-5 overflow-x-auto" tabIndex={0} role="region" aria-label={filename ? `Code: ${filename}` : "Code sample"}>

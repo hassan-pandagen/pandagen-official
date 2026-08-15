@@ -234,7 +234,7 @@ export default function PlatformKillerChart({
 
       {/* Extractable comparison table, semantic HTML for AI citation + accessibility (mirrors the chart) */}
       <div className="max-w-3xl mx-auto mt-8 px-6">
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
           <table className="w-full border-collapse text-sm">
             <caption className="sr-only">{comparisonTitle} comparison</caption>
             <thead>

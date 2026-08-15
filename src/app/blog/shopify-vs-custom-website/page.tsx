@@ -299,7 +299,7 @@ export default function ShopifyVsCustomWebsitePage() {
                         build on one side and the monthly plan on the other is not a comparison. Fill the table below
                         from your own contract and invoices rather than from published list prices.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[820px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Cost</th><th className="p-4">Shopify theme</th><th className="p-4">Headless or custom</th></tr>

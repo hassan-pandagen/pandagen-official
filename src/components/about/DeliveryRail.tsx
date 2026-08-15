@@ -33,7 +33,7 @@ export default function DeliveryRail({ stages }: { stages: DeliveryStage[] }) {
                     {/* The rail. Horizontal from each numeral on wide screens,
                         suppressed on the last item so the line does not run off. */}
                     <div aria-hidden="true" className="mb-6 flex items-center gap-4">
-                        <span aria-hidden="true" className="font-serif text-5xl leading-none text-cognac/35 tabular-nums md:text-6xl">
+                        <span aria-hidden="true" className="font-serif text-5xl leading-none text-cognac-light/80 tabular-nums md:text-6xl">
                             {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="h-px flex-1 bg-white/15" />

@@ -61,13 +61,32 @@ async function main() {
         Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
             while (queue.length) {
                 const p = queue.shift();
-                const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+                const page = await browser.newPage({
+                    viewport: { width: 1366, height: 900 },
+                    // Reveal animations were being sampled mid-fade: text-charcoal
+                    // measured as #aeadab and reported 23 phantom failures on
+                    // /free-audit that vanished on the next run. This also matches
+                    // what a reader with the OS preference set actually sees.
+                    reducedMotion: 'reduce',
+                });
                 try {
-                    await page.goto(base + p, { waitUntil: 'domcontentloaded', timeout: 30_000 });
-                    await page.waitForTimeout(1500);
+                    await page.goto(base + p, { waitUntil: 'load', timeout: 30_000 });
+                    // Settle before measuring. Reveal animations and late third-party
+                    // widgets were being sampled mid-flight: one run reported
+                    // #e1e1e0 on #dddddc at 1.03:1, two nearly identical greys that
+                    // only exist during a transition. Three consecutive runs of the
+                    // home page gave 0, 3, 0 before this wait was raised.
+                    await page.waitForLoadState('networkidle', { timeout: 15_000 }).catch(() => {});
+                    await page.waitForTimeout(2500);
                     await page.addScriptTag({ content: AXE });
                     const r = await page.evaluate(
-                        async (tags) => await window.axe.run(document, { runOnly: { type: 'tag', values: tags } }),
+                        async (tags) =>
+                            await window.axe.run(
+                                // Third-party embeds inject iframes whose documents are not
+                                // ours to fix. Auditing them reports failures we cannot act on.
+                                { include: [['html']], exclude: [['iframe']] },
+                                { runOnly: { type: 'tag', values: tags }, iframes: false }
+                            ),
                         WCAG_TAGS
                     );
                     results.push({

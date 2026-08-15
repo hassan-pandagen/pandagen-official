@@ -202,7 +202,7 @@ export default function BuildVsBuySoftware2026Page() {
                     </BlogText>
 
                     {/* Comparison table */}
-                    <div className="my-8 overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0">
+                    <div className="my-8 overflow-x-auto -mx-8 px-8 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Scrollable table">
                         <p className="md:hidden text-xs font-bold text-cognac mb-2">Swipe to see the full table</p>
                         <table className="min-w-[600px] w-full border-collapse text-sm">
                             <thead>
@@ -249,7 +249,7 @@ export default function BuildVsBuySoftware2026Page() {
                         Then fill the table with your own figures rather than anyone&apos;s published averages: your
                         license quote, your developer cost and your own tolerance for the adverse column.
                     </BlogText>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Input</th><th className="p-4">Conservative</th><th className="p-4">Base</th><th className="p-4">Adverse</th></tr>

@@ -340,7 +340,7 @@ export default function WordPressCostPage() {
                             Two options can only be compared if they were quoted against the same assumptions, and most platform comparisons fail here rather than on the arithmetic. Fix the capability list, the demand you are planning for, the quality bar and the time horizon first, then apply all four identically to every option on the table.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[920px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Control</th><th className="p-4">Use the same assumption for every option</th></tr>

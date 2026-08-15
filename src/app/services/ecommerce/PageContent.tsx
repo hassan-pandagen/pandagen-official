@@ -354,7 +354,7 @@ export default function PageContent() {
           <div className="max-w-3xl mx-auto mb-10 grid grid-cols-2 gap-4 md:gap-6">
             <div className="p-5 md:p-6 rounded-2xl bg-white border border-red-200 text-center">
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-red-500 mb-2">Other quotes</p>
-              <p className="text-2xl md:text-3xl font-black text-stone-400 tracking-tight leading-none">Not assessed</p>
+              <p className="text-2xl md:text-3xl font-black text-stone-500 tracking-tight leading-none">Not assessed</p>
               <p className="text-xs text-stone-500 mt-2 leading-relaxed">Compare like-for-like scope, timeline and code ownership before comparing totals.</p>
             </div>
             <div className="p-5 md:p-6 rounded-2xl bg-white border border-emerald-300 text-center shadow-card">

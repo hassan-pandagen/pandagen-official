@@ -233,7 +233,7 @@ export default function WordPressVsCustomCostPage() {
                             Three years is the horizon where these two options separate, because a build price lands once and everything else recurs. The model carries four columns for a reason: every input needs a WordPress source, a custom source, and one rule applied identically to both. Where a figure cannot be sourced, record the assumption instead of guessing.
                         </BlogText>
                     </div>
-                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200">
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[1080px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
                                 <tr><th className="p-4">Input</th><th className="p-4">WordPress source</th><th className="p-4">Custom source</th><th className="p-4">Model rule</th></tr>
@@ -339,7 +339,7 @@ export default function WordPressVsCustomCostPage() {
                             in-house spending a couple of hours a month on the site either way.
                         </BlogText>
 
-                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200">
+                        <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[34rem] border-collapse text-sm">
                                 <caption className="sr-only">
                                     Illustrative three-year cost model for a 15-page marketing site: managed WordPress
