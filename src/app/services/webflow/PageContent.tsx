@@ -10,6 +10,7 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
+import { spec } from "@/data/spec-facts";
 
 const comparisonData = [
   { feature: "Performance", webflow: "Measure the current pages and scripts", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
@@ -376,6 +377,132 @@ export default function WebflowPageContent() {
                 <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/*
+        WEBFLOW LIST PRICES, READ IN A BROWSER.
+        This section exists to make this page different from the other seven
+        service pages, which shared 33-39% of their eight-word phrases with it
+        and left it out of Google's index. Everything here is Webflow-specific
+        and cannot appear on any of them.
+
+        Every figure renders through spec() so it carries its verified-at date
+        and its qualifier, and so scripts/spec_freshness.py fails the build if
+        it goes stale. Webflow's pricing page is JS-rendered and returns 403 to
+        fetchers, which is why these were read with a browser rather than
+        fetched, and why the monthly-billing figures are deliberately absent.
+      */}
+      <section className="bg-paper py-20 md:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-cognac">What Webflow costs</p>
+          <h2 className="mb-5 font-serif text-3xl leading-tight text-charcoal md:text-4xl">
+            The list prices, read off Webflow&apos;s own pricing page
+          </h2>
+          <p className="mb-10 max-w-3xl text-lg leading-relaxed text-stone-600">
+            Most of the numbers you will find for this are second-hand. These were read in a browser on{" "}
+            {spec("webflow-team-price").verifiedAt}, on the billed-yearly view. We publish the date because a price
+            without one is a guess, and Webflow changes these.
+          </p>
+
+          <div className="overflow-x-auto rounded-2xl border border-stone-200 bg-white" tabIndex={0} role="region" aria-label="Webflow list prices">
+            <table className="w-full text-left text-sm">
+              <thead className="border-b border-stone-200 bg-stone-50">
+                <tr>
+                  <th className="px-5 py-3 font-bold text-charcoal">Plan</th>
+                  <th className="px-5 py-3 font-bold text-charcoal">List price</th>
+                  <th className="px-5 py-3 font-bold text-charcoal">What the number does not say</th>
+                </tr>
+              </thead>
+              <tbody>
+                {["webflow-basic-price", "webflow-premium-price", "webflow-team-price",
+                  "webflow-optimize-addon", "webflow-localize-essential", "webflow-analyze-addon"].map((id) => {
+                  const f = spec(id);
+                  return (
+                    <tr key={id} className="border-b border-stone-100 align-top last:border-0">
+                      <td className="px-5 py-4 font-semibold text-charcoal">{f.plan}</td>
+                      <td className="px-5 py-4 font-bold text-cognac whitespace-nowrap">{f.value}</td>
+                      <td className="px-5 py-4 leading-relaxed text-stone-600">{f.qualifier}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-4 text-xs text-stone-500">
+            All figures per site, plus applicable tax, on the billed-yearly view, read at{" "}
+            <a href={spec("webflow-team-price").source} target="_blank" rel="nofollow noopener noreferrer"
+               className="font-medium text-cognac underline underline-offset-4">webflow.com/pricing</a>{" "}
+            on {spec("webflow-team-price").verifiedAt}. Monthly-billing figures are not listed because the monthly
+            toggle did not render when these were read, and we do not publish a number we did not see.
+          </p>
+
+          <div className="mt-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7 md:p-9">
+            <h3 className="mb-3 text-xl font-bold text-charcoal">
+              The Team plan is the line most budgets get wrong
+            </h3>
+            <p className="mb-4 leading-relaxed text-stone-700">
+              When we checked, Google&apos;s AI Overview reported the Team plan at $2,500 a year. Webflow&apos;s own
+              pricing page says {spec("webflow-team-price").value}, on an annual contract. A team planning from the
+              first number under-budgets that line by twelve times.
+            </p>
+            <p className="leading-relaxed text-stone-700">
+              Two smaller ones travel with it. Team is a <em>platform</em> plan, charged on top of the per-site plans
+              rather than instead of them, so a multi-site setup pays both. And Localize Essential at{" "}
+              {spec("webflow-localize-essential").value} covers one to three locales in total, not $9 for each one.
+            </p>
+          </div>
+
+          <h3 className="mb-4 mt-14 text-2xl font-bold text-charcoal">What a 50 to 100 page migration actually turns on</h3>
+          <p className="mb-6 max-w-3xl leading-relaxed text-stone-600">
+            This is the question we are asked most, and page count is the least useful part of the answer. Four things
+            move the number, and all four are knowable before anyone quotes you.
+          </p>
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              { h: "How many templates, not how many pages", b: "Two hundred pages built from eleven templates is a smaller job than forty pages each laid out by hand. Count the distinct layouts before you count URLs." },
+              { h: "How much of the CMS is relational", b: "Flat collections port cleanly. Multi-reference fields, nested collections and anything driving conditional visibility have to be modelled again, and that is design work rather than export work." },
+              { h: "What the interactions are load-bearing for", b: "A scroll animation is decoration. An interaction that gates a form step or drives a pricing calculator is application logic in an animation costume, and it gets rebuilt." },
+              { h: "Which integrations hold state", b: "Embeds are cheap to move. Anything storing member data, orders or submissions inside Webflow needs an export path confirmed before a date is agreed, not after." },
+            ].map((x) => (
+              <div key={x.h} className="rounded-xl border border-stone-200 bg-white p-6">
+                <h4 className="mb-2 font-bold text-charcoal">{x.h}</h4>
+                <p className="text-sm leading-relaxed text-stone-600">{x.b}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="mb-4 mt-14 text-2xl font-bold text-charcoal">What continues to cost money after you leave</h3>
+          <p className="mb-6 max-w-3xl leading-relaxed text-stone-600">
+            A migration removes the Webflow site plan. It does not remove every line, and a comparison that pretends
+            otherwise is selling you something. The recurring cost usually falls. It does not go to zero.
+          </p>
+          <ul className="space-y-3">
+            {[
+              "Hosting, which for a static marketing site is often materially cheaper, and occasionally free at low volume.",
+              "The CMS, if you take one. Some are free at your size, some are per-seat, and the seat count is what moves it.",
+              "Anything Webflow was bundling that you were not costing separately: forms handling, search, localization, analytics.",
+              "Maintenance. Dependency updates and security patching do not disappear because the platform did. They change hands.",
+            ].map((t) => (
+              <li key={t} className="flex items-start gap-3 rounded-xl border border-stone-200 bg-white p-4">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cognac" />
+                <span className="text-sm leading-relaxed text-stone-600">{t}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-10 rounded-2xl border border-stone-200 bg-white p-7">
+            <h3 className="mb-3 text-xl font-bold text-charcoal">One argument on this site that has weakened</h3>
+            <p className="leading-relaxed text-stone-700">
+              Several of our own guides describe Webflow as a closed system a serious operator eventually outgrows.
+              That is less true than it was. As of the same pricing read, Webflow lists an MCP server and Webflow AI on
+              every tier including the free one, ships app hosting, and markets itself as an AI-native platform. If the
+              reason you are considering a move is that Webflow cannot talk to anything, check that assumption before
+              you spend money on it. The access, cost and ownership questions above stand on their own.
+            </p>
           </div>
         </div>
       </section>

@@ -73,6 +73,60 @@
       "qualifier": "reduced from 15MB; past the cutoff Googlebot stops the fetch and only the downloaded part is considered for indexing. Each referenced resource is fetched separately under the same cap. PDFs: 64MB",
       "verifiedAt": "2026-08-11",
       "source": "https://developers.google.com/search/docs/crawling-indexing/googlebot"
+    },
+    "webflow-basic-price": {
+      "vendor": "Webflow",
+      "plan": "Basic",
+      "label": "Basic site plan price",
+      "value": "$15 a month",
+      "qualifier": "billed yearly, per site, plus tax; custom domain, 300 static pages, 10 GB bandwidth. The monthly-billing toggle did not re-render when this was read, so no monthly figure is verified",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-premium-price": {
+      "vendor": "Webflow",
+      "plan": "Premium",
+      "label": "Premium site plan price",
+      "value": "$25 a month",
+      "qualifier": "billed yearly, per site, plus tax; the tier that adds the CMS, site search and code components. Previously named the CMS plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-team-price": {
+      "vendor": "Webflow",
+      "plan": "Team",
+      "label": "Team platform plan price",
+      "value": "$2,500 a month",
+      "qualifier": "annual contract required. This is a platform plan, charged on top of the per-site plans, not instead of them. Google's AI Overview stated this as $2,500 a year when checked",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-optimize-addon": {
+      "vendor": "Webflow",
+      "plan": "Optimize add-on",
+      "label": "Optimize add-on price",
+      "value": "$299 a month",
+      "qualifier": "priced by page views, and charged separately from the site plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-localize-essential": {
+      "vendor": "Webflow",
+      "plan": "Localize Essential add-on",
+      "label": "Localize Essential price",
+      "value": "$9 a month",
+      "qualifier": "covers 1 to 3 locales in total, not $9 per locale. Localize Advanced is $29 a month for 1 to 10",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-analyze-addon": {
+      "vendor": "Webflow",
+      "plan": "Analyze add-on",
+      "label": "Analyze add-on price",
+      "value": "$9 a month",
+      "qualifier": "priced by sessions, and charged separately from the site plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
     }
   }
 }
