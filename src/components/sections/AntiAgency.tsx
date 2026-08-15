@@ -1,21 +1,18 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { UserX, Code, LockOpen, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const pillars = [
   {
-    icon: UserX,
     title: "Founders, Not Account Managers",
     body: "You work directly with the co-founder engineer building your site, one dedicated point of contact from discovery to launch. No account managers, no ticket queues, no freelancers who vanish mid-project.",
   },
   {
-    icon: Code,
     title: "Zero Outsourcing",
     body: "We don't outsource to offshore teams. Every line of code is written by our core engineers, the same people you speak to on the discovery call.",
   },
   {
-    icon: LockOpen,
     title: "You Own The IP",
     body: "We hand over the full source code on day one. We deploy to your hosting account, not ours. No monthly maintenance retainer required. You are in full control.",
   },
@@ -34,11 +31,14 @@ export default function AntiAgency() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center mb-8 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-stone-400 text-xs font-bold uppercase tracking-widest mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-cognac-light/25 text-cognac-light text-xs font-bold uppercase tracking-widest mb-6">
             The Engineering Standard
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            We are not a &ldquo;Digital Agency.&rdquo;
+            We are not a{" "}
+            <span className="font-serif font-normal italic text-cognac-light">
+              &ldquo;Digital Agency.&rdquo;
+            </span>
           </h2>
           <p className="text-xl text-stone-400 leading-relaxed">
             Agencies sell hours. We sell a working system. We stripped out the layers that make B2B projects run late.
@@ -54,11 +54,14 @@ export default function AntiAgency() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-900/10 ring-1 ring-stone-900/5 rounded-2xl hover:border-cognac/30 hover:shadow-2xl hover:shadow-cognac/10 hover:-translate-y-1 transition-all duration-500 group text-center"
+              className="p-8 bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-900/10 ring-1 ring-stone-900/5 rounded-2xl hover:border-cognac/30 hover:shadow-2xl hover:shadow-cognac/10 hover:-translate-y-1 transition-all duration-500 group"
             >
-              <div className="w-14 h-14 mx-auto bg-stone-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-stone-200 transition-colors">
-                <item.icon className="w-7 h-7 text-charcoal" />
-              </div>
+              <span
+                aria-hidden="true"
+                className="block font-serif text-5xl italic leading-none text-cognac tabular-nums mb-5"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <h3 className="text-xl font-bold text-charcoal mb-3">{item.title}</h3>
               <p className="text-stone-500 leading-relaxed text-base">{item.body}</p>
             </motion.div>

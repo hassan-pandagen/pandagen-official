@@ -15,7 +15,7 @@ export default function SocialProof() {
   return (
     <section
       aria-labelledby="client-proof-heading"
-      className="border-y border-stone-300 bg-paper px-6 py-16 md:py-24"
+      className="border-y border-stone-300 bg-paper px-6 py-12 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16 xl:gap-24">
@@ -81,21 +81,21 @@ export default function SocialProof() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
-            <figure className="relative overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal p-7 text-white md:col-span-2 md:p-9">
+            <figure className="relative overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal p-6 text-white md:col-span-2 md:p-9">
               <div aria-hidden="true" className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-cognac/25 blur-3xl" />
-              <div className="relative grid gap-8 md:grid-cols-[0.65fr_1.35fr] md:items-end md:gap-10">
+              <div className="relative grid gap-5 md:grid-cols-[0.65fr_1.35fr] md:items-end md:gap-10">
                 <div className="border-b border-white/15 pb-7 md:border-b-0 md:border-r md:pb-0 md:pr-8">
                   <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#ffc2a6]">
                     <Clock className="h-4 w-4" aria-hidden="true" />
                     Client delivery
                   </div>
-                  <p className="mt-5 font-serif text-6xl italic leading-none text-[#f2a17c] md:text-7xl">22 days</p>
+                  <p className="mt-5 font-serif text-5xl italic leading-none text-[#f2a17c] md:text-7xl">22 days</p>
                   <p className="mt-4 font-bold text-white">MyCustomPatches project delivery</p>
                   <p className="mt-2 text-xs leading-5 text-stone-400">Owner-confirmed project record, recorded July 21, 2026.</p>
                 </div>
                 <div>
                   <Quote className="h-7 w-7 text-[#f2a17c]" aria-hidden="true" />
-                  <blockquote className="mt-5 font-serif text-2xl italic leading-snug text-white md:text-3xl">
+                  <blockquote className="mt-4 font-serif text-xl italic leading-snug text-white md:text-3xl">
                     Hassan was available to me at any time, and his response time was always less than an hour.
                   </blockquote>
                   <figcaption className="mt-7">
@@ -117,13 +117,13 @@ export default function SocialProof() {
             {reviews.map((review) => (
               <figure
                 key={review.quote}
-                className="relative overflow-hidden rounded-[1.75rem] border border-stone-300 bg-white p-7 text-charcoal md:p-8"
+                className="relative overflow-hidden rounded-[1.75rem] border border-stone-300 bg-white p-6 text-charcoal"
               >
-                <Quote className="relative h-7 w-7 text-cognac" aria-hidden="true" />
-                <blockquote className="relative mt-6 font-serif text-2xl italic leading-snug text-charcoal md:text-3xl">
+                <Quote className="relative h-5 w-5 text-cognac" aria-hidden="true" />
+                <blockquote className="relative mt-3 font-serif text-lg italic leading-snug text-charcoal md:text-xl">
                   {review.quote}
                 </blockquote>
-                <figcaption className="relative mt-8 border-t border-stone-200 pt-5">
+                <figcaption className="relative mt-5 border-t border-stone-200 pt-4">
                   <a
                     href={review.href}
                     target="_blank"
