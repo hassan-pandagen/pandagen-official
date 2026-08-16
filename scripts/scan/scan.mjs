@@ -151,7 +151,14 @@ async function scanSite(browser, site) {
     });
     const page = await context.newPage();
     try {
-        record.home = await auditPage(page, site.url);
+        try {
+            record.home = await auditPage(page, site.url);
+        } catch (first) {
+            const wwwUrl = site.url.replace(/^https:\/\/(?!www\.)/, 'https://www.');
+            if (wwwUrl === site.url) throw first;
+            record.home = await auditPage(page, wwwUrl);
+            record.usedWww = true;
+        }
         const origin = new URL(page.url()).origin;
         const target = await findIntentPage(page, origin);
         if (!target) {
@@ -161,7 +168,13 @@ async function scanSite(browser, site) {
             record.intent = { ...audited, matchedBy: target.matchedBy, anchorText: target.anchorText };
         }
     } catch (e) {
-        record.error = String(e.message).split('\n')[0].slice(0, 200);
+        const msg = String(e.message).split('\n')[0].slice(0, 200);
+        record.error = msg;
+        // Tranco ranks by DNS resolution volume, so a large share of any band is
+        // CDN, telemetry and nameserver domains that serve no page at all. Those
+        // are OUT OF SCOPE, not measurement failures, and reporting them as
+        // failures would make our own harness look flaky when it is not.
+        record.notAWebsite = /ERR_NAME_NOT_RESOLVED|ERR_CONNECTION_REFUSED|ERR_CONNECTION_RESET/.test(msg);
     } finally {
         await context.close();
     }
@@ -202,6 +215,7 @@ async function main() {
 
     const measured = results.filter((r) => !r.error);
     const withIntent = measured.filter((r) => r.intent && !r.intent.skipped);
+    const notWebsites = results.filter((r) => r.notAWebsite);
 
     const run = {
         $comment: [
@@ -226,7 +240,8 @@ async function main() {
         denominator: {
             attempted: sites.length,
             measured: measured.length,
-            failedToLoad: results.length - measured.length,
+            notAWebsite: notWebsites.length,
+            failedToLoad: results.length - measured.length - notWebsites.length,
             withIntentPage: withIntent.length,
             noIntentPageFound: measured.length - withIntent.length,
         },
