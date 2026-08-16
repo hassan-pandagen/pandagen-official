@@ -144,8 +144,8 @@ export default function WooCommerceLowConversionRatePage() {
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             No industry benchmark is quoted here, and no revenue figure is calculated for you. Both
-                            depend on your catalogue, traffic mix and margin, and a number invented from someone
-                            else&apos;s store is worse than no number.
+                            depend on your own catalogue and margin, and a number borrowed from someone else&apos;s
+                            store is worse than no number.
                         </p>
                     </header>
 
@@ -172,7 +172,7 @@ export default function WooCommerceLowConversionRatePage() {
 
                     <BlogHeader>1. Define the metric, because WooCommerce will not do it for you</BlogHeader>
                     <BlogText>
-                        Hosted platforms hand you a conversion rate and quietly decide what it means. WooCommerce does
+                        Hosted platforms hand you a conversion rate and pick the definition for you. WooCommerce does
                         not, and that is an advantage only if you take it. Write down the definition before you look at
                         a chart: sessions or users as the denominator, which order statuses count as a conversion,
                         whether failed and cancelled orders are excluded, and whether internal and bot traffic is
@@ -239,9 +239,11 @@ export default function WooCommerceLowConversionRatePage() {
 
                     <BlogHeader>5. Cart fragments, the WooCommerce-specific one</BlogHeader>
                     <BlogText>
-                        WooCommerce keeps the mini-cart accurate using an AJAX request called cart fragments, and by
-                        default it runs on every page rather than only where a cart is displayed. On a cached site this
-                        is the request that cannot be cached, because it is per-visitor state.
+                        WooCommerce keeps the mini-cart accurate with a script called <code>wc-cart-fragments.js</code>,
+                        which calls the <code>get_refreshed_fragments</code> AJAX action. By default it runs on every
+                        page rather than only where a cart is displayed, and on a cached site it is the one request that
+                        cannot be cached, because it carries per-visitor state. You can confirm it in your browser
+                        network panel by filtering for <code>wc-ajax</code>.
                     </BlogText>
                     <BlogText>
                         The symptom is specific and worth recognising: pages appear quickly, then the header cart count
@@ -329,9 +331,7 @@ export default function WooCommerceLowConversionRatePage() {
                     <BlogHeader>11. What speed can and cannot explain</BlogHeader>
                     <BlogText>
                         Performance work is worth doing on its own merits and it does not come with a conversion
-                        guarantee. Published field studies show associations between speed and commercial outcomes
-                        across sites in general; none of them establish what your store will do, because your traffic
-                        mix, margin and catalogue are not theirs.
+                        guarantee.
                     </BlogText>
                     <BlogText>
                         <BlogHighlight>
@@ -356,9 +356,10 @@ export default function WooCommerceLowConversionRatePage() {
 
                     <BlogHeader>13. Size the effect as a scenario, never as a promise</BlogHeader>
                     <BlogText>
-                        You will be asked what a fix is worth. The honest way to answer is a scenario with its
-                        assumptions visible: at your current sessions and average order value, a change of X points at
-                        this stage would be worth Y per month, IF the change holds and nothing else moves.
+                        State it as a scenario with its assumptions visible: at your current sessions and average
+                        order value, a change of X points at this stage would be worth Y per month, IF the change holds
+                        and nothing else moves. That is the honest answer to what a fix is worth, and it is the only
+                        form of the answer that survives contact with a month of real data.
                     </BlogText>
                     <BlogText>
                         Write the IF down and keep it attached to the number. The moment it is dropped, a conditional
@@ -366,8 +367,7 @@ export default function WooCommerceLowConversionRatePage() {
                         how agencies end up defending revenue figures they never had the data to produce.
                     </BlogText>
                     <BlogText>
-                        Use your own average order value and your own margin. A model built on a published benchmark is
-                        a model of a store you do not own.
+                        Use your own average order value and your own margin.
                     </BlogText>
 
                     <BlogHeader>14. Repair, go headless, or rebuild</BlogHeader>
