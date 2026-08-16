@@ -274,7 +274,7 @@ export const clusters: Cluster[] = [
     serviceOwned: true,
     entityIds: ['woocommerce', 'wordpress'],
     relatedClusterIds: ['wordpress', 'shopify', 'performance'],
-    postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow', 'woocommerce-migration-cost'],
+    postIds: ['woocommerce-vs-custom-website', 'woocommerce-too-slow', 'woocommerce-migration-cost', 'woocommerce-low-conversion-rate'],
   },
   {
     id: 'webflow',
