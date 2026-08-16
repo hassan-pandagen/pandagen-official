@@ -129,13 +129,22 @@ Google, and both are part of the AEO surface this site sells.
 
 Google's own tool, so these are the more citable numbers. Mobile form factor.
 
-| category | score |
-| --- | ---: |
-| Performance | **60** |
-| Accessibility | 82 |
-| Best Practices | 81 |
-| SEO | **92** |
-| Agentic Browsing | 1 of 2 |
+| category | mobile | desktop |
+| --- | ---: | ---: |
+| Performance | **60** | **59** |
+| Accessibility | 82 | 87 |
+| Best Practices | 81 | 81 |
+| SEO | **92** | **92** |
+| Agentic Browsing | 1 of 2 | **0 of 2** |
+
+**Desktop 59 against mobile 60 is the diagnostic here.** Desktop normally scores far higher,
+because it has more CPU and a faster network profile. When the two are level, the constraint
+is not the device. It is payload and server response, which matches 6.2 MB and a 1,425 ms
+first byte on `/our-courses/`. A lighter theme would not fix this; the bytes and the
+uncached inner pages would follow it across.
+
+**Agentic Browsing drops from 1 of 2 on mobile to 0 of 2 on desktop.** Capture which check
+differs before cutover, because the ratio alone does not say.
 
 **Field data: "No Data".** CrUX has no record for this origin, which means it does not get
 enough traffic for Google to report real-user metrics. Two consequences. The after-capture
@@ -178,8 +187,12 @@ Raw: `astepabovemed-2026-08-16-lighthouse.json`. Driver:
 | `/` | desktop | **13** | 87 | 58 | 92 | 18,050 ms | 2,834 ms | 0.471 |
 | `/our-courses/` | desktop | 31 | 87 | 77 | 92 | 17,516 ms | 1,720 ms | 0.003 |
 
-**Accessibility and SEO agree with PageSpeed Insights exactly: 82 and 92 on mobile.** Those
-two categories are stable on this machine and safe to use for a before/after delta.
+**Accessibility and SEO agree with PageSpeed Insights exactly, on BOTH form factors:**
+82/87 accessibility and 92/92 SEO. Those two categories are stable on this machine and safe
+to use for a before/after delta.
+
+**Best Practices does not agree.** Local says 58 where PSI says 81, on both form factors.
+Add it to the list of scores that must come from PSI rather than from here.
 
 **The performance score is not.** Local Lighthouse says 25 where PSI says 60, and desktop
 scores 13 against mobile 25, which cannot happen on a real machine. Desktop has more CPU and
@@ -192,7 +205,8 @@ its simulated throttling against exactly that number.
 | what to compare | measure it with | why |
 | --- | --- | --- |
 | Performance score | **PageSpeed Insights only** | Google's hardware, consistent between runs, and it is the number a client recognises |
-| Accessibility, SEO | local Lighthouse | reproducible, and it matches PSI here |
+| Accessibility, SEO | local Lighthouse | reproducible, and it matches PSI on both form factors |
+| Best Practices score | **PageSpeed Insights only** | local says 58, PSI says 81 |
 | Bytes, requests, TTFB | `baseline.mjs` | barely sensitive to local CPU |
 | Schema, meta, alt, formats | `seo-baseline.mjs` | not timing-dependent at all |
 
