@@ -125,6 +125,47 @@ Google, and both are part of the AEO surface this site sells.
 
 ---
 
+## PageSpeed Insights, 16 August 2026, 22:53
+
+Google's own tool, so these are the more citable numbers. Mobile form factor.
+
+| category | score |
+| --- | ---: |
+| Performance | **60** |
+| Accessibility | 82 |
+| Best Practices | 81 |
+| SEO | **92** |
+| Agentic Browsing | 1 of 2 |
+
+**Field data: "No Data".** CrUX has no record for this origin, which means it does not get
+enough traffic for Google to report real-user metrics. Two consequences. The after-capture
+will also be lab-only unless traffic grows, so the comparison has to be stated as a lab
+comparison. And nobody can contradict our lab numbers with field numbers, which cuts both
+ways and should be said out loud rather than relied on.
+
+Desktop scores not yet captured. Take them before cutover; mobile and desktop are different
+measurements and the after-capture must compare like with like.
+
+### Three things worth reading carefully
+
+**SEO 92 with zero structured data on the page.** Lighthouse's SEO category checks title,
+meta description, crawlable links, viewport, and a handful of similar basics. It does not
+look at schema, Open Graph, entity coverage or anything an answer engine uses. A site can
+score in the nineties for SEO and be entirely invisible to the machine-readable layer, and
+this one does. That is a genuinely useful illustration for our own writing, and it is a
+first-hand one.
+
+**Accessibility 82 against 2 detected axe nodes.** These agree. Our scan found exactly two
+defects, `link-name` and `meta-viewport`, and Lighthouse weights `meta-viewport` heavily
+because it governs whether a reader can zoom. Same two problems, expressed as a count in one
+tool and a weighted score in the other. This is the "keep the tool constant" rule in
+miniature: do not put 82 and 2 in the same sentence as though one contradicts the other.
+
+**Agentic Browsing 1 of 2.** A real reading of the experimental Chrome category that
+`agentic-browsing-pagespeed-score` currently describes without a single measured example.
+Capture the individual check results before cutover, not just the ratio, since the ratio
+alone is not reproducible.
+
 ## The honest read
 
 **The story is weight, first byte, and an empty machine-readable surface. It is not
@@ -156,8 +197,9 @@ a result. This is the rule the accessibility glossary states in print.
   the before while the old site is still up if LCP is wanted in the comparison.
 - **`content-length` undercounts** chunked or header-less compressed responses, so the
   transferred figures are a floor.
-- **No field data.** Everything here is lab. If CrUX has data for this origin it should be
-  captured too, because a lab number and a field number answer different questions.
+- **No field data exists.** PageSpeed Insights reports "No Data" for this origin, so CrUX
+  has no real-user record of it. Every figure in this file is lab. Say so with any
+  comparison, because a lab improvement is not a claim about what visitors experienced.
 
 ---
 
