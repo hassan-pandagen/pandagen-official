@@ -1,0 +1,137 @@
+{
+  "capturedAt": "2026-08-16",
+  "browser": "151.0.7922.34",
+  "target": "https://astepabovemed.com/",
+  "pages": [
+    {
+      "url": "https://astepabovemed.com/",
+      "finalUrl": "https://astepabovemed.com/",
+      "wallClockMs": 43115,
+      "timing": {
+        "ttfbMs": 172,
+        "domContentLoadedMs": 2124,
+        "loadEventMs": 13009,
+        "firstContentfulPaintMs": 1408,
+        "largestContentfulPaintMs": null,
+        "domNodes": 394,
+        "scripts": 13,
+        "inlineScripts": 15,
+        "stylesheets": 9,
+        "images": 13,
+        "imagesWithoutAlt": 0,
+        "iframes": 0,
+        "htmlBytes": 192137
+      },
+      "axe": {
+        "nodes": 2,
+        "byRule": {
+          "link-name": 1,
+          "meta-viewport": 1
+        },
+        "axeVersion": "4.13.0"
+      },
+      "requests": 59,
+      "transferredBytes": 7110772,
+      "byType": {
+        "document": {
+          "count": 1,
+          "bytes": 0
+        },
+        "image": {
+          "count": 16,
+          "bytes": 6183017
+        },
+        "stylesheet": {
+          "count": 9,
+          "bytes": 0
+        },
+        "script": {
+          "count": 14,
+          "bytes": 712610
+        },
+        "font": {
+          "count": 5,
+          "bytes": 214072
+        },
+        "fetch": {
+          "count": 12,
+          "bytes": 1073
+        },
+        "ping": {
+          "count": 1,
+          "bytes": 0
+        },
+        "xhr": {
+          "count": 1,
+          "bytes": 0
+        }
+      },
+      "screenshot": "https-astepabovemed-com-.png"
+    },
+    {
+      "url": "https://astepabovemed.com/contact/",
+      "finalUrl": "https://astepabovemed.com/contact/",
+      "wallClockMs": 34160,
+      "timing": {
+        "ttfbMs": 1501,
+        "domContentLoadedMs": 3574,
+        "loadEventMs": 4110,
+        "firstContentfulPaintMs": 2400,
+        "largestContentfulPaintMs": null,
+        "domNodes": 208,
+        "scripts": 14,
+        "inlineScripts": 15,
+        "stylesheets": 10,
+        "images": 2,
+        "imagesWithoutAlt": 0,
+        "iframes": 0,
+        "htmlBytes": 92516
+      },
+      "axe": {
+        "nodes": 2,
+        "byRule": {
+          "link-name": 1,
+          "meta-viewport": 1
+        },
+        "axeVersion": "4.13.0"
+      },
+      "requests": 45,
+      "transferredBytes": 1036368,
+      "byType": {
+        "document": {
+          "count": 1,
+          "bytes": 0
+        },
+        "stylesheet": {
+          "count": 10,
+          "bytes": 0
+        },
+        "image": {
+          "count": 5,
+          "bytes": 38576
+        },
+        "script": {
+          "count": 15,
+          "bytes": 864014
+        },
+        "font": {
+          "count": 4,
+          "bytes": 133772
+        },
+        "fetch": {
+          "count": 8,
+          "bytes": 6
+        },
+        "ping": {
+          "count": 1,
+          "bytes": 0
+        },
+        "xhr": {
+          "count": 1,
+          "bytes": 0
+        }
+      },
+      "screenshot": "https-astepabovemed-com-contact-.png"
+    }
+  ]
+}
