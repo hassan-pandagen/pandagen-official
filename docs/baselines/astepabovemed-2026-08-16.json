@@ -6,12 +6,12 @@
     {
       "url": "https://astepabovemed.com/",
       "finalUrl": "https://astepabovemed.com/",
-      "wallClockMs": 43115,
+      "wallClockMs": 35418,
       "timing": {
-        "ttfbMs": 172,
-        "domContentLoadedMs": 2124,
-        "loadEventMs": 13009,
-        "firstContentfulPaintMs": 1408,
+        "ttfbMs": 97,
+        "domContentLoadedMs": 2379,
+        "loadEventMs": 5403,
+        "firstContentfulPaintMs": 544,
         "largestContentfulPaintMs": null,
         "domNodes": 394,
         "scripts": 13,
@@ -20,7 +20,7 @@
         "images": 13,
         "imagesWithoutAlt": 0,
         "iframes": 0,
-        "htmlBytes": 192137
+        "htmlBytes": 192117
       },
       "axe": {
         "nodes": 2,
@@ -31,31 +31,31 @@
         "axeVersion": "4.13.0"
       },
       "requests": 59,
-      "transferredBytes": 7110772,
+      "transferredBytes": 6496064,
       "byType": {
         "document": {
           "count": 1,
           "bytes": 0
         },
-        "image": {
-          "count": 16,
-          "bytes": 6183017
-        },
         "stylesheet": {
           "count": 9,
           "bytes": 0
         },
-        "script": {
-          "count": 14,
-          "bytes": 712610
+        "image": {
+          "count": 16,
+          "bytes": 5568307
         },
         "font": {
           "count": 5,
           "bytes": 214072
         },
+        "script": {
+          "count": 14,
+          "bytes": 712595
+        },
         "fetch": {
           "count": 12,
-          "bytes": 1073
+          "bytes": 1090
         },
         "ping": {
           "count": 1,
@@ -69,23 +69,23 @@
       "screenshot": "https-astepabovemed-com-.png"
     },
     {
-      "url": "https://astepabovemed.com/contact/",
-      "finalUrl": "https://astepabovemed.com/contact/",
-      "wallClockMs": 34160,
+      "url": "https://astepabovemed.com/our-courses/",
+      "finalUrl": "https://astepabovemed.com/our-courses/",
+      "wallClockMs": 38593,
       "timing": {
-        "ttfbMs": 1501,
-        "domContentLoadedMs": 3574,
-        "loadEventMs": 4110,
-        "firstContentfulPaintMs": 2400,
+        "ttfbMs": 1425,
+        "domContentLoadedMs": 2590,
+        "loadEventMs": 8576,
+        "firstContentfulPaintMs": 2416,
         "largestContentfulPaintMs": null,
-        "domNodes": 208,
-        "scripts": 14,
-        "inlineScripts": 15,
-        "stylesheets": 10,
-        "images": 2,
+        "domNodes": 319,
+        "scripts": 13,
+        "inlineScripts": 14,
+        "stylesheets": 7,
+        "images": 9,
         "imagesWithoutAlt": 0,
         "iframes": 0,
-        "htmlBytes": 92516
+        "htmlBytes": 177830
       },
       "axe": {
         "nodes": 2,
@@ -95,24 +95,24 @@
         },
         "axeVersion": "4.13.0"
       },
-      "requests": 45,
-      "transferredBytes": 1036368,
+      "requests": 46,
+      "transferredBytes": 10438573,
       "byType": {
         "document": {
           "count": 1,
           "bytes": 0
         },
         "stylesheet": {
-          "count": 10,
+          "count": 7,
           "bytes": 0
         },
         "image": {
-          "count": 5,
-          "bytes": 38576
+          "count": 10,
+          "bytes": 9592215
         },
         "script": {
-          "count": 15,
-          "bytes": 864014
+          "count": 14,
+          "bytes": 712580
         },
         "font": {
           "count": 4,
@@ -131,7 +131,72 @@
           "bytes": 0
         }
       },
-      "screenshot": "https-astepabovemed-com-contact-.png"
+      "screenshot": "https-astepabovemed-com-our-courses-.png"
+    },
+    {
+      "url": "https://astepabovemed.com/private-group-training/",
+      "finalUrl": "https://astepabovemed.com/private-group-training/",
+      "wallClockMs": 33327,
+      "timing": {
+        "ttfbMs": 1241,
+        "domContentLoadedMs": 2456,
+        "loadEventMs": 3312,
+        "firstContentfulPaintMs": 2100,
+        "largestContentfulPaintMs": null,
+        "domNodes": 406,
+        "scripts": 20,
+        "inlineScripts": 47,
+        "stylesheets": 8,
+        "images": 2,
+        "imagesWithoutAlt": 0,
+        "iframes": 0,
+        "htmlBytes": 268202
+      },
+      "axe": {
+        "nodes": 2,
+        "byRule": {
+          "link-name": 1,
+          "meta-viewport": 1
+        },
+        "axeVersion": "4.13.0"
+      },
+      "requests": 50,
+      "transferredBytes": 1103043,
+      "byType": {
+        "document": {
+          "count": 1,
+          "bytes": 0
+        },
+        "stylesheet": {
+          "count": 8,
+          "bytes": 0
+        },
+        "script": {
+          "count": 21,
+          "bytes": 864065
+        },
+        "image": {
+          "count": 5,
+          "bytes": 38576
+        },
+        "font": {
+          "count": 5,
+          "bytes": 200396
+        },
+        "fetch": {
+          "count": 8,
+          "bytes": 6
+        },
+        "ping": {
+          "count": 1,
+          "bytes": 0
+        },
+        "xhr": {
+          "count": 1,
+          "bytes": 0
+        }
+      },
+      "screenshot": "https-astepabovemed-com-private-group-training-.png"
     }
   ]
 }

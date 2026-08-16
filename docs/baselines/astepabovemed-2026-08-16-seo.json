@@ -1,0 +1,96 @@
+{
+  "capturedAt": "2026-08-16",
+  "origin": "https://astepabovemed.com/",
+  "pages": [
+    {
+      "url": "https://astepabovemed.com/",
+      "title": "A Step Above Medical | Phlebotomy & IV Training Courses",
+      "titleLength": 55,
+      "metaDescription": null,
+      "metaDescriptionLength": 0,
+      "canonical": "https://astepabovemed.com/",
+      "robotsMeta": "max-image-preview:large",
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "twitterCard": null,
+      "htmlLang": "en-US",
+      "hreflang": 0,
+      "jsonLdBlocks": 0,
+      "schemaTypes": [],
+      "h1": 1,
+      "h2": 3,
+      "h3": 3,
+      "h1Text": [
+        "Teaching Medical Excellence: Learn. Update. Excel."
+      ],
+      "images": 13,
+      "imagesNoAlt": 0,
+      "imagesEmptyAlt": 13,
+      "imagesLazy": 4,
+      "imageFormats": {
+        "png": 12,
+        "jpg": 1
+      },
+      "internalLinks": 17,
+      "externalLinks": 6,
+      "words": 403,
+      "inlineStyleBlocks": 10
+    },
+    {
+      "url": "https://astepabovemed.com/contact/",
+      "title": "404 Not Found | A Step Above Medical",
+      "titleLength": 36,
+      "metaDescription": null,
+      "metaDescriptionLength": 0,
+      "canonical": null,
+      "robotsMeta": "max-image-preview:large",
+      "ogTitle": null,
+      "ogImage": null,
+      "ogType": null,
+      "twitterCard": null,
+      "htmlLang": "en-US",
+      "hreflang": 0,
+      "jsonLdBlocks": 0,
+      "schemaTypes": [],
+      "h1": 1,
+      "h2": 1,
+      "h3": 0,
+      "h1Text": [
+        "No Results Found"
+      ],
+      "images": 2,
+      "imagesNoAlt": 0,
+      "imagesEmptyAlt": 2,
+      "imagesLazy": 1,
+      "imageFormats": {
+        "png": 2
+      },
+      "internalLinks": 15,
+      "externalLinks": 6,
+      "words": 74,
+      "inlineStyleBlocks": 11
+    }
+  ],
+  "site": {
+    "robotsTxt": {
+      "status": 200,
+      "bytes": 118,
+      "disallowLines": 1,
+      "namesAiCrawlers": false
+    },
+    "sitemapXml": {
+      "status": 200,
+      "bytes": 835,
+      "urls": 7
+    },
+    "sitemapIndex": {
+      "status": 404,
+      "bytes": 0
+    },
+    "llmsTxt": {
+      "status": 404,
+      "bytes": 0
+    }
+  }
+}
