@@ -87,3 +87,6 @@ exports/
 
 # Scanner deps (see scripts/scan/README.md)
 scripts/scan/node_modules/
+
+# Scanner deps
+scripts/scan/lighthouse-*.json

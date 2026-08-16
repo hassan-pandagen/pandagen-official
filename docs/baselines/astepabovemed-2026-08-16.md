@@ -166,6 +166,44 @@ miniature: do not put 82 and 2 in the same sentence as though one contradicts th
 Capture the individual check results before cutover, not just the ratio, since the ratio
 alone is not reproducible.
 
+## Local Lighthouse, and why its performance score is NOT usable here
+
+Raw: `astepabovemed-2026-08-16-lighthouse.json`. Driver:
+`scripts/scan/lighthouse-baseline.mjs`, Lighthouse 13.4.1.
+
+| page | form | perf | a11y | best practices | seo | LCP | TBT | CLS |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `/` | mobile | 25 | 82 | 58 | 92 | 14,655 ms | 1,060 ms | 0.657 |
+| `/our-courses/` | mobile | 20 | 82 | 77 | 92 | 12,189 ms | 1,007 ms | 0.600 |
+| `/` | desktop | **13** | 87 | 58 | 92 | 18,050 ms | 2,834 ms | 0.471 |
+| `/our-courses/` | desktop | 31 | 87 | 77 | 92 | 17,516 ms | 1,720 ms | 0.003 |
+
+**Accessibility and SEO agree with PageSpeed Insights exactly: 82 and 92 on mobile.** Those
+two categories are stable on this machine and safe to use for a before/after delta.
+
+**The performance score is not.** Local Lighthouse says 25 where PSI says 60, and desktop
+scores 13 against mobile 25, which cannot happen on a real machine. Desktop has more CPU and
+a larger viewport; scoring lower means the runs were contending for the processor.
+`environment.benchmarkIndex` is **1514**, which is a slow host, and Lighthouse calibrates
+its simulated throttling against exactly that number.
+
+### The rule this sets for the after-capture
+
+| what to compare | measure it with | why |
+| --- | --- | --- |
+| Performance score | **PageSpeed Insights only** | Google's hardware, consistent between runs, and it is the number a client recognises |
+| Accessibility, SEO | local Lighthouse | reproducible, and it matches PSI here |
+| Bytes, requests, TTFB | `baseline.mjs` | barely sensitive to local CPU |
+| Schema, meta, alt, formats | `seo-baseline.mjs` | not timing-dependent at all |
+
+**Never put a local Lighthouse performance score and a PSI score in the same comparison.**
+That is the same measurement error as comparing an axe count with a WAVE count, and the
+25-against-60 gap here shows how large it can get.
+
+One real finding survives the noise: **`/our-courses/` ships 1.91 MB to mobile and 9.27 MB
+to desktop.** That is responsive images working in the wrong direction for the page where
+people choose what to buy, and it is not a scoring artefact.
+
 ## The honest read
 
 **The story is weight, first byte, and an empty machine-readable surface. It is not

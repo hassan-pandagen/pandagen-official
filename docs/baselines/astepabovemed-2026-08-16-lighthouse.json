@@ -1,0 +1,120 @@
+{
+  "capturedAt": "2026-08-16T17:58:15.798Z",
+  "lighthouse": "13.4.1",
+  "runs": [
+    {
+      "url": "https://astepabovemed.com/",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 25,
+        "accessibility": 82,
+        "best-practices": 58,
+        "seo": 92
+      },
+      "metrics": {
+        "firstContentfulPaintMs": 1885,
+        "largestContentfulPaintMs": 14655,
+        "totalBlockingTimeMs": 1060,
+        "cumulativeLayoutShift": 0.657,
+        "speedIndexMs": 4780,
+        "timeToInteractiveMs": 14662,
+        "totalByteWeight": 6083841
+      },
+      "failedAudits": [
+        "deprecations",
+        "third-party-cookies",
+        "heading-order",
+        "landmark-one-main",
+        "link-name",
+        "meta-viewport",
+        "inspector-issues",
+        "meta-description"
+      ]
+    },
+    {
+      "url": "https://astepabovemed.com/our-courses/",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 20,
+        "accessibility": 82,
+        "best-practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "firstContentfulPaintMs": 3515,
+        "largestContentfulPaintMs": 12189,
+        "totalBlockingTimeMs": 1007,
+        "cumulativeLayoutShift": 0.6,
+        "speedIndexMs": 5346,
+        "timeToInteractiveMs": 12204,
+        "totalByteWeight": 1999285
+      },
+      "failedAudits": [
+        "third-party-cookies",
+        "heading-order",
+        "landmark-one-main",
+        "link-name",
+        "meta-viewport",
+        "inspector-issues",
+        "meta-description"
+      ]
+    },
+    {
+      "url": "https://astepabovemed.com/",
+      "formFactor": "desktop",
+      "scores": {
+        "performance": 13,
+        "accessibility": 87,
+        "best-practices": 58,
+        "seo": 92
+      },
+      "metrics": {
+        "firstContentfulPaintMs": 1841,
+        "largestContentfulPaintMs": 18050,
+        "totalBlockingTimeMs": 2834,
+        "cumulativeLayoutShift": 0.471,
+        "speedIndexMs": 2276,
+        "timeToInteractiveMs": 18065,
+        "totalByteWeight": 6817462
+      },
+      "failedAudits": [
+        "deprecations",
+        "third-party-cookies",
+        "heading-order",
+        "landmark-one-main",
+        "link-name",
+        "meta-viewport",
+        "inspector-issues",
+        "meta-description"
+      ]
+    },
+    {
+      "url": "https://astepabovemed.com/our-courses/",
+      "formFactor": "desktop",
+      "scores": {
+        "performance": 31,
+        "accessibility": 87,
+        "best-practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "firstContentfulPaintMs": 1887,
+        "largestContentfulPaintMs": 17516,
+        "totalBlockingTimeMs": 1720,
+        "cumulativeLayoutShift": 0.003,
+        "speedIndexMs": 3153,
+        "timeToInteractiveMs": 17538,
+        "totalByteWeight": 9719772
+      },
+      "failedAudits": [
+        "third-party-cookies",
+        "heading-order",
+        "landmark-one-main",
+        "link-name",
+        "meta-viewport",
+        "inspector-issues",
+        "meta-description"
+      ]
+    }
+  ]
+}
