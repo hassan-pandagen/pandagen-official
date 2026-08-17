@@ -63,6 +63,17 @@ export interface ClientReview {
      * therefore NOT set there, and must not be inferred.
      */
     unprompted?: boolean;
+    /**
+     * True where the platform verifies the reviewer's identity through its own
+     * process. Clutch does; Trustpilot's public label speaks to solicitation
+     * rather than identity, so the two badges are NOT interchangeable and a
+     * review should carry the one its own platform actually publishes.
+     *
+     * "Verified Clutch review" is already the wording used on the featured card
+     * in SocialProof, so this reuses established language rather than inventing
+     * a second phrase for the same thing.
+     */
+    verified?: boolean;
 }
 
 export const CLIENT_REVIEWS: readonly ClientReview[] = [
@@ -119,6 +130,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         // this note can go. If he ever withdraws it, the name comes off here
         // first -- consent is the reason it is published, not the link.
         id: 'mycustompatches',
+        verified: true,
         caseStudy: '/work/mycustompatches',
         quote: 'Hassan was available to me at any time, and his response time was always less than an hour. And he suggested me to go route that will help me in business i.e. Seo, UI, UX etc',
         snippet: 'Hassan was available to me at any time, and his response time was always less than an hour.',

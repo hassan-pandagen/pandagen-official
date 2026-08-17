@@ -75,14 +75,17 @@ function ReviewCard({ review, position, cardSize, reduceMotion, onSelect }: Card
                 className={cn("h-5 w-5 shrink-0", isCentre ? "text-cognac-light" : "text-cognac")}
                 aria-hidden="true"
             />
+            {/* Centred in the free space rather than pinned to the top. The cards
+                are a fixed square and the snippets are not the same length, so a
+                short one left an obvious hole above the caption. */}
             <blockquote
                 className={cn(
-                    "mt-3 flex-1 font-serif italic leading-snug",
+                    "flex flex-1 items-center font-serif italic leading-snug",
                     cardSize > 300 ? "text-lg" : "text-base",
                     isCentre ? "text-white" : "text-charcoal"
                 )}
             >
-                {review.snippet}
+                <span>{review.snippet}</span>
             </blockquote>
             <figcaption
                 className={cn(
@@ -108,7 +111,7 @@ function ReviewCard({ review, position, cardSize, reduceMotion, onSelect }: Card
                 )}
                 <span className={cn("mt-0.5 flex flex-wrap items-center gap-2 text-xs", isCentre ? "text-stone-300" : "text-stone-600")}>
                     {review.date}
-                    {review.unprompted && (
+                    {(review.unprompted || review.verified) && (
                         <span
                             className={cn(
                                 "inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em]",
@@ -117,8 +120,12 @@ function ReviewCard({ review, position, cardSize, reduceMotion, onSelect }: Card
                                     : "border-cognac/30 text-cognac"
                             )}
                         >
-                            Unprompted
-                            <span className="sr-only"> review, as labelled by {review.platform}</span>
+                            {review.unprompted ? "Unprompted" : "Verified"}
+                            <span className="sr-only">
+                                {review.unprompted
+                                    ? ` review, as labelled by ${review.platform}`
+                                    : ` review, identity checked by ${review.platform}`}
+                            </span>
                         </span>
                     )}
                 </span>
