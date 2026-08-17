@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-13",
-        modifiedTime: "2026-08-15",
+        modifiedTime: "2026-08-18",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/web-accessibility-statistics-2026")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/web-accessibility-statistics-2026"),
             datePublished: "2026-08-13",
-            dateModified: "2026-08-15",
+            dateModified: "2026-08-18",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -342,9 +342,10 @@ export default function WebAccessibilityStatistics2026Page() {
                         replace, which we learned by trying the find and replace first and adding 51 new failures.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>All 134 pages now report zero detected violations</BlogHighlight>, confirmed on
-                        three consecutive runs. The scanner is in our repository and runs against a local build before
-                        anything ships.
+                        <BlogHighlight>All 137 pages now report zero detected violations</BlogHighlight>, first
+                        confirmed on three consecutive runs and re-checked every time a page is added, most recently on
+                        18 August 2026. The scanner is in our repository, reads the sitemap so new pages are covered
+                        automatically, and runs against a local build before anything ships.
                     </BlogText>
                     <BlogText>
                         Two things that number is not. It is not comparable to the 95.9% above, because that study uses

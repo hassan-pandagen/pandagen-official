@@ -127,6 +127,88 @@
       "qualifier": "priced by sessions, and charged separately from the site plan",
       "verifiedAt": "2026-08-05",
       "source": "https://webflow.com/pricing"
+    },
+    "shopify-storefront-api-protocol": {
+      "vendor": "Shopify",
+      "label": "Storefront API protocol",
+      "value": "GraphQL only",
+      "qualifier": "Shopify states there is no REST API for storefronts",
+      "verifiedAt": "2026-08-17",
+      "source": "https://shopify.dev/docs/api/storefront"
+    },
+    "shopify-storefront-api-content": {
+      "vendor": "Shopify",
+      "label": "Content available through the Storefront API",
+      "value": "pages, blogs and articles, alongside products, collections, cart, checkout, search and customer accounts",
+      "qualifier": "this is why Shopify can serve a headless site as well as a headless shop",
+      "verifiedAt": "2026-08-17",
+      "source": "https://shopify.dev/docs/api/storefront"
+    },
+    "woocommerce-store-api-scope": {
+      "vendor": "WooCommerce",
+      "label": "Store API scope",
+      "value": "unauthenticated cart, checkout and product endpoints at /wp-json/wc/store/v1/",
+      "qualifier": "WooCommerce describes it as public endpoints for customer-facing cart, checkout and product functionality",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developer.woocommerce.com/docs/apis/store-api/"
+    },
+    "woocommerce-rest-api-scope": {
+      "vendor": "WooCommerce",
+      "label": "REST API scope",
+      "value": "authenticated admin resources only, with no cart or checkout endpoints",
+      "qualifier": "products, orders, customers, coupons, refunds, tax rates and reports; a headless storefront needs the separate Store API",
+      "verifiedAt": "2026-08-17",
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    "wix-headless-price": {
+      "vendor": "Wix",
+      "plan": "Headless",
+      "label": "Wix Headless entry price",
+      "value": "free to start",
+      "qualifier": "Wix states a premium plan is required to unlock payments, in-depth analytics and custom domains",
+      "verifiedAt": "2026-08-17",
+      "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
+    },
+    "wix-headless-solutions": {
+      "vendor": "Wix",
+      "plan": "Headless",
+      "label": "Business solutions available headlessly",
+      "value": "eCommerce, bookings, events, memberships, CMS and blog",
+      "qualifier": "Wix states these sit under a single auth model and a consistent API pattern",
+      "verifiedAt": "2026-08-17",
+      "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
+    },
+    "squarespace-api-scope": {
+      "vendor": "Squarespace",
+      "label": "Developer API scope",
+      "value": "nine back-office Commerce APIs, with no content, page or storefront API",
+      "qualifier": "Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.squarespace.com/commerce-apis/overview"
+    },
+    "webflow-cloud-frameworks": {
+      "vendor": "Webflow",
+      "label": "Frameworks deployable to Webflow Cloud",
+      "value": "Astro and Next.js",
+      "qualifier": "deployed to Webflow infrastructure either standalone or mounted on an existing Webflow site at a path",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.webflow.com/webflow-cloud/getting-started"
+    },
+    "webflow-devlink-direction": {
+      "vendor": "Webflow",
+      "label": "What DevLink moves",
+      "value": "Webflow components exported as React components into an external codebase",
+      "qualifier": "Webflow describes DevLink as the interface between external codebases and Webflow",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.webflow.com/devlink/reference/overview"
+    },
+    "gohighlevel-api-scope": {
+      "vendor": "GoHighLevel",
+      "label": "Public API modules",
+      "value": "CRM and contacts, conversations, calendar and events, opportunities, payments and webhooks",
+      "qualifier": "Blogs and Funnels APIs are listed in the developer portal; whether they return renderable page content was not established",
+      "verifiedAt": "2026-08-17",
+      "source": "https://marketplace.gohighlevel.com/docs/"
     }
   }
 }

@@ -979,6 +979,28 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "which-website-builders-can-go-headless",
+    cardStat: "3 of 6",
+    cardStatLabel: "Builders that genuinely support headless",
+    title: "Which Website Builders Can Actually Go Headless in 2026",
+    excerpt: "Checked against each platform's own API documentation rather than its marketing. Shopify, WooCommerce and Wix genuinely support it, Webflow runs the idea in the opposite direction, and Squarespace does not mention headless once.",
+    category: "Research",
+    readTime: "10 min",
+    date: "Aug 18",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'code',
+    lastModified: "2026-08-18",
+    faqs: [
+      { question: "Can you use Squarespace headless?", answer: "No. Squarespace publishes nine APIs and every one of them is back-office: Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions. There is no API that returns page or blog content, and no storefront or checkout API, so there is nothing to render a custom front end from. The word headless does not appear on the Squarespace developer portal. Checked 17 August 2026." },
+      { question: "Is Wix Headless free?", answer: "Wix Headless is free to start. Wix states that a premium plan is required to unlock payments, in-depth analytics and custom domains, so a real commercial site will need one. The free tier is enough to build and evaluate against your own content. Checked 17 August 2026." },
+      { question: "Can Webflow be used headless?", answer: "Not in the usual sense, and Webflow appears to have chosen a different direction on purpose. The Data API reads CMS collection items, but the larger developer surface moves the other way: DevLink exports Webflow components as React into your codebase, and Webflow Cloud deploys your Astro or Next.js application onto Webflow infrastructure. So rather than taking Webflow content out to your host, you bring your code to theirs." },
+      { question: "Does WooCommerce have a headless API?", answer: "Yes, and it takes two of them. The REST API at /wp-json/wc/v3/ is authenticated and administrative, covering products, orders, customers and reports, with no cart or checkout endpoints at all. The Store API at /wp-json/wc/store/v1/ is unauthenticated and customer-facing, and it is the one carrying cart, checkout and product browsing. A headless WooCommerce storefront uses both, which is the detail most guides omit." },
+      { question: "Which website builder is best for going headless?", answer: "Shopify, if you are selling. Its Storefront API is GraphQL only and returns pages, blogs and articles alongside products, collections, cart and checkout, so one API serves both the shop and the surrounding content site. WooCommerce is the most open but needs two APIs and your own hosting. Wix is the surprise, with genuine coverage across eCommerce, bookings, events, memberships, CMS and blog under one auth model." }
+    ]
+  },
+  {
     id: "cms-market-share-2026",
     cardStat: "65.2% → 59.0%",
     cardStatLabel: "WordPress share, 2022 peak to today",
@@ -1037,7 +1059,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-15",
+    lastModified: "2026-08-18",
     faqs: [
       { question: "What percentage of websites are accessible?", answer: "In the 2026 WebAIM Million, 95.9% of the top one million home pages had detected WCAG 2 failures, up from 94.8% in 2025. That is automated testing of home pages only, so it detects a subset of failures and a page with no detected errors is not necessarily conformant." },
       { question: "Is web accessibility getting better or worse?", answer: "It got worse in 2026. The 95.9% failure rate reversed six consecutive years of small improvements. Average page element counts rose 22.5% in the same year, so growing page complexity is the likeliest mechanism rather than a decline in effort." },

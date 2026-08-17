@@ -405,7 +405,7 @@ export const clusters: Cluster[] = [
     entityIds: ['headless-commerce', 'shopify', 'custom-engineering'],
     relatedClusterIds: ['shopify', 'performance', 'custom'],
     postIds: [
-      'what-is-headless-commerce', 'google-universal-commerce-protocol-what-it-means-for-your-store',
+      'what-is-headless-commerce', 'which-website-builders-can-go-headless', 'google-universal-commerce-protocol-what-it-means-for-your-store',
       'shopify-slow-losing-sales', 'shopify-conversion-rate-speed-fix',
       'meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking',
       'fix-meta-ad-tracking-2026',
