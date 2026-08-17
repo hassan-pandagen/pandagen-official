@@ -20,7 +20,7 @@ export default function SocialProof() {
       className="border-y border-stone-300 bg-paper px-6 py-12 md:py-24"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16 xl:gap-24">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16 xl:gap-24">
           <div className="max-w-lg">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-cognac">
               Evidence, not theater
@@ -116,10 +116,16 @@ export default function SocialProof() {
               </div>
             </figure>
 
-            {reviews.map((review) => (
+            {reviews.map((review, index) => (
               <figure
                 key={review.quote}
-                className="relative overflow-hidden rounded-[1.75rem] border border-stone-300 bg-white p-6 text-charcoal"
+                /* Reviews 3 and 4 are hidden below md. Five stacked cards ran to
+                   3,153px on a 390x844 screen, nearly four viewports for one
+                   section. The Trustpilot link at the top of the section reaches
+                   the full set, so this hides nothing a reader cannot get to. */
+                className={`relative overflow-hidden rounded-[1.75rem] border border-stone-300 bg-white p-6 text-charcoal${
+                  index >= 2 ? " hidden md:block" : ""
+                }`}
               >
                 <Quote className="relative h-5 w-5 text-cognac" aria-hidden="true" />
                 <blockquote className="relative mt-3 font-serif text-lg italic leading-snug text-charcoal md:text-xl">
