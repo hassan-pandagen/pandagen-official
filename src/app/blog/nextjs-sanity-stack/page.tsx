@@ -10,6 +10,7 @@ import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { finding } from "@/data/research-facts";
 import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
@@ -377,6 +378,35 @@ export default function NextjsSanityStackPage() {
                         That last point is the one worth settling in writing before the build starts. Our{" "}
                         <Link href="/blog/do-you-own-your-website" className={sourceLinkClass}>checklist on website and account ownership</Link>{" "}
                         lists the accounts and records a client should hold in their own name.
+                    </BlogText>
+
+                    <BlogHeader>How widely used is this stack, actually</BlogHeader>
+                    <BlogText>
+                        Worth establishing before the comparison sections, because the two halves of this stack are not
+                        in the same position and most writing about it treats them as one thing.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>{finding("nextjs-adoption-2026").statement}.</BlogHighlight> That is a mainstream
+                        framework by any reading. The CMS beside it is not:{" "}
+                        {finding("sanity-adoption-2026").statement}. W3Techs does not publish a figure below that
+                        threshold, so there is no trend to quote either.
+                    </BlogText>
+                    <BlogText>
+                        We are stating this plainly because we build on it and it would be easy not to. Anyone telling
+                        you this stack is surging is describing a feeling rather than a measurement, and{" "}
+                        {finding("sanity-adoption-2026").limitation.charAt(0).toLowerCase() +
+                            finding("sanity-adoption-2026").limitation.slice(1)}
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>What follows from it is a hiring and continuity question, not a quality one.</BlogHighlight>{" "}
+                        A niche CMS means a smaller pool of people who have used it, and a slower answer when you search
+                        for a problem. That is a real cost and it is separate from whether the software is good. Weigh it
+                        against the thing the next section is about, which is whether the editing experience actually
+                        works for the person who has to use it every week.
+                    </BlogText>
+                    <BlogText>
+                        Both figures were read from W3Techs on {finding("sanity-adoption-2026").verifiedAt}.{" "}
+                        {finding("nextjs-adoption-2026").limitation}
                     </BlogText>
 
                     <BlogHeader>Compare alternatives on equivalent requirements</BlogHeader>

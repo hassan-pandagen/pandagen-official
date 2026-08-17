@@ -105,6 +105,30 @@
       "publishedYear": "2025",
       "verifiedAt": "2026-08-13",
       "source": "https://www.uscourts.gov/statistics-reports"
+    },
+    "nextjs-adoption-2026": {
+      "study": "Usage statistics and market share of Next.js",
+      "publisher": "W3Techs, Q-Success",
+      "value": "3.2% of all websites",
+      "statement": "Next.js is used by 4.2% of websites whose JavaScript library is known, which is 3.2% of all websites",
+      "note": "Cite this WITH the Sanity figure, never alone. The asymmetry is the point: the framework is mainstream and the CMS beside it is not.",
+      "method": "Detection by signature across W3Techs' survey of the top 10 million sites. The 4.2% denominator is sites with an identified JavaScript library; the 3.2% denominator is all surveyed sites.",
+      "limitation": "Detection by signature, so sites that strip their fingerprint are absent. Share of existing sites is not share of new builds.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-17",
+      "source": "https://w3techs.com/technologies/details/js-nextjs"
+    },
+    "sanity-adoption-2026": {
+      "study": "Usage statistics and market share of Sanity",
+      "publisher": "W3Techs, Q-Success",
+      "value": "less than 0.1%",
+      "statement": "Sanity is used by less than 0.1% of all websites whose content management system is known",
+      "note": "This is the figure that stops us writing that the stack is 'gaining popularity'. W3Techs does not publish a number below 0.1%, so there is no trend to report either, and claiming momentum for it would be unsupportable. Publish it as readily as anything else: a reader evaluating this stack should know the CMS is niche before committing, and hiring and continuity risk follow from that.",
+      "method": "Detection by signature across W3Techs' survey of the top 10 million sites, among sites with an identified CMS.",
+      "limitation": "Below the publisher's reporting threshold, so no exact value or trend is available. Headless CMSs are also harder to fingerprint than server-rendered ones, which may understate them.",
+      "publishedYear": "2026",
+      "verifiedAt": "2026-08-17",
+      "source": "https://w3techs.com/technologies/details/cm-sanity"
     }
   }
 }
