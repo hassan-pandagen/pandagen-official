@@ -85,6 +85,7 @@ export const COMMERCIAL: readonly Fact[] = [
 export const GOVERNANCE: readonly Fact[] = [
     { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date." },
     { label: 'Evidence policy', value: 'Project results are published with the relationship, date, measurement method and stated limitations. Founder-affiliated projects are labelled as such and are not presented as independent client proof.' },
+    { label: 'Review sourcing', value: 'Client reviews are published as named individual excerpts linked to their source page, never as a star rating or an aggregate score. As checked on 17 August 2026, four of the reviews at trustpilot.com/review/pandacodegen.com carry Trustpilot\u2019s own \u201cUnprompted review\u201d label, which Trustpilot applies when the business did not invite the review. The Clutch review is identity-verified by Clutch and is not labelled unprompted, because Clutch does not publish that label.' },
     // "A BAA is currently in place with a healthcare client" was removed on
     // 11 Aug 2026. It was a present-tense claim about a specific live
     // relationship, published on three surfaces including llms.txt, and it

@@ -114,6 +114,7 @@ function evidencePolicy(): string {
     return `## Evidence policy
 
 - Project results are published with the relationship, date, measurement method, and stated limitations.
+- Client reviews are published as named individual excerpts linked to their source page, never as a star rating or an aggregate score. As checked on 17 August 2026, four reviews at trustpilot.com/review/pandacodegen.com carry Trustpilot's own "Unprompted review" label, applied by Trustpilot when the business did not invite the review. The Clutch review is identity-verified by Clutch and carries no unprompted label, because Clutch does not publish one.
 - Panda Patches is owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake. It is labelled founder-affiliated and is not independent client proof.
 ${mcp}
 - No provider controls search rankings. Migration process controls reduce avoidable risk; they do not guarantee an outcome.
