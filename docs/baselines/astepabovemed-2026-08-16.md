@@ -1,5 +1,29 @@
 # A Step Above Medical — pre-rebuild baseline, 16 August 2026
 
+## Status, updated 17 August 2026
+
+| blocker | state |
+| --- | --- |
+| Client agrees to be named | **CLEARED.** Owner has given permission. Get it in writing with a date before publishing, so `approvedBy` and `approvedDate` in `case-study-facts.json` are backed by something. |
+| Rebuild stack confirmed | **CLEARED.** Next.js and Sanity, which means this project also becomes first-hand evidence for `nextjs-sanity-stack`, currently the only Sanity post with just two builds behind it. |
+| Rebuild is live | **NOT CLEARED.** Checked 17 Aug: astepabovemed.com still serves WordPress 7.0.4 with Divi (`et_pb` x2,530) and Elementor. Zero `_next`, zero `sanity`. |
+
+**There is no pending slot.** `case-study-facts.json` feeds `CaseStudyGrid`, three service pages,
+`RelationshipDisclosure` and `llms.txt`, so an entry added early publishes everywhere at once.
+The case study is created the day the rebuild serves, not before.
+
+**What to do the moment it goes live**, in this order:
+1. Re-run all four captures (see the commands at the end of this file). Do performance three
+   times and take a median; the correction log explains why one run is not enough.
+2. Add the entry to `case-study-facts.json` with `status: "verified"`, a `method` block naming
+   this file and both capture dates, and the written permission recorded.
+3. Put the numbers in `divi-theme-slow` and `woocommerce-too-slow` FIRST. Those earn 22 and 18
+   clicks; the `/work` page earns almost none. The case study is the proof, not the magnet.
+4. Add the Sanity build to `nextjs-sanity-stack` as a third project, and the first one that is
+   both independent and measured before and after.
+
+---
+
 **Nothing in this file is publishable yet.** It is a "before" measurement taken while the
 old site is still up, because once it is replaced the before is gone forever. The
 MyCustomPatches load time, mobile PageSpeed and hosting cost are all `status: withdrawn`
