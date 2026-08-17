@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
       title: "Next.js and Sanity in 2026: Fit, Cost and Tradeoffs",
       excerpt: "A current guide to Next.js with Sanity: rendering and content roles, editorial workflows, localization, pricing, security boundaries and when to use a simpler stack.",
     category: "Next.js",
-    readTime: "13 min",
+    readTime: "16 min",
     date: "Jul 23",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -84,8 +84,8 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Next.js and content management",
             inLanguage: "en-US",
-            wordCount: 2684,
-            timeRequired: "PT13M",
+            wordCount: 3247,
+            timeRequired: "PT16M",
             about: [
                 { "@type": "Thing", "name": "Next.js", "sameAs": ["https://nextjs.org/", "https://en.wikipedia.org/wiki/Next.js"] },
                 { "@type": "Thing", "name": "Sanity", "sameAs": ["https://www.sanity.io/"] },
@@ -270,7 +270,7 @@ export default function NextjsSanityStackPage() {
                         a real project. <strong>The Studio is embedded in the application at <code>/studio</code> rather
                         than deployed separately</strong>, which means schema changes ship with an ordinary git push and
                         there is no second deploy step to forget. And <strong>content edits reach the live site in about
-                        sixty seconds through revalidation, with no code deploy at all</strong> &mdash; a non-technical
+                        sixty seconds through revalidation, with no code deploy at all</strong>. A non-technical
                         administrator runs the site day to day without a developer in the loop. That is the whole
                         argument for this pairing, and it either works in practice or it does not.
                     </BlogText>
@@ -282,21 +282,21 @@ export default function NextjsSanityStackPage() {
                         that the owner run everything herself, and where nine content types and five moderated
                         submission paths are managed from the embedded Studio without a developer.{" "}
                         <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>{" "}
-                        is the same stack under commerce load, and it is founder-affiliated rather than independent —
-                        operating experience, labelled as such. <strong>Read the independent record first if what you
+                        is the same stack under commerce load, and it is founder-affiliated rather than independent.
+                        That makes it operating experience, labelled as such. <strong>Read the independent record first if what you
                         are assessing is whether this holds for someone who is not us.</strong>
                     </BlogText>
                     <BlogText>
                         The moderation model is worth noting because it is a content-modeling decision rather than a
-                        feature. Five of the seven document types are user-submitted &mdash; testimonies, questions,
-                        comments, messages and reports &mdash; and each carries a status field, so nothing a visitor
+                        feature. Five of the seven document types are user-submitted (testimonies, questions,
+                        comments, messages and reports) and each carries a status field, so nothing a visitor
                         submits is publicly readable until it is approved in the Studio. That is enforced in the queries
                         rather than by a plugin, which is the difference between a workflow and a setting.
                     </BlogText>
                     <InsightBox variant="info" label="What we measured, and what it does not prove">
                         Loaded on August 2, 2026 in headless Chromium 150, one unthrottled run from a single location:
                         time to first byte (TTFB) 81 ms, 65 requests, 629 KB transferred in total. <strong>Of that, 273 KB is
-                        CSS and fonts and 216 KB is JavaScript</strong>, which is the honest weak spot &mdash; the
+                        CSS and fonts and 216 KB is JavaScript</strong>, which is the honest weak spot. The
                         typography choices on a design-led site cost real bytes, and we are not going to present that as
                         a performance win. One lab run from one machine is not what visitors experience, and this figure
                         is a starting point for the site&apos;s own field data rather than a score.
@@ -404,6 +404,67 @@ export default function NextjsSanityStackPage() {
                         If the current site is already on WordPress, our{" "}
                         <Link href="/services/wordpress-migration" className={sourceLinkClass}>WordPress migration service</Link>{" "}
                         page describes how the move is scoped.
+                    </BlogText>
+
+                    <BlogHeader>Two production sites we have shipped on this stack</BlogHeader>
+                    <BlogText>
+                        Everything above is checkable against Sanity&apos;s and Vercel&apos;s own documentation, which
+                        is deliberate. This section is the part that is not: what actually happened when we built on
+                        it. Both projects have a published record, and one of them is founder-affiliated, which is
+                        stated here rather than left for you to work out.
+                    </BlogText>
+
+                    <BlogHeader>Ladies 4 Jesus, an independent client</BlogHeader>
+                    <BlogText>
+                        A community site on Next.js 16 with Sanity, where every visitor submission is moderated before
+                        it appears publicly. The Studio is embedded in the application at <code>/studio</code> rather
+                        than hosted separately, so the owner edits content at the same domain she visits, and edits
+                        reach the live site in about sixty seconds through revalidation with no code deploy.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>
+                            The decision that mattered on this project was the CMS, not the framework.
+                        </BlogHighlight>{" "}
+                        Sanity was chosen because a non-technical owner had to run content, moderation, gallery and
+                        settings without a developer, and she does. That is the requirement most stack comparisons
+                        skip, because it cannot be established from a feature table.
+                    </BlogText>
+                    <BlogText>
+                        One integration detail is worth taking if you are building something similar: video uploads go
+                        to Vercel Blob rather than into the CMS, and a Sanity webhook fires on rejection or deletion to
+                        remove the associated asset. Without that, rejected submissions accumulate in storage
+                        indefinitely and nobody notices until the bill does. The full record is in the{" "}
+                        <Link href="/work/ladies-4-jesus" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            Ladies 4 Jesus case study
+                        </Link>
+                        .
+                    </BlogText>
+
+                    <BlogHeader>Panda Patches, founder-affiliated and labelled as such</BlogHeader>
+                    <BlogText>
+                        Panda Patches is owned and operated by a PandaCodeGen co-founder. We built and maintain its
+                        platform but hold no ownership stake, so it is operating experience rather than independent
+                        client proof, and we do not present it as the latter.
+                    </BlogText>
+                    <BlogText>
+                        With that stated: it is a three-year-old WordPress store migrated to a headless Next.js, Sanity,
+                        Supabase and Square stack, and no ranking losses were recorded in Search Console during the
+                        monitored post-launch period. It is the reason we can say what Sanity is like as a commerce
+                        CMS rather than as a marketing-site CMS, which are different jobs. Sanity holds the product
+                        content; Supabase holds the data that has to be queried and written; Square holds checkout.
+                        Trying to put all three in the CMS is the mistake that makes people say they moved away from
+                        this stack. The record is in the{" "}
+                        <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            Panda Patches project notes
+                        </Link>
+                        .
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>What neither project establishes</BlogHighlight> is what your build will cost or
+                        how fast it will be. Two sites is not a sample, the requirements were ours and our
+                        clients&apos;, and nothing here is a benchmark. It is first-hand experience offered as
+                        experience, which is worth more than a feature comparison and less than a measurement of your
+                        own project.
                     </BlogText>
 
                     <BlogHeader>When a simpler stack is better</BlogHeader>
