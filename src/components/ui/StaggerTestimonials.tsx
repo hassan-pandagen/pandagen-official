@@ -106,8 +106,21 @@ function ReviewCard({ review, position, cardSize, reduceMotion, onSelect }: Card
                         {review.name} on {review.platform}
                     </span>
                 )}
-                <span className={cn("mt-0.5 block text-xs", isCentre ? "text-stone-300" : "text-stone-600")}>
+                <span className={cn("mt-0.5 flex flex-wrap items-center gap-2 text-xs", isCentre ? "text-stone-300" : "text-stone-600")}>
                     {review.date}
+                    {review.unprompted && (
+                        <span
+                            className={cn(
+                                "inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.12em]",
+                                isCentre
+                                    ? "border-[#ffc2a6]/40 text-[#ffc2a6]"
+                                    : "border-cognac/30 text-cognac"
+                            )}
+                        >
+                            Unprompted
+                            <span className="sr-only"> review, as labelled by {review.platform}</span>
+                        </span>
+                    )}
                 </span>
                 {review.caseStudy && isCentre && (
                     <Link

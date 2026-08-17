@@ -49,11 +49,26 @@ export interface ClientReview {
      * is the record that they agreed to that. No case study, no link.
      */
     caseStudy?: string;
+    /**
+     * True only where the SOURCE PLATFORM labels the review unprompted.
+     *
+     * THIS IS TRUSTPILOT'S CLAIM, NOT OURS. Trustpilot prints "Unprompted
+     * review" on reviews the business did not invite, and it prints it itself,
+     * which is the entire value: a solicited review is the default and everyone
+     * assumes it, so "we didn't ask" is only worth anything when a third party
+     * says it. Render it attributed, never as a bare boast.
+     *
+     * Matt Conner's review is on Clutch, which does not publish this label and
+     * whose reviews are typically collected through an interview. It is
+     * therefore NOT set there, and must not be inferred.
+     */
+    unprompted?: boolean;
 }
 
 export const CLIENT_REVIEWS: readonly ClientReview[] = [
     {
         id: 'ladies-4-jesus',
+        unprompted: true,
         caseStudy: '/work/ladies-4-jesus',
         quote: 'I was hesitant to use them at first because the price seemed more than reasonable and I had never heard of them but I am so glad I chose to work with them.',
         snippet: 'I was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.',
@@ -64,6 +79,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
     },
     {
         id: 'emblematic-studio',
+        unprompted: true,
         caseStudy: '/work/emblematic-studio',
         quote: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
         snippet: "It looks premium, loads fast, and perfectly captures Emblematic Studio's brand.",
@@ -74,6 +90,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
     },
     {
         id: 'marshall-james',
+        unprompted: true,
         quote: 'Hassan was super helpful and communicative throughout the process.',
         snippet: 'Hassan was super helpful and communicative throughout the process.',
         name: 'Marshall James',
@@ -83,6 +100,7 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
     },
     {
         id: 'james-peace',
+        unprompted: true,
         quote: 'They worked with me to make a website that I could afford.',
         snippet: 'They worked with me to make a website that I could afford.',
         name: 'James Peace',

@@ -33,7 +33,7 @@ export default function SocialProof() {
             <span className="font-serif font-normal italic text-cognac">you can open.</span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-stone-700">
-            No stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself.
+            No stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself. Four of them carry Trustpilot&rsquo;s own &ldquo;unprompted&rdquo; label, meaning we never asked for them.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
