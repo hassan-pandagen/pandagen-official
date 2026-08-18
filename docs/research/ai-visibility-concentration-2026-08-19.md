@@ -106,3 +106,61 @@ The `content-intent-ctr-rule` record says problem pages earn 0.60% CTR against
 are the ones winning AI surfacing. The page type that loses clicks may be the
 page type that wins citations. Those are different jobs and probably want
 different pages, rather than one page trying to do both.
+
+---
+
+## Pre-registered decision rule (written 19 Aug 2026, BEFORE any result)
+
+Recorded in advance on purpose. With baselines this small it is very easy to
+read noise as signal after the fact, so the threshold is fixed here first.
+
+### The two groups
+
+**Treatment (headings rewritten 19 Aug):**
+
+| page | AI impressions, 18 May to 13 Aug |
+|---|---|
+| webflow-vs-custom-website | 0 |
+| shopify-headless | 4 |
+| squarespace-too-slow | 5 |
+| shopify-stocky-sunset-date-2026 | 7 |
+| gohighlevel-keep-crm-replace-website | 9 |
+| **cohort total** | **25** |
+
+**Control:** every other page at 10 or fewer AI impressions in the same export,
+untouched. Roughly 26 pages. This group exists because site-wide AI impressions
+grew +523% across the measurement window. If the tide lifts everything, the
+cohort rising proves nothing on its own.
+
+### Read date
+
+**Not before 8 September 2026.** The pages need recrawling, then a window to
+accumulate. Anything before ~26 Aug is confounded by the August 2026 spam update
+(started 18 Aug) and the 19 Aug push.
+
+### What counts as a pass
+
+Pull the same Generative AI features export and compare **cohort growth against
+control growth**, not raw numbers.
+
+- **PASS:** at least 3 of 5 cohort pages more than double their baseline AND the
+  cohort grows at least twice as fast as the control median.
+- **INCONCLUSIVE:** cohort rises but within roughly the control's growth rate.
+  That is the tide, not the headings. Extend to October rather than rolling out.
+- **FAIL:** cohort flat or moving with the control. Headings are not the lever.
+  Do not start the 10-a-day rollout. Go back to the topic-demand explanation,
+  which this analysis could never rule out.
+
+### Why 2 of 5 is not enough
+
+Baselines of 0, 4 and 5 are small enough that a single query trend moves them.
+Two pages improving is inside what chance produces at these numbers. Three of
+five, with the control flat, is the point where headings become the better
+explanation than luck.
+
+### The separate test already running
+
+`which-website-builders-can-go-headless` (published 18 Aug, 19 spec() calls,
+twice the anchor page's density) tests the OTHER hypothesis, that dated vendor
+specs drive AI surfacing. It is independent of this cohort. Both can be read on
+the same date, and they can disagree, which would itself be informative.
