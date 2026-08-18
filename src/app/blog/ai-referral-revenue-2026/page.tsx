@@ -177,7 +177,7 @@ export default function AiReferralRevenuePage() {
 
                     <BlogHeader>Revenue by source, {window_.label}</BlogHeader>
                     <BlogText>
-                        Every row the platform recorded, including the ones that produced nothing. Sorted by revenue.
+                        Every row Panda Patches recorded, including the ones that produced nothing. Sorted by revenue.
                         AI assistants are marked so you can find them without hunting.
                     </BlogText>
                     <div className="my-8 overflow-x-auto rounded-2xl border border-stone-200">
@@ -297,6 +297,33 @@ export default function AiReferralRevenuePage() {
                         already made and never written down plainly is a query like that one going to a competitor.
                         We are quoting her anonymously because permission to use her name is hers to give and had not
                         been given when this was published.
+                    </BlogText>
+
+                    <BlogHeader>How this compares to the one large study that exists</BlogHeader>
+                    <BlogText>
+                        <BlogHighlight>A 94-brand study found the same thing about order value that a single store found here.</BlogHighlight>{" "}
+                        Visibility Labs analysed twelve months of Google Analytics data from 94 seven and eight-figure
+                        ecommerce brands across 2025, comparing 9.46 million non-branded organic sessions against
+                        135,000 ChatGPT referral sessions. ChatGPT traffic converted at 1.81% versus 1.39% for
+                        non-branded organic, but its average order value was{" "}
+                        <a href="https://searchengineland.com/chatgpt-vs-non-branded-organic-search-conversions-470321" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                            $204 against $238 for organic
+                        </a>
+                        , a 14.3% gap, leaving revenue per session 10.3% higher rather than 31%.
+                    </BlogText>
+                    <BlogText>
+                        Our single store shows the same direction on the part that overlaps. ChatGPT&apos;s average
+                        order here is {usd(aov("ChatGPT"))} against a site average of {usd(siteAov)}. Two samples with
+                        nothing in common, one of 94 brands and one of {totalOrders} orders, both finding that AI
+                        assistants send smaller orders than the channel they are compared against. That is worth more
+                        than either finding alone, and it is the reason the AOV column is on this page at all.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>What is not in that study, or any other we could find, is revenue by individual assistant.</BlogHighlight>{" "}
+                        Published work reports ChatGPT against organic search. It does not separate Claude from
+                        Perplexity from Google AI Overview, because almost nobody can. That separation is the part of
+                        this dataset with no equivalent elsewhere, and it is only possible because the source question
+                        is asked at the point of enquiry rather than inferred from a referrer header.
                     </BlogText>
 
                     <BlogHeader>What this does not establish</BlogHeader>

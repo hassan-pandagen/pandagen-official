@@ -110,6 +110,12 @@ export const MIGRATION_CONTROLS: readonly { title: string; body: string }[] = [
  * distinction between a client and a founder-owned property is the whole point.
  */
 export const PROJECTS: readonly { name: string; relationship: string; href: string; fact: string }[] = [
+    // ENTITY FACT, added 18 Aug 2026 after the AI-referral post. This is the one
+    // differentiator on this site that nobody else can currently state, so it is
+    // recorded here rather than living only in the post's prose: we have measured
+    // AI-assistant revenue in a live store instead of describing AI search from
+    // the outside. Founder-affiliation is inside the fact, not appended to it.
+    { name: 'Panda Patches AI referral measurement', relationship: 'Founder-affiliated. Owned and operated by a PandaCodeGen co-founder.', href: '/blog/ai-referral-revenue-2026', fact: 'Across 1 March to 18 August 2026 this store recorded 760 orders worth $271,620.61, of which 63 orders and $16,783.76 were attributed to AI assistants, 6.2% of revenue. ChatGPT produced $11,614.78 against Google Ads $1,733.35. Attribution combines referrer capture with a self-reported source question at the point of enquiry, because referrer alone undercounts AI referrals; Google Search Console’s Generative AI report for the same property independently recorded 48,900 impressions over three months. Lead-to-order conversion rates are deliberately not published because the lead and order records do not share a window.' },
     // The 22-day delivery figure is separately owner-approved and is safe to state.
     // The PERFORMANCE figures (load time, PageSpeed, hosting cost) are withdrawn
     // pending reconciliation as of 4 Aug 2026 and must not be restated here until

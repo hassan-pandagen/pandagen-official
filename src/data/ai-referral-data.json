@@ -34,7 +34,7 @@
     "label": "1 March to 18 August 2026",
     "totalOrders": 760,
     "totalRevenueUsd": 271620.61,
-    "note": "Both totals exclude Web Checkout (48 orders, $10,295.11), which the platform treats as a fulfilment route rather than an acquisition source and already excludes from its own revenue total. Excluding it from the order count too keeps both figures describing the same population; mixing them was an error caught by summing the rows against the declared totals.",
+    "note": "Both totals exclude Web Checkout (48 orders, $10,295.11), which the Panda Patches operations platform treats as a fulfilment route rather than an acquisition source and already excludes from its own revenue total. Excluding it from the order count too keeps both figures describing the same population; mixing them was an error caught by summing the rows against the declared totals.",
     "verifiedAt": "2026-08-18"
   },
   "bySource": [
