@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-headless")],
@@ -79,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-headless"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -262,7 +262,7 @@ export default function ShopifyHeadlessPage() {
                         theme, and the sections below will tell you when it genuinely is not.
                     </BlogText>
 
-                    <BlogHeader>What headless changes</BlogHeader>
+                    <BlogHeader>What going headless on Shopify actually changes</BlogHeader>
                     <BlogText>
                         Your storefront team takes over how pages render, how routing works, what the interface does,
                         how content gets in, and most of the analytics and deployment. Shopify keeps running the
@@ -279,7 +279,7 @@ export default function ShopifyHeadlessPage() {
                         moving rendering into your frontend moves that responsibility onto you. Scope the work against your requirements, then measure the build you actually ship.
                     </InsightBox>
 
-                    <BlogHeader>1. Start with requirements that a theme cannot meet well</BlogHeader>
+                    <BlogHeader>What can a Shopify theme not do?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             The case for headless is a requirement a theme cannot meet, not a theme somebody dislikes. Five requirements qualify, and they share one property: each needs control over rendering, routing or composition that Liquid and sections do not hand you. If your reason is not on this list, a theme project is the cheaper answer.
@@ -306,7 +306,7 @@ export default function ShopifyHeadlessPage() {
                         before assuming the plan is the constraint.
                     </BlogText>
 
-                    <BlogHeader>2. Compare the three storefront paths</BlogHeader>
+                    <BlogHeader>Hydrogen, Next.js or a Shopify theme: which path?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Three paths are available, and what separates them is not capability but how much integration work your team owns afterwards. A Shopify theme leaves almost all of it with Shopify, Hydrogen splits it, and your own Storefront API client puts every decision on your side. Pick by the team you have rather than the stack you admire.
@@ -332,7 +332,7 @@ export default function ShopifyHeadlessPage() {
                         <Link href="/blog/shopify-vs-custom-website" className={inlineLinkClass}>Shopify and custom website decision framework</Link>.
                     </BlogText>
 
-                    <BlogHeader>3. Inventory commerce compatibility</BlogHeader>
+                    <BlogHeader>Which Shopify apps break when you go headless?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Inventory what the store does today, because a headless build has to reproduce every one of these behaviors and none of them come across for free. Six areas cover it, and the last one decides the budget: an app that renders through the theme has no theme to render through once you leave.
@@ -355,7 +355,7 @@ export default function ShopifyHeadlessPage() {
                         gives you a method for the second half of that.
                     </BlogText>
 
-                    <BlogHeader>4. Treat analytics and consent as architecture</BlogHeader>
+                    <BlogHeader>How does headless Shopify change analytics and consent?</BlogHeader>
                     <BlogText>
                         A custom storefront does not inherit the analytics your theme did. Shopify documents a migration
                         path for custom headless analytics, and says in the same place that the custom setup is not
@@ -376,7 +376,7 @@ export default function ShopifyHeadlessPage() {
                         covers the server-side event work that a storefront change usually disturbs.
                     </BlogText>
 
-                    <BlogHeader>5. Make the migration SEO-safe</BlogHeader>
+                    <BlogHeader>Will headless Shopify hurt your SEO?</BlogHeader>
                     <BlogText>
                         Headless is not inherently better or worse for SEO. The implementation controls the output.
                         Google warns that significant site changes can produce temporary ranking fluctuations while
@@ -400,7 +400,7 @@ export default function ShopifyHeadlessPage() {
                         <Link href="/blog/google-universal-commerce-protocol-what-it-means-for-your-store" className={inlineLinkClass}>what Google&apos;s universal commerce protocol means for a store</Link>.
                     </BlogText>
 
-                    <BlogHeader>6. Define performance acceptance precisely</BlogHeader>
+                    <BlogHeader>What speed should a headless Shopify store hit?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             An acceptance target means nothing without its test conditions attached, because the same build scores differently on another device, network or cache state. Six things turn a number into something you can hold a supplier to. Agree them before the build, since afterwards every disagreement becomes an argument about what was measured.
@@ -424,7 +424,7 @@ export default function ShopifyHeadlessPage() {
                         sets out the field metrics that acceptance criterion is measured against later.
                     </BlogText>
 
-                    <BlogHeader>7. Price total ownership, not only the build</BlogHeader>
+                    <BlogHeader>What does headless Shopify cost to run, not just build?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             The build is one line in a headless budget, and it is rarely the line that decides whether the project was worth doing. Six cost categories run for as long as the storefront does, and two of them, security updates and API version upgrades, arrive on Shopify&apos;s schedule rather than yours. Price the whole column.
@@ -476,7 +476,7 @@ export default function ShopifyHeadlessPage() {
                         anyone quotes the work.
                     </BlogText>
 
-                    <BlogHeader>8. Require a reversible launch</BlogHeader>
+                    <BlogHeader>Can you roll back a headless Shopify launch?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             A launch is reversible only if the rollback criteria were written down before anyone was under pressure to keep going. Six items make that possible, and the one most often skipped is naming who decides. Settle in advance what evidence would send you back, because at two in the morning nobody wants to be the person who called it.

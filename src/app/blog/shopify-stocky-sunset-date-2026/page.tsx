@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-25",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-stocky-sunset-date-2026")],
@@ -74,7 +74,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-stocky-sunset-date-2026"),
             description,
             datePublished: "2026-04-25",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -255,7 +255,7 @@ export default function ShopifyStockySunsetPage() {
                         third.
                     </InsightBox>
 
-                    <BlogHeader>1. Do not uninstall Stocky as a cleanup step</BlogHeader>
+                    <BlogHeader>Why you should not uninstall Shopify Stocky yet</BlogHeader>
                     <BlogText>
                         Shopify advises merchants to avoid uninstalling Stocky unless Shopify Support explicitly directs
                         it or the app is no longer required. Stocky cannot be reinstalled from the App Store, and data
@@ -265,7 +265,7 @@ export default function ShopifyStockySunsetPage() {
                         <Link href="/blog/do-you-own-your-website" className="text-cognac hover:underline font-medium">who owns your website and its data</Link>.
                     </BlogText>
 
-                    <BlogHeader>2. Export the history you need</BlogHeader>
+                    <BlogHeader>What Stocky data can you export before it shuts down?</BlogHeader>
                     <BlogText>
                         Shopify says historical purchase orders and stocktakes will not automatically move to Shopify.
                         Export them through Stocky&apos;s built-in reports before the deadline. Suppliers cannot be
@@ -321,7 +321,7 @@ export default function ShopifyStockySunsetPage() {
                         rather than this list, because Shopify is the authority on what it is replacing.
                     </BlogText>
 
-                    <BlogHeader>3. Map the workflow differences</BlogHeader>
+                    <BlogHeader>What changes when you replace Shopify Stocky?</BlogHeader>
                     <BlogText>
                         Do this while Stocky is still running, because it becomes guesswork the moment the app stops. The middle column is Shopify's own guidance for each workflow, not our assessment of it. The right-hand column is what you have to prove works for your operation before accepting the replacement.
                     </BlogText>
@@ -341,7 +341,7 @@ export default function ShopifyStockySunsetPage() {
                         </table>
                     </div>
 
-                    <BlogHeader>4. Choose the replacement by requirements</BlogHeader>
+                    <BlogHeader>Which Stocky replacement fits your workflow?</BlogHeader>
                     <BlogText>
                         There is no universal replacement price or best option. Obtain current vendor terms and a comparable scope, then include configuration, migration, integration, training, support, security, maintenance and exit in the decision. The four routes below are gated on requirements you have tested, not on which product looks closest.
                     </BlogText>
@@ -363,7 +363,7 @@ export default function ShopifyStockySunsetPage() {
                         <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline font-medium">migration cost breakdown</Link>.
                     </BlogText>
 
-                    <BlogHeader>5. Run workflow acceptance</BlogHeader>
+                    <BlogHeader>How to test a Stocky replacement before cutover</BlogHeader>
                     <BlogText>
                         This is where a mapped workflow becomes evidence. Seven tests, and the ones people skip are the awkward ones: a partial receipt, a count run on the actual devices and roles used in stores, and every integration that previously called a Stocky API. This step can still run after the sunset date, slower but not blocked.
                     </BlogText>
@@ -379,7 +379,7 @@ export default function ShopifyStockySunsetPage() {
                         ]}
                     />
 
-                    <BlogHeader>6. Rehearse cutover and rollback</BlogHeader>
+                    <BlogHeader>How to leave Stocky without losing stock data</BlogHeader>
                     <BlogText>
                         Inventory truth is the thing you are protecting, so name the system of record and the freeze window for each field before anything moves. Six steps cover it. Note the timing constraint in the fifth: keeping current Stocky access until sign-off only works before the sunset date, after which Shopify's current transition page describes read-only export access for at least 90 days.
                     </BlogText>
@@ -394,7 +394,7 @@ export default function ShopifyStockySunsetPage() {
                         ]}
                     />
 
-                    <BlogHeader>7. Treat read-only access as temporary</BlogHeader>
+                    <BlogHeader>How long will Shopify keep Stocky read-only?</BlogHeader>
                     <BlogText>
                         Shopify states you keep read-only access to export your data for at least 90 days after that date, as specified on its current transition page. That window is finite, so do not use it as your retention plan. and validate your
                         exports before August 31, 2026.

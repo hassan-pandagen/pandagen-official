@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-08-06",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-too-slow")],
@@ -78,7 +78,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-too-slow"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -209,7 +209,7 @@ export default function SquarespaceTooSlowPage() {
                         ))}
                     </div>
 
-                    <BlogHeader>1. Name the problem correctly</BlogHeader>
+                    <BlogHeader>Is Squarespace actually slow, or is it your site?</BlogHeader>
                     <BlogText>
                         &ldquo;The site is slow&rdquo; describes five different problems with five different fixes.
                         Decide which one you have before you touch anything: content that arrives late, a page that
@@ -258,7 +258,7 @@ export default function SquarespaceTooSlowPage() {
                         runs the same diagnosis without assuming a platform.
                     </BlogText>
 
-                    <BlogHeader>2. Check platform and local conditions</BlogHeader>
+                    <BlogHeader>What Squarespace controls, and what you control</BlogHeader>
                     <BlogText>
                         Rule out the platform and your own machine before attributing anything to the site. A live
                         Squarespace incident, a browser extension rewriting the page, a saturated home connection or a
@@ -275,7 +275,7 @@ export default function SquarespaceTooSlowPage() {
                         ]}
                     />
 
-                    <BlogHeader>3. Reduce page weight</BlogHeader>
+                    <BlogHeader>How much does Squarespace page weight cost you?</BlogHeader>
                     <BlogText>
                         Squarespace publishes four specific budgets on its page-size guidance, and they are worth having
                         in front of you before you start deleting things. Verbatim, it says to{" "}
@@ -325,14 +325,14 @@ export default function SquarespaceTooSlowPage() {
                         <Link href="/blog/wix-too-slow" className={inlineLinkClass}>our diagnosis of a slow Wix site</Link>.
                     </BlogText>
 
-                    <BlogHeader>4. Simplify fonts</BlogHeader>
+                    <BlogHeader>Do custom fonts slow a Squarespace site down?</BlogHeader>
                     <BlogText>
                         Squarespace recommends using no more than two fonts as a general design rule and notes that all
                         selected fonts must load. Review families, weights, icons and third-party font hosts. Preserve
                         brand and readability while reducing unnecessary requests.
                     </BlogText>
 
-                    <BlogHeader>5. Isolate custom code and third parties</BlogHeader>
+                    <BlogHeader>Which third-party scripts hurt Squarespace most?</BlogHeader>
                     <BlogText>
                         Squarespace warns that code injection, embeds, CSS and other custom code can contribute to slow
                         loading and fall outside standard support. Save a copy and remove one item at a time in a safe
@@ -340,7 +340,7 @@ export default function SquarespaceTooSlowPage() {
                         regression tests.
                     </BlogText>
 
-                    <BlogHeader>6. Review redirects and navigation</BlogHeader>
+                    <BlogHeader>Do Squarespace redirects add measurable delay?</BlogHeader>
                     <BlogText>
                         Squarespace advises reviewing excessive redirect mappings. Trace redirect chains from paid,
                         organic, email and old bookmarked URLs. Update internal and campaign links to their final
@@ -354,7 +354,7 @@ export default function SquarespaceTooSlowPage() {
                         <Link href="/blog/how-website-speed-affects-seo" className={inlineLinkClass}>how site speed relates to search performance</Link>.
                     </BlogText>
 
-                    <BlogHeader>7. Compare representative routes</BlogHeader>
+                    <BlogHeader>Which Squarespace pages should you actually test?</BlogHeader>
                     <BlogText>
                         Speed work is accepted per route, not per site, because a home page and a checkout fail in
                         different ways. Test one real example of each template you have, in the state a visitor
@@ -375,7 +375,7 @@ export default function SquarespaceTooSlowPage() {
                         </table>
                     </div>
 
-                    <BlogHeader>8. Decide whether to stay or migrate</BlogHeader>
+                    <BlogHeader>Should you fix Squarespace or leave it?</BlogHeader>
                     <BlogText>
                         Stay on Squarespace when the platform still does what the business needs and the measured
                         causes are ones you can change. Redesign inside it when the structure is the problem but the
@@ -400,7 +400,7 @@ export default function SquarespaceTooSlowPage() {
                         covers the risk to manage during cutover.
                     </BlogText>
 
-                    <BlogHeader>9. If you do move, plan the extraction early</BlogHeader>
+                    <BlogHeader>What can you actually export out of Squarespace?</BlogHeader>
                     <BlogText>
                         Squarespace&apos;s{" "}
                         <a href="https://support.squarespace.com/hc/en-us/articles/206566687-Exporting-your-site" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>own export documentation</a>{" "}
@@ -420,7 +420,7 @@ export default function SquarespaceTooSlowPage() {
                         ]}
                     />
 
-                    <BlogHeader>10. Define performance acceptance</BlogHeader>
+                    <BlogHeader>What speed target should a Squarespace rebuild hit?</BlogHeader>
                     <BlogText>
                         A migration scope can include a 90-plus Lighthouse delivery target for agreed representative
                         routes, recorded mobile and desktop profiles, and three consecutive tests per route and profile.

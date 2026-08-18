@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Will my HighLevel workflows still fire after the website moves?", answer: "Only if the integration still produces each workflow's real trigger and required fields. Inventory contact, form, appointment, tag, opportunity and other dependencies, then run accepted end-to-end tests. Do not assume that creating a contact reproduces every prior event." },
       { question: "Do I cancel HighLevel for a hybrid website?", answer: "The hybrid model normally keeps HighLevel for the resources named in the accepted scope. Confirm the account's current plan, add-ons, usage charges and required capabilities directly in HighLevel before quoting. The website project does not guarantee an unchanged vendor bill." },
@@ -891,7 +891,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     cardStat: "Aug 31",
     cardStatLabel: "Shopify Stocky sunset",
     faqs: [
@@ -1348,7 +1348,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How do I decide between Webflow and a custom website?", answer: "Compare the actual editing workflow, required features, ownership and portability, and complete lifecycle responsibility. Choose Webflow when its managed visual system fits; optimize it when the platform fits but implementation does not; choose custom when verified requirements justify added engineering ownership." },
       { question: "Is Webflow good enough for a small business, or do I need custom code?", answer: "Webflow can be a strong fit when visual production, its CMS and supported features meet the requirements and the current cost is acceptable. Business size or traffic alone does not decide. Custom becomes relevant when specific data, experience, integration, portability or release needs justify it." },
@@ -1392,7 +1392,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my Squarespace site slow?", answer: "Possible causes include heavy pages, media, fonts, custom code, third parties, embeds, redirects, consent state and platform-controlled work. Measure representative routes with field data where available and repeated lab tests before assigning the cause." },
       { question: "Can I fix Squarespace speed without leaving the platform?", answer: "Often, depending on the measured cause. Follow Squarespace's current page-size and media guidance, reduce unnecessary fonts and third parties, review custom code and redirects, and retest. Platform-controlled constraints remain, but migration is not the automatic first step." },
@@ -1884,7 +1884,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is headless Shopify?", answer: "Headless Shopify uses Shopify as the commerce back end while a separate storefront controls rendering and customer experience through supported APIs. The team also assumes more responsibility for frontend delivery, integrations, analytics, SEO, security and maintenance." },
       { question: "How much faster is headless Shopify than a theme?", answer: "There is no universal speed difference. A headless build can support strong performance, but outcomes depend on rendering, caching, media, JavaScript, third parties, data access and implementation quality. Compare representative routes using the same recorded conditions." },

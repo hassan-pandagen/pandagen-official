@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-04",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-keep-crm-replace-website")],
@@ -68,7 +68,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-04",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -112,7 +112,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-04",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -196,7 +196,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         ))}
                     </div>
 
-                    <BlogHeader>What stays, what moves, what crosses between them</BlogHeader>
+                    <BlogHeader>What stays in GoHighLevel and what moves to a custom site</BlogHeader>
                     <BlogText>
                         The split is the first thing to agree, because it decides how much integration you are taking
                         on. Anything the public sees and search engines read moves to the frontend, whether that frontend is Next.js, WordPress or Webflow. The integration questions below are the same in all three; only the build effort differs. Anything that runs
@@ -236,7 +236,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         they are the real cost of the hybrid, not the frontend build.
                     </InsightBox>
 
-                    <BlogHeader>When a hybrid build is worth considering</BlogHeader>
+                    <BlogHeader>When is a GoHighLevel hybrid build worth it?</BlogHeader>
                     <BlogText>
                         A hybrid is worth considering once you have fixed what you realistically can inside HighLevel and real pages still miss what you agreed, while your team still runs on HighLevel for contacts, workflows and calendars. Stay native when the current website meets the business requirements, or when budget, traffic, content maturity, capacity and integration risk do not justify a separate frontend. Framework preference alone is not a migration case.
                     </BlogText>
@@ -266,7 +266,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         page describes how we scope the hybrid version.
                     </BlogText>
 
-                    <BlogHeader>Match the decision to your situation</BlogHeader>
+                    <BlogHeader>Should you keep GoHighLevel or replace it entirely?</BlogHeader>
                     <BlogText>
                         The architecture is overhead, and overhead only pays when it removes a constraint the business
                         can actually feel. These are the situations we see most often and the direction each one points
@@ -289,7 +289,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         </table>
                     </div>
 
-                    <BlogHeader>What HighLevel officially supports</BlogHeader>
+                    <BlogHeader>What GoHighLevel officially supports for external sites</BlogHeader>
                     <BlogText>
                         HighLevel&apos;s current developer portal documents programmatic access to resources including
                         contacts, conversations, calendars, appointments, payments, and webhooks. It documents OAuth
@@ -311,7 +311,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         architecture choice, not proof that every native HighLevel site is broken.
                     </BlogText>
 
-                    <BlogHeader>Forms and contact creation</BlogHeader>
+                    <BlogHeader>How do you send forms into GoHighLevel from a custom site?</BlogHeader>
                     <BlogText>
                         A custom form has to create the contact as reliably as the native one did, which means the work is mostly server-side rather than in the markup. Collect only approved fields with accurate consent, validate and normalize on the server, use the current approved endpoint and duplicate policy, and record a correlation ID so support can trace a submission that went missing.
                     </BlogText>
@@ -350,7 +350,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         firing silently, and nobody notices until a month of leads has gone cold.
                     </BlogText>
 
-                    <BlogHeader>Calendar choices</BlogHeader>
+                    <BlogHeader>Can you use GoHighLevel calendars on your own site?</BlogHeader>
                     <BlogText>
                         An approved HighLevel embed can be the smallest integration, but measure its responsive,
                         accessibility, consent, styling, performance, and failure behavior. A{" "}
@@ -367,7 +367,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         almost everywhere else.
                     </BlogText>
 
-                    <BlogHeader>Webhooks need authentication and recovery</BlogHeader>
+                    <BlogHeader>How do GoHighLevel webhooks fail, and what catches it?</BlogHeader>
                     <BlogText>
                         HighLevel&apos;s current webhook guide says to verify authenticity. It identifies{" "}
                         <code className="rounded bg-stone-100 px-1.5 py-0.5 text-sm">X-GHL-Signature</code>{" "}
@@ -391,7 +391,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         ]}
                     />
 
-                    <BlogHeader>Privacy and security responsibilities</BlogHeader>
+                    <BlogHeader>Who owns privacy and security in a GoHighLevel hybrid?</BlogHeader>
                     <BlogText>
                         A separate frontend does not decide who is controller, processor, business, service provider, or
                         subprocessor. Map the actual parties, fields, purposes, regions, vendors, retention, access, and
@@ -408,7 +408,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         ]}
                     />
 
-                    <BlogHeader>SEO migration controls</BlogHeader>
+                    <BlogHeader>Will replacing your GoHighLevel site hurt SEO?</BlogHeader>
                     <BlogText>
                         Google can render JavaScript; it is inaccurate to say that crawlers never execute it. Answer
                         engines are a separate question from Google, and the honest position is narrower than the one
@@ -435,7 +435,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         covers what to ask for in writing.
                     </BlogText>
 
-                    <BlogHeader>Performance acceptance</BlogHeader>
+                    <BlogHeader>What speed should a GoHighLevel replacement hit?</BlogHeader>
                     <BlogText>
                         HighLevel and Next.js do not have one universal score. Test representative real pages under a
                         recorded device, network, location, consent state, content state, cache state, and tool version.
@@ -449,7 +449,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         profile, exclusions, and remedy. It is not a ranking, traffic, conversion, or revenue guarantee.
                     </BlogText>
 
-                    <BlogHeader>Cutover and handoff checklist</BlogHeader>
+                    <BlogHeader>How to cut over from a GoHighLevel site safely</BlogHeader>
                     <BlogText>
                         The account-transfer step is the one teams tend to leave vague, and it is the one that matters six months later. Five items: freeze the inventory and record DNS, certificates, redirects and rollback owners; test contacts, workflows, calendars and consent with disposable records; verify the failure behavior as well as the happy path; transfer the repository, deployment and business accounts under the accepted terms; then monitor before closing.
                     </BlogText>

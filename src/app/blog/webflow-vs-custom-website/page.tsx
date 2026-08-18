@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-08-06",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -177,7 +177,7 @@ export default function WebflowVsCustomWebsitePage() {
                         ))}
                     </div>
 
-                    <BlogHeader>The four-factor decision framework</BlogHeader>
+                    <BlogHeader>Four things that decide Webflow or custom</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Four factors decide this, and none of them is speed or design quality. Editing asks who ships a page change. Requirements ask whether the platform can express what you need. Control asks who holds the code and the accounts. Lifecycle asks who can afford to run it. Answer all four before you compare anything else.
@@ -205,7 +205,7 @@ export default function WebflowVsCustomWebsitePage() {
                         year, which is the horizon the decision actually has to survive.
                     </InsightBox>
 
-                    <BlogHeader>1. Editing and design workflow</BlogHeader>
+                    <BlogHeader>Who can edit a Webflow site versus a custom one?</BlogHeader>
                     <BlogText>
                         Webflow&apos;s visual environment can let designers build without handing every layout change to
                         an engineer. Its current content-editor role can update copy, assets, CMS content and selected
@@ -226,7 +226,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="text-cognac hover:underline">our guide to the Webflow sunset dates</Link>.
                     </BlogText>
 
-                    <BlogHeader>2. Features and integrations</BlogHeader>
+                    <BlogHeader>What can Webflow not integrate with?</BlogHeader>
                     <BlogText>
                         Inventory forms, search, localization, ecommerce, membership, personalization, analytics,
                         consent, CRM and custom applications. Webflow has native features, apps, custom code and React
@@ -236,7 +236,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom engineering</Link>.
                     </BlogText>
 
-                    <BlogHeader>3. Ownership, portability and exit</BlogHeader>
+                    <BlogHeader>Do you own your Webflow site, and can you export it?</BlogHeader>
                     <BlogText>
                         Webflow can transfer sites between Workspaces and paid Workspaces can export HTML, CSS,
                         JavaScript and assets. The export is not a full portable application: current documentation
@@ -254,7 +254,7 @@ export default function WebflowVsCustomWebsitePage() {
                         third-party licenses remain in force.
                     </InsightBox>
 
-                    <BlogHeader>4. Lifecycle cost and operating responsibility</BlogHeader>
+                    <BlogHeader>What does Webflow cost over three years?</BlogHeader>
                     <BlogText>
                         Reconcile the current Webflow Website and Workspace plans, add-ons, external tools, commerce
                         fees and internal time. Then calculate the custom alternative&apos;s design, migration, hosting,
@@ -343,7 +343,7 @@ export default function WebflowVsCustomWebsitePage() {
                         comparison instead of being argued away by a spreadsheet.
                     </BlogText>
 
-                    <BlogHeader>What a custom website can give you</BlogHeader>
+                    <BlogHeader>What a custom build gives you that Webflow cannot</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Five controls, and every one of them is a control rather than an outcome. Custom code buys you the ability to decide the architecture, the providers and the release process. It does not buy speed, accessibility or maintainability, all of which still have to be designed, tested and paid for.
@@ -365,7 +365,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/work" className="text-cognac hover:underline">browse our project work</Link>.
                     </BlogText>
 
-                    <BlogHeader>Performance and SEO</BlogHeader>
+                    <BlogHeader>Is Webflow slower than a custom site?</BlogHeader>
                     <BlogText>
                         Webflow has no universal PageSpeed ceiling, and custom code does not guarantee any particular
                         score. Measure representative routes with field{" "}
@@ -382,7 +382,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline">will migrating hurt my SEO</Link>.
                     </BlogText>
 
-                    <BlogHeader>Match the business profile to the model</BlogHeader>
+                    <BlogHeader>Which businesses should stay on Webflow?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Four routes, and two of them keep you on Webflow. Read this alongside the table underneath, which maps common business shapes to where they usually land. The word usually is doing real work there: these are patterns drawn from the four factors, not rules that override them.
@@ -425,7 +425,7 @@ export default function WebflowVsCustomWebsitePage() {
                         not a business case.
                     </BlogText>
 
-                    <BlogHeader>If the evidence points toward custom, what happens next?</BlogHeader>
+                    <BlogHeader>If you leave Webflow, what happens next?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Six steps, and the fourth is the one that protects you: build and migrate in parallel while the current site stays live, so the decision stays reversible until cutover. Nothing here is specific to Webflow. It is the same sequence any platform move needs if search traffic is at stake.
@@ -458,7 +458,7 @@ export default function WebflowVsCustomWebsitePage() {
                         <Link href="/blog/website-migration-cost-2026" className="text-cognac hover:underline">what drives migration cost</Link>.
                     </BlogText>
 
-                    <BlogHeader>The decision that matters</BlogHeader>
+                    <BlogHeader>Webflow or custom: the decision that actually matters</BlogHeader>
                     <BlogText>
                         Choose the least complex operating model that meets the verified requirements. That may be
                         Webflow, an in-platform repair, a hybrid or a custom build. Revisit the decision when the
