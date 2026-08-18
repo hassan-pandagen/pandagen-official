@@ -164,3 +164,33 @@ explanation than luck.
 twice the anchor page's density) tests the OTHER hypothesis, that dated vendor
 specs drive AI surfacing. It is independent of this cohort. Both can be read on
 the same date, and they can disagree, which would itself be informative.
+
+---
+
+## DO NOT EDIT THE COHORT BEFORE 8 SEPTEMBER 2026
+
+The five treated pages are `squarespace-too-slow`, `shopify-headless`,
+`shopify-stocky-sunset-date-2026`, `gohighlevel-keep-crm-replace-website` and
+`webflow-vs-custom-website`. Any content change to them before the read date
+makes the result unattributable and wastes the three weeks.
+
+### Which skills were run, and which were held back
+
+**Run, because they verify the change rather than alter the page:**
+
+- `deslop` on all 47 new headings: zero AI tells, zero em dashes, zero numbered
+  steps remaining, mean 7.8 words.
+- `citability` on all 47: 98% now name a specific vendor or product, up from
+  roughly 0%. 73% are posed as a reader question. The single heading naming no
+  third party is "PandaCodeGen commercial and acceptance terms", which names us.
+
+**Deliberately NOT run until after the read date:**
+
+`google-content-audit`, `semantic-triples` and `ai-overview-gap-fill` all prompt
+content changes. Running them now would take each diff past the current 24
+insertions and 24 deletions and destroy the single-variable design. They are
+owed on all five pages and should run the moment the cohort reports, whichever
+way it goes.
+
+This is the one situation on this site where NOT running the full five-skill
+gate is correct. It is a deferral with a date on it, not a skip.
