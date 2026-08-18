@@ -1,0 +1,223 @@
+{
+  "$comment": [
+    "FIRST-PARTY AI REFERRAL DATA from Panda Patches, a founder-affiliated store.",
+    "",
+    "WHY THIS FILE EXISTS. Almost no business can break out AI assistants as a",
+    "revenue source. Most report near-zero AI traffic, and the reason is",
+    "measurement rather than reality: ChatGPT strips referrers, its mobile apps",
+    "do not pass them, and a large share of people read an answer and then type",
+    "the domain directly. Panda Patches captures referrer WHERE IT SURVIVES and",
+    "asks the customer where it does not, which is why these numbers are not zero.",
+    "",
+    "RELATIONSHIP, STATED NOT BURIED. Panda Patches is owned and operated by a",
+    "PandaCodeGen co-founder. This is operating experience, not independent client",
+    "proof, and any page rendering it must say so.",
+    "",
+    "WHAT IS DELIBERATELY ABSENT: lead-to-order conversion rates. The lead card",
+    "and the order card do not share a window, and repeat orders appear to inherit",
+    "the original lead source. Computing a rate across them produced Claude at",
+    "133% and Facebook at 96%, which is structurally impossible. Rather than",
+    "publish a softened version of a broken number, the rate is omitted and this",
+    "note explains why. Do not add it back without confirming both cards cover",
+    "the same range and that repeat orders are excluded."
+  ],
+  "source": {
+    "business": "Panda Patches",
+    "relationship": "Founder-affiliated. Owned and operated by a PandaCodeGen co-founder.",
+    "system": "Custom operations platform built on Next.js, Sanity, Supabase and Square",
+    "method": "Referrer captured where it survives; self-reported source collected at quote request where it does not. Both fields feed one source value.",
+    "limitation": "One business, one vertical (custom embroidered and printed patches), one window. These are not industry benchmarks and no claim is made that they generalise."
+  },
+  "orderWindow": {
+    "from": "2026-03-01",
+    "to": "2026-08-18",
+    "label": "1 March to 18 August 2026",
+    "totalOrders": 760,
+    "totalRevenueUsd": 271620.61,
+    "note": "Both totals exclude Web Checkout (48 orders, $10,295.11), which the platform treats as a fulfilment route rather than an acquisition source and already excludes from its own revenue total. Excluding it from the order count too keeps both figures describing the same population; mixing them was an error caught by summing the rows against the declared totals.",
+    "verifiedAt": "2026-08-18"
+  },
+  "bySource": [
+    {
+      "source": "Repeat Order",
+      "orders": 128,
+      "revenueUsd": 61020.51,
+      "kind": "retention"
+    },
+    {
+      "source": "Google",
+      "orders": 152,
+      "revenueUsd": 49083.84,
+      "kind": "organic-search"
+    },
+    {
+      "source": "Facebook",
+      "orders": 129,
+      "revenueUsd": 34201.85,
+      "kind": "social"
+    },
+    {
+      "source": "Facebook Ad",
+      "orders": 106,
+      "revenueUsd": 28068.91,
+      "kind": "paid"
+    },
+    {
+      "source": "Other",
+      "orders": 4,
+      "revenueUsd": 24480.0,
+      "kind": "unclassified"
+    },
+    {
+      "source": "Direct",
+      "orders": 49,
+      "revenueUsd": 18021.66,
+      "kind": "direct"
+    },
+    {
+      "source": "ChatGPT",
+      "orders": 51,
+      "revenueUsd": 11614.78,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "Instagram",
+      "orders": 39,
+      "revenueUsd": 9995.0,
+      "kind": "social"
+    },
+    {
+      "source": "Tawk.to",
+      "orders": 27,
+      "revenueUsd": 8960.0,
+      "kind": "on-site-chat"
+    },
+    {
+      "source": "WhatsApp",
+      "orders": 25,
+      "revenueUsd": 7760.0,
+      "kind": "messaging"
+    },
+    {
+      "source": "RingCentral",
+      "orders": 10,
+      "revenueUsd": 3185.0,
+      "kind": "phone"
+    },
+    {
+      "source": "Unknown",
+      "orders": 7,
+      "revenueUsd": 3160.0,
+      "kind": "unclassified"
+    },
+    {
+      "source": "Claude",
+      "orders": 4,
+      "revenueUsd": 2520.0,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "Referral",
+      "orders": 4,
+      "revenueUsd": 1850.0,
+      "kind": "referral"
+    },
+    {
+      "source": "Google Ad",
+      "orders": 5,
+      "revenueUsd": 1733.35,
+      "kind": "paid"
+    },
+    {
+      "source": "Brave",
+      "orders": 2,
+      "revenueUsd": 1499.77,
+      "kind": "search"
+    },
+    {
+      "source": "Perplexity",
+      "orders": 2,
+      "revenueUsd": 990.0,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "Google AI Overview",
+      "orders": 1,
+      "revenueUsd": 850.0,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "DuckDuckGo",
+      "orders": 4,
+      "revenueUsd": 732.76,
+      "kind": "search"
+    },
+    {
+      "source": "Gemini",
+      "orders": 4,
+      "revenueUsd": 673.98,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "WEBSITE",
+      "orders": 2,
+      "revenueUsd": 435.04,
+      "kind": "unclassified"
+    },
+    {
+      "source": "Checkout",
+      "orders": 2,
+      "revenueUsd": 346.9,
+      "kind": "unclassified"
+    },
+    {
+      "source": "Bing",
+      "orders": 2,
+      "revenueUsd": 302.26,
+      "kind": "search"
+    },
+    {
+      "source": "Meta AI",
+      "orders": 1,
+      "revenueUsd": 135.0,
+      "kind": "ai-assistant"
+    },
+    {
+      "source": "TikTok",
+      "orders": 0,
+      "revenueUsd": 0,
+      "kind": "social"
+    },
+    {
+      "source": "YouTube",
+      "orders": 0,
+      "revenueUsd": 0,
+      "kind": "social"
+    },
+    {
+      "source": "LinkedIn",
+      "orders": 0,
+      "revenueUsd": 0,
+      "kind": "social"
+    }
+  ],
+  "corroboration": {
+    "instrument": "Google Search Console, Performance, Generative AI features (Beta)",
+    "property": "pandapatches.com",
+    "window": "3 months to 18 August 2026",
+    "totalImpressions": 48900,
+    "dailyLow": 400,
+    "dailyHigh": 1121,
+    "dailyHighDate": "2026-08-12",
+    "topPageImpressions": 7613,
+    "verifiedAt": "2026-08-18",
+    "note": "Independent of the platform's own attribution. Two unrelated instruments pointing the same way is the reason this is offered as evidence rather than as a claim.",
+    "limitation": "Impressions in Google's generative surfaces, not clicks and not revenue. It corroborates direction, not the dollar figures."
+  },
+  "outlierDisclosure": {
+    "source": "Other",
+    "orders": 4,
+    "revenueUsd": 24480.0,
+    "note": "Average order value of $6,120 against a site average of $348.91, almost certainly bulk or wholesale. Removing it moves the AI revenue share from 6.2% to 6.5%, so it works against the headline rather than for it."
+  }
+}
