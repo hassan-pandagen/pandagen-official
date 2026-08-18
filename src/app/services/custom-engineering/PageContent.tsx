@@ -275,6 +275,114 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* 4b. REPORTING LAYER, the differentiator against a plain web shop.
+
+          WHY THIS SECTION EXISTS AND WHY IT IS HERE RATHER THAN ON ITS OWN PAGE
+          Keyword Planner, 18 Aug 2026: "automated reporting dashboard", "kpi
+          dashboard for small business", "automated business reports" and "all in
+          one marketing dashboard" ALL return ZERO_SEARCH_VOLUME. Nobody searches
+          for this offer in the words we would describe it with, so a dedicated
+          service page would rank for nothing. The demand is on THIS page's terms
+          ("web development agency" 4,400/mo, "custom web development" 1,000/mo),
+          so the reporting layer earns its keep here as the reason to pick us over
+          another agency, not as its own bet. Full data in
+          docs/research/keyword-gap-2026-08-18.md. */}
+      <section className="py-12 md:py-20 px-6 bg-paper border-t border-stone-200">
+        <div className="container mx-auto max-w-5xl">
+          <div className="max-w-3xl mb-10">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-cognac mb-4">After the build</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-5">
+              Most businesses cannot say which channel their last ten customers came from
+            </h2>
+            <p data-speakable="true" className="text-lg text-stone-600 leading-relaxed">
+              <strong className="text-charcoal">The reporting layer is where most builds stop short.</strong>{" "}
+              The site ships, the leads arrive, and nobody can say whether the spend is going to the
+              channel that produces them. We build the part that answers that, because a dashboard you
+              have to interpret is not a report.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 mb-10">
+            {[
+              {
+                title: "The lead arrives as an email",
+                detail: "A form fires a notification, nobody records where that visitor came from, and by the time somebody reads it the source is gone. The CRM has a lead source field and it is empty on most records.",
+              },
+              {
+                title: "GA4 answers a different question",
+                detail: "It reports sessions and events. You asked which spend produced revenue. Getting from one to the other is a configuration project, not a setting, which is why the tab stays closed.",
+              },
+              {
+                title: "Every platform claims the same sale",
+                detail: "Meta counts it, Google counts it, and the CRM counts it. The totals never reconcile, so eventually nobody trusts any of them and the decision gets made on instinct.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="p-6 rounded-2xl border border-stone-200 bg-white"
+              >
+                <h3 className="font-bold text-charcoal mb-2">{item.title}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{item.detail}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="rounded-2xl border border-stone-200 bg-white p-8 md:p-10">
+            <h3 className="text-2xl font-bold text-charcoal mb-4">What we build instead</h3>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Lead source captured at the moment of the enquiry and written onto the CRM record, so it survives past the notification email.",
+                "One view showing leads by channel next to what that channel cost and what it produced, rather than three tools that disagree.",
+                "A scheduled email report, because the dashboard nobody logs into is the same as no dashboard.",
+              ].map((line, i) => (
+                <li key={i} className="flex gap-3 text-stone-600 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* SCREENSHOT SLOT, deliberately empty.
+
+                To fill it: drop a REDACTED export into public/work/ and uncomment
+                the figure below. Redacted means no customer names, no email
+                addresses and no individual order values. The existing
+                public/work/panda-operations.png does NOT qualify: it shows eight
+                named customers with amounts and payment status. It is currently
+                the OG image for /work/enterprise-ops, which is worth revisiting
+                separately.
+
+            <figure className="my-8">
+                <Image src="/work/lead-source-report.png" alt="Lead source report showing enquiry volume by channel, with customer identifiers removed" width={1600} height={900} className="rounded-xl border border-stone-200" />
+                <figcaption className="mt-2 text-xs text-stone-500">Lead source view from a live operations platform. Customer identifiers removed.</figcaption>
+            </figure>
+            */}
+
+            <div className="rounded-xl bg-stone-50 border border-stone-200 p-6">
+              <p className="text-sm text-stone-600 leading-relaxed mb-3">
+                <strong className="text-charcoal">Where this is already running.</strong> Our{" "}
+                <Link href="/work/enterprise-ops" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">
+                  enterprise operations platform
+                </Link>{" "}
+                reports lead volume by channel across search, social, paid ads, AI and LLM referrals,
+                and direct referral, in one place, at 95% process automation.
+              </p>
+              <p className="text-sm text-stone-500 leading-relaxed">
+                <strong className="text-stone-600">What it does not do.</strong> This reports on data you
+                already have. It does not recover attribution for traffic that arrived before the
+                tracking existed, and no model resolves the buyer who saw an ad, asked a friend, then
+                typed your name into Google. Anyone promising that is selling you a guess with a
+                confidence interval printed on it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">

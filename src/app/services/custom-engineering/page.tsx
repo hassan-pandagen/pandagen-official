@@ -4,8 +4,12 @@ import ServicePageSchema from "@/components/services/ServicePageSchema";
 import PageContent from "./PageContent";
 
 const path = "/services/custom-engineering";
-const name = "Custom Web Application Engineering";
-const description = "Scope and build web applications, portals, dashboards, and integrations around users, data, workflows, acceptance criteria, security, operations, and handover.";
+const name = "Custom Web Development Agency";
+// Targets the terms with measured demand: "web development agency" 4,400/mo and
+// "custom web development" 1,000/mo, both LOW paid competition (Keyword Planner,
+// 18 Aug 2026). The reporting clause is the differentiator, not a keyword bet:
+// its own terms return ZERO_SEARCH_VOLUME. See docs/research/keyword-gap-2026-08-18.md.
+const description = "Custom web development agency building Next.js applications, dashboards and internal tools, with reporting that shows which channel your leads actually came from.";
 
 export const metadata: Metadata = {
   title: name,
