@@ -1014,3 +1014,61 @@ After today's mass fixes ship, the next GSC data pull (Apr 27) is the validation
 6. /blog/squarespace-too-slow (direct-answer block added)
 7. /blog/gohighlevel-website-speed (new H2 section)
 8. /manifesto (new page)
+
+---
+
+## AI VISIBILITY BASELINE — 15 August 2026 (pre-push)
+
+**Why this section exists.** The `/GSC` folder is gitignored, so the CSV exports
+live on one machine and are not backed up. This transcribes the numbers into the
+tracked file before they can be lost, and it is deliberately dated PRE-PUSH: ten
+commits shipped on 19 Aug and the August 2026 spam update began rolling out on
+18 Aug. Anything measured after those two dates is confounded. This is the line
+in the sand to compare against.
+
+**Source:** Search Console → Performance → **Generative AI features (Beta)** for
+pandacodegen.com. Note this report has NO clicks column: it reports impressions
+in Google's generative surfaces only. Do not compare it against standard
+Performance numbers, which are a different population.
+
+**Window:** 2026-05-18 to 2026-08-13 (88 days)
+
+| Metric | Value |
+|---|---|
+| Total AI impressions | **6,186** |
+| First 30 days | 694 |
+| Last 30 days | **4,322** |
+| Growth across the window | **+523%** |
+| Daily mean / peak | 70 / 330 |
+| Pages appearing in AI surfaces | 76 |
+
+### Top pages by AI impressions
+
+| Page | Impressions | Share |
+|---|---|---|
+| /blog/nextjs-hosting-zero-cost | 3,250 | 52.5% |
+| /blog/gohighlevel-website-speed | 389 | 6.3% |
+| /blog/webflow-migration-cost | 383 | 6.2% |
+| /blog/woocommerce-too-slow | 336 | 5.4% |
+| /blog/divi-theme-slow | 311 | 5.0% |
+| /blog/top-nextjs-agencies-2026 | 206 | 3.3% |
+
+**The concentration is the finding.** `/blog/nextjs-hosting-zero-cost` alone is
+53% of all AI impressions on the site. AI visibility here is not broad,
+it is one post carrying half the programme. That is a single point of failure and
+it is also the clearest template available for what earns AI surfacing.
+
+**Separate export, do not mix:** `Queries.csv` dated 9 Aug 2026 is the STANDARD
+Performance report: 1,000 queries (GSC caps the export there), 35,143 impressions,
+40 clicks. Different report, different window, different metric.
+
+### What to compare against, and when
+
+Re-pull the same Generative AI export in 2-3 weeks. Two things to look for: the
+last-30-days figure against 4,322, and whether the 76-page spread widens.
+A rising total with the same concentration means one post is still doing the
+work. A rising page count is the programme generalising, which is the outcome
+that matters.
+
+Do not read anything before ~26 Aug. The spam update and the 19 Aug push land in
+the same window and cannot be separated.
