@@ -10,7 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
-import { GOOGLE_UPDATES, UPDATE_STATS, REGISTER_START, REGISTER_UPDATED } from "@/data/google-updates";
+import { GOOGLE_UPDATES, UPDATE_STATS, REGISTER_START, REGISTER_UPDATED, inProgressUpdate, longDate } from "@/data/google-updates";
 import type { Metadata } from "next";
 
 const updateFAQs = blogPosts.find(p => p.id === "google-algorithm-updates")?.faqs ?? [];
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
         description: `Every ranking update on Google's Search Status Dashboard, with start dates and rollout lengths. The median core update takes ${UPDATE_STATS.medianCoreDays} days to finish rolling out.`,
         type: "article",
         publishedTime: "2026-04-09T00:00:00-05:00",
-        modifiedTime: "2026-08-08T00:00:00-05:00",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-algorithm-updates",
         images: [ogImageForPath("/blog/google-algorithm-updates")],
@@ -97,7 +97,7 @@ const articleSchema = {
             "description": `A dated register of all ${UPDATE_STATS.total} ranking updates Google has confirmed since ${REGISTER_START}, transcribed from the Search Status Dashboard, with an evidence-led method for diagnosing whether an update affected your site.`,
             "image": ogImageUrlForPath("/blog/google-algorithm-updates"),
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -137,7 +137,7 @@ const articleSchema = {
             "description": `Every ranking update listed on Google's Search Status Dashboard from ${REGISTER_START} onward, with the update name, rollout start date and Google's stated rollout duration. ${GOOGLE_UPDATES.length} entries.`,
             "creator": { "@id": "https://www.pandacodegen.com/#organization" },
             "isBasedOn": DASHBOARD_URL,
-            "dateModified": "2026-08-08",
+            "dateModified": "2026-08-19",
             "temporalCoverage": "2021-11-03/2026-06-26",
             "variableMeasured": ["Update name", "Rollout start date", "Rollout duration"],
             "isPartOf": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#article" },
@@ -161,7 +161,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-algorithm-updates") },
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -230,6 +230,27 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </BlogText>
 
                         <BlogHeader>Every Google Algorithm Update Google Has Confirmed</BlogHeader>
+
+                        {/* Renders only while Google's dashboard still shows a rollout as
+                            ongoing. It disappears on its own once the entry gains a duration,
+                            so there is no stale "currently rolling out" banner to clean up
+                            later. The register table below always carries the same row. */}
+                        {inProgressUpdate && (
+                            <InsightBox label="Rolling out right now">
+                                Google started the <strong>{inProgressUpdate.name}</strong> on{" "}
+                                {longDate(inProgressUpdate.start)} and its dashboard still shows the rollout as
+                                ongoing. Google said it may take a few days, published no new spam policies
+                                alongside it, and released no accompanying blog post. It applies globally and to all
+                                languages.{" "}
+                                <strong>
+                                    A spam update is not a core update, and the response differs.
+                                </strong>{" "}
+                                A core update calls for a look at content quality. A spam update calls for checking
+                                whether you breach a specific published policy, and most sites breach none of them.
+                                Do not diagnose anything from a rollout that has not finished; note the start date
+                                and wait for it to complete, then a further week.
+                            </InsightBox>
+                        )}
 
                         <BlogText>
                             Google began publishing this history in {REGISTER_START}. Updates before that date were announced through blog posts and social accounts rather than a structured record, so they are not included here. Two entries are labelled &ldquo;ranking issue&rdquo; rather than an update, which is how Google logs a bug it later corrected.

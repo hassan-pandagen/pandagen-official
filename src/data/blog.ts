@@ -1325,7 +1325,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the latest Google algorithm update?", answer: `The most recent update on Google's Search Status Dashboard is the ${UPDATE_STATS.latest.name}, which began rolling out on ${longDate(UPDATE_STATS.latest.start)} and took ${UPDATE_STATS.latest.duration} to complete. The most recent core update is the ${UPDATE_STATS.latestCore.name}, which started ${longDate(UPDATE_STATS.latestCore.start)} and ran for ${UPDATE_STATS.latestCore.duration}. Google announces a name, a start date and a completion date for each one, and nothing about which ranking factors changed.` },
       { question: "How long does a Google core update take to roll out?", answer: `Across the ${UPDATE_STATS.coreCount} core updates Google has dated on its Search Status Dashboard, the median rollout is ${UPDATE_STATS.medianCoreDays} days. The shortest was the ${UPDATE_STATS.shortestCore.name} at ${UPDATE_STATS.shortestCore.duration}; the longest was the ${UPDATE_STATS.longestCore.name} at ${UPDATE_STATS.longestCore.duration}. None has completed in under six days, so a traffic comparison run in the first week of a core update is measuring a half-applied change.` },

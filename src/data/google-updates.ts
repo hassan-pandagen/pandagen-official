@@ -4,7 +4,7 @@
  * Source of truth, and the ONLY acceptable source for this file:
  *   https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history
  *
- * Transcribed 8 Aug 2026. Names, start dates and durations are copied verbatim
+ * Transcribed 8 Aug 2026, re-read 19 Aug 2026. Names, start dates and durations are copied verbatim
  * from Google's own history table -- not from SEO news coverage, which routinely
  * reports rollout dates that Google never stated. If you update this file, read
  * the dashboard again rather than trusting a secondary report.
@@ -25,10 +25,19 @@ export interface GoogleUpdate {
     /** `duration` as decimal days, for computation only. */
     days: number;
     kind: UpdateKind;
+    /**
+     * True while Google still shows the rollout as ongoing.
+     *
+     * An in-progress update has NO duration yet, so it must never reach any
+     * statistic or any sentence of the form "finished in X". `UPDATE_STATS.latest`
+     * deliberately skips these and `inProgressUpdate` exposes them separately.
+     */
+    inProgress?: boolean;
 }
 
 export const GOOGLE_UPDATES: readonly GoogleUpdate[] = [
     // 2026
+    { name: 'August 2026 spam update', start: '2026-08-18', duration: 'still rolling out', days: 0, kind: 'spam', inProgress: true },
     { name: 'June 2026 spam update', start: '2026-06-24', duration: '2 days, 1 hour', days: 2 + 1 / 24, kind: 'spam' },
     { name: 'May 2026 core update', start: '2026-05-21', duration: '11 days, 21 hours', days: 11 + 21 / 24, kind: 'core' },
     { name: 'March 2026 core update', start: '2026-03-27', duration: '12 days, 4 hours', days: 12 + 4 / 24, kind: 'core' },
@@ -83,7 +92,7 @@ export const GOOGLE_UPDATES: readonly GoogleUpdate[] = [
 
 /** The dashboard's own earliest entry, so the page can state its coverage window. */
 export const REGISTER_START = 'November 2021';
-export const REGISTER_UPDATED = '8 August 2026';
+export const REGISTER_UPDATED = '19 August 2026';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -112,6 +121,12 @@ export const UPDATE_STATS = {
     medianCoreDays: Math.round(median(coreUpdates.map(u => u.days)) * 10) / 10,
     shortestCore: coreUpdates.reduce((a, b) => (a.days < b.days ? a : b)),
     longestCore: coreUpdates.reduce((a, b) => (a.days > b.days ? a : b)),
-    latest: GOOGLE_UPDATES[0],
-    latestCore: coreUpdates[0],
+    // Latest COMPLETED update. The page renders "finished in {duration}" from
+    // this, so an in-progress rollout here would publish a false sentence.
+    latest: GOOGLE_UPDATES.filter(u => !u.inProgress)[0],
+    latestCore: coreUpdates.filter(u => !u.inProgress)[0],
 } as const;
+
+/** The rollout Google currently shows as ongoing, or null. Has no duration. */
+export const inProgressUpdate: GoogleUpdate | null =
+    GOOGLE_UPDATES.find(u => u.inProgress) ?? null;
