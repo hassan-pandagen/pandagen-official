@@ -342,7 +342,7 @@ export default function WebAccessibilityStatistics2026Page() {
                         replace, which we learned by trying the find and replace first and adding 51 new failures.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>All 137 pages now report zero detected violations</BlogHighlight>, first
+                        <BlogHighlight>All 138 pages now report zero detected violations</BlogHighlight>, first
                         confirmed on three consecutive runs and re-checked every time a page is added, most recently on
                         18 August 2026. The scanner is in our repository, reads the sitemap so new pages are covered
                         automatically, and runs against a local build before anything ships.

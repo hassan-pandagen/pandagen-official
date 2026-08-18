@@ -1001,6 +1001,28 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "ai-referral-revenue-2026",
+    cardStat: "6.7x",
+    cardStatLabel: "ChatGPT revenue vs Google Ads, same six months",
+    title: "ChatGPT Out-Earned Our Google Ads by 6.7x: Six Months of AI Referral Revenue",
+    excerpt: "First-party data from a founder-affiliated store. 760 orders, $271,620.61, and a per-assistant breakdown of what ChatGPT, Claude, Perplexity, Gemini and Google AI Overview actually produced.",
+    category: "Research",
+    readTime: "11 min",
+    date: "Aug 18",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: true,
+    illustrationType: 'aicommerce',
+    lastModified: "2026-08-18",
+    faqs: [
+      { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "Yes, measurably. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. ChatGPT alone produced $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
+      { question: "Why do most businesses report almost no AI traffic?", answer: "Because referrer-based tracking undercounts it badly. ChatGPT strips referrers on many links, its mobile apps do not pass them at all, and a large share of people read an AI answer and then type the company name into a browser directly, which lands in the Direct bucket. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
+      { question: "How much revenue did ChatGPT generate compared to Google Ads?", answer: "ChatGPT produced $11,614.78 from 51 orders. Google Ads produced $1,733.35 from 5 orders. That is 6.7 times more revenue from ChatGPT, from a channel with no ad spend attached to it, over the same six-month window in the same store." },
+      { question: "Which AI assistant sends the most valuable customers?", answer: "By volume, ChatGPT, with 51 of the 63 AI-attributed orders. By order value, Claude, at an average order value of $630.00 against a site average of $357.40. That Claude figure rests on four orders, which is far too small a sample to rely on, and it is reported here with the sample size attached rather than as a finding." },
+      { question: "Is there independent confirmation of this, or just your own tracking?", answer: "Both. Google Search Console's Generative AI features report for the same property recorded 48,900 impressions over three months, rising from roughly 400 a day in mid-May to 1,121 on 12 August 2026. That is Google's own instrument, entirely separate from the store's attribution, showing the same direction. It measures impressions in generative surfaces rather than clicks or revenue, so it corroborates the trend rather than the dollar figures." }
+    ]
+  },
+  {
     id: "cms-market-share-2026",
     cardStat: "65.2% → 59.0%",
     cardStatLabel: "WordPress share, 2022 peak to today",
