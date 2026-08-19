@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-14",
-        modifiedTime: "2026-08-02",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/what-is-headless-commerce")],
@@ -73,7 +73,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-14",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-14",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -203,6 +203,10 @@ export default function WhatIsHeadlessCommercePage() {
                             </div>
                         ))}
                     </div>
+
+                    <BlogQuote>
+                        Going headless changes four things, and none of them is speed.
+                    </BlogQuote>
 
                     <BlogHeader id="traditional-vs-headless">Traditional vs headless commerce</BlogHeader>
                     <BlogText>

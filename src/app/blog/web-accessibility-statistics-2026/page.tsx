@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { finding } from "@/data/research-facts";
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-13",
-        modifiedTime: "2026-08-18",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/web-accessibility-statistics-2026")],
@@ -74,7 +74,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/web-accessibility-statistics-2026"),
             datePublished: "2026-08-13",
-            dateModified: "2026-08-18",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -198,6 +198,11 @@ export default function WebAccessibilityStatistics2026Page() {
                     </BlogText>
 
                     <BlogHeader>What actually fails, and why that is good news</BlogHeader>
+
+                    <BlogQuote>
+                        Low contrast text is checkable in seconds and fixable by changing a hex code. It still appears on 83.9% of home pages.
+                    </BlogQuote>
+
                     <BlogText>
                         {finding("top-failure-types-2026").statement}.
                     </BlogText>

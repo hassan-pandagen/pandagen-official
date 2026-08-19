@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-16",
-        modifiedTime: "2026-08-16",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-low-conversion-rate")],
@@ -60,7 +60,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-low-conversion-rate"),
             datePublished: "2026-08-16T00:00:00-05:00",
-            dateModified: "2026-08-16T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -171,6 +171,11 @@ export default function WooCommerceLowConversionRatePage() {
                     </BlogText>
 
                     <BlogHeader>1. Define the metric, because WooCommerce will not do it for you</BlogHeader>
+
+                    <BlogQuote>
+                        A low conversion rate has at least four unrelated causes, and speed is only the easiest one to blame.
+                    </BlogQuote>
+
                     <BlogText>
                         Hosted platforms hand you a conversion rate and pick the definition for you. WooCommerce does
                         not, and that is an advantage only if you take it. Write down the definition before you look at

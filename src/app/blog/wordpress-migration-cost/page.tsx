@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-08-02",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-migration-cost")],
@@ -66,7 +66,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-22",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -111,7 +111,7 @@ const articleSchema = {
             description,
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-22",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -237,6 +237,11 @@ export default function WordPressMigrationCostPage() {
                     </BlogText>
 
                     <BlogHeader id="host-vs-platform">Are you changing hosts, or changing platforms?</BlogHeader>
+
+                    <BlogQuote>
+                        Rebuilding on Next.js is not one price. It is three tiers, and templates, data and integrations move you between them.
+                    </BlogQuote>
+
                     <div data-speakable="true">
                         <BlogText>
                             Two different jobs share one word, and only one of them is worth agency money. Moving a

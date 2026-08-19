@@ -11,6 +11,7 @@ import {
   BlogAuthor,
   BlogHeader,
   BlogList,
+  BlogQuote,
   BlogText,
   InsightBox,
 } from "@/components/ui/BlogStyles";
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
       "A measurement-first guide to slow websites: field data, lab traces, 12 causes, practical fixes and an optimize-versus-rebuild decision framework.",
     type: "article",
     publishedTime: "2026-05-13T00:00:00-05:00",
-    modifiedTime: "2026-08-01T00:00:00-05:00",
+    modifiedTime: "2026-08-19T00:00:00-05:00",
     authors: ["Hassan Jamal"],
     url: "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow",
     images: [ogImageForPath("/blog/why-is-my-website-loading-so-slow")],
@@ -82,7 +83,7 @@ const articleSchema = {
         "A measurement-first guide to diagnosing slow websites with field data, lab traces, twelve common causes, practical fixes and a rebuild decision framework.",
       image: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
       datePublished: "2026-05-13T00:00:00-05:00",
-      dateModified: "2026-08-01T00:00:00-05:00",
+      dateModified: "2026-08-19T00:00:00-05:00",
       author: {
         "@type": "Person",
         "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -207,7 +208,7 @@ const articleSchema = {
         url: ogImageUrlForPath("/blog/why-is-my-website-loading-so-slow"),
       },
       datePublished: "2026-05-13T00:00:00-05:00",
-      dateModified: "2026-08-01T00:00:00-05:00",
+      dateModified: "2026-08-19T00:00:00-05:00",
       breadcrumb: {
         "@id":
           "https://www.pandacodegen.com/blog/why-is-my-website-loading-so-slow#breadcrumb",
@@ -452,6 +453,10 @@ export default function SlowWebsitePage() {
               March 12, 2024 and removed FID from the program. Any current performance
               report or dashboard should be showing you LCP, INP and CLS.
             </InsightBox>
+
+            <BlogQuote>
+                You are testing your own site on your own cache and your own network. Nobody else gets that page load.
+            </BlogQuote>
 
             <BlogHeader>Why It Seems Fast to You and Slow to Everyone Else</BlogHeader>
 

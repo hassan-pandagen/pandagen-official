@@ -666,7 +666,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "speed",
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "The 3 second rule is a planning heuristic, not a Google requirement or a universal abandonment point. Different pages, devices, networks, audiences, and tasks produce different behavior. Use your own real-user performance and analytics data, then evaluate loading, responsiveness, layout stability, conversion, and engagement together." },
       { question: "Why is my website slow but my internet connection is fast?", answer: "Your connection is only one layer. Origin response, cache misses, redirects, large media, fonts, JavaScript, third parties and main-thread work can delay the page. Use a request waterfall and performance trace under recorded conditions to find the slow layer." },
@@ -916,7 +916,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     cardStat: "Jan 29",
     cardStatLabel: "Webflow User Accounts sunset",
     faqs: [
@@ -968,7 +968,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-16",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my WooCommerce conversion rate low?", answer: "A low conversion rate has at least four unrelated causes: traffic quality, offer and pricing, funnel friction, and technical performance. WooCommerce only contributes to some of them. Before spending anything, find which of the four funnel transitions actually changed: landing to product view, product view to add to cart, add to cart to checkout started, or checkout started to order placed." },
       { question: "What is a good WooCommerce conversion rate?", answer: "We do not publish a benchmark, because a number from someone else's catalogue, traffic mix and margin tells you nothing about yours. The useful comparison is your own store over time, with the metric definition written down first: which order statuses count, whether failed and cancelled orders are excluded, and whether internal and bot traffic is filtered." },
@@ -1082,7 +1082,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-18",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What percentage of websites are accessible?", answer: "In the 2026 WebAIM Million, 95.9% of the top one million home pages had detected WCAG 2 failures, up from 94.8% in 2025. That is automated testing of home pages only, so it detects a subset of failures and a page with no detected errors is not necessarily conformant." },
       { question: "Is web accessibility getting better or worse?", answer: "It got worse in 2026. The 95.9% failure rate reversed six consecutive years of small improvements. Average page element counts rose 22.5% in the same year, so growing page complexity is the likeliest mechanism rather than a decline in effort." },
@@ -1440,7 +1440,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does Webflow migration cost in 2026?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with custom work scoped separately. Final price depends on templates, CMS, export gaps, content, integrations, SEO, accessibility, QA, cutover and support." },
       { question: "What factors increase the cost of a Webflow migration project?", answer: "Unique templates, CMS relationships, localization, interactions, ecommerce, membership, forms, search, integrations, content cleanup, redesign, accessibility, security, SEO, compressed schedules and additional reviewers can all expand scope. Quantify them from the live inventory." },
@@ -1465,7 +1465,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-08-02",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does a WordPress to Next.js migration cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with complex commerce and application work scoped separately. Final price follows the accepted URL, template, content, plugin, data, integration, quality, cutover and support scope." },
       { question: "How long does a WordPress to Next.js migration take?", answer: "A host transfer can be same-day. A platform rebuild is weeks, and MyCustomPatches, an owner-confirmed PandaCodeGen delivery example, completed in about 22 days. That is one project, not a standard, and the variable is template count and content readiness rather than page count. The existing site stays live until cutover." },
@@ -1541,7 +1541,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does Shopify take from a $100 sale?", answer: "It depends far more on whether you use Shopify Payments than on your plan. With Shopify Payments you pay the published card rate for your country and plan and no additional transaction fee. With any other gateway, Shopify charges a third-party payment provider fee on top of whatever that gateway takes: read from Shopify's own pricing page on August 2, 2026, that is 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus, so $2.00, $1.00, $0.60 or $0.20 on a $100 sale before your gateway takes anything. Card rates are quoted per country and shopify.com/pricing geo-redirects, so read the rate on your own market's pricing page or in the Payments section of your admin rather than from an article." },
       { question: "How much do Shopify apps cost per month?", answer: "Individual app prices published on August 2, 2026 range from free to a few hundred dollars a month per app. Common entry tiers: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, PageFly Builder $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus 1.49% and 19 cents per transaction. Some apps, including Okendo and Attentive, do not publish tier prices at all. There is no reliable universal total, because volume-metered pricing means the bill tracks your list size, order count or message volume. Export your Shopify bills, card statements and vendor invoices, then separate subscription, usage, transaction, one-time, tax and external charges. Public list prices might not match your legacy, annual, promotional or negotiated terms." },
@@ -2179,7 +2179,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'sales',
-    lastModified: "2026-08-02",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is headless Shopify worth it?", answer: "For most stores, no. Headless buys you control of the storefront and costs you the theme editor, an ongoing engineering commitment, and a hosting line Shopify publishes no price for. It is worth it when you can name a requirement the theme demonstrably cannot meet after you have actually tried, when somebody will own the storefront application after launch, and when the people who run campaigns can still change a page without filing a ticket. Two out of three is not enough, and the third is where these projects quietly fail. The same budget spent on the existing theme, its images, its app load and its data layer usually moves the numbers further and adds nothing to maintenance." },
       {

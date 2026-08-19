@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { GOOGLE_UPDATES, UPDATE_STATS, REGISTER_START, REGISTER_UPDATED, inProgressUpdate, longDate } from "@/data/google-updates";
@@ -293,6 +293,11 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </div>
 
                         <BlogHeader>What the Rollout Data Actually Shows</BlogHeader>
+
+                    <BlogQuote>
+                        The most-read coverage of a rollout is written in its first 48 hours, the one point at which nobody can know what it actually did.
+                    </BlogQuote>
+
 
                         <BlogText>
                             The durations are the part of this record almost nobody reads, and they change how you should respond. Across the {UPDATE_STATS.coreCount} core updates Google has dated, the median rollout is <BlogHighlight>{UPDATE_STATS.medianCoreDays} days</BlogHighlight>. The shortest was the {UPDATE_STATS.shortestCore.name} at {UPDATE_STATS.shortestCore.duration}. The longest was the {UPDATE_STATS.longestCore.name}, which ran for {UPDATE_STATS.longestCore.duration}.

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-19",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-app-costs-real-monthly-bill")],
@@ -85,7 +85,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-19",
-            dateModified: "2026-08-06T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -131,7 +131,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-19",
-            dateModified: "2026-08-06T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
@@ -376,6 +376,10 @@ export default function ShopifyAppCostsPage() {
                         percentage of revenue that dwarfs every app on your invoice, and it will never appear in the app
                         charges you have been reconciling. Put the payment line in the same register as the apps.
                     </BlogText>
+
+                    <BlogQuote>
+                        A lower price is not automatically equivalent. Compare what each app actually does, not what it costs.
+                    </BlogQuote>
 
                     <BlogHeader>4. Measure value before comparing prices</BlogHeader>
                     <BlogText>
