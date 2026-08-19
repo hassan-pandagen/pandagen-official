@@ -116,7 +116,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "conversion",
-    lastModified: "2026-07-31",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why do Meta and my store show different conversion totals?", answer: "They may answer different questions. Reconcile the same event definition, time zone, date range, order state, test and refund treatment, and attribution window. Separate event delivery from ad attribution before calling the integration broken." },
       { question: "Why is my Meta Pixel not firing?", answer: "Check consent state, the expected Pixel or dataset ID, duplicate or stale integrations, browser requests, script errors, navigation timing, extensions and vendor diagnostics. Diagnose the affected session instead of assuming one universal cause." },
@@ -363,7 +363,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "How long does it take to build a custom website in 2026?",
@@ -408,7 +408,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Do I own my website if an agency builds it?",
@@ -518,7 +518,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-08-03",
+      lastModified: "2026-08-19",
       faqs: [
         { question: "How much is the average business spending on SaaS in 2026?", answer: "A general benchmark does not establish your stack cost. Reconcile at least twelve months of card, bank, accounts-payable and app-marketplace charges, then map each item to the exact account, SKU, owner, usage, contract and renewal." },
         { question: "What is the 2026 SaaS inflation rate?", answer: "This audit does not apply one market-wide rate to every contract. Vendor, SKU, region, billing channel, renewal, discount and billed quantity differ. Use the official change notice and the account's renewal quote and invoice." },
@@ -567,7 +567,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "security",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What happened to Smart Slider 3 Pro in April 2026?", answer: "Patchstack reported that compromised update infrastructure distributed Smart Slider 3 Pro version 3.5.1.35 on April 7 for approximately six hours. It said the Pro release contained a remote-access toolkit, the free WordPress.org edition was not affected, and 3.5.1.36 was the clean release. Sites that installed the affected build should follow the current vendor incident guidance." },
       { question: "What happened to EssentialPlugin in April 2026?", answer: "Patchstack reported that the vendor changed hands in 2025 and that the new owner introduced backdoor code across more than 20 plugins. It said the code was activated on April 5 and that the WordPress Plugin Review team closed affected listings and pushed a forced security update on April 7. Applicability and compromise still require site-specific evidence." },
@@ -864,7 +864,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'migration',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does a website migration cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. Final price depends on the route, template, content, data, feature, integration, compliance, QA, cutover and support scope. These are PandaCodeGen planning anchors, not market averages." },
       { question: "Why can two migration quotes differ so much?", answer: "The quotes may cover different inventories, design changes, content work, integrations, accessibility, SEO safeguards, testing, governance, ownership or support. Normalize the statements of work before attributing the difference to markup or quality." },
@@ -1640,7 +1640,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'performance',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is WordPress or Next.js better for SEO?", answer: "Neither framework guarantees better SEO. Both can produce crawlable, indexable, fast pages or serious technical defects. Compare content workflow, rendered output, URL control, canonicals, structured data, internal links, performance, security, maintenance, and team capability for the actual requirements." },
       { question: "How much faster is Next.js than WordPress?", answer: "There is no universal difference. Compare representative routes with the same content, features and third parties using field data where available and repeated lab tests under recorded conditions. WordPress and Next.js performance both depend on implementation, infrastructure and operations." },
@@ -1826,7 +1826,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'security',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "What are WordPress Abilities and the MCP Adapter?",
@@ -1927,7 +1927,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'plugins',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
@@ -2064,7 +2064,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why does my competitor rank higher on Google than me?",

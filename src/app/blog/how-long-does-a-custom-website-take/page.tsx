@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-long-does-a-custom-website-take")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-long-does-a-custom-website-take"),
             description,
             datePublished: "2026-06-03",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -105,7 +105,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-03",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -212,6 +212,10 @@ export default function WebsiteTimelineGuide() {
                             "Change: how a new feature, page, integration or approval round changes price and schedule.",
                         ]}
                     />
+
+                    <BlogQuote>
+                        A brochure site and a commerce rebuild do not share one honest duration. The schedule follows the dependencies, not the project type.
+                    </BlogQuote>
 
                     <BlogHeader>Typical timelines by project size</BlogHeader>
                     <BlogText>

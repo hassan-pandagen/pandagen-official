@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-software-pricing-audit-2026")],
@@ -84,7 +84,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-software-pricing-audit-2026"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -127,7 +127,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -256,6 +256,10 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         readers. The primary sources are linked at the end of this article; your invoice is the only
                         authority on what you specifically now pay.
                     </InsightBox>
+
+                    <BlogQuote>
+                        A real audit starts with paid invoices and observed usage, not the price on the vendor's website.
+                    </BlogQuote>
 
                     <BlogHeader>1. Reconcile finance, identity and vendor records</BlogHeader>
                     <div data-speakable="true">

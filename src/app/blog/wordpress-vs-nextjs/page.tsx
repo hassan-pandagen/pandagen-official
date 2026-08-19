@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { cite, finding } from "@/data/research-facts";
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-15",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-nextjs")],
@@ -73,7 +73,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-nextjs"),
             description,
             datePublished: "2026-03-15",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -245,6 +245,10 @@ export default function WordPressVsNextJsPage() {
                         share number, name the measurer and the month, because these are detector estimates from a
                         sample rather than a census.
                     </BlogText>
+
+                    <BlogQuote>
+                        Choose WordPress when the publishing workflow fits your team. Choose Next.js when the interface or the data needs more control than a theme gives you.
+                    </BlogQuote>
 
                     <BlogHeader id="why-people-leave">Why do people move away from WordPress?</BlogHeader>
                     <BlogText>

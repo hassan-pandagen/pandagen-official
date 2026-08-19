@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-competitor-outranks-you")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -290,6 +290,10 @@ export default function WhyCompetitorOutranksYouPage() {
                         </Link>{" "}
                         shows how to check a rollout window against your own release dates.
                     </BlogText>
+
+                    <BlogQuote>
+                        A competitor rarely wins on everything. Usually it is one gap in one of seven comparable areas.
+                    </BlogQuote>
 
                     <BlogHeader id="links">Links: the gap most likely to explain it, and the metric that will not</BlogHeader>
                     <div data-speakable="true">

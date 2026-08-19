@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-migration-cost-2026")],
@@ -72,7 +72,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-06",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -117,7 +117,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-06",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -264,6 +264,10 @@ export default function WebsiteMigrationCostPage() {
                         <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline font-medium">what a website costs to build from scratch</Link>{" "}
                         covers the case where replacing beats moving.
                     </BlogText>
+
+                    <BlogQuote>
+                        The platform you are leaving changes how hard the export is. It does not set the price.
+                    </BlogQuote>
 
                     <BlogHeader id="what-changes-the-number">The three things a quote actually depends on</BlogHeader>
 

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-05",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-plugins-destroy-speed")],
@@ -66,7 +66,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-plugins-destroy-speed"),
             description,
             datePublished: "2026-02-05",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -229,6 +229,10 @@ export default function WordPressPluginPerformancePage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogQuote>
+                        A plugin count is not a performance score. One plugin doing real damage matters more than ten sitting idle.
+                    </BlogQuote>
 
                     <BlogHeader id="baseline">Create a reproducible baseline</BlogHeader>
                     <BlogText>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, ComparisonGrid } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, ComparisonGrid } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-03",
-        modifiedTime: "2026-08-01",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/do-you-own-your-website")],
@@ -64,7 +64,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/do-you-own-your-website"),
             datePublished: "2026-06-03",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -128,7 +128,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-03",
-            dateModified: "2026-08-01",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -256,6 +256,10 @@ export default function DoYouOwnYourWebsitePage() {
                         the same either way: read what your agreement actually says about the code, and fix it now if it
                         says nothing.
                     </BlogText>
+
+                    <BlogQuote>
+                        Paying for a website does not answer every ownership question. Copyright, source access and the domain are separate rights, not one bundle.
+                    </BlogQuote>
 
                     <BlogHeader id="builders">Do website builders own your website?</BlogHeader>
                     <div data-speakable="true">

@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-06",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/fix-meta-ad-tracking-2026")],
@@ -67,7 +67,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/fix-meta-ad-tracking-2026"),
             datePublished: "2026-07-06",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -141,7 +141,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-06",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -281,6 +281,10 @@ export default function MetaAdTrackingGuide() {
                         depend on the visitor&apos;s browser holding onto anything. It does nothing to the left-hand
                         column, and should not.
                     </BlogText>
+
+                    <BlogQuote>
+                        If Meta reports fewer sales than your shop admin, the campaign is often fine. The data path is what is leaking.
+                    </BlogQuote>
 
                     <BlogHeader>Make sure you are comparing like with like</BlogHeader>
                     <BlogText>

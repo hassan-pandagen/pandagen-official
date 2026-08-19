@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-23",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-april-2026-evidence")],
@@ -90,7 +90,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-april-2026-evidence"),
             description,
             datePublished: "2026-04-23",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -133,7 +133,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-23",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -252,6 +252,10 @@ export default function WordPressAprilEvidencePage() {
                             "Notification, insurer, contractual and regulatory duties appropriate to the incident",
                         ]}
                     />
+
+                    <BlogQuote>
+                        Two incidents and one feedback thread are useful operating evidence. They do not prove every WordPress site is compromised.
+                    </BlogQuote>
 
                     <BlogHeader id="event-two">Record two: EssentialPlugin</BlogHeader>
                     <BlogText>
