@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { finding } from "@/data/research-facts";
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/is-squarespace-bad-for-seo")],
@@ -84,7 +84,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -128,7 +128,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -253,6 +253,10 @@ export default function IsSquarespaceBadForSEOPage() {
                         page is rendered markup an answer engine can read. Fix the checklist first, then judge the ceiling
                         on what is left.
                     </InsightBox>
+
+                    <BlogQuote>
+                        The platform is not the ceiling on Squarespace SEO. What you are competing against is.
+                    </BlogQuote>
 
                     <BlogHeader id="real-limits">The four limits that are actually structural</BlogHeader>
                     <BlogText>

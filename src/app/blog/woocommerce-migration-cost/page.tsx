@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-08",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-migration-cost")],
@@ -73,7 +73,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-migration-cost"),
             datePublished: "2026-05-08",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,7 +116,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-08",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -248,6 +248,10 @@ export default function WooCommerceMigrationCostPage() {
                         <Link href="/work" className="text-cognac hover:underline">our project work</Link>{" "}
                         shows what a delivered build contains.
                     </BlogText>
+
+                    <BlogQuote>
+                        Moving a store is not moving a website. The products, customers and orders all have to keep working on the other side.
+                    </BlogQuote>
 
                     <BlogHeader id="complexity">The WooCommerce migration complexity matrix</BlogHeader>
                     <BlogText>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-developer-agency")],
@@ -70,7 +70,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-developer-agency"),
             description,
             datePublished: "2026-05-12",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -113,7 +113,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -239,6 +239,10 @@ export default function WebsiteDeveloperAgencyPage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogQuote>
+                        An agency&apos;s job is to turn what your business needs into a website you can actually run, with someone clearly accountable for it.
+                    </BlogQuote>
 
                     <BlogHeader>How much does a website developer agency cost in 2026?</BlogHeader>
                     <BlogText>

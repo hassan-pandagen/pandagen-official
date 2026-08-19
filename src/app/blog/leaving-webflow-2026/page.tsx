@@ -16,7 +16,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogHeader, BlogText, BlogAuthor, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         description: "Decide whether to stay, optimize, or migrate using current Webflow plan terms, total cost, export constraints, performance data, and SEO migration controls.",
         type: "article",
         publishedTime: "2026-04-06",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/leaving-webflow-2026",
         images: [ogImageForPath("/blog/leaving-webflow-2026")],
@@ -72,7 +72,7 @@ const articleSchema = {
             "description": "A practical framework for deciding whether to stay on Webflow, optimize the current implementation, or plan an SEO-safe migration.",
             "image": ogImageUrlForPath("/blog/leaving-webflow-2026"),
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -176,7 +176,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/leaving-webflow-2026") },
             "datePublished": "2026-04-06T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/leaving-webflow-2026#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -337,6 +337,10 @@ export default function LeavingWebflow2026Page() {
                                 <p className="mt-2 text-sm leading-relaxed text-stone-600">Use a custom architecture when authentication, permissions, transactions, real-time data, or API behavior has become the product rather than a small website add-on.</p>
                             </div>
                         </div>
+
+                        <BlogQuote>
+                            A feature deprecation is a planning signal, not a reason to panic and migrate overnight.
+                        </BlogQuote>
 
                         <BlogHeader>Treat Ecommerce and Membership as Separate Architecture Decisions</BlogHeader>
 

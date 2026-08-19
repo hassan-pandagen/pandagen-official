@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-07-31",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does it cost to migrate off WooCommerce to a custom site?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with commerce, subscriptions, regulated data and complex integrations potentially requiring custom scope. Final price follows the signed inventory and acceptance criteria." },
       { question: "Will I lose my SEO rankings during the migration?", answer: "Product and category URLs carry the revenue, so map those first and in full, including variations, out-of-stock items and paginated archives. Keep the product structured data matching what is visible on the page. Search engines control indexing and recovery timing, so the measurable goal is that nothing 404s and nothing loses its structured data, not a promised ranking." },
@@ -188,7 +188,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "performance",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "When should I optimize WooCommerce instead of rebuilding?", answer: "Optimize when WooCommerce capabilities and editing fit, measured bottlenecks are repairable, and the team can maintain hosting, extensions, security and operations. Compare the repaired option with headless and replacement using the same acceptance criteria." },
       { question: "How much does it cost to move from WooCommerce to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with complex commerce scoped separately. Final price depends on the capability, data, integration, design, compliance, testing, cutover and support inventory." },
@@ -618,7 +618,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "code",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is web development dead because of AI?", answer: "No. AI can assist research, coding and testing, but the buyer still needs accountable requirements, architecture, security, accessibility, privacy, integration, validation and ownership decisions. Evaluate the named team and its evidence rather than assuming tool use guarantees speed or quality." },
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a universal abandonment point or Google requirement. Use your own real-user and funnel evidence. Google publishes Core Web Vitals thresholds for field experience, but passing them does not guarantee rankings, conversion or revenue." },
@@ -712,7 +712,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "ranking",
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why do some people say Squarespace is bad for SEO?", answer: "Some properties have performance, scale, integration, editing or technical-control constraints, but a platform label does not diagnose an individual site. Audit crawlability, rendered output, content, search data and representative route performance before assigning a cause." },
       { question: "What are the main SEO limitations of Squarespace?", answer: "Four are structural rather than settings you forgot. You cannot edit robots.txt, only tick two crawler checkboxes. Blog posts sit under a collection prefix. Redirects have no CSV import, so a large migration is pasted by hand. Squarespace emits six schema types automatically that you cannot edit or remove, so your own markup sits alongside them rather than replacing them. Everything else people blame on the platform is usually a page control that was never filled in." },
@@ -786,7 +786,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How long does a website redesign take from start to launch?", answer: "A redesign is usually faster than a migration because the platform, the data and most of the URLs stay put. What sets the schedule is the number of distinct templates and the number of people who have to approve them. Two approvers and four templates is a different project from six approvers and fourteen templates, at the same page count." },
       { question: "How often should a business redesign its website?", answer: "There is no universal redesign cycle. Act when evidence shows the experience, accessibility, content system or brand no longer meets current requirements and a redesign is the smallest sufficient intervention. Site age alone is not a business case." },
@@ -810,7 +810,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is hiring a cheap web developer safe for my business website?", answer: "It can be, and the price is not what tells you. What tells you is whether you can point at a deliverable when each payment falls due, whether the contract says who owns the code and the accounts, and whether the developer can show you finished work rather than a capability list. Cheap and careful exist together; cheap and undefined do not." },
             {
@@ -840,7 +840,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a Google requirement or universal abandonment point. Different routes, devices, networks, audiences and tasks behave differently. Use the property's field performance and funnel evidence rather than applying one cutoff to every visitor." },
       { question: "Does website speed affect Google rankings?", answer: "Google uses Core Web Vitals in broader ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Lighthouse is a lab diagnostic, not a direct ranking cutoff. Diagnose search changes with Search Console, content, links, indexing and release evidence." },
@@ -1272,7 +1272,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "Webflow can still be a strong fit when a marketing team values visual editing, the current Site and Workspace plans fit the budget, and the platform supports the next two to three years of content and integration needs. Review your actual account terms, bandwidth usage, add-ons, roadmap, performance data, and governance requirements instead of deciding from one plan change or incident." },
       { question: "When should a business leave Webflow?", answer: "Consider leaving when several structural constraints overlap: recurring cost no longer matches value, product logic or integrations exceed the supported model, export limitations create unacceptable dependency, governance requires client-controlled infrastructure, or measured performance problems remain after a focused optimization pass. One low PageSpeed score or one outage is not a complete migration case." },
@@ -1566,7 +1566,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'webflow',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Is Webflow worth it in 2026?", answer: "For a marketing site that one or two people edit and nobody needs to export, yes. It stops being worth it at three thresholds you can check today. Seat count, because a Workspace seat is charged per editing person and grows with your team rather than your traffic. Add-on mix, because Optimize from $299/mo and Localize can each cost more than the site plan they sit on. And the moment somebody asks for the code, because a paid Workspace plan is the entry fee and what you get back still excludes the CMS, the store and anything behind a login. None of those thresholds is about design or speed, which is where the argument usually gets had." },
       { question: "How much does Webflow actually cost per year?", answer: "Webflow's published Site plan prices on August 2, 2026 are $15/mo billed yearly for Basic, which has no CMS, and $25/mo billed yearly for Premium, which does, so $180 or $300 a year per site before anything else. Add a Workspace plan if you need code export or extra seats: Core is $19/mo billed yearly, Growth $49/mo. Add-ons are separate and usage-priced: Optimize from $299/mo, Analyze from $9/mo, Localize $9 or $29/mo. Selling needs an Ecommerce plan: Standard $29/mo with a 2% transaction fee, Plus $74/mo and Advanced $212/mo at 0%, all billed yearly, with Stripe or PayPal charging their own processing fees on top. All prices are USD, per site, before tax. Your own yearly total is those figures plus connected vendors, agency work and internal time, which Webflow does not publish and you take from twelve months of invoices." },
@@ -1751,7 +1751,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the total cost of WordPress over three years?", answer: "Calculate it from actual hosting, software, support and incident invoices plus internal operating labor, planned roadmap work and any exit work inside the period. There is no representative total for every WordPress business site." },
       { question: "Is a custom website cheaper than WordPress long term?", answer: "Sometimes, but not automatically. Compare the same capabilities, demand, service level and period. Include custom build and migration, providers, dependencies, releases, support, internal labor and exit. Publish payback only when the inputs are visible and verified." },
