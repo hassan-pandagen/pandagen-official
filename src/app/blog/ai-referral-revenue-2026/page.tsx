@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title, description, type: "article",
-        publishedTime: "2026-08-18", modifiedTime: "2026-08-18",
+        publishedTime: "2026-08-18", modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"], url: canonicalUrl,
         images: [ogImageForPath("/blog/ai-referral-revenue-2026")],
     },
@@ -63,7 +63,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/ai-referral-revenue-2026"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-08-18T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -174,6 +174,10 @@ export default function AiReferralRevenuePage() {
                         customer heard about you, and wait ninety days. It costs nothing and it is the only way to see
                         traffic that arrives without a referrer.
                     </InsightBox>
+
+                    <BlogQuote>
+                        Most businesses are not seeing less AI traffic than we are. They are measuring it worse.
+                    </BlogQuote>
 
                     <BlogHeader>Revenue by source, {window_.label}</BlogHeader>
                     <BlogText>
@@ -333,22 +337,26 @@ export default function AiReferralRevenuePage() {
                         to an ideal case for an assistant that answers constraint-shaped questions. Your category may
                         behave nothing like it.
                     </BlogText>
-                    <BlogText>
-                        <BlogHighlight>There are no conversion rates on this page, deliberately.</BlogHighlight> The
-                        lead records and the order records do not share a window, and repeat orders appear to inherit
-                        the original lead&apos;s source. Dividing one by the other produced a conversion rate above
-                        100% for two sources, which is impossible, so the whole measure is withheld rather than
-                        presented in a softened form.
-                    </BlogText>
-                    <BlogText>
-                        <BlogHighlight>One outlier is disclosed rather than removed.</BlogHighlight> {outlier.note}
-                    </BlogText>
-                    <BlogText>
-                        And self-reported attribution has its own bias. A customer who used ChatGPT and then searched
-                        Google may report either one. The honest reading is that these figures are better than
-                        referrer-only tracking and still not exact, which is true of every attribution number anyone
-                        has ever published.
-                    </BlogText>
+                    <div className="my-8 grid gap-5 md:grid-cols-2">
+                        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+                            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-stone-500">What the data supports</p>
+                            <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
+                                <li>Revenue attributed to each AI assistant across one store and one six-month window</li>
+                                <li>That ChatGPT out-earned Google Ads here by {chatgptVsGoogleAds}x, from the same table and the same window</li>
+                                <li>That average order value from AI assistants sits below the site average, which a 94-brand study found independently</li>
+                                <li>That referrer-only tracking undercounts AI referrals, which is why these figures are not zero</li>
+                            </ul>
+                        </div>
+                        <div className="rounded-2xl border border-cognac/20 bg-cognac/5 p-6">
+                            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-cognac">What it cannot tell you</p>
+                            <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
+                                <li>Lead-to-order conversion. The lead and order records do not share a window and repeat orders inherit the original source, which produced a rate above 100% for two sources</li>
+                                <li>Anything about your category. One business, one vertical, one window</li>
+                                <li>A clean average. {outlier.note}</li>
+                                <li>Exact attribution. Someone who used ChatGPT and then searched Google may report either one</li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <BlogHeader>What we would do with this if it were your business</BlogHeader>
                     <BlogText>

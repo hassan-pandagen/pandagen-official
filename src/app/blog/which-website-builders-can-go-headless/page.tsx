@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { spec, asOf } from "@/data/spec-facts";
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-18",
-        modifiedTime: "2026-08-18",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/which-website-builders-can-go-headless")],
@@ -82,7 +82,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/which-website-builders-can-go-headless"),
             datePublished: "2026-08-18T00:00:00-05:00",
-            dateModified: "2026-08-18T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -389,7 +389,30 @@ export default function WhichBuildersHeadlessPage() {
                         require GoHighLevel to render the pages.
                     </BlogText>
 
+                    <BlogQuote>
+                        On Shopify or WooCommerce you can put a custom front end in front of the shop you already have.
+                        On Squarespace, leaving the front end means leaving the platform.
+                    </BlogQuote>
+
                     <BlogHeader>The six platforms side by side</BlogHeader>
+                    <div className="my-8 grid gap-5 md:grid-cols-2">
+                        <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+                            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-stone-500">Can go headless</p>
+                            <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
+                                <li><strong className="text-charcoal">Shopify.</strong> One GraphQL API carries products, cart, checkout and the blog</li>
+                                <li><strong className="text-charcoal">WooCommerce.</strong> Fully open, but it takes two separate APIs and your own hosting</li>
+                                <li><strong className="text-charcoal">Wix.</strong> Free to start, with Wix-hosted checkout available as a shortcut</li>
+                            </ul>
+                        </div>
+                        <div className="rounded-2xl border border-cognac/20 bg-cognac/5 p-6">
+                            <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-cognac">Cannot, or not in that direction</p>
+                            <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
+                                <li><strong className="text-charcoal">Webflow.</strong> Runs it in reverse: you bring your code to Webflow rather than Webflow content to you</li>
+                                <li><strong className="text-charcoal">Squarespace.</strong> Nine APIs, all back-office, no content and no storefront</li>
+                                <li><strong className="text-charcoal">GoHighLevel.</strong> Business operations APIs; content delivery not established</li>
+                            </ul>
+                        </div>
+                    </div>
                     <BlogText>
                         Content out and commerce out are scored separately, because a platform can pass one and fail
                         the other. Every row was verified against the vendor&apos;s own documentation in {checkedOn}.

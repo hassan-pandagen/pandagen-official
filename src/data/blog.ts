@@ -991,7 +991,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-08-18",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Can you use Squarespace headless?", answer: "No. Squarespace publishes nine APIs and every one of them is back-office: Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions. There is no API that returns page or blog content, and no storefront or checkout API, so there is nothing to render a custom front end from. The word headless does not appear on the Squarespace developer portal. Checked 17 August 2026." },
       { question: "Is Wix Headless free?", answer: "Wix Headless is free to start. Wix states that a premium plan is required to unlock payments, in-depth analytics and custom domains, so a real commercial site will need one. The free tier is enough to build and evaluate against your own content. Checked 17 August 2026." },
@@ -1013,7 +1013,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-08-18",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Do AI assistants like ChatGPT actually generate sales?", answer: "Yes, measurably. Across 1 March to 18 August 2026, a store we operate recorded 63 orders worth $16,783.76 attributed to AI assistants, out of 760 orders and $271,620.61 total. That is 6.2% of all revenue, or 9.2% of acquisition revenue once repeat orders are excluded. ChatGPT alone produced $11,614.78. This is one business in one vertical, so it is evidence that it happens, not a benchmark for your business." },
       { question: "Why do most businesses report almost no AI traffic?", answer: "Because referrer-based tracking undercounts it badly. ChatGPT strips referrers on many links, its mobile apps do not pass them at all, and a large share of people read an AI answer and then type the company name into a browser directly, which lands in the Direct bucket. A business measuring referrer alone will see close to zero and conclude AI sends no traffic. We capture referrer where it survives and ask the customer where it does not, which is the only reason these numbers are not zero." },
