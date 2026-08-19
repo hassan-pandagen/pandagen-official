@@ -1072,3 +1072,71 @@ that matters.
 
 Do not read anything before ~26 Aug. The spam update and the 19 Aug push land in
 the same window and cannot be separated.
+
+---
+
+## AI VISIBILITY CHECKPOINT — 19 August 2026 (informational only, not a cohort read)
+
+**Do not treat this as evidence for or against the heading-cohort experiment.** It is
+logged here purely to keep the trend line current. The heading changes shipped the
+same day this export was pulled; Google has not recrawled these pages yet. The
+pre-registered read date remains 8 September 2026.
+
+Source: Search Console, Performance, Generative AI features, exported via the
+`generative-ai-pages.csv` tool output (Suganthan's AI Mode/AI Overview query
+classifier, https://suganthan.com/free-seo-tools/conversation-query-classifier/,
+which re-summarises the same Pages.csv export).
+
+| Metric | 15 Aug | 19 Aug | Change |
+|---|---|---|---|
+| Total AI impressions | 6,257 | 6,700 | +7.1% |
+| Pages appearing | 76 | 77 | +1 |
+| nextjs-hosting-zero-cost | 3,250 (51.9%) | 3,627 (54.1%) | +377, concentration UP |
+
+The concentration problem is worsening, not improving: the anchor page gained more
+impressions on its own (377) than the rest of the site combined (66). This
+strengthens the case for tomorrow's planned analysis of what that page does
+differently — see "Queued for the next session" in `next-session-plan.md`.
+
+Cohort pages, logged for completeness only, all within noise (0-2 impressions):
+squarespace-too-slow 5→5, shopify-headless 4→6, shopify-stocky-sunset-date-2026
+7→9, gohighlevel-keep-crm-replace-website 9→9, webflow-vs-custom-website 0→0.
+
+## SEPARATE FINDING — automated/bot traffic in the standard Queries report
+
+Independent of the AI-visibility work above. Ran `Queries.csv` (1,000 rows, 9 Aug
+export) through the same classifier tool, cross-checked by hand first.
+
+**51 of 1,000 queries (5.1%) carry zero human search intent, and 100% of them have
+zero clicks.** Breakdown: 32 "conversational" (666 impressions), 15
+"long_uncategorised" (142), 3 "tracker_probe" (60), 1 "pivot" (8).
+
+Investigated each bucket rather than trusting the labels:
+
+- **"conversational" is mostly false-positive.** Most of it is ordinary long-form
+  natural-language questions ("how much should we budget for a webflow migration
+  for a 50-100 page site?"), which is normal search behaviour and, in this case,
+  content this site already targets and already ranks for (that exact query was
+  flagged as a win in the 18 May snapshot above).
+- **"tracker_probe" is the real finding.** A structured template — "evaluate the
+  [dimension] - [entity description] on [topic]" — appearing twice, near-identical,
+  about Squarespace. Reads as a brand-monitoring or AI-visibility tool running
+  scripted evaluations, not a person.
+- **"long_uncategorised" contains genuine bot signatures**: Google-dork-style
+  queries with `-site:` exclusions, and the "Iron Horse Studio" competitor-research
+  pattern already flagged in the 18 May snapshot above, now with more variants.
+  Also contains query-fan-out (the same underlying Vercel bandwidth question
+  phrased three ways), and at least two queries ("forthroute", "w3 total cache")
+  that do not appear to be about this business at all — an automated tool hitting
+  many unrelated domains, this site incidentally among them.
+
+**What this is NOT:** evidence for the specific claim that prompted this check
+(Google leaking live AI Mode conversation turns like "yes go on" into Search
+Console). That exact signature — short chatbot-reply fragments — was searched for
+directly and found zero times in this export.
+
+**What this IS:** confirmation, now via two independent methods (a hand-built
+regex check and a third-party ML classifier), that this site's content is a
+target for automated competitive-intelligence and AI-visibility monitoring
+tooling, and that traffic pollutes roughly 5% of the query dataset at zero clicks.
+Not the site's problem to fix; useful to know when reading query counts.
