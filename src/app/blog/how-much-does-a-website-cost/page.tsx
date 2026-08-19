@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-12",
-        modifiedTime: "2026-08-06",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-much-does-a-website-cost")],
@@ -73,7 +73,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-05-12",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -116,7 +116,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-12",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -286,6 +286,10 @@ export default function WebsiteCostGuide() {
                         remove design, content, migration, integrations or the person maintaining it, which is where
                         the money in every quote below actually goes.
                     </BlogText>
+
+                    <BlogQuote>
+                        Our own numbers are not the market average. They are what we charge, and we say so.
+                    </BlogQuote>
 
                     <BlogHeader>What belongs in a comparable website quote</BlogHeader>
                     <BlogText>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-14",
-        modifiedTime: "2026-08-06",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-vs-custom-website")],
@@ -79,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-vs-custom-website"),
             description,
             datePublished: "2026-04-14",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -210,6 +210,10 @@ export default function SquarespaceVsCustomWebsitePage() {
                         where it is. Confirm the current behavior in Squarespace&apos;s documentation before planning a
                         rebrand around either assumption.
                     </BlogText>
+
+                    <BlogQuote>
+                        Squarespace offers a managed platform. A custom website offers control, and the responsibility that comes with it.
+                    </BlogQuote>
 
                     <BlogHeader>2. Compare features and boundaries</BlogHeader>
                     <BlogText>

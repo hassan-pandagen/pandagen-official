@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-09",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/squarespace-migration-cost")],
@@ -75,7 +75,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/squarespace-migration-cost"),
             description,
             datePublished: "2026-04-09",
-            dateModified: "2026-08-06T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -246,6 +246,10 @@ export default function SquarespaceMigrationCostPage() {
                         <Link href="/blog/how-much-does-a-website-cost" className={inlineLinkClass}>what a website costs to build</Link>{" "}
                         applies the same scope drivers outside a migration.
                     </BlogText>
+
+                    <BlogQuote>
+                        How many pages you have is the wrong first question. What kind of pages they are is the right one.
+                    </BlogQuote>
 
                     <BlogHeader>3. Know what pushes a Squarespace move to the top of its range</BlogHeader>
                     <BlogText>

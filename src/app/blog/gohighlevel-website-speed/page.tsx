@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-22",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/gohighlevel-website-speed")],
@@ -76,7 +76,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/gohighlevel-website-speed"),
             datePublished: "2026-03-22",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath("/blog/gohighlevel-website-speed") },
             datePublished: "2026-03-22",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -310,6 +310,10 @@ export default function HighLevelSpeedGuide() {
                         <Link href="/blog/why-is-my-website-loading-so-slow" className={sourceLinkClass}>slow-site diagnostic order</Link>{" "}
                         applies to any stack.
                     </BlogText>
+
+                    <BlogQuote>
+                        Three things decide how fast a HighLevel page loads, and you can check all three yourself in about five minutes.
+                    </BlogQuote>
 
                     <BlogHeader id="architecture">What you control on a HighLevel page, and what you do not</BlogHeader>
                     <BlogText>

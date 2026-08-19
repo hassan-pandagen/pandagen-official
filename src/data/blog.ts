@@ -141,7 +141,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "migration",
-    lastModified: "2026-07-31",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does it cost to migrate off Wix?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with complex work scoped separately. Final price depends on templates, content, CMS data, commerce, apps, integrations, redesign, SEO, accessibility, QA, cutover and support." },
       { question: "Can I export my Wix site and import it somewhere else?", answer: "Do not treat Wix as one universal full-site export. Wix currently documents separate export or transfer paths for CMS collections, contacts, physical products, orders and site ownership. Design, layout, app behavior, digital products and target compatibility need item-by-item discovery and may require rebuilding." },
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "conversion",
-      lastModified: "2026-08-08",
+      lastModified: "2026-08-19",
       faqs: [
         { question: "How much does Meta Conversions API setup cost in 2026?", answer: "There is no responsible universal price. Quote the exact event set, source systems, consent requirements, matching data, browser and server deduplication, testing, reconciliation, monitoring, processors and support. PandaCodeGen can include an accepted CAPI scope in a Scale project starting at $5,000, but that starting tier is not a quote for every implementation." },
         { question: "Is the Meta pixel enough on its own?", answer: "It depends on the accepted measurement requirements and observed event coverage. Meta documents using Conversions API alongside the pixel for a more reliable connection, but the actual gap must be reconciled against the site's system of record. Server delivery does not bypass consent, privacy obligations or Meta's terms." },
@@ -541,7 +541,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Who are the top Next.js development agencies in 2026?", answer: "This disclosed shortlist includes Bejamas, Blazity, Brainhub, FocusReactive, Naturaily, Netguru, Pagepro and PandaCodeGen. It is not an objective ranking. Compare each provider's current first-party evidence, assigned team, relevant references, scope, acceptance, ownership, support and current quote." },
       { question: "Which Next.js agency has the lowest published minimum project size?", answer: "PandaCodeGen publishes starting tiers of $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. The article does not claim that other providers' changing minimums or quotes are lower or higher. Obtain current like-for-like proposals before comparing price." },
@@ -640,7 +640,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Can I build a website for free?", answer: "Some vendors offer no-cost or trial plans, but eligibility, branding, domains, features, usage and commercial terms differ. Infrastructure, domain, email, apps, payment, content, maintenance and internal time can still cost money. Check the current official plan and do not assume a personal free tier fits commercial use." },
       { question: "How much does a one-page website cost?", answer: "Price the actual copy, design states, form or payment flow, analytics, consent, accessibility, responsive behavior, integrations, QA, launch and support. PandaCodeGen's Starter planning anchor begins at $1,500, but the accepted scope determines whether a one-page project fits." },
@@ -1128,7 +1128,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Can I export my Squarespace website to another platform?", answer: "Partially. Squarespace exports selected content to a WordPress XML file, including one blog and some layout-page content. Its current documentation lists exclusions such as store and portfolio pages, product and video blocks, drafts, style settings and custom CSS. Inventory and test the actual site instead of assuming every asset or system exports." },
       { question: "How much does it cost to migrate from Squarespace to a custom website?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. Final price depends on pages, templates, content, excluded export data, design, commerce, scheduling, integrations, SEO, analytics, accessibility, QA, launch and support." },
@@ -1151,7 +1151,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'webflow',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Can I export my Wix website to another platform?", answer: "Wix documents separate export or transfer paths for some assets, including CMS collections, contacts, physical products, orders and site ownership. There is no single universal export that reproduces every page, design and app behavior on another platform. Inventory each content and data type before estimating migration." },
       { question: "How much does it cost to migrate from Wix to a custom website?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with custom scope where needed. Final price depends on pages, templates, CMS data, commerce, apps, design, integrations, SEO, accessibility, QA, launch and support." },
@@ -1174,7 +1174,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does it cost to migrate from Squarespace?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. Final price depends on pages, templates, export gaps, content, design, commerce, scheduling, integrations, SEO, analytics, accessibility, QA, launch and support." },
       { question: "What does Squarespace actually cost per year?", answer: "Use the current account, invoices and payment statements. Include the site plan, domain, email, scheduling, campaigns, digital products, extensions, transaction and processing fees, custom work and internal administration. Plans and fees can vary by account, product, country and processor." },
@@ -1224,7 +1224,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my Divi website slow?", answer: "The cause can be server response, cache behavior, Divi or compatibility-mode assets, plugins, child-theme code, database work, media, fonts, tags, embeds, or application logic. Measure representative routes with field data where available and repeat controlled lab tests before assigning the cause." },
       { question: "What PageSpeed score does a Divi site typically get?", answer: "There is no defensible universal score. Divi version, modules, templates, media, plugins, hosting, cache, third parties, consent state, device, network, and test version all affect the result. Record the conditions and inspect individual metrics and diagnostics instead of using a platform-wide range." },
@@ -1488,7 +1488,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What PageSpeed score does a typical GoHighLevel site get?", answer: "There is no defensible universal score. Results vary by URL, content, custom code, media, fonts, third parties, consent state, cache, device, network, location and tool version. Preserve field data and at least three comparable lab runs for each agreed representative page and profile." },
       { question: "Does a low mobile Lighthouse score directly hurt rankings?", answer: "Lighthouse is a lab diagnostic, not a direct ranking grade. Google uses Core Web Vitals in its ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Review field data, search output, content and the broader page experience." },
@@ -1863,7 +1863,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'wordpress',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does WordPress really cost per year?", answer: "Use the site's hosting, software, support and incident invoices plus internal operating labor and approved roadmap work. Public averages do not represent every WordPress site, contract or team." },
       { question: "Is WordPress still worth it in 2026?", answer: "Yes when its editorial workflow and maintained capabilities fit, measured quality is acceptable or repairable, and the team can own updates, security and operations. Migration is worth pricing when verified constraints and a complete target plan justify its added cost and risk." },

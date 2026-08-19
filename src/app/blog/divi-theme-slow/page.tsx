@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-08",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/divi-theme-slow")],
@@ -66,7 +66,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/divi-theme-slow"),
             datePublished: "2026-04-08",
-            dateModified: "2026-08-06T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -137,7 +137,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath("/blog/divi-theme-slow") },
             datePublished: "2026-04-08",
-            dateModified: "2026-08-06T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -336,6 +336,10 @@ export default function DiviThemeSlowPage() {
                         third-party products support the new architecture. Test business-critical page states before
                         production.
                     </BlogText>
+
+                    <BlogQuote>
+                        A Divi page is usually slow for a reason you can name and locate, not a reason you have to guess at.
+                    </BlogQuote>
 
                     <BlogHeader>How to measure the problem correctly</BlogHeader>
                     <BlogText>

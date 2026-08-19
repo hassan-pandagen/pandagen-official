@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/meta-conversions-api-setup-cost")],
@@ -77,7 +77,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/meta-conversions-api-setup-cost"),
             description,
             datePublished: "2026-06-14",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -120,7 +120,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -248,6 +248,10 @@ export default function MetaCAPISetupCostPage() {
                         ours, and re-run your reconciliation after the free options are on. If the gap closes, you are
                         finished and you have spent nothing.
                     </BlogText>
+
+                    <BlogQuote>
+                        Nobody can quote the Conversions API honestly without knowing your setup first.
+                    </BlogQuote>
 
                     <BlogHeader>Why cost ranges without scope are misleading</BlogHeader>
                     <BlogText>

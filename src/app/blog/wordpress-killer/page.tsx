@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-08",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-killer")],
@@ -68,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-killer"),
             description,
             datePublished: "2026-02-08",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -221,6 +221,11 @@ export default function WordPressCostPage() {
                     </BlogText>
 
                     <BlogHeader id="invoices">Collect the recurring invoices</BlogHeader>
+
+                    <BlogQuote>
+                        WordPress can be cheap or expensive, and the invoice alone never tells you which.
+                    </BlogQuote>
+
                     <div data-speakable="true">
                         <BlogText>
                             Start with what you are already paying, because the real number is almost never the one people quote from memory. Six categories catch nearly all of it, and the lines that get forgotten are the annual renewals and the retainer that has been running quietly since launch. Work from invoices rather than from a list of plugins.

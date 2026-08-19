@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-12",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-vs-custom-website")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-vs-custom-website"),
             description,
             datePublished: "2026-04-12",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -226,6 +226,10 @@ export default function WixVsCustomWebsitePage() {
                         Velo code, or not available on this plan. Answer that per requirement and the platform question
                         mostly answers itself.
                     </BlogText>
+
+                    <BlogQuote>
+                        Wix hands you an editor and a set of tools. A custom site hands you control, and the engineering responsibility that comes with it.
+                    </BlogQuote>
 
                     <BlogHeader id="performance">Performance</BlogHeader>
                     <BlogText>

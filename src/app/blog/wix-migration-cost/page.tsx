@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-03",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-migration-cost")],
@@ -73,7 +73,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/wix-migration-cost"),
             datePublished: "2026-07-03",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -115,7 +115,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-03",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -243,6 +243,10 @@ export default function WixMigrationCostPage() {
                         cheap tiers and the expensive ones, and it is a boundary about design and templates rather than
                         about content volume.
                     </BlogText>
+
+                    <BlogQuote>
+                        Wix lets you export your data, but not the site itself. That one fact sets the price of leaving.
+                    </BlogQuote>
 
                     <BlogHeader id="export">What can you export from Wix?</BlogHeader>
                     <BlogText>
