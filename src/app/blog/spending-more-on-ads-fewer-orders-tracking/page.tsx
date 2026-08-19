@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-06-04",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/spending-more-on-ads-fewer-orders-tracking")],
@@ -95,7 +95,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/spending-more-on-ads-fewer-orders-tracking"),
             description,
             datePublished: "2026-06-04",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -138,7 +138,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-04",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -283,6 +283,10 @@ export default function SpendingMoreOnAdsTrackingPage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogQuote>
+                        Broken tracking is not the automatic explanation for rising acquisition cost. It is one hypothesis to test, not a conclusion.
+                    </BlogQuote>
 
                     <BlogHeader>3. Reconcile coverage instead of assuming a fixed loss rate</BlogHeader>
                     <BlogText>

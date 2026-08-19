@@ -281,7 +281,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "conversion",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why are my ad costs going up but my orders staying flat?",
@@ -762,7 +762,7 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-      lastModified: "2026-08-03",
+      lastModified: "2026-08-19",
       faqs: [
         { question: "Is Pagepro a fit for a small business?", answer: "Ask Pagepro for a current written proposal for the exact scope. Company size alone does not establish fit. Compare engagement model, team, relevant evidence, price, timeline, acceptance, support, ownership, licensing and total operating cost." },
         { question: "How much does Pagepro charge?", answer: "This page does not repeat a third-party profile rate as a current Pagepro price. Request a dated written proposal and confirm whether it covers discovery, a fixed deliverable, time and materials, a retainer or dedicated capacity. Compare it only with equivalent scope." },
@@ -943,7 +943,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does a website rebuild cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale. A rebuild can require custom scope when strategy, content, applications, data, compliance or governance expands. Final price belongs to a signed statement of work." },
       { question: "What's the difference between a website rebuild, a redesign, and a migration?", answer: "A redesign changes the experience while retaining the current platform. A migration changes the platform while preserving much of the approved structure and experience. A rebuild changes the platform and materially reworks the structure, experience or content system." },
@@ -1036,7 +1036,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-08-15",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is WordPress's market share in 2026?", answer: "WordPress is at 59.0% of the top ten million websites with an identified CMS, read on 15 August 2026. That is its lowest reading since 2017 and 6.2 points below its peak of 65.2% in January 2022." },
       { question: "Is WordPress losing market share?", answer: "Yes, and it has been since 2022. WordPress rose from 60.7% in 2015 to a peak of 65.2% in January 2022, then declined in every subsequent yearly reading to 59.0%. It remains more than three times the size of the entire hosted site-builder category combined, so it is a declining incumbent with a very large lead rather than a collapsing one." },
@@ -1515,7 +1515,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "performance",
-    lastModified: "2026-08-02",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the best website builder for a GoHighLevel agency?", answer: "Start with the native HighLevel builder, because it is already paid for and it removes an integration boundary. Three conditions overturn that default: the client's pages carry organic search revenue the native implementation demonstrably cannot serve after you have applied HighLevel's own speed guidance; the agency needs branded management surfaces HighLevel does not brand, which is where Duda's White Label plan earns its price; or the site needs bespoke frontend engineering no builder's extension points reach, which is where a custom build starts. If none of those describes your client, the honest recommendation is the one you are already paying for." },
       { question: "What does GoHighLevel actually cost per client site at scale?", answer: "The plan fee is flat but several add-ons are not, and that is what breaks an agency margin model. Read from HighLevel's own pricing page on August 2, 2026: plans are $97 Starter (3 sub-accounts), $297 Unlimited and $497 Agency Pro, with unlimited contacts and users on all three. The Branded Client Portal App is $49/month per sub-account, the AI Employee Growth Plan $50/month per sub-account, the AI Employee Unlimited Plan $97/month per sub-account, and dedicated email IPs $59/month per IP. A thirty-client agency enabling the branded portal for everyone adds $1,470 a month to a $297 plan. Conversation AI, Voice AI, Reviews AI, email and SMS marketing and calling all carry usage-based charges on top; Agency Pro is the plan that lets you rebill those with markup, while Unlimited rebills at cost." },
@@ -1684,7 +1684,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-02",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my Shopify Dawn theme slow?", answer: "Dawn is a performance-oriented reference theme, but production results also depend on media, apps, tags, third-party code, custom sections, content and user conditions. Use Shopify's real-user reports and controlled route tests to identify the actual contributor." },
       { question: "What PageSpeed score does Shopify Dawn get?", answer: "Dawn has no universal PageSpeed score or fixed ceiling. Test representative home, collection, product and cart states under a recorded mobile and desktop profile, repeat the runs and use field Core Web Vitals where enough traffic exists." },
@@ -2024,7 +2024,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'sales',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much money am I losing from a slow Shopify store?", answer: "Do not multiply a universal loss-per-second statistic. Join route-level field performance to sessions, device, traffic source and funnel outcomes, then model low, central and high scenarios from your own data. Report assumptions and uncertainty." },
       { question: "Why is my Shopify store slow on mobile?", answer: "Measure representative templates and investigate theme code, sections, apps, pixels, consent, images, fonts, video, liquid work, network and platform behavior. Mobile hardware and networks often expose work that a desktop test hides, but the cause is property-specific." },
@@ -2043,7 +2043,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'conversion',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my Shopify conversion rate low?", answer: "A store-wide average does not identify a cause. Segment the funnel by route, device, market, product, traffic source, customer type and period, then investigate offer, pricing, inventory, merchandising, errors, checkout and performance within the affected segment." },
       { question: "What is a good conversion rate for Shopify?", answer: "Use your own historical conversion rate segmented by traffic source, device, market, product, new versus returning visitors, and funnel step. Public averages mix unlike stores. Performance can contribute to friction, but it does not explain the whole conversion difference or guarantee a multiplier." },

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -207,6 +207,10 @@ export default function WebsiteRebuildCostPage() {
                         constraints or a business change the current system cannot support. A news event or platform
                         critique does not make every site an urgent rebuild.
                     </BlogText>
+
+                    <BlogQuote>
+                        A rebuild is not a redesign with new colours. It changes the platform and reworks the structure underneath it.
+                    </BlogQuote>
 
                     <BlogHeader id="rebuild-vs-redesign-vs-migration">Rebuild vs redesign vs migration</BlogHeader>
                     <BlogText>

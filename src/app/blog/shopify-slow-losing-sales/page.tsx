@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-10",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-slow-losing-sales")],
@@ -80,7 +80,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-slow-losing-sales"),
             description,
             datePublished: "2026-02-10",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -260,6 +260,10 @@ export default function ShopifySlowLosingSalesPage() {
                         intervals assumes a linear relationship the underlying study never tested, and it produces a
                         number that says nothing about your store. Use your own field data and funnel steps instead.
                     </InsightBox>
+
+                    <BlogQuote>
+                        There is no public formula for what a slow page costs you. There is only your own funnel, measured.
+                    </BlogQuote>
 
                     <BlogHeader>2. Locate the affected funnel stage</BlogHeader>
                     <BlogText>

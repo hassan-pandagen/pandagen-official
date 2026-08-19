@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-02",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/pagepro-alternatives")],
@@ -69,7 +69,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-05-02",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -113,7 +113,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-02",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
@@ -285,6 +285,10 @@ export default function PageproAlternativesPage() {
                         and keep the record. Provider terms change often, so an undated claim ages badly and cannot be
                         defended when someone questions the shortlist later.
                     </InsightBox>
+
+                    <BlogQuote>
+                        Four agencies claim to build Next.js sites. The claim tells you almost nothing about which one fits your project.
+                    </BlogQuote>
 
                     <BlogHeader>Start with the engagement you actually need</BlogHeader>
                     <div data-speakable="true">

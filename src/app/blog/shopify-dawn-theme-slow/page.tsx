@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox, StatCard } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-07",
-        modifiedTime: "2026-08-02",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-dawn-theme-slow")],
@@ -80,7 +80,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-07",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -125,7 +125,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-07",
-            dateModified: "2026-08-02",
+            dateModified: "2026-08-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -282,6 +282,10 @@ export default function ShopifyDawnThemeSlowPage() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogQuote>
+                        The theme name alone never identifies the cause. What you installed on top of it usually does.
+                    </BlogQuote>
 
                     <BlogHeader>Audit the app layer by name</BlogHeader>
                     <BlogText>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { periods, platforms, source, latest, peak, first, fallFromPeak, groupShare, year } from "@/data/market-share";
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-15",
-        modifiedTime: "2026-08-15",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/cms-market-share-2026")],
@@ -69,7 +69,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/cms-market-share-2026"),
             datePublished: "2026-08-15T00:00:00-05:00",
-            dateModified: "2026-08-15T00:00:00-05:00",
+            dateModified: "2026-08-19T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -221,6 +221,10 @@ export default function CmsMarketShare2026Page() {
                             </tbody>
                         </table>
                     </div>
+
+                    <BlogQuote>
+                        WordPress's losses did not go where most people assume.
+                    </BlogQuote>
 
                     <BlogHeader>What actually moved</BlogHeader>
                     <BlogText>

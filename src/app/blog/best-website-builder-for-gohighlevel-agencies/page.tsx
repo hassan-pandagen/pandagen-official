@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogAuthor } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description: "Compare six GHL agency website options by fit, integration, ownership, current vendor terms, and repeatable performance tests.",
         type: "article",
         publishedTime: "2026-05-13T00:00:00-05:00",
-        modifiedTime: "2026-08-02T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies",
         images: [ogImageForPath("/blog/best-website-builder-for-gohighlevel-agencies")],
@@ -68,7 +68,7 @@ const articleSchema = {
             "description": "A source-linked framework for comparing GHL Native, Simvoly, SiteSwan, Duda, Webflow, and custom Next.js by fit, integration, ownership, cost, and measured performance.",
             "image": ogImageUrlForPath("/blog/best-website-builder-for-gohighlevel-agencies"),
             "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-08-02T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -137,7 +137,7 @@ const articleSchema = {
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/best-website-builder-for-gohighlevel-agencies") },
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/best-website-builder-for-gohighlevel-agencies#breadcrumb" },
             "datePublished": "2026-05-13T00:00:00-05:00",
-            "dateModified": "2026-08-02T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "inLanguage": "en-US"
         }
     ]
@@ -300,6 +300,10 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     </div>
 
                     {/* GHL Native */}
+                    <BlogQuote>
+                        Invented platform-wide speed scores are not in this comparison. What each builder actually does for a GoHighLevel agency is.
+                    </BlogQuote>
+
                     <BlogHeader id="ghl-native">GoHighLevel Native Builder for Lead-Gen and Automation Agencies</BlogHeader>
                     <BlogText>
                         HighLevel&apos;s public pricing page lists the Website &amp; Funnel Builder among core features. Reread on August 2, 2026, the public plan prices are unchanged at $97 Starter, $297 Unlimited and $497 Agency Pro per month, with a 14-day free trial on any plan and a monthly-or-annual toggle. Add-ons and usage are billed separately and are covered below. Confirm the required plan and in-app billing before quoting a client.
