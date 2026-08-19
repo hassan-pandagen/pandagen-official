@@ -140,7 +140,6 @@ const articleSchema = {
             "dateModified": "2026-08-19",
             "temporalCoverage": "2021-11-03/2026-06-26",
             "variableMeasured": ["Update name", "Rollout start date", "Rollout duration"],
-            "isPartOf": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#article" },
             "license": "https://creativecommons.org/licenses/by/4.0/",
         },
         {
