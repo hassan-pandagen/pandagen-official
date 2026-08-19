@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
-        modifiedTime: "2026-08-08T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
         images: [ogImageForPath("/blog/aeo-playbook-built-into-every-website")],
@@ -64,7 +64,7 @@ const articleSchema = {
             "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
             "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -127,7 +127,7 @@ const articleSchema = {
             "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
-            "dateModified": "2026-08-08T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "inLanguage": "en-US"
         },
         {
@@ -295,6 +295,10 @@ export default function AEOPlaybookPage() {
                     </BlogText>
 
                     {/* Section 3: The Receipt */}
+                    <BlogQuote>
+                        Being crawlable, answering something and being measurable is not a growth hack. It is the baseline most sites still skip.
+                    </BlogQuote>
+
                     <BlogHeader id="the-receipt">What Counts as Evidence</BlogHeader>
                     <BlogText>
                         We launched pandacodegen.com in February 2026. Custom Next.js, fixed pricing starting at $1,500. We do website rebuilds and migrations for businesses tired of slow WordPress, Shopify, Webflow, and GoHighLevel sites.

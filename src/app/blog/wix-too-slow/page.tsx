@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-10",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wix-too-slow")],
@@ -65,7 +65,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wix-too-slow"),
             description,
             datePublished: "2026-04-10",
-            dateModified: "2026-08-06",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -241,6 +241,10 @@ export default function WixTooSlowPage() {
                         request chains, JavaScript main-thread work, images, fonts, layout shifts and interaction traces.
                         No single score establishes the business cause or migration requirement.
                     </BlogText>
+
+                    <BlogQuote>
+                        Wix speed is not one number. It changes page by page, app by app.
+                    </BlogQuote>
 
                     <BlogHeader id="causes">Eight common Wix performance contributors</BlogHeader>
                     <BlogText>

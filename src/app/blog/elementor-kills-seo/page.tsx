@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-10",
-        modifiedTime: "2026-08-07",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/elementor-kills-seo")],
@@ -60,7 +60,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/elementor-kills-seo"),
             datePublished: "2026-03-10",
-            dateModified: "2026-08-07",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -250,6 +250,10 @@ export default function ElementorSeoPage() {
                         so check what your version exposes and what state each feature is in before concluding that the
                         overhead is fixed.
                     </BlogText>
+
+                    <BlogQuote>
+                        Elementor does not carry one penalty or one score. It adds work to the page, and so does everything else you install.
+                    </BlogQuote>
 
                     <BlogHeader id="heading-structure">The one SEO defect that has nothing to do with speed</BlogHeader>
                     <div data-speakable="true">

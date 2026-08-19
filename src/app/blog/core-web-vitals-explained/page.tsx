@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-06",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/core-web-vitals-explained")],
@@ -65,7 +65,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/core-web-vitals-explained"),
             datePublished: "2026-05-06",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -326,6 +326,10 @@ export default function CoreWebVitalsExplainedPage() {
                         score as a field result. Record the exact URL, the test time, the device profile, the consent state and the release you tested. Repeat lab tests to reduce one-run noise, then add real-user monitoring if
                         the decision warrants it.
                     </BlogText>
+
+                    <BlogQuote>
+                        Field data and lab data answer different questions. Comparing them like they answer the same one is the most common mistake here.
+                    </BlogQuote>
 
                     <BlogHeader id="still-relevant">Are Core Web Vitals still relevant in 2026?</BlogHeader>
                     <div data-speakable="true">

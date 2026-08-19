@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-21",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store")],
@@ -71,7 +71,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/google-universal-commerce-protocol-what-it-means-for-your-store"),
             description,
             datePublished: "2026-02-21",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -287,6 +287,10 @@ export default function UniversalCommerceProtocolGuide() {
                         products involved, the surface it runs on, your payment provider, and what Google's
                         instructions say today.
                     </InsightBox>
+
+                    <BlogQuote>
+                        A documented path is not the same as an available one.
+                    </BlogQuote>
 
                     <BlogHeader>Can someone buy without visiting the merchant website?</BlogHeader>
                     <BlogText>

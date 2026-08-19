@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description: "Measure real Shopify performance by template, diagnose themes, apps, images, scripts, and fonts, then choose a controlled optimization or headless plan.",
         type: "article",
         publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-08-01T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
         images: [ogImageForPath("/blog/shopify-store-speed-optimization")],
@@ -67,7 +67,7 @@ const articleSchema = {
             "description": "A practical Shopify speed optimization guide covering field and lab data, Core Web Vitals, themes, apps, images, scripts, and headless decisions.",
             "image": ogImageUrlForPath("/blog/shopify-store-speed-optimization"),
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -121,7 +121,7 @@ const articleSchema = {
             "name": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-01T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "inLanguage": "en-US",
         },
         {
@@ -256,6 +256,10 @@ export default function ShopifySpeedOptimizationPage() {
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">If you only do one thing today</p>
                                 <p className="text-sm leading-relaxed text-stone-700">Run PageSpeed Insights on your busiest product page and find the line naming the LCP element. Most owners assume it is the hero image and go straight to compressing photos. Often it is a heading waiting on a web font, a promotional banner an app injects, or a video poster frame. Five minutes of reading that one line tells you which of the next twenty hours is worth spending, and it costs nothing.</p>
                             </div>
+
+                            <BlogQuote>
+                                Speeding up a Shopify store starts with measuring it, not with an app, and not with someone promising a perfect score.
+                            </BlogQuote>
 
                             <BlogHeader>What Actually Slows Down a Shopify Store</BlogHeader>
 

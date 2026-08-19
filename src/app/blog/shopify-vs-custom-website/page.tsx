@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { finding } from "@/data/research-facts";
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-30",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-vs-custom-website")],
@@ -78,7 +78,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-vs-custom-website"),
             description,
             datePublished: "2026-03-30",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -290,6 +290,10 @@ export default function ShopifyVsCustomWebsitePage() {
                         your contract, your invoices and your own delivery plan, then compare it against the work the
                         platform is doing for you today.
                     </InsightBox>
+
+                    <BlogQuote>
+                        Shopify, headless Shopify and a custom stack solve different problems. Compare them against what you need, not against each other.
+                    </BlogQuote>
 
                     <BlogHeader>3. Build a comparable total-cost model</BlogHeader>
                     <BlogText>

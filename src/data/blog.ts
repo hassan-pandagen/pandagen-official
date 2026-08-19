@@ -590,7 +590,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "code",
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How long does it take to get cited by AI engines on a new website?", answer: "There is no reliable fixed timeline. Providers independently control crawling, inclusion, recommendation, and citation. Track provider reports, referrals, and dated manual observations separately, and do not infer a citation from ordinary Search Console impressions or zero clicks." },
       { question: "What is an AI-info page and why does it matter?", answer: "An AI-info page is a governed reference page for public company facts such as services, pricing approach, contact methods, coverage, evidence labels, and limitations. It can reduce factual drift across a site, but it is not a provider requirement or citation guarantee." },
@@ -689,7 +689,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How long does Shopify speed optimization take?", answer: "Speed work is measured in days, not weeks, when it is diagnostic rather than a rebuild. Establish a baseline on your busiest product page first, change one thing at a time, and re-measure under the same conditions. Most of the elapsed time is waiting for field data to accumulate, which is why the report window matters more than the working hours." },
       { question: "Do Shopify speed booster apps actually improve performance?", answer: "Sometimes, and rarely as much as the listing implies. Measure your own storefront before and after installing one, on the same route under the same conditions, because a booster app is itself more JavaScript. Shopify already serves WebP and compresses images automatically, so an app promising image optimisation is often charging you for something the platform does for free." },
@@ -1105,7 +1105,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What are Core Web Vitals in plain English?", answer: "Core Web Vitals are three field metrics for real-user loading performance, responsiveness, and visual stability: LCP, INP, and CLS. They help identify experience problems but do not calculate a guaranteed ranking, conversion, or revenue outcome." },
       { question: "Why do Core Web Vitals matter for my business?", answer: "They measure parts of the experience visitors receive and contribute to Google's broader page-experience systems. Their commercial importance depends on the affected routes, audience, funnel, and first-party data. A pass does not guarantee rankings or revenue." },
@@ -1250,7 +1250,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my Wix website slow?", answer: "Possible causes include heavy pages, media, fonts, animation, apps, custom code, third parties, redirects, consent state and platform-controlled work. Segment Wix field data where available and reproduce the affected route with controlled lab tests before assigning a cause." },
       { question: "What PageSpeed score does a Wix site get?", answer: "There is no defensible universal Wix score. Lighthouse results vary by URL, content, device, network, test version and run. Use field Core Web Vitals for real-user experience where data exists and repeat lab tests under recorded conditions for diagnosis." },
@@ -1370,7 +1370,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "When should I switch from Shopify to a custom website?", answer: "Do not switch from a headline threshold. Compare required experience, checkout, integrations, data, performance, current cost and operating capability. A theme optimization may solve implementation problems; headless can change the storefront while retaining Shopify commerce; fully custom transfers more responsibility." },
       { question: "How much does a custom ecommerce website cost compared to Shopify?", answer: "PandaCodeGen's planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, but commerce scope can exceed those ranges. Compare current Shopify plans, apps, fees and internal work with migration, providers, maintenance, security, support and team time." },
@@ -1414,7 +1414,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-02",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why is my WooCommerce store slow?", answer: "The cause may be hosting, caching, extensions, theme code, media, database work, third parties or background operations. Use real-user field data, controlled lab tests, server traces and transaction checks to isolate the affected layer before changing architecture." },
       { question: "What PageSpeed score should WooCommerce aim for?", answer: "There is no universal platform score. A Lighthouse score of 90 or above is the tool's good-score band, not a Google ranking threshold. Contractual targets should name representative pages, profiles, environment and repeated runs while field Core Web Vitals track real-user experience." },
@@ -1773,7 +1773,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'aicommerce',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "What is Google's Universal Commerce Protocol (UCP)?",
@@ -1905,7 +1905,7 @@ export const blogPosts: BlogPost[] = [
     role: "Lead Engineer",
     featured: true,
     illustrationType: 'code',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Does Elementor hurt SEO?", answer: "Elementor does not carry one Google penalty or ranking outcome. Audit crawlability, initial and rendered content, indexing controls, metadata, canonicals, internal links, structured data, content quality, and field Core Web Vitals. Then compare Search Console around releases while accounting for other changes." },
       { question: "Does Elementor slow down WordPress?", answer: "Elementor contributes markup and assets, but site performance also depends on theme structure, plugins, media, fonts, third parties, hosting, cache, consent, page state, and visitor conditions. Measure representative routes and identify the actual contributor instead of using a universal platform score." },
@@ -2142,7 +2142,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-07",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why is my WordPress site so slow?",
