@@ -194,3 +194,35 @@ way it goes.
 
 This is the one situation on this site where NOT running the full five-skill
 gate is correct. It is a deferral with a date on it, not a skip.
+
+---
+
+## Sample size caveat on Experiment 2 (recorded 19 Aug, before either result)
+
+Experiment 1 (the heading cohort) runs on 5 pages. Experiment 2
+(`which-website-builders-can-go-headless`, spec-density) runs on 1. That
+asymmetry is real and was flagged before any data came back, specifically so it
+cannot be argued away after the fact depending on which way the result breaks.
+
+**Why the sample sizes differ, not fixed for fairness tonight:** a heading
+rewrite adds no new facts and no new claims, so it scales cheaply. A spec()
+call is a verified, dated, sourced fact. Matching Experiment 1's n=5 would mean
+researching and verifying roughly 30+ new facts across 4 more topics under time
+pressure, which risks exactly the kind of unverified or stale claim this site's
+evidence policy exists to prevent. Padding the sample size that way would cost
+more than it would prove.
+
+**How the n=1 result must be read, decided now:**
+
+- A single page moving the way the anchor moves (outsized AI impressions
+  relative to its search rank, the signature already established) is
+  SUGGESTIVE, not confirmatory. One data point cannot separate "specs are the
+  lever" from "this particular topic has unusual demand."
+- A single page staying flat does not kill the theory either, for the same
+  reason in reverse.
+- Neither outcome should be announced as a settled finding on 1 page. The
+  correct action on a positive signal is to fund a second, properly-researched
+  round (real verified specs, 3-5 more pages, done without time pressure), not
+  to declare victory. The correct action on a flat result is to deprioritise
+  the spec-density theory relative to whatever else surfaces, not to discard it
+  outright on n=1.
