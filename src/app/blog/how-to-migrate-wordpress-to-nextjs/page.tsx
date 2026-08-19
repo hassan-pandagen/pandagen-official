@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
         type: "article",
         publishedTime: "2026-03-11",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-08-19T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs",
         images: [ogImageForPath("/blog/how-to-migrate-wordpress-to-nextjs")],
@@ -55,7 +55,7 @@ const articleSchema = {
             "description": "Step-by-step WordPress to Next.js migration: content export, 301 redirect mapping, SEO preservation, staged QA, controlled cutover, rollback, and monitoring.",
             "image": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs"),
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-08-06T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -108,7 +108,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/how-to-migrate-wordpress-to-nextjs") },
             "datePublished": "2026-03-11T00:00:00-05:00",
-            "dateModified": "2026-08-06T00:00:00-05:00",
+            "dateModified": "2026-08-19T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/how-to-migrate-wordpress-to-nextjs#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -220,6 +220,10 @@ export default function MigrateWordPressToNextJSPage() {
 
                     {/* Architecture fork */}
                     <section className="mb-10">
+                        <BlogQuote>
+                            Businesses migrate WordPress to Next.js for one of three reasons, and speed is only one of them.
+                        </BlogQuote>
+
                         <h2 className="text-3xl font-bold mb-4">First Decide Whether WordPress Stays: Headless or Full Migration</h2>
                         <BlogText>
                             Every other decision on this page depends on this one, and it is the step most guides skip.

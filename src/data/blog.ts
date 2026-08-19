@@ -1618,7 +1618,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'performance',
-    lastModified: "2026-08-06",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How long does it take to migrate WordPress to Next.js?", answer: "Weeks, and the schedule is set by how many distinct templates your theme actually renders rather than by post count. Content moves in bulk through the REST API or an export; templates are rebuilt one at a time. Plugin-provided functionality is the wildcard, because each one has to be replaced or deliberately dropped." },
       { question: "Will I lose my Google rankings when migrating from WordPress to Next.js?", answer: "WordPress permalinks can usually be reproduced exactly in Next.js, so this migration can be near-neutral on addresses if you decide to keep them. Most losses come from the rendering change instead: check that every template ships its content in the initial HTML rather than assembling it client-side, and compare a representative page's rendered output on both sides." },
