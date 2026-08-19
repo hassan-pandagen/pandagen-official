@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-09",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-website-speed-affects-seo")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/how-website-speed-affects-seo"),
             description,
             datePublished: "2026-03-09",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -231,6 +231,10 @@ export default function SpeedAndSeoGuide() {
                         focuses on keeping mobile content, metadata, structured data, images and crawl access equivalent
                         and usable. This does not turn one mobile Lighthouse run into a ranking score.
                     </BlogText>
+
+                    <BlogQuote>
+                        Google says good scores do not guarantee top rankings. Relevance still comes first.
+                    </BlogQuote>
 
                     <BlogHeader>Why speed and search results can move together</BlogHeader>
                     <BlogText>

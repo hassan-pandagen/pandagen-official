@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-06",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-plus-still-slow")],
@@ -83,7 +83,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-plus-still-slow"),
             description,
             datePublished: "2026-02-06",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -242,6 +242,10 @@ export default function ShopifyPlusStillSlowPage() {
                         commerce layer rather than the theme. Whatever the argument for or against rebuilding, losing
                         what you pay Plus for is not part of it.
                     </BlogText>
+
+                    <BlogQuote>
+                        Plus gives you more enterprise features. It does not explain why your storefront is slow, and paying more for it will not fix that.
+                    </BlogQuote>
 
                     <BlogHeader>1. Define the incident or objective</BlogHeader>
                     <BlogText>

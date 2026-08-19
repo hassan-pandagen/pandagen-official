@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-17",
-        modifiedTime: "2026-08-03",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-achieve-100-pagespeed")],
@@ -67,7 +67,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-02-17",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -112,7 +112,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-02-17",
-            dateModified: "2026-08-03",
+            dateModified: "2026-08-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -233,6 +233,10 @@ export default function PageSpeedProcessGuide() {
                         </Link>{" "}
                         narrows the list first.
                     </BlogText>
+
+                    <BlogQuote>
+                        A Lighthouse score is one lab test on one day. It is not a permanent property of your site.
+                    </BlogQuote>
 
                     <BlogHeader>Step 2: record field and lab baselines</BlogHeader>
                     <BlogText>

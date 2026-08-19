@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-01-28",
-        modifiedTime: "2026-07-24",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-traffic-drop-speed")],
@@ -63,7 +63,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-traffic-drop-speed"),
             description,
             datePublished: "2026-01-28",
-            dateModified: "2026-07-24",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -224,6 +224,10 @@ export default function WordPressTrafficDropPage() {
                         browsers, routes and transaction handoffs. Repair collection before interpreting the apparent
                         decline as lost users.
                     </BlogText>
+
+                    <BlogQuote>
+                        Speed is one possible cause of a traffic drop, and it is rarely the first one worth checking.
+                    </BlogQuote>
 
                     <BlogHeader id="technical">Path two: a technical or release problem</BlogHeader>
                     <div data-speakable="true">

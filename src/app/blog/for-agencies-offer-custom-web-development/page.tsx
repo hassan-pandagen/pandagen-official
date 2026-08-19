@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-06",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/for-agencies-offer-custom-web-development")],
@@ -59,7 +59,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -198,6 +198,10 @@ export default function WhiteLabelDevelopmentGuide() {
                         usually within reach if you have someone to hand the engineering to. Knowing which of the four
                         a client is describing is the difference between quoting confidently and quoting defensively.
                     </BlogText>
+
+                    <BlogQuote>
+                        Bringing in a delivery partner widens what you can sell. None of it is automatic, least of all the margin.
+                    </BlogQuote>
 
                     <BlogHeader>White-label, co-delivery, and referral are different</BlogHeader>
                     <BlogText>

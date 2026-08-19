@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-04",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-we-chose-nextjs-over-wordpress-2026")],
@@ -69,7 +69,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-we-chose-nextjs-over-wordpress-2026"),
             description,
             datePublished: "2026-03-04",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -215,6 +215,10 @@ export default function WhyWeChooseNextJsPage() {
                         handover target on mobile and desktop applies to the representative pages named in the written
                         scope, verified across three recorded runs.
                     </InsightBox>
+
+                    <BlogQuote>
+                        We choose Next.js when a client needs a deliberately engineered presentation layer, and can own what that requires afterward.
+                    </BlogQuote>
 
                     <BlogHeader id="hosting">Hosting and lifecycle cost</BlogHeader>
                     <BlogText>

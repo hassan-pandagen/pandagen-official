@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "ranking",
-      lastModified: "2026-07-31",
+      lastModified: "2026-08-19",
       faqs: [
         { question: "Why is my Lovable site not showing up on Google?", answer: "First confirm that the latest project is publicly published, the intended URL is indexable, robots and noindex controls allow crawling, the sitemap and canonical use the correct host, and Google Search Console has inspected the exact page. Current Lovable apps use server-side rendering or verified-crawler pre-rendering, so an empty-shell diagnosis must be demonstrated rather than assumed." },
         { question: "Do ChatGPT and Claude crawlers run JavaScript?", answer: "Do not apply Googlebot's rendering behavior to every AI product. OpenAI and Anthropic document product-specific user agents and robots controls, but those controls do not promise full browser-style JavaScript execution on every page. Keep important public content in the initial or server-rendered HTML, verify the response for the named user agent, review current provider documentation, and use server logs rather than an assumption." },
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: "cost",
-    lastModified: "2026-07-31",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "How much does a custom website cost with PandaCodeGen in 2026?", answer: "PandaCodeGen's planning tiers begin at $1,500 for Starter and $3,500 for Growth, while Scale normally falls between $5,000 and $10,000. The accepted proposal or SOW sets the final price after the page, template, content, integration, data, migration, security, compliance, and acceptance scope is known." },
       { question: "What is included in a custom website starting at $5,000?", answer: "Scale can include a custom Next.js frontend, content editing, URL and metadata migration, redirects, integrations, responsive implementation, security and accessibility work, performance acceptance tests, staged launch, documentation, and support. Only the items in the accepted SOW are included; the tier itself is not a universal feature bundle." },
@@ -449,7 +449,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "saas",
-      lastModified: "2026-08-08",
+      lastModified: "2026-08-19",
       faqs: [
         { question: "Which SaaS changes are verified in this watchlist?", answer: "The page covers Microsoft's July 1, 2026 commercial Microsoft 365 changes, Webflow's phased May 2026 Site-plan restructure, and Klaviyo's February 2025 active-profile billing policy because it can still affect 2026 invoices. Each row links to a primary vendor source." },
         { question: "How much did SaaS prices increase in 2026?", answer: "There is no universal percentage. The result depends on vendor, SKU, region, channel, contract, renewal, billed units, usage and discounts. Calculate each change from the account's current invoice and dated renewal quote." },
@@ -495,7 +495,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "cost",
-    lastModified: "2026-08-01",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is the fastest way to cut a SaaS bill without cancelling anything?", answer: "Build a ledger of every charge, account, plan, commitment, renewal, owner, user, integration, data class and exit condition. Verify real use and business value, right-size safely, compare candidates under a common requirements matrix, and measure realized savings after switching and operating costs." },
       { question: "What is the cheapest alternative to an expensive SaaS tool?", answer: "There is no stable universal equivalent. Compare current official quotes for the required country, billing term, seats and usage, then test must-have workflows, data, integrations, access, security, support, export and exit. A lower list price can cost more after migration and missing capability." },
@@ -1200,7 +1200,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'ranking',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Who is the best custom web development agency in the USA for 2026?", answer: "There is no objective best agency for every project. Match the provider to the platform, migration, commerce, brand, editorial or product problem, then verify the assigned team, comparable work, references, scope, acceptance, ownership, support and current terms." },
       { question: "How much does a custom web development agency in the USA charge?", answer: "Price depends on pages, content, design, data, integrations, accessibility, SEO, security, QA, launch and support. PandaCodeGen publishes $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale starting tiers. Other providers must be compared through current like-for-like proposals, not an undated market average." },
@@ -1662,7 +1662,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'ranking',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Does website speed affect SEO rankings?", answer: "Google uses Core Web Vitals in its broader ranking systems, but says good scores do not guarantee top rankings and relevance remains fundamental. Performance is one part of page experience, not a fixed ranking formula." },
       { question: "What PageSpeed score do I need for good Google rankings?", answer: "Google publishes no Lighthouse score that guarantees ranking. Lighthouse is a lab diagnostic. Use URL-level field Core Web Vitals where available, fix real experience problems and evaluate content, links, indexing and other search factors separately." },
@@ -1706,7 +1706,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "What is white-label web development?", answer: "It is a delivery arrangement in which an agency leads the client relationship while another team performs defined development work. Branding, disclosure, access, confidentiality, ownership and support must be written into the partner and client terms." },
       { question: "What margin can an agency make?", answer: "There is no promised margin. Use the partner's project-specific quote, then price your sales, strategy, creative, management, revisions, risk, tax, payment fees and support. The agency controls its retail price and remains responsible for its own economics." },
@@ -1729,7 +1729,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'code',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       { question: "Why does PandaCodeGen choose Next.js for some migrations?", answer: "It can provide deliberate rendering, routing, data and deployment control when those capabilities match the brief. The decision follows measurable requirements and operating ownership. It is not based on a claim that every Next.js site is fast or every WordPress site is slow." },
       { question: "When is WordPress the better choice?", answer: "WordPress can be the better fit when its editing workflow, ecosystem and maintained extensions serve the required capabilities and the team can operate updates, security and performance. Repairing a suitable implementation may be lower risk than migrating." },
@@ -1960,7 +1960,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-08",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why is my Shopify Plus store still slow?",
@@ -1993,7 +1993,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'traffic',
-    lastModified: "2026-07-24",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "Why is my website traffic decreasing?",
@@ -2101,7 +2101,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-03",
+    lastModified: "2026-08-19",
     faqs: [
       {
         question: "What is a good PageSpeed score?",

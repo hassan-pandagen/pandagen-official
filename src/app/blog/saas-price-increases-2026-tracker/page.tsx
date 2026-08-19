@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-05-31",
-        modifiedTime: "2026-08-08",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/saas-price-increases-2026-tracker")],
@@ -79,7 +79,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/saas-price-increases-2026-tracker"),
             description,
             datePublished: "2026-05-31",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -122,7 +122,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-05-31",
-            dateModified: "2026-08-08",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -267,6 +267,10 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         that reconciliation is in our{" "}
                         <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software pricing audit walkthrough</Link>.
                     </BlogText>
+
+                    <BlogQuote>
+                        A pricing tracker only earns trust when every row carries a source, a date and a billed unit.
+                    </BlogQuote>
 
                     <BlogHeader>Webflow: phased plan restructuring</BlogHeader>
                     <BlogText>

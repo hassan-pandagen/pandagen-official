@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogText, StatCard } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, StatCard } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-06-14",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/custom-website-5000-whats-included")],
@@ -68,7 +68,7 @@ const articleSchema = {
             description: pageDescription,
             image: ogImageUrlForPath("/blog/custom-website-5000-whats-included"),
             datePublished: "2026-06-14",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -110,7 +110,7 @@ const articleSchema = {
             description: pageDescription,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-06-14",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -225,6 +225,10 @@ export default function CustomWebsite5000Page() {
                         they are either pricing bespoke design for every page, which is expensive and usually
                         unnecessary, or they are about to build you six templates and charge by URL.
                     </BlogText>
+
+                    <BlogQuote>
+                        The Scale tier is a planning range, not a fixed package. The signed statement of work decides what you actually get.
+                    </BlogQuote>
 
                     <BlogHeader>What a Scale build normally contains</BlogHeader>
                     <BlogText>

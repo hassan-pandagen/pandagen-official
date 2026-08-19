@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, CodeWindow, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, CodeWindow, ComparisonGrid, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-07-12",
-        modifiedTime: "2026-07-31",
+        modifiedTime: "2026-08-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/lovable-site-not-showing-on-google")],
@@ -80,7 +80,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/lovable-site-not-showing-on-google"),
             datePublished: "2026-07-12",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -123,7 +123,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-07-12",
-            dateModified: "2026-07-31",
+            dateModified: "2026-08-19",
             inLanguage: "en-US",
         },
         {
@@ -298,6 +298,10 @@ export default function LovableSiteNotShowingPage() {
                         </Link>{" "}
                         describes, with the profile and run count written down.
                     </BlogText>
+
+                    <BlogQuote>
+                        An empty page for crawlers is usually not the problem it looks like on current Lovable.
+                    </BlogQuote>
 
                     <BlogHeader>Step 3: inspect what Google fetched</BlogHeader>
                     <BlogText>
