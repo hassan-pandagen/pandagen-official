@@ -282,3 +282,63 @@ regardless of outcome, consider a third natural experiment that combines all
 three now-isolated variables on one new post -- inline per-claim citation to
 primary sources, spec density, and a binary yes/no product-pricing title --
 rather than continuing to test them one variable at a time on unrelated pages.
+
+---
+
+## Resolution: topic demand, tested directly (20 Aug 2026)
+
+The remaining open question after the citation-density test was whether the
+gap is explained by demand that cannot be manufactured, rather than anything
+on the page. Tested directly against Google Ads Keyword Planner rather than
+left as "cannot rule out."
+
+| Page | Rank by AI impressions | Its own seed keyword | Monthly search volume |
+|---|---|---|---|
+| nextjs-hosting-zero-cost | 1st | "is vercel free" | **880** |
+| nextjs-hosting-zero-cost | (same page, broader) | "vercel pricing" | **4,400** |
+| gohighlevel-website-speed | 2nd | "gohighlevel site speed" | **ZERO_SEARCH_VOLUME** |
+| webflow-migration-cost | 3rd | "webflow migration cost" | **ZERO_SEARCH_VOLUME** |
+| woocommerce-too-slow | 4th | "woocommerce too slow" | 10 |
+| divi-theme-slow | 5th | "divi theme slow" | 10 |
+
+This is decisive, not marginal. The site's #1 AI-visibility page answers one of
+the only topics on the entire site with real, four-figure monthly demand. The
+#2 and #3 pages answer topics with literally no measurable search volume under
+their own title's phrasing.
+
+### How this reconciles with the citation-density finding, rather than replacing it
+
+Demand alone does not guarantee citation. Every finding from tonight and two
+nights ago now fits one coherent account instead of competing theories:
+
+1. High topic demand is necessary and cannot be built. It is the reason this
+   specific topic has enough underlying question volume, across search boxes
+   and AI assistants alike, for a citation to be possible at this scale at all.
+2. Inline citation to primary sources and dated spec density (Experiments 1
+   and 2, plus the citation-density test above) are what CONVERT that existing
+   demand into an actual AI citation once it exists. That is consistent with
+   the citation signal being real but weak on its own (r=0.176): it multiplies
+   demand, it does not create it, so on a low-demand page it has little to
+   multiply.
+
+### The honest limit of this test
+
+Keyword Planner is built around classic search-box behaviour and, per
+spec-facts.json's own docblock, "barely sees the long tail" of natural-language
+phrasing that AI assistants are more likely to be asked in. Zero measured
+volume for "gohighlevel site speed" does not prove zero real demand for
+GoHighLevel speed questions asked in other words. It does prove that whatever
+demand exists is not concentrated the way Vercel pricing demand is, which is
+itself the point: the anchor page sits on unusually concentrated, measurable
+demand that the comparison pages do not.
+
+### What this changes about the plan
+
+Do not expect the heading cohort (Experiment 1) or the spec-density page
+(Experiment 2) to reproduce the anchor page's scale, even if both succeed on
+their own pre-registered terms. Neither touches a topic with anything close to
+Vercel pricing's demand. Success for both should be read as "citability
+improved," not "we found another 3,600-impression page." The actual lever for
+finding the next anchor-scale page is demand-led: identify which other topics
+on this site, if any, carry four-figure monthly search volume the way Vercel
+pricing does, and prioritise citability work there first.
