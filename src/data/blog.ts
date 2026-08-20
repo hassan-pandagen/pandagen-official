@@ -689,7 +689,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: "performance",
-    lastModified: "2026-08-19",
+    lastModified: "2026-08-20",
     faqs: [
       { question: "How long does Shopify speed optimization take?", answer: "Speed work is measured in days, not weeks, when it is diagnostic rather than a rebuild. Establish a baseline on your busiest product page first, change one thing at a time, and re-measure under the same conditions. Most of the elapsed time is waiting for field data to accumulate, which is why the report window matters more than the working hours." },
       { question: "Do Shopify speed booster apps actually improve performance?", answer: "Sometimes, and rarely as much as the listing implies. Measure your own storefront before and after installing one, on the same route under the same conditions, because a booster app is itself more JavaScript. Shopify already serves WebP and compresses images automatically, so an app promising image optimisation is often charging you for something the platform does for free." },

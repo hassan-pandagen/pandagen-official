@@ -209,6 +209,82 @@
       "qualifier": "Blogs and Funnels APIs are listed in the developer portal; whether they return renderable page content was not established",
       "verifiedAt": "2026-08-17",
       "source": "https://marketplace.gohighlevel.com/docs/"
+    },
+    "shopify-theme-store-min-perf": {
+      "vendor": "Shopify",
+      "label": "Theme Store minimum Lighthouse performance score",
+      "value": "60",
+      "qualifier": "Average across the theme’s product, collection and home page, for both desktop and mobile",
+      "verifiedAt": "2026-08-20",
+      "source": "https://shopify.dev/docs/storefronts/themes/store/requirements"
+    },
+    "shopify-theme-store-min-a11y": {
+      "vendor": "Shopify",
+      "label": "Theme Store minimum Lighthouse accessibility score",
+      "value": "90",
+      "qualifier": "Average across the theme’s product, collection and home page, for both desktop and mobile",
+      "verifiedAt": "2026-08-20",
+      "source": "https://shopify.dev/docs/storefronts/themes/store/requirements"
+    },
+    "shopify-speed-report-retention": {
+      "vendor": "Shopify",
+      "label": "Web Performance report data retention",
+      "value": "90 days",
+      "qualifier": "The lookback window the admin report holds",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-speed-report-percentile": {
+      "vendor": "Shopify",
+      "label": "Web Performance report percentile",
+      "value": "75th",
+      "qualifier": "The default percentile shown for each Core Web Vital, in milliseconds",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-speed-report-lag": {
+      "vendor": "Shopify",
+      "label": "Web Performance report reporting lag",
+      "value": "up to 36 hours",
+      "qualifier": "Due to tracking and calculation processes, per Shopify’s own documentation",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-plan-basic": {
+      "vendor": "Shopify",
+      "plan": "Basic",
+      "label": "Basic plan price",
+      "value": "$25/mo",
+      "qualifier": "$19/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-grow": {
+      "vendor": "Shopify",
+      "plan": "Grow",
+      "label": "Grow plan price",
+      "value": "$65/mo",
+      "qualifier": "$49/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-advanced": {
+      "vendor": "Shopify",
+      "plan": "Advanced",
+      "label": "Advanced plan price",
+      "value": "$399/mo",
+      "qualifier": "$299/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-plus": {
+      "vendor": "Shopify",
+      "plan": "Plus",
+      "label": "Plus plan starting price",
+      "value": "$2,300/mo",
+      "qualifier": "Starting price; annual pricing not published",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
     }
   }
 }

@@ -10,6 +10,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec, asOf } from "@/data/spec-facts";
 import type { Metadata } from "next";
 
 const postFAQs = blogPosts.find((post) => post.id === "shopify-store-speed-optimization")?.faqs ?? [];
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
         description: "Measure real Shopify performance by template, diagnose themes, apps, images, scripts, and fonts, then choose a controlled optimization or headless plan.",
         type: "article",
         publishedTime: "2026-05-12T00:00:00-05:00",
-        modifiedTime: "2026-08-19T00:00:00-05:00",
+        modifiedTime: "2026-08-20T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/shopify-store-speed-optimization",
         images: [ogImageForPath("/blog/shopify-store-speed-optimization")],
@@ -67,7 +68,7 @@ const articleSchema = {
             "description": "A practical Shopify speed optimization guide covering field and lab data, Core Web Vitals, themes, apps, images, scripts, and headless decisions.",
             "image": ogImageUrlForPath("/blog/shopify-store-speed-optimization"),
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-08-20T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -95,7 +96,7 @@ const articleSchema = {
                 { "@type": "Thing", "name": "Headless Commerce" },
             ],
             "inLanguage": "en-US",
-            "wordCount": 3950,
+            "wordCount": 5021,
             "timeRequired": "PT20M",
             "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", "[data-speakable='true']"] },
             "citation": [
@@ -103,6 +104,8 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Shopify: Web performance reports", "url": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports" },
                 { "@type": "CreativeWork", "name": "Shopify: Performance best practices for themes", "url": "https://shopify.dev/docs/storefronts/themes/best-practices/performance" },
                 { "@type": "CreativeWork", "name": "Shopify: Storefront app performance", "url": "https://shopify.dev/docs/apps/build/performance/storefront" },
+                { "@type": "CreativeWork", "name": "Shopify: Theme Store requirements", "url": "https://shopify.dev/docs/storefronts/themes/store/requirements" },
+                { "@type": "CreativeWork", "name": "Shopify: Pricing", "url": "https://www.shopify.com/pricing" },
             ],
         },
         {
@@ -121,7 +124,7 @@ const articleSchema = {
             "name": "Shopify Store Speed Optimization: What Actually Works (2026)",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-12T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-08-20T00:00:00-05:00",
             "inLanguage": "en-US",
         },
         {
@@ -239,7 +242,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">2. Start with real-user reports</h3>
                             <BlogText>
-                                In Shopify admin, open Online Store, Themes, and the Web Performance area. Review mobile and desktop distributions, URLs, page types, and the timeline around theme updates, new code, or app changes. Shopify notes that its report can lag by up to 36 hours, so do not judge a release from the first few minutes after deployment. The report holds only the last 90 days and reports the 75th percentile by default, so export what you need before a comparison window closes. A new or password-protected store may show no metrics at all, and a low-traffic store will swing more between readings.
+                                In Shopify admin, open Online Store, Themes, and the Web Performance area. Review mobile and desktop distributions, URLs, page types, and the timeline around theme updates, new code, or app changes. Shopify&apos;s own <a href={spec("shopify-speed-report-lag").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Web Performance report documentation</a> states the data can lag by {spec("shopify-speed-report-lag").value}, so do not judge a release from the first few minutes after deployment. The report holds only the last {spec("shopify-speed-report-retention").value} and reports the {spec("shopify-speed-report-percentile").value} percentile by default, as of {asOf("shopify-speed-report-lag")}, so export what you need before a comparison window closes. A new or password-protected store may show no metrics at all, and a low-traffic store will swing more between readings.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">3. Use PageSpeed Insights correctly</h3>
@@ -306,7 +309,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>A Shopify Theme Performance Code Review</BlogHeader>
 
                             <BlogText>
-                                A theme review should answer where code loads, when it executes, and which customer task it supports. <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer" className={sourceLink}>Shopify&apos;s official theme guidance</a> recommends using HTML and CSS for basic functionality where possible, avoiding parser-blocking scripts, limiting external frameworks, loading non-critical resources later, serving assets from Shopify, and using responsive images. Theme Check can flag large bundles, remote assets, parser-blocking JavaScript, and cross-file CSS dependencies. Shopify&apos;s own target for a theme&apos;s minified JavaScript bundle is 16 KB or less, which is a useful yardstick when you are deciding whether a theme feature has earned its code.
+                                A theme review should answer where code loads, when it executes, and which customer task it supports. <a href="https://shopify.dev/docs/storefronts/themes/best-practices/performance" target="_blank" rel="noopener noreferrer" className={sourceLink}>Shopify&apos;s official theme guidance</a> recommends using HTML and CSS for basic functionality where possible, avoiding parser-blocking scripts, limiting external frameworks, loading non-critical resources later, serving assets from Shopify, and using responsive images. Theme Check can flag large bundles, remote assets, parser-blocking JavaScript, and cross-file CSS dependencies. Neither this guidance nor the Theme Store requirements page publishes a specific minified JavaScript bundle size target, so treat &ldquo;does this feature earn its code&rdquo; as a judgement call informed by the trace, not a number to hit.
                             </BlogText>
 
                             <div className="grid gap-4 md:grid-cols-2 my-6">
@@ -326,7 +329,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </div>
 
                             <BlogText>
-                                Shopify tests submitted themes against a benchmark shop, and its published bar for acceptance is a minimum average Lighthouse performance score of 60 across the home, product and collection pages, on both desktop and mobile, with those pages carrying real images and content rather than empty sections. The same requirements page sets a minimum average accessibility score of 90. That is the closest thing to an official Shopify speed target that exists, and it is a floor for a clean theme carrying sample data rather than a goal for a live store carrying your catalog, your apps and your tags. Repeat the assessment on your own templates.
+                                Shopify tests submitted themes against a benchmark shop, and its published bar for acceptance, per the <a href={spec("shopify-theme-store-min-perf").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Theme Store requirements</a>, is a minimum average Lighthouse performance score of {spec("shopify-theme-store-min-perf").value} across the home, product and collection pages, on both desktop and mobile, with those pages carrying real images and content rather than empty sections. The same requirements page sets a minimum average accessibility score of {spec("shopify-theme-store-min-a11y").value}, read {asOf("shopify-theme-store-min-a11y")}. That is the closest thing to an official Shopify speed target that exists, and it is a floor for a clean theme carrying sample data rather than a goal for a live store carrying your catalog, your apps and your tags. Repeat the assessment on your own templates.
                             </BlogText>
 
                             <BlogHeader>Seven High-Impact Shopify Speed Optimization Steps</BlogHeader>
@@ -375,8 +378,12 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
-                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. Shopify also publishes how it weights an app&apos;s measured impact: product detail pages at 40 percent, collection pages at 43 percent, and the home page at 17 percent. It sets no numeric threshold, only that an app should show low or no negative impact on real merchant stores over time. That weighting is a useful prompt for your own testing, because the templates Shopify weights most heavily are usually the ones your revenue depends on. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey is not an optimization.
+                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact and publishes no page-type weighting, only that an app should show low or no negative impact on real merchant stores over time. The absence of a number is itself useful to know before you go looking for one: test your own product, collection and home templates directly rather than assuming Shopify grades them on a published curve. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey is not an optimization.
                             </BlogText>
+
+                            <BlogQuote>
+                                An app costs you twice: a subscription line and a share of the storefront&apos;s performance budget. Neither shows up in the install count.
+                            </BlogQuote>
 
                             <BlogHeader>Shopify Image and Font Optimization</BlogHeader>
                     <BlogText>
@@ -430,6 +437,10 @@ export default function ShopifySpeedOptimizationPage() {
                                 A Liquid theme does not have one universal PageSpeed ceiling. Results depend on the template, theme implementation, apps, media, third-party code, traffic mix, and test conditions. A headless storefront is also not automatically fast. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce actually means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
                             </BlogText>
 
+                            <BlogText>
+                                Upgrading your <a href={spec("shopify-plan-basic").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>plan tier</a> does not change the rendering model your theme uses. Basic runs {spec("shopify-plan-basic").value}, Grow {spec("shopify-plan-grow").value}, Advanced {spec("shopify-plan-advanced").value}, and Plus {spec("shopify-plan-plus").value} as of {asOf("shopify-plan-plus")}, and all four serve the same theme through the same storefront rendering path. What changes between tiers is checkout customization, staff accounts, reporting depth and negotiated rates, not how fast a Liquid page renders. We cover the specific Plus case in <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why Plus does not fix a slow storefront</Link>.
+                            </BlogText>
+
                             <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
                                 <div className="text-xs text-stone-500 mb-2 md:hidden">Scroll to compare options</div>
                                 <table className="min-w-[680px] w-full border-collapse border border-stone-300 text-sm">
@@ -451,6 +462,10 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogText>
                                 Shopify&apos;s Hydrogen framework provides official patterns for responsive images, prefetching, caching, and deployment, but its <a href="https://shopify.dev/docs/storefronts/headless/hydrogen/production-checklist" target="_blank" rel="noopener noreferrer" className={sourceLink}>production checklist</a> still requires performance, analytics, redirect, monitoring, and launch work. Choose headless for a documented business and architecture case, not because someone promised a fixed score.
                             </BlogText>
+
+                            <BlogQuote>
+                                A higher plan tier buys you checkout customization and reporting depth. It does not buy your theme a faster rendering model.
+                            </BlogQuote>
 
                             <BlogHeader>A Controlled Shopify Optimization and Migration Plan</BlogHeader>
 
