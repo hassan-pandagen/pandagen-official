@@ -401,3 +401,37 @@ from nothing. Recommended as a candidate for the third combined-variable
 experiment proposed above (inline citation + spec density + question-shaped
 title), applied to shopify-headless specifically, once Experiments 1 and 2
 report.
+
+---
+
+## Experiment 3 read date, pre-registered (20 Aug 2026)
+
+`shopify-store-speed-optimization` rebuilt today with 9 spec() facts, 3 pull
+quotes, and citations to 6 distinct Shopify pages, up from 0, 1 and 5.
+Submitted for indexing the same day.
+
+**Baseline before this change:** 1 AI impression against 170/mo measured
+demand for "shopify speed optimization" (Google Ads Keyword Planner, 20 Aug
+2026).
+
+**Read date: no earlier than 10 September 2026.** Needs recrawl plus a
+measurement window, same reasoning as Experiments 1 and 2. Do not read this
+against the 8 Sep cohort date, it is a different page with a different change
+type submitted on a different day.
+
+**Pass, provisional:** meaningful movement off a baseline of 1 is a low bar
+statistically, a jump to even 10-20 could be noise at this scale. Read it
+against the site-wide trend the same way the cohort is read: has it grown
+faster than untouched comparable pages over the same window, not just moved
+in absolute terms.
+
+**What a positive result would mean:** citation and spec density can lift a
+page sitting on proven, unclaimed demand. Directly actionable: apply the same
+rebuild to shopify-conversion-rate-speed-fix (140/mo, 3 impressions) and
+wix-too-slow (170/mo, 0 impressions) next, in that order.
+
+**What a flat result would mean:** demand alone was never going to be enough
+to explain the gap here either, and something else about this page, or about
+Shopify-topic competition generally, is the real constraint. Do not roll the
+citation/spec treatment out further on demand-led reasoning alone until that
+is understood.
