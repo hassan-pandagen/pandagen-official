@@ -226,3 +226,59 @@ more than it would prove.
   to declare victory. The correct action on a flat result is to deprioritise
   the spec-density theory relative to whatever else surfaces, not to discard it
   outright on n=1.
+
+---
+
+## Direct investigation of the anchor page (20 Aug 2026)
+
+Queued in `next-session-plan.md` as the priority for this session: what does
+`nextjs-hosting-zero-cost` actually do that the rest of the site doesn't.
+
+### What was tested
+
+**Inline, per-claim external citation density.** The anchor page carries 21
+external links, and unlike a generic "sources" list, 20 of 21 point at Vercel's
+own primary documentation (docs, pricing, terms, blog), placed inline at the
+exact sentence making that specific claim, not aggregated at the bottom. That
+is structurally different from `which-website-builders-can-go-headless`
+(Experiment 2), which has high spec() density (19 calls) but almost no inline
+links, the sources are aggregated into one "Primary sources" list instead.
+
+Tested across all 83 eligible posts:
+
+- Pearson r (raw): 0.517 -- looks strong, but dominated by the anchor page
+  being the extreme outlier on both axes at once.
+- Pearson r (log-transformed AI impressions, to stop one outlier dominating):
+  0.372
+- **Pearson r, anchor page excluded, tested on the other 82: 0.242**
+- **Spearman rank correlation, anchor excluded: 0.176**
+
+### Verdict: real but weak
+
+0.176 is a genuine positive signal, well above the -0.03 the search-rank
+theory produced, but far too weak to call this the explanation. Counter-
+examples are direct: `woocommerce-too-slow` gets 340 AI impressions with ZERO
+inline external links. `shopify-app-costs-real-monthly-bill` ties the anchor's
+citation count (21) and gets only 170 impressions, a fraction of the anchor's
+3,627.
+
+**Conclusion: inline citation density is a real, additive factor. It is not,
+on its own, sufficient to explain the anchor page.**
+
+### A fourth lead, not yet tested by either running experiment
+
+The anchor page's title, "Is Vercel Free?", is a binary yes/no
+product-pricing question about a named, widely-known platform. No other
+high-performing post on the site shares that exact shape.
+`gohighlevel-website-speed` and `webflow-migration-cost`, the next two highest
+AI-impression pages, are diagnostic and cost-scoping titles respectively, not
+binary questions. This is untested by both Experiment 1 (headings reworded to
+name a vendor and pose a question, but not specifically a binary yes/no
+pricing question) and Experiment 2 (spec density, no citation-inlining, no
+title-shape control).
+
+**Recommended next step, not started tonight:** when Experiment 2 reports,
+regardless of outcome, consider a third natural experiment that combines all
+three now-isolated variables on one new post -- inline per-claim citation to
+primary sources, spec density, and a binary yes/no product-pricing title --
+rather than continuing to test them one variable at a time on unrelated pages.
