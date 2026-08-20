@@ -342,3 +342,62 @@ improved," not "we found another 3,600-impression page." The actual lever for
 finding the next anchor-scale page is demand-led: identify which other topics
 on this site, if any, carry four-figure monthly search volume the way Vercel
 pricing does, and prioritise citability work there first.
+
+---
+
+## Correction: demand is necessary for the anchor's scale, not a clean predictor everywhere (20 Aug 2026)
+
+Extended the demand test from a 6-page spot check to the full Wix (3), WordPress
+(12) and Shopify (9) clusters, prompted by a direct question about whether the
+method holds up at scale rather than on hand-picked examples.
+
+### Real demand sitting unused
+
+| Post | Measured demand | Current AI impressions |
+|---|---|---|
+| shopify-headless | "headless shopify" 590/mo | 6 |
+| shopify-conversion-rate-speed-fix | "shopify conversion rate" 140/mo | 3 |
+| shopify-store-speed-optimization | "shopify speed optimization" 170/mo | 1 |
+| wix-too-slow | "why is wix so slow" 170/mo | 0 |
+| wordpress-vs-nextjs | "wordpress vs nextjs" 20/mo | 2 |
+
+`shopify-headless` is the standout: its demand (590/mo) is the same order of
+magnitude as two of the anchor page's own keywords ("vercel free tier" and
+"vercel hobby plan", both 590/mo), and it converts that into 6 AI impressions
+against the anchor's 3,627.
+
+### Real AI visibility with no measured demand behind it
+
+| Post | Measured demand | Current AI impressions |
+|---|---|---|
+| how-to-fix-slow-wordpress | 10/mo | 62 |
+| how-to-migrate-wordpress-to-nextjs | ZERO_SEARCH_VOLUME | 42 |
+| wordpress-traffic-drop-speed | ZERO_SEARCH_VOLUME | 18 |
+
+### Revised conclusion
+
+Demand explains the ANCHOR PAGE's scale specifically: nothing else on the site
+approaches 880-4,400/mo. It does not cleanly predict AI-impression rank across
+the rest of the site. Two failure modes exist in both directions, and both are
+now evidenced rather than theoretical:
+
+1. Real, provable demand can sit almost entirely uncaptured (shopify-headless).
+   This is a citability gap, not a demand gap, and it is fixable with the same
+   toolkit as Experiments 1 and 2, on a page that does not need new demand
+   found for it.
+2. Meaningful AI visibility can exist on topics with no measured
+   Keyword-Planner demand at all (how-to-fix-slow-wordpress,
+   how-to-migrate-wordpress-to-nextjs), consistent with the standing caveat
+   that Keyword Planner undercounts natural-language, assistant-style phrasing.
+
+### What this changes about the plan, again
+
+The 20 Aug entry above recommended a demand-led hunt for "the next anchor."
+That is now qualified: demand-led search should specifically surface pages
+like `shopify-headless`, where real demand already exists and citability is
+the missing piece, rather than searching for entirely new topics. That is a
+cheaper, more concrete target than finding a fresh 4,000-search/month topic
+from nothing. Recommended as a candidate for the third combined-variable
+experiment proposed above (inline citation + spec density + question-shaped
+title), applied to shopify-headless specifically, once Experiments 1 and 2
+report.
