@@ -407,6 +407,13 @@ export const clusters: Cluster[] = [
     postIds: [
       'what-is-headless-commerce', 'which-website-builders-can-go-headless', 'google-universal-commerce-protocol-what-it-means-for-your-store',
       'shopify-slow-losing-sales', 'shopify-conversion-rate-speed-fix',
+      // Added 25 Aug 2026. Its Shopify counterpart, shopify-conversion-rate-speed-fix,
+      // already sits in both its platform cluster and this one, which is why that post
+      // reaches llms.txt and this one did not. The `woocommerce` cluster is
+      // serviceOwned, so hubForPost() returns null for anything living only there and
+      // the post is invisible to guidesByTopic(). Same gap still applies to
+      // woocommerce-too-slow; left alone until Experiment 1 reads on 8 Sep 2026.
+      'woocommerce-low-conversion-rate',
       'meta-conversions-api-setup-cost', 'spending-more-on-ads-fewer-orders-tracking',
       'fix-meta-ad-tracking-2026',
     ],

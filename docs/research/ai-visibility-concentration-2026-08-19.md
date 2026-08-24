@@ -440,108 +440,218 @@ is understood.
 
 ## Experiment 4, pre-registered 25 August 2026 (BEFORE any result)
 
-`woocommerce-low-conversion-rate`. This one is different from Experiments 1-3:
-the page is not underperforming in search, it is **absent from the index
-entirely**.
+`woocommerce-low-conversion-rate`. Different in kind from Experiments 1-3: this
+page was not underperforming in search, it was **absent from the index
+entirely**. Every change is listed below so the read can attribute or discount
+each one.
 
 ### Baseline, captured 25 Aug 2026 before any change
 
 | measure | value |
 |---|---|
 | Google index state | **Discovered - currently not indexed**, `Last crawled: N/A` |
-| AI impressions | 0 (cannot appear in the export; never crawled) |
+| AI impressions | 0 (a never-crawled page cannot appear in the export) |
 | Inbound editorial internal links | **0** |
 | Outbound links to siblings | 4 |
-| Verified dated facts on the page | 0 |
+| Verified dated facts | 0 |
 | Pull quotes | 1 |
+| Present in `/llms.txt` | **No** |
+| Schema `wordCount` | 2096 (stale) |
 
-The page was a pure link sink: it passed equity to three siblings and received
-none. `/services/woocommerce` listed three of the four posts in its
-further-reading block and omitted this one. Google's behaviour was rational.
+The page was a pure link sink. `/services/woocommerce` listed three of the four
+posts in its own cluster and omitted this one.
 
-### Measured demand, Google Ads Keyword Planner, US, 25 Aug 2026
+### Measured demand, Google Ads Keyword Planner, US, English, last 12 months
 
-| keyword | avg monthly |
-|---|---|
-| woocommerce low conversion rate (exact page target) | **0, WILL_NOT_RUN** |
-| improve woocommerce conversion rate | 0 |
-| woocommerce checkout abandonment | 0 |
-| why is my woocommerce store not converting | 0 |
-| woocommerce conversion rate | 10 |
-| woocommerce cart fragments | 10 |
-| woocommerce conversion rate optimization | 10 |
-| woocommerce checkout optimization | 10 |
+Checked 25 Aug 2026. Conversion cluster: `woocommerce low conversion rate`
+**0 / WILL_NOT_RUN**, `improve woocommerce conversion rate` 0, `woocommerce
+checkout abandonment` 0, `why is my woocommerce store not converting` 0,
+`woocommerce conversion rate` 10, `woocommerce cart fragments` 10, `woocommerce
+conversion rate optimization` 10, `woocommerce checkout optimization` 10.
 
-**This page will not become a second anchor and it is not being treated as a
-candidate for one.** The concentration research established topic demand as the
-dominant variable, and `nextjs-hosting-zero-cost` sits on 880-4,400/mo against
-this page's 0-10/mo. Anyone reading this entry later should not score it against
-anchor-scale expectations.
+Speed cluster, checked as a possible re-target and rejected: `woocommerce speed
+optimization` 40, `speed up woocommerce` 30, `woocommerce checkout slow` 10,
+`woocommerce slow` 10, `why is woocommerce slow` 0. Re-targeting was rejected
+because `woocommerce-too-slow` already owns those terms and the two would
+cannibalise.
 
-Two things keep it worth doing anyway. Keyword Planner systematically undercounts
-natural-language problem phrasing, which is exactly the shape of every query this
-page answers, and `how-to-fix-slow-wordpress` already demonstrated 62 AI
-impressions on 10/mo measured demand. And the measured CTR rule on this site is
-that problem-intent pages run 0.60% against 0.04% for third-party-spec pages, so
-what little demand exists here is the higher-quality kind.
+**This page is explicitly NOT an anchor candidate.** The concentration research
+established topic demand as the dominant variable and the anchor sits on
+880-4,400/mo. Nobody should score this against anchor-scale expectations later.
 
-### What changed on 25 Aug 2026
+### The demand measurement is contradicted by the SERP, and that is the finding
 
-1. **Inbound internal links 0 -> 3**: `/services/woocommerce` further-reading,
-   `woocommerce-too-slow` (the highest-inbound page in the cluster), and
-   `woocommerce-vs-custom-website`. This is the primary intervention.
-2. **All 16 headings rewritten**: numbered steps removed, 17 of 18 now
-   question-shaped, mean 8.6 words, addressed to the reader rather than the
-   practitioner. Same treatment the Experiment 1 cohort received.
-3. **6 spec() facts added**, 0 before: cart-fragments enqueue behaviour, the
-   30-variation AJAX threshold, guest-checkout default, default checkout field
-   counts, the hide-shipping-cost default, and Cart/Checkout blocks as default.
-   All read off WooCommerce docs or current core source on 25 Aug 2026.
-4. **A factual error corrected.** The page claimed cart fragments run "on every
-   page by default". That stopped being true in **WooCommerce 7.8**, which
-   disabled enqueueing on all routes by default. The same error was in the FAQ
-   and in the FAQPage schema. It had been live since 16 Aug 2026.
-5. **A stale competitor claim corrected.** "On Shopify the checkout belongs to
-   Shopify, and outside Plus you cannot meaningfully change it" predates
-   Checkout Extensibility and contradicted this site's own better-sourced pages.
-6. **Gap-fill**: a new section on offer, pricing and trust. The page named four
-   causes in its opening and only developed three, and offer/trust is the
-   sub-fact every competing AI answer covers.
-7. Pull quotes 1 -> 3. Schema gained a 6-entry `citation` array. `wordCount`
-   corrected 2096 -> 3404.
+Checked with Playwright, `gl=us&hl=en`, 25 Aug 2026, on `why is my woocommerce
+store not converting` (Keyword Planner: **0/mo**):
 
-### Read date and decision rule
+- Google rendered a **full AI Overview citing 9 sites**
+- A People Also Ask block with four questions
+- r/ecommerce "Store not converting", **96 posts, dated 21 Aug 2026**
+- r/WPWebsiteHelp "WooCommerce store not converting", 5 months old
+- r/ecommerce "My client's store is not converting", 16 posts
 
-**Read no earlier than 15 September 2026**, and the clock starts at **push, not
-commit** - this repo commits locally and pushes in batches, so the crawl signal
-does not exist until the deploy lands. Record the push date when it happens.
+Google does not build that for a query nobody asks. Treat Keyword Planner zeros
+on natural-language problem phrasing as **unmeasured, not absent**.
 
-The primary metric is **binary and unusually clean for this site**: does the URL
-leave "Discovered - currently not indexed"?
+**Who actually ranks there:** slayva.com, themehigh.com, themewinter.com,
+ecomsupport360.com (published 5 days prior), creative-side.ro,
+sleeplessmedia.com, Reddit, Quora, YouTube (Adrian Sticea cited three times).
+**Not present: Baymard, Adobe, Klaviyo, FullStory, Shopify.** Two small agencies
+already rank. The earlier assumption that enterprise CRO brands hold this SERP
+was wrong; they hold the generic head term, not the problem query.
 
-- **PASS:** the page is indexed. The internal-link fix was sufficient.
-- **FAIL:** still "Discovered" after three weeks with three inbound links from
-  crawled pages. That points at something other than link discovery, and the
-  next check is crawl budget or a quality signal, not more links.
+Caveat: `gl=us` set result country but the machine IP is Pakistani and Google's
+footer reported "Can't determine location". Re-run from a US IP before betting
+heavily, and cross-check in ChatGPT and Perplexity.
 
-Secondary, and much weaker: AI impressions above 0. Given the demand figures,
-treat anything in single digits as noise and do not read it as vindication of
-the heading or citation treatment.
+### Every change made on 25 August 2026
+
+**1. Interlinking, inbound 0 to 3.** `/services/woocommerce` further-reading list
+(money page); `woocommerce-too-slow` (highest-inbound page in the cluster, one
+new paragraph plus link); `woocommerce-vs-custom-website` (one clause plus link).
+This is the primary intervention.
+
+**2. All 16 headings rewritten.** Numbered steps removed entirely. 17 of 18 now
+question-shaped, mean 8.6 words, addressed to the reader rather than the
+practitioner. Three were previously written to the author, for example "Size the
+effect as a scenario, never as a promise". Same treatment the Experiment 1 cohort
+received. Anchor ids added to all 16.
+
+**3. Broken cross-reference fixed.** Body text said "go back to step two", which
+referenced a numbering that no longer exists.
+
+**4. Ten `spec()` facts added, from zero.** Six WooCommerce product facts read off
+WooCommerce docs or current core source: cart-fragments enqueue behaviour, the
+30-variation AJAX threshold, guest-checkout default, default checkout field
+counts, the hide-shipping-cost default, Cart and Checkout blocks as default. Four
+benchmark facts: IRP Commerce July 2026, the IRP sector spread, Statista Q2 2026,
+Contentsquare returning-vs-new. All carry `verifiedAt` and a source URL and are
+watched by `spec_freshness.py`.
+
+**5. A factual error corrected.** The page claimed cart fragments run "on every
+page by default". Untrue since **WooCommerce 7.8**, which disabled enqueueing on
+all routes by default. The same error was in the FAQ, and therefore in the
+FAQPage schema. Live since 16 Aug 2026.
+
+**6. A stale competitor claim corrected.** "On Shopify the checkout belongs to
+Shopify, and outside Plus you cannot meaningfully change it" predates Checkout
+Extensibility and contradicted this repo's own better-sourced pages on the
+`checkout.liquid` sunset.
+
+**7. Gap-fill: offer, pricing and trust section added.** The page named four
+causes in its opening and developed only three. Trust signals is a sub-fact the
+live AI Overview covers.
+
+**8. Benchmark section added, and it is original research.** The page previously
+refused to answer "what is a good conversion rate". It now answers by reporting
+what happened when the common figures were checked at source on 25 Aug 2026:
+Dynamic Yield's benchmark page, origin of the most-quoted 2.66%, **renders every
+value as 0% or blank**; Adobe's 3.65% cites "the latest research" with no study,
+sample, denominator or on-page date; Statista's table and its own prose disagree,
+and Statista is quoting Salesforce, whose figure sits in a dashboard with no
+method stated; WooCommerce publishes no benchmark at all. The usable finding is
+that IRP's sector spread within one month (0.55% to 5.23%, 9.5x) is wider than
+the disagreement between publishers, and that GA4 in-property benchmarking is the
+only comparison that has ever measured the reader's own store.
+
+**9. Two answer-first defects fixed.** "What should you ask before accepting a
+conversion quote?" had a 0-word lead into a bare list. "How much can site speed
+actually explain?" had an 18-word lead that was entirely caveat; it now states
+which funnel stages latency can and cannot explain.
+
+**10. Hedge consolidation.** One caveat, do not trust borrowed conversion
+numbers, was restated five times across the header, two sections and the closing
+list. Reduced; the header note remains its home.
+
+**11. Pull quotes 1 to 4.** All synthesised from the page's own argument, none
+duplicating existing sentences. `dupe_prose.py` passes.
+
+**12. Duplicate FAQ heading removed.** `FAQAccordion` renders its own
+`h2#faq-heading`; the page added a second above it. **19 of 83 posts share this
+defect**; the other 18 are untouched.
+
+**13. llms.txt visibility fixed, and a systemic bug found.** The post was absent
+from `/llms.txt` entirely. Cause: it lived only in the `woocommerce` cluster,
+which is `serviceOwned: true` and has no hub in `hubs.ts`, so `hubForPost()`
+returns null and `guidesByTopic()` skips it. Added to `ecommerce-strategy`,
+mirroring how `shopify-conversion-rate-speed-fix` already sits in both its
+platform cluster and that one.
+
+**Seven other posts have the same bug and were deliberately left alone**:
+`gohighlevel-website-speed`, `gohighlevel-keep-crm-replace-website`,
+`best-website-builder-for-gohighlevel-agencies`, `wix-too-slow`,
+`wix-migration-cost`, `wix-vs-custom-website`, `woocommerce-too-slow`. All live
+only in the three `serviceOwned` clusters (`gohighlevel`, `wix`, `woocommerce`).
+Two matter most: **`gohighlevel-website-speed` is the site's number two
+AI-visibility page at 417 impressions and is invisible to llms.txt**, and
+`wix-too-slow` is named elsewhere in this document as a future experiment
+candidate. `gohighlevel-keep-crm-replace-website` is an Experiment 1 cohort page
+and must not be touched before 8 Sep. Fix the rest after that date.
+
+Scope note: llms.txt is **not** a Google signal, as `src/app/llms.txt/route.ts`
+states, so this fix cannot explain any Google indexing change. It is an AEO fix
+for ChatGPT, Claude and Perplexity, tracked separately from the indexing
+question.
+
+**14. Metadata and schema.** `dateModified` and `lastModified` moved to
+2026-08-25 across all four date sources (`check_dates.py` passes). Schema gained
+a 10-entry `citation` array. `wordCount` corrected 2096 to 3871. Blog excerpt
+updated; it referenced "fifteen checks" from the removed numbering.
+
+### Verification run after the changes
+
+`tsc --noEmit` clean; `npm run build` compiles; `check_dates`, `link_guard`,
+`metrics_guard`, `spec_freshness`, `glossary_guard` and `dupe_prose` all pass;
+`selfscan` 138 pages, 0 violations; 0 em dashes, 0 AI tells. The two
+`check-public-claims` failures are the pre-existing `[free-commercial-hosting]`
+ones in files not touched here.
+
+### Read dates and decision rules
+
+The clock starts at **push, not commit**. This repo commits locally and pushes in
+batches; the crawl signal does not exist until the deploy lands. **Record the
+push date here when it happens.**
+
+**8 September 2026, indexing check only.** Binary and cheap: has the URL left
+"Discovered - currently not indexed"? This can share the Experiment 1 cohort date
+because it needs no measurement window.
+
+- **PASS:** indexed. Three inbound links from crawled pages were sufficient, and
+  the same fix should be applied to every other orphaned page.
+- **FAIL:** still Discovered after two weeks with three inbound links. That points
+  at crawl budget or a quality signal rather than link discovery, and the next
+  check is server logs and the sitemap, not more links.
+
+**15 September 2026 at the earliest, performance read.** Position, clicks, AI
+impressions. Needs a measurement window after indexing, so it cannot be read on
+8 Sep.
+
+Given demand of 0-10/mo measured, treat single-digit impressions as noise. The
+more interesting signal is whether the page earns an **AI Overview citation** on
+the problem queries, given it now covers 5 of the 5 sub-facts the live Overview
+uses and carries sourced numbers none of the 9 cited pages have.
 
 **This is a combined-variable change and cannot attribute a result to any single
-element.** Same limitation as Experiment 3, stated here in advance so nobody
-claims otherwise later. If it indexes, the honest conclusion is "the bundle
-worked", and the cheapest next test is applying the interlinking fix alone to
-another orphaned page.
+element**, the same limitation Experiment 3 carries. If it indexes, the honest
+conclusion is "the bundle worked", and the cheapest follow-up is applying the
+interlinking fix alone to another orphaned page.
 
 ### Effect on Experiment 1
 
-`woocommerce-low-conversion-rate` is not in the Experiment 1 cohort and cannot be
-in its control, because the control was drawn from pages appearing in the
-Generative AI features export and a never-crawled page does not appear there.
+This page cannot be in Experiment 1's control: the control was drawn from pages
+appearing in the Generative AI features export, and a never-crawled page does not
+appear there.
 
 Two edited pages, `woocommerce-too-slow` and `woocommerce-vs-custom-website`, may
 be control members. Each received one added sentence and one link. If either is
-in the control set at the 8 Sep read, the option exists to exclude it. The bias
-direction is conservative: a control page improving makes the cohort's relative
-growth look smaller, so this cannot manufacture a false PASS.
+in the control set at the 8 Sep read, exclude it. The bias direction is
+conservative: a control page improving makes the cohort's relative growth look
+smaller, so this cannot manufacture a false PASS.
+
+### If this works, the pattern to repeat
+
+The stated intent is to apply this per category. The order should be orphan-led
+and demand-led rather than category-led: fix llms.txt visibility for the seven
+affected posts first (cheapest, no content risk), then apply the interlinking fix
+to any page sitting in "Discovered - currently not indexed", then consider the
+full rebuild only where measured or SERP-observed demand justifies it.

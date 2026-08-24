@@ -83,8 +83,12 @@ const articleSchema = {
                 { "@type": "CreativeWork", name: "WooCommerce source: account and guest checkout settings", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php" },
                 { "@type": "CreativeWork", name: "WooCommerce source: default address and checkout fields", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-countries.php" },
                 { "@type": "CreativeWork", name: "WooCommerce source: shipping settings defaults", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php" },
+                { "@type": "CreativeWork", name: "IRP Commerce: Ecommerce Market Data and Benchmarks", url: "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx" },
+                { "@type": "CreativeWork", name: "Contentsquare: Digital Experience Benchmark, conversions", url: "https://contentsquare.com/guides/digital-experience-benchmark/conversions/" },
+                { "@type": "CreativeWork", name: "Statista: Online shopper conversion rate worldwide", url: "https://www.statista.com/statistics/439576/online-shopper-conversion-rate-worldwide/" },
+                { "@type": "CreativeWork", name: "Google: GA4 benchmarking", url: "https://support.google.com/analytics/answer/13771577" },
             ],
-            wordCount: 3404,
+            wordCount: 3871,
             timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             about: [
@@ -197,6 +201,51 @@ export default function WooCommerceLowConversionRatePage() {
                         that WooCommerce counts orders at one status while an analytics tool counts a purchase event
                         that fires earlier. Neither is wrong. They are answering different questions, and a store owner
                         comparing them is measuring the gap between two definitions rather than anything about the shop.
+                    </BlogText>
+
+                    <BlogHeader id="benchmark">What is a good WooCommerce conversion rate?</BlogHeader>
+                    <BlogText>
+                        Nobody publishes one, and the organisations holding the best data decline to try. WooCommerce
+                        itself publishes no benchmark at all, which is worth saying plainly because a figure attributed
+                        to WooCommerce is being attributed to a source that does not exist. We went looking for the
+                        numbers everyone quotes, on {asOf("irp-conversion-rate-jul-2026")}, and the results are worth
+                        your attention before you compare your store to any of them.
+                    </BlogText>
+                    <BlogText>
+                        The most-quoted figure in this category is 2.66%, usually credited to Dynamic Yield. Its
+                        benchmark page is live and{" "}
+                        <BlogHighlight>currently renders every value as a blank or a zero</BlogHighlight>, reading
+                        &ldquo;The average eCommerce conversion rate globally is 0%&rdquo;. Adobe&apos;s widely repeated
+                        3.65% is sourced to &ldquo;the latest research&rdquo; with no study named, no sample, no
+                        denominator, and no date on the page. Statista&apos;s table and its own prose disagree with each
+                        other by a tenth of a point, and Statista is quoting Salesforce, whose figure sits inside a
+                        dashboard with no method stated.
+                    </BlogText>
+                    <BlogText>
+                        The most transparent source we found is IRP Commerce, which calculates transactions divided by
+                        sessions from live trading data and publishes monthly. It puts{" "}
+                        {spec("irp-conversion-rate-jul-2026").label.toLowerCase()} at{" "}
+                        {spec("irp-conversion-rate-jul-2026").value}. Read the qualifier before you use it: that is
+                        B2C stores in Great Britain, Northern Ireland and Ireland, on IRP&apos;s own platform. It is not
+                        a global average and it is not a WooCommerce figure.
+                    </BlogText>
+                    <BlogQuote>
+                        The gap between sectors inside one dataset is wider than the gap between the publishers arguing about the average.
+                    </BlogQuote>
+                    <BlogText>
+                        That is the finding that actually helps you. Within that single month, on one platform under one
+                        definition, IRP&apos;s sectors ran from{" "}
+                        {spec("irp-conversion-spread-jul-2026").value}, Baby and Child at the bottom and Arts and Crafts
+                        at the top. A 9.5x range. Contentsquare, working from 99 billion sessions across more than six
+                        thousand sites, declines to publish an overall number at all and reports only cuts, among them
+                        returning visitors at {spec("contentsquare-returning-vs-new-2026").value} for new ones.
+                    </BlogText>
+                    <BlogText>
+                        So the honest answer is that your category, your device mix and your returning-visitor share
+                        move this number further than any industry average can describe. The one benchmark that has ever
+                        been about your store is inside Google Analytics: GA4 shows your industry&apos;s median and its
+                        25th and 75th percentiles within your own property, and Google publishes no public figure. That
+                        is the comparison worth making.
                     </BlogText>
 
                     <BlogHeader id="which-stage">Which funnel stage did your WooCommerce conversion rate drop at?</BlogHeader>
