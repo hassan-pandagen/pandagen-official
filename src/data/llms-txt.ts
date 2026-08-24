@@ -35,8 +35,9 @@ const HEADER = `# PandaCodeGen
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Founded: February 2026.
-- Formation: Wyoming, United States.
-- Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States. This is a mailing address, not a public service location.
+- Legal name: Panda Group Ventures L.L.C., trading as PandaCodeGen.
+- Formation: Texas, United States.
+- Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States. This is a mailing address, not a public service location.
 - Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Lead Architect).
 - Engineering is performed remotely from Karachi, Pakistan.
 - Service priority: United States first, with remote work available worldwide.

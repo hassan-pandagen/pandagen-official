@@ -706,11 +706,15 @@ export default function NextjsHostingZeroCostPage() {
                         ]} />
 
                         <BlogText>
-                            For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and expected usage. If you need a workload and migration estimate, our{" "}
+                            For a business website, service site, or e-commerce storefront, start the Vercel pricing comparison with Pro&apos;s $20 monthly platform fee, then add any extra seats and expected usage. If you are moving off WordPress, our{" "}
                             <Link href="/services/wordpress-migration?ref=blog/nextjs-hosting-zero-cost" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">
                                 WordPress migration service
                             </Link>{" "}
-                            includes a free assessment.
+                            includes a free assessment. Building new instead, or need something beyond a marketing site, our{" "}
+                            <Link href="/services/custom-engineering?ref=blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">
+                                custom Next.js development
+                            </Link>{" "}
+                            work covers the same hosting and workload planning from day one.
                         </BlogText>
 
                         <BlogText>

@@ -116,7 +116,7 @@ const caseStudySchema = {
             "areaServed": "Worldwide",
             "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Austin",
+                "addressLocality": "Stafford",
                 "addressRegion": "TX",
                 "addressCountry": "US"
             },

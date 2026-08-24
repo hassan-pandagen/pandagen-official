@@ -735,7 +735,7 @@ const de: Dictionary = {
       },
       {
         q: "Wo hat das Unternehmen seinen Sitz?",
-        a: "PandaCodeGen wurde im Februar 2026 gegründet; die Anschrift lautet 701 Tillery St Ste 12, Austin, TX 78702, USA.",
+        a: "PandaCodeGen wurde im Februar 2026 gegründet; die Anschrift lautet 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, USA.",
       },
     ],
   },

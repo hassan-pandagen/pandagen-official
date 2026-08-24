@@ -263,7 +263,7 @@ export default function CookiesPage() {
                     info@pandacodegen.com
                   </a>
                 </p>
-                <p className="mt-2 text-sm">Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States.</p>
+                <p className="mt-2 text-sm">Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States.</p>
               </div>
             </FadeIn>
           </div>

@@ -215,9 +215,9 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy or our privacy practices, please contact us:
               </p>
               <div className="mt-4 p-4 bg-stone-50 border border-stone-200 rounded-lg">
-                <p className="text-charcoal font-semibold">PandaCodeGen, website operator and controller</p>
+                <p className="text-charcoal font-semibold">PandaCodeGen, a trading name of Panda Group Ventures L.L.C., website operator and controller</p>
                 <p>Email: <a href="mailto:info@pandacodegen.com" className="text-cognac hover:underline">info@pandacodegen.com</a></p>
-                <p>Mailing address: 701 Tillery St Ste 12, Austin, TX 78702, United States.</p>
+                <p>Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States.</p>
                 <p>Project agreements separately record whether PandaCodeGen acts as a controller or processes project data only on a client&apos;s documented instructions.</p>
               </div>
             </FadeIn>

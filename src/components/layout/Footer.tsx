@@ -72,8 +72,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 </li>
                 <li>
                   <address className="not-italic leading-relaxed">
-                    701 Tillery St Ste 12<br />
-                    Austin, TX 78702, United States
+                    12250 S Kirkwood Rd, Apt 1128<br />
+                    Stafford, TX 77477, United States
                   </address>
                 </li>
               </ul>

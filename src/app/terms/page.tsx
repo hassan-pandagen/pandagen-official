@@ -28,8 +28,8 @@ const sections = [
     title: "1. Scope of these website terms",
     body: (
       <>
-        <p>These terms apply to access to pandacodegen.com, the automated website audit, and inquiry forms operated under the PandaCodeGen name. They do not by themselves form a project-services contract.</p>
-        <p className="mt-4">PandaCodeGen was founded in February 2026 and uses 701 Tillery St Ste 12, Austin, TX 78702, United States as its mailing address. Each paid engagement identifies its contracting party, authorized contact, governing law, and dispute process in the written project terms accepted by both parties.</p>
+        <p>These terms apply to access to pandacodegen.com, the automated website audit, and inquiry forms operated under the PandaCodeGen name, the trading name of Panda Group Ventures L.L.C. They do not by themselves form a project-services contract.</p>
+        <p className="mt-4">PandaCodeGen was founded in February 2026 and uses 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States as its mailing address. Each paid engagement identifies its contracting party, authorized contact, governing law, and dispute process in the written project terms accepted by both parties.</p>
       </>
     ),
   },

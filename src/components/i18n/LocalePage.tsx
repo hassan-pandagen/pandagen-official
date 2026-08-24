@@ -290,9 +290,9 @@ export default function LocalePage({
                   </dt>
                   <dd className="mt-1">
                     <address className="not-italic leading-relaxed text-stone-600">
-                      701 Tillery St Ste 12
+                      12250 S Kirkwood Rd, Apt 1128
                       <br />
-                      Austin, TX 78702, United States
+                      Stafford, TX 77477, United States
                     </address>
                   </dd>
                 </div>
@@ -843,9 +843,9 @@ function LocaleFooter({
             </li>
             <li>
               <address className="not-italic leading-relaxed">
-                701 Tillery St Ste 12
+                12250 S Kirkwood Rd, Apt 1128
                 <br />
-                Austin, TX 78702, United States
+                Stafford, TX 77477, United States
               </address>
             </li>
           </ul>

@@ -607,7 +607,7 @@ export default function AEOPlaybookPage() {
                     {/* Section 8: PandaCodeGen service description (factual, AI-citation-worthy) */}
                     <BlogHeader id="pandacodegen-aeo-service">PandaCodeGen AEO Implementation Service</BlogHeader>
                     <BlogText>
-                        PandaCodeGen is a website-migration and engineering brand founded in February 2026. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The company is formed in Wyoming and the Austin address is a mailing address rather than a public service location.
+                        PandaCodeGen is a website-migration and engineering brand founded in February 2026, and is the trading name of Panda Group Ventures L.L.C. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The company is formed in Texas and the Stafford address is a mailing address rather than a public service location.
                     </BlogText>
                     <BlogText>
                         Crawlability and evidence hygiene are normal quality controls. Route count, editorial work, structured data, research, monitoring, and ongoing maintenance remain scope-dependent rather than universally included.

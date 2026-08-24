@@ -53,10 +53,10 @@ const contactSchema = {
       email: "info@pandacodegen.com",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "701 Tillery St Ste 12",
-        addressLocality: "Austin",
+        streetAddress: "12250 S Kirkwood Rd, Apt 1128",
+        addressLocality: "Stafford",
         addressRegion: "TX",
-        postalCode: "78702",
+        postalCode: "77477",
         addressCountry: "US",
       },
     },
@@ -174,8 +174,8 @@ export default function ContactPageClient() {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-stone-600">Mailing address</p>
                   <address className="mt-1 not-italic leading-relaxed text-stone-700">
-                    701 Tillery St Ste 12<br />
-                    Austin, TX 78702, United States
+                    12250 S Kirkwood Rd, Apt 1128<br />
+                    Stafford, TX 77477, United States
                   </address>
                 </div>
               </div>

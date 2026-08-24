@@ -40,10 +40,10 @@ const aboutSchema = {
       foundingDate: "2026-02",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "701 Tillery St Ste 12",
-        addressLocality: "Austin",
+        streetAddress: "12250 S Kirkwood Rd, Apt 1128",
+        addressLocality: "Stafford",
         addressRegion: "TX",
-        postalCode: "78702",
+        postalCode: "77477",
         addressCountry: "US",
       },
       founder: [
@@ -200,7 +200,7 @@ export default function AboutPageClient() {
             </div>
             <div>
               <dt className="text-sm font-bold uppercase tracking-widest text-stone-600">Mailing address</dt>
-              <dd className="mt-2 font-semibold text-charcoal">701 Tillery St Ste 12, Austin, TX 78702, United States</dd>
+              <dd className="mt-2 font-semibold text-charcoal">12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States</dd>
             </div>
           </dl>
         </div>

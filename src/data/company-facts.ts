@@ -50,10 +50,11 @@ export const PHONE = {
 
 /** Identity, formation and contracting. */
 export const COMPANY: readonly Fact[] = [
-    { label: 'Legal and trading name', value: 'PandaCodeGen' },
+    { label: 'Legal name', value: 'Panda Group Ventures L.L.C.' },
+    { label: 'Trading name', value: 'PandaCodeGen' },
     { label: 'Founded', value: 'February 2026' },
-    { label: 'Formation', value: 'Wyoming, United States' },
-    { label: 'Mailing address', value: '701 Tillery St Ste 12, Austin, TX 78702, United States' },
+    { label: 'Formation', value: 'Texas, United States' },
+    { label: 'Mailing address', value: '12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States' },
     { label: 'Founders', value: 'Hassan Jamal and Imran Raza Ladhani' },
     { label: 'Phone', value: PHONE.display },
     { label: 'Service priority', value: 'United States first, with remote work available worldwide' },

@@ -102,10 +102,10 @@ export default function Home() {
         "foundingDate": "2026-02",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "701 Tillery St Ste 12",
-          "addressLocality": "Austin",
+          "streetAddress": "12250 S Kirkwood Rd, Apt 1128",
+          "addressLocality": "Stafford",
           "addressRegion": "TX",
-          "postalCode": "78702",
+          "postalCode": "77477",
           "addressCountry": "US"
         },
         "areaServed": "Worldwide",

@@ -735,7 +735,7 @@ const fr: Dictionary = {
       },
       {
         q: "Où l'entreprise est-elle établie ?",
-        a: "PandaCodeGen a été fondée en février 2026 et son adresse est 701 Tillery St Ste 12, Austin, TX 78702, États-Unis.",
+        a: "PandaCodeGen a été fondée en février 2026 et son adresse est 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, États-Unis.",
       },
     ],
   },
