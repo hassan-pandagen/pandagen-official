@@ -285,6 +285,54 @@
       "qualifier": "Starting price; annual pricing not published",
       "verifiedAt": "2026-08-20",
       "source": "https://www.shopify.com/pricing"
+    },
+    "woocommerce-cart-fragments-default": {
+      "vendor": "WooCommerce",
+      "label": "Cart fragments script enqueueing",
+      "value": "only on views that render the Cart widget",
+      "qualifier": "Changed in WooCommerce 7.8. Before that release the script was enqueued on every page load. Third-party code that registers wc-cart-fragments as a dependency, or enqueues it explicitly, still pulls it in",
+      "verifiedAt": "2026-08-25",
+      "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/"
+    },
+    "woocommerce-variation-ajax-threshold": {
+      "vendor": "WooCommerce",
+      "label": "Variation preload threshold",
+      "value": "30",
+      "qualifier": "A product with 30 or fewer variations has all of them preloaded into the page as JSON; 31 or more falls back to AJAX. Filterable via woocommerce_ajax_variation_threshold",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-template-functions.php"
+    },
+    "woocommerce-guest-checkout-default": {
+      "vendor": "WooCommerce",
+      "label": "Guest checkout default",
+      "value": "enabled on a fresh install",
+      "qualifier": "woocommerce_enable_guest_checkout defaults to yes. The admin label reads Enable guest checkout (recommended), under WooCommerce, Settings, Accounts and Privacy",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php"
+    },
+    "woocommerce-classic-checkout-fields": {
+      "vendor": "WooCommerce",
+      "label": "Default billing fields on the classic checkout",
+      "value": "11 shown, 9 required",
+      "qualifier": "Default locale only. Per-country overrides make state or postcode optional in many countries. The block checkout shows 10 and requires 8, hiding company name and making phone optional",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-countries.php"
+    },
+    "woocommerce-shipping-cost-requires-address-default": {
+      "vendor": "WooCommerce",
+      "label": "Hide shipping costs until an address is entered",
+      "value": "off by default",
+      "qualifier": "woocommerce_shipping_cost_requires_address defaults to no, so a fresh store is not hiding shipping cost by configuration. If your customers meet the price late, something else put it there",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php"
+    },
+    "woocommerce-blocks-checkout-default": {
+      "vendor": "WooCommerce",
+      "label": "Cart and Checkout blocks as the default experience",
+      "value": "new installs from WooCommerce 8.3",
+      "qualifier": "Existing stores keep the shortcode checkout when they upgrade, so a store built before November 2023 is likely still running it",
+      "verifiedAt": "2026-08-25",
+      "source": "https://developer.woocommerce.com/2023/08/18/cart-and-checkout-blocks-becoming-the-default-experience/"
     }
   }
 }

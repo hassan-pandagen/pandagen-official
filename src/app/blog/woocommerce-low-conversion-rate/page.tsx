@@ -9,6 +9,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
+import { spec, asOf } from "@/data/spec-facts";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-16",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-08-25",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/woocommerce-low-conversion-rate")],
@@ -60,7 +61,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/woocommerce-low-conversion-rate"),
             datePublished: "2026-08-16T00:00:00-05:00",
-            dateModified: "2026-08-19T00:00:00-05:00",
+            dateModified: "2026-08-25T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -75,7 +76,15 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "WooCommerce",
             inLanguage: "en-US",
-            wordCount: 2096,
+            citation: [
+                { "@type": "CreativeWork", name: "WooCommerce: Best practices for the use of the Cart Fragments API", url: "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/" },
+                { "@type": "CreativeWork", name: "WooCommerce: Cart and Checkout blocks becoming the default experience", url: "https://developer.woocommerce.com/2023/08/18/cart-and-checkout-blocks-becoming-the-default-experience/" },
+                { "@type": "CreativeWork", name: "WooCommerce source: variable product AJAX variation threshold", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-template-functions.php" },
+                { "@type": "CreativeWork", name: "WooCommerce source: account and guest checkout settings", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php" },
+                { "@type": "CreativeWork", name: "WooCommerce source: default address and checkout fields", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-countries.php" },
+                { "@type": "CreativeWork", name: "WooCommerce source: shipping settings defaults", url: "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php" },
+            ],
+            wordCount: 3404,
             timeRequired: "PT10M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             about: [
@@ -155,7 +164,7 @@ export default function WooCommerceLowConversionRatePage() {
                         bio="Hassan rebuilds WooCommerce stores that have outgrown the plugin stack holding them together."
                     />
 
-                    <BlogHeader>The short answer</BlogHeader>
+                    <BlogHeader id="short-answer">What actually causes a low WooCommerce conversion rate?</BlogHeader>
                     <BlogText>
                         <BlogHighlight>
                             A low conversion rate is a symptom with at least four unrelated causes, and WooCommerce
@@ -170,7 +179,7 @@ export default function WooCommerceLowConversionRatePage() {
                         Everything below is a way of answering that before spending anything.
                     </BlogText>
 
-                    <BlogHeader>1. Define the metric, because WooCommerce will not do it for you</BlogHeader>
+                    <BlogHeader id="define-metric">Why does WooCommerce not give you a conversion rate?</BlogHeader>
 
                     <BlogQuote>
                         A low conversion rate has at least four unrelated causes, and speed is only the easiest one to blame.
@@ -190,7 +199,7 @@ export default function WooCommerceLowConversionRatePage() {
                         comparing them is measuring the gap between two definitions rather than anything about the shop.
                     </BlogText>
 
-                    <BlogHeader>2. Find the stage that changed</BlogHeader>
+                    <BlogHeader id="which-stage">Which funnel stage did your WooCommerce conversion rate drop at?</BlogHeader>
                     <BlogText>
                         A single percentage tells you almost nothing. The four transitions do:
                     </BlogText>
@@ -208,7 +217,7 @@ export default function WooCommerceLowConversionRatePage() {
                         finding that out the expensive way.
                     </BlogText>
 
-                    <BlogHeader>3. Segment before you attribute anything</BlogHeader>
+                    <BlogHeader id="segment">Why does a sitewide conversion rate hide the cause?</BlogHeader>
                     <BlogText>
                         A sitewide conversion rate is an average of populations that behave nothing like each other.
                         Split it four ways before going further: device, traffic source, new against returning, and
@@ -229,7 +238,11 @@ export default function WooCommerceLowConversionRatePage() {
                         single most common false alarm we see, and it is invisible until you segment.
                     </BlogText>
 
-                    <BlogHeader>4. Traffic quality is the cause everyone skips</BlogHeader>
+                    <BlogQuote>
+                        An average across mobile and desktop, paid and organic, new and returning is four different stores reported as one number.
+                    </BlogQuote>
+
+                    <BlogHeader id="traffic-quality">Can a traffic change lower conversion on its own?</BlogHeader>
                     <BlogText>
                         Conversion rate has a denominator, and it is easy to change it by accident. A new campaign, a
                         post that went around, a page that started ranking for something loosely related, or a bot
@@ -242,13 +255,43 @@ export default function WooCommerceLowConversionRatePage() {
                         people arriving were never going to buy.
                     </BlogText>
 
-                    <BlogHeader>5. Cart fragments, the WooCommerce-specific one</BlogHeader>
+                    <BlogHeader id="offer">What if the problem is the offer rather than the store?</BlogHeader>
+                    <BlogText>
+                        This is the cause a technical article is least equipped to fix and most likely to skip. Price
+                        against the alternatives your buyer is actually comparing, delivery cost and timing, returns
+                        terms, and whether the product page answers the questions that stop someone buying: sizing,
+                        materials, compatibility, and what happens if it turns out to be wrong.
+                    </BlogText>
+                    <BlogText>
+                        Trust belongs here too. A store a shopper has not heard of is asking a stranger for card
+                        details, and the things that answer that are unglamorous: a returns policy written in plain
+                        terms, a contact route that is not only a form, delivery expectations stated before the checkout
+                        rather than inside it, and reviews that read like people wrote them.
+                    </BlogText>
+                    <BlogText>
+                        The funnel tells you whether to look here. If add-to-cart is healthy and the loss is at
+                        checkout, the offer landed and the friction is downstream. If the loss is between product view
+                        and add to cart on a page that loads quickly and whose selector responds, then the stack is not
+                        what is failing you.
+                    </BlogText>
+
+                    <BlogHeader id="cart-fragments">What does wc-cart-fragments.js do to your add-to-cart?</BlogHeader>
                     <BlogText>
                         WooCommerce keeps the mini-cart accurate with a script called <code>wc-cart-fragments.js</code>,
-                        which calls the <code>get_refreshed_fragments</code> AJAX action. By default it runs on every
-                        page rather than only where a cart is displayed, and on a cached site it is the one request that
-                        cannot be cached, because it carries per-visitor state. You can confirm it in your browser
-                        network panel by filtering for <code>wc-ajax</code>.
+                        which calls the <code>get_refreshed_fragments</code> action. Since WooCommerce 7.8 it is
+                        enqueued {spec("woocommerce-cart-fragments-default").value}, not on every page. WooCommerce made
+                        that change because the previous behaviour, in its own words, &ldquo;could severely impact the
+                        load on the server and the responsiveness of a site&rdquo;. Checked{" "}
+                        {asOf("woocommerce-cart-fragments-default")}.
+                    </BlogText>
+                    <BlogText>
+                        That history matters for diagnosis, because the old behaviour has not disappeared from real
+                        stores. The script is still pulled in wherever the Cart widget renders, whenever a third-party
+                        plugin registers it as a dependency, and whenever a theme enqueues it directly. Several popular
+                        themes hard-code the widget into their templates, so a store can still be making the request on
+                        every page without anyone having chosen that. Confirm it on your own store in the browser
+                        network panel by filtering for <code>wc-ajax</code>. On a cached site it is the one request that
+                        cannot be cached, because it carries per-visitor state.
                     </BlogText>
                     <BlogText>
                         The symptom is specific and worth recognising: pages appear quickly, then the header cart count
@@ -265,12 +308,19 @@ export default function WooCommerceLowConversionRatePage() {
                         covers how to confirm it in the network panel.
                     </BlogText>
 
-                    <BlogHeader>6. Variable products deserve their own check</BlogHeader>
+                    <BlogHeader id="variable-products">Do WooCommerce variable products convert worse than simple ones?</BlogHeader>
                     <BlogText>
-                        A product with a handful of options is cheap. A product with several attributes multiplying into
-                        dozens or hundreds of variations is a different page: the variation data is loaded so the
-                        selector can resolve price and stock, and on large catalogues that payload and the queries
-                        behind it grow faster than anyone expects.
+                        WooCommerce changes how it loads a variable product at a specific point, and the number is worth
+                        knowing: {spec("woocommerce-variation-ajax-threshold").value} variations. At or below that,
+                        every variation is preloaded into the page as JSON so the selector can resolve price and stock
+                        instantly. Above it, the page ships without them and the selector fetches over AJAX instead.
+                        Checked {asOf("woocommerce-variation-ajax-threshold")}.
+                    </BlogText>
+                    <BlogText>
+                        Both sides of that line have a cost, which is why the threshold exists. Below it you are paying
+                        in page weight, and a product with several attributes multiplying together reaches a large JSON
+                        payload faster than anyone expects. Above it you are paying in latency at the moment the
+                        customer picks an option.
                     </BlogText>
                     <BlogText>
                         The conversion symptom is a selector that feels unresponsive, or a price that appears a beat
@@ -279,11 +329,15 @@ export default function WooCommerceLowConversionRatePage() {
                         comparison, and the fix is a product-page problem rather than a sitewide one.
                     </BlogText>
 
-                    <BlogHeader>7. Your checkout is yours, which cuts both ways</BlogHeader>
+                    <BlogHeader id="checkout-stack">What runs on your WooCommerce checkout while customers wait?</BlogHeader>
                     <BlogText>
-                        On Shopify the checkout belongs to Shopify, and outside Plus you cannot meaningfully change it.
-                        On WooCommerce the checkout is yours. Every plugin that hooks into it is running on the page
-                        where the money is, and that is both the risk and the opportunity.
+                        On Shopify the checkout is Shopify&apos;s. Since <code>checkout.liquid</code> was withdrawn,
+                        changes are made through checkout UI extensions and Functions, inside the boundaries Shopify
+                        defines, and part of that surface stays on Plus. The dated version of that story is in our{" "}
+                        <Link href="/blog/shopify-plus-still-slow" className={inlineLink}>
+                            write-up of where a Shopify Plus store can still be slow
+                        </Link>. On WooCommerce the checkout is yours. Every plugin that hooks into it is running on the
+                        page where the money is, and that is both the risk and the opportunity.
                     </BlogText>
                     <BlogText>
                         Work through what is actually attached: payment gateways, shipping rate calculators, tax
@@ -293,36 +347,51 @@ export default function WooCommerceLowConversionRatePage() {
                         it is invisible in a home page performance score.
                     </BlogText>
                     <BlogText>
+                        Which checkout you are timing also matters. The Cart and Checkout blocks became the default for{" "}
+                        {spec("woocommerce-blocks-checkout-default").value}, and existing stores kept the shortcode
+                        checkout when they upgraded, so a store built before November 2023 is likely still running the
+                        older one and carrying whatever was hooked into it. Checked{" "}
+                        {asOf("woocommerce-blocks-checkout-default")}.
+                    </BlogText>
+                    <BlogText>
                         Time the checkout as a flow rather than as a page. Load, fill, submit, confirm. The number that
                         matters is how long the customer waits after pressing the button that spends their money.
                     </BlogText>
 
-                    <BlogHeader>8. Account creation and guest checkout</BlogHeader>
+                    <BlogHeader id="guest-checkout">Is guest checkout switched off in your WooCommerce settings?</BlogHeader>
                     <BlogText>
-                        WooCommerce lets you require an account before purchase, and that setting is one checkbox with a
-                        large behavioural consequence. If guest checkout is off, check it deliberately rather than
-                        assuming somebody thought about it. Many stores have it disabled because a plugin or a theme
-                        default set it years ago.
+                        WooCommerce ships guest checkout {spec("woocommerce-guest-checkout-default").value}, under
+                        Settings, Accounts and Privacy, where the label reads &ldquo;Enable guest checkout
+                        (recommended)&rdquo;. That default matters for diagnosis: if yours is off, somebody or something
+                        turned it off, and it is worth finding out who and why rather than assuming it was considered.
+                        Checked {asOf("woocommerce-guest-checkout-default")}.
                     </BlogText>
                     <BlogText>
-                        The related check is field count. Every field in the checkout is a chance to abandon, and the
-                        default WooCommerce billing form asks for more than most stores need. Company name and second
-                        address line are the usual candidates.
+                        The related check is field count. The default classic checkout shows{" "}
+                        {spec("woocommerce-classic-checkout-fields").value} billing fields, and the block checkout shows
+                        10 and requires 8, hiding company name and making phone optional. Those counts are for the
+                        default locale, because WooCommerce overlays per-country rules that make state or postcode
+                        optional in many places. Company name and the second address line are the usual candidates for
+                        removal on a store that has never reviewed them.
                     </BlogText>
 
-                    <BlogHeader>9. Unexpected cost is a conversion problem, not a technical one</BlogHeader>
+                    <BlogHeader id="unexpected-cost">Why does shipping cost shown late lose the order?</BlogHeader>
                     <BlogText>
                         Shipping and tax appearing for the first time at the last step is one of the most reliable ways
-                        to lose an order, and it has nothing to do with your stack. If your shipping is calculated only
-                        after an address is entered, the customer discovers the true price at the moment they were about
-                        to pay.
+                        to lose an order, and it has nothing to do with your stack. Worth knowing before you go looking:
+                        WooCommerce ships the setting that hides shipping cost until an address is entered{" "}
+                        {spec("woocommerce-shipping-cost-requires-address-default").value}. Checked{" "}
+                        {asOf("woocommerce-shipping-cost-requires-address-default")}. So on a store where the price
+                        arrives late, that is usually a decision someone made, a shipping plugin&apos;s behaviour, or a
+                        rate that genuinely cannot be calculated earlier, rather than a WooCommerce default doing it to
+                        you.
                     </BlogText>
                     <BlogText>
                         This is worth naming in a technical article because it is frequently misdiagnosed as one. A
                         store that rebuilt its front end and saw no change often had this problem the whole time.
                     </BlogText>
 
-                    <BlogHeader>10. A slow wp-admin is not a conversion problem</BlogHeader>
+                    <BlogHeader id="wp-admin">Does a slow wp-admin affect your conversion rate?</BlogHeader>
                     <BlogText>
                         WooCommerce backend slowness is real and it is worth fixing, but it costs you staff time rather
                         than orders. Customers never see wp-admin. If your evidence is that the admin feels slow, you
@@ -333,10 +402,18 @@ export default function WooCommerceLowConversionRatePage() {
                         solve an add-to-cart problem.
                     </BlogText>
 
-                    <BlogHeader>11. What speed can and cannot explain</BlogHeader>
+                    <BlogHeader id="speed-limits">How much can site speed actually explain?</BlogHeader>
                     <BlogText>
-                        Performance work is worth doing on its own merits and it does not come with a conversion
-                        guarantee.
+                        Speed explains the stages where waiting is the mechanism. A product page that takes several
+                        seconds to become interactive can lose someone before they finish choosing a variation, and a
+                        checkout that stalls after the pay button can lose an order that had already been won. It
+                        explains very little at the stages where the decision is about price, delivery, trust, or
+                        whether the product is the right one.
+                    </BlogText>
+                    <BlogText>
+                        That boundary is the useful part. If your loss is between product view and add to cart on a page
+                        that already loads quickly, more performance work will not move it, and performance work is
+                        still worth doing on its own merits.
                     </BlogText>
                     <BlogText>
                         <BlogHighlight>
@@ -347,11 +424,11 @@ export default function WooCommerceLowConversionRatePage() {
                         else&apos;s data.
                     </BlogText>
 
-                    <BlogHeader>12. Form a hypothesis you could be wrong about</BlogHeader>
+                    <BlogHeader id="hypothesis">How do you write a testable conversion hypothesis?</BlogHeader>
                     <BlogText>
                         Write it down in this shape: the drop is at [stage], caused by [mechanism], and if I change
                         [one thing] then [metric] should move by [direction] within [window]. If you cannot fill in the
-                        stage, go back to step two. If you cannot state what would prove you wrong, you are not testing
+                        stage, go back and get the four funnel transitions first. If you cannot state what would prove you wrong, you are not testing
                         anything, you are redecorating.
                     </BlogText>
                     <BlogText>
@@ -359,7 +436,7 @@ export default function WooCommerceLowConversionRatePage() {
                         together will change the number, and it will never tell you which part did it.
                     </BlogText>
 
-                    <BlogHeader>13. Size the effect as a scenario, never as a promise</BlogHeader>
+                    <BlogHeader id="what-its-worth">What is a conversion fix actually worth?</BlogHeader>
                     <BlogText>
                         State it as a scenario with its assumptions visible: at your current sessions and average
                         order value, a change of X points at this stage would be worth Y per month, IF the change holds
@@ -371,11 +448,8 @@ export default function WooCommerceLowConversionRatePage() {
                         model becomes a forecast, and a forecast becomes a promise somebody expects you to hit. That is
                         how agencies end up defending revenue figures they never had the data to produce.
                     </BlogText>
-                    <BlogText>
-                        Use your own average order value and your own margin.
-                    </BlogText>
 
-                    <BlogHeader>14. Repair, go headless, or rebuild</BlogHeader>
+                    <BlogHeader id="repair-or-rebuild">Should you repair the WooCommerce store or rebuild it?</BlogHeader>
                     <BlogText>
                         Most stores should repair. If the diagnosis lands on a single plugin, a shipping call, a
                         checkout field or cart fragments, that is a fix measured in hours and it does not need a new
@@ -388,6 +462,10 @@ export default function WooCommerceLowConversionRatePage() {
                         during a purchase. That is a maintainability problem showing up as a conversion problem, and
                         more optimisation does not resolve it.
                     </BlogText>
+
+                    <BlogQuote>
+                        A maintainability problem and a conversion problem look identical from the dashboard, and only one of them is fixed by a rebuild.
+                    </BlogQuote>
                     <BlogText>
                         If you are weighing that, our{" "}
                         <Link href="/services/woocommerce" className={inlineLink}>
@@ -401,7 +479,12 @@ export default function WooCommerceLowConversionRatePage() {
                         sets out where each one genuinely wins.
                     </BlogText>
 
-                    <BlogHeader>15. What to ask before accepting a conversion quote</BlogHeader>
+                    <BlogHeader id="what-to-ask">What should you ask before accepting a conversion quote?</BlogHeader>
+                    <BlogText>
+                        Five questions separate a diagnosis from a pitch. A proposal that cannot name the funnel stage
+                        it is fixing has not looked at your funnel, and one that cannot say what result would prove it
+                        wrong is not proposing a test. Ask these before any money changes hands.
+                    </BlogText>
                     <BlogList
                         items={[
                             "Which funnel stage are you fixing, and what is its current number? A proposal that cannot name the stage has not looked.",

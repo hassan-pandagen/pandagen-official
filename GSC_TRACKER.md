@@ -1140,3 +1140,46 @@ regex check and a third-party ML classifier), that this site's content is a
 target for automated competitive-intelligence and AI-visibility monitoring
 tooling, and that traffic pollutes roughly 5% of the query dataset at zero clicks.
 Not the site's problem to fix; useful to know when reading query counts.
+
+---
+
+## AI VISIBILITY CHECKPOINT — 24 August 2026
+
+**Numbers only. Read as CONFOUNDED; see the caveat below before interpreting.**
+
+Generative AI features report, sc-domain:pandacodegen.com, 3-month window
+(23 May to 22 Aug 2026), last GSC update 5 hours before capture.
+
+| Metric | 15 Aug | 19 Aug | 24 Aug |
+|---|---|---|---|
+| Total AI impressions | 6,257 | 6,700 | **8,260** |
+| `nextjs-hosting-zero-cost` | 3,250 | 3,624 | **4,760** |
+| Anchor share of all AI impressions | 51.9% | 54.1% | **57.6%** |
+
+Second-place page: `/blog/gohighlevel-website-speed`, 417 impressions.
+The anchor page now carries 11.4x the impressions of the next page.
+
+Standard Performance report, same 3-month window:
+241 clicks, 140k impressions, 0.2% CTR, average position 10.8.
+
+### Why this is not a result
+
+1. **The terminal dip is a data artefact, not a drop.** The chart ends 22 Aug and
+   was captured 24 Aug. GSC's final 1-3 days are always incomplete. The standard
+   report shows 0 clicks on 22 Aug, which would be an unprecedented single-day
+   collapse if real. It is not. Do not read the right edge of either chart.
+
+2. **The window is confounded and was pre-registered as unreadable.** Ten commits
+   shipped 19 Aug, and the August 2026 spam update began rolling 18 Aug and is
+   still listed as in progress in `src/data/google-updates.ts`. The site's own
+   algorithm-updates article states that judging traffic before a rollout
+   completes measures a half-applied update. The pre-registered read date is
+   ~26 Aug 2026.
+
+### The one thing worth noting now
+
+Concentration is rising, not falling: 51.9% → 54.1% → 57.6% across nine days.
+AI-visibility growth is mostly one URL getting stronger rather than the corpus
+broadening. That is the risk the concentration research flagged, and it is the
+reason Experiment 3 (`shopify-store-speed-optimization`, read date 10 Sep 2026)
+exists. No action before that read.

@@ -435,3 +435,113 @@ to explain the gap here either, and something else about this page, or about
 Shopify-topic competition generally, is the real constraint. Do not roll the
 citation/spec treatment out further on demand-led reasoning alone until that
 is understood.
+
+---
+
+## Experiment 4, pre-registered 25 August 2026 (BEFORE any result)
+
+`woocommerce-low-conversion-rate`. This one is different from Experiments 1-3:
+the page is not underperforming in search, it is **absent from the index
+entirely**.
+
+### Baseline, captured 25 Aug 2026 before any change
+
+| measure | value |
+|---|---|
+| Google index state | **Discovered - currently not indexed**, `Last crawled: N/A` |
+| AI impressions | 0 (cannot appear in the export; never crawled) |
+| Inbound editorial internal links | **0** |
+| Outbound links to siblings | 4 |
+| Verified dated facts on the page | 0 |
+| Pull quotes | 1 |
+
+The page was a pure link sink: it passed equity to three siblings and received
+none. `/services/woocommerce` listed three of the four posts in its
+further-reading block and omitted this one. Google's behaviour was rational.
+
+### Measured demand, Google Ads Keyword Planner, US, 25 Aug 2026
+
+| keyword | avg monthly |
+|---|---|
+| woocommerce low conversion rate (exact page target) | **0, WILL_NOT_RUN** |
+| improve woocommerce conversion rate | 0 |
+| woocommerce checkout abandonment | 0 |
+| why is my woocommerce store not converting | 0 |
+| woocommerce conversion rate | 10 |
+| woocommerce cart fragments | 10 |
+| woocommerce conversion rate optimization | 10 |
+| woocommerce checkout optimization | 10 |
+
+**This page will not become a second anchor and it is not being treated as a
+candidate for one.** The concentration research established topic demand as the
+dominant variable, and `nextjs-hosting-zero-cost` sits on 880-4,400/mo against
+this page's 0-10/mo. Anyone reading this entry later should not score it against
+anchor-scale expectations.
+
+Two things keep it worth doing anyway. Keyword Planner systematically undercounts
+natural-language problem phrasing, which is exactly the shape of every query this
+page answers, and `how-to-fix-slow-wordpress` already demonstrated 62 AI
+impressions on 10/mo measured demand. And the measured CTR rule on this site is
+that problem-intent pages run 0.60% against 0.04% for third-party-spec pages, so
+what little demand exists here is the higher-quality kind.
+
+### What changed on 25 Aug 2026
+
+1. **Inbound internal links 0 -> 3**: `/services/woocommerce` further-reading,
+   `woocommerce-too-slow` (the highest-inbound page in the cluster), and
+   `woocommerce-vs-custom-website`. This is the primary intervention.
+2. **All 16 headings rewritten**: numbered steps removed, 17 of 18 now
+   question-shaped, mean 8.6 words, addressed to the reader rather than the
+   practitioner. Same treatment the Experiment 1 cohort received.
+3. **6 spec() facts added**, 0 before: cart-fragments enqueue behaviour, the
+   30-variation AJAX threshold, guest-checkout default, default checkout field
+   counts, the hide-shipping-cost default, and Cart/Checkout blocks as default.
+   All read off WooCommerce docs or current core source on 25 Aug 2026.
+4. **A factual error corrected.** The page claimed cart fragments run "on every
+   page by default". That stopped being true in **WooCommerce 7.8**, which
+   disabled enqueueing on all routes by default. The same error was in the FAQ
+   and in the FAQPage schema. It had been live since 16 Aug 2026.
+5. **A stale competitor claim corrected.** "On Shopify the checkout belongs to
+   Shopify, and outside Plus you cannot meaningfully change it" predates
+   Checkout Extensibility and contradicted this site's own better-sourced pages.
+6. **Gap-fill**: a new section on offer, pricing and trust. The page named four
+   causes in its opening and only developed three, and offer/trust is the
+   sub-fact every competing AI answer covers.
+7. Pull quotes 1 -> 3. Schema gained a 6-entry `citation` array. `wordCount`
+   corrected 2096 -> 3404.
+
+### Read date and decision rule
+
+**Read no earlier than 15 September 2026**, and the clock starts at **push, not
+commit** - this repo commits locally and pushes in batches, so the crawl signal
+does not exist until the deploy lands. Record the push date when it happens.
+
+The primary metric is **binary and unusually clean for this site**: does the URL
+leave "Discovered - currently not indexed"?
+
+- **PASS:** the page is indexed. The internal-link fix was sufficient.
+- **FAIL:** still "Discovered" after three weeks with three inbound links from
+  crawled pages. That points at something other than link discovery, and the
+  next check is crawl budget or a quality signal, not more links.
+
+Secondary, and much weaker: AI impressions above 0. Given the demand figures,
+treat anything in single digits as noise and do not read it as vindication of
+the heading or citation treatment.
+
+**This is a combined-variable change and cannot attribute a result to any single
+element.** Same limitation as Experiment 3, stated here in advance so nobody
+claims otherwise later. If it indexes, the honest conclusion is "the bundle
+worked", and the cheapest next test is applying the interlinking fix alone to
+another orphaned page.
+
+### Effect on Experiment 1
+
+`woocommerce-low-conversion-rate` is not in the Experiment 1 cohort and cannot be
+in its control, because the control was drawn from pages appearing in the
+Generative AI features export and a never-crawled page does not appear there.
+
+Two edited pages, `woocommerce-too-slow` and `woocommerce-vs-custom-website`, may
+be control members. Each received one added sentence and one link. If either is
+in the control set at the 8 Sep read, the option exists to exclude it. The bias
+direction is conservative: a control page improving makes the cohort's relative
+growth look smaller, so this cannot manufacture a false PASS.

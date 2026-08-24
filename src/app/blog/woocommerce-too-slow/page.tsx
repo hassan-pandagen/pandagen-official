@@ -445,6 +445,13 @@ export default function WooCommerceTooSlowPage() {
                         improve experience, but a public benchmark does not prove the conversion or revenue result for
                         this store.
                     </BlogText>
+                    <BlogText>
+                        If the funnel numbers point somewhere other than performance, diagnose that instead of optimising
+                        further. Our companion guide to{" "}
+                        <Link href="/blog/woocommerce-low-conversion-rate" className={inlineLinkClass}>a low WooCommerce conversion rate</Link>{" "}
+                        works through the four stages separately, because a drop between product view and add to cart is
+                        not a speed problem and will not respond to one.
+                    </BlogText>
 
                     <BlogHeader id="options">Repair, headless WooCommerce or replace?</BlogHeader>
                     <BlogText>

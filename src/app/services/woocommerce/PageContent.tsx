@@ -659,6 +659,7 @@ export default function PageContent() {
             <li>&rarr; <Link href="/blog/woocommerce-migration-cost" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce migration cost: what leaving WooCommerce really costs</Link></li>
             <li>&rarr; <Link href="/blog/woocommerce-vs-custom-website" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce vs custom website: the honest comparison</Link></li>
             <li>&rarr; <Link href="/blog/woocommerce-too-slow" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce too slow? A 2026 diagnosis and fix guide</Link></li>
+            <li>&rarr; <Link href="/blog/woocommerce-low-conversion-rate" className="text-charcoal hover:text-cognac underline underline-offset-2">WooCommerce low conversion rate: diagnose it before you blame speed</Link></li>
             <li>&rarr; <Link href="/blog/wordpress-plugins-destroy-speed" className="text-charcoal hover:text-cognac underline underline-offset-2">How WordPress plugins destroy site speed</Link></li>
             <li>&rarr; <Link href="/blog/what-is-headless-commerce" className="text-charcoal hover:text-cognac underline underline-offset-2">What is headless commerce, and is it worth it?</Link></li>
           </ul>

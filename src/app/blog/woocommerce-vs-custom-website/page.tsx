@@ -297,7 +297,10 @@ export default function WooCommerceVsCustomWebsitePage() {
                         practices, including keeping customer-specific pages dynamic. A headless frontend can improve
                         rendering control. It does not make your backend, your APIs, search, payments or operations any faster.
                         Where a store is measurably slow, the diagnostic route is set out in{" "}
-                        <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why a WooCommerce store runs slowly</Link>.
+                        <Link href="/blog/woocommerce-too-slow" className="text-cognac hover:underline font-medium">why a WooCommerce store runs slowly</Link>. Where it
+                        is converting badly and the cause has not been established,{" "}
+                        <Link href="/blog/woocommerce-low-conversion-rate" className="text-cognac hover:underline font-medium">diagnose the conversion rate first</Link>,
+                        because a rebuild that fixes the wrong stage changes the number without explaining it.
                     </BlogText>
                     <BlogText>
                         It helps to know what a request actually does. A WooCommerce page is assembled per request: PHP
