@@ -609,8 +609,12 @@ ones in files not touched here.
 ### Read dates and decision rules
 
 The clock starts at **push, not commit**. This repo commits locally and pushes in
-batches; the crawl signal does not exist until the deploy lands. **Record the
-push date here when it happens.**
+batches; the crawl signal does not exist until the deploy lands.
+
+**PUSHED 25 AUGUST 2026.** Commits `079efe2`, `b18fdf6`, `8532898` confirmed on
+`origin/main`. The clock starts here. Submit the URL to GSC for indexing on the
+same day and note the submission separately, because a manual submission and an
+organic recrawl are different signals and the read should know which happened.
 
 **8 September 2026, indexing check only.** Binary and cheap: has the URL left
 "Discovered - currently not indexed"? This can share the Experiment 1 cohort date
