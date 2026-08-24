@@ -510,7 +510,6 @@ export default function WooCommerceLowConversionRatePage() {
                         </CalModalButton>
                     </section>
 
-                    <BlogHeader>Frequently asked questions</BlogHeader>
                     <FAQAccordion faqs={postFAQs} />
 
                     <BlogText>
