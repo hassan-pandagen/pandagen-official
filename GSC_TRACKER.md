@@ -1183,3 +1183,107 @@ AI-visibility growth is mostly one URL getting stronger rather than the corpus
 broadening. That is the risk the concentration research flagged, and it is the
 reason Experiment 3 (`shopify-store-speed-optimization`, read date 10 Sep 2026)
 exists. No action before that read.
+
+---
+
+## PAGE-LEVEL CTR CHECKPOINT — 25 August 2026
+
+Export: standard Performance report, sc-domain:pandacodegen.com, **24 May to
+23 August 2026**. Files in `/GSC` (gitignored, not backed up).
+
+### METHODOLOGY TRAP — read this before using Queries.csv again
+
+**Queries.csv contains 48 of the site's 243 clicks. Eighty percent of clicks sit
+on queries GSC anonymised out of the export.**
+
+GSC caps the query table at 1,000 rows and suppresses low-volume queries
+entirely. On this site the top-1,000 list is dominated by one page's queries, so
+any CTR curve derived from Queries.csv is measuring a biased fifth of the data.
+
+A page-2 audit run on 25 Aug produced a CTR-by-position curve from Queries.csv
+showing 0.02% at positions 5-7. That number is real for those queries and wrong
+for the site. **Use Pages.csv for anything involving clicks or CTR.** Queries.csv
+is safe for query discovery and position, not for rates.
+
+### The real shape
+
+| slice | clicks | impressions | CTR |
+|---|---|---|---|
+| Whole site | 243 | 141,968 | 0.17% |
+| `nextjs-hosting-zero-cost` alone | 19 | **90,472** | **0.021%** |
+| **Everything except that page** | 224 | 51,496 | **0.43%** |
+
+The anchor page holds **64% of all site impressions** and converts at two
+hundredths of a percent. It was suppressing the sitewide average by 20x. The
+concentration finding from the 19 Aug research now has a click-side counterpart:
+the page is not just concentrated, it is concentrated in traffic that does not
+click.
+
+### Content-intent CTR rule, re-confirmed on fresh data
+
+Problem-intent pages as a cohort (divi-theme-slow, gohighlevel-website-speed,
+woocommerce-too-slow, shopify-dawn-theme-slow, why-is-my-website-loading-so-slow,
+how-to-fix-slow-wordpress, wix-too-slow, squarespace-too-slow):
+
+**88 clicks / 15,787 impressions = 0.56% CTR**
+
+Against the anchor's 0.021%. That is a **27x gap**, and it lands within a
+rounding error of the 0.60% vs 0.04% split measured in July. Three months apart,
+different export, same answer. This is the most reliable finding on the site.
+
+### Top pages by clicks
+
+| page | clicks | impressions | CTR | position |
+|---|---|---|---|---|
+| `/` | 59 | 905 | 6.52% | 7.8 |
+| `/blog/divi-theme-slow` | 31 | 4,721 | 0.66% | 9.1 |
+| `/blog/gohighlevel-website-speed` | 29 | 4,249 | 0.68% | 8.5 |
+| `/blog/woocommerce-too-slow` | 20 | 4,809 | 0.42% | **28.1** |
+| `/blog/nextjs-hosting-zero-cost` | 19 | 90,472 | 0.02% | 8.5 |
+| `/blog/shopify-app-costs-real-monthly-bill` | 8 | 5,771 | 0.14% | 11.5 |
+| `/blog/shopify-dawn-theme-slow` | 7 | 1,116 | 0.63% | 9.2 |
+| `/blog/how-to-migrate-wordpress-to-nextjs` | 7 | 843 | 0.83% | 15.3 |
+| `/blog/how-to-achieve-100-pagespeed` | 6 | 229 | **2.62%** | 20.1 |
+
+**`woocommerce-too-slow` earns 20 clicks from average position 28.1.** Page
+three, converting at 0.42%, out-clicking a page with nineteen times its
+impressions. It is also one of the seven posts found invisible to `/llms.txt`
+on 25 Aug. Both facts point the same way: this page is under-served relative to
+what it earns.
+
+`how-to-achieve-100-pagespeed` runs the highest blog CTR on the site at 2.62%
+from position 20.1.
+
+### Pages with impressions and zero clicks
+
+| page | impressions | position |
+|---|---|---|
+| `webflow-user-accounts-sunset-date-2026` | 1,923 | 7.3 |
+| `webflow-true-cost` | 1,722 | 25.2 |
+| `shopify-headless` | 1,205 | 24.4 |
+| `website-migration-cost-2026` | 1,056 | 9.2 |
+
+The first is the instructive one: page one, nearly two thousand impressions,
+nothing. A sunset-date query is answered by the date, so the SERP satisfies it
+without a click. Structurally identical to the Vercel bandwidth queries feeding
+the anchor page. **This is a query-type problem, not a title or ranking problem,
+and no snippet rewrite fixes it.**
+
+`shopify-headless` is an Experiment 1 cohort page. Do not touch before 8 Sep 2026.
+
+### What this changes
+
+The lever is not position. It is which queries the content targets. Spec queries
+(a vendor's number, a date, a limit) earn impressions and no clicks at any
+position, because the answer fits in the SERP. Problem queries earn clicks even
+from page three.
+
+This supports, from an independent direction, the two decisions taken on 25 Aug:
+rebuilding `woocommerce-low-conversion-rate` as a problem-intent page, and moving
+the public positioning toward AI-search visibility rather than platform specs.
+
+### Caveat
+
+Window is 24 May to 23 Aug and includes the August 2026 spam update, which began
+18 Aug and was still rolling out at export time. Position figures inside the last
+week of this window are unsettled.
