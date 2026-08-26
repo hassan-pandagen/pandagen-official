@@ -365,6 +365,54 @@
       "qualifier": "From 99 billion sessions across 6,000+ sites, Q4 2024 to Q4 2025, published March 2026. Contentsquare publishes no single overall ecommerce conversion figure",
       "verifiedAt": "2026-08-25",
       "source": "https://contentsquare.com/guides/digital-experience-benchmark/conversions/"
+    },
+    "wp-saml-cve-15981": {
+      "vendor": "miniOrange",
+      "label": "CVE-2026-15981 severity",
+      "value": "CVSS 9.8, critical",
+      "qualifier": "Authentication bypass in the SAML Single Sign On plugin. mo_saml_validate_signature() runs a loose boolean check on the tri-state integer from PHP's openssl_verify(), so an error return of -1 evaluates as truthy and is treated as a valid signature. Affects free-edition versions up to and including 5.4.4; patched in 5.4.5. Score assigned by Wordfence as CNA",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-15981"
+    },
+    "wp-saml-cve-61979": {
+      "vendor": "miniOrange",
+      "label": "CVE-2026-61979 severity",
+      "value": "CVSS 8.1, high",
+      "qualifier": "Unauthenticated privilege escalation via SAML signature algorithm confusion, affecting versions up to 5.4.3, patched in 5.4.4. The vector carries AC:H, which is what keeps it below 9.0. Patchstack assigned this record as CNA; their own write-up describes both SAML issues as 9.8. Wordfence separately assigned CVE-2026-15013 at 9.8 for what the records describe as the same mechanism and version range",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-61979"
+    },
+    "wp-saml-editions": {
+      "vendor": "miniOrange",
+      "label": "Product editions shipped under one WordPress plugin slug",
+      "value": "7",
+      "qualifier": "Free, Standard, Premium, Premium multisite, Enterprise, VIP single site and VIP multisite all ship under the slug miniorange-saml-20-single-sign-on, each independently version-numbered. Public advisories covered the free edition only; the six paid editions were patched with no public changelog entry and no advisory, and were not listed in any vulnerability database until miniOrange supplied the full matrix on 18 August 2026",
+      "verifiedAt": "2026-08-26",
+      "source": "https://patchstack.com/articles/one-slug-seven-editions/"
+    },
+    "wp-saml-installs": {
+      "vendor": "miniOrange",
+      "label": "Active installations, SAML Single Sign On free edition",
+      "value": "10,000+",
+      "qualifier": "WordPress.org reports the free edition only. Install counts for the six paid editions are not published anywhere, so the total exposed population is unknown",
+      "verifiedAt": "2026-08-26",
+      "source": "https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/"
+    },
+    "nextjs-avif-rce": {
+      "vendor": "Next.js",
+      "label": "GHSA-2xp9-vwfh-vxw4 severity",
+      "value": "CVSS 9.5, critical",
+      "qualifier": "Unauthenticated remote code execution in the Image Optimization API when AVIF is processed, via a libheif flaw reachable through sharp. Affects >= 10.0.0 < 15.5.24 and < 16.3.3. No CVE identifier was assigned. The same release also fixed CVE-2026-75604, a second critical RCE affecting Windows-hosted servers only",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nextjs.org/blog/august-2026-security-release"
+    },
+    "nextjs-patched-versions-aug-2026": {
+      "vendor": "Next.js",
+      "label": "Patched versions, August 2026 security release",
+      "value": "16.3.3 and 15.5.24",
+      "qualifier": "16.3.3 is Active LTS, 15.5.24 is Maintenance LTS. Vercel pre-announced the release, then moved it forward when a second critical vulnerability was identified, so users would only need to upgrade once",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nextjs.org/blog/august-2026-security-release"
     }
   }
 }

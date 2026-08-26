@@ -248,7 +248,7 @@ export const clusters: Cluster[] = [
       'wordpress-april-2026-evidence', 'divi-theme-slow', 'cloudflare-emdash-wordpress-replacement',
       'wordpress-migration-cost', 'how-to-migrate-wordpress-to-nextjs', 'wordpress-vs-nextjs',
       'why-we-chose-nextjs-over-wordpress-2026', 'nextjs-sanity-stack', 'wordpress-vs-custom-code-real-cost-3-years',
-      'wordpress-ai-security-risk-2026', 'wordpress-killer', 'elementor-kills-seo',
+      'wordpress-ai-security-risk-2026', 'wordpress-plugin-security-2026', 'wordpress-killer', 'elementor-kills-seo',
       'wordpress-plugins-destroy-speed', 'wordpress-traffic-drop-speed', 'how-to-fix-slow-wordpress',
       // Market-share research: the WordPress peak is the reason a migration
       // conversation is happening at all, so it belongs with the migration cluster.

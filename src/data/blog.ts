@@ -1814,6 +1814,29 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "wordpress-plugin-security-2026",
+    cardStat: "7",
+    cardStatLabel: "plugin editions under one slug, six patched with no advisory",
+    title: "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
+    excerpt: "In one week, a critical authentication bypass was exploited in a WordPress SSO plugin and a critical remote code execution was patched in Next.js. Nothing on the internet is secure. What a site owner controls is how fast a fix lands, and this is what that difference actually looked like.",
+    category: "WordPress",
+    readTime: "11 min",
+    date: "Aug 27",
+    author: "Hassan",
+    role: "Co-founder, Lead Engineer",
+    featured: false,
+    illustrationType: 'security',
+    lastModified: "2026-08-27",
+    faqs: [
+      { question: "Is WordPress less secure than a custom-coded site?", answer: "Not in the way the question implies. In the last week of August 2026 a critical authentication bypass was under active exploitation in a WordPress SSO plugin, and a critical unauthenticated remote code execution was disclosed and patched in Next.js. Both ecosystems shipped critical vulnerabilities in the same week. What differed was the response path: whether the advisory named the affected versions, whether vulnerability databases could see them, whether a scanner would flag your install, and how many steps the fix took. Those four things are measurable. Platform choice on its own is not a security outcome." },
+      { question: "What is CVE-2026-15981?", answer: "An authentication bypass in miniOrange's SAML Single Sign On plugin for WordPress, scored CVSS 9.8. The plugin's mo_saml_validate_signature() function ran a loose boolean check on the value returned by PHP's openssl_verify(). That function is tri-state: 1 for a valid signature, 0 for invalid, and -1 when OpenSSL itself errors. In PHP, -1 is truthy. An attacker who sent a deliberately malformed signature triggered the error path, and the plugin treated the error as a successful verification, logging them in as any existing user including an administrator. Fixed in free-edition 5.4.5. Checked 26 August 2026." },
+      { question: "Why did vulnerability scanners report vulnerable WordPress sites as safe?", answer: "Because seven independently versioned product editions ship under one plugin slug, and the public advisories covered only the free one. Patchstack reported on 21 August 2026 that the six paid editions were patched with no public changelog entry and no advisory, so no vulnerability database listed them and affected sites were reported as unaffected. That changed on 18 August 2026, when miniOrange supplied the full edition and version matrix and Patchstack updated its database. Until then, the scanner, the dashboard and the database were all blind at once." },
+      { question: "How long was a working exploit public before the attacks were noticed?", answer: "A full disclosure including a proof-of-concept and a Docker lab was posted to the Full Disclosure mailing list on 29 July 2026 for the algorithm-confusion variant. DigitalOcean detected an anomalous WordPress admin session on 16 August 2026 and shared a working reproduction on 17 August. That is eighteen days between a weaponised public exploit and the first reported detection. Patchstack characterised the traffic as opportunistic scanning rather than a targeted campaign." },
+      { question: "How fast should a critical vulnerability be patched?", answer: "Fast enough that the window between a public exploit and your fix is short, which means the practical questions are how you find out and how many steps the fix takes. On a maintained dependency the path is: an advisory names the patched version, an automated audit surfaces it, one command applies it, and a build confirms nothing broke. Where an advisory does not name your edition, no database lists it and your dashboard shows no update, that path does not exist and the clock keeps running. Ask any provider to describe their actual sequence rather than promising a response time." },
+      { question: "What should I do if I run the miniOrange SAML plugin?", answer: "Check which edition you run, not just the version number, because the seven editions use separate version series and a Standard 16.x install will not be offered a jump to the patched 17.x line through the normal dashboard update. Free edition is patched at 5.4.5. Compare your edition against the matrix miniOrange supplied to Patchstack on 18 August 2026, upgrade by manual upload if the dashboard offers nothing, then audit for unexpected administrator accounts and recent logins, because exploitation was already underway before the advisories covered the paid editions." }
+    ]
+  },
+  {
     id: "wordpress-ai-security-risk-2026",
     cardStat: "Dated",
     cardStatLabel: "Version, configuration and advisory conditions matter",
