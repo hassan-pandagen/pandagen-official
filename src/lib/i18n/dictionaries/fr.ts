@@ -696,7 +696,7 @@ const fr: Dictionary = {
         "PandaCodeGen aide les entreprises à planifier et réaliser des migrations de sites web lorsque les URL, les contenus, les intégrations, la mesure et le contrôle opérationnel comptent. Le travail commence par des preuves et un périmètre écrit, pas par la promesse automatique qu'un site doit être reconstruit.",
     },
     summary:
-      "PandaCodeGen est un studio de développement web fondé en février 2026 et établi à Austin, au Texas. L'entreprise est dirigée par ses deux cofondateurs : Hassan Jamal, cofondateur et ingénieur principal, et Imran Raza Ladhani, cofondateur et architecte principal. Les deux personnes qui cadrent un projet sont les deux ingénieurs qui le réalisent.",
+      "PandaCodeGen est un studio de développement web fondé en février 2026 et établi à Stafford, au Texas. L'entreprise est dirigée par ses deux cofondateurs : Hassan Jamal, cofondateur et ingénieur principal, et Imran Raza Ladhani, cofondateur et architecte principal. Les deux personnes qui cadrent un projet sont les deux ingénieurs qui le réalisent.",
     sections: [
       {
         title: "Continuité de migration",

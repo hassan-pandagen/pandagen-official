@@ -90,3 +90,7 @@ scripts/scan/node_modules/
 
 # Scanner deps
 scripts/scan/lighthouse-*.json
+
+# Design working files, not site assets and not for the repo
+assets/banner-kit/
+public/New folder/

@@ -696,7 +696,7 @@ const de: Dictionary = {
         "PandaCodeGen unterstützt Unternehmen bei Planung und Umsetzung von Website-Migrationen, wenn URLs, Inhalte, Integrationen, Messbarkeit und operative Kontrolle zählen. Die Arbeit beginnt mit Belegen und einem schriftlichen Leistungsumfang, nicht mit dem automatischen Versprechen, dass eine Website neu gebaut werden muss.",
     },
     summary:
-      "PandaCodeGen ist ein im Februar 2026 gegründetes Webentwicklungsstudio mit Sitz in Austin, Texas. Das Unternehmen wird von seinen beiden Mitgründern geführt: Hassan Jamal, Mitgründer und leitender Ingenieur, sowie Imran Raza Ladhani, Mitgründer und leitender Architekt. Die beiden Personen, die ein Projekt kalkulieren, sind die beiden Ingenieure, die es umsetzen.",
+      "PandaCodeGen ist ein im Februar 2026 gegründetes Webentwicklungsstudio mit Sitz in Stafford, Texas. Das Unternehmen wird von seinen beiden Mitgründern geführt: Hassan Jamal, Mitgründer und leitender Ingenieur, sowie Imran Raza Ladhani, Mitgründer und leitender Architekt. Die beiden Personen, die ein Projekt kalkulieren, sind die beiden Ingenieure, die es umsetzen.",
     sections: [
       {
         title: "Migrationskontinuität",

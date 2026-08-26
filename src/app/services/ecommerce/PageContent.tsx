@@ -117,10 +117,10 @@ export default function PageContent() {
             <div>
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Client receipt, on the record</p>
               <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium italic mb-3">
-                &ldquo;Hassan rebuilt MyCustomPatches, a WordPress + WooCommerce store, onto a custom Next.js storefront. The performance figures for that project are withdrawn pending reconciliation of their test profiles, dates and conditions. Fixed price. Unlimited revisions. Live at mycustompatches.net. &rdquo;
+                &ldquo;Hassan rebuilt MyCustomPatches, a WordPress + WooCommerce store, onto a custom Next.js storefront. The performance figures for that project are withdrawn pending reconciliation of their test profiles, dates and conditions. Fixed price. Live at mycustompatches.net. &rdquo;
               </p>
               <p className="text-sm text-stone-500">Matt Conner, owner, MC Patches LLC, an independent client. Published with permission. <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Clutch review</a> &middot; <a href="https://www.goodfirms.co/company/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">GoodFirms review</a></p>
-              <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">What that project involved, and what it did not establish, is set out in the case study. Refund terms for your project are stated in the written scope. No hourly billing. No subcontractors. Hassan Jamal, Austin, TX.</p>
+              <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">What that project involved, and what it did not establish, is set out in the case study. Revision rounds, acceptance criteria and refund terms for your project are stated in the written scope, and revisions run until the agreed scope is accepted. No hourly billing. No subcontractors. Hassan Jamal, Stafford, TX.</p>
             </div>
           </div>
         </div>

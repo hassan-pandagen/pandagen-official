@@ -14,7 +14,12 @@ const nextConfig = {
   // Image optimization is intentionally limited to same-origin assets. Add an
   // exact remote host only when a reviewed product requirement needs it.
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // AVIF removed 26 Aug 2026 for GHSA-2xp9-vwfh-vxw4: a libheif flaw reachable via
+    // sharp allowed unauthenticated RCE when the optimizer processed an attacker-
+    // controlled AVIF. Next.js 16.3.3 disables AVIF optimization itself until the
+    // upstream fix propagates, so this mirrors the patch rather than fighting it.
+    // Re-add only when Next.js announces libheif is fixed upstream.
+    formats: ['image/webp'],
     qualities: [75, 90],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
