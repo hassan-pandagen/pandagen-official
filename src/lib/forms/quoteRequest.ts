@@ -33,6 +33,7 @@ export interface QuoteScalarFields {
   trafficMedium: string;
   trafficCampaign: string;
   landingPage: string;
+  submittedFrom: string;
   firstVisit: string;
   honeypot: string;
   formLoadedAt: number | null;
@@ -55,6 +56,7 @@ const ALLOWED_FIELDS = new Set([
   "trafficMedium",
   "trafficCampaign",
   "landingPage",
+  "submittedFrom",
   "firstVisit",
   "website_url_confirm",
   "_t",
@@ -297,6 +299,11 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
   const trafficMedium = scalar(formData, "trafficMedium", 100);
   const trafficCampaign = scalar(formData, "trafficCampaign", 200);
   const landingPage = scalar(formData, "landingPage", 2_048);
+  // The page the form was submitted from, which is NOT landingPage. landingPage
+  // is where the session started; this is where it converted. A visitor who
+  // enters on a WooCommerce post and submits from /pricing produces two
+  // different values, and only the pair tells you which page did the selling.
+  const submittedFrom = scalar(formData, "submittedFrom", 2_048);
   const firstVisit = scalar(formData, "firstVisit", 64);
   if (firstVisit && !Number.isFinite(Date.parse(firstVisit))) throw new QuoteRequestError(400, "Invalid first-visit timestamp.");
 
@@ -317,6 +324,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
     trafficMedium,
     trafficCampaign,
     landingPage,
+    submittedFrom,
     firstVisit,
     honeypot: readQuoteHoneypot(formData),
     formLoadedAt: readQuoteFormLoadedAt(formData),

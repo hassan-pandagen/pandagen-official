@@ -115,6 +115,7 @@ export async function POST(request: NextRequest) {
         trafficMedium: fields.trafficMedium,
         trafficCampaign: fields.trafficCampaign,
         landingPage: fields.landingPage,
+        submittedFrom: fields.submittedFrom,
         firstVisit: fields.firstVisit,
       }))
       .digest("hex");
@@ -162,13 +163,14 @@ export async function POST(request: NextRequest) {
             ${fields.alreadyTried ? `<p style="margin:14px 0 6px"><strong>Already tried:</strong></p><p style="white-space:pre-wrap;background:#f5f5f4;padding:12px;border-radius:6px">${escHtml(fields.alreadyTried)}</p>` : ""}
             ${fields.details ? `<p style="margin:14px 0 6px"><strong>Project details:</strong></p><p style="white-space:pre-wrap;background:#f5f5f4;padding:12px;border-radius:6px">${escHtml(fields.details)}</p>` : ""}
           </div>
-          ${fields.trafficSource || fields.landingPage ? `
+          ${fields.trafficSource || fields.landingPage || fields.submittedFrom ? `
             <div style="margin-top:16px;background:#fff;padding:16px;border-radius:8px">
               <h3 style="margin:0 0 10px;font-size:15px">Attribution</h3>
               ${detailRow("Source", fields.trafficSource)}
               ${detailRow("Medium", fields.trafficMedium)}
               ${detailRow("Campaign", fields.trafficCampaign)}
               ${detailRow("Landing page", fields.landingPage)}
+              ${detailRow("Submitted from", fields.submittedFrom)}
               ${detailRow("First visit", fields.firstVisit)}
             </div>
           ` : ""}

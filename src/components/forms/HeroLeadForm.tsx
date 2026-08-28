@@ -103,6 +103,7 @@ export default function HeroLeadForm({
         formData.append("trafficCampaign", attribution.campaign);
       }
       if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
+      formData.append("submittedFrom", window.location.pathname);
       if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
 
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });

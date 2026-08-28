@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { getAttribution } from "@/lib/analytics/trafficSource";
 
 const platforms = [
   "WordPress",
@@ -113,6 +114,20 @@ export default function ContactPageClient() {
 
     setIsSubmitting(true);
     try {
+      // This form sent no attribution at all until 28 Aug 2026, while the hero
+      // form and the quote modal both did. Every enquiry from the contact page,
+      // which is where the most considered ones arrive, was landing with no
+      // source, no landing page and no first-visit time.
+      const attribution = getAttribution();
+      formData.append("trafficSource", attribution.source);
+      formData.append("trafficMedium", attribution.medium);
+      if (attribution.campaign && attribution.campaign !== "none") {
+        formData.append("trafficCampaign", attribution.campaign);
+      }
+      if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
+      formData.append("submittedFrom", window.location.pathname);
+      if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
+
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });
       if (!response.ok) throw new Error(await responseMessage(response));
       formFunnel.markSubmitted();
