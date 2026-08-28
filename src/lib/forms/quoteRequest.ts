@@ -114,6 +114,27 @@ const ALLOWED_TRAFFIC_BANDS = new Set([
 const ALLOWED_TIMELINES = new Set(["", "Within 30 days", "1–3 months", "3–6 months", "Researching"]);
 const ALLOWED_BUDGETS = new Set(["", "Under $3,500", "$3,500–$7,500", "$7,500–$15,000", "$15,000+", "Not sure"]);
 
+/**
+ * Accept a website the way a person types their own: "example.com".
+ *
+ * The field is optional and labelled optional, but both the browser (type="url")
+ * and this validator demanded a scheme, so "www.testing.com" was rejected on the
+ * client and would have 400'd on the server. An optional field that blocks
+ * submission is worse than no field, and the people most likely to type a bare
+ * domain are the non-technical owners we most want to hear from.
+ *
+ * Normalising is unambiguous here: a website field containing a bare host can
+ * only have meant https. Anything still unparseable after this is genuinely
+ * invalid and is still rejected.
+ */
+export function normalizeWebsiteUrl(raw: string): string {
+  const value = raw.trim();
+  if (!value) return "";
+  if (/^[a-z][a-z0-9+.-]*:\/\//i.test(value)) return value;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(value)) return value; // a non-http scheme; let validation reject it
+  return `https://${value}`;
+}
+
 export function assertSameOriginQuoteRequest(request: RequestLike): void {
   const origin = request.headers.get("origin");
   if (!origin) throw new QuoteRequestError(403, "This submission source is not allowed.");
@@ -279,10 +300,11 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
   const service = allowlisted(scalar(formData, "service", 100), ALLOWED_SERVICES, "Invalid service selection.");
   const details = scalar(formData, "details", 5_000, { multiline: true });
   const alreadyTried = scalar(formData, "alreadyTried", 5_000, { multiline: true });
-  const currentUrl = scalar(formData, "currentUrl", 2_048);
+  const currentUrl = normalizeWebsiteUrl(scalar(formData, "currentUrl", 2_048));
   if (currentUrl) {
     try {
       const parsed = new URL(currentUrl);
+      if (!parsed.hostname.includes(".")) throw new Error("no dot in host");
       if (!/^https?:$/.test(parsed.protocol) || parsed.username || parsed.password) throw new Error("unsupported");
     } catch {
       throw new QuoteRequestError(400, "Current website must be a valid HTTP(S) URL.");

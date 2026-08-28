@@ -340,7 +340,7 @@ export default function ContactPageClient() {
                       <input type="tel" id="contact-phone" name="phone" autoComplete="tel" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
                     </ContactField>
                     <ContactField label="Current website" id="contact-url" hint="optional">
-                      <input type="url" id="contact-url" name="currentUrl" autoComplete="url" placeholder="https://example.com" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
+                      <input type="text" inputMode="url" id="contact-url" name="currentUrl" autoComplete="url" placeholder="example.com" className="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac" />
                     </ContactField>
                     <ContactSelect label="Current platform" id="contact-platform" name="currentPlatform" options={platforms} />
                     <ContactSelect label="Primary goal" id="contact-goal" name="primaryGoal" options={goals} />

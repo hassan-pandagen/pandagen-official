@@ -182,11 +182,19 @@ export default function HeroLeadForm({
               <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
                 {copy.urlLabel}{" "}
                 <span className="font-medium normal-case text-stone-500">({copy.urlHint})</span>
+                {/*
+                  type="text", not type="url". The browser refuses to submit a
+                  type="url" field unless it carries a scheme, so "www.acme.com"
+                  produced "Please enter a URL" on a field labelled optional.
+                  inputMode keeps the URL keyboard on mobile; the server
+                  normalises a bare host to https before validating.
+                */}
                 <input
-                  type="url"
+                  type="text"
+                  inputMode="url"
                   name="currentUrl"
                   autoComplete="url"
-                  placeholder="https://example.com"
+                  placeholder="example.com"
                   className="mt-1.5 w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
                 />
               </label>
