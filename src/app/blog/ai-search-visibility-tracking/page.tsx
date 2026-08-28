@@ -9,7 +9,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText } from "@/components/ui/BlogStyles";
-import { asOf, datedFact } from "@/data/spec-facts";
+import { asOf, datedFact, spec } from "@/data/spec-facts";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -130,8 +130,9 @@ export default function AiSearchVisibilityTracking() {
                     <BlogText>
                         You can track AI visibility for free in Google Search Console, under Performance then Generative
                         AI. It reports how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary
-                        results. We pulled ours on 25 August 2026 and found 6,700 AI impressions spread across 77 pages,
-                        with 3,627 of them on a single page. One URL out of 77 was 54 percent of everything.
+                        results. PandaCodeGen pulled its own on 25 August 2026 and found 6,700 AI impressions spread
+                        across 77 pages, with 3,627 of them on a single page. One URL out of 77 was 54 percent of
+                        everything.
                     </BlogText>
 
                     <BlogHighlight>
@@ -143,7 +144,8 @@ export default function AiSearchVisibilityTracking() {
                     <section aria-labelledby="method-heading" className="rounded-2xl border border-stone-300 bg-white p-6">
                         <h2 id="method-heading" className="text-lg font-bold text-charcoal">Method and source data</h2>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
-                            Two Google Search Console exports for pandacodegen.com, both pulled on 25 August 2026: the
+                            Two Google Search Console exports for pandacodegen.com, the property PandaCodeGen operates,
+                            both pulled on 25 August 2026: the
                             Generative AI report exported by page, and the standard Performance report exported by page
                             and by query. The Generative AI export contained 77 URLs carrying 6,700 AI impressions.
                         </p>
@@ -183,14 +185,31 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
                     <BlogText>
                         A detail worth getting right, because most write-ups blur it. Clicks on AI results are not
-                        missing from Search Console altogether. Google documents that {datedFact("gsc-ai-overview-click-counting")},
-                        so those clicks have been landing in your ordinary Performance totals the whole time, mixed in
-                        with everything else. What the Generative AI report adds is the ability to see AI impressions on
+                        missing from Search Console altogether.{" "}
+                        <a
+                            href={spec("gsc-ai-overview-click-counting").source}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cognac hover:underline"
+                        >
+                            Google documents
+                        </a>{" "}
+                        that {datedFact("gsc-ai-overview-click-counting")}, so those clicks have been landing in your
+                        ordinary Performance totals the whole time, mixed in with everything else. What the Generative AI report adds is the ability to see AI impressions on
                         their own. What that report does not yet add is the ability to see AI clicks on their own.
                     </BlogText>
                     <BlogText>
-                        One further exclusion to know about: {datedFact("gsc-search-labs-excluded")}. Anything Google is still
-                        testing in Labs is invisible to you, which means the Generative AI number is a floor rather than a full count.
+                        One further exclusion to know about, from{" "}
+                        <a
+                            href={spec("gsc-search-labs-excluded").source}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cognac hover:underline"
+                        >
+                            the same Google documentation
+                        </a>
+                        : {datedFact("gsc-search-labs-excluded")}. Anything Google is still testing in Labs is invisible
+                        to you, which means the Generative AI number is a floor rather than a full count.
                     </BlogText>
 
                     <BlogHeader id="concentration">How concentrated is AI visibility, really?</BlogHeader>
@@ -362,9 +381,9 @@ export default function AiSearchVisibilityTracking() {
 
                     <BlogHeader id="what-we-do">What we do with this</BlogHeader>
                     <BlogText>
-                        The conclusion we drew is not that a site needs a separate AI strategy. Retrieval systems reward
-                        pages clear enough to lift, attribute and trust, which is the same property that makes a page
-                        good for a reader. Answer-first sections, named entities and dated facts do that work. A
+                        The conclusion is not that a site needs a separate AI strategy. PandaCodeGen builds sites so a
+                        retrieval system can lift a passage, attribute it and trust it, and that is the same property
+                        that makes a page good for a reader. Answer-first sections, named entities and dated facts do that work. A
                         separate file for robots does not.
                     </BlogText>
                     <BlogText>
