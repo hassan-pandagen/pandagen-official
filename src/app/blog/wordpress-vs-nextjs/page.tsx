@@ -440,7 +440,7 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogHeader id="cost">Three-year cost comparison</BlogHeader>
                     <BlogText>
-                        Neither platform has a three-year cost until you fill in seven line items from your own invoices and like-for-like quotes. A free hosting allowance is not a permanent commercial-cost promise, a WordPress maintenance retainer is not universal, and a custom build does not have zero maintenance. Do not publish a saving or a payback period until every input and assumption is visible and approved.
+                        Neither platform has a three-year cost until you fill in seven line items from your own invoices and like-for-like quotes. A generous free tier today is not a price you are owed in year three, a WordPress maintenance retainer is not universal, and a custom build still needs somebody to maintain it. Fill the seven rows below with your own figures before you believe any saving or payback period, including ours.
                     </BlogText>
                     <BlogList
                         items={[

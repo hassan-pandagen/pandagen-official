@@ -267,8 +267,8 @@ export default function WebsiteCostGuide() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        The reliable pattern is that free hosting stays free and everything a business needs is what
-                        you pay for. Check these four before assuming a free tier fits:
+                        The reliable pattern is that the free tier stays free and everything you need in order to run a
+                        real company on it is what you pay for. Check these four before assuming a free tier fits:
                     </BlogText>
                     <BlogList
                         items={[

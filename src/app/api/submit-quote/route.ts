@@ -88,6 +88,7 @@ export async function POST(request: NextRequest) {
         phone: fields.phone,
         service: fields.service,
         details: fields.details,
+        alreadyTried: fields.alreadyTried,
         currentUrl: fields.currentUrl,
         currentPlatform: fields.currentPlatform,
         primaryGoal: fields.primaryGoal,
@@ -142,6 +143,7 @@ export async function POST(request: NextRequest) {
             ${detailRow("Timeline", fields.timeline)}
             ${detailRow("Indicative budget", fields.budget)}
             ${detailRow("Service", fields.service)}
+            ${fields.alreadyTried ? `<p style="margin:14px 0 6px"><strong>Already tried:</strong></p><p style="white-space:pre-wrap;background:#f5f5f4;padding:12px;border-radius:6px">${escHtml(fields.alreadyTried)}</p>` : ""}
             ${fields.details ? `<p style="margin:14px 0 6px"><strong>Project details:</strong></p><p style="white-space:pre-wrap;background:#f5f5f4;padding:12px;border-radius:6px">${escHtml(fields.details)}</p>` : ""}
           </div>
           ${fields.trafficSource || fields.landingPage ? `

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { pricingFaqs } from "@/data/pricing-faqs";
 
 const comparisonRows = [
   { label: "Scope", agency: "May be described at a high level", pandagen: "Every URL, all the content, what it connects to, and what is not included", isPain: false },
@@ -478,16 +479,9 @@ export default function PricingPageClient() {
       <section className="container mx-auto px-6 pb-16 md:pb-32 max-w-3xl">
         <h2 className="text-3xl font-bold text-charcoal text-center mb-8 md:mb-12">Common Questions</h2>
         <div className="space-y-6">
-          <FAQ q="Which package should I start with?" a="Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Choose the closest base; extra pages or features are discussed and priced in the written scope before work starts." />
-          <FAQ q="Do I need a long contract for every project?" a="No. A straightforward project can use a clear written quote or order summary accepted in email or chat. Regulated, sensitive, or complex work may need a signed statement of work or other detailed agreement. In either case, the accepted written project terms control." />
-          <FAQ q="How do payment milestones work?" a="A common option is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms, but the parties may agree to another written schedule. The accepted terms also state currency, taxes, due dates, approval points, and any pause or cancellation terms." />
-          <FAQ q="What if my project is bigger than Scale?" a="Larger, multi-region, e-commerce, application, and integration-heavy work is scoped separately after discovery. The proposal lists the team, deliverables, dependencies, exclusions, and schedule for that engagement." />
-          <FAQ q="What support is included?" a="A package discussion may start with 15 business days of support for Starter and 30 business days for Growth and Scale. Support is included only when the accepted project terms state the period, start event, covered defects or minor adjustments, response expectations, exclusions, and any bespoke arrangement. Material new features, extra pages, and third-party changes are separately scoped." />
-          <FAQ q="When does the 100% refund apply?" a="When that protection is included in the accepted project terms, it applies if PandaCodeGen fails to deliver the promised deliverables under that written scope. The terms define the trigger, verification, and any cure process. It does not apply merely because preferences change, a new direction is requested, or work outside the agreed scope is desired." />
-          <FAQ q="How should I compare providers?" a="Compare the actual scope, migration plan, acceptance tests, ownership and licensing terms, third-party costs, change process, launch responsibilities, warranty, and remedies, not just the headline price." />
-          <FAQ q="What determines the quote?" a="The main drivers are URL and content volume, CMS structure, custom design and functionality, integrations, analytics, accessibility and compliance needs, stakeholders, migration risk, and deadline." />
-          <FAQ q="What happens before you quote?" a="We review your current platform and URL, primary goal, content and traffic scale, required integrations, timeline, budget range, and known constraints. We then document assumptions and open questions before pricing." />
-          <FAQ q="How is the 90+ performance target checked?" a="The accepted project terms name the representative pages and reproducible Lighthouse conditions for mobile and desktop. Each of three recorded pre-handover runs per agreed page/profile must score 90 or higher. This is a lab acceptance target, not a guarantee of field Core Web Vitals, rankings, revenue, or unchanged results after third-party or client changes." />
+          {pricingFaqs.map((faq) => (
+            <FAQ key={faq.q} q={faq.q} a={faq.a} />
+          ))}
         </div>
       </section>
 

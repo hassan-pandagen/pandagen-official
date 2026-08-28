@@ -50,6 +50,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/panda-codelab', changeFrequency: 'yearly', priority: 0.6 },
+    // Added 28 Aug 2026. Both pages were live, linked from /work and declaring
+    // index:true, but had been missed here when they shipped, so the sitemap
+    // contradicted their own robots directive. seo-audit.mjs flagged both.
+    { path: '/work/emblematic-studio', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/ladies-4-jesus', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },

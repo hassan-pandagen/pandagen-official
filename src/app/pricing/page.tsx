@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import PricingPageClient from "./PricingPageClient";
 import { alternatesFor } from "@/lib/i18n/config";
+import { pricingFaqs } from "@/data/pricing-faqs";
 
 export const metadata: Metadata = {
     title: { absolute: "Website Migration Pricing & Scope | PandaCodeGen" },
@@ -21,6 +22,33 @@ export const metadata: Metadata = {
     },
 };
 
+/**
+ * FAQPage JSON-LD for the pricing page.
+ *
+ * Added 28 Aug 2026. The page rendered fourteen visible FAQ answers and emitted
+ * no structured data for any of them, while the blog corpus emits FAQPage on
+ * almost every post. Both sides now read the same array, so the schema cannot
+ * assert an answer the visitor cannot see.
+ */
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.pandacodegen.com/pricing#faq",
+    mainEntity: pricingFaqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+};
+
 export default function PricingPage() {
-    return <PricingPageClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <PricingPageClient />
+        </>
+    );
 }

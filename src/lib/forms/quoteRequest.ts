@@ -22,6 +22,7 @@ export interface QuoteScalarFields {
   phone: string;
   service: string;
   details: string;
+  alreadyTried: string;
   currentUrl: string;
   currentPlatform: string;
   primaryGoal: string;
@@ -43,6 +44,7 @@ const ALLOWED_FIELDS = new Set([
   "phone",
   "service",
   "details",
+  "alreadyTried",
   "currentUrl",
   "currentPlatform",
   "primaryGoal",
@@ -243,6 +245,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
   const phone = scalar(formData, "phone", 50);
   const service = allowlisted(scalar(formData, "service", 100), ALLOWED_SERVICES, "Invalid service selection.");
   const details = scalar(formData, "details", 5_000, { multiline: true });
+  const alreadyTried = scalar(formData, "alreadyTried", 5_000, { multiline: true });
   const currentUrl = scalar(formData, "currentUrl", 2_048);
   if (currentUrl) {
     try {
@@ -272,6 +275,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
     phone,
     service,
     details,
+    alreadyTried,
     currentUrl,
     currentPlatform,
     primaryGoal,

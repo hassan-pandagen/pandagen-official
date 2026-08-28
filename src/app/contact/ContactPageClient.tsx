@@ -320,6 +320,17 @@ export default function ContactPageClient() {
                     <ContactSelect label="Indicative budget" id="contact-budget" name="budget" options={budgets} />
                   </div>
 
+                  <ContactField label="What have you already tried?" id="contact-tried" hint="optional">
+                    <textarea
+                      id="contact-tried"
+                      name="alreadyTried"
+                      rows={3}
+                      autoComplete="off"
+                      placeholder="Caching plugins, a speed agency, a redesign, switching hosts. What happened?"
+                      className="w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                    />
+                  </ContactField>
+
                   <ContactField label="Project details" id="contact-details" hint="optional">
                     <textarea
                       id="contact-details"
