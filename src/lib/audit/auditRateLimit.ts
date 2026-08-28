@@ -299,6 +299,20 @@ function rulesFor(request: NextRequest, target: URL): RateLimitRule[] {
   ];
 }
 
+/**
+ * Hourly ceiling on emails either public form can cause.
+ *
+ * Tied to the email provider, not to expected traffic. Resend's free plan allows
+ * 3,000 a month with a hard 100 a day, so an hourly global of 100 on each of the
+ * two form endpoints meant a single bad hour could consume the whole daily
+ * allowance and every real enquiry after it would silently fail to send.
+ *
+ * 50 across both, set 28 Aug 2026. Real volume is nowhere near this, so the only
+ * thing it constrains is abuse. Raise it only alongside a paid Resend plan, and
+ * remember overage there is billed rather than blocked.
+ */
+const FORM_GLOBAL_HOURLY_LIMIT = 50;
+
 function leadRulesFor(request: NextRequest): RateLimitRule[] {
   const prefix = process.env.AUDIT_RATE_LIMIT_KEY_PREFIX || 'pandacodegen:audit:v1';
   const oneHourMs = 60 * 60 * 1_000;
@@ -313,7 +327,7 @@ function leadRulesFor(request: NextRequest): RateLimitRule[] {
     {
       key: `${prefix}:lead:global`,
       name: 'global',
-      limit: 100,
+      limit: FORM_GLOBAL_HOURLY_LIMIT,
       windowMs: oneHourMs,
     },
   ];
@@ -333,7 +347,7 @@ function quoteRulesFor(request: NextRequest): RateLimitRule[] {
     {
       key: `${prefix}:quote:global`,
       name: 'global',
-      limit: 100,
+      limit: FORM_GLOBAL_HOURLY_LIMIT,
       windowMs: oneHourMs,
     },
   ];
