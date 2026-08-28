@@ -1,6 +1,7 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import PageContent from "./PageContent";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const canonical = "https://www.pandacodegen.com/services/ecommerce";
 
@@ -43,6 +44,18 @@ export default function EcommercePage() {
           { "@type": "ListItem", position: 2, name: "Services", item: "https://www.pandacodegen.com/services" },
           { "@type": "ListItem", position: 3, name: "E-commerce", item: canonical },
         ],
+      },
+      {
+        // Same array PageContent renders, so the schema cannot assert an answer
+        // the visitor cannot see. This page builds its graph inline rather than
+        // using ServicePageSchema, which is why the node is spelled out here.
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        mainEntity: serviceFaqs["ecommerce"].map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
+        })),
       },
     ],
   };

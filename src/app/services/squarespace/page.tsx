@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
 import PageContent from "./PageContent";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/squarespace";
 const name = "Squarespace Website Migration";
@@ -16,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function SquarespaceServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Squarespace migration" /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Squarespace migration" faqs={serviceFaqs["squarespace"]} /><PageContent /></>;
 }

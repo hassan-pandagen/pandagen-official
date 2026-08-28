@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
 import PageContent from "./PageContent";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/woocommerce";
 const name = "WooCommerce Storefront Migration";
@@ -16,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function WooCommerceServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce migration" /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce migration" faqs={serviceFaqs["woocommerce"]} /><PageContent /></>;
 }

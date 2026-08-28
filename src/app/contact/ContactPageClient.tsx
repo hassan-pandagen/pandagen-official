@@ -2,7 +2,7 @@
 
 import { CheckCircle2, Globe, Mail, MapPin, Send } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
@@ -87,6 +87,16 @@ export default function ContactPageClient() {
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
   const formFunnel = useLeadFormFunnel({ formId: "contact_page", active: !isSuccess });
 
+  // Stamped on first interaction, not in an effect: the server render must not
+  // depend on a clock. The API only needs a plausible fill duration, and a form
+  // submitted faster than a human can read it is the cheapest bot signal there
+  // is. HeroLeadForm and QuoteModal already sent this; this form did not, so the
+  // check could never fire on the page that gets the most considered enquiries.
+  const formLoadedAtRef = useRef(0);
+  const stampFormLoad = () => {
+    if (formLoadedAtRef.current === 0) formLoadedAtRef.current = Date.now();
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
@@ -99,6 +109,7 @@ export default function ContactPageClient() {
       setIsSuccess(true);
       return;
     }
+    if (formLoadedAtRef.current > 0) formData.append("_t", String(formLoadedAtRef.current));
 
     setIsSubmitting(true);
     try {
@@ -274,7 +285,10 @@ export default function ContactPageClient() {
                   aria-labelledby="contact-quote-form"
                   aria-busy={isSubmitting}
                   onSubmit={handleSubmit}
-                  onFocusCapture={formFunnel.onFocusCapture}
+                  onFocusCapture={(event) => {
+                    stampFormLoad();
+                    formFunnel.onFocusCapture(event);
+                  }}
                   onBlurCapture={formFunnel.onBlurCapture}
                   onInvalidCapture={handleInvalidCapture}
                   className="mt-7 space-y-5"

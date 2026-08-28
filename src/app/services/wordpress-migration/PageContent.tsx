@@ -16,29 +16,9 @@ import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 import { Gauge, Shield, RefreshCcw, Eye } from "lucide-react";
+import { serviceFaqs } from "@/data/service-faqs";
 
-const faqs = [
-  {
-    q: "Will I lose my Google rankings during migration?",
-    a: "No. We map every single URL from your old WordPress site to your new site with 301 redirects. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed."
-  },
-  {
-    q: "How long does a WordPress migration take?",
-    a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: staged cutover with a documented rollback path. Larger sites can run to four weeks. Compare any quote on like-for-like scope rather than on headline timeline. AI tooling collapses that timeline without cutting corners."
-  },
-  {
-    q: "What happens to my blog posts and content?",
-    a: "Everything migrates. Blog posts, pages, images, metadata, categories. We extract it all from your WordPress database and move it to a modern content editor where you can still edit content without touching code."
-  },
-  {
-    q: "How much does a WordPress to Next.js migration cost?",
-    a: "Compare quotes on like-for-like scope. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (15 to 50 pages, custom features). Scale is $5,000 to $10,000 (complex WordPress or WooCommerce sites, 30+ pages, custom integrations). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. Whether it pays back, and over what period, depends on your own invoices and your own measured results."
-  },
-  {
-    q: "Can I still edit my website after migration?",
-    a: "Yes. We set up a content editor with a user-friendly dashboard. You can edit text, images, blog posts, and pages without any coding knowledge. It's simpler than WordPress: no plugins to update, no themes to manage."
-  },
-];
+const faqs = serviceFaqs["wordpress-migration"];
 
 export default function PageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

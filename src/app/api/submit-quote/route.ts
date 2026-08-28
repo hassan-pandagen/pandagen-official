@@ -10,8 +10,10 @@ import {
 } from "@/lib/audit/auditRateLimit";
 import {
   assertSameOriginQuoteRequest,
+  isQuoteFilledTooFast,
   QuoteRequestError,
   readBoundedQuoteFormData,
+  readQuoteFormLoadedAt,
   readQuoteHoneypot,
   validateQuoteScalarFields,
 } from "@/lib/forms/quoteRequest";
@@ -73,7 +75,21 @@ export async function POST(request: NextRequest) {
     }
 
     const formData = await readBoundedQuoteFormData(request);
+
+    // Both discards answer with the ordinary success body on purpose. Telling a
+    // script it was caught teaches it what to change; a plain 200 gives it no
+    // signal and no reason to retry. Nothing is sent and nothing is stored.
     if (readQuoteHoneypot(formData)) {
+      return NextResponse.json(
+        { success: true, message: "Quote request sent successfully" },
+        { status: 200, headers: { "Cache-Control": "no-store" } }
+      );
+    }
+
+    // The `_t` stamp was parsed here since the form was built and never checked,
+    // so three forms were sending a timing signal nothing read. Wired up 28 Aug
+    // 2026. See isQuoteFilledTooFast for why this fails open.
+    if (isQuoteFilledTooFast(readQuoteFormLoadedAt(formData))) {
       return NextResponse.json(
         { success: true, message: "Quote request sent successfully" },
         { status: 200, headers: { "Cache-Control": "no-store" } }

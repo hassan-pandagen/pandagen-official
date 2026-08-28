@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
 import PageContent from "./PageContent";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/gohighlevel";
 const name = "GoHighLevel Website & CRM Integration";
@@ -16,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function GoHighLevelServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="GoHighLevel" /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="GoHighLevel" faqs={serviceFaqs["gohighlevel"]} /><PageContent /></>;
 }

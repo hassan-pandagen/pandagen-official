@@ -11,6 +11,7 @@ import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const comparisonData = [
   { feature: "Performance", wix: "Measure representative pages, scripts, media, and apps", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
@@ -20,28 +21,7 @@ const comparisonData = [
   { feature: "Search Controls", wix: "Audit rendering, metadata, links, and structured data", custom: "Implement agreed controls; outcomes remain third-party controlled", icon: TrendingUp },
 ];
 
-const faqs = [
-  {
-    q: "Will I lose my Google rankings if I leave Wix?",
-    a: "Any migration can affect crawling, indexing, and visibility. We inventory URLs, metadata, canonicals, content, links, and redirects, then define pre-launch and post-launch checks. Search engines control rankings, so no ranking outcome is guaranteed."
-  },
-  {
-    q: "Can I still edit my website without coding?",
-    a: "We can scope a CMS for approved text, image, and post workflows. The editor experience, roles, previews, content model, training, and maintenance responsibilities depend on the selected provider and written scope."
-  },
-  {
-    q: "How long does it take to migrate from Wix?",
-    a: "Timing depends on the page and content inventory, design, apps, forms, stores, bookings, localization, data, integrations, redirects, reviews, and acceptance requirements. Discovery produces a written proposal with milestones and dependencies."
-  },
-  {
-    q: "What about my Wix forms and contact pages?",
-    a: "We inventory each form, field, validation rule, destination, consent requirement, notification, automation, and error path. Supported integrations and acceptance tests are defined for the approved services; continuity and performance are measured rather than assumed."
-  },
-  {
-    q: "Is custom code harder to maintain than Wix?",
-    a: "The maintenance model changes rather than disappearing. Discovery compares editorial needs, application updates, hosting, third-party services, monitoring, security, and support so ongoing responsibilities and costs can be stated in the proposal."
-  },
-];
+const faqs = serviceFaqs["wix"];
 
 export default function PageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

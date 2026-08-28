@@ -2,6 +2,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
 import PageContent from "./PageContent";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/custom-engineering";
 const name = "Custom Web Development Agency";
@@ -20,5 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function EngineeringPage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Custom engineering" /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Custom engineering" faqs={serviceFaqs["custom-engineering"]} /><PageContent /></>;
 }

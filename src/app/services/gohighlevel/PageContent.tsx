@@ -10,6 +10,7 @@ import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const comparisonData = [
   { feature: "Performance Review", ghl: "Measure the current pages with a defined device, network, and test run", custom: "Set a baseline, budget, and acceptance method for the approved frontend", icon: Gauge },
@@ -19,28 +20,7 @@ const comparisonData = [
   { feature: "Search Readiness", ghl: "Check what actually renders, the metadata, the content, the links and the structured data", custom: "We implement the controls we agreed. Whether you show up in search is still Google’s call, not ours", icon: TrendingUp },
 ];
 
-const faqs = [
-  {
-    q: "Will my GHL automations break during migration?",
-    a: "First we list the forms, triggers, pipelines, webhooks and account settings that matter. A parallel build and staged cutover can reduce risk, but continuity depends on GHL's APIs, account configuration, third-party services, and the acceptance checks documented for the project."
-  },
-  {
-    q: "Do I need to cancel GHL?",
-    a: "Not necessarily. One path keeps GHL for CRM and connects a separate frontend; another scopes replacement workflows. Discovery determines feasibility, migration risk, and the responsibilities of each system."
-  },
-  {
-    q: "How much does a custom site with GHL integration cost?",
-    a: "Price and timing depend on page inventory, design, API access, forms, calendars, workflows, sub-accounts, data, and testing needs. The written proposal states scope, dependencies, commercial terms, support, access, ownership, and the cutover plan."
-  },
-  {
-    q: "Can you build custom landing pages that work with GHL?",
-    a: "We can scope landing pages that submit to supported GHL endpoints or webhooks. Performance, data flow, attribution, and error handling are tested against agreed conditions; advertising scores and lead costs are controlled by third parties and are not guaranteed."
-  },
-  {
-    q: "What if I want to leave GHL later?",
-    a: "A future replacement can be considered when the initial architecture defines clear integration boundaries. Feasibility still depends on the workflows, data access, exports, provider terms, and a separately approved migration scope."
-  },
-];
+const faqs = serviceFaqs["gohighlevel"];
 
 export default function PageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

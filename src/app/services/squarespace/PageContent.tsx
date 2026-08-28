@@ -11,6 +11,7 @@ import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const squarespaceComparison = [
   { metric: "Performance", bad: "Measure current", good: "Agree target", icon: Zap },
@@ -20,28 +21,7 @@ const squarespaceComparison = [
   { metric: "Design System", bad: "Map limits", good: "Scope changes", icon: Layout },
 ];
 
-const faqs = [
-  {
-    q: "Will my Squarespace site design transfer to custom code?",
-    a: "We list the design, the content, the components, how it behaves on each screen and what accessibility needs. The proposal then defines what is retained, redesigned, or excluded, along with the method used to review visual fidelity and performance."
-  },
-  {
-    q: "Can I still use Squarespace for my online store?",
-    a: "A full migration is not always necessary. We can evaluate retaining Squarespace Commerce or using a supported checkout integration, with fees, product data, tax, shipping, payments, and operational responsibilities reviewed before a recommendation."
-  },
-  {
-    q: "How much does a Squarespace migration cost?",
-    a: "Price and timing depend on how many pages and how much content there is, the design, whether you sell, scheduling, member areas, integrations, the data, redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies."
-  },
-  {
-    q: "What if I have a blog on Squarespace?",
-    a: "We can list the posts, media, authors, dates, URLs, metadata and what your editors need. The migration plan records what can be exported, transformed, redirected, manually recreated, or excluded; performance is measured against an agreed baseline."
-  },
-  {
-    q: "Is the migration disruptive to my business?",
-    a: "Building alongside the live site and switching DNS in stages cuts the disruption. No migration is risk free. The proposal defines backups, DNS responsibilities, verification, monitoring, rollback, and the maintenance window for the approved site."
-  },
-];
+const faqs = serviceFaqs["squarespace"];
 
 export default function SquarespacePageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

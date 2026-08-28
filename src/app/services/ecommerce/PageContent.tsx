@@ -11,29 +11,9 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import ShopifyKiller from "@/components/sections/ShopifyKiller";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import CaseStudyGrid from "@/components/services/CaseStudyGrid";
+import { serviceFaqs } from "@/data/service-faqs";
 
-const faqs = [
-  {
-    q: "What is custom Shopify?",
-    a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, with the storefront layer rebuilt for speed. The actual improvement depends on your current theme, apps and catalogue, so we measure your baseline before quoting."
-  },
-  {
-    q: "Will my Shopify apps still work?",
-    a: "Your backend apps (inventory, email, shipping) work as before. Frontend apps (review widgets, upsell popups) get rebuilt as native features in your custom code, so they load instantly instead of injecting slow JavaScript. You stop paying monthly app fees for features we build once."
-  },
-  {
-    q: "How long does a custom storefront migration take?",
-    a: "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build (product pages, cart, checkout) accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: staged cutover with a documented rollback path. Compare any quote on like-for-like scope rather than on headline timeline. AI tooling collapses that timeline without cutting corners."
-  },
-  {
-    q: "Will I lose sales during the migration?",
-    a: "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Your existing store stays live until the new one is verified, and a rollback path is documented before cutover. Universal zero interruption is not promised."
-  },
-  {
-    q: "How much does a custom Shopify storefront cost?",
-    a: "Compare quotes on like-for-like scope. Four tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds are $5,000 to $10,000 (subscriptions, custom logic, large catalogs, 30+ pages). Scale+ is $10,000+ for enterprise headless commerce, custom-quoted after a scoping call. Whether it pays back, and over what period, depends on your own app bill and your own measured results."
-  },
-];
+const faqs = serviceFaqs["ecommerce"];
 
 export default function PageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

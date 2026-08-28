@@ -11,6 +11,7 @@ import PricingTiers from "@/components/services/PricingTiers";
 import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import { spec } from "@/data/spec-facts";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const comparisonData = [
   { feature: "Performance", webflow: "Measure the current pages and scripts", custom: "Agree a baseline, budgets, and test conditions", icon: Gauge },
@@ -20,28 +21,7 @@ const comparisonData = [
   { feature: "Content Model", webflow: "List the collections, how they relate, which languages, and where Webflow stops you", custom: "Choose a CMS and model against validated requirements", icon: Database },
 ];
 
-const faqData = [
-  {
-    q: "Is custom code harder to use than Webflow's visual editor?",
-    a: "What editing feels like depends on which CMS you pick, who is allowed to do what, whether they can preview, how publishing flows, and how content is structured. Discovery compares those requirements with Webflow's current editor and records any training, maintenance, or developer dependency in scope.",
-  },
-  {
-    q: "Can you recreate my Webflow animations in code?",
-    a: "We can inventory Webflow interactions and evaluate equivalent or revised implementations. Feasibility, accessibility, reduced-motion behavior, browser support, assets, and acceptance criteria are defined for the approved interactions.",
-  },
-  {
-    q: "What about Webflow's CMS?",
-    a: "We can map your Webflow collections, fields, references, assets, languages, slugs and publishing flow onto a CMS that fits. Export coverage, provider limits, data cleanup, API access, and migration verification vary by project and provider.",
-  },
-  {
-    q: "How much does it cost to migrate from Webflow?",
-    a: "Price and timing depend on how many pages there are, the design system, the interactions, the CMS data, the languages, whether you sell, what it connects to, the redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
-  },
-  {
-    q: "What if Webflow adds the features I need later?",
-    a: "It is possible, and platform capabilities change. The decision should use current Webflow documentation, your actual account and roadmap tolerance, and a like-for-like comparison of implementation and operating responsibilities.",
-  },
-];
+const faqData = serviceFaqs["webflow"];
 
 export default function WebflowPageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

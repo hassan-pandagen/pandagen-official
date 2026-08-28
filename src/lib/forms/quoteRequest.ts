@@ -232,6 +232,37 @@ export function readQuoteFormLoadedAt(formData: FormData): number | null {
   return formLoadedAt;
 }
 
+/**
+ * Shortest fill time a real submission is allowed to take.
+ *
+ * A person has to read the labels, type a name, an email and a sentence or two.
+ * Two seconds is not enough time to do that, and a script posting the form has
+ * no reason to wait. Deliberately generous: password managers and browser
+ * autofill can complete a form very fast, and rejecting a real enquiry costs far
+ * more than letting one bot through.
+ */
+export const MIN_QUOTE_FILL_MS = 2_000;
+
+/**
+ * True when the submission arrived implausibly fast.
+ *
+ * `_t` is set by the client, so a bot that bothers to forge a plausible value
+ * defeats this. That is fine. It is a cheap filter for the unsophisticated
+ * majority, layered under the same-origin check, the rate limiter, the honeypot
+ * and the dedupe claim, not a standalone control.
+ *
+ * Returns false whenever the timing cannot be trusted, including a missing
+ * stamp, a stamp from the future, or one old enough to be a stale tab. Failing
+ * open is the correct direction here: the cost of a false positive is a lost
+ * customer who is never told why.
+ */
+export function isQuoteFilledTooFast(formLoadedAt: number | null, now: number = Date.now()): boolean {
+  if (formLoadedAt === null) return false;
+  const elapsed = now - formLoadedAt;
+  if (elapsed < 0) return false;
+  return elapsed < MIN_QUOTE_FILL_MS;
+}
+
 export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields {
   for (const [key, value] of formData.entries()) {
     if (typeof value !== "string") throw new QuoteRequestError(400, "File uploads are not accepted by this form.");

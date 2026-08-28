@@ -11,6 +11,7 @@ import PartnerPromise from "@/components/services/PartnerPromise";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import BuiltWith from "@/components/sections/BuiltWith";
+import { serviceFaqs } from "@/data/service-faqs";
 
 const comparisonData = [
   { feature: "Capacity Planning", nocode: "Capacity and scaling controls depend on the selected platform and plan", custom: "Load profile, capacity targets, and scaling controls are defined during discovery", icon: Users },
@@ -21,28 +22,7 @@ const comparisonData = [
   { feature: "AI Integration", nocode: "Options depend on available APIs, add-ons, and data controls", custom: "Integrations get designed around the data you approved, the security you need, and how it will be judged", icon: Cpu },
 ];
 
-const faqData = [
-  {
-    q: "How long does it take to build a custom app?",
-    a: "How long it takes depends on how firm the requirements are, what it connects to, how much data moves, how quickly you can review, and how you sign it off. Discovery produces a written proposal with milestones, dependencies, and the change process before work begins.",
-  },
-  {
-    q: "How much does custom development cost?",
-    a: "We quote custom work after looking at what you need, what it connects to, the data, the security, and what we are waiting on. The accepted proposal states the price model, payment schedule, scope, exclusions, support, repository access, licensing, and IP terms.",
-  },
-  {
-    q: "Can I add AI features to my app?",
-    a: "We can scope direct integrations with supported AI-provider APIs for chat, document analysis, extraction, generation, or search. Feasibility depends on provider capabilities, data quality, privacy requirements, evaluation criteria, and the approved scope.",
-  },
-  {
-    q: "What if I already have a Bubble/no-code app?",
-    a: "We can go through the application logic, the data model, how people sign in and what it connects to, then propose a staged migration and a cutover plan. Performance and continuity are measured against agreed baselines and acceptance checks rather than assumed in advance.",
-  },
-  {
-    q: "Do I own the code?",
-    a: "The accepted proposal writes down who gets the code, the documentation, deployment access, the licences, which third-party components are involved, when IP transfers and when handover happens so both parties know exactly what is included.",
-  },
-];
+const faqData = serviceFaqs["custom-engineering"];
 
 export default function PageContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

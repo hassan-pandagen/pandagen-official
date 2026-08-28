@@ -16,49 +16,9 @@ import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import PlatformKillerChart from "@/components/services/PlatformKillerChart";
 import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import { Gauge } from "lucide-react";
+import { serviceFaqs } from "@/data/service-faqs";
 
-const faqs = [
-  {
-    q: "Will I lose my WooCommerce orders and customer data?",
-    a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. Migrated records are reconciled against a pre-migration export and any exceptions are reported before cutover. We test imports in staging before anything touches your live store."
-  },
-  {
-    q: "Do I keep my Google rankings after migrating from WooCommerce?",
-    a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed."
-  },
-  {
-    q: "Can I still manage products and orders without being technical?",
-    a: "Absolutely. We set up a clean admin dashboard where you can add products, update prices, manage inventory, and process orders. No code required. It's simpler than WooCommerce's admin because we only build what you actually need."
-  },
-  {
-    q: "What payment gateways do you support?",
-    a: "Stripe, PayPal, Apple Pay, Google Pay, Cash App Pay, Klarna, Afterpay, and any other gateway with an API. We integrate them natively. No paid plugin required. Your checkout is fully custom, so we can add any payment method you want."
-  },
-  {
-    q: "How much does a WooCommerce migration cost?",
-    a: "Four tiers. Starter $1,500 (simple WooCommerce migration, 10 to 30 products). Growth $3,500 (30 to 150 products with custom cart logic). Scale $5,000 to $10,000 (subscriptions, B2B pricing, wholesale, 100+ products). Scale+ $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. We give a fixed-price quote upfront. No hourly surprises."
-  },
-  {
-    q: "How long does a WooCommerce migration take?",
-    a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day runs as a staged cutover with a documented rollback path."
-  },
-  {
-    q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
-    a: "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts, booking calendars: these are all custom logic we build natively. You won't need a $300/mo plugin to handle what we can build into the core of your store."
-  },
-  {
-    q: "What about WooCommerce Subscriptions and my existing recurring billing?",
-    a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Payment continuity and re-authentication are tested before cutover. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions."
-  },
-  {
-    q: "Do I keep my Stripe account and saved customer cards?",
-    a: "Yes. We connect to your existing Stripe account using your live keys. All Customer IDs, saved payment methods, subscription IDs, and Stripe Customer Portal history carry over untouched. Your buyers never re-enter a card."
-  },
-  {
-    q: "How do you handle tax (Avalara, TaxJar, WooCommerce Tax)?",
-    a: "We integrate Stripe Tax or TaxJar directly at checkout. Live nexus calculation across all US states plus VAT for UK/EU. Tax handling moves to your payment provider. Stripe Tax handles filings in 30+ jurisdictions."
-  },
-];
+const faqs = serviceFaqs["woocommerce"];
 
 const comparisonRows = [
   { label: "Load Time",     woo: "Measure your own routes",              custom: "Under 1s target",        isPain: true  },
