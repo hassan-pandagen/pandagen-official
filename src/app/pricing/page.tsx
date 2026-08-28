@@ -29,6 +29,12 @@ export const metadata: Metadata = {
  * no structured data for any of them, while the blog corpus emits FAQPage on
  * almost every post. Both sides now read the same array, so the schema cannot
  * assert an answer the visitor cannot see.
+ *
+ * This buys nothing in Google. The FAQ rich result stopped appearing in Search on
+ * 7 May 2026 and Google removed the feature documentation on 15 June 2026. The
+ * reason to carry it is Bing, Perplexity and the RAG crawlers, which still read
+ * FAQPage, and consistency with the rest of the corpus. Do not reintroduce this
+ * anywhere as a Google SERP play.
  */
 const faqSchema = {
     "@context": "https://schema.org",

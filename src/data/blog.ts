@@ -25,7 +25,13 @@ export interface BlogPost {
   featured: boolean;
   illustrationType: IllustrationType;
   lastModified?: string; // For sitemap
-  faqs?: FAQ[]; // For FAQ Schema (helps win featured snippets)
+  // Feeds FAQPage JSON-LD. NOT a Google rich-result lever any more: Google's own
+  // docs carry a deprecation notice saying the FAQ rich result stopped appearing
+  // in Search on 7 May 2026, and the feature documentation was removed on
+  // 15 June 2026. Verified at the primary source 28 Aug 2026. Kept because Bing,
+  // Perplexity and RAG crawlers still read it, which is the audience this site
+  // is built for. Never add it for a Google SERP appearance.
+  faqs?: FAQ[];
   // Optional per-post overrides for the blog card illustration. If omitted, falls back to
   // the illustrationType default in BlogPageClient's cardDisplay map. Use these when
   // multiple posts share an illustrationType and need a unique hook in the card visual.
