@@ -118,6 +118,12 @@ export default async function TopicHubPage({ params }: Params) {
                 breadcrumb: { "@id": `${url}#breadcrumb` },
                 significantLink: `${BASE}${money}`,
                 inLanguage: "en-US",
+                author: {
+                    "@type": "Person",
+                    name: "Hassan Jamal",
+                    url: `${BASE}/about/hassan`,
+                },
+                publisher: { "@id": `${BASE}/#organization` },
             },
             {
                 "@type": "BreadcrumbList",
@@ -158,11 +164,34 @@ export default async function TopicHubPage({ params }: Params) {
                         {hub.h1}
                     </h1>
 
-                    <div className="mb-12 text-lg">
+                    <div className="mb-6 text-lg">
                         {hub.intro.map((para, i) => (
                             <IntroParagraph key={i} text={para} href={money} anchor={hub.moneyAnchor} />
                         ))}
                     </div>
+
+                    {/*
+                      Attribution for the introduction above.
+
+                      Added 28 Aug 2026 after an external review pointed out that these
+                      pages carry several hundred words of authored editorial and named
+                      nobody. That part was correct. A hub is not an article and should
+                      not pretend to be one, so this is a source line rather than a
+                      full byline block: who wrote the framing, and where the rules
+                      that govern it are published.
+                    */}
+                    <p className="mb-12 border-l-2 border-stone-300 pl-4 text-sm leading-relaxed text-stone-600">
+                        Topic introduction written by{" "}
+                        <Link href="/about/hassan" className="font-semibold text-cognac hover:underline">
+                            Hassan Jamal
+                        </Link>
+                        , Lead Engineer, from the scoping and handover work behind these guides. How claims here are
+                        sourced, dated and corrected is set out in our{" "}
+                        <Link href="/editorial-policy" className="text-cognac hover:underline">
+                            editorial policy
+                        </Link>
+                        .
+                    </p>
 
                     <h2 className="mb-6 text-2xl font-bold tracking-tight text-charcoal">
                         Every guide in this topic
