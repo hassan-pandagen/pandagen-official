@@ -122,7 +122,7 @@ export default function AiSearchVisibilityTracking() {
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
-                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="11 min" />
+                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="12 min" />
 
                 <TopicUpLink postId={postId} />
 
@@ -139,6 +139,26 @@ export default function AiSearchVisibilityTracking() {
                         describe our corpus and nothing more. What transfers is the method and the two measurement traps,
                         not the percentages.
                     </BlogHighlight>
+
+                    <section aria-labelledby="method-heading" className="rounded-2xl border border-stone-300 bg-white p-6">
+                        <h2 id="method-heading" className="text-lg font-bold text-charcoal">Method and source data</h2>
+                        <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                            Two Google Search Console exports for pandacodegen.com, both pulled on 25 August 2026: the
+                            Generative AI report exported by page, and the standard Performance report exported by page
+                            and by query. The Generative AI export contained 77 URLs carrying 6,700 AI impressions.
+                        </p>
+                        <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                            Concentration was calculated by sorting pages on AI impressions and accumulating each
+                            page&apos;s share of the total. The rank correlation is Spearman&apos;s, computed across the
+                            76 URLs present in both exports, using AI impressions against ordinary clicks. Every rate
+                            comes from the page-level exports, never the query export, for the reason set out below.
+                        </p>
+                        <p className="mt-3 text-sm leading-relaxed text-stone-600">
+                            The window is one property, one niche and one export. Nothing here is a benchmark. The part
+                            worth copying is the procedure: export your own, check the concentration, compare the two
+                            reports page by page, then read the answers behind the queries you actually sell on.
+                        </p>
+                    </section>
 
                     <BlogHeader id="free-tool">How do you track AI visibility without buying a tool?</BlogHeader>
                     <BlogText>
@@ -180,6 +200,28 @@ export default function AiSearchVisibilityTracking() {
                         held 66 percent and the top ten held 87 percent, which leaves 67 pages splitting the remaining
                         13 percent.
                     </BlogText>
+
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <caption className="mb-3 text-left text-sm text-stone-500">
+                                AI impressions by URL group. The top page alone produced more than half of everything the
+                                site earned. Search Console Generative AI export, 25 August 2026.
+                            </caption>
+                            <thead>
+                                <tr className="border-b border-stone-300">
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Group</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">AI impressions</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Share</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-stone-600">
+                                <tr className="border-b border-stone-200"><td className="p-3">Top page</td><td className="p-3">3,627</td><td className="p-3">54.1%</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Pages 2 to 3</td><td className="p-3">774</td><td className="p-3">11.6%</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Pages 4 to 10</td><td className="p-3">1,411</td><td className="p-3">21.1%</td></tr>
+                                <tr><td className="p-3">Remaining 67 pages</td><td className="p-3">888</td><td className="p-3">13.3%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse text-left text-sm">
@@ -320,11 +362,19 @@ export default function AiSearchVisibilityTracking() {
 
                     <BlogHeader id="what-we-do">What we do with this</BlogHeader>
                     <BlogText>
-                        PandaCodeGen builds sites so that a retrieval system can lift a passage, attribute it and trust
-                        it, which is the mechanism behind every number on this page. That means answer-first sections,
-                        named entities and dated facts rather than a separate file for robots. Impressions are the
-                        halfway measure: they say a retrieval system reached for you. What that turned into is a
-                        different question, and we answered it separately in{" "}
+                        The conclusion we drew is not that a site needs a separate AI strategy. Retrieval systems reward
+                        pages clear enough to lift, attribute and trust, which is the same property that makes a page
+                        good for a reader. Answer-first sections, named entities and dated facts do that work. A
+                        separate file for robots does not.
+                    </BlogText>
+                    <BlogText>
+                        When we look at a property now we ask three things: whether AI visibility is spread across a real
+                        portfolio or resting on one page, which pages earn AI impressions without earning clicks, and
+                        whether the commercial queries show the site being recommended or merely used as supporting
+                        evidence. Impressions answer the first two. Only reading the answers settles the third.
+                    </BlogText>
+                    <BlogText>
+                        What any of it turned into is a different question again, and we measured that separately in{" "}
                         <Link href="/blog/ai-referral-revenue-2026" className="text-cognac hover:underline">
                             six months of AI referral revenue
                         </Link>
@@ -346,7 +396,13 @@ export default function AiSearchVisibilityTracking() {
                         behaviour is cited to primary documentation and dated {asOf("gsc-ai-overview-click-counting")}.
                     </BlogHighlight>
 
-                    <div className="mt-12 rounded-2xl border border-stone-300 bg-white p-7">
+                    <p className="mt-10 border-l-2 border-stone-300 pl-4 text-sm leading-relaxed text-stone-600">
+                        Editorial note: everything above is analysis of our own Search Console data. What follows is a
+                        service offer. The two are separated deliberately, because the findings should be worth reading
+                        whether or not you ever hire us.
+                    </p>
+
+                    <div className="mt-6 rounded-2xl border border-stone-300 bg-white p-7">
                         <h2 className="text-xl font-bold text-charcoal">Want this read on your own property?</h2>
                         <p className="mt-3 text-stone-600">
                             We will pull your Generative AI export against your standard Performance export and tell you

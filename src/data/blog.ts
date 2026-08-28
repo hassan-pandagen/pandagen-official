@@ -1013,7 +1013,7 @@ export const blogPosts: BlogPost[] = [
     title: "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
     excerpt: "First-party Search Console data on how AI visibility is actually distributed across a corpus, what the Generative AI report can and cannot tell you, and why an impression is not the same as being mentioned.",
     category: "Research",
-    readTime: "11 min",
+    readTime: "12 min",
     date: "Aug 28",
     author: "Hassan",
     role: "Lead Engineer",
