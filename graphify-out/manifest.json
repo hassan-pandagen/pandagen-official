@@ -1085,9 +1085,9 @@
     "semantic_hash": "6cb6bf630008590ea4f5754e768c7503"
   },
   "src/data/blog.ts": {
-    "mtime": 1787939482.4228468,
-    "ast_hash": "9136ec8699a0108e4ddbe49d74cc302d",
-    "semantic_hash": "9136ec8699a0108e4ddbe49d74cc302d"
+    "mtime": 1787945197.7273078,
+    "ast_hash": "d9c838162f51f1b8c22bb58cb43ba808",
+    "semantic_hash": "d9c838162f51f1b8c22bb58cb43ba808"
   },
   "src/data/topical-map.ts": {
     "mtime": 1787939369.3556447,
@@ -1555,9 +1555,9 @@
     "semantic_hash": "4acec56d4a638eb59212179abf9cd8f4"
   },
   "scripts/citability_report.json": {
-    "mtime": 1787939389.1091733,
-    "ast_hash": "b48634981d43591f08c46f85f0ff08f9",
-    "semantic_hash": "b48634981d43591f08c46f85f0ff08f9"
+    "mtime": 1787947707.1684806,
+    "ast_hash": "ae90a02abc64956efb3975d5dea805f5",
+    "semantic_hash": "ae90a02abc64956efb3975d5dea805f5"
   },
   "scripts/citability_scan.py": {
     "mtime": 1787939388.3239276,
@@ -1720,9 +1720,9 @@
     "semantic_hash": "8ebf98a6607235d755914f4e04a39d40"
   },
   "src/app/blog/ai-search-visibility-tracking/page.tsx": {
-    "mtime": 1787939745.0650012,
-    "ast_hash": "47de50022ebb54fde0d1a35a363e90d5",
-    "semantic_hash": "47de50022ebb54fde0d1a35a363e90d5"
+    "mtime": 1787947525.137627,
+    "ast_hash": "e1df047df120f6c1f9ce475b661f1fb2",
+    "semantic_hash": "e1df047df120f6c1f9ce475b661f1fb2"
   },
   "src/app/blog/cms-market-share-2026/page.tsx": {
     "mtime": 1787140989.524615,
@@ -1735,9 +1735,9 @@
     "semantic_hash": "ce3c90753063161db10f65d029cc2630"
   },
   "src/app/blog/topic/[topic]/page.tsx": {
-    "mtime": 1786295911.660593,
-    "ast_hash": "fd1ae1d61bbccb2b892945af63d91a14",
-    "semantic_hash": "fd1ae1d61bbccb2b892945af63d91a14"
+    "mtime": 1787942722.4599144,
+    "ast_hash": "42fcdc3ee1232ccef7fb9dc2d4fecd7a",
+    "semantic_hash": "42fcdc3ee1232ccef7fb9dc2d4fecd7a"
   },
   "src/app/blog/web-accessibility-glossary/page.tsx": {
     "mtime": 1786632153.2380314,
