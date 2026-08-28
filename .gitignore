@@ -94,3 +94,7 @@ scripts/scan/lighthouse-*.json
 # Design working files, not site assets and not for the repo
 assets/banner-kit/
 public/New folder/
+
+# Prospect audit output. Third-party measurement data, regenerate with
+# scripts/scan/audit_prospects.mjs rather than committing a snapshot.
+scripts/scan/prospect-audit.json
