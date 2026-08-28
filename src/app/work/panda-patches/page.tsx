@@ -7,6 +7,7 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
@@ -168,19 +169,7 @@ const caseStudySchema = {
                 "Server-side conversion tracking",
                 "Custom ERP and operations platforms"
             ],
-            "sameAs": [
-                "https://twitter.com/pandacodegen",
-                "https://www.linkedin.com/company/pandacodegen",
-                "https://www.linkedin.com/in/hassan-jamal-713ba6228/",
-                "https://github.com/hassan-pandagen",
-                "https://clutch.co/profile/panda-code-gen",
-                "https://www.trustpilot.com/review/pandacodegen.com",
-                "https://www.goodfirms.co/company/pandacodegen",
-                "https://www.crunchbase.com/organization/pandacodegen",
-                "https://www.sanity.io/exchange/community/pandacodegen",
-                "https://www.behance.net/pandacodegen",
-                "https://dev.to/pandacodegen"
-            ]
+            "sameAs": [...ORGANIZATION_PROFILES]
         },
         // A "Product" node for the Panda Patches platform was removed on 11 Aug
         // 2026. Search Console flagged it: "Either 'offers', 'review' or

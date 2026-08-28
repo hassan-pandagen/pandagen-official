@@ -11,6 +11,7 @@ import { BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/comp
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 
 const migrateFAQs = blogPosts.find(p => p.id === 'how-to-migrate-wordpress-to-nextjs')?.faqs ?? [];
 
@@ -119,7 +120,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "sameAs": ["https://x.com/PandaCodeGen", "https://www.linkedin.com/company/pandacodegen", "https://www.linkedin.com/in/hassan-jamal-713ba6228/", "https://github.com/hassan-pandagen", "https://clutch.co/profile/panda-code-gen", "https://www.goodfirms.co/company/panda-code-gen", "https://www.trustpilot.com/review/pandacodegen.com", "https://www.crunchbase.com/organization/pandacodegen", "https://www.designrush.com/agency/profile/pandacodegen", "https://www.sortlist.com/agency/pandacodegen", "https://www.f6s.com/pandacodegen", "https://www.sanity.io/exchange/community/pandacodegen", "https://www.behance.net/pandacodegen", "https://dev.to/pandacodegen", "https://www.reddit.com/user/PandaCodeGen/"],
+            "sameAs": [...ORGANIZATION_PROFILES],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
             "description": "PandaCodeGen plans and builds SEO-safe WordPress to Next.js migrations, with URL inventory, redirect validation, staged QA, performance targets, cutover, and handover defined in the signed scope.",
             "areaServed": "Worldwide",

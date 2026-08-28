@@ -143,5 +143,46 @@ export const REFERENCE_LINKS: readonly { href: string; title: string; body: stri
     { href: '/security', title: 'Security reporting', body: 'How to report a suspected vulnerability privately.' },
 ];
 
+/**
+ * Every external profile that IS this organization, for schema `sameAs`.
+ *
+ * One list, because three Organization nodes were declaring three different
+ * subsets on 28 Aug 2026: the home page listed fifteen, the Panda Patches case
+ * study eleven (missing G2, DesignRush, F6S, Sortlist and Reddit, and still on
+ * the old twitter.com host), and how-to-migrate-wordpress-to-nextjs fifteen
+ * without G2. A knowledge-graph consumer reading three different identity sets
+ * for one entity gets a weaker signal than if it read one.
+ *
+ * The same audit found goodfirms.co/company/pandacodegen in the case study's
+ * list. That URL redirects to the GoodFirms home page; the real profile is
+ * panda-code-gen. A sameAs pointing at nothing is worse than an omission.
+ *
+ * RULES
+ * 1. Only profiles we actually control or that are actually about us. Verify the
+ *    URL resolves to the profile before adding it, not to a search or a home page.
+ * 2. Keep the canonical host: x.com not twitter.com.
+ * 3. Personal profiles (a founder's LinkedIn or GitHub) are NOT the organization
+ *    and do not belong here. Those go on the Person node.
+ *
+ * Verified 28 August 2026.
+ */
+export const ORGANIZATION_PROFILES: readonly string[] = [
+    'https://www.linkedin.com/company/pandacodegen',
+    'https://x.com/PandaCodeGen',
+    'https://clutch.co/profile/panda-code-gen',
+    'https://www.goodfirms.co/company/panda-code-gen',
+    'https://www.trustpilot.com/review/pandacodegen.com',
+    'https://www.g2.com/products/pandacodegen',
+    'https://www.designrush.com/agency/profile/pandacodegen',
+    'https://www.sortlist.com/agency/pandacodegen',
+    'https://www.crunchbase.com/organization/pandacodegen',
+    'https://www.f6s.com/pandacodegen',
+    'https://www.sanity.io/exchange/community/pandacodegen',
+    'https://www.behance.net/pandacodegen',
+    'https://dev.to/pandacodegen',
+    'https://pandacodegen.hashnode.dev',
+    'https://www.reddit.com/user/PandaCodeGen/',
+];
+
 /** Date the values above were last checked against source. Rendered on every reference page. */
 export const FACTS_VERIFIED = '8 August 2026';

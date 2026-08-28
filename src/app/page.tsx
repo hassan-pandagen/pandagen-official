@@ -8,6 +8,7 @@ import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 import { alternatesFor } from "@/lib/i18n/config";
+import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 
 // Tell Next.js to statically generate this page at build time
 // so critters can inline critical CSS into the HTML output
@@ -137,23 +138,7 @@ export default function Home() {
         // Company-owned profiles, confirmed by the owner as controlled and live
         // (2026-07-27). sameAs is an identity assertion, so a URL that starts
         // 404ing should be removed rather than left asserted.
-        "sameAs": [
-          "https://www.linkedin.com/company/pandacodegen",
-          "https://clutch.co/profile/panda-code-gen",
-          "https://www.goodfirms.co/company/panda-code-gen",
-          "https://www.trustpilot.com/review/pandacodegen.com",
-          "https://www.crunchbase.com/organization/pandacodegen",
-          "https://www.designrush.com/agency/profile/pandacodegen",
-          "https://www.sortlist.com/agency/pandacodegen",
-          "https://www.f6s.com/pandacodegen",
-          "https://www.sanity.io/exchange/community/pandacodegen",
-          "https://www.behance.net/pandacodegen",
-          "https://dev.to/pandacodegen",
-          "https://pandacodegen.hashnode.dev",
-          "https://x.com/PandaCodeGen",
-          "https://www.g2.com/products/pandacodegen",
-          "https://www.reddit.com/user/PandaCodeGen/"
-        ],
+        "sameAs": [...ORGANIZATION_PROFILES],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "info@pandacodegen.com",
