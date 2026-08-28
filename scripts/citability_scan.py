@@ -17,7 +17,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = r"d:\Projects\pandagen-official\src\app\blog"
 
-DONE = """nextjs-sanity-stack aeo-web-performance-glossary lovable-site-not-showing-on-google
+DONE = """ai-search-visibility-tracking nextjs-sanity-stack aeo-web-performance-glossary lovable-site-not-showing-on-google
 fix-meta-ad-tracking-2026 wix-migration-cost woocommerce-migration-cost woocommerce-vs-custom-website
 agentic-browsing-pagespeed-score custom-website-5000-whats-included meta-conversions-api-setup-cost
 spending-more-on-ads-fewer-orders-tracking will-migrating-hurt-my-seo how-long-does-a-custom-website-take

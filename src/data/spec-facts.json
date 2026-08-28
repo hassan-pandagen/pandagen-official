@@ -413,6 +413,33 @@
       "qualifier": "16.3.3 is Active LTS, 15.5.24 is Maintenance LTS. Vercel pre-announced the release, then moved it forward when a second critical vulnerability was identified, so users would only need to upgrade once",
       "verifiedAt": "2026-08-26",
       "source": "https://nextjs.org/blog/august-2026-security-release"
+    },
+    "gsc-ai-overview-click-counting": {
+      "vendor": "Google",
+      "plan": "Search Console",
+      "label": "AI Overview link clicks",
+      "value": "counted as clicks in the Performance report",
+      "qualifier": "clicking a link to an external page in an AI Overview or AI Mode counts as a click, under standard impression rules",
+      "verifiedAt": "2026-08-28",
+      "source": "https://support.google.com/webmasters/answer/7042828"
+    },
+    "gsc-search-labs-excluded": {
+      "vendor": "Google",
+      "plan": "Search Console",
+      "label": "Search Labs experiments",
+      "value": "excluded from all Search Console data",
+      "qualifier": "Google states experiments in Search Labs are still in active development and are not reported",
+      "verifiedAt": "2026-08-28",
+      "source": "https://support.google.com/webmasters/answer/7042828"
+    },
+    "google-faq-rich-result-retired": {
+      "vendor": "Google",
+      "plan": "Search",
+      "label": "FAQ rich result",
+      "value": "no longer shown, from 7 May 2026",
+      "qualifier": "Google removed the feature documentation on 15 June 2026; FAQPage markup remains valid but earns no Search appearance",
+      "verifiedAt": "2026-08-28",
+      "source": "https://developers.google.com/search/docs/appearance/structured-data/faqpage"
     }
   }
 }

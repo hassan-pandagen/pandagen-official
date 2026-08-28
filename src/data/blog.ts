@@ -1007,6 +1007,29 @@ export const blogPosts: BlogPost[] = [
     ]
   },
   {
+    id: "ai-search-visibility-tracking",
+    cardStat: "54%",
+    cardStatLabel: "of all AI impressions landed on one page",
+    title: "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
+    excerpt: "First-party Search Console data on how AI visibility is actually distributed across a corpus, what the Generative AI report can and cannot tell you, and why an impression is not the same as being mentioned.",
+    category: "Research",
+    readTime: "11 min",
+    date: "Aug 28",
+    author: "Hassan",
+    role: "Lead Engineer",
+    featured: false,
+    illustrationType: 'aicommerce',
+    lastModified: "2026-08-28",
+    faqs: [
+      { question: "How do I track whether AI search mentions my site?", answer: "Open Google Search Console and go to Performance, then Generative AI. The report breaks out how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary results, and it costs nothing. Most published advice on this question recommends buying a monitoring product first, which is worth doing only once you have read the free report and found it insufficient for a specific reason you can name." },
+      { question: "Does an AI impression mean my brand was named in the answer?", answer: "No, and this is the most common misreading of the report. An impression records that your URL was shown as a source in an AI experience. It does not record whether the generated answer text used your company name, described you accurately, or recommended you. Presence as a citation and presence in the prose are two different things, and Search Console only measures the first." },
+      { question: "How evenly is AI visibility spread across a website?", answer: "On our own site, not evenly at all. Across 77 pages carrying any AI impressions between roughly late May and 25 August 2026, one page accounted for 3,627 of 6,700 total impressions, or 54 percent. The top three pages held 66 percent and the top ten held 87 percent. Thirty-one pages, two fifths of the set, sat on five impressions or fewer and contributed 1.2 percent of the total between them." },
+      { question: "Does AI visibility follow ordinary search rankings?", answer: "Mostly, with real exceptions. Comparing AI impressions against ordinary clicks across the 76 pages present in both reports gives a Spearman rank correlation of 0.79, so the two broadly move together. The exceptions are the interesting part: one page drew 383 AI impressions against a single ordinary click, and another drew 116 AI impressions against none at all." },
+      { question: "Why does the Search Console query report show fewer clicks than the pages report?", answer: "Because Google anonymises queries that too few people searched, and the export is capped at 1,000 rows. In our 25 August 2026 export the pages report totalled 243 clicks while the query report showed 48. Four fifths of the clicks were absent from the query file, so any click-through rate calculated from queries alone would have been wrong by a wide margin." },
+      { question: "Can Search Console tell me which prompts triggered an AI answer?", answer: "No. The Generative AI report supports filtering by URL, country, device and date, and our own export from 25 August 2026 carried impressions and nothing else. There is no prompt or query dimension. If you need to know what someone asked, you have to test prompts against the assistants yourself and record what comes back." }
+    ]
+  },
+  {
     id: "ai-referral-revenue-2026",
     cardStat: "6.7x",
     cardStatLabel: "ChatGPT revenue vs Google Ads, same six months",
