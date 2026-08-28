@@ -98,3 +98,7 @@ public/New folder/
 # Prospect audit output. Third-party measurement data, regenerate with
 # scripts/scan/audit_prospects.mjs rather than committing a snapshot.
 scripts/scan/prospect-audit.json
+
+# Unredacted client/operations exports. Never ship these; they are kept only so
+# a redacted version can be produced from them.
+private-assets/
