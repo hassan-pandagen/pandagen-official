@@ -8,11 +8,25 @@ const muted = "#675f56";
 
 type OgVariant = "migration" | "journal" | "case-study" | "engagement" | "profile" | "policy";
 
+/**
+ * Screenshots used as the OG image for a case study.
+ *
+ * /work/enterprise-ops was removed on 29 Aug 2026. Its image,
+ * public/work/panda-operations.png, was an unredacted operations dashboard
+ * showing eight named customers, their order IDs, individual amounts, payment
+ * status and outstanding balances, alongside monthly revenue totals. It was
+ * publicly downloadable from the site AND was the social preview served every
+ * time that page was shared. The file now lives in private-assets/, outside the
+ * build.
+ *
+ * Anything added here is published twice over: as a fetchable file under
+ * public/ and as the preview image on every share of that page. Redact before
+ * adding, and assume both surfaces are permanent.
+ */
 const caseStudyImages: Record<string, string> = {
   "/work/mycustompatches": "/work/mycustompatches.png",
   "/work/panda-patches": "/work/panda-patches.png",
   "/work/panda-codelab": "/work/pandacodelab.png",
-  "/work/enterprise-ops": "/work/panda-operations.png",
 };
 
 const profileImages: Record<string, string> = {
