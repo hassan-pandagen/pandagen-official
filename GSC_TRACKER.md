@@ -1371,3 +1371,62 @@ convenient one.
 The 8 Sep question is only "is it indexed". It went from 0 to 22 impressions,
 which means Google is now serving it. That is the check passing early, not the
 performance result, which is 15 Sep and needs the AI number.
+
+---
+
+## GOOGLE goto REDIRECTS — first-party test, 29 August 2026
+
+Google confirmed on 26 Aug that it is rewriting organic result links through
+`google.com/goto?url=[encoded]`, calling it a technical measure against abuse.
+Coverage since has flagged an open question nobody had answered with data: does
+the extra hop break referrer attribution.
+
+Tested it here rather than waiting for someone else to.
+
+### Method
+
+Real headless Chromium, US geo, two commercial queries relevant to this site
+("custom next.js development agency", "wordpress to nextjs migration cost").
+Counted link types in the served SERP, then clicked an organic result the way a
+searcher would and read `document.referrer` on the destination.
+
+### Result
+
+| | query 1 | query 2 |
+|---|---|---|
+| goto-wrapped links | 60 | 39 |
+| direct external links | **0** | **0** |
+| landed on real destination | yes | yes |
+| tracking params appended | none | none |
+| `document.referrer` | `https://www.google.com/` | `https://www.google.com/` |
+
+**Referrer survives.** GA4 and server logs still see google.com, so organic
+attribution does not break. That is the outcome the speculation listed as one of
+three, and it is the benign one.
+
+**The destination URL is genuinely absent from the SERP HTML.** Not obscured,
+absent. Zero direct external links on either page.
+
+**The tokens are session-bound.** A goto URL captured from an earlier AI Mode
+response returned HTTP 400 to a plain fetch hours later, so these cannot be
+resolved outside the session that produced them.
+
+### What this means here
+
+Nothing to change on this site. Attribution is intact, rankings are unaffected,
+and the `submittedFrom` / `landingPage` fields added 28 Aug are unaffected
+because they read the visitor's own navigation, not Google's link.
+
+What it does change is third-party rank data. A tracker now has to follow
+hundreds of session-bound redirects per SERP to learn which URL ranked. Expect
+rank-tracking tools to get slower, more expensive, or quietly less accurate, and
+treat any competitor-position figure sourced from them after August 2026 as
+weaker evidence than it was before. That applies to figures this site might cite
+as much as anyone's.
+
+### Limits
+
+Two queries, one geo, one browser, one day. Headless Chromium rather than a
+consumer browser with a Google session. Does not test what a destination with a
+stricter referrer policy receives, nor AI Mode citations specifically, though
+the same goto pattern appears there.
