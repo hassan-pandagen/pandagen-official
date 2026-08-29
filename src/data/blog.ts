@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
     title: "Lighthouse Agentic Browsing Checks Explained (2026)",
     excerpt: "A dated review of the Agentic Browsing checks shown in the audit snapshot, what was scored, what was marked not applicable, and why no technical score guarantees AI inclusion or sales.",
     category: "AEO",
-    readTime: "16 min",
+    readTime: "18 min",
     date: "Jun 19",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
