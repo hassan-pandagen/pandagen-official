@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { ORGANIZATION_PROFILES } from "@/data/company-facts";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
@@ -274,6 +275,12 @@ export default function PandaPatchesCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "Panda Patches", href: "/work/panda-patches" },
                     ]} />
+
+                    <CaseStudyShot
+                        src="/work/panda-patches.png"
+                        alt="The Panda Patches storefront home page, showing the product range, the instant pricing entry point and the ordering call to action."
+                        caption="Panda Patches, a headless Next.js storefront on Sanity, Supabase and Square with a real-time pricing calculator. Founder-affiliated."
+                    />
 
                     <RelationshipDisclosure slug="panda-patches" />
 

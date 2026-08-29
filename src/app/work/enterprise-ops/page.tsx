@@ -7,6 +7,7 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
@@ -306,6 +307,14 @@ export default function EnterpriseOpsCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "Enterprise Operations", href: "/work/enterprise-ops" },
                     ]} />
+
+                    <CaseStudyShot
+                        src="/work/enterprise-ops.png"
+                        alt="The Enterprise Operations dashboard, showing the production pipeline stages, an order table with status flow, and revenue summary tiles. Customer names, sales-agent addresses, order identifiers and all figures are redacted."
+                        caption="The operations platform in use. Customer names, agent addresses, order identifiers and every figure are redacted; the layout and workflow are unchanged."
+                        width={1711}
+                        height={919}
+                    />
 
                     <RelationshipDisclosure slug="enterprise-ops" />
 
