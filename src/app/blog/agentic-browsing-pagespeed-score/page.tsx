@@ -330,6 +330,60 @@ export default function AgenticBrowsingPage() {
                         separate questions and this score answers none of them.
                     </BlogText>
 
+                    <BlogHeader id="why-this-one-first">Why fix this one before the performance score?</BlogHeader>
+
+                    <BlogText>
+                        Because it is the only score on the report where a competitor can be measurably ahead of you
+                        on something you can close in weeks. Performance is a spectrum and everyone argues about it.
+                        Agentic Browsing is close to binary: you pass a check or you do not, the same three checks
+                        apply to your rival, and the category is new enough that most of any given field has not
+                        looked at it yet.
+                    </BlogText>
+
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <caption className="mb-3 text-left text-sm text-stone-500">
+                                Agentic Browsing results across nine live sites, PageSpeed Insights API, 29 August
+                                2026. Third-party sites are described by platform rather than named.
+                            </caption>
+                            <thead>
+                                <tr className="border-b border-stone-300">
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Site</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Score</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">What failed</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-stone-600">
+                                <tr className="border-b border-stone-200"><td className="p-3">Divi site</td><td className="p-3">0 of 3</td><td className="p-3">accessibility tree, layout shift, llms.txt</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Divi site</td><td className="p-3">0 of 2</td><td className="p-3">accessibility tree, layout shift</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Elementor site</td><td className="p-3">1 of 3</td><td className="p-3">accessibility tree, layout shift</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Elementor site</td><td className="p-3">2 of 3</td><td className="p-3">accessibility tree</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">WordPress site</td><td className="p-3">1 of 2</td><td className="p-3">accessibility tree</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">WordPress site</td><td className="p-3">1 of 2</td><td className="p-3">accessibility tree</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Squarespace, own marketing site</td><td className="p-3">2 of 3</td><td className="p-3">accessibility tree</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3">Webflow, own marketing site</td><td className="p-3">3 of 3</td><td className="p-3">nothing</td></tr>
+                                <tr><td className="p-3">pandacodegen.com</td><td className="p-3">3 of 3</td><td className="p-3">nothing</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogText>
+                        Eight of the nine failed the accessibility-tree check, including Squarespace&apos;s own
+                        marketing site. That is the finding worth carrying away: the common failure is not a missing
+                        AI file, it is that the page&apos;s structure is not legible to something that is not a
+                        browser. It is also the check nobody can pass by adding a file, which is why it is the one
+                        that separates sites.
+                    </BlogText>
+
+                    <BlogHighlight>
+                        What a 0 of 3 does not mean. It does not mean assistants cannot see your site, that you are
+                        absent from AI answers, or that you are losing customers. None of those are measured here.
+                        It means three specific checks failed on one URL. Anyone telling you a low score makes your
+                        business invisible is selling from a number that does not say that, and the honest version
+                        is strong enough without it: your competitor passes checks you fail, on a report you can both
+                        run in a minute.
+                    </BlogHighlight>
+
                     <BlogHeader id="the-three-checks">Which three checks make up the score?</BlogHeader>
 
                     <BlogText>
