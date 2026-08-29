@@ -1287,3 +1287,87 @@ the public positioning toward AI-search visibility rather than platform specs.
 Window is 24 May to 23 Aug and includes the August 2026 spam update, which began
 18 Aug and was still rolling out at export time. Position figures inside the last
 week of this window are unsettled.
+
+---
+
+## MID-POINT CHECKPOINT — 29 August 2026
+
+Taken so the September reads are a lookup rather than a reconstruction. Two
+exports pulled 29 Aug: the standard Performance report (27 May to 26 Aug) and
+the Generative AI report (27 May to 26 Aug). Compared against 25 Aug and 19 Aug
+respectively. Files kept in `GSC/search-2026-08-29/` and `GSC/genai-2026-08-29/`.
+
+**Nothing below is a result. The earliest read date is 8 September.**
+
+### The trend line every experiment is scored against
+
+Standard search, 25 Aug to 29 Aug export, windows overlap on 89 of 92 days so
+these are comparable:
+
+| | 25 Aug | 29 Aug | change |
+|---|---|---|---|
+| Impressions | 141,968 | 145,462 | +2.5% |
+| Clicks | 243 | 251 | +3.3% |
+| CTR | 0.17% | 0.17% | flat |
+
+**+2.5% is the number a treated page has to beat to mean anything.**
+
+AI impressions cannot be compared the same way. The Generative AI export moved
+nine days off the front and thirteen onto the back, and decomposing the daily
+series puts the entire apparent 6,700 to 8,749 rise inside those thirteen added
+days. Like-for-like on the shared window is 6,024 either way. What is real is
+the shape: 14 impressions a day in mid-June, 242 a day in early August, easing
+to 208 by mid-month. Roughly fifteenfold growth that peaked around 3 to 10 Aug
+and is now declining.
+
+**That peak matters.** Experiment 3 shipped 20 Aug, into the declining phase.
+A treated page holding flat while the site eases is a positive result there, and
+one that rose during the early-August surge would be a false positive.
+
+### Per-experiment, no conclusions drawn
+
+| Page | Web impr | AI impr | Clicks | Note |
+|---|---|---|---|---|
+| `shopify-store-speed-optimization` (Exp 3) | 619 → 1,114 | 1 → 4 | 1 → 1 | +80% web against +2.5% site |
+| `woocommerce-low-conversion-rate` (Exp 4) | 0 → 22 | absent | 0 → 0 | was unindexed, now surfacing |
+| `webflow-migration-cost` (Exp 1) | 1,147 → 1,026 | 383 → 248 | 1 → 1 | down on both |
+| `wix-too-slow` (Exp 1) | 56 → 55 | absent both | 0 → 0 | flat |
+| `saas-price-increases-2026-tracker` (Exp 1) | 403 → 407 | 7 → 8 | 0 → 0 | flat |
+| `wordpress-killer` (Exp 1 CONTROL) | absent | absent | — | **see below** |
+| `nextjs-hosting-zero-cost` (anchor) | 90,472 → 91,943 | 3,627 → 5,059 | 19 → 20 | +1.6%, under the site trend |
+
+### Experiment 3 is moving, on the wrong metric so far
+
+Nine of the twenty-four queries new to the 29 Aug export are Shopify speed
+queries: "shopify store optimization" (17 impressions, pos 27.1), "optimize page
+speed shopify" (16, 38.1), "how to speed up my shopify store" (15, 34.1),
+"shopify speed optimization guide" (13, 22.9) and five more. "shopify speed
+optimization" itself went 46 to 95 impressions.
+
+So the rebuild demonstrably widened the query set the page is eligible for. It
+has not yet converted that into AI citations (1 to 4) or clicks (1 to 1), and
+every new query sits between position 22 and 54. Breadth, not depth, and the
+experiment is scored on AI impressions. **Read 10 Sep, not before.**
+
+### Experiment 1 has a broken control
+
+`wordpress-killer` is the pre-registered control and it appears in neither
+export, on either metric, in either window. Zero impressions throughout.
+
+A control with no data cannot function as a control, so Experiment 1 cannot be
+read as designed on 8 September. The three treatments are flat or down against a
++2.5% site trend, which is a weak signal on its own, but without a control there
+is no way to separate that from what the cohort would have done untouched.
+
+**Decide before 8 Sep:** nominate a replacement control from the untouched
+cohort with comparable baseline impressions, and say so in writing with the
+reason, or record Experiment 1 as unreadable and do not report a result from it.
+Choosing a control after seeing the treatment outcomes is the thing that makes a
+result worthless, so this has to be settled on the stated grounds, not the
+convenient one.
+
+### Experiment 4's binary check is trending yes
+
+The 8 Sep question is only "is it indexed". It went from 0 to 22 impressions,
+which means Google is now serving it. That is the check passing early, not the
+performance result, which is 15 Sep and needs the AI number.
