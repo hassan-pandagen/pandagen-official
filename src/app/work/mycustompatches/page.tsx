@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { clientIdentity } from "@/data/case-study-facts";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     // Metadata renders the same verified facts as the body. Do not type a metric
@@ -226,6 +227,12 @@ export default function MyCustomPatchesCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "MyCustomPatches", href: "/work/mycustompatches" },
                     ]} />
+
+                    <CaseStudyShot
+                        src="/work/mycustompatches.png"
+                        alt="The MyCustomPatches storefront home page after migration, showing the patch category navigation, the hero product imagery and the quote request entry point."
+                        caption="MyCustomPatches after the move from WordPress to Next.js. 200+ URLs across 13 templates, migrated with no downtime at cutover."
+                    />
 
                     <RelationshipDisclosure slug="mycustompatches" />
 

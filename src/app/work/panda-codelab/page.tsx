@@ -7,6 +7,7 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     title: { absolute: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen" },
@@ -211,6 +212,14 @@ export default function PandaCodelabCaseStudy() {
                         { label: "Our Work", href: "/work" },
                         { label: "Panda CodeLab", href: "/work/panda-codelab" },
                     ]} />
+
+                    <CaseStudyShot
+                        src="/work/pandacodelab.png"
+                        alt="The Panda CodeLab agency site home page, showing the service positioning, navigation and primary call to action."
+                        caption="Panda CodeLab, built on an accessibility-first component system. Founder-affiliated."
+                        width={1920}
+                        height={911}
+                    />
 
                     <RelationshipDisclosure slug="panda-codelab" />
 

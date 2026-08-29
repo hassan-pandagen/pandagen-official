@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import OtherReviews from "@/components/work/OtherReviews";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
 const title = "Emblematic Studio Case Study: One Catalogue, Twenty Products, One Server Route";
@@ -178,6 +179,12 @@ export default function EmblematicStudioCaseStudy() {
                             { label: "Work", href: "/work" },
                             { label: "Emblematic Studio", href: "/work/emblematic-studio" },
                         ]}
+                    />
+
+                    <CaseStudyShot
+                        src="/work/emblematic-studio.png"
+                        alt="The Emblematic Studio home page, showing an embroidered patch specimen alongside its vector source drawing, with the product and process navigation."
+                        caption="Emblematic Studio. 20 product types generated from one typed registry, with a single runtime route across the whole site."
                     />
 
                     <RelationshipDisclosure slug="emblematic-studio" />

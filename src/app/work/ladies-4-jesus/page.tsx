@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import OtherReviews from "@/components/work/OtherReviews";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
+import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/ladies-4-jesus";
 const title = "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone";
@@ -159,6 +160,12 @@ export default function Ladies4JesusCaseStudy() {
                             { label: "Work", href: "/work" },
                             { label: "Ladies 4 Jesus", href: "/work/ladies-4-jesus" },
                         ]}
+                    />
+
+                    <CaseStudyShot
+                        src="/work/ladies-4-jesus.png"
+                        alt="The Ladies 4 Jesus community home page, showing the welcome hero, the section navigation for stories, devotionals and Q&A, and the Share Your Story entry point."
+                        caption="Ladies 4 Jesus. Nine content types and five moderated submission paths, run by the owner without a developer."
                     />
 
                     <RelationshipDisclosure slug="ladies-4-jesus" />
