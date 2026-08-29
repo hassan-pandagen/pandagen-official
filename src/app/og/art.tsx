@@ -29,6 +29,11 @@ const caseStudyImages: Record<string, string> = {
   "/work/panda-codelab": "/work/pandacodelab.png",
   "/work/ladies-4-jesus": "/work/ladies-4-jesus.png",
   "/work/emblematic-studio": "/work/emblematic-studio.png",
+  // Redacted 29 Aug 2026. Customer names, sales-agent email addresses, order
+  // IDs, dates, amounts and the revenue tiles are all blurred. The unredacted
+  // original lives in private-assets/ and must never return to public/. The
+  // note above records what happened the first time it did.
+  "/work/enterprise-ops": "/work/enterprise-ops.png",
 };
 
 const profileImages: Record<string, string> = {
