@@ -122,7 +122,7 @@ export default function AiSearchVisibilityTracking() {
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
-                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="12 min" />
+                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="13 min" />
 
                 <TopicUpLink postId={postId} />
 
@@ -130,9 +130,9 @@ export default function AiSearchVisibilityTracking() {
                     <BlogText>
                         You can track AI visibility for free in Google Search Console, under Performance then Generative
                         AI. It reports how often your URLs appeared in AI Overviews and AI Mode, separately from ordinary
-                        results. PandaCodeGen pulled its own on 25 August 2026 and found 6,700 AI impressions spread
-                        across 77 pages, with 3,627 of them on a single page. One URL out of 77 was 54 percent of
-                        everything.
+                        results. PandaCodeGen pulled its own on 19 August 2026, covering 18 May to 13 August, and found
+                        6,700 AI impressions spread across 77 pages, with 3,627 of them on a single page. One URL out of
+                        77 was 54 percent of everything.
                     </BlogText>
 
                     <BlogHighlight>
@@ -144,10 +144,12 @@ export default function AiSearchVisibilityTracking() {
                     <section aria-labelledby="method-heading" className="rounded-2xl border border-stone-300 bg-white p-6">
                         <h2 id="method-heading" className="text-lg font-bold text-charcoal">Method and source data</h2>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
-                            Two Google Search Console exports for pandacodegen.com, the property PandaCodeGen operates,
-                            both pulled on 25 August 2026: the
-                            Generative AI report exported by page, and the standard Performance report exported by page
-                            and by query. The Generative AI export contained 77 URLs carrying 6,700 AI impressions.
+                            Two Google Search Console exports for pandacodegen.com, the property PandaCodeGen operates.
+                            The Generative AI report, exported by page on 19 August 2026 for the window 18 May to 13
+                            August, containing 77 URLs and 6,700 AI impressions. The standard Performance report,
+                            exported by page and by query on 25 August 2026 for the window 24 May to 23 August. The two
+                            windows overlap but are not identical, which is why no figure below divides one report by
+                            the other.
                         </p>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
                             Concentration was calculated by sorting pages on AI impressions and accumulating each
@@ -224,7 +226,7 @@ export default function AiSearchVisibilityTracking() {
                         <table className="w-full border-collapse text-left text-sm">
                             <caption className="mb-3 text-left text-sm text-stone-500">
                                 AI impressions by URL group. The top page alone produced more than half of everything the
-                                site earned. Search Console Generative AI export, 25 August 2026.
+                                site earned. Search Console Generative AI report for 18 May to 13 August 2026.
                             </caption>
                             <thead>
                                 <tr className="border-b border-stone-300">
@@ -245,8 +247,8 @@ export default function AiSearchVisibilityTracking() {
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse text-left text-sm">
                             <caption className="mb-3 text-left text-sm text-stone-500">
-                                AI impressions by page, pandacodegen.com, Search Console Generative AI report exported 25
-                                August 2026.
+                                AI impressions by page, pandacodegen.com, Search Console Generative AI report for 18 May
+                                to 13 August 2026, exported 19 August.
                             </caption>
                             <thead>
                                 <tr className="border-b border-stone-300">
@@ -272,6 +274,22 @@ export default function AiSearchVisibilityTracking() {
                         on five AI impressions or fewer. Together those 31 pages accounted for 1.2 percent of all AI
                         impressions. Publishing more pages did not spread AI visibility around; it produced a long list
                         of pages that AI search has effectively never surfaced.
+                    </BlogText>
+
+                    <BlogText>
+                        A later export, taken 29 August 2026 for the window 27 May to 26 August, shows the same shape
+                        rather than a softening one. It carries 92 pages against 77, and the top page holds 5,059 of
+                        8,749 impressions, which is 57.8 percent against the earlier 54.1. Publishing more did not
+                        spread the visibility around. The anchor grew faster than the corpus underneath it.
+                    </BlogText>
+                    <BlogText>
+                        The totals from those two exports are not comparable and are not compared here. Search Console
+                        serves a rolling window, so the later export drops nine days from the start and adds thirteen to
+                        the end. Decomposing the daily series shows the whole apparent increase sits in the thirteen
+                        added days, which ran at 204 impressions a day against a 94-a-day average for the window. Share
+                        of total survives that shift. A growth percentage between two differently-framed windows does
+                        not, which is the kind of number that gets quoted for years after the person who made it has
+                        forgotten the window moved.
                     </BlogText>
 
                     <BlogQuote>
@@ -410,8 +428,9 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
 
                     <BlogHighlight>
-                        Every figure on this page comes from two Search Console exports for pandacodegen.com taken on 25
-                        August 2026: the Generative AI report and the standard Performance report. Third-party platform
+                        Every figure on this page comes from two Search Console exports for pandacodegen.com: the
+                        Generative AI report for 18 May to 13 August 2026, and the standard Performance report for 24
+                        May to 23 August 2026. Third-party platform
                         behaviour is cited to primary documentation and dated {asOf("gsc-ai-overview-click-counting")}.
                     </BlogHighlight>
 
