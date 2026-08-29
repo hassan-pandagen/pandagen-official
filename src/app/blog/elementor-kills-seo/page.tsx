@@ -255,6 +255,22 @@ export default function ElementorSeoPage() {
                         Elementor does not carry one penalty or one score. It adds work to the page, and so does everything else you install.
                     </BlogQuote>
 
+                    <BlogHeader id="elementor-agentic-browsing">What this costs you in the agent-readability check</BlogHeader>
+                    <BlogText>
+                        Heading structure is no longer only an SEO question. PageSpeed Insights now reports an
+                        Agentic Browsing score, and one of its three checks reads the accessibility tree: heading
+                        order, landmark structure and whether interactive controls have names. The defect this
+                        article describes, headings chosen because they looked right rather than because they
+                        described the hierarchy, is exactly what that check fails on.
+                    </BlogText>
+                    <BlogText>
+                        Worth being fair to Elementor here. Two Elementor sites we measured on 29 August 2026 scored
+                        1 of 3 and 2 of 3, which is better than the two Divi sites in the same test, and one of them
+                        passed on layout stability outright. The builder is not the whole story and the output can be
+                        repaired without leaving it. What the check does not care about is which plugin produced the
+                        markup, only whether the result is legible to something that is not a browser.
+                    </BlogText>
+
                     <BlogHeader id="heading-structure">The one SEO defect that has nothing to do with speed</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
