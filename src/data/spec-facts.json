@@ -440,6 +440,15 @@
       "qualifier": "Google removed the feature documentation on 15 June 2026; FAQPage markup remains valid but earns no Search appearance",
       "verifiedAt": "2026-08-28",
       "source": "https://developers.google.com/search/docs/appearance/structured-data/faqpage"
+    },
+    "google-goto-redirect-confirmed": {
+      "vendor": "Google",
+      "plan": "Search",
+      "label": "goto URL redirects on result links",
+      "value": "confirmed rolling out, 26 August 2026",
+      "qualifier": "Google described it as a technical measure against abuse and did not address referrer, analytics or ranking impact",
+      "verifiedAt": "2026-08-29",
+      "source": "https://searchengineland.com/google-confirms-deploying-goto-url-redirects-to-search-results-links-485926"
     }
   }
 }
