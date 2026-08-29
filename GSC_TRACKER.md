@@ -1430,3 +1430,104 @@ Two queries, one geo, one browser, one day. Headless Chromium rather than a
 consumer browser with a Google session. Does not test what a destination with a
 stricter referrer policy receives, nor AI Mode citations specifically, though
 the same goto pattern appears there.
+
+---
+
+## EXPERIMENT 5, PRE-REGISTERED 29 AUGUST 2026
+
+Written before the 8 September reads, deliberately. Experiment 1 failed because
+its control had no data and the only remaining fix was to nominate a replacement
+after seeing the treatments underperform, which would have made any result
+worthless. This is the same design done in the right order.
+
+### The finding it tests
+
+Ranking is not the constraint on this corpus. Across 85 posts in the 29 Aug
+export:
+
+| cohort | n | median impressions | median position |
+|---|---|---|---|
+| impressions AND clicks | 33 | 515 | 13.7 |
+| impressions, ZERO clicks | 48 | 55 | **12.6** |
+| no impressions at all | 3 | 0 | n/a |
+
+**The pages earning nothing rank BETTER than the pages earning clicks.** Thirty-
+seven of the 48 stalled pages sit inside position 20. `webflow-user-accounts-
+sunset-date-2026` holds position 7.3 on 1,860 impressions and has never been
+clicked. `saas-software-pricing-audit-2026` sits at 5.5. `pagepro-alternatives`
+at 6.0.
+
+Read the two lists and the split is intent, not quality. The stalled set is
+sunset dates, price trackers, spec audits, comparison tables: questions whose
+answer fits in the SERP, so the searcher never needs the page. The earning set is
+`divi-theme-slow` (0.69% CTR), `gohighlevel-website-speed` (0.73%),
+`woocommerce-too-slow`, `shopify-dawn-theme-slow`, `how-to-achieve-100-pagespeed`
+(2.62%): "my thing is broken, how do I fix it", which does not fit in a snippet.
+
+This independently reproduces the July measurement of 0.60% on problem pages
+against 0.04% on third-party-spec pages, on a later export and a larger sample.
+
+### Hypothesis
+
+Rewriting a well-ranking, zero-click page from spec intent to problem intent
+raises clicks without needing any ranking change.
+
+### Cohorts, fixed now
+
+Eligible pool: the 37 stalled pages ranking inside position 20. Sorted by
+impressions descending and assigned alternately, so the split is deterministic,
+reproducible, and impression-matched (treatment median 55, holdout median 55).
+Nobody picked anything.
+
+**TREATMENT, 19 pages, rewrite after 8 Sep:** webflow-user-accounts-sunset-date-2026,
+saas-software-pricing-audit-2026, top-custom-web-development-agencies-usa-2026,
+pagepro-alternatives, how-long-does-a-custom-website-take,
+shopify-conversion-rate-speed-fix, web-accessibility-statistics-2026,
+wordpress-april-2026-evidence, webflow-vs-custom-website, wix-too-slow,
+website-redesign-cost, wix-vs-custom-website,
+build-vs-buy-software-2026-cost-comparison, how-to-speed-up-your-website,
+ai-referral-revenue-2026, why-is-my-website-loading-so-slow,
+for-agencies-offer-custom-web-development, how-website-speed-affects-seo,
+shopify-slow-losing-sales
+
+**HOLDOUT, 18 pages, do not touch:** website-migration-cost-2026,
+shopify-stocky-sunset-date-2026, saas-price-increases-2026-tracker,
+core-web-vitals-explained, google-universal-commerce-protocol-what-it-means-for-your-store,
+shopify-vs-custom-website, nextjs-sanity-stack, website-rebuild-cost-2026,
+leaving-webflow-2026, do-you-own-your-website, woocommerce-migration-cost,
+will-migrating-hurt-my-seo, website-developer-agency, how-to-cut-saas-bill-2026,
+cms-market-share-2026, wordpress-plugins-destroy-speed,
+wordpress-vs-custom-code-real-cost-3-years, wordpress-ai-security-risk-2026
+
+Two treatment pages carry existing constraints: `wix-too-slow` is an Experiment 1
+treatment and `ai-referral-revenue-2026` is a published research piece. Neither
+is barred, but log any change to them against both records.
+
+### Pass and fail, stated before the data
+
+**Pass:** treatment clicks grow materially against holdout clicks over the same
+window, with position roughly unchanged. Position moving materially means the
+mechanism was not the one under test, whatever the click number does.
+
+**Fail:** both cohorts move together. That means the site-wide trend did it, and
+intent rewriting is not the lever on already-ranking pages.
+
+**Read no earlier than 8 October 2026**, roughly four weeks after the rewrites
+begin, which is recrawl plus a measurement window on the same reasoning as
+Experiments 1 to 4.
+
+### The rule this exists to enforce
+
+Do not rewrite a holdout page because it looks like an easy win. The holdout is
+the entire value of the exercise. Experiment 1 is unreadable for exactly the
+want that will show up here around week two.
+
+### Separately: the three dark pages
+
+`wordpress-killer`, `shopify-plus-still-slow` and
+`why-we-chose-nextjs-over-wordpress-2026` record zero impressions in every export
+and every window. That is a discovery or eligibility question, not a click one,
+and it does not belong in this experiment. Diagnose on 8 Sep: indexed at all, in
+the sitemap, reachable in llms.txt, and whether anything links to them.
+`ai-search-visibility-tracking` also shows zero and is excluded as simply too
+new, published 28 Aug.
