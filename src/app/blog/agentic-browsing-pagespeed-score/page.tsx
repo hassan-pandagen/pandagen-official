@@ -26,10 +26,12 @@ export const metadata: Metadata = {
     alternates: { canonical: "/blog/agentic-browsing-pagespeed-score" },
     keywords: [
         "agentic browsing",
+        "webmcp",
+        "agentic browsing 0 of 3",
+        "how to fix agentic browsing",
         "agentic browsing pagespeed insights",
         "google agentic browsing score",
         "is my website ready for ai agents",
-        "webmcp",
         "agent ready website",
         "llms.txt google",
         "lighthouse agentic browsing",
