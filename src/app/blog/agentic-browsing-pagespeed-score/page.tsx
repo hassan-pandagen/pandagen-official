@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         description: "What the experimental Lighthouse category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
         type: "article",
         publishedTime: "2026-06-19T00:00:00-05:00",
-        modifiedTime: "2026-07-31T00:00:00-05:00",
+        modifiedTime: "2026-08-29T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/agentic-browsing-pagespeed-score",
         images: [ogImageForPath("/blog/agentic-browsing-pagespeed-score")],
@@ -66,7 +66,7 @@ const articleSchema = {
             "description": "A source-linked guide to Lighthouse's experimental Agentic Browsing category, its pass ratio, WebMCP requirements, and a dated PandaCodeGen snapshot.",
             "image": ogImageUrlForPath("/blog/agentic-browsing-pagespeed-score"),
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-07-31T00:00:00-05:00",
+            "dateModified": "2026-08-29T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -124,7 +124,7 @@ const articleSchema = {
             "description": "What Lighthouse's experimental Agentic Browsing category checks, what its pass ratio does not prove, and a dated PandaCodeGen snapshot.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-06-19T00:00:00-05:00",
-            "dateModified": "2026-07-31T00:00:00-05:00",
+            "dateModified": "2026-08-29T00:00:00-05:00",
             "inLanguage": "en-US"
         },
     ]
@@ -302,6 +302,121 @@ export default function AgenticBrowsingPage() {
 
                     <BlogText>
                         Chrome&apos;s experimental audit checks llms.txt presence, but that check does not make the file a Google Search requirement or prove that another product consumes it. Add and maintain the file only when it serves a named consumer or test. Crawlable, useful, source-linked content remains important, but no structure or opening-sentence pattern guarantees retrieval or quotation.
+                    </BlogText>
+
+                    <BlogHeader id="check-yours">How do you check your own score, and your competitor&apos;s?</BlogHeader>
+
+                    <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
+                        <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">Open pagespeed.web.dev, enter your URL, choose Mobile, and read the Agentic Browsing figure next to Performance. Then do the same for the two or three competitors you lose work to. It takes about a minute each and needs no account, no tool and no access to their site.</p>
+                    </div>
+
+                    <BlogText>
+                        Run it on the page you would want an assistant to describe, which is usually a service or
+                        product page rather than the home page. The audits run per URL, so a good home page score
+                        tells you nothing about the page that actually sells.
+                    </BlogText>
+                    <BlogText>
+                        Then run the same test on a competitor. This is the part most people skip and it is the only
+                        part that gives the number meaning. A 1 of 3 in a field where everyone scores 1 of 3 is a
+                        different situation from a 1 of 3 where two rivals score 3 of 3. You are looking for a gap,
+                        not a grade.
+                    </BlogText>
+                    <BlogText>
+                        What the comparison can tell you is narrow and worth stating plainly. It shows whether an
+                        assistant reading your page finds a well-formed structure, a stable layout and a
+                        machine-readable summary, and whether your competitor&apos;s page does. It does not tell you
+                        who gets recommended, how often either page is quoted, or what any of it is worth. Those are
+                        separate questions and this score answers none of them.
+                    </BlogText>
+
+                    <BlogHeader id="the-three-checks">Which three checks make up the score?</BlogHeader>
+
+                    <BlogText>
+                        Six audits exist in the category and most sites are scored on three of them. We confirmed this
+                        against the PageSpeed Insights API on 29 August 2026 rather than from other write-ups, several
+                        of which disagree about whether the denominator is three or four. It is neither, fixed: the
+                        three WebMCP audits report &ldquo;not applicable&rdquo; on any site that has not implemented
+                        WebMCP, which today is nearly every site, so those drop out of the count and the remaining
+                        three are what you are scored on.
+                    </BlogText>
+
+                    <div className="overflow-x-auto">
+                        <table className="w-full border-collapse text-left text-sm">
+                            <caption className="mb-3 text-left text-sm text-stone-500">
+                                Audits returned by the PageSpeed Insights API under the agentic-browsing category,
+                                verified 29 August 2026. Audit identifiers are Google&apos;s own.
+                            </caption>
+                            <thead>
+                                <tr className="border-b border-stone-300">
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Audit</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">Counts for most sites</th>
+                                    <th scope="col" className="p-3 font-semibold text-charcoal">What it looks at</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-stone-600">
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>agent-accessibility-tree</code></td><td className="p-3">Yes</td><td className="p-3">Whether the accessibility tree is well-formed: names, labels, structure</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>cumulative-layout-shift</code></td><td className="p-3">Yes</td><td className="p-3">Whether the layout stays still while it loads</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>llms-txt</code></td><td className="p-3">Yes</td><td className="p-3">Whether an llms.txt file exists and follows the recommendations</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>webmcp-form-coverage</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
+                                <tr className="border-b border-stone-200"><td className="p-3"><code>webmcp-registered-tools</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
+                                <tr><td className="p-3"><code>webmcp-schema-validity</code></td><td className="p-3">No</td><td className="p-3">Not applicable without WebMCP</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogText>
+                        This is why two sites can show different denominators and neither is broken. Implement WebMCP
+                        and the count grows; skip it, as almost everyone has, and you are scored out of three.
+                    </BlogText>
+
+                    <BlogHeader id="fix-each-check">How do you fix each of the three?</BlogHeader>
+
+                    <BlogText>
+                        Read which audit failed before touching anything, because the three have nothing in common and
+                        the wrong fix costs a week. Below is what each failure means and where the work actually sits.
+                    </BlogText>
+
+                    <BlogHighlight>
+                        The figures in this section come from PageSpeed Insights runs we made on 29 August 2026
+                        against live third-party sites. Those sites are not named. Publishing a company&apos;s failing
+                        audit alongside a pitch is a thing we would rather not do to a stranger.
+                    </BlogHighlight>
+
+                    <h3 className="mt-8 mb-3 text-xl font-bold text-charcoal">Accessibility tree is well-formed</h3>
+                    <BlogText>
+                        This fails when controls have no accessible name, headings skip levels, landmarks are missing,
+                        or interactive elements are built from divs with click handlers rather than buttons and links.
+                        An assistant reads your page through roughly the structure a screen reader uses, so the fix is
+                        ordinary semantic HTML: real buttons, labelled form fields, headings in order, alt text that
+                        describes the image. There is no AI-specific markup to add. A page-builder site fails this
+                        most often because the builder emits nested divs where elements should be, which is also why
+                        the fix is sometimes the template rather than the page.
+                    </BlogText>
+
+                    <h3 className="mt-8 mb-3 text-xl font-bold text-charcoal">Cumulative Layout Shift</h3>
+                    <BlogText>
+                        The threshold is 0.1 or below. One site we measured returned 0.906, roughly nine times over.
+                        Layout shift comes from images and embeds without dimensions, fonts that swap after paint,
+                        cookie banners and chat widgets injected late, and ads that reserve no space. It is the most
+                        mechanical of the three to fix and the most commonly ignored, because it looks like a design
+                        nuisance rather than a machine-readability problem. Set explicit width and height on media,
+                        reserve space for anything injected, and load fonts so they do not reflow the page.
+                    </BlogText>
+
+                    <h3 className="mt-8 mb-3 text-xl font-bold text-charcoal">llms.txt follows recommendations</h3>
+                    <BlogText>
+                        This one is a single file at the root of your domain, and it is the cheapest point on the
+                        board. The most common failure is not a malformed file but no file at all; on one site we
+                        tested the audit reported the fetch had timed out, which counts the same as absent.
+                    </BlogText>
+                    <BlogText>
+                        Be clear about what you are buying, though. We have written separately about how rarely
+                        answer engines request this file. Passing this audit earns a Lighthouse point and does not,
+                        on the evidence we have, meaningfully change whether an assistant quotes you. Add it because
+                        it is ten minutes of work and a check on a report someone will run, not because it is the
+                        thing that gets you cited. Anyone selling llms.txt as an AI visibility strategy is selling
+                        you the easiest third of an experimental score.
                     </BlogText>
 
                     <BlogHeader id="how-to-pass">How to Test and Resolve the Current Checks</BlogHeader>
