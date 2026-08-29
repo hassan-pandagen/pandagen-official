@@ -91,7 +91,8 @@ async function detectStack(browser, url) {
 async function scorePsi(url) {
   const api =
     `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}` +
-    `&key=${KEY}&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices`;
+    `&key=${KEY}&strategy=mobile&category=performance&category=seo&category=accessibility` +
+    `&category=best-practices&category=agentic-browsing`;
   const res = await fetch(api);
   if (!res.ok) throw new Error(`PSI ${res.status}`);
   const lhr = (await res.json()).lighthouseResult;
@@ -110,6 +111,30 @@ async function scoreLighthouse(url, port) {
   return shape(run.lhr);
 }
 
+/**
+ * Agentic Browsing is scored as a ratio, not 0-100, and the denominator moves.
+ * Verified against the API on 29 Aug 2026: six audits exist, and the three
+ * WebMCP ones report notApplicable on any site without WebMCP, which is nearly
+ * all of them. So most sites are scored out of 3 on agent-accessibility-tree,
+ * cumulative-layout-shift and llms-txt. Count what actually applies rather than
+ * assuming a denominator; published guides disagree about whether it is 3 or 4
+ * precisely because they assumed one.
+ */
+function agentic(lhr) {
+  const cat = (lhr.categories || {})['agentic-browsing'];
+  if (!cat) return { agentic: null, agenticFailed: [] };
+  const failed = [];
+  let passed = 0, total = 0;
+  for (const ref of cat.auditRefs || []) {
+    const a = (lhr.audits || {})[ref.id];
+    if (!a || a.scoreDisplayMode === 'notApplicable') continue;
+    total += 1;
+    if (a.score === 1) passed += 1;
+    else failed.push(ref.id);
+  }
+  return { agentic: total ? `${passed}/${total}` : null, agenticFailed: failed };
+}
+
 function shape(lhr) {
   const c = lhr.categories || {};
   const a = lhr.audits || {};
@@ -124,6 +149,7 @@ function shape(lhr) {
     tbt: v('total-blocking-time'),
     cls: v('cumulative-layout-shift'),
     weight: v('total-byte-weight'),
+    ...agentic(lhr),
   };
 }
 
@@ -187,14 +213,14 @@ console.log('\n' + '='.repeat(104));
 console.log(`QUALIFIED  (WordPress or a page builder, median mobile performance under 50)   source: ${SOURCE}`);
 console.log('='.repeat(104));
 console.log(
-  `${'site'.padEnd(34)} ${'builder'.padEnd(10)} ${'perf'.padEnd(5)} ${'+/-'.padEnd(4)} ${'SEO'.padEnd(4)} ${'a11y'.padEnd(5)} ${'LCP'.padEnd(9)} ${'TBT'.padEnd(9)} weight`
+  `${'site'.padEnd(32)} ${'builder'.padEnd(10)} ${'perf'.padEnd(5)} ${'agentic'.padEnd(8)} ${'SEO'.padEnd(4)} ${'LCP'.padEnd(9)} ${'TBT'.padEnd(9)} weight`
 );
 for (const r of qualified) {
   const host = new URL(r.url).host.replace(/^www\./, '');
   const builder = r.divi ? 'Divi' : r.elementor ? 'Elementor' : r.wpbakery ? 'WPBakery' : 'WP';
   console.log(
-    `${host.slice(0, 34).padEnd(34)} ${builder.padEnd(10)} ${String(r.performance).padEnd(5)} ` +
-      `${String(r.performanceSpread ?? '-').padEnd(4)} ${String(r.seo).padEnd(4)} ${String(r.accessibility).padEnd(5)} ` +
+    `${host.slice(0, 32).padEnd(32)} ${builder.padEnd(10)} ${String(r.performance).padEnd(5)} ` +
+      `${String(r.agentic ?? '-').padEnd(8)} ${String(r.seo).padEnd(4)} ` +
       `${String(r.lcp ?? '-').padEnd(9)} ${String(r.tbt ?? '-').padEnd(9)} ${r.weight ?? '-'}`
   );
 }
