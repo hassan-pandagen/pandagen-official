@@ -459,6 +459,20 @@ export default function SquarespaceTooSlowPage() {
                         ))}
                     </ul>
 
+                    <BlogHeader id="squarespace-agentic-browsing">The check that has nothing to do with load time</BlogHeader>
+                    <BlogText>
+                        PageSpeed Insights now carries an Agentic Browsing score alongside Performance, measuring
+                        whether an AI assistant can read the page rather than how fast it paints. It is worth looking
+                        at separately, because a Squarespace site can be tolerably quick and still fail it.
+                    </BlogText>
+                    <BlogText>
+                        The most telling result we got on 29 August 2026 was from squarespace.com itself, which scored
+                        2 of 3 and failed the accessibility-tree check. That is the platform&apos;s own marketing site,
+                        built by the people who build the platform. It is a reasonable indication that the check is
+                        strict and that passing it is not something a template hands you. Test your own busiest page
+                        rather than the home page, since the audits run per URL.
+                    </BlogText>
+
                     <BlogHeader id="faq">Frequently asked questions</BlogHeader>
                     {postFAQs.length > 0 && <FAQAccordion faqs={postFAQs} />}
                     <TopicUpLink postId={postId} />

@@ -391,6 +391,25 @@ export default function DiviThemeSlowPage() {
                         <Link href="/blog/how-to-fix-slow-wordpress" className={sourceLinkClass}>evidence-led methods for fixing a slow WordPress site</Link>.
                     </BlogText>
 
+                    <BlogHeader id="divi-agentic-browsing">Divi and the new agent-readability check</BlogHeader>
+                    <BlogText>
+                        Google added an Agentic Browsing category to PageSpeed Insights, and builder-heavy sites do
+                        badly in it for a reason that is not speed. One of its three checks asks whether the
+                        accessibility tree is well formed: whether your buttons are buttons, your headings run in
+                        order, and your controls carry names a machine can read. Divi composes pages from nested
+                        module wrappers, and a Divi button is frequently a div with a click handler rather than a
+                        button element. A screen reader struggles with that, and so does an assistant, because they
+                        read the page through the same structure.
+                    </BlogText>
+                    <BlogText>
+                        Two Divi sites we measured on 29 August 2026 scored 0 of 3 and 0 of 2. Both failed the
+                        accessibility-tree check and both failed on layout shift, one of them at 0.906 against a
+                        threshold of 0.1. That is the same instability this article is about, showing up in a second
+                        report under a different name. Run your own at pagespeed.web.dev and look at the Agentic
+                        Browsing figure next to Performance; if the tree check fails, the fix is semantic markup
+                        rather than another caching plugin.
+                    </BlogText>
+
                     <BlogHeader id="what-each-fix-addresses">What each common fix actually addresses</BlogHeader>
                     <BlogText>
                         The usual advice is a shopping list without a diagnosis, which is how people spend money in the

@@ -484,7 +484,24 @@ export default function WebflowVsCustomWebsitePage() {
                     </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
-                        <h2 className="mb-3 font-serif text-3xl">Get a Webflow fit and migration plan</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Where Webflow does well: agent readability</h2>
+                <p className="mb-6 text-lg leading-relaxed text-stone-700">
+                    One place the comparison goes in Webflow&apos;s favour, and it is worth saying because most
+                    comparison articles never concede anything. PageSpeed Insights now reports an Agentic Browsing
+                    score covering whether an assistant can read a page: accessibility-tree structure, layout
+                    stability and an llms.txt file. On 29 August 2026 we ran it across nine sites on different
+                    platforms. Eight failed the accessibility-tree check. The one that passed everything, scoring
+                    3 of 3, was webflow.com.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-stone-700">
+                    That is one page rather than a survey, and a marketing site rather than a customer&apos;s build.
+                    But it is a fair indication that Webflow&apos;s output is semantically respectable, and that
+                    machine readability is not the reason to leave it. The reasons to consider leaving are the ones
+                    covered above: cost at scale, what you own, and what happens when a feature you depend on is
+                    retired. Choose on those, not on a score Webflow does well at.
+                </p>
+
+                <h2 className="mb-3 font-serif text-3xl">Get a Webflow fit and migration plan</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We will compare staying, optimizing, using a hybrid and migrating against one requirement
                             set. Extra features and pages can be discussed after the inventory.
