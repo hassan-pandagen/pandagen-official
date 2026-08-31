@@ -1,7 +1,7 @@
 [
  {
   "slug": "ai-search-visibility-tracking",
-  "h2_total": 9,
+  "h2_total": 10,
   "flagged": 0,
   "num_promise_no_figure": 0,
   "hedge_distinct": 0,
@@ -114,13 +114,13 @@
  },
  {
   "slug": "agentic-browsing-pagespeed-score",
-  "h2_total": 9,
+  "h2_total": 13,
   "flagged": 0,
   "num_promise_no_figure": 0,
-  "hedge_distinct": 3,
-  "hedge_worst": 1,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
   "vague": 0,
-  "tables": 0,
+  "tables": 2,
   "lists": 3,
   "findings": []
  },
