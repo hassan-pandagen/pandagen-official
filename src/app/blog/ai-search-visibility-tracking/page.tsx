@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-28",
-        modifiedTime: "2026-08-28",
+        modifiedTime: "2026-08-31",
         url: canonicalUrl,
         siteName: "PandaCodeGen",
         images: [ogImageForPath("/blog/ai-search-visibility-tracking")],
@@ -65,7 +65,7 @@ const schema = {
             headline: title,
             description,
             datePublished: "2026-08-28",
-            dateModified: "2026-08-28",
+            dateModified: "2026-08-31",
             author: { "@type": "Person", name: "Hassan Jamal", url: "https://www.pandacodegen.com/about/hassan" },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: canonicalUrl,
@@ -84,6 +84,11 @@ const schema = {
                     "@type": "CreativeWork",
                     name: "Google: FAQPage structured data",
                     url: "https://developers.google.com/search/docs/appearance/structured-data/faqpage",
+                },
+                {
+                    "@type": "CreativeWork",
+                    name: "Lily Ray: What We Can Learn from Evolving ChatGPT Fan-Out Queries",
+                    url: "https://lilyraynyc.substack.com/p/what-we-can-learn-from-evolving-chatgpt",
                 },
             ],
         },
@@ -122,7 +127,7 @@ export default function AiSearchVisibilityTracking() {
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
-                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="13 min" />
+                <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="15 min" />
 
                 <TopicUpLink postId={postId} />
 
@@ -361,6 +366,65 @@ export default function AiSearchVisibilityTracking() {
                         rates from the query export and produced a figure that was wrong by orders of magnitude, because
                         the denominator was complete and the numerator was not. Use the pages export for any rate. Use
                         the query export to see which phrases exist, never to work out how well they perform.
+                    </BlogText>
+
+                    <BlogHeader id="fan-out-queries">Can you see the machine\u2019s own queries in Search Console?</BlogHeader>
+
+                    <BlogText>
+                        Sometimes, and it costs nothing to check. Filter the query report for{" "}
+                        <code>site:</code> and any results are almost certainly not people. Assistants building a
+                        retrieval query use search operators; humans typing into a box very rarely do. The method comes
+                        from{" "}
+                        <a
+                            href="https://lilyraynyc.substack.com/p/what-we-can-learn-from-evolving-chatgpt"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cognac hover:underline"
+                        >
+                            Lily Ray&apos;s work on ChatGPT fan-out queries
+                        </a>
+                        , published 17 August 2026, which argues the operator is being used to scope retrieval toward
+                        domains the model already trusts.
+                    </BlogText>
+                    <BlogText>
+                        Our own export carries four queries with operators in them. The most interesting one is this,
+                        reformatted onto one line:
+                    </BlogText>
+
+                    <div className="overflow-x-auto rounded-xl border border-stone-300 bg-stone-50 p-4">
+                        <code className="block whitespace-pre text-xs leading-relaxed text-stone-700">{`outgrown wix need custom website
+  -site:upwork.com -site:fiverr.com -site:freelancer.com
+  -site:peopleperhour.com -site:guru.com -site:toptal.com
+  -site:contra.com -site:clutch.co -site:wix.com
+  -site:squarespace.com -site:canva.com`}</code>
+                    </div>
+
+                    <BlogText>
+                        Twenty-one impressions, average position 3.24, no clicks. Nobody types eleven exclusions. That
+                        is a retrieval query stating an intent in plain words and then removing every freelance
+                        marketplace and website-builder domain from the results, which is a reasonable thing to do if
+                        you are trying to find an agency rather than a gig listing.
+                    </BlogText>
+                    <BlogText>
+                        Worth noting how it differs from the pattern Ray describes. Hers scopes toward trusted domains
+                        with positive operators. This one excludes with negative ones, a variation others have reported
+                        separately. Both are the same behaviour seen from opposite ends: the model deciding in advance
+                        which kinds of source it will and will not accept.
+                    </BlogText>
+
+                    <BlogHighlight>
+                        Not every operator query is a machine reading your page. One of ours reads{" "}
+                        <code>+1 &quot;info * com&quot; -india in inurl:contact</code>, which is a wildcard email
+                        harvest with a country exclusion. That is lead-generation tooling scraping for addresses, not an
+                        assistant answering a question. Read the query before you count it.
+                    </BlogHighlight>
+
+                    <BlogText>
+                        This changes how one earlier figure on this page should be read. A page earning impressions and
+                        no clicks looks like a click-through failure, and often is. The query above is impressions with
+                        no clicks and is not a failure at all: something retrieved the result, read what it needed, and
+                        had no reason to click. Those two cases are indistinguishable in the pages report and separable
+                        in the query report, which is the one argument for opening the query export at all.
                     </BlogText>
 
                     <BlogHeader id="how-to-read">How should you read your own numbers?</BlogHeader>
