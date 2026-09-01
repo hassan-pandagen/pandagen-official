@@ -316,25 +316,30 @@ export default function WooCommerceTooSlowPage() {
                         explain a large share of what a real audit finds, and knowing them changes which fix you reach for.
                     </BlogText>
 
-                    <h3 className="mt-6 text-xl font-bold text-charcoal">Cart fragments run site-wide, not just on the shop</h3>
+                    <h3 className="mt-6 text-xl font-bold text-charcoal">Cart fragments load wherever the mini-cart renders</h3>
                     <BlogText>
-                        WooCommerce loads its JavaScript on every page of the site, not only on shop, cart and checkout.
-                        That includes the cart-fragments script, which fires an AJAX request to refresh cart state, so
-                        your homepage, About page and contact page can each make an uncached server request that a static
-                        page has no reason to make. Because the response varies per visitor, page caching does not remove
-                        it. Plugins can disable it conditionally, but that needs configuration, risks breaking cart
-                        behavior, and has to be re-checked after WooCommerce updates. Treat it as ongoing maintenance
-                        rather than a fix, and measure the before and after on your own store instead of trusting a
-                        published millisecond figure. The same compounding pattern across the wider plugin set is covered
+                        WooCommerce used to enqueue the cart-fragments script on every page route. That changed in
+                        WooCommerce 7.8, released June 2023: the script now loads only where the Cart Widget is
+                        rendered, where a third-party script declares it as a dependency, or where it is explicitly
+                        enqueued in code. The catch is how often one of those is true. Storefront and many commercial
+                        themes hardcode the mini-cart into the header template, so it renders everywhere and the script
+                        comes with it. Where that happens, an AJAX request to refresh cart state fires on your homepage,
+                        About page and contact page, and because the response varies per visitor, page caching does not
+                        remove it. Check your own store rather than assuming either way: load a page that has no cart on
+                        it and look for <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-cart-fragments</code> in the network panel. If it is there,
+                        WooCommerce publishes a filter to scope it to shop pages, and the mini-cart block avoids the API
+                        altogether. The same compounding pattern across the wider plugin set is covered
                         in{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>.
                     </BlogText>
 
                     <h3 className="mt-6 text-xl font-bold text-charcoal">WooCommerce does not modernize your images for you</h3>
                     <BlogText>
-                        WooCommerce generates cropped thumbnails, but it does not convert uploads to WebP or AVIF, does not
-                        enforce an upload size limit, and does not build responsive image sets on its own. Upload a
-                        full-resolution DSLR product photo and mobile browsers can be served something very close to it.
+                        WooCommerce generates cropped thumbnails, and WordPress core has emitted
+                        <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">srcset</code> and <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">sizes</code> markup since version 4.4, so responsive
+                        candidates do exist. What neither does is convert uploads to WebP or AVIF, or enforce an upload
+                        size limit. Upload a full-resolution DSLR product photo and the largest candidate mobile
+                        browsers can pick is still very close to it.
                         Google reports WebP as roughly 25 to 34% smaller than comparable JPEG; AVIF is typically smaller
                         again. On a product page carrying eight unoptimized photos, that difference is the gap between a
                         page that renders quickly on mobile data and one that does not.
@@ -353,9 +358,12 @@ export default function WooCommerceTooSlowPage() {
                     <BlogText>
                         WooCommerce add to cart is slow because the click is not a local update. It is a server round trip that runs
                         WordPress, resolves the product, checks stock and pricing, writes the cart to the session, and
-                        then hands back a fragment for the mini-cart to redraw. In a browser network panel you will see
-                        it as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=get_refreshed_fragments</code>. On a variable product it also has to
-                        match the chosen variation. Because the response differs per visitor it cannot be served from a
+                        then hands back a fragment for the mini-cart to redraw. In a browser network panel a classic store
+                        shows the add itself as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=add_to_cart</code>, usually followed by a second
+                        request, <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=get_refreshed_fragments</code>, that redraws the mini-cart. A
+                        block-based store uses the Store API instead and posts to <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wc/store/v1/cart/add-item</code>.
+                        Either way it is two round trips where the shopper expects one instant update. On a variable
+                        product it also has to match the chosen variation. Because the response differs per visitor it cannot be served from a
                         page cache, so it lands on PHP every time, competing for the same workers as everything else on
                         the site. Any extension hooked into the add-to-cart action, such as bundles, add-ons,
                         subscriptions or upsell logic, runs inside that same request.
@@ -379,9 +387,13 @@ export default function WooCommerceTooSlowPage() {
                         WooCommerce checkout is the slowest page in most stores because it is the one page that can never be
                         full-page cached. WooCommerce&apos;s own caching guidance is explicit that Cart, Checkout and My
                         Account must stay dynamic, since they carry customer and session-specific data. So every load
-                        runs the full stack: it holds customer state, calculates shipping and tax, checks stock, calls
-                        the payment provider and writes the order. Every extension hooked into that flow adds its work
-                        to the same request, and a slow payment or fraud service becomes your slow checkout.
+                        runs the full stack: it holds customer state, calculates shipping and tax, and checks stock.
+                        Separate the three stages before you optimise, because they cost different things. The initial
+                        load builds the form and the totals. Changing an address or a shipping method fires a
+                        recalculation over AJAX, and that is where a slow checkout usually reveals itself, since a
+                        shopper triggers it several times. Only when they press Place Order does WooCommerce contact
+                        the payment provider and write the order. Every extension hooked into any of those adds its
+                        work to the same request, and a slow payment or fraud service becomes your slow checkout.
                     </BlogText>
                     <BlogText>
                         Test each supported country, shipping method, tax path and payment method. Inspect address

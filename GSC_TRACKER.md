@@ -97,6 +97,38 @@
 | Mar 24, 2026 | 42 | 13 | 20+ (Bing Site Explorer: 20 root + 6 blog) |
 | May 15, 2026 | 80 | 12 | — |
 | May 31, 2026 | ~80 (62 in current build) | — | — (40.9K impressions, 71 clicks 3-mo) |
+| Aug 28, 2026 | **122** (sitemap-filtered) | **17** | — (129 indexed / 231 not indexed across ALL known URLs) |
+
+> **Aug 28 indexing breakdown:** 122 indexed of 139 in the sitemap (88%), up +42
+> from the 80 logged on May 15. The 17 not indexed split 14 "Crawled - currently
+> not indexed" (validation **Failed**) and 3 "Discovered - currently not indexed"
+> (validation Passed). The all-URLs view reports 129 indexed / 231 not indexed;
+> that larger not-indexed pile is mostly non-www variants, redirects and param
+> URLs rather than real pages. The 14 crawled-not-indexed with failed validation
+> is the only actionable group and repeats the May pattern: Google looked and
+> declined.
+
+> **Aug 31 diagnosis of the 14 "Crawled - currently not indexed":** it is a
+> recrawl problem, not a content problem. All 13 blog posts in the group carry
+> `lastModified: 2026-08-19` in blog.ts, and the sitemap emits that date
+> correctly. Google's most recent visit to any of them was 7 Jul, and nine of
+> the fourteen were last crawled in April or May. So Google judged the
+> PRE-rewrite version, declined, and has not returned. Every July and August
+> pass on these pages is invisible to it. Same root cause as the 3 Aug stale-
+> snippet finding. Internal linking is NOT the cause: inbound refs run 6 to 21
+> per page (how-website-speed-affects-seo has 21, wordpress-plugins-destroy-
+> speed 17, wordpress-vs-custom-code 15). Fix is forced recrawl via URL
+> Inspection > Request Indexing (~10/day cap), highest inbound-link pages first.
+> Whether the rewritten versions then get indexed is untested, because Google
+> has never seen them.
+>
+> **The 3 "Discovered - never crawled" are a different bug.** `/services/webflow`
+> is a real money page with 19 inbound internal links and IS in sitemap.ts, yet
+> has never been fetched (flagged Jul 7 too, still unresolved). `/de` and
+> `/fr/pricing` are real 5-page locale trees (de and fr each have home, about,
+> contact, pricing, services) that are NOT listed in sitemap.ts at all. Decide:
+> either add the locale routes to the sitemap or noindex them, but leaving real
+> linked pages out of the sitemap is why Google found them and stalled.
 
 > **May 15 indexing breakdown:** 80 indexed (+38 from Mar 24, +25 from estimated 55 at week 7). 12 not indexed: 4 Page with redirect (HTTP→HTTPS, normal — not real issues), 4 Crawled-currently not indexed (validation failed 12/05/26 — affected: google-universal-commerce-protocol, shopify-app-costs-real-monthly-bill, pandacodegen.com root non-www, wordpress-traffic-drop-speed), 1 Not found 404, 3 other. Crawled-not-indexed validation started 30/04 then failed 12/05 — Google decided not to index these despite re-validation request.
 
