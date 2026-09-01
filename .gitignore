@@ -102,3 +102,8 @@ scripts/scan/prospect-audit.json
 # Unredacted client/operations exports. Never ship these; they are kept only so
 # a redacted version can be produced from them.
 private-assets/
+
+# Outreach research. Named prospects, personal work emails, LinkedIn profiles,
+# competitor analysis and internal pricing. Same rule as private-assets/ and the
+# prospect audit output above: kept locally so it is easy to find, never committed.
+outreach/
