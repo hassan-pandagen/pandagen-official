@@ -43,7 +43,10 @@ next-env.d.ts
 *.swo
 
 # Claude Code internal files
-.claude/
+# Claude Code project config. Skills and shared settings ARE committed so they
+# travel between machines. settings.local.json is per-machine permission state
+# that Claude Code rewrites constantly, so it stays out.
+.claude/settings.local.json
 
 # Playwright MCP artifacts (screenshots, console logs, page snapshots — local research only)
 .playwright-mcp/
@@ -57,6 +60,9 @@ test-results/
 !SECURITY.md
 !docs/
 !docs/**/*.md
+# Skills are markdown by design and must travel between machines. This negation
+# has to sit AFTER the *.md rule above to win: last matching pattern applies.
+!.claude/skills/**/*.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
 ad-creative.md
