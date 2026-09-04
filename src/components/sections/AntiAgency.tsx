@@ -54,7 +54,7 @@ export default function AntiAgency() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 bg-linear-to-b from-white to-stone-50 border border-white shadow-xl shadow-stone-900/10 ring-1 ring-stone-900/5 rounded-2xl hover:border-cognac/30 hover:shadow-2xl hover:shadow-cognac/10 hover:-translate-y-1 transition-all duration-500 group"
+              className="p-8 bg-linear-to-b from-white to-stone-50 border border-cognac/25 shadow-xl shadow-stone-900/10 ring-1 ring-stone-900/5 rounded-2xl hover:border-cognac/60 hover:shadow-2xl hover:shadow-cognac/10 hover:-translate-y-1 transition-all duration-500 group"
             >
               <span
                 aria-hidden="true"

@@ -100,6 +100,15 @@ export const GOVERNANCE: readonly Fact[] = [
     // The remaining wording is true regardless of who is a client this month,
     // and it is the part a prospect actually needs.
     { label: 'Regulated data', value: 'PandaCodeGen will execute a Business Associate Agreement where a project involves protected health information under HIPAA. Signing a BAA defines responsibilities for that engagement; it is not a certification and is not a claim of blanket HIPAA compliance.' },
+    // ADDED 4 Sep 2026, when we first published measurements of sites we do not
+    // own. The evidence policy above governs OUR project results. It says nothing
+    // about third parties we measure, which raises a different set of questions:
+    // who chose the sample, are they identifiable, and does the finding read as an
+    // accusation. Stating it once is the same reasoning as the paid-placement
+    // entry, and it is the answer a measured company should be able to find
+    // without emailing to ask.
+    { label: 'Third-party measurement', value: 'Where PandaCodeGen publishes measurements of websites it does not own, the instrument, the dates measured and how the sample was chosen are stated on the page. Individual sites, their owners and the agencies that built them are not named, because a measurement of a live site reflects its condition on one date and not the competence of whoever built it. Findings are published with what they cannot show, including results that run against our own argument.' },
+
     { label: 'Crawl policy', value: 'All crawlers, including AI crawlers, may access the site. Only /api/ and /_next/data/ are excluded. The machine-readable version is at /robots.txt.' },
     { label: 'Corrections', value: 'Mutable facts carry the date they were checked. Where a published figure is later found wrong it is corrected rather than quietly removed, and the editorial policy states how.' },
 ];

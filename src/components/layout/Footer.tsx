@@ -179,6 +179,11 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 desc="Platform and engineering options."
               />
               <FeaturedLink
+                href="/ai-info"
+                title="Facts and Figures"
+                desc="Pricing, team, case studies and guarantees, stated plainly."
+              />
+              <FeaturedLink
                 href="/security"
                 title="Security"
                 desc="Reporting and disclosure process."

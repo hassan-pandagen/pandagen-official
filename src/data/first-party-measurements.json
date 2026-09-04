@@ -1,0 +1,155 @@
+{
+  "$comment": [
+    "MEASUREMENTS WE TOOK OURSELVES. Not vendor specs, not published studies.",
+    "",
+    "WHY A THIRD FILE. spec-facts.json holds other companies' prices and limits on a",
+    "90/180-day clock, because a vendor can change one this afternoon.",
+    "research-facts.json holds published studies, which do not decay on a clock but",
+    "are superseded when the next edition appears. These are neither. A measurement",
+    "we took on a stated date with a stated instrument is true of that date forever,",
+    "and becomes misleading the moment it is presented as current. Different",
+    "lifecycle again, so a different file.",
+    "",
+    "THE RULE THAT MATTERS MOST HERE. We are the source, so nobody else will catch",
+    "an error. Every entry carries the instrument, the window, the limitation, and",
+    "whether the subject is founder-affiliated. A first-party number published",
+    "without its method is marketing, and this site's own editorial policy calls it",
+    "that.",
+    "",
+    "AFFILIATION IS NOT OPTIONAL. Panda Patches is founder-owned. Every figure drawn",
+    "from it renders with that stated, per the brand canon. The July audit named",
+    "unlabelled affiliated claims as the site's first entity liability.",
+    "",
+    "WHAT THESE DO NOT LICENSE. None of this proves that passing a Lighthouse check",
+    "causes revenue. pandacodegen.com scores 3 of 3 and has too little traffic to",
+    "register in the Chrome UX Report, which is the counter-example kept in this file",
+    "deliberately. State the measurements, state the testimony, and let the reader",
+    "join them."
+  ],
+  "measurements": {
+    "small-business-agentic-failure-2026-09": {
+      "headline": "37 of 48",
+      "statement": "37 of 48 small-business websites failed Google's agent-accessibility-tree check, while the median Lighthouse SEO score across every build stack was 92 or above",
+      "detail": {
+        "sitesMeasured": 48,
+        "failedAccessibilityTree": 37,
+        "failureRate": "77%",
+        "medianSeoByStack": "92 to 100",
+        "haveCruxData": 4
+      },
+      "instrument": "Google PageSpeed Insights API v5, mobile strategy, categories agentic-browsing and seo",
+      "window": "1 to 3 September 2026",
+      "sampling": "Sites sourced from published agency portfolios and from a directory of board-certified surgeons. Not a random sample of the web.",
+      "note": "The stack was recorded and did not predict failure. Sites with no page builder failed at 90%, higher than any builder group. Report that as a null result rather than omitting it.",
+      "limitation": "48 sites is enough to notice a pattern and not enough to generalise to an industry. No rankings, conversions or revenue were measured for any of them. A failing score does not prove absence from AI answers.",
+      "affiliated": false,
+      "verifiedAt": "2026-09-03",
+      "source": "outreach/tools/webflo_clients.json, sweep2.json, stack_vs_agentic.json"
+    },
+    "panda-patches-ai-revenue-2026-08": {
+      "headline": "$11,186.59",
+      "statement": "AI assistants produced $11,186.59 across 36 orders in August 2026, 14.7% of the store's revenue, with no money spent on any AI platform",
+      "detail": {
+        "netRevenue": 74755,
+        "grossRevenue": 76350,
+        "refunds": -1595,
+        "totalAttributed": 76349.81,
+        "aiRevenue": 11186.59,
+        "aiOrders": 36,
+        "aiShareOfRevenue": "14.7%",
+        "byPlatform": {
+          "ChatGPT": {
+            "orders": 27,
+            "revenue": 9137.61
+          },
+          "Gemini": {
+            "orders": 4,
+            "revenue": 723.98
+          },
+          "Claude": {
+            "orders": 3,
+            "revenue": 790
+          },
+          "Perplexity": {
+            "orders": 1,
+            "revenue": 400
+          },
+          "Meta AI": {
+            "orders": 1,
+            "revenue": 135
+          }
+        },
+        "comparison": "ChatGPT alone ($9,137.61) exceeded Google Ads ($7,580.84)",
+        "unattributed": "$3,350 across Unknown and Direct/Unknown"
+      },
+      "instrument": "First-party referrer capture plus email-declared source, recorded in the store's own order system at portal.pandapatches.com",
+      "window": "1 to 31 August 2026",
+      "note": "AI orders are worth LESS, not more: $310.74 average against a site average of $366.45. Publish that. It runs against the industry narrative and it is the figure that makes the rest credible.",
+      "limitation": "One store, one month, one product category, at a $366 average order. Referrer-based attribution undercounts AI, because assistants frequently pass no referrer, so this is a floor rather than a total. Nothing here transfers to a different price point or sales cycle.",
+      "affiliated": true,
+      "affiliationNote": "Panda Patches is founder-owned. State this wherever the figure appears.",
+      "verifiedAt": "2026-09-04",
+      "source": "portal.pandapatches.com/reports, Last Month view, 08/01/2026 to 08/31/2026"
+    },
+    "our-own-sites-agentic-2026-09": {
+      "headline": "3 of 3, and one of them has no audience",
+      "statement": "pandapatches.com and pandacodegen.com both score 3 of 3 on Agentic Browsing with Lighthouse SEO 100; pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not",
+      "detail": {
+        "pandapatches.com": {
+          "agentic": "3/3",
+          "seo": 100,
+          "crux": true
+        },
+        "pandacodegen.com": {
+          "agentic": "3/3",
+          "seo": 100,
+          "crux": false
+        }
+      },
+      "instrument": "Google PageSpeed Insights API v5, mobile strategy",
+      "window": "4 September 2026",
+      "note": "Keep both rows together, always. Our own site passes every check and has too little traffic to register. That is the proof the check is necessary and not sufficient, and it is the most disarming fact available to us. Removing it to make an argument cleaner would be the exact dishonesty the evidence policy exists to prevent.",
+      "limitation": "Two sites. Proves the checks can be passed, nothing about what passing produces.",
+      "affiliated": true,
+      "affiliationNote": "Both are our own properties.",
+      "verifiedAt": "2026-09-04",
+      "source": "PageSpeed Insights API, run 4 September 2026"
+    },
+    "constraint-not-category-2026": {
+      "headline": "Two customers, two constraints",
+      "statement": "Two Panda Patches customers independently described finding the store by asking an AI assistant for a constraint rather than a category: one for patch companies with no or low minimums, one for PVC patches with no mould fee",
+      "instrument": "Unprompted customer statements, recorded at the point of order",
+      "window": "2026",
+      "note": "The cross-vertical case is My Houston Surgeons, measured 2 September 2026: first place for 'best sinus surgeon Houston', where a named sub-specialty exists, and absent from 'best plastic surgeon Houston', where nothing distinguishes them. Same mechanism, different industry.",
+      "limitation": "Two self-reported customer accounts and one practice measured on two queries. A mechanism with supporting cases, not a proven law. Say so.",
+      "affiliated": true,
+      "affiliationNote": "Panda Patches is founder-owned. The Houston case is a third party and is not named on any page.",
+      "verifiedAt": "2026-09-04",
+      "source": "Customer statements on file; Houston measurement at outreach/shots/houston/"
+    },
+    "ai-crawler-access-2026-09": {
+      "headline": "200 OK, all four",
+      "statement": "GPTBot, ClaudeBot, PerplexityBot and Googlebot were each served HTTP 200 and an identical 128,100 bytes by a site that fails Google's agent-accessibility-tree check",
+      "detail": {
+        "userAgentsTested": [
+          "GPTBot/1.0",
+          "ClaudeBot/1.0",
+          "PerplexityBot/1.0",
+          "Googlebot/2.1",
+          "Chrome 120 desktop"
+        ],
+        "responseCode": 200,
+        "bytesServed": 128100,
+        "robotsTxt": "no AI-crawler exclusions; Disallow /wp-admin/ and Crawl-delay: 10 only",
+        "agenticBrowsing": "1 of 2, fails accessibility tree"
+      },
+      "instrument": "curl with each user-agent string, response code and byte count compared",
+      "window": "2 September 2026",
+      "note": "Google's own AI answer to 'why is my website not showing up in AI search' names blocked AI crawlers as the number one technical culprit. On the site we tested it was not a factor at all. That is information gain against the prevailing answer and the reason this measurement exists.",
+      "limitation": "One site. Proves that a site can serve every AI crawler and still fail machine-readability checks. Says nothing about how common crawler blocking is across the web.",
+      "affiliated": false,
+      "verifiedAt": "2026-09-04",
+      "source": "Session log, 2 September 2026; site not named per the third-party measurement policy"
+    }
+  }
+}
