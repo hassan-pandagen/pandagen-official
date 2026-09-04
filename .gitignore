@@ -65,6 +65,12 @@ test-results/
 !.claude/skills/**/*.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
+
+# Word documents. The research project outputs .docx dossiers and they land in the
+# working directory; the client evaluation docs are the same shape. None of them
+# belong in a repo with a public GitHub remote, and the old PandaCodeGen_* rule only
+# caught the ones we happened to name that way.
+*.docx
 ad-creative.md
 improvements-plan.md
 
