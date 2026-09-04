@@ -150,6 +150,25 @@
       "affiliated": false,
       "verifiedAt": "2026-09-04",
       "source": "Session log, 2 September 2026; site not named per the third-party measurement policy"
+    },
+    "lighthouse-agent-a11y-tree-rules-2026-09": {
+      "headline": "33 rules, binary",
+      "statement": "Lighthouse's agent-accessibility-tree audit filters axe-core violations to 33 hard-coded rules and scores binary: one violation of any rule scores zero",
+      "detail": {
+        "ruleCount": 33,
+        "scoringLine": "score: Number(items.length === 0)",
+        "auditTitleString": "Accessibility tree is well-formed",
+        "reportsOnlyFirstNode": "rule.nodes?.[0], so the visible table is shorter than the real violation list",
+        "branch": "main",
+        "conflictingClaim": "An agency write-up states 38 rules. The build inside PageSpeed Insights on any given day may differ from main."
+      },
+      "instrument": "Direct reading of core/audits/agentic/agent-accessibility-tree.js in the GoogleChrome/lighthouse repository; rules counted from the TARGET_RULES set",
+      "window": "4 September 2026",
+      "note": "This is what a failing agentic-browsing result actually means, and it is weaker than the phrase suggests. A site with one unnamed icon link fails identically to one built entirely from unlabelled divs. Never write 'fails the check that decides whether an assistant can read the page' without this qualification.",
+      "limitation": "Read from the main branch, not a release tag. Re-read and re-pin before quoting the count again; the set is a hard-coded list in an actively developed file.",
+      "affiliated": false,
+      "verifiedAt": "2026-09-04",
+      "source": "https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/core/audits/agentic/agent-accessibility-tree.js"
     }
   }
 }

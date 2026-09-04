@@ -109,6 +109,12 @@ export const GOVERNANCE: readonly Fact[] = [
     // without emailing to ask.
     { label: 'Third-party measurement', value: 'Where PandaCodeGen publishes measurements of websites it does not own, the instrument, the dates measured and how the sample was chosen are stated on the page. Individual sites, their owners and the agencies that built them are not named, because a measurement of a live site reflects its condition on one date and not the competence of whoever built it. Findings are published with what they cannot show, including results that run against our own argument.' },
 
+    // ADDED 4 Sep 2026. Both halves belong together and the second is the reason
+    // the first is worth stating. A fact sheet that published the score and omitted
+    // the traffic result would be selecting evidence, which is the behaviour the
+    // policy two entries above forbids.
+    { label: 'Agentic browsing', value: 'As checked on 4 September 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of Google PageSpeed Insights, with a Lighthouse SEO score of 100. pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not, meaning pandacodegen.com sits below Google’s undisclosed traffic threshold for real-user reporting. Passing those checks is a statement about machine readability and not a claim about traffic, rankings or revenue.' },
+
     { label: 'Crawl policy', value: 'All crawlers, including AI crawlers, may access the site. Only /api/ and /_next/data/ are excluded. The machine-readable version is at /robots.txt.' },
     { label: 'Corrections', value: 'Mutable facts carry the date they were checked. Where a published figure is later found wrong it is corrected rather than quietly removed, and the editorial policy states how.' },
 ];

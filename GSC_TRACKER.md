@@ -1465,6 +1465,57 @@ the same goto pattern appears there.
 
 ---
 
+## 4 SEPTEMBER EXPORT — CAPTURED, NOT READ
+
+Both exports saved to `GSC/search-2026-09-04/` and `GSC/genai-2026-09-04/`.
+Deliberately taken four days before the Experiment 5 rewrites begin, so the
+pre-intervention baseline sits close to the intervention rather than ten days out.
+
+**Nothing cohort-related has been examined. No treatment-versus-holdout comparison
+was run, and none should be until 8 September.** Capturing data and reading
+outcomes are different acts; only the second is date-locked.
+
+### Site totals, 3 Jun to 2 Sep
+
+131 pages, 253 clicks, 149,990 impressions.
+
+### Generative AI features, 29 Aug against 4 Sep
+
+| | 29 Aug | 4 Sep |
+|---|---|---|
+| Pages with AI impressions | 92 | 95 |
+| Total AI impressions | 8,749 | 9,203 |
+| Top page's share of all AI impressions | 58% | 57% |
+| /ai-info cluster | 39 | 41 |
+
+`nextjs-hosting-zero-cost` holds 5,277 of 9,203, unchanged in six days. The
+concentration question raised in August is still open and still unexplained.
+
+The generative-AI export carries impressions only, no clicks, so it cannot answer
+a CTR question in either direction.
+
+### Operational findings, which are not experiment metrics
+
+**The three dark pages are still absent from the export entirely.** Not zero
+impressions, not present: `wordpress-killer`, `shopify-plus-still-slow` and
+`why-we-chose-nextjs-over-wordpress-2026`, across a full three-month window.
+`wordpress-killer` being invisible is why Experiment 1 has no readable control,
+and nothing has resolved on its own.
+
+**`/services/webflow` still records nothing.** A money page with 19 inbound
+internal links, present in the sitemap, first flagged as never-crawled on 7 July.
+Two months, no change. It is the highest-value Request Indexing target on the
+backlog.
+
+**`/work/enterprise-ops` recovered without intervention**, showing 21 impressions
+and confirmed indexed on 4 Sep. Mild evidence that the crawled-not-indexed set can
+come back, and a reason to force the rest rather than wait.
+
+**The `/ai-info` cluster is six pages, not five.** `/ai-info/competitor-comparison`
+was missed in an earlier count. All six draw AI impressions.
+
+---
+
 ## EXPERIMENT 5, PRE-REGISTERED 29 AUGUST 2026
 
 Written before the 8 September reads, deliberately. Experiment 1 failed because

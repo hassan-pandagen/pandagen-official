@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-10",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-05",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/elementor-kills-seo")],
@@ -60,7 +60,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath("/blog/elementor-kills-seo"),
             datePublished: "2026-03-10",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-05",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -303,6 +303,31 @@ export default function ElementorSeoPage() {
                         SEO&quot; claim that is actually true — not because Elementor emits bad markup, but because a
                         visual canvas invites a structural decision to be made on visual grounds. That is a workflow
                         problem, and workflow problems survive a migration if nobody names them.
+                    </BlogText>
+
+                    <BlogHeader id="september-2026-security">A separate matter if you run Elementor Pro</BlogHeader>
+                    <BlogText>
+                        This is not an SEO finding and it does not belong in the argument above, but anyone auditing an
+                        Elementor site in September 2026 should clear it first. CVE-2026-32475 is an unauthenticated
+                        arbitrary file upload in Elementor Pro, scored CVSS 9.8, affecting versions up to and including
+                        4.2.1. Patchstack disclosed it and Elementor released 4.2.2 on 19 August 2026. If you are on
+                        4.2.2 or later you are patched and there is nothing here to do.
+                    </BlogText>
+                    <BlogText>
+                        A site is only reachable through this if it has a published Form widget carrying at least one
+                        File Upload field, which is one reason the route-level audit below asks you to include a form
+                        path among the templates you test. Exploitation began the same day the fix shipped and Wordfence
+                        blocked close to 190,000 attempts over the following four days. Elementor&apos;s response was
+                        immediate, so what decided the outcome for any given site was whether the update had been
+                        applied. If a site ran 4.2.1 or earlier after 19 August 2026, audit
+                        /wp-content/uploads/elementor/forms/ for PHP files and check for administrator accounts nobody
+                        recognises.
+                    </BlogText>
+                    <BlogText>
+                        The full timeline, and the Super Forms campaign that ran on the same validation-bypass
+                        mechanism, are in our{" "}
+                        <Link href="/blog/wordpress-plugin-security-2026" className={sourceLinkClass}>WordPress plugin security guide</Link>.
+                        Checked 5 September 2026.
                     </BlogText>
 
                     <BlogHeader>Run a route-level Elementor audit</BlogHeader>

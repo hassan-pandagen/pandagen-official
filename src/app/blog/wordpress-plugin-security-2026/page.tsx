@@ -35,6 +35,10 @@ export const metadata: Metadata = {
         "is wordpress secure",
         "wordpress plugin vulnerability",
         "CVE-2026-15981",
+        "CVE-2026-32475",
+        "CVE-2026-14894",
+        "elementor pro vulnerability",
+        "super forms vulnerability",
         "miniorange saml vulnerability",
         "wordpress security 2026",
     ],
@@ -43,7 +47,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-08-27",
-        modifiedTime: "2026-08-27",
+        modifiedTime: "2026-09-05",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath(`/blog/${postId}`)],
@@ -61,7 +65,7 @@ const articleSchema = {
             description,
             image: ogImageUrlForPath(`/blog/${postId}`),
             datePublished: "2026-08-27T00:00:00-05:00",
-            dateModified: "2026-08-27T00:00:00-05:00",
+            dateModified: "2026-09-05T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -349,6 +353,50 @@ export default function WordPressPluginSecurity2026Page() {
                         Notice that none of those four is about the language, the framework or the hosting. They are
                         about disclosure discipline and update mechanics, and they vary enormously between vendors
                         inside the same ecosystem.
+                    </BlogText>
+
+                    <BlogHeader id="patch-available-not-applied">The September attacks invert this, and that case is worse</BlogHeader>
+                    <BlogText>
+                        Between July and September 2026 two WordPress plugins were attacked at scale while a fix was
+                        already published for both. Wordfence blocked more than 250,000 attempts against Super Forms and
+                        close to 190,000 against Elementor Pro. Neither campaign relied on a hidden edition, a silent
+                        changelog or an advisory that named the wrong version. Both vendors did the disclosure work
+                        correctly and hundreds of thousands of sites were attacked anyway.
+                    </BlogText>
+                    <BlogText>
+                        CVE-2026-14894 is an unauthenticated arbitrary file upload in Super Forms, scored CVSS 9.8,
+                        caused by a public AJAX endpoint that performed no file-type validation and no capability check.
+                        Super Forms 6.3.314 fixed it in the first week of July 2026 and Wordfence published the advisory
+                        on 9 July. Attacks began on 14 July, five days after that advisory, and peaked above 40,000
+                        requests in a single day on 18 August. Sites were still being compromised five weeks after the
+                        fix shipped.
+                    </BlogText>
+                    <BlogText>
+                        CVE-2026-32475 is the same class of flaw in Elementor Pro, also scored CVSS 9.8, reachable on
+                        any site with a published Form widget carrying at least one File Upload field. Patchstack
+                        disclosed it and Elementor released 4.2.2 on 19 August 2026. Exploitation started the same day,
+                        and Wordfence blocked close to 190,000 attempts over the following four days across a plugin
+                        with more than six million active installations. Elementor&apos;s response time was effectively
+                        zero, and it did not protect the sites that had not applied the update.
+                    </BlogText>
+                    <BlogText>
+                        Read against the miniOrange case, these two say something the four questions above do not cover.
+                        With the SSO plugin the failure was upstream, because no advisory named the paid editions and a
+                        diligent owner could not have found out. With Super Forms and Elementor Pro every signal worked.
+                        The version numbers were public and the dashboard offered the update. No edition matrix had to
+                        be reconstructed from a third-party article.{" "}
+                        <BlogHighlight>
+                            A patch nobody applied protects a site exactly as much as a patch nobody wrote.
+                        </BlogHighlight>{" "}
+                        That gap is not something a vendor can close on your behalf.
+                    </BlogText>
+                    <BlogText>
+                        Both flaws also share a shape worth recognising in your own stack. A form that accepts file
+                        uploads from the public is a code path where an unauthenticated stranger writes a file to your
+                        server, and it turns on validation that is easy to get subtly wrong. Super Forms and Elementor
+                        Pro both failed on an array-shaped submission where the first element was empty and the second
+                        carried the payload. If you run any plugin that accepts public uploads, that is the input worth
+                        asking about first.
                     </BlogText>
 
                     <BlogHeader id="what-to-do">What should you do if you run this plugin?</BlogHeader>

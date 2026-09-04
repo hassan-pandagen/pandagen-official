@@ -424,6 +424,88 @@ export default function AgenticBrowsingPage() {
                         and the count grows; skip it, as almost everyone has, and you are scored out of three.
                     </BlogText>
 
+                    <BlogHeader id="what-well-formed-means">What does &ldquo;well-formed&rdquo; actually mean?</BlogHeader>
+
+                    <BlogText>
+                        It means no violation of thirty-three named rules. We read the audit&apos;s source rather than
+                        anyone&apos;s description of it: <code>core/audits/agentic/agent-accessibility-tree.js</code> on
+                        the Lighthouse main branch, checked 4 September 2026. The audit takes the axe-core violations
+                        already collected for the accessibility category and filters them to a hard-coded list.
+                    </BlogText>
+
+                    <BlogText>
+                        The list runs from <code>button-name</code>, <code>link-name</code> and <code>label</code>
+                        through the ARIA family, <code>aria-required-attr</code>, <code>aria-valid-attr-value</code>,
+                        <code>aria-required-children</code> and the rest, to <code>tabindex</code>,
+                        <code>autocomplete-valid</code> and <code>svg-img-alt</code>. Thirty-three identifiers, and you
+                        can count them yourself in the file.
+                    </BlogText>
+
+                    <BlogHighlight>
+                        Scoring is binary. The line is <code>score: Number(items.length === 0)</code>, so one violation
+                        of any one of the thirty-three scores the audit zero.
+                    </BlogHighlight>
+
+                    <BlogText>
+                        That changes how a failure should be read. A site with a single unnamed icon link and an
+                        otherwise clean structure fails identically to a site built entirely from unlabelled divs.
+                        Nothing in the score distinguishes them. If you are looking at a failing audit, open the table:
+                        it lists the failing rule, and Lighthouse shows only the first offending element per rule, so
+                        the visible list is shorter than the real one.
+                    </BlogText>
+                    <BlogText>
+                        Worth pinning the version if you quote the count. We read the main branch on 4 September 2026;
+                        write-ups elsewhere say thirty-eight, and the build running inside PageSpeed Insights on the day
+                        you test may not match either.
+                    </BlogText>
+
+                    <BlogHeader id="w3c-definition">What the standard says, as opposed to the audit</BlogHeader>
+
+                    <BlogText>
+                        The phrase &ldquo;well-formed accessibility tree&rdquo; is Lighthouse&apos;s own. It is the
+                        audit&apos;s title string, sitting in that same file as
+                        <code>title: &apos;Accessibility tree is well-formed&apos;</code>. WAI-ARIA defines the tree
+                        itself without ever using the word.
+                    </BlogText>
+                    <BlogText>
+                        WAI-ARIA 1.2, a W3C Recommendation since 6 June 2023, defines an accessibility tree in its
+                        glossary as a{" "}
+                        <a
+                            href="https://www.w3.org/TR/wai-aria-1.2/#dfn-accessibility-tree"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-cognac hover:underline"
+                        >
+                            &ldquo;tree of accessible objects that represents the structure of the user interface&rdquo;
+                        </a>
+                        . Each node is an element as exposed through a platform accessibility API. That definition sits
+                        in a section marked non-normative; the requirements about which elements must and must not
+                        become accessible objects are in Section 7.
+                    </BlogText>
+
+                    <BlogHeader id="not-just-screen-readers">Who reads the tree, besides screen readers?</BlogHeader>
+
+                    <BlogText>
+                        Five of the six assistive technologies the specification names are not screen readers. WAI-ARIA
+                        1.2 lists screen magnifiers, screen readers, text-to-speech software, speech recognition
+                        software, alternate input technologies such as head pointers, on-screen keyboards, single
+                        switches and sip-and-puff devices, and alternate pointing devices.
+                    </BlogText>
+                    <BlogText>
+                        Section 3.3 is normative and it is the part that matters here. It states that speech recognition
+                        systems and alternate input devices require the ability to control a web application
+                        device-independently, and that user agents must provide a way to notify the application when a
+                        state or property changes through the accessibility API. Microsoft&apos;s own UI Automation
+                        documentation says the same API lets automated test scripts interact with an interface, and its
+                        Win32 accessibility page lists the expected clients as screen readers, magnifiers, speech
+                        recognisers and eye trackers.
+                    </BlogText>
+                    <BlogHighlight>
+                        The tree was never a screen reader feature that agents happen to borrow. It is the general
+                        interface for anything driving a page without eyes, and the specification said so years before
+                        anyone scored a site on agentic browsing.
+                    </BlogHighlight>
+
                     <BlogHeader id="fix-each-check">How do you fix each of the three?</BlogHeader>
 
                     <BlogText>

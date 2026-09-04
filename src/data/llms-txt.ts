@@ -43,6 +43,8 @@ const HEADER = `# PandaCodeGen
 - Service priority: United States first, with remote work available worldwide.
 - Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
 - Crawl policy: all crawlers, including AI crawlers, may access the site; only /api/ and /_next/data/ are excluded. See /robots.txt.
+- Agentic browsing: as checked on 4 September 2026, pandacodegen.com and pandapatches.com each score 3 of 3 in the Agentic Browsing category of PageSpeed Insights, with a Lighthouse SEO score of 100. pandapatches.com appears in the Chrome UX Report and pandacodegen.com does not, meaning pandacodegen.com is below Google's traffic threshold for real-user reporting. This is a statement about machine readability, not about traffic or rankings.
+- Third-party measurement: where PandaCodeGen publishes measurements of sites it does not own, the instrument, dates and sample selection are stated on the page, and the sites, their owners and the agencies that built them are not named.
 - Contact: info@pandacodegen.com, +1 (302) 773-8982
 
 ## Commercial terms
