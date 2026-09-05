@@ -334,7 +334,7 @@ export default function SquarespaceTooSlowPage() {
 
                     <BlogHeader>Which third-party scripts hurt Squarespace most?</BlogHeader>
                     <BlogText>
-                        Squarespace warns that code injection, embeds, CSS and other <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">custom code</Link> can contribute to slow
+                        Squarespace warns that code injection, embeds, CSS and other custom code can contribute to slow
                         loading and fall outside standard support. Save a copy and remove one item at a time in a safe
                         test context. Include analytics, advertising, chat, scheduling, forms and consent behavior in
                         regression tests.

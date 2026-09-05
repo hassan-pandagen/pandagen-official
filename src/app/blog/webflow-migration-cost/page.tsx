@@ -568,7 +568,7 @@ export default function WebflowMigrationCostPage() {
 
                     <BlogHeader>Measure performance separately from rankings</BlogHeader>
                     <BlogText>
-                        Webflow has no universal PageSpeed ceiling, and <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">custom code</Link> has no automatic 90-plus result.
+                        Webflow has no universal PageSpeed ceiling, and <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">custom code</Link> has no automatic 90-plus result.
                         Test representative routes under recorded mobile and desktop conditions and inspect field Core
                         Web Vitals where available. Google says good Core Web Vitals support page experience, while
                         relevance and many other signals still affect search. Do not convert a lab-score change into a

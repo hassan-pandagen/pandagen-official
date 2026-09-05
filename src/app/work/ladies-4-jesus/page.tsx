@@ -248,7 +248,7 @@ export default function Ladies4JesusCaseStudy() {
                             </p>
                             <p className="mt-4 leading-relaxed text-stone-700">
                                 <strong>That is worth saying out loud, because it is a mistake anyone can avoid.</strong>{" "}
-                                Measure load time, PageSpeed and the actual <Link href="/blog/shopify-app-costs-real-monthly-bill" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">monthly bill</Link> <em>before</em> you migrate. The
+                                Measure load time, PageSpeed and the actual <Link href="/blog/how-to-cut-saas-bill-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">monthly bill</Link> <em>before</em> you migrate. The
                                 day the old site is switched off is the day that evidence stops existing, and no amount of
                                 later work recovers it.
                             </p>

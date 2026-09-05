@@ -242,7 +242,7 @@ export default function CheapWebDeveloperPage() {
           <div data-speakable="true">
             <BlogText>
               Three routes compete for the same budget in 2026, and they differ less in what they produce
-              than in who is answerable when it is wrong. A <Link href="/blog/best-website-builder-for-gohighlevel-agencies" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">website builder</Link> sells you a subscription and a
+              than in who is answerable when it is wrong. A website builder sells you a subscription and a
               system to assemble inside. An AI site generator sells you a starting point in minutes. A
               developer sells you someone accountable for the result. Work out which of the three you are
               actually buying before you compare a single price.

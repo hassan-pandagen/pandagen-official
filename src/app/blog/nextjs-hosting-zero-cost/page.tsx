@@ -718,7 +718,7 @@ export default function NextjsHostingZeroCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            The honest answer depends on the current invoices and the target workload. <BlogHighlight>Next.js on Vercel Pro may lower total operating cost, but managed WordPress can still be the better fit when its editing workflow, plugin ecosystem, support model, or <Link href="/blog/squarespace-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migration cost</Link> outweighs the projected saving.</BlogHighlight>
+                            The honest answer depends on the current invoices and the target workload. <BlogHighlight>Next.js on Vercel Pro may lower total operating cost, but managed WordPress can still be the better fit when its editing workflow, plugin ecosystem, support model, or <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migration cost</Link> outweighs the projected saving.</BlogHighlight>
                         </BlogText>
 
                     </div>
