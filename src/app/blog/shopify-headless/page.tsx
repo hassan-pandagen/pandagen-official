@@ -403,7 +403,7 @@ export default function ShopifyHeadlessPage() {
                     <BlogHeader>What speed should a headless Shopify store hit?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            An acceptance target means nothing without its test conditions attached, because the same build scores differently on another device, network or cache state. Six things turn a number into something you can hold a supplier to. Agree them before the build, since afterwards every disagreement becomes an argument about what was measured.
+                            An <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> means nothing without its test conditions attached, because the same build scores differently on another device, network or cache state. Six things turn a number into something you can hold a supplier to. Agree them before the build, since afterwards every disagreement becomes an argument about what was measured.
                         </BlogText>
                     </div>
                     <BlogList

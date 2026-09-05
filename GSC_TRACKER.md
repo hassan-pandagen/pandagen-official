@@ -1516,6 +1516,49 @@ was missed in an earlier count. All six draw AI impressions.
 
 ---
 
+## CONTEXTUAL LINK PASS, 6 SEPTEMBER 2026 - EXPERIMENT 5 IS CONTAMINATED
+
+43 in-prose internal links were added across 39 pages from
+`CONTEXTUAL_LINKS_AUDIT.md`. The owner was told twice that touching cohort pages
+would compromise the reads, reaffirmed both times ("do this for experiment page
+as well no issue", "if this benefits then why hold back??"), and the pass was run
+on that instruction. This entry exists so the reads are not misreported later.
+
+### What was touched
+
+| Cohort | Pages modified |
+|---|---|
+| Exp 5 HOLDOUT | 6: cms-market-share-2026, leaving-webflow-2026, nextjs-sanity-stack, shopify-stocky-sunset-date-2026, shopify-vs-custom-website, website-migration-cost-2026 |
+| Exp 5 TREATMENT | 5: build-vs-buy-software-2026-cost-comparison, shopify-conversion-rate-speed-fix, shopify-slow-losing-sales, wix-vs-custom-website, wordpress-april-2026-evidence |
+| Exp 1 | 2: shopify-headless, webflow-migration-cost |
+| Exp 3 | 1: shopify-store-speed-optimization |
+| Exp 4 | 1: woocommerce-low-conversion-rate |
+
+### What this does to the 8 October read
+
+**Experiment 5 can no longer be read as designed.** The holdout's whole function
+was to be untouched while the treatment changed. Six holdout pages have new
+internal links, so both arms moved and the comparison no longer isolates intent
+rewriting. A treatment-versus-holdout difference on 8 Oct is now consistent with
+at least two causes that cannot be separated: the intent rewrites, or the
+uneven link changes across the two arms.
+
+**State this in any write-up. Do not report an Experiment 5 result as clean.**
+The honest options on 8 Oct are to report it as confounded and say why, or to
+re-baseline from 6 Sep and treat everything before as a different experiment.
+
+Experiments 1, 3 and 4 are less affected: 1 is already unreadable on its broken
+control, 3 is scored on AI impressions for a single page, and 4 is a binary
+indexed check that had already passed. Note the edits against each anyway.
+
+### The unaffected work
+
+23 non-cohort pages also received links, and that part is clean. 28 new prose
+in-links were verified in the rendered HTML, and pages with zero prose links fell
+from 13 to 10.
+
+---
+
 ## EXPERIMENT 5, PRE-REGISTERED 29 AUGUST 2026
 
 Written before the 8 September reads, deliberately. Experiment 1 failed because

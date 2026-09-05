@@ -268,7 +268,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <BlogHeader>2. Use the Shopify field view</BlogHeader>
                     <BlogText>
-                        Shopify&apos;s Web Performance reports provide real-user LCP, INP and CLS over time, by URL and
+                        Shopify&apos;s <Link href="/blog/aeo-web-performance-glossary" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Web Performance</Link> reports provide real-user LCP, INP and CLS over time, by URL and
                         by page type. The summary uses the 75th percentile and separates device experiences. Review
                         releases and traffic changes across the same period.
                     </BlogText>

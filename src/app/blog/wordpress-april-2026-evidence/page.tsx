@@ -262,7 +262,7 @@ export default function WordPressAprilEvidencePage() {
                         <a href="https://patchstack.com/articles/critical-supply-chain-compromise-on-20-plugins-by-essentialplugin/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Patchstack&apos;s analysis of the EssentialPlugin portfolio</a> reports that the
                         vendor changed hands in 2025 and that the new owner introduced
                         malicious code across more than 20 plugins. That analysis says the backdoor was activated on
-                        April 5, 2026. On April 7, the WordPress Plugin Review team confirmed the attack, closed the
+                        April 5, 2026. On April 7, the <Link href="/blog/wordpress-plugin-security-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress Plugin</Link> Review team confirmed the attack, closed the
                         affected directory listings and pushed a forced security update intended to remove the backdoor
                         and warn administrators.
                     </BlogText>

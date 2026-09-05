@@ -335,7 +335,7 @@ export default function CompanyReferencePage() {
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Reference directory</p>
             <h2 id="reference-directory" className="mt-3 text-3xl font-bold md:text-5xl">The same facts for people and machines.</h2>
             <p className="mt-5 max-w-3xl leading-7 text-stone-700">
-              There is no separate set of facts here for AI crawlers. The visible pages are the source of truth for services, pricing, evidence, the team, editorial policy, and security information.
+              There is no separate set of facts here for AI crawlers. The visible pages are the source of truth for services, pricing, evidence, the team, <Link href="/editorial-policy" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">editorial policy</Link>, and security information.
             </p>
             <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {referenceLinks.map((item) => (

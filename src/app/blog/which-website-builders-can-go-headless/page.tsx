@@ -269,7 +269,7 @@ export default function WhichBuildersHeadlessPage() {
 
                     <BlogHeader>WooCommerce: yes, but it takes two different APIs</BlogHeader>
                     <BlogText>
-                        WooCommerce supports headless, and it does so through two APIs that are easy to confuse. The
+                        <Link href="/services/woocommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce</Link> supports headless, and it does so through two APIs that are easy to confuse. The
                         REST API is {spec("woocommerce-rest-api-scope").value}. Reaching for it to build a storefront
                         is the most common mistake in headless WooCommerce work, because it looks comprehensive right
                         up until the point a customer needs to buy something.

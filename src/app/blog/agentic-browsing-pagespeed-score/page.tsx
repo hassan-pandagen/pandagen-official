@@ -241,7 +241,7 @@ export default function AgenticBrowsingPage() {
 
                     <div className="my-4 p-4 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-1">Quick Answer</p>
-                        <p className="text-sm text-stone-700 leading-relaxed">No Lighthouse result proves an AI recommendation or a sale. The owner-operated Panda Patches store separately recorded $7,419.18 across 27 internally AI-tagged orders in a June 2026 dashboard snapshot. Those labels are first-party attribution, not an independently audited or causal measurement.</p>
+                        <p className="text-sm text-stone-700 leading-relaxed">No Lighthouse result proves an AI recommendation or a sale. The owner-operated <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link> store separately recorded $7,419.18 across 27 internally AI-tagged orders in a June 2026 dashboard snapshot. Those labels are first-party attribution, not an independently audited or causal measurement.</p>
                     </div>
 
                     <BlogText>

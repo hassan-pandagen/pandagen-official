@@ -171,7 +171,7 @@ export default function WooCommerceLowConversionRatePage() {
                     <BlogHeader id="short-answer">What actually causes a low WooCommerce conversion rate?</BlogHeader>
                     <BlogText>
                         <BlogHighlight>
-                            A low conversion rate is a symptom with at least four unrelated causes, and WooCommerce
+                            A low <Link href="/blog/shopify-conversion-rate-speed-fix" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">conversion rate</Link> is a symptom with at least four unrelated causes, and WooCommerce
                             contributes to only some of them.
                         </BlogHighlight>{" "}
                         Traffic quality, offer and pricing, funnel friction, and technical performance all move the same

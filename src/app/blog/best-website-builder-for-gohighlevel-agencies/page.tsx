@@ -552,7 +552,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     </div>
 
                     <BlogText>
-                        Use the same scope and workload across all options. PandaCodeGen&apos;s $1,500 tier is a starting anchor, not a three-year total, and a custom build still has vendor and operating costs. No cost winner is declared until the worksheet uses current quotes and the accepted scope.
+                        Use the same scope and workload across all options. PandaCodeGen&apos;s $1,500 tier is a starting anchor, not a three-year total, and a <Link href="/services/custom-engineering" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">custom build</Link> still has vendor and operating costs. No cost winner is declared until the worksheet uses current quotes and the accepted scope.
                     </BlogText>
 
                     {/* How to Choose */}
@@ -616,7 +616,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Choose after a dated plan comparison, prototype, integration test, content and URL inventory, ownership review, and three-year cost worksheet. Record which requirements each option passes, fails, or makes scope-dependent.
                     </BlogText>
                     <BlogText>
-                        If an existing site carries revenue and the current platform blocks agreed requirements, use an SEO-safe migration plan: inventory URLs and integrations, preserve equivalent content, map redirects, define rollback, test representative routes, document third-party costs, and assign account and repository control. Search visibility, ad efficiency, and conversion lift remain measured outcomes, not delivery guarantees.
+                        If an existing site carries revenue and the current platform blocks agreed requirements, use an SEO-safe migration plan: inventory URLs and integrations, preserve equivalent content, map redirects, define rollback, test representative routes, document third-party costs, and assign account and repository control. <Link href="/blog/ai-search-visibility-tracking" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Search visibility</Link>, ad efficiency, and conversion lift remain measured outcomes, not delivery guarantees.
                     </BlogText>
 
                     {/* CTA */}

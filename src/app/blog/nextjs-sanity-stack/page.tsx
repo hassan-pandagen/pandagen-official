@@ -222,7 +222,7 @@ export default function NextjsSanityStackPage() {
                         others. That number is the honest answer to &ldquo;how much modeling is this?&rdquo; A brochure
                         site does not need 25. A catalog with categories, guides and reusable company facts gets there
                         faster than most people expect, and every one of those types is a decision someone has to make
-                        before an editor can touch it. Disclosure: Panda Patches is owned and operated by Imran Raza
+                        before an editor can touch it. Disclosure: Panda Patches is owned and operated by <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza
                         Ladhani, a PandaCodeGen co-founder. PandaCodeGen built and maintains its platform and holds no
                         ownership stake, so treat this as operating experience rather than an independent client
                         reference.

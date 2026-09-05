@@ -365,7 +365,7 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader>How to test a Stocky replacement before cutover</BlogHeader>
                     <BlogText>
-                        This is where a mapped workflow becomes evidence. Seven tests, and the ones people skip are the awkward ones: a partial receipt, a count run on the actual devices and roles used in stores, and every integration that previously called a Stocky API. This step can still run after the sunset date, slower but not blocked.
+                        This is where a mapped workflow becomes evidence. Seven tests, and the ones people skip are the awkward ones: a partial receipt, a count run on the actual devices and roles used in stores, and every integration that previously called a Stocky API. This step can still run after the <Link href="/blog/webflow-user-accounts-sunset-date-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">sunset date</Link>, slower but not blocked.
                     </BlogText>
                     <BlogList
                         items={[

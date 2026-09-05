@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ogImageForPath } from "@/lib/seo/og";
 import lazyLoad from "next/dynamic";
 import type { Metadata } from "next";
@@ -238,7 +239,7 @@ export default function Home() {
       <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen is a custom Next.js web development studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code the client owns outright. Builds start at $1,500 with fixed pricing for the written scope, carry a 90+ Lighthouse handover target on mobile and desktop verified across three recorded runs, and have no monthly platform fees. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
+            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code the client owns outright. Builds start at $1,500 with fixed pricing for the written scope, carry a 90+ Lighthouse handover target on mobile and desktop verified across three recorded runs, and have no monthly platform fees. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
           </p>
         </div>
       </section>

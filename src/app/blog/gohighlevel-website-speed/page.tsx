@@ -515,7 +515,7 @@ export default function HighLevelSpeedGuide() {
                         ]}
                     />
                     <BlogText>
-                        PandaCodeGen&apos;s 90+ Lighthouse acceptance target applies only when signed terms identify the
+                        PandaCodeGen&apos;s 90+ Lighthouse <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> applies only when signed terms identify the
                         representative pages, profiles, environment, three-run method, exclusions and remedy. It does
                         not promise rankings, traffic, leads, citations, advertising performance or revenue. For how a
                         move like this is scoped and budgeted, see the{" "}

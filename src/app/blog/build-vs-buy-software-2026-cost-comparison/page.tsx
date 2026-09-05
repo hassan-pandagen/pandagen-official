@@ -198,7 +198,7 @@ export default function BuildVsBuySoftware2026Page() {
                         about the one at the top.
                     </BlogText>
                     <BlogText>
-                        Isolate that workflow and compare like for like. The table below is the worksheet structure; it deliberately does not declare that a monthly bill makes custom software worthwhile.
+                        Isolate that workflow and compare like for like. The table below is the worksheet structure; it deliberately does not declare that a <Link href="/blog/shopify-app-costs-real-monthly-bill" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">monthly bill</Link> makes custom software worthwhile.
                     </BlogText>
 
                     {/* Comparison table */}

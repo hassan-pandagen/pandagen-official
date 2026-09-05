@@ -549,7 +549,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <BlogText>
                         Where a 90-plus Lighthouse result is included, it is written as a handover target on mobile and
                         desktop for the representative pages named in the scope, verified across three recorded runs
-                        under stated conditions before handover. It is a lab acceptance target. It is not a promise
+                        under stated conditions before handover. It is a lab <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link>. It is not a promise
                         about rankings, traffic or revenue, and no honest supplier can give you one of those.
                     </BlogText>
 

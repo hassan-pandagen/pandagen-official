@@ -502,7 +502,7 @@ export default function WebsiteCostGuide() {
 
                     <BlogHeader>Panda Patches: a first-party cost example</BlogHeader>
                     <BlogText>
-                        Panda Patches is owned by Imran, PandaCodeGen&apos;s co-founder. PandaCodeGen built and
+                        Panda Patches is owned by <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link>, PandaCodeGen&apos;s co-founder. PandaCodeGen built and
                         maintains the platform and holds no stake in the business, and the owner has approved these cost
                         figures for publication. The owner reports that the former WordPress and WooCommerce stack ran
                         at approximately $200 per month, and that the replacement Next.js, Sanity, Supabase and Square

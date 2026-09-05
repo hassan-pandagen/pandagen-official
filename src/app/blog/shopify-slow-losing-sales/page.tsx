@@ -250,7 +250,7 @@ export default function ShopifySlowLosingSalesPage() {
 
                     <BlogHeader>1. Confirm that a meaningful performance problem exists</BlogHeader>
                     <BlogText>
-                        Shopify&apos;s Web Performance reports show real-user LCP, INP and CLS at the 75th percentile
+                        Shopify&apos;s <Link href="/blog/aeo-web-performance-glossary" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Web Performance</Link> reports show real-user LCP, INP and CLS at the 75th percentile
                         over time, by URL and by page type. Identify the affected route, device and reporting period.
                         Use repeated lab tests to reproduce and trace it, not to replace field evidence.
                     </BlogText>
@@ -283,7 +283,7 @@ export default function ShopifySlowLosingSalesPage() {
                     <BlogHeader>3. Rule out competing explanations</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Before you attribute a drop in orders to speed, rule out the six things that move a conversion rate far more reliably than milliseconds do. Price, assortment, traffic mix and seasonality all shift the same number a slow page would. If any of them changed inside your comparison window, the speed hypothesis is not testable yet.
+                            Before you attribute a drop in orders to speed, rule out the six things that move a <Link href="/blog/woocommerce-low-conversion-rate" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">conversion rate</Link> far more reliably than milliseconds do. Price, assortment, traffic mix and seasonality all shift the same number a slow page would. If any of them changed inside your comparison window, the speed hypothesis is not testable yet.
                         </BlogText>
                     </div>
                     <BlogList

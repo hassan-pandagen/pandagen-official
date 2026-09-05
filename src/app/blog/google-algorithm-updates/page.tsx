@@ -315,7 +315,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         ]} />
 
                         <InsightBox variant="warning">
-                            Google has never announced a per-update ranking threshold: no LCP cutoff attached to a named core update, no PageSpeed score requirement, no platform penalty, and no stated percentage of sites that lost rankings. Claims of that shape are inferred from third-party rank trackers and should not be used to diagnose a site or justify a rebuild.
+                            Google has never announced a per-update ranking threshold: no LCP cutoff attached to a named core update, no <Link href="/blog/agentic-browsing-pagespeed-score" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">PageSpeed score</Link> requirement, no platform penalty, and no stated percentage of sites that lost rankings. Claims of that shape are inferred from third-party rank trackers and should not be used to diagnose a site or justify a rebuild.
                         </InsightBox>
 
                         <BlogHeader>What Google Confirms, and What It Leaves Unsaid</BlogHeader>

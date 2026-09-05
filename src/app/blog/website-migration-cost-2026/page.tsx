@@ -428,7 +428,7 @@ export default function WebsiteMigrationCostPage() {
 
                     <BlogHeader id="shopify-migration-cost">Shopify and headless Shopify migration cost</BlogHeader>
                     <BlogText>
-                        Headless Shopify migrations start at $5,000 and reach $10,000 or more, because the storefront is
+                        Headless <Link href="/services/ecommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Shopify</Link> migrations start at $5,000 and reach $10,000 or more, because the storefront is
                         only part of the job. The first decision is whether Shopify remains the commerce backend or is
                         replaced. A headless migration still
                         needs search, accounts, analytics, consent, localization, app compatibility, preview,

@@ -449,7 +449,7 @@ export default function ShopifyAppCostsPage() {
 
                     <BlogHeader>7. Decide whether custom code belongs in the comparison</BlogHeader>
                     <BlogText>
-                        Custom code can remove a vendor dependency when the requirement is stable and the business is
+                        <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Custom code</Link> can remove a vendor dependency when the requirement is stable and the business is
                         prepared to own it. It does not make the function free. Include design, engineering, migration,
                         hosting, monitoring, security, maintenance, provider changes, support and recovery in the total.
                         Our{" "}

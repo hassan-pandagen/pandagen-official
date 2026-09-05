@@ -323,7 +323,7 @@ export default function MigrateWordPressToNextJSPage() {
                                     Build each page as a React Server Component in Next.js. Replicate your navigation structure, internal linking, and page hierarchy exactly. Import your WordPress XML content into your CMS or convert blog posts to MDX files. Use <code className="bg-stone-100 px-1 py-0.5 rounded-sm text-sm">next/image</code> for every image: this automatically serves WebP, handles lazy loading, and generates responsive sizes.
                                 </BlogText>
                                 <BlogText>
-                                    For each WordPress plugin, implement the equivalent native solution:
+                                    For each <Link href="/blog/wordpress-plugin-security-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress plugin</Link>, implement the equivalent native solution:
                                 </BlogText>
                                 <BlogList items={[
                                     "Contact Form 7 / Gravity Forms → API route + Resend or Nodemailer",

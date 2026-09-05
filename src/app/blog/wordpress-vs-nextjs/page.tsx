@@ -558,7 +558,7 @@ export default function WordPressVsNextJsPage() {
                     <BlogText>
                         <Link href="/pricing" className="text-cognac hover:underline">Planning tiers</Link> start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with custom
                         scope where needed. A common payment option is 30 percent at onboarding and 70 percent on delivery, and another written schedule may be agreed.
-                        Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted project terms record it. A
+                        Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted <Link href="/terms" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">project terms</Link> record it. A
                         90-plus Lighthouse target applies only under the representative pages, profiles, environment,
                         repeated runs, exclusions and remedy named in the signed scope.
                     </BlogText>

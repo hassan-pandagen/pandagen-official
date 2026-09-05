@@ -349,7 +349,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            Then map the complete commerce operation, not only the storefront. Include products and variants, inventory, pricing, promotions, tax, shipping, payment methods, refunds, order notifications, customer service, analytics, feeds, subscriptions, and accounting. Webflow Ecommerce may remain appropriate for a straightforward catalog that fits its current plan. A headless commerce service or custom application becomes relevant when the business needs logic or integrations that the existing system cannot support cleanly. The destination should be chosen from those requirements, not from a belief that custom code automatically removes transaction fees or operational costs.
+                            Then map the complete commerce operation, not only the storefront. Include products and variants, inventory, pricing, promotions, tax, shipping, payment methods, refunds, order notifications, customer service, analytics, feeds, subscriptions, and accounting. Webflow Ecommerce may remain appropriate for a straightforward catalog that fits its current plan. A <Link href="/blog/what-is-headless-commerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">headless commerce</Link> service or custom application becomes relevant when the business needs logic or integrations that the existing system cannot support cleanly. The destination should be chosen from those requirements, not from a belief that custom code automatically removes transaction fees or operational costs.
                         </BlogText>
 
                         <BlogText>

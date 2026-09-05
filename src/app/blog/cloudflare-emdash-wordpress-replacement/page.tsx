@@ -332,7 +332,7 @@ export default function CloudflareEmDashPage() {
                         </BlogText>
 
                         <BlogText>
-                            Traditional WordPress plugins execute inside the application and can interact with sensitive site resources. EmDash takes a capability-based approach. On Cloudflare, plugins can run in isolated Dynamic Workers and request declared permissions through bindings. Limiting a plugin&apos;s authority can reduce blast radius if that plugin fails or is compromised.
+                            Traditional <Link href="/blog/wordpress-plugins-destroy-speed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress plugins</Link> execute inside the application and can interact with sensitive site resources. EmDash takes a capability-based approach. On Cloudflare, plugins can run in isolated Dynamic Workers and request declared permissions through bindings. Limiting a plugin&apos;s authority can reduce blast radius if that plugin fails or is compromised.
                         </BlogText>
 
                         <InsightBox variant="warning" label="Security boundary">

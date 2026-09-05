@@ -387,7 +387,7 @@ export default function GlossaryPage() {
               example={<>A page can use CSS selectors or XPath values to identify visible sections that are particularly suitable for text-to-speech. The selected content should still make sense in context.</>}
               ask={<>&ldquo;Which single sentence on this page answers what the visitor came for?&rdquo; If nobody can point at one, the problem is not the markup, it is that the page never actually answers anything.</>}
             >
-              <BlogHighlight>Speakable is Schema.org markup for sections considered especially suitable for text-to-speech.</BlogHighlight>{" "}It can identify a CSS selector or XPath, but Schema.org does not describe it as an AI-citation signal. Use it only where it accurately describes visible content; do not treat it as proof of search visibility.
+              <BlogHighlight>Speakable is Schema.org markup for sections considered especially suitable for text-to-speech.</BlogHighlight>{" "}It can identify a CSS selector or XPath, but Schema.org does not describe it as an AI-citation signal. Use it only where it accurately describes visible content; do not treat it as proof of <Link href="/blog/ai-search-visibility-tracking" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">search visibility</Link>.
             </Term>
 
             <Term

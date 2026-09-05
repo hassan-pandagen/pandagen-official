@@ -356,7 +356,7 @@ export default function ShopifyVsCustomWebsitePage() {
 
                     <BlogHeader>4. Measure performance instead of assigning platform scores</BlogHeader>
                     <BlogText>
-                        Shopify&apos;s Web Performance reports show real-user LCP, INP and CLS by URL, page type, device
+                        Shopify&apos;s <Link href="/blog/aeo-web-performance-glossary" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Web Performance</Link> reports show real-user LCP, INP and CLS by URL, page type, device
                         and time. Use them with repeated lab traces to identify the responsible work. A theme does not
                         have one permanent score ceiling, and a custom storefront is not automatically fast. That
                         applies at every plan level, including Plus, where the entitlements change but the storefront

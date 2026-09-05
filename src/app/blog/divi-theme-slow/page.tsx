@@ -393,7 +393,7 @@ export default function DiviThemeSlowPage() {
 
                     <BlogHeader id="divi-agentic-browsing">Divi and the new agent-readability check</BlogHeader>
                     <BlogText>
-                        Google added an Agentic Browsing category to PageSpeed Insights, and builder-heavy sites do
+                        Google added an <Link href="/blog/agentic-browsing-pagespeed-score" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Agentic Browsing</Link> category to PageSpeed Insights, and builder-heavy sites do
                         badly in it for a reason that is not speed. One of its three checks asks whether the
                         accessibility tree is well formed: whether your buttons are buttons, your headings run in
                         order, and your controls carry names a machine can read. Divi composes pages from nested

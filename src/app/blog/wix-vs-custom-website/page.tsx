@@ -322,7 +322,7 @@ export default function WixVsCustomWebsitePage() {
                         This is the difference people feel first, and it is real. <strong>Wix can have something
                         live the same afternoon.</strong> You pick a template, replace the content, connect a
                         domain, and the hosting, certificates and updates are somebody else&apos;s problem from
-                        then on. Nothing in a custom build competes with that, and if speed to launch is the
+                        then on. Nothing in a <Link href="/services/custom-engineering" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">custom build</Link> competes with that, and if speed to launch is the
                         binding constraint, the honest recommendation is the builder.
                     </BlogText>
                     <BlogText>

@@ -282,7 +282,7 @@ export default function IsSquarespaceBadForSEOPage() {
                     <BlogHeader id="wix-comparison">Squarespace or Wix: which gives you more SEO control?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Wix exposes more technical SEO control than Squarespace on three specific things: editing
+                            <Link href="/services/wix" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Wix</Link> exposes more technical SEO control than Squarespace on three specific things: editing
                             robots.txt, editing the structured data the platform generates, and importing redirects from a
                             file. Squarespace exposes none of the three. That answers the capability question, and it does
                             not answer the platform question, because a control you will never open is worth nothing.

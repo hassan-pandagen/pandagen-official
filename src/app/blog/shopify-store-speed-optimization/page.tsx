@@ -505,7 +505,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <BlogHeader>When to Hire a Shopify Performance Specialist</BlogHeader>
                     <BlogText>
-                        Hire when you need someone accountable for evidence rather than for a score, and judge the candidate on what they agree to produce. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an acceptance target written into the scope rather than asserted about websites in general.
+                        Hire when you need someone accountable for evidence rather than for a score, and judge the candidate on what they agree to produce. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope rather than asserted about websites in general.
                     </BlogText>
 
                             <BlogList items={[

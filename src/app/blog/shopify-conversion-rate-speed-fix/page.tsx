@@ -246,7 +246,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <BlogHeader>1. Lock the metric definitions</BlogHeader>
                     <BlogText>
-                        Shopify defines online-store conversion rate as the percentage of sessions that result in an
+                        Shopify defines online-store <Link href="/blog/woocommerce-low-conversion-rate" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">conversion rate</Link> as the percentage of sessions that result in an
                         order. Its conversion breakdown uses all sessions, sessions with cart additions, sessions that
                         reached checkout and sessions that completed checkout. Preserve those definitions when you
                         export or compare data.
