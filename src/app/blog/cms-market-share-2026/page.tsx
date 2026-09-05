@@ -284,7 +284,7 @@ export default function CmsMarketShare2026Page() {
 
                     <BlogHeader>Shopify is the outlier</BlogHeader>
                     <BlogText>
-                        Shopify went from {first("Shopify").value}% to {latest("Shopify").value}%, and it is the only
+                        <Link href="/services/ecommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Shopify</Link> went from {first("Shopify").value}% to {latest("Shopify").value}%, and it is the only
                         platform here that grew by more than a factor of ten while already being large. It also has the
                         one visible setback in the table, falling from 6.6% to 5.7% between 2022 and 2023, which lines
                         up with the end of the pandemic ecommerce surge. It has grown every year since.

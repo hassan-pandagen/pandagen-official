@@ -210,7 +210,7 @@ export default function WebAccessibilityStatistics2026Page() {
                         {finding("top-failure-types-2026").note} Take the three largest in turn.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>Low contrast text is a colour value.</BlogHighlight> WCAG 2 at level AA asks for a
+                        <BlogHighlight>Low contrast text is a colour value.</BlogHighlight> <Link href="/blog/web-accessibility-glossary" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WCAG 2 at level AA</Link> asks for a
                         contrast ratio of at least 4.5:1 between normal-size text and its background, and 3:1 for large
                         text. Browser developer tools report the ratio for any element you inspect, so this is checkable
                         in seconds and fixable by changing a hex code. It appears on 83.9% of home pages mostly because
