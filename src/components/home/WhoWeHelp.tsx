@@ -48,7 +48,7 @@ const SEGMENTS = [
 export default function WhoWeHelp() {
   return (
     <section className="py-16 md:py-28 px-6 bg-white border-y border-stone-200">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-cognac">Who we help</span>
           <h2 className="text-3xl md:text-5xl font-bold text-charcoal mt-3 mb-4 tracking-tight">Start with the situation.</h2>

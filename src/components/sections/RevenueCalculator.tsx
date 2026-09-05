@@ -17,7 +17,7 @@ export default function RevenueCalculator() {
 
   return (
     <section className="py-12 md:py-24 pb-16 md:pb-24 bg-paper border-y border-stone-200">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
           {/* LEFT: Text */}
@@ -40,7 +40,7 @@ export default function RevenueCalculator() {
             <div className="p-6 bg-stone-50 rounded-2xl border border-stone-200 mb-8">
               <h3 className="font-bold text-charcoal mb-2">The calculation logic, stated openly</h3>
               <p className="text-sm text-stone-500 leading-relaxed">
-                The model applies a flat 20% conversion-rate uplift to the traffic, conversion rate and order value <em>you</em> enter. That 20% is our own planning assumption, extrapolated from the Deloitte and Google &ldquo;Milliseconds Make Millions&rdquo; study (2020), which measured an 8.4% retail conversion lift from a 0.1s mobile improvement. It is not a measurement of your site and not a finding of that study.
+                The model applies a flat 20% conversion uplift to the numbers <em>you</em> enter. That 20% is our own planning assumption, extrapolated from Deloitte and Google&rsquo;s &ldquo;Milliseconds Make Millions&rdquo; (2020), which measured an 8.4% retail lift from a 0.1s mobile improvement. It is not a measurement of your site or a finding of that study.
               </p>
               <p className="mt-3 text-sm text-stone-500 leading-relaxed">
                 Your actual result depends on your baseline speed, traffic mix, pricing, checkout and demand. Treat the output as an illustrative estimate for discussion, not a forecast, a promise, or a measured loss.

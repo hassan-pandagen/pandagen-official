@@ -20,7 +20,7 @@ const pillars = [
 
 export default function AntiAgency() {
   return (
-    <section className="py-12 md:py-24 bg-[#0C0A09] text-white relative overflow-hidden">
+    <section className="py-12 md:py-24 bg-charcoal text-white relative overflow-hidden">
       {/* Subtle warm glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cognac/5 blur-[120px] rounded-full pointer-events-none" />
 

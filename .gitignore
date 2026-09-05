@@ -119,3 +119,6 @@ private-assets/
 # competitor analysis and internal pricing. Same rule as private-assets/ and the
 # prospect audit output above: kept locally so it is easy to find, never committed.
 outreach/
+
+# Local design-audit screenshots (Playwright before/after, research only)
+audit/

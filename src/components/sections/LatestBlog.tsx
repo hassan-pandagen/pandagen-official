@@ -19,7 +19,7 @@ export default function LatestBlog() {
       className="px-6 bg-paper relative overflow-hidden"
       style={{ paddingTop: "var(--space-section)", paddingBottom: "var(--space-section)" }}
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
 
         {/* Section Header */}
         <div className="flex items-center justify-between" style={{ marginBottom: "var(--space-heading)" }}>
