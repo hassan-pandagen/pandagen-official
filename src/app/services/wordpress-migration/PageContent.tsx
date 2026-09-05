@@ -194,7 +194,7 @@ export default function PageContent() {
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
             <p className="text-stone-300 leading-relaxed">
-              Free audit at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a PageSpeed reading and a list of things worth investigating. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
+              <Link href="/free-audit" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Free audit</Link> at pandacodegen.com requires no email, no Calendly, no sales pitch. Drop your URL, receive a PageSpeed reading and a list of things worth investigating. A separate free 30-minute consultation call with co-founder Hassan Jamal is available for deeper review of competing agency quotes. We will tell you honestly if a competing quote is fair, or if migration does not make sense for your situation.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
@@ -367,7 +367,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Comparing quotes that describe different amounts of work? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We migrate WordPress sites to custom Next.js for $1,500 to $10,000, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+              We <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migrate WordPress</Link> sites to custom Next.js for $1,500 to $10,000, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →

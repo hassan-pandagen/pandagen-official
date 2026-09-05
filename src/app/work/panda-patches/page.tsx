@@ -402,7 +402,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">The storefront today, in production.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
-                            What started as a WordPress migration is now a deep custom storefront on Next.js 16 + React 19, with an AI generator, a customer portal, and a full conversion-tracking stack. The staff side, order operations, production, and reporting, runs in a separate connected CRM that shares the same Supabase backend.
+                            What started as a <Link href="/blog/wordpress-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WordPress migration</Link> is now a deep custom storefront on Next.js 16 + React 19, with an AI generator, a customer portal, and a full conversion-tracking stack. The staff side, order operations, production, and reporting, runs in a separate connected CRM that shares the same Supabase backend.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                             {storefrontNumbers.map((n) => (

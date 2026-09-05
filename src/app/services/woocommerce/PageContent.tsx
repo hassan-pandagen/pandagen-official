@@ -597,7 +597,7 @@ export default function PageContent() {
               A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen WooCommerce migration carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
+              Every PandaCodeGen <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration</Link> carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"

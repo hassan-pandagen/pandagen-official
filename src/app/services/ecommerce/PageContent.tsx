@@ -167,7 +167,7 @@ export default function PageContent() {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The Shopify App Trap</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              These are the exact problems Shopify store owners tell us about before they switch:
+              These are the exact problems <Link href="/blog/shopify-store-speed-optimization" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Shopify store</Link> owners tell us about before they switch:
             </p>
           </div>
 
