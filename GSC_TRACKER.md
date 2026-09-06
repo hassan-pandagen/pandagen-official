@@ -1516,6 +1516,74 @@ was missed in an earlier count. All six draw AI impressions.
 
 ---
 
+## PLAIN-LANGUAGE PASS, PRE-REGISTERED 6 SEPTEMBER 2026
+
+Written before the data, on purpose. 207 passages were rewritten out of contract
+language into buyer language across 32 pages, and the whole thing is pushed the
+same day the Request Indexing test is still running. That overlap cannot be
+undone now, so the predictions below are recorded first and the read is scored
+against them rather than against whatever looks good in October.
+
+### What changed
+
+The homepage, all eight service pages, /services, /pricing, /partners, eleven
+shared components and data files, and 21 blogs. Jargon terms measured before and
+after: homepage 24 to 4, service pages roughly halved each, 20 blogs 361 to 271.
+No figure, date or caveat was altered. Only the wording.
+
+### The two signals are different mechanisms, and that is the point
+
+**Indexing** is Google crawling a URL and including it. **Citation** is an AI
+system fetching the page and quoting it in an answer. A page can sit indexed for
+months and never be cited, and the Generative AI export counts impressions in AI
+features rather than clicks. Read them separately.
+
+| Indexed | Cited | What it means |
+|---|---|---|
+| Yes | Yes | The rewrite worked on both. Roll it out to the remaining ~50 blogs. |
+| Yes | No | Crawl was the blocker, not the wording. Citation needs something else, most likely the constraint content itself rather than its phrasing. |
+| No | Yes | Unlikely, and would mean AI systems fetch live independently of Google's index. Worth investigating rather than acting on. |
+| No | No | Neither wording nor a crawl request moves these pages. The problem is eligibility or quality, and no amount of rewriting fixes it. |
+
+### What is attributable and what is not
+
+**Not attributable.** Four of the ten Request Indexing URLs were rewritten in
+this push: `/services/webflow`, `wordpress-killer`,
+`why-we-chose-nextjs-over-wordpress-2026` and `shopify-plus-still-slow`. If any
+of those is indexed in the next fortnight, the cause could be the request or the
+rewrite. Do not claim either.
+
+**Still attributable.** Any of the ten that does NOT appear in the 32-page list
+above stays a clean read on Request Indexing alone. Cross-check the submitted
+list against that list before drawing a conclusion.
+
+**The cleanest signal in the whole exercise** remains the seven zero-impression
+pages, because they have nowhere to go but up and no competing explanation:
+how-website-speed-affects-seo, shopify-plus-still-slow, shopify-slow-losing-sales,
+why-we-chose-nextjs-over-wordpress-2026, wordpress-ai-security-risk-2026,
+wordpress-killer, wordpress-vs-custom-code-real-cost-3-years.
+
+### Pass and fail, stated before the data
+
+**Pass:** two or more of the seven dead pages record impressions, or AI
+impressions rise on the rewritten blogs against a flat site trend. Either result
+justifies rewriting the remaining ~50 blogs.
+
+**Fail:** the dead pages stay at zero and the rewritten pages move with the site
+trend. That means wording was not the constraint, the remaining 50 blogs should
+be left alone, and the effort belongs on crawl and eligibility instead.
+
+**Read no earlier than 6 October 2026,** four weeks out, which is recrawl plus a
+measurement window. Reading before then is reading noise.
+
+### The control that survives
+
+Roughly 50 blogs were deliberately NOT rewritten. They are the control group. Do
+not touch them before the October read, whatever the temptation, because they are
+the only reason this pass is readable at all.
+
+---
+
 ## CONTEXTUAL LINK PASS, 6 SEPTEMBER 2026 - EXPERIMENT 5 IS CONTAMINATED
 
 43 in-prose internal links were added across 39 pages from
