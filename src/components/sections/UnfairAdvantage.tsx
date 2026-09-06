@@ -1,18 +1,18 @@
 const controls = [
   {
     label: "01",
-    title: "Inventory before architecture",
-    body: "Review URLs, content, CMS models, forms, integrations, analytics, accessibility needs, stakeholders, and cutover constraints before selecting a stack.",
+    title: "Look at your site before choosing anything",
+    body: "We go through your pages, your content, your forms, whatever your site connects to, and your analytics. Then we recommend a build. Not the other way round.",
   },
   {
     label: "02",
-    title: "Compare total cost",
-    body: "Document current and proposed platform, app, hosting, database, email, observability, payment, support, and migration costs using dated provider prices and usage assumptions.",
+    title: "Add up what you pay now",
+    body: "Every plan, app, plugin and hosting bill you are paying today, next to what the new site costs to run. Real prices from real invoices, so you can see whether moving is worth it.",
   },
   {
     label: "03",
-    title: "Accept against written evidence",
-    body: "Put deliverables, exclusions, test conditions, ownership, licensing, change control, warranty, support, remedies, and handover into the proposal.",
+    title: "Everything in writing before you pay",
+    body: "Your quote says what you get, what you do not, who owns the code, what happens if something breaks, and what support you have after launch. In writing, before you pay.",
   },
 ];
 

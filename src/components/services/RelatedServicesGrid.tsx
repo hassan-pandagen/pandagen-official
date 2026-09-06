@@ -36,7 +36,7 @@ export default function RelatedServicesGrid({ currentHref }: Props) {
     <section className="py-10 md:py-16 px-6 bg-stone-50 border-y border-stone-200">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl font-bold text-charcoal text-center mb-3">Explore More Services</h2>
-        <p className="text-stone-600 text-center mb-10 text-sm">Compare the scope, dependencies, and trade-offs for each service path.</p>
+        <p className="text-stone-600 text-center mb-10 text-sm">See what each one covers, and what it costs.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {services.map((s) => (
             <Link

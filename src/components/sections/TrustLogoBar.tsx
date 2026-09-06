@@ -3,24 +3,24 @@ import { ArrowUpRight, ShieldCheck } from "lucide-react";
 
 const continuityControls = [
   {
-    area: "Search continuity",
-    control: "URLs, canonicals, and indexable content",
-    artifact: "Inventory + redirect specification",
+    area: "Your Google rankings",
+    control: "Every old web address, and the pages Google already knows",
+    artifact: "A list of every link, and where it now points",
   },
   {
-    area: "Revenue continuity",
-    control: "Forms, checkout paths, and integrations",
-    artifact: "Staged end-to-end test log",
+    area: "Your sales",
+    control: "Forms, checkout, and anything connected to your other tools",
+    artifact: "Every one tested end to end before launch",
   },
   {
-    area: "Measurement continuity",
-    control: "Analytics, consent, and conversion events",
-    artifact: "Baseline + event QA record",
+    area: "Your numbers",
+    control: "Analytics, cookie consent, and the events you track",
+    artifact: "Recorded before, checked after",
   },
   {
-    area: "Operating continuity",
-    control: "DNS, launch owners, monitoring, and rollback",
-    artifact: "Ownered launch runbook",
+    area: "Launch day",
+    control: "Domain switch, who does what, and how we undo it",
+    artifact: "Written down, so we can switch back in minutes",
   },
 ];
 

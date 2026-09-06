@@ -89,7 +89,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are fixed-price from $1,500 (Starter) to $10,000+, take 1 to 3 weeks behind a staged cutover, and include a full 301-redirect map for every URL you agree to keep. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, hosting costs are quoted from the destination provider plan.
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are a fixed price from $1,500 to $10,000+, take 1 to 3 weeks, and every old web address you keep is forwarded to its new page. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, hosting costs are quoted from the destination provider plan.
           </p>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function PageContent() {
             For WordPress migration specifically: WordPress sites have no universal score; measure your own routes. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> has appeared in Google AI Overview citations.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen ships the same scope, priced against a written inventory at fixed prices from $1,500 (Starter) to $10,000 (Scale). The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Texas LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            PandaCodeGen builds the same thing at a fixed price from $1,500 to $10,000, quoted against a written list of your pages. The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Texas LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
@@ -224,7 +224,7 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How Our WordPress to Next.js Migration Works</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 4-phase process, 2 to 4 weeks for most sites. No surprises. Staged cutover.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Four stages, 2 to 4 weeks for most sites. No surprises, and we switch over in stages.</p>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
@@ -367,7 +367,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Comparing quotes that describe different amounts of work? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migrate WordPress</Link> sites to custom Next.js for $1,500 to $10,000, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+              We <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migrate WordPress</Link> sites to custom Next.js for $1,500 to $10,000, and every page named in your quote scores 90 or better on Google PageSpeed on phone and desktop, tested three times before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -386,7 +386,7 @@ export default function PageContent() {
             What If Your Website Was an Asset, Not a Liability?
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
-            A custom coded website is measured against your agreed pages, has a smaller third-party surface, and starts on a free hosting tier for non-commercial use, and you own every line of code. No plugins. No monthly fees. No surprises.
+            A custom site is tested on the pages in your quote, has far fewer outside parts that can break, and you own every line of the code. No plugins. No monthly fees. No surprises.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -457,11 +457,11 @@ export default function PageContent() {
 
       {/* PRICING TIERS — foot-in-the-door with agency comparison */}
       <PricingTiers
-        heading="Compare on like-for-like scope."
+        heading="Compare the same thing, not the headline price."
         headingAccent="We meet you halfway."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare like-for-like scope, timeline and code ownership.",
+          agencyNote: "Compare the same scope, the same timeline, and who owns the code.",
           ourPrice: "From $1,500",
           ourNote: "2 to 4 week timeline. Fixed price. You own 100% of the code.",
         }}
@@ -476,7 +476,7 @@ export default function PageContent() {
               "Custom Next.js build up to 15 pages",
               "Sanity CMS so your team can edit",
               "90+ Lighthouse handover target",
-              "301 redirect mapping for every agreed URL",
+              "Every old web address forwarded to its new page",
               "15 days of free post-launch support",
             ],
             cta: "Get Starter Quote",
@@ -608,7 +608,7 @@ export default function PageContent() {
               A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen migration carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
+              Every migration scores 90 or better on Google PageSpeed on phone and desktop, on the pages named in your quote, tested three times before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -662,7 +662,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Lead engineer on WordPress migrations, focused on redirect planning, acceptance testing and controlled cutovers.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Lead engineer on WordPress migrations. Plans the link forwarding, tests everything before launch, and runs the switchover.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

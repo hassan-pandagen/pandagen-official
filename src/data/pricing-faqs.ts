@@ -17,27 +17,27 @@ export interface PricingFaq {
 export const pricingFaqs: PricingFaq[] = [
   {
     q: "Which package should I start with?",
-    a: "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Choose the closest base; extra pages or features are discussed and priced in the written scope before work starts.",
+    a: "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts.",
   },
   {
     q: "Do I need a long contract for every project?",
-    a: "No. A straightforward project can use a clear written quote or order summary accepted in email or chat. Regulated, sensitive, or complex work may need a signed statement of work or other detailed agreement. In either case, the accepted written project terms control.",
+    a: "No. Most projects run on a short written quote you accept by email. Only regulated or complex work needs a longer signed agreement. Either way, the written quote is what counts.",
   },
   {
-    q: "How do payment milestones work?",
-    a: "A common option is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms, but the parties may agree to another written schedule. The accepted terms also state currency, taxes, due dates, approval points, and any pause or cancellation terms.",
+    q: "When do I pay?",
+    a: "Usually 30% to start and 70% when the work is delivered. We can agree a different split in writing. Your quote also states the currency, any tax, when payments are due, and what happens if the project pauses or is cancelled.",
   },
   {
     q: "What if my project is bigger than Scale?",
-    a: "Larger, multi-region, e-commerce, application, and integration-heavy work is scoped separately after discovery. The proposal lists the team, deliverables, dependencies, exclusions, and schedule for that engagement.",
+    a: "Bigger stores, apps, multiple regions or heavy integration work are priced on their own after one call. Your quote names the team, what gets built, what does not, and the dates.",
   },
   {
     q: "What support is included?",
-    a: "A package discussion may start with 15 business days of support for Starter and 30 business days for Growth and Scale. Support is included only when the accepted project terms state the period, start event, covered defects or minor adjustments, response expectations, exclusions, and any bespoke arrangement. Material new features, extra pages, and third-party changes are separately scoped.",
+    a: "Usually 15 working days after launch on Starter, and 30 on Growth and Scale, for fixing anything that is not working right and small tweaks. Your quote states the exact period and what it covers. New features, extra pages and changes to other people's tools are quoted separately.",
   },
   {
     q: "When does the 100% refund apply?",
-    a: "When that protection is included in the accepted project terms, it applies if PandaCodeGen fails to deliver the promised deliverables under that written scope. The terms define the trigger, verification, and any cure process. It does not apply merely because preferences change, a new direction is requested, or work outside the agreed scope is desired.",
+    a: "Where your quote includes it, you get your money back if we fail to deliver what the quote promised. Your quote says exactly what triggers it and how it is checked. It does not apply because you changed your mind, want a new direction, or want work that was never in the quote.",
   },
   {
     q: "Can't we just make our current WordPress site faster instead?",
@@ -57,18 +57,18 @@ export const pricingFaqs: PricingFaq[] = [
   },
   {
     q: "How should I compare providers?",
-    a: "Compare the actual scope, migration plan, acceptance tests, ownership and licensing terms, third-party costs, change process, launch responsibilities, warranty, and remedies, not just the headline price.",
+    a: "Look past the headline price. Compare what is actually built, how your links get moved, what has to be working before you sign off, who owns the code, what you still pay monthly, and what happens if something breaks.",
   },
   {
     q: "What determines the quote?",
-    a: "The main drivers are URL and content volume, CMS structure, custom design and functionality, integrations, analytics, accessibility and compliance needs, stakeholders, migration risk, and deadline.",
+    a: "How many pages and posts you have, how much of the design is custom, what the site connects to, whether you need accessibility or compliance work, how many people sign off, and your deadline.",
   },
   {
     q: "What happens before you quote?",
-    a: "We review your current platform and URL, primary goal, content and traffic scale, required integrations, timeline, budget range, and known constraints. We then document assumptions and open questions before pricing.",
+    a: "We look at your current site, what you want it to do, how big it is, what it connects to, your timeline and your budget. Then we write down what we assumed and what we still need to know, before quoting.",
   },
   {
     q: "How is the 90+ performance target checked?",
-    a: "The accepted project terms name the representative pages and reproducible Lighthouse conditions for mobile and desktop. Each of three recorded pre-handover runs per agreed page/profile must score 90 or higher. This is a lab acceptance target, not a guarantee of field Core Web Vitals, rankings, revenue, or unchanged results after third-party or client changes.",
+    a: "Your quote names which pages we test and on what device. Each one has to score 90 or better on Google PageSpeed, three times in a row, before we hand over. That is a test-bench score. It is not a promise about your rankings, your revenue, or what happens after someone adds a new tool to the site.",
   },
 ];

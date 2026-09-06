@@ -243,7 +243,7 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-[#F8FAFC]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your WooCommerce Store</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A proven 5-phase process, 2 to 6 weeks depending on scope. Staged cutover with a documented rollback path.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Five stages, 2 to 6 weeks depending on the size of your store. We switch over in stages and can switch back in minutes.</p>
 
           <div className="grid md:grid-cols-5 gap-4">
             {[
@@ -448,11 +448,11 @@ export default function PageContent() {
 
       {/* PRICING TIERS */}
       <PricingTiers
-        heading="Compare on like-for-like scope."
+        heading="Compare the same thing, not the headline price."
         headingAccent="We meet you halfway."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare like-for-like scope, timeline and code ownership.",
+          agencyNote: "Compare the same scope, the same timeline, and who owns the code.",
           ourPrice: "From $1,500",
           ourNote: "2 to 6 week timeline depending on scope. Fixed price. No plugin taxes. You own the code.",
         }}
@@ -502,7 +502,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="All builds include: staged cutover migration, 301 redirect mapping, redirect and metadata carry-over, your domain stays yours, you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
+        footnote="Every build includes: a staged switchover, every old link forwarded, your titles and descriptions carried across, your domain stays yours, and you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
       />
 
       {/* 6. DUAL CTA */}
@@ -597,7 +597,7 @@ export default function PageContent() {
               A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration</Link> carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
+              Every PandaCodeGen <Link href="/blog/woocommerce-migration-cost" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">WooCommerce migration</Link> scores 90 or better on Google PageSpeed on phone and desktop, on the pages named in your quote, tested three times before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -640,7 +640,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. WooCommerce-to-Next.js migrations with measured checkout performance and a staged cutover, and direct Stripe and PayPal integration. Headless storefronts that score 90+ on PageSpeed.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Moves WooCommerce stores to custom code, tests the checkout speed, switches over in stages, and connects Stripe and PayPal directly. Headless storefronts that score 90+ on PageSpeed.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -649,7 +649,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes WooCommerce exits around order data, redirect mapping and acceptance criteria. Eliminates hosting bills, plugin fees, and update maintenance. 8+ years in e-commerce architecture.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Plans WooCommerce moves around your order data, your links, and what has to be working before launch. Eliminates hosting bills, plugin fees, and update maintenance. 8+ years in e-commerce architecture.</p>
               </div>
             </div>
           </div>

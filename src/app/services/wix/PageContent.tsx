@@ -51,7 +51,7 @@ export default function PageContent() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Wix is a practical starting point. If what you need from design, content, selling, speed or integrations has moved on, we can put your current site next to a scoped custom implementation. <span className="text-charcoal font-medium">We do not assume anything about search results, what you pay, your support, access, licences, ownership or handover. Those get agreed.</span>
+            Wix is a fine place to start. If your design, your content, your shop, your speed or the tools you connect to have outgrown it, we will show you what a custom build costs next to what you pay now. <span className="text-charcoal font-medium">From $1,500, fixed before we start, 2 to 4 weeks, and you own the code.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
@@ -67,7 +67,7 @@ export default function PageContent() {
               Compare migration options <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Wix URL when you book. We can run a point-in-time diagnostic, review migration inputs, and <span className="text-charcoal font-medium">identify what is needed for a written proposal.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Wix address when you book. We will test your site live on the call and <span className="text-charcoal font-medium">give you a fixed price for the move.</span></p>
 
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-600">
             <span>Current-state review</span>
@@ -144,7 +144,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              A migration assessment should check what the editor will not let you do, what you can export, the domains, the content, the apps, how it behaves on mobile, how fast it is now, what the account costs, and the provider terms. The written proposal, not this page, defines price, timing, support, confidentiality, access, ownership, and remedies.
+              Before you move, someone should check what Wix will not let you change, what you can actually export, your domains, your apps, how the site behaves on a phone, how fast it is now, and what the account really costs you. Your written quote, not this page, has your price, your dates and what happens if something goes wrong.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               Get your migration plan <ArrowRight className="w-4 h-4" />
@@ -194,7 +194,7 @@ export default function PageContent() {
       {/* 4. COMPARISON TABLE */}
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs a Scoped Custom Implementation</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">Wix vs a Custom Built Site</h2>
           <p className="text-stone-600 text-center mb-12">Compare current constraints with a project-specific architecture and operating model.</p>
 
           <div className="rounded-2xl border border-stone-200 overflow-hidden bg-white">
@@ -222,7 +222,7 @@ export default function PageContent() {
                 </div>
                 {/* Custom value */}
                 <div className="grid gap-1.5 rounded-xl border border-cognac/20 bg-cognac/[0.04] p-3 md:block md:rounded-none md:border-0 md:bg-transparent md:p-0 md:text-center">
-                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Scoped custom implementation</span>
+                  <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-cognac">Custom built</span>
                   <span className="text-charcoal text-sm font-medium leading-relaxed md:text-center">{row.custom}</span>
                 </div>
               </div>
@@ -389,7 +389,7 @@ export default function PageContent() {
         agencyComparison={{
           agencyPrice: "Not assessed",
           agencyNote: "Compare equivalent content, app, commerce, integration, and support scope.",
-          ourPrice: "Scoped proposal",
+          ourPrice: "From $1,500, fixed",
           ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
         tiers={[
@@ -399,7 +399,7 @@ export default function PageContent() {
             timeline: "Milestones proposed after review",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
-              "Page, content, and app inventory",
+              "A list of every page, post and app you have",
               "Design and redirect requirements",
               "Written acceptance and handover terms",
             ],
@@ -425,7 +425,7 @@ export default function PageContent() {
             fit: "Commerce, bookings, localization, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",
-              "Cutover, rollback, and verification plan",
+              "Launch day plan, and how we switch back if needed",
               "Written licensing, access, and handover terms",
             ],
             cta: "Get your migration plan",
@@ -462,7 +462,7 @@ export default function PageContent() {
               </div>
               <h3 className="text-lg font-bold text-cognac uppercase tracking-widest mb-2">Option B</h3>
               <h4 className="text-3xl font-bold text-charcoal mb-4">Full Migration to Next.js</h4>
-              <p className="text-stone-600 mb-8">Scope a replacement implementation with explicit measurements, dependencies, recurring services, access, licensing, support, and handover terms.</p>
+              <p className="text-stone-600 mb-8">A custom site from $1,500, fixed price, 2 to 4 weeks, with the code and every account handed to you at the end.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Documented performance baseline and budgets</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> URL mapping and migration checks</li>
@@ -540,7 +540,7 @@ export default function PageContent() {
             <div className="flex-1">
               <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span></h3>
               <p className="text-stone-700 leading-relaxed mb-6">
-                The accepted proposal states the page set, test conditions, redirect and data checks, client responsibilities, accessibility criteria, support, access, licensing, ownership, handover, and any remedies. This page does not create a performance or refund promise.
+                Your written quote lists the pages, the speed test we run, the link forwarding, what you need to give us, what support you get after launch, and who owns what at the end. It is the quote that counts, not this page.
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start text-xs font-bold text-cognac uppercase tracking-wider mb-6">
                 <span>• Written Scope</span>

@@ -4,11 +4,11 @@ import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
   title: "Agency Partnership Pilot",
-  description: "A scoped white-label or delivery-partner pilot for agencies, with confidentiality, roles, acceptance, handover, and commercial terms agreed in writing.",
+  description: "A one-project white-label pilot for agencies. Who does what, what stays confidential, and what it pays, all agreed in writing first.",
   alternates: { canonical: "/partners" },
   openGraph: {
     title: "Agency Partnership Pilot | PandaCodeGen",
-    description: "Test one scoped engagement before agreeing repeat white-label delivery or partnership terms.",
+    description: "Try one project together before committing to anything ongoing.",
     url: "https://www.pandacodegen.com/partners",
     type: "website",
     images: [ogImageForPath("/partners")],
@@ -29,7 +29,7 @@ const schema = {
       "@id": "https://www.pandacodegen.com/partners#webpage",
       url: "https://www.pandacodegen.com/partners",
       name: "Agency Partnership Pilot",
-      description: "A process for evaluating a scoped agency delivery partnership.",
+      description: "How to test whether we are a good delivery partner for your agency.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       inLanguage: "en-US",
     },

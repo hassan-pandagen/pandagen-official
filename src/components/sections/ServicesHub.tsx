@@ -59,7 +59,7 @@ export default function ServicesHub() {
                   <Globe className="w-7 h-7 text-charcoal group-hover:text-white transition-colors duration-300" />
                 </div>
                 <span className="text-xs font-bold text-stone-600 bg-stone-100 border border-stone-300 rounded-full px-3 py-1.5">
-                  URL inventory &middot; Redirect mapping
+                  Every old link forwarded
                 </span>
               </div>
               <div>
@@ -111,9 +111,9 @@ export default function ServicesHub() {
                 SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
               </p>
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                <p className="text-xs text-stone-400 uppercase tracking-widest font-bold mb-1">Scoped separately</p>
+                <p className="text-xs text-stone-400 uppercase tracking-widest font-bold mb-1">Priced on its own</p>
                 <p className="text-sm text-white leading-snug">
-                  Product and internal-tool work starts with how it should be built, what data it holds, how it stays secure, what it connects to and what it will cost to run. Not a generic website package.
+                  Apps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.
                 </p>
               </div>
             </div>

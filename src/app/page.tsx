@@ -59,15 +59,15 @@ const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 const homeFaqs = [
   {
     q: "How much does WordPress to Next.js migration cost?",
-    a: "WordPress to Next.js migration starts at $1,500 for a 5 to 7 page business site (Starter), $3,500 for a 10 to 20 page site with blog migration and 301 redirects (Growth, most popular), and $5,000 to $10,000 for headless e-commerce with 30+ pages and custom integrations (Scale). Pricing is fixed for the scope written into the accepted project terms. We move your content, SEO settings and design to a custom coded site with no monthly plugin fees and no vendor lock in. Every plan carries a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.",
+    a: "From $1,500 for a 5 to 7 page business site. From $3,500 for 10 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. $5,000 to $10,000 for an online store or 30-plus pages. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. No monthly plugin fees, and you own the code. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test three times before handover.",
   },
   {
     q: "How does the free AI website audit work?",
-    a: "The free audit analyses your website's load time, Core Web Vitals (the speed and stability signals Google reports), technical SEO and common security misconfigurations. Enter your URL and you get a breakdown of what the tests found, including your measured load time and Lighthouse performance score, plus specific recommendations. It runs in well under a minute and requires no signup. It is a point-in-time technical review, not a diagnosis of lost revenue.",
+    a: "Type in your web address and you get your load time, your Google speed scores, your technical SEO and any obvious security problems, with specific things to fix. It takes under a minute. No email, no signup, no sales call. It is a snapshot of your site today, not a claim about money you are losing.",
   },
   {
     q: "How much faster will my site be after migrating from WordPress or Shopify?",
-    a: "It depends on your starting point, your templates and what runs on the page. Typical WordPress and Shopify sites we assess load in roughly 3 to 8 seconds; our builds target sub-second lab load times and a 90+ Lighthouse score on the agreed representative pages. What we commit to in writing is the handover target and the test conditions used to verify it, measured across three recorded runs on mobile and desktop. Field Core Web Vitals depend on your real traffic, devices and any third-party scripts added after launch, so those are monitored rather than promised.",
+    a: "Most WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and every page we hand over scores 90 or better on Google's PageSpeed test on phone and desktop. We test three times and show you the results. Your real-world speed also depends on your traffic and anything added to the site later, so we keep measuring it rather than promise a number.",
   },
   {
     q: "Do you work with Shopify stores?",
@@ -75,7 +75,7 @@ const homeFaqs = [
   },
   {
     q: "Will I lose SEO rankings when migrating from WordPress?",
-    a: "No provider controls search rankings, so nobody can honestly guarantee they hold. What reduces avoidable risk is a documented process: a complete URL inventory, a one-to-one 301 redirect map, schema and metadata migration, sitemap regeneration, canonical consistency, a phased DNS cutover and Search Console monitoring afterwards. Your old site stays live until the new one is verified, and a rollback path is documented before cutover. Our MyCustomPatches migration is an owner-confirmed record: 22 days, 200+ URLs across 13 templates, zero downtime at cutover, and no rankings lost in the 30 days after launch. Performance and hosting figures for that project are withdrawn pending reconciliation of the original test records.",
+    a: "Nobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.",
   },
   {
     q: "Why not just use a faster WordPress host or a caching plugin?",
@@ -239,7 +239,7 @@ export default function Home() {
       <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code the client owns outright. Builds start at $1,500 with fixed pricing for the written scope, carry a 90+ Lighthouse handover target on mobile and desktop verified across three recorded runs, and have no monthly platform fees. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
+            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Google&apos;s PageSpeed test on phone and desktop. No monthly platform fees and no retainer. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
           </p>
         </div>
       </section>

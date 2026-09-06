@@ -49,7 +49,7 @@ export default function PageContent() {
                 and they cannot leave without losing the CRM they depend on. */}
             Your GoHighLevel site is slow, and the CRM is why you cannot just leave.{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
-              Start with an inventory, baseline, and integration plan.
+              Start with a look at your site, your speed, and what it connects to.
             </span>
           </motion.h1>
 
@@ -60,7 +60,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Share your GHL URL and the workflows the public site must support. We can inspect the current implementation, identify integration dependencies, and propose a measured frontend path without promising search, advertising, or lead outcomes.
+            Send us your GHL address and tell us which automations the site has to feed. We will look at what you have now, check what it connects to, and give you a fixed price. We will not promise you rankings, ad results or a number of leads.
           </motion.p>
 
           <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">
@@ -85,7 +85,7 @@ export default function PageContent() {
               See How It Works <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your GHL site URL when you book. We can run a point-in-time diagnostic and <span className="text-charcoal font-medium">identify the inputs needed for a written proposal.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your GHL site address when you book. We will test it live on the call and <span className="text-charcoal font-medium">give you a fixed price.</span></p>
         </div>
       </section>
 
@@ -136,12 +136,12 @@ export default function PageContent() {
             A hybrid architecture can place a custom public frontend in front of supported GHL CRM workflows. Discovery verifies API access, forms, calendars, attribution, account configuration, and the current measured baseline.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            Projects are compared on like-for-like deliverables, dependencies, test methods, support, and handover, not headline prices or generic agency benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
+            Compare quotes on what you actually get, not on the headline number. Your written quote has your price, your dates and what is included.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Diagnostic discipline</p>
             <p className="text-stone-300 leading-relaxed">
-              A diagnostic is a point-in-time technical review, not proof of lost revenue or a guaranteed business result. We document the test context, distinguish observations from hypotheses, and flag when a frontend replacement may not be justified.
+              A speed test is a snapshot of your site today, not proof you are losing money. We write down how we tested, separate what we measured from what we suspect, and tell you when a rebuild is not worth it.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
@@ -157,11 +157,11 @@ export default function PageContent() {
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">Written proposal</div>
-              <p className="text-sm text-stone-600">Define scope, assumptions, exclusions, price model, and changes.</p>
+              <p className="text-sm text-stone-600">What you get, what you do not, the price, and what happens if it changes.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">Defined handover</div>
-              <p className="text-sm text-stone-600">State support, access, licensing, ownership, and remedies explicitly.</p>
+              <p className="text-sm text-stone-600">Who owns the code, what support you get, and what happens if something breaks.</p>
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function PageContent() {
       <section id="how-it-works" className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How GoHighLevel Custom Website Integration Works</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase review and implementation path. Continuity controls and acceptance checks are defined for the approved account and integrations.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Four stages, with dates. Every form, calendar and automation is tested before your site goes live.</p>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
@@ -402,7 +402,7 @@ export default function PageContent() {
         agencyComparison={{
           agencyPrice: "Not assessed",
           agencyNote: "Compare equivalent account, integration, testing, and support scope.",
-          ourPrice: "Scoped proposal",
+          ourPrice: "From $1,500, fixed",
           ourNote: "Price, timing, continuity checks, access, and rights follow discovery.",
         }}
         tiers={[
@@ -412,7 +412,7 @@ export default function PageContent() {
             timeline: "Milestones proposed after review",
             fit: "A focused landing-page and GHL data-flow review.",
             includes: [
-              "Current-state inventory",
+              "A look at your site as it is today",
               "Supported endpoint and field mapping",
               "Written test and handover terms",
             ],
@@ -424,7 +424,7 @@ export default function PageContent() {
             timeline: "Milestones proposed after review",
             fit: "A broader marketing site with content, forms, and supported GHL integrations.",
             includes: [
-              "Page, content, and integration inventory",
+              "A list of every page and every automation it feeds",
               "Consent-aware analytics requirements",
               "Written acceptance and support terms",
             ],
@@ -442,7 +442,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="The accepted proposal controls scope, price, timing, continuity checks, support, access, licensing, ownership, and remedies."
+        footnote="Your written quote has the final price, the dates, what is included, who owns the code, and what happens if something breaks."
       />
 
       {/* Agency delivery-path link */}

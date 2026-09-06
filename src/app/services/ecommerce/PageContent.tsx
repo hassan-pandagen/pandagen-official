@@ -100,7 +100,7 @@ export default function PageContent() {
                 &ldquo;Hassan rebuilt MyCustomPatches, a WordPress + WooCommerce store, onto a custom Next.js storefront. The performance figures for that project are withdrawn pending reconciliation of their test profiles, dates and conditions. Fixed price. Live at mycustompatches.net. &rdquo;
               </p>
               <p className="text-sm text-stone-500">Matt Conner, owner, MC Patches LLC, an independent client. Published with permission. <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">Clutch review</a> &middot; <a href="https://www.goodfirms.co/company/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">GoodFirms review</a></p>
-              <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">What that project involved, and what it did not establish, is set out in the case study. Revision rounds, acceptance criteria and refund terms for your project are stated in the written scope, and revisions run until the agreed scope is accepted. No hourly billing. No subcontractors. Hassan Jamal, Stafford, TX.</p>
+              <p className="text-sm text-stone-700 mt-4 pt-4 border-t border-stone-100">What that project involved, and what it did not establish, is set out in the case study. How many rounds of changes you get, what counts as done, and the refund terms are all in your written quote. Changes run until the agreed work is signed off. No hourly billing. No subcontractors. Hassan Jamal, Stafford, TX.</p>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function PageContent() {
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Go Headless</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel with AI-paired development. <span className="font-semibold text-charcoal">Three weeks to launch</span>, with a staged cutover and a documented rollback path.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Your existing Shopify store stays live. We build in parallel with AI-paired development. <span className="font-semibold text-charcoal">Three weeks to launch</span>, switched over in stages, and we can switch back in minutes if anything is wrong.</p>
 
           <div className="space-y-8">
             {[
@@ -335,7 +335,7 @@ export default function PageContent() {
             <div className="p-5 md:p-6 rounded-2xl bg-white border border-red-200 text-center">
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-red-500 mb-2">Other quotes</p>
               <p className="text-2xl md:text-3xl font-black text-stone-500 tracking-tight leading-none">Not assessed</p>
-              <p className="text-xs text-stone-500 mt-2 leading-relaxed">Compare like-for-like scope, timeline and code ownership before comparing totals.</p>
+              <p className="text-xs text-stone-500 mt-2 leading-relaxed">Compare the same scope, the same timeline and who owns the code before you compare prices.</p>
             </div>
             <div className="p-5 md:p-6 rounded-2xl bg-white border border-emerald-300 text-center shadow-card">
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-emerald-600 mb-2">PandaCodeGen</p>
@@ -431,7 +431,7 @@ export default function PageContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-sm text-stone-500 mt-8 max-w-2xl mx-auto">All builds include: staged cutover migration, 301 redirect mapping, SEO preservation, your domain stays yours, you own 100% of the code.</p>
+          <p className="text-center text-sm text-stone-500 mt-8 max-w-2xl mx-auto">Every build includes: a staged switchover, every old link forwarded, your Google rankings protected, your domain stays yours, and you own 100% of the code.</p>
         </div>
       </section>
 
@@ -530,7 +530,7 @@ export default function PageContent() {
               A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every PandaCodeGen build carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
+              Every build scores 90 or better on Google PageSpeed on phone and desktop, on the pages named in your quote, tested three times before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -609,7 +609,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/hassan" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Hassan Jamal</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Headless Shopify builds that score 90+ on PageSpeed. Full storefront migrations from Liquid templates to custom Next.js storefronts, behind a staged cutover with a documented rollback path.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Engineer. Headless Shopify builds that score 90+ on PageSpeed. Full store moves from Shopify themes to custom storefronts, switched over in stages so we can go back in minutes.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -618,7 +618,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Scopes headless migrations around the integration surface and the acceptance criteria. 8+ years in enterprise e-commerce architecture.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. Works out what your store connects to and what has to be working before launch. 8+ years in enterprise e-commerce architecture.</p>
               </div>
             </div>
           </div>

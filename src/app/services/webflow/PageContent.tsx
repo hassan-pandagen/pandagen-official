@@ -60,7 +60,7 @@ export default function WebflowPageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Webflow is a strong visual tool. If what you need from content, interactions, application logic, speed, other languages or day-to-day running has moved on, we can compare the current site with a scoped replacement. <span className="text-charcoal font-medium">What you pay, what support you get, who has access, which licences, who owns it and how it is handed over all get written down after discovery.</span>
+            Webflow is a strong visual tool. If what you need from content, interactions, application logic, speed, other languages or day-to-day running has moved on, we will show you what a custom build costs next to what you pay Webflow now. <span className="text-charcoal font-medium">What you pay, what support you get, who has access, which licences, who owns it and how it is handed over all get written down after discovery.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 1, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,7 +76,7 @@ export default function WebflowPageContent() {
               When to Migrate <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Webflow URL when you book. We can run a point-in-time diagnostic, review migration inputs, and <span className="text-charcoal font-medium">identify what is needed for a written proposal.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Webflow address when you book. We will test your site live on the call and <span className="text-charcoal font-medium">give you a fixed price for the move.</span></p>
         </div>
       </section>
 
@@ -93,12 +93,12 @@ export default function WebflowPageContent() {
             Look at what the account costs you today, and at who would run the replacement day to day. Availability incidents should be checked against <a href="https://status.webflow.com" target="_blank" rel="nofollow noopener noreferrer" className="text-orange-300 hover:underline">Webflow&apos;s current status history</a>; a different hosting architecture changes dependencies but does not eliminate outage risk. <Link href="/blog/webflow-true-cost" className="text-orange-300 hover:underline">See the Webflow cost-input guide</Link>.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            Compare vendors on the same scope: the same pages, design work, CMS, languages, commerce, integrations, testing, support and handover. Not on headline prices or generic benchmarks. The accepted proposal defines the commercial model and project-specific commitments.
+            Compare quotes on the same thing: the same pages, the same design work, the same CMS and languages, the same testing and support. Not on the headline number. Your written quote has your price and your dates.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-orange-300 mb-2">Diagnostic discipline</p>
             <p className="text-stone-300 leading-relaxed">
-              A diagnostic is a point-in-time technical review, not proof of lost revenue or a guaranteed business result. We document the test context, distinguish observations from hypotheses, and flag when a migration may not be justified.
+              A speed test is a snapshot of your site today, not proof you are losing money. We write down how we tested, separate what we measured from what we suspect, and tell you when moving is not worth it.
             </p>
           </div>
           <div className="my-8 p-5 bg-cognac/10 border-l-4 border-cognac rounded-r-xl">
@@ -114,11 +114,11 @@ export default function WebflowPageContent() {
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">Written proposal</div>
-              <p className="text-sm text-stone-600">Define scope, assumptions, exclusions, price model, and changes.</p>
+              <p className="text-sm text-stone-600">What you get, what you do not, the price, and what happens if it changes.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">Defined handover</div>
-              <p className="text-sm text-stone-600">State support, access, licensing, ownership, and remedies explicitly.</p>
+              <p className="text-sm text-stone-600">Who owns the code, what support you get, and what happens if something breaks.</p>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function WebflowPageContent() {
             Third-party monitors such as <a href="https://isdown.app/status/webflow" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">IsDown</a> may provide additional signals, but their classifications and windows require verification. Use current provider records, your own monitoring, and the agreed service requirements.
           </p>
           <p className="text-stone-700 text-lg leading-relaxed">
-            A custom deployment introduces a different set of hosting, DNS, CDN, data, monitoring, and operational dependencies. The architecture and proposal should state responsibilities, recovery controls, support, and acceptance without promising uninterrupted availability.
+            A custom site runs on your own hosting account instead of Webflow, from $20 a month as of August 2026 paid straight to the host. Your quote says who looks after it, how it is backed up and what support you get. Nobody can promise a site never goes down.
           </p>
         </div>
       </section>
@@ -301,7 +301,7 @@ export default function WebflowPageContent() {
       <section className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Webflow Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. The proposal identifies included interactions, content, dependencies, milestones, and acceptance checks.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">Four stages, with dates. Your quote lists which animations and content are included, and what has to be working before launch.</p>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
             <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-stone-200 -z-10" />
@@ -340,7 +340,7 @@ export default function WebflowPageContent() {
             Define What the Replacement Must Do.
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            A custom implementation can provide different application, content, and deployment controls. The proposal defines measurable targets, recurring services, support, repository access, licensing, IP, and handover.
+            A custom build gives you control Webflow does not. Your written quote says what speed we hit, what it costs to run each month, what support you get, and that the code is yours at the end.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -507,7 +507,7 @@ export default function WebflowPageContent() {
             timeline: "Milestones proposed after review",
             fit: "A focused marketing-site migration with validated inputs.",
             includes: [
-              "Page, component, and content inventory",
+              "A list of every page and CMS item you have",
               "Design and redirect requirements",
               "Written acceptance and handover terms",
             ],
@@ -532,7 +532,7 @@ export default function WebflowPageContent() {
             fit: "Localization, ecommerce, data, or complex application requirements.",
             includes: [
               "Export and data-risk assessment",
-              "Cutover, rollback, and verification plan",
+              "Launch day plan, and how we switch back if needed",
               "Written licensing, access, and handover terms",
             ],
           },
@@ -570,7 +570,7 @@ export default function WebflowPageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Migrate to Custom Code</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Scope a replacement implementation around the required design system, content model, application logic, performance method, and operating responsibilities.
+                A custom site from $1,500, fixed price, 2 to 4 weeks, with the code and every account handed to you at the end.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Documented performance budgets", "Scoped server-side requirements", "Validated content model", "Written repository and rights terms", "Current hosting and service estimate", "Written support and remedies"].map((item, i) => (
@@ -650,7 +650,7 @@ export default function WebflowPageContent() {
               Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              The accepted proposal states the page set, test conditions, redirect and data checks, client responsibilities, accessibility criteria, support, access, licensing, ownership, handover, and any remedies. This page does not create a performance or refund promise.
+              Your written quote lists the pages, the speed test we run, the link forwarding, what you need to give us, what support you get after launch, and who owns what at the end. It is the quote that counts, not this page.
             </p>
             <button
               data-cal-namespace="discovery"

@@ -58,7 +58,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            We design SaaS platforms, internal dashboards and AI-enabled tools around how you actually work, what they have to connect to, and what gets in the way. All of that comes out of discovery. <span className="text-charcoal font-medium">Who gets the code, which licences apply, who owns the IP, what support you get and how it is handed over are all in the written proposal.</span>
+            We design SaaS platforms, internal dashboards and AI-enabled tools around how you actually work, what they have to connect to, and what gets in the way. All of that comes out of one short call. <span className="text-charcoal font-medium">Who gets the code, which licences apply, who owns the IP, what support you get and how it is handed over are all in the written proposal.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,7 +74,7 @@ export default function PageContent() {
               See What We Build <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Describe your idea or share your current tool when you book. We review the problem, identify open dependencies, and <span className="text-charcoal font-medium">outline the next discovery step.</span> Any commercial commitment appears in a written proposal.</p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Tell us the idea or show us the tool you use now. We will tell you what it would take and <span className="text-charcoal font-medium">what it costs.</span> The price comes in writing.</p>
         </div>
       </section>
 
@@ -82,7 +82,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen scopes and builds custom software, SaaS platforms, dashboards, and internal tools</strong> with technologies such as Next.js, TypeScript, and Supabase. The accepted proposal records deliverables, dependencies, price, timing, support, repository access, licensing, IP, and handover terms for the specific project.
+            <strong className="text-charcoal">PandaCodeGen scopes and builds custom software, SaaS platforms, dashboards, and internal tools</strong> with technologies such as Next.js, TypeScript, and Supabase. Your written quote says what gets built, the price, the dates, what support you get, and that the code, the accounts and the rights are yours at the end.
           </p>
         </div>
       </section>
@@ -185,7 +185,7 @@ export default function PageContent() {
               How We Build
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">From Idea to an Agreed Delivery Plan</h2>
-            <p className="text-stone-600 text-lg max-w-2xl mx-auto">Work is organized into reviewable phases. The proposal defines milestones, review cadence, dependencies, and acceptance for the approved scope.</p>
+            <p className="text-stone-600 text-lg max-w-2xl mx-auto">The work runs in stages you review as we go. Your quote has the dates and what has to be working at each one.</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
@@ -367,7 +367,7 @@ export default function PageContent() {
       <section id="comparison" className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50/50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">No-Code vs Custom Coded</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-12">Compare constraints, dependencies, portability, and operating responsibilities.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-12">Compare what each one limits, what it locks you into, and what it costs to run.</p>
 
           <div className="rounded-2xl border border-stone-300 overflow-hidden bg-white">
             {/* Header for desktop only. On mobile, each row gets inline labels. */}
@@ -414,10 +414,10 @@ export default function PageContent() {
               <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">Delivery accountability</p>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Know the Team and Responsibilities Before Kickoff.</h2>
               <p className="text-stone-600 text-lg leading-relaxed mb-4">
-                The written proposal identifies the delivery roles, technical responsibilities, communication path, review cadence, and any approved subcontracting or external dependencies for the project.
+                Your written quote names who does the work, who you talk to, how often you review it, and whether anyone outside our team is involved.
               </p>
               <p className="text-stone-600 text-base">
-                Discovery establishes the implementation path and open risks. Price, timing, staffing, support, and commercial terms are then recorded in the written proposal.
+                One call works out how it would be built and what could go wrong. The price, the dates, who builds it and what support you get all go in writing.
               </p>
             </div>
           </div>
@@ -438,7 +438,7 @@ export default function PageContent() {
               A reviewable <span className="font-serif font-normal italic text-cognac">build blueprint</span> for each project
             </h2>
             <p data-speakable="true" className="text-stone-300 text-lg max-w-2xl leading-relaxed">
-              Before implementation, we document the proposed architecture, dependencies, measurements, and responsibilities. Final commitments are the ones stated in the accepted proposal and technical specification.
+              Before we build, you get a written plan of how it works, what it connects to and who is responsible for what. The quote is what counts.
             </p>
           </div>
 
@@ -489,7 +489,7 @@ export default function PageContent() {
         headingAccent="Confirm commercial terms in writing."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare like-for-like scope, dependencies, and contract terms.",
+          agencyNote: "Compare the same scope and the same contract terms, not headline prices.",
           ourPrice: "Scoped proposal",
           ourNote: "Price, timing, access, support, and rights follow discovery.",
         }}
@@ -530,7 +530,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="The accepted proposal controls scope, price, timing, support, access, licensing, ownership, and remedies."
+        footnote="Your written quote has the final price, the dates, what is included, who owns the code, and what happens if something breaks."
       />
 
       {/* 7. DUAL CTA */}
@@ -544,7 +544,7 @@ export default function PageContent() {
               <div className="text-stone-600 text-sm font-bold uppercase tracking-wider mb-4">For Startups</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">MVP / Prototype</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                Need to validate an idea? We can scope a functional prototype around the riskiest workflows, dependencies, and user questions.
+                Need to test an idea first? We can build a working prototype of the riskiest part before you commit to the whole thing.
               </p>
               <ul className="space-y-3 mb-8">
                 {["Defined validation questions", "Reviewable implementation path", "Documented architecture assumptions", "User-testing plan", "Written acceptance criteria"].map((item, i) => (
@@ -564,7 +564,7 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">For Growing Businesses</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Full SaaS / Platform</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                A scoped platform path for projects that may require AI integrations, multi-tenant architecture, or custom operational workflows.
+                For products that need AI features, multiple customer accounts, or workflows built around how you actually operate.
               </p>
               <ul className="space-y-3 mb-8">
                 {["SaaS architecture review", "AI-provider feasibility", "Responsive application scope", "Administration workflows", "Repository and licensing terms", "Capacity and monitoring plan"].map((item, i) => (
@@ -648,9 +648,9 @@ export default function PageContent() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Define How the Build Will Be Verified.</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-2 max-w-2xl mx-auto">
-              Capacity assumptions, test conditions, acceptance criteria, support, repository access, licensing, IP transfer, handover, and any remedies are documented for the approved scope. This page does not create a performance or refund promise.
+              Your written quote says how much load it handles, how we test it, what support you get, and that the code, the accounts and the rights are yours at handover. It is the quote that counts, not this page.
             </p>
-            <p className="text-sm text-stone-600 mb-8">Project location, staffing, and delivery responsibilities are confirmed in the written proposal.</p>
+            <p className="text-sm text-stone-600 mb-8">Your quote names who does the work and where they are.</p>
             <button
               data-cal-namespace="discovery"
               data-cal-link={process.env.NEXT_PUBLIC_CAL_LINK || undefined}

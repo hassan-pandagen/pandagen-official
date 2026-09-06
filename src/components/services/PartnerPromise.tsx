@@ -5,17 +5,17 @@ import { motion } from "@/components/ui/motion";
 
 const reviewRows = [
     {
-        area: "Scope and exclusions",
+        area: "What you get, and what you do not",
         discovery: "List what they have today, what it depends on, and what we are assuming",
         proposal: "Say what is included, what is not, who does what, and how changes get handled",
     },
     {
-        area: "Performance and acceptance",
+        area: "Speed, and how we prove it",
         discovery: "Record a dated baseline, and name what only the client can change",
         proposal: "Agree the target, which pages, which tools, the test conditions, and how it gets signed off",
     },
     {
-        area: "Commercial and handover terms",
+        area: "Payment, support and who owns it",
         discovery: "Talk through payment, support, ownership, access, and what happens at handover",
         proposal: "State the milestones, what support covers, the licences, the handover, and what happens if something is wrong",
     },
@@ -44,7 +44,7 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                         <span className="font-serif font-normal italic text-cognac md:block">Put the agreement in writing.</span>
                     </h2>
                     <p className="text-lg text-stone-600 leading-relaxed max-w-3xl mx-auto">
-                        Discovery is used to understand the current system, desired outcome, constraints, and dependencies. Scope, commercial terms, targets, support, ownership, and remedies become commitments only when they are stated in accepted written project terms. Those may be a concise quote or order summary accepted in email or chat, or a more detailed agreement for regulated or complex work.
+                        The call is where we work out what you have, what you want, and what is in the way. Nothing is a commitment until it is in your written quote. For most projects that quote is a short document you accept by email. Regulated or complex work gets a fuller agreement.
                     </p>
                 </motion.div>
 
@@ -68,7 +68,7 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                 >
                     <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Evidence before outcomes</p>
                     <p className="text-stone-700 leading-relaxed">
-                        Performance measurements and project examples are point-in-time references. Any target used for your project should identify the tested pages, tool, date, device profile, run method, exclusions, and acceptance rule in the written scope.
+                        Any speed number, ours or anyone else's, is a snapshot of one day. Your quote names which pages we test, on what device, with which tool, and what counts as passing.
                     </p>
                 </motion.div>
 
@@ -110,7 +110,7 @@ export default function PartnerPromise({ hideTiers = false }: PartnerPromiseProp
                 >
                     <div className="p-6 md:p-8 border-b border-stone-200">
                         <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-1">What should be documented before work starts</h3>
-                        <p className="text-stone-600 text-sm">Use the discovery conversation to gather evidence, then rely on the written proposal for commitments.</p>
+                        <p className="text-stone-600 text-sm">Use the call to get the facts. Use the written quote for the promises.</p>
                     </div>
 
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 px-4 swipe-hint">← Swipe to see more →</p>

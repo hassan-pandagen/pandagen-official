@@ -51,7 +51,7 @@ export default function SquarespacePageContent() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Squarespace is a practical starting point. If what you need from design, content, selling, speed or integrations has moved on, we can put your current site next to a scoped custom implementation. <span className="text-charcoal font-medium">We do not assume anything about search results, what you pay, your support, access, licences, ownership or handover. Those get agreed.</span>
+            Squarespace is a fine place to start. If your design, your content, your shop, your speed or the tools you connect to have outgrown it, we will show you what a custom build costs next to what you pay now. <span className="text-charcoal font-medium">We do not assume anything about search results, what you pay, your support, access, licences, ownership or handover. Those get agreed.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
@@ -67,7 +67,7 @@ export default function SquarespacePageContent() {
               Scope Squarespace improvements <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Squarespace URL when you book. We can run a point-in-time diagnostic, review migration inputs, and <span className="text-charcoal font-medium">identify what is needed for a written proposal.</span></p>
+          <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Drop your Squarespace address when you book. We will test your site live on the call and <span className="text-charcoal font-medium">give you a fixed price for the move.</span></p>
         </div>
       </section>
 
@@ -271,7 +271,7 @@ export default function SquarespacePageContent() {
                     </span>
                   </h3>
                   <p className="text-base md:text-lg text-stone-600 mb-8 leading-relaxed max-w-md">
-                    Measure the current implementation, review account and export terms, and compare the effort, risks, and operating responsibilities of staying versus migrating.
+                    We measure your site as it is, check what Squarespace will let you export, and show you what staying costs against what moving costs.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <button
@@ -420,7 +420,7 @@ export default function SquarespacePageContent() {
             <span className="text-stone-300 font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Choose the Architecture That Fits.</h2>
             <p className="text-stone-300 text-lg max-w-2xl mx-auto">
-              A custom implementation can provide different design, integration, and deployment controls. The proposal defines measurable targets, recurring services, support, repository access, licensing, IP, and handover.
+              A custom build gives you control Squarespace does not. Your written quote says what speed we hit, what you pay monthly to run it, what support you get, and that the code is yours at the end.
             </p>
           </div>
 
@@ -456,7 +456,7 @@ export default function SquarespacePageContent() {
               <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium mb-3">
                 Review Squarespace migrations at the component and workflow level. Inventory Fluid Engine layouts, Commerce products, scheduling, member areas, exports, and integrations before committing to a build or cutover plan.
               </p>
-              <p className="text-sm text-stone-600">Project staffing, delivery roles, and responsibilities are confirmed in the written proposal.</p>
+              <p className="text-sm text-stone-600">Your quote names who is doing the work.</p>
             </div>
           </div>
         </div>
@@ -482,7 +482,7 @@ export default function SquarespacePageContent() {
               <Layout className="w-3.5 h-3.5" /> The Template Ceiling
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-              Match each observed constraint to a <span className="font-serif font-normal italic text-cognac">scoped response.</span>
+              Every limit, and <span className="font-serif font-normal italic text-cognac">what we would do about it.</span>
             </h2>
             <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
               Platform behavior can vary by plan, template, account, extensions, and current product changes. Each pair below is a review question and a possible implementation direction, not a universal limitation or promised outcome.
@@ -543,7 +543,7 @@ export default function SquarespacePageContent() {
         agencyComparison={{
           agencyPrice: "Not assessed",
           agencyNote: "Compare equivalent content, commerce, integration, and support scope.",
-          ourPrice: "Scoped proposal",
+          ourPrice: "From $1,500, fixed",
           ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
         tiers={[
@@ -553,7 +553,7 @@ export default function SquarespacePageContent() {
             timeline: "Milestones proposed after review",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
-              "Page and content inventory",
+              "A list of every page and post you have",
               "Design and redirect requirements",
               "Written acceptance and handover terms",
             ],
@@ -578,7 +578,7 @@ export default function SquarespacePageContent() {
             fit: "Commerce, scheduling, member, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",
-              "Cutover, rollback, and verification plan",
+              "Launch day plan, and how we switch back if needed",
               "Written licensing, access, and handover terms",
             ],
           },
@@ -614,7 +614,7 @@ export default function SquarespacePageContent() {
               </div>
               <h3 className="text-lg font-bold text-cognac uppercase tracking-widest mb-2">Option B</h3>
               <h4 className="text-3xl font-bold text-charcoal mb-4">Full Migration to Next.js</h4>
-              <p className="text-stone-600 mb-8">Scope a replacement implementation with explicit measurements, dependencies, recurring services, access, licensing, support, and handover terms.</p>
+              <p className="text-stone-600 mb-8">A custom site from $1,500, fixed price, 2 to 4 weeks, with the code and every account handed to you at the end.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Documented performance baseline and budgets</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> URL mapping and migration checks</li>
@@ -692,7 +692,7 @@ export default function SquarespacePageContent() {
             <div className="flex-1">
               <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span></h3>
               <p className="text-stone-700 leading-relaxed mb-6">
-                The accepted proposal states the page set, test conditions, redirect checks, content responsibilities, accessibility criteria, support, access, licensing, ownership, handover, and any remedies. This page does not create a performance or refund promise.
+                Your written quote lists the pages, the speed test we run, the link forwarding, what you need to give us, what support you get after launch, and who owns what at the end. It is the quote that counts, not this page.
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start text-xs font-bold text-cognac uppercase tracking-wider mb-6">
                 <span>• Written Scope</span>

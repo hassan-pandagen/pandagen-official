@@ -23,7 +23,7 @@
  */
 
 export const SEARCH_IMPLEMENTATION_AUDIT =
-    'Audit rendering, indexability, canonicals, metadata, content, internal links, redirects, and structured data. Search engines control crawling, indexing, and rankings.';
+    'Check that Google and AI assistants can actually read the page, that your titles and descriptions are right, and that every link works. Search engines still decide the rankings.';
 
 export const AI_DISCOVERABILITY_AUDIT =
     'Review crawlability, entity clarity, structured data, content quality, and source credibility. Inclusion and citation by AI systems remain controlled by third parties.';

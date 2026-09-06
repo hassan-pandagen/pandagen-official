@@ -5,11 +5,11 @@ import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
   title: "Website Migration & Custom Web Engineering Services",
-  description: "Website migration, commerce diagnostic, and custom web engineering services scoped around evidence, acceptance, cutover, and handover.",
+  description: "Website migration, store speed reviews and custom builds. Fixed prices from $1,500, 2 to 4 weeks, and you own the code.",
   alternates: alternatesFor("services", "en"),
   openGraph: {
     title: "Website Migration & Custom Web Engineering Services | PandaCodeGen",
-    description: "Migration and engineering services scoped around evidence, acceptance, cutover, and handover.",
+    description: "Migration and custom build services. Fixed prices from $1,500, and you own the code.",
     url: "https://www.pandacodegen.com/services",
     type: "website",
     images: [ogImageForPath("/services")],

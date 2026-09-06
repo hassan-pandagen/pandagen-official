@@ -26,17 +26,17 @@ const SEGMENTS = [
   {
     icon: Gauge,
     signal: "The current website platform creates measurable performance or maintenance constraints.",
-    approach: "Map URLs, content, integrations, DNS, analytics, rollback needs, and platform costs before recommending optimization or migration.",
+    approach: "We check your pages, your content, what your site connects to and what you pay each month, then tell you whether to fix the current site or move it.",
   },
   {
     icon: Zap,
     signal: "Existing GoHighLevel workflows remain useful while the public website needs independent review.",
-    approach: "Assess frontend performance and API compatibility, then document which CRM workflows can remain and which dependencies need changes.",
+    approach: "We keep your GoHighLevel contacts, pipelines and calendars exactly as they are, and replace only the slow website in front of them.",
   },
   {
     icon: Sparkles,
     signal: "Important content is difficult for search and answer systems to discover, interpret, or attribute.",
-    approach: "Audit crawlability, entity clarity, structured data, answer formatting, and source quality; inclusion and citation remain controlled by third parties.",
+    approach: "We check that AI assistants and search engines can actually read your pages, then write the answers so they can be quoted. Whether they quote you is their call, not ours.",
   },
   {
     icon: LayoutDashboard,

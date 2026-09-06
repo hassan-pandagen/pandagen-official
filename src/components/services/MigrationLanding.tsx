@@ -206,7 +206,7 @@ export default function MigrationLanding({
             </h2>
           </div>
           <p className="border-l border-cognac/70 pl-6 text-lg leading-8 text-stone-300 md:pl-8 lg:self-center">
-            The accepted written project terms should state the price, payment milestones, delivery assumptions, supported browsers, accessibility target, performance method, redirect and content scope, launch responsibility, warranty, remedies, source-code and account ownership, licenses, support, and change process. They may be a concise quote or order summary for a straightforward project or a detailed agreement for regulated or complex work. Search rankings, traffic, and commercial results remain controlled by external systems and users, so they are not guaranteed.
+            Your written quote should say the price, when you pay, which browsers are supported, how speed is tested, which links get forwarded, who launches it, what support you get, who owns the code and the accounts, and what happens if something is wrong. For most projects that is a short document. Nobody controls Google, so rankings, traffic and sales are never guaranteed.
           </p>
         </div>
       </section>

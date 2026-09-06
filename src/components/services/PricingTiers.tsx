@@ -47,7 +47,7 @@ export default function PricingTiers({ tiers }: Props) {
             <span className="font-serif font-normal italic text-cognac md:block">Confirm the project in writing.</span>
           </h2>
           <p className="text-stone-600 max-w-2xl mx-auto text-base md:text-lg">
-            These are here to shape the first conversation. They are not quotes and not delivery promises. The scope, price, timing, tests, support, ownership and remedies are stated in the accepted written project terms, which may be a concise quote or order summary or a more detailed agreement.
+            These are starting points for the first conversation, not quotes. Your written quote has the real price, the dates, what is included, what support you get and who owns the code.
           </p>
         </div>
 
