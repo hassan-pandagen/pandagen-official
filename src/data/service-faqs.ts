@@ -23,23 +23,23 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "custom-engineering": [
     {
       q: "How long does it take to build a custom app?",
-      a: "How long it takes depends on how firm the requirements are, what it connects to, how much data moves, how quickly you can review, and how you sign it off. Discovery produces a written proposal with milestones, dependencies, and the change process before work begins.",
+      a: "A marketing site takes 2 to 4 weeks. An application takes longer, and the honest way to answer is with a built example rather than a promise: our Enterprise Ops platform, with role-based access, payments, attendance tracking and twenty Supabase Edge Functions, was built in 10 weeks. What moves the number is how firm the requirements are, what the app connects to, how much data migrates, and how fast you can review. Discovery produces a written proposal with dated milestones before any work starts.",
     },
     {
       q: "How much does custom development cost?",
-      a: "We quote custom work after looking at what you need, what it connects to, the data, the security, and what we are waiting on. The accepted proposal states the price model, payment schedule, scope, exclusions, support, repository access, licensing, and IP terms.",
+      a: "An agency that bills by the hour sells you hours, so a fixed budget buys a number of hours rather than a finished application. We quote the application. Custom builds start in the Scale range, $5,000 to $10,000, which covers dashboards, internal tools, integrations and 30-plus screens. Larger scope is Scale+, from $10,000, quoted after a scoping call. The price is fixed for the written scope, paid 30 percent at onboarding and 70 percent at the delivery milestone. No hourly billing, no monthly retainer to keep it running. The accepted written terms control the final figure.",
     },
     {
       q: "Can I add AI features to my app?",
-      a: "We can scope direct integrations with supported AI-provider APIs for chat, document analysis, extraction, generation, or search. Feasibility depends on provider capabilities, data quality, privacy requirements, evaluation criteria, and the approved scope.",
+      a: "Yes. We scope direct integrations with supported AI-provider APIs for chat, document analysis, extraction, generation, or search, built into your codebase rather than bolted on through a per-seat SaaS subscription. Feasibility depends on the provider's capabilities, your data quality, privacy requirements and the evaluation criteria written into the scope.",
     },
     {
       q: "What if I already have a Bubble/no-code app?",
-      a: "We can go through the application logic, the data model, how people sign in and what it connects to, then propose a staged migration and a cutover plan. Performance and continuity are measured against agreed baselines and acceptance checks rather than assumed in advance.",
+      a: "We go through the application logic, the data model, how people sign in and what it connects to, then propose a staged migration in the Scale tier, $5,000 to $10,000 for most no-code replacements. Your existing app stays live while the new one is built, and cutover runs against agreed acceptance checks with a documented rollback path. You stop paying the platform's subscription the day the new build is accepted.",
     },
     {
       q: "Do I own the code?",
-      a: "The accepted proposal writes down who gets the code, the documentation, deployment access, the licences, which third-party components are involved, when IP transfers and when handover happens so both parties know exactly what is included.",
+      a: "Yes, and it is written down, not implied. At handover the source code, design files, CMS models, documentation and the production accounts are transferred to you or created under your control. Some providers host on their own accounts and keep the repository, which means you rent your own product; ask any provider which of those five things you will hold on day one. Ours are listed in the accepted proposal along with the licences of any third-party components and the date IP transfers.",
     },
   ],
   "ecommerce": [
@@ -67,89 +67,89 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "gohighlevel": [
     {
       q: "Will my GHL automations break during migration?",
-      a: "First we list the forms, triggers, pipelines, webhooks and account settings that matter. A parallel build and staged cutover can reduce risk, but continuity depends on GHL's APIs, account configuration, third-party services, and the acceptance checks documented for the project.",
+      a: "No, because nothing in GoHighLevel is switched off. Your contacts, pipelines, workflows, calendars and webhooks stay exactly where they are; we replace only the public website in front of them. We list every form, trigger and webhook first, build the new frontend in parallel while your current site stays live, and cut over in stages with a documented rollback path. Continuity still depends on GHL's own APIs and your account configuration, so the acceptance checks for each integration are written into the proposal rather than assumed.",
     },
     {
       q: "Do I need to cancel GHL?",
-      a: "Not necessarily. One path keeps GHL for CRM and connects a separate frontend; another scopes replacement workflows. Discovery determines feasibility, migration risk, and the responsibilities of each system.",
+      a: "No. The usual path keeps GoHighLevel as the CRM and puts a fast custom frontend in front of it, so you keep every automation you have paid to build and stop paying only for the part that was slow. If you later want the workflows replaced too, that is scoped separately. Discovery decides which path fits and writes down which system is responsible for what.",
     },
     {
       q: "How much does a custom site with GHL integration cost?",
-      a: "Price and timing depend on page inventory, design, API access, forms, calendars, workflows, sub-accounts, data, and testing needs. The written proposal states scope, dependencies, commercial terms, support, access, ownership, and the cutover plan.",
+      a: "An agency billing by the hour sells you hours, and integration work is where hours multiply. We quote the site, integrations included. Starter from $1,500 covers a 5 to 7 page site or landing set submitting to GHL forms and calendars. Growth from $3,500 covers 10 to 20 pages with Sanity CMS and a full redirect map. Scale is $5,000 to $10,000 for 30-plus pages, sub-accounts or heavier workflow integration. Fixed for the written scope, 30 percent at onboarding and 70 percent at the delivery milestone, no hourly billing and no monthly retainer. The accepted terms control the final figure.",
     },
     {
       q: "Can you build custom landing pages that work with GHL?",
-      a: "We can scope landing pages that submit to supported GHL endpoints or webhooks. Performance, data flow, attribution, and error handling are tested against agreed conditions; advertising scores and lead costs are controlled by third parties and are not guaranteed.",
+      a: "Yes. A landing set of 5 to 7 pages sits in the Starter tier from $1,500. Each page submits to your GHL forms, calendars or webhooks natively, with no third-party form app to pay for, and every build carries a 90+ Lighthouse handover target on mobile and desktop for the named pages, verified across three recorded runs. Performance and data flow are tested against agreed conditions. Advertising quality scores and lead costs are controlled by the ad platforms, so those are measured, not promised.",
     },
     {
       q: "What if I want to leave GHL later?",
-      a: "A future replacement can be considered when the initial architecture defines clear integration boundaries. Feasibility still depends on the workflows, data access, exports, provider terms, and a separately approved migration scope.",
+      a: "You can, without rebuilding the website, because you own the frontend code and the integration boundary is deliberately clean: the site talks to GHL through its APIs, so a different CRM means changing the connector, not the site. Source code, design files, CMS models, documentation and production accounts are all transferred to you at handover. Replacing the workflows themselves is a separately scoped migration, and its feasibility depends on GHL's exports and provider terms at the time.",
     },
   ],
   "squarespace": [
     {
       q: "Will my Squarespace site design transfer to custom code?",
-      a: "We list the design, the content, the components, how it behaves on each screen and what accessibility needs. The proposal then defines what is retained, redesigned, or excluded, along with the method used to review visual fidelity and performance.",
+      a: "Yes, as closely as you want it to. We inventory the design, content and components page by page and how each behaves on every screen size, then the proposal lists what is kept as-is, what is redesigned and what is dropped. Visual fidelity is reviewed against the current site before acceptance, and the build carries a 90+ Lighthouse handover target on mobile and desktop for the named pages, verified across three recorded runs, which a template usually cannot reach with the same design.",
     },
     {
       q: "Can I still use Squarespace for my online store?",
-      a: "A full migration is not always necessary. We can evaluate retaining Squarespace Commerce or using a supported checkout integration, with fees, product data, tax, shipping, payments, and operational responsibilities reviewed before a recommendation.",
+      a: "Sometimes, and we will say so. If your catalogue is small and Squarespace Commerce is working, keeping it or connecting a supported checkout can be the cheaper answer, and a full migration is not always necessary. Where the store does need to move, headless commerce sits in the Scale tier, $5,000 to $10,000, with products, orders, tax, shipping and payments reviewed before a recommendation rather than assumed.",
     },
     {
       q: "How much does a Squarespace migration cost?",
-      a: "Price and timing depend on how many pages and how much content there is, the design, whether you sell, scheduling, member areas, integrations, the data, redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
+      a: "An agency billing by the hour sells you hours. We quote the site. Starter from $1,500 covers a 5 to 7 page site with no CMS. Growth from $3,500 covers 10 to 20 pages with Sanity CMS, blog migration and a full 301 redirect map. Scale is $5,000 to $10,000 for 30-plus pages, commerce, member areas or scheduling. Above that is quoted after a scoping call. The price is fixed for the written scope, paid 30 percent at onboarding and 70 percent at the delivery milestone, with no hourly billing and no monthly retainer. The accepted terms control the final figure.",
     },
     {
       q: "What if I have a blog on Squarespace?",
-      a: "We can list the posts, media, authors, dates, URLs, metadata and what your editors need. The migration plan records what can be exported, transformed, redirected, manually recreated, or excluded; performance is measured against an agreed baseline.",
+      a: "It moves with you. Posts, media, authors, dates, categories and metadata are exported and loaded into Sanity CMS, where you keep editing without code, and every old post URL gets a 301 redirect to its new address. Blog migration and the redirect map are included in the Growth tier from $3,500. Anything Squarespace will not export cleanly is listed in the plan as recreated or excluded, so nothing disappears silently.",
     },
     {
       q: "Is the migration disruptive to my business?",
-      a: "Building alongside the live site and switching DNS in stages cuts the disruption. No migration is risk free. The proposal defines backups, DNS responsibilities, verification, monitoring, rollback, and the maintenance window for the approved site.",
+      a: "Your Squarespace site stays live for the entire build, which takes 2 to 4 weeks for most sites and around three typically. We build alongside it, then switch DNS in stages with backups taken, verification checks run and a documented rollback path, so a problem at cutover means switching back, not downtime. No migration is risk free, so the proposal names the maintenance window, who owns DNS and what is monitored afterwards.",
     },
   ],
   "webflow": [
     {
       q: "Is custom code harder to use than Webflow's visual editor?",
-      a: "What editing feels like depends on which CMS you pick, who is allowed to do what, whether they can preview, how publishing flows, and how content is structured. Discovery compares those requirements with Webflow's current editor and records any training, maintenance, or developer dependency in scope.",
+      a: "For day-to-day editing, no. Growth and Scale builds ship with Sanity CMS, so text, images, posts and pages are edited with visual editing and no code, and the editing roles and publishing flow are set up to match how your team already works. What changes is layout: a new page type is a developer task rather than a drag-and-drop one, and that trade is written into the scope so nobody discovers it after launch. Training is included in handover.",
     },
     {
       q: "Can you recreate my Webflow animations in code?",
-      a: "We can inventory Webflow interactions and evaluate equivalent or revised implementations. Feasibility, accessibility, reduced-motion behavior, browser support, assets, and acceptance criteria are defined for the approved interactions.",
+      a: "Yes. We inventory every Webflow interaction, then rebuild the ones worth keeping with Framer Motion, including reduced-motion behaviour for visitors who have asked for it and a check that each animation does not push the page past its 90+ Lighthouse handover target. The approved list of interactions and their acceptance criteria are named in the proposal, so an interaction is either in scope and tested or explicitly dropped.",
     },
     {
       q: "What about Webflow's CMS?",
-      a: "We can map your Webflow collections, fields, references, assets, languages, slugs and publishing flow onto a CMS that fits. Export coverage, provider limits, data cleanup, API access, and migration verification vary by project and provider.",
+      a: "Your collections, fields, references, assets, languages and slugs are mapped onto Sanity CMS field for field, and every collection item keeps its URL through a 301 redirect map. Webflow's export covers most of it; what it does not export cleanly is listed in the plan as recreated or excluded. Growth from $3,500 includes CMS migration and the redirect map for 10 to 20 pages, and Scale from $5,000 covers larger or multilingual collections.",
     },
     {
       q: "How much does it cost to migrate from Webflow?",
-      a: "Price and timing depend on how many pages there are, the design system, the interactions, the CMS data, the languages, whether you sell, what it connects to, the redirects, and how you sign it off. The written proposal states the commercial model, milestones, assumptions, support, access, licensing, ownership, and remedies.",
+      a: "An agency billing by the hour sells you hours. We quote the site. Starter from $1,500 covers a 5 to 7 page site with no CMS. Growth from $3,500 covers 10 to 20 pages with Sanity CMS, collection migration and a full 301 redirect map. Scale is $5,000 to $10,000 for 30-plus pages, ecommerce or multiple languages. Above that is quoted after a scoping call. Fixed for the written scope, 30 percent at onboarding and 70 percent at the delivery milestone, no hourly billing and no monthly retainer. Your own Webflow plan and add-on costs, the other side of the comparison, are worked through in our Webflow true-cost guide. The accepted terms control the final figure.",
     },
     {
       q: "What if Webflow adds the features I need later?",
-      a: "It is possible, and platform capabilities change. The decision should use current Webflow documentation, your actual account and roadmap tolerance, and a like-for-like comparison of implementation and operating responsibilities.",
+      a: "It might, and we will tell you if waiting is the better answer. Several of our own guides exist to talk people out of a migration they do not need. The difference after a move is that the features you need are owned code on your own account, with no plan tier deciding whether you get them and no per-seat or per-site pricing change arriving by email. Decide from current Webflow documentation, your actual account and a like-for-like comparison of what each path costs to run for three years.",
     },
   ],
   "wix": [
     {
       q: "Will I lose my Google rankings if I leave Wix?",
-      a: "Any migration can affect crawling, indexing, and visibility. We inventory URLs, metadata, canonicals, content, links, and redirects, then define pre-launch and post-launch checks. Search engines control rankings, so no ranking outcome is guaranteed.",
+      a: "The controls that protect rankings are process, and we run all of them: every Wix URL is inventoried and mapped to its new address with a 301 redirect, metadata and canonicals are carried over, internal links are rebuilt, and Search Console is checked before and after cutover. Your old site stays live until the new one is verified. Search engines control rankings, so no provider can honestly guarantee the outcome; what we guarantee is that the redirect map covers every URL you agree to keep, in writing.",
     },
     {
       q: "Can I still edit my website without coding?",
-      a: "We can scope a CMS for approved text, image, and post workflows. The editor experience, roles, previews, content model, training, and maintenance responsibilities depend on the selected provider and written scope.",
+      a: "Yes. Growth and Scale builds ship with Sanity CMS: text, images, posts and pages are edited with visual editing, no code, and no app to install or renew. Starter, from $1,500 for 5 to 7 pages with no CMS, is for sites that rarely change. Editor roles and training are part of handover, and there is no monthly retainer required to keep editing.",
     },
     {
       q: "How long does it take to migrate from Wix?",
-      a: "Timing depends on the page and content inventory, design, apps, forms, stores, bookings, localization, data, integrations, redirects, reviews, and acceptance requirements. Discovery produces a written proposal with milestones and dependencies.",
+      a: "Two to four weeks for most sites, around three weeks typically. Starter sites ship in 1 to 2 weeks, Growth sites in 2 to 4. Stores, bookings, member areas or multiple languages add scope and are given their own milestone in the proposal. Your Wix site stays live for the whole build, and launch runs as a staged cutover with a documented rollback path.",
     },
     {
       q: "What about my Wix forms and contact pages?",
-      a: "We inventory each form, field, validation rule, destination, consent requirement, notification, automation, and error path. Supported integrations and acceptance tests are defined for the approved services; continuity and performance are measured rather than assumed.",
+      a: "Every form, field, validation rule and destination is inventoried and rebuilt as a native form in your own codebase, so there is no third-party form app to pay for and submissions go straight to your email, CRM or calendar. Consent handling, notifications and error paths are tested against agreed conditions before cutover, and each form is confirmed working on the live site before the old one is switched off.",
     },
     {
       q: "Is custom code harder to maintain than Wix?",
-      a: "The maintenance model changes rather than disappearing. Discovery compares editorial needs, application updates, hosting, third-party services, monitoring, security, and support so ongoing responsibilities and costs can be stated in the proposal.",
+      a: "It is different, and cheaper to run. There are no monthly app subscriptions, no plan tier to renew and no maintenance retainer required. The site is deployed to your own Vercel account, which for a commercial site is the Pro plan at $20 a month as of August 2026, billed to you directly with no markup. What you take on is a dependency update now and then, which we document at handover. What you lose is a vendor deciding what your site is allowed to do.",
     },
   ],
   "woocommerce": [
