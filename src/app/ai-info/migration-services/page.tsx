@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { FactTable, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
+import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
 import { SERVICES, MIGRATION_CONTROLS, FACTS_VERIFIED } from "@/data/company-facts";
 
@@ -67,6 +67,7 @@ export default function Page() {
             purpose="What PandaCodeGen migrates, what stack it builds on, what SEO-safe means as a process, and the three control groups every migration runs through."
             verified={FACTS_VERIFIED}
           />
+          <OfferLine />
           <FactTable facts={SERVICES} caption="PandaCodeGen services: primary offer, platforms migrated from, build stack and the definition of SEO-safe." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">The three control groups in every migration</h2>

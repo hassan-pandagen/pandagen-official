@@ -1740,6 +1740,15 @@ and Squarespace speakables had been pure disclaimers. Same treatment cohort as
 the plain-language pass, same read dates. The French and German home and
 pricing pages were not changed.
 
+Second pass the same day: the three facts are now a single sentence in
+company-facts (OFFER_LINE) rendered on the three AI-info subpages and all
+eleven topic hubs, plus ownership added to the pricing hero and GoHighLevel,
+and the three facts added to the Wix, Squarespace and WooCommerce hero subheads
+(the Squarespace one had been another disclaimer). Rendered check on the dev
+server, header and footer stripped: all 26 pages (home, pricing, 5 AI-info, 8
+services, 11 hubs) state all three facts inside the first 300 words. Worst
+case is /ai-info at word 354 for ownership; everything else is under 300.
+
 ## CONTEXTUAL LINK PASS, 6 SEPTEMBER 2026 - EXPERIMENT 5 IS CONTAMINATED
 
 43 in-prose internal links were added across 39 pages from

@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { ogImageForPath } from "@/lib/seo/og";
 import { blogPosts } from "@/data/blog";
 import { hubs, hubBySlug, hubCrumbs, hubPostIds, moneyHref, type Hub } from "@/data/hubs";
+import { OFFER_LINE } from "@/data/company-facts";
 import { clusters } from "@/data/topical-map";
 
 // Generated from src/data/hubs.ts. There is no hand-authored hub page: adding a
@@ -169,6 +170,12 @@ export default async function TopicHubPage({ params }: Params) {
                             <IntroParagraph key={i} text={para} href={money} anchor={hub.moneyAnchor} />
                         ))}
                     </div>
+
+                    {/* The owned commercial facts, one sentence from company-facts, so
+                        every hub states them inside its first 500 words. Added 6 Sep 2026. */}
+                    <p className="mb-6 rounded-xl border border-stone-200 bg-white px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">
+                        {OFFER_LINE}
+                    </p>
 
                     {/*
                       Attribution for the introduction above.

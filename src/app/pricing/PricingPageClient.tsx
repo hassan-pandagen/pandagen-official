@@ -70,7 +70,7 @@ export default function PricingPageClient() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-700 max-w-2xl mx-auto mb-6"
           >
-            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a 5 to 7 page site. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing.
+            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a 5 to 7 page site. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing. You own the code, the design files and the accounts at the end.
           </motion.p>
 
           <button

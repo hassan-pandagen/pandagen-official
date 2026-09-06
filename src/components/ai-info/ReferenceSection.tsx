@@ -1,4 +1,4 @@
-import type { Fact } from "@/data/company-facts";
+import { OFFER_LINE, type Fact } from "@/data/company-facts";
 
 /**
  * Renders a labelled fact table for the /ai-info reference pages.
@@ -24,6 +24,15 @@ export function FactTable({ facts, caption }: { facts: readonly Fact[]; caption:
                 </tbody>
             </table>
         </div>
+    );
+}
+
+/** The owned commercial facts in one extractable sentence, placed before the first table. */
+export function OfferLine() {
+    return (
+        <p className="mb-8 rounded-xl border border-stone-200 bg-stone-50 px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">
+            {OFFER_LINE}
+        </p>
     );
 }
 

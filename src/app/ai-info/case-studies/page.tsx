@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { FactTable, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
+import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import { PROJECTS, GOVERNANCE, FACTS_VERIFIED } from "@/data/company-facts";
@@ -68,6 +68,7 @@ export default function Page() {
             purpose="Every published project, its relationship to PandaCodeGen, and what is and is not claimed about each. Founder-owned properties are labelled as such and are not presented as independent client proof."
             verified={FACTS_VERIFIED}
           />
+          <OfferLine />
           <div className="my-8 space-y-4">
             {PROJECTS.map(({ name, relationship, href, fact }) => (
               <div key={name} className="rounded-xl border border-stone-200 p-5">

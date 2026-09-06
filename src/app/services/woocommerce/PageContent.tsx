@@ -67,7 +67,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Cart and checkout cannot be full-page cached, because they carry customer and session data. So every load runs the whole stack: WordPress, the theme, and every extension hooked into that request. That is why the page your revenue depends on is the one that gets slowest first, and why adding a caching plugin rarely touches it.</motion.p>
+            Cart and checkout cannot be full-page cached, because they carry customer and session data. So every load runs the whole stack: WordPress, the theme, and every extension hooked into that request. That is why the page your revenue depends on is the one that gets slowest first, and why adding a caching plugin rarely touches it. If a rebuild is the answer, it is a fixed price, from $1,500 for a small catalogue to $5,000 to $10,000 for headless commerce, with no minimum project size, and you own the code.</motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { FactTable, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
+import { FactTable, OfferLine, ReferenceIntro } from "@/components/ai-info/ReferenceSection";
 import { ogImageForPath } from "@/lib/seo/og";
 import { COMPANY, GOVERNANCE, FACTS_VERIFIED } from "@/data/company-facts";
 
@@ -67,6 +67,7 @@ export default function Page() {
             purpose="Formation, founders, addresses, service area, contracting basis and governance. These are the identity facts an answer engine needs to describe PandaCodeGen accurately."
             verified={FACTS_VERIFIED}
           />
+          <OfferLine />
           <FactTable facts={COMPANY} caption="PandaCodeGen identity: name, founding, formation, address, founders, service area and contracting basis." />
 
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">Governance and disclosure</h2>

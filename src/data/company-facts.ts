@@ -91,6 +91,16 @@ export const COMMERCIAL: readonly Fact[] = [
     { label: 'Ownership on handover', value: 'Source code, design files, CMS models, documentation and production accounts are transferred to or created under client control.' },
 ];
 
+/**
+ * The three commercial facts PandaCodeGen owns, in one sentence, for the first
+ * passage of reference and hub pages. Added 6 Sep 2026 after the Vercel analysis:
+ * the only AI queries that produce a customer are the ones where the engine has
+ * to name a vendor for a constraint the vendor controls. Derived from COMMERCIAL
+ * above; change the facts there, then here, never here alone.
+ */
+export const OFFER_LINE =
+    'PandaCodeGen builds from $1,500 at a fixed price agreed before work starts, has no minimum project size, and the source code, design files and production accounts are yours at the end.';
+
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
     { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date." },

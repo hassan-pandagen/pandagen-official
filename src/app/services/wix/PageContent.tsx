@@ -51,7 +51,7 @@ export default function PageContent() {
           </h1>
 
           <p className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto animate-fade-in-up-2">
-            Wix is a fine place to start. If your design, your content, your shop, your speed or the tools you connect to have outgrown it, we will show you what a custom build costs next to what you pay now. <span className="text-charcoal font-medium">From $1,500, fixed before we start, 2 to 4 weeks, and you own the code.</span>
+            Wix is a fine place to start. If your design, your content, your shop, your speed or the tools you connect to have outgrown it, we will show you what a custom build costs next to what you pay now. <span className="text-charcoal font-medium">From $1,500, fixed before we start, no minimum project size, 2 to 4 weeks, and you own the code.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-4">
