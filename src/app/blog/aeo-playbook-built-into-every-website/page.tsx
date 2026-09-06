@@ -251,7 +251,7 @@ export default function AEOPlaybookPage() {
                         There is no verified advantage window of any particular length. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>Here is the honest split. We can guarantee your site is readable by the machines. Nobody can guarantee a machine quotes you.</BlogHighlight> Readability is ours to control and yours to verify: it is a test you can run in PageSpeed Insights. Being quoted depends on the model, the question and who else answered it that day. Any agency selling you the second one is selling something it does not control.
+                        <BlogHighlight>We build sites every bot can read, then structure your answers so the questions your buyers actually ask are the easiest thing on the page to lift.</BlogHighlight> Both halves are things you can check yourself. Readability is a test you run in PageSpeed Insights. The structure is visible in your own page source, in plain sentences a person and a machine read the same way.
                     </BlogText>
 
                     {/* Section 2: what AEO means and does not mean */}

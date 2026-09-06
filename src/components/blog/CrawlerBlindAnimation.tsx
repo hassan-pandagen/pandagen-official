@@ -6,7 +6,7 @@ const CHECKS = [
   { label: "Access", detail: "Test robots rules, noindex, authentication, CDN controls, and the requested user agent." },
   { label: "Response", detail: "Compare initial HTML, rendered DOM, structured data, links, and meaningful text." },
   { label: "Behavior", detail: "Use each crawler operator's current documentation; JavaScript behavior is not universal." },
-  { label: "Outcome", detail: "Monitor discovery and referrals. Crawlability creates eligibility, not a citation guarantee." },
+  { label: "Outcome", detail: "Watch which bots arrive, what they fetch, and which referrals follow. All three are in your own server logs and analytics." },
 ];
 
 export default function CrawlerBlindAnimation() {
