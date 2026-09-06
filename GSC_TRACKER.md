@@ -1398,6 +1398,38 @@ Choosing a control after seeing the treatment outcomes is the thing that makes a
 result worthless, so this has to be settled on the stated grounds, not the
 convenient one.
 
+### RESOLVED 6 SEPTEMBER 2026: Experiment 1 is unreadable. Closed.
+
+The decision above is settled, and not by choice. On 6 Sep the plain-language
+pass rewrote `wordpress-killer`, which is the pre-registered control, along with
+two cohort pages, `shopify-headless` and `webflow-migration-cost`. Four jargon
+terms were removed from the control and its copy now reads differently from the
+version the experiment was designed around.
+
+A control that has been edited is not a control. That was already true of a
+control with no data, and now it is true twice over.
+
+**Experiment 1 is recorded as unreadable. No result is to be reported from it,
+on 8 September or afterwards.**
+
+Nominating a replacement control now would be worse than reporting nothing. It
+would mean choosing a control on 6 September, after the treatment outcomes are
+already visible in the 4 September export, which is the exact thing the original
+note warned against.
+
+**What is still usable from it.** The three treatments, `webflow-migration-cost`,
+`wix-too-slow` and `saas-price-increases-2026-tracker`, were flat or down against
+a +2.5% site trend across the 25 to 29 Aug windows. That observation stands on
+its own as a weak negative signal and can be quoted as such, provided it is
+described as an observation and never as an experimental result.
+
+**The lesson, for the next one.** The control was rewritten because the
+plain-language pass was scoped by jargon density rather than by experiment
+membership, and nothing in the tooling objected. Any future cohort needs its
+pages listed somewhere a bulk edit will actually check, not only in this file.
+`hubs.ts` throws when a post has no parent; there is no equivalent guard for
+"this page belongs to a running experiment".
+
 ### Experiment 4's binary check is trending yes
 
 The 8 Sep question is only "is it indexed". It went from 0 to 22 impressions,
