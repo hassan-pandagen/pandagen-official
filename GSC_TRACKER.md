@@ -1659,6 +1659,12 @@ change set and must not be counted in either read.
 
 ## PLAIN-LANGUAGE PASS, PRE-REGISTERED 6 SEPTEMBER 2026
 
+**Pushed 6 September 2026 (evening), commit b3939e1.** Everything below plus the
+Vercel analysis, the service FAQ numbers, the no-minimum fact on four surfaces,
+and the owned-facts-in-the-lead pass across 78 pages went live in that single
+deploy. Read 1 (AI only) 16 to 20 Sep and Read 2 (everything) 6 Oct count from
+this date.
+
 Written before the data, on purpose. 207 passages were rewritten out of contract
 language into buyer language across 32 pages, and the whole thing is pushed the
 same day the Request Indexing test is still running. That overlap cannot be
