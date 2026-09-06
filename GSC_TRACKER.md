@@ -1725,6 +1725,21 @@ the only reason this pass is readable at all.
 
 ---
 
+### Addendum, 6 September 2026: the owned constraints moved to the front
+
+The Vercel analysis (below) showed the only queries that produce a customer are
+the ones where the AI has to name a vendor for a constraint the vendor owns.
+The three PandaCodeGen owns (no minimum project size, fixed price from $1,500
+with no retainer, code and accounts handed over) existed on the site but sat in
+bottom-of-page FAQs and llms.txt. They are now in the first extractable
+passage on: the homepage hero proof line and speakable, the pricing hero
+(rewritten out of contract language), the speakables on wordpress-migration,
+custom-engineering, wix, squarespace, gohighlevel and ecommerce, the webflow
+subhead (that page has no speakable), and the ai-info company facts. The Wix
+and Squarespace speakables had been pure disclaimers. Same treatment cohort as
+the plain-language pass, same read dates. The French and German home and
+pricing pages were not changed.
+
 ## CONTEXTUAL LINK PASS, 6 SEPTEMBER 2026 - EXPERIMENT 5 IS CONTAMINATED
 
 43 in-prose internal links were added across 39 pages from

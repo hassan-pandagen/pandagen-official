@@ -60,7 +60,7 @@ export default function PageContent() {
             data-speakable="true"
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Send us your GHL address and tell us which automations the site has to feed. We will look at what you have now, check what it connects to, and give you a fixed price. We will not promise you rankings, ad results or a number of leads.
+            Send us your GHL address and tell us which automations the site has to feed. We will look at what you have now, check what it connects to, and give you a fixed price, from $1,500 with no minimum project size. We will not promise you rankings, ad results or a number of leads.
           </motion.p>
 
           <div className="mb-8 inline-flex flex-wrap items-center gap-3 justify-center px-5 py-3 rounded-full bg-white border border-stone-200 text-sm">

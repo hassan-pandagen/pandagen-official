@@ -89,7 +89,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are a fixed price from $1,500 to $10,000+, take 1 to 3 weeks, and every old web address you keep is forwarded to its new page. Every migration ships with a written 90+ Lighthouse handover target on mobile and desktop, verified across three recorded runs, and refund terms stated in the accepted scope and removes recurring plugin and managed-hosting fees, hosting costs are quoted from the destination provider plan.
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are a fixed price from $1,500 to $10,000+, take 1 to 3 weeks, and every old web address you keep is forwarded to its new page. There is no minimum project size and no retainer. Every migration ships with a 90 or better PageSpeed score on phone and desktop, tested three times, and refund terms written into your quote. Your plugin and managed-hosting bills stop, and the new hosting cost is quoted from the provider's plan.
           </p>
         </div>
       </section>

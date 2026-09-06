@@ -60,7 +60,7 @@ export default function WebflowPageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            Webflow is a strong visual tool. If what you need from content, interactions, application logic, speed, other languages or day-to-day running has moved on, we will show you what a custom build costs next to what you pay Webflow now. <span className="text-charcoal font-medium">What you pay, what support you get, who has access, which licences, who owns it and how it is handed over all get written down after discovery.</span>
+            Webflow is a strong visual tool. If what you need from content, interactions, application logic, speed, other languages or day-to-day running has moved on, we will show you what a custom build costs next to what you pay Webflow now. <span className="text-charcoal font-medium">Fixed price from $1,500, no minimum project size, and the code, design files and accounts are yours at the end. Your written quote has the exact figure.</span>
           </motion.p>
 
           <motion.div initial={{ opacity: 1, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -82,7 +82,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen scopes and builds custom software, SaaS platforms, dashboards, and internal tools</strong> with technologies such as Next.js, TypeScript, and Supabase. Your written quote says what gets built, the price, the dates, what support you get, and that the code, the accounts and the rights are yours at the end.
+            <strong className="text-charcoal">PandaCodeGen scopes and builds custom software, SaaS platforms, dashboards, and internal tools</strong> with technologies such as Next.js, TypeScript, and Supabase. Your written quote says what gets built, the price, the dates, what support you get, and that the code, the accounts and the rights are yours at the end. Work starts at $1,500 at a fixed price, and there is no minimum project size.
           </p>
         </div>
       </section>

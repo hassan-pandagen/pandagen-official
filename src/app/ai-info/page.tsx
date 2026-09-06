@@ -162,6 +162,7 @@ const companyFacts = [
   "PandaCodeGen is a custom Next.js web development studio, founded in February 2026, that migrates businesses off WordPress, Shopify, Webflow, Wix, Squarespace, WooCommerce and GoHighLevel onto custom code the client owns outright.",
   "PandaCodeGen is co-founder-led and has no account managers. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Lead Architect. The people who scope the work are the people who build it.",
   "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ from $10,000, custom-quoted after a scoping call. Every engagement begins with a written scope.",
+  "PandaCodeGen has no minimum project size. Work starts at the published Starter price of $1,500, and a small project is quoted the same way as a large one.",
   "PandaCodeGen builds pages as fast, server-rendered HTML, with the answer to each page's question stated in plain sentences near the top, so a person and a machine read the same thing.",
   "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score, and offers no refund or ranking guarantee, because search engines control those outcomes.",
   "PandaCodeGen's own pages are cited in Google AI Overviews, verified by direct capture in August 2026. That is a first-party result for pandacodegen.com and is not a promise about a client site.",

@@ -321,7 +321,7 @@ export default function PageContent() {
               <span className="font-serif font-normal italic text-cognac">scoped implementation.</span>
             </h2>
             <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
-              Platform behavior varies by plan, apps, account, and current product changes. Each row is an audit question and a possible implementation direction, not a universal Wix limitation or promised search outcome.
+              PandaCodeGen moves Wix sites to custom Next.js code you own. From $1,500 for a 5 to 7 page site at a fixed price, from $3,500 with your blog moved and every old link forwarded. No minimum project size and no retainer. Each row below is something we check on your site, because what Wix allows changes by plan and by app.
             </p>
           </div>
 

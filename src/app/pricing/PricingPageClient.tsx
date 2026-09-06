@@ -70,7 +70,7 @@ export default function PricingPageClient() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-700 max-w-2xl mx-auto mb-6"
           >
-            Choose the closest starting package, then add or remove pages and features in a written quote. A common package starting structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted project terms; another written schedule can be agreed for a particular project.
+            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a 5 to 7 page site. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing.
           </motion.p>
 
           <button
@@ -85,7 +85,7 @@ export default function PricingPageClient() {
           </button>
 
           <p className="text-base font-semibold text-charcoal max-w-2xl mx-auto mb-12">
-            Scope is driven by URL and content volume, CMS models, integrations, analytics, compliance needs, stakeholders, and migration risk, not page count alone.
+            The price moves with how much content you have, what the site connects to, what has to be moved without breaking, and who has to sign off, not page count alone.
           </p>
 
           {/* Work Teaser Strip */}

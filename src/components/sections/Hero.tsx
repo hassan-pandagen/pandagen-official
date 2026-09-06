@@ -89,7 +89,7 @@ export default function Hero() {
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Our own pages are cited in Google&apos;s AI Overviews. Built to 90+ PageSpeed, fixed pricing from $1,500.
+            Our own pages are cited in Google&apos;s AI Overviews. Fixed price from $1,500, no minimum project size, and you own the code.
           </p>
 
           {/* CTAs, animated client component */}

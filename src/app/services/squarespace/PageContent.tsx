@@ -485,7 +485,7 @@ export default function SquarespacePageContent() {
               Every limit, and <span className="font-serif font-normal italic text-cognac">what we would do about it.</span>
             </h2>
             <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
-              Platform behavior can vary by plan, template, account, extensions, and current product changes. Each pair below is a review question and a possible implementation direction, not a universal limitation or promised outcome.
+              PandaCodeGen moves Squarespace sites to custom Next.js code you own. From $1,500 for a 5 to 7 page site at a fixed price, from $3,500 with your blog moved and every old link forwarded. No minimum project size and no retainer. Each pair below is something we check on your site, because what Squarespace allows changes by plan and by template.
             </p>
           </div>
 
