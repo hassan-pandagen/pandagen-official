@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis";
 const description =
-    "Compare query intent, content, crawlability, internal links, reputation, page experience and first-party search data without blaming a CMS or promising rankings.";
+    "Compare query intent, content, crawlability, internal links, reputation, page experience and your own search data without blaming a CMS or promising rankings.";
 
 export const dynamic = "force-static";
 

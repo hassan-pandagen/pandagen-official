@@ -276,7 +276,7 @@ export default function GlossaryPage() {
               <span className="font-serif italic text-cognac">Glossary</span>
             </h1>
             <p className="text-lg md:text-xl text-stone-500 leading-relaxed mb-6 max-w-2xl">
-              Search, AI answers, rendering, Core Web Vitals, and crawlability are often discussed as if one tactic controls all of them. It does not. This source-linked glossary explains {TERMS.length} terms, how they connect, and where the evidence stops.
+              Search, AI answers, page speed and whether a bot can read your site all get talked about as if one trick fixes them all. It does not. This source-linked glossary explains {TERMS.length} terms, how they connect, and where the evidence stops.
             </p>
             <BlogAuthor
               date="Jul 16, 2026"

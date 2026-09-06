@@ -187,7 +187,7 @@ export default function LovableSiteNotShowingPage() {
                                 "Lovable says new apps created from May 13, 2026 use TanStack Start with server-side rendering.",
                                 "Older React and Vite apps use on-request pre-rendering on deployed public URLs for verified search, social and AI crawlers.",
                                 "Private, unpublished and branded workspace URLs are not indexable; a public deployment is required.",
-                                "Technical eligibility does not guarantee indexing, ranking or an AI citation.",
+                                "Getting the technical side right does not guarantee Google indexes you, ranks you, or that an AI quotes you.",
                             ]}
                         />
                     </section>

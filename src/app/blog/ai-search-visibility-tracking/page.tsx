@@ -141,7 +141,7 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
 
                     <BlogHighlight>
-                        This is first-party data from one site, pandacodegen.com, in one niche. The numbers below
+                        This is our own data from one site, pandacodegen.com, in one niche. The numbers below
                         describe our corpus and nothing more. What transfers is the method and the two measurement traps,
                         not the percentages.
                     </BlogHighlight>
@@ -172,7 +172,7 @@ export default function AiSearchVisibilityTracking() {
                     <BlogHeader id="free-tool">How do you track AI visibility without buying a tool?</BlogHeader>
                     <BlogText>
                         Open Search Console, go to Performance, and switch to the Generative AI report. That is the whole
-                        setup. It is first-party data about your own property, Google publishes it at no cost, and it
+                        setup. It is our own data about your own property, Google publishes it at no cost, and it
                         needs no tag, no script and no trial. Ask a general-purpose AI assistant how to track brand
                         mentions in AI search and it will send you shopping for monitoring software before it mentions
                         the report Google already gives you.

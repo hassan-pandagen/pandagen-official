@@ -21,7 +21,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-    title: { absolute: "AEO Playbook: Improve Eligibility for AI Search Citations" },
+    title: { absolute: "AEO Playbook: How to Get Your Site Quoted by AI Search" },
     description: "A practical, evidence-led AEO playbook for crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
     alternates: {
         canonical: "/blog/aeo-playbook-built-into-every-website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
     openGraph: {
-        title: "AEO Playbook: Improve Eligibility for AI Search Citations",
+        title: "AEO Playbook: How to Get Your Site Quoted by AI Search",
         description: "Ten practical controls for AI-search eligibility, measurement, and useful content without promising inclusion, ranking, or citation.",
         type: "article",
         publishedTime: "2026-05-18T00:00:00-05:00",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "AEO Playbook: Improve Eligibility for AI Search Citations",
+        title: "AEO Playbook: How to Get Your Site Quoted by AI Search",
         description: "An evidence-led playbook for crawlability, structured data, useful content, and AI-search measurement.",
     },
 };
@@ -60,7 +60,7 @@ const articleSchema = {
         {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#article",
-            "headline": "AEO Playbook: Improve Eligibility for AI Search Citations",
+            "headline": "AEO Playbook: How to Get Your Site Quoted by AI Search",
             "description": "An evidence-led AEO playbook covering crawlability, useful content, structured data, measurement, and AI-search eligibility without citation guarantees.",
             "image": ogImageUrlForPath("/blog/aeo-playbook-built-into-every-website"),
             "datePublished": "2026-05-18T00:00:00-05:00",
@@ -123,7 +123,7 @@ const articleSchema = {
             "@type": "WebPage",
             "@id": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website#webpage",
             "url": "https://www.pandacodegen.com/blog/aeo-playbook-built-into-every-website",
-            "name": "AEO Playbook: Improve Eligibility for AI Search Citations",
+            "name": "AEO Playbook: How to Get Your Site Quoted by AI Search",
             "description": "An evidence-led playbook for crawlability, useful content, structured data, and AI-search measurement.",
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "datePublished": "2026-05-18T00:00:00-05:00",
@@ -181,7 +181,7 @@ export default function AEOPlaybookPage() {
                             name="Hassan Jamal"
                             date="May 18, 2026"
                             readTime="15 min read"
-                            bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on crawlability, structured evidence, and technical performance. Any AI referral described here is a dated first-party observation, not a citation guarantee."
+                            bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on making sure search engines and AI assistants can actually read a site, and that what they read is backed by evidence. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -203,7 +203,7 @@ export default function AEOPlaybookPage() {
                         <BlogList items={[
                             "Google says the basics that always mattered for Search still matter for its AI features: your pages can be crawled, they can be indexed, they say something useful, and they are decent to use.",
                             "Something you know first-hand holds up far better than a page written only to catch a phrasing someone might type.",
-                            "Structured data helps machines understand what a page is about. Google treats correct markup as a precondition for eligibility, not a trigger for it.",
+                            "Structured data helps machines work out what a page is about. Google treats correct markup as something you need in place, not something that makes you appear.",
                             "Watch visibility using each provider's own reports, the referrals you can actually see in your analytics, and manual checks you date and keep. Impressions with no clicks are not proof an AI quoted you.",
                             "We can build these controls into a migration we have agreed, but what you actually get depends on the signed scope and the content you have.",
                             "Google and the AI systems decide for themselves what they crawl, index, rank, recommend and quote. Nobody else controls that."
@@ -251,13 +251,13 @@ export default function AEOPlaybookPage() {
                         There is no verified advantage window of any particular length. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>Build a reliable information system, not a citation promise.</BlogHighlight> That work remains useful even when providers change their interfaces or retrieval systems.
+                        <BlogHighlight>Build a site that tells the truth clearly and can be checked, not a promise of citations.</BlogHighlight> That keeps working even when Google and the AI tools change how they fetch pages.
                     </BlogText>
 
                     {/* Section 2: what AEO means and does not mean */}
                     <BlogHeader id="aeo-wins-for-new-domains">What AEO Actually Means, and What It Does Not</BlogHeader>
                     <BlogText>
-                        AEO stands for Answer Engine Optimization. We use the term for improving the eligibility, clarity, and measurability of public information used by search and answer systems. It does not create a right to inclusion or citation.
+                        AEO stands for Answer Engine Optimization. We use it to mean making your public information clear, checkable and easy for search and AI tools to read. It does not create a right to inclusion or citation.
                     </BlogText>
                     <BlogText>
                         Provider systems are not interchangeable, and their ranking or citation weights are not fully public. Google advises site owners to keep using Search fundamentals, publish unique and useful content, and avoid creating many low-value pages for prompt variations.
@@ -668,7 +668,7 @@ export default function AEOPlaybookPage() {
                     <div className="my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">Ready to build an AEO-ready website?</p>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                            Custom Next.js. Evidence architecture included. <span className="font-serif italic text-cognac">No AI inclusion or citation promise.</span>
+                            Custom Next.js, built so machines can read it. <span className="font-serif italic text-cognac">We cannot promise any AI will quote you.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
                             We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 30 minute consultation, including a live audit of your site.

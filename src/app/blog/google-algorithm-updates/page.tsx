@@ -204,7 +204,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         <BlogAuthor
                             date="Apr 9, 2026, updated Aug 8, 2026"
                             readTime="15 min read"
-                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the performance testing, the technical SEO, and runs controlled migrations with documented baselines and acceptance criteria."
+                            bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
                     </div>
@@ -452,7 +452,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </BlogText>
 
                         <BlogText>
-                            Optimization is usually the first path when the current system can meet the agreed requirement without creating unsustainable maintenance. A migration becomes reasonable when documented constraints repeatedly block performance, security, content operations, integration, ownership or growth goals. The migration still needs a complete URL inventory, redirect decisions, metadata parity, analytics validation, staged crawl, cutover plan and rollback path. The search side of that is covered in <Link href="/blog/will-migrating-hurt-my-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">what a migration does to search visibility</Link>, and delivery under <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">our migration service</Link> and <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom engineering</Link>.
+                            Fixing the site you have is usually the first move, when it can do the job without becoming a maintenance burden. Moving becomes reasonable when the problems you have written down repeatedly block performance, security, content operations, integration, ownership or growth goals. The migration still needs a complete URL inventory, redirect decisions, metadata parity, analytics validation, staged crawl, cutover plan and rollback path. The search side of that is covered in <Link href="/blog/will-migrating-hurt-my-seo" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">what a migration does to search visibility</Link>, and delivery under <Link href="/services/wordpress-migration" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">our migration service</Link> and <Link href="/services/custom-engineering" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">custom engineering</Link>.
                         </BlogText>
 
                         <BlogHeader>What to Change After a Confirmed Traffic Drop</BlogHeader>
@@ -503,7 +503,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-8 mt-8 md:mt-16 text-center">
                         <h2 className="text-2xl font-bold mb-4">Build a Search Monitoring Plan Before the Next Update</h2>
                         <p className="text-stone-600 mb-6">
-                            Get a scoped review of Search Console, indexing, Core Web Vitals, analytics, release history, and the pages and queries that changed. You will receive evidence, limitations, and recommended next steps instead of a guaranteed ranking claim.
+                            We will go through Search Console, your indexing, your speed scores, your analytics, what you shipped and when, and which pages and searches actually moved. You get the evidence, what it cannot tell you, and what to do next instead of a guaranteed ranking claim.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-stone-800 transition-all">
                             Get your diagnostic plan <ArrowRight className="w-5 h-5" />
