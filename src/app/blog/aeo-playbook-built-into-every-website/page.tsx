@@ -251,7 +251,7 @@ export default function AEOPlaybookPage() {
                         There is no verified advantage window of any particular length. The durable advantage is operational: maintain accurate public facts, publish evidence worth citing, and keep a dated measurement record.
                     </BlogText>
                     <BlogText>
-                        <BlogHighlight>Build a site that tells the truth clearly and can be checked, not a promise of citations.</BlogHighlight> That keeps working even when Google and the AI tools change how they fetch pages.
+                        <BlogHighlight>Here is the honest split. We can guarantee your site is readable by the machines. Nobody can guarantee a machine quotes you.</BlogHighlight> Readability is ours to control and yours to verify: it is a test you can run in PageSpeed Insights. Being quoted depends on the model, the question and who else answered it that day. Any agency selling you the second one is selling something it does not control.
                     </BlogText>
 
                     {/* Section 2: what AEO means and does not mean */}
@@ -668,7 +668,7 @@ export default function AEOPlaybookPage() {
                     <div className="my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                         <p className="text-xs font-bold uppercase tracking-wider text-cognac mb-3">Ready to build an AEO-ready website?</p>
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                            Custom Next.js, built so machines can read it. <span className="font-serif italic text-cognac">We cannot promise any AI will quote you.</span>
+                            Custom Next.js that passes all three of Google&apos;s agentic browsing checks and scores 100 on SEO. <span className="font-serif italic text-cognac">Check it yourself in PageSpeed Insights.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
                             We build crawlable, evidence-led websites, while search and AI systems independently control inclusion, ranking, and citation. Starter from $1,500. Growth from $3,500. Free 30 minute consultation, including a live audit of your site.
