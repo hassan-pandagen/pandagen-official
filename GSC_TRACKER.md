@@ -1866,3 +1866,147 @@ and it does not belong in this experiment. Diagnose on 8 Sep: indexed at all, in
 the sitemap, reachable in llms.txt, and whether anything links to them.
 `ai-search-visibility-tracking` also shows zero and is excluded as simply too
 new, published 28 Aug.
+
+---
+
+## VERCEL CONCENTRATION ANALYSIS, 6 SEPTEMBER 2026 - RESOLVED
+
+Open since 19 August: why does `/blog/nextjs-hosting-zero-cost` hold 57% of all
+Generative AI impressions? Answered from the 4 Sep exports plus the 25 Aug and
+29 Aug exports as a consistency check. No page was touched. Nothing here reads
+any experiment cohort.
+
+### 1. AI does not favour that page. The premise was wrong.
+
+The AI figure in the Generative AI export is Google AI Overview and AI Mode
+impressions only, page level, no query column. Divide it by the page's ordinary
+web impressions and the Vercel post is BELOW the site rate, on both export dates:
+
+| 4 Sep export | web impr | AI impr | AI per 1,000 web |
+|---|---|---|---|
+| Whole site | 149,990 | 9,203 | 61.4 |
+| Vercel post | 94,826 | 5,277 | **55.6** |
+| Everything except the Vercel post | 55,164 | 3,926 | **71.2** |
+
+29 Aug export: Vercel 55.0, rest of site 68.9. Same picture.
+
+The post is 63.2% of web impressions and 57.3% of AI impressions. It holds most
+of the AI number because it holds most of the web number, and AI cites it
+slightly LESS often than it cites the average page. The concentration is a
+Google web-impression phenomenon that the AI export mirrors. "57% of AI
+visibility" is not a KPI and should not be reported again.
+
+### 2. Where the web impressions come from: machine-generated fact-check queries
+
+672 of the top 1,000 queries contain "vercel", 33,358 impressions, 5 clicks.
+Their shape:
+
+| shape | queries | impressions | clicks | weighted position |
+|---|---|---|---|---|
+| limit / quota lookup ("free tier bandwidth 100gb 2026") | 313 | 21,275 | 0 | 8.3 |
+| price / is-it-free | 339 | 11,072 | 5 | 8.8 |
+| other | 19 | 1,002 | 0 | 5.5 |
+
+Top query: `vercel free tier bandwidth 100gb 2026`, 1,340 impressions, 0 clicks.
+Then the same string with `2025`, with `limit`, with `pricing`, with `per month`,
+with `100 gb`, with `official`. 477 of the 672 Vercel queries (71% of their
+impressions) carry a year suffix or the word "official". No person types
+"vercel pricing hobby free official 2026". That is a retrieval system that
+already holds "100 GB" and "$0" as candidate answers and is running verification
+searches, product + number + year + "official", against the open web. Google
+documents this as query fan-out for AI Mode and AI Overviews. The post appears
+at positions 7 to 9 for those searches because it contains the exact strings
+being verified: "Hobby", "$0", "100 GB", "August 2026". It is one of several
+corroborating sources for a fact Vercel publishes itself. No human saw those
+SERPs, which is the whole reason the CTR is 0.02%.
+
+Site wide, the same tells (year in query, "official", the "evaluate the brand"
+template, "number of websites", `-site:` chains, "per month" appended):
+
+| | queries | impressions | clicks | CTR |
+|---|---|---|---|---|
+| carrying a tell | 513 | 25,226 (53% of top-1,000) | **0** | 0.00% |
+| no tell | 487 | 22,101 | 50 | 0.23% |
+
+Zero clicks across 513 queries and 25,000 impressions is the evidence; the
+regex is only how they were found. Some year-suffixed queries are surely human
+("webflow migration cost 2026"), so 53% is an upper bound. The floor is the
+Vercel permutation cluster on its own, which is already 45% of top-1,000
+impressions.
+
+**This corrects the August finding above** ("roughly 5% of the query dataset").
+That check looked for chatbot reply fragments ("yes go on") and scripted
+"evaluate the" probes, found few, and concluded pollution was small. It was
+looking for the wrong signature. The dominant automated pattern on this property
+is fan-out fact-verification, and it is the majority of recorded impressions.
+
+Sources that describe the phenomenon: Search Engine Journal, "The AI
+Conversations Leaking Into Your Search Console" (Suganthan Mohanadasan, Aug
+2026); The SEO Central, "Are AI Agents Generating Synthetic Queries in Google
+Search Console?"; AI Agency Plus, "Search Console CTR Collapsed? Query Fan-Out
+In AI Mode". Google's own AI Mode documentation describes fan-out; it does not
+document how fan-out sub-queries are reported. Treat the mechanism as
+well-attested and the exact accounting as unconfirmed.
+
+### 3. What actually earns AI citations at the highest rate
+
+Blog pages grouped by what they answer, 4 Sep export:
+
+| page type | pages | web impr | AI impr | AI per 1,000 | CTR |
+|---|---|---|---|---|---|
+| problem / diagnostic about a named platform | 12 | 15,181 | 1,529 | **100.7** | **0.49%** |
+| listicle | 3 | 3,447 | 349 | 101.2 | 0.12% |
+| cost / price, excluding the Vercel post | 18 | 11,891 | 863 | 72.6 | 0.17% |
+| explainer / thought piece | 48 | 16,680 | 804 | 48.2 | 0.31% |
+| money / site pages | 39 | 5,660 | 244 | 43.1 | 1.20% |
+| the Vercel post | 1 | 94,826 | 5,277 | 55.6 | 0.02% |
+
+Highest individual rates: `is-squarespace-bad-for-seo` 235, `top-nextjs-agencies-2026`
+150, `wix-migration-cost` 145, `webflow-migration-cost` 145, `squarespace-too-slow`
+128, `webflow-true-cost` 119, `divi-theme-slow` 116. Lowest with volume:
+`shopify-store-speed-optimization` 3.7, `shopify-headless` 10.6,
+`saas-software-pricing-audit-2026` 11.1, `elementor-kills-seo` 12.6.
+
+`is-squarespace-bad-for-seo` is the clean example of a real AI win: its top web
+query sits at position 24, yet Google's AI cites the page at four times the site
+rate. Named platform, buyer's question, defensible dated answer.
+
+Named-platform blogs run at 77.6 per 1,000 against 58.6 for generic blogs. The
+medians (68.8 against 62.0, pages with 200+ impressions) are closer, so the
+aggregate is carried by the big diagnostics rather than being true of every
+named-platform page. Opening paragraphs were checked on the top eleven and
+bottom eight pages: every one has a dated number in its first 260 characters,
+so "dated number up front" does not separate them. Word count does not either
+(2,500 to 4,800 in both groups). What separates them is the question answered.
+
+### 4. The repeatable statement
+
+A page earns Google AI citations at the highest rate on this site when it
+answers a buyer's question about a named third-party platform: is it slow, is it
+bad for SEO, what does leaving it cost. A page earns clicks when the constraint
+it answers is one PandaCodeGen itself controls: what a build costs here, no
+minimum, fixed price. The Vercel post does neither. It corroborates a number
+Vercel publishes, for searches machines run to verify that number, and 71% of
+its impressions come from those searches.
+
+For the constraint theory: the Panda Patches "no minimums" win and the Vercel
+"100 GB" appearance are both named entity + number + constraint, but they are
+opposite query types. The first is discovery, a buyer asks and the AI has to
+name a vendor. The second is verification, the AI already has the answer and is
+checking it. Only discovery produces a customer, and the AI can only name you
+for a constraint you own. That is the case for the plain-language pass and
+against building anything else like the Vercel post.
+
+### 5. Decisions
+
+- The Vercel post stays frozen. Do not edit it, do not build siblings, do not
+  count it in any AI KPI. Report AI per 1,000 web impressions excluding it.
+- The human baseline for query reads is the no-tell set: 22,101 impressions, 50
+  clicks, 0.23% CTR (top-1,000 rows, 4 Sep). Use that, not the headline total.
+- Weekly web impressions fell from 23,018 (week of 10 Aug) to 8,965 (week of 24
+  Aug) while AI per 1,000 rose from 74 to 82. If the fan-out cluster is decaying,
+  the October reads will show a large impression drop that means nothing. Note
+  it now so it is not read as a penalty.
+- Limits: the Queries export is the top 1,000 rows only (47,327 of 149,990
+  impressions); the Generative AI export covers Google surfaces only, not
+  ChatGPT or Perplexity; page types were assigned by slug by hand.
