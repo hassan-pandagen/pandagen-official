@@ -153,9 +153,13 @@ export default function CustomWebsite5000Page() {
                             What a Custom Website <span className="italic text-cognac">Starting at $5,000</span> Includes
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            PandaCodeGen&apos;s Scale tier is a $5,000 to $10,000 planning range, not a universal
-                            package. Your signed statement of work decides the pages, features, migration controls,
-                            tests, support, ownership, exclusions, and remedy.
+                            An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen
+                            quotes the site: a 5 to 7 page custom Next.js site for a small business is $1,500, a 10 to
+                            20 page site with a CMS and a full redirect map is $3,500, and the Scale tier this guide
+                            covers is a $5,000 to $10,000 planning range for 30-plus pages or commerce. Every tier is
+                            fixed for the written scope and you own the code at handover. Your signed statement of
+                            work decides the pages, features, migration controls, tests, support, exclusions, and
+                            remedy.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Offer terms reviewed July 31, 2026. A signed proposal or SOW controls if it differs from this guide.
