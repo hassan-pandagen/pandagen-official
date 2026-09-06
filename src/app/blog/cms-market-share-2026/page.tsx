@@ -164,7 +164,7 @@ export default function CmsMarketShare2026Page() {
                             WordPress reached {wp.top.value}% of measured sites in {year(wp.top.period)} and sits at{" "}
                             {wp.now.value}% today, {wp.off} points below its own high. The share it lost did not go
                             where most people assume, and the platform most often described as the future has not moved
-                            in three readings.
+                            in three readings. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Figures read from the source table on {source.verifiedAt}. Method and limits are stated in

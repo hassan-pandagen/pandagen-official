@@ -178,7 +178,7 @@ export default function ShopifySlowLosingSalesPage() {
                             you have almost certainly been quoted while researching this — that around half of mobile
                             visitors abandon a site loading longer than three seconds — was measured on somebody
                             else&apos;s traffic, in a different year, for different products, at a different price
-                            point, with different buying intent. It cannot tell you what your store is losing.
+                            point, with different buying intent. It cannot tell you what your store is losing. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mb-4 leading-relaxed text-stone-700">
                             You will find that number, and per-second conversion formulas alongside it, repeated across

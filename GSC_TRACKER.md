@@ -1749,6 +1749,25 @@ server, header and footer stripped: all 26 pages (home, pricing, 5 AI-info, 8
 services, 11 hubs) state all three facts inside the first 300 words. Worst
 case is /ai-info at word 354 for ownership; everything else is under 300.
 
+Third pass the same day, per Hassan: the 48 blogs rewritten today, the French
+and German home and pricing pages, and the WooCommerce "best fit for stores
+doing $50K+/year" line (replaced with "Any size of store. There is no minimum
+project size.", since it read as a minimum). Each blog's lead paragraph, the
+first paragraph after the H1, now ends with one sentence carrying the three
+facts, worded four ways by page type (cost, diagnostic, comparison, AEO) with
+four hand-written exceptions, so the corpus does not carry one identical
+boilerplate line 48 times. `nextjs-hosting-zero-cost` got the sentence too,
+which touches the frozen page; it was already changed by today's plain-language
+pass, so the freeze was already broken, and the sentence is the only edit.
+
+Measured on the dev server, words counted from the H1 (the earlier method
+stripped every <header> element, which on the blog template deleted the lead
+itself; that produced 22 false failures before it was caught): all 48 blogs
+pass, latest fact at word 461 (`build-vs-buy-software-2026-cost-comparison`);
+all 26 site pages pass, latest at word 273; /fr, /fr/pricing, /de and
+/de/pricing pass in their own language. The main /ai-info page also gained the
+offer line under its hero lead (was word 980, now 47).
+
 ## CONTEXTUAL LINK PASS, 6 SEPTEMBER 2026 - EXPERIMENT 5 IS CONTAMINATED
 
 43 in-prose internal links were added across 39 pages from

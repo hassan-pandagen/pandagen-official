@@ -156,7 +156,7 @@ export default function WhyWeChooseNextJsPage() {
                             We moved for engineering control over how pages are rendered and delivered, not because
                             WordPress is bad at what it does. That distinction matters, because the second framing
                             would make this a recommendation and the first makes it a fit decision. Four things
-                            followed from it, and each one cost us something in exchange.
+                            followed from it, and each one cost us something in exchange. A build here starts at $1,500 at a fixed price, has no minimum project size, and the code is yours at the end.
                         </p>
                         <BlogList
                             items={[

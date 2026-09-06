@@ -149,7 +149,7 @@ export default function NextjsSanityStackPage() {
                             Next.js builds the website your visitors see. Sanity is where your team writes and stores
                             the content. The two work well together for custom, content-heavy sites, but this is not the
                             right setup for every business. Pick it because your requirements call for it, not because
-                            it is popular.
+                            it is popular. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Assessed July 24, 2026 against current Sanity, Next.js and Google documentation. Pricing rechecked July 31, 2026.

@@ -190,7 +190,7 @@ export default function HighLevelSpeedGuide() {
                             leaving the builder. What you cannot change is how the platform renders and delivers the
                             page. Work the fixable half first, measure your own routes rather than a quoted score
                             range, and only cost a frontend replacement once the remaining causes are the ones you do
-                            not control.
+                            not control. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <ul className="space-y-3 text-sm leading-relaxed text-stone-700">
                             <li><strong>Why is my GoHighLevel site slow?</strong> Usually because of what is on the page rather than what HighLevel does with it: oversized images, a page built from stacked sections, animations and hidden blocks, and third-party scripts sitting on the critical path. HighLevel documents all three itself, and they are yours to fix. What is left after that is architectural, and that part is real: content that arrives only after JavaScript runs, a bundle sized for every possible page rather than yours, and per-request assembly instead of edge caching all delay the largest paint.</li>

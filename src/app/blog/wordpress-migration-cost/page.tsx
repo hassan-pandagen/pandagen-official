@@ -170,7 +170,7 @@ export default function WordPressMigrationCostPage() {
                             broader marketing site, and $5,000 to $10,000 where templates, data or integrations
                             multiply. Treat those as entry points for planning, not as quotes: the signed statement of
                             work sets the final price, the deliverables, the acceptance criteria and the remedy, and it
-                            overrides anything on this page.
+                            overrides anything on this page. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <BlogList
                             items={[

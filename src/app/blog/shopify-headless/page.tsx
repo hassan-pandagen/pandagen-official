@@ -162,7 +162,7 @@ export default function ShopifyHeadlessPage() {
                             guaranteed lift in speed, rankings or revenue. What it means in practice: you build your
                             own storefront and Shopify stays the system of record for products, inventory, orders,
                             customers and checkout. What transfers to you is the storefront code, its hosting, its
-                            release process, and any customer-facing feature a theme or an app used to provide.
+                            release process, and any customer-facing feature a theme or an app used to provide. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Shopify and Google documentation.

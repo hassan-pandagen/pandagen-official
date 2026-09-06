@@ -159,7 +159,7 @@ export default function WordPressCostPage() {
                         <p className="mb-4 leading-relaxed text-stone-700">
                             WordPress can be cheap or expensive, and no published average tells you which case you are
                             in. The number that matters is the one you build from your own paid invoices, your own
-                            internal hours and the incidents you have actually had. Five things go into it.
+                            internal hours and the incidents you have actually had. Five things go into it. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <BlogList
                             items={[

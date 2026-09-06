@@ -161,7 +161,7 @@ export default function ShopifyPlusStillSlowPage() {
                             Shopify Plus gives you more enterprise commerce features. It does not tell you why your
                             storefront is slow, and paying for it does not fix that. Measure the store your customers
                             actually load, find what is really costing you the time, then pick the smallest change that
-                            meets the requirements you have agreed.
+                            meets the requirements you have agreed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Shopify documentation.

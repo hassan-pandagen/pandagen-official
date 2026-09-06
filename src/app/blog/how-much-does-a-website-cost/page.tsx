@@ -155,7 +155,7 @@ export default function WebsiteCostGuide() {
                             $5,000 and $10,000 once a store or real integrations are involved. Those are our published
                             numbers, not the market&apos;s. Nobody has the market&apos;s number, because a one-page
                             campaign, a 30-route migration, a store and an application with logins are four different
-                            products that happen to share a word.
+                            products that happen to share a word. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-3 text-base leading-relaxed text-stone-600">
                             What you can price is a scope, and then check whether the quote beside it covers the same

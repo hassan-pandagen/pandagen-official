@@ -198,7 +198,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Google has confirmed {UPDATE_STATS.total} ranking updates since {REGISTER_START}, {UPDATE_STATS.coreCount} of them core updates. The most recent is the {UPDATE_STATS.latest.name}, which started {formatStart(UPDATE_STATS.latest.start)} and took {UPDATE_STATS.latest.duration} to roll out. Below is the full dated register, taken from Google&apos;s own dashboard, and the method for working out whether any of it touched your site.
+                            Google has confirmed {UPDATE_STATS.total} ranking updates since {REGISTER_START}, {UPDATE_STATS.coreCount} of them core updates. The most recent is the {UPDATE_STATS.latest.name}, which started {formatStart(UPDATE_STATS.latest.start)} and took {UPDATE_STATS.latest.duration} to roll out. Below is the full dated register, taken from Google&apos;s own dashboard, and the method for working out whether any of it touched your site. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
 
                         <BlogAuthor

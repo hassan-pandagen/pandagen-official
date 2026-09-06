@@ -217,7 +217,7 @@ export default function TopNextjsAgenciesPage() {
                             Eight firms worth looking at, described from what each one currently says on its own service
                             pages. PandaCodeGen compiled this shortlist, and it is not an independent ranking. We are not treating anyone&apos;s Clutch score,
                             minimum project size or hourly rate as a fixed fact, and we are not claiming any of them is
-                            better than the others.
+                            better than the others. Our own figures are the exception, because we can stand behind them: PandaCodeGen starts at $1,500 at a fixed price, has no minimum project size, and hands over code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Researched July 24, 2026. Confirm services, availability and commercial terms directly.

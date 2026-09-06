@@ -189,7 +189,7 @@ export default function ShopifyAppCostsPage() {
                             Shopify, so the sum of the list prices on the App Store is not it. Recurring charges,
                             usage-based charges, per-transaction percentages and one-off charges each behave
                             differently as the store grows, and the externally billed ones do not appear on your
-                            Shopify invoice at all. Build the register from actual bills before you touch anything.
+                            Shopify invoice at all. Build the register from actual bills before you touch anything. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <BlogList
                             items={[

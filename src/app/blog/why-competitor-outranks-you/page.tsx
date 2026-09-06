@@ -137,7 +137,7 @@ export default function WhyCompetitorOutranksYouPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             A competitor outranks you because of a gap in one of seven comparable areas: query intent, content depth, crawl and indexing health, links, page experience, entity signals, or something that changed outside your site. Ranking below someone tells you that a difference exists; it does not tell you which of the seven it is. Hold everything steady and change one thing at a time: the same search, the same
                             place, the same device, the same day, the same kind of result. Then make the smallest fix
-                            your evidence actually supports.
+                            your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on July 24, 2026.</p>
                     </header>

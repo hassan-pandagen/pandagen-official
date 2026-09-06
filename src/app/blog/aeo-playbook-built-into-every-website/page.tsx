@@ -175,7 +175,7 @@ export default function AEOPlaybookPage() {
                             <span className="font-serif italic text-cognac">AI Search and Citations</span>
                         </h1>
                         <p className="text-lg text-stone-600 leading-relaxed mb-6" data-speakable="true">
-                            Ten things you can actually do: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted.
+                            Ten things you can actually do: make sure crawlers can reach your pages, write content that answers something, mark it up so machines can read it, and measure what happens. Together they make you eligible to be picked, and let you see what is going on. Nothing you build can guarantee you get included, ranked, sent traffic, or quoted. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
                         <BlogAuthor
                             name="Hassan Jamal"

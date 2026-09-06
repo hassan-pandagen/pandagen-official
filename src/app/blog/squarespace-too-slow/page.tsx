@@ -175,7 +175,7 @@ export default function SquarespaceTooSlowPage() {
                             blocks that open connections to hosts you do not control. All four are yours to fix in the
                             editor. Work through them in the order below, measuring the same route before and after
                             each change, and only treat the platform as the constraint once the controllable causes
-                            are gone.
+                            are gone. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <BlogList
                             items={[

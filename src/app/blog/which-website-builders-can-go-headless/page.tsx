@@ -207,7 +207,7 @@ export default function WhichBuildersHeadlessPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Three of the six can: Shopify, WooCommerce and Wix. Webflow cannot in the usual sense and
                             has deliberately built the reverse. Squarespace cannot at all, and does not use the word
-                            once in its developer documentation. GoHighLevel publishes no confirmed content API.
+                            once in its developer documentation. GoHighLevel publishes no confirmed content API. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Every claim here was read off the vendor&apos;s own API documentation in {checkedOn}, not

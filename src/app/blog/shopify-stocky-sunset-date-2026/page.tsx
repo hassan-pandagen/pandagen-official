@@ -181,7 +181,7 @@ export default function ShopifyStockySunsetPage() {
                             The full sequence below assumes you have time to map workflows and trial a replacement. If
                             you do not, order the work by what is <strong>permanently lost</strong> rather than by what
                             is most urgent-feeling, because those are different lists and only one of them matters
-                            after the date passes.
+                            after the date passes. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <ol className="mb-4 list-decimal space-y-2 pl-5 text-stone-700">
                             <li>

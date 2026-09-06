@@ -145,7 +145,7 @@ export default function WixVsCustomWebsitePage() {
                             Wix gives you the editor, the hosting and a set of business tools in one place. A custom site
                             hands you control over how it looks, how it behaves and what it connects to, and hands you
                             the engineering work that comes with that. Neither one is always faster, always cheaper,
-                            always safer, or always better for search.
+                            always safer, or always better for search. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current primary documentation on July 24, 2026.</p>
                     </header>

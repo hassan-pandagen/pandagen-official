@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS } from "@/data/company-facts";
+import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS, OFFER_LINE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -184,6 +184,9 @@ export default function CompanyReferencePage() {
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
               PandaCodeGen moves revenue-generating WordPress, Webflow and GoHighLevel sites without losing their search traffic. Custom Next.js, commerce, integration and application work remains available when the migration requires it.
+            </p>
+            <p className="mt-5 max-w-3xl rounded-xl border border-stone-200 bg-stone-50 px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">
+              {OFFER_LINE}
             </p>
             <p className="mt-5 text-sm text-stone-600">Published February 15, 2026. Reviewed July 22, 2026.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">

@@ -154,7 +154,7 @@ export default function WebsiteMigrationCostPage() {
                             What a migration costs comes down to what you already have and what it has to do once it
                             lands. The platform you are leaving changes how hard the export is, but the price is set by
                             how many pages and templates there are, what data has to move, what it has to connect to,
-                            and how much testing the launch needs.
+                            and how much testing the launch needs. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current platform and Google documentation. Every export link below was re-checked on August 1, 2026.

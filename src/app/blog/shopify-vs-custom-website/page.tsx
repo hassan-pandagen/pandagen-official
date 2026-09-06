@@ -194,7 +194,7 @@ export default function ShopifyVsCustomWebsitePage() {
                             The distinction matters because the two options fail differently. Self-hosted breaks through
                             plugin conflicts and deferred updates. Custom code breaks through dependency drift and
                             whoever built it becoming unavailable. Comparing either one to Shopify without naming which
-                            you mean produces an argument that cannot be checked.
+                            you mean produces an argument that cannot be checked. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                     </section>
 

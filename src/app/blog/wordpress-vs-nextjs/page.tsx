@@ -167,7 +167,7 @@ export default function WordPressVsNextJsPage() {
                             cost or a security level that travels with its name. Four tests, in the order they usually
                             settle it. Disclosure worth having up front: PandaCodeGen builds custom Next.js sites and
                             sells WordPress migrations, so we have a commercial interest in one side of this comparison.
-                            That is also why the sections below refuse to publish platform-level numbers.
+                            That is also why the sections below refuse to publish platform-level numbers. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                         <BlogList
                             items={[

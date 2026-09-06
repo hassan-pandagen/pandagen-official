@@ -186,7 +186,7 @@ export default function AgenticBrowsingPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            Our migrations can include recorded checks on what actually renders, whether the HTML is semantic, whether controls have accessible names, whether the layout holds still, and the Lighthouse profiles you agreed. Experimental results are dated with their browser and tool versions and do not create a ranking, citation, transaction, or revenue promise.
+                            Our migrations can include recorded checks on what actually renders, whether the HTML is semantic, whether controls have accessible names, whether the layout holds still, and the Lighthouse profiles you agreed. Experimental results are dated with their browser and tool versions and do not create a ranking, citation, transaction, or revenue promise. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
                     </div>
 

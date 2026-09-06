@@ -203,7 +203,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             cannot. Field data says which real visitors are affected but not why. A lab trace says why
                             but not how common it is. The per-route inventory names the specific asset or script. And a
                             clean Dawn preview is the only thing that separates what the theme does from what your
-                            configuration does to it.
+                            configuration does to it. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <BlogList
                             items={[

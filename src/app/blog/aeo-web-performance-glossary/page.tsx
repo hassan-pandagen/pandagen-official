@@ -290,7 +290,7 @@ export default function GlossaryPage() {
           <div className="relative bg-charcoal text-white rounded-2xl p-7 md:p-9 mb-12 overflow-hidden" data-speakable="true">
             <div className="absolute -top-8 -right-6 font-serif text-[9rem] leading-none text-white/5 select-none pointer-events-none">&rdquo;</div>
             <p className="relative text-lg md:text-xl leading-relaxed">
-              Start with three questions. Can the crawlers that matter actually fetch your important content? Does the page answer a real question, with something to back it up? And do your real-user numbers and your lab numbers both say the experience is decent? Getting those right makes you eligible. It does not guarantee you a ranking or a citation.
+              Start with three questions. Can the crawlers that matter actually fetch your important content? Does the page answer a real question, with something to back it up? And do your real-user numbers and your lab numbers both say the experience is decent? Getting those right makes you eligible. It does not guarantee you a ranking or a citation. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
             </p>
           </div>
 

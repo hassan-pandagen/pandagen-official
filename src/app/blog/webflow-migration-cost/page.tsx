@@ -157,7 +157,7 @@ export default function WebflowMigrationCostPage() {
                             count. It is how many distinct templates hide behind those pages, how your CMS collections
                             reference each other, which features Webflow will not export at all, which systems have to
                             keep talking to each other afterwards, how the URLs get mapped so the search traffic
-                            survives, and what you have to see before you sign it off.
+                            survives, and what you have to see before you sign it off. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Every Webflow figure on this page was re-checked against Webflow&apos;s own pricing page and help centre on August 2, 2026.

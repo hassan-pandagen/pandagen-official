@@ -168,7 +168,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             A slow experience can obstruct shopping, but a conversion rate does not reveal its cause.
                             Segment performance and funnel behavior together, control other changes and test a defined
-                            intervention before assigning revenue to speed.
+                            intervention before assigning revenue to speed. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Shopify documentation.

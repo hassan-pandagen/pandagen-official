@@ -161,7 +161,7 @@ export default function WebAccessibilityStatistics2026Page() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             The web got measurably less accessible in 2026, ending six consecutive years of small
                             improvements. This is what the measured data says about how sites fail, whether the platform
-                            matters, and where the legal exposure sits, along with the parts the data cannot settle.
+                            matters, and where the legal exposure sits, along with the parts the data cannot settle. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Figures verified against their sources on 13 August 2026. Each one is stated with the method

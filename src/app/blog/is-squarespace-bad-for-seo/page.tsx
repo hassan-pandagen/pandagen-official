@@ -168,7 +168,7 @@ export default function IsSquarespaceBadForSEOPage() {
                             has is a ceiling, and whether that ceiling matters depends entirely on who you are competing
                             against. Most sites that underperform have not reached it. They have pages where the controls
                             Squarespace already gives them were never filled in. Check that first, then judge the
-                            platform on what is left.
+                            platform on what is left. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 3, 2026 against current Squarespace and Google documentation.

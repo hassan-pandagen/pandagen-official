@@ -283,7 +283,7 @@ export default function LeavingWebflow2026Page() {
                     <div className="rounded-xl border border-stone-200 bg-stone-50 p-6 mb-10" data-speakable="true">
                         <p className="font-semibold text-charcoal mb-3">The short answer</p>
                         <p className="text-stone-700 leading-relaxed">
-                            Stay on Webflow if the visual editor, the plan you are on and the features it supports will still cover what you need for the next two or three years. Fix things first if the problem is one template, one heavy asset, one script or one workflow. Start thinking about leaving when several documented problems stack up at once: the bill keeps climbing, you cannot export what you need, it will not run the application logic you want, you have governance rules it cannot meet, or it is still slow after you have properly measured and optimized it.
+                            Stay on Webflow if the visual editor, the plan you are on and the features it supports will still cover what you need for the next two or three years. Fix things first if the problem is one template, one heavy asset, one script or one workflow. Start thinking about leaving when several documented problems stack up at once: the bill keeps climbing, you cannot export what you need, it will not run the application logic you want, you have governance rules it cannot meet, or it is still slow after you have properly measured and optimized it. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                     </div>
 

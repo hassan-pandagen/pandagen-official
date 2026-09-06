@@ -159,7 +159,7 @@ export default function CustomWebsite5000Page() {
                             covers is a $5,000 to $10,000 planning range for 30-plus pages or commerce. Every tier is
                             fixed for the written scope and you own the code at handover. Your signed statement of
                             work decides the pages, features, migration controls, tests, support, exclusions, and
-                            remedy.
+                            remedy. There is no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Offer terms reviewed July 31, 2026. A signed proposal or SOW controls if it differs from this guide.

@@ -196,7 +196,7 @@ export default function WooCommerceTooSlowPage() {
                         Field data tells you what real customers experienced and cannot tell you why. A lab trace tells
                         you why and cannot tell you how common it is. Backend measurement is the only thing that sees
                         server time, and commerce timing is the only thing that sees whether the order actually got
-                        placed. Collect all four before deciding anything.
+                        placed. Collect all four before deciding anything. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                     </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[

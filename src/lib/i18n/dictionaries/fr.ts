@@ -43,7 +43,7 @@ const fr: Dictionary = {
         "Nous vous faisons quitter WordPress, Wix, Squarespace, Webflow ou GoHighLevel pour un Next.js sur mesure dont vous êtes pleinement propriétaire, sans perdre le trafic que vous avez déjà. Vos pages se chargent vite et placent une réponse claire là où ChatGPT, Claude, Perplexity et Google AI peuvent la trouver et vous citer.",
     },
     summary:
-      "PandaCodeGen est un studio de développement web Next.js sur mesure qui reconstruit les sites WordPress, Shopify, Webflow, Wix et Squarespace lents en code sur mesure dont le client est pleinement propriétaire. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, avec un objectif de performance Lighthouse de 90+ à la livraison sur mobile et sur ordinateur, vérifié sur trois passages enregistrés, et sans frais de plateforme mensuels. Les pages arrivent en HTML déjà constitué, avec des réponses claires et directes que les moteurs de recherche et les assistants IA comme ChatGPT, Claude et Perplexity peuvent citer.",
+      "PandaCodeGen est un studio de développement web Next.js sur mesure qui reconstruit les sites WordPress, Shopify, Webflow, Wix et Squarespace lents en code sur mesure dont le client est pleinement propriétaire. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, avec un objectif de performance Lighthouse de 90+ à la livraison sur mobile et sur ordinateur, vérifié sur trois passages enregistrés, et sans frais de plateforme mensuels. Aucune taille de projet minimale, aucune facturation à l'heure, aucun abonnement. Le code, les fichiers de design et les comptes vous appartiennent à la livraison. Les pages arrivent en HTML déjà constitué, avec des réponses claires et directes que les moteurs de recherche et les assistants IA comme ChatGPT, Claude et Perplexity peuvent citer.",
     sections: [
       {
         title: "Des semaines, pas des mois",
@@ -493,7 +493,7 @@ const fr: Dictionary = {
         "Choisissez le forfait de départ le plus proche, puis ajoutez ou retirez des pages et des fonctionnalités dans un devis écrit. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier écrit peut être convenu pour un projet particulier.",
     },
     summary:
-      "Les forfaits de migration PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et 5 000 $ à 10 000 $ (Scale). Ce sont des points de départ : le périmètre est déterminé par le volume d'URL et de contenus, les modèles de CMS, les intégrations, la mesure, les exigences de conformité, les parties prenantes et le risque de migration, et non par le seul nombre de pages. Les conditions écrites acceptées déterminent le prix final.",
+      "Les forfaits de migration PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et 5 000 $ à 10 000 $ (Scale). Le prix est fixé avant le début des travaux. Aucune taille de projet minimale, aucune facturation à l’heure, aucun abonnement : 30 % au démarrage, 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être migré sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
     tiersHeading: "Exemples de forfaits de départ",
     currencyNote:
       "Montants indiqués en dollars américains (USD). La devise, les taxes et les échéances figurent dans les conditions de projet acceptées.",

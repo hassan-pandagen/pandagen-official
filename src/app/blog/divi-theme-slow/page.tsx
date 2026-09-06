@@ -187,7 +187,7 @@ export default function DiviThemeSlowPage() {
                             uncached pages per request; and media, fonts, plugins and third-party tags add to whichever
                             of those is already hurting. Elegant Themes ships a Performance tab specifically to control
                             the first of those. Find which layer is responsible on your site before buying another
-                            plugin or committing to a rebuild.
+                            plugin or committing to a rebuild. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current Elegant Themes and Google primary documentation.

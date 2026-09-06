@@ -146,7 +146,7 @@ export default function CheapWebDeveloperPage() {
             cover the same work: the same pages, the same features, the same care over migration, the same
             security and accessibility checks, the same way of measuring performance, the same ownership at
             the end, the same support, and the same third-party costs. This guide gives you the questions to
-            ask and the evidence to request before you pay a deposit.
+            ask and the evidence to request before you pay a deposit. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
           </p>
           <BlogAuthor
             date="Apr 30, 2026, updated Aug 3, 2026"

@@ -167,7 +167,7 @@ export default function WordPressAprilEvidencePage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Two supply-chain incidents and one WooCommerce feedback thread are useful operating evidence.
-                            They do not prove that every WordPress site is compromised or should migrate.
+                            They do not prove that every WordPress site is compromised or should migrate. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Patchstack&apos;s Smart Slider analysis reverified August 1, 2026. Remaining sources and

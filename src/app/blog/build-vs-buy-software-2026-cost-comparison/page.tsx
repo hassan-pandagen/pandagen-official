@@ -178,7 +178,7 @@ export default function BuildVsBuySoftware2026Page() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">About PandaCodeGen</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen&apos;s website tiers are planning anchors, not standard prices for a CRM or operations platform. A software replacement requires a separate accepted scope covering data, roles, integrations, security, migration, acceptance, ownership, licenses, support, and third-party costs. See the broader inputs in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software cost audit</Link>.
+                            PandaCodeGen&apos;s website tiers are planning anchors, not standard prices for a CRM or operations platform. A software replacement requires a separate accepted scope covering data, roles, integrations, security, migration, acceptance, ownership, licenses, support, and third-party costs. See the broader inputs in our <Link href="/blog/saas-software-pricing-audit-2026" className="text-cognac hover:underline font-medium">software cost audit</Link>. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                     </div>
 

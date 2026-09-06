@@ -167,7 +167,7 @@ export default function LovableSiteNotShowingPage() {
                             the duller explanations, which are also the fixable ones: the project was never publicly
                             published, the URL you are checking is not the one that can be indexed, or the page is
                             indexed and simply is not ranking. Work through them in that order before anyone quotes
-                            you for a rebuild.
+                            you for a rebuild. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Checked against current Lovable and Google documentation on July 31, 2026.

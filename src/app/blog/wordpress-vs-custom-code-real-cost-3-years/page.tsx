@@ -156,7 +156,7 @@ export default function WordPressVsCustomCostPage() {
                             Neither option wins in the abstract, and the total is whatever your own invoices and time
                             records say it is. That is why this page publishes formulas rather than figures: the
                             inputs are yours, and a headline three-year total that hides them cannot be checked
-                            against your situation. Five things settle it.
+                            against your situation. Five things settle it. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <BlogList
                             items={[

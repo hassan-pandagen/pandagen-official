@@ -158,7 +158,7 @@ export default function SquarespaceMigrationCostPage() {
                             whether you sell or take bookings, whether you have members, what your forms do,
                             what has to keep talking to what, how much work protecting your search traffic
                             takes, how much data has to move, how you sign it off, and how you intend to run
-                            the site afterwards.
+                            the site afterwards. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Squarespace and Google documentation.

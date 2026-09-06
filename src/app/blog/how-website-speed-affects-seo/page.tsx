@@ -154,7 +154,7 @@ export default function SpeedAndSeoGuide() {
                             score you have to clear. There is no Lighthouse number that guarantees a position or
                             triggers a penalty, and a fast page that answers the query badly still loses to a slower
                             page that answers it well. Five propositions hold up; everything else you will read on
-                            this topic is inference from them.
+                            this topic is inference from them. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <BlogList
                             items={[

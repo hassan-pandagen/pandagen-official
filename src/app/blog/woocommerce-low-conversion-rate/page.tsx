@@ -153,7 +153,7 @@ export default function WooCommerceLowConversionRatePage() {
                             Most stores decide the cause before they measure it, and speed is the usual suspect because
                             it is the easiest thing to have an opinion about. This is the order we work in instead:
                             define the metric, find the stage that actually changed, then separate the problems
-                            WooCommerce creates from the ones every store has.
+                            WooCommerce creates from the ones every store has. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             No industry benchmark is quoted here, and no revenue figure is calculated for you. Both

@@ -156,7 +156,7 @@ export default function WixMigrationCostPage() {
                             page-level SEO settings are recreated by hand on the other side. PandaCodeGen&apos;s tiers start at
                             $1,500 and run past $10,000. Page count on its own is a poor predictor of where you land.
                             What actually moves the number is how many unique templates, data domains, apps and
-                            workflows have to come with you.
+                            workflows have to come with you. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 31, 2026.</p>
                     </header>

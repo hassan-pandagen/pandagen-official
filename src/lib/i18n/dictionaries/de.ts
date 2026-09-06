@@ -43,7 +43,7 @@ const de: Dictionary = {
         "Wir holen Sie von WordPress, Wix, Squarespace, Webflow oder GoHighLevel auf ein individuelles Next.js, das Ihnen vollständig gehört, ohne den Traffic zu verlieren, den Sie bereits haben. Ihre Seiten laden schnell und stellen eine klare Antwort genau dort bereit, wo ChatGPT, Claude, Perplexity und Google AI sie finden und Sie zitieren können.",
     },
     summary:
-      "PandaCodeGen ist ein Studio für individuelle Next.js-Webentwicklung und baut langsame WordPress-, Shopify-, Webflow-, Wix- und Squarespace-Websites in individuellen Code um, der dem Kunden vollständig gehört. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, tragen einen Lighthouse-Zielwert von 90+ bei der Übergabe auf Mobilgeräten und Desktop, geprüft über drei aufgezeichnete Durchläufe, und verursachen keine monatlichen Plattformgebühren. Die Seiten kommen als fertiges HTML, mit klaren und direkten Antworten, die Suchmaschinen und KI-Assistenten wie ChatGPT, Claude und Perplexity zitieren können.",
+      "PandaCodeGen ist ein Studio für individuelle Next.js-Webentwicklung und baut langsame WordPress-, Shopify-, Webflow-, Wix- und Squarespace-Websites in individuellen Code um, der dem Kunden vollständig gehört. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, tragen einen Lighthouse-Zielwert von 90+ bei der Übergabe auf Mobilgeräten und Desktop, geprüft über drei aufgezeichnete Durchläufe, und verursachen keine monatlichen Plattformgebühren. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer. Code, Designdateien und Konten gehören Ihnen bei der Übergabe. Die Seiten kommen als fertiges HTML, mit klaren und direkten Antworten, die Suchmaschinen und KI-Assistenten wie ChatGPT, Claude und Perplexity zitieren können.",
     sections: [
       {
         title: "Wochen statt Monate",
@@ -493,7 +493,7 @@ const de: Dictionary = {
         "Wählen Sie das nächstgelegene Startpaket und ergänzen oder streichen Sie Seiten und Funktionen in einem schriftlichen Angebot. Eine übliche Zahlungsstruktur sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; für ein bestimmtes Projekt kann ein anderer schriftlicher Zahlungsplan vereinbart werden.",
     },
     summary:
-      "Die Migrationspakete von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und 5.000 $ bis 10.000 $ (Scale). Das sind Ausgangspunkte: Der Umfang ergibt sich aus URL- und Inhaltsvolumen, CMS-Modellen, Integrationen, Messung, Compliance-Anforderungen, Beteiligten und Migrationsrisiko, nicht aus der Seitenzahl allein. Maßgeblich für den endgültigen Preis sind die angenommenen schriftlichen Bedingungen.",
+      "Die Migrationspakete von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und 5.000 $ bis 10.000 $ (Scale). Der Preis steht fest, bevor die Arbeit beginnt. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer: 30 % zum Start, 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch migriert werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
     tiersHeading: "Beispielhafte Startpakete",
     currencyNote:
       "Alle Beträge in US-Dollar (USD). Währung, Steuern und Fälligkeiten werden in den angenommenen Projektbedingungen festgehalten.",
