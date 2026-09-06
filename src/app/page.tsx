@@ -58,6 +58,10 @@ const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 
 const homeFaqs = [
   {
+    q: "Do you have a minimum project size?",
+    a: "No. We start at $1,500 for a 5 to 7 page site, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.",
+  },
+  {
     q: "How much does WordPress to Next.js migration cost?",
     a: "From $1,500 for a 5 to 7 page business site. From $3,500 for 10 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. $5,000 to $10,000 for an online store or 30-plus pages. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. No monthly plugin fees, and you own the code. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test three times before handover.",
   },

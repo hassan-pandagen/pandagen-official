@@ -72,6 +72,15 @@ export const SERVICES: readonly Fact[] = [
 
 /** Commercial terms. Every figure here is a published starting point, not a quote. */
 export const COMMERCIAL: readonly Fact[] = [
+    // ADDED 6 Sep 2026. The one constraint the site never stated, and the one a
+    // buyer hits before they reach a price. Every named Next.js agency on the
+    // shortlist carries a minimum: Bejamas, Blazity and FocusReactive $10,000+,
+    // Pagepro and Naturaily $25,000+, Netguru and Brainhub $50,000+, each read
+    // first-hand from its Clutch profile on 6 Sep 2026. Those figures are
+    // deliberately NOT published, because top-nextjs-agencies-2026 decided in
+    // July not to treat third-party Clutch numbers as fixed facts. The fact
+    // about ourselves needs no such maintenance.
+    { label: 'Minimum project size', value: 'None. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.' },
     { label: 'Starter', value: 'From $1,500. 5 to 7 custom pages, no CMS.' },
     { label: 'Growth', value: 'From $3,500. 10 to 20 pages, Sanity CMS, full migration with redirect map.' },
     { label: 'Scale', value: '$5,000 to $10,000. Headless commerce and 30+ pages.' },

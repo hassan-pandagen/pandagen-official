@@ -49,6 +49,7 @@ const HEADER = `# PandaCodeGen
 
 ## Commercial terms
 
+- Minimum project size: none. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.
 - Starting prices: Starter from $1,500, Growth from $3,500, Scale $5,000 to $10,000, and Scale+ from $10,000, custom-quoted after a scoping call.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
 - Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.

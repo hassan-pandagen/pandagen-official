@@ -16,6 +16,10 @@ export interface PricingFaq {
 
 export const pricingFaqs: PricingFaq[] = [
   {
+    q: "Do you have a minimum project size?",
+    a: "No. We start at $1,500 for a 5 to 7 page site, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often turned away before it gets a price. You get a fixed price before we begin either way.",
+  },
+  {
     q: "Which package should I start with?",
     a: "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts.",
   },
