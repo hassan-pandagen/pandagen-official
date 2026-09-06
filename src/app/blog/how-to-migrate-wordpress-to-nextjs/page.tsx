@@ -188,7 +188,7 @@ export default function MigrateWordPressToNextJSPage() {
                     <div data-speakable="true" className="bg-stone-50 border border-stone-200 rounded-xl p-6 mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-3">How To Migrate WordPress To Next.js In 8 Steps</p>
                         <p className="text-stone-700 leading-relaxed">
-                            A WordPress to Next.js migration without losing SEO starts with evidence, not a ranking promise. Build a complete URL inventory, keep valuable URLs stable, record a disposition for every old URL, create and validate 301 redirects when a changed URL has a relevant successor, preserve metadata and canonical tags, submit the new sitemap, run a staged crawl, and monitor Google Search Console after launch. Some ranking volatility can occur while search engines recrawl and reprocess the site. No agency can guarantee rankings, but a documented process reduces avoidable technical risk. If you are still weighing the risk, our guide to <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline font-medium">whether migrating hurts your SEO</Link> explains what separates a controlled migration from a costly one.
+                            A WordPress to Next.js move that keeps your search traffic starts with a list, not a promise. Write down every web address you have, keep the valuable ones exactly as they are, decide what happens to each of the rest, create and validate 301 redirects when a changed URL has a relevant successor, preserve metadata and canonical tags, submit the new sitemap, run a staged crawl, and monitor Google Search Console after launch. Some ranking volatility can occur while search engines recrawl and reprocess the site. No agency can guarantee rankings, but a documented process reduces avoidable technical risk. If you are still weighing the risk, our guide to <Link href="/blog/will-migrating-hurt-my-seo" className="text-cognac hover:underline font-medium">whether migrating hurts your SEO</Link> explains what separates a controlled migration from a costly one.
                         </p>
                     </div>
 
@@ -199,7 +199,7 @@ export default function MigrateWordPressToNextJSPage() {
                             Before getting into the how, it is worth being clear on why. Businesses migrate WordPress to Next.js for one of three reasons. Understanding which one applies to you affects how you approach the migration.
                         </BlogText>
                         <BlogList items={[
-                            "Performance constraints: some WordPress sites remain slow after sensible optimization because the theme, plugin stack, database work, hosting, or third-party scripts limit further gains. Measure representative pages before deciding that a rebuild is necessary.",
+                            "Still slow after real effort: some WordPress sites stay slow no matter what you do, because the theme, the plugins, the database, the hosting or outside scripts are the limit. Measure representative pages before deciding that a rebuild is necessary.",
                             "Search and page-experience risk: poor Core Web Vitals can weaken the user experience and contribute to search-performance problems, but they are only part of Google's broader ranking systems. Base the decision on lab tests, field data, crawl health, content quality, and conversion evidence rather than a blanket WordPress failure statistic.",
                             "Cost and maintenance burden: compare the current spend on hosting, premium plugins, security, updates, and developer support with the proposed WordPress migration cost. Commercial Next.js hosting on Vercel Pro starts at $20 per month plus usage. Vercel Hobby is for personal, non-commercial use, so it is not a valid business-hosting cost assumption."
                         ]} />
@@ -274,7 +274,7 @@ export default function MigrateWordPressToNextJSPage() {
                     </section>
 
                     <div className="my-8 p-6 bg-cognac/5 border-l-4 border-cognac rounded-r-xl">
-                        <p className="text-charcoal font-serif italic text-lg leading-relaxed mb-2">&ldquo;A missing or incorrect 301 redirect on a URL with traffic or backlinks is a preventable migration risk. Build the URL inventory first, then document every route and validate redirects for changed URLs with relevant successors before launch.&rdquo;</p>
+                        <p className="text-charcoal font-serif italic text-lg leading-relaxed mb-2">&ldquo;A missing or wrong forward on a page that has traffic or links pointing at it is the most preventable way to lose search traffic. List every address first, then write down where each one goes and test them for changed URLs with relevant successors before launch.&rdquo;</p>
                         <p className="text-sm text-stone-600 font-semibold">Hassan Jamal, PandaCodeGen</p>
                     </div>
 

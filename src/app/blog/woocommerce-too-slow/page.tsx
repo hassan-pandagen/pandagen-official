@@ -295,7 +295,7 @@ export default function WooCommerceTooSlowPage() {
                             "Back up the store and reproduce the issue in a production-like test environment.",
                             "Check the environment against WooCommerce's own recommendations first: PHP 8.3 or greater, MySQL 8.0 or greater (or MariaDB 10.6 or greater), and a WordPress memory limit of 256 MB or greater. A store below these is being slowed by its environment before any tuning starts.",
                             "Fix errors, unsupported runtime versions, failed jobs and resource exhaustion.",
-                            "Configure page, object and CDN caching with explicit commerce exclusions.",
+                            "Set up caching properly, and make sure the cart, checkout and account pages are never cached.",
                             "Optimize the largest images, fonts, CSS and JavaScript found in the trace.",
                             "Profile expensive queries, hooks, extension code and remote requests.",
                             "Reduce or replace a component only after an isolated test shows its effect.",
@@ -469,7 +469,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogText>
                         Repair WooCommerce when the measurement points at things you can change and the platform still
                         does what the business needs. Go headless when the back office is working and the storefront
-                        is the constraint, accepting that you now own two systems and the boundary between them.
+                        is the thing holding you back, accepting that you now run two systems and whatever sits between them.
                         Replace WooCommerce only when the core workflows, the data model or the scale no longer fit,
                         because that is the option that costs a data migration and a retraining exercise on top of the
                         build.
@@ -548,9 +548,9 @@ export default function WooCommerceTooSlowPage() {
                     <BlogList
                         items={[
                             "Which field and lab evidence will be captured before changes?",
-                            "Which representative pages, devices, account states and transaction flows will be tested?",
+                            "Which pages, which devices, logged in or out, and which checkout steps will actually be tested?",
                             "How will server, database, extension and third-party time be separated?",
-                            "What functional, privacy, accessibility and performance acceptance criteria apply?",
+                            "What has to work, load fast and be accessible before you sign it off?",
                             "Which changes are reversible, and what are the release and rollback triggers?",
                             "Who owns hosting, code, provider accounts, monitoring and post-launch support?",
                         ]}
@@ -569,8 +569,8 @@ export default function WooCommerceTooSlowPage() {
                         PandaCodeGen&apos;s published tiers start at $1,500, $3,500 and $5,000 to $10,000, with custom
                         scope where needed. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed.
                         Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted <Link href="/terms" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">project terms</Link> record it.
-                        A 90-plus Lighthouse target applies only when the signed scope identifies representative pages,
-                        profiles, environment, three passing runs per page and profile, exclusions and remedy. It is not
+                        A 90-plus score means the pages named in your quote, tested on phone and desktop, passing three
+                        times each. That is a test-bench score. It is not
                         a ranking or conversion guarantee. The tiers and what each one includes are listed on the{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link>.
                     </BlogText>
@@ -597,7 +597,7 @@ export default function WooCommerceTooSlowPage() {
                         <Wrench className="mb-4 h-7 w-7 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get evidence before choosing the fix</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map the slow journeys, system boundaries and acceptance criteria before recommending
+                            We will find the slow paths, see where one system hands off to another, and agree what done looks like before recommending
                             optimization, headless WooCommerce or a full migration.
                         </p>
                         <QuoteModalButton cta="woocommerce_speed_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">

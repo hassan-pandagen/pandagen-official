@@ -184,7 +184,7 @@ export default function IsSquarespaceBadForSEOPage() {
                                 "Squarespace documents SEO descriptions, page titles, custom slugs, SSL, alt text, sitemaps and search-console connections.",
                                 "No platform-wide mobile score, load-time range or ranking ceiling can be inferred without a dated sample and method.",
                                 "Core Web Vitals matter within Google's broader systems, but a Lighthouse score is not a ranking guarantee.",
-                                "A migration is justified by measured requirements and residual constraints, not a generic platform verdict.",
+                                "Move because something you need is genuinely impossible here, not because someone said the platform is bad.",
                             ]}
                         />
                     </section>
@@ -260,7 +260,7 @@ export default function IsSquarespaceBadForSEOPage() {
 
                     <BlogHeader id="real-limits">The four limits that are actually structural</BlogHeader>
                     <BlogText>
-                        Once the checklist above is clean, four constraints remain that no amount of configuration will
+                        Once the checklist above is clean, four limits remain that no amount of settings will
                         move. These are the ones worth weighing a migration against, and they are worth knowing before
                         you start rather than after you have built a hundred pages.
                     </BlogText>
@@ -324,7 +324,7 @@ export default function IsSquarespaceBadForSEOPage() {
                     <BlogText>
                         Of the three, redirects are the row that actually costs people money, and it only costs it once.
                         Moving a site with two thousand old URLs onto Squarespace means pasting two thousand lines by hand,
-                        which is an afternoon nobody scoped. The robots.txt row matters at scale or where parameterized URLs
+                        which is an afternoon nobody planned for. The robots.txt row matters at scale or where parameterized URLs
                         need excluding, and almost nowhere else. The structured data row matters when what you want to add
                         conflicts with what Squarespace already emits, since yours sits alongside the automatic markup rather
                         than replacing it.
@@ -435,7 +435,7 @@ export default function IsSquarespaceBadForSEOPage() {
                         hosted builder decides your markup, and constrained markup is harder to break. The
                         same boundary that stops you controlling schema output also stops a site owner
                         shipping an unlabelled form or a contrast failure in a custom template. If you are
-                        not going to change anything structural, that constraint is protecting you.
+                        not going to change anything structural, that limit is protecting you.
                     </BlogText>
                     <BlogText>
                         Read it carefully though: {finding("cms-errors-2026").limitation}{" "}
@@ -475,7 +475,7 @@ export default function IsSquarespaceBadForSEOPage() {
                     <BlogHeader>Optimize, stay or migrate</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Three outcomes are legitimate and the evidence decides which, not the platform name. Stay when the checklist is clean and the constraints do not touch you. Optimize when the audit found settings rather than limits. Migrate only when a structural constraint blocks something the business actually needs, and you can name which one.
+                            Three answers are all fine, and your own evidence decides which, not the platform name. Stay when the checklist is clean and those four limits do not affect you. Optimize when the audit found settings rather than limits. Migrate only when a structural constraint blocks something the business actually needs, and you can name which one.
                         </BlogText>
                     </div>
                     <BlogText>
@@ -513,7 +513,7 @@ export default function IsSquarespaceBadForSEOPage() {
                                 <tr>
                                     <td className="p-4 font-semibold">Migrate</td>
                                     <td className="p-4">Accepted requirements stay blocked after reasonable optimization, and the expected benefit exceeds migration plus operating cost</td>
-                                    <td className="p-4">Scope the URL inventory, redirects and acceptance criteria before anyone writes code</td>
+                                    <td className="p-4">List every web address, decide where each one forwards to, and agree what done looks like before anyone writes code</td>
                                 </tr>
                             </tbody>
                         </table>

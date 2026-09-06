@@ -174,7 +174,7 @@ export default function WixMigrationCostPage() {
                                 "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
                                 "Those are our own anchors, not Wix migration market averages.",
                                 "Wix documents separate export paths for CMS collections, contacts, products and orders rather than one complete portable site package.",
-                                "Final price, schedule, ownership, cutover and remedies belong in the signed scope.",
+                                "The final price, the dates, who owns the code, launch day and what happens if it goes wrong all belong in your written quote.",
                             ]}
                         />
                     </section>
@@ -400,13 +400,13 @@ export default function WixMigrationCostPage() {
                         rebuild and they run on someone else&apos;s clock. If the domain is registered through Wix, moving
                         it to another registrar means unlocking it, retrieving the authorization code and completing the
                         transfer under current registrar and registry rules, including any lock period that applies
-                        after a recent registration or transfer. Start that early rather than on cutover day.
+                        after a recent registration or transfer. Start that early rather than on launch day.
                     </BlogText>
                     <BlogList
                         items={[
-                            "Confirm who controls the registrar account, the DNS zone and the email tenancy before a cutover date is agreed.",
+                            "Find out who actually controls your domain account, your DNS and your email before anyone agrees a launch date.",
                             "Record every existing DNS record, including MX, SPF, DKIM, DMARC and verification TXT records, and recreate them on the new provider before the switch.",
-                            "Leave mail routing untouched unless mail is also moving; a website cutover should never interrupt email.",
+                            "Do not touch email settings unless email is moving too. Launching a website should never stop your email working.",
                             "Decide whether the domain stays where it is with DNS repointed, which is often the lower-risk route, or is transferred outright.",
                             "Plan certificate issuance on the new host so HTTPS is valid the moment traffic moves.",
                         ]}

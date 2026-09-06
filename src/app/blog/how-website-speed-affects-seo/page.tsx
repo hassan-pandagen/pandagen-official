@@ -312,7 +312,7 @@ export default function SpeedAndSeoGuide() {
                         items={[
                             "Note the exact release, and list every content, link, design, tracking, URL and technical change that went with it.",
                             "Compare Search Console pages and queries by country, device and search type across sensible periods.",
-                            "Check indexing, crawling, status codes, robots rules, canonicals, what actually renders, the sitemaps, and server errors.",
+                            "Check that Google can find the page, that it loads without an error, that nothing is blocking it, and that the content is actually in the page rather than loaded afterwards.",
                             "Compare URL or template field Core Web Vitals where eligible data exists and retain lab traces for diagnosis.",
                             "Use unaffected pages or staged rollouts as a comparison where the site and risk permit it.",
                             "Report uncertainty and competing explanations instead of assigning the full change to speed.",
@@ -386,10 +386,10 @@ export default function SpeedAndSeoGuide() {
                         WordPress, Shopify, Webflow, Wix, Squarespace and Next.js do not have universal score or ranking
                         ceilings. Compare representative routes, content, integrations, field data, editor needs,
                         security, ownership, operating cost and available controls. Optimize the current platform first
-                        when it can meet the requirement; migrate when residual constraints and total cost justify it.
+                        when it can do what you need. Move when it cannot, and when the total cost makes moving worth it.
                     </BlogText>
                     <BlogText>
-                        Where the platform is the suspected constraint, start from the route-level diagnostic for that
+                        Where you think the platform itself is the problem, start with the page-by-page diagnostic for that
                         stack:{" "}
                         <Link href="/blog/how-to-fix-slow-wordpress" className="text-cognac hover:underline">
                             fixing a slow WordPress site
@@ -428,7 +428,7 @@ export default function SpeedAndSeoGuide() {
                     <BlogList
                         items={[
                             "Keep valuable URLs stable where practical and map every approved change to a relevant destination.",
-                            "Preserve content, metadata, canonicals, internal links, media and structured data.",
+                            "Keep your content, your titles and descriptions, your internal links, your images and your markup exactly as they were.",
                             "Crawl staging and production, test redirects and errors, submit sitemaps and keep rollback.",
                             "Record representative performance acceptance and monitor Search Console after launch.",
                         ]}

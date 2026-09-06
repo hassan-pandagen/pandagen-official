@@ -230,7 +230,7 @@ export default function ShopifyPlusStillSlowPage() {
                     <BlogList
                         items={[
                             "The integration load is heavier as a result. Plus merchants commonly run classes of system a smaller store does not: ERP or inventory sync, loyalty, subscriptions, personalisation, tax and compliance. Each tends to contribute its own script to the storefront, and the theme layer gives you no built-in way to isolate or defer them per route.",
-                            "Checkout customisation moved. Merchants who built deep custom logic under checkout.liquid rebuild it as checkout UI extensions and Functions. Extensions that are not scoped carefully reintroduce script and network work into the checkout flow, which is the one place a Plus store can be slow in a way a smaller store cannot.",
+                            "Checkout customisation moved. Stores that built custom logic into checkout.liquid have to rebuild it as checkout extensions. Careless extensions put scripts back into checkout, and checkout is the one place a Plus store can be slow in a way a smaller store never is.",
                             "Catalogue scale is a per-request cost. Collection and search templates get more expensive as SKU and variant counts grow, because that markup is produced per request rather than served pre-built. It is why benchmarks taken on small catalogues describe a different store than yours.",
                             "Multi-market and multi-currency add work to the same templates. Every additional locale or currency is more logic on the routes that already do the most.",
                         ]}
@@ -249,7 +249,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <BlogHeader>1. Define the incident or objective</BlogHeader>
                     <BlogText>
-                        Do not collapse all five into the site is slow. Each one requires different evidence, different owners and different acceptance criteria, and starting work before you know which you have is how a team spends a month on the wrong layer.
+                        Do not flatten all five into the site is slow. Each one needs different evidence, a different owner and a different test to prove it is fixed. Starting before you know which one you have is how a team spends a month on the wrong thing.
                     </BlogText>
                     <BlogList
                         items={[
@@ -342,7 +342,7 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <BlogHeader>5. Optimize with enterprise controls</BlogHeader>
                     <BlogText>
-                        At Plus scale the constraint is rarely the technique, it is governance. Five controls make an improvement stick: an owner and a business justification for every app and tag, route-level budgets enforced before release, phased rollouts with named rollback criteria, guardrails that keep accessibility, analytics and consent intact, and vendor changes tracked on the same timeline as your field data.
+                        At Plus scale the problem is rarely the technique, it is that nobody owns the decisions. Five things make a speed fix stick: every app and tag has an owner and a reason to exist, each page has a weight limit checked before release, changes roll out in phases with a named point at which you undo them, and accessibility, analytics and cookie consent survive the change, and vendor changes tracked on the same timeline as your field data.
                     </BlogText>
                     <BlogList
                         items={[
@@ -374,7 +374,7 @@ export default function ShopifyPlusStillSlowPage() {
                         ]}
                     />
 
-                    <BlogHeader>7. Use credible acceptance criteria</BlogHeader>
+                    <BlogHeader>7. Agree what done actually looks like</BlogHeader>
                     <BlogText>
                         A 90-plus Lighthouse target can be an accepted delivery term under recorded conditions. It should not be restated as a permanent guarantee for every route, visitor, app state or future release. Six things make the term enforceable, and the run count and the recorded conditions are what separate a criterion from a screenshot.
                     </BlogText>

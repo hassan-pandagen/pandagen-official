@@ -215,7 +215,7 @@ export default function HighLevelSpeedGuide() {
                                 "Check field Core Web Vitals where eligible data exists; use repeated lab runs to diagnose.",
                                 "Then name the cause: images, fonts, layout, custom code, a third-party script, an embed, the content itself, the hosting, or GoHighLevel doing what GoHighLevel does.",
                                 "Apply one controlled change at a time and compare under the same test profile.",
-                                "Choose native optimization, a lighter rebuild, or a hybrid frontend from measured residual constraints.",
+                                "Decide between fixing it in HighLevel, a lighter rebuild, or keeping the CRM and replacing the site, based on what is actually still slow after you have tried.",
                             ]}
                         />
                     </section>
@@ -362,7 +362,7 @@ export default function HighLevelSpeedGuide() {
                         HighLevel&apos;s current website overview documents mobile editing, tracking code, custom CSS and
                         external JavaScript behavior. Use the builder&apos;s current controls and preview behavior as
                         part of the investigation. A platform feature can help, but only the retest proves what changed
-                        on the route. The remedies for most of these causes are the same across builders, and we list
+                        on the route. The fixes for most of these are the same on any builder, and we list
                         them in{" "}
                         <Link href="/blog/how-to-speed-up-your-website" className={sourceLinkClass}>how to speed up a website</Link>.
                     </BlogText>
@@ -465,7 +465,7 @@ export default function HighLevelSpeedGuide() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">What you control</td><td data-label="Keep optimizing" className="p-4">Media, fonts, layout depth, embeds, third-party scripts, HighLevel&apos;s own optimization toggles</td><td data-label="Hybrid" className="p-4">Rendering, caching, delivery, bundle size, and everything in the left column</td></tr>
                                 <tr><td className="p-4 font-bold">What stays fixed</td><td data-label="Keep optimizing" className="p-4">How the page is rendered and delivered</td><td data-label="Hybrid" className="p-4">Contacts, workflows, calendars, pipelines stay in HighLevel</td></tr>
-                                <tr><td className="p-4 font-bold">Effort</td><td data-label="Keep optimizing" className="p-4">Hours, repeatable in-house, no integration work</td><td data-label="Hybrid" className="p-4">A scoped build plus an integration and testing layer</td></tr>
+                                <tr><td className="p-4 font-bold">Effort</td><td data-label="Keep optimizing" className="p-4">Hours, repeatable in-house, no integration work</td><td data-label="Hybrid" className="p-4">A custom build from $1,500, plus connecting it to HighLevel and testing it</td></tr>
                                 <tr><td className="p-4 font-bold">Ongoing ownership</td><td data-label="Keep optimizing" className="p-4">None added</td><td data-label="Hybrid" className="p-4">Integration monitoring, vendor-change ownership, a tested recovery plan</td></tr>
                                 <tr><td className="p-4 font-bold">Right call when</td><td data-label="Keep optimizing" className="p-4">Your own content and embeds are the measured cause, or search is not an acquisition channel</td><td data-label="Hybrid" className="p-4">The realistic fixes are done, requirements are still missed, and the residual causes are architectural</td></tr>
                             </tbody>
@@ -510,14 +510,14 @@ export default function HighLevelSpeedGuide() {
                             "Carry across every URL you agreed to keep, with its metadata, canonical, content, internal links, media and structured data.",
                             "Create and test page-level redirects for every approved URL change.",
                             "Test it properly: contact fields, how duplicates are handled, the workflows, calendars, consent, analytics, what happens on an error, whether it retries, and who gets notified.",
-                            "Run the agreed representative pages on mobile and desktop and preserve reports and release versions.",
+                            "Test the agreed pages on phone and desktop, and keep the reports so you can compare them later.",
                             "Keep DNS, redirect and deployment rollback steps with named owners.",
                         ]}
                     />
                     <BlogText>
-                        PandaCodeGen&apos;s 90+ Lighthouse <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> applies only when signed terms identify the
-                        representative pages, profiles, environment, three-run method, exclusions and remedy. It does
-                        not promise rankings, traffic, leads, citations, advertising performance or revenue. For how a
+                        PandaCodeGen builds score 90 or better on <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Google PageSpeed</Link> on phone and desktop, on the
+                        pages named in your quote, tested three times. That is a test-bench score. It does
+                        not promise rankings, traffic, leads, citations, ad performance or revenue. For how a
                         move like this is scoped and budgeted, see the{" "}
                         <Link href="/blog/website-migration-cost-2026" className={sourceLinkClass}>website migration cost guide</Link>{" "}
                         and our <Link href="/pricing" className={sourceLinkClass}>published planning tiers</Link>. The redirect and

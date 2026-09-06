@@ -173,8 +173,8 @@ export default function SquarespaceMigrationCostPage() {
                             items={[
                                 "Starter from $1,500 for a small, well-defined presentation-site scope.",
                                 "Growth from $3,500 for a broader marketing site with agreed CMS and integration needs.",
-                                "Scale from $5,000 to $10,000 for larger, commerce, multi-system or complex migration scope, with anything beyond that scoped separately.",
-                                "The accepted statement of work controls the final price, deliverables and exclusions.",
+                                "Scale from $5,000 to $10,000 for bigger sites, shops or anything connecting several systems. Above that is priced on its own.",
+                                "Your written quote sets the final price, what you get, and what is not included.",
                             ]}
                         />
                     </section>
@@ -279,7 +279,7 @@ export default function SquarespaceMigrationCostPage() {
                             "Stay when organic search is not how the business wins work, because search continuity risk then buys you nothing.",
                             "Stay when whoever edits the site values the visual editor more than the control a custom stack offers.",
                             "Move when unmet requirements, portability, integration needs or cumulative platform cost justify both the transition and the ongoing responsibility it creates.",
-                            "Move when the constraint you have hit is architectural rather than a configuration problem, confirmed by measurement instead of assumption.",
+                            "Move when the thing blocking you is built into the platform rather than a setting you can change, and when you have measured it rather than assumed it.",
                         ]}
                     />
 
@@ -347,14 +347,14 @@ export default function SquarespaceMigrationCostPage() {
 
                     <BlogHeader>8. Define PandaCodeGen commercial terms correctly</BlogHeader>
                     <BlogText>
-                        The signed scope controls all of this; what follows is the starting position, not the contract. A 30/70 split is a common option rather than the only schedule, refunds attach to failure to deliver signed scope rather than to a change of preference, and support days apply only where the accepted terms record them. Anything not written down is not included.
+                        Your written quote controls all of this. What follows is the starting position, not the contract. Paying 30% up front and 70% on delivery is the usual split rather than the only one, refunds attach to failure to deliver signed scope rather than to a change of preference, and support days apply only where the accepted terms record them. Anything not written down is not included.
                     </BlogText>
                     <BlogList
                         items={[
                             "A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed.",
                             "A refund applies according to the accepted contract when PandaCodeGen fails to deliver the signed scope, not merely because preferences change.",
                             "Refund timing is contract-specific; PandaCodeGen normally initiates an approved refund promptly and publishes an outside expectation of 10 to 12 business days for bank processing.",
-                            "Where the accepted terms include it, Starter carries 15 business days of post-launch defect support and Growth and Scale carry 30.",
+                            "Where your quote includes it, Starter comes with 15 working days of fixes after launch, and Growth and Scale come with 30.",
                             "Minor accepted fixes can be included; new or expanded scope follows written change control and agreed pricing.",
                         ]}
                     />

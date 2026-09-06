@@ -195,7 +195,7 @@ export default function WhyWeChooseNextJsPage() {
                         <Link href="/blog/wordpress-vs-nextjs" className="text-cognac hover:underline">WordPress compared with Next.js</Link>.
                     </BlogText>
 
-                    <BlogHeader id="performance">Performance is implementation-specific</BlogHeader>
+                    <BlogHeader id="performance">Speed depends on the build, not the platform name</BlogHeader>
                     <BlogText>
                         Next.js supports server and client components plus multiple caching and revalidation patterns.
                         Those tools can help an experienced team send less work and control data freshness. They can
@@ -211,9 +211,8 @@ export default function WhyWeChooseNextJsPage() {
                         We do not publish a <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> score range for either platform. A score belongs to a specific
                         page, build, hosting setup and test condition rather than to the platform name, so a range
                         quoted without that context tells you nothing about what your own site would score. Test your
-                        representative routes yourself and compare them against themselves over time. Our 90+ Lighthouse
-                        handover target on mobile and desktop applies to the representative pages named in the written
-                        scope, verified across three recorded runs.
+                        representative routes yourself and compare them against themselves over time. Every page named in your quote scores 90 or better on Google
+                        PageSpeed on phone and desktop, tested three times before we hand it over.
                     </InsightBox>
 
                     <BlogQuote>
@@ -322,7 +321,7 @@ export default function WhyWeChooseNextJsPage() {
                             "The design system and rendered output need deliberate engineering control.",
                             "Integrations or application behavior exceed the current theme and extension model.",
                             "A separate structured content workflow fits the editors and governance.",
-                            "Measured performance or reliability constraints remain after realistic repairs.",
+                            "The site is still slow or still breaking after you have genuinely tried to fix it.",
                             "The client can own the target providers, maintenance, security and release process.",
                         ]}
                     />

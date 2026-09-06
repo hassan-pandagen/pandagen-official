@@ -218,7 +218,7 @@ export default function WebsiteMigrationCostPage() {
                         We do not publish a market median or a cross-agency price range for these migrations. Ranges
                         like that mix unlike project types, scopes, regions and levels of finish, so a figure stated
                         without a defined sample and scope definition is not something a buyer can plan against. The
-                        only prices we stand behind are our own, and the scope written into the accepted terms sets the
+                        only prices we stand behind are our own, and your written quote sets the
                         final one.
                     </InsightBox>
 
@@ -227,7 +227,7 @@ export default function WebsiteMigrationCostPage() {
                         content volume, custom functionality and integrations rather than by which platform you are
                         leaving, so the same source platform can land in any of the three. The price is fixed for the scope
                         written into the accepted project terms, and every build carries a 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> handover target
-                        on mobile and desktop for the agreed representative pages, verified across three recorded runs.
+                        on phone and desktop for the pages named in your quote, tested three times.
                         Current tiers are always on the{" "}
                         <Link href="/pricing" className="text-cognac hover:underline font-medium">pricing page</Link>;
                         if this article and that page ever disagree, the pricing page is correct.
@@ -282,7 +282,7 @@ export default function WebsiteMigrationCostPage() {
                             items={[
                                 "The platform pair, not just the destination. WordPress to Next.js and Wix to Next.js are different jobs: WordPress exposes its database and a REST API, so content extraction is scriptable. Wix does not give you the same access, so more content is moved by hand and the same page count costs more.",
                                 "The countable unit, and which one applies. Brochure sites price per page or per template; stores price per product, per variant and per historical order. A 40-page site and a 4,000-product catalogue can carry the same design work and differ by an order of magnitude on data.",
-                                "Whether URLs have to survive. If the site has search traffic worth keeping, someone has to inventory every live URL, map each to its new path and ship 301 redirects, then verify them after cutover. On an established site this is often the single largest line item, and it is the one most commonly missing from a cheap quote.",
+                                "Whether your web addresses have to survive. If the site has search traffic worth keeping, someone has to list every live address, decide where each one goes, forward them, and check them after launch. On an established site this is often the single largest line item, and it is the one most commonly missing from a cheap quote.",
                             ]}
                         />
 
@@ -300,7 +300,7 @@ export default function WebsiteMigrationCostPage() {
                             Before asking anyone for a number, write down three things: the platform you are on and the
                             one you are moving to, your page count or product count, and whether you need existing URLs
                             and rankings preserved. A quote given without those is not a quote. A quote that omits the
-                            redirect mapping is not cheaper than one that includes it, it is just deferring the cost.
+                            the link forwarding is not cheaper than one that includes it. It just moves the cost to later, when it is worse.
                         </InsightBox>
                     </div>
 
@@ -339,7 +339,7 @@ export default function WebsiteMigrationCostPage() {
                         than every URL someone remembers, waiting on content decisions, and the freeze-and-cutover window
                         where data must stop changing. The parts that go faster than expected are usually templates,
                         because a site with forty pages often has six real layouts. Ask any provider for the schedule
-                        broken into inventory, build, content, testing and cutover, with the dependencies named, rather
+                        broken into listing what you have, building, moving content, testing and launching, with what each stage waits on, rather
                         than a single duration. A quote that gives one number for the whole thing has not been planned.
                     </BlogText>
 

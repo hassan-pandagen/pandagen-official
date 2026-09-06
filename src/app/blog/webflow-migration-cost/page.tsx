@@ -248,7 +248,7 @@ export default function WebflowMigrationCostPage() {
                             Search this and you will be told a Webflow migration costs somewhere between a few
                             thousand dollars and the high five figures. That range is real, and it is useless,
                             because it averages four different jobs into one number. A code export dropped onto new
-                            hosting, a like-for-like rebuild, a rebuild with a new content model, and a replatform
+                            hosting, rebuilding the same thing, rebuilding with a new content structure, and moving platform
                             that also changes what the site does are not variations in size. They are different
                             projects, and only the last two are affected much by page count at all.
                         </BlogText>
@@ -433,12 +433,12 @@ export default function WebflowMigrationCostPage() {
                             "Discovery, inventory, dependency map and accepted target architecture.",
                             "Page, component, CMS, content, asset and integration migration.",
                             "Functional states including errors, validation, empty states and permissions.",
-                            "Responsive implementation for agreed devices and browsers.",
+                            "Works properly on the phones, tablets and browsers you agreed.",
                             "Accessibility checks against the agreed standard.",
                             "Analytics, consent, tag and conversion-event validation.",
                             "SEO inventory, rendered-output checks, URL mapping, redirects and sitemap.",
                             "Security configuration, credential handling and account ownership.",
-                            "QA evidence, rollback plan, cutover, monitoring, handoff and support.",
+                            "Proof it was tested, a way to undo it, the launch itself, monitoring afterwards, handover and support.",
                         ]}
                     />
 
@@ -448,7 +448,7 @@ export default function WebflowMigrationCostPage() {
 
                     <BlogHeader>What may not be included in a standard quote</BlogHeader>
                     <BlogText>
-                        Ask for exclusions in writing. Common separate workstreams include new brand strategy,
+                        Ask what is not included, in writing. Things usually priced separately include new brand work,
                         photography, video, net-new copy, data cleansing, custom product development, complex
                         integrations, translations, legal or compliance advice, paid vendor plans, email and DNS
                         coordination, and ongoing growth work. An exclusion is not a problem when it is visible before signing. The URL mapping and

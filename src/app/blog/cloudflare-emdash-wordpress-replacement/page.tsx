@@ -350,7 +350,7 @@ export default function CloudflareEmDashPage() {
                         </BlogText>
 
                         <BlogText>
-                            EmDash starts with a modern TypeScript and Astro architecture, structured content, serverless deployment options, scoped plugin permissions, and built-in tooling for developers and agents. Its tradeoffs come from being new: beta stability, a younger extension ecosystem, fewer experienced operators, and more responsibility for validating integrations that WordPress users may currently obtain from established plugins.
+                            EmDash starts with a modern TypeScript and Astro build, structured content, serverless hosting, plugins that only get the permissions they ask for, and tooling built in for developers and agents. Its tradeoffs come from being new: beta stability, a younger extension ecosystem, fewer experienced operators, and more responsibility for validating integrations that WordPress users may currently obtain from established plugins.
                         </BlogText>
 
                         <div className="my-10 overflow-hidden rounded-2xl border border-stone-200">
@@ -364,7 +364,7 @@ export default function CloudflareEmDashPage() {
                                 ["Content model", "Flexible, often shaped by themes and plugins", "Structured content with Portable Text and typed collections"],
                                 ["Security", "Requires plugin governance, patching, and host controls", "Capability model with Cloudflare isolate option"],
                                 ["Portability", "Broad hosting support, with plugin and theme dependencies", "Cloudflare and Node.js paths, with deployment-specific differences"],
-                                ["Adoption risk", "Known operational patterns and legacy constraints", "Beta change risk and a smaller support market"],
+                                ["Risk of adopting it", "Well understood, but carrying years of old baggage", "Still in beta, and far fewer people who can help"],
                             ].map(([area, wordpress, emdash]) => (
                                 <div key={area} className="grid grid-cols-1 gap-2 border-t border-stone-200 p-5 text-sm leading-relaxed sm:grid-cols-3 sm:gap-5">
                                     <p className="font-bold text-charcoal">{area}</p>
@@ -387,7 +387,7 @@ export default function CloudflareEmDashPage() {
                         <BlogList
                             items={[
                                 "Build a representative pilot with real content and the hardest integration, not only the homepage template.",
-                                "Review the current beta release, open issues, upgrade notes, and rollback path before setting a launch date.",
+                                "Read the current beta release notes, the open bugs and the upgrade instructions, and know how you would undo it, before you pick a launch date.",
                                 "Threat-model the chosen deployment mode, including plugin permissions, secrets, roles, backups, logs, and recovery.",
                                 "Load-test the real application path and measure field data after launch instead of promising a lab score in advance.",
                                 "Document who owns the domain, repository, Cloudflare or hosting account, database, storage, and third-party services.",
@@ -488,11 +488,11 @@ export default function CloudflareEmDashPage() {
                         <BlogHeader>When to pilot EmDash or consider a custom rebuild</BlogHeader>
 
                         <BlogText>
-                            An EmDash pilot is worth considering when a team wants structured content, TypeScript and Astro alignment, Cloudflare-native deployment, scoped plugin permissions, and a willingness to test beta software. Keep the pilot away from the most sensitive workflow until publishing, recovery, upgrades, and integrations have survived realistic use.
+                            An EmDash trial is worth considering when a team wants structured content, already works in TypeScript and Astro, hosts on Cloudflare, likes that plugins get limited permissions, and is willing to test beta software. Keep the pilot away from the most sensitive workflow until publishing, recovery, upgrades, and integrations have survived realistic use.
                         </BlogText>
 
                         <BlogText>
-                            A custom build may fit when the required workflows do not map cleanly to an off-the-shelf CMS, the organization wants an explicit dependency model, or a revenue-critical experience needs deeper integration than a theme and plugin stack can provide. Custom code is not automatically faster, safer, cheaper, or portable. Those outcomes depend on architecture, implementation, operating controls, contract terms, and continuing maintenance. A responsible{" "}
+                            A custom build may fit when what you need does not map cleanly onto an off-the-shelf CMS, when you want to know exactly what your site depends on, or when a page that makes you money needs deeper integration than a theme and plugin stack can provide. Custom code is not automatically faster, safer, cheaper, or portable. Those outcomes depend on architecture, implementation, operating controls, contract terms, and continuing maintenance. A responsible{" "}
                             <Link href="/blog/wordpress-vs-nextjs" className={internalLinkClass}>
                                 WordPress vs Next.js comparison
                             </Link>{" "}
@@ -515,7 +515,7 @@ export default function CloudflareEmDashPage() {
                                 "Give every old URL a documented outcome: keep it, redirect it to a relevant equivalent, or intentionally return 404 or 410.",
                                 "Preserve important content, titles, descriptions, canonicals, structured data, media references, hreflang, and internal links where appropriate.",
                                 "Validate forms, consent, analytics events, CRM handoffs, search, authentication, accessibility, and representative device journeys in staging.",
-                                "Test redirect status codes and destinations before cutover, remove accidental noindex or crawl blocks, and publish the production sitemap.",
+                                "Test that every forward lands on the right page before launch, remove anything accidentally blocking Google, and publish the sitemap.",
                                 "Record a rollback plan, monitor crawling and indexing after launch, and keep migration redirects for at least the period Google recommends.",
                             ]}
                         />

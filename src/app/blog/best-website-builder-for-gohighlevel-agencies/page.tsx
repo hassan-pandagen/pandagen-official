@@ -226,7 +226,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Landing-page experience can affect campaign outcomes, but there is no universal cost reduction attached to one load-time change. Record field <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> where available, repeat Lighthouse runs under named conditions, and compare ad metrics before and after while noting other campaign changes.
                     </BlogText>
                     <BlogText>
-                        If a 90+ Lighthouse performance target matters, put it in the accepted terms for agreed representative pages, mobile and desktop profiles, and three recorded passing runs per page and profile. Do not assign a score ceiling to a platform without a dated sample of comparable URLs and test conditions.
+                        If a 90-plus speed score matters, get it into your written quote: which pages, on phone and desktop, passing three times each. Ours is written in that way. Anyone who will not name the pages and the profile. Do not assign a score ceiling to a platform without a dated sample of comparable URLs and test conditions.
                     </BlogText>
 
                     <h3 id="native-ghl-api-integration" className="text-xl font-bold text-charcoal mt-6 mb-3">Native GHL API and Webhook Integration</h3>
@@ -247,7 +247,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Google Search can render JavaScript, but Google still recommends server-side or pre-rendering because it helps users and crawlers, and not every bot runs JavaScript. Inspect the actual HTTP response, rendered DOM, status, canonical, internal links, and structured data for representative pages.
                     </BlogText>
                     <BlogText>
-                        Do not infer rendering from a platform name. Platforms change delivery systems, and templates or embeds can change the output. Test a current production example from the exact plan and implementation you intend to use.
+                        Do not assume how a platform builds pages from its name. Platforms change how they work, and a template or an embed can change the result. Test a real live site on the exact plan and implementation you intend to use.
                     </BlogText>
 
                     <h3 id="predictable-cost-per-site" className="text-xl font-bold text-charcoal mt-6 mb-3">Predictable Cost Per Client Site at Scale</h3>
@@ -412,7 +412,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="duda-design" className="text-xl font-bold text-charcoal mt-6 mb-3">Design System and CMS Flexibility</h3>
                     <BlogText>
-                        Compare the required design system, dynamic content, localization, widgets, permissions, and client editing in a prototype. AWS and CloudFront describe infrastructure, not a guaranteed PageSpeed range; test the published implementation.
+                        Build a small prototype and compare the design, the dynamic content, the languages, the widgets, who can edit what, and how it feels for your client to use. AWS and CloudFront describe infrastructure, not a guaranteed PageSpeed range; test the published implementation.
                     </BlogText>
 
                     <h3 id="duda-pricing" className="text-xl font-bold text-charcoal mt-6 mb-3">Pricing and Reseller Margin</h3>

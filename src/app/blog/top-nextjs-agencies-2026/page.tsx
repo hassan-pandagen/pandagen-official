@@ -190,7 +190,7 @@ const agencies = [
     {
         name: "PandaCodeGen",
         publicEvidence: "SEO-safe platform migrations and custom Next.js delivery",
-        likelyFit: "Scoped migrations and builds using published starting tiers",
+        likelyFit: "Migrations and builds at published fixed prices from $1,500",
         verify: "Signed scope, first-party references, acceptance terms and support",
         url: "https://www.pandacodegen.com/services",
     },
@@ -376,7 +376,7 @@ export default function TopNextjsAgenciesPage() {
                             "Client content remains the client's, while custom-deliverable transfer follows full payment and the contract.",
                             "PandaCodeGen retains reusable tools and pre-existing code; third-party licenses continue to apply.",
                             "The client can control domain, repository, hosting and business accounts when that operating model is agreed.",
-                            "A 90+ target requires representative pages, mobile and desktop profiles, three consecutive tests and a written remedy.",
+                            "A 90-plus promise should name which pages, on phone and desktop, tested three times, and say what happens if it is missed.",
                         ]}
                     />
                     <BlogText>
@@ -448,7 +448,7 @@ export default function TopNextjsAgenciesPage() {
                         a different quality level: enterprise staff augmentation, general software consultancies where
                         Next.js is one stack among many, and design-led studios that deliver frontend work in several
                         frameworks. Those firms may well be the better answer for the right project. They are simply not
-                        comparable on a like-for-like basis with a scoped Next.js build, which is what this page is for.
+                        comparable with a fixed-price Next.js build covering the same work, which is what this page is for.
                     </BlogText>
                     <BlogText>
                         Related shortlists cover adjacent categories: our{" "}
@@ -468,7 +468,7 @@ export default function TopNextjsAgenciesPage() {
                     <BlogList
                         items={[
                             "Published fixed tiers give you a budget figure before you speak to anyone, at the cost of scope being defined tightly per tier. Work that does not fit the tier becomes a separately priced addition.",
-                            "Inquiry-based quoting lets the provider tune scope to your budget and constraints, but you cannot compare on price until you have invested time in calls with each of them.",
+                            "Quote-on-request lets a provider fit the work to your budget, but you cannot compare prices until you have sat through a call with every one of them.",
                             "Neither model is better. They fail differently: published tiers can under-scope an unusual project, and bespoke quoting can produce numbers you cannot compare because each provider scoped something different.",
                         ]}
                     />

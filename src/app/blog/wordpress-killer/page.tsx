@@ -167,7 +167,7 @@ export default function WordPressCostPage() {
                                 "Use paid invoices, contracts, time records, incidents and approved roadmap work as the base case.",
                                 "Compare maintain, optimize and migrate using the same features, traffic, service level and time period.",
                                 "Do not count hypothetical traffic or revenue as savings unless first-party evidence and an attribution method support it.",
-                                "A custom site still has hosting, dependencies, providers, maintenance and support responsibility.",
+                                "A custom site still has hosting to pay for, packages to update, and someone who has to look after it.",
                             ]}
                         />
                     </section>
@@ -314,7 +314,7 @@ export default function WordPressCostPage() {
 
                     <BlogHeader id="optimize">Scenario B: optimize or rebuild within WordPress</BlogHeader>
                     <BlogText>
-                        Separate content and feature value from implementation debt. A new theme, template system,
+                        Separate what your content and features are worth from what the old build is costing you. A new theme, template system,
                         hosting configuration, database repair or extension consolidation may solve measured problems
                         without changing the content and commerce platform. Include migration within WordPress, staging,
                         QA, launch and retraining in the comparison. Page-builder debt is a common part of that
@@ -404,7 +404,7 @@ export default function WordPressCostPage() {
                     <BlogHeader id="migration-fit">When migration may be worth pricing</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Migration is worth pricing once repair has been attempted and the constraint survived it, not because the recurring bill looks high. Five conditions apply, and the last is the one that gets skipped: the risks around data, search traffic, ownership, sign-off and switchover need a budget line of their own before anybody quotes the build.
+                            Get a migration priced once you have tried to fix the site and the problem is still there, not because the monthly bill looks high. Five things have to be true, and the last one always gets skipped: moving your data, protecting your search traffic, sorting out who owns what, getting sign-off and switching over all cost money, and they need their own line in the budget before anyone quotes the build.
                         </BlogText>
                     </div>
                     <BlogList
@@ -412,7 +412,7 @@ export default function WordPressCostPage() {
                             "Core workflows or data models repeatedly conflict with the current stack.",
                             "Required controls cannot be reached through a reasonable repair plan.",
                             "Direct recurring and operating costs are verified and materially reducible.",
-                            "The target capability and lifecycle model is fully scoped.",
+                            "You know exactly what the new site has to do, and who keeps it running afterwards.",
                             "You have budgeted for the risks: the data, your search traffic, ownership, sign-off, the switchover and support.",
                         ]}
                     />

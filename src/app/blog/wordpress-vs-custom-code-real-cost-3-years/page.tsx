@@ -223,7 +223,7 @@ export default function WordPressVsCustomCostPage() {
                     />
                     <BlogText>
                         If custom scope omits a capability currently supplied by a WordPress plugin, the lower price is
-                        not a like-for-like result. If WordPress includes features the business no longer needs, remove
+                        not the same thing compared fairly. If WordPress includes features the business no longer needs, remove
                         them from both scenarios.
                     </BlogText>
 
@@ -520,8 +520,8 @@ export default function WordPressVsCustomCostPage() {
                     <BlogText>
                         PandaCodeGen planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale,
                         with custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent
-                        on delivery. Use the accepted statement of work as the quote input and compare it with a
-                        like-for-like WordPress option. These starting tiers do not prove three-year savings. The tier
+                        on delivery. Use your written quote as the input and compare it with an equivalent
+                        WordPress option covering the same work. These starting tiers do not prove three-year savings. The tier
                         detail sits on our{" "}
                         <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>, and{" "}
                         <Link href="/work" className="text-cognac hover:underline">our project work</Link>{" "}

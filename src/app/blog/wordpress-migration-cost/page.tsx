@@ -177,8 +177,8 @@ export default function WordPressMigrationCostPage() {
                                 "Starter begins at $1,500 for a small, bounded migration.",
                                 "Growth begins at $3,500 for broader content, templates, CMS or integration work.",
                                 "Scale normally falls between $5,000 and $10,000 for larger or more operationally sensitive scope.",
-                                "Complex commerce, applications, regulated data and unusual integrations are scoped separately.",
-                                "The signed statement of work, not this article, sets the final price, deliverables, acceptance and remedy.",
+                                "Bigger stores, apps, regulated data and unusual integrations are priced on their own.",
+                                "Your written quote, not this article, sets the final price, what you get, what counts as done, and what happens if it is not.",
                             ]}
                         />
                     </section>
@@ -347,12 +347,12 @@ export default function WordPressMigrationCostPage() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Redirect mapping for every existing URL, including paginated archives, tag and category routes, media attachment pages and campaign destinations. A homepage redirect is not a redirect map.",
+                            "Every existing web address forwarded to its new page, including archive pages, tag and category pages, image pages and campaign links. Pointing everything at the homepage is not forwarding, it is losing them.",
                             "Content migration with reconciliation, not just an export. Counts checked, fields mapped, relationships preserved, media re-linked and exceptions reported.",
                             "Page-builder layouts rebuilt as templates. Elementor, Divi, WPBakery and similar store layout as their own markup and shortcodes, so what comes out of a WordPress export is not something a different architecture can render. In every inventory we have run, those pages were rebuilt rather than transferred, and someone has to price that.",
                             "Form handling end to end: submission, validation, spam protection, notification delivery, storage and whatever CRM or email tool currently receives the data.",
                             "The editorial experience after launch. Which CMS, which fields, who can publish, how preview and scheduling work. A site nobody can update is a problem you discover in week three.",
-                            "Analytics and consent continuity, so historical data stays comparable and tracking does not silently break at cutover.",
+                            "Your analytics and cookie consent keep working, so your history still lines up and nothing quietly stops tracking on launch day.",
                             "Accessibility work, if it matters to you. Retrofitting it after the templates are built costs more than designing to it.",
                             "Launch, monitoring and rollback. DNS, verification, a named decision-maker and a documented way back if something is wrong.",
                         ]}

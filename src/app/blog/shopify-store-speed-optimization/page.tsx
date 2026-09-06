@@ -434,7 +434,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Theme Optimization, Theme Refresh, or Headless Shopify?</BlogHeader>
 
                             <BlogText>
-                                A Liquid theme does not have one universal PageSpeed ceiling. Results depend on the template, theme implementation, apps, media, third-party code, traffic mix, and test conditions. A headless storefront is also not automatically fast. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce actually means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
+                                A Liquid theme does not have one universal PageSpeed ceiling. Results depend on the template, how the theme was built, your apps, your images, outside scripts, who is visiting and how you test. A headless storefront is also not automatically fast. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce actually means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
                             </BlogText>
 
                             <BlogText>
@@ -495,7 +495,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogText>
-                                Costs and outcomes also depend on scope. An image cleanup, app audit, theme refactor, theme replacement, and headless build are different engagements. Hosting, observability, search, preview, CMS, and ongoing engineering can change the total cost of a headless storefront. Any score target, acceptance test, support period, price, or refund term should live in the signed scope of work, with the representative URLs, device profile, environment, number of test runs, and exclusions stated clearly. Our <Link href="/pricing" className={sourceLink}>planning tiers</Link> show where each engagement type starts, and the <Link href="/blog/website-rebuild-cost-2026" className={sourceLink}>rebuild scoping guide</Link> covers how a replatform is priced line by line.
+                                Costs and outcomes also depend on scope. Cleaning up images, auditing apps, reworking a theme, replacing a theme and a full custom build are five different jobs at five different prices. Hosting, observability, search, preview, CMS, and ongoing engineering can change the total cost of a headless storefront. Any score target, acceptance test, support period, price, or refund term should live in the signed scope of work, with the representative URLs, device profile, environment, number of test runs, and exclusions stated clearly. Our <Link href="/pricing" className={sourceLink}>planning tiers</Link> show where each engagement type starts, and the <Link href="/blog/website-rebuild-cost-2026" className={sourceLink}>rebuild scoping guide</Link> covers how a replatform is priced line by line.
                             </BlogText>
 
                             <div className="rounded-2xl border border-cognac/30 bg-cognac/5 p-5 md:p-6">
@@ -505,7 +505,7 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <BlogHeader>When to Hire a Shopify Performance Specialist</BlogHeader>
                     <BlogText>
-                        Hire when you need someone accountable for evidence rather than for a score, and judge the candidate on what they agree to produce. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope rather than asserted about websites in general.
+                        Hire someone who will show you the evidence, not just a score, and judge them on what they put in writing. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope rather than asserted about websites in general.
                     </BlogText>
 
                             <BlogList items={[
@@ -514,7 +514,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 "Require functional, analytics, consent, accessibility, and SEO regression checks, not only a new screenshot of a score.",
                                 "Request a rollback plan and a record of the exact theme or storefront version that was tested.",
                                 "If headless is proposed, ask which requirement cannot be solved safely in the theme and who owns the new integrations after launch.",
-                                "Put any acceptance target and commercial remedy in the signed scope rather than relying on a universal website claim.",
+                                "Get the speed number and what happens if it is missed written into your quote, not left as a general claim on a website.",
                             ]} />
 
                             <BlogHeader>Your Shopify Speed Optimization Action Plan</BlogHeader>
@@ -526,7 +526,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <div className="my-10 md:my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Shopify performance planning</p>
                                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Get a plan for the bottleneck you actually have.</h3>
-                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">Share the store, priority templates, required apps, and business constraints. We will scope whether the next step is theme optimization, a controlled theme refresh, or a headless migration plan.</p>
+                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">Send us the store, the pages that matter most, the apps you cannot drop and your budget. We will tell you whether the next step is tuning the theme, replacing it, or a custom build from $1,500, and what each would costion plan.</p>
                                 <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Get your migration plan <ArrowRight className="w-5 h-5" /></CalModalButton>
                             </div>
 

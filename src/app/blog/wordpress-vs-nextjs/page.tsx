@@ -150,7 +150,7 @@ export default function WordPressVsNextJsPage() {
                             assembling and maintaining a custom one. The decision is about operating capability, not
                             about which platform is better. WordPress is an integrated publishing platform. Next.js is
                             an application framework that must be paired with content, hosting and services, so compare
-                            complete implementations rather than the two names.
+                            finished builds rather than the two names.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current WordPress, Next.js and Google documentation on July 24, 2026.
@@ -440,7 +440,7 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogHeader id="cost">Three-year cost comparison</BlogHeader>
                     <BlogText>
-                        Neither platform has a three-year cost until you fill in seven line items from your own invoices and like-for-like quotes. A generous free tier today is not a price you are owed in year three, a WordPress maintenance retainer is not universal, and a custom build still needs somebody to maintain it. Fill the seven rows below with your own figures before you believe any saving or payback period, including ours.
+                        Neither platform has a three-year cost until you fill in seven lines from your own invoices and from quotes covering the same work. A generous free tier today is not a price you are owed in year three, a WordPress maintenance retainer is not universal, and a custom build still needs somebody to maintain it. Fill the seven rows below with your own figures before you believe any saving or payback period, including ours.
                     </BlogText>
                     <BlogList
                         items={[
@@ -454,7 +454,7 @@ export default function WordPressVsNextJsPage() {
                         ]}
                     />
                     <BlogText>
-                        Use current invoices and like-for-like quotes. A free hosting allowance is not a permanent
+                        Use your current invoices and quotes covering the same work. A free hosting allowance is not a permanent
                         commercial-cost promise. A WordPress maintenance retainer is not universal. A custom build does
                         not have zero maintenance. Do not publish savings or payback until the inputs and assumptions are
                         visible and approved. For the line items to collect, work through our{" "}
@@ -490,7 +490,7 @@ export default function WordPressVsNextJsPage() {
                         items={[
                             "Its editor and content model fit the team.",
                             "Maintained plugins provide required capability economically.",
-                            "The current implementation can meet quality requirements after measured repair.",
+                            "The site you have can do the job once it has actually been repaired.",
                             "The organization has a clear update, security, backup and support owner.",
                             "A custom migration would recreate mature functionality without material benefit.",
                         ]}
@@ -520,7 +520,7 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogHeader id="migration">WordPress to Next.js migration controls</BlogHeader>
                     <BlogText>
-                        Seven controls, in this order, are what turn a migration into a managed change rather than a gamble: crawl and classify the URLs, inventory what the site actually contains, choose the target CMS and workflow, keep valuable URLs stable and map the rest, validate the rendered output, test the journeys, then cut over with monitoring and a rollback path. They reduce avoidable technical risk. They do not guarantee ranking continuity, because processing depends on the site and on search systems.
+                        Seven steps, in this order, turn a migration into something managed rather than a gamble: list and sort every web address, write down what the site actually contains, choose the new CMS and workflow, keep valuable URLs stable and map the rest, validate the rendered output, test the journeys, then cut over with monitoring and a rollback path. They reduce avoidable technical risk. They do not guarantee ranking continuity, because processing depends on the site and on search systems.
                     </BlogText>
                     <BlogList
                         items={[
