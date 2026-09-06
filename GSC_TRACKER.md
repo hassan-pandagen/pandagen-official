@@ -1398,6 +1398,57 @@ Choosing a control after seeing the treatment outcomes is the thing that makes a
 result worthless, so this has to be settled on the stated grounds, not the
 convenient one.
 
+### VERDICT, 6 SEPTEMBER 2026: no evidence the heading changes helped
+
+Recorded on the read date rather than after it. The treatments shipped 19 Aug and
+the 4 Sep export is 16 days later, which the recrawl research says is enough for a
+content change to be reflected, so the window is legitimate.
+
+**The data is clean even though the experiment is not.** The 4 September export
+was captured two days before the plain-language pass rewrote these pages, so
+nothing in the table below is contaminated by that edit. What is broken is the
+control, not the measurement.
+
+| Page | 25 Aug | 4 Sep | Change |
+|---|---|---|---|
+| Site total | 141,968 | 149,990 | **+5.6%** |
+| `webflow-migration-cost` (treatment) | 1,147 | 602 | **-47.5%** |
+| `wix-too-slow` (treatment) | 56 | 41 | **-26.8%** |
+| `saas-price-increases-2026-tracker` (treatment) | 403 | 365 | **-9.4%** |
+| `wordpress-killer` (control) | absent | absent | no data |
+
+Clicks across all three treatments moved by one, from 1 to 2 combined.
+
+**All three treatments fell while the site rose 5.6%.** The direction is
+consistent across every treated page, and none of them beat the trend they had to
+beat. Whatever the heading changes did, they did not produce the lift the
+experiment was run to find.
+
+### What this verdict is not
+
+It is not proof the heading changes caused the decline, and it must never be
+written up that way. Three things block that:
+
+1. **No control.** `wordpress-killer` never produced data, so there is no
+   counterfactual. Pages decline for reasons unrelated to anything we did.
+2. **The spam update.** The August 2026 spam update began rolling 18 Aug and the
+   treatments shipped 19 Aug. The intervention and the update are one day apart
+   and cannot be separated.
+3. **Rolling windows.** These are 3-month windows 10 days apart, so roughly 82 of
+   92 days overlap. A 47.5% drop partly reflects strong days ageing off the back
+   of the window rather than weak days arriving at the front.
+
+**The defensible statement, and the only one to use:** across 19 Aug to 4 Sep,
+all three Experiment 1 treatment pages lost impressions while the site gained
+5.6%, with no control and a concurrent Google spam update, so no causal claim can
+be made in either direction.
+
+**What follows from it.** Do not extend the heading-change approach on the
+strength of this, and do not report it as a failure of headings either. The one
+usable conclusion is procedural: Experiment 1 was designed with a control that had
+no traffic, and that error cost the entire result. Every future cohort control must
+be checked for existing impressions before the experiment starts, not after.
+
 ### RESOLVED 6 SEPTEMBER 2026: Experiment 1 is unreadable. Closed.
 
 The decision above is settled, and not by choice. On 6 Sep the plain-language
