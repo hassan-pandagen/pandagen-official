@@ -1516,6 +1516,64 @@ was missed in an earlier count. All six draw AI impressions.
 
 ---
 
+## READ SCHEDULE: AI AND GOOGLE RUN ON DIFFERENT CLOCKS
+
+Added 6 September 2026, after researching how long each signal actually takes.
+The plain-language pass is being read on two separate clocks because the two
+systems refresh at completely different speeds. Reading them together is how a
+noisy Google number gets mistaken for a result.
+
+### What the research says
+
+**AI citations move in days.** Perplexity retrieves live on every query, with a
+typical 12 to 24 hour lag from publication, so new content can surface within
+hours. GPTBot crawls roughly 8x more often than Googlebot in the first days after
+a change; high-authority domains see it every 24 to 48 hours, lower-authority
+sites every 7 to 14 days.
+
+**Google moves in weeks to months.** Recrawl is days to weeks. Content and
+algorithm changes take 1 to 3 weeks to settle. Site moves fluctuate through weeks
+3 to 8 and do not stabilise for 3 to 6 months. Google's own guidance is to wait at
+least a full week after a rollout completes before comparing periods.
+
+**This site crawls slowly.** `/services/webflow` went unfetched from 7 July to at
+least 4 September. Assume the slow end of every Google range above.
+
+### The two reads
+
+**Read 1, AI only, 16 to 20 September 2026.** Pull the Generative AI export and
+hand-check a small fixed set of prompts in ChatGPT and Perplexity. By then the AI
+side has genuinely had time to move.
+
+**Do not look at Google rankings or clicks in Read 1.** Ten to fourteen days is
+inside the window where Google is still recrawling, and any number there is noise.
+Writing it down would create an anchor the 6 October read then argues against.
+
+**Read 2, Google and everything else, 6 October 2026 as pre-registered.** Thirty
+days is the right window for indexing and the minimum credible one for ranking
+movement. The pass and fail criteria are unchanged and are stated in the section
+below.
+
+### The decay finding, which changes operations rather than the read
+
+Two independent sources report AI citation visibility decaying after roughly 30
+days without a content refresh. ZipTie found 76.4% of ChatGPT's top-cited pages
+had been updated within the previous 30 days. Metricus reports visibility dropping
+sharply past that window.
+
+If Read 1 or Read 2 shows the AI channel working, the pages carrying it need a
+refresh cycle to hold the position. That is an ongoing cost, not a one-time fix,
+and it should be priced into any decision to extend this work to the remaining
+~50 blogs.
+
+### What is NOT in this push
+
+The draft blog `is-it-cheaper-to-build-your-own-website.md` passed its five-skill
+gate on 6 Sep but is still markdown and unconverted. It is not part of this
+change set and must not be counted in either read.
+
+---
+
 ## PLAIN-LANGUAGE PASS, PRE-REGISTERED 6 SEPTEMBER 2026
 
 Written before the data, on purpose. 207 passages were rewritten out of contract
