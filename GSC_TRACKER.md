@@ -2059,3 +2059,43 @@ against building anything else like the Vercel post.
 - Limits: the Queries export is the top 1,000 rows only (47,327 of 149,990
   impressions); the Generative AI export covers Google surfaces only, not
   ChatGPT or Perplexity; page types were assigned by slug by hand.
+
+### Addendum, 8 September 2026: a second fan-out instance, on an untouched control page
+
+GSC flagged `/blog/what-is-headless-commerce` as "more impressions than usual"
+(+936%). The page has not been edited since 19 August and is in the untouched
+control group for the 6 October read. Week-on-week queries (22 to 28 Aug against
+29 Aug to 4 Sep), from Hassan's GSC view on 8 September:
+
+| query | 22-28 Aug | 29 Aug-4 Sep | clicks |
+|---|---|---|---|
+| headless commerce | 0 | 331 | 0 |
+| what is headless commerce | 0 | 100 | 0 |
+| headless commerce development | 0 | 29 | 0 |
+| headless commerce definition | 0 | 25 | 0 |
+| how headless commerce works | 0 | 17 | 0 |
+| headless commerce meaning | 0 | 16 | 0 |
+| headless commerce updates / guide / explained / wiki / gartner | 0 | 1 to 10 each | 0 |
+| "what's involved in securing a headless commerce checkout flow?" | 0 | 3 | 0 |
+| "is headless commerce worth the investment for a mid-sized brand?" | 0 | 1 | 0 |
+| vad är headless commerce (Swedish) | 0 | 1 | 0 |
+
+Meanwhile the buyer-shaped queries the page previously drew went the other way:
+"easiest headless commerce setup for non-technical store owners" 4 to 0, "how much
+does headless cost" 2 to 0, "how much is headless" 2 to 0.
+
+Reading: a definition-verification burst. Bare term, "definition", "meaning",
+"wiki", "gartner", "explained", and fully formed natural-language questions are
+the sub-queries a retrieval system issues when it is grounding an answer about a
+concept, and they arrived together, from zero, with zero clicks. This is the same
+mechanism as the Vercel post (section "VERCEL CONCENTRATION ANALYSIS"), on a
+page nobody touched, which rules out our own edits as the cause. The Vercel post
+was flagged "fewer impressions than usual" (-65%) in the same GSC view, which is
+the decay of its own cluster, predicted in that section.
+
+Decisions: do not edit the page; it stays a control. When the 6 October read is
+pulled, exclude the 29 Aug to 4 Sep headless burst from the control group's
+impression baseline, or the control will look like it gained on its own. Report
+the human baseline by the no-tell query set as before. Two instances now; if a
+third appears on another definition page, the "explainer" page type in the
+page-type table should be re-cut with tells removed.
