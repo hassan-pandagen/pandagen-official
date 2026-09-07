@@ -98,6 +98,7 @@
 | May 15, 2026 | 80 | 12 | — |
 | May 31, 2026 | ~80 (62 in current build) | — | — (40.9K impressions, 71 clicks 3-mo) |
 | Aug 28, 2026 | **122** (sitemap-filtered) | **17** | — (129 indexed / 231 not indexed across ALL known URLs) |
+| Sep 4, 2026 (read Sep 8) | **132** (sitemap, 142 URLs) | **10** | — (134 indexed / 226 not indexed across ALL known URLs) |
 
 > **Aug 28 indexing breakdown:** 122 indexed of 139 in the sitemap (88%), up +42
 > from the 80 logged on May 15. The 17 not indexed split 14 "Crawled - currently
@@ -107,6 +108,20 @@
 > URLs rather than real pages. The 14 crawled-not-indexed with failed validation
 > is the only actionable group and repeats the May pattern: Google looked and
 > declined.
+
+> **Sep 4 snapshot, read 8 Sep 2026, BY NAME this time.** Not indexed 10 of 142.
+> 7 "Crawled - currently not indexed", with Google's last crawl date, all before
+> the 6 Sep rewrite: wix-vs-custom-website (7 Jul), why-competitor-outranks-you
+> (3 Jun), shopify-conversion-rate-speed-fix (1 Jun), cheap-web-developer (24 May),
+> for-agencies-offer-custom-web-development (19 May), shopify-plus-still-slow
+> (13 May), wordpress-vs-custom-code-real-cost-3-years (13 Apr). Six of the seven
+> were rewritten 6 Sep; for-agencies was not. 3 "Discovered - currently not
+> indexed", never fetched: /de, /fr/pricing, /services/webflow. Against the 28 Aug
+> count of 14 crawled-not-indexed, seven recovered; the 28 Aug list was never
+> written down, so only the named ones can be confirmed: how-website-speed-affects-seo
+> and wordpress-plugins-destroy-speed (both named in the 31 Aug diagnosis, both
+> absent from today's seven) and /work/enterprise-ops (noted 4 Sep). Rule from
+> here: every indexing snapshot records the not-indexed URLs by name.
 
 > **Aug 31 diagnosis of the 14 "Crawled - currently not indexed":** it is a
 > recrawl problem, not a content problem. All 13 blog posts in the group carry
