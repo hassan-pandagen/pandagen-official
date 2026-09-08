@@ -210,6 +210,30 @@ export default function AEOPlaybookPage() {
                         ]} />
                     </div>
 
+                    <BlogText>
+                        These are marketers and developers on Reddit this month, describing the problem in their own words. All four comments come from one <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">r/aeo thread</a>.
+                    </BlogText>
+
+                    <BlogQuote>
+                        I&apos;m a marketer in a SaaS company and all I get asked about is showing up in AI answers. Honestly I have no idea what I&apos;m actually doing here. Like, honestly all I am doing at the moment is researching on Reddit and YouTube and I feel like there&apos;s so much conflicting advice. I&apos;ve tried to use Semrush&apos;s tool because I&apos;m already paying for it (I use it for SEO) but from what I understand it doesn&apos;t show you whether you appear inside AI answers. So yeah, I feel kind of screwed and very stressed.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/EnvironmentalDot9131, r/aeo, 6 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        One thing that tripped me up early is that I kept checking if our brand name showed up in ChatGPT and felt good when it did. Total waste of signal. Of course it knows your name when you say it, that&apos;s easy mode.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/flowerfields777, r/aeo, 6 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        Ranking tools tell you where you sit in search results, they don&apos;t sample what a model actually says when someone asks it something.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Jason_StickyFrog, r/aeo, 6 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        do remember that AI just lift the paragraph not the whole page, so write content accordingly.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Fit_Path_6450, r/aeo, 7 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     {/* Section 1: The Loss + Opportunity */}
                     <BlogHeader id="are-you-losing">Where to Start if You Are Behind on Both</BlogHeader>
                     <BlogText>

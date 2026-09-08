@@ -2230,3 +2230,21 @@ Also established: `get_ai_search_results` through the Percuity connection return
 Google AI Mode answers by API from a US location, with citations. That replaces
 the Playwright capture for the prompt set and for prospect research, and removes
 the "prove your humanity" failure mode.
+
+**Fresh quotes added to two AEO pages, 8 September 2026.** Nine verbatim comments
+from an r/aeo thread dated 6 to 8 September: four on
+`aeo-playbook-built-into-every-website`, five on `ai-search-visibility-tracking`.
+Selection and the reasons for every exclusion are in
+`QUOTES_SELECTED_AEO_2026-09-08.md`. Placement verified on the rendered pages:
+first quote at word 520 and 516 from the H1, the owned facts still at word 78 and
+52, no body H2 above them.
+
+Both pages were in the 6 September plain-language pass, so **Read 1 on 16 to 20
+September can no longer attribute AEO-cluster movement to the rewrite alone.**
+Report it as "the AEO cluster moved or did not", not as a plain-language result.
+Decision taken knowingly; the alternative was holding finished work for twelve
+days while its source thread aged.
+
+Attribution links are thread-level with handle and date, not comment-level
+permalinks. That is verifiable (open the thread, find the handle) but weaker.
+Upgrade to comment permalinks when convenient.
