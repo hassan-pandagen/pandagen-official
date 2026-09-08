@@ -25,7 +25,7 @@ const pricingSchema = {
       "@id": "https://www.pandacodegen.com/pricing#webpage",
       "url": "https://www.pandacodegen.com/pricing",
       "name": "Website Migration Pricing & Scope | PandaCodeGen",
-      "description": "Website migration packages starting at $1,500, $3,500, and $5,000–$10,000, adjusted through a written project scope.",
+      "description": "Website migration packages starting at $1,500, $3,500, and $5,000, adjusted through a written project scope.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "inLanguage": "en-US"
     },
@@ -70,7 +70,7 @@ export default function PricingPageClient() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-700 max-w-2xl mx-auto mb-6"
           >
-            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a 5 to 7 page site. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing. You own the code, the design files and the accounts at the end.
+            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a site of up to 7 pages. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing. You own the code, the design files and the accounts at the end.
           </motion.p>
 
           <button
@@ -147,7 +147,7 @@ export default function PricingPageClient() {
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Starter</h3>
-              <p className="text-sm text-stone-600 mt-1">Small business sites, 5 to 7 pages.</p>
+              <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
@@ -161,7 +161,7 @@ export default function PricingPageClient() {
             </div>
 
             <ul className="space-y-3 mb-8 grow">
-              <Feature text="5 to 7 custom pages, with the exact templates and content responsibilities listed in scope" />
+              <Feature text="Up to 7 custom pages, with the exact templates and content responsibilities listed in scope" />
               <Feature text="A Next.js deployment, with the code, the environments and who does what at handover all written down" />
               <Feature text="90+ Lighthouse performance target on both mobile and desktop for the agreed representative pages" />
               <Feature text="Three recorded pre-handover runs per agreed page/profile; every run must meet the target" />
@@ -196,7 +196,7 @@ export default function PricingPageClient() {
 
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-2xl font-serif italic text-white">Growth</h3>
-              <p className="text-stone-400 mt-1">10 to 20 pages, CMS, full migration.</p>
+              <p className="text-stone-400 mt-1">8 to 20 pages, CMS, full migration.</p>
             </div>
 
             <div className="mb-6 pb-6 border-b border-white/10 min-h-[140px] flex flex-col justify-start">
@@ -210,7 +210,7 @@ export default function PricingPageClient() {
             </div>
 
             <ul className="space-y-3 mb-6 grow">
-              <Feature dark text="10 to 20 Page Custom Site (full marketing site with service pages, case studies, and resources)" />
+              <Feature dark text="8 to 20 Page Custom Site (full marketing site with service pages, case studies, and resources)" />
               <Feature dark text="Sanity CMS Integration (your team updates content without touching code)" />
               <Feature dark text="Blog migration with every URL listed, a redirect map, metadata carried across, and monitoring after launch" />
               <Feature dark text="90+ Lighthouse performance target on mobile and desktop, with three passing runs per agreed page/profile" />
@@ -241,22 +241,22 @@ export default function PricingPageClient() {
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Scale</h3>
-              <p className="text-sm text-stone-600 mt-1">Headless e-commerce &amp; 30+ pages.</p>
+              <p className="text-sm text-stone-600 mt-1">More than 20 pages, a shop, or more than one language.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
               <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-4xl font-black text-charcoal">$5,000–$10,000</span>
+                <span className="text-4xl font-black text-charcoal">From $5,000</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
-                <p className="text-sm font-bold text-stone-700">Starting range · exact scope in proposal</p>
+                <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
               </div>
             </div>
 
             <ul className="space-y-4 mb-8 grow">
               <Feature text="Headless E-Commerce (Shopify or WooCommerce backend, Next.js frontend. The speed of custom, the admin of Shopify)" />
-              <Feature text="30+ page or template scope for products, collections, content, and landing pages" />
+              <Feature text="More than 20 pages or templates for products, collections, content, and landing pages" />
               <Feature text="Reviewed integrations such as Klaviyo, HubSpot, Salesforce, Stripe subscriptions, or another documented API" />
               <Feature text="90+ Lighthouse performance target on mobile and desktop, with three passing runs per agreed page/profile" />
               <Feature text="Sanity CMS + Content Ops (content model designed for your editors, not generic templates)" />
@@ -281,23 +281,19 @@ export default function PricingPageClient() {
 
         </div>
 
-        {/* Scale+ Custom Quote Callout */}
+        {/* Beyond the three tiers: quoted after a call, plus the direct route for anyone the ladder does not fit */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-8 md:mt-10 max-w-3xl mx-auto"
+          className="mt-8 md:mt-10 max-w-3xl mx-auto text-center"
         >
-          <div className="p-5 md:p-6 rounded-2xl border border-stone-300 bg-white shadow-xs flex flex-col md:flex-row items-start md:items-center gap-4 md:justify-between">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-charcoal mb-2">Scale+ Custom Engagement</p>
-              <h3 className="text-lg md:text-xl font-bold text-charcoal mb-1">Bigger project? Let&apos;s scope it together.</h3>
-              <p className="text-sm text-stone-600">Enterprise scope, multi-region e-commerce, custom SaaS platforms, complex integrations. We cannot quote without understanding the work. Message us and we will scope it on a call. Curious what this looks like in practice? See our <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">custom engineering service</Link>.</p>
-            </div>
-            <button onClick={() => { trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_scale_plus" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="shrink-0 px-5 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-cognac transition-all">
-                Get your migration plan
-            </button>
-          </div>
+          <p className="text-base text-stone-700 leading-relaxed">
+            Anything bigger is quoted after a call. Enterprise scope, multi-region e-commerce, custom SaaS platforms and complex integrations are scoped together first, because we cannot quote them without understanding the work. See our <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">custom engineering service</Link>.
+          </p>
+          <p className="mt-4 text-base font-semibold text-charcoal leading-relaxed">
+            If none of these match what you have, call <a href="tel:+13027738982" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">+1 (302) 773-8982</a> or email <a href="mailto:info@pandacodegen.com" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">info@pandacodegen.com</a> and we will quote it.
+          </p>
         </motion.div>
 
       </section>

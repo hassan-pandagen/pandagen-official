@@ -2340,3 +2340,49 @@ tests from 11 days ago. Given the widget was invisible at desktop widths, that i
 what we would expect. The funnel has never actually been tested with real
 traffic, so its yield is unknown rather than poor. Commit 61baa50 makes it
 measurable for the first time.
+
+### Addendum, 9 September 2026: one page-count ladder, and two experiment holdouts touched
+
+The 8 September audit found Starter and Growth advertising different deliverables
+at the same price across surfaces. Owner set a single ladder; 19 files now carry
+it identically.
+
+| Tier | From | Pages | What it adds |
+|---|---|---|---|
+| Starter | $1,500 | up to 7 | built and updated by us, no CMS |
+| Growth | $3,500 | 8 to 20 | a CMS you edit yourself, full migration |
+| Scale | $5,000 | more than 20 | or a shop, or more than one language |
+
+Anything bigger is quoted after a call. The fourth tier, Scale+, is retired
+everywhere, including its pricing-page card and its `pricing_scale_plus`
+analytics event.
+
+Three deliberate changes. "Up to 7" replaces "5 to 7", because a five-page floor
+contradicted the no-minimum-project-size fact now carried in the first passage of
+78 pages. Growth starts at 8 and Scale above 20, closing gaps at 8 to 9 pages and
+21 to 29 pages where a buyer belonged to no tier. Every surface also gained one
+line: if none of these match what you have, call or email and we will quote it.
+It appears on 13 surfaces and pulls the number from the shared PHONE constant.
+
+**Defects found while doing it, all pre-existing.** The tier quiz branched on
+page count with boundaries that contradicted the pricing page even before this
+change: "under 10" routed 8 and 9 page sites to a tier that stopped at 7, "10 to
+30" routed 25-page sites to a tier that stopped at 20, and 30 sat in two buckets.
+Its options now touch the pricing cards exactly. The WooCommerce product counts
+overlapped at 30 the same way and now read up to 30, 31 to 150, more than 150.
+The pricing page's own metadata, which is what Google shows in results, still
+advertised the retired $5,000 to $10,000 range in three places. The WordPress
+migration page sold a CMS in Starter, which canon has always placed in Growth.
+
+**Contamination, logged not prevented.** Five blog posts carried old figures and
+all five were corrected, including two intent-experiment HOLDOUTS,
+`website-rebuild-cost-2026` and `wordpress-vs-custom-code-real-cost-3-years`.
+Seven of those eighteen holdouts had already been contaminated by the 8 September
+quote restoration, and a live page quoting a price we no longer offer is a claims
+problem, which outranks a broken experiment. The 8 October read stays confounded.
+
+**Left alone, needs its own pass.** Banned contract language survives in answers
+and process blocks outside the tier definitions: staged cutover, rollback path,
+redirect map, 301, acceptance target, recorded runs, milestones. These sit in the
+ecommerce, WooCommerce and WordPress-migration sets, which the 6 September
+plain-language pass did not cover.

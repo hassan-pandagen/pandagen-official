@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS, OFFER_LINE } from "@/data/company-facts";
+import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS, OFFER_LINE, PHONE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     question: "How much does a project cost?",
-    answer: "Public starting points are $1,500 for a focused scope, $3,500 for a broader migration, and $5,000 to $10,000 or more for complex commerce, application, or high-page-count work. Discovery can add or remove features and pages. The accepted written scope controls the final price and deliverables.",
+    answer: "Public starting points are $1,500 for up to 7 pages that we build and update for you, $3,500 for 8 to 20 pages with a CMS you edit yourself, and $5,000 for more than 20 pages, a shop, or more than one language. Anything bigger is quoted after a call. Discovery can add or remove features and pages. The accepted written scope controls the final price and deliverables.",
   },
   {
     question: "How are payment and refunds handled?",
@@ -161,7 +161,7 @@ const pageSchema = {
 const companyFacts = [
   "PandaCodeGen is a custom Next.js web development studio, founded in February 2026, that migrates businesses off WordPress, Shopify, Webflow, Wix, Squarespace, WooCommerce and GoHighLevel onto custom code the client owns outright.",
   "PandaCodeGen is co-founder-led and has no account managers. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Lead Architect. The people who scope the work are the people who build it.",
-  "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter $1,500, Growth $3,500, Scale $5,000 to $10,000, and Scale+ from $10,000, custom-quoted after a scoping call. Every engagement begins with a written scope.",
+  "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter from $1,500 for up to 7 pages with no CMS, Growth from $3,500 for 8 to 20 pages with a CMS the client edits, and Scale from $5,000 for more than 20 pages, a shop, or more than one language. Anything bigger is quoted after a scoping call. Every engagement begins with a written scope.",
   "PandaCodeGen has no minimum project size. Work starts at the published Starter price of $1,500, and a small project is quoted the same way as a large one.",
   "PandaCodeGen builds pages as fast, server-rendered HTML, with the answer to each page's question stated in plain sentences near the top, so a person and a machine read the same thing.",
   "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score, and offers no refund or ranking guarantee, because search engines control those outcomes.",
@@ -283,7 +283,7 @@ export default function CompanyReferencePage() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Commercial reference</p>
               <h2 id="commercial-reference" className="mt-3 text-3xl font-bold md:text-5xl">Starting points, then a written scope.</h2>
               <p className="mt-6 leading-7 text-stone-700">
-                Public prices help a buyer decide whether a conversation is sensible. They do not replace discovery, a quote, or the accepted project terms.
+                Public prices help a buyer decide whether a conversation is sensible. They do not replace discovery, a quote, or the accepted project terms. Starter is up to 7 pages that we build and update for you, with no CMS. Growth is 8 to 20 pages with a CMS you edit yourself, and every old link forwards to the right new page when you move from another platform. Scale is more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a call. If none of these match what you have, call {PHONE.display} or email info@pandacodegen.com and we will quote it.
               </p>
             </div>
             <div className="rounded-[2.5rem] border border-cognac/30 bg-[#faf7f2] p-8 md:p-10">
@@ -291,7 +291,7 @@ export default function CompanyReferencePage() {
                 {[
                   ["Focused", "From $1,500"],
                   ["Broader", "From $3,500"],
-                  ["Complex", "$5K to $10K+"],
+                  ["Complex", "From $5,000"],
                 ].map(([label, price]) => (
                   <div key={label} className="rounded-2xl border border-stone-300 bg-white p-5">
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{label}</p>

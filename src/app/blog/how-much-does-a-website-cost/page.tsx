@@ -186,7 +186,7 @@ export default function WebsiteCostGuide() {
                                 "Starter begins at $1,500 for a focused, clearly bounded scope.",
                                 "Growth begins at $3,500 for a broader migration, CMS or content-continuity scope.",
                                 "Scale normally falls between $5,000 and $10,000 for larger or integration-heavy work.",
-                                "Scale+ and unusual applications are quoted after discovery.",
+                                "Anything bigger than Scale, and unusual applications, are quoted after discovery.",
                                 "Extra pages and features are discussed and written into the scope before implementation.",
                             ]}
                         />

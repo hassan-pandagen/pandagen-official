@@ -485,7 +485,7 @@ export default function SquarespacePageContent() {
               Every limit, and <span className="font-serif font-normal italic text-cognac">what we would do about it.</span>
             </h2>
             <p data-speakable="true" className="text-stone-600 text-lg leading-relaxed max-w-2xl mx-auto">
-              PandaCodeGen moves Squarespace sites to custom Next.js code you own. From $1,500 for a 5 to 7 page site at a fixed price, from $3,500 with your blog moved and every old link forwarded. No minimum project size and no retainer. Each pair below is something we check on your site, because what Squarespace allows changes by plan and by template.
+              PandaCodeGen moves Squarespace sites to custom Next.js code you own. From $1,500 for a site of up to 7 pages at a fixed price, from $3,500 with your blog moved and every old link forwarded. No minimum project size and no retainer. Each pair below is something we check on your site, because what Squarespace allows changes by plan and by template.
             </p>
           </div>
 
@@ -584,6 +584,11 @@ export default function SquarespacePageContent() {
           },
         ]}
       />
+
+      {/* None-of-these-fit invitation, closing the tier ladder */}
+      <p className="mx-auto max-w-2xl px-6 pb-10 -mt-4 text-center text-sm text-stone-600 leading-relaxed">
+        If none of these match what you have, call <a href="tel:+13027738982" className="text-cognac font-semibold hover:underline">+1 (302) 773-8982</a> or email <a href="mailto:info@pandacodegen.com" className="text-cognac font-semibold hover:underline">info@pandacodegen.com</a> and we will quote it.
+      </p>
 
       {/* 7. DUAL CTA */}
       <section className="py-12 md:py-20 px-6 bg-paper border-y border-stone-200">

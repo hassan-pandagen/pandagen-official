@@ -23,6 +23,19 @@
  * No third-party rate is quoted, because this array is also schema. Four
  * questions were added to match queries buyers actually type: a cost question
  * for Wix, and a how-long question for Squarespace, Webflow and GoHighLevel.
+ *
+ * 9 Sep 2026: every tier sentence was moved onto the ladder in company-facts.ts
+ * COMMERCIAL, which pricing-faqs.ts already follows. Starter is "up to 7 pages",
+ * never "5 to 7", because the site states in several places that there is no
+ * minimum project size and a five-page floor contradicts it. Growth is 8 to 20
+ * and Scale is more than 20, so the boundaries touch: the old 5-to-7 / 10-to-20 /
+ * 30-plus wording left a buyer with 8 pages, or 25, unable to place themselves.
+ * Scale is "from $5,000", and the old Scale+ tier is gone, since a fourth named
+ * tier that only says "bigger" is answered better by the phone number. Answers
+ * that list all three tiers end with the same invitation to call, worded exactly
+ * as in COMMERCIAL. It repeats across service pages on purpose; a reader only
+ * ever sees one page. Prices did not change. Change company-facts.ts first,
+ * then here, never here alone.
  */
 export interface ServiceFaq {
   q: string;
@@ -37,7 +50,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does custom development cost?",
-      a: "Custom apps are quoted after one short call, and the quote is fixed. Agencies that bill by the hour sell you hours. We sell you the finished app. Our published tiers run to $10,000, and anything bigger is priced on its own. You pay 30% to start and 70% when it's done. No hourly billing, no monthly retainer, and your written quote has the exact figure.",
+      a: "Custom apps are quoted after one short call, and the quote is fixed. Agencies that bill by the hour sell you hours. We sell you the finished app. Our published tiers start at $1,500 and the largest starts at $5,000, and anything bigger is quoted after a call. You pay 30% to start and 70% when it's done. No hourly billing, no monthly retainer, and your written quote has the exact figure.",
     },
     {
       q: "Can I add AI features to my app?",
@@ -71,7 +84,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a custom Shopify storefront cost?",
-      a: "Compare quotes on like-for-like scope. Four tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds are $5,000 to $10,000 (subscriptions, custom logic, large catalogs, 30+ pages). Scale+ is $10,000+ for enterprise headless commerce, custom-quoted after a scoping call. Whether it pays back, and over what period, depends on your own app bill and your own measured results.",
+      a: "Compare quotes on like-for-like scope. Three tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds start at $5,000 (subscriptions, custom logic, large catalogs, more than 20 pages). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own app bill and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
   ],
   "gohighlevel": [
@@ -85,11 +98,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a custom site with GHL integration cost?",
-      a: "From $1,500 for a 5 to 7 page site that feeds your GHL forms and calendar. From $3,500 for 10 to 20 pages with an editor you update yourself. $5,000 to $10,000 for bigger sites or heavy automation work. Hourly agencies charge for the hours. We charge for the finished site, integrations included, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure.",
+      a: "From $1,500 for a site of up to 7 pages that feeds your GHL forms and calendar. From $3,500 for 8 to 20 pages with an editor you update yourself. From $5,000 for more than 20 pages or heavy automation work. Hourly agencies charge for the hours. We charge for the finished site, integrations included, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "Can you build custom landing pages that work with GHL?",
-      a: "Yes. A set of 5 to 7 landing pages is $1,500. Each one sends leads straight into your GHL forms, calendar or automations, with no third-party form app to pay for. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test it three times before handover.",
+      a: "Yes. A set of up to 7 landing pages is $1,500. Each one sends leads straight into your GHL forms, calendar or automations, with no third-party form app to pay for. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test it three times before handover.",
     },
     {
       q: "What if I want to leave GHL later?",
@@ -97,7 +110,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a GoHighLevel website build take?",
-      a: "Two to four weeks for most sites, about three on average. A 5 to 7 page site ships in 1 to 2 weeks. Extra calendars, sub-accounts or automations add time, and each one gets its own date in your written plan.",
+      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. Extra calendars, sub-accounts or automations add time, and each one gets its own date in your written plan.",
     },
   ],
   "squarespace": [
@@ -107,11 +120,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Can I still use Squarespace for my online store?",
-      a: "Sometimes, and we'll tell you if you should. If your shop is small and working, keeping it can be the cheaper answer. If the store does need to move, a full custom store is $5,000 to $10,000, and we check your products, orders, tax and shipping before recommending anything.",
+      a: "Sometimes, and we'll tell you if you should. If your shop is small and working, keeping it can be the cheaper answer. If the store does need to move, a full custom store is from $5,000, and we check your products, orders, tax and shipping before recommending anything.",
     },
     {
       q: "How much does a Squarespace migration cost?",
-      a: "From $1,500 for a 5 to 7 page site. From $3,500 for 10 to 20 pages with your blog moved and an editor you update yourself. $5,000 to $10,000 for a store, a members area or 30-plus pages. An hourly agency sells you time. We sell you the finished site at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and an editor you update yourself. From $5,000 for a store, a members area or more than 20 pages. An hourly agency sells you time. We sell you the finished site at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "What if I have a blog on Squarespace?",
@@ -123,7 +136,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a Squarespace migration take?",
-      a: "Two to four weeks for most sites, about three on average. A 5 to 7 page site ships in 1 to 2 weeks. A store, a members area or more than one language takes longer, and you get the dates in writing before we start.",
+      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. A store, a members area or more than one language takes longer, and you get the dates in writing before we start.",
     },
   ],
   "webflow": [
@@ -141,7 +154,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does it cost to migrate from Webflow?",
-      a: "From $1,500 for a 5 to 7 page site. From $3,500 for 10 to 20 pages with your CMS content moved and every link forwarded. $5,000 to $10,000 for a store, more than one language or 30-plus pages. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your CMS content moved and every link forwarded. From $5,000 for a store, more than one language or more than 20 pages. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "What if Webflow adds the features I need later?",
@@ -149,7 +162,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a Webflow migration take?",
-      a: "Two to four weeks for most sites, about three on average. A 5 to 7 page site ships in 1 to 2 weeks. Lots of CMS content, animations or languages take longer, and every stage has a date in your written plan.",
+      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. Lots of CMS content, animations or languages take longer, and every stage has a date in your written plan.",
     },
   ],
   "wix": [
@@ -163,7 +176,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does it take to migrate from Wix?",
-      a: "Two to four weeks for most sites, about three on average. A 5 to 7 page site ships in 1 to 2 weeks. A shop, bookings or a members area takes longer. Your Wix site stays live the whole time, and if anything is wrong on launch day we switch back.",
+      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. A shop, bookings or a members area takes longer. Your Wix site stays live the whole time, and if anything is wrong on launch day we switch back.",
     },
     {
       q: "What about my Wix forms and contact pages?",
@@ -175,7 +188,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does it cost to migrate from Wix?",
-      a: "From $1,500 for a 5 to 7 page site. From $3,500 for 10 to 20 pages with an editor and every link forwarded. $5,000 to $10,000 for a shop, bookings or 30-plus pages. No hourly billing. You pay for the finished site, not for time, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with an editor and every link forwarded. From $5,000 for a shop, bookings or more than 20 pages. No hourly billing. You pay for the finished site, not for time, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
   ],
   "woocommerce": [
@@ -197,11 +210,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a WooCommerce migration cost?",
-      a: "Four tiers. Starter $1,500 (simple WooCommerce migration, 10 to 30 products). Growth $3,500 (30 to 150 products with custom cart logic). Scale $5,000 to $10,000 (subscriptions, B2B pricing, wholesale, 100+ products). Scale+ $10,000+ for enterprise WooCommerce scope, custom-quoted after a scoping call. We give a fixed-price quote upfront. No hourly surprises.",
+      a: "Three tiers. Starter $1,500 (simple WooCommerce migration, up to 30 products). Growth $3,500 (31 to 150 products with custom cart logic). Scale from $5,000 (subscriptions, B2B pricing, wholesale, more than 150 products). Anything bigger is quoted after a call. We give a fixed-price quote upfront. No hourly surprises. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "How long does a WooCommerce migration take?",
-      a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time, and launch day runs as a staged cutover with a documented rollback path.",
+      a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time. On launch day we switch over in stages, and if anything is wrong we switch back.",
     },
     {
       q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
@@ -235,7 +248,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a WordPress to Next.js migration cost?",
-      a: "Compare quotes on like-for-like scope. Four tiers: Starter starts at $1,500 (5 to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (10 to 20 pages, custom features). Scale is $5,000 to $10,000 (complex WordPress or WooCommerce sites, 30+ pages, custom integrations). Scale+ is $10,000+ for enterprise scope, custom-quoted after a scoping call. Whether it pays back, and over what period, depends on your own invoices and your own measured results.",
+      a: "Compare quotes on like-for-like scope. Three tiers: Starter starts at $1,500 (up to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (8 to 20 pages, custom features). Scale starts at $5,000 (complex WordPress or WooCommerce sites, more than 20 pages, custom integrations). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own invoices and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "Can I still edit my website after migration?",

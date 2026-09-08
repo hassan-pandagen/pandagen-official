@@ -502,7 +502,7 @@ export default function PageContent() {
             ],
           },
         ]}
-        footnote="Every build includes: a staged switchover, every old link forwarded, your titles and descriptions carried across, your domain stays yours, and you own 100% of the code. Bigger than Scale? Scale+ covers enterprise WooCommerce scope at $10,000+, custom-quoted after a scoping call."
+        footnote="Every build includes: a staged switchover, every old link forwarded, your titles and descriptions carried across, your domain stays yours, and you own 100% of the code. Anything bigger than Scale is quoted after a call. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it."
       />
 
       {/* 6. DUAL CTA */}

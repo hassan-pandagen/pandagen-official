@@ -127,17 +127,16 @@ export default function PageContent() {
           <div className="text-center mb-8 md:mb-10">
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Fixed Pricing</p>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">
-              Four tiers. <span className="font-serif italic text-cognac">No hourly billing.</span>
+              Three tiers. <span className="font-serif italic text-cognac">No hourly billing.</span>
             </h2>
             <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price for a written scope. The performance target, how it is tested and what happens if we miss it are set out below.</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
             {[
-              { tier: "Starter", price: "$1,500", fit: "Simple sites, 5 to 7 pages" },
-              { tier: "Growth", price: "$3,500", fit: "Business sites, blogs, integrations" },
-              { tier: "Scale", price: "$5K to $10K", fit: "E-commerce and complex builds" },
-              { tier: "Scale+", price: "$10K+", fit: "Enterprise scope, custom quoted" },
+              { tier: "Starter", price: "$1,500", fit: "Simple sites, up to 7 pages" },
+              { tier: "Growth", price: "$3,500", fit: "Business sites and blogs, 8 to 20 pages" },
+              { tier: "Scale", price: "From $5,000", fit: "More than 20 pages, a shop, or more than one language" },
             ].map((t) => (
               <div key={t.tier} className="p-5 rounded-2xl bg-stone-50 border border-stone-200 text-center hover:border-cognac/30 transition-colors">
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-1">{t.tier}</p>
@@ -146,6 +145,10 @@ export default function PageContent() {
               </div>
             ))}
           </div>
+
+          <p className="max-w-2xl mx-auto text-center text-sm text-stone-600 leading-relaxed mb-8">
+            If none of these match what you have, call <a href="tel:+13027738982" className="text-cognac font-semibold hover:underline">+1 (302) 773-8982</a> or email <a href="mailto:info@pandacodegen.com" className="text-cognac font-semibold hover:underline">info@pandacodegen.com</a> and we will quote it.
+          </p>
 
           <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-green-50 border border-green-200 flex items-start gap-3">
             <Shield className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
