@@ -2203,3 +2203,30 @@ than news; two are new and would have corrupted the 16 to 20 September read.
 name alone and confirm it returns this company rather than a larger unrelated
 one. If another entity owns the term, brand prompts are unreadable and no amount
 of schema fixes it.
+
+**Entity check run 8 September 2026, Google AI Mode, US, via the DataForSEO API
+rather than a browser.** Prompt: `pandacodegen`, bare.
+
+The answer names us first and describes us accurately: "a custom Next.js web
+development agency that rebuilds slow platforms (like WordPress, Shopify, or
+Wix) into fast, custom code designed to hit 90+ Lighthouse scores and be easily
+parsed/quoted by AI search engines", citing pandacodegen.com. That description is
+our own canon coming back at us, which is evidence the single-source approach in
+`company-facts.ts`, /ai-info and llms.txt is landing. One small drift: it calls
+us "PandaCodeGen Studio", a name we do not use, apparently assembled from the
+"migration studio" phrasing in the central entity line.
+
+**But we do not own the term outright.** The same answer offers Panda CSS's
+`panda codegen` CLI as the other reading and ends by asking which one the user
+meant. Panda CSS is a widely used styling library, so `panda codegen` as two
+words is a real command in real documentation.
+
+Consequence for Read 1: the brand prompt must be `PandaCodeGen agency` or
+`PandaCodeGen Next.js`, never bare `pandacodegen`, or the measurement is against
+a CSS library. Not a problem to fix, a collision to work around. Non-brand
+category prompts are unaffected.
+
+Also established: `get_ai_search_results` through the Percuity connection returns
+Google AI Mode answers by API from a US location, with citations. That replaces
+the Playwright capture for the prompt set and for prospect research, and removes
+the "prove your humanity" failure mode.
