@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(awk '/^# Wix Migration Cost/{f=1} f' blog-drafts/wix-migration-cost.md)",
+      "Read(//c/Users/GaaRA/.claude/skills/google-content-audit/**)",
+      "Read(//c/Users/GaaRA/.claude/skills/semantic-triples/**)",
+      "Bash(python -)",
+      "mcp__playwright__browser_find",
+      "Bash(python \"C:/Users/GaaRA/AppData/Local/Temp/claude/d--Projects-pandagen-official/1d252c07-1176-41f2-986f-64fe1019441a/scratchpad/aiofill3.py\")",
+      "Bash(npx eslint *)",
+      "Bash(npx next *)",
+      "mcp__playwright__browser_evaluate"
+    ]
+  }
+}

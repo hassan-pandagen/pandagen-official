@@ -1,0 +1,686 @@
+@import 'tailwindcss';
+
+/* Playfair is the 400-weight editorial accent. Prevent browsers from inventing
+   a bold face when the accent sits inside an Inter heading. */
+.font-serif {
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
+
+  --color-background: #f5f5f4;
+  --color-surface: #fafaf9;
+  --color-border: #e7e5e4;
+  --color-primary: #b8410c;
+  --color-secondary: #44403c;
+  --color-muted: #57534e;
+  --color-dark: #1c1917;
+  --color-accent: #c2410c;
+  --color-success: #16a34a;
+  --color-neon: #c2410c;
+  --color-focus: #b8410c;
+  --color-electric: #9a3412;
+  --color-orange: #f97316;
+  --color-paper: #f5f5f4;
+  --color-charcoal: #1c1917;
+  --color-midnight: #0c0a09;
+  --color-cognac: #ad3d0b;
+  /* Cognac for dark surfaces. #b8410c measures 2.78:1 to 3.47:1 on the dark
+     panels this site uses; this measures 5.69:1 to 6.48:1 on the same set. */
+  --color-cognac-light: #e8763a;
+
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  /* Keep the semantic Tailwind neutral scale intact. Components choose a
+     surface-aware step: stone-600 on light surfaces, stone-400 on dark. */
+  --color-stone-400: #a8a29e;
+  /* Was #78716c, which measures 4.39:1 on the paper background (#f5f5f4) and
+     so failed WCAG AA by 0.11 in 57 places. This measures 5.02:1 on paper and
+     5.48:1 on white. Only used on light surfaces; on dark, use stone-400. */
+  --color-stone-500: #6f6862;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
+
+  /* Accent scales overridden for contrast, 14 Aug 2026.
+     red-500   #fb2c36 measured 3.81:1 on white AND for white text on it (used
+               both ways in "Other quotes" callouts and badges). #d70008 gives
+               5.39:1 in both directions and 4.93:1 on the red-50 surface.
+     emerald-600 #009966 measured 3.65:1 on white. #008055 gives 4.98:1. */
+  --color-red-500: #d70008;
+  --color-emerald-600: #008055;
+  /* red-600 #e7000b measured 4.36:1 on the red-50 callout and 4.37:1 on paper.
+     green-600 #00a63e measured 3.08:1 on green-50. orange-600 #f54900
+     measured 3.39:1 on orange-50. All three sit on tinted callout surfaces
+     where the default scale is tuned for white and falls just short. */
+  --color-red-600: #d70008;
+  --color-green-600: #008236;
+  --color-orange-600: #ca3500;
+
+  --text-heading-1: 72px;
+  --text-heading-1--line-height: 1.05;
+  --text-heading-1--letter-spacing: -0.03em;
+  --text-heading-2: 48px;
+  --text-heading-2--line-height: 1.1;
+  --text-heading-2--letter-spacing: -0.02em;
+  --text-heading-3: 32px;
+  --text-heading-3--line-height: 1.2;
+  --text-heading-3--letter-spacing: -0.01em;
+  --text-body: 18px;
+  --text-body--line-height: 1.7;
+  --text-caption: 14px;
+  --text-caption--line-height: 1.5;
+
+  /* ── Fluid spacing tokens (industry standard: Vercel / Linear / Stripe pattern) ──
+     These clamp values scale fluidly between mobile min and desktop max, eliminating
+     the need for breakpoint-based `py-12 md:py-24` hacks. Use these via Tailwind arbitrary
+     values: py-(--space-section), mb-(--space-heading), etc. */
+  --space-section-xl: clamp(4rem, 10vw, 8rem);    /* Hero sections, main landmarks */
+  --space-section: clamp(3rem, 8vw, 6rem);         /* Standard section padding */
+  --space-section-sm: clamp(2rem, 5vw, 4rem);      /* Tighter sections, cards */
+  --space-heading: clamp(1.5rem, 4vw, 3rem);       /* Space under h2/h3 headings */
+  --space-heading-sm: clamp(1rem, 3vw, 2rem);      /* Tighter heading gap */
+  --space-stack: clamp(0.75rem, 2vw, 1.5rem);      /* Small element spacing */
+  --space-gutter: clamp(1rem, 3vw, 1.5rem);        /* Container horizontal padding */
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover:
+    0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.04);
+  --shadow-elevated:
+    0 20px 50px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-green-glow:
+    0 8px 30px rgba(22, 163, 74, 0.12), 0 2px 8px rgba(22, 163, 74, 0.08);
+  --shadow-red-glow:
+    0 8px 30px rgba(239, 68, 68, 0.1), 0 2px 8px rgba(239, 68, 68, 0.06);
+  --shadow-premium:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 30px -5px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-spin-slow: spin 4s linear infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-scan: scan 3s linear infinite;
+  --animate-gradient-x: gradient-x 3s ease infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease-out backwards;
+  /* Stagger delay variants replace framer-motion `transition={{ delay: 0.X }}` patterns.
+     Used as `animate-fade-in-up [animation-delay:50ms]` or via the .fade-up-1..5 classes below. */
+  --animate-fade-in-up-1: fadeInUp 0.5s ease-out 0.05s backwards;
+  --animate-fade-in-up-2: fadeInUp 0.5s ease-out 0.10s backwards;
+  --animate-fade-in-up-3: fadeInUp 0.5s ease-out 0.15s backwards;
+  --animate-fade-in-up-4: fadeInUp 0.5s ease-out 0.20s backwards;
+  --animate-fade-in-up-5: fadeInUp 0.5s ease-out 0.25s backwards;
+  --animate-fade-in: fadeIn 0.5s ease-out backwards;
+  --animate-slide-in-left: slideInLeft 0.4s ease-out backwards;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes scan {
+    0% {
+      top: 0%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* ── Scroll-triggered reveal pattern (replaces framer-motion whileInView fade-ups) ──
+   Default state: invisible + offset. When [data-reveal="visible"] is set by the
+   IntersectionObserver in <FadeIn>, the element animates into place.
+   Stagger delays via inline style or [data-stagger="N"] (N = 1..5).
+   No `will-change`, because that promotes every reveal element to its own GPU layer permanently,
+   which tanks Lenis smooth-scroll on desktop. The transition itself triggers compositing only
+   for the brief 500ms window each element is animating, which is exactly what we want. */
+[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(20px);
+  /* Never leave content invisible when hydration or IntersectionObserver is
+     delayed. The observer normally reveals it first; this is a safety net. */
+  animation: reveal-content-safety 0s linear 1s forwards;
+}
+[data-reveal] {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+[data-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes reveal-content-safety {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-reveal][data-stagger="1"] { transition-delay: 0.05s; }
+[data-reveal][data-stagger="2"] { transition-delay: 0.10s; }
+[data-reveal][data-stagger="3"] { transition-delay: 0.15s; }
+[data-reveal][data-stagger="4"] { transition-delay: 0.20s; }
+[data-reveal][data-stagger="5"] { transition-delay: 0.25s; }
+[data-reveal][data-stagger="6"] { transition-delay: 0.30s; }
+[data-reveal][data-stagger="7"] { transition-delay: 0.35s; }
+[data-reveal][data-stagger="8"] { transition-delay: 0.40s; }
+
+/* Honor user motion preference: skip reveal animations entirely. */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="visible"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: none;
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility glass-panel {
+  @apply bg-white/80 backdrop-blur-md border border-border;
+}
+
+@utility container-width {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+@utility text-gradient-primary {
+  @apply text-transparent bg-clip-text bg-linear-to-r from-cognac to-orange-800;
+}
+
+@utility text-gradient-vibrant {
+  @apply text-transparent bg-clip-text bg-linear-to-r from-cognac via-orange-700 to-amber-700;
+}
+
+@utility section-glow-green {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(22, 163, 74, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+@utility section-glow-red {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(239, 68, 68, 0.05) 0%,
+    transparent 70%
+  );
+}
+
+@utility card-premium {
+  @apply bg-white border border-gray-200 rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300;
+}
+
+@utility bg-radial-hero {
+  /* Radial hero glow */
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 30%,
+    rgba(184, 65, 12, 0.06) 0%,
+    transparent 70%
+  );
+}
+
+@utility bg-radial-subtle {
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 50%,
+    rgba(184, 65, 12, 0.04) 0%,
+    transparent 70%
+  );
+}
+
+@utility scrollbar-hide {
+  /* Hide scrollbar for mobile swiper */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility theme-paper {
+  /* ─── NEW PREMIUM THEMES (Phase 1, applied section by section) ─── */
+  background-color: #f5f5f4; /* Stone-100 */
+  color: #1c1917; /* Stone-900 */
+}
+
+@utility theme-midnight {
+  background-color: #0c0a09; /* Stone-950 */
+  color: #fafaf9; /* Stone-50  */
+}
+
+@utility text-cognac {
+  /* Cognac accent helpers.
+     #b8410c measured 4.39:1 on the #efe3dd badge surface (bg-cognac/10 over
+     paper), failing by 0.11 in 15 places. #ad3d0b measures 4.84:1 there and
+     6.09:1 on white. bg-cognac and border-cognac keep the exact brand value;
+     only text moves, and the two are indistinguishable side by side. */
+  color: #ad3d0b;
+}
+
+/*
+ * Cognac for DARK surfaces only.
+ *
+ * The brand cognac (#b8410c) measures 3.05:1 to 3.47:1 against the six dark
+ * backgrounds used on the home page, so every use of it on dark failed WCAG AA
+ * (4.5:1 for normal text). This value measures 5.69:1 to 6.48:1 across the same
+ * six. It is the closest colour to the brand that clears the requirement on the
+ * lightest of those backgrounds (#211c18), which is the binding constraint.
+ *
+ * Do not use it on the paper background. There it is the light-on-light problem
+ * in the other direction; keep text-cognac for that.
+ */
+@utility text-cognac-light {
+  color: var(--color-cognac-light);
+}
+
+@utility bg-cognac {
+  background-color: #b8410c;
+}
+
+@utility border-cognac {
+  border-color: #b8410c;
+}
+
+/* Base styles in @layer base are overridden by utilities and override v4 preflight. */
+@layer base {
+  :root {
+    --background: #f5f5f4;
+    --foreground: #1c1917;
+    --surface: #fafaf9;
+    --border: #e7e5e4;
+    --focus: #b8410c;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: #ffedd5;
+    color: #7c2d12;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  html.lenis {
+    scroll-behavior: auto;
+  }
+
+  /* Defensive reset: decorative article drop caps must be explicitly opted in. */
+  article > p:first-of-type::first-letter {
+    float: none;
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #a8a29e;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #78716c;
+  }
+
+  /* ── Typography polish: balanced headings + orphan-free paragraphs ──
+     text-wrap: balance evens heading line lengths (no lone last word on titles).
+     text-wrap: pretty prevents orphans/runts at the end of body paragraphs.
+     Both degrade gracefully. Unsupported browsers just wrap normally with no layout shift. */
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+  p, li {
+    text-wrap: pretty;
+  }
+}
+
+/* Paper grain texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  will-change: auto;
+  contain: layout;
+}
+
+/* Long articles already inherit the global paper grain below. The legacy
+   fixed overlay duplicated an SVG turbulence filter across the viewport and
+   added avoidable paint/compositing work during scroll. */
+.fixed.bg-noise {
+  display: none;
+}
+
+/* Long editorial titles must fit a 320px viewport without forced phrases or
+   synthetic typography. Desktop sizes remain controlled by page utilities. */
+@media (max-width: 639px) {
+  main article h1 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Global paper grain applied directly to body ensures every page gets texture. */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.07'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* GPU Acceleration for smooth animations */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Prevent layout thrashing on scroll */
+.scroll-optimize {
+  contain: layout style paint;
+}
+
+/* ── Tawk.to: no auto-popup, passive chat only (see TawkToChat.tsx) ── */
+
+/* ── Responsive table: stacks rows as cards on mobile ──
+   Industry standard pattern used by Stripe docs, GitHub, Linear, Shopify.
+
+   Usage:
+   1. Add `responsive-stack-table` class to <table>
+   2. First <td> in each row is the card title (displayed full-width, bold on mobile)
+   3. All OTHER <td>s need `data-label="Column Name"` matching their <th>
+   4. Wrap in a parent div with class `responsive-stack-wrap` to hide the swipe hint
+
+   On desktop: normal HTML table.
+   On mobile: each <tr> becomes a card. First column is the title. Other columns
+   become label/value pairs. Perfectly readable with no horizontal scroll. */
+@media (max-width: 767px) {
+  .responsive-stack-table {
+    border: 0 !important;
+    min-width: 0 !important;
+    display: block;
+  }
+  .responsive-stack-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .responsive-stack-table tbody {
+    display: block;
+  }
+  .responsive-stack-table tr {
+    display: block;
+    margin-bottom: 0.875rem;
+    border: 1px solid var(--color-stone-300) !important;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    background: white !important;
+  }
+  .responsive-stack-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+  /* First td of each row = card title, full width, bold */
+  .responsive-stack-table tr > td:first-child {
+    display: block;
+    padding: 0.875rem 1rem !important;
+    background: var(--color-stone-50);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    text-align: left;
+    border: none !important;
+    border-bottom: 1px solid var(--color-stone-200) !important;
+  }
+  /* All other tds = key/value rows */
+  .responsive-stack-table tr > td:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.625rem 1rem !important;
+    border: none !important;
+    text-align: right;
+  }
+  .responsive-stack-table tr > td:not(:first-child) + td {
+    border-top: 1px solid var(--color-stone-100) !important;
+  }
+  .responsive-stack-table tr > td:not(:first-child)::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-stone-500);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  /* Hide swipe hint when a responsive-stack-table is present nearby.
+     Since tables now stack as cards, no horizontal scroll needed. */
+  .swipe-hint {
+    display: none !important;
+  }
+}
+
+/* ── Footer social pills: no sticky hover on touch devices ──
+   Mobile browsers keep :hover styles "stuck" after a tap until user taps elsewhere.
+   Scoped to footer social pills only so it doesn't break intentional hover states elsewhere. */
+@media (hover: none) and (pointer: coarse) {
+  footer .group:hover {
+    border-color: var(--color-stone-200) !important;
+    color: var(--color-stone-600) !important;
+    box-shadow: var(--shadow-xs) !important;
+  }
+  footer .group:hover .text-cognac {
+    color: var(--color-cognac) !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Accessibility fixes found by scripts/scan/selfscan.mjs on 14 Aug 2026.
+ * First run: 740 detected violation nodes across 70 of 134 pages.
+ * ------------------------------------------------------------------------- */
+
+/*
+ * Inline links in prose must not be distinguished by colour alone.
+ *
+ * 329 of the 740 nodes were axe's `link-in-text-block`, across 34 pages. Every
+ * one was the same pattern: `text-cognac hover:underline`, so a link inside a
+ * paragraph was cognac-on-paper against stone-700 body text with less than
+ * 3:1 between them, and nothing but colour to mark it until the mouse arrived.
+ * A keyboard user, a colour-blind reader and anyone reading on a poor screen
+ * gets no signal at all.
+ *
+ * Scoped to <p> and <li> children inside prose containers so that button-style
+ * CTAs, cards and nav links inside an <article> keep their own treatment.
+ */
+/* Widened from article/.prose after the scan showed the same failure on the
+ * legal pages and two service pages, which are prose but not <article>. */
+:is(article, .prose, main) :is(p, li) > a:not([class*="rounded"]):not([class*="bg-"]) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+:is(article, .prose, main) :is(p, li) > a:not([class*="rounded"]):not([class*="bg-"]):hover {
+  text-decoration-thickness: 2px;
+}
+
+/*
+ * SURFACE-AWARE ACCENT AND NEUTRAL TOKENS
+ *
+ * The problem this solves, stated precisely: no single cognac clears 4.5:1 on
+ * both surfaces. Clearing it against white caps relative luminance at 0.183;
+ * clearing it against #1c1917 requires at least 0.233. There is no such colour,
+ * so the token has to know what it is sitting on.
+ *
+ * A find-and-replace cannot do this, and we proved it the expensive way: the
+ * same class string (`text-cognac text-sm font-bold uppercase tracking-widest`)
+ * appears on paper in /work and on charcoal in /services. Swapping it by string
+ * introduced 51 new failures. Only the surface can decide.
+ *
+ * 147 files use a dark background, so tagging each section by hand was not
+ * sensible either. This keys off the background classes the site already uses.
+ * The substring matches cover Tailwind arbitrary values such as bg-[#161b27],
+ * whose escaped class selectors are unreadable.
+ *
+ * Specificity: these are (0,2,0) or higher and beat the (0,1,0) utilities.
+ *
+ * VERIFY WITH THE SCANNER, NEVER BY EYE:
+ *   npm run build && npx next start -p 3111
+ *   cd scripts/scan && node selfscan.mjs --base http://localhost:3111
+ */
+@layer utilities {
+  :is(
+    .bg-charcoal, .bg-midnight, .theme-midnight,
+    .bg-stone-800, .bg-stone-900, .bg-stone-950,
+    [class*="bg-[#0"], [class*="bg-[#1"], [class*="bg-[#2"], [class*="bg-[#3"]
+  ) {
+    :is(.text-cognac, .text-accent) { color: var(--color-cognac-light); }
+    :is(.text-stone-500, .text-stone-600, .text-stone-700, .text-gray-500, .text-gray-600) {
+      color: var(--color-stone-400);
+    }
+  }
+
+  /*
+   * A light card nested inside a dark section must go back to the light values,
+   * or the rule above lightens text that is sitting on white again. This is the
+   * failure mode the /work revert was caused by, so it is guarded explicitly.
+   */
+  :is(
+    .bg-charcoal, .bg-midnight, .theme-midnight,
+    .bg-stone-800, .bg-stone-900, .bg-stone-950,
+    [class*="bg-[#0"], [class*="bg-[#1"], [class*="bg-[#2"], [class*="bg-[#3"]
+  ) :is(.bg-white, .bg-paper, .bg-stone-50, .bg-stone-100, .bg-stone-200) {
+    :is(.text-cognac, .text-accent) { color: var(--color-cognac); }
+    .text-stone-600 { color: var(--color-stone-600); }
+    .text-stone-700 { color: var(--color-stone-700); }
+    .text-stone-500 { color: var(--color-stone-500); }
+  }
+}

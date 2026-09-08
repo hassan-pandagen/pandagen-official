@@ -1,0 +1,173 @@
+{
+  "$comment": [
+    "SINGLE SOURCE OF TRUTH for every case-study metric on this site.",
+    "",
+    "WHY THIS FILE EXISTS. These metrics used to be prose, typed into 25+ places.",
+    "A PageSpeed claim drifted upward on its own across surfaces: a 90+ baseline",
+    "became 97/100 on one page and '100 PageSpeed' on another, which contradicts",
+    "brand canon. On 4 Aug 2026 five service surfaces withdrew the MyCustomPatches",
+    "performance figures while the case study, the work index and llms.txt kept",
+    "asserting them. Four surfaces disagreed with five about one client's numbers.",
+    "",
+    "THE RULE. A metric appears here once. Every surface renders from here:",
+    "page title, meta description, OG, Twitter, body, work-index cards, schema.",
+    "No metric is ever typed into a page file again.",
+    "",
+    "STATUS. 'verified' renders the number and MUST carry a method.",
+    "'withdrawn' renders the dated withdrawal note INSTEAD of the number, on every",
+    "surface at once. Flipping one field flips the whole site in one deploy.",
+    "",
+    "ENFORCEMENT. scripts/metrics_guard.py reads this file and the built HTML and",
+    "fails the build if a withdrawn value appears anywhere, or a verified metric",
+    "renders without its method. Drift is now a build error, not a memory.",
+    "",
+    "RELATIONSHIP. Every case study declares one, and it renders on the page.",
+    "Added 10 Aug 2026 after an audit found 3 of 6 /work pages carrying NO",
+    "relationship disclosure at all: mycustompatches (the independent-client",
+    "proof, which never said so on its own page), panda-codelab (founder-",
+    "affiliated, disclosed in llms.txt but not on the page), and enterprise-ops",
+    "(presented as client work; it is the internal CRM for Panda Patches).",
+    "`disclosure` is the sentence surfaces render verbatim. scripts/link_guard.py",
+    "fails the build if a /work page renders without it."
+  ],
+  "caseStudies": {
+    "mycustompatches": {
+      "name": "MyCustomPatches",
+      "legalEntity": "MC Patches LLC",
+      "relationship": "Independent client",
+      "href": "/work/mycustompatches",
+      "url": "mycustompatches.net",
+      "metrics": [
+        {
+          "id": "delivery-days",
+          "label": "Migration completed in",
+          "value": "about 22 days",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-07-21",
+            "note": "Project record, owner-approved."
+          },
+          "approvedBy": "Client owner",
+          "approvedDate": "2026-07-21"
+        },
+        {
+          "id": "urls-migrated",
+          "label": "URLs migrated",
+          "value": "200+",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-07-21",
+            "note": "URL inventory taken before cutover."
+          },
+          "approvedBy": "Client owner",
+          "approvedDate": "2026-07-21"
+        },
+        {
+          "id": "templates",
+          "label": "Distinct templates rebuilt",
+          "value": "13",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-07-21",
+            "note": "Template inventory taken before cutover."
+          },
+          "approvedBy": "Client owner",
+          "approvedDate": "2026-07-21"
+        },
+        {
+          "id": "downtime",
+          "label": "Downtime at cutover",
+          "value": "zero",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-07-21",
+            "note": "Monitored through DNS cutover."
+          },
+          "approvedBy": "Client owner",
+          "approvedDate": "2026-07-21"
+        },
+        {
+          "id": "rankings",
+          "label": "Rankings lost",
+          "value": "none recorded in the 30 days after launch",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-07-21",
+            "note": "Search Console, 30-day post-launch monitoring window."
+          },
+          "approvedBy": "Client owner",
+          "approvedDate": "2026-07-21"
+        },
+        {
+          "id": "load-time",
+          "label": "Load time",
+          "before": "3.2s",
+          "after": "0.7s",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-08-04",
+          "withdrawnReason": "The original test records could not be reconciled. The figure appeared across surfaces with inconsistent method, and a related PageSpeed claim inflated between edits, so all performance figures for this project were pulled pending re-measurement."
+        },
+        {
+          "id": "pagespeed",
+          "label": "Mobile PageSpeed",
+          "before": "~45",
+          "after": "90+",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-08-04",
+          "withdrawnReason": "The original test records could not be reconciled. This claim inflated from 90+ to 97/100 and to '100 PageSpeed' across different surfaces during editing, which is exactly the drift this file now prevents."
+        },
+        {
+          "id": "hosting-cost",
+          "label": "Hosting cost",
+          "before": "$150/mo",
+          "after": "$0/mo",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-08-04",
+          "withdrawnReason": "RETIRED, not pending. Established 10 Aug 2026: the client has no hosting invoices and never kept any, and when asked directly he does not recall the figure. There is therefore no document to reconcile against and no attestation to quote. This number cannot return by any honest route and must not be restored from memory, ours or his. The structural claim -- managed hosting plus plugin and theme licences replaced by a serverless deployment -- is not in dispute and does not need a figure.",
+          "permanent": true
+        }
+      ],
+      "disclosure": "Independent client. MyCustomPatches is operated by MC Patches LLC. PandaCodeGen has no ownership or financial stake in the business."
+    },
+    "emblematic-studio": {
+      "name": "Emblematic Studio",
+      "relationship": "Independent client",
+      "href": "/work/emblematic-studio",
+      "disclosure": "Independent client. PandaCodeGen has no ownership or financial stake in the business.",
+      "metrics": []
+    },
+    "ladies-4-jesus": {
+      "name": "Ladies 4 Jesus",
+      "relationship": "Independent client",
+      "href": "/work/ladies-4-jesus",
+      "disclosure": "Independent client. PandaCodeGen has no ownership or financial stake in the business.",
+      "metrics": []
+    },
+    "panda-patches": {
+      "name": "Panda Patches",
+      "relationship": "Founder-affiliated",
+      "href": "/work/panda-patches",
+      "disclosure": "Founder-affiliated, not independent client proof. Owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains the platform but holds no ownership stake.",
+      "metrics": []
+    },
+    "panda-codelab": {
+      "name": "Panda CodeLab",
+      "relationship": "Founder-affiliated",
+      "href": "/work/panda-codelab",
+      "disclosure": "Founder-affiliated, not independent client proof. Owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains the platform but holds no ownership stake.",
+      "metrics": []
+    },
+    "enterprise-ops": {
+      "name": "Enterprise operations platform",
+      "relationship": "Founder-affiliated",
+      "href": "/work/enterprise-ops",
+      "disclosure": "Founder-affiliated, not independent client proof. This is the internal operations and CRM platform that runs Panda Patches, the business owned and operated by co-founder Imran Raza Ladhani. It is our own system, built for our own use, not work delivered to an outside client.",
+      "metrics": []
+    }
+  }
+}

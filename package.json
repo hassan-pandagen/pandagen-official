@@ -1,0 +1,73 @@
+{
+  "name": "panda-gen-code",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next build && npm run pagefind",
+    "pagefind": "node pagefind-clean.mjs && pagefind --site .next/server/app --output-path public/_pagefind --glob \"blog/**/*.html\"",
+    "analyze": "cross-env ANALYZE=true NODE_OPTIONS=--max-old-space-size=8192 next build --webpack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test": "npm run test:audit-security && npm run test:forms",
+    "test:audit-security": "node --test src/lib/audit/__tests__/*.test.mjs",
+    "test:forms": "node --test src/lib/forms/__tests__/*.test.mjs",
+    "claims:check": "node scripts/check-public-claims.mjs",
+    "dates:check": "python scripts/check_dates.py",
+    "guard:metrics": "python scripts/metrics_guard.py",
+    "guard:links": "python scripts/link_guard.py",
+    "guard:specs": "python scripts/spec_freshness.py",
+    "guard:glossary": "python scripts/glossary_guard.py",
+    "guard:unicode": "python scripts/unicode_guard.py",
+    "guard:retired": "python scripts/retired_claims.py",
+    "guard:all": "npm run guard:metrics && npm run guard:links && npm run guard:specs && npm run guard:glossary && npm run guard:unicode && npm run guard:retired",
+    "check": "npm run typecheck && npm run lint && npm test && npm run claims:check && npm run dates:check",
+    "smoke:release": "node release-smoke.mjs",
+    "seo:check": "node seo-audit.mjs",
+    "audit:dependencies": "npm audit --audit-level=high",
+    "indexnow": "node indexnow-ping.mjs"
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "firefox >= 111",
+    "safari >= 16.4",
+    "edge >= 111",
+    "ios >= 16.4",
+    "not ie 11",
+    "not dead"
+  ],
+  "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
+    "@vercel/analytics": "^1.6.1",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.0",
+    "lenis": "^1.3.19",
+    "lucide-react": "^0.468.0",
+    "next": "^16.3.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resend": "6.17.2",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "16.2.11",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^20.11.24",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "cross-env": "^10.1.0",
+    "eslint": "latest",
+    "eslint-config-next": "16.2.11",
+    "pagefind": "^1.5.0",
+    "postcss": "8.5.20",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "postcss": "8.5.20",
+    "sharp": "0.35.3"
+  }
+}

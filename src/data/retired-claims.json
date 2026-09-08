@@ -1,0 +1,82 @@
+{
+  "$comment": [
+    "CLAIMS WE ONCE PUBLISHED THAT ARE NO LONGER TRUE.",
+    "",
+    "WHY THIS FILE EXISTS. On 31 Aug 2026 four factual errors were found in",
+    "woocommerce-too-slow. Three of them were about vendor behaviour that had",
+    "changed. The uncomfortable part: spec-facts.json ALREADY carried the correct",
+    "cart-fragments fact, verified 25 Aug, citing the same WooCommerce developer",
+    "post used to confirm it. The research had been done. The prose had never been",
+    "reconciled with it, and nothing in the build noticed the contradiction.",
+    "",
+    "spec_freshness.py guards the DATA going stale. Nothing guarded the PROSE",
+    "drifting away from the data. This file closes that gap.",
+    "",
+    "WHAT IT IS NOT. It cannot detect a claim nobody has found yet. It is a",
+    "regression test, not a fact-checker: once a wrong claim has been identified",
+    "and removed, this stops it coming back in a rewrite, a merge, or a new post",
+    "by an author who learned the old behaviour and never heard it changed. That",
+    "is the actual failure mode here, so that is what it defends against.",
+    "",
+    "ADDING AN ENTRY. Whenever you correct a factual claim about a third party,",
+    "record the SUPERSEDED assertion here, not the corrected one. Point",
+    "supersededBy at the spec-facts key that now holds the truth, if one exists.",
+    "",
+    "WRITING THE PATTERN. Match the assertion, not the topic. Too broad and the",
+    "guard fires on the corrected text and gets switched off, which is worse than",
+    "not having it. Run the guard immediately after adding an entry: it must pass",
+    "against the corrected page. Two escape hatches exist for that:",
+    "  historicalOk  - a match is allowed when the prose is describing the old",
+    "                  behaviour as history ('used to', 'before 7.8', 'changed in')",
+    "  requiresNearby- a match is allowed when the page also carries the current",
+    "                  fact somewhere, which is how you permit a fuller",
+    "                  explanation without permitting the bare old claim"
+  ],
+  "claims": [
+    {
+      "id": "wc-cart-fragments-sitewide",
+      "vendor": "WooCommerce",
+      "retiredAssertion": "The cart-fragments script is enqueued on every page of a WooCommerce store.",
+      "whatChanged": "WooCommerce 7.8 (June 2023) stopped enqueueing it on all page routes. It now loads only where the Cart Widget renders, where third-party code declares wc-cart-fragments as a dependency, or where it is explicitly enqueued. Many themes hardcode the widget, so it still happens often, but it is no longer the default.",
+      "pattern": "cart[- ]fragments[^.]{0,140}(on every page|on all pages|site-?wide)",
+      "historicalOk": true,
+      "supersededBy": "woocommerce-cart-fragments-default",
+      "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/",
+      "correctedOn": "2026-08-31"
+    },
+    {
+      "id": "wc-fragments-as-add-to-cart",
+      "vendor": "WooCommerce",
+      "retiredAssertion": "wc-ajax=get_refreshed_fragments is the request you see when a shopper adds to cart.",
+      "whatChanged": "The add itself is wc-ajax=add_to_cart on a classic store, or a POST to /wc/store/v1/cart/add-item on a block store. get_refreshed_fragments is the separate follow-up call that redraws the mini-cart. Naming only the second one describes the wrong request.",
+      "pattern": "add[ -]to[ -]cart[^.]{0,160}get_refreshed_fragments",
+      "historicalOk": false,
+      "requiresNearby": ["wc-ajax=add_to_cart", "/wc/store/v1/cart/add-item"],
+      "supersededBy": "woocommerce-store-api-scope",
+      "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/",
+      "correctedOn": "2026-08-31"
+    },
+    {
+      "id": "wc-checkout-load-writes-order",
+      "vendor": "WooCommerce",
+      "retiredAssertion": "Every checkout page load contacts the payment provider and writes the order.",
+      "whatChanged": "Neither happens on page load. The initial load builds the form and totals; changing an address or shipping method fires an AJAX recalculation; the payment provider is contacted and the order written only after the shopper presses Place Order. Conflating the three misdirects anyone optimising a slow checkout.",
+      "pattern": "(every|each)\\s+(checkout\\s+)?load[^.]{0,150}(payment (provider|gateway)|writes? the order)",
+      "historicalOk": false,
+      "supersededBy": null,
+      "source": "https://woocommerce.com/document/high-performance-order-storage/",
+      "correctedOn": "2026-08-31"
+    },
+    {
+      "id": "wc-no-responsive-image-sets",
+      "vendor": "WooCommerce",
+      "retiredAssertion": "WooCommerce does not build responsive image sets.",
+      "whatChanged": "WordPress core has emitted srcset and sizes markup since version 4.4, so responsive candidates exist on any WooCommerce store. What is genuinely missing is WebP/AVIF conversion and an upload size cap. Saying there are no image sets sends readers after the wrong fix.",
+      "pattern": "(does not|doesn'?t|never|no)[^.]{0,80}responsive image set",
+      "historicalOk": false,
+      "supersededBy": null,
+      "source": "https://developer.wordpress.org/advanced-administration/wordpress/basic-usage/responsive-images/",
+      "correctedOn": "2026-08-31"
+    }
+  ]
+}

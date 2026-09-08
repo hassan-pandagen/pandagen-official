@@ -1,0 +1,575 @@
+[
+ {
+  "slug": "ai-search-visibility-tracking",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 8,
+  "tables": 3,
+  "lists": 2,
+  "findings": []
+ },
+ {
+  "slug": "nextjs-sanity-stack",
+  "h2_total": 17,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 0,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "aeo-web-performance-glossary",
+  "h2_total": 0,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 3,
+  "vague": 0,
+  "tables": 0,
+  "lists": 2,
+  "findings": []
+ },
+ {
+  "slug": "lovable-site-not-showing-on-google",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 0,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "fix-meta-ad-tracking-2026",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "wix-migration-cost",
+  "h2_total": 16,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "woocommerce-migration-cost",
+  "h2_total": 16,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 3,
+  "lists": 5,
+  "findings": [
+   {
+    "h2": "What is cheap to move and what is expensive",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 61,
+    "opens": "Cost follows the mechanics of what has to move rather than the size of"
+   },
+   {
+    "h2": "Is the migration worth it?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 67,
+    "opens": "Possibly not, and it is worth saying that plainly before quoting anyone. If your"
+   }
+  ]
+ },
+ {
+  "slug": "woocommerce-vs-custom-website",
+  "h2_total": 21,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 1,
+  "tables": 2,
+  "lists": 9,
+  "findings": []
+ },
+ {
+  "slug": "agentic-browsing-pagespeed-score",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
+  "vague": 0,
+  "tables": 2,
+  "lists": 3,
+  "findings": []
+ },
+ {
+  "slug": "custom-website-5000-whats-included",
+  "h2_total": 11,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 0,
+  "lists": 3,
+  "findings": []
+ },
+ {
+  "slug": "meta-conversions-api-setup-cost",
+  "h2_total": 18,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 3,
+  "hedge_worst": 2,
+  "vague": 2,
+  "tables": 1,
+  "lists": 13,
+  "findings": [
+   {
+    "h2": "Why cost ranges without scope are misleading",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 66,
+    "opens": "We do not publish a market price range for a Conversions API build, and"
+   }
+  ]
+ },
+ {
+  "slug": "spending-more-on-ads-fewer-orders-tracking",
+  "h2_total": 13,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
+  "vague": 2,
+  "tables": 1,
+  "lists": 7,
+  "findings": [
+   {
+    "h2": "3. Reconcile coverage instead of assuming a fixed loss rate",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 42,
+    "opens": "For each eligible event in the system of record, check browser delivery, server delivery,"
+   }
+  ]
+ },
+ {
+  "slug": "will-migrating-hurt-my-seo",
+  "h2_total": 8,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 1,
+  "lists": 2,
+  "findings": []
+ },
+ {
+  "slug": "how-long-does-a-custom-website-take",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 2,
+  "lists": 5,
+  "findings": []
+ },
+ {
+  "slug": "do-you-own-your-website",
+  "h2_total": 12,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 5,
+  "tables": 0,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "saas-price-increases-2026-tracker",
+  "h2_total": 10,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 2,
+  "vague": 2,
+  "tables": 0,
+  "lists": 5,
+  "findings": []
+ },
+ {
+  "slug": "build-vs-buy-software-2026-cost-comparison",
+  "h2_total": 6,
+  "flagged": 3,
+  "num_promise_no_figure": 3,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 2,
+  "lists": 4,
+  "findings": [
+   {
+    "h2": "The Scenario Test That Replaces a Spend Threshold",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 86,
+    "opens": "Before the worksheet, one move decides whether any of it produces a sensible answer:"
+   },
+   {
+    "h2": "How to price a CRM decision: what to collect before you compare",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 36,
+    "opens": "For a CRM comparison, obtain current quotes from the shortlisted vendors and a scoped"
+   },
+   {
+    "h2": "The AI Caveat: Why Cheap-to-Build Is Not the Same as Build-It-Yourself",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 38,
+    "opens": "AI tools genuinely save time on some engineering work. They do not give you"
+   }
+  ]
+ },
+ {
+  "slug": "how-to-cut-saas-bill-2026",
+  "h2_total": 8,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 1,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "saas-software-pricing-audit-2026",
+  "h2_total": 12,
+  "flagged": 1,
+  "num_promise_no_figure": 1,
+  "hedge_distinct": 2,
+  "hedge_worst": 2,
+  "vague": 5,
+  "tables": 2,
+  "lists": 7,
+  "findings": [
+   {
+    "h2": "7. Compare buy, switch and build on total cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 74,
+    "opens": "Compare buy, switch and build on one list of inputs: license or build cost,"
+   }
+  ]
+ },
+ {
+  "slug": "top-nextjs-agencies-2026",
+  "h2_total": 16,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "wordpress-april-2026-evidence",
+  "h2_total": 14,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 6,
+  "hedge_worst": 2,
+  "vague": 5,
+  "tables": 1,
+  "lists": 8,
+  "findings": []
+ },
+ {
+  "slug": "aeo-playbook-built-into-every-website",
+  "h2_total": 12,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 11,
+  "hedge_worst": 2,
+  "vague": 1,
+  "tables": 1,
+  "lists": 13,
+  "findings": []
+ },
+ {
+  "slug": "website-developer-agency",
+  "h2_total": 17,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 3,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "how-much-does-a-website-cost",
+  "h2_total": 14,
+  "flagged": 4,
+  "num_promise_no_figure": 4,
+  "hedge_distinct": 0,
+  "hedge_worst": 0,
+  "vague": 6,
+  "tables": 2,
+  "lists": 8,
+  "findings": [
+   {
+    "h2": "What a cheap quote usually leaves out",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 57,
+    "opens": "A low number is often a narrow number. The work below still has to"
+   },
+   {
+    "h2": "How to calculate three-year total cost",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 48,
+    "opens": "Three-year total cost is the build plus everything that follows it: migration, vendor services,"
+   },
+   {
+    "h2": "How to spend less without shrinking the outcome",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 59,
+    "opens": "The cheapest lever is the first one: write the requirement list before you ask"
+   },
+   {
+    "h2": "Current vendor pricing sources",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 0,
+    "opens": ""
+   }
+  ]
+ },
+ {
+  "slug": "why-is-my-website-loading-so-slow",
+  "h2_total": 7,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 2,
+  "lists": 4,
+  "findings": []
+ },
+ {
+  "slug": "shopify-store-speed-optimization",
+  "h2_total": 18,
+  "flagged": 2,
+  "num_promise_no_figure": 2,
+  "hedge_distinct": 5,
+  "hedge_worst": 1,
+  "vague": 3,
+  "tables": 2,
+  "lists": 5,
+  "findings": [
+   {
+    "h2": "Shopify App Speed: Measure Value and Cost Together",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 108,
+    "opens": "An app costs you twice: a monthly subscription line and a share of the"
+   },
+   {
+    "h2": "Content-Heavy Shopify Pages Need Their Own Budget",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 84,
+    "opens": "Give editorial templates their own performance budget rather than letting them inherit the product"
+   }
+  ]
+ },
+ {
+  "slug": "is-squarespace-bad-for-seo",
+  "h2_total": 14,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 3,
+  "vague": 9,
+  "tables": 2,
+  "lists": 6,
+  "findings": []
+ },
+ {
+  "slug": "gohighlevel-keep-crm-replace-website",
+  "h2_total": 13,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 10,
+  "findings": []
+ },
+ {
+  "slug": "pagepro-alternatives",
+  "h2_total": 9,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 0,
+  "tables": 1,
+  "lists": 7,
+  "findings": []
+ },
+ {
+  "slug": "website-redesign-cost",
+  "h2_total": 18,
+  "flagged": 4,
+  "num_promise_no_figure": 4,
+  "hedge_distinct": 4,
+  "hedge_worst": 1,
+  "vague": 4,
+  "tables": 2,
+  "lists": 8,
+  "findings": [
+   {
+    "h2": "What does it cost to update an existing website instead?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 111,
+    "opens": "Far less, and most people who ask for a redesign want an update. An"
+   },
+   {
+    "h2": "How to evaluate the cost of no redesign",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 90,
+    "opens": "The cost of leaving it alone is whatever the current site makes harder, measured"
+   },
+   {
+    "h2": "How to justify the budget internally",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 59,
+    "opens": "An internal case is won on evidence about your own site, not on a"
+   },
+   {
+    "h2": "How to reduce redesign cost safely",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 52,
+    "opens": "Cost comes out of a redesign by removing decisions and duplication, not by removing"
+   }
+  ]
+ },
+ {
+  "slug": "cheap-web-developer",
+  "h2_total": 16,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 3,
+  "hedge_worst": 1,
+  "vague": 2,
+  "tables": 1,
+  "lists": 10,
+  "findings": []
+ },
+ {
+  "slug": "how-to-speed-up-your-website",
+  "h2_total": 16,
+  "flagged": 0,
+  "num_promise_no_figure": 0,
+  "hedge_distinct": 2,
+  "hedge_worst": 1,
+  "vague": 4,
+  "tables": 2,
+  "lists": 8,
+  "findings": []
+ },
+ {
+  "slug": "website-migration-cost-2026",
+  "h2_total": 19,
+  "flagged": 3,
+  "num_promise_no_figure": 3,
+  "hedge_distinct": 4,
+  "hedge_worst": 2,
+  "vague": 4,
+  "tables": 1,
+  "lists": 5,
+  "findings": [
+   {
+    "h2": "What is inside a migration price?",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 49,
+    "opens": "Seven workstreams, and only two of them look like building a website. Discovery, content"
+   },
+   {
+    "h2": "Is a migration worth it? How to build the business case",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 70,
+    "opens": "A migration is worth it when the measured cost of staying exceeds the cost"
+   },
+   {
+    "h2": "How to budget the migration",
+    "promises_number": true,
+    "has_figure": false,
+    "delayed_open": false,
+    "words": 50,
+    "opens": "Build the number before you request quotes, so you can tell which quote is"
+   }
+  ]
+ }
+]

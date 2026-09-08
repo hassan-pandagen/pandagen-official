@@ -1,0 +1,454 @@
+{
+  "$comment": [
+    "THIRD-PARTY PLATFORM SPECS, each with the date it was last verified.",
+    "",
+    "WHY THIS FILE EXISTS. 49% of this site's search impressions are year-qualified",
+    "queries ('vercel free tier bandwidth 100gb 2025', '...limit 100gb 2026'). In the",
+    "Vercel cluster it is 69%. Half the demand is explicitly asking AS OF WHEN, and",
+    "the page answering it dated 17 of its 319 sentences. A spec sentence that does",
+    "not carry its own date cannot be lifted into an answer as a dateable fact.",
+    "",
+    "WHY IT IS DATA AND NOT PROSE. Writing 'as of August 2026' inline fifty times is",
+    "prose-carried fact-state: the same class that produced the PageSpeed drift and",
+    "the fabricated 95 on /services/ecommerce. Typed once, rendered everywhere, one",
+    "edit moves every date on the page.",
+    "",
+    "THESE ARE OTHER COMPANIES' NUMBERS. We do not control them and they change",
+    "without notice. Every value here must be read off the vendor's own published",
+    "page and carry the URL it came from. Never carry a value forward on memory.",
+    "",
+    "ENFORCEMENT. scripts/spec_freshness.py warns at 90 days and FAILS the build at",
+    "180. A stale third-party price presented as current is the same defect class as",
+    "a withdrawn metric that keeps rendering."
+  ],
+  "specs": {
+    "vercel-hobby-price": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Hobby plan price",
+      "value": "$0",
+      "qualifier": "for eligible personal, non-commercial projects",
+      "verifiedAt": "2026-08-02",
+      "source": "https://vercel.com/pricing"
+    },
+    "vercel-hobby-fast-data-transfer": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Fast Data Transfer",
+      "value": "up to 100 GB a month",
+      "qualifier": "published as a fair-use guideline, not an itemised plan allowance",
+      "verifiedAt": "2026-08-02",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "vercel-hobby-fast-origin-transfer": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Fast Origin Transfer",
+      "value": "up to 10 GB a month",
+      "qualifier": "the cap most comparisons omit; reached before the 100 GB figure on an uncached or image-heavy site",
+      "verifiedAt": "2026-08-02",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "vercel-hobby-deployments": {
+      "vendor": "Vercel",
+      "plan": "Hobby",
+      "label": "Deployments",
+      "value": "up to 100 a day",
+      "verifiedAt": "2026-08-02",
+      "source": "https://vercel.com/docs/limits"
+    },
+    "vercel-pro-price": {
+      "vendor": "Vercel",
+      "plan": "Pro",
+      "label": "Pro plan price",
+      "value": "$20 a month",
+      "qualifier": "platform fee including one deploying seat and a usage credit; added seats and usage are extra",
+      "verifiedAt": "2026-08-02",
+      "source": "https://vercel.com/pricing"
+    },
+    "googlebot-crawl-size-limit": {
+      "vendor": "Google",
+      "label": "Googlebot crawl size limit",
+      "value": "the first 2MB of a supported file type",
+      "qualifier": "reduced from 15MB; past the cutoff Googlebot stops the fetch and only the downloaded part is considered for indexing. Each referenced resource is fetched separately under the same cap. PDFs: 64MB",
+      "verifiedAt": "2026-08-11",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/googlebot"
+    },
+    "webflow-basic-price": {
+      "vendor": "Webflow",
+      "plan": "Basic",
+      "label": "Basic site plan price",
+      "value": "$15 a month",
+      "qualifier": "billed yearly, per site, plus tax; custom domain, 300 static pages, 10 GB bandwidth. The monthly-billing toggle did not re-render when this was read, so no monthly figure is verified",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-premium-price": {
+      "vendor": "Webflow",
+      "plan": "Premium",
+      "label": "Premium site plan price",
+      "value": "$25 a month",
+      "qualifier": "billed yearly, per site, plus tax; the tier that adds the CMS, site search and code components. Previously named the CMS plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-team-price": {
+      "vendor": "Webflow",
+      "plan": "Team",
+      "label": "Team platform plan price",
+      "value": "$2,500 a month",
+      "qualifier": "annual contract required. This is a platform plan, charged on top of the per-site plans, not instead of them. Google's AI Overview stated this as $2,500 a year when checked",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-optimize-addon": {
+      "vendor": "Webflow",
+      "plan": "Optimize add-on",
+      "label": "Optimize add-on price",
+      "value": "$299 a month",
+      "qualifier": "priced by page views, and charged separately from the site plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-localize-essential": {
+      "vendor": "Webflow",
+      "plan": "Localize Essential add-on",
+      "label": "Localize Essential price",
+      "value": "$9 a month",
+      "qualifier": "covers 1 to 3 locales in total, not $9 per locale. Localize Advanced is $29 a month for 1 to 10",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-analyze-addon": {
+      "vendor": "Webflow",
+      "plan": "Analyze add-on",
+      "label": "Analyze add-on price",
+      "value": "$9 a month",
+      "qualifier": "priced by sessions, and charged separately from the site plan",
+      "verifiedAt": "2026-08-05",
+      "source": "https://webflow.com/pricing"
+    },
+    "shopify-storefront-api-protocol": {
+      "vendor": "Shopify",
+      "label": "Storefront API protocol",
+      "value": "GraphQL only",
+      "qualifier": "Shopify states there is no REST API for storefronts",
+      "verifiedAt": "2026-08-17",
+      "source": "https://shopify.dev/docs/api/storefront"
+    },
+    "shopify-storefront-api-content": {
+      "vendor": "Shopify",
+      "label": "Content available through the Storefront API",
+      "value": "pages, blogs and articles, alongside products, collections, cart, checkout, search and customer accounts",
+      "qualifier": "this is why Shopify can serve a headless site as well as a headless shop",
+      "verifiedAt": "2026-08-17",
+      "source": "https://shopify.dev/docs/api/storefront"
+    },
+    "woocommerce-store-api-scope": {
+      "vendor": "WooCommerce",
+      "label": "Store API scope",
+      "value": "unauthenticated cart, checkout and product endpoints at /wp-json/wc/store/v1/",
+      "qualifier": "WooCommerce describes it as public endpoints for customer-facing cart, checkout and product functionality",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developer.woocommerce.com/docs/apis/store-api/"
+    },
+    "woocommerce-rest-api-scope": {
+      "vendor": "WooCommerce",
+      "label": "REST API scope",
+      "value": "authenticated admin resources only, with no cart or checkout endpoints",
+      "qualifier": "products, orders, customers, coupons, refunds, tax rates and reports; a headless storefront needs the separate Store API",
+      "verifiedAt": "2026-08-17",
+      "source": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    "wix-headless-price": {
+      "vendor": "Wix",
+      "plan": "Headless",
+      "label": "Wix Headless entry price",
+      "value": "free to start",
+      "qualifier": "Wix states a premium plan is required to unlock payments, in-depth analytics and custom domains",
+      "verifiedAt": "2026-08-17",
+      "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
+    },
+    "wix-headless-solutions": {
+      "vendor": "Wix",
+      "plan": "Headless",
+      "label": "Business solutions available headlessly",
+      "value": "eCommerce, bookings, events, memberships, CMS and blog",
+      "qualifier": "Wix states these sit under a single auth model and a consistent API pattern",
+      "verifiedAt": "2026-08-17",
+      "source": "https://dev.wix.com/docs/go-headless/get-started/about-wix-headless"
+    },
+    "squarespace-api-scope": {
+      "vendor": "Squarespace",
+      "label": "Developer API scope",
+      "value": "nine back-office Commerce APIs, with no content, page or storefront API",
+      "qualifier": "Analytics, Contacts, Discounts, Inventory, Orders, Products, Profiles, Transactions and Webhook Subscriptions",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.squarespace.com/commerce-apis/overview"
+    },
+    "webflow-cloud-frameworks": {
+      "vendor": "Webflow",
+      "label": "Frameworks deployable to Webflow Cloud",
+      "value": "Astro and Next.js",
+      "qualifier": "deployed to Webflow infrastructure either standalone or mounted on an existing Webflow site at a path",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.webflow.com/webflow-cloud/getting-started"
+    },
+    "webflow-devlink-direction": {
+      "vendor": "Webflow",
+      "label": "What DevLink moves",
+      "value": "Webflow components exported as React components into an external codebase",
+      "qualifier": "Webflow describes DevLink as the interface between external codebases and Webflow",
+      "verifiedAt": "2026-08-17",
+      "source": "https://developers.webflow.com/devlink/reference/overview"
+    },
+    "gohighlevel-api-scope": {
+      "vendor": "GoHighLevel",
+      "label": "Public API modules",
+      "value": "CRM and contacts, conversations, calendar and events, opportunities, payments and webhooks",
+      "qualifier": "Blogs and Funnels APIs are listed in the developer portal; whether they return renderable page content was not established",
+      "verifiedAt": "2026-08-17",
+      "source": "https://marketplace.gohighlevel.com/docs/"
+    },
+    "shopify-theme-store-min-perf": {
+      "vendor": "Shopify",
+      "label": "Theme Store minimum Lighthouse performance score",
+      "value": "60",
+      "qualifier": "Average across the theme’s product, collection and home page, for both desktop and mobile",
+      "verifiedAt": "2026-08-20",
+      "source": "https://shopify.dev/docs/storefronts/themes/store/requirements"
+    },
+    "shopify-theme-store-min-a11y": {
+      "vendor": "Shopify",
+      "label": "Theme Store minimum Lighthouse accessibility score",
+      "value": "90",
+      "qualifier": "Average across the theme’s product, collection and home page, for both desktop and mobile",
+      "verifiedAt": "2026-08-20",
+      "source": "https://shopify.dev/docs/storefronts/themes/store/requirements"
+    },
+    "shopify-speed-report-retention": {
+      "vendor": "Shopify",
+      "label": "Web Performance report data retention",
+      "value": "90 days",
+      "qualifier": "The lookback window the admin report holds",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-speed-report-percentile": {
+      "vendor": "Shopify",
+      "label": "Web Performance report percentile",
+      "value": "75th",
+      "qualifier": "The default percentile shown for each Core Web Vital, in milliseconds",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-speed-report-lag": {
+      "vendor": "Shopify",
+      "label": "Web Performance report reporting lag",
+      "value": "up to 36 hours",
+      "qualifier": "Due to tracking and calculation processes, per Shopify’s own documentation",
+      "verifiedAt": "2026-08-20",
+      "source": "https://help.shopify.com/en/manual/online-store/web-performance/web-performance-reports"
+    },
+    "shopify-plan-basic": {
+      "vendor": "Shopify",
+      "plan": "Basic",
+      "label": "Basic plan price",
+      "value": "$25/mo",
+      "qualifier": "$19/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-grow": {
+      "vendor": "Shopify",
+      "plan": "Grow",
+      "label": "Grow plan price",
+      "value": "$65/mo",
+      "qualifier": "$49/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-advanced": {
+      "vendor": "Shopify",
+      "plan": "Advanced",
+      "label": "Advanced plan price",
+      "value": "$399/mo",
+      "qualifier": "$299/mo billed annually",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "shopify-plan-plus": {
+      "vendor": "Shopify",
+      "plan": "Plus",
+      "label": "Plus plan starting price",
+      "value": "$2,300/mo",
+      "qualifier": "Starting price; annual pricing not published",
+      "verifiedAt": "2026-08-20",
+      "source": "https://www.shopify.com/pricing"
+    },
+    "woocommerce-cart-fragments-default": {
+      "vendor": "WooCommerce",
+      "label": "Cart fragments script enqueueing",
+      "value": "only on views that render the Cart widget",
+      "qualifier": "Changed in WooCommerce 7.8. Before that release the script was enqueued on every page load. Third-party code that registers wc-cart-fragments as a dependency, or enqueues it explicitly, still pulls it in",
+      "verifiedAt": "2026-08-25",
+      "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/"
+    },
+    "woocommerce-variation-ajax-threshold": {
+      "vendor": "WooCommerce",
+      "label": "Variation preload threshold",
+      "value": "30",
+      "qualifier": "A product with 30 or fewer variations has all of them preloaded into the page as JSON; 31 or more falls back to AJAX. Filterable via woocommerce_ajax_variation_threshold",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/wc-template-functions.php"
+    },
+    "woocommerce-guest-checkout-default": {
+      "vendor": "WooCommerce",
+      "label": "Guest checkout default",
+      "value": "enabled on a fresh install",
+      "qualifier": "woocommerce_enable_guest_checkout defaults to yes. The admin label reads Enable guest checkout (recommended), under WooCommerce, Settings, Accounts and Privacy",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php"
+    },
+    "woocommerce-classic-checkout-fields": {
+      "vendor": "WooCommerce",
+      "label": "Default billing fields on the classic checkout",
+      "value": "11 shown, 9 required",
+      "qualifier": "Default locale only. Per-country overrides make state or postcode optional in many countries. The block checkout shows 10 and requires 8, hiding company name and making phone optional",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/class-wc-countries.php"
+    },
+    "woocommerce-shipping-cost-requires-address-default": {
+      "vendor": "WooCommerce",
+      "label": "Hide shipping costs until an address is entered",
+      "value": "off by default",
+      "qualifier": "woocommerce_shipping_cost_requires_address defaults to no, so a fresh store is not hiding shipping cost by configuration. If your customers meet the price late, something else put it there",
+      "verifiedAt": "2026-08-25",
+      "source": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php"
+    },
+    "woocommerce-blocks-checkout-default": {
+      "vendor": "WooCommerce",
+      "label": "Cart and Checkout blocks as the default experience",
+      "value": "new installs from WooCommerce 8.3",
+      "qualifier": "Existing stores keep the shortcode checkout when they upgrade, so a store built before November 2023 is likely still running it",
+      "verifiedAt": "2026-08-25",
+      "source": "https://developer.woocommerce.com/2023/08/18/cart-and-checkout-blocks-becoming-the-default-experience/"
+    },
+    "irp-conversion-rate-jul-2026": {
+      "vendor": "IRP Commerce",
+      "label": "All Ecommerce Markets conversion rate, July 2026",
+      "value": "2.22%",
+      "qualifier": "Transactions divided by sessions, calculated from live trading data on IRP's own platform. B2C only, Great Britain, Northern Ireland and Ireland. Merchant count is withheld for confidentiality. This is not a global average and does not describe your store",
+      "verifiedAt": "2026-08-25",
+      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
+    },
+    "irp-conversion-spread-jul-2026": {
+      "vendor": "IRP Commerce",
+      "label": "Sector spread within a single month, July 2026",
+      "value": "0.55% to 5.23%",
+      "qualifier": "Baby and Child at the low end, Arts and Crafts at the high end. Same month, same platform, same definition, a 9.5x range",
+      "verifiedAt": "2026-08-25",
+      "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
+    },
+    "statista-global-conversion-q2-2026": {
+      "vendor": "Statista",
+      "label": "Global ecommerce visit-to-purchase rate, Q2 2026",
+      "value": "1.4%",
+      "qualifier": "Statista's table gives 1.4% while its own prose beneath says 1.3%. Statista is not the primary source; the page credits Salesforce Research, whose figure sits inside a dashboard with no methodology page",
+      "verifiedAt": "2026-08-25",
+      "source": "https://www.statista.com/statistics/439576/online-shopper-conversion-rate-worldwide/"
+    },
+    "contentsquare-returning-vs-new-2026": {
+      "vendor": "Contentsquare",
+      "label": "Returning against new visitor conversion",
+      "value": "2.9% against 1.7%",
+      "qualifier": "From 99 billion sessions across 6,000+ sites, Q4 2024 to Q4 2025, published March 2026. Contentsquare publishes no single overall ecommerce conversion figure",
+      "verifiedAt": "2026-08-25",
+      "source": "https://contentsquare.com/guides/digital-experience-benchmark/conversions/"
+    },
+    "wp-saml-cve-15981": {
+      "vendor": "miniOrange",
+      "label": "CVE-2026-15981 severity",
+      "value": "CVSS 9.8, critical",
+      "qualifier": "Authentication bypass in the SAML Single Sign On plugin. mo_saml_validate_signature() runs a loose boolean check on the tri-state integer from PHP's openssl_verify(), so an error return of -1 evaluates as truthy and is treated as a valid signature. Affects free-edition versions up to and including 5.4.4; patched in 5.4.5. Score assigned by Wordfence as CNA",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-15981"
+    },
+    "wp-saml-cve-61979": {
+      "vendor": "miniOrange",
+      "label": "CVE-2026-61979 severity",
+      "value": "CVSS 8.1, high",
+      "qualifier": "Unauthenticated privilege escalation via SAML signature algorithm confusion, affecting versions up to 5.4.3, patched in 5.4.4. The vector carries AC:H, which is what keeps it below 9.0. Patchstack assigned this record as CNA; their own write-up describes both SAML issues as 9.8. Wordfence separately assigned CVE-2026-15013 at 9.8 for what the records describe as the same mechanism and version range",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nvd.nist.gov/vuln/detail/CVE-2026-61979"
+    },
+    "wp-saml-editions": {
+      "vendor": "miniOrange",
+      "label": "Product editions shipped under one WordPress plugin slug",
+      "value": "7",
+      "qualifier": "Free, Standard, Premium, Premium multisite, Enterprise, VIP single site and VIP multisite all ship under the slug miniorange-saml-20-single-sign-on, each independently version-numbered. Public advisories covered the free edition only; the six paid editions were patched with no public changelog entry and no advisory, and were not listed in any vulnerability database until miniOrange supplied the full matrix on 18 August 2026",
+      "verifiedAt": "2026-08-26",
+      "source": "https://patchstack.com/articles/one-slug-seven-editions/"
+    },
+    "wp-saml-installs": {
+      "vendor": "miniOrange",
+      "label": "Active installations, SAML Single Sign On free edition",
+      "value": "10,000+",
+      "qualifier": "WordPress.org reports the free edition only. Install counts for the six paid editions are not published anywhere, so the total exposed population is unknown",
+      "verifiedAt": "2026-08-26",
+      "source": "https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/"
+    },
+    "nextjs-avif-rce": {
+      "vendor": "Next.js",
+      "label": "GHSA-2xp9-vwfh-vxw4 severity",
+      "value": "CVSS 9.5, critical",
+      "qualifier": "Unauthenticated remote code execution in the Image Optimization API when AVIF is processed, via a libheif flaw reachable through sharp. Affects >= 10.0.0 < 15.5.24 and < 16.3.3. No CVE identifier was assigned. The same release also fixed CVE-2026-75604, a second critical RCE affecting Windows-hosted servers only",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nextjs.org/blog/august-2026-security-release"
+    },
+    "nextjs-patched-versions-aug-2026": {
+      "vendor": "Next.js",
+      "label": "Patched versions, August 2026 security release",
+      "value": "16.3.3 and 15.5.24",
+      "qualifier": "16.3.3 is Active LTS, 15.5.24 is Maintenance LTS. Vercel pre-announced the release, then moved it forward when a second critical vulnerability was identified, so users would only need to upgrade once",
+      "verifiedAt": "2026-08-26",
+      "source": "https://nextjs.org/blog/august-2026-security-release"
+    },
+    "gsc-ai-overview-click-counting": {
+      "vendor": "Google",
+      "plan": "Search Console",
+      "label": "AI Overview link clicks",
+      "value": "counted as clicks in the Performance report",
+      "qualifier": "clicking a link to an external page in an AI Overview or AI Mode counts as a click, under standard impression rules",
+      "verifiedAt": "2026-08-28",
+      "source": "https://support.google.com/webmasters/answer/7042828"
+    },
+    "gsc-search-labs-excluded": {
+      "vendor": "Google",
+      "plan": "Search Console",
+      "label": "Search Labs experiments",
+      "value": "excluded from all Search Console data",
+      "qualifier": "Google states experiments in Search Labs are still in active development and are not reported",
+      "verifiedAt": "2026-08-28",
+      "source": "https://support.google.com/webmasters/answer/7042828"
+    },
+    "google-faq-rich-result-retired": {
+      "vendor": "Google",
+      "plan": "Search",
+      "label": "FAQ rich result",
+      "value": "no longer shown, from 7 May 2026",
+      "qualifier": "Google removed the feature documentation on 15 June 2026; FAQPage markup remains valid but earns no Search appearance",
+      "verifiedAt": "2026-08-28",
+      "source": "https://developers.google.com/search/docs/appearance/structured-data/faqpage"
+    },
+    "google-goto-redirect-confirmed": {
+      "vendor": "Google",
+      "plan": "Search",
+      "label": "goto URL redirects on result links",
+      "value": "confirmed rolling out, 26 August 2026",
+      "qualifier": "Google described it as a technical measure against abuse and did not address referrer, analytics or ranking impact",
+      "verifiedAt": "2026-08-29",
+      "source": "https://searchengineland.com/google-confirms-deploying-goto-url-redirects-to-search-results-links-485926"
+    }
+  }
+}

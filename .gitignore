@@ -1,0 +1,124 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Next.js
+.next/
+.next-audit/
+out/
+
+# Pagefind search index (generated at build time from .next/server/app)
+public/_pagefind/
+
+# Production
+build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code internal files
+# Claude Code project config. Skills and shared settings ARE committed so they
+# travel between machines. settings.local.json is per-machine permission state
+# that Claude Code rewrites constantly, so it stays out.
+.claude/settings.local.json
+
+# Playwright MCP artifacts (screenshots, console logs, page snapshots — local research only)
+.playwright-mcp/
+*.png.playwright
+playwright-report/
+test-results/
+
+# Internal docs and trackers (not for repo)
+*.md
+!README.md
+!SECURITY.md
+!docs/
+!docs/**/*.md
+# Skills are markdown by design and must travel between machines. This negation
+# has to sit AFTER the *.md rule above to win: last matching pattern applies.
+!.claude/skills/**/*.md
+PandaCodeGen_*.pdf
+PandaCodeGen_*.docx
+
+# Word documents. The research project outputs .docx dossiers and they land in the
+# working directory; the client evaluation docs are the same shape. None of them
+# belong in a repo with a public GitHub remote, and the old PandaCodeGen_* rule only
+# caught the ones we happened to name that way.
+*.docx
+ad-creative.md
+improvements-plan.md
+
+# Client briefs and brand assets (not for repo)
+*.pdf
+*.indd
+*.ai
+*.psd
+*.sketch
+*.fig
+
+# Rendered video files (Remotion output / Swishy exports)
+renders/
+public/videos/
+remotion/assets/*.mp4
+remotion/assets/*.mov
+*.mp4
+*.mov
+*.webm
+
+# GSC + AirOps + analytics exports (never commit; data is local-only research)
+*.csv
+GSC/
+airops/
+exports/
+
+# Scanner deps (see scripts/scan/README.md)
+scripts/scan/node_modules/
+
+# Scanner deps
+scripts/scan/lighthouse-*.json
+
+# Design working files, not site assets and not for the repo
+assets/banner-kit/
+public/New folder/
+
+# Prospect audit output. Third-party measurement data, regenerate with
+# scripts/scan/audit_prospects.mjs rather than committing a snapshot.
+scripts/scan/prospect-audit.json
+
+# Unredacted client/operations exports. Never ship these; they are kept only so
+# a redacted version can be produced from them.
+private-assets/
+
+# Outreach research. Named prospects, personal work emails, LinkedIn profiles,
+# competitor analysis and internal pricing. Same rule as private-assets/ and the
+# prospect audit output above: kept locally so it is easy to find, never committed.
+outreach/
+
+# Local design-audit screenshots (Playwright before/after, research only)
+audit/
