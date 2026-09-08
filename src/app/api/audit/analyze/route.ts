@@ -88,14 +88,21 @@ function maxConcurrentAudits(): number {
   return Number.isInteger(configured) && configured >= 1 && configured <= 20 ? configured : 2;
 }
 
-// No `maxDuration` is exported here on purpose: the correct value depends on
-// the Vercel plan this deploys to, and that has not been confirmed. The
-// platform default therefore applies, which on Hobby is a hard 10 seconds. This
-// design does not fit inside 10 seconds for a URL that PageSpeed has not
-// cached, because Google runs a fresh Lighthouse pass (roughly 15-30 seconds)
-// on the first request for a URL and only serves a cached result afterwards.
-// Our own budget is 20s for PageSpeed and 8s per deep-check fetch, running
-// concurrently. Setting maxDuration is the owner's decision.
+// A backstop, not a target. Our own budget is 20s for PageSpeed and 8s per
+// deep-check fetch, running concurrently, so a normal request finishes well
+// under 25s and never reaches this ceiling. It exists because Google runs a
+// fresh Lighthouse pass, roughly 15 to 30 seconds, on the first request for a
+// URL it has not cached; the platform default of 10 or 15 seconds killed those
+// requests mid-flight, which is why a first scan failed and a retry appeared to
+// work.
+//
+// 60 REQUIRES VERCEL PRO. Hobby caps functions at a hard 10 seconds and the
+// deployment will be rejected. If a build ever fails citing maxDuration, the
+// plan is Hobby, and the answer is not a smaller number here: no fresh
+// Lighthouse run fits in 10 seconds, so PageSpeed would have to move off the
+// request path entirely.
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
   let hasConcurrencySlot = false;
   try {
