@@ -166,6 +166,22 @@ export default function WebflowMigrationCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 25, 2026" readTime="12 min read" />
 
+                    <BlogText>
+                        These are Webflow site owners posting during the April 13, 2026 outage, in their own words, with a link to each original comment.
+                    </BlogText>
+                    <BlogQuote>
+                        That was the last straw for me. Removing my remaining three sites off this platform. Moved the rest of my sites a year ago.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/jmonroe200</strong> · r/webflow · Apr 13, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        We are down as well and of course we just issued one of our biggest press releases of the year. Perfect timing.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/SirBowsersniff</strong> · r/webflow · Apr 13, 2026 · 32-upvote outage thread · <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        This is the second time we have had this type of long-term downtime this year. I have been a Webflow customer for 7 years, and I am definitely considering switching to another platform.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/PureTrouble5575</strong> · r/webflow · Apr 13, 2026 · 7 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/og6tysb/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList

@@ -177,6 +177,22 @@ export default function ShopifyConversionRateSpeedFixPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="6 min read" />
 
+                    <BlogText>
+                        The quotes below are Shopify merchants describing what moved, or wrecked, their conversion rate, in their own words. The link after each one goes to the original post.
+                    </BlogText>
+                    <BlogQuote>
+                        We added the sticky checkout button that stays visible when a user scrolls on their phone and it nearly doubled our conversion rate. I would add it if you have not.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/CoryJ0407</strong> · r/shopify · May 4, 2026 · 41 upvotes, 43 comments · <a href="https://www.reddit.com/r/shopify/comments/1szso5w/sticky_checkout_button_nearly_doubled_conversion/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Months of data. Watching interactions via Hotjar and you can see the interactions change dramatically. People scroll down, analyze a bit more and click to order instead of searching for the checkout button.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/CoryJ0407</strong> (OP follow-up) · r/shopify · May 4, 2026 · 10 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1szso5w/sticky_checkout_button_nearly_doubled_conversion/oj42k0v/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Shopify store getting hammered with fake YouTube referrer traffic from countries we do not sell to, conversion rate is wrecked. Anyone seen this?
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">r/shopify thread</strong> · Apr 22, 2026 · 15 upvotes, 22 comments, conversion rate affected by platform issues · <a href="https://www.reddit.com/r/shopify/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Do not diagnose from one average</h2>
                         <BlogList

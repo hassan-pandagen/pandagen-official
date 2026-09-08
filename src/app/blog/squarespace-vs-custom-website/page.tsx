@@ -168,6 +168,22 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="6 min read" />
 
+                    <BlogText>
+                        Squarespace users wrote the following themselves, on r/squarespace, about the editor, mobile layouts and an outage. Each quote links to the post it came from.
+                    </BlogText>
+                    <BlogQuote>
+                        I am so sick of dealing with SS — not being able to customize things the way I want to. Having multiple sized fonts and varied text formatting in one text box, changing line height on one section of one page rather than across the entire website, making sure photos stay in place and the correct size rather than getting all wonky when you change the screen size. I could go on.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026 · 16 upvotes, 61 comments · <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        It is kind of baffling that there is still no option to have separate versions for desktop and mobile. Every time I finish something on desktop and then switch to mobile to tweak it, everything shifts — settings change, the layout breaks. I have seen platforms with way fewer resources handle this better.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/Gabsnmaia</strong> · r/squarespace · Apr 30, 2026 · 13 upvotes · <a href="https://www.reddit.com/r/squarespace/comments/1szxt8p/why_cant_we_customize_desktop_and_mobile/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        All my ads push customers to book through the site. When I told them I expected some compensation for loss of business they responded with: We do not offer refunds for site errors or other issues.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/sandywilli</strong> · r/squarespace · Apr 25, 2026 · on 41-upvote 503 outage thread · <a href="https://www.reddit.com/r/squarespace/comments/1sx6skq/503_service_unavailable/oiksgiq/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList

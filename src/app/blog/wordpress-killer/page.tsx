@@ -154,6 +154,22 @@ export default function WordPressCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 8, 2026" readTime="6 min read" />
 
+                    <BlogText>
+                        Before you open a spreadsheet, hear from three people closer to WordPress than we are. The founder and two developers on r/Wordpress said this in April 2026, in their own words, and each quote links to the original post.
+                    </BlogText>
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress founder) · Internal Slack post · Apr 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        The dictator, who micromanaged the project for two decades, says community is to blame for the results.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Rarst · r/Wordpress · Apr 14, 2026 · 128 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Having a db is not a problem, it is that WP database structure is straight from hell, and it is like that for the sake of being retrocompatible. They should have made a breaking change with v5 or v6 and completely redesign it.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/zenotds · r/Wordpress · Apr 14, 2026 · 4 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/oghfw0f/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">

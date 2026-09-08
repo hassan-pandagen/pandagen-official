@@ -160,6 +160,22 @@ export default function WebflowTrueCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="7 min read" />
 
+                    <BlogText>
+                        Three Webflow users on the March 2026 pricing change, in their own words, each with a link back to the original Reddit comment.
+                    </BlogText>
+                    <BlogQuote>
+                        Your number one gripe by a wide margin is how awful your pricing is. It is an absolute hellhole and the worst part of trying to sell a Webflow project. You have somehow created a way to make it so much worse.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/wherethewifisweak</strong> (OP) · r/webflow · Mar 8, 2026 · 54 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I have been using Webflow for years and NEVER have been able to understand the pricing models nor fully communicate to my clients which plan they needed and why. It is so convoluted and counterintuitive but it seems the confusion is part of the business model here.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/proteanradish</strong> · r/webflow · Mar 8, 2026 · 16 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/o3yx308/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Webflow: great product to build with, awful, confusing, overpriced account management.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/originaladam</strong> · r/webflow · Mar 8, 2026 · 24 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/o3yr07w/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList

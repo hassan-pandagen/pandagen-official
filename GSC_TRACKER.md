@@ -2114,3 +2114,43 @@ impression baseline, or the control will look like it gained on its own. Report
 the human baseline by the no-tell query set as before. Two instances now; if a
 third appears on another definition page, the "explainer" page type in the
 page-type table should be re-cut with tells removed.
+
+### Addendum, 8 September 2026: 57 verbatim buyer quotes restored to 20 blogs, locks overridden by decision
+
+On 30 July (commit 3e93feb, the claim-safety pass) 51 source-linked buyer quotes
+were removed from 21 posts on the advice that pseudonymous Reddit and forum
+quotes were "useless". Reversed today at Hassan's decision. Every quote was
+recovered byte for byte from `3e93feb^`, re-inserted directly after the lead
+paragraph and byline, before the first H2, with the original handle, forum,
+date and permalink (label "Verify source"). 57 blocks on 20 pages, because some
+quotes sat on several pages originally. do-you-own-your-website got nothing: its
+only quote linked to a dead page. Typecheck and guards clean; dev render checked.
+Inventory: `REDDIT_QUOTES_REMOVED_2026-07-30.md`. Thread list for FRESH quotes,
+to be copied by Hassan from a real browser: `QUOTE_THREADS_TO_COLLECT.md`.
+
+**Contamination, logged not prevented.** Fifteen of the 20 pages are locked
+cohorts:
+- Exp 5 HOLDOUT: leaving-webflow-2026, shopify-vs-custom-website,
+  website-migration-cost-2026
+- Exp 5 treatment: shopify-conversion-rate-speed-fix, wix-vs-custom-website
+- Plain-language CONTROL (untouched since 6 Sep until now):
+  core-web-vitals-explained, do-you-own-your-website (unchanged in the end),
+  gohighlevel-keep-crm-replace-website, squarespace-vs-custom-website,
+  top-custom-web-development-agencies-usa-2026, webflow-true-cost,
+  website-rebuild-cost-2026, what-is-headless-commerce,
+  wordpress-ai-security-risk-2026, wordpress-plugins-destroy-speed
+The 6 Oct read now has 9 fewer clean controls (about 41 remain untouched) and
+Exp 5 is confounded a second way. Report both as such.
+
+**Known defects to fix during the fresh-quote pass.** (1) One quote on
+shopify-conversion-rate-speed-fix links only to r/shopify, not its thread; get
+the permalink or drop it. (2) Three quotes are duplicated across pages, which
+is the scaled-boilerplate shape Google's spam model watches: the Mullenweg
+"not being killed by competition" line on 4 pages, u/user_number_666 on 2,
+u/Myth_Thrazz on 2. Keep each on one page and replace the others with fresh
+2026 quotes. (3) Three em dashes sit inside verbatim quotes; left as the
+source wrote them, the unicode guard is report-only. (4) Restored quotes date
+from 2024 to May 2026; the fresh pass is what moves the dates.
+
+Read: none of this is a KPI. The effect, if any, shows in the 6 Oct read as
+citations and clicks on these 20 pages against the remaining controls.

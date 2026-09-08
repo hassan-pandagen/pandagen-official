@@ -159,6 +159,22 @@ export default function WordPressVsNextJsPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="8 min read" />
 
+                    <BlogText>
+                        What the WordPress founder and two working developers said about the platform in April 2026, quoted as written and linked to where they said it.
+                    </BlogText>
+                    <BlogQuote>
+                        We are operating at a level of collective delusion that is quite impressive. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        CMS should just generate a static HTML + CSS ONCE and then just let the server serve it, instead of hammering the DB every single time — unless someone installed enough caching plugins to fix this.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Myth_Thrazz · r/Wordpress · Apr 14, 2026 · 44 upvotes on 160-upvote thread · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5bmvs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        It is basically Matt and Automattic that steer the direction. There is no community driven direction or voting on what should be added or improved next. It is basically whatever Matt wants.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/-skyrocketeer- (Designer/Developer) · r/Wordpress · Apr 14, 2026 · 20 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5qoca/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">

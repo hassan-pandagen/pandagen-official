@@ -163,6 +163,22 @@ export default function WebsiteMigrationCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
 
+                    <BlogText>
+                        Owners and developers on the platforms this page covers, quoted in their own words, with a link to each original post so you can check the context yourself.
+                    </BlogText>
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · Internal Slack post · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/user_number_666</strong> · r/Wordpress · Apr 14, 2026 · 103 upvotes on 160-upvote thread · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I am so sick of dealing with SS — not being able to customize things the way I want to. Making sure photos stay in place and the correct size rather than getting all wonky when you change the screen size. I could go on.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026 · 16 upvotes, 61 comments · <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <div className="my-10">
                         <MigrationVisual />
                     </div>

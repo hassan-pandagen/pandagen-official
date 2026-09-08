@@ -177,6 +177,25 @@ export default function CoreWebVitalsExplainedPage() {
                         readTime="9 min read"
                     />
 
+                    <BlogText>
+                        Three site owners described the problem in their own words on Reddit in April 2026. Each quote below links to the original thread so you can read the full discussion.
+                    </BlogText>
+
+                    <BlogQuote>
+                        Total impressions: 57,000. Total clicks: 1,270. Average CTR: 2.2%. Average position: 8.6. Clicks are stuck at ~40 per day despite high impressions. CTR dropped from ~14% (brand queries only) to ~1.2% as non-brand impressions grew.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Big_University_6035 · r/SEO · Apr 20, 2026 · 25 upvotes, 35 comments · <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        A 1-3% CTR at position 8-9 is expected, so the issue is not really CTR, it is that you are sitting at the bottom of page 1 where clicks are limited. Go after keywords where you are already ranking 5-12, improve titles to better match intent, and strengthen those pages with internal links.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Exact-Delay2152 · r/SEO · Apr 20, 2026 (community response) · <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/oh7h4es/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        The recent thread about subscriptions being insane really hit home for me. I started my store a few months ago and quickly fell into the trap of adding apps for every little feature. Now my monthly bill is way higher than I expected.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Jinnapat397 · r/shopify · Apr 14, 2026 · apps adding to page weight affecting rankings · <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <div className="my-10">
                         <PageSpeedAnimation />
                     </div>

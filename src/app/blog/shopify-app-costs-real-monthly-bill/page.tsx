@@ -182,6 +182,22 @@ export default function ShopifyAppCostsPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 19, 2026" readTime="9 min read" />
 
+                    <BlogText>
+                        Three Shopify store owners describe the app bill in their own words below. Each post is linked so you can read the full thread.
+                    </BlogText>
+                    <BlogQuote>
+                        I added reviews with Judge.me, then a loyalty program, and suddenly I am paying for multiple apps on top of Shopify while I have barely launched and made sales. It feels like profits = subscriptions.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/Confusedmind75</strong> · r/shopify · Apr 14, 2026 · 105 upvotes, 149 comments · <a href="https://www.reddit.com/r/shopify/comments/1sm2hly/starting_a_shopify_store_and_realizing_everything/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I started my store a few months ago and quickly fell into the trap of adding apps for every little feature. Now my monthly bill is way higher than I expected. I have apps for reviews, upsells, email capture, currency conversion, and more. Some get used daily, others I barely touch.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/Jinnapat397</strong> · r/shopify · Apr 14, 2026 · 23 upvotes, 75 comments · <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        If you can not directly measure ROI with them (conversions or time saving) you probably do not need them.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/ThePracticalDad</strong> · r/shopify · Apr 14, 2026 · 11 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1snbsz9/how_do_you_decide_which_paid_shopify_apps_are/ogkqa8s/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">How to work out your real monthly app bill</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">

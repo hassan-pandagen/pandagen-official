@@ -163,6 +163,18 @@ export default function WordPressMigrationCostPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 22, 2026" readTime="8 min read" />
 
+                    <BlogText>
+                        Two things the developer who founded WordPress said about his own platform in April 2026, quoted as he wrote them, with a link to the report that published each one.
+                    </BlogText>
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. We did it by blindly following rules and ideals to a point when they became iatrogenic.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen. That is an input and a save button, stored in a meta field.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, comparing WordPress velocity to Cloudflare&apos;s EmDash CMS, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">

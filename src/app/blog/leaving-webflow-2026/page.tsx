@@ -256,6 +256,25 @@ export default function LeavingWebflow2026Page() {
                         />
                     </header>
 
+                    <BlogText>
+                        Webflow users put the pricing and downtime frustrations into their own words on r/webflow in 2026. Every quote is reproduced as posted and links back to the thread it came from.
+                    </BlogText>
+
+                    <BlogQuote>
+                        I have been using Webflow for years and NEVER have been able to understand the pricing models nor fully communicate to my clients which plan they needed and why. It is so convoluted and counterintuitive but it seems the confusion is part of the business model here.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/proteanradish · r/webflow · Mar 8, 2026 · 16 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1qxsin3/client_seats_and_pricing_update_webflow_just_made/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        Webflow should credit us downtime.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Jambajamba90 (Webflow Community MVP) · r/webflow · Apr 13, 2026 · 15 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        Really screwing up our development schedule. Hired people cannot continue website development because of these issues events.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/eweber911 · r/webflow · Apr 13, 2026 · 6 upvotes · <a href="https://www.reddit.com/r/webflow/comments/1sl9ubw/is_webflow_down_no_access_to_anything_bad_gateway/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section className="mb-12 rounded-2xl border border-stone-200 bg-stone-950 p-5 text-white md:p-8" aria-label="Four controls for deciding whether to leave Webflow">
                         <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
                             <div>

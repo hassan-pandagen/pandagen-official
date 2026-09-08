@@ -171,6 +171,22 @@ export default function WhatIsHeadlessCommercePage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="11 min read" />
 
+                    <BlogText>
+                        Three Shopify store owners and developers, in their own words on r/shopify, on what apps and admin changes do to a themed store. Each quote links to the original post.
+                    </BlogText>
+                    <BlogQuote>
+                        One badly-written app that injects a synchronous script in the head can drag your LCP more than 15 well-written apps. Apps that load on every page when they only need to fire on product pages, third-party CDN dependencies, and any app whose JavaScript size is over 100kb — those three patterns cause 80% of the slowdowns we have seen.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Only-Fisherman5788 · r/shopify · May 5, 2026 · 5 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1t0ohfs/at_what_point_do_shopify_apps_actually_start/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Our store has literally no front end apps whatsoever as I prefer to manually create them myself so I have full control over when they fire or not.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/SimilarControl · r/shopify · May 5, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1t0ohfs/at_what_point_do_shopify_apps_actually_start/ojafdcu/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Feels like they are optimizing for new user simplicity at the expense of power users. Every update adds guardrails and abstraction, but kills speed for people who actually live in the admin all day. Death by a thousand clicks is real.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/HusainKaizar · r/shopify · May 4, 2026 · 17 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1t028ic/why_are_devs_on_a_tear_making_shopify_admin_less/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Headless commerce in plain English</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">

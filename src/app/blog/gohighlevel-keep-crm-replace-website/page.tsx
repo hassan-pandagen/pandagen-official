@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -168,6 +168,35 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan designs CRM-connected websites and search-sensitive migrations."
                     />
+
+                    <BlogText>
+                        Agency owners and developers have been describing the same website-builder problem on the HighLevel Ideas board and r/gohighlevel since 2024. These are their words, unedited, with a link to each original post.
+                    </BlogText>
+
+                    <BlogQuote>
+                        Mobile takes 3 to 5 seconds on average to load sites. GHL fonts alone took a whole second to load.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Viktar Saikouski, GHL Ideas Board, May 7, 2025 · <a href="https://ideas.gohighlevel.com/website/p/extremely-slow-mobile-website-load-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        I tested dozens of sites. None are above 50 on mobile performance. The best I can get on any HighLevel site is 47.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Jeffrey Lemoine, GHL Ideas Board, November 27, 2024 · <a href="https://ideas.gohighlevel.com/website/p/fix-mobile-page-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        I stripped everything off the page. No images, no Google fonts, no tracking, no CSS. Just Arial text on a plain page. Page speed is extremely slow for such a basic page. I love GHL but fear I am going to have to move to another LP solution due to these horrible load times.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/AdIllustrious7272, r/gohighlevel, July 29, 2024 · <a href="https://www.reddit.com/r/gohighlevel/comments/1ef21su/mobile_page_speed_debacle_please_help/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        I am a huge advocate when it comes to not using the GHL site builder unless the client is not concerned with SEO, site speed, or does not plan to scale. The system is janky, not customizable to a fault, and produces bloated code.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Vibesushi, r/gohighlevel, May 30, 2025 · <a href="https://www.reddit.com/r/gohighlevel/comments/1kz7por/ghl_is_the_worst_possible_website_builder_for/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        GHL API is way too slow for your frontend to rely on API calls to render or post. GHL sends webhooks one way and needs to be spoken to in API another way. Not to mention their trailing slash nightmare.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/darkmaneckz, r/gohighlevel, April 17, 2026 · <a href="https://www.reddit.com/r/gohighlevel/comments/1sgjok7/anyone_running_a_headless_ghl_setup_nextjs/ognr9ag/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The architecture in one minute</h2>

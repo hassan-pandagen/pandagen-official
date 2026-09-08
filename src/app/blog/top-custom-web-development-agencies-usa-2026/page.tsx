@@ -231,6 +231,22 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
 
+                    <BlogText>
+                        Three people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.
+                    </BlogText>
+                    <BlogQuote>
+                        I sense a lack of direction and communication. Lots of initiatives started, but never completed. The new product editor is scrapped although it seemed what users wanted. The more in core initiative never produced a roadmap.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/beloved-wombat</strong> · r/woocommerce · Apr 16, 2026 · 8 upvotes (on WooCommerce Core lead thread) · <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        We are not being killed by competition, I believe we have done this to ourselves. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I tested 10,000 WooCommerce stores and found they use on average 30 plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/beloved-wombat</strong> (independent 10K-store study) · r/woocommerce · Apr 16, 2026 · <a href="https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <InsightBox variant="warning" label="Commercial disclosure">
                         PandaCodeGen publishes this article, sells web-development services, and appears in the
                         shortlist. We do not rank ourselves first or claim independent superiority. Agencies are listed first in alphabetical order, then the two talent marketplaces, because they are different things to buy. Position within each group carries no ranking, and no placement was purchased.

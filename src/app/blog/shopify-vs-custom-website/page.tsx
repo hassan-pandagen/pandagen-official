@@ -166,6 +166,22 @@ export default function ShopifyVsCustomWebsitePage() {
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="5 min read" />
 
+                    <BlogText>
+                        These are merchants on r/shopify explaining, in their own words, why they started looking at leaving the platform. Every quote links to the original post.
+                    </BlogText>
+                    <BlogQuote>
+                        There is $4,200 sitting in that account. That is literally my inventory money for next month. I am also starting to look at moving off Shopify entirely because I cannot run a business where the platform can just decide to hold my money whenever they want.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/hipap</strong> · r/shopify · Apr 9, 2026 · 27 upvotes, 62 comments · <a href="https://www.reddit.com/r/shopify/comments/1skg672/shopify_payments_froze_4200_and_support_wont_tell/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I have been using Shopify for 7 years now and it has truly gotten worse and worse with each year. The customer service has fallen off dramatically, the platform has almost weekly outages, and I am constantly finding issues that they cannot fix.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/Carey251</strong> · r/shopify · May 4, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1t028ic/why_are_devs_on_a_tear_making_shopify_admin_less/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        Feels like they are optimizing for new user simplicity at the expense of power users. Every update adds guardrails and abstraction, but kills speed for people who actually live in the admin all day. Death by a thousand clicks is real.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/HusainKaizar</strong> · r/shopify · May 4, 2026 · 17 upvotes · <a href="https://www.reddit.com/r/shopify/comments/1t028ic/why_are_devs_on_a_tear_making_shopify_admin_less/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <section data-speakable="true" className="my-10 rounded-2xl border border-stone-200 bg-stone-50 p-7">
                         <h2 className="mb-3 text-xl font-bold text-charcoal">First: which &ldquo;custom website&rdquo; do you mean?</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
