@@ -134,7 +134,7 @@ export default function PageContent() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
-              { tier: "Starter", price: "$1,500", fit: "Simple sites, 5 to 15 pages" },
+              { tier: "Starter", price: "$1,500", fit: "Simple sites, 5 to 7 pages" },
               { tier: "Growth", price: "$3,500", fit: "Business sites, blogs, integrations" },
               { tier: "Scale", price: "$5K to $10K", fit: "E-commerce and complex builds" },
               { tier: "Scale+", price: "$10K+", fit: "Enterprise scope, custom quoted" },
