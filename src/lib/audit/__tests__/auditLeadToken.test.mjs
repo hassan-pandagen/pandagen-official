@@ -38,6 +38,7 @@ function useDevelopmentMemory() {
 
 function auditResult() {
   return {
+    pageSpeedAvailable: true,
     performanceScore: 91,
     seoScore: 95,
     accessibilityScore: 93,

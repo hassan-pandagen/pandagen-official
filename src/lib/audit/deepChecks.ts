@@ -120,7 +120,7 @@ function checkVisualHierarchy(html: string): DeepCheckResult {
   return { id, name, score, status: status(score), findings, fix: h1s.length !== 1 ? 'Ensure exactly one H1 tag per page and maintain proper heading hierarchy.' : 'Heading structure looks good. Consider reviewing visual weight of text elements.' };
 }
 
-function checkMobileFirstUX(html: string, pageSpeed: PageSpeedResult): DeepCheckResult {
+function checkMobileFirstUX(html: string, pageSpeed: PageSpeedResult | null): DeepCheckResult {
   const id = 'mobile-first-ux';
   const name = 'Mobile First UX';
   const findings: string[] = [];
@@ -153,12 +153,18 @@ function checkMobileFirstUX(html: string, pageSpeed: PageSpeedResult): DeepCheck
     score -= 15;
   }
 
-  // Leverage PageSpeed performance as a mobile proxy
-  if (pageSpeed.performanceScore < 50) {
-    findings.push(`Mobile performance score is low (${pageSpeed.performanceScore}/100)`);
+  // Leverage PageSpeed performance as a mobile proxy. When PageSpeed did not
+  // answer there is no measurement, so this sub-check is skipped outright: it
+  // neither adds nor removes points and it prints no number. The markup-based
+  // sub-checks above are unaffected and keep their existing weights.
+  const performanceScore = pageSpeed?.performanceScore ?? null;
+  if (performanceScore === null) {
+    findings.push('Mobile performance score unavailable, so this sub-check was skipped');
+  } else if (performanceScore < 50) {
+    findings.push(`Mobile performance score is low (${performanceScore}/100)`);
     score -= 15;
   } else {
-    findings.push(`Mobile performance score: ${pageSpeed.performanceScore}/100`);
+    findings.push(`Mobile performance score: ${performanceScore}/100`);
   }
 
   score = clamp(score);
@@ -879,7 +885,26 @@ export function checkSearchAndAIFoundations(
 /*  Main orchestrator                                                  */
 /* ------------------------------------------------------------------ */
 
-export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult): Promise<DeepChecksResult> {
+/** Everything the eleven checks need, once the network work is done. */
+export interface DeepCheckSources {
+  url: string;
+  html: string;
+  htmlOk: boolean;
+  headers: Headers;
+  robotsText: string;
+  robotsOk: boolean;
+  sitemapText: string;
+  sitemapOk: boolean;
+  llmsOk: boolean;
+  aiTxtOk: boolean;
+}
+
+/**
+ * The network half of the deep checks. It depends on nothing but the URL, so
+ * the caller can start it at the same moment as the PageSpeed request instead
+ * of waiting for that result first.
+ */
+export async function fetchDeepCheckSources(url: string): Promise<DeepCheckSources> {
   const urlObj = new URL(url);
   const origin = urlObj.origin;
 
@@ -898,9 +923,37 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
   const llmsData = llmsRes.status === 'fulfilled' ? llmsRes.value : { ok: false, text: '', headers: new Headers() };
   const aiTxtData = aiTxtRes.status === 'fulfilled' ? aiTxtRes.value : { ok: false, text: '', headers: new Headers() };
 
-  const html = htmlData.text;
-  const htmlFetched = htmlData.ok && html.length > 0;
-  const headers = htmlData.headers;
+  return {
+    url,
+    html: htmlData.text,
+    htmlOk: htmlData.ok,
+    headers: htmlData.headers,
+    robotsText: robotsData.text,
+    robotsOk: robotsData.ok,
+    sitemapText: sitemapData.text,
+    sitemapOk: sitemapData.ok,
+    llmsOk: llmsData.ok,
+    aiTxtOk: aiTxtData.ok,
+  };
+}
+
+/**
+ * The pure half: runs the eleven checks over already-fetched sources. A null
+ * `pageSpeedData` means PageSpeed did not answer; only checkMobileFirstUX
+ * consults it, and it skips its performance sub-check in that case.
+ */
+export function evaluateDeepChecks(
+  sources: DeepCheckSources,
+  pageSpeedData: PageSpeedResult | null
+): DeepChecksResult {
+  const { url, headers } = sources;
+  const robotsData = { text: sources.robotsText, ok: sources.robotsOk };
+  const sitemapData = { text: sources.sitemapText, ok: sources.sitemapOk };
+  const llmsData = { ok: sources.llmsOk };
+  const aiTxtData = { ok: sources.aiTxtOk };
+
+  const html = sources.html;
+  const htmlFetched = sources.htmlOk && html.length > 0;
 
   // Run all 11 checks, each wrapped in try/catch
   const checks: DeepCheckResult[] = [];
@@ -941,4 +994,16 @@ export async function runDeepChecks(url: string, pageSpeedData: PageSpeedResult)
     : 0;
 
   return { checks, overallScore, htmlFetched };
+}
+
+/**
+ * Sequential convenience wrapper. The analyze route deliberately does not use
+ * this: it calls fetchDeepCheckSources concurrently with the PageSpeed request
+ * and then evaluateDeepChecks, so the two network phases overlap.
+ */
+export async function runDeepChecks(
+  url: string,
+  pageSpeedData: PageSpeedResult | null
+): Promise<DeepChecksResult> {
+  return evaluateDeepChecks(await fetchDeepCheckSources(url), pageSpeedData);
 }

@@ -1,22 +1,55 @@
 import type { DeepChecksResult } from './deepChecks';
 
+/**
+ * Every field except `deepChecks` is derived from Google's PageSpeed Insights
+ * response. When that request fails, times out, or omits a metric, the field is
+ * `null` and `pageSpeedAvailable` is false. Nothing here is ever defaulted to
+ * zero: a zero would be indistinguishable from a genuine measurement of zero,
+ * and the audit must never present absent data as a score.
+ */
 export interface PageSpeedResult {
-  performanceScore: number;
-  seoScore: number;
-  accessibilityScore: number;
-  bestPracticesScore: number;
-  pageSize: string;
-  fcp: number;
-  lcp: number;
-  cls: number;
-  tbt: number;
-  speedIndex: number;
-  platformDetected: string;
-  criticalIssues: number;
-  warnings: number;
-  passedChecks: number;
-  topIssues: AuditIssue[];
+  pageSpeedAvailable: boolean;
+  performanceScore: number | null;
+  seoScore: number | null;
+  accessibilityScore: number | null;
+  bestPracticesScore: number | null;
+  pageSize: string | null;
+  fcp: number | null;
+  lcp: number | null;
+  cls: number | null;
+  tbt: number | null;
+  speedIndex: number | null;
+  platformDetected: string | null;
+  criticalIssues: number | null;
+  warnings: number | null;
+  passedChecks: number | null;
+  topIssues: AuditIssue[] | null;
   deepChecks?: DeepChecksResult;
+}
+
+/**
+ * The shape returned when PageSpeed could not be reached. The deep checks can
+ * still run and be reported alongside this.
+ */
+export function unavailablePageSpeedResult(): PageSpeedResult {
+  return {
+    pageSpeedAvailable: false,
+    performanceScore: null,
+    seoScore: null,
+    accessibilityScore: null,
+    bestPracticesScore: null,
+    pageSize: null,
+    fcp: null,
+    lcp: null,
+    cls: null,
+    tbt: null,
+    speedIndex: null,
+    platformDetected: null,
+    criticalIssues: null,
+    warnings: null,
+    passedChecks: null,
+    topIssues: null,
+  };
 }
 
 export interface AuditIssue {
@@ -44,7 +77,10 @@ interface LighthouseResult {
   stackPacks?: Array<{ id?: string }>;
 }
 
-const PAGESPEED_TIMEOUT_MS = 35_000;
+// Kept below the serverless platform's own execution ceiling on purpose. Being
+// killed by the platform returns nothing we control; timing out here returns a
+// response we can shape, so the deep checks still reach the visitor.
+const PAGESPEED_TIMEOUT_MS = 20_000;
 const PAGESPEED_MAX_RESPONSE_BYTES = 10 * 1024 * 1024;
 
 async function readBoundedJson(response: Response): Promise<unknown> {
@@ -106,6 +142,18 @@ export async function runPageSpeedAnalysis(url: string): Promise<PageSpeedResult
   }
 }
 
+/** A Lighthouse category score as 0-100, or null when the category is absent. */
+function categoryScore(category: LighthouseCategory | undefined): number | null {
+  const score = category?.score;
+  return typeof score === 'number' && Number.isFinite(score) ? Math.round(score * 100) : null;
+}
+
+/** A Lighthouse numeric metric, or null when the audit did not report one. */
+function auditMetric(audit: LighthouseAudit | undefined): number | null {
+  const value = audit?.numericValue;
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
 function parsePageSpeedResult(data: unknown): PageSpeedResult {
   const lighthouse = data && typeof data === 'object' && 'lighthouseResult' in data
     ? (data as { lighthouseResult?: LighthouseResult }).lighthouseResult
@@ -116,19 +164,19 @@ function parsePageSpeedResult(data: unknown): PageSpeedResult {
   const cats = lighthouse.categories;
   const audits = lighthouse.audits;
 
-  const performanceScore = Math.round((cats.performance?.score || 0) * 100);
-  const seoScore = Math.round((cats.seo?.score || 0) * 100);
-  const accessibilityScore = Math.round((cats.accessibility?.score || 0) * 100);
-  const bestPracticesScore = Math.round((cats['best-practices']?.score || 0) * 100);
+  const performanceScore = categoryScore(cats.performance);
+  const seoScore = categoryScore(cats.seo);
+  const accessibilityScore = categoryScore(cats.accessibility);
+  const bestPracticesScore = categoryScore(cats['best-practices']);
 
-  const fcp = audits['first-contentful-paint']?.numericValue || 0;
-  const lcp = audits['largest-contentful-paint']?.numericValue || 0;
-  const cls = audits['cumulative-layout-shift']?.numericValue || 0;
-  const tbt = audits['total-blocking-time']?.numericValue || 0;
-  const speedIndex = audits['speed-index']?.numericValue || 0;
+  const fcp = auditMetric(audits['first-contentful-paint']);
+  const lcp = auditMetric(audits['largest-contentful-paint']);
+  const cls = auditMetric(audits['cumulative-layout-shift']);
+  const tbt = auditMetric(audits['total-blocking-time']);
+  const speedIndex = auditMetric(audits['speed-index']);
 
-  const totalByteWeight = audits['total-byte-weight']?.numericValue || 0;
-  const pageSize = formatBytes(totalByteWeight);
+  const totalByteWeight = auditMetric(audits['total-byte-weight']);
+  const pageSize = totalByteWeight === null ? null : formatBytes(totalByteWeight);
   const platformDetected = detectPlatform(lighthouse);
 
   let criticalIssues = 0;
@@ -157,6 +205,7 @@ function parsePageSpeedResult(data: unknown): PageSpeedResult {
   }
 
   return {
+    pageSpeedAvailable: true,
     performanceScore, seoScore, accessibilityScore, bestPracticesScore,
     pageSize, fcp, lcp, cls, tbt, speedIndex,
     platformDetected, criticalIssues, warnings, passedChecks, topIssues,

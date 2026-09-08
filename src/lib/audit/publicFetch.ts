@@ -284,7 +284,17 @@ function requestAtAddress(url: URL, target: ResolvedAddress, deadline: number): 
       return;
     }
 
-    const lookupPinned: LookupFunction = (_hostname, _options, callback) => {
+    // Node 20.13 and later call a custom `lookup` with `{ all: true }` and
+    // require the ARRAY callback form. The scalar form fails earlier, at
+    // "Invalid IP address: undefined", before any socket is opened, so every
+    // audit fetch returned nothing on modern runtimes. Answer whichever form
+    // the runtime asked for. Both stay pinned to the single address we already
+    // validated as public, so the SSRF guarantee is unchanged.
+    const lookupPinned: LookupFunction = (_hostname, options, callback) => {
+      if (options && typeof options === 'object' && options.all) {
+        callback(null, [{ address: target.address, family: target.family }]);
+        return;
+      }
       callback(null, target.address, target.family);
     };
 

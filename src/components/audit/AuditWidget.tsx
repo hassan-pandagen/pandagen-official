@@ -20,6 +20,12 @@ type WidgetState = "idle" | "loading" | "results";
 const SITE_UNREACHABLE_MESSAGE =
   "We could not reach that site, so there is nothing to score yet. This is usually a temporary block or a redirect. Try again, or send us the address and we will look manually.";
 
+// Shown when Google's PageSpeed lab run did not return. The 11 technical checks
+// still ran, so they are reported; the lab metrics are marked unavailable and
+// no performance number of any kind is shown.
+const PAGESPEED_UNAVAILABLE_MESSAGE =
+  "Google's lab run did not return for this scan, so the performance score and Core Web Vitals are not shown. The technical checks below ran normally. Google measures a URL fresh the first time it sees it, so a second scan in a minute usually returns the lab data.";
+
 const DESKTOP_URL_INPUT_ID = "audit-url-desktop";
 const DESKTOP_URL_ERROR_ID = "audit-url-desktop-error";
 const MOBILE_URL_INPUT_ID = "audit-url-mobile";
@@ -117,6 +123,10 @@ export default function AuditWidget() {
   // The site's HTML never arrived, so every check ran against an empty document.
   // Both render paths must suppress scores when this is true.
   const siteUnreachable = auditData?.deepChecks?.htmlFetched === false;
+
+  // PageSpeed did not answer, so every lab-derived field is null. The deep
+  // checks are still shown; the lab metrics render as unavailable, never as 0.
+  const pageSpeedUnavailable = auditData?.pageSpeedAvailable === false;
 
   // Derived hero diagnostics from a real result
   const aiCheck = auditData?.deepChecks?.checks.find((c) => c.id === "ai-readiness");
@@ -253,11 +263,22 @@ export default function AuditWidget() {
                     )}
                   </div>
 
+                  {pageSpeedUnavailable && (
+                    <div className="flex items-start gap-3 rounded-xl border border-orange-100 bg-orange-50/50 px-4 py-3">
+                      <AlertTriangle className="w-5 h-5 text-orange-700 shrink-0 mt-0.5" />
+                      <p className="text-xs text-stone-700 leading-relaxed">{PAGESPEED_UNAVAILABLE_MESSAGE}</p>
+                    </div>
+                  )}
+
                   {/* 3 hero answers, now personalized */}
                   <div className="space-y-2.5">
                     {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" />}
-                    <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} />
-                    <HeroResult icon={Search} q="Performance score" score={auditData.performanceScore} suffix="/100" />
+                    {auditData.fcp !== null
+                      ? <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} />
+                      : <HeroUnavailable icon={Gauge} q="Mobile FCP (lab)" />}
+                    {auditData.performanceScore !== null
+                      ? <HeroResult icon={Search} q="Performance score" score={auditData.performanceScore} suffix="/100" />
+                      : <HeroUnavailable icon={Search} q="Performance score" />}
                   </div>
 
                   {/* All 11 checks are UNBLURRED. Generosity beats the email wall. */}
@@ -395,10 +416,20 @@ export default function AuditWidget() {
               {state === "results" && auditData && !siteUnreachable && (
                 <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-3">
                   <div className="text-sm text-stone-600 truncate">{url}</div>
+                  {pageSpeedUnavailable && (
+                    <div className="flex items-start gap-2 rounded-xl border border-orange-100 bg-orange-50/50 px-3 py-2">
+                      <AlertTriangle className="w-4 h-4 text-orange-700 shrink-0 mt-0.5" />
+                      <p className="text-[11px] text-stone-700 leading-relaxed">{PAGESPEED_UNAVAILABLE_MESSAGE}</p>
+                    </div>
+                  )}
                   <div className="space-y-2">
                     {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" compact />}
-                    <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} compact />
-                    <HeroResult icon={Search} q="Performance" score={auditData.performanceScore} suffix="/100" compact />
+                    {auditData.fcp !== null
+                      ? <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} compact />
+                      : <HeroUnavailable icon={Gauge} q="Mobile FCP (lab)" compact />}
+                    {auditData.performanceScore !== null
+                      ? <HeroResult icon={Search} q="Performance" score={auditData.performanceScore} suffix="/100" compact />
+                      : <HeroUnavailable icon={Search} q="Performance" compact />}
                   </div>
                   {auditData.deepChecks && (
                     <div className="border border-stone-200 rounded-xl overflow-hidden">
@@ -510,6 +541,29 @@ function SiteUnreachable({
         Try again
         <ArrowRight className={`${compact ? "w-4 h-4" : "w-5 h-5"} group-hover:translate-x-1 transition-transform`} />
       </button>
+    </div>
+  );
+}
+
+/* --- Hero metric with no measurement behind it. Deliberately prints a word,
+       not a number: no zero, no dash that could read as a value, no colour
+       that would imply a good or bad result. --- */
+function HeroUnavailable({
+  icon: Icon,
+  q,
+  compact,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  q: string;
+  compact?: boolean;
+}) {
+  return (
+    <div className={`flex items-center gap-3 rounded-xl border border-stone-200 bg-stone-50 ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
+      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} text-stone-600 shrink-0`} />
+      <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal flex-1 leading-tight`}>{q}</p>
+      <span className={`font-mono font-bold uppercase tracking-wider text-stone-600 ${compact ? "text-[10px]" : "text-xs"}`}>
+        Not measured
+      </span>
     </div>
   );
 }
