@@ -2154,3 +2154,52 @@ from 2024 to May 2026; the fresh pass is what moves the dates.
 
 Read: none of this is a KPI. The effect, if any, shows in the 6 Oct read as
 citations and clicks on these 20 pages against the remaining controls.
+
+### Addendum, 8 September 2026: Read 1 method upgraded before it runs
+
+Source: an r/aeo thread of 6 to 8 September (link and full selection in
+`QUOTES_SELECTED_AEO_2026-09-08.md`). Three commenters describe measurement
+traps. Two of them we had found independently, which is corroboration rather
+than news; two are new and would have corrupted the 16 to 20 September read.
+
+**Already ours, now confirmed from outside.**
+- Geography changes the answer. u/Narrow_Hall_7273 tested the same model and
+  question with only the stated user location changed and moved a brand from
+  missing to named in 5 of 6 tests. Our `gl=us&hl=en` rule stands.
+- Brand-name prompts are worthless as a measure. Same commenter: one brand named
+  in 100% of answers when the question contained its name and about 15% on the
+  plain category question, same day. Matches our own note that brand queries are
+  4 of 1,000 queries and 64% of clicks.
+- Reddit is roughly a third of citations, YouTube and LinkedIn about a fifth
+  each, company websites well below. Independently close to Meltwater's 47.5%
+  for Reddit, LinkedIn and YouTube combined against 18.7% for company sites.
+
+**New, and both change the Read 1 protocol.**
+1. **Record NAMED and CITED as two separate columns.** An engine can cite our
+   page as a source while naming a competitor in the sentence. Analytics only
+   ever sees the link. Our current plan records citation only, which would score
+   a loss as a win. Add the second column before the read.
+2. **An absent AI Overview is not evidence of absence.** u/EffectiveElk2703
+   repeated identical queries and got an Overview on roughly 7 in 10 runs and
+   nothing on the rest, same query, same location, minutes apart. Any prompt
+   recorded as "no Overview" must be run at least twice before that is written
+   down. This also explains two early readings we logged as extraction failures.
+3. **Perplexity sometimes answers without retrieving.** The reply reads normally
+   but is not grounded in any source, and scoring it naively logs a false
+   "not mentioned". Before recording an absence on Perplexity, confirm the answer
+   carries sources. Discard ungrounded runs rather than counting them.
+
+**Protocol for 16 to 20 September, superseding the earlier note.**
+- Fixed prompt set, no brand names in any prompt, US geography forced.
+- Each prompt run three times. Count a mention only when it appears in two of
+  three. A single run is not a measurement.
+- Four columns per prompt: named, cited, who was named instead, which sources
+  were pulled.
+- Re-run any "no AI Overview" result once before recording it.
+- Discard ungrounded Perplexity runs.
+- Still AI only. Do not look at Google clicks or positions until 6 October.
+
+**Entity check, to run once before the read:** ask each engine our exact brand
+name alone and confirm it returns this company rather than a larger unrelated
+one. If another entity owns the term, brand prompts are unreadable and no amount
+of schema fixes it.
