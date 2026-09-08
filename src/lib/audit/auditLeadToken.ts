@@ -64,9 +64,19 @@ function isFiniteNumber(value: unknown): value is number {
   return typeof value === 'number' && Number.isFinite(value);
 }
 
+function isFiniteNumberOrNull(value: unknown): value is number | null {
+  return value === null || isFiniteNumber(value);
+}
+
+function isStringOrNull(value: unknown): value is string | null {
+  return value === null || typeof value === 'string';
+}
+
 function isPageSpeedResult(value: unknown): value is PageSpeedResult {
   if (!value || typeof value !== 'object') return false;
   const data = value as Partial<PageSpeedResult>;
+  // Null is a valid stored value for every PageSpeed-derived field: it is how a
+  // PageSpeed failure is recorded. Zero is not substituted anywhere.
   return [
     data.performanceScore,
     data.seoScore,
@@ -80,10 +90,11 @@ function isPageSpeedResult(value: unknown): value is PageSpeedResult {
     data.criticalIssues,
     data.warnings,
     data.passedChecks,
-  ].every(isFiniteNumber)
-    && typeof data.pageSize === 'string'
-    && typeof data.platformDetected === 'string'
-    && Array.isArray(data.topIssues)
+  ].every(isFiniteNumberOrNull)
+    && isStringOrNull(data.pageSize)
+    && isStringOrNull(data.platformDetected)
+    && (data.topIssues === null || Array.isArray(data.topIssues))
+    && typeof data.pageSpeedAvailable === 'boolean'
     && (data.deepChecks === undefined
       || (!!data.deepChecks && Array.isArray(data.deepChecks.checks)));
 }

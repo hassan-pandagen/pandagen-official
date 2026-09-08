@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { runPageSpeedAnalysis, type PageSpeedResult } from '@/lib/audit/pagespeed';
-import { runDeepChecks } from '@/lib/audit/deepChecks';
+import {
+  runPageSpeedAnalysis,
+  unavailablePageSpeedResult,
+  type PageSpeedResult,
+} from '@/lib/audit/pagespeed';
+import {
+  evaluateDeepChecks,
+  fetchDeepCheckSources,
+  type DeepChecksResult,
+} from '@/lib/audit/deepChecks';
 import {
   assertPublicUrl,
   normalizePublicUrl,
@@ -80,6 +88,14 @@ function maxConcurrentAudits(): number {
   return Number.isInteger(configured) && configured >= 1 && configured <= 20 ? configured : 2;
 }
 
+// No `maxDuration` is exported here on purpose: the correct value depends on
+// the Vercel plan this deploys to, and that has not been confirmed. The
+// platform default therefore applies, which on Hobby is a hard 10 seconds. This
+// design does not fit inside 10 seconds for a URL that PageSpeed has not
+// cached, because Google runs a fresh Lighthouse pass (roughly 15-30 seconds)
+// on the first request for a URL and only serves a cached result afterwards.
+// Our own budget is 20s for PageSpeed and 8s per deep-check fetch, running
+// concurrently. Setting maxDuration is the owner's decision.
 export async function POST(request: NextRequest) {
   let hasConcurrencySlot = false;
   try {
@@ -130,19 +146,45 @@ export async function POST(request: NextRequest) {
     activeAudits += 1;
     hasConcurrencySlot = true;
 
-    const pageSpeedResult = await runPageSpeedAnalysis(normalizedUrl);
+    // The PageSpeed request and the deep-check fetches are genuinely
+    // concurrent. Only checkMobileFirstUX consults the PageSpeed result, and it
+    // needs no network of its own, so the checks are evaluated after both
+    // network phases have settled rather than after PageSpeed alone.
+    const [pageSpeedSettled, deepSourcesSettled] = await Promise.allSettled([
+      runPageSpeedAnalysis(normalizedUrl),
+      fetchDeepCheckSources(normalizedUrl),
+    ]);
 
-    // Run deep checks in parallel with minimal added latency
-    let deepChecks;
-    try {
-      deepChecks = await runDeepChecks(normalizedUrl, pageSpeedResult);
-    } catch (err) {
-      console.error('Deep checks error:', err);
-      deepChecks = null;
+    let pageSpeedResult: PageSpeedResult | null = null;
+    if (pageSpeedSettled.status === 'fulfilled') {
+      pageSpeedResult = pageSpeedSettled.value;
+    } else {
+      // A PageSpeed failure no longer discards the deep checks. The response
+      // carries pageSpeedAvailable: false and null lab metrics instead.
+      console.error('PageSpeed analysis error:', pageSpeedSettled.reason);
+    }
+
+    let deepChecks: DeepChecksResult | null = null;
+    if (deepSourcesSettled.status === 'fulfilled') {
+      try {
+        deepChecks = evaluateDeepChecks(deepSourcesSettled.value, pageSpeedResult);
+      } catch (err) {
+        console.error('Deep checks error:', err);
+      }
+    } else {
+      console.error('Deep checks fetch error:', deepSourcesSettled.reason);
+    }
+
+    // Nothing was measured at all, so there is no honest partial result.
+    if (!pageSpeedResult && !deepChecks) {
+      return jsonResponse(
+        { error: 'The website could not be analyzed right now. Please try again.' },
+        502
+      );
     }
 
     const result: PageSpeedResult = {
-      ...pageSpeedResult,
+      ...(pageSpeedResult ?? unavailablePageSpeedResult()),
       deepChecks: deepChecks ?? undefined,
     };
     const leadToken = await issueAuditLeadToken(normalizedUrl, result);
@@ -169,7 +211,7 @@ export async function POST(request: NextRequest) {
         { 'Retry-After': '60' }
       );
     }
-    console.error('PageSpeed analysis error:', error);
+    console.error('Audit analyze error:', error);
     return jsonResponse(
       { error: 'The website could not be analyzed right now. Please try again.' },
       502

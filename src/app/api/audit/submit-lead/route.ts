@@ -24,7 +24,13 @@ function getResend(): Resend {
   return resendClient;
 }
 
-const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
+// PageSpeed-derived values are null when Google did not return lab data. They
+// are reported as unavailable rather than as a zero or an invented figure.
+const UNAVAILABLE = 'Not available (PageSpeed lab data did not return)';
+const fmt = (n: number | null) => n === null
+  ? UNAVAILABLE
+  : n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
+const fmtScore = (n: number | null) => n === null ? UNAVAILABLE : `${n}/100`;
 const MAX_LEAD_REQUEST_BYTES = 2_048;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -62,19 +68,19 @@ function buildUserConfirmationText(url: string, data: PageSpeedResult): string {
   const hasDeep = data.deepChecks && data.deepChecks.checks.length > 0;
   const failCount = hasDeep
     ? data.deepChecks!.checks.filter((check) => check.status === 'fail').length
-    : data.criticalIssues;
+    : (data.criticalIssues ?? 0);
   const warnCount = hasDeep
     ? data.deepChecks!.checks.filter((check) => check.status === 'warn').length
-    : data.warnings;
+    : (data.warnings ?? 0);
   const issueCount = failCount + warnCount;
 
   let text = `Here is a summary of the automated website audit you requested.\n\n`;
   text += `Automated checks are point-in-time diagnostics, not a guarantee of field performance, rankings, conversions, revenue, security, or accessibility conformance.\n\n`;
   text += `Audit summary:\n`;
   text += `Site: ${url}\n`;
-  text += `Performance: ${data.performanceScore}/100\n`;
+  text += `Performance: ${fmtScore(data.performanceScore)}\n`;
   text += `First Contentful Paint: ${fmt(data.fcp)}\n`;
-  if (data.platformDetected !== 'Custom / Unknown') {
+  if (data.platformDetected && data.platformDetected !== 'Custom / Unknown') {
     text += `Platform: ${data.platformDetected}\n`;
   }
   if (issueCount > 0) text += `Issues found: ${issueCount}\n`;
@@ -92,30 +98,33 @@ function buildOwnerNotification(
   const hasDeep = auditData.deepChecks && auditData.deepChecks.checks.length > 0;
   const failCount = hasDeep
     ? auditData.deepChecks!.checks.filter((check) => check.status === 'fail').length
-    : auditData.criticalIssues;
+    : (auditData.criticalIssues ?? 0);
   const warnCount = hasDeep
     ? auditData.deepChecks!.checks.filter((check) => check.status === 'warn').length
-    : auditData.warnings;
+    : (auditData.warnings ?? 0);
   const issueCount = failCount + warnCount;
   const emailDomain = email.split('@')[1] || '';
 
   let text = `NEW AUDIT LEAD\n${new Date().toUTCString()}\n\n`;
   text += `LEAD\nEmail: ${email}\nDomain: ${emailDomain}\nWebsite: ${url}\n`;
-  text += `Platform: ${auditData.platformDetected}\n\n`;
+  text += `Platform: ${auditData.platformDetected ?? 'Not detected'}\n\n`;
   text += `LOCATION\nCountry: ${geo.country || 'Unknown'}\n`;
   if (geo.city && geo.city !== 'Unknown') text += `City: ${geo.city}\n`;
   if (geo.region && geo.region !== 'Unknown') text += `Region: ${geo.region}\n`;
   text += `\n`;
-  text += `VERDICT: ${auditData.performanceScore >= 80 && failCount === 0
+  // A null performance score cannot support a "healthy site" verdict, so the
+  // null case falls through to the issue count rather than being treated as 0.
+  const performanceScore = auditData.performanceScore;
+  text += `VERDICT: ${performanceScore !== null && performanceScore >= 80 && failCount === 0
     ? 'Healthy site (soft CTA sent)'
     : `${issueCount} issues found (urgency CTA sent)`}\n\n`;
-  text += `SCORES\nPerformance: ${auditData.performanceScore}/100\n`;
-  text += `SEO: ${auditData.seoScore}/100\n`;
-  text += `Accessibility: ${auditData.accessibilityScore}/100\n`;
-  text += `Best Practices: ${auditData.bestPracticesScore}/100\n\n`;
+  text += `SCORES\nPerformance: ${fmtScore(performanceScore)}\n`;
+  text += `SEO: ${fmtScore(auditData.seoScore)}\n`;
+  text += `Accessibility: ${fmtScore(auditData.accessibilityScore)}\n`;
+  text += `Best Practices: ${fmtScore(auditData.bestPracticesScore)}\n\n`;
   text += `LIGHTHOUSE METRICS\nFCP: ${fmt(auditData.fcp)}\n`;
   text += `LCP: ${fmt(auditData.lcp)}\nTBT: ${fmt(auditData.tbt)}\n`;
-  text += `CLS: ${auditData.cls.toFixed(3)}\n\n`;
+  text += `CLS: ${auditData.cls === null ? UNAVAILABLE : auditData.cls.toFixed(3)}\n\n`;
 
   if (hasDeep) {
     text += `11-POINT INSPECTION\n`;
@@ -125,7 +134,7 @@ function buildOwnerNotification(
     }
     text += `\n`;
   }
-  if (auditData.topIssues.length > 0) {
+  if (auditData.topIssues !== null && auditData.topIssues.length > 0) {
     text += `TOP ISSUES\n`;
     for (const issue of auditData.topIssues) {
       text += `- ${issue.title}${issue.savings ? ` (${issue.savings})` : ''}\n`;
@@ -209,7 +218,7 @@ export async function POST(request: NextRequest) {
     const ownerNotification = await getResend().emails.send({
       from: fromEmail,
       to: notifyEmail,
-      subject: `NEW AUDIT FOLLOW-UP REQUEST: ${auditData.performanceScore}/100 | ${auditData.platformDetected} | ${geo.country} | ${email}`,
+      subject: `NEW AUDIT FOLLOW-UP REQUEST: ${auditData.performanceScore === null ? 'no lab data' : `${auditData.performanceScore}/100`} | ${auditData.platformDetected ?? 'Platform not detected'} | ${geo.country} | ${email}`,
       text: buildOwnerNotification(email, url, auditData, geo),
     }).catch((error) => {
       console.error('Owner notification failed:', error);
