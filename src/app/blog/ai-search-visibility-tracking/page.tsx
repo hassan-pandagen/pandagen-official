@@ -171,6 +171,44 @@ export default function AiSearchVisibilityTracking() {
                         </p>
                     </section>
 
+                    <BlogText>
+                        People doing this measurement themselves have been writing up what they found in{" "}
+                        <a
+                            href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="text-cognac hover:underline"
+                        >
+                            an r/aeo thread
+                        </a>{" "}
+                        this month. Five of them are quoted below.
+                    </BlogText>
+
+                    <BlogQuote>
+                        Write down two separate things: did it say your name, and did it link your site. Keep those two apart. They come apart way more often than people expect. An AI can cite your page as a source and still recommend a competitor by name in the actual sentence. Your analytics only ever sees the link, so tools built on traffic will tell you things are fine when the answer is recommending someone else. The name is what a buyer remembers.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Narrow_Hall_7273, r/aeo, 8 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        for a lot of queries, Google returns an AI Overview on some runs and no overview at all on others. Same query, same location, minutes apart. Running identical queries repeatedly, roughly 7 in 10 came back with an overview, and the rest came back with nothing. So if you check once and see no AIO, you have not established that the query doesn&apos;t trigger one.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/EffectiveElk2703, r/aeo, 8 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        Run each question three times, since answers move between runs, and count a mention only when it shows in two of three.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Slow-Commercial4316, r/aeo, 6 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        Then make a dumb spreadsheet: mentioned? recommended? who beat us? what sources keep showing up?
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Tech_Stack_Crunch, r/aeo, 6 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        it can take months or even 1+ years to get sustained inbound from it. Don&apos;t expect it to be quick.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/jayson_OutreachBloom, r/aeo, 7 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
                     <BlogHeader id="free-tool">How do you track AI visibility without buying a tool?</BlogHeader>
                     <BlogText>
                         Open Search Console, go to Performance, and switch to the Generative AI report. That is the whole
