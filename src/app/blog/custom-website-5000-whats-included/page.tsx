@@ -154,9 +154,9 @@ export default function CustomWebsite5000Page() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             An agency that bills by the hour can only sell you the hours a budget buys. PandaCodeGen
-                            quotes the site: a 5 to 7 page custom Next.js site for a small business is $1,500, a 10 to
-                            20 page site with a CMS and a full redirect map is $3,500, and the Scale tier this guide
-                            covers is a $5,000 to $10,000 planning range for 30-plus pages or commerce. Every tier is
+                            quotes the site: a custom Next.js site of up to 7 pages for a small business is $1,500, an 8 to
+                            20 page site with a CMS and every old link forwarded is $3,500, and the Scale tier this guide
+                            covers starts at $5,000, for more than 20 pages, a shop, or more than one language. Every tier is
                             fixed for the written scope and you own the code at handover. Your signed statement of
                             work decides the pages, features, migration controls, tests, support, exclusions, and
                             remedy. There is no minimum project size, and the code, design files and accounts are yours at the end.

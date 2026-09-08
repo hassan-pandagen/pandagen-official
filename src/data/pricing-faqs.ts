@@ -17,11 +17,11 @@ export interface PricingFaq {
 export const pricingFaqs: PricingFaq[] = [
   {
     q: "Do you have a minimum project size?",
-    a: "No. We start at $1,500 for a 5 to 7 page site, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often turned away before it gets a price. You get a fixed price before we begin either way.",
+    a: "No. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often turned away before it gets a price. You get a fixed price before we begin either way.",
   },
   {
     q: "Which package should I start with?",
-    a: "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts.",
+    a: "Starter begins at $1,500 for up to 7 pages that we build and update for you, with no CMS. Growth begins at $3,500 for 8 to 20 pages with a CMS you edit yourself, and if you are moving from another platform, every old link forwards to the right new page. Scale begins at $5,000 for more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a call. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
   },
   {
     q: "Do I need a long contract for every project?",

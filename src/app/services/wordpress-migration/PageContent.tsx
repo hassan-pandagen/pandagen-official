@@ -89,7 +89,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are a fixed price from $1,500 to $10,000+, take 1 to 3 weeks, and every old web address you keep is forwarded to its new page. There is no minimum project size and no retainer. Every migration ships with a 90 or better PageSpeed score on phone and desktop, tested three times, and refund terms written into your quote. Your plugin and managed-hosting bills stop, and the new hosting cost is quoted from the provider's plan.
+            <strong className="text-charcoal">PandaCodeGen migrates WordPress sites to custom Next.js code the client owns outright.</strong> Migrations are a fixed price from $1,500, take 1 to 3 weeks, and every old web address you keep is forwarded to its new page. There is no minimum project size and no retainer. Every migration ships with a 90 or better PageSpeed score on phone and desktop, tested three times, and refund terms written into your quote. Your plugin and managed-hosting bills stop, and the new hosting cost is quoted from the provider's plan.
           </p>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function PageContent() {
             For WordPress migration specifically: WordPress sites have no universal score; measure your own routes. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> has appeared in Google AI Overview citations.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen builds the same thing at a fixed price from $1,500 to $10,000, quoted against a written list of your pages. The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Texas LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            PandaCodeGen builds the same thing at a fixed price from $1,500, quoted against a written list of your pages. The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Texas LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
@@ -367,7 +367,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Comparing quotes that describe different amounts of work? That is the gap we built PandaCodeGen for.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migrate WordPress</Link> sites to custom Next.js for $1,500 to $10,000, and every page named in your quote scores 90 or better on Google PageSpeed on phone and desktop, tested three times before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
+              We <Link href="/blog/how-to-migrate-wordpress-to-nextjs" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migrate WordPress</Link> sites to custom Next.js from $1,500, and every page named in your quote scores 90 or better on Google PageSpeed on phone and desktop, tested three times before handover. No plugin subscriptions. No WPEngine bill. Full code ownership on day one.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →
@@ -473,8 +473,8 @@ export default function PageContent() {
             fit: "Simple WordPress site. Brochure, small blog. Our Starter tier.",
             includes: [
               "Full WordPress content export + cleanup",
-              "Custom Next.js build up to 15 pages",
-              "Sanity CMS so your team can edit",
+              "Custom Next.js build, up to 7 pages",
+              "No CMS. We build it and we update it for you",
               "90+ Lighthouse handover target",
               "Every old web address forwarded to its new page",
               "15 days of free post-launch support",
@@ -485,9 +485,10 @@ export default function PageContent() {
             tier: "Growth",
             price: "Starting from $3,500",
             timeline: "2 to 4 weeks",
-            fit: "Business WordPress site. 15-50 pages. Blog, forms, integrations.",
+            fit: "Business WordPress site. 8 to 20 pages. Blog, forms, integrations.",
             includes: [
               "Everything in Starter",
+              "Sanity CMS you edit yourself",
               "Custom post types and taxonomies",
               "Forms with custom API routes",
               "Full SEO migration with schema",
@@ -498,9 +499,9 @@ export default function PageContent() {
           },
           {
             tier: "Scale",
-            price: "$5,000 to $10,000",
+            price: "From $5,000",
             timeline: "4 to 8 weeks",
-            fit: "Complex WordPress or WooCommerce. 30+ pages, custom plugins, integrations.",
+            fit: "Complex WordPress or WooCommerce. More than 20 pages, a shop, or more than one language.",
             includes: [
               "Everything in Growth",
               "WooCommerce to custom ecommerce",
@@ -513,8 +514,11 @@ export default function PageContent() {
         ]}
       />
 
-      {/* SCALE+ NOTE — larger scopes beyond the grid */}
-      <p className="text-center text-sm text-stone-500 px-6 pb-10 -mt-4">Larger scopes: <span className="font-semibold text-charcoal">Scale+ from $10,000</span>, custom quoted after a scoping call.</p>
+      {/* None-of-these-fit invitation, closing the tier ladder. Replaces the
+          former Scale+ card, which existed only to say "bigger". */}
+      <p className="mx-auto max-w-2xl px-6 pb-10 -mt-4 text-center text-sm text-stone-600 leading-relaxed">
+        If none of these match what you have, call <a href="tel:+13027738982" className="text-cognac font-semibold hover:underline">+1 (302) 773-8982</a> or email <a href="mailto:info@pandacodegen.com" className="text-cognac font-semibold hover:underline">info@pandacodegen.com</a> and we will quote it.
+      </p>
 
       {/* 7. DUAL CTA */}
       <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-white">

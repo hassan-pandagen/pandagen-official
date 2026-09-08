@@ -411,7 +411,7 @@ export default function WordPressVsCustomCostPage() {
                         <InsightBox variant="info">
                             Published figures for a custom build usually start around $5,000 and run past $20,000, which
                             is why custom looks like the expensive column. Our Growth package is $3,500 for a comparable
-                            10 to 20 page scope with a CMS, so in this scenario the custom column lands inside the
+                            8 to 20 page scope with a CMS, so in this scenario the custom column lands inside the
                             WordPress range rather than above it. That is a statement about our pricing, not about
                             custom builds in general — plug your own quotes in, because a $15,000 build changes the
                             conclusion completely.

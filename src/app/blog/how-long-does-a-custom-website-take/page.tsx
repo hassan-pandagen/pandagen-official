@@ -241,12 +241,12 @@ export default function WebsiteTimelineGuide() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Starter, 5 to 7 pages</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Starter, up to 7 pages</td>
                                     <td className="border border-stone-300 px-4 py-3">1 to 2 weeks</td>
                                     <td className="border border-stone-300 px-4 py-3">Design back and forth</td>
                                 </tr>
                                 <tr className="bg-stone-50">
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Growth, 10 to 20 pages</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Growth, 8 to 20 pages</td>
                                     <td className="border border-stone-300 px-4 py-3">2 to 4 weeks</td>
                                     <td className="border border-stone-300 px-4 py-3">Content readiness</td>
                                 </tr>

@@ -8,16 +8,19 @@ import { trackGAEvent } from "@/components/GoogleAnalytics";
 
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
-type Tier = "Starter" | "Growth" | "Scale" | "ScalePlus";
+type Tier = "Starter" | "Growth" | "Scale";
+
+type Answer = "starter" | "growth" | "scale";
 
 const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits: string[] }> = {
   Starter: {
     name: "Starter",
     price: "$1,500",
-    tagline: "A small business site, 5 to 7 pages, live quickly.",
+    tagline: "A small business site, up to 7 pages, live quickly.",
     fits: [
-      "Under 10 pages",
+      "Up to 7 pages",
       "A brochure or service site. Nothing to buy.",
+      "We build it and we update it for you. No CMS.",
       "Custom Next.js, with a 90+ Lighthouse target at handover",
       "1 to 2 weeks delivery",
     ],
@@ -27,7 +30,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
     price: "$3,500",
     tagline: "A full move, blog and all, without losing your search traffic.",
     fits: [
-      "10 to 20 pages",
+      "8 to 20 pages",
       "Sanity CMS (you edit content yourself, no developer needed)",
       "Your blog moves with 301 redirects, so Google keeps finding it",
       "2 to 4 weeks delivery",
@@ -35,50 +38,39 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
   },
   Scale: {
     name: "Scale",
-    price: "$5,000 to $10,000",
-    tagline: "A headless store, custom integrations, more than 30 pages.",
+    price: "From $5,000",
+    tagline: "A headless store, custom integrations, more than 20 pages.",
     fits: [
-      "30 or more pages, or 50 to 100 page sites",
+      "More than 20 pages, a shop, or more than one language",
       "Shopify or WooCommerce headless rebuild",
       "Custom integrations (HubSpot, Salesforce, Stripe, etc.)",
       "4 to 8 weeks delivery",
-    ],
-  },
-  ScalePlus: {
-    name: "Scale+",
-    price: "$10,000+",
-    tagline: "Enterprise scope, custom quote.",
-    fits: [
-      "100+ pages or enterprise replatform",
-      "Several regions, several languages, or rules you have to meet",
-      "Custom engineering: SaaS dashboards, internal tools, AI integrations",
-      "We work out the timeline in discovery",
     ],
   },
 };
 
 type Step = {
   q: string;
-  options: { label: string; value: "starter" | "growth" | "scale" | "scaleplus" }[];
+  options: { label: string; value: Answer }[];
 };
 
+// Page-count boundaries here must touch the pricing page exactly: Starter up to 7,
+// Growth 8 to 20, Scale more than 20. No gap and no overlap between the options.
 const steps: Step[] = [
   {
     q: "How many pages does your site have today?",
     options: [
-      { label: "Under 10 pages", value: "starter" },
-      { label: "10 to 30 pages", value: "growth" },
-      { label: "30 to 100 pages", value: "scale" },
-      { label: "More than 100 pages", value: "scaleplus" },
+      { label: "7 pages or fewer", value: "starter" },
+      { label: "8 to 20 pages", value: "growth" },
+      { label: "More than 20 pages", value: "scale" },
     ],
   },
   {
     q: "Do you sell products online?",
     options: [
       { label: "No, brochure or service site", value: "starter" },
-      { label: "Yes, a few products", value: "growth" },
-      { label: "Yes, full e-commerce store", value: "scale" },
-      { label: "Yes, multi-region store or B2B portal", value: "scaleplus" },
+      { label: "No, but I publish a blog or resources", value: "growth" },
+      { label: "Yes, I sell products online", value: "scale" },
     ],
   },
   {
@@ -86,28 +78,27 @@ const steps: Step[] = [
     options: [
       { label: "No, just a contact form", value: "starter" },
       { label: "Maybe one or two", value: "growth" },
-      { label: "Yes, several integrations", value: "scale" },
-      { label: "Yes, complex enterprise systems", value: "scaleplus" },
+      { label: "Yes, several integrations, or more than one language", value: "scale" },
     ],
   },
 ];
 
-function pickTier(answers: ("starter" | "growth" | "scale" | "scaleplus")[]): Tier {
-  // Take the highest tier across all answers (any "scaleplus" wins, then "scale", then "growth", then "starter")
-  const rank: Record<string, number> = { starter: 0, growth: 1, scale: 2, scaleplus: 3 };
-  const reverse: Tier[] = ["Starter", "Growth", "Scale", "ScalePlus"];
+function pickTier(answers: Answer[]): Tier {
+  // Take the highest tier across all answers (any "scale" wins, then "growth", then "starter")
+  const rank: Record<Answer, number> = { starter: 0, growth: 1, scale: 2 };
+  const reverse: Tier[] = ["Starter", "Growth", "Scale"];
   const max = answers.reduce((acc, a) => Math.max(acc, rank[a]), 0);
   return reverse[max];
 }
 
 export default function TierQuiz() {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<("starter" | "growth" | "scale" | "scaleplus")[]>([]);
+  const [answers, setAnswers] = useState<Answer[]>([]);
 
   const isDone = step >= steps.length;
   const result = useMemo(() => (isDone ? pickTier(answers) : null), [isDone, answers]);
 
-  function choose(value: "starter" | "growth" | "scale" | "scaleplus") {
+  function choose(value: Answer) {
     // Fire quiz_start on the very first answer (engagement signal).
     if (step === 0) {
       trackGAEvent("quiz_start", { quiz: "tier_finder" });
@@ -200,6 +191,13 @@ export default function TierQuiz() {
                 Start over
               </button>
             </div>
+            <p className="mt-6 text-sm font-semibold text-charcoal leading-relaxed">
+              If none of these match what you have, call{" "}
+              <a href="tel:+13027738982" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">+1 (302) 773-8982</a>{" "}
+              or email{" "}
+              <a href="mailto:info@pandacodegen.com" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">info@pandacodegen.com</a>{" "}
+              and we will quote it.
+            </p>
           </motion.div>
         )}
       </div>
