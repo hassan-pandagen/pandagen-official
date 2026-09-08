@@ -2248,3 +2248,50 @@ days while its source thread aged.
 Attribution links are thread-level with handle and date, not comment-level
 permalinks. That is verifiable (open the thread, find the handle) but weaker.
 Upgrade to comment permalinks when convenient.
+
+### Addendum, 8 September 2026: which queries pull Reddit, and how old that Reddit is
+
+Hassan's objection to chasing fresh Reddit threads: AI engines cite OLD threads.
+Tested by API against Google AI Mode, US, rather than argued.
+
+**Query 1, `is squarespace bad for seo`** (our highest AI-rate page, 235 AI
+impressions per 1,000 web). Citations: seospace.co, merakibranding.com on three
+separate URLs, imegonline.com, support.squarespace.com, seobility.net,
+mariahmagazine.com, saradoesseo.com. **No Reddit at all.** No pandacodegen.com
+either.
+
+**Query 2, `how much should i pay for a small business website`.** Citations:
+gruffygoat.com, webnode.com, bigtee.dev, elementor.com, upwork.com,
+rankflowsystems.com, and
+`reddit.com/r/smallbusiness/comments/1iby0qy/how_much_should_it_cost_for_basic_website/`.
+That thread's id places it around **January 2025, roughly twenty months old.**
+Hassan is right on the evidence.
+
+**The rule that follows.** Reddit gets cited on experience and price questions,
+where a stranger's lived answer is the thing being sought. It does not get cited
+on definitional or technical questions, where the engine wants a document. Our
+own page types split the same way: the cost pages compete with Reddit, the
+diagnostics compete with agency blogs.
+
+**And the age of a cited thread is not an argument for old quotes on our pages.**
+Three separate things were being conflated:
+1. Which thread the engine cites. Old, because ranking authority accrues.
+2. Whether our page is fresh. Matters, and adding quotes refreshes it.
+3. Whether the quote is still TRUE. This is the only thing a quote's age governs.
+Match a quote's age to the claim's half-life. "GoHighLevel sites score under 50
+on mobile" survives from 2024 and the age proves the problem is chronic. "Semrush
+does not show whether you appear in AI answers" must be recent, because a
+commenter in that same thread says Semrush now sells exactly that as an add-on.
+
+**The finding that matters most, and it is not about quotes.** On query 2 the
+engine states the band as "$1,500 and $10,000 as a one-time fee if you hire a
+freelance professional", and its table gives "Freelance Designer $1,500 to
+$8,000". That is our Starter price and our published band, almost exactly. The
+engine is telling buyers our number and citing seven other sources for it. We are
+not in the answer. That is a specific, addressable gap on a live commercial query
+with buyer intent, and it is worth more than any quote pass.
+
+**Method note:** the target list for off-page work is not "fresh threads to
+quote". It is the pages the engine cites on our money queries, which this API
+returns directly. Run the money-query set, list every cited host, and that is the
+placement backlog.
