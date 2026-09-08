@@ -2311,3 +2311,32 @@ content or forms. Every price tier in the same answer comes from lilbigthings.co
 at $2,500 to $200,000+. The engine takes our reasoning and their numbers. Ours
 start at $1,500 and are not in the answer. First confirmed AI Mode citation of a
 post-remediation page, and the clearest statement of the gap we have.
+
+### Addendum, 9 September 2026: the lead channel is proven, and the real volume is two
+
+The 8 September external audit could not verify that a submitted enquiry arrives
+anywhere, because it never submitted one. Closed today from the Resend dashboard.
+
+**The channel works.** Domain verified, created seven months ago. Last 15 days:
+10 emails sent, 100% delivered, 0% bounced, 0% complaints. Eight to
+info@pandacodegen.com, two to info@astepabovemed.com, so the client site routes
+correctly too. No silent failure anywhere.
+
+**The number underneath it is the finding.** Of those ten, most are our own
+tests: two named "Hassan Jamal", one "hassan", one "T", one "PandaCodeGen Test",
+one "Test Clinic", plus an audit follow-up and an audit summary sent to a
+personal Gmail on the same day. Strip those and **the genuine inbound over 15
+days is Stefan Hikey on 7 September, and possibly Alice Flores on 2 September,
+which is unconfirmed.** Call it one to two real enquiries a fortnight.
+
+That is consistent with the audit's arithmetic on page 10: 243 search clicks over
+92 days is 2.6 a day, and conversion work on that base cannot produce volume.
+Record it as the honest pre-intervention baseline. Every read from here compares
+against one to two enquiries a fortnight, not against an aspiration.
+
+**It also reframes the free-audit defect.** No member of the public completed an
+audit and requested follow-up in this window. The only audit emails are our own
+tests from 11 days ago. Given the widget was invisible at desktop widths, that is
+what we would expect. The funnel has never actually been tested with real
+traffic, so its yield is unknown rather than poor. Commit 61baa50 makes it
+measurable for the first time.
