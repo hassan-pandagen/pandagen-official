@@ -15,6 +15,11 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
 type WidgetState = "idle" | "loading" | "results";
 
+// Shown when the target site could not be fetched. Without the HTML there is
+// nothing to measure, so no score of any kind may be displayed.
+const SITE_UNREACHABLE_MESSAGE =
+  "We could not reach that site, so there is nothing to score yet. This is usually a temporary block or a redirect. Try again, or send us the address and we will look manually.";
+
 const DESKTOP_URL_INPUT_ID = "audit-url-desktop";
 const DESKTOP_URL_ERROR_ID = "audit-url-desktop-error";
 const MOBILE_URL_INPUT_ID = "audit-url-mobile";
@@ -71,6 +76,12 @@ export default function AuditWidget() {
         throw new Error("The report session could not be created. Please run the audit again.");
       }
 
+      // No fetch, no scores. When the target HTML never arrived, the deep checks
+      // ran against an empty document and their numbers describe nothing.
+      if (result.data?.deepChecks && result.data.deepChecks.htmlFetched === false) {
+        throw new Error(SITE_UNREACHABLE_MESSAGE);
+      }
+
       setAuditData(result.data);
       setLeadToken(result.leadToken);
       setState("results");
@@ -103,6 +114,10 @@ export default function AuditWidget() {
     }
   }, []);
 
+  // The site's HTML never arrived, so every check ran against an empty document.
+  // Both render paths must suppress scores when this is true.
+  const siteUnreachable = auditData?.deepChecks?.htmlFetched === false;
+
   // Derived hero diagnostics from a real result
   const aiCheck = auditData?.deepChecks?.checks.find((c) => c.id === "ai-readiness");
   const totalFails = auditData?.deepChecks
@@ -123,7 +138,7 @@ export default function AuditWidget() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="relative hidden lg:flex justify-center items-center"
+        className="relative flex max-lg:hidden justify-center items-center"
       >
         <div className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-elevated">
           {/* Terminal chrome */}
@@ -220,8 +235,15 @@ export default function AuditWidget() {
                 </motion.div>
               )}
 
+              {/* ---------- UNAVAILABLE: fetch failed, so no scores may be shown ---------- */}
+              {state === "results" && auditData && siteUnreachable && (
+                <motion.div key="unreachable" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <SiteUnreachable url={url} onRetry={handleReset} />
+                </motion.div>
+              )}
+
               {/* ---------- RESULTS: 3 hero answers + all 11 unblurred + dual CTA ---------- */}
-              {state === "results" && auditData && (
+              {state === "results" && auditData && !siteUnreachable && (
                 <motion.div key="results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
                   <div className="flex items-center gap-2 text-sm text-stone-600">
                     <Search className="w-4 h-4 text-cognac" />
@@ -233,7 +255,7 @@ export default function AuditWidget() {
 
                   {/* 3 hero answers, now personalized */}
                   <div className="space-y-2.5">
-                    <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck?.score ?? 0} suffix="/100" />
+                    {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" />}
                     <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} />
                     <HeroResult icon={Search} q="Performance score" score={auditData.performanceScore} suffix="/100" />
                   </div>
@@ -364,11 +386,17 @@ export default function AuditWidget() {
                 </motion.div>
               )}
 
-              {state === "results" && auditData && (
+              {state === "results" && auditData && siteUnreachable && (
+                <motion.div key="m-unreachable" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+                  <SiteUnreachable url={url} onRetry={handleReset} compact />
+                </motion.div>
+              )}
+
+              {state === "results" && auditData && !siteUnreachable && (
                 <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-3">
                   <div className="text-sm text-stone-600 truncate">{url}</div>
                   <div className="space-y-2">
-                    <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck?.score ?? 0} suffix="/100" compact />
+                    {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" compact />}
                     <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} compact />
                     <HeroResult icon={Search} q="Performance" score={auditData.performanceScore} suffix="/100" compact />
                   </div>
@@ -452,6 +480,36 @@ function HeroDiag({
         <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>{q}</p>
         <p className={`${compact ? "text-[10px]" : "text-xs"} ${bad ? "text-red-600" : "text-stone-600"} mt-0.5`}>{verdict}</p>
       </div>
+    </div>
+  );
+}
+
+/* --- Site could not be fetched: honest message, no scores of any kind --- */
+function SiteUnreachable({
+  url,
+  onRetry,
+  compact,
+}: {
+  url: string;
+  onRetry: () => void;
+  compact?: boolean;
+}) {
+  return (
+    <div className={compact ? "space-y-3" : "space-y-4"}>
+      <div className={`flex items-start gap-3 rounded-xl border border-orange-100 bg-orange-50/50 ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
+        <AlertTriangle className={`${compact ? "w-4 h-4" : "w-5 h-5"} text-orange-700 shrink-0 mt-0.5`} />
+        <div className="min-w-0 flex-1">
+          <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>No results for {url || "that address"}</p>
+          <p className={`${compact ? "text-[11px]" : "text-xs"} text-stone-700 mt-1 leading-relaxed`}>{SITE_UNREACHABLE_MESSAGE}</p>
+        </div>
+      </div>
+      <button
+        onClick={onRetry}
+        className={`w-full ${compact ? "py-3" : "py-4"} bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group`}
+      >
+        Try again
+        <ArrowRight className={`${compact ? "w-4 h-4" : "w-5 h-5"} group-hover:translate-x-1 transition-transform`} />
+      </button>
     </div>
   );
 }

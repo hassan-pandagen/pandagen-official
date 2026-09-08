@@ -121,4 +121,4 @@ private-assets/
 outreach/
 
 # Local design-audit screenshots (Playwright before/after, research only)
-audit/
+/audit/
