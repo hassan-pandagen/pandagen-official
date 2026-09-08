@@ -2295,3 +2295,19 @@ with buyer intent, and it is worth more than any quote pass.
 quote". It is the pages the engine cites on our money queries, which this API
 returns directly. Run the money-query set, list every cited host, and that is the
 placement backlog.
+
+**Citation research, 8 September 2026, full write-up in
+`CITATION_RESEARCH_2026-09-08.md`.** Six target queries run through Google AI Mode
+by API. Reddit is cited on peer-judgment questions ("how much SHOULD I pay") and
+not on figure questions ("cost to migrate off Webflow", "conversions API setup
+cost"). Technical diagnostics pull YouTube and vendor docs: the GoHighLevel query
+returned three YouTube videos and the vendor help article and nothing else, the
+Divi query leaned on one blog almost alone.
+
+**We are cited on `how much does it cost to migrate off webflow`**, for
+`/blog/website-migration-cost-2026`, specifically the explanation that a Webflow
+code export does not carry CMS collections, e-commerce, user accounts, localised
+content or forms. Every price tier in the same answer comes from lilbigthings.com
+at $2,500 to $200,000+. The engine takes our reasoning and their numbers. Ours
+start at $1,500 and are not in the answer. First confirmed AI Mode citation of a
+post-remediation page, and the clearest statement of the gap we have.
