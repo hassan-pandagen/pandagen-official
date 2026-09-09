@@ -6,7 +6,7 @@ import HeroLeadForm from "@/components/forms/HeroLeadForm";
 export default function Hero() {
   return (
     <section
-      className="relative flex flex-col justify-center overflow-hidden bg-paper pt-20 md:pt-24 lg:pt-28"
+      className="relative flex flex-col justify-center overflow-hidden bg-paper pt-20 md:pt-24 lg:pt-32"
       style={{
         backgroundColor: "#f5f5f4",
         paddingBottom: "var(--space-section-sm)",
@@ -116,7 +116,7 @@ export default function Hero() {
             for two reasons: it converted no leads from here, and the fallback-to-real
             swap was the page's entire layout shift. The form that replaced it renders
             on first paint with a reserved height, so this column cannot shift. */}
-        <div className="relative lg:-mt-8">
+        <div className="relative">
           <div className="hidden md:block absolute -top-[100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/50 blur-3xl rounded-full pointer-events-none" />
           <HeroLeadForm />
           <p className="relative z-10 mt-3 text-center text-sm text-stone-600">

@@ -785,7 +785,7 @@ function LocaleHeader({
     <header className="border-b border-stone-200 bg-white/90 backdrop-blur">
       {/* Same container as the English header so the logo and nav line up at the
           same x-position when a visitor switches language. */}
-      <div className="container mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-4">
+      <div className="container mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-4 lg:flex-nowrap">
         <Link href={routes.home[locale]} className="text-2xl font-bold tracking-tight text-charcoal">
           PandaCodeGen<span className="text-cognac">.</span>
         </Link>
@@ -803,8 +803,8 @@ function LocaleHeader({
             {dict.nav.blog}
           </Link>
         </nav>
-        <div className="flex items-center gap-4">
-          <LocaleSwitcher label={dict.common.languageLabel} className="text-sm" />
+        <div className="flex shrink-0 items-center gap-4">
+          <LocaleSwitcher label={dict.common.languageLabel} className="text-sm" compact />
           {/* The English header carries a primary CTA here; without it the localized
               header reads as a cut-down version of the same site. */}
           <Link
