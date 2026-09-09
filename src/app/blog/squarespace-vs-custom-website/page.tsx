@@ -444,7 +444,7 @@ export default function SquarespaceVsCustomWebsitePage() {
 
                     <BlogHeader>10. Use contract-specific migration terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen publishes $1,500, $3,500 and $5,000 to $10,000 planning tiers. The accepted
+                        PandaCodeGen publishes $1,500, $3,500 and $5,000 planning tiers. The accepted
                         scope controls final price, support, refund, ownership, performance and change terms. Payment is
                         normally 30 percent at onboarding and 70 percent on delivery. There is no universal second-year
                         payback or outcome guarantee. How we run the move itself is described on our{" "}

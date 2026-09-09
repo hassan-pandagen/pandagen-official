@@ -401,7 +401,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         <Link href="/services/gohighlevel" className="text-cognac hover:underline">GoHighLevel</Link> sites, plus scoped{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline">custom application work</Link>.{" "}
                         <Link href="/pricing" className="text-cognac hover:underline">Public starting tiers</Link> are $1,500 Starter,
-                        $3,500 Growth and $5,000 to $10,000 Scale, with larger work discussed separately. Standard
+                        $3,500 Growth and $5,000 Scale, with larger work discussed separately. Standard
                         payment is 30 percent at onboarding and 70 percent on delivery, subject to the signed project
                         terms. The{" "}
                         <Link href="/work" className="text-cognac hover:underline">project pages</Link>{" "}

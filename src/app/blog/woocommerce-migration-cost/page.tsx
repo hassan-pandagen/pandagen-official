@@ -166,7 +166,7 @@ export default function WooCommerceMigrationCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.",
                                 "If you run subscriptions, handle regulated data, or have a lot of systems talking to each other, expect a custom scope rather than a tier.",
                                 "WooCommerce exports products by CSV and has a REST API. Everything else may need an extension's own export, an API, or direct database work.",
                                 "The signed scope is where the final price sits, along with what counts as the data arriving correctly, how the switchover happens, who owns what afterwards, and what we do if something is wrong.",
@@ -227,7 +227,7 @@ export default function WooCommerceMigrationCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded catalog or storefront scope with limited data movement</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">More templates, catalog, content, integrations and migration controls</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Larger catalog, data, search, workflows or operational risk</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Larger catalog, data, search, workflows or operational risk</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Subscriptions, complex payments, regulated data, multiple markets or applications</td></tr>
                             </tbody>
                         </table>

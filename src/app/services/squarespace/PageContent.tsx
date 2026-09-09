@@ -15,10 +15,10 @@ import { serviceFaqs } from "@/data/service-faqs";
 
 const squarespaceComparison = [
   { metric: "Performance", bad: "Measure current", good: "Agree target", icon: Zap },
-  { metric: "Operating Cost", bad: "Review account", good: "Estimate scope", icon: Wallet },
+  { metric: "Operating Cost", bad: "Review account", good: "Estimate the work", icon: Wallet },
   { metric: "Access & Rights", bad: "Check terms", good: "Write terms", icon: Lock },
   { metric: "Search Controls", bad: "Audit current", good: "Define work", icon: Search },
-  { metric: "Design System", bad: "Map limits", good: "Scope changes", icon: Layout },
+  { metric: "Design System", bad: "Map limits", good: "Plan changes", icon: Layout },
 ];
 
 const faqs = serviceFaqs["squarespace"];
@@ -199,7 +199,7 @@ export default function SquarespacePageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Use anecdotes to form questions, not conclusions.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              A migration assessment should check what the editor will not let you do, how it behaves on every screen, who controls the domain, what you can export, what your uptime depends on, how fast it is now, and any third-party terms. The written proposal, not this page, defines price, timing, support, repository access, licensing, ownership, and remedies.
+              A migration assessment should check what the editor will not let you do, how it behaves on every screen, who controls the domain, what you can export, what your uptime depends on, how fast it is now, and any third-party terms. Your written quote, not this page, has your price, your dates, the support you get, who owns the code at the end, and what happens if something goes wrong.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               Get your migration plan →
@@ -212,14 +212,14 @@ export default function SquarespacePageContent() {
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Squarespace Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. The proposal defines milestones, continuity controls, responsibilities, and acceptance for the approved site.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. Your written quote gives the date for each phase, how we keep your site running while we build, who does what, and what counts as done.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Inventory & Export Review", desc: "We inventory pages, posts, media, products, members, forms, scheduling, domains, metadata, and available exports, then record gaps or manual work.", icon: FileSearch, duration: "Phase 1" },
+              { step: "01", title: "Page List & Export Review", desc: "We list your pages, posts, media, products, members, forms, scheduling, domains, page titles and descriptions, and whatever Squarespace will let you export, then write down the gaps and the manual work.", icon: FileSearch, duration: "Phase 1" },
               { step: "02", title: "Design & Content Mapping", desc: "We say what is kept, what is redesigned, what is reshaped and what is dropped, including how it behaves on each screen and what accessibility needs.", icon: PenTool, duration: "Phase 2" },
-              { step: "03", title: "Build & Redirect Plan", desc: "We implement the approved scope and prepare a source-to-destination URL map. Redirects reduce migration risk but do not guarantee rankings or traffic.", icon: Wrench, duration: "Phase 3" },
-              { step: "04", title: "Cutover & Verification", desc: "We work through the agreed checks: DNS, content, does it work, analytics, accessibility, monitoring, rollback, training and handover.", icon: Rocket, duration: "Phase 4" },
+              { step: "03", title: "Build & Forwarding Plan", desc: "We build the agreed work and write down where every old web address forwards to. Forwarding cuts the risk. It does not guarantee your rankings or your traffic.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Switchover & Verification", desc: "We work through the agreed checks: DNS, content, does it work, analytics, accessibility, monitoring, switching back if needed, training and handover.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn
                 key={i}
@@ -296,7 +296,7 @@ export default function SquarespacePageContent() {
                 {/* RIGHT: Comparison + Savings */}
                 <div className="p-6 md:p-10 md:border-l border-stone-200 bg-stone-50/50 overflow-x-hidden">
                   <div className="flex justify-between items-center mb-6 pb-4 border-b border-stone-200">
-                    <h4 className="text-lg font-bold text-charcoal">Current Setup vs Proposed Scope</h4>
+                    <h4 className="text-lg font-bold text-charcoal">Current Setup vs What We Would Build</h4>
                   </div>
 
                   {/* Column Headers */}
@@ -347,7 +347,7 @@ export default function SquarespacePageContent() {
                       {[
                         { label: "Current subscription and add-ons", amount: "Review" },
                         { label: "Commerce, scheduling, and member fees", amount: "Review" },
-                        { label: "Migration implementation scope", amount: "Scope" },
+                        { label: "The migration work itself", amount: "Quote" },
                         { label: "Hosting and connected services", amount: "Estimate" },
                         { label: "Maintenance and support", amount: "Define" },
                         { label: "Content, data, and client inputs", amount: "Confirm" },
@@ -454,7 +454,7 @@ export default function SquarespacePageContent() {
             <div>
               <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Migration scoping note</p>
               <p className="text-lg md:text-xl text-charcoal leading-relaxed font-medium mb-3">
-                Review Squarespace migrations at the component and workflow level. Inventory Fluid Engine layouts, Commerce products, scheduling, member areas, exports, and integrations before committing to a build or cutover plan.
+                Review Squarespace migrations at the component and workflow level. List the Fluid Engine layouts, Commerce products, scheduling, member areas, exports, and integrations before committing to a build or a date for switching over.
               </p>
               <p className="text-sm text-stone-600">Your quote names who is doing the work.</p>
             </div>
@@ -495,7 +495,7 @@ export default function SquarespacePageContent() {
               { icon: Code2, ceiling: "Review supported code injection, extensions, APIs, and exports", liberation: "Define source access, routes, integrations, repository access, and licensing in writing." },
               { icon: FileSearch, ceiling: "Audit control over semantic markup and structured data", liberation: "Implement agreed HTML and schema, then validate output without promising search or AI visibility." },
               { icon: Gauge, ceiling: "Measure the current script, media, and interaction baseline", liberation: "Set project-specific budgets and verify them under documented test conditions." },
-              { icon: Palette, ceiling: "Test the current grid across required responsive states", liberation: "Define the target design system and accessibility acceptance checks." },
+              { icon: Palette, ceiling: "Test the current grid across required responsive states", liberation: "Define the target design system and the accessibility checks, agreed in writing before we start." },
             ].map((pair, i) => (
               <FadeIn key={i} style={{ transitionDelay: `${i * 70}ms` }} className="relative">
                 {/* Constraint tile (muted, top) */}
@@ -542,7 +542,7 @@ export default function SquarespacePageContent() {
         headingAccent="Confirm commitments after discovery."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare equivalent content, commerce, integration, and support scope.",
+          agencyNote: "Compare the same content, commerce, integrations and support.",
           ourPrice: "From $1,500, fixed",
           ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
@@ -550,19 +550,19 @@ export default function SquarespacePageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
               "A list of every page and post you have",
-              "Design and redirect requirements",
-              "Written acceptance and handover terms",
+              "What we design, and where every old link forwards",
+              "What counts as done, and how we hand over, in writing",
             ],
             cta: "Get your migration plan",
           },
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A business site with broader content, forms, or commerce requirements.",
             includes: [
               "Content and integration mapping",
@@ -574,7 +574,7 @@ export default function SquarespacePageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "Commerce, scheduling, member, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",
@@ -622,7 +622,7 @@ export default function SquarespacePageContent() {
               <p className="text-stone-600 mb-8">A custom site from $1,500, fixed price, 2 to 4 weeks, with the code and every account handed to you at the end.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Documented performance baseline and budgets</li>
-                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> URL mapping and migration checks</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Every old web address forwarded and checked</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Current hosting and service estimate</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Written repository and rights terms</li>
               </ul>
@@ -695,14 +695,14 @@ export default function SquarespacePageContent() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span></h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and what counts as done.</span></h3>
               <p className="text-stone-700 leading-relaxed mb-6">
                 Your written quote lists the pages, the speed test we run, the link forwarding, what you need to give us, what support you get after launch, and who owns what at the end. It is the quote that counts, not this page.
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start text-xs font-bold text-cognac uppercase tracking-wider mb-6">
-                <span>• Written Scope</span>
-                <span>• Defined Acceptance</span>
-                <span>• Recorded Responsibilities</span>
+                <span>• Written Quote</span>
+                <span>• What Counts As Done</span>
+                <span>• Who Does What</span>
               </div>
               <button
                 data-cal-namespace="discovery"

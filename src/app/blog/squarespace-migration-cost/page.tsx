@@ -173,7 +173,7 @@ export default function SquarespaceMigrationCostPage() {
                             items={[
                                 "Starter from $1,500 for a small, well-defined presentation-site scope.",
                                 "Growth from $3,500 for a broader marketing site with agreed CMS and integration needs.",
-                                "Scale from $5,000 to $10,000 for bigger sites, shops or anything connecting several systems. Above that is priced on its own.",
+                                "Scale from $5,000 for bigger sites, shops or anything connecting several systems. Above that is priced on its own.",
                                 "Your written quote sets the final price, what you get, and what is not included.",
                             ]}
                         />

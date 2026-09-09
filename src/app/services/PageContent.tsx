@@ -74,7 +74,7 @@ export default function PageContent() {
           title="WordPress Migration"
           subtitle="Rebuild the Frontend, Keep the Content"
           description="Slow, hard to maintain, or carrying more plugins than anyone can account for? We rebuild the frontend as custom code and measure the result on your own routes."
-          tags={["Fix Slow Loading", "Hardened Stack", "Redirect-Mapped URLs"]}
+          tags={["Fix Slow Loading", "Hardened Stack", "Every Old Link Forwarded"]}
           features={["No Plugin Update Treadmill", "90+ Lighthouse Handover Target", "Smaller Third-Party Attack Surface", "We Handle All Data Transfer"]}
           align="left"
           icon={Database}
@@ -129,7 +129,7 @@ export default function PageContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">
               Three tiers. <span className="font-serif italic text-cognac">No hourly billing.</span>
             </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price for a written scope. The performance target, how it is tested and what happens if we miss it are set out below.</p>
+            <p className="text-stone-600 max-w-2xl mx-auto">Every build ships at a fixed price for a written list of what we build. The performance target, how it is tested and what happens if we miss it are set out below.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
@@ -153,7 +153,7 @@ export default function PageContent() {
           <div className="max-w-3xl mx-auto p-5 rounded-2xl bg-green-50 border border-green-200 flex items-start gap-3">
             <Shield className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
             <p className="text-sm text-stone-700 leading-relaxed">
-              <span className="font-bold text-charcoal">Fixed price for the written scope.</span> A 30% deposit starts the build. Every build carries a 90+ Lighthouse handover target on mobile and desktop for the representative pages named in your written scope, verified across three recorded runs before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.{" "}
+              <span className="font-bold text-charcoal">Fixed price for the written quote.</span> A 30% deposit starts the build. Every build carries a 90+ Lighthouse handover target on mobile and desktop for the pages named in your written quote. We test it three times and show you the results before handover. If we fail to deliver what that written quote promises, the accepted terms set out the refund trigger and how long we have to fix it. That score is measured in a lab test, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.{" "}
               <Link href="/pricing" className="text-cognac font-semibold hover:underline">See full pricing →</Link>
             </p>
           </div>

@@ -36,6 +36,15 @@
  * as in COMMERCIAL. It repeats across service pages on purpose; a reader only
  * ever sees one page. Prices did not change. Change company-facts.ts first,
  * then here, never here alone.
+ *
+ * 9 Sep 2026, second pass: the ecommerce, woocommerce and wordpress-migration
+ * sets were missed by the 6 Sep plain-language rewrite and still read like a
+ * contract. "Staged cutover with a documented rollback path" is now "we switch
+ * it over in stages, and if anything is wrong we switch back"; "301 redirects"
+ * and "URL-level redirect mapping" are now "every old web address forwards to
+ * its new page"; "like-for-like scope" is now "the same amount of work". Only
+ * answers changed. No question, number, price, timeline or the closing
+ * invitation to call was touched.
  */
 export interface ServiceFaq {
   q: string;
@@ -76,15 +85,15 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a custom storefront migration take?",
-      a: "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build (product pages, cart, checkout) accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: staged cutover with a documented rollback path. Compare any quote on like-for-like scope rather than on headline timeline. AI tooling collapses that timeline without cutting corners.",
+      a: "Three weeks for most stores. Days 1-3: API architecture and design. Days 4-14: Custom storefront build (product pages, cart, checkout) accelerated by AI-paired development with Claude and Cursor. Days 15-18: Testing with live Shopify data. Days 19-21: we switch it over in stages, and if anything is wrong we switch back. Compare any quote on the same amount of work rather than on the headline timeline. AI tooling collapses that timeline without cutting corners.",
     },
     {
       q: "Will I lose sales during the migration?",
-      a: "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Your existing store stays live until the new one is verified, and a rollback path is documented before cutover. Universal zero interruption is not promised.",
+      a: "No. Your existing Shopify store stays live throughout the entire build. We develop the new storefront in parallel. On launch day, we simply point your domain to the new site. Your existing store stays live until the new one is checked, and before we switch over we write down how we switch back. Nobody can promise zero interruption in every case.",
     },
     {
       q: "How much does a custom Shopify storefront cost?",
-      a: "Compare quotes on like-for-like scope. Three tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds start at $5,000 (subscriptions, custom logic, large catalogs, more than 20 pages). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own app bill and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "Compare quotes on the same amount of work. Three tiers: Starter stores start at $1,500 (small catalogs, basic Shopify Storefront API). Growth builds start at $3,500 (30 to 100 products, custom features). Scale builds start at $5,000 (subscriptions, custom logic, large catalogs, more than 20 pages). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own app bill and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
   ],
   "gohighlevel": [
@@ -194,11 +203,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "woocommerce": [
     {
       q: "Will I lose my WooCommerce orders and customer data?",
-      a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. Migrated records are reconciled against a pre-migration export and any exceptions are reported before cutover. We test imports in staging before anything touches your live store.",
+      a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. We check every migrated record against a copy taken before the move, and tell you about anything that does not match before we switch over. We test the import on a practice copy before anything touches your live store.",
     },
     {
       q: "Do I keep my Google rankings after migrating from WooCommerce?",
-      a: "Yes. Every URL from your WooCommerce store is mapped with 301 redirects to the new site. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed.",
+      a: "Yes. Every old web address on your WooCommerce store forwards to its new page. Google treats it as the same page at a new address. Forwarding each address one by one is what protects the search traffic you already have. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed.",
     },
     {
       q: "Can I still manage products and orders without being technical?",
@@ -214,7 +223,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a WooCommerce migration take?",
-      a: "2 to 6 weeks depending on scope. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for enterprise scope. Your current store stays live the entire time. On launch day we switch over in stages, and if anything is wrong we switch back.",
+      a: "2 to 6 weeks depending on how big the store is. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for the largest stores. Your current store stays live the entire time. On launch day we switch over in stages, and if anything is wrong we switch back.",
     },
     {
       q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
@@ -222,7 +231,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What about WooCommerce Subscriptions and my existing recurring billing?",
-      a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. Payment continuity and re-authentication are tested before cutover. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions.",
+      a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. We test that payments keep running and that saved cards still clear before we switch over. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions.",
     },
     {
       q: "Do I keep my Stripe account and saved customer cards?",
@@ -236,11 +245,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "wordpress-migration": [
     {
       q: "Will I lose my Google rankings during migration?",
-      a: "No. We map every single URL from your old WordPress site to your new site with 301 redirects. Google treats it as the same page at a new address. URL-level redirect mapping is what protects existing search equity. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed.",
+      a: "No. Every old web address on your WordPress site forwards to its new page. Google treats it as the same page at a new address. Forwarding each address one by one is what protects the search traffic you already have. Search engines control crawling, indexing, rankings and timing, so no ranking outcome or recovery date is guaranteed.",
     },
     {
       q: "How long does a WordPress migration take?",
-      a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, content migration, URL mapping. Days 19-21: staged cutover with a documented rollback path. Larger sites can run to four weeks. Compare any quote on like-for-like scope rather than on headline timeline. AI tooling collapses that timeline without cutting corners.",
+      a: "Two to four weeks for most sites, around three weeks being typical. Days 1-3: full audit and architecture. Days 4-14: custom Next.js build with AI-paired development using Claude and Cursor. Days 15-18: testing, moving your content, listing where every old web address goes. Days 19-21: we switch it over in stages, and if anything is wrong we switch back. Larger sites can run to four weeks. Compare any quote on the same amount of work rather than on the headline timeline. AI tooling collapses that timeline without cutting corners.",
     },
     {
       q: "What happens to my blog posts and content?",
@@ -248,7 +257,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a WordPress to Next.js migration cost?",
-      a: "Compare quotes on like-for-like scope. Three tiers: Starter starts at $1,500 (up to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (8 to 20 pages, custom features). Scale starts at $5,000 (complex WordPress or WooCommerce sites, more than 20 pages, custom integrations). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own invoices and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "Compare quotes on the same amount of work. Three tiers: Starter starts at $1,500 (up to 7 pages, custom Next.js, 90+ PageSpeed). Growth starts at $3,500 (8 to 20 pages, custom features). Scale starts at $5,000 (complex WordPress or WooCommerce sites, more than 20 pages, custom integrations). Anything bigger is quoted after a call. Whether it pays back, and over what period, depends on your own invoices and your own measured results. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "Can I still edit my website after migration?",

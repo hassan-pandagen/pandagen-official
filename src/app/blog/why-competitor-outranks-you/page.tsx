@@ -435,7 +435,7 @@ export default function WhyCompetitorOutranksYouPage() {
                         <Link href="/pricing" className="text-cognac hover:underline">
                             PandaCodeGen planning tiers
                         </Link>{" "}
-                        start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.
+                        start at $1,500 Starter, $3,500 Growth and $5,000 Scale.
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30.
                     </BlogText>

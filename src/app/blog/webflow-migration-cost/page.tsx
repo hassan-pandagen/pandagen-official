@@ -152,7 +152,7 @@ export default function WebflowMigrationCostPage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Moving a site off Webflow onto a custom build starts at $1,500 with PandaCodeGen, $3,500 for a larger
-                            marketing site, and $5,000 to $10,000 where templates, CMS or integrations multiply. Those
+                            marketing site, and $5,000 where templates, CMS or integrations multiply. Those
                             are our prices, not a market average. What decides which one you land in is rarely page
                             count. It is how many distinct templates hide behind those pages, how your CMS collections
                             reference each other, which features Webflow will not export at all, which systems have to
@@ -186,7 +186,7 @@ export default function WebflowMigrationCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "PandaCodeGen's public planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "PandaCodeGen's public planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.",
                                 "For a 50 to 100 page site we quote after sorting out how many templates you really have and tidying the content, not by multiplying one page price by 100.",
                                 "Webflow's code export gives you the front end, not the whole application. Your CMS, store, forms, search, other languages and anything behind a login all need separate work.",
                                 "The signed scope is where the final price, the schedule, who owns what, how you sign it off, support and refund terms all live.",
@@ -241,7 +241,7 @@ export default function WebflowMigrationCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, well-defined migration with limited templates and integrations</td><td className="p-4">CMS, content cleanup, forms, redirects and custom behavior</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">Larger marketing site or migration with structured content</td><td className="p-4">Design change, complex CMS, analytics, localization and integrations</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Multi-template, integration-heavy or higher-risk migration</td><td className="p-4">Commerce, user systems, custom applications, data and governance</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Multi-template, integration-heavy or higher-risk migration</td><td className="p-4">Commerce, user systems, custom applications, data and governance</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Requirements outside the standard tiers</td><td className="p-4">Program size, compliance, multiple markets, complex data or ongoing team</td></tr>
                             </tbody>
                         </table>
@@ -332,7 +332,7 @@ export default function WebflowMigrationCostPage() {
                             publishes the platform side: Team is $2,500/mo on an annual contract, and Enterprise is
                             quoted on request with no figure published anywhere on webflow.com, read August 2, 2026. The
                             migration side is not published by anyone, ours included, because at this size the cost is
-                            governance rather than pages. Our Scale tier starts at $5,000 to $10,000 and enterprise
+                            governance rather than pages. Our Scale tier starts at $5,000 and enterprise
                             programs are scoped separately against the workstreams below.
                         </BlogText>
                     </div>

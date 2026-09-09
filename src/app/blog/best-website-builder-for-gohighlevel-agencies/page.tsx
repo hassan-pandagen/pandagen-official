@@ -214,7 +214,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
                         <p className="text-xs font-bold text-cognac uppercase tracking-wide mb-2">Where we sit in this comparison</p>
                         <p className="text-sm text-stone-700 leading-relaxed">
-                            PandaCodeGen sells one of the six options compared here: we build custom Next.js frontends, so read our assessment of that row with that in mind. Our published planning anchors are $1,500 Starter, $3,500 Growth, and $5,000 to $10,000+ Scale. A GHL-connected migration can use supported APIs, inbound webhooks, or embedded components according to the accepted scope. A 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target applies only when the accepted terms name the pages, mobile and desktop profiles, three-run protocol, environment, and remedy. Our <Link href="/services/gohighlevel" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">GoHighLevel service page</Link> sets out what that engagement contains. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            PandaCodeGen sells one of the six options compared here: we build custom Next.js frontends, so read our assessment of that row with that in mind. Our published planning anchors are $1,500 Starter, $3,500 Growth, and $5,000 Scale. A GHL-connected migration can use supported APIs, inbound webhooks, or embedded components according to the accepted scope. A 90+ <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> target applies only when the accepted terms name the pages, mobile and desktop profiles, three-run protocol, environment, and remedy. Our <Link href="/services/gohighlevel" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">GoHighLevel service page</Link> sets out what that engagement contains. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
                     </div>
                     <BlogText>
@@ -511,7 +511,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <h3 id="custom-pricing" className="text-xl font-bold text-charcoal mt-6 mb-3">Pricing and documented code ownership and licensing</h3>
                     <BlogText>
-                        <Link href="/pricing" className="text-cognac hover:underline">Published tiers</Link> are planning anchors: $1,500 Starter, $3,500 Growth, and $5,000 to $10,000 Scale. Final scope, page and funnel inventory, integrations, performance acceptance, ownership, licensing, third-party costs, and support follow the accepted project terms.
+                        <Link href="/pricing" className="text-cognac hover:underline">Published tiers</Link> are planning anchors: $1,500 Starter, $3,500 Growth, and $5,000 Scale. Final scope, page and funnel inventory, integrations, performance acceptance, ownership, licensing, third-party costs, and support follow the accepted project terms.
                     </BlogText>
                     <BlogText>
                         Hosting, CMS, database, email, monitoring, analytics, and other vendors retain their current commercial limits and prices. Client-controlled domain, hosting, repository, and business accounts can be used when agreed. Rights in paid custom deliverables transfer after full payment only as defined in the accepted terms; PandaCodeGen retains reusable internal tools and pre-existing code, while third-party components keep their licenses.
@@ -626,7 +626,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             Preserve the CRM. Define the frontend. <span className="font-serif italic text-cognac">Test the migration.</span>
                         </h3>
                         <p className="text-stone-300 mb-6 max-w-xl mx-auto">
-                            Starting anchors are $1,500, $3,500, and $5,000 to $10,000+. Final pages, integrations, performance protocol, ownership, support, third-party costs, cutover, and remedy are defined in the accepted proposal or SOW.
+                            Starting anchors are $1,500, $3,500, and $5,000. Final pages, integrations, performance protocol, ownership, support, third-party costs, cutover, and remedy are defined in the accepted proposal or SOW.
                         </p>
                         <CalModalButton>
                             Get Your Migration Plan <ArrowRight className="w-4 h-4" />

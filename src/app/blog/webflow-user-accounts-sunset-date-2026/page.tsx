@@ -446,7 +446,7 @@ export default function WebflowUserAccountsSunsetPage() {
                         Price the identity and business system, not only the sign-in screen. Include discovery, data
                         recovery, migration, UI, authorization, billing, consent, security, testing, customer
                         communication, cutover, provider fees and ongoing support. PandaCodeGen&apos;s planning tiers
-                        start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, but membership and billing
+                        start at $1,500 Starter, $3,500 Growth and $5,000 Scale, but membership and billing
                         complexity can require custom scope. The full tier detail sits on the{" "}
                         <Link href="/pricing" className={sourceLinkClass}>pricing page</Link>, and{" "}
                         <Link href="/blog/webflow-migration-cost" className={sourceLinkClass}>our Webflow migration cost breakdown</Link>{" "}

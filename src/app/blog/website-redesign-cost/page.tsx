@@ -156,7 +156,7 @@ export default function WebsiteRedesignCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.",
                                 "Those are our own starting points, not a claim about the whole redesign market.",
                                 "A same-platform redesign should not be compared with a platform migration or full rebuild.",
                                 "Final price, review rounds, acceptance, schedule and change handling belong in the signed scope.",
@@ -182,7 +182,7 @@ export default function WebsiteRedesignCostPage() {
                     <BlogHeader id="cost">How much does a website redesign cost?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            We quote redesigns from $1,500 for a bounded template set, $3,500 once a reusable design system is part of the work, and $5,000 to $10,000 where content volume, integrations or a staged rollout are involved. Those are PandaCodeGen&apos;s own planning tiers rather than a market survey, and what moves a project between them is scope rather than page count.
+                            We quote redesigns from $1,500 for a bounded template set, $3,500 once a reusable design system is part of the work, and $5,000 where content volume, integrations or a staged rollout are involved. Those are PandaCodeGen&apos;s own planning tiers rather than a market survey, and what moves a project between them is scope rather than page count.
                         </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -193,7 +193,7 @@ export default function WebsiteRedesignCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded redesign with a limited template set</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">More templates, deeper UX and a reusable design system</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Larger content, integrations, governance or staged rollout</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Larger content, integrations, governance or staged rollout</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Applications, commerce, regulated journeys or multi-market systems</td></tr>
                             </tbody>
                         </table>
@@ -392,7 +392,7 @@ export default function WebsiteRedesignCostPage() {
 
                     <BlogHeader id="billing">Fixed price vs hourly work</BlogHeader>
                     <BlogText>
-                        We quote redesigns fixed, at $1,500, $3,500 or $5,000 to $10,000 depending on scope, and price
+                        We quote redesigns fixed, at $1,500, $3,500 or $5,000 depending on scope, and price
                         anything outside that scope through an approved change request. Fixed price works when
                         deliverables, assumptions and review boundaries are defined. Hourly or weekly work fits
                         discovery, uncertain legacy systems or client-directed changes. Neither model guarantees

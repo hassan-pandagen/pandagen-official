@@ -189,7 +189,7 @@ export default function WebsiteMigrationCostPage() {
                             items={[
                                 "Starter begins at $1,500 for a small, well-defined migration.",
                                 "Growth begins at $3,500 for more templates, structured content or integrations.",
-                                "Scale runs from $5,000 to $10,000 for broader or higher-risk migrations.",
+                                "Scale runs from $5,000 for broader or higher-risk migrations.",
                                 "Larger or unusual scope is discussed separately before signing.",
                             ]}
                         />
@@ -386,7 +386,7 @@ export default function WebsiteMigrationCostPage() {
                     <BlogText>
                         Most WordPress migrations we scope start at $1,500 for a bounded brochure site and $3,500 once
                         there is structured content or a real plugin footprint. Plugin-heavy and multi-template sites
-                        run $5,000 to $10,000. What moves it is themes, templates, blocks, plugins, shortcodes, custom
+                        run $5,000. What moves it is themes, templates, blocks, plugins, shortcodes, custom
                         post types, fields, users, forms, search, media and hosting behavior. WordPress can export content, but a
                         replacement must reproduce accepted functions and editorial workflows. A brochure site may fit
                         Starter; structured or plugin-heavy sites may fit Growth, Scale or custom scope. The full

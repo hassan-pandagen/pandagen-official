@@ -425,7 +425,7 @@ export default function WixVsCustomWebsitePage() {
 
                     <BlogHeader id="offer">PandaCodeGen terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.
+                        PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.
                         A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
                         failure to deliver the signed scope. Starter includes 15 business days of launch defect support and Growth and Scale carry 30, where the accepted terms include it. Ownership and performance acceptance follow the signed
                         terms, not the framework name.

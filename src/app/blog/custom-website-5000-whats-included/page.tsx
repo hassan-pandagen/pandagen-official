@@ -20,7 +20,7 @@ const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/custom-website-5000-whats-included";
 const pageTitle = "Custom Website Starting at $5,000: Scope Guide (2026)";
 const pageDescription =
-    "See how PandaCodeGen scopes its $5,000 to $10,000 Scale tier, including migration, performance, support, payment, ownership, and change-control terms.";
+    "See how PandaCodeGen scopes its $5,000 Scale tier, including migration, performance, support, payment, ownership, and change-control terms.";
 
 export const dynamic = "force-static";
 

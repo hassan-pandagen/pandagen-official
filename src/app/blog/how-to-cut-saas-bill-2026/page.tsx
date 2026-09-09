@@ -335,7 +335,7 @@ export default function SaasBillAuditGuide() {
                         infrastructure, monitoring, support, change work, qualified operators and exit.
                     </BlogText>
                     <BlogText>
-                        PandaCodeGen&apos;s public $1,500, $3,500 and $5,000 to $10,000 website tiers are planning
+                        PandaCodeGen&apos;s public $1,500, $3,500 and $5,000 website tiers are planning
                         anchors, not default pricing for replacing a CRM or business application. Custom software is
                         scoped separately. No savings percentage or payback period is promised.
                     </BlogText>
