@@ -8,6 +8,7 @@ import Hero from "@/components/sections/Hero";
 import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
+import WorkPreviews from "@/components/home/WorkPreviews";
 import { alternatesFor } from "@/lib/i18n/config";
 import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 
@@ -250,6 +251,14 @@ export default function Home() {
 
       {/* Trust Stats Strip */}
       <TrustLogoBar />
+
+      {/* Real finished sites, before any claim about them. Added 9 Sep 2026:
+          the homepage rendered one photograph, a founder portrait, in the ninth
+          of thirteen sections, while six real screenshots sat in the repository
+          reachable only from a case study. The audit's recommended order is
+          outcome and scope, then real projects, then a review, so this sits
+          between the migration standard and the review block. */}
+      <WorkPreviews />
 
       {/* Public reviews and owner-confirmed project records */}
       <SocialProof />
