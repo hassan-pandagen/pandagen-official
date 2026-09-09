@@ -365,7 +365,7 @@ export default function PageContent() {
               {
                 tier: "Growth",
                 price: "Starting from $3,500",
-                timeline: "2-3 weeks",
+                timeline: "2 to 4 weeks",
                 fit: "30-100 products. Custom features. Serious scaling.",
                 includes: [
                   "Everything in Starter",
@@ -381,7 +381,7 @@ export default function PageContent() {
               {
                 tier: "Scale",
                 price: "From $5,000",
-                timeline: "3 to 4 weeks",
+                timeline: "3 to 6 weeks",
                 fit: "Subscriptions, custom logic, large catalogs, headless APIs.",
                 includes: [
                   "Everything in Growth",

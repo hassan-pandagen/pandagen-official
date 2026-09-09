@@ -475,7 +475,7 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Starting from $3,500",
-            timeline: "2-3 weeks",
+            timeline: "2 to 4 weeks",
             fit: "30-150 products. Custom cart logic, reviews, email capture.",
             includes: [
               "Everything in Starter",
@@ -490,7 +490,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "From $5,000",
-            timeline: "3 to 5 weeks",
+            timeline: "3 to 6 weeks",
             fit: "100+ products, subscriptions, B2B pricing, wholesale, custom logic.",
             includes: [
               "Everything in Growth",

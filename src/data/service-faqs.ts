@@ -223,7 +223,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does a WooCommerce migration take?",
-      a: "2 to 6 weeks depending on how big the store is. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 3, and Scale builds with subscriptions or B2B pricing run 3 to 5 weeks, sometimes 6 for the largest stores. Your current store stays live the entire time. On launch day we switch over in stages, and if anything is wrong we switch back.",
+      a: "2 to 6 weeks depending on how big the store is. Starter stores ship in 1 to 2 weeks, Growth stores in 2 to 4, and Scale builds with subscriptions or B2B pricing run 3 to 6 weeks. Your current store stays live the entire time. On launch day we switch over in stages, and if anything is wrong we switch back.",
     },
     {
       q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",

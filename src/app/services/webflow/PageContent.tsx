@@ -504,7 +504,7 @@ export default function WebflowPageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A focused marketing-site migration with validated inputs.",
             includes: [
               "A list of every page and CMS item you have",
@@ -516,7 +516,7 @@ export default function WebflowPageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A business site with broader interactions and content-model requirements.",
             includes: [
               "Interaction and CMS mapping",
@@ -528,7 +528,7 @@ export default function WebflowPageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "Localization, ecommerce, data, or complex application requirements.",
             includes: [
               "Export and data-risk assessment",
