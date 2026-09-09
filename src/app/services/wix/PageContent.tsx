@@ -382,6 +382,13 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* What moves the date on a Wix job: the app and Velo inventory */}
+      <div className="mx-auto max-w-2xl px-6 pt-12">
+        <p className="border-l-2 border-cognac/40 pl-4 text-base leading-relaxed text-stone-600">
+          Two Wix sites of the same size can land in different bands, since each app doing real work, and any Velo code behind it, is rebuilt as a native part of the new site.
+        </p>
+      </div>
+
       {/* PRICING TIERS */}
       <PricingTiers
         heading="Choose a migration planning path."
@@ -396,7 +403,7 @@ export default function PageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "1 to 2 weeks",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
               "A list of every page, post and app you have",
@@ -408,7 +415,7 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "2 to 4 weeks",
             fit: "A business site with broader content, forms, or interaction requirements.",
             includes: [
               "Content and integration mapping",
@@ -421,7 +428,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "3 to 6 weeks",
             fit: "Commerce, bookings, localization, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",

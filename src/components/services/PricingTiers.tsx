@@ -30,12 +30,17 @@ type Props = {
   footnote?: string;
 };
 
-const proposalItems = [
-  "What you get, what you do not, and what we need from you",
-  "What we are waiting on, how you sign it off, and how changes get approved",
-  "When you pay, what support you get, who owns it, which licences, and how it is handed over",
-];
 
+// 9 Sep 2026: this component stopped rendering tier.price, tier.timeline,
+// tier.fit and tier.includes in the 30 July claim-safety pass (commit 3e93feb,
+// the same one that deleted the source-linked buyer quotes). Two of the removals
+// were right and stay removed: the "Honest Pricing" heading, which is a
+// self-superlative, and the typical-agency price comparison, because we do not
+// publish competitor figures. The other four were collateral. They are our own
+// published facts, and without them seven service pages rendered twenty-one
+// identical cards showing only a tier name and the same three bullets, which is
+// exactly the templated look the owner asked to avoid. Restored, with a
+// per-card line making clear it is a starting point rather than a quote.
 export default function PricingTiers({ tiers }: Props) {
   return (
     <section className="py-12 md:py-20 px-6 bg-paper">
@@ -80,18 +85,21 @@ export default function PricingTiers({ tiers }: Props) {
                 </div>
               )}
               <p className={`text-[11px] uppercase tracking-[0.22em] font-bold mb-2 ${tier.featured ? "text-orange-300" : "text-stone-600"}`}>Scope option</p>
-              <h3 className={`text-2xl md:text-3xl font-black leading-tight tracking-tight mb-2 ${tier.featured ? "text-white" : "text-charcoal"}`}>{tier.tier}</h3>
-              <p className={`text-sm mb-5 leading-relaxed ${tier.featured ? "text-stone-300" : "text-stone-600"}`}>
-                We review what this actually needs before committing to anything commercially or on delivery.
-              </p>
+              <h3 className={`text-2xl md:text-3xl font-black leading-tight tracking-tight mb-1 ${tier.featured ? "text-white" : "text-charcoal"}`}>{tier.tier}</h3>
+              <p className={`text-xl md:text-2xl font-black leading-tight tracking-tight mb-1 ${tier.featured ? "text-white" : "text-charcoal"}`}>{tier.price}</p>
+              <p className={`text-sm mb-3 ${tier.featured ? "text-stone-300" : "text-stone-600"}`}>{tier.timeline}</p>
+              <p className={`text-sm mb-5 leading-relaxed ${tier.featured ? "text-stone-300" : "text-stone-600"}`}>{tier.fit}</p>
               <ul className="space-y-2.5 mb-6">
-                {proposalItems.map((item) => (
+                {tier.includes.map((item) => (
                   <li key={item} className={`flex items-start gap-2 text-sm ${tier.featured ? "text-stone-200" : "text-stone-600"}`}>
                     <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${tier.featured ? "text-orange-300" : "text-cognac"}`} />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
+              <p className={`text-xs mb-6 leading-relaxed ${tier.featured ? "text-stone-400" : "text-stone-500"}`}>
+                A starting point, not a quote. Your written quote has the real price, the dates and who owns the code.
+              </p>
               <button
                 onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event", "cta_click", { cta: "pricing_tier", location: "service_pricing" }); window.dispatchEvent(new Event("open-quote-modal")); } }}
                 className={`w-full px-6 py-3 font-bold rounded-full transition-all ${tier.featured ? "bg-white text-charcoal hover:bg-stone-100" : "bg-charcoal text-white hover:bg-cognac"}`}

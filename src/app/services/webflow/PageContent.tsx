@@ -490,6 +490,11 @@ export default function WebflowPageContent() {
       {/* Scope and evidence framework */}
       <PartnerPromise />
 
+      {/* What moves the date on a Webflow job: how relational the CMS is */}
+      <p className="mx-auto max-w-3xl px-6 pt-12 text-base leading-relaxed text-stone-600">
+        Flat collections port cleanly; multi-reference fields and nested collections have to be modelled again first, and that modelling is what stretches a Webflow build.
+      </p>
+
       {/* PRICING TIERS: an initial offer with an agency comparison */}
       <PricingTiers
         heading="Choose a migration planning path."
@@ -504,7 +509,7 @@ export default function WebflowPageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "1 to 2 weeks",
             fit: "A focused marketing-site migration with validated inputs.",
             includes: [
               "A list of every page and CMS item you have",
@@ -516,7 +521,7 @@ export default function WebflowPageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "2 to 4 weeks",
             fit: "A business site with broader interactions and content-model requirements.",
             includes: [
               "Interaction and CMS mapping",
@@ -528,7 +533,7 @@ export default function WebflowPageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "3 to 6 weeks",
             fit: "Localization, ecommerce, data, or complex application requirements.",
             includes: [
               "Export and data-risk assessment",
