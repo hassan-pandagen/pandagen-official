@@ -88,9 +88,15 @@ export default function CookieConsent() {
                 <Cookie className="h-5 w-5" aria-hidden="true" />
               </span>
               <div>
+                {/* Kept short on purpose. At 390px this banner measured 349px, 41% of
+                    the first screen, and covered the primary action. The paragraph was
+                    120px of that. The full category list lives in the Cookie Policy and
+                    in Customize; a consent notice has to be readable, not exhaustive.
+                    Do NOT change the three buttons' relative prominence: rejecting must
+                    stay exactly as easy as accepting. Measured 9 Sep 2026. */}
                 <h2 className="font-bold text-charcoal">Your privacy choices</h2>
                 <p className="mt-1 text-sm leading-6 text-stone-600">
-                  We keep optional analytics, advertising, live chat, chat location lookup, and scheduling tools off until you allow them. Necessary storage only remembers this choice. Read our{" "}
+                  Optional analytics, advertising, chat and scheduling stay off until you allow them. Details in our{" "}
                   <Link href="/cookies" className="font-semibold text-charcoal underline underline-offset-2">
                     Cookie Policy
                   </Link>

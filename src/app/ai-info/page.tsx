@@ -289,13 +289,14 @@ export default function CompanyReferencePage() {
             <div className="rounded-[2.5rem] border border-cognac/30 bg-[#faf7f2] p-8 md:p-10">
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  ["Focused", "From $1,500"],
-                  ["Broader", "From $3,500"],
-                  ["Complex", "From $5,000"],
-                ].map(([label, price]) => (
+                  ["Starter", "From $1,500", "Up to 7 pages, built and updated by us, no CMS."],
+                  ["Growth", "From $3,500", "8 to 20 pages, a CMS you edit yourself, full migration."],
+                  ["Scale", "From $5,000", "More than 20 pages, a store, or more than one language."],
+                ].map(([label, price, detail]) => (
                   <div key={label} className="rounded-2xl border border-stone-300 bg-white p-5">
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{label}</p>
                     <p className="mt-2 text-xl font-bold">{price}</p>
+                    <p className="mt-2 text-sm leading-6 text-stone-600">{detail}</p>
                   </div>
                 ))}
               </div>
