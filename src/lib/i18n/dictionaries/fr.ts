@@ -58,7 +58,7 @@ const fr: Dictionary = {
       {
         title: "Une migration documentée avant la mise en production",
         body:
-          "Aucun prestataire ne contrôle le classement des moteurs de recherche. Ce qui réduit le risque évitable, c'est un processus documenté : inventaire complet des URL, plan de redirections 301 au cas par cas, reprise du balisage et des métadonnées, régénération du sitemap, cohérence des balises canoniques, bascule DNS par étapes et surveillance dans la Search Console après la mise en ligne.",
+          "Aucun prestataire ne contrôle le classement des moteurs de recherche. Ce qui réduit le risque évitable, c'est un processus documenté : inventaire complet des URL, un plan qui redirige chaque ancienne adresse vers sa nouvelle page, reprise du balisage et des métadonnées, régénération du sitemap, cohérence des balises canoniques, bascule DNS par étapes et surveillance dans la Search Console après la mise en ligne.",
         bullets: [
           "Votre site actuel reste en ligne jusqu'à la vérification du nouveau.",
           "Un chemin de retour arrière est documenté avant la bascule.",
@@ -79,11 +79,11 @@ const fr: Dictionary = {
     faq: [
       {
         q: "Combien coûte une migration de WordPress vers Next.js ?",
-        a: "Une migration de WordPress vers Next.js démarre à 1 500 $ pour un site vitrine de 5 à 7 pages (Starter), 3 500 $ pour un site de 10 à 20 pages avec migration du blog et redirections 301 (Growth), et 5 000 $ à 10 000 $ pour du commerce headless avec plus de 30 pages et des intégrations sur mesure (Scale). Le prix est fixe pour le périmètre inscrit dans les conditions de projet acceptées.",
+        a: "Une migration de WordPress vers Next.js démarre à 1 500 $ pour un site vitrine allant jusqu'à 7 pages (Starter), 3 500 $ pour un site de 8 à 20 pages avec migration du blog et chaque ancienne adresse redirigée vers sa nouvelle page (Growth), et à partir de 5 000 $ pour du commerce headless avec plus de 20 pages et des intégrations sur mesure (Scale). Tout projet plus important est chiffré après un appel. Le prix est fixe pour le périmètre inscrit dans les conditions de projet acceptées.",
       },
       {
         q: "Vais-je perdre mon référencement en migrant ?",
-        a: "Aucun prestataire ne contrôle le classement des moteurs de recherche, donc personne ne peut honnêtement garantir qu'il se maintiendra. Ce qui réduit le risque évitable est un processus documenté : inventaire des URL, plan de redirections 301, reprise du balisage et des métadonnées, régénération du sitemap, cohérence des canoniques, bascule DNS par étapes et surveillance après la mise en ligne.",
+        a: "Aucun prestataire ne contrôle le classement des moteurs de recherche, donc personne ne peut honnêtement garantir qu'il se maintiendra. Ce qui réduit le risque évitable est un processus documenté : inventaire des URL, un plan qui redirige chaque ancienne adresse vers sa nouvelle page, reprise du balisage et des métadonnées, régénération du sitemap, cohérence des canoniques, bascule DNS par étapes et surveillance après la mise en ligne.",
       },
       {
         q: "Travaillez-vous avec des boutiques Shopify ?",
@@ -455,7 +455,7 @@ const fr: Dictionary = {
       {
         title: "Prix fixe pour le périmètre écrit",
         body:
-          "Quatre niveaux, sans facturation à l'heure : Starter à 1 500 $, Growth à 3 500 $, Scale de 5 000 $ à 10 000 $, et Scale+ chiffré sur mesure pour les périmètres d'entreprise. Une option de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier peut être convenu par écrit.",
+          "Trois niveaux, sans facturation à l'heure : Starter à partir de 1 500 $, Growth à partir de 3 500 $ et Scale à partir de 5 000 $. Tout projet plus important est chiffré après un appel. Une option de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier peut être convenu par écrit.",
       },
       {
         title: "Comment la performance est vérifiée",
@@ -483,7 +483,7 @@ const fr: Dictionary = {
     meta: {
       title: "Tarifs et périmètre de migration web | PandaCodeGen",
       description:
-        "Les forfaits de migration démarrent à 1 500 $, 3 500 $ et 5 000 $–10 000 $, les pages et fonctionnalités étant ajustées dans un devis écrit.",
+        "Les forfaits de migration démarrent à 1 500 $, 3 500 $ et 5 000 $, les pages et fonctionnalités étant ajustées dans un devis écrit.",
     },
     hero: {
       eyebrow: "Clarté contractuelle",
@@ -493,7 +493,7 @@ const fr: Dictionary = {
         "Choisissez le forfait de départ le plus proche, puis ajoutez ou retirez des pages et des fonctionnalités dans un devis écrit. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier écrit peut être convenu pour un projet particulier.",
     },
     summary:
-      "Les forfaits de migration PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et 5 000 $ à 10 000 $ (Scale). Le prix est fixé avant le début des travaux. Aucune taille de projet minimale, aucune facturation à l’heure, aucun abonnement : 30 % au démarrage, 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être migré sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
+      "Les forfaits de migration PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale). Tout projet plus important est chiffré après un appel. Le prix est fixé avant le début des travaux. Aucune taille de projet minimale, aucune facturation à l’heure, aucun abonnement : 30 % au démarrage, 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être migré sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
     tiersHeading: "Exemples de forfaits de départ",
     currencyNote:
       "Montants indiqués en dollars américains (USD). La devise, les taxes et les échéances figurent dans les conditions de projet acceptées.",
@@ -502,9 +502,9 @@ const fr: Dictionary = {
         name: "Starter",
         price: "1 500 $",
         priceNote: "Forfait de départ · périmètre exact dans la proposition",
-        fit: "Sites de petite entreprise, 5 à 7 pages.",
+        fit: "Sites de petite entreprise, jusqu'à 7 pages.",
         features: [
-          "5 à 7 pages sur mesure, avec les gabarits et les responsabilités de contenu listés dans le périmètre",
+          "Jusqu'à 7 pages sur mesure, avec les gabarits et les responsabilités de contenu listés dans le périmètre",
           "Déploiement Next.js avec dépôt, environnements et responsabilités de remise documentés",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur pour les pages représentatives convenues",
           "Trois passages enregistrés avant la livraison par page et profil convenus ; chaque passage doit atteindre l'objectif",
@@ -517,9 +517,9 @@ const fr: Dictionary = {
         name: "Growth",
         price: "3 500 $",
         priceNote: "Forfait de départ · périmètre exact dans la proposition",
-        fit: "10 à 20 pages, CMS, migration complète.",
+        fit: "8 à 20 pages, CMS, migration complète.",
         features: [
-          "Site sur mesure de 10 à 20 pages : pages de service, études de cas et ressources",
+          "Site sur mesure de 8 à 20 pages : pages de service, études de cas et ressources",
           "Intégration du CMS Sanity : votre équipe met à jour les contenus sans toucher au code",
           "Migration du blog avec inventaire des URL, plan de redirections, conservation des métadonnées et surveillance après mise en ligne",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur, avec trois passages réussis par page et profil convenus",
@@ -529,12 +529,12 @@ const fr: Dictionary = {
       },
       {
         name: "Scale",
-        price: "5 000 $–10 000 $",
-        priceNote: "Fourchette de départ · périmètre exact dans la proposition",
-        fit: "Commerce headless et plus de 30 pages.",
+        price: "À partir de 5 000 $",
+        priceNote: "Forfait de départ · périmètre exact dans la proposition",
+        fit: "Plus de 20 pages, une boutique ou plusieurs langues.",
         features: [
           "E-commerce headless : back-office Shopify ou WooCommerce, interface Next.js",
-          "Périmètre de plus de 30 pages ou gabarits pour produits, collections, contenus et pages d'atterrissage",
+          "Périmètre de plus de 20 pages ou gabarits pour produits, collections, contenus et pages d'atterrissage",
           "Intégrations examinées telles que Klaviyo, HubSpot, Salesforce, les abonnements Stripe ou une autre API documentée",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur, avec trois passages réussis par page et profil convenus",
           "CMS Sanity et modèle de contenu conçu pour vos rédacteurs, pas des gabarits génériques",
@@ -604,7 +604,7 @@ const fr: Dictionary = {
     faq: [
       {
         q: "Par quel forfait commencer ?",
-        a: "Starter démarre à 1 500 $, Growth à 3 500 $, et Scale se situe normalement entre 5 000 $ et 10 000 $. Choisissez la base la plus proche ; les pages ou fonctionnalités supplémentaires sont discutées et chiffrées dans le périmètre écrit avant le démarrage.",
+        a: "Starter démarre à 1 500 $ pour un site allant jusqu'à 7 pages, Growth à 3 500 $ pour 8 à 20 pages, et Scale à partir de 5 000 $ pour plus de 20 pages, une boutique ou plusieurs langues. Tout projet plus important est chiffré après un appel. Choisissez la base la plus proche ; les pages ou fonctionnalités supplémentaires sont discutées et chiffrées dans le périmètre écrit avant le démarrage. Si aucun de ces forfaits ne correspond à votre situation, appelez le +1 (302) 773-8982 ou écrivez à info@pandacodegen.com et nous le chiffrerons.",
       },
       {
         q: "Faut-il un contrat long pour chaque projet ?",
@@ -616,7 +616,7 @@ const fr: Dictionary = {
       },
       {
         q: "Et si mon projet dépasse le niveau Scale ?",
-        a: "Les projets plus vastes, multi-régions, e-commerce, applicatifs ou riches en intégrations sont cadrés séparément après une phase de découverte. La proposition liste l'équipe, les livrables, les dépendances, les exclusions et le calendrier de la mission.",
+        a: "Tout projet plus important que Scale est chiffré après un appel. Les projets plus vastes, multi-régions, e-commerce, applicatifs ou riches en intégrations sont cadrés séparément après une phase de découverte. La proposition liste l'équipe, les livrables, les dépendances, les exclusions et le calendrier de la mission.",
       },
       {
         q: "Comment l'objectif de performance 90+ est-il vérifié ?",
