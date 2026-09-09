@@ -101,8 +101,25 @@ export default function Hero() {
             Our own pages are cited in Google&apos;s AI Overviews. Fixed price from $1,500, no minimum project size, and you own the code.
           </p>
 
-          {/* CTAs, animated client component */}
-          <HeroCTAs />
+          {/* CTAs, animated client component.
+
+              HeroCTAs is dynamic with ssr:false because it pulls framer-motion,
+              so the server sends nothing here and the buttons appear only after
+              hydration. Measured 9 Sep 2026 at 1024 wide, that was the homepage's
+              single largest layout shift: the slot went from 0 to 84px and, because
+              this grid centres its two columns, the whole left column then moved.
+              Page CLS was 0.128 locally and 0.136 on production, both above the
+              0.1 threshold, and every shift was attributed to this column.
+
+              The fix is the one the right column already uses: reserve the height
+              so the swap changes nothing. The numbers are measured, not guessed.
+              132px when the buttons stack on mobile, 60px once they sit in a row,
+              and 84px between 1024 and 1279 where the grid column is narrow enough
+              that "Get your migration plan" wraps to two lines. If you change the
+              button text, padding, or this grid, re-measure all four. */}
+          <div className="min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]">
+            <HeroCTAs />
+          </div>
 
           {/* The "Ask our experts" text link used to sit here, making three competing
               actions in the hero. Removed to leave two. It is a genuine low-friction
