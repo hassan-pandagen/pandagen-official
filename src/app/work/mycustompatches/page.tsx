@@ -44,7 +44,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How does the hosting model differ from managed WordPress?",
-        answer: "The specific hosting figures for this project are withdrawn pending reconciliation of the original invoices. The structural difference is unchanged: the original site ran on managed WordPress hosting plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel's free tier with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) use serverless functions with zero monthly cost at this traffic level.",
+        answer: "The specific hosting figures for this project are withdrawn pending reconciliation of the original invoices. The structural difference is unchanged: the original site ran on managed WordPress hosting plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) run as serverless functions rather than an always-on server, so nothing sits idle waiting to be patched.",
     },
     {
         question: "Was there any downtime during the migration?",
@@ -181,7 +181,7 @@ const techStack = [
     { name: "Cloudinary", role: "Design file uploads", color: "bg-blue-700 text-white" },
     { name: "Web3Forms", role: "Email delivery", color: "bg-emerald-700 text-white" },
     { name: "Cloudflare", role: "CDN + DNS", color: "bg-orange-700 text-white" },
-    { name: "Vercel", role: "Hosting (free tier)", color: "bg-stone-700 text-white" },
+    { name: "Vercel", role: "Hosting", color: "bg-stone-700 text-white" },
     { name: "Tawk.to", role: "Live chat", color: "bg-teal-700 text-white" },
     { name: "Swiper + Lightbox", role: "Image gallery", color: "bg-violet-700 text-white" },
     { name: "Facebook Pixel", role: "Analytics", color: "bg-blue-700 text-white" },
@@ -475,7 +475,6 @@ export default function MyCustomPatchesCaseStudy() {
                                     <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">Core Web Vitals</td><td className="px-4 py-3 text-red-600">Failing</td><td className="px-4 py-3 text-emerald-600">All green</td></tr>
                                     <tr><td className="px-4 py-3 font-medium text-stone-700">Migration Downtime</td><td className="px-4 py-3 text-stone-500">N/A</td><td className="px-4 py-3 text-emerald-600">Zero</td></tr>
                                     <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-stone-700">SEO Rankings Lost</td><td className="px-4 py-3 text-stone-500">N/A</td><td className="px-4 py-3 text-emerald-600">Zero pages lost</td></tr>
-                                    <tr><td className="px-4 py-3 font-medium text-stone-700">3-Year Hosting Cost</td><td className="px-4 py-3 text-red-600">$5,400+</td><td className="px-4 py-3 text-emerald-600">$0</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -556,7 +555,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 "Explicit width/height on all images, zero CLS",
                                 ".browserslistrc, eliminated ~24 KB of unnecessary polyfills",
                                 "Cloudflare CDN with optimized cache rules",
-                                "Vercel deployment (free tier, $0/mo)",
+                                "Vercel deployment, no origin server to patch or keep alive",
                                 "Full 301 redirect map, every WordPress URL covered",
                                 "WCAG AA accessibility, all labels, contrast, keyboard nav",
                                 "Zero downtime DNS cutover, WordPress site kept live as fallback",
