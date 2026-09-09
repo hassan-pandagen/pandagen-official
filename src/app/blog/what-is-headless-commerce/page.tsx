@@ -493,7 +493,7 @@ export default function WhatIsHeadlessCommercePage() {
                     <BlogHeader id="our-tiers">What we charge for this work</BlogHeader>
                     <BlogText>
                         A headless commerce build is normally custom scope rather than a standard tier. Our published
-                        tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, and a storefront with
+                        tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, and a storefront with
                         its own commerce integration, content system, search, accounts and migration usually sits beyond
                         Scale. Those are our prices, not a market average, and we would rather say so than anchor you on
                         an entry figure that does not apply to this job. The full tier detail sits on the{" "}

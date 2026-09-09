@@ -366,7 +366,7 @@ export default function TopNextjsAgenciesPage() {
                         <Link href="/services/gohighlevel" className={sourceLinkClass}>GoHighLevel</Link> sites, plus{" "}
                         <Link href="/services/custom-engineering" className={sourceLinkClass}>scoped custom Next.js work</Link>.{" "}
                         <Link href="/pricing" className={sourceLinkClass}>Public starting tiers</Link> are $1,500 Starter,
-                        $3,500 Growth and $5,000 to $10,000 Scale. Larger or unusually complex scope is discussed
+                        $3,500 Growth and $5,000 Scale. Larger or unusually complex scope is discussed
                         separately. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed under the
                         signed agreement.
                     </BlogText>

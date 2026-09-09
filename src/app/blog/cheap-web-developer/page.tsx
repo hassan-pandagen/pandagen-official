@@ -177,7 +177,7 @@ export default function CheapWebDeveloperPage() {
             The search phrase covers freelance web developers on marketplaces, individual contractors, template specialists, fixed-price studios, agencies, website builders, and AI-assisted services. Their prices are not directly comparable until the scope is normalized. Marketplace listings are also mutable and self-selected, so a search-result price is not a market benchmark.
           </BlogText>
           <BlogText>
-            Hiring a web developer generally lands between a few hundred dollars for a narrow repair and five figures for a migration with commerce or a portal, and the spread is caused by scope rather than by rate. Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 to $10,000+ Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
+            Hiring a web developer generally lands between a few hundred dollars for a narrow repair and five figures for a migration with commerce or a portal, and the spread is caused by scope rather than by rate. Use price buckets only to organize quotes, not to infer deliverables. Under $500 may be appropriate for a narrow repair or template task. A $500 to $1,500 quote may fit a landing page or small scoped site. PandaCodeGen publishes a $1,500 Starter planning anchor, $3,500 Growth anchor, and $5,000 Scale anchor. In every bucket, the accepted scope controls what is included. The{" "}
             <Link href="/pricing" className="text-cognac hover:underline">pricing page</Link>{" "}
             lists those anchors, and our{" "}
             <Link href="/blog/how-much-does-a-website-cost" className="text-cognac hover:underline">website cost guide</Link>{" "}
@@ -456,7 +456,7 @@ export default function CheapWebDeveloperPage() {
           <div className="grid md:grid-cols-3 gap-4 my-8">
             <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$1,500 Starter</p><p className="text-sm text-stone-600 mt-2">Small scoped site or migration anchor. Final pages, features, tests, and 15-business-day support boundary follow the accepted terms.</p></div>
             <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$3,500 Growth</p><p className="text-sm text-stone-600 mt-2">Larger content and CMS anchor. Final migration inventory, integrations, tests, and 30-business-day support boundary follow the accepted terms.</p></div>
-            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$5,000 to $10,000+</p><p className="text-sm text-stone-600 mt-2">Scale, commerce, portal, or custom-feature anchor. Architecture, vendors, security, data, and operations are scope-dependent.</p></div>
+            <div className="rounded-xl border border-stone-200 p-5"><p className="font-bold text-charcoal">$5,000</p><p className="text-sm text-stone-600 mt-2">Scale, commerce, portal, or custom-feature anchor. Architecture, vendors, security, data, and operations are scope-dependent.</p></div>
           </div>
 
           <div className="my-10 p-8 bg-charcoal text-white rounded-2xl text-center">

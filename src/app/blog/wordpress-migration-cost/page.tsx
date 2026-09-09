@@ -149,7 +149,7 @@ export default function WordPressMigrationCostPage() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Rebuilding a WordPress site as a custom Next.js build starts at $1,500 with PandaCodeGen, $3,500 for
-                            a broader marketing site, and $5,000 to $10,000 where templates, data or integrations
+                            a broader marketing site, and $5,000 where templates, data or integrations
                             multiply. Those are our prices, not a market average. Before you use any of them: if you
                             only want the same WordPress site on a different host, that is a different job and it is
                             usually free. Kinsta publishes unlimited free migrations from all hosts, and SiteGround
@@ -179,7 +179,7 @@ export default function WordPressMigrationCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">PandaCodeGen planning tiers</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
                             A WordPress rebuild with us starts at $1,500 for a small bounded site, $3,500 for a
-                            broader marketing site, and $5,000 to $10,000 where templates, data or integrations
+                            broader marketing site, and $5,000 where templates, data or integrations
                             multiply. Treat those as entry points for planning, not as quotes: the signed statement of
                             work sets the final price, the deliverables, the acceptance criteria and the remedy, and it
                             overrides anything on this page. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
@@ -235,7 +235,7 @@ export default function WordPressMigrationCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small site, few repeatable templates, bounded content and forms</td><td className="p-4">Redesign, custom data, many unique layouts or integrations</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">Broader marketing site, CMS, blog and defined integrations</td><td className="p-4">Complex search, localization, accounts or workflows</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Larger content, data, commerce or operational scope</td><td className="p-4">Subscriptions, regulated data, multiple systems or markets</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Larger content, data, commerce or operational scope</td><td className="p-4">Subscriptions, regulated data, multiple systems or markets</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Application behavior and risk outside a standard website tier</td><td className="p-4">Discovery identifies the appropriate delivery model</td></tr>
                             </tbody>
                         </table>

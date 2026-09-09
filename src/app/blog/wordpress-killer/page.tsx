@@ -435,7 +435,7 @@ export default function WordPressCostPage() {
 
                     <BlogHeader id="offer">PandaCodeGen planning terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, with
+                        PandaCodeGen tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, with
                         custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent on
                         delivery, and another written schedule may be agreed. Where the accepted project terms include it, a refund covers fees paid under that scope if the promised deliverables are not delivered. It is not a change-of-mind refund, and deliverables, acceptance and remedy all follow the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30. These terms are inputs
                         to a comparison, not proof that migration is the lower-cost choice. What sits inside each tier

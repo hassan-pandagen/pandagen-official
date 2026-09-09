@@ -81,7 +81,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 to $10,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces monthly app fees with code you own, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
+            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces monthly app fees with code you own, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
           </p>
         </div>
       </section>
@@ -279,7 +279,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">Headless removes app bloat at the source. No ghost code. No render-blocking JavaScript. No silent conversion killer.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              We rebuild Shopify stores headless on Next.js from $1,500 (most headless store rebuilds land $5,000 to $10,000). App functionality moves to native code. Same Shopify backend, with the storefront rebuilt as code you own and measure.
+              We rebuild Shopify stores headless on Next.js from $1,500 (most headless store rebuilds land $5,000). App functionality moves to native code. Same Shopify backend, with the storefront rebuilt as code you own and measure.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Headless Pricing →
@@ -380,7 +380,7 @@ export default function PageContent() {
               },
               {
                 tier: "Scale",
-                price: "$5,000 to $10,000",
+                price: "From $5,000",
                 timeline: "3 to 4 weeks",
                 fit: "Subscriptions, custom logic, large catalogs, headless APIs.",
                 includes: [

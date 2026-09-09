@@ -171,7 +171,7 @@ export default function WixMigrationCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.",
                                 "Those are our own anchors, not Wix migration market averages.",
                                 "Wix documents separate export paths for CMS collections, contacts, products and orders rather than one complete portable site package.",
                                 "The final price, the dates, who owns the code, launch day and what happens if it goes wrong all belong in your written quote.",
@@ -196,7 +196,7 @@ export default function WixMigrationCostPage() {
 
                     <BlogHeader id="price">How much does a Wix migration cost?</BlogHeader>
                     <BlogText>
-                        Our planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale, and those are our own anchors rather than Wix migration market averages. There is no page-count formula behind them. Five pages with booking, payments, automations and member data can require more migration work than many static pages, so price unique templates, states, data and workflows alongside page count.
+                        Our planning tiers are $1,500 Starter, $3,500 Growth and $5,000 Scale, and those are our own anchors rather than Wix migration market averages. There is no page-count formula behind them. Five pages with booking, payments, automations and member data can require more migration work than many static pages, so price unique templates, states, data and workflows alongside page count.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[860px] border-collapse text-left text-sm">
@@ -206,7 +206,7 @@ export default function WixMigrationCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded marketing site with limited data and integrations</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">More templates, structured content, forms and search safeguards</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Larger content, commerce, apps, integrations or governance</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Larger content, commerce, apps, integrations or governance</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Complex commerce, membership, booking, regulated data or applications</td></tr>
                             </tbody>
                         </table>

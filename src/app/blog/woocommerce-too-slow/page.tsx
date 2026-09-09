@@ -566,7 +566,7 @@ export default function WooCommerceTooSlowPage() {
 
                     <BlogHeader id="terms">PandaCodeGen terms and performance acceptance</BlogHeader>
                     <BlogText>
-                        PandaCodeGen&apos;s published tiers start at $1,500, $3,500 and $5,000 to $10,000, with custom
+                        PandaCodeGen&apos;s published tiers start at $1,500, $3,500 and $5,000, with custom
                         scope where needed. A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed.
                         Package discussions may start with 15 business days of launch defect support on Starter and 30 on Growth and Scale; support applies only where the accepted <Link href="/terms" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">project terms</Link> record it.
                         A 90-plus score means the pages named in your quote, tested on phone and desktop, passing three

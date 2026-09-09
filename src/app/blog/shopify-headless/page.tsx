@@ -442,7 +442,7 @@ export default function ShopifyHeadlessPage() {
                     />
                     <InsightBox variant="info" label="PandaCodeGen commercial context">
                         Our published Scale tier starts at $5,000 and commonly covers scoped headless work in the
-                        $5,000 to $10,000 range. That is our price, not an industry benchmark. Final scope, third-party
+                        $5,000 range. That is our price, not an industry benchmark. Final scope, third-party
                         costs, ownership, support and acceptance terms are agreed before onboarding. See the{" "}
                         <Link href="/services/ecommerce" className={inlineLinkClass}>ecommerce development service</Link> and the{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link> for what each tier covers.

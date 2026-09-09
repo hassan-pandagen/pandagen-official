@@ -224,7 +224,7 @@ export default function WebsiteCostGuide() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-semibold">Starter</td><td className="p-4">$1,500</td><td className="p-4">$450</td><td className="p-4">$1,050</td><td className="p-4">15 business days</td></tr>
                                 <tr><td className="p-4 font-semibold">Growth</td><td className="p-4">$3,500</td><td className="p-4">$1,050</td><td className="p-4">$2,450</td><td className="p-4">30 business days</td></tr>
-                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">$1,500 to $3,000</td><td className="p-4">$3,500 to $7,000</td><td className="p-4">30 business days</td></tr>
+                                <tr><td className="p-4 font-semibold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">$1,500 to $3,000</td><td className="p-4">$3,500 to $7,000</td><td className="p-4">30 business days</td></tr>
                             </tbody>
                         </table>
                     </div>

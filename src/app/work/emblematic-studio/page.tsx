@@ -250,7 +250,7 @@ export default function EmblematicStudioCaseStudy() {
                                 <strong>Read that as one client&apos;s experience, which is what it is.</strong> The
                                 quotes he compares against are the ones he personally received, not a market survey, and
                                 we have no visibility into what they covered. The $5,000 figure is our published Scale
-                                tier rather than a discount — our tiers start at $1,500, $3,500 and $5,000 to $10,000,
+                                tier rather than a discount — our tiers start at $1,500, $3,500 and $5,000,
                                 and they are on the{" "}
                                 <Link
                                     href="/blog/how-much-does-a-website-cost"

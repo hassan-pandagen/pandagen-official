@@ -158,7 +158,7 @@ export default function WebsiteRebuildCostPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale.",
+                                "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale.",
                                 "A rebuild goes past those tiers when the strategy work grows, or the content, or the applications, or the data, or what compliance and governance demand.",
                                 "Do not compare a rebuild quote with a visual redesign or like-for-like migration.",
                                 "Final price, schedule and remedies belong to a signed scope with acceptance evidence.",
@@ -193,7 +193,7 @@ export default function WebsiteRebuildCostPage() {
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr><td className="p-4 font-bold">Starter</td><td className="p-4">$1,500</td><td className="p-4">Small, bounded site with limited structure and integration change</td></tr>
                                 <tr><td className="p-4 font-bold">Growth</td><td className="p-4">$3,500</td><td className="p-4">More pages, structured content, redesign and migration work</td></tr>
-                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">$5,000 to $10,000</td><td className="p-4">Broader systems, integrations, content and launch risk</td></tr>
+                                <tr><td className="p-4 font-bold">Scale</td><td className="p-4">From $5,000</td><td className="p-4">Broader systems, integrations, content and launch risk</td></tr>
                                 <tr><td className="p-4 font-bold">Custom</td><td className="p-4">Scoped separately</td><td className="p-4">Applications, commerce, compliance, multiple markets or program governance</td></tr>
                             </tbody>
                         </table>

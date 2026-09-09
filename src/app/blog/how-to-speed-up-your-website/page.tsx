@@ -543,7 +543,7 @@ export default function WebsiteSpeedGuide() {
                         for the representative pages named in that scope, evidenced by three recorded runs per page and
                         profile before handover. It is a lab acceptance target for delivered work. It is not a promise
                         about rankings, traffic or revenue, because nobody controls those. Planning tiers start at
-                        $1,500 for Starter, $3,500 for Growth and $5,000 to $10,000 for Scale.
+                        $1,500 for Starter, $3,500 for Growth and $5,000 for Scale.
                     </BlogText>
                     <BlogText>
                         If replacement is the answer, the cost drivers are set out in our{" "}

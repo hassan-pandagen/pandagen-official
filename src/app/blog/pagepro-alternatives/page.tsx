@@ -363,7 +363,7 @@ export default function PageproAlternativesPage() {
 
                     <BlogHeader>PandaCodeGen pricing and terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen publishes planning tiers at $1,500, $3,500 and $5,000 to $10,000. The recommended
+                        PandaCodeGen publishes planning tiers at $1,500, $3,500 and $5,000. The recommended
                         path is a free fit audit, then an accepted paid blueprint or migration sprint where appropriate.
                         Extra pages or features are estimated through change control. Published tiers are not evidence
                         that another provider is overpriced or that the scopes are equivalent. The current figures and

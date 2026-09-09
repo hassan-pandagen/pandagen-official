@@ -544,7 +544,7 @@ export default function ShopifyDawnThemeSlowPage() {
                     <div className="my-6 grid gap-4 sm:grid-cols-3">
                         <StatCard stat="$1,500" label="Starter" context="Small, clearly bounded scope" />
                         <StatCard stat="$3,500" label="Growth" context="Larger migration, CMS or content-continuity scope" />
-                        <StatCard stat="$5,000+" label="Scale" context="$5,000 to $10,000 for integration-heavy commerce work" />
+                        <StatCard stat="$5,000+" label="Scale" context="$5,000 for integration-heavy commerce work" />
                     </div>
                     <BlogText>
                         Where a 90-plus Lighthouse result is included, it is written as a handover target on mobile and

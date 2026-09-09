@@ -534,7 +534,7 @@ export default function WordPressVsCustomCostPage() {
 
                     <BlogHeader id="terms">PandaCodeGen as one quote input</BlogHeader>
                     <BlogText>
-                        PandaCodeGen planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to $10,000 Scale,
+                        PandaCodeGen planning tiers are $1,500 Starter, $3,500 Growth and $5,000 Scale,
                         with custom work scoped separately. A common payment option is 30 percent at onboarding and 70 percent
                         on delivery. Use your written quote as the input and compare it with an equivalent
                         WordPress option covering the same work. These starting tiers do not prove three-year savings. The tier

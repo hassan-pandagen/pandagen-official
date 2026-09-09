@@ -105,7 +105,7 @@ export default function PageContent() {
           comparisonTitle="WordPress vs Custom"
           themLabel="WordPress"
           metrics={[
-            { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at acceptance",         themPct: 30, usPct: 98, icon: Gauge },
+            { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at handover",           themPct: 30, usPct: 98, icon: Gauge },
             { metric: "Monthly Cost", themLabel: "$150+",        usLabel: "$0",           themPct: 95, usPct: 2,  icon: DollarSign },
             { metric: "Security",     themLabel: "Vulnerable",   usLabel: "Smaller third-party surface",   themPct: 40, usPct: 100, icon: Shield },
             { metric: "Maintenance",  themLabel: "Daily",        usLabel: "Zero",         themPct: 90, usPct: 5,  icon: RefreshCcw },
@@ -206,7 +206,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">90+ PageSpeed</div>
-              <p className="text-sm text-stone-600">Refund terms are stated in the written scope.</p>
+              <p className="text-sm text-stone-600">Refund terms are stated in your written quote.</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-xl">
               <div className="text-2xl font-bold text-cognac-light mb-1">Fixed price</div>
@@ -230,8 +230,8 @@ export default function PageContent() {
             {[
               { step: "01", title: "Full Site Audit", desc: "We analyze your WordPress site top to bottom: speed, security, plugins, SEO, and database health. You get a detailed report showing exactly what's costing you money.", icon: FileSearch, duration: "Phase 1" },
               { step: "02", title: "Data Export & Cleaning", desc: "We extract every page, post, image, and metadata from your WordPress database, then clean it. Plugin bloat removed. Broken links fixed. Images optimized.", icon: Database, duration: "Phase 2" },
-              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Performance is measured against the pages named in your scope.", icon: Wrench, duration: "Phase 3" },
-              { step: "04", title: "Migration & Launch", desc: "Every old URL maps to the new site with 301 redirects. Redirect-mapped URLs. Staged cutover. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Phase 4" },
+              { step: "03", title: "Custom Website Build", desc: "Your new site is built in Next.js with SSR, automatic image optimization, and a content editor. Performance is measured on the pages named in your written quote.", icon: Wrench, duration: "Phase 3" },
+              { step: "04", title: "Migration & Launch", desc: "Every old web address forwards to its new page. We switch it over in stages, and if anything is wrong we switch back. We launch, monitor, and hand you the keys.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -391,9 +391,9 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: Database, title: "Clean Data Migration", desc: "We clean your WordPress database, remove bloat, and migrate to a modern backend. Migrated content is reconciled against a pre-migration inventory and the exceptions are reported." },
+              { icon: Database, title: "Clean Data Migration", desc: "We clean your WordPress database, remove bloat, and migrate to a modern backend. We check the moved content against the list of your pages taken before we started, and tell you about anything that did not come across." },
               { icon: Server, title: "Static Edge Rendering", desc: "Your site is pre-built as static HTML. It is served from an edge network, and the risk moves into your dependencies and build pipeline rather than disappearing." },
-              { icon: Lock, title: "SEO Preservation", desc: "We map every single old URL to the new site. Every URL is redirect-mapped, and search engines still control rankings and timing." },
+              { icon: Lock, title: "SEO Preservation", desc: "We list every old web address and forward each one to its new page. Search engines still control rankings and timing." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white border border-stone-200 shadow-card hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -461,7 +461,7 @@ export default function PageContent() {
         headingAccent="We meet you halfway."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare the same scope, the same timeline, and who owns the code.",
+          agencyNote: "Compare the same amount of work, the same timeline, and who owns the code.",
           ourPrice: "From $1,500",
           ourNote: "2 to 4 week timeline. Fixed price. You own 100% of the code.",
         }}
@@ -552,7 +552,7 @@ export default function PageContent() {
                 Complete migration from WordPress to a custom coded platform you own forever. Faster, more secure, and cheaper to maintain long-term.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Measured performance at acceptance", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "Refund terms stated in the written scope"].map((item, i) => (
+                {["Measured performance at handover", "90+ PageSpeed score", "Zero monthly plugin fees", "Enterprise level security", "You own 100% of the code", "Refund terms stated in your written quote"].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>
@@ -612,7 +612,7 @@ export default function PageContent() {
               A 90+ handover target, <span className="font-serif italic text-cognac">measured before you sign off.</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-              Every migration scores 90 or better on Google PageSpeed on phone and desktop, on the pages named in your quote, tested three times before handover. If we fail to deliver what that written scope promises, the accepted terms set out the refund trigger and cure process. This is a lab acceptance target, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
+              Every migration scores 90 or better on Google PageSpeed on phone and desktop, on the pages named in your quote, tested three times before handover. If we fail to deliver what that written quote promises, the accepted terms set out the refund trigger and how long we have to fix it. That score is measured in a lab test, not a promise about rankings, revenue, or field Core Web Vitals after third-party changes.
             </p>
             <button
               data-cal-namespace="discovery"
@@ -675,7 +675,7 @@ export default function PageContent() {
               </Link>
               <div>
                 <Link href="/about/imran" className="font-bold text-charcoal text-sm hover:text-cognac transition-colors">Imran</Link>
-                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. 8+ years in enterprise architecture. Scopes every migration around redirect mapping, acceptance criteria and cutover.</p>
+                <p className="text-xs text-stone-500 mt-0.5">Lead Solutions Architect. 8+ years in enterprise architecture. Plans every migration around where each old web address goes, what counts as done, and how we switch it over.</p>
               </div>
             </div>
           </div>

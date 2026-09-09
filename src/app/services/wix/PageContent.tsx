@@ -72,9 +72,9 @@ export default function PageContent() {
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-xs font-bold uppercase tracking-widest text-stone-600">
             <span>Current-state review</span>
             <span>&bull;</span>
-            <span>Migration inventory</span>
+            <span>A list of your pages</span>
             <span>&bull;</span>
-            <span>Written scope and acceptance</span>
+            <span>What we build, agreed in writing</span>
             <span>&bull;</span>
             <span>Terms in writing</span>
           </div>
@@ -157,14 +157,14 @@ export default function PageContent() {
       <section id="how-it-works" className="py-10 md:py-14 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Wix Site</h2>
-          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. The proposal defines milestones, continuity controls, responsibilities, and acceptance for the approved site.</p>
+          <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">A four-phase planning and delivery path. Your written quote gives the date for each phase, how we keep your site running while we build, who does what, and what counts as done.</p>
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Inventory & Export Review", desc: "We list your pages, media, posts, forms, products, bookings, members, domains, metadata, apps and whatever Wix will let you export. Then we write down the gaps and what has to be done by hand.", icon: FileSearch, duration: "Phase 1" },
+              { step: "01", title: "Page List & Export Review", desc: "We list your pages, media, posts, forms, products, bookings, members, domains, metadata, apps and whatever Wix will let you export. Then we write down the gaps and what has to be done by hand.", icon: FileSearch, duration: "Phase 1" },
               { step: "02", title: "Design & Workflow Mapping", desc: "We say what is kept, what is redesigned, what is reshaped and what is dropped. That covers how it behaves on every screen, accessibility, the content and the integrations.", icon: Wrench, duration: "Phase 2" },
-              { step: "03", title: "Build & Redirect Plan", desc: "We build the agreed scope and map every old URL to its new home. Redirects cut the risk. They do not guarantee your rankings or your traffic.", icon: Search, duration: "Phase 3" },
-              { step: "04", title: "Cutover & Handover", desc: "We follow the agreed DNS, content, functional, analytics, accessibility, monitoring, rollback, training, access, and support checks.", icon: Rocket, duration: "Phase 4" },
+              { step: "03", title: "Build & Forwarding Plan", desc: "We build the agreed work and write down where every old web address forwards to. Forwarding cuts the risk. It does not guarantee your rankings or your traffic.", icon: Search, duration: "Phase 3" },
+              { step: "04", title: "Switchover & Handover", desc: "We follow the agreed DNS, content, functional, analytics, accessibility, monitoring, switching back if needed, training, access, and support checks.", icon: Rocket, duration: "Phase 4" },
             ].map((item, i) => (
               <FadeIn
                 key={i}
@@ -280,13 +280,13 @@ export default function PageContent() {
             <span className="text-cognac font-bold tracking-widest uppercase text-sm">The Smarter Path</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-charcoal">Choose the Architecture That Fits.</h2>
             <p className="text-stone-600 text-lg max-w-2xl mx-auto">
-              A custom implementation can provide different design, integration, and deployment controls. The proposal defines measurable targets, recurring services, support, repository access, licensing, IP, and handover.
+              A custom implementation can provide different design, integration, and deployment controls. Your written quote says what speed we hit, what you pay monthly to run it, what support you get, and that the code is yours at the end.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Gauge, title: "Measured Experience", desc: "Define page-specific performance, responsive, and accessibility acceptance checks under documented conditions." },
+              { icon: Gauge, title: "Measured Experience", desc: "Define the speed, screen-size and accessibility checks for each page, agreed in writing before we start and run under conditions we write down." },
               { icon: Lock, title: "Clear Access and Rights", desc: "Record repository access, third-party licenses, IP transfer, deployment responsibilities, and handover in the accepted proposal." },
               { icon: DollarSign, title: "Documented Operating Model", desc: "Estimate hosting and connected services, then state maintenance and support responsibilities for the proposed architecture." },
             ].map((item, i) => (
@@ -343,7 +343,7 @@ export default function PageContent() {
             {[
               { locked: "Verify robots.txt and per-route indexing controls", owned: "Define required crawl directives and validate the deployed output" },
               { locked: "Audit supported structured-data fields and custom markup", owned: "Implement and validate agreed JSON-LD without promising eligibility or visibility" },
-              { locked: "Inventory URL patterns, slugs, canonicals, and redirects", owned: "Define the target URL map and migration verification process" },
+              { locked: "List the URL patterns, slugs, canonicals, and redirects", owned: "Define the target URL map and migration verification process" },
               { locked: "Inspect rendered HTML and client-side dependencies", owned: "Choose a rendering strategy based on content and application requirements" },
               { locked: "Measure Core Web Vitals and identify controllable causes", owned: "Set budgets, test conditions, and third-party exclusions in the specification" },
               { locked: "Review available logs, reports, sitemaps, and crawl signals", owned: "Define observability and search-monitoring responsibilities for the proposed stack" },
@@ -375,7 +375,7 @@ export default function PageContent() {
                 <Scale className="w-4 h-4 text-cognac" /> Net Balance
               </div>
               <p className="text-sm md:text-base text-center sm:text-right text-stone-300">
-                Six review areas documented <span className="text-white font-bold">→ final controls, access, and responsibilities follow the approved scope.</span>
+                Six review areas documented <span className="text-white font-bold">→ final controls, access, and responsibilities follow your written quote.</span>
               </p>
             </div>
           </div>
@@ -388,7 +388,7 @@ export default function PageContent() {
         headingAccent="Confirm commitments after discovery."
         agencyComparison={{
           agencyPrice: "Not assessed",
-          agencyNote: "Compare equivalent content, app, commerce, integration, and support scope.",
+          agencyNote: "Compare the same content, apps, commerce, integrations and support.",
           ourPrice: "From $1,500, fixed",
           ourNote: "Price, timing, services, access, and rights follow discovery.",
         }}
@@ -396,19 +396,19 @@ export default function PageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
               "A list of every page, post and app you have",
-              "Design and redirect requirements",
-              "Written acceptance and handover terms",
+              "What we design, and where every old link forwards",
+              "What counts as done, and how we hand over, in writing",
             ],
             cta: "Get your migration plan",
           },
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A business site with broader content, forms, or interaction requirements.",
             includes: [
               "Content and integration mapping",
@@ -421,7 +421,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "Commerce, bookings, localization, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",
@@ -470,7 +470,7 @@ export default function PageContent() {
               <p className="text-stone-600 mb-8">A custom site from $1,500, fixed price, 2 to 4 weeks, with the code and every account handed to you at the end.</p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Documented performance baseline and budgets</li>
-                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> URL mapping and migration checks</li>
+                <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Every old web address forwarded and checked</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Current hosting and service estimate</li>
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Written repository and rights terms</li>
               </ul>
@@ -543,14 +543,14 @@ export default function PageContent() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and acceptance method.</span></h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-charcoal mb-3 tracking-tight">Define the migration <span className="font-serif font-normal italic text-cognac">and what counts as done.</span></h3>
               <p className="text-stone-700 leading-relaxed mb-6">
                 Your written quote lists the pages, the speed test we run, the link forwarding, what you need to give us, what support you get after launch, and who owns what at the end. It is the quote that counts, not this page.
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start text-xs font-bold text-cognac uppercase tracking-wider mb-6">
-                <span>• Written Scope</span>
-                <span>• Defined Acceptance</span>
-                <span>• Recorded Responsibilities</span>
+                <span>• Written Quote</span>
+                <span>• What Counts As Done</span>
+                <span>• Who Does What</span>
               </div>
               <button
                 data-cal-namespace="discovery"

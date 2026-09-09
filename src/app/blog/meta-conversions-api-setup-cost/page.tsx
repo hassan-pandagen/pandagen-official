@@ -469,7 +469,7 @@ export default function MetaCAPISetupCostPage() {
 
                     <BlogHeader>What actually moves the price</BlogHeader>
                     <BlogText>
-                        A Conversions API integration sits in our Scale tier at $5,000 to $10,000; our Starter and Growth tiers, at $1,500 and $3,500, do not include one. What moves a quote within Scale is scope rather than the platform. We will not print a market range we cannot stand behind. What we can give you is the set of
+                        A Conversions API integration sits in our Scale tier at $5,000; our Starter and Growth tiers, at $1,500 and $3,500, do not include one. What moves a quote within Scale is scope rather than the platform. We will not print a market range we cannot stand behind. What we can give you is the set of
                         variables that decide whether a build sits at the bottom or the top of whatever quote you are
                         given, so you can push a vendor on the ones that apply to you.
                     </BlogText>
@@ -532,7 +532,7 @@ export default function MetaCAPISetupCostPage() {
                     </BlogText>
                     <BlogText>
                         For clarity on where it sits in the tiers: Starter from $1,500 and Growth from $3,500 do not
-                        include a Conversions API integration. Scale runs $5,000 to $10,000, and an accepted scope at
+                        include a Conversions API integration. Scale runs $5,000, and an accepted scope at
                         that tier is where the integration belongs. At the upper end of Scale we can add event-quality
                         and reconciliation monitoring you can read yourself, and fold ongoing measurement work into a
                         retainer. See the <Link href="/pricing" className="text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">pricing page</Link> for the full breakdown.
