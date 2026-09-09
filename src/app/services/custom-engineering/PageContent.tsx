@@ -497,7 +497,7 @@ export default function PageContent() {
           {
             tier: "Tool",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A focused tool or portal with validated requirements.",
             includes: [
               "Requirements and dependency review",
@@ -509,7 +509,7 @@ export default function PageContent() {
           {
             tier: "Platform",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A SaaS product, client portal, or dashboard with custom workflows.",
             includes: [
               "Validated feature and data scope",
@@ -521,7 +521,7 @@ export default function PageContent() {
           {
             tier: "Enterprise",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "Complex systems with broader security, integration, or operational requirements.",
             includes: [
               "Architecture and risk assessment",

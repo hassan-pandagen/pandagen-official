@@ -409,7 +409,7 @@ export default function PageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A focused landing-page and GHL data-flow review.",
             includes: [
               "A look at your site as it is today",
@@ -421,7 +421,7 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "A broader marketing site with content, forms, and supported GHL integrations.",
             includes: [
               "A list of every page and every automation it feeds",
@@ -433,7 +433,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Milestones proposed after review",
+            timeline: "Dates proposed after review",
             fit: "Multi-site, portal, or complex workflow requirements that need deeper review.",
             includes: [
               "Account and permission mapping",

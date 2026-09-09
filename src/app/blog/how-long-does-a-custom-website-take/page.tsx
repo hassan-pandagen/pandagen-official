@@ -251,8 +251,8 @@ export default function WebsiteTimelineGuide() {
                                     <td className="border border-stone-300 px-4 py-3">Content readiness</td>
                                 </tr>
                                 <tr>
-                                    <td className="border border-stone-300 px-4 py-3 font-medium">Scale, 30 plus / e-commerce</td>
-                                    <td className="border border-stone-300 px-4 py-3">4 to 8 weeks</td>
+                                    <td className="border border-stone-300 px-4 py-3 font-medium">Scale, more than 20 pages or a shop</td>
+                                    <td className="border border-stone-300 px-4 py-3">3 to 6 weeks</td>
                                     <td className="border border-stone-300 px-4 py-3">Catalog, integrations, content</td>
                                 </tr>
                                 <tr className="bg-stone-50">

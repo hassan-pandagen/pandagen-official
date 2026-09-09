@@ -2386,3 +2386,48 @@ and process blocks outside the tier definitions: staged cutover, rollback path,
 redirect map, 301, acceptance target, recorded runs, milestones. These sit in the
 ecommerce, WooCommerce and WordPress-migration sets, which the 6 September
 plain-language pass did not cover.
+
+### Addendum, 9 September 2026: delivery timelines are now canon too
+
+The audit's first P1 row asked to unify packages, timelines, performance scope
+and recurring-cost claims. Packages were done earlier today. Checking the rest:
+performance claims already agreed, all stating 90 with varied phrasing, which is
+fine. Recurring costs agreed, and the apparent $20 against $25 conflict is two
+different vendors' published prices, Vercel Pro and Webflow Premium, each with
+its source. Timelines did NOT agree.
+
+Three service pages each gave a different answer for the same tier: Growth was
+2 to 3 weeks on ecommerce and WooCommerce but 2 to 4 on WordPress migration, and
+Scale was 3 to 4, 3 to 5 and 4 to 8 on those same three pages. Nine other tier
+cards said "Milestones proposed after review" and six said "Dates proposed after
+review". Nothing arbitrated, because company-facts carried no delivery figure.
+
+| Tier | Canon |
+|---|---|
+| Starter | 1 to 2 weeks |
+| Growth | 2 to 4 weeks |
+| Scale | 3 to 6 weeks |
+
+**Scale was set from evidence, not preference.** MyCustomPatches was a decade-old
+WordPress store, 200-plus URLs across 13 templates, a shop, so unambiguously
+Scale under the new ladder, and it was delivered in 22 days. That is 3.1 weeks.
+"4 to 8 weeks" was contradicted by our own flagship case study; "3 to 4 weeks"
+left no room for genuinely large work. 3 to 6 contains the real delivery at the
+bottom and is honest at the top.
+
+The Growth and Scale ranges overlap between 3 and 4 weeks, deliberately. Unlike
+page counts, which must place a buyer in exactly one tier, timelines are
+estimates, and a complex Growth build can legitimately take as long as a simple
+Scale one. company-facts says so, so nobody "fixes" it later.
+
+Nine cards moved from "Milestones" to "Dates proposed after review". The tier
+quiz and one blog comparison table also carried the old 4 to 8 figure, and that
+blog row still described Scale as "30 plus" pages, a survivor of the earlier
+sweep.
+
+**Not changed, and worth a decision.** Squarespace, Wix, Webflow and GoHighLevel
+state no timeline at all, only "dates proposed after review", while WordPress
+migration, WooCommerce and ecommerce give numbers for the same class of work. A
+buyer comparing two of our own service pages sees a promise on one and a
+deferral on the other. Adding numbers is a new commercial promise rather than a
+consistency fix, so it stays with the owner.

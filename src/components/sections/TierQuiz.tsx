@@ -44,7 +44,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
       "More than 20 pages, a shop, or more than one language",
       "Shopify or WooCommerce headless rebuild",
       "Custom integrations (HubSpot, Salesforce, Stripe, etc.)",
-      "4 to 8 weeks delivery",
+      "3 to 6 weeks delivery",
     ],
   },
 };

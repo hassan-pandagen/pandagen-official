@@ -500,7 +500,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "From $5,000",
-            timeline: "4 to 8 weeks",
+            timeline: "3 to 6 weeks",
             fit: "Complex WordPress or WooCommerce. More than 20 pages, a shop, or more than one language.",
             includes: [
               "Everything in Growth",
