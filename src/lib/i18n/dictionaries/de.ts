@@ -58,7 +58,7 @@ const de: Dictionary = {
       {
         title: "Eine dokumentierte Migration vor dem Livegang",
         body:
-          "Kein Dienstleister kontrolliert Suchmaschinen-Rankings. Was vermeidbares Risiko senkt, ist ein dokumentierter Ablauf: vollständige URL-Inventur, eine 1:1-Weiterleitungskarte mit 301-Redirects, Übernahme von Schema-Markup und Metadaten, Neuerzeugung der Sitemap, konsistente Canonicals, ein stufenweiser DNS-Wechsel und Überwachung in der Search Console nach dem Livegang.",
+          "Kein Dienstleister kontrolliert Suchmaschinen-Rankings. Was vermeidbares Risiko senkt, ist ein dokumentierter Ablauf: vollständige URL-Inventur, ein Weiterleitungsplan, der jede alte Adresse auf ihre neue Seite führt, Übernahme von Schema-Markup und Metadaten, Neuerzeugung der Sitemap, konsistente Canonicals, ein stufenweiser DNS-Wechsel und Überwachung in der Search Console nach dem Livegang.",
         bullets: [
           "Ihre bisherige Website bleibt online, bis die neue verifiziert ist.",
           "Ein Rückfallweg wird vor dem Umschalten dokumentiert.",
@@ -79,11 +79,11 @@ const de: Dictionary = {
     faq: [
       {
         q: "Was kostet eine Migration von WordPress zu Next.js?",
-        a: "Eine Migration von WordPress zu Next.js beginnt bei 1.500 $ für eine Unternehmenswebsite mit 5 bis 7 Seiten (Starter), 3.500 $ für eine Website mit 10 bis 20 Seiten inklusive Blog-Migration und 301-Weiterleitungen (Growth) sowie 5.000 $ bis 10.000 $ für Headless-Commerce mit mehr als 30 Seiten und individuellen Integrationen (Scale). Der Preis ist fest für den Leistungsumfang, der in den angenommenen Projektbedingungen festgehalten ist.",
+        a: "Eine Migration von WordPress zu Next.js beginnt bei 1.500 $ für eine Unternehmenswebsite mit bis zu 7 Seiten (Starter), 3.500 $ für eine Website mit 8 bis 20 Seiten inklusive Blog-Migration, bei der jede alte Adresse auf ihre neue Seite weitergeleitet wird (Growth), sowie ab 5.000 $ für Headless-Commerce mit mehr als 20 Seiten und individuellen Integrationen (Scale). Alles Größere wird nach einem Gespräch kalkuliert. Der Preis ist fest für den Leistungsumfang, der in den angenommenen Projektbedingungen festgehalten ist.",
       },
       {
         q: "Verliere ich bei der Migration meine Rankings?",
-        a: "Kein Dienstleister kontrolliert Suchmaschinen-Rankings, deshalb kann niemand seriös zusichern, dass sie erhalten bleiben. Vermeidbares Risiko senkt ein dokumentierter Ablauf: URL-Inventur, 301-Weiterleitungskarte, Übernahme von Schema-Markup und Metadaten, Neuerzeugung der Sitemap, konsistente Canonicals, stufenweiser DNS-Wechsel und Überwachung nach dem Livegang.",
+        a: "Kein Dienstleister kontrolliert Suchmaschinen-Rankings, deshalb kann niemand seriös zusichern, dass sie erhalten bleiben. Vermeidbares Risiko senkt ein dokumentierter Ablauf: URL-Inventur, ein Weiterleitungsplan, der jede alte Adresse auf ihre neue Seite führt, Übernahme von Schema-Markup und Metadaten, Neuerzeugung der Sitemap, konsistente Canonicals, stufenweiser DNS-Wechsel und Überwachung nach dem Livegang.",
       },
       {
         q: "Arbeiten Sie mit Shopify-Shops?",
@@ -455,7 +455,7 @@ const de: Dictionary = {
       {
         title: "Festpreis für den schriftlichen Leistungsumfang",
         body:
-          "Vier Stufen, keine Abrechnung nach Stunden: Starter ab 1.500 $, Growth ab 3.500 $, Scale von 5.000 $ bis 10.000 $ und Scale+ individuell kalkuliert für Enterprise-Umfänge. Eine übliche Zahlungsoption sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; ein anderer Zahlungsplan kann schriftlich vereinbart werden.",
+          "Drei Stufen, keine Abrechnung nach Stunden: Starter ab 1.500 $, Growth ab 3.500 $ und Scale ab 5.000 $. Alles Größere wird nach einem Gespräch kalkuliert. Eine übliche Zahlungsoption sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; ein anderer Zahlungsplan kann schriftlich vereinbart werden.",
       },
       {
         title: "Wie die Performance geprüft wird",
@@ -483,7 +483,7 @@ const de: Dictionary = {
     meta: {
       title: "Preise und Leistungsumfang der Website-Migration | PandaCodeGen",
       description:
-        "Migrationspakete beginnen bei 1.500 $, 3.500 $ und 5.000 $–10.000 $; Seiten und Funktionen werden in einem schriftlichen Angebot angepasst.",
+        "Migrationspakete beginnen bei 1.500 $, 3.500 $ und 5.000 $; Seiten und Funktionen werden in einem schriftlichen Angebot angepasst.",
     },
     hero: {
       eyebrow: "Vertragliche Klarheit",
@@ -493,7 +493,7 @@ const de: Dictionary = {
         "Wählen Sie das nächstgelegene Startpaket und ergänzen oder streichen Sie Seiten und Funktionen in einem schriftlichen Angebot. Eine übliche Zahlungsstruktur sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; für ein bestimmtes Projekt kann ein anderer schriftlicher Zahlungsplan vereinbart werden.",
     },
     summary:
-      "Die Migrationspakete von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und 5.000 $ bis 10.000 $ (Scale). Der Preis steht fest, bevor die Arbeit beginnt. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer: 30 % zum Start, 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch migriert werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
+      "Die Migrationspakete von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und ab 5.000 $ (Scale). Alles Größere wird nach einem Gespräch kalkuliert. Der Preis steht fest, bevor die Arbeit beginnt. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer: 30 % zum Start, 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch migriert werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
     tiersHeading: "Beispielhafte Startpakete",
     currencyNote:
       "Alle Beträge in US-Dollar (USD). Währung, Steuern und Fälligkeiten werden in den angenommenen Projektbedingungen festgehalten.",
@@ -502,9 +502,9 @@ const de: Dictionary = {
         name: "Starter",
         price: "1.500 $",
         priceNote: "Startpaket · exakter Umfang im Angebot",
-        fit: "Websites kleiner Unternehmen, 5 bis 7 Seiten.",
+        fit: "Websites kleiner Unternehmen, bis zu 7 Seiten.",
         features: [
-          "5 bis 7 individuelle Seiten, mit den im Umfang aufgeführten Templates und Inhaltsverantwortlichkeiten",
+          "Bis zu 7 individuelle Seiten, mit den im Umfang aufgeführten Templates und Inhaltsverantwortlichkeiten",
           "Next.js-Deployment mit dokumentiertem Repository, dokumentierten Umgebungen und Übergabeverantwortlichkeiten",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop für die vereinbarten repräsentativen Seiten",
           "Drei aufgezeichnete Durchläufe vor der Übergabe je vereinbarter Seite und Profil; jeder Durchlauf muss das Ziel erreichen",
@@ -517,9 +517,9 @@ const de: Dictionary = {
         name: "Growth",
         price: "3.500 $",
         priceNote: "Startpaket · exakter Umfang im Angebot",
-        fit: "10 bis 20 Seiten, CMS, vollständige Migration.",
+        fit: "8 bis 20 Seiten, CMS, vollständige Migration.",
         features: [
-          "Individuelle Website mit 10 bis 20 Seiten: Leistungsseiten, Fallstudien und Ressourcen",
+          "Individuelle Website mit 8 bis 20 Seiten: Leistungsseiten, Fallstudien und Ressourcen",
           "Sanity-CMS-Integration: Ihr Team pflegt Inhalte, ohne Code anzufassen",
           "Blog-Migration mit URL-Inventur, Weiterleitungskarte, Erhalt der Metadaten und Überwachung nach dem Livegang",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop, mit drei bestandenen Durchläufen je vereinbarter Seite und Profil",
@@ -529,12 +529,12 @@ const de: Dictionary = {
       },
       {
         name: "Scale",
-        price: "5.000 $–10.000 $",
-        priceNote: "Startspanne · exakter Umfang im Angebot",
-        fit: "Headless-Commerce und mehr als 30 Seiten.",
+        price: "Ab 5.000 $",
+        priceNote: "Startpaket · exakter Umfang im Angebot",
+        fit: "Mehr als 20 Seiten, ein Shop oder mehr als eine Sprache.",
         features: [
           "Headless-Commerce: Shopify- oder WooCommerce-Backend, Next.js-Frontend",
-          "Umfang von mehr als 30 Seiten oder Templates für Produkte, Kollektionen, Inhalte und Landingpages",
+          "Umfang von mehr als 20 Seiten oder Templates für Produkte, Kollektionen, Inhalte und Landingpages",
           "Geprüfte Integrationen wie Klaviyo, HubSpot, Salesforce, Stripe-Abonnements oder eine andere dokumentierte API",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop, mit drei bestandenen Durchläufen je vereinbarter Seite und Profil",
           "Sanity CMS und ein Content-Modell, das für Ihre Redaktion entworfen wird, statt generischer Templates",
@@ -604,7 +604,7 @@ const de: Dictionary = {
     faq: [
       {
         q: "Mit welchem Paket sollte ich starten?",
-        a: "Starter beginnt bei 1.500 $, Growth bei 3.500 $, und Scale liegt normalerweise zwischen 5.000 $ und 10.000 $. Wählen Sie die nächstgelegene Basis; zusätzliche Seiten oder Funktionen werden vor Arbeitsbeginn im schriftlichen Umfang besprochen und bepreist.",
+        a: "Starter beginnt bei 1.500 $ für eine Website mit bis zu 7 Seiten, Growth bei 3.500 $ für 8 bis 20 Seiten, und Scale ab 5.000 $ für mehr als 20 Seiten, einen Shop oder mehr als eine Sprache. Alles Größere wird nach einem Gespräch kalkuliert. Wählen Sie die nächstgelegene Basis; zusätzliche Seiten oder Funktionen werden vor Arbeitsbeginn im schriftlichen Umfang besprochen und bepreist. Wenn nichts davon zu Ihrem Vorhaben passt, rufen Sie +1 (302) 773-8982 an oder schreiben Sie an info@pandacodegen.com, und wir kalkulieren es.",
       },
       {
         q: "Brauche ich für jedes Projekt einen langen Vertrag?",
@@ -616,7 +616,7 @@ const de: Dictionary = {
       },
       {
         q: "Was, wenn mein Projekt größer ist als Scale?",
-        a: "Größere, mehrregionale, E-Commerce-, Anwendungs- und integrationsintensive Vorhaben werden nach einer Discovery-Phase separat kalkuliert. Das Angebot listet Team, Leistungen, Abhängigkeiten, Ausschlüsse und Zeitplan der Zusammenarbeit auf.",
+        a: "Alles, was größer ist als Scale, wird nach einem Gespräch kalkuliert. Größere, mehrregionale, E-Commerce-, Anwendungs- und integrationsintensive Vorhaben werden nach einer Discovery-Phase separat kalkuliert. Das Angebot listet Team, Leistungen, Abhängigkeiten, Ausschlüsse und Zeitplan der Zusammenarbeit auf.",
       },
       {
         q: "Wie wird das Performance-Ziel von 90+ geprüft?",
