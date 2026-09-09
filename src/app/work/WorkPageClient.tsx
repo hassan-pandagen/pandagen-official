@@ -168,6 +168,36 @@ export default function WorkPageClient() {
               </Link>
             ))}
           </div>
+
+          {/* Live work that does not have a record yet.
+
+              Added 9 Sep 2026. NorthDeck Group is shown on the homepage, and
+              putting it in the grid above would have been wrong: that grid
+              promises a full write-up with its measurement conditions stated,
+              and this project has none captured yet. Saying so is more use to a
+              reader than either hiding the project or publishing a record with
+              nothing measured in it. Client is content for the work to be shown.
+              When the conditions are captured, move it up into the grid. */}
+          <div className="mt-10 rounded-3xl border border-dashed border-stone-300 bg-white/60 p-7 md:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">Live, no record yet</p>
+            <h3 className="mt-3 text-2xl font-bold text-charcoal">NorthDeck Group</h3>
+            <p className="mt-3 max-w-3xl leading-7 text-stone-700">
+              A connected security and business services site, built as a custom Next.js
+              build and live now at{" "}
+              <a
+                href="https://northdeckgroup.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-cognac underline underline-offset-4"
+              >
+                northdeckgroup.com
+              </a>
+              . There is no write-up above because no baseline or post-launch measurement
+              was captured for it, and a record here has to state the conditions its
+              figures were taken under. It gets one when there is something real to put
+              in it.
+            </p>
+          </div>
         </div>
       </section>
 
