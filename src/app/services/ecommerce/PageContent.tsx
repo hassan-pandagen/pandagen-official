@@ -320,10 +320,10 @@ export default function PageContent() {
       </section>
 
       {/* PRICING TIERS — foot-in-the-door with agency comparison */}
-      <section className="py-12 md:py-20 px-6 bg-paper">
+      <section id="pricing" className="scroll-mt-24 py-12 md:py-20 px-6 bg-paper">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-10 md:mb-14">
-            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Honest Pricing</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Scope and Commercial Review</p>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4 tracking-tight leading-tight">
               Fixed price for a written scope. <br/><span className="font-serif italic text-cognac">No hourly billing.</span>
             </h2>
