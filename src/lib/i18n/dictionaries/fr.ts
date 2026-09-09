@@ -20,6 +20,7 @@ const fr: Dictionary = {
   },
   common: {
     ctaPrimary: "Demander votre plan de migration",
+    ctaCompact: "Demander un plan",
     ctaSecondary: "Consulter les exemples de périmètre",
     faqHeading: "Questions fréquentes",
     languageLabel: "Langue",

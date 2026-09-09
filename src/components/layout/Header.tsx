@@ -278,17 +278,38 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            ref={mobileMenuButtonRef}
-            className="xl:hidden z-[61] p-2 text-charcoal"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-site-menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile and tablet: a primary action plus the menu.
+
+              Added 9 Sep 2026. Below xl the header carried nothing but a
+              hamburger, so a phone visitor had no visible action anywhere until
+              they scrolled past the headline, and on a first visit the consent
+              panel covered the hero button on every screen shorter than about
+              800px. The audit asked for a visible first-visit call to action and
+              this is the only place that satisfies it at every size, because the
+              header is fixed and the panel sits at the bottom.
+
+              The label is short because the space is not: measured at 360 wide,
+              the row has 133px free once the wordmark and the menu are placed.
+              It opens the same quote modal as every other primary action. */}
+          <div className="z-[61] flex items-center gap-1 xl:hidden">
+            <button
+              type="button"
+              onClick={handleOpenQuote}
+              className="min-h-11 whitespace-nowrap rounded-full bg-charcoal px-4 text-sm font-bold text-white transition-colors hover:bg-cognac focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+            >
+              Get a plan
+            </button>
+            <button
+              ref={mobileMenuButtonRef}
+              className="p-2 text-charcoal"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-site-menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </header>
 
