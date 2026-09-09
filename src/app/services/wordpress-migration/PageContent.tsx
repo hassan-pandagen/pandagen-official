@@ -468,7 +468,7 @@ export default function PageContent() {
         tiers={[
           {
             tier: "Starter",
-            price: "Starting from $1,500",
+            price: "From $1,500",
             timeline: "1 to 2 weeks",
             fit: "Simple WordPress site. Brochure, small blog. Our Starter tier.",
             includes: [
@@ -483,7 +483,7 @@ export default function PageContent() {
           },
           {
             tier: "Growth",
-            price: "Starting from $3,500",
+            price: "From $3,500",
             timeline: "2 to 4 weeks",
             fit: "Business WordPress site. 8 to 20 pages. Blog, forms, integrations.",
             includes: [
