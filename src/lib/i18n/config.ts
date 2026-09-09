@@ -24,6 +24,18 @@ export const localeNames: Record<Locale, string> = {
   de: "Deutsch",
 };
 
+/**
+ * Two-letter codes for places where the full names do not fit, currently the
+ * fixed header. The switcher pairs each code with the full name in visually
+ * hidden text, so the accessible name still contains the visible label and a
+ * screen reader still announces "Français" rather than "FR".
+ */
+export const localeShortNames: Record<Locale, string> = {
+  en: "EN",
+  fr: "FR",
+  de: "DE",
+};
+
 /** Full BCP 47 tags used for og:locale and JSON-LD inLanguage. */
 export const localeTags: Record<Locale, string> = {
   en: "en-US",

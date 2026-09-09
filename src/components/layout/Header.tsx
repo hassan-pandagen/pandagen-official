@@ -190,12 +190,12 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="z-[61]">
+          <Link href="/" className="z-[61] shrink-0">
             <Image src="/logo.png" alt="PandaCodeGen" width={131} height={23} priority className="h-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-           <nav className="hidden xl:flex items-center gap-8" aria-label="Primary navigation">
+           <nav className="hidden xl:flex items-center gap-6 2xl:gap-8" aria-label="Primary navigation">
              {navItems.map((item) => {
                if (item.hasDropdown) {
                  const dropdownKey = item.dropdownKey || "services";
@@ -253,7 +253,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
              })}
           </nav>
 
-          <div className="hidden xl:flex items-center gap-4 z-[61]">
+          <div className="hidden xl:flex items-center gap-4 z-[61] shrink-0">
             {/* Restored 11 Aug 2026. It was in this exact position until 3e93feb
                 (30 Jul) removed it as collateral in a nav rewrite, and because it
                 lived only here it vanished from the site entirely. It now renders
@@ -269,7 +269,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               {PHONE.display}
             </a>
             {/* Renders only on pages that have a French and German version. */}
-            <LocaleSwitcher label="Language" className="text-sm" />
+            <LocaleSwitcher label="Language" className="text-sm" compact />
             <button
               onClick={handleOpenQuote}
               className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-cognac"
