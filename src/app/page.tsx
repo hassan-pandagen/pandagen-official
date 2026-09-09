@@ -16,7 +16,7 @@ import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+  title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
   description:
     "Move off WordPress, Wix, Squarespace or Webflow onto custom Next.js you own from the start, without losing the traffic you already have. Fixed pricing from $1,500.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+    title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
     description:
       "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+    title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
     description:
       "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
     images: [ogImageForPath("/")],
@@ -192,7 +192,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "Get Cited by AI Search | Custom Next.js Web Development | PandaCodeGen",
+        "name": "Website Migration to Custom Next.js You Own | PandaCodeGen",
         "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"

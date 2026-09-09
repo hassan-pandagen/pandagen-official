@@ -59,17 +59,26 @@ export default function Hero() {
               entails that WordPress, Wix and Webflow sites cannot be read. They can,
               and most pages AI engines cite today are built on them. Do not
               reintroduce a comparison. Plain words only, no "server-rendered" or
-              "structured data" in the headline. */}
+              "structured data" in the headline.
+
+              9 Sep 2026: the headline used to be "Get in front of AI search before
+              your competitor does", and the title tag said "Get Cited by AI Search".
+              Both made an outcome third parties control into the product, which the
+              3 Aug 2026 entity decision had already retired. Migration is the offer;
+              being quotable is the differentiator inside it, so the headline now
+              names the move and the subhead carries the differentiator. An external
+              audit reached the same conclusion independently, calling the jump from
+              changing platforms to being chosen by AI a causal leap. */}
           <h1
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem" }}
           >
-            Get in front of AI search{" "}
+            Move off WordPress, Wix or Squarespace{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              before your competitor does.
+              without losing your traffic.
             </span>
           </h1>
 
@@ -79,9 +88,9 @@ export default function Hero() {
             className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
             style={{ color: "#44403c" }}
           >
-            We move you off WordPress, Wix, Squarespace or Webflow onto{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own from the start</span>, without
-            losing the traffic you already have. So when someone asks{" "}
+            You get{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own from the start</span>, built so
+            the answer engines can read it. So when someone asks{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude or Google</span>{" "}
             who to choose, your pages are what they see.
           </p>
