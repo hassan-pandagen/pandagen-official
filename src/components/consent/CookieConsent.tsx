@@ -91,12 +91,32 @@ export default function CookieConsent() {
                 {/* Kept short on purpose. At 390px this banner measured 349px, 41% of
                     the first screen, and covered the primary action. The paragraph was
                     120px of that. The full category list lives in the Cookie Policy and
-                    in Customize; a consent notice has to be readable, not exhaustive.
-                    Do NOT change the three buttons' relative prominence: rejecting must
-                    stay exactly as easy as accepting. Measured 9 Sep 2026. */}
+                    in the preferences dialog; a consent notice has to be readable, not
+                    exhaustive.
+
+                    Do NOT change the relative prominence of rejecting and accepting:
+                    they are the same size, the same shape and side by side, and
+                    rejecting must stay exactly as easy as accepting.
+
+                    9 Sep 2026, second pass. Trimming the copy alone was not enough. The
+                    banner still opened at y=531 on a 390x844 screen, and the hero's
+                    "Get your migration plan" button also starts at exactly y=531, so
+                    the primary action was completely covered on a first visit. Three
+                    stacked buttons were the height. The granular option moved into the
+                    sentence as a real button, which drops a whole row without touching
+                    the reject-accept balance. If you put it back in the grid, measure
+                    the banner against the hero button before shipping. */}
                 <h2 className="font-bold text-charcoal">Your privacy choices</h2>
                 <p className="mt-1 text-sm leading-6 text-stone-600">
-                  Optional analytics, advertising, chat and scheduling stay off until you allow them. Details in our{" "}
+                  Optional analytics, advertising, chat and scheduling stay off until you allow them.{" "}
+                  <button
+                    type="button"
+                    onClick={() => openPreferences()}
+                    className="font-semibold text-charcoal underline underline-offset-2 hover:text-cognac focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                  >
+                    Choose which ones
+                  </button>
+                  , or read the{" "}
                   <Link href="/cookies" className="font-semibold text-charcoal underline underline-offset-2">
                     Cookie Policy
                   </Link>
@@ -104,25 +124,18 @@ export default function CookieConsent() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:shrink-0">
+            <div className="grid grid-cols-2 gap-2 lg:shrink-0">
               <button
                 type="button"
                 onClick={rejectOptional}
-                className="min-h-11 rounded-full border border-stone-300 px-5 py-2.5 text-sm font-bold text-charcoal transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                className="min-h-11 whitespace-nowrap rounded-full border border-stone-300 px-4 py-2.5 text-sm font-bold text-charcoal transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:px-5"
               >
                 Reject optional
               </button>
               <button
                 type="button"
-                onClick={() => openPreferences()}
-                className="min-h-11 rounded-full border border-stone-300 px-5 py-2.5 text-sm font-bold text-charcoal transition-colors hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
-              >
-                Customize
-              </button>
-              <button
-                type="button"
                 onClick={acceptAll}
-                className="min-h-11 rounded-full bg-charcoal px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
+                className="min-h-11 whitespace-nowrap rounded-full bg-charcoal px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal sm:px-5"
               >
                 Accept all
               </button>

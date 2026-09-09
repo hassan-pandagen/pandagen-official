@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="max-w-2xl">
 
           {/* Founder trust pill: replaces generic "Accepting Q2 Clients" with Hassan signature */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-300 text-xs font-bold uppercase tracking-widest text-stone-600 mb-5 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-300 text-xs font-bold uppercase tracking-widest text-stone-600 mb-3 shadow-xs sm:mb-5">
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
@@ -85,7 +85,7 @@ export default function Hero() {
           {/* Clarifying subhead: names the platforms people search for, then the AI engines.
               Soft-styled so it supports the headline without competing. */}
           <p
-            className="text-lg md:text-xl font-medium mb-4 max-w-xl leading-snug"
+            className="text-lg md:text-xl font-medium mb-3 max-w-xl leading-snug sm:mb-4"
             style={{ color: "#44403c" }}
           >
             You get{" "}
@@ -96,7 +96,7 @@ export default function Hero() {
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
-          <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-6">
+          <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-4 sm:mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
             Our own pages are cited in Google&apos;s AI Overviews. Fixed price from $1,500, no minimum project size, and you own the code.
           </p>
