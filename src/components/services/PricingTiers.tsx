@@ -43,7 +43,13 @@ type Props = {
 // per-card line making clear it is a starting point rather than a quote.
 export default function PricingTiers({ tiers }: Props) {
   return (
-    <section className="py-12 md:py-20 px-6 bg-paper">
+    // id and scroll offset added 10 Sep 2026. Three service pages carried a
+    // "See ... Pricing" button pointing at #pricing and no element with that id
+    // existed anywhere in the codebase, so the click changed the hash and moved
+    // nothing. Confirmed by an external auditor clicking all three in a real
+    // browser. scroll-mt clears the fixed header, which is 84px at rest and 68px
+    // once scrolled, so the heading is not hidden on arrival.
+    <section id="pricing" className="scroll-mt-24 py-12 md:py-20 px-6 bg-paper">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-10 md:mb-14">
           <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-3">Scope and Commercial Review</p>
