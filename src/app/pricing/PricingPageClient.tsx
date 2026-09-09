@@ -147,7 +147,7 @@ export default function PricingPageClient() {
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Starter</h3>
-              <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages.</p>
+              <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages. We build them and we update them for you, so there is no CMS to log into.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
@@ -158,6 +158,7 @@ export default function PricingPageClient() {
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
                 <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
               </div>
+              <p className="mt-3 text-sm text-stone-600">Typically delivered in 1 to 2 weeks.</p>
             </div>
 
             <ul className="space-y-3 mb-8 grow">
@@ -196,7 +197,7 @@ export default function PricingPageClient() {
 
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-2xl font-serif italic text-white">Growth</h3>
-              <p className="text-stone-400 mt-1">8 to 20 pages, CMS, full migration.</p>
+              <p className="text-stone-400 mt-1">8 to 20 pages, a Sanity CMS you edit yourself, full migration.</p>
             </div>
 
             <div className="mb-6 pb-6 border-b border-white/10 min-h-[140px] flex flex-col justify-start">
@@ -207,6 +208,7 @@ export default function PricingPageClient() {
               <div className="inline-block bg-white/10 px-3 py-1 rounded-md border border-white/10">
                 <p className="text-sm font-bold text-stone-300">Starting package · exact scope in proposal</p>
               </div>
+              <p className="mt-3 text-sm text-stone-400">Typically delivered in 2 to 4 weeks.</p>
             </div>
 
             <ul className="space-y-3 mb-6 grow">
@@ -252,6 +254,7 @@ export default function PricingPageClient() {
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
                 <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
               </div>
+              <p className="mt-3 text-sm text-stone-600">Typically delivered in 3 to 6 weeks.</p>
             </div>
 
             <ul className="space-y-4 mb-8 grow">
@@ -289,6 +292,9 @@ export default function PricingPageClient() {
           className="mt-8 md:mt-10 max-w-3xl mx-auto text-center"
         >
           <p className="text-base text-stone-700 leading-relaxed">
+            Those delivery ranges overlap on purpose. A complex Growth build can take as long as a simple Scale one, and the dates that bind us are the ones in your accepted written terms.
+          </p>
+          <p className="mt-4 text-base text-stone-700 leading-relaxed">
             Anything bigger is quoted after a call. Enterprise scope, multi-region e-commerce, custom SaaS platforms and complex integrations are scoped together first, because we cannot quote them without understanding the work. See our <Link href="/services/custom-engineering" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">custom engineering service</Link>.
           </p>
           <p className="mt-4 text-base font-semibold text-charcoal leading-relaxed">
