@@ -536,6 +536,11 @@ export default function SquarespacePageContent() {
         </div>
       </section>
 
+      {/* What moves the date on a Squarespace job: export coverage, not page count */}
+      <p className="mx-auto max-w-2xl px-6 pt-12 text-center text-base leading-relaxed text-stone-600">
+        What sets the date here is how much falls outside what Squarespace exports, because a store, a members area or Scheduling is rebuilt by hand rather than carried across.
+      </p>
+
       {/* PRICING TIERS */}
       <PricingTiers
         heading="Choose a migration planning path."
@@ -550,7 +555,7 @@ export default function SquarespacePageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "1 to 2 weeks",
             fit: "A focused brochure or portfolio migration with validated inputs.",
             includes: [
               "A list of every page and post you have",
@@ -562,7 +567,7 @@ export default function SquarespacePageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "2 to 4 weeks",
             fit: "A business site with broader content, forms, or commerce requirements.",
             includes: [
               "Content and integration mapping",
@@ -574,7 +579,7 @@ export default function SquarespacePageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "3 to 6 weeks",
             fit: "Commerce, scheduling, member, data, or complex integration requirements.",
             includes: [
               "Export and data-risk assessment",

@@ -461,7 +461,7 @@ export default function PageContent() {
             tier: "Starter",
             price: "Starting from $1,500",
             timeline: "1 to 2 weeks",
-            fit: "Simple WooCommerce store. 10-30 products, basic catalog. Starter tier.",
+            fit: "Simple WooCommerce store. up to 30 products, basic catalog. Starter tier.",
             includes: [
               "Full WooCommerce product + order export",
               "Custom Next.js storefront",
@@ -476,7 +476,7 @@ export default function PageContent() {
             tier: "Growth",
             price: "Starting from $3,500",
             timeline: "2 to 4 weeks",
-            fit: "30-150 products. Custom cart logic, reviews, email capture.",
+            fit: "31 to 150 products. Custom cart logic, reviews, email capture.",
             includes: [
               "Everything in Starter",
               "Custom filtering & search",
@@ -491,7 +491,7 @@ export default function PageContent() {
             tier: "Scale",
             price: "From $5,000",
             timeline: "3 to 6 weeks",
-            fit: "100+ products, subscriptions, B2B pricing, wholesale, custom logic.",
+            fit: "more than 150 products, subscriptions, B2B pricing, wholesale, custom logic.",
             includes: [
               "Everything in Growth",
               "Stripe Subscriptions",

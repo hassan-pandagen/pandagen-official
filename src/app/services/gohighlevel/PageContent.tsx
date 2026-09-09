@@ -395,6 +395,13 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* What moves the date on a GHL job: the wiring count, not the page count */}
+      <div className="mx-auto max-w-2xl px-6 pt-12">
+        <p className="rounded-2xl border border-stone-200 bg-white px-6 py-5 text-base leading-relaxed text-stone-600">
+          Count the funnels, calendars and automations the new pages have to feed, not the pages themselves: every connection is wired and tested before launch.
+        </p>
+      </div>
+
       {/* PRICING TIERS: GoHighLevel site overlay pricing */}
       <PricingTiers
         heading="Choose an integration planning path."
@@ -409,7 +416,7 @@ export default function PageContent() {
           {
             tier: "Starter",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "1 to 2 weeks",
             fit: "A focused landing-page and GHL data-flow review.",
             includes: [
               "A look at your site as it is today",
@@ -421,7 +428,7 @@ export default function PageContent() {
           {
             tier: "Growth",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "2 to 4 weeks",
             fit: "A broader marketing site with content, forms, and supported GHL integrations.",
             includes: [
               "A list of every page and every automation it feeds",
@@ -433,7 +440,7 @@ export default function PageContent() {
           {
             tier: "Scale",
             price: "Defined after discovery",
-            timeline: "Dates proposed after review",
+            timeline: "3 to 6 weeks",
             fit: "Multi-site, portal, or complex workflow requirements that need deeper review.",
             includes: [
               "Account and permission mapping",
