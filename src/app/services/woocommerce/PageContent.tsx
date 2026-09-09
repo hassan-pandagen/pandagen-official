@@ -459,7 +459,7 @@ export default function PageContent() {
         tiers={[
           {
             tier: "Starter",
-            price: "Starting from $1,500",
+            price: "From $1,500",
             timeline: "1 to 2 weeks",
             fit: "Simple WooCommerce store. up to 30 products, basic catalog. Starter tier.",
             includes: [
@@ -474,7 +474,7 @@ export default function PageContent() {
           },
           {
             tier: "Growth",
-            price: "Starting from $3,500",
+            price: "From $3,500",
             timeline: "2 to 4 weeks",
             fit: "31 to 150 products. Custom cart logic, reviews, email capture.",
             includes: [
