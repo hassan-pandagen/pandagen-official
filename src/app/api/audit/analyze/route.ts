@@ -96,11 +96,11 @@ function maxConcurrentAudits(): number {
 // requests mid-flight, which is why a first scan failed and a retry appeared to
 // work.
 //
-// 60 REQUIRES VERCEL PRO. Hobby caps functions at a hard 10 seconds and the
-// deployment will be rejected. If a build ever fails citing maxDuration, the
-// plan is Hobby, and the answer is not a smaller number here: no fresh
-// Lighthouse run fits in 10 seconds, so PageSpeed would have to move off the
-// request path entirely.
+// The project is on Vercel Pro, confirmed by the owner on 9 Sep 2026, so 60 is
+// allowed; Pro permits up to 300. Hobby would cap this at a hard 10 seconds and
+// reject the deployment, and the answer there would not be a smaller number,
+// because no fresh Lighthouse run fits in 10 seconds. PageSpeed would have to
+// move off the request path entirely. Re-check this if the plan ever changes.
 export const maxDuration = 60;
 
 export async function POST(request: NextRequest) {
