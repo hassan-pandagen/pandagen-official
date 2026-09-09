@@ -227,6 +227,9 @@ export interface Dictionary {
   };
   common: {
     ctaPrimary: string;
+    /** Short form of ctaPrimary, for the header on phones and tablets where the
+        full sentence does not fit. Same action, fewer words. */
+    ctaCompact: string;
     ctaSecondary: string;
     faqHeading: string;
     languageLabel: string;

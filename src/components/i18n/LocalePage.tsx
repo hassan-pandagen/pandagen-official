@@ -806,12 +806,18 @@ function LocaleHeader({
         <div className="flex shrink-0 items-center gap-4">
           <LocaleSwitcher label={dict.common.languageLabel} className="text-sm" compact />
           {/* The English header carries a primary CTA here; without it the localized
-              header reads as a cut-down version of the same site. */}
+              header reads as a cut-down version of the same site.
+
+              9 Sep 2026: it was hidden below lg, so a French or German visitor on
+              a phone had no visible action at all, which is the same gap the
+              English header had. It now shows at every width, using the short
+              label on phones because the full sentence does not fit at 375. */}
           <Link
             href={routes.contact[locale]}
-            className="hidden min-h-11 items-center justify-center rounded-full bg-charcoal px-5 text-sm font-bold text-white transition-colors hover:bg-cognac lg:inline-flex"
+            className="inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-full bg-charcoal px-4 text-sm font-bold text-white transition-colors hover:bg-cognac lg:px-5"
           >
-            {dict.common.ctaPrimary}
+            <span className="lg:hidden">{dict.common.ctaCompact}</span>
+            <span className="hidden lg:inline">{dict.common.ctaPrimary}</span>
           </Link>
         </div>
       </div>

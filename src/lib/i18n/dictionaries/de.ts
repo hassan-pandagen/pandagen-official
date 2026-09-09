@@ -20,6 +20,7 @@ const de: Dictionary = {
   },
   common: {
     ctaPrimary: "Migrationsplan anfordern",
+    ctaCompact: "Plan anfordern",
     ctaSecondary: "Beispiel-Leistungsumfänge ansehen",
     faqHeading: "Häufige Fragen",
     languageLabel: "Sprache",
