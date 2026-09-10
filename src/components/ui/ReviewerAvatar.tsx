@@ -21,7 +21,7 @@ import Image from "next/image";
  */
 
 function initials(name: string): string {
-    // "Matt Conner, owner, MC Patches LLC" -> "MC". Strips the role and company
+    // "Matt Conner, Executive, MC Patches LLC" -> "MC". Strips the role and company
     // that some entries carry so the monogram stays two letters.
     const person = name.split(",")[0].trim();
     const parts = person.split(/\s+/).filter(Boolean);
