@@ -42,7 +42,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Enterprise Operations platform?",
-        answer: "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from independent senior developer review: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX.",
+        answer: "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from a senior-developer code review that we commissioned: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX. That review is internal and is not an independent third-party audit or certification.",
     },
     {
         question: "Can a custom dashboard work offline?",
