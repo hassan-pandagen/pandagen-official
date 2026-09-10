@@ -86,8 +86,15 @@ export const COMMERCIAL: readonly Fact[] = [
     // July not to treat third-party Clutch numbers as fixed facts. The fact
     // about ourselves needs no such maintenance.
     { label: 'Minimum project size', value: 'None. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.' },
-    { label: 'Starter', value: 'From $1,500. Up to 7 pages, built and updated by us, no CMS.' },
-    { label: 'Growth', value: 'From $3,500. 8 to 20 pages, a Sanity CMS you edit yourself, full migration with redirect map.' },
+    // 10 Sep 2026: Starter gained the content editor. It previously read "built
+    // and updated by us, no CMS", which was honest but was the single most
+    // common reason a small buyer hesitated: it reads as a dependency. Two buyer
+    // audits and a live client's own emails all landed there. The editor is a
+    // named field list, not "a CMS", so the support load stays bounded on the
+    // cheapest tier. Growth keeps its distance through migration and a content
+    // model built for the client's own collections, not through basic editing.
+    { label: 'Starter', value: 'From $1,500. Up to 7 pages, with a content editor for your words, images and business details. Set up, documented, and we train you on it.' },
+    { label: 'Growth', value: 'From $3,500. 8 to 20 pages, a content model built around your own collections, full migration with redirect map.' },
     { label: 'Scale', value: 'From $5,000. More than 20 pages, a store, or more than one language.' },
     { label: 'Above that range', value: 'Quoted after a scoping call. The accepted written terms control the final price.' },
     { label: 'Delivery, Starter', value: '1 to 2 weeks.' },

@@ -474,7 +474,7 @@ export default function PageContent() {
             includes: [
               "Full WordPress content export + cleanup",
               "Custom Next.js build, up to 7 pages",
-              "No CMS. We build it and we update it for you",
+              "Edit your own words, images and business details",
               "90+ Lighthouse handover target",
               "Every old web address forwarded to its new page",
               "15 days of free post-launch support",

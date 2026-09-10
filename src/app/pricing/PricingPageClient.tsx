@@ -147,7 +147,7 @@ export default function PricingPageClient() {
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Starter</h3>
-              <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages. We build them and we update them for you, so there is no CMS to log into.</p>
+              <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages. You edit your own words, images and business details, and we set it up and train you on it.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
@@ -163,6 +163,7 @@ export default function PricingPageClient() {
 
             <ul className="space-y-3 mb-8 grow">
               <Feature text="Up to 7 custom pages, with the exact templates and content responsibilities listed in scope" />
+              <Feature text="A content editor for your words, images and business details, set up for your pages, with documentation and training" />
               <Feature text="A Next.js deployment, with the code, the environments and who does what at handover all written down" />
               <Feature text="90+ Lighthouse performance target on both mobile and desktop for the agreed representative pages" />
               <Feature text="Three recorded pre-handover runs per agreed page/profile; every run must meet the target" />

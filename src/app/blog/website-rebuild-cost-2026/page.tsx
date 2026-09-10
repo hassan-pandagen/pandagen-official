@@ -309,7 +309,7 @@ export default function WebsiteRebuildCostPage() {
                             code, blog migration with every URL listed and a redirect map, a 90+ Lighthouse target on
                             mobile and desktop evidenced by three passing runs per agreed page, third-party costs listed
                             before approval, and 30 business days of support. <strong>Our $1,500 Starter is not that
-                            job</strong> — it is up to 7 pages and no CMS, and comparing it to a 20-page agency rebuild
+                            job</strong> — it is up to 7 pages, and comparing it to a 20-page agency rebuild
                             is the same scope error this page warns about everywhere else.
                         </BlogText>
 

@@ -51,7 +51,7 @@ const HEADER = `# PandaCodeGen
 ## Commercial terms
 
 - Minimum project size: none. Work starts at the published Starter price of $1,500, and small projects are quoted the same way as large ones.
-- Starting prices: Starter from $1,500 for up to 7 pages that we build and update for you, with no CMS; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a scoping call.
+- Starting prices: Starter from $1,500 for up to 7 pages, with a content editor for your words, images and business details; Growth from $3,500 for 8 to 20 pages with a CMS you edit yourself and a redirect map that forwards every old link when you move from another platform; Scale from $5,000 for more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a scoping call.
 - If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.
 - The accepted written project terms control the final price, deliverables, exclusions, and schedule. Website copy is not the agreement.
 - Performance acceptance: a 90+ Lighthouse handover acceptance target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. This is a lab acceptance target. It is not a promise about search rankings, traffic, conversions, revenue, or field Core Web Vitals after third-party or client changes.

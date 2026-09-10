@@ -62,14 +62,18 @@ const homeFaqs = [
     // Added 10 Sep 2026. The single biggest objection to a custom-coded site is
     // "then I have to call a developer every time", and none of the seven
     // questions here answered it. The answer already existed, verified, on the
-    // Ladies 4 Jesus case study, which almost nobody reaches. Every fact below
-    // is from that record: embedded Studio, roughly sixty seconds, no deploy,
-    // owner-run. The last two sentences are the boundary. Do not delete them to
-    // make the answer stronger; a CMS genuinely does not cover new templates or
-    // new features, and pretending otherwise creates the dependency argument
-    // all over again on the first invoice.
+    // Ladies 4 Jesus case study, which almost nobody reaches: embedded Studio,
+    // roughly a minute to go live, no deploy, owner-run.
+    //
+    // Rewritten the same day, after Starter gained the content editor. The first
+    // version carved out Starter as deliberately CMS-free. That is no longer the
+    // offer, and an FAQ contradicting the pricing page is worse than no FAQ.
+    //
+    // The boundary sentence stays. A content editor genuinely does not cover new
+    // templates or new features, and pretending otherwise recreates the whole
+    // dependency argument on the first invoice.
     q: "If the site is custom code, do I need a developer every time I want to change something?",
-    a: "No, and this is the part most people get wrong about custom code in 2026. On Growth and Scale we build the site with Sanity, and the editor is built into your own site. You sign in, change the words, swap a photo, add a class date or a staff member, and the live site updates in about sixty seconds. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. Starter has no CMS on purpose, because at up to 7 pages it is usually cheaper for us to make the changes than for you to learn a system, and we say so rather than selling you one.",
+    a: "No, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you can change what the site says, and we change what it does."
   },
   {
     q: "Do you have a minimum project size?",

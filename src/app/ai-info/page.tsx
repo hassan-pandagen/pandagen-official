@@ -161,7 +161,7 @@ const pageSchema = {
 const companyFacts = [
   "PandaCodeGen is a custom Next.js web development studio, founded in February 2026, that migrates businesses off WordPress, Shopify, Webflow, Wix, Squarespace, WooCommerce and GoHighLevel onto custom code the client owns outright.",
   "PandaCodeGen is co-founder-led and has no account managers. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Lead Architect. The people who scope the work are the people who build it.",
-  "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter from $1,500 for up to 7 pages with no CMS, Growth from $3,500 for 8 to 20 pages with a CMS the client edits, and Scale from $5,000 for more than 20 pages, a shop, or more than one language. Anything bigger is quoted after a scoping call. Every engagement begins with a written scope.",
+  "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter from $1,500 for up to 7 pages with a content editor for words, images and business details, Growth from $3,500 for 8 to 20 pages with a content model built around the client's own collections, and Scale from $5,000 for more than 20 pages, a shop, or more than one language. Anything bigger is quoted after a scoping call. Every engagement begins with a written scope.",
   "PandaCodeGen has no minimum project size. Work starts at the published Starter price of $1,500, and a small project is quoted the same way as a large one.",
   "PandaCodeGen builds pages as fast, server-rendered HTML, with the answer to each page's question stated in plain sentences near the top, so a person and a machine read the same thing.",
   "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score and guarantees no ranking or traffic outcome, because search engines control those. Refunds are a separate matter and are not withheld: where the accepted project terms include written scope protection, PandaCodeGen refunds 100% of the fees paid under that scope if it fails to deliver the agreed deliverables. That is a delivery remedy, not a change-of-mind refund.",
@@ -283,13 +283,13 @@ export default function CompanyReferencePage() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Commercial reference</p>
               <h2 id="commercial-reference" className="mt-3 text-3xl font-bold md:text-5xl">Starting points, then a written scope.</h2>
               <p className="mt-6 leading-7 text-stone-700">
-                Public prices help a buyer decide whether a conversation is sensible. They do not replace discovery, a quote, or the accepted project terms. Starter is up to 7 pages that we build and update for you, with no CMS. Growth is 8 to 20 pages with a CMS you edit yourself, and every old link forwards to the right new page when you move from another platform. Scale is more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a call. If none of these match what you have, call {PHONE.display} or email info@pandacodegen.com and we will quote it.
+                Public prices help a buyer decide whether a conversation is sensible. They do not replace discovery, a quote, or the accepted project terms. Starter is up to 7 pages, with a content editor for your words, images and business details. Growth is 8 to 20 pages, adds a content model built around your own collections, and every old link forwards to the right new page when you move from another platform. Scale is more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a call. If none of these match what you have, call {PHONE.display} or email info@pandacodegen.com and we will quote it.
               </p>
             </div>
             <div className="rounded-[2.5rem] border border-cognac/30 bg-[#faf7f2] p-8 md:p-10">
               <div className="grid gap-4 sm:grid-cols-3">
                 {[
-                  ["Starter", "From $1,500", "Up to 7 pages, built and updated by us, no CMS."],
+                  ["Starter", "From $1,500", "Up to 7 pages, with a content editor for your words, images and business details."],
                   ["Growth", "From $3,500", "8 to 20 pages, a CMS you edit yourself, full migration."],
                   ["Scale", "From $5,000", "More than 20 pages, a store, or more than one language."],
                 ].map(([label, price, detail]) => (
