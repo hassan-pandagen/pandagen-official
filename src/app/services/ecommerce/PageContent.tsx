@@ -81,7 +81,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces monthly app fees with code you own, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
+            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces storefront app fees with code you own, while Shopify keeps running products, orders and payments on its own subscription, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
           </p>
         </div>
       </section>
@@ -467,7 +467,22 @@ export default function PageContent() {
                 A fully custom storefront that keeps Shopify&apos;s backend but eliminates all frontend limitations. The ultimate e-commerce upgrade.
               </p>
               <ul className="space-y-3 mb-8">
-                {["Under a second load times", "Zero monthly app fees", "Custom checkout flows", "90+ PageSpeed score", "Unique brand experience", "Refund terms stated in the written scope"].map((item, i) => (
+                {[
+                  // Corrected 11 Sep 2026. This list read "Under a second load
+                  // times" and "Zero monthly app fees". The paragraph at the top of
+                  // this page already says "target sub-second load times" and closes
+                  // by saying how much speed improves depends on the current theme,
+                  // apps and catalogue. A bullet list on the same page promising both
+                  // outright contradicted it. Zero app fees was also false: Shopify is
+                  // retained for products, orders and payments, so that subscription
+                  // stays, and only storefront-facing apps get replaced by code.
+                  "Sub-second load times as the target",
+                  "Storefront app fees replaced by code you own",
+                  "Custom checkout flows",
+                  "90+ PageSpeed handover target",
+                  "Unique brand experience",
+                  "Refund terms stated in the written scope",
+                ].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-stone-600">
                     <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" /> {item}
                   </li>

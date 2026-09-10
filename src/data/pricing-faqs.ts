@@ -25,8 +25,15 @@ export const pricingFaqs: PricingFaq[] = [
     // The diagnostic in the last two sentences is adapted from a published test
     // that a buyer can run against their current site before they ever talk to
     // us. It is deliberately useful whether or not they buy.
+    //
+    // Corrected 11 Sep 2026. The first version opened "You change what the site
+    // says. We change what it does." Clean, and wrong in the middle. A client
+    // applying a discount, taking a booking or publishing a page is changing
+    // what the site does, using functionality already delivered to them. The
+    // real line is between operating delivered capability and building new
+    // capability, not between words and behaviour. Keep the three levels.
     q: "What can I change myself, and what still needs you?",
-    a: "You change what the site says. We change what it does. In practice you edit the words on any page, swap images, update prices, dates, opening hours, staff and service entries, and add new items to any list the site already has, such as a new service or a new team member. That covers almost everything a business changes month to month. What still comes to us is a new page template, a new feature, or a change to how something works, and each is quoted before it starts. Here is a test you can run on your current site right now, before you speak to anyone: open your admin and count what you can actually edit. If the only thing listed is the blog, the rest of your site is hard coded, and every change that is not a blog post needs a developer.",
+    a: "There are three levels, and the middle one is the part people miss. You change what the site says. You also operate what it already does, so if your build includes discounts, bookings or a publishing workflow, running those is yours, not a support ticket. We build what it cannot do yet. In practice you edit the words on any page, swap images, update prices, dates, opening hours, staff and service entries, and add new items to any list the site already has, such as a new service or a new team member. That covers almost everything a business changes month to month. What still comes to us is a new page template, a new feature, or a change to how something works, and each is quoted before it starts. Here is a test you can run on your current site right now, before you speak to anyone: open your admin and count what you can actually edit. If the only thing listed is the blog, the rest of your site is hard coded, and every change that is not a blog post needs a developer.",
   },
   {
     q: "Do you have a minimum project size?",

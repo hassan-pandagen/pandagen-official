@@ -73,7 +73,7 @@ const homeFaqs = [
     // templates or new features, and pretending otherwise recreates the whole
     // dependency argument on the first invoice.
     q: "If the site is custom code, do I need a developer every time I want to change something?",
-    a: "No, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you can change what the site says, and we change what it does."
+    a: "No, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet."
   },
   {
     q: "Do you have a minimum project size?",
