@@ -40,6 +40,21 @@ export interface Hub {
     intro: string[];
     /** Anchor text for the money-page link. Descriptive, never "learn more". */
     moneyAnchor: string;
+    /**
+     * Destination for the closing "Past the reading stage?" button, when it must
+     * differ from the cluster's pillar.
+     *
+     * Added 10 Sep 2026. One field was serving two different links. The SEO and
+     * AI search cluster points its pillar at the editorial policy, which is
+     * right for its closing intro sentence about how claims are sourced and
+     * corrected. The closing button inherited the same destination, and that
+     * button's copy promises the work scoped against your own site, with
+     * commercial terms, acceptance criteria and exclusions. A publication policy
+     * is none of those. An external auditor caught the mismatch.
+     *
+     * Leave undefined unless the pillar genuinely is not a commercial page.
+     */
+    ctaHref?: string;
 }
 
 /**
@@ -189,13 +204,16 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         title: 'Website Migration Guides: Cost, SEO Risk and Platform Moves',
         description:
             'Cross-platform website migration guides: what a migration costs across seven platforms, how to protect search visibility, and what has to be inventoried before cutover.',
-        moneyAnchor: 'our migration service',
+        // Names the destination. The cluster deliberately shares the WordPress
+        // service as its pillar, but a cross-platform reader clicking a generic
+        // "our migration service" landed on a WordPress page without warning.
+        moneyAnchor: 'our WordPress migration service',
         intro: [
             'This cluster covers the parts of a migration that are the same regardless of which platform you are leaving. The platform-specific guides live in their own hubs; what follows applies to all of them.',
             'The fear that stops most migrations is losing search visibility, and it is a reasonable fear, because it happens. It happens for identifiable reasons though, and nearly all of them are process failures rather than technology ones: URLs that changed without redirects, content that was quietly dropped during the rebuild, metadata that was never carried across, a cutover nobody monitored afterwards. Each of those is preventable with an inventory taken before the work starts.',
             'So the guides here are organised around that inventory. Every URL that currently exists and receives traffic. Every redirect the old site already serves, because chained and broken ones are inherited. Content, metadata, and structured data as they stand today. What integrations write to the site and what reads from it.',
             'Being straightforward about the limits: careful process reduces avoidable risk and does not guarantee an outcome. Search results are controlled by search engines, rankings move for reasons unrelated to any migration, and any provider claiming otherwise is describing something they do not control.',
-            'For a specific site, [[money]] covers how the inventory, cutover, and post-launch monitoring are scoped.',
+            'For a specific site, [[money]] covers how the inventory, cutover, and post-launch monitoring are scoped. The same controls apply whichever platform you are leaving; the page is written around WordPress because that is where most of these moves start.',
         ],
     },
 
@@ -207,6 +225,9 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         description:
             'Guides on search and AI answer engines: what structured data and llms.txt do and do not do, why competitors outrank you, and why a site may not be indexed at all.',
         moneyAnchor: 'our editorial and evidence policy',
+        // The intro's closing sentence links the policy, which is correct.
+        // The closing button promises commercial scope, so it goes to pricing.
+        ctaHref: '/pricing',
         intro: [
             'AI search generated a large amount of advice very quickly, and a lot of it was published before anyone could test it. The guides in this cluster try to separate the parts that are documented by the platforms from the parts that are inference.',
             'What is documented is narrower than the advice suggests. Structured data can make a page eligible for certain result types; eligibility is not selection, and Google removes support for result types periodically. llms.txt is read by some AI systems and explicitly not used by Google, which makes it cheap to publish and dishonest to sell as a lever. Content in server-rendered HTML is more reliably available to crawlers than content assembled by client-side JavaScript, and that has been true for a long time.',

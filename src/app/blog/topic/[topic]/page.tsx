@@ -97,6 +97,9 @@ export default async function TopicHubPage({ params }: Params) {
 
     const money = moneyHref(hub);
     const moneyLabel = MONEY_LABEL[money] ?? "our services";
+    // The closing button may point somewhere other than the pillar. See Hub.ctaHref.
+    const cta = hub.ctaHref ?? money;
+    const ctaLabel = MONEY_LABEL[cta] ?? "our services";
 
     // Resolve post ids to posts, newest first. An id in the taxonomy with no
     // matching post is dropped here and caught by the build check in hubs.ts.
@@ -237,10 +240,10 @@ export default async function TopicHubPage({ params }: Params) {
                             are on one page.
                         </p>
                         <Link
-                            href={money}
+                            href={cta}
                             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100"
                         >
-                            See the {moneyLabel} <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                            See the {ctaLabel} <ArrowRight aria-hidden="true" className="h-4 w-4" />
                         </Link>
                     </section>
 
