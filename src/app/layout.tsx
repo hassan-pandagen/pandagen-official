@@ -141,7 +141,10 @@ const siteGraph = {
       contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com", telephone: PHONE.e164 },
       description: "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
       areaServed: "Worldwide",
-      foundingDate: "2026",
+      // The LLC formation date from the Articles, not the brand start date.
+      // PandaCodeGen has traded since February 2026; the company was formed
+      // on 12 August 2026 and that is the date a KYC reviewer is matching.
+      foundingDate: "2026-08-12",
     },
   ],
 };
