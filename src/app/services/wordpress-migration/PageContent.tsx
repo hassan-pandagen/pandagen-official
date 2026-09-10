@@ -189,7 +189,7 @@ export default function PageContent() {
             For WordPress migration specifically: WordPress sites have no universal score; measure your own routes. We rebuild on custom Next.js plus Sanity, hosted on Vercel. Our <Link href="/blog/wordpress-migration-cost" className="text-cognac hover:underline">WordPress migration cost breakdown</Link> has appeared in Google AI Overview citations.
           </p>
           <p className="text-lg text-stone-300 leading-relaxed mb-6">
-            PandaCodeGen builds the same thing at a fixed price from $1,500, quoted against a written list of your pages. The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Texas LLC for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
+            PandaCodeGen builds the same thing at a fixed price from $1,500, quoted against a written list of your pages. The lower price is structural, not a discount. Co-founder-led delivery, no account managers, no NYC office rent, AI-accelerated development, and global engineering economics (Wyoming LLC, Texas mailing address for billing, Karachi for engineering). Quality stays the same. The savings flow to clients.
           </p>
           <div className="my-8 p-5 bg-white/5 border-l-4 border-cognac rounded-r-xl">
             <p className="text-sm font-bold uppercase tracking-wider text-cognac mb-2">Customer-first, not profit-first</p>
