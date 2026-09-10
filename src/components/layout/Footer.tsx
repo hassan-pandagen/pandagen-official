@@ -225,8 +225,13 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 it to the Articles, so the legal name has to be visible rather than
                 buried in Terms section 1 and Privacy section 13. Rendered from
                 COMPANY in company-facts.ts so it cannot drift from the reference
-                pages. NOTE: the state is TEXAS. The brief that requested this said
-                Wyoming, which is the entity this one replaced in August 2026. */}
+                pages.
+
+                The address here is the mailing and principal office. The company
+                itself is a WYOMING LLC, filed 12 August 2026. An earlier version
+                of this comment asserted Texas, which was wrong and came from the
+                same conflation that put "a Texas limited liability company" on
+                three published surfaces. Check the Articles, not the tracker. */}
             <span className="normal-case tracking-normal">
               &copy; 2026 <strong className="font-semibold text-charcoal">Panda Group Ventures L.L.C.</strong>, trading as PandaCodeGen &middot;{" "}
               12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States

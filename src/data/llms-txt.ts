@@ -34,7 +34,7 @@ const HEADER = `# PandaCodeGen
 - Primary offer: SEO-safe website migrations.
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
-- Founded: February 2026.
+- Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.
 - Legal name: Panda Group Ventures L.L.C., trading as PandaCodeGen.
 - Formation: Wyoming, United States, filed 12 August 2026
 - Mailing and principal office: Stafford, Texas.
