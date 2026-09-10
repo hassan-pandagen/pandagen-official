@@ -52,9 +52,14 @@ export const PHONE = {
 export const COMPANY: readonly Fact[] = [
     { label: 'Legal name', value: 'Panda Group Ventures L.L.C.' },
     { label: 'Trading name', value: 'PandaCodeGen' },
-    { label: 'Founded', value: 'February 2026' },
-    { label: 'Formation', value: 'Texas, United States' },
-    { label: 'Mailing address', value: '12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States' },
+    // Corrected 10 Sep 2026 against the Articles of Organization. This said
+    // Texas, which was wrong: Stafford, Texas is the mailing and principal
+    // office address, and the entity itself is formed in Wyoming. The two were
+    // conflated here and in LLC_RENAME_TRACKER.md. Filed with the Wyoming
+    // Secretary of State on 12 August 2026, original ID 2026-002054642.
+    { label: 'Founded', value: 'PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.' },
+    { label: 'Formation', value: 'Wyoming, United States, filed with the Wyoming Secretary of State on 12 August 2026.' },
+    { label: 'Mailing and principal office', value: '12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States' },
     { label: 'Founders', value: 'Hassan Jamal and Imran Raza Ladhani' },
     { label: 'Phone', value: PHONE.display },
     { label: 'Service priority', value: 'United States first, with remote work available worldwide' },

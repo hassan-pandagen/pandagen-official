@@ -167,7 +167,7 @@ const companyFacts = [
   "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score and guarantees no ranking or traffic outcome, because search engines control those. Refunds are a separate matter and are not withheld: where the accepted project terms include written scope protection, PandaCodeGen refunds 100% of the fees paid under that scope if it fails to deliver the agreed deliverables. That is a delivery remedy, not a change-of-mind refund.",
   "PandaCodeGen's own pages are cited in Google AI Overviews, verified by direct capture in August 2026. That is a first-party result for pandacodegen.com and is not a promise about a client site.",
   "Panda Patches is an in-house brand owned by co-founder Imran Raza Ladhani and built and operated by PandaCodeGen. It grew from about $38,000 to about $50,000 per month while running on roughly $55 per month in tooling. It is founder-affiliated and is not independent client proof.",
-  "PandaCodeGen is the trading name of Panda Group Ventures L.L.C., a Texas limited liability company. Its Stafford, Texas address is a mailing address, not a public service location, and its engineering is performed remotely from Karachi, Pakistan.",
+  "PandaCodeGen is the trading name of Panda Group Ventures L.L.C., a Wyoming limited liability company formed on 12 August 2026. Its Stafford, Texas address is a mailing address, not a public service location, and its engineering is performed remotely from Karachi, Pakistan.",
 ]
 export default function CompanyReferencePage() {
   return (
