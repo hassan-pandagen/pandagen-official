@@ -249,46 +249,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Stats Strip */}
-      <TrustLogoBar />
+      {/* SECTION ORDER, resequenced 10 Sep 2026.
 
-      {/* Real finished sites, before any claim about them. Added 9 Sep 2026:
-          the homepage rendered one photograph, a founder portrait, in the ninth
-          of thirteen sections, while six real screenshots sat in the repository
-          reachable only from a case study. The audit's recommended order is
-          outcome and scope, then real projects, then a review, so this sits
-          between the migration standard and the review block. */}
+          A structure audit measured the mobile homepage at ~30,000px and found
+          that the buying decisions arrived late: situation-based service
+          selection began around 9,787px, the tier finder around 22,058. Adding
+          the work previews the day before had pushed selection down further, to
+          11,699. The audit's recommended sequence is outcome and scope, then
+          real projects, then a review, then service choices, then packages,
+          then a short process, then a focused FAQ.
+
+          This is a pure reorder. No section was cut and no copy changed, so
+          nothing measured elsewhere is invalidated. Two constraints held it in
+          place: the answer-first summary above stays in the first 30% of the
+          page for extraction, and no two adjacent sections share a background,
+          which is why the migration standard sits between services and the tier
+          finder rather than immediately after the hero. */}
+
+      {/* Real finished sites, before any claim about them. Projects precede the
+          standards that describe how we build them. */}
       <WorkPreviews />
 
       {/* Public reviews and owner-confirmed project records */}
       <SocialProof />
 
-      {/* Unfair Advantage, financial grid stats (White) */}
-      <UnfairAdvantage />
+      {/* Who We Help, ICP audience cards. "Start with the situation" is the
+          first question a buyer actually asks, so it leads the selection pair. */}
+      <WhoWeHelp />
 
       {/* Services Bento, premium bento grid (Paper) */}
       <ServicesHub />
 
-      {/* Who We Help, ICP audience cards */}
-      <WhoWeHelp />
+      {/* Trust Stats Strip: the migration standard. Supporting detail once the
+          reader knows what is on offer, and the dark band separates two
+          light sections. */}
+      <TrustLogoBar />
+
+      {/* Tier Finder Quiz, "Which tier is right for me?" Packages, immediately
+          after service selection rather than 22,000px below it. */}
+      <TierQuiz />
 
       {/* How It Works, 4 Steps with Visual Diagrams */}
       <HowItWorksSimple />
 
-      {/* AI-Powered, Speed Comparison */}
-      <AIPowered />
+      {/* Unfair Advantage, financial grid stats (White) */}
+      <UnfairAdvantage />
 
       {/* Revenue model, illustrative estimate on the visitor's own numbers */}
       <RevenueCalculator />
+
+      {/* AI-Powered, Speed Comparison */}
+      <AIPowered />
 
       {/* Founders */}
       <FounderSection />
 
       {/* Anti-Agency Manifesto */}
       <AntiAgency />
-
-      {/* Tier Finder Quiz, "Which tier is right for me?" */}
-      <TierQuiz />
 
       {/* FAQ Section */}
       <HomeFaqSection faqs={homeFaqs} />
