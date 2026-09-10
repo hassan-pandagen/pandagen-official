@@ -422,18 +422,29 @@ export default function PageContent() {
                 <tr className="bg-stone-50">
                   <th className="text-left p-3 font-semibold text-stone-700">WordPress Plugin</th>
                   <th className="text-left p-3 font-semibold text-stone-700">Replaced By</th>
-                  <th className="text-right p-3 font-semibold text-cognac">Yearly Savings</th>
+                  <th className="text-right p-3 font-semibold text-cognac">Entry price, if you pay it</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100">
                 {[
-                  ["Yoast Premium / RankMath PRO", "Next.js native metadata API", "$99 to $199"],
-                  ["WP Rocket / LiteSpeed Cache / W3 Total Cache", "Static generation + Vercel Edge", "$59 to $180"],
-                  ["Advanced Custom Fields (ACF) Pro", "Sanity schema + TypeScript types", "$249"],
-                  ["Elementor Pro / Divi Builder", "Custom React components", "$59 to $199"],
-                  ["Gravity Forms / WPForms", "API routes + Resend", "$259"],
-                  ["WooCommerce Subscriptions", "Stripe Billing (native)", "$199"],
-                  ["WPML / TranslatePress", "next-intl + Sanity i18n", "$99 to $199"],
+                  // Prices corrected 11 Sep 2026, checked at each vendor. The old
+                  // table quoted the top tier of almost every product and summed
+                  // them into a single "bill eliminated" figure of $1,023 to
+                  // $1,484. ACF was listed at $249, which is the unlimited-sites
+                  // plan, against $49 for one site. Gravity Forms was listed at
+                  // $259, the Elite tier, against $59 for Basic. Two of the three
+                  // caching products named have free versions. WPML and
+                  // TranslatePress are priced in euros and were shown as dollars.
+                  // Overstating a named third party's price in our own favour is
+                  // the fastest way to lose a buyer who checks one of them, and
+                  // every one of these takes ten seconds to check.
+                  ["Yoast Premium", "Next.js native metadata API", "$118.80/yr, one site, ex VAT"],
+                  ["WP Rocket", "Static generation + Vercel Edge", "$59.95/yr. LiteSpeed and W3 Total Cache have free versions"],
+                  ["Advanced Custom Fields (ACF) Pro", "Sanity schema + TypeScript types", "$49/yr, one site"],
+                  ["Divi / Elementor Pro", "Custom React components", "Divi $89/yr, or $249 once"],
+                  ["Gravity Forms", "API routes + Resend", "$59/yr Basic"],
+                  ["WooCommerce Subscriptions", "Stripe Billing", "$279/yr. Stripe Billing charges 0.7% of billing volume instead"],
+                  ["WPML / TranslatePress", "next-intl + Sanity i18n", "From EUR 39 and EUR 99"],
                 ].map(([plugin, replacement, savings]) => (
                   <tr key={plugin} className="border border-stone-100 hover:bg-stone-50">
                     <td className="p-3 text-charcoal font-medium">{plugin}</td>
@@ -442,9 +453,9 @@ export default function PageContent() {
                   </tr>
                 ))}
                 <tr className="bg-cognac/5 border-t-2 border-cognac/20">
-                  <td className="p-3 text-charcoal font-bold">Total annual plugin bill eliminated</td>
-                  <td data-label="" className="p-3 text-stone-500 text-xs italic">replaced with native code you own</td>
-                  <td data-label="Total" className="p-3 text-right text-cognac font-black">$1,023 to $1,484/yr</td>
+                  <td className="p-3 text-charcoal font-bold">What you would actually save</td>
+                  <td data-label="" className="p-3 text-stone-500 text-xs italic">only the ones you pay for today</td>
+                  <td data-label="Total" className="p-3 text-right text-cognac font-bold">Send us your renewals and we will total them</td>
                 </tr>
               </tbody>
             </table>
