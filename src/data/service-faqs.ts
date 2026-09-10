@@ -54,6 +54,10 @@ export interface ServiceFaq {
 export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "custom-engineering": [
     {
+      q: "On an application rather than a website, what can our team change without us calling you?",
+      a: "The line sits in a different place on an application, so it is worth setting before we build. Content, labels, copy, prices, options in a dropdown and anything else that is data goes in an editor or an admin screen your team controls. Business rules, permissions, new screens and anything that changes how the system behaves is development work, quoted before it starts. We agree that list with you during scoping and write it into the handover, so nobody discovers the boundary during an emergency.",
+    },
+    {
       q: "How long does it take to build a custom app?",
       a: "A website takes 2 to 4 weeks. An app takes longer. The last one we published, an operations platform with staff logins, payments and attendance tracking, took 10 weeks. You get a written plan with dates before you pay anything, so the timeline is agreed rather than guessed.",
     },
@@ -76,6 +80,10 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   ],
   "ecommerce": [
     {
+      q: "If the storefront is custom, where do I manage products and orders?",
+      a: "In Shopify, exactly where you do now. Products, prices, variants, inventory, discount codes, orders and customers all stay in the Shopify admin, and your staff carry on using the screens they already know. The custom part is the storefront your customers see. Page content such as your homepage sections, landing pages and posts moves into a content editor you also control. Nothing about running the shop moves into developer hands.",
+    },
+    {
       q: "What is custom Shopify?",
       a: "Custom Shopify means you keep Shopify for everything it's great at (inventory, orders, payments, and customer management), but replace the slow Liquid theme with a custom coded storefront that loads in under 1 second. Same dashboard, with the storefront layer rebuilt for speed. The actual improvement depends on your current theme, apps and catalogue, so we measure your baseline before quoting.",
     },
@@ -97,6 +105,10 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
   ],
   "gohighlevel": [
+    {
+      q: "Do I lose the HighLevel dashboard my team works in every day?",
+      a: "No. Contacts, pipelines, calendars, campaigns and automations stay in HighLevel and your team keeps working in it. What moves is the public website, which becomes a custom build you own, with a content editor for pages, text, images and business details. The two are connected so a form on the site still creates the contact in HighLevel. You are replacing the pages that load slowly, not the system you run the business in.",
+    },
     {
       q: "Will my GHL automations break during migration?",
       a: "No. We don't touch your GoHighLevel account. Your contacts, pipelines, workflows and calendars stay exactly where they are, and we only replace the website in front of them. Your old site stays live while we build, and we test every form and booking before switching over.",
@@ -123,6 +135,10 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
   ],
   "squarespace": [
+    {
+      q: "Can I still edit my own pages, the way I do in Squarespace?",
+      a: "Yes, and Squarespace is genuinely easy to edit, so we are not going to pretend otherwise. Every site we build includes an editor from $1,500 up: text, images, prices, opening hours, staff and service entries, plus new items in any list the site already has. What changes is not the editing. In Squarespace you are editing inside their system and the site exists while the subscription does. Here you own the code and the accounts, so the editing carries on regardless of who you work with next.",
+    },
     {
       q: "Will my Squarespace site design transfer to custom code?",
       a: "Yes, as closely as you want. We go through your site page by page and list what stays, what gets redesigned and what gets dropped, so nothing changes without you agreeing to it. The rebuilt site scores 90 or better on Google's PageSpeed test on phone and desktop, which most templates can't reach with the same design.",
@@ -181,7 +197,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Can I still edit my website without coding?",
-      a: "Yes. Sites from $3,500 come with a simple visual editor. Change text, swap images, add posts and pages, no code and nothing to install or renew. The $1,500 site has no editor and suits a business that rarely changes its pages. We train you at handover, and there's no monthly fee to keep editing.",
+      a: "Yes, and Wix is genuinely easy to edit, so this is not the reason to move. Every site we build includes an editor, from $1,500 up. Change text, swap images, update prices and hours, add posts and pages, no code and nothing to install or renew. We train you at handover and there is no monthly fee to keep editing. The difference is not whether you can edit it. It is that you keep the code and the accounts, so nobody can switch the site off.",
     },
     {
       q: "How long does it take to migrate from Wix?",
@@ -201,6 +217,10 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
   ],
   "woocommerce": [
+    {
+      q: "Who manages products and orders after the frontend is rebuilt?",
+      a: "You do, in the WooCommerce admin you already use. Products, prices, stock, coupons and orders stay exactly where they are, and your fulfilment routine does not change. The rebuild replaces the storefront your customers load, not the shop you run. Page content moves into a content editor you control, so a new landing page or a change to the homepage does not need a developer either.",
+    },
     {
       q: "Will I lose my WooCommerce orders and customer data?",
       a: "No. We export your entire WooCommerce database (products, orders, customer accounts, reviews, categories) and migrate it to your new platform. We check every migrated record against a copy taken before the move, and tell you about anything that does not match before we switch over. We test the import on a practice copy before anything touches your live store.",
