@@ -369,7 +369,14 @@ export default function PricingPageClient() {
               // project sits inside it, which is why this says the accounts are
               // theirs rather than that they get them at the end. Do not add
               // figures here: care pricing is quoted per project and changes.
-              { num: "07", title: "Whose accounts these are", body: "Your content system, your database and your transactional email are set up in your own accounts from the start, not handed over later. Hosting is the one exception and it is a choice: while you are on a monthly plan we host it on our account and there is no separate hosting bill, and if you are not, or whenever you ask, it moves to your own account. Your domain and business email stay exactly where they are. If you have someone in-house who can hold the keys and respond when something breaks, take the hosting yourself and pay us nothing monthly." },
+              //
+              // The administrator sentence is not a hedge, it is the mechanism.
+              // Sanity's free plan lets a client own the organization while the
+              // agency holds admin, so token rotation and similar chores do not
+              // queue behind a busy owner. Saying it plainly turns the thing a
+              // sceptical buyer would otherwise discover later into a reason to
+              // trust the rest. Keep the removable-at-any-time half attached.
+              { num: "07", title: "Whose accounts these are", body: "Your content system, your database and your transactional email are set up in your own accounts from the start, not handed over later. We hold administrator access to them so that routine work, an expiring API token for example, does not land on your desk or wait for you to be free. You can remove that access at any time and nothing about the site stops working. Hosting is the one exception and it is a choice: while you are on a monthly plan we host it on our account and there is no separate hosting bill, and if you are not, or whenever you ask, it moves to your own account. Your domain and business email stay exactly where they are. If you have someone in-house who can hold the keys and respond when something breaks, take the hosting yourself and pay us nothing monthly." },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
                 <div className="text-xs font-black text-stone-600 tracking-widest w-6 shrink-0 pt-0.5">{item.num}</div>
