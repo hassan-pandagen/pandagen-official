@@ -506,6 +506,7 @@ const fr: Dictionary = {
         fit: "Sites de petite entreprise, jusqu'à 7 pages.",
         features: [
           "Jusqu'à 7 pages sur mesure, avec les gabarits et les responsabilités de contenu listés dans le périmètre",
+          "Un éditeur de contenu pour vos textes, vos images et vos coordonnées, configuré pour vos pages, documenté et accompagné d'une formation",
           "Déploiement Next.js avec dépôt, environnements et responsabilités de remise documentés",
           "Objectif de performance Lighthouse 90+ sur mobile et ordinateur pour les pages représentatives convenues",
           "Trois passages enregistrés avant la livraison par page et profil convenus ; chaque passage doit atteindre l'objectif",

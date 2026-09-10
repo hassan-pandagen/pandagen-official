@@ -20,7 +20,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
     fits: [
       "Up to 7 pages",
       "A brochure or service site. Nothing to buy.",
-      "We build it and we update it for you. No CMS.",
+      "Edit your own words, images and business details.",
       "Custom Next.js, with a 90+ Lighthouse target at handover",
       "1 to 2 weeks delivery",
     ],

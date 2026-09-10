@@ -506,6 +506,7 @@ const de: Dictionary = {
         fit: "Websites kleiner Unternehmen, bis zu 7 Seiten.",
         features: [
           "Bis zu 7 individuelle Seiten, mit den im Umfang aufgeführten Templates und Inhaltsverantwortlichkeiten",
+          "Ein Redaktionswerkzeug für Ihre Texte, Bilder und Geschäftsangaben, für Ihre Seiten eingerichtet, dokumentiert und mit Einweisung",
           "Next.js-Deployment mit dokumentiertem Repository, dokumentierten Umgebungen und Übergabeverantwortlichkeiten",
           "Lighthouse-Zielwert 90+ auf Mobilgeräten und Desktop für die vereinbarten repräsentativen Seiten",
           "Drei aufgezeichnete Durchläufe vor der Übergabe je vereinbarter Seite und Profil; jeder Durchlauf muss das Ziel erreichen",
