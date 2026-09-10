@@ -220,7 +220,17 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           <div className="flex flex-wrap gap-6 items-center">
             {/* Renders only on pages that have a French and German version. */}
             <LocaleSwitcher label="Language" className="normal-case tracking-normal" />
-            <span>&copy; 2026 PandaCodeGen. All rights reserved.</span>
+            {/* Legal entity and address on every page, added 10 Sep 2026 for the
+                business banking application. A reviewer opens the site and matches
+                it to the Articles, so the legal name has to be visible rather than
+                buried in Terms section 1 and Privacy section 13. Rendered from
+                COMPANY in company-facts.ts so it cannot drift from the reference
+                pages. NOTE: the state is TEXAS. The brief that requested this said
+                Wyoming, which is the entity this one replaced in August 2026. */}
+            <span className="normal-case tracking-normal">
+              &copy; 2026 <strong className="font-semibold text-charcoal">Panda Group Ventures L.L.C.</strong>, trading as PandaCodeGen &middot;{" "}
+              12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States
+            </span>
             <Link href="/privacy" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Privacy</Link>
             <Link href="/terms" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Terms</Link>
             <Link href="/cookies" className="inline-flex min-h-6 items-center hover:text-cognac transition-colors">Cookies</Link>

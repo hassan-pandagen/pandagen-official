@@ -115,6 +115,22 @@ const siteGraph = {
       "@id": "https://www.pandacodegen.com/#organization",
       name: "PandaCodeGen",
       alternateName: "Panda Code Gen",
+      // legalName, address and founder added 10 Sep 2026 for the banking
+      // application: a reviewer matching the site to the Articles should find
+      // the registered entity in the markup, not only in the legal pages.
+      legalName: "Panda Group Ventures L.L.C.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "12250 S Kirkwood Rd, Apt 1128",
+        addressLocality: "Stafford",
+        addressRegion: "TX",
+        postalCode: "77477",
+        addressCountry: "US",
+      },
+      founder: [
+        { "@type": "Person", name: "Hassan Jamal" },
+        { "@type": "Person", name: "Imran Raza Ladhani" },
+      ],
       url: "https://www.pandacodegen.com",
       logo: { "@type": "ImageObject", url: "https://www.pandacodegen.com/logo.png", width: 655, height: 113 },
       // telephone added 11 Aug 2026, from PHONE in company-facts.ts. NAP facts
