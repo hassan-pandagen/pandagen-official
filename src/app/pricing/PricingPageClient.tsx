@@ -360,6 +360,16 @@ export default function PricingPageClient() {
               { num: "04", title: "Support option", body: "Package discussions may start with 15 business days for Starter and 30 business days for Growth and Scale. Support applies only when the accepted project terms state when it starts, what defects or minor adjustments it covers, and any bespoke arrangement." },
               { num: "05", title: "Payment, changes, and ownership", body: "A common payment option is 30% at onboarding and 70% at the defined delivery milestone; the parties may agree otherwise in writing. Currency, taxes, revision limits, separately priced additions, ownership transfer, licenses, accounts, and third-party costs are stated before implementation." },
               { num: "06", title: "Launch and rollback", body: "Responsibilities for redirects, analytics, forms, DNS, monitoring, rollback, and post-launch review are included in the cutover plan." },
+              // 07 added 10 Sep 2026. Two buyer audits and a live client's own
+              // emails all landed on the same gap: "you own the accounts" was one
+              // line, said once, and a buyer had to ask repeatedly to find out
+              // what that meant in practice. Every statement below is how the
+              // work is actually set up. On the current project the Sanity
+              // organization is registered in the client business name and the
+              // project sits inside it, which is why this says the accounts are
+              // theirs rather than that they get them at the end. Do not add
+              // figures here: care pricing is quoted per project and changes.
+              { num: "07", title: "Whose accounts these are", body: "Your content system, your database and your transactional email are set up in your own accounts from the start, not handed over later. Hosting is the one exception and it is a choice: while you are on a monthly plan we host it on our account and there is no separate hosting bill, and if you are not, or whenever you ask, it moves to your own account. Your domain and business email stay exactly where they are. If you have someone in-house who can hold the keys and respond when something breaks, take the hosting yourself and pay us nothing monthly." },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
                 <div className="text-xs font-black text-stone-600 tracking-widest w-6 shrink-0 pt-0.5">{item.num}</div>
