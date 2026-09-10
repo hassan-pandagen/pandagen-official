@@ -134,7 +134,11 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         caseStudy: '/work/mycustompatches',
         quote: 'Hassan was available to me at any time, and his response time was always less than an hour. And he suggested me to go route that will help me in business i.e. Seo, UI, UX etc',
         snippet: 'Hassan was available to me at any time, and his response time was always less than an hour.',
-        name: 'Matt Conner, owner, MC Patches LLC',
+        // "Executive" is the title Matt Conner used himself. Both platforms
+        // render it that way: Clutch signs the review "Executive, MC Patches
+        // LLC" and GoodFirms shows "Matt Conner, Executive at MC Patches LLC".
+        // This said "owner" until 10 Sep 2026, which was our word, not his.
+        name: 'Matt Conner, Executive, MC Patches LLC',
         platform: 'Clutch',
         date: 'March 2026',
         href: 'https://clutch.co/profile/panda-code-gen#reviews',
