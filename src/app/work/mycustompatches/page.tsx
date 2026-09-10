@@ -492,7 +492,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { before: "A decade of accumulated templates and 45 active plugins", after: "13 rebuilt templates, no plugin update treadmill." },
                                 { before: "Every change needed a developer or a plugin", after: "The team edits content directly, no deploy required." },
                                 { before: "Managed hosting plus plugin and theme licences", after: "Vercel and Cloudflare. Figures withdrawn pending reconciliation." },
-                                { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. No maintenance overhead." },
+                                { before: "45 active plugins, security risk, update anxiety", after: "Zero plugins. 12 purpose built integrations. Dependency updates on a schedule we control, not a plugin author's." },
                                 { before: "200+ pages of SEO equity at risk during migration", after: "No ranking losses recorded in the monitored period. No pages dropped and no 404s observed post-launch." },
                                 { before: "File uploads bloating the server", after: "All design uploads go to Cloudinary. Server never touches user files." },
                             ].map((r, i) => (
