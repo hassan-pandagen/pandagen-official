@@ -582,6 +582,18 @@ const fr: Dictionary = {
         body:
           "Les responsabilités relatives aux redirections, à la mesure d'audience, aux formulaires, au DNS, à la surveillance, au retour arrière et à la revue post-lancement font partie du plan de bascule.",
       },
+      {
+        number: "07",
+        title: "À qui appartiennent ces comptes",
+        body:
+          "Votre système de contenu, votre base de données et votre service d'e-mails transactionnels sont créés dès le départ sur vos propres comptes, et non transférés plus tard. Nous y conservons un accès administrateur afin que les tâches courantes, un jeton d'API qui expire par exemple, n'atterrissent pas sur votre bureau et n'attendent pas votre disponibilité. Vous pouvez retirer cet accès à tout moment, et rien ne cesse de fonctionner sur le site. L'hébergement est la seule exception, et c'est un choix : tant que vous êtes en formule mensuelle, nous l'hébergeons sur notre compte et il n'y a pas de facture d'hébergement séparée ; sinon, ou dès que vous le demandez, il bascule sur votre propre compte. Votre nom de domaine et votre messagerie professionnelle restent exactement où ils sont. Si vous avez en interne quelqu'un capable de détenir les clés et de réagir en cas de panne, prenez l'hébergement vous-même et ne nous payez rien chaque mois.",
+      },
+      {
+        number: "08",
+        title: "Si vous voulez que nous continuions à nous en occuper",
+        body:
+          "Aucune formule mensuelle n'est obligatoire, et le site vous appartient dans les deux cas. Le suivi mensuel optionnel couvre l'hébergement, la maintenance, les petites modifications, les correctifs, ainsi que le travail de référencement et de contenu là où vous le souhaitez. Il est chiffré d'après votre site réel et les systèmes qui y sont connectés plutôt que vendu par palier fixe, car un site vitrine et un site qui gère des inscriptions ou des paiements ne représentent pas la même charge. Ce qui relève d'une nouvelle fonctionnalité ou d'un nouveau gabarit de page est chiffré à part. Lorsque le suivi comprend des articles ou du contenu, le calendrier dépend de votre validation des brouillons, et nous précisons clairement ce qu'il advient d'un mois non utilisé.",
+      },
     ],
     sections: [
       {
