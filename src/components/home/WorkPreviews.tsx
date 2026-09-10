@@ -152,7 +152,7 @@ export default function WorkPreviews() {
         </div>
 
         <p className="mt-10 text-base text-stone-600">
-          Four more, including two labelled founder affiliated because a co-founder owns them, are on the{" "}
+          Four more, including three labelled founder affiliated, are on the{" "}
           <Link href="/work" className="font-semibold text-cognac underline underline-offset-4">
             work index
           </Link>

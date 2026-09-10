@@ -166,10 +166,15 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // that reconciliation is finished. See the tracker entry dated 8 Aug 2026.
     { name: 'MyCustomPatches', relationship: 'Independent client', href: '/work/mycustompatches', fact: 'Every page, product and blog post migrated to a custom Next.js build in about 22 days, with Search Console crawl validation before DNS cutover. Performance and hosting-cost figures for this project are withdrawn pending reconciliation of the original test records.' },
     { name: 'Panda Patches', relationship: 'Founder-owned property, not independent client proof', href: '/work/panda-patches', fact: 'Migrated to a custom Next.js storefront. Owned by co-founder Imran Raza Ladhani, so it is labelled as a founder-affiliated project rather than presented as client evidence.' },
-    { name: 'Enterprise Ops', relationship: 'Client project', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and twenty Supabase Edge Functions, built in 10 weeks.' },
+    { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and twenty Supabase Edge Functions, built in 10 weeks. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'Custom build. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
     { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: 'Migration to a self-manageable CMS. No before-and-after performance figures are published, because the previous platform baseline was never captured.' },
-];
+
+    // Added 10 Sep 2026. The reference page states it covers every published
+    // project, and six work pages exist while this list held five. An external
+    // auditor caught the overclaim. Adding the missing record is the honest fix;
+    // weakening the sentence to "selected projects" would have been the lazy one.
+    { name: 'Panda CodeLab', relationship: 'Founder-affiliated, not independent client proof', href: '/work/panda-codelab', fact: 'A separate agency brand at pandacodelab.com, designed and built by the same team. It is our own property, so it demonstrates build capability rather than independent client evidence.' },];
 
 /** Where a machine or a person should go for the human-facing version of each area. */
 export const REFERENCE_LINKS: readonly { href: string; title: string; body: string }[] = [
@@ -222,5 +227,15 @@ export const ORGANIZATION_PROFILES: readonly string[] = [
     'https://www.reddit.com/user/PandaCodeGen/',
 ];
 
-/** Date the values above were last checked against source. Rendered on every reference page. */
-export const FACTS_VERIFIED = '8 August 2026';
+/**
+ * Date the values above were last checked against source. Rendered on every
+ * reference page.
+ *
+ * 10 Sep 2026: moved from 8 August after a real review, not a freshness bump.
+ * An external auditor pointed out that the stated date lagged the record: facts
+ * inside it already carried 17 August and 4 September check dates. On this date
+ * the refund statement, the traffic-preservation claim, the Enterprise Ops
+ * affiliation and the review-independence wording were corrected, and the
+ * missing Panda CodeLab record was added. Only move this when that is true.
+ */
+export const FACTS_VERIFIED = '10 September 2026';

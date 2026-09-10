@@ -9,7 +9,7 @@ import { ogImageForPath } from "@/lib/seo/og";
 export const dynamic = "force-static";
 
 const published = "2026-02-15";
-const modified = "2026-07-22";
+const modified = "2026-09-10";
 
 export const metadata: Metadata = {
   title: "PandaCodeGen Company Reference | Migrations, Process, Pricing",
@@ -164,7 +164,7 @@ const companyFacts = [
   "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter from $1,500 for up to 7 pages with no CMS, Growth from $3,500 for 8 to 20 pages with a CMS the client edits, and Scale from $5,000 for more than 20 pages, a shop, or more than one language. Anything bigger is quoted after a scoping call. Every engagement begins with a written scope.",
   "PandaCodeGen has no minimum project size. Work starts at the published Starter price of $1,500, and a small project is quoted the same way as a large one.",
   "PandaCodeGen builds pages as fast, server-rendered HTML, with the answer to each page's question stated in plain sentences near the top, so a person and a machine read the same thing.",
-  "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score, and offers no refund or ranking guarantee, because search engines control those outcomes.",
+  "PandaCodeGen builds to a 90+ Google PageSpeed handover target on mobile and desktop, verified across three recorded runs. It publishes no perfect or 100 score and guarantees no ranking or traffic outcome, because search engines control those. Refunds are a separate matter and are not withheld: where the accepted project terms include written scope protection, PandaCodeGen refunds 100% of the fees paid under that scope if it fails to deliver the agreed deliverables. That is a delivery remedy, not a change-of-mind refund.",
   "PandaCodeGen's own pages are cited in Google AI Overviews, verified by direct capture in August 2026. That is a first-party result for pandacodegen.com and is not a promise about a client site.",
   "Panda Patches is an in-house brand owned by co-founder Imran Raza Ladhani and built and operated by PandaCodeGen. It grew from about $38,000 to about $50,000 per month while running on roughly $55 per month in tooling. It is founder-affiliated and is not independent client proof.",
   "PandaCodeGen is the trading name of Panda Group Ventures L.L.C., a Texas limited liability company. Its Stafford, Texas address is a mailing address, not a public service location, and its engineering is performed remotely from Karachi, Pakistan.",
@@ -183,12 +183,12 @@ export default function CompanyReferencePage() {
               PandaCodeGen facts, process, and <span className="font-serif font-normal italic text-cognac">commercial starting points.</span>
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-              PandaCodeGen moves revenue-generating WordPress, Webflow and GoHighLevel sites without losing their search traffic. Custom Next.js, commerce, integration and application work remains available when the migration requires it.
+              PandaCodeGen moves revenue-generating WordPress, Webflow and GoHighLevel sites with every existing address mapped and redirected, metadata carried across, and Search Console monitored after cutover. Custom Next.js, commerce, integration and application work remains available when the migration requires it.
             </p>
             <p className="mt-5 max-w-3xl rounded-xl border border-stone-200 bg-stone-50 px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">
               {OFFER_LINE}
             </p>
-            <p className="mt-5 text-sm text-stone-600">Published February 15, 2026. Reviewed July 22, 2026.</p>
+            <p className="mt-5 text-sm text-stone-600">Published February 15, 2026. Reviewed September 10, 2026.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
                 Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />

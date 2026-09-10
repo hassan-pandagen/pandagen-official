@@ -142,7 +142,7 @@ export default function WorkPageClient() {
             The full write-ups, <span className="font-serif font-normal italic text-cognac">with their limits stated.</span>
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-            Each record states the relationship, the measurement conditions and what the figures do not prove. Two are
+            Each record states the relationship, the measurement conditions and what the figures do not prove. Three are
             founder-affiliated and labelled as such; they are operating experience, not independent client proof.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -151,7 +151,7 @@ export default function WorkPageClient() {
               { href: "/work/ladies-4-jesus", name: "Ladies 4 Jesus", kind: "Independent client", desc: "Community site migration. Nine content types, five moderated submission paths, owner-run CMS. No before/after claimed: no baseline was captured." },
               { href: "/work/emblematic-studio", name: "Emblematic Studio", kind: "Independent client", desc: "Product catalogue and quote experience. 20 product types from one typed registry; one runtime route on the whole site. Build record, no traffic claims." },
               { href: "/work/panda-patches", name: "Panda Patches", kind: "Founder-affiliated", desc: "Headless Next.js, Sanity, Supabase and Square build with a real-time pricing calculator and ops platform." },
-              { href: "/work/enterprise-ops", name: "Enterprise Operations", kind: "Client project", desc: "Custom operations platform: order tracking, role-based dashboards and reporting replacing spreadsheets." },
+              { href: "/work/enterprise-ops", name: "Enterprise Operations", kind: "Founder-affiliated", desc: "Our own operations platform for the founder-owned Panda Patches business: order tracking, role-based dashboards and reporting replacing spreadsheets." },
               { href: "/work/panda-codelab", name: "Panda CodeLab", kind: "Founder-affiliated", desc: "Agency site build. Sub-second load times and an accessibility-first component system." },
             ].map((c) => (
               <Link
