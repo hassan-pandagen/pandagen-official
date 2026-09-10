@@ -16,6 +16,19 @@ export interface PricingFaq {
 
 export const pricingFaqs: PricingFaq[] = [
   {
+    // Added 10 Sep 2026, after Starter gained the content editor. The homepage
+    // answers "do I need a developer every time". This answers the question that
+    // follows it, which is the boundary, and the one a buyer is actually burned
+    // by later. Search language checked the same day: "every change needs a
+    // developer" recurs verbatim across Reddit, LinkedIn and agency posts, and
+    // "web dev won't let us make changes, is this normal" is a real thread title.
+    // The diagnostic in the last two sentences is adapted from a published test
+    // that a buyer can run against their current site before they ever talk to
+    // us. It is deliberately useful whether or not they buy.
+    q: "What can I change myself, and what still needs you?",
+    a: "You change what the site says. We change what it does. In practice you edit the words on any page, swap images, update prices, dates, opening hours, staff and service entries, and add new items to any list the site already has, such as a new service or a new team member. That covers almost everything a business changes month to month. What still comes to us is a new page template, a new feature, or a change to how something works, and each is quoted before it starts. Here is a test you can run on your current site right now, before you speak to anyone: open your admin and count what you can actually edit. If the only thing listed is the blog, the rest of your site is hard coded, and every change that is not a blog post needs a developer.",
+  },
+  {
     q: "Do you have a minimum project size?",
     a: "No. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often turned away before it gets a price. You get a fixed price before we begin either way.",
   },
