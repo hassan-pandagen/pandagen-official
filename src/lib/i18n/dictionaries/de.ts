@@ -582,6 +582,18 @@ const de: Dictionary = {
         body:
           "Verantwortlichkeiten für Weiterleitungen, Analytics, Formulare, DNS, Überwachung, Rückfall und die Nachbetrachtung nach dem Livegang sind Teil des Umschaltplans.",
       },
+      {
+        number: "07",
+        title: "Wem diese Konten gehören",
+        body:
+          "Ihr Content-System, Ihre Datenbank und Ihr transaktionaler E-Mail-Dienst werden von Anfang an in Ihren eigenen Konten eingerichtet und nicht erst später übergeben. Wir halten dort Administratorzugang, damit Routinearbeiten, etwa ein ablaufender API-Token, nicht auf Ihrem Schreibtisch landen oder darauf warten, dass Sie Zeit haben. Sie können diesen Zugang jederzeit entziehen, und die Website funktioniert unverändert weiter. Das Hosting ist die einzige Ausnahme und eine Wahl: Solange Sie eine monatliche Betreuung beziehen, hosten wir auf unserem Konto und es gibt keine separate Hosting-Rechnung; andernfalls, oder sobald Sie es wünschen, wechselt es in Ihr eigenes Konto. Ihre Domain und Ihre geschäftliche E-Mail bleiben genau dort, wo sie sind. Wenn Sie jemanden im Haus haben, der die Schlüssel halten und bei einer Störung reagieren kann, übernehmen Sie das Hosting selbst und zahlen uns monatlich nichts.",
+      },
+      {
+        number: "08",
+        title: "Wenn wir die Website weiter betreuen sollen",
+        body:
+          "Es gibt keine verpflichtende Betreuung, und die Website gehört Ihnen in beiden Fällen. Die optionale monatliche Betreuung umfasst Hosting, Wartung, kleine Änderungen, Fehlerbehebungen sowie Such- und Inhaltsarbeit, wo Sie sie wünschen. Sie wird an Ihrer tatsächlichen Website und den angebundenen Systemen bemessen und nicht als feste Stufe verkauft, denn eine Broschüren-Website und eine Website, die Anmeldungen oder Zahlungen abwickelt, sind nicht derselbe Aufwand. Was als neue Funktion oder neues Seitentemplate gilt, wird separat angeboten. Enthält die Betreuung Artikel oder Inhalte, hängt der Zeitplan an Ihrer Freigabe der Entwürfe, und wir halten ausdrücklich fest, was mit einem nicht genutzten Monat geschieht.",
+      },
     ],
     sections: [
       {
