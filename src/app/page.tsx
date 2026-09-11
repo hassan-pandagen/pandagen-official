@@ -9,6 +9,7 @@ import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 import WorkPreviews from "@/components/home/WorkPreviews";
+import CustomFeatures from "@/components/home/CustomFeatures";
 import { alternatesFor } from "@/lib/i18n/config";
 import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 
@@ -301,6 +302,14 @@ export default function Home() {
           reader knows what is on offer, and the dark band separates two
           light sections. */}
       <TrustLogoBar />
+
+      {/* What actually gets built, and who can change it afterwards. Placed
+          where the 10 Sep feature audit asked for it: after a real project and
+          before the packages, so the reader knows what a package contains
+          before being asked to pick one. White between the charcoal band above
+          and the paper of the tier finder below, which keeps the homepage rule
+          that no two adjacent sections share a background. */}
+      <CustomFeatures />
 
       {/* Tier Finder Quiz, "Which tier is right for me?" Packages, immediately
           after service selection rather than 22,000px below it. */}
