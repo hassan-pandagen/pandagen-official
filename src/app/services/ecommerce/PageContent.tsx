@@ -128,7 +128,7 @@ export default function PageContent() {
           <div className="space-y-8">
             {[
               { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map how every feature connects through Shopify's Storefront API: products, cart, checkout, customer accounts. AI tooling compresses discovery from days to hours.", duration: "Days 1-3" },
-              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js with AI-paired development: product pages that load instantly, a cart that never lags, and search that actually works. Every app feature gets rebuilt natively. Claude and Cursor handle scaffolding so we ship in weeks, not months.", duration: "Days 4-14" },
+              { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js: fast product pages, a cart that holds up under load, and search worth using. The audit in step 01 sorts your apps into kept, replaced and needing a closer look, and step 02 builds the replacements that were agreed. Apps doing backend work keep running and keep billing. AI-paired development, with a named developer responsible for the result, is how we keep that scope affordable to quote.", duration: "Days 4-14" },
               { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Days 15-18" },
               { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Days 19-21" },
             ].map((item, i) => (
@@ -464,7 +464,7 @@ export default function PageContent() {
               <div className="text-cognac text-sm font-bold uppercase tracking-wider mb-4">Option B</div>
               <h3 className="text-2xl font-bold text-charcoal mb-4">Go Headless (Custom Coded)</h3>
               <p className="text-stone-600 text-base mb-6 leading-relaxed">
-                A fully custom storefront that keeps Shopify&apos;s backend but eliminates all frontend limitations. The ultimate e-commerce upgrade.
+                A custom storefront on your own code, with Shopify kept underneath for products, orders and payments. You get the front of the store; the platform keeps doing what it is good at.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -478,7 +478,11 @@ export default function PageContent() {
                   // stays, and only storefront-facing apps get replaced by code.
                   "Sub-second load times as the target",
                   "Storefront app fees replaced by code you own",
-                  "Custom checkout flows",
+                  // Shopify hosts the checkout itself, and extensions on some of its
+                  // steps are a Shopify Plus entitlement. Promising custom checkout
+                  // flows to a merchant on a standard plan is a promise we cannot keep,
+                  // so this says what we actually control on their plan.
+                  "Cart and pre-checkout flows you control, with Shopify's own checkout kept",
                   "90+ PageSpeed handover target",
                   "Unique brand experience",
                   "Refund terms stated in the written scope",
