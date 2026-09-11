@@ -13,9 +13,20 @@ export type ComparisonMetric = {
   icon: LucideIcon;
 };
 
-export type SavingsLine = {
+/**
+ * One line of the buyer's own running costs.
+ *
+ * `amount` used to hold an invented annual figure. Five of them under a
+ * "what this mess costs you every year" banner still summed to a universal
+ * total even after the total itself was replaced, so the claim the audit
+ * asked us to drop survived by addition. It now holds the place the buyer
+ * reads their real number from, which is the only figure that can be
+ * defended and the only one worth comparing a quote against.
+ */
+export type CostLine = {
   label: string;
-  amount: string;
+  /** Where this number lives in the buyer's own billing, kept short. */
+  source: string;
 };
 
 type Props = {
@@ -36,10 +47,12 @@ type Props = {
   /** Short "Us" column header — always "Custom" unless overridden. */
   usLabel?: string;
   metrics: ComparisonMetric[];
-  /** Itemized savings lines. */
-  savingsLines: SavingsLine[];
-  /** Total per year savings number, e.g. "$12,600". */
-  totalPerYear: string;
+  /** The running-cost lines the buyer should total from their own billing. */
+  costLines: CostLine[];
+  /** Heading of the running-cost panel. */
+  costsTitle: string;
+  /** One line under it saying what to do with the list. */
+  costsSubtitle: string;
   /** Optional: pre-click handler for the "Calculate Savings" button. */
   onOpenQuote?: () => void;
 };
@@ -54,8 +67,9 @@ export default function PlatformKillerChart({
   themLabel,
   usLabel = "Custom",
   metrics,
-  savingsLines,
-  totalPerYear,
+  costLines,
+  costsTitle,
+  costsSubtitle,
   onOpenQuote,
 }: Props) {
   return (
@@ -129,20 +143,17 @@ export default function PlatformKillerChart({
                   viewport={{ once: true }}
                   className="rounded-2xl bg-white border border-stone-200 shadow-card overflow-hidden"
                 >
-                  {/* Big dollar number at the top */}
+                  {/* The panel used to lead with a large annual number. It read
+                      "Measured per store/yr" once the invented total was removed,
+                      because the "/yr" suffix was hardcoded beside the prop. */}
                   <div className="px-5 md:px-6 py-5 bg-linear-to-br from-emerald-600 to-green-700 text-white">
-                    <div className="flex items-center justify-between gap-4">
-                      <div>
-                        <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white mb-1">Your Potential Savings</p>
-                        <p className="text-sm text-white/90 font-medium italic">what this mess costs you every year.</p>
-                      </div>
-                      <p className="text-3xl md:text-4xl font-black tracking-tight leading-none text-white">{totalPerYear}<span className="text-sm text-white/80 font-semibold">/yr</span></p>
-                    </div>
+                    <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-white mb-1">{costsTitle}</p>
+                    <p className="text-sm text-white/90 font-medium leading-relaxed">{costsSubtitle}</p>
                   </div>
 
                   {/* Itemized breakdown */}
                   <div className="divide-y divide-stone-100">
-                    {savingsLines.map((line, i) => (
+                    {costLines.map((line, i) => (
                       <motion.div
                         key={line.label}
                         initial={{ opacity: 0 }}
@@ -151,8 +162,8 @@ export default function PlatformKillerChart({
                         transition={{ delay: i * 0.05 }}
                         className="flex items-center justify-between px-5 md:px-6 py-2.5 text-xs md:text-sm"
                       >
-                        <span className="text-charcoal font-medium truncate pr-2">{line.label}</span>
-                        <span className="text-red-500 font-bold whitespace-nowrap tracking-tight">{line.amount}</span>
+                        <span className="text-charcoal font-medium pr-3">{line.label}</span>
+                        <span className="text-stone-600 whitespace-nowrap text-right">{line.source}</span>
                       </motion.div>
                     ))}
                   </div>

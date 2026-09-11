@@ -247,11 +247,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "My WooCommerce store has subscriptions / bookings / B2B pricing. Can you handle that?",
-      a: "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts, booking calendars: these are all custom logic we build natively. You won't need a $300/mo plugin to handle what we can build into the core of your store.",
+      a: "Yes. Subscriptions, recurring billing, tiered B2B pricing, volume discounts and booking calendars are built as part of the store rather than assembled from extensions. Whether that is cheaper than the extensions depends on your volume and on how many of them you actually use, so we price it against your current renewals rather than against a figure we picked. The reason most stores move is that these four things have to agree with each other, and separate extensions from separate vendors update on separate schedules.",
     },
     {
       q: "What about WooCommerce Subscriptions and my existing recurring billing?",
-      a: "We migrate every active subscription to Stripe Billing (native, no markup). Your subscribers keep their saved cards and billing date. We test that payments keep running and that saved cards still clear before we switch over. Stripe handles the dunning, the webhooks, the failed-card retries. You stop paying $199/month for WooCommerce Subscriptions.",
+      a: "We migrate every active subscription to Stripe Billing. Your subscribers keep their saved cards and billing date. We test that payments keep running and that saved cards still clear before we switch over, and Stripe handles the dunning, the webhooks and the failed-card retries. On cost, be careful of the comparison: WooCommerce Subscriptions is $279 a year as listed by WooCommerce in September 2026, while Stripe Billing is priced at 0.7% of billing volume on top of payment processing. That means the annual licence goes away and a percentage arrives in its place, and the two cross at roughly $40,000 of annual billing volume. Below that you save on this line, above it you do not, and the reason to move is the migration of subscribers and the control you get rather than the fee.",
     },
     {
       q: "Do I keep my Stripe account and saved customer cards?",

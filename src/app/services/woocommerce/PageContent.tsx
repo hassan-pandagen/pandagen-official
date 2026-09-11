@@ -96,8 +96,17 @@ export default function PageContent() {
         badge="What Your Plugin Vendor Won't Tell You"
         headline="You're paying for plugins that"
         headlineAccent="don't integrate."
-        description="You're paying $49/mo for a plugin to sync Stripe. There's a native API that does it for free. You're paying a subscriptions extension. Stripe handles subscriptions natively with zero markup. You're paying a spam-filtering plugin from your contact form. A 10-line reCAPTCHA does it."
-        descriptionSecondary="We replace your ACF fields, Yoast meta, WP Rocket caching, Perfmatters tweaks, and LiteSpeed cache layer with native Next.js equivalents. No plugin stack. No Kinsta bill. Every piece lives in your codebase. Nobody tells you this because recurring licensing is the norm across the extension market. We're the agency that builds what replaces them. No pitch. Just receipts."
+        /* Was: "$49/mo for a plugin to sync Stripe", "Stripe handles subscriptions
+           natively with zero markup". Neither survives checking. Stripe Billing is
+           priced at 0.7% of billing volume on top of payment processing, so moving
+           recurring billing to it changes the cost from a flat licence to a
+           percentage rather than removing it, and above roughly $40,000 of annual
+           billing volume it costs more than the WooCommerce extension it replaces. */
+        description="Some of what your extensions do, Stripe's own API already does, and a contact form does not need a paid spam plugin. That is worth checking before you renew. It is not the same as saying the cost disappears: Stripe Billing is priced at 0.7% of billing volume on top of processing, so recurring billing moves from a flat annual licence to a percentage of what you bill. Which one is cheaper depends on your volume, and we work it out with your numbers."
+        /* "No Kinsta bill" implied hosting became free, and LiteSpeed Cache is
+           free and open source, so listing it among the things a rebuild saves you
+           money on was never true. */
+        descriptionSecondary="Content fields, metadata, caching and performance tuning become part of the codebase rather than five separate extensions to license and keep compatible. Some of those extensions are free, so the honest gain there is one less thing to update, not a smaller bill. Hosting does not disappear either; it moves to a provider you pay directly. What changes is that every piece is in your repository and nothing on the list can be discontinued out from under you."
         comparisonTitle="WooCommerce vs Custom"
         themLabel="WooCommerce"
         metrics={[
@@ -108,15 +117,15 @@ export default function PageContent() {
           { metric: "Maintenance",   themLabel: "Plugin updates", usLabel: "Dependency updates",       themPct: 85, usPct: 5,  icon: Wrench },
           { metric: "Ownership",     themLabel: "Rented",    usLabel: "100% Yours", themPct: 30, usPct: 100, icon: Lock },
         ]}
-        savingsLines={[
-          { label: "WooCommerce Pro extensions",      amount: "$1,200" },
-          { label: "Stripe + PayPal sync plugins",    amount: "$480" },
-          { label: "WP hosting + PHP workers",        amount: "$1,440" },
-          { label: "Security + backup (Jetpack etc.)", amount: "$600" },
-          { label: "Dev retainer + plugin fixes",     amount: "$3,600" },
-          
+        costLines={[
+          { label: "WooCommerce extension renewals",   source: "Woo account" },
+          { label: "Payment and sync extensions",      source: "Woo account" },
+          { label: "Hosting and PHP workers",          source: "Host invoice" },
+          { label: "Security, backup and monitoring",  source: "Card statement" },
+          { label: "Developer retainer and fixes",     source: "Your own records" },
         ]}
-        totalPerYear="Measured per store"
+        costsTitle="What your store costs to run"
+        costsSubtitle="Add these up from your own billing. That number is what a rebuild has to beat, and it is the only one we will quote against."
       />
 
       {/* 2a. WHAT IS ACTUALLY EVIDENCED
@@ -441,7 +450,7 @@ export default function PageContent() {
           {/* Metaphor caption */}
           <p className="text-center text-sm text-stone-600 mt-6 max-w-2xl mx-auto leading-relaxed">
             <Unplug className="w-4 h-4 text-cognac inline-block mr-1 -mt-0.5" />
-            A tangle of interdependent plugins versus one self-contained custom codebase. We do not patch the web. We replace it.
+            Many separately licensed extensions, each with its own update and compatibility schedule, versus one codebase you own. Custom code still has dependencies, a hosting provider and integrations that can break. The difference is that they are in your repository, on your release schedule, and nobody can discontinue one.
           </p>
         </div>
       </section>
