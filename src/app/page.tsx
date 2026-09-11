@@ -77,6 +77,20 @@ const homeFaqs = [
     a: "No, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet."
   },
   {
+    // Added 11 Sep 2026 alongside the CustomFeatures section above. That section
+    // now makes two promises on this page, that features are built to the
+    // business's rules and that they carry no separate monthly licence, and the
+    // 10 Sep audit named the two questions a buyer asks straight afterwards.
+    // Both were unanswered anywhere on the site. A claim whose obvious follow-up
+    // is unanswered reads as a catch.
+    q: "If the features are built in, is every future feature included too?",
+    a: "No, and it would not be honest to imply it. Your quote lists the features being built, and those are fixed in price before work starts. Something new later is scoped and priced the same way, before anyone begins. What you do not pay for again is the thing you already bought: a calculator we built you keeps working, keeps being editable, and never arrives with a renewal notice or a price rise. The distinction that matters is between changing what an existing feature does, which is usually a setting you control, and adding a feature the site has never had, which is new work."
+  },
+  {
+    q: "Do I need your monthly plan to keep a custom feature working?",
+    a: "No. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers hosting, maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier."
+  },
+  {
     q: "Do you have a minimum project size?",
     a: "No. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.",
   },
