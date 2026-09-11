@@ -112,15 +112,15 @@ export default function PageContent() {
             { metric: "Ownership",    themLabel: "Rented",       usLabel: "100% Yours",   themPct: 30, usPct: 100, icon: Lock },
             { metric: "AI Search",    themLabel: "Invisible",    usLabel: "Optimized",    themPct: 15, usPct: 98, icon: Eye },
           ]}
-          savingsLines={[
-            { label: "Premium hosting (WP Engine etc.)", amount: "$1,200" },
-            { label: "Plugin licenses & renewals",       amount: "$960" },
-            { label: "Security & backup tools",          amount: "$600" },
-            { label: "Monthly maintenance retainer",     amount: "$2,400" },
-            { label: "Dev fixes & downtime incidents",   amount: "$2,400" },
-            
+          costLines={[
+            { label: "Managed WordPress hosting",       source: "Host invoice" },
+            { label: "Plugin licences and renewals",    source: "Renewal emails" },
+            { label: "Security and backup tools",       source: "Card statement" },
+            { label: "Maintenance retainer",            source: "Your agency" },
+            { label: "Developer fixes and downtime",    source: "Your own records" },
           ]}
-          totalPerYear="Measured per site"
+          costsTitle="What your site costs to run"
+          costsSubtitle="Add these up from your own billing. That number is what a rebuild has to beat, and it is the only one we will quote against."
         />
       </div>
 
