@@ -6,6 +6,7 @@ import {
   enforceAuditLeadRateLimit,
   enforceAuditRateLimit,
   enforceQuoteRateLimit,
+  FORM_GLOBAL_HOURLY_LIMIT,
   hashedAuditClientIdentifier,
   releaseQuoteSubmission,
   resetAuditRateLimitMemoryForTests,
@@ -30,44 +31,52 @@ function preserveEnvironment(names) {
   };
 }
 
-test('production fails closed when no durable limiter is configured', async () => {
+// Production with no Redis DEGRADES to the in-memory limiter rather than throwing.
+// This assertion was inverted on 2026-09-08 for a reason recorded in auditRateLimit.ts:
+// the throwing version returned 503 on both lead-capture paths for the entire period it
+// shipped, because Redis was never configured. The property worth testing is that the
+// endpoint still limits, not that it refuses to serve.
+test('production degrades to the in-memory limiter instead of refusing to serve', async () => {
   const names = ['NODE_ENV', 'AUDIT_RATE_LIMIT_MODE', ...redisVariables];
   const restore = preserveEnvironment(names);
 
   try {
+    // reset before switching: the helper refuses to run in production by design
+    resetAuditRateLimitMemoryForTests();
     process.env.NODE_ENV = 'production';
     delete process.env.AUDIT_RATE_LIMIT_MODE;
     redisVariables.forEach((name) => delete process.env[name]);
 
-    await assert.rejects(
-      enforceAuditRateLimit(
-        { headers: { get: () => null } },
-        new URL('https://example.com/'),
-      ),
-      AuditRateLimitConfigurationError,
+    const result = await enforceAuditRateLimit(
+      { headers: { get: () => null } },
+      new URL('https://example.com/'),
     );
+    assert.equal(result.allowed, true, 'a configured-but-undurable limiter still serves');
   } finally {
+    process.env.NODE_ENV = 'development';
+    resetAuditRateLimitMemoryForTests();
     restore();
   }
 });
 
-test('production rejects an explicit in-memory limiter', async () => {
+test('production accepts an explicit in-memory limiter', async () => {
   const names = ['NODE_ENV', 'AUDIT_RATE_LIMIT_MODE', ...redisVariables];
   const restore = preserveEnvironment(names);
 
   try {
+    resetAuditRateLimitMemoryForTests();
     process.env.NODE_ENV = 'production';
     process.env.AUDIT_RATE_LIMIT_MODE = 'memory';
     redisVariables.forEach((name) => delete process.env[name]);
 
-    await assert.rejects(
-      enforceAuditRateLimit(
-        { headers: { get: () => null } },
-        new URL('https://example.com/'),
-      ),
-      AuditRateLimitConfigurationError,
+    const result = await enforceAuditRateLimit(
+      { headers: { get: () => null } },
+      new URL('https://example.com/'),
     );
+    assert.equal(result.allowed, true, 'AUDIT_RATE_LIMIT_MODE=memory is a supported production choice');
   } finally {
+    process.env.NODE_ENV = 'development';
+    resetAuditRateLimitMemoryForTests();
     restore();
   }
 });
@@ -96,12 +105,21 @@ test('lead limits hash client identifiers and enforce client and global budgets'
     assert.equal(clientBlocked.allowed, false);
     assert.equal(clientBlocked.blockedBy, 'client');
 
+    // Derived from the module constant on purpose. This loop hardcoded 100 while the
+    // budget was 50, so it asserted nothing except that the number had not changed.
     resetAuditRateLimitMemoryForTests();
-    for (let index = 0; index < 100; index += 1) {
+    for (let index = 0; index < FORM_GLOBAL_HOURLY_LIMIT; index += 1) {
+      const octet = index + 1;
       const uniqueRequest = {
-        headers: new Headers({ 'x-forwarded-for': `198.51.100.${index + 1}` }),
+        headers: new Headers({
+          'x-forwarded-for': `198.51.${Math.floor(octet / 254)}.${(octet % 254) + 1}`,
+        }),
       };
-      assert.equal((await enforceAuditLeadRateLimit(uniqueRequest)).allowed, true);
+      assert.equal(
+        (await enforceAuditLeadRateLimit(uniqueRequest)).allowed,
+        true,
+        `client ${octet} of ${FORM_GLOBAL_HOURLY_LIMIT} should be inside the global budget`,
+      );
     }
     const globalBlocked = await enforceAuditLeadRateLimit({
       headers: new Headers({ 'x-forwarded-for': '203.0.113.250' }),
@@ -151,7 +169,7 @@ test('production trusts only the Vercel-managed forwarding header on Vercel', ()
   }
 });
 
-test('quote limits fail closed in production and enforce the development client budget', async () => {
+test('quote limits stay available in production and enforce the development client budget', async () => {
   const names = [
     'NODE_ENV',
     'AUDIT_RATE_LIMIT_MODE',
@@ -160,12 +178,14 @@ test('quote limits fail closed in production and enforce the development client 
   ];
   const restore = preserveEnvironment(names);
   try {
+    resetAuditRateLimitMemoryForTests();
     process.env.NODE_ENV = 'production';
     delete process.env.AUDIT_RATE_LIMIT_MODE;
     delete process.env.AUDIT_RATE_LIMIT_SECRET;
     redisVariables.forEach((name) => delete process.env[name]);
     const request = { headers: new Headers({ 'x-forwarded-for': '198.51.100.20' }) };
-    await assert.rejects(enforceQuoteRateLimit(request), AuditRateLimitConfigurationError);
+    const degraded = await enforceQuoteRateLimit(request);
+    assert.equal(degraded.allowed, true, 'quote capture stays available without Redis');
 
     process.env.NODE_ENV = 'development';
     process.env.AUDIT_RATE_LIMIT_MODE = 'memory';

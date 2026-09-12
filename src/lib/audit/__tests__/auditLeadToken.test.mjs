@@ -132,7 +132,11 @@ test('a claimed token can be restored after a delivery failure', async () => {
   }
 });
 
-test('production token issuance fails closed without Redis and a secret', async () => {
+// Token issuance follows the same deliberate degradation as the limiter: getAuditBackend()
+// is selectMode(), which as of 2026-09-08 falls back to in-memory rather than throwing.
+// The security property that still holds is the sibling test below -- a missing hashing
+// secret DOES still fail closed, because that one cannot be degraded safely.
+test('production token issuance degrades to in-memory when Redis is absent', async () => {
   const names = [
     'NODE_ENV',
     'AUDIT_RATE_LIMIT_MODE',
@@ -146,10 +150,8 @@ test('production token issuance fails closed without Redis and a secret', async 
     delete process.env.AUDIT_RATE_LIMIT_SECRET;
     redisVariables.forEach((name) => delete process.env[name]);
 
-    await assert.rejects(
-      issueAuditLeadToken('https://example.com/', auditResult()),
-      AuditRateLimitConfigurationError
-    );
+    const token = await issueAuditLeadToken('https://example.com/', auditResult());
+    assert.ok(token, 'lead capture stays available without a durable token store');
   } finally {
     process.env.NODE_ENV = 'development';
     resetAuditLeadTokenMemoryForTests();
@@ -157,7 +159,7 @@ test('production token issuance fails closed without Redis and a secret', async 
   }
 });
 
-test('production token issuance also fails closed when Redis exists but the hashing secret is absent', async () => {
+test('production token issuance still fails closed when Redis exists but the hashing secret is absent', async () => {
   const names = [
     'NODE_ENV',
     'AUDIT_RATE_LIMIT_MODE',
