@@ -35,7 +35,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "Can you replace Shopify with a custom coded e-commerce store?",
-        answer: "Yes. We replaced WordPress + WooCommerce entirely for Panda Patches with a custom Next.js storefront. The store has scaled from $38K to about $50K/month with zero platform fees, compared to Shopify's $79 to $299/month plus transaction fees. You own 100% of the code.",
+        answer: "Yes, but this project is not the evidence for it. Panda Patches ran on WordPress and WooCommerce and was never on Shopify, so it shows we can replace a hosted commerce stack with a custom Next.js storefront — not that we have moved a store off Shopify. What transfers is the method: we rebuilt the storefront, checkout and pricing engine on Sanity, Supabase and Square, and the store now runs with no platform plan fee. For an actual Shopify store there are two different jobs with very different costs: a headless storefront that keeps Shopify running products, orders and payments, or a full replacement of commerce as well. We scope those separately. Panda Patches is founder-affiliated, not an independent client engagement. You own 100% of the code.",
     },
     {
         question: "How does a real-time pricing calculator work without API calls?",

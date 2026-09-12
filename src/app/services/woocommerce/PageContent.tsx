@@ -197,14 +197,17 @@ export default function PageContent() {
               </div>
             </div>
 
-            {/* Quote 2: Independent study - 30 plugins average */}
+            {/* Quote 2: Studio Wombat's own-customer study - 30 plugins average. NOT independent: the
+                sample is drawn from their plugin customer database, so every site had already bought a
+                plugin. Verified 13 Sep 2026: the published write-up states 15,000 sites; the Reddit
+                comment quoted here says 10,000. Quote kept verbatim, characterisation corrected. */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
                 I tested 10,000 WooCommerce stores and found they use on average 30 plugins. I think a lot of stores can do a lot with just a handful of Woo plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/beloved-wombat</strong> · r/woocommerce · Apr 16, 2026 · independent 10K-store study</span>
+                <span><strong className="text-charcoal">u/beloved-wombat</strong> · r/woocommerce · Apr 16, 2026 · Studio Wombat scrape. Not independent: the sample comes from their own plugin-customer database, so every site had already bought at least one plugin, which pushes a plugin-count average up. Their published write-up states 15,000 sites; the comment above says 10,000</span>
                 <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/oh9orf3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -239,7 +242,7 @@ export default function PageContent() {
           <div className="mt-8 p-6 bg-charcoal text-white rounded-2xl text-center">
             <p className="text-lg font-bold mb-2">When the WooCommerce Core team lead publicly admits the problem, you know it is structural.</p>
             <p className="text-stone-400 text-sm mb-4 max-w-2xl mx-auto">
-              30 plugins on average per store. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a demonstrated supply-chain attack surface; see our dated write-up of the April 2026 incident for the sourced figures. A custom Next.js store has no plugin layer, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with a Shopify, BigCommerce, or Sanity backend, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.
+              Around 30 plugins per store among sites that already buy plugins, which is where that figure is measured. Plugin fatigue. Fear of updating. Performance bottlenecks. Plus a demonstrated supply-chain attack surface; see our dated write-up of the April 2026 incident for the sourced figures. A custom Next.js store has no plugin layer, no auto-update channel an attacker can hijack, and no PHP execution. We migrate WooCommerce stores to headless Next.js with a Shopify, BigCommerce, or Sanity backend, with a 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs before handover.
             </p>
             <a href="#pricing" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
               See Migration Pricing →

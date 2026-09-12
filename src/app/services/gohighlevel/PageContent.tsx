@@ -422,7 +422,7 @@ export default function PageContent() {
               "Your funnels, calendars, forms and webhooks inventoried before anything is built",
               "Leads posting straight into your GHL forms, calendar or automations, with no third-party form app",
               "Your GoHighLevel account left untouched, so contacts, pipelines and workflows stay where they are",
-              "Every page tested three times for 90 or better on Google's PageSpeed test, phone and desktop",
+              "Named representative pages tested three times for 90 or better on Lighthouse, phone and desktop",
             ],
             cta: "Get your migration plan",
           },

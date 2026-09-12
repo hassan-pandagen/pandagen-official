@@ -460,12 +460,13 @@ export default function SpendingMoreOnAdsTrackingPage() {
                         &ldquo;Script tags were sunset on those pages on August 28, 2025 for Plus stores, and are sunset
                         for non-Plus stores on August 26, 2026.&rdquo;
                     </BlogText>
-                    <InsightBox variant="warning" label="Time-critical: sunset dated August 26, 2026">
-                        That non-Plus date is <strong>August 26, 2026</strong>. If any of your Meta, Google or analytics measurement still runs
-                        through a script tag on the Thank you or Order status pages, it stops working on that date and
-                        nothing at your business will have changed to explain it. Open Shopify admin, check what is
-                        still installed on those pages, and move it before the deadline rather than diagnosing a drop
-                        in September.
+                    <InsightBox variant="warning" label="This sunset happened on 26 August 2026">
+                        That non-Plus date was <strong>26 August 2026</strong> and it has passed. If any of your Meta,
+                        Google or analytics measurement still ran through a script tag on the Thank you or Order status
+                        pages, it has already stopped, and nothing at your business will have changed to explain it.
+                        That makes this the first thing to rule out if your numbers moved in September: open Shopify
+                        admin, check what is still installed on those pages, and move it now rather than spending the
+                        week diagnosing a platform change as a campaign problem.
                     </InsightBox>
                     <BlogText>
                         This is not an argument that tracking apps are bad. Most of them do what they say. It is an

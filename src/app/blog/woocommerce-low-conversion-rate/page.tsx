@@ -212,10 +212,13 @@ export default function WooCommerceLowConversionRatePage() {
                         your attention before you compare your store to any of them.
                     </BlogText>
                     <BlogText>
-                        The most-quoted figure in this category is 2.66%, usually credited to Dynamic Yield. Its
-                        benchmark page is live and{" "}
-                        <BlogHighlight>currently renders every value as a blank or a zero</BlogHighlight>, reading
-                        &ldquo;The average eCommerce conversion rate globally is 0%&rdquo;. Adobe&apos;s widely repeated
+                        The most-quoted figure in this category is 2.66%, usually credited to Dynamic Yield and repeated
+                        by Shopify, ConvertCart and most benchmark round-ups. Re-read on 13 September 2026,{" "}
+                        <a href="https://marketing.dynamicyield.com/benchmarks/" target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Dynamic Yield&apos;s benchmark page</a>{" "}
+                        <BlogHighlight>publishes industry cuts but no single global average at all</BlogHighlight> — it
+                        gives Pet Care and Veterinary Services at 7.68% and Luxury and Jewelry at 0.72% for July, and
+                        nothing aggregate. So the number everyone attributes to Dynamic Yield is not currently on
+                        Dynamic Yield&apos;s own page. Adobe&apos;s widely repeated
                         3.65% is sourced to &ldquo;the latest research&rdquo; with no study named, no sample, no
                         denominator, and no date on the page. Statista&apos;s table and its own prose disagree with each
                         other by a tenth of a point, and Statista is quoting Salesforce, whose figure sits inside a

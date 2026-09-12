@@ -35,7 +35,9 @@
     "url": "https://w3techs.com/technologies/history_overview/content_management/ms/y",
     "method": "Share of the top 10 million websites, among sites whose content management system is identified. Surveyed by W3Techs; readings are taken 1 January of each year, plus a current reading.",
     "limitation": "Identification is by detectable signature, so sites that hide or strip their CMS fingerprint are absent. Share of existing sites is not share of new builds, and the top 10 million skews toward established sites.",
-    "verifiedAt": "2026-08-15"
+    "currency": "W3Techs updates continuously, so the 2026-08 column is a dated reading and not a live figure. Spot-checked 13 September 2026: WordPress read 58.8% of known-CMS sites and 40.3% of all websites, against 59.0% in the 2026-08 column here. Re-read before quoting the current number.",
+ "verifiedAt": "2026-08-15",
+ "spotCheckedAt": "2026-09-13"
   },
   "periods": [
     "2015-01", "2016-01", "2017-01", "2018-01", "2019-01", "2020-01",

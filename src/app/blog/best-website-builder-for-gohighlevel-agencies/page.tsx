@@ -226,7 +226,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                         Landing-page experience can affect campaign outcomes, but there is no universal cost reduction attached to one load-time change. Record field <Link href="/blog/core-web-vitals-explained" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Core Web Vitals</Link> where available, repeat Lighthouse runs under named conditions, and compare ad metrics before and after while noting other campaign changes.
                     </BlogText>
                     <BlogText>
-                        If a 90-plus speed score matters, get it into your written quote: which pages, on phone and desktop, passing three times each. Ours is written in that way. Anyone who will not name the pages and the profile. Do not assign a score ceiling to a platform without a dated sample of comparable URLs and test conditions.
+                        If a 90-plus speed score matters, get it into your written quote: which pages, on phone and desktop, passing three times each. Ours is written in that way. Treat it as a warning sign if a supplier will not name the pages and the device profile they are testing. And do not assign a score ceiling to a platform without a dated sample of comparable URLs and test conditions.
                     </BlogText>
 
                     <h3 id="native-ghl-api-integration" className="text-xl font-bold text-charcoal mt-6 mb-3">Native GHL API and Webhook Integration</h3>
@@ -306,7 +306,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
 
                     <BlogHeader id="ghl-native">GoHighLevel Native Builder for Lead-Gen and Automation Agencies</BlogHeader>
                     <BlogText>
-                        HighLevel&apos;s public pricing page lists the Website &amp; Funnel Builder among core features. Reread on August 2, 2026, the public plan prices are unchanged at $97 Starter, $297 Unlimited and $497 Agency Pro per month, with a 14-day free trial on any plan and a monthly-or-annual toggle. Add-ons and usage are billed separately and are covered below. Confirm the required plan and in-app billing before quoting a client.
+                        HighLevel&apos;s public pricing page lists the Website &amp; Funnel Builder among core features. Rechecked on September 12, 2026, the public plan prices are unchanged at $97 Starter, $297 Unlimited and $497 Agency Pro per month, with a 14-day free trial on any plan and a monthly-or-annual toggle. Annual billing is listed at $970, $2,970 and $4,970. Add-ons and usage are billed separately and are covered below. Confirm the required plan and in-app billing before quoting a client.
                     </BlogText>
 
                     <h3 id="ghl-strengths" className="text-xl font-bold text-charcoal mt-6 mb-3">Strengths Inside the GHL Ecosystem</h3>

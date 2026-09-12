@@ -89,6 +89,7 @@ Run these before delivering any prose:
 - Three consecutive sentences match length? Break one.
 - Paragraph ends with a punchy one-liner? Vary it.
 - Em dash anywhere? Remove it. Use a comma or period or a parenthetical.
+  (For rhythm, not as evidence: dash use is model-dependent. See grammatical-signals.md.)
 - Vague declarative ("The implications are significant")? Name the specific implication.
 - Any sentence starting with What/When/Where/Which/Who/Why/How as a crutch? Restructure.
 - Meta-joiners ("The rest of this essay...")? Delete.
@@ -97,6 +98,11 @@ Run these before delivering any prose:
 - "Despite these challenges..." formula? Rewrite.
 - Bold-first bullet pattern? Remove bold leads.
 - Tricolon (three-item list)? Use two items or one.
+- More than one "-ing" clause per paragraph? Split them into sentences. Check each one
+  is not smuggling in an unproven cause.
+- "-tion/-ment/-ance" noun where a verb works? Use the verb.
+- Paired near-synonyms ("clear and transparent")? Delete one.
+- Same thing called by three different names? Repeat the correct noun instead.
 - A paragraph explaining what the evidence just meant? Cut it, or cut the evidence.
 - Vague referent where a name, version or date belongs? Name it.
 - Does the piece address the reader as "you" anywhere? If not, ask why not.
@@ -125,6 +131,7 @@ Consult these for detailed catalogs when writing or editing:
 - [references/tropes.md](references/tropes.md): Full catalog of AI writing tropes (word choice, sentence structure, paragraph structure, tone, formatting, composition)
 - [references/examples.md](references/examples.md): Before/after transformations showing how to fix common patterns
 - [references/structural-signals.md](references/structural-signals.md): The layer under the style. Measured differences that survive a style edit (StoryScope, COLM 2026), marked as transfers / fiction-only / inferred
+- [references/grammatical-signals.md](references/grammatical-signals.md): The non-fiction counterpart. Measured grammatical distributions (PNAS 2025, ACL 2025) — participial clauses, nominalizations, phrasal coordination, elegant variation — plus what is NOT a tell, and why detector scores are never cited
 
 ## Examples
 

@@ -286,13 +286,14 @@ export default function WebflowTrueCostPage() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        Two features hide inside those plan tiers and both change a migration budget. <strong>Code export
-                        requires Core</strong>, so $19/mo is the floor for getting your own markup out. And{" "}
-                        <strong>301 redirects are a Growth feature</strong>, which means the plan that lets you preserve
-                        search traffic when URLs change is $49/mo, not $19. If you are moving a site into Webflow and
-                        mapping old URLs, price Growth from the start rather than discovering it at cutover. Growth also
-                        carries site-level roles, publishing permissions and password protection, which is usually what
-                        an agency actually needs rather than more staging.
+                        One feature hides inside those plan tiers, and one widely repeated claim about them is wrong.
+                        <strong>Code export requires Core</strong>, so $19/mo is the floor for getting your own markup
+                        out. But <strong>301 redirects are not a Growth feature</strong>, and we had that wrong here
+                        until we checked it. Webflow&apos;s own documentation is explicit: redirects need a paid Site
+                        plan, or a Workspace on a paid Workspace plan. If you are publishing the site at all you are
+                        already on a paid Site plan, so redirects come with it and there is no extra $49/mo to preserve
+                        search traffic when URLs change. Budget Growth for what it genuinely adds, site-level roles,
+                        publishing permissions and password protection, rather than for the ability to redirect.
                     </BlogText>
                     <BlogText>
                         The arithmetic that catches teams: a five-person marketing team on Growth is $49 plus four

@@ -215,7 +215,7 @@ export default function CloudflareEmDashPage() {
                         </h1>
 
                         <p className="mb-6 text-xl leading-relaxed text-stone-600">
-                            Cloudflare calls EmDash the spiritual successor to WordPress. The project is real, open source, and ambitious. It is also a beta preview. Here is the evidence-based way to compare EmDash, WordPress, and a custom rebuild without treating a launch announcement as a migration order. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Cloudflare calls EmDash the spiritual successor to WordPress. The project is real, open source, and ambitious. It is also still a pre-1.0 preview, though that is closer to changing than it was when we first wrote this: on 26 August 2026 Cloudflare said a version 1.0 release is coming, after running EmDash on its own high-traffic blog. Coming is not shipped, and dogfooding one blog is not the same as a plugin ecosystem, so the advice below has not changed. Re-check the release status before you act on any of it. Here is the evidence-based way to compare EmDash, WordPress, and a custom rebuild without treating a launch announcement as a migration order. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
 
                         <BlogAuthor

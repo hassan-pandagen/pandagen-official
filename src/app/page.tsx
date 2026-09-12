@@ -96,7 +96,7 @@ const homeFaqs = [
   },
   {
     q: "How much does WordPress to Next.js migration cost?",
-    a: "From $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. No monthly plugin fees, and you own the code. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+    a: "From $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
   },
   {
     q: "How does the free AI website audit work?",
@@ -104,7 +104,7 @@ const homeFaqs = [
   },
   {
     q: "How much faster will my site be after migrating from WordPress or Shopify?",
-    a: "Most WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and every page we hand over scores 90 or better on Google's PageSpeed test on phone and desktop. We test three times and show you the results. Your real-world speed also depends on your traffic and anything added to the site later, so we keep measuring it rather than promise a number.",
+    a: "Most WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.",
   },
   {
     q: "Do you work with Shopify stores?",
@@ -276,7 +276,7 @@ export default function Home() {
       <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Google&apos;s PageSpeed test on phone and desktop. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
+            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
           </p>
         </div>
       </section>

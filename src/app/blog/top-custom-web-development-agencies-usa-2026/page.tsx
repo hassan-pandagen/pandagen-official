@@ -245,9 +245,11 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogQuote>
                         I tested 10,000 WooCommerce stores and found they use on average 30 plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/beloved-wombat</strong> (independent 10K-store study) · r/woocommerce · Apr 16, 2026 · <a href="https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/beloved-wombat</strong> (Studio Wombat, 15,000-site scrape, Apr 2026) · r/woocommerce · Apr 16, 2026 · Read the selection effect before you use the number: Studio Wombat sells WooCommerce plugins and drew the sample from its own customer database, so every site in it had already bought at least one plugin. That biases a plugin-count average upward and it is not an independent study of WooCommerce stores generally · <a href="https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <InsightBox variant="warning" label="Commercial disclosure">
+                        Every company below is described from its own public pages, read on 13 September 2026.
+                        Positioning changes, so check each site on the day you shortlist.
                         PandaCodeGen publishes this article, sells web-development services, and appears in the
                         shortlist. We do not rank ourselves first or claim independent superiority. Agencies are listed first in alphabetical order, then the two talent marketplaces, because they are different things to buy. Position within each group carries no ranking, and no placement was purchased.
                     </InsightBox>

@@ -103,7 +103,7 @@ export const COMMERCIAL: readonly Fact[] = [
     { label: 'None of these fit', value: `If none of these match what you have, call ${PHONE.display} or email info@pandacodegen.com and we will quote it.` },
     { label: 'Payment structure', value: 'A common starting structure is 30 percent at onboarding and 70 percent at the delivery milestone. The accepted project terms control each engagement.' },
     { label: 'Refunds', value: 'Refund protection is tied to failure to deliver the signed scope, not a general change-of-mind promise. Timing, exceptions and ownership consequences are documented before work begins.' },
-    { label: 'Performance acceptance', value: 'A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise.' },
+    { label: 'Performance acceptance', value: 'A 90+ Lighthouse handover target on mobile and desktop for the representative pages named in the written scope, verified across three recorded runs before handover. It is a lab acceptance target, not a ranking, traffic, or revenue promise. Field data in the Chrome User Experience Report is measured from real visitors over 28 days and depends on their devices, networks and anything added after handover, so it is measured with the client rather than promised.' },
     { label: 'Ownership on handover', value: 'Source code, design files, CMS models, documentation and production accounts are transferred to or created under client control.' },
 ];
 

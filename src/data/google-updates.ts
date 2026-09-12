@@ -4,7 +4,7 @@
  * Source of truth, and the ONLY acceptable source for this file:
  *   https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history
  *
- * Transcribed 8 Aug 2026, re-read 19 Aug 2026. Names, start dates and durations are copied verbatim
+ * Transcribed 8 Aug 2026, re-read 19 Aug 2026, re-read 13 Sep 2026 (the August spam update had completed at 2 days, 16 hours; it was still showing as rolling out). Names, start dates and durations are copied verbatim
  * from Google's own history table -- not from SEO news coverage, which routinely
  * reports rollout dates that Google never stated. If you update this file, read
  * the dashboard again rather than trusting a secondary report.
@@ -37,7 +37,7 @@ export interface GoogleUpdate {
 
 export const GOOGLE_UPDATES: readonly GoogleUpdate[] = [
     // 2026
-    { name: 'August 2026 spam update', start: '2026-08-18', duration: 'still rolling out', days: 0, kind: 'spam', inProgress: true },
+    { name: 'August 2026 spam update', start: '2026-08-18', duration: '2 days, 16 hours', days: 2 + 16 / 24, kind: 'spam' },
     { name: 'June 2026 spam update', start: '2026-06-24', duration: '2 days, 1 hour', days: 2 + 1 / 24, kind: 'spam' },
     { name: 'May 2026 core update', start: '2026-05-21', duration: '11 days, 21 hours', days: 11 + 21 / 24, kind: 'core' },
     { name: 'March 2026 core update', start: '2026-03-27', duration: '12 days, 4 hours', days: 12 + 4 / 24, kind: 'core' },
@@ -92,7 +92,7 @@ export const GOOGLE_UPDATES: readonly GoogleUpdate[] = [
 
 /** The dashboard's own earliest entry, so the page can state its coverage window. */
 export const REGISTER_START = 'November 2021';
-export const REGISTER_UPDATED = '19 August 2026';
+export const REGISTER_UPDATED = '13 September 2026';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 

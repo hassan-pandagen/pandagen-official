@@ -337,9 +337,9 @@
     "irp-conversion-rate-jul-2026": {
       "vendor": "IRP Commerce",
       "label": "All Ecommerce Markets conversion rate, July 2026",
-      "value": "2.22%",
-      "qualifier": "Transactions divided by sessions, calculated from live trading data on IRP's own platform. B2C only, Great Britain, Northern Ireland and Ireland. Merchant count is withheld for confidentiality. This is not a global average and does not describe your store",
-      "verifiedAt": "2026-08-25",
+      "value": "2.26%",
+      "qualifier": "Transactions divided by sessions, calculated from live trading data on IRP's own platform. B2C only, Great Britain, Northern Ireland and Ireland. Merchant count is withheld for confidentiality. This is not a global average and does not describe your store. IRP revises published months, so re-read before quoting: this figure read 2.22% on 25 August 2026 and 2.26% on 13 September 2026 for the same month",
+      "verifiedAt": "2026-09-13",
       "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
     },
     "irp-conversion-spread-jul-2026": {
@@ -347,7 +347,7 @@
       "label": "Sector spread within a single month, July 2026",
       "value": "0.55% to 5.23%",
       "qualifier": "Baby and Child at the low end, Arts and Crafts at the high end. Same month, same platform, same definition, a 9.5x range",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-09-13",
       "source": "https://www.irpcommerce.com/en/gb/ecommercemarketdata.aspx"
     },
     "statista-global-conversion-q2-2026": {
@@ -363,7 +363,7 @@
       "label": "Returning against new visitor conversion",
       "value": "2.9% against 1.7%",
       "qualifier": "From 99 billion sessions across 6,000+ sites, Q4 2024 to Q4 2025, published March 2026. Contentsquare publishes no single overall ecommerce conversion figure",
-      "verifiedAt": "2026-08-25",
+      "verifiedAt": "2026-09-13",
       "source": "https://contentsquare.com/guides/digital-experience-benchmark/conversions/"
     },
     "wp-saml-cve-15981": {

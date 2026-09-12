@@ -165,7 +165,7 @@ export default function WordPressVsNextJsPage() {
                     <BlogQuote>
                         We are operating at a level of collective delusion that is quite impressive. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
                         CMS should just generate a static HTML + CSS ONCE and then just let the server serve it, instead of hammering the DB every single time — unless someone installed enough caching plugins to fix this.
                     </BlogQuote>
@@ -245,16 +245,17 @@ export default function WordPressVsNextJsPage() {
                         <BlogText>
                             No, and we build in Next.js, so take that as evidence rather than modesty.{" "}
                             <a href="https://w3techs.com/technologies/details/cm-wordpress" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">W3Techs</a>{" "}
-                            reported in <strong>August 2026</strong> that WordPress is used by{" "}
-                            <strong>41.2% of all websites</strong>, and by <strong>59.1% of websites whose content
-                            management system is known</strong>. A platform running two-fifths of the web is not
+                            reported on <strong>12 September 2026</strong> that WordPress is used by{" "}
+                            <strong>40.3% of all websites</strong>, and by <strong>58.8% of websites whose content
+                            management system is known</strong>. Both figures move: they read 41.2% and 59.1% in
+                            August 2026, so re-read them rather than quoting this sentence. A platform running two-fifths of the web is not
                             obsolete, and any argument that starts by assuming it is has skipped the part where you
                             check.
                         </BlogText>
                     </div>
                     <BlogText>
                         Those two percentages are the ones most often confused, including by summaries of this
-                        question. <strong>41.2% is the share of every site on the web. 59.1% is the share of sites
+                        question. <strong>40.3% is the share of every site on the web. 58.8% is the share of sites
                         where a CMS could be detected at all.</strong> Quoting the second as though it were the first
                         overstates WordPress by half, and quoting a rounded &quot;43% of the web&quot; — as several
                         widely-repeated answers currently do — is not the figure W3Techs publishes. If you cite a

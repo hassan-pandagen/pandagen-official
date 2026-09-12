@@ -340,7 +340,7 @@ export default function WooCommerceTooSlowPage() {
                         candidates do exist. What neither does is convert uploads to WebP or AVIF, or enforce an upload
                         size limit. Upload a full-resolution DSLR product photo and the largest candidate mobile
                         browsers can pick is still very close to it.
-                        Google reports WebP as roughly 25 to 34% smaller than comparable JPEG; AVIF is typically smaller
+                        Google reports WebP lossy images as 25 to 34% smaller than comparable JPEG at equivalent SSIM quality index, which is the qualifier that makes the number meaningful: it is a saving at matched quality, not a free one. AVIF is typically smaller
                         again. On a product page carrying eight unoptimized photos, that difference is the gap between a
                         page that renders quickly on mobile data and one that does not.
                     </BlogText>

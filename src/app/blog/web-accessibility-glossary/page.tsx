@@ -901,7 +901,7 @@ export default function WebAccessibilityGlossaryPage() {
                                     with that input. A placeholder is not a label.
                                 </BlogHighlight>{" "}
                                 It disappears the moment somebody types, it is frequently rendered in grey too light to
-                                read, and it is not reliably announced. Missing form input labels appeared on 52.8% of
+                                read, and it is not reliably announced. Missing form input labels appeared on 51% of
                                 home pages in the 2026 data, which is remarkable given how many of those home pages
                                 carry only a search box or a newsletter signup.{" "}
                                 <BlogHighlight>Why it matters:</BlogHighlight> visible labels help everyone. This is one

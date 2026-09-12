@@ -160,7 +160,7 @@ export default function WordPressCostPage() {
                     <BlogQuote>
                         We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress founder) · Internal Slack post · Apr 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · Internal Slack post · Apr 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
                         The dictator, who micromanaged the project for two decades, says community is to blame for the results.
                     </BlogQuote>

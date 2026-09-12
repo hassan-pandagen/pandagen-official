@@ -291,8 +291,13 @@ export default function NextjsSanityStackPage() {
                         The moderation model is worth noting because it is a content-modeling decision rather than a
                         feature. Five of the seven document types are user-submitted (testimonies, questions,
                         comments, messages and reports) and each carries a status field, so nothing a visitor
-                        submits is publicly readable until it is approved in the Studio. That is enforced in the queries
-                        rather than by a plugin, which is the difference between a workflow and a setting.
+                        submits <em>appears on the site</em> until it is approved in the Studio. Be precise about what
+                        that does and does not mean, because we were not precise enough here before. The filter controls
+                        what the site renders; it is not access control. Sanity&apos;s own guidance says a filter
+                        &ldquo;selects documents, not queries&rdquo;, and on a public dataset anyone can query the
+                        Content Lake without authorization. Unauthenticated reads do exclude drafts, but an ordinary
+                        document marked pending is not a draft. If submissions must be unreadable rather than merely
+                        unpublished, that is a dataset access decision, not a query one.
                     </BlogText>
                     <InsightBox variant="info" label="What we measured, and what it does not prove">
                         Loaded on August 2, 2026 in headless Chromium 150, one unthrottled run from a single location:
@@ -340,7 +345,7 @@ export default function NextjsSanityStackPage() {
 
                     <BlogHeader>Current Sanity pricing needs careful reading</BlogHeader>
                     <BlogText>
-                        Sanity&apos;s pricing page, rechecked on July 31, 2026, lists Free at $0 for individuals experimenting or shipping
+                        Sanity&apos;s pricing page, rechecked on 13 September 2026, lists Free at $0 for individuals experimenting or shipping
                         smaller projects, with up to 20 seats, two permission roles and two public-only datasets. It
                         lists Growth at $15 per seat per month with up to 50 seats and five roles. Growth does not
                         raise the dataset count: it is still two, but they can be private rather than public only.
@@ -349,7 +354,11 @@ export default function NextjsSanityStackPage() {
                     <BlogText>
                         The same table sets limits on how many documents you can hold, how many requests and how much
                         bandwidth you get, how many assets and webhooks, how many roles, and which features are
-                        included. Free is not accurately described as covering “most business websites.” Match dataset
+                        included. The document cap is the one most likely to bind first: <strong>10,000 on Free and
+                        25,000 on Growth</strong>, and drafts count toward it. The other meters do not move between
+                        those two plans at all &mdash; API requests (250,000/month), API CDN requests (1 million/month),
+                        assets (100 GB) and bandwidth (100 GB) are identical on Free and Growth, and only Growth can
+                        exceed them by paying. Free is not accurately described as covering “most business websites.” Match dataset
                         privacy, editor roles, document volume, usage, preview, scheduling, security and support needs
                         to the current plan before estimating cost.
                     </BlogText>

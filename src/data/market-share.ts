@@ -28,7 +28,11 @@ export interface SeriesSource {
     url: string;
     method: string;
     limitation: string;
+    /** Why the newest column is a dated reading rather than a live figure, plus the latest spot-check. */
+    currency: string;
     verifiedAt: string;
+    /** Date the newest column was last re-checked against the publisher. */
+    spotCheckedAt: string;
 }
 
 export const periods = raw.periods as string[];

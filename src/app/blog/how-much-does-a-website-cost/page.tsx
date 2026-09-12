@@ -261,18 +261,26 @@ export default function WebsiteCostGuide() {
                             Yes, and the free tiers are real rather than trials, but they are bounded in ways that
                             decide whether free is viable for you. Webflow&apos;s Starter plan, read from its pricing
                             page on August 5, 2026, costs nothing and gives you a <BlogHighlight>webflow.io
-                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight>.
+                            subdomain, two static pages, 1 GB of bandwidth and 50 form submissions</BlogHighlight> —
+                            and that submission cap is a lifetime total, not a monthly one (re-verified 13 September
+                            2026).
                             That is a genuine free website. It is also not a business website, because the limit that
                             bites first is not bandwidth: it is that you cannot put your own domain on it.
                         </BlogText>
                     </div>
                     <BlogText>
-                        The reliable pattern is that the free tier stays free and everything you need in order to run a
-                        real company on it is what you pay for. Check these four before assuming a free tier fits:
+                        Before the checklist, separate two things that both get called a free tier. A free
+                        <em>builder</em> plan is a whole hosted website product, and it is the one that gives you a
+                        vendor subdomain and page caps. A free <em>component</em> tier is one service inside a stack you
+                        own, such as a CMS, database or email sender, and those sit behind your own domain with no
+                        vendor branding on the page. The limits below apply sharply to the first and only partly to the
+                        second. The reliable pattern in both cases is that the free tier stays free and everything you
+                        need in order to run a real company on it is what you pay for. Check these four before assuming
+                        a free tier fits:
                     </BlogText>
                     <BlogList
                         items={[
-                            "Custom domain: usually the first paid upgrade. A free plan almost always means a vendor subdomain, which is why free tiers suit prototypes and portfolios rather than a business people search for by name.",
+                            "Custom domain on a builder: usually the first paid upgrade. A free builder plan almost always means a vendor subdomain, which is why those suit prototypes and portfolios rather than a business people search for by name. This does not apply to the free tiers of the components behind a custom build: a free Sanity, Supabase or Resend plan sits behind your own domain and puts no vendor branding on your pages. Two different products described with the same word.",
                             "Page and content limits: two static pages on Webflow Starter is the shape of the constraint. Count your actual pages before you plan around a free tier.",
                             "Commercial-use terms: some free tiers permit personal projects only. Read the terms rather than assuming, because this is the limit that gets discovered late.",
                             "What happens at the ceiling: find out whether you are throttled, billed automatically, or taken offline. The answer differs by vendor and it belongs in the decision, not in the incident.",

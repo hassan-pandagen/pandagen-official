@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -297,6 +297,36 @@ export default function WebsiteSpeedGuide() {
                         a speed guide does not exempt us from the finding. If you run the same check and see the same
                         shape, the honest next step is the same for you as for us: find out what each of those files is
                         for, and whether the ones that are not needed for first render can be deferred or dropped.
+                    </BlogText>
+                    <BlogText>
+                        <BlogHighlight>Weight and readability are two different problems, and only one of them decides
+                        whether a machine can read you.</BlogHighlight> A page can be heavy with JavaScript and still
+                        serve every word of its content in the first response. A page can also be light and serve an
+                        empty <code>&lt;div&gt;</code>. The question that matters for search engines and AI assistants
+                        is not how much JavaScript you ship, it is whether your actual sentences are in the HTML before
+                        any of it runs.
+                    </BlogText>
+                    <BlogText>
+                        So we measured this page the way a crawler sees it. Requesting it as GPTBot on 13 September 2026
+                        returned <strong>716,835 bytes of HTML uncompressed</strong>, of which{" "}
+                        <strong>64.1% is inline script, 23.3% inline CSS, 9.1% markup and 3.5% readable text</strong>
+                        &mdash; about 4,081 words in 24.8 KB. Before you read that as bloat, here is what it actually
+                        is. Most of that script is the React Server Component payload Next.js inlines so the browser can
+                        hydrate without a second request, and it contains a serialised copy of the same sentences that
+                        are already in the HTML. The content is genuinely in the document twice, by design. Compression
+                        collapses the duplication almost entirely: the same page leaves our server at{" "}
+                        <strong>roughly 60 to 80 KB</strong>, a reduction of about ten times. The uncompressed ratio is
+                        a useful thing to understand and a bad thing to optimise against.
+                    </BlogText>
+                    <BlogText>
+                        The part that actually matters passed: every sentence in this article, including the
+                        uncomfortable one above, is present in that raw response before a line of JavaScript executes.
+                        That is the test to run on your own site, and it takes one command. Fetch your page as a bot
+                        with <code>curl -A &quot;GPTBot&quot; https://yoursite.com/</code> and search the output for a
+                        sentence only a human reader would see. If it is there, machines can read you and your
+                        JavaScript weight is a speed question. If it is missing, no amount of optimisation will help,
+                        because the content was never in the response. We wrote up what that failure looks like in{" "}
+                        <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">why AI-built sites are invisible</Link>.
                     </BlogText>
                     <InsightBox variant="warning" label="What this run does not show">
                         Two things, and they matter more than the numbers above. <strong>Largest Contentful Paint was
