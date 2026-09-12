@@ -156,7 +156,7 @@ export default function WordPressVsCustomCostPage() {
                     <BlogQuote>
                         We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress founder) · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
                         Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.
                     </BlogQuote>
@@ -358,6 +358,15 @@ export default function WordPressVsCustomCostPage() {
                             site for a small business, a CMS the team edits themselves, no ecommerce, and someone
                             in-house spending a couple of hours a month on the site either way.
                         </BlogText>
+                        <BlogText>
+                            One input in that table is not a range we get to choose. A business site cannot sit on a
+                            free developer-hosting tier: Vercel&apos;s Hobby plan is restricted to non-commercial
+                            personal use, so the commercial floor is Pro at $20 a month, which is $720 across three
+                            years before any usage. We priced that in full in{" "}
+                            <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline">what Vercel actually costs</Link>.
+                            An earlier version of this table carried $0 at the low end, which contradicted our own
+                            page, so the custom column here starts at $720.
+                        </BlogText>
 
                         <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[34rem] border-collapse text-sm">
@@ -375,11 +384,11 @@ export default function WordPressVsCustomCostPage() {
                                 <tbody>
                                     {[
                                         ["Build or setup", "$500 – $3,000", "$3,500 (our Growth package)"],
-                                        ["Hosting, 3 years", "$300 – $900", "$0 – $600"],
+                                        ["Hosting, 3 years", "$300 – $900", "$720 – $1,500"],
                                         ["Plugins, themes, licences, 3 years", "$150 – $600", "$0"],
                                         ["Outsourced maintenance, 3 years", "$0 self-managed, or $1,500 – $4,500", "$0 – $1,500"],
                                         ["Internal time, 2 hrs/month at $50", "$3,600", "$3,600"],
-                                        ["Three-year total", "$4,550 – $12,600", "$7,100 – $9,200"],
+                                        ["Three-year total", "$4,550 – $12,600", "$7,820 – $10,100"],
                                     ].map(([line, wp, custom], idx, arr) => (
                                         <tr key={line} className={`border-t border-stone-200 align-top ${idx === arr.length - 1 ? "bg-stone-50 font-bold text-charcoal" : ""}`}>
                                             <td className="px-4 py-3">{line}</td>

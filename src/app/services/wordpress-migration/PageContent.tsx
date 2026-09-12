@@ -100,7 +100,7 @@ export default function PageContent() {
           badge="What Your WordPress Dev Won't Tell You"
           headline="You're paying $200/mo to"
           headlineAccent="keep a broken thing alive."
-          description="You're paying $100/mo for premium hosting. There's $0/mo Vercel hosting that's faster. You're paying $80/mo for plugin licenses that keep breaking. A custom build has zero plugins. You're paying $200/mo for a dev retainer because WordPress updates keep breaking your site. Custom Next.js doesn't need a retainer."
+          description="You're paying $100/mo for premium hosting. Commercial hosting on Vercel Pro is $20/mo, and Hobby is personal use only, so the honest comparison is $20 against $100, not free against $100. You're paying $80/mo for plugin licenses that keep breaking. A custom build has zero plugins. You're paying $200/mo for a dev retainer because WordPress updates keep breaking your site. Custom Next.js doesn't need a retainer."
           descriptionSecondary="Nobody tells you this because Patches and retainers are how the WordPress services market is structured. Not the hosts. Not the plugin companies. Not the agencies who bill to fix the breaks. We're the agency that replaces it honestly. No pitch. Just receipts."
           comparisonTitle="WordPress vs Custom"
           themLabel="WordPress"

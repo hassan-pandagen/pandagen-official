@@ -169,6 +169,120 @@
       "affiliated": false,
       "verifiedAt": "2026-09-04",
       "source": "https://raw.githubusercontent.com/GoogleChrome/lighthouse/main/core/audits/agentic/agent-accessibility-tree.js"
+    },
+    "own-site-html-composition-2026-09": {
+      "headline": "3.5% text, 64% script",
+      "statement": "Requested as GPTBot, pandacodegen.com pages return 591-797 KB of uncompressed HTML of which 52.7-64.7% is inline script and only 0.8-5.4% is readable text. All page content is present in that first response before any JavaScript runs. The script share is mostly the Next.js React Server Component payload, which carries a serialised copy of the same text, so compression removes it: the same pages leave the server at 54-83 KB, about 10x smaller.",
+      "detail": {
+        "/": {
+          "htmlKb": 797,
+          "scriptPct": 58.9,
+          "cssPct": 20.5,
+          "textPct": 3.2,
+          "words": 4291,
+          "wireKb": 83
+        },
+        "/pricing": {
+          "htmlKb": 618,
+          "scriptPct": 60.4,
+          "cssPct": 26.4,
+          "textPct": 2.9,
+          "words": 3009
+        },
+        "/services/wordpress-migration": {
+          "htmlKb": 690,
+          "scriptPct": 52.7,
+          "cssPct": 23.7,
+          "textPct": 3.8,
+          "words": 4269
+        },
+        "/blog/nextjs-hosting-zero-cost": {
+          "htmlKb": 785,
+          "scriptPct": 63.6,
+          "cssPct": 20.8,
+          "textPct": 5.4,
+          "words": 6832
+        },
+        "/blog/how-to-speed-up-your-website": {
+          "htmlKb": 700,
+          "scriptPct": 64.1,
+          "cssPct": 23.3,
+          "textPct": 3.5,
+          "words": 4081
+        },
+        "/ai-info": {
+          "htmlKb": 653,
+          "scriptPct": 64.4,
+          "cssPct": 25.0,
+          "textPct": 2.6,
+          "words": 2627,
+          "wireKb": 60
+        },
+        "/blog/topic/wordpress": {
+          "htmlKb": 623,
+          "scriptPct": 64.7,
+          "textPct": 1.4,
+          "words": 1390,
+          "wireKb": 54
+        }
+      },
+      "instrument": "curl with user agent GPTBot, uncompressed response. Inline <script> and <style> byte totals measured against document size; readable text is the document with script, style and tags stripped.",
+      "window": "13 September 2026",
+      "note": "The readability test passed everywhere checked, including all 11 topic hubs and /ai-info: content and member links are in the raw response before JavaScript executes, and every hub links every post in its cluster. The low text share is not bloat to fix. It is the RSC payload duplicating the page text as JSON for hydration, which is standard Next.js App Router behaviour and compresses away.",
+      "limitation": "Uncompressed byte shares are a composition observation, not a transfer cost. Measured over the wire the same documents are 54-83 KB. One run, one machine, one date, 17 URLs.",
+      "affiliated": true,
+      "affiliationNote": "Our own site.",
+      "verifiedAt": "2026-09-13",
+      "source": "curl -A GPTBot, run 13 September 2026"
+    },
+    "gsc-crawl-stats-2026-06-to-09": {
+      "headline": "10% HTML, 38% JavaScript",
+      "statement": "Google Search Console crawl stats for pandacodegen.com, 14 June to 6 September 2026: 9,004 crawl requests, 159 MB downloaded, 221 ms average response. 99% returned 200, with under 1% each for 301 and 404. By file type HTML was 10% of requests against JavaScript 38% and other file types 46%. By purpose, refresh was 97% and discovery 3%.",
+      "detail": {
+        "totalRequests": 9004,
+        "downloadMb": 159,
+        "avgResponseMs": 221,
+        "windowDays": 84,
+        "requestsPerDay": 107,
+        "avgKbPerRequest": 18.1,
+        "byResponse": {
+          "ok200": "99%",
+          "moved301": "<1%",
+          "notFound404": "<1%"
+        },
+        "byFileType": {
+          "other": "46%",
+          "javascript": "38%",
+          "html": "10%",
+          "json": "3%",
+          "image": "3%"
+        },
+        "byPurpose": {
+          "refresh": "97%",
+          "discovery": "3%"
+        },
+        "byGooglebot": {
+          "desktop": "53%",
+          "pageResourceLoad": "35%",
+          "smartphone": "7%",
+          "image": "2%",
+          "other": "2%"
+        },
+        "byHost": {
+          "www.pandacodegen.com": 8956,
+          "pandacodegen.com": 48
+        },
+        "derivedHtmlFetchesPerUrl": 6.3,
+        "derivedDaysBetweenHtmlFetches": 13.2
+      },
+      "instrument": "Google Search Console, Settings > Crawl stats, domain property sc-domain:pandacodegen.com. Percentages are Google's; request counts per type are derived from them and are approximate.",
+      "window": "14 June to 6 September 2026",
+      "note": "Both hosts report No problems. Checked 13 September 2026 that desktop and smartphone Googlebot receive byte-identical responses on / and /pricing, so the 53% desktop against 7% smartphone split is Google's own allocation and not device-specific serving. http://pandacodegen.com takes two hops to reach https://www.pandacodegen.com because Vercel upgrades the protocol on the requested host before applying the domain redirect; that host accounts for 48 of 9,004 requests.",
+      "limitation": "Crawl requests are not indexing, and refresh against discovery describes Google's scheduling rather than content quality. Per-type request counts are derived from rounded percentages. One property, one 84-day window.",
+      "affiliated": true,
+      "affiliationNote": "Our own Search Console property.",
+      "verifiedAt": "2026-09-13",
+      "source": "Google Search Console crawl stats export, read 13 September 2026"
     }
   }
 }

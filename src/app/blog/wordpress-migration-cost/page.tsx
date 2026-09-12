@@ -152,8 +152,10 @@ export default function WordPressMigrationCostPage() {
                             a broader marketing site, and $5,000 where templates, data or integrations
                             multiply. Those are our prices, not a market average. Before you use any of them: if you
                             only want the same WordPress site on a different host, that is a different job and it is
-                            usually free. Kinsta publishes unlimited free migrations from all hosts, and SiteGround
-                            publishes both a free expert migration and a free Migrator plugin. Do not pay
+                            usually free. Kinsta publishes &ldquo;unlimited free WordPress migrations from all hosts&rdquo;, and
+                            SiteGround publishes a free Migrator plugin that moves multiple WordPress sites from any
+                            host, alongside an expert transfer handled by its support team &mdash; check how many of
+                            those your plan includes, because that one is plan-dependent. Do not pay
                             platform-migration prices for a host change.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
@@ -169,7 +171,7 @@ export default function WordPressMigrationCostPage() {
                     <BlogQuote>
                         We are not being killed by competition, I believe we have done this to ourselves. We did it by blindly following rules and ideals to a point when they became iatrogenic.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg, WordPress co-founder, internal Slack post, April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
                         When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen. That is an input and a save button, stored in a meta field.
                     </BlogQuote>

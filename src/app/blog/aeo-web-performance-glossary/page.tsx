@@ -137,7 +137,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/aeo-web-performance-glossary" },
   keywords: [
     "aeo glossary", "geo vs aeo", "what is answer engine optimization", "csr vs ssr", "core web vitals explained",
-    "what is llms.txt", "llms.txt example", "query fan out", "ai crawlers gptbot claudebot", "semantic triples seo",
+    "query fan out", "ai crawlers gptbot claudebot", "semantic triples seo",
     "server side rendering vs client side rendering", "web performance glossary", "schema markup for ai search",
   ],
   robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },

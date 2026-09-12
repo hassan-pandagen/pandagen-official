@@ -240,9 +240,10 @@ export default function MetaAdTrackingGuide() {
                         it is not a way around the first item on that list.
                     </BlogText>
 
-                    <InsightBox variant="warning" label="Time-critical: sunset dated August 26, 2026">
-                        Script tags on the Thank you and Order status pages are sunset for non-Plus stores on
-                        August 26, 2026. If any part of your conversion tracking still lives there, it stops. Shopify&apos;s
+                    <InsightBox variant="warning" label="This sunset happened on 26 August 2026">
+                        That date has passed. Script tags on the Thank you and Order status pages were sunset for
+                        non-Plus stores on 26 August 2026, so if any part of your conversion tracking still lived there,
+                        it has already stopped rather than being about to. Shopify&apos;s
                         documented replacement is Checkout Extensions, and for Meta specifically the native sales-channel
                         integration is the supported path. Check this before you spend a week debugging attribution,
                         because a script that no longer runs will not show up as a Meta problem.

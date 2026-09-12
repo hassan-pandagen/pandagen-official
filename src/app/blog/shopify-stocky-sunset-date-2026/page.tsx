@@ -155,9 +155,21 @@ export default function ShopifyStockySunsetPage() {
                             how the new thing works.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Status verified August 8, 2026 against Shopify&apos;s current migration guidance.
+                            Status verified August 8, 2026 against Shopify&apos;s current migration guidance, and
+                            re-checked on 13 September 2026.
                         </p>
                     </header>
+
+                    <InsightBox variant="warning" label="Update: this date has passed">
+                        The deadline in the title was <strong>31 August 2026</strong>, which is now behind us, so read
+                        the rest of this page as a record of what was required rather than a plan you still have time to
+                        run. If you migrated, nothing here changes. If you did not, the position on 13 September 2026 is
+                        this: Stocky no longer manages inventory and <strong>its APIs stopped on the same date</strong>,
+                        so anything that called them is already failing. Shopify has said it provides read-only access
+                        for a limited time, and it has not published an end date for that window, which makes exporting
+                        purchase orders, stock counts and supplier records the only item on this page that is still
+                        urgent. Do that first, then work through the rest in order.
+                    </InsightBox>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="10 min read" />
 
@@ -243,7 +255,7 @@ export default function ShopifyStockySunsetPage() {
                             "Irreversible, do now: export everything (step 2). Purchase order history, supplier records, landed cost inputs and stocktakes do not migrate to Shopify automatically, and the APIs stop on the sunset date. Treat anything you have not exported as work you will have to do inside a closing window.",
                             "Irreversible, do now: do not uninstall Stocky first (step 1). Uninstalling before exporting removes the access you need to preserve the data, and Shopify says Stocky cannot be reinstalled.",
                             "Irreversible, do now: settle what you keep from read-only access (step 7). Shopify says you keep read-only access to export your data for at least 90 days after that date, so treat anything you have not exported as unavailable rather than delayed.",
-                            "Time-boxed, do before the date: map the workflows (step 3) while Stocky is still running, so you are comparing against observed behavior rather than memory. This one becomes guesswork the moment the app stops.",
+                            "Was time-boxed to before 31 August 2026: mapping the workflows (step 3) against a running Stocky meant comparing observed behavior rather than memory. After the shutdown this one is reconstruction, so lean on read-only exports and on whatever downstream systems received the data.",
                             "Reversible, and safe to do after the deadline: choosing the replacement (step 4). The right answer depends on the workflow map, so a short runway is a reason to compress this decision rather than to bring it forward.",
                             "Can run after the date: acceptance testing, cutover rehearsal and rollback (steps 5 and 6). If the runway is short, these happen on the replacement rather than in parallel with Stocky, which is slower but not blocked.",
                         ]}
@@ -268,7 +280,7 @@ export default function ShopifyStockySunsetPage() {
                     <BlogHeader>What Stocky data can you export before it shuts down?</BlogHeader>
                     <BlogText>
                         Shopify says historical purchase orders and stocktakes will not automatically move to Shopify.
-                        Export them through Stocky&apos;s built-in reports before the deadline. Suppliers cannot be
+                        Export them through Stocky&apos;s built-in reports while read-only access lasts. Suppliers cannot be
                         exported from Stocky, so build and validate a separate supplier register from the records
                         available to your business. Where a business wants its own view of that data afterwards, the{" "}
                         <Link href="/work/enterprise-ops" className="text-cognac hover:underline font-medium">operations dashboards we build</Link>{" "}
@@ -323,7 +335,7 @@ export default function ShopifyStockySunsetPage() {
 
                     <BlogHeader>What changes when you replace Shopify Stocky?</BlogHeader>
                     <BlogText>
-                        Do this while Stocky is still running, because it becomes guesswork the moment the app stops. The middle column is Shopify's own guidance for each workflow, not our assessment of it. The right-hand column is what you have to prove works for your operation before accepting the replacement.
+                        This was best done while Stocky was still running, because it became guesswork the moment the app stopped; if you are reading after 31 August 2026, reconstruct what you can from read-only access and from whatever downstream systems received the data. The middle column is Shopify's own guidance for each workflow, not our assessment of it. The right-hand column is what you have to prove works for your operation before accepting the replacement.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[800px] border-collapse text-left text-sm">

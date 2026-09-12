@@ -123,7 +123,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Can you build custom landing pages that work with GHL?",
-      a: "Yes. A set of up to 7 landing pages is $1,500. Each one sends leads straight into your GHL forms, calendar or automations, with no third-party form app to pay for. Every page scores 90 or better on Google's PageSpeed test on phone and desktop, and we test it three times before handover.",
+      a: "Yes. A set of up to 7 landing pages is $1,500. Each one sends leads straight into your GHL forms, calendar or automations, with no third-party form app to pay for. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test each three times before handover.",
     },
     {
       q: "What if I want to leave GHL later?",

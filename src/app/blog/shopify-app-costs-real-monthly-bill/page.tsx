@@ -520,17 +520,18 @@ export default function ShopifyAppCostsPage() {
                         </QuoteModalButton>
                     </section>
 
-                    <InsightBox variant="warning" label="Time-critical: Stocky access ends August 31, 2026">
-                        If your operation depends on Stocky for purchase orders, transfers or demand forecasting,
-                        Shopify has confirmed the app is unavailable after August 31, 2026 and its APIs stop on the same
-                        date. It was delisted from the App Store in February 2026. Export what you need before access
-                        ends, and note that this is one of the cases where removing an app is not a cost decision at
-                        all.
+                    <InsightBox variant="warning" label="Stocky access ended on 31 August 2026">
+                        That date has passed. If your operation depended on Stocky for purchase orders, transfers or
+                        demand forecasting, it is already unavailable and its APIs stopped on the same date, so anything
+                        that called them is failing now rather than later. It was delisted from the App Store in
+                        February 2026. Shopify has said it provides read-only access for a limited time without
+                        publishing an end date, so exporting purchase orders, stock counts and supplier records is the
+                        one step still worth doing today. This was never a cost decision.
                     </InsightBox>
                     <BlogText>
                         The{" "}
                         <Link href="/blog/shopify-stocky-sunset-date-2026" className="text-cognac hover:underline font-medium">Stocky sunset guide</Link>{" "}
-                        covers what to export before access ends.
+                        covers what to export while read-only access lasts.
                     </BlogText>
 
                     <BlogHeader>Primary sources</BlogHeader>

@@ -225,7 +225,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <BlogText>
                             Speed and conversion move together, and that is not the same as speed causing conversion.
                             Shopify analysed Core Web Vitals against conversion across actively-selling stores and
-                            published the result in its own words: <strong>&quot;for every 100 milliseconds slower a
+                            published the result on 27 April 2026, from field data collected over a 28-day window at
+                            the turn of January and February 2026. In its own words: <strong>&quot;for every 100 milliseconds slower a
                             store loads, conversion tends to be about 3.5% lower&quot;</strong>, and{" "}
                             <strong>&quot;stores with 2.5 second LCP report roughly 30% lower conversion than stores
                             with 1.5 second LCP&quot;</strong>.

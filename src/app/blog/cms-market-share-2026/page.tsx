@@ -357,6 +357,9 @@ export default function CmsMarketShare2026Page() {
                         {source.limitation}
                     </BlogText>
                     <BlogText>
+                        {source.currency}
+                    </BlogText>
+                    <BlogText>
                         The trap worth naming: <BlogHighlight>share of existing sites is not share of new builds.</BlogHighlight>{" "}
                         A platform that every new project chose from tomorrow would still take years to show up here,
                         because the denominator is full of sites built long ago that nobody has touched. Decline in

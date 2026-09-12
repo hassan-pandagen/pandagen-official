@@ -153,7 +153,11 @@ export default function UniversalCommerceProtocolGuide() {
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Availability reviewed July 24, 2026 against Google&apos;s current merchant guide, FAQ,
-                            Merchant API updates, and the open UCP repository.
+                            Merchant API updates, and the open UCP repository, and re-checked on 13 September 2026.
+                            Two things had moved and neither changes the answer above: Universal Cart launched in May
+                            2026 with cross-retailer support across Search, Gemini, YouTube and Gmail, and UCP-powered
+                            checkout is still limited to selected US merchants through an early access programme, with
+                            global expansion described as planned rather than dated.
                         </p>
                     </header>
 

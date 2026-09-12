@@ -157,7 +157,7 @@ export default function WebsiteMigrationCostPage() {
                             and how much testing the launch needs. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 2, 2026 against current platform and Google documentation. Every export link below was re-checked on August 1, 2026.
+                            Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026.
                         </p>
                     </header>
 
@@ -169,7 +169,7 @@ export default function WebsiteMigrationCostPage() {
                     <BlogQuote>
                         We are not being killed by competition, I believe we have done this to ourselves. When Cloudflare can ship the entire functionality of WordPress, and then some, in 2 months, we can take longer than that to almost not ship one sub-menu of our Settings screen.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · Internal Slack post · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress co-founder) · Internal Slack post · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a>. Context, added September 12, 2026: Automattic&apos;s board placed Mullenweg on a leave of absence on September 9, 2026. That is after this post and does not change what he said in April, but it is worth knowing when weighing the quote.</p>
                     <BlogQuote>
                         Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.
                     </BlogQuote>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { postCrumbs } from "@/data/hubs";
 import TopicUpLink from "@/components/blog/TopicUpLink";
-import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
+import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 
@@ -255,6 +255,17 @@ export default function SquarespaceVsCustomWebsitePage() {
                         page typically loads its own script there. A feature added this way changes the recurring
                         bill and the page weight at the same time, which is why the answer to &ldquo;can the platform do
                         it&rdquo; is usually yes and the useful question is what it costs to run.
+                    </BlogText>
+                    <BlogText>
+                        One distinction inside that list is worth getting right, because it is the one most cost
+                        comparisons get wrong in our favour. <BlogHighlight>Booking emails and marketing emails are
+                        different products with different bills.</BlogHighlight> Acuity sends its own confirmations,
+                        reminders and follow-ups as part of scheduling, so a business running classes or appointments
+                        does not need Squarespace Email Campaigns to notify a customer that they are booked. Campaigns
+                        is marketing sending, with its own quota, and its free access is a small number of trial blasts
+                        rather than a recurring monthly allowance. Counting Campaigns into the cost of operational
+                        booking mail inflates the Squarespace total against a custom build, and we are not going to do
+                        that. Checked 13 September 2026.
                     </BlogText>
                     <BlogText>
                         The same questions apply to the other managed builders. We run them for{" "}

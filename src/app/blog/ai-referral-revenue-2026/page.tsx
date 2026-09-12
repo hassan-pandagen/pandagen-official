@@ -342,7 +342,7 @@ export default function AiReferralRevenuePage() {
                             <p className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-stone-500">What the data supports</p>
                             <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
                                 <li>Revenue attributed to each AI assistant across one store and one six-month window</li>
-                                <li>That ChatGPT out-earned Google Ads here by {chatgptVsGoogleAds}x, from the same table and the same window</li>
+                                <li>That ChatGPT out-earned Google Ads here by {chatgptVsGoogleAds}x, from the same table and the same window. Read that with the denominator in view: Google Ads is {row('Google Ad').orders} orders and {usd(row('Google Ad').revenueUsd)} in this window, so the ratio rests on a very small paid-ads base and one more order would move it</li>
                                 <li>That average order value from AI assistants sits below the site average, which a 94-brand study found independently</li>
                                 <li>That referrer-only tracking undercounts AI referrals, which is why these figures are not zero</li>
                             </ul>
@@ -352,6 +352,7 @@ export default function AiReferralRevenuePage() {
                             <ul className="space-y-2.5 text-sm leading-relaxed text-stone-700">
                                 <li>Lead-to-order conversion. The lead and order records do not share a window and repeat orders inherit the original source, which produced a rate above 100% for two sources</li>
                                 <li>Anything about your category. One business, one vertical, one window</li>
+                                <li>That AI beat search. It did not. Google organic is {usd(row('Google').revenueUsd)} across {row('Google').orders} orders in this same table, several times ChatGPT&apos;s {usd(row('ChatGPT').revenueUsd)}. The headline compares ChatGPT with paid ads only, because that is the line with an invoice attached</li>
                                 <li>A clean average. {outlier.note}</li>
                                 <li>Exact attribution. Someone who used ChatGPT and then searched Google may report either one</li>
                             </ul>
