@@ -311,7 +311,10 @@ function rulesFor(request: NextRequest, target: URL): RateLimitRule[] {
  * thing it constrains is abuse. Raise it only alongside a paid Resend plan, and
  * remember overage there is billed rather than blocked.
  */
-const FORM_GLOBAL_HOURLY_LIMIT = 50;
+// Exported so tests derive the budget instead of hardcoding it. A test that
+// restates this number silently stops testing the real limit the moment the
+// number changes, which is exactly how the 100-client loop below it rotted.
+export const FORM_GLOBAL_HOURLY_LIMIT = 50;
 
 function leadRulesFor(request: NextRequest): RateLimitRule[] {
   const prefix = process.env.AUDIT_RATE_LIMIT_KEY_PREFIX || 'pandacodegen:audit:v1';
