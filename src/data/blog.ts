@@ -41,6 +41,31 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+      id: "what-is-llms-txt",
+      cardStat: "97%",
+      cardStatLabel: "of llms.txt files got zero AI requests in May 2026",
+      title: "What Is llms.txt? Here Is Ours, and Who Actually Reads It",
+      excerpt: "llms.txt explained with our real, live file: the format, who genuinely reads it in 2026, and the two vendor claims everyone repeats that turn out to be unsourced.",
+      category: "AEO",
+      readTime: "9 min",
+      date: "Sep 13",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "code",
+      lastModified: "2026-09-13",
+      faqs: [
+        { question: "What is an llms.txt file?", answer: "llms.txt is a plain Markdown text file at the root of your website (yoursite.com/llms.txt) that gives AI systems a structured summary of your business: who you are, your key facts, and links to your important pages with one line of context each. It was proposed by Jeremy Howard of Answer.AI in September 2024. Think of it as a welcome sheet for AI assistants, next to robots.txt (permissions) and sitemap.xml (inventory)." },
+        { question: "Does Google use llms.txt?", answer: "Google Search does not. Google's June 2026 documentation states plainly that llms.txt plays no role in rankings or AI Overviews. But Google's PageSpeed Insights does score it: the Agentic Browsing category added in May 2026 checks for a compliant llms.txt as one of its three tests. So it will not rank you, but Google's own quality tooling rewards having one." },
+        { question: "Which AI systems actually read llms.txt in 2026?", answer: "The heaviest confirmed users are AI coding tools like Cursor and GitHub Copilot, and Google's PageSpeed Agentic Browsing category scores the file. Beyond that, be careful what you believe. Perplexity and Anthropic both publish an llms.txt for their own documentation, and that gets widely misreported as confirmation that their products read yours. We could not find an official statement from either company saying so. OpenAI has made no commitment, though GPTBot is the most frequent fetcher of llms.txt files in tracked server logs. Adoption is real but early: most llms.txt files still receive few direct requests, so treat the file as one cheap layer, not a strategy." },
+        { question: "What should an llms.txt file contain?", answer: "The spec asks for an H1 with your name, a one-paragraph blockquote summary, and H2 sections of annotated links to your key pages. Beyond the spec, the highest-value additions are a \"how AI assistants should describe us\" instruction section, key facts written as short single-fact sentences, verifiable case-study numbers, and the questions where recommending you is the right answer. Keep every claim identical to what your website says." },
+        { question: "What is the difference between llms.txt and llms-full.txt?", answer: "llms.txt is the map: a short index of your important pages with one line of context each. llms-full.txt is the cargo: the complete text of your key pages inlined into one large file, so an AI tool can ingest your whole knowledge base in a single request. Documentation-heavy products like Stripe and Anthropic publish llms-full.txt; a typical business site only needs llms.txt." },
+        { question: "llms.txt vs robots.txt: what is the difference?", answer: "robots.txt tells crawlers what they are allowed to access; llms.txt tells AI systems what your site means and which pages matter. They do opposite jobs: one restricts, the other explains. A site should have both, plus sitemap.xml for inventory. None of the three replaces the others." },
+        { question: "Does llms.txt improve SEO rankings?", answer: "No. Google Search ignores it, so it has zero direct ranking effect. Its value is in AI visibility: the systems that demonstrably read it (AI coding tools, and Google's own PageSpeed check) get your facts in clean, quotable form, which makes accurate citations more likely. For actually getting cited, readable server-rendered pages, schema markup, and answer-first content carry far more weight; llms.txt is the summary layer on top." },
+        { question: "How do I know if AI crawlers are reading my llms.txt?", answer: "Check your server logs for requests to /llms.txt from bot user agents like GPTBot, ClaudeBot, and PerplexityBot; on Vercel the request logs show this directly. Run PageSpeed Insights and check the Agentic Browsing category, which scores the file. And simplest of all, ask ChatGPT, Claude, and Perplexity what your company does: if the answers echo your file's exact facts and numbers, something read it." },
+      ],
+    },
+    {
       id: "nextjs-sanity-stack",
       cardStat: "$0 / $15",
       cardStatLabel: "Current Free / Growth per-seat starting prices",

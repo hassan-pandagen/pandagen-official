@@ -169,11 +169,45 @@ def load_hubs() -> dict[str, dict]:
     return hubs
 
 
+def registered_post_ids() -> set[str]:
+    """Post ids declared in the source registry, independent of the build."""
+    src = (ROOT / "src" / "data" / "blog.ts").read_text(encoding="utf-8")
+    return set(re.findall(r'id:\s*"([a-z0-9-]+)"', src))
+
+
+def assert_build_is_current() -> None:
+    """Fail when the build predates the registry.
+
+    This guard reads rendered HTML from .next, not source. That is deliberate --
+    it checks what a crawler would actually receive. The cost is that a stale
+    build makes every result a statement about the PREVIOUS site, and it passes
+    while doing it, which is worse than not running at all.
+
+    Caught 13 Sep 2026: a newly registered post was added to blog.ts and the
+    topical map, the guard reported "85 posts" and OK, and the post it had never
+    seen was the only one that needed checking.
+    """
+    registered = registered_post_ids()
+    built = {p.stem for p in (BUILD / "blog").glob("*.html")}
+    missing = sorted(registered - built)
+    if missing:
+        print(
+            "link_guard: build is stale. These posts are registered in blog.ts but "
+            "absent from the build output, so nothing below would have checked them:",
+            file=sys.stderr,
+        )
+        for post_id in missing:
+            print(f"  - {post_id}", file=sys.stderr)
+        print("Run `npm run build`, then re-run this guard.", file=sys.stderr)
+        sys.exit(2)
+
+
 def main() -> int:
     as_json = "--json" in sys.argv
     if not BUILD.exists():
         print("link_guard: no build output. Run `next build` first.", file=sys.stderr)
         return 2
+    assert_build_is_current()
 
     hubs = load_hubs()
     failures: list[dict] = []

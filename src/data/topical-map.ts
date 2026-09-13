@@ -393,6 +393,7 @@ export const clusters: Cluster[] = [
       'aeo-playbook-built-into-every-website', 'google-algorithm-updates',
       'why-competitor-outranks-you', 'will-migrating-hurt-my-seo', 'how-website-speed-affects-seo',
       'lovable-site-not-showing-on-google', 'aeo-web-performance-glossary',
+      'what-is-llms-txt',
     ],
   },
   {
