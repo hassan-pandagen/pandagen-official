@@ -124,14 +124,31 @@ export default function TierQuiz() {
     <section className="py-12 md:py-20 bg-paper">
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-10 text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Tier Finder</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Pricing</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal tracking-tight mb-3">
-            Which tier is{" "}
-            <span className="font-serif italic text-cognac">right for me?</span>
+            Custom websites,{" "}
+            <span className="font-serif italic text-cognac">from $1,500.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            Three questions and we will tell you which tier fits. No email needed.
+            The three starting points are below. Answer three questions if you want us to
+            point at one, or read them yourself and skip the quiz.
           </p>
+        </div>
+
+        {/* 13 Sep 2026: these numbers already existed in tierMap and rendered only
+            AFTER three questions were answered. Six competitor homepages were read
+            with the same extractor and three of them put a price in a section
+            heading -- "Fixed pricing, from $700", "Know the cost before you write
+            to me". Making a visitor work for a number we already publish is the one
+            thing the comparison showed us doing that nobody else does. */}
+        <div className="grid sm:grid-cols-3 gap-4 mb-10">
+          {(Object.keys(tierMap) as Tier[]).map((key) => (
+            <div key={key} className="bg-white rounded-2xl border border-stone-200 p-5 text-center">
+              <p className="text-sm font-bold text-charcoal mb-1">{tierMap[key].name}</p>
+              <p className="text-2xl font-bold text-cognac mb-2">{tierMap[key].price}</p>
+              <p className="text-xs text-stone-600 leading-relaxed">{tierMap[key].tagline}</p>
+            </div>
+          ))}
         </div>
 
         {!isDone && (

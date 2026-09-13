@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import TrustLogoBar from "@/components/sections/TrustLogoBar";
 import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
 import HomeFaqSection from "@/components/home/HomeFaqSection";
 import WorkPreviews from "@/components/home/WorkPreviews";
@@ -47,14 +46,9 @@ export const metadata: Metadata = {
 
 // Lazy load below-the-fold components
 const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
-const UnfairAdvantage = lazyLoad(() => import("@/components/sections/UnfairAdvantage"));
 const ServicesHub = lazyLoad(() => import("@/components/sections/ServicesHub"));
-const WhoWeHelp = lazyLoad(() => import("@/components/home/WhoWeHelp"));
 const HowItWorksSimple = lazyLoad(() => import("@/components/HowItWorksSimple"));
-const AIPowered = lazyLoad(() => import("@/components/sections/AIPowered"));
-const RevenueCalculator = lazyLoad(() => import("@/components/sections/RevenueCalculator"));
 const FounderSection = lazyLoad(() => import("@/components/sections/FounderSection"));
-const AntiAgency = lazyLoad(() => import("@/components/sections/AntiAgency"));
 const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
 const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 
@@ -267,6 +261,14 @@ export default function Home() {
       {/* Scroll Progress Bar */}
       <ScrollProgressBar />
 
+      {/* SECTIONS REMOVED 13 Sep 2026, components kept and still importable.
+          Measured against eleven competitor homepages with the same extractor:
+          median 9 H2 sections, longest 12, this page 17. The excess was not
+          spread evenly -- it sat in four services blocks, three pricing blocks,
+          three "who we are" blocks and two CTAs, twelve blocks doing the work of
+          five. Nothing here was cut to hit a word count; the auditor withdrew
+          that target on 13 Sep as unvalidated. Each removal below is a
+          duplicate or a block the audit named. To restore one, re-add its tag. */}
       <Header />
 
       {/* Hero */}
@@ -305,17 +307,10 @@ export default function Home() {
       {/* Public reviews and owner-confirmed project records */}
       <SocialProof />
 
-      {/* Who We Help, ICP audience cards. "Start with the situation" is the
-          first question a buyer actually asks, so it leads the selection pair. */}
-      <WhoWeHelp />
 
       {/* Services Bento, premium bento grid (Paper) */}
       <ServicesHub />
 
-      {/* Trust Stats Strip: the migration standard. Supporting detail once the
-          reader knows what is on offer, and the dark band separates two
-          light sections. */}
-      <TrustLogoBar />
 
       {/* What actually gets built, and who can change it afterwards. Placed
           where the 10 Sep feature audit asked for it: after a real project and
@@ -332,20 +327,12 @@ export default function Home() {
       {/* How It Works, 4 Steps with Visual Diagrams */}
       <HowItWorksSimple />
 
-      {/* Unfair Advantage, financial grid stats (White) */}
-      <UnfairAdvantage />
 
-      {/* Revenue model, illustrative estimate on the visitor's own numbers */}
-      <RevenueCalculator />
 
-      {/* AI-Powered, Speed Comparison */}
-      <AIPowered />
 
       {/* Founders */}
       <FounderSection />
 
-      {/* Anti-Agency Manifesto */}
-      <AntiAgency />
 
       {/* FAQ Section */}
       <HomeFaqSection faqs={homeFaqs} />
