@@ -73,32 +73,40 @@ export default function Hero() {
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem" }}
           >
-            Move off WordPress, Wix or Squarespace{" "}
+            Website redesign and migration{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              without starting from scratch.
+              for WordPress, Wix and Squarespace.
             </span>
           </h1>
 
-          {/* Clarifying subhead: names the platforms people search for, then the AI engines.
-              Soft-styled so it supports the headline without competing. */}
+          {/* Rewritten 13 Sep 2026 against external keyword data, not our own GSC --
+              GSC only shows what we already rank for, which is a survivorship-biased
+              sample. US volume/difficulty, checked 13 Sep: "website redesign services"
+              6,600/mo at KD 10 and "website migration services" 720 at KD 3, while
+              "nextjs development agency" is 10/mo and "migrate wordpress to nextjs",
+              "ai ready website", "ai optimized website" and "get cited by chatgpt" all
+              report no volume at all. The headline now uses the two words buyers type
+              plus the platform names (wordpress/webflow/wix/squarespace "alternative"
+              together are ~1,260/mo at KD 0-6). Framework and AI vocabulary moved to
+              the pages whose readers know those words. Plain language is the point:
+              the buyer is usually a marketing or ops lead, not an engineer. */}
           <p
             className="text-lg md:text-xl font-medium mb-3 max-w-xl leading-snug sm:mb-4"
             style={{ color: "#44403c" }}
           >
-            You get{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own from the start</span>, built so{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude and Google</span>{" "}
-            can read every page without running your JavaScript. Which sources they cite stays their
-            decision. Being readable is the part we control, and we do it properly.
+            A proper rebuild, not a template. Your pages, your links and the tools you already
+            use all come across, and{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>your team keeps changing text and images</span>{" "}
+            the same way they do now.
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-4 sm:mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Our own pages are cited in Google&apos;s AI Overviews. Fixed price from $1,500, no minimum project size, and you own the code.
+            Last move: 200+ pages in about three weeks, no ranking losses recorded. Fixed price from $1,500, no minimum project size, and you own the code.
           </p>
 
           {/* CTAs, animated client component.

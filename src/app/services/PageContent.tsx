@@ -41,9 +41,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
-            Capabilities <span className="text-gray-400">&</span> <br />
+            Website redesign and <br />
             <span className="font-serif italic text-cognac">
-              Architecture.
+              migration services.
             </span>
           </motion.h1>
           <motion.p
@@ -52,7 +52,7 @@ export default function PageContent() {
             transition={{ delay: 0.2 }}
             className="text-lg text-stone-600 max-w-2xl mx-auto"
           >
-            Three things we build. All of them aim at the same result: a site you can measure, can afford to run, and actually own.
+            We rebuild business websites that already earn their keep: your pages, your links and the tools you already use come across, and your team carries on editing content afterwards. Three service shapes below, all fixed-price against a written scope.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}

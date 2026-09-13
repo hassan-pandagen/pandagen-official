@@ -31,7 +31,8 @@ const englishCopy: LeadFormCopy = {
   bookLabel: "Book a discovery call",
   errorFallback: "We could not send your request. Please email info@pandacodegen.com.",
   honeypotLabel: "Leave this field empty",
-  replyNote: "",
+  replyNote:
+    "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
 };
 
 async function responseMessage(response: Response, fallback: string): Promise<string> {
