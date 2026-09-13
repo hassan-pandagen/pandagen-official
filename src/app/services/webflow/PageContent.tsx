@@ -327,6 +327,71 @@ export default function WebflowPageContent() {
               </motion.div>
             ))}
           </div>
+
+          {/* Added 13 Sep 2026. The four stages above describe only what WE do, which
+              was the gap a buyer audit named: the process pages emphasise build
+              activity and leave the client guessing how much work lands on them.
+              These three columns are not new commitments -- they restate the
+              dependencies and approval points already in the written scope and in
+              the timeline guide, at the point where the buyer is reading about time.
+              Icons used here are all already imported at the top of this file. */}
+          <div className="mt-12 md:mt-16 rounded-2xl border border-stone-200 bg-stone-50/60 p-6 md:p-10">
+            <h3 className="text-xl md:text-2xl font-bold text-charcoal text-center mb-2">How much of this lands on your team?</h3>
+            <p className="text-stone-600 text-center text-sm mb-8 max-w-2xl mx-auto">
+              Most of a Webflow migration is our work, because the content already exists. These are the
+              three parts that are not, so you can plan around them before the project starts.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: FileSearch,
+                  title: "You supply",
+                  items: [
+                    "Access to the Webflow account, the domain and any connected service",
+                    "The copy and images for any page that is not simply moving across",
+                    "One person who can make decisions, so approvals do not queue behind a committee",
+                  ],
+                },
+                {
+                  icon: Wrench,
+                  title: "Panda handles",
+                  items: [
+                    "The full inventory: pages, collections, interactions, forms, integrations",
+                    "The rebuild, the content transfer, the redirect map and the testing",
+                    "Cutover, DNS, analytics, monitoring and the rollback plan",
+                  ],
+                },
+                {
+                  icon: CheckCircle2,
+                  title: "You approve",
+                  items: [
+                    "The scope, in writing, before any building starts",
+                    "The animation list, once we have said which are worth keeping",
+                    "The preview site, against the agreed pages, before we go live",
+                  ],
+                },
+              ].map((col) => (
+                <div key={col.title} className="bg-white rounded-xl border border-stone-200 p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <col.icon className="w-5 h-5 text-cognac shrink-0" />
+                    <h4 className="font-bold text-charcoal">{col.title}</h4>
+                  </div>
+                  <ul className="space-y-2.5">
+                    {col.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
+                        <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cognac" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-stone-500 text-center mt-6 max-w-2xl mx-auto leading-relaxed">
+              The exact split, the review points and how added work is priced are set in your written
+              scope for the project. This is the shape of it, not the terms.
+            </p>
+          </div>
         </div>
       </section>
 

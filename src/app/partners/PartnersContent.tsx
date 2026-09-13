@@ -253,13 +253,13 @@ export default function PartnersContent() {
           },
           {
             name: "White-Label Partner",
-            rate: "35% margin",
+            rate: "35% markup",
             commitment: "One pilot project to start",
             fit: "Full-service agencies adding development capacity without hiring engineers.",
             includes: [
               "We stay invisible to your clients",
               "Your GitHub, Vercel, domain and branding",
-              "Our fixed scope plus your 35% markup becomes your client quote",
+              "Our fixed scope plus your 35% markup becomes your client quote: our $3,500 becomes your $4,725, which is a 25.9% gross margin on that sale before your own costs",
               "Mutual NDA signed before any project detail is shared",
               "No minimums after the pilot",
               "Priority scheduling over non-partners",

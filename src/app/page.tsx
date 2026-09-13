@@ -88,7 +88,7 @@ const homeFaqs = [
   },
   {
     q: "Do I need your monthly plan to keep a custom feature working?",
-    a: "No. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers hosting, maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier."
+    a: "No. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically."
   },
   {
     q: "Do you have a minimum project size?",
