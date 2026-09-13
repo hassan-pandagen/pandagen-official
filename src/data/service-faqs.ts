@@ -171,7 +171,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Can you recreate my Webflow animations in code?",
-      a: "Yes. We list every animation on your site, rebuild the ones worth keeping and drop the ones that only slow the page down. Each one is checked so it doesn't cost you your 90-plus speed score. You approve the list before we build.",
+      a: "Yes. We list every animation on your site, rebuild the ones worth keeping and drop the ones that only slow the page down. Each one is checked against the 90+ Lighthouse handover target that applies to the representative pages named in your written scope, so a kept animation cannot quietly break acceptance. You approve the list before we build.",
     },
     {
       q: "What about Webflow's CMS?",
@@ -182,12 +182,20 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
       a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your CMS content moved and every link forwarded. From $5,000 for a store, more than one language or more than 20 pages. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
+      q: "Who supplies the words and images?",
+      a: "You do, and we agree exactly what that means before quoting. A migration reuses the copy and images already on your Webflow site, which is why most migrations need nothing new from you. Original copywriting, branding and photography are not automatically included in the build price. If pages need writing or shooting from scratch, that is scoped and priced separately rather than absorbed quietly into the build.",
+    },
+    {
+      q: "What will I still be paying for after the site is live?",
+      a: "Three separate lines, and your quote keeps them separate. The build fee is one fixed payment. Provider bills continue and are paid straight to the provider, not marked up by us: commercial hosting on Vercel Pro starts at $20 a month as of August 2026, plus your domain and any third-party service the site uses. Panda support is optional, quoted against a scope you choose, and is not required for the site to keep running. Leaving Webflow removes the plan tier and the seat charges; it does not remove hosting.",
+    },
+    {
       q: "What if Webflow adds the features I need later?",
       a: "It might, and if waiting is the better answer we'll say so. Several of our guides exist to talk people out of a migration they don't need. The difference after moving is that the features are yours, on your own account. No plan tier decides what your site can do, and no price change lands in your inbox.",
     },
     {
       q: "How long does a Webflow migration take?",
-      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. Lots of CMS content, animations or languages take longer, and every stage has a date in your written plan.",
+      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. Lots of CMS content, animations or languages take longer, and every stage has a date in your written plan. The clock starts when three things are in place: the scope is agreed in writing, we have the access we need to your Webflow account and domain, and the content and images for the agreed pages are with us. Waiting on any of those is queue time, not build time, and we will tell you which one we are waiting for.",
     },
   ],
   "wix": [

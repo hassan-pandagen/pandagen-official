@@ -98,19 +98,19 @@ export default function PageContent() {
       <div className="-mt-4">
         <PlatformKillerChart
           badge="What Your WordPress Dev Won't Tell You"
-          headline="You're paying $200/mo to"
-          headlineAccent="keep a broken thing alive."
-          description="You're paying $100/mo for premium hosting. Commercial hosting on Vercel Pro is $20/mo, and Hobby is personal use only, so the honest comparison is $20 against $100, not free against $100. You're paying $80/mo for plugin licenses that keep breaking. A custom build has zero plugins. You're paying $200/mo for a dev retainer because WordPress updates keep breaking your site. Custom Next.js doesn't need a retainer."
+          headline="Add up what you pay each month to"
+          headlineAccent="keep the current site alive."
+          description="Managed WordPress hosting, plugin licences and a maintenance retainer are three separate lines, and most owners have never added them up. A custom build removes the plugin licences and the plugin-update work. It does not remove hosting: commercial hosting on Vercel Pro is $20/mo, and Hobby is personal use only, so the honest comparison is $20 against whatever your host charges, not free against it."
           descriptionSecondary="Nobody tells you this because Patches and retainers are how the WordPress services market is structured. Not the hosts. Not the plugin companies. Not the agencies who bill to fix the breaks. We're the agency that replaces it honestly. No pitch. Just receipts."
           comparisonTitle="WordPress vs Custom"
           themLabel="WordPress"
           metrics={[
             { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at handover",           themPct: 30, usPct: 98, icon: Gauge },
-            { metric: "Monthly Cost", themLabel: "$150+",        usLabel: "$0",           themPct: 95, usPct: 2,  icon: DollarSign },
-            { metric: "Security",     themLabel: "Vulnerable",   usLabel: "Smaller third-party surface",   themPct: 40, usPct: 100, icon: Shield },
-            { metric: "Maintenance",  themLabel: "Daily",        usLabel: "Zero",         themPct: 90, usPct: 5,  icon: RefreshCcw },
-            { metric: "Ownership",    themLabel: "Rented",       usLabel: "100% Yours",   themPct: 30, usPct: 100, icon: Lock },
-            { metric: "AI Search",    themLabel: "Invisible",    usLabel: "Optimized",    themPct: 15, usPct: 98, icon: Eye },
+            { metric: "Monthly Cost", themLabel: "From your invoices", usLabel: "Hosting from $20", themPct: 95, usPct: 13, icon: DollarSign },
+            { metric: "Security",     themLabel: "Plugin and core surface to patch", usLabel: "Dependency surface to patch", themPct: 35, usPct: 80, icon: Shield },
+            { metric: "Maintenance",  themLabel: "Plugin and core updates", usLabel: "Dependency updates", themPct: 90, usPct: 20, icon: RefreshCcw },
+            { metric: "Ownership",    themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", themPct: 30, usPct: 100, icon: Lock },
+            { metric: "AI Search",    themLabel: "Depends on the theme", usLabel: "Server-rendered HTML", themPct: 45, usPct: 90, icon: Eye },
           ]}
           costLines={[
             { label: "Managed WordPress hosting",       source: "Host invoice" },
@@ -490,7 +490,6 @@ export default function PageContent() {
               "Every old web address forwarded to its new page",
               "15 days of free post-launch support",
             ],
-            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",

@@ -176,7 +176,7 @@ export default function PageContent() {
               { icon: DollarSign, pain: "App Fees Are Eating Your Profit Margin", detail: "Review, page-builder, upsell and subscription apps each carry their own recurring charge, and several bill outside your Shopify invoice. Read your own app bill rather than a list price. That total is worth reconciling against what each app actually does. SaaS fees instead of growth." },
               { icon: AlertTriangle, pain: "Speed Can Obstruct a Purchase. It Cannot Be Multiplied Into a Number.", detail: "Every app injects JavaScript that loads before your customer sees a single product. No public per-second figure can be multiplied out into your monthly loss, because those studies were measured on other people's stores. Build the case from your own funnel instead: eligible sessions, your measured completion rate, and a tested change." },
               { icon: XCircle, pain: "Shopify's URL Structure Is Fixed, So Plan Canonicals Around It", detail: "Shopify forces /collections/ and /products/ into every URL. You can't clean them up. Competitors with custom storefronts rank for cleaner URLs. Decide how canonicals and internal links handle a product reachable at more than one address." },
-              { icon: Code2, pain: "Liquid Blocks the Checkout Experience That Converts", detail: "One-page checkout, custom upsell flows, subscription bundling. Liquid's template system has boundaries that configuration does not move. Going headless means your checkout works exactly how your conversion data says it should." },
+              { icon: Code2, pain: "Liquid Blocks the Path to Checkout", detail: "Product discovery, cart, bundling and upsell prompts all sit in front of checkout, and Liquid's template system has boundaries that configuration does not move. Going headless gives you those screens in code. Checkout itself stays with Shopify, which hosts it, and editing its steps is a Shopify Plus entitlement." },
               { icon: XCircle, pain: "Your Store Looks Like 50,000 Other Shopify Stores", detail: "Standard Shopify themes are deployed by hundreds of thousands of stores. Your competitors are literally running the same template. A custom storefront is the only way to build a brand experience that's 100% yours." },
               { icon: Globe, pain: "AI Search Won't Recommend a Slow Storefront", detail: "ChatGPT, Perplexity, and Google's AI Overviews now answer 'where should I buy X?' directly. They surface fast, structured storefronts. Check what arrives as HTML on your own product page before assuming an answer engine can read it that influences a growing share of buying decisions." },
             ].map((item, i) => (
@@ -305,7 +305,7 @@ export default function PageContent() {
             {[
               { icon: ArrowRightLeft, title: "Theme to Custom", desc: "Migrate from Liquid to custom code behind a staged cutover. Products, orders and customers are reconciled against a pre-migration export and any exceptions are reported before cutover." },
               { icon: Globe, title: "Global CDN Delivery", desc: "Serve your store from the Edge. Instant loading in Dubai, New York, and London. Measured against your own funnel, not a published multiplier." },
-              { icon: CreditCard, title: "Custom Checkout", desc: "Bypass Shopify limitations. Integrate Stripe, custom upsells, and subscriptions exactly how you want them." },
+              { icon: CreditCard, title: "Custom Cart and Pre-Checkout", desc: "Bundling, upsells and subscription selection built in code, then handed to Shopify's hosted checkout. Shopify runs payments; we build every screen in front of it." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white border border-stone-200 shadow-card hover:border-cognac/30 transition-colors group">
                 <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
@@ -370,7 +370,7 @@ export default function PageContent() {
                 includes: [
                   "Everything in Starter",
                   "Custom product filtering & search",
-                  "Advanced checkout flow",
+                  "Advanced cart and pre-checkout flow",
                   "Upsell and personalization logic",
                   "Custom review system (no Yotpo)",
                   "30 days of free post-launch support",

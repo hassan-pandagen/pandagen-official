@@ -499,18 +499,19 @@ export default function PageContent() {
             price: "Defined after discovery",
             timeline: "Dates proposed after review",
             fit: "A focused tool or portal with validated requirements.",
+            cta: "Scope your build",
             includes: [
               "Requirements and dependency review",
               "Architecture and integration plan",
               "Written acceptance and handover terms",
             ],
-            cta: "Get your migration plan",
           },
           {
             tier: "Platform",
             price: "Defined after discovery",
             timeline: "Dates proposed after review",
             fit: "A SaaS product, client portal, or dashboard with custom workflows.",
+            cta: "Scope your build",
             includes: [
               "Validated feature and data scope",
               "Security and integration requirements",
@@ -523,6 +524,7 @@ export default function PageContent() {
             price: "Defined after discovery",
             timeline: "Dates proposed after review",
             fit: "Complex systems with broader security, integration, or operational requirements.",
+            cta: "Scope your build",
             includes: [
               "Architecture and risk assessment",
               "Acceptance method and operational plan",

@@ -110,7 +110,7 @@ export default function PricingTiers({ tiers }: Props) {
                 onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event", "cta_click", { cta: "pricing_tier", location: "service_pricing" }); window.dispatchEvent(new Event("open-quote-modal")); } }}
                 className={`w-full px-6 py-3 font-bold rounded-full transition-all ${tier.featured ? "bg-white text-charcoal hover:bg-stone-100" : "bg-charcoal text-white hover:bg-cognac"}`}
               >
-                Get your migration plan
+                {tier.cta ?? "Get your migration plan"}
               </button>
             </motion.div>
           ))}

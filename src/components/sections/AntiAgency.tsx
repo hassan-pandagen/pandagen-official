@@ -77,7 +77,7 @@ export default function AntiAgency() {
         >
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-lg">Ready to work with engineers, not account managers?</p>
-            <p className="text-stone-400 text-sm mt-1">Book 30 minutes with an engineer. No sales pitch.</p>
+            <p className="text-stone-400 text-sm mt-1">Book 15 minutes with an engineer. No sales pitch.</p>
           </div>
           <button
             data-cal-namespace="discovery"

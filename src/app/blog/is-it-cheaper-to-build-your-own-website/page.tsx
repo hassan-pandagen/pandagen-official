@@ -307,7 +307,8 @@ export default function IsItCheaperPage() {
                         <strong>Ask for the minimum project size before you ask for a price.</strong> Minimums vary far
                         more than the marketing suggests. Specialist Next.js shops do publish high ones &mdash;
                         Pagepro&apos;s Clutch profile lists a $25,000 minimum, checked 10 September 2026 &mdash; while
-                        other custom and Next.js suppliers advertise entry prices from $1,250. That one question tells
+                        other independent suppliers start below us: Brian Yang publishes a three-page Starter at $700,
+                        checked 13 September 2026, and Sanjeewa a $1,250 entry tier, checked 10 September 2026. That one question tells
                         you whether you are a client or a rounding error.
                     </InsightBox>
                     <BlogText>

@@ -78,7 +78,7 @@ export default function Hero() {
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              without losing your traffic.
+              without starting from scratch.
             </span>
           </h1>
 
@@ -89,10 +89,10 @@ export default function Hero() {
             style={{ color: "#44403c" }}
           >
             You get{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own from the start</span>, built so
-            the answer engines can read it. So when someone asks{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude or Google</span>{" "}
-            who to choose, your pages are what they see.
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>custom Next.js you own from the start</span>, built so{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>ChatGPT, Claude and Google</span>{" "}
+            can read every page without running your JavaScript. Which sources they cite stays their
+            decision. Being readable is the part we control, and we do it properly.
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}

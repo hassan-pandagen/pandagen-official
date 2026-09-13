@@ -115,7 +115,7 @@ export default function PageContent() {
           { metric: "Checkout",      themLabel: "Slow cart", usLabel: "Custom flow",themPct: 40, usPct: 100, icon: CreditCard },
           { metric: "Security",      themLabel: "Plugin surface to patch", usLabel: "Dependency surface to patch", themPct: 35, usPct: 100, icon: ShieldCheck },
           { metric: "Maintenance",   themLabel: "Plugin updates", usLabel: "Dependency updates",       themPct: 85, usPct: 5,  icon: Wrench },
-          { metric: "Ownership",     themLabel: "Rented",    usLabel: "100% Yours", themPct: 30, usPct: 100, icon: Lock },
+          { metric: "Ownership",     themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", themPct: 30, usPct: 100, icon: Lock },
         ]}
         costLines={[
           { label: "WooCommerce extension renewals",   source: "Woo account" },
@@ -482,7 +482,6 @@ export default function PageContent() {
               "301 redirect mapping",
               "15 days of free post-launch support",
             ],
-            cta: "Get Starter Quote",
           },
           {
             tier: "Growth",
