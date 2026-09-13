@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 const controls = [
   ["Mutable facts", "Anything that changes, prices, product limits, policies, market data, incidents, should cite a primary source and say when we checked it and which region, plan currency, or version."],
-  ["First-party results", "A case-study number should say who it is about, over what period, where it was measured, what it started from, how it was measured, where it stops being reliable, and that we have permission to publish it. Results are not presented as typical or guaranteed."],
+  ["First-party results", "Case-study results should identify the project, source record, dates, sample, tools, metric definitions, method and limitations. Before-and-after comparisons should use comparable conditions, and client or data-owner permission should be recorded before publication. Results are not presented as typical or guaranteed."],
   ["Estimates and illustrations", "Forecasts, example budgets and calculators are labelled as estimates, state what they assume, and are never presented as quotes or promises."],
   ["Search and performance", "Lab tests are distinguished from field data. Search rankings, indexing, traffic, AI citations, PageSpeed scores under all conditions, conversions, and revenue are not guaranteed."],
   ["Comparisons", "When we compare named companies we say how we picked them, where the information came from, when we checked, where the scope genuinely differs, and what PandaCodeGen's commercial interest in the comparison is."],
@@ -75,7 +75,7 @@ export default function EditorialPolicyPage() {
 
       <section className="border-y border-stone-300 bg-white px-6 py-16 md:py-24">
         <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold md:text-5xl">Publication controls</h2>
+          <h2 id="publication-controls" className="scroll-mt-28 text-3xl font-bold md:text-5xl">Publication controls</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {controls.map(([title, body]) => (
               <article key={title} className="rounded-2xl border border-stone-300 bg-paper p-6">
