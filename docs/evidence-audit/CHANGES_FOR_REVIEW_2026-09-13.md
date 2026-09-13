@@ -116,7 +116,8 @@ rank for — a survivorship-biased sample that cannot show demand we are invisib
 External US volume and difficulty, checked 13 Sep 2026. **Source: DataForSEO via the
 Percuity MCP `get_keyword_data` tool, `location_code: 2840`, `language_code: "en"`,
 `include_difficulty: true`.** Raw rows for all five calls, with the provider's own caveats,
-are in `audit/keyword-volume-2026-09-13/` — that folder was written on 14 September after a
+are in `docs/evidence-audit/keyword-evidence/` (moved there 14 Sep from `audit/`, which
+`.gitignore` excludes, so it existed on one machine only) — that record was written on 14 September after a
 reviewer asked for the provider, which had not been recorded when these figures were first
 reported. Volumes are provider estimates, difficulty is a modelled backlink score, and
 `NO_VOLUME_REPORTED` means below the reporting floor rather than zero.
@@ -131,9 +132,21 @@ reported. Volumes are provider estimates, difficulty is a modelled backlink scor
 | wordpress alternative | 720 | **6** |
 | webflow alternative | 320 | **0** |
 | seo migration services | 170 | **0** |
-| nextjs development agency | **10** | — |
-| migrate wordpress to nextjs | **no volume** | — |
-| ai ready website, ai optimized website, get cited by chatgpt, llms txt | **no volume** | — |
+| nextjs development agency | **10** | 14 |
+| migrate wordpress to nextjs | no value returned | — |
+| ai ready website | no value returned | 12 |
+| ai optimized website | no value returned | 19 |
+| llms txt | no value returned | 46 |
+| get cited by chatgpt | no value returned | — |
+
+**Three corrections to this table, 14 Sep.** It previously showed a dash for
+`nextjs development agency`'s difficulty when the capture returned KD 14, and grouped four
+terms into one "no volume" row that hid KD 12, 19 and 46. A missing volume is not a missing
+difficulty, and collapsing them made the evidence look thinner than it was. Second,
+"no volume" now reads "no value returned": the cause of a null is not established, and
+`ai website builder for business` returned 30/mo on 13 Sep and null on 14 Sep, so the status
+is not even stable across a day. Third, these figures must not be summed — DataForSEO groups
+close variants, so adding them and calling the total distinct searchers would double-count.
 
 - `src/components/sections/Hero.tsx` H1 → **"Website redesign and migration for WordPress,
   Wix and Squarespace."**
@@ -191,13 +204,24 @@ of unqualified superlative `check-public-claims.mjs` blocks.
 
 ## 5. AI-builder post (`394b554`)
 
-Asked to retitle at "ai website builder" (40,500/mo). **Not done, deliberately.** Every angle
-this post could honestly claim reports no volume: `ai website builder problems`,
-`problems with ai website builders`, `should i use an ai website builder`,
-`ai website builder limitations`, `ai website builder vs developer`. The only real volume is
-the head term at KD 44, held by the builders themselves, whose searchers want a tool rather
-than an argument against using one. One H2 now carries the exact phrase; title, URL,
-canonical, schema and positioning are untouched.
+Asked to retitle at "ai website builder" (40,500/mo). **Not done.**
+
+**Corrected 14 Sep.** The commit message for `394b554` says "the only real volume is the head
+term". That is contradicted by rows in my own capture: `can ai build a website` 320,
+`ai website builder for business` 30, `are ai website builders good` 10. A reviewer caught
+it and is right. The commit message overstates and cannot now be edited; this is the record.
+
+What the evidence does support: the five phrases that carry the post's actual argument —
+`ai website builder problems`, `problems with ai website builders`,
+`should i use an ai website builder`, `ai website builder limitations`,
+`ai website builder vs developer` — all returned no volume. The head term at KD 44 is held
+by the builders themselves, whose searchers want a tool rather than an argument against
+using one. `can ai build a website` at 320/KD 48 is real and adjacent, but it is a
+capability question, not a cost decision, so it does not by itself justify retitling a
+cost-decision article. Relevance still has to carry that, and it does not.
+
+One H2 now carries the exact phrase; title, URL, canonical, schema and positioning are
+untouched.
 
 ---
 
