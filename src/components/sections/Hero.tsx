@@ -97,10 +97,12 @@ export default function Hero() {
             className="text-lg md:text-xl font-medium mb-3 max-w-xl leading-snug sm:mb-4"
             style={{ color: "#44403c" }}
           >
-            A proper rebuild, not a template. Your pages, your links and the tools you already
-            use all come across, and{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>your team keeps changing text and images</span>{" "}
-            the same way they do now.
+            A{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>fast, modern site built around your business</span>,
+            not a template. Your pages, your links and the tools you already use all come across,
+            your team carries on changing text and images the same way they do now, and every page
+            is built so{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>Google and AI assistants can read it properly</span>.
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
