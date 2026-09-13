@@ -99,9 +99,8 @@ export default function Hero() {
           >
             A{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>fast, modern site built around your business</span>,
-            not a template. Your pages, your links and the tools you already use all come across,
-            your team carries on changing text and images the same way they do now, and every page
-            is built so{" "}
+            not a template. The pages, links and integrations in your agreed plan come across,
+            your team gets a content editor and training to run it, and every page is built so{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>Google and AI assistants can read it properly</span>.
           </p>
 

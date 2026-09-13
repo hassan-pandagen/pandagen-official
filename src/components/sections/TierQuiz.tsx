@@ -28,7 +28,7 @@ const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits
   Growth: {
     name: "Growth (Most Popular)",
     price: "$3,500",
-    tagline: "A full move, blog and all, without losing your search traffic.",
+    tagline: "A full website and blog move, with redirects and launch checks.",
     fits: [
       "8 to 20 pages",
       "Sanity CMS (you edit content yourself, no developer needed)",
