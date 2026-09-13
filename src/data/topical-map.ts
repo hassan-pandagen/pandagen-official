@@ -323,7 +323,8 @@ export const clusters: Cluster[] = [
     postIds: [
       'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',
-      'build-vs-buy-software-2026-cost-comparison', 'meta-conversions-api-setup-cost',
+      'build-vs-buy-software-2026-cost-comparison',
+      'is-it-cheaper-to-build-your-own-website', 'meta-conversions-api-setup-cost',
     ],
   },
   {

@@ -41,6 +41,30 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+      id: "is-it-cheaper-to-build-your-own-website",
+      cardStat: "37 of 48",
+      cardStatLabel: "small-business sites we tested fail the check AI assistants use",
+      title: "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
+      excerpt: "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part — and the four costs that follow all arrive after launch.",
+      category: "Pricing",
+      readTime: "10 min",
+      date: "Sep 13",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "cost",
+      lastModified: "2026-09-13",
+      faqs: [
+        { question: "Is it cheaper to build your own website?", answer: "For a personal site, a portfolio, a one-campaign landing page, or anything you would be happy to delete in six months: yes, and you should. An AI builder will get you something live in an afternoon. For a business that takes orders, bookings or enquiries, the build was never the expensive part. The cost is in integrations, launch, maintenance, machine readability and your own time, and every one of those arrives after the site is live." },
+        { question: "Are AI website builders good enough for a business website?", answer: "They produce a real, working, responsive page from one sentence, and the layout is competent. What they do not give you is the account, the key, the permissions, the error handling for when a payment provider is down, the retry when a message fails, or the webhook that confirms the money arrived. Those are operational problems rather than code problems, and they only appear when a real customer hits them." },
+        { question: "Is $1,500 a good price for a website?", answer: "It depends entirely on what is included and what happens after launch. PandaCodeGen builds a 5 to 7 page custom Next.js site for $1,500 at a price fixed before work starts, with no minimum project size, and hands over the code, design files and accounts. Before comparing any two quotes, ask each supplier for their minimum project size: specialist Next.js shops publish minimums as high as $25,000, while others advertise entry prices from $1,250." },
+        { question: "Do I own the code if an agency builds my website?", answer: "With PandaCodeGen, yes. The source, the design files, the CMS and the production accounts are transferred into your name at handover, so a different developer can pick the site up without asking anyone's permission. This is worth confirming in writing with any supplier before you sign, because it is not universal and it is difficult to fix afterwards." },
+        { question: "What does a website cost to run after it is built?", answer: "Hosting is the smallest line. Commercial hosting on Vercel Pro starts at $20 a month paid straight to the provider. The larger costs are the ones that do not arrive as an invoice: the afternoon spent working out why a form stopped delivering, the evening spent reading about DNS records, and the security patching that nobody is watching if the answer to \"who notices\" is \"me, when I next log in\"." },
+        { question: "Can AI assistants read a website built with an AI builder?", answer: "Often not. PandaCodeGen tested 48 small-business websites between 1 and 3 September 2026 and 37 of them failed Google's agent-accessibility-tree audit, while the same sites had a median Lighthouse SEO score of 92 or above. Passing the standard SEO check does not mean software can read and act on the page. You can test your own site in PageSpeed Insights under the Agentic Browsing category." },
+        { question: "Does being readable by AI assistants actually produce sales?", answer: "It can, though the evidence available here is founder-affiliated rather than independent. Panda Patches, a store owned and operated by a PandaCodeGen co-founder, took $11,186.59 from AI assistants across 36 orders in August 2026, which was 14.7% of that month's revenue, with nothing spent on any AI platform. That is one store, one month and one product category, and nothing in it transfers automatically to a longer sales cycle." },
+      ],
+    },
+    {
       id: "what-is-llms-txt",
       cardStat: "97%",
       cardStatLabel: "of llms.txt files got zero AI requests in May 2026",
