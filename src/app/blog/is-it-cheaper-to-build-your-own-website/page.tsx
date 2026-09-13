@@ -172,7 +172,7 @@ export default function IsItCheaperPage() {
                         </ul>
                     </div>
 
-                    <BlogHeader id="builders">What AI builders genuinely do well</BlogHeader>
+                    <BlogHeader id="builders">What AI website builders genuinely do well</BlogHeader>
                     <BlogText>
                         AI builders produce a real, working page from one sentence, and for a project with no customers
                         attached that is the correct tool. Most agency writing on this topic is dishonest about that. The
