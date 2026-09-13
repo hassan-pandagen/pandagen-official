@@ -1,0 +1,73 @@
+{
+  "_provenance": {
+    "provider": "DataForSEO",
+    "accessed_via": "Percuity MCP server, tool `get_keyword_data`",
+    "request": {
+      "keywords": ["website redesign services", "website migration services", "seo migration services", "website redesign", "website redesign cost", "ai seo agency", "ai seo services", "aeo services", "geo agency", "nextjs development agency", "wordpress alternative", "webflow alternative", "white label web development", "can ai build a website", "ai website builder", "ai website builder for business"],
+      "location_code": 2840,
+      "language_code": "en",
+      "include_difficulty": true
+    },
+    "location": "United States",
+    "retrieved": "2026-09-14",
+    "status": "First-party capture. Unlike reconstruction-2026-09-13.json this is the response as returned, including the monthly `trend` arrays, which the 13 September record did not preserve.",
+    "purpose": "Taken after an external reviewer noted that (a) the claimed monthly volatility could not be checked because no monthly arrays survived, and (b) a rerun cannot retroactively authenticate the 13 September response. This is therefore a separate dated capture, not a replacement.",
+    "currency_note": "The provider returns `cpc` as a bare number with no currency field. It is reported here exactly as returned. Narrative elsewhere renders these with a dollar sign; that is an assumption from the US location setting, not a value the API supplied.",
+    "trend_window_note": "Every `trend` array ends at 2026-02 and begins at 2025-09 — six months ending SEVEN MONTHS before this capture. The arrays therefore say nothing about demand in the recent period, and `search_volume` cannot be reconciled against them arithmetically.",
+    "reproduction_check_vs_2026_09_13": "15 of 16 rows reproduced the 13 September values exactly. The exception is recorded below."
+  },
+
+  "_material_finding": {
+    "keyword": "ai website builder for business",
+    "2026-09-13": { "search_volume": 30, "cpc": 38.99, "competition": "LOW", "competition_index": 24, "status": "VIABLE" },
+    "2026-09-14": { "search_volume": null, "cpc": null, "competition": null, "competition_index": null, "status": "NO_VOLUME_REPORTED" },
+    "significance": "The same keyword, at the same location and language, moved from a reported 30/mo to NO_VOLUME_REPORTED in 24 hours. NO_VOLUME_REPORTED is therefore not a stable property of a keyword and cannot be read as a diagnosis of low demand. This is first-party evidence for the reviewer's correction that 'below the reporting floor' was an unsupported inference: the null has an unverified cause and can appear or disappear between calls. Every conclusion resting on a NO_VOLUME_REPORTED status in the 13 September record is weaker than it was presented, and should be read as 'no value was returned under these settings on that date'."
+  },
+
+  "keywords": [
+    { "keyword": "website redesign services", "search_volume": 6600, "cpc": 24.08, "competition": "LOW", "competition_index": 13, "keyword_difficulty": 10, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":2900},{"month":"2026-01","volume":4400},{"month":"2025-12","volume":6600},{"month":"2025-11","volume":9900},{"month":"2025-10","volume":12100},{"month":"2025-09","volume":18100}] },
+    { "keyword": "website migration services", "search_volume": 720, "cpc": 13.3, "competition": "LOW", "competition_index": 9, "keyword_difficulty": 3, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":480},{"month":"2026-01","volume":480},{"month":"2025-12","volume":480},{"month":"2025-11","volume":880},{"month":"2025-10","volume":1300},{"month":"2025-09","volume":1900}] },
+    { "keyword": "seo migration services", "search_volume": 170, "cpc": null, "competition": "LOW", "competition_index": 4, "keyword_difficulty": 0, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":140},{"month":"2026-01","volume":70},{"month":"2025-12","volume":70},{"month":"2025-11","volume":40},{"month":"2025-10","volume":110},{"month":"2025-09","volume":390}] },
+    { "keyword": "website redesign", "search_volume": 2900, "cpc": 45.64, "competition": "LOW", "competition_index": 12, "keyword_difficulty": 24, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":1900},{"month":"2026-01","volume":4400},{"month":"2025-12","volume":2400},{"month":"2025-11","volume":2900},{"month":"2025-10","volume":3600},{"month":"2025-09","volume":5400}] },
+    { "keyword": "website redesign cost", "search_volume": 260, "cpc": 57.88, "competition": "LOW", "competition_index": 21, "keyword_difficulty": 5, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":170},{"month":"2026-01","volume":170},{"month":"2025-12","volume":170},{"month":"2025-11","volume":260},{"month":"2025-10","volume":210},{"month":"2025-09","volume":390}] },
+    { "keyword": "ai seo agency", "search_volume": 1600, "cpc": 45.01, "competition": "LOW", "competition_index": 7, "keyword_difficulty": 0, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":720},{"month":"2026-01","volume":720},{"month":"2025-12","volume":590},{"month":"2025-11","volume":480},{"month":"2025-10","volume":590},{"month":"2025-09","volume":1900}] },
+    { "keyword": "ai seo services", "search_volume": 1300, "cpc": 41.06, "competition": "LOW", "competition_index": 16, "keyword_difficulty": 2, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":720},{"month":"2026-01","volume":880},{"month":"2025-12","volume":720},{"month":"2025-11","volume":880},{"month":"2025-10","volume":1000},{"month":"2025-09","volume":2400}] },
+    { "keyword": "aeo services", "search_volume": 480, "cpc": 41.74, "competition": "LOW", "competition_index": 21, "keyword_difficulty": 9, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":260},{"month":"2026-01","volume":390},{"month":"2025-12","volume":390},{"month":"2025-11","volume":170},{"month":"2025-10","volume":210},{"month":"2025-09","volume":590}] },
+    { "keyword": "geo agency", "search_volume": 720, "cpc": 44.22, "competition": "MEDIUM", "competition_index": 36, "keyword_difficulty": 24, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":480},{"month":"2026-01","volume":320},{"month":"2025-12","volume":390},{"month":"2025-11","volume":320},{"month":"2025-10","volume":320},{"month":"2025-09","volume":880}] },
+    { "keyword": "nextjs development agency", "search_volume": 10, "cpc": null, "competition": null, "competition_index": null, "keyword_difficulty": 14, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":10},{"month":"2026-01","volume":0},{"month":"2025-12","volume":0},{"month":"2025-11","volume":0},{"month":"2025-10","volume":10},{"month":"2025-09","volume":10}] },
+    { "keyword": "wordpress alternative", "search_volume": 720, "cpc": 11.06, "competition": "MEDIUM", "competition_index": 36, "keyword_difficulty": 6, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":590},{"month":"2026-01","volume":720},{"month":"2025-12","volume":590},{"month":"2025-11","volume":590},{"month":"2025-10","volume":720},{"month":"2025-09","volume":1600}] },
+    { "keyword": "webflow alternative", "search_volume": 320, "cpc": 11.71, "competition": "LOW", "competition_index": 23, "keyword_difficulty": 0, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":210},{"month":"2026-01","volume":260},{"month":"2025-12","volume":210},{"month":"2025-11","volume":260},{"month":"2025-10","volume":260},{"month":"2025-09","volume":320}] },
+    { "keyword": "white label web development", "search_volume": 320, "cpc": 23.13, "competition": "LOW", "competition_index": 22, "keyword_difficulty": 1, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":110},{"month":"2026-01","volume":260},{"month":"2025-12","volume":260},{"month":"2025-11","volume":720},{"month":"2025-10","volume":880},{"month":"2025-09","volume":880}] },
+    { "keyword": "can ai build a website", "search_volume": 320, "cpc": 21.36, "competition": "MEDIUM", "competition_index": 58, "keyword_difficulty": 48, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":320},{"month":"2026-01","volume":320},{"month":"2025-12","volume":260},{"month":"2025-11","volume":390},{"month":"2025-10","volume":720},{"month":"2025-09","volume":260}] },
+    { "keyword": "ai website builder", "search_volume": 40500, "cpc": 30.78, "competition": "MEDIUM", "competition_index": 57, "keyword_difficulty": 44, "status": "VIABLE",
+      "trend": [{"month":"2026-02","volume":40500},{"month":"2026-01","volume":40500},{"month":"2025-12","volume":33100},{"month":"2025-11","volume":27100},{"month":"2025-10","volume":40500},{"month":"2025-09","volume":40500}] },
+    { "keyword": "ai website builder for business", "search_volume": null, "cpc": null, "competition": null, "competition_index": null, "keyword_difficulty": null, "status": "NO_VOLUME_REPORTED", "trend": [] }
+  ],
+
+  "_trend_observations": {
+    "note": "These are arithmetic observations on the arrays above, not claims about present demand. Every array ends 2026-02.",
+    "range_within_the_six_recorded_months": {
+      "website redesign services": "2,900 to 18,100 — a 6.2x spread, declining month over month across the whole window",
+      "seo migration services": "40 to 390 — a 9.8x spread",
+      "white label web development": "110 to 880 — an 8x spread",
+      "website migration services": "480 to 1,900 — a 4x spread",
+      "ai seo agency": "480 to 1,900 — a 4x spread",
+      "ai website builder": "27,100 to 40,500 — a 1.5x spread, the most stable term captured"
+    },
+    "caveat_that_matters_most": "The headline search_volume for `website redesign services` is 6,600, while the recorded months run 18,100 down to 2,900 and the most recent recorded month is the lowest. The single figure used to justify retargeting /services is an average over a window in which the term fell steadily. Whether that decline continued into the seven unrecorded months is not known from this data. It should be checked with a 12-month named-period export before any further investment is made on the strength of the 6,600 figure."
+  }
+}
