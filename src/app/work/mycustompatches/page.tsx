@@ -44,7 +44,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How does the hosting model differ from managed WordPress?",
-        answer: "The specific hosting figures for this project are withdrawn pending reconciliation of the original invoices. The structural difference is unchanged: the original site ran on managed WordPress hosting plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) run as serverless functions rather than an always-on server, so nothing sits idle waiting to be patched.",
+        answer: "The specific hosting figures for this project are retired rather than pending: no invoices were kept and the client does not recall the amount, so there is nothing to reconcile against and no figure can honestly be restored. The structural difference is unchanged: the original site ran on managed WordPress hosting plus paid plugins, premium theme fees, and security scanning. The new Next.js site deploys on Vercel with Cloudflare CDN. Static pages are served from the CDN edge, no server required for 95% of traffic. The remaining dynamic routes (quote form submissions) run as serverless functions rather than an always-on server, so nothing sits idle waiting to be patched.",
     },
     {
         question: "Was there any downtime during the migration?",
@@ -521,8 +521,8 @@ export default function MyCustomPatchesCaseStudy() {
                                 // same word-as-value mistake it was meant to fix. An em dash is the
                                 // only correct rendering of an absent figure; the detail carries the why.
                                 { icon: "—", label: "Hosting model", value: "—", detail: "Cost figures for this project are retired rather than pending: no invoices were kept and the client does not recall the amount. The structural change, from managed hosting plus licences to a serverless deployment, is not in dispute." },
-                                { icon: "⚡", label: "Zero Migration Stress", value: "0 Downtime", detail: "200+ pages, all products, all blog posts, all SEO rankings — moved without losing a single order or dropping a single position in Google." },
-                                { icon: "😌", label: "Headache Eliminated", value: "0 Plugins", detail: "No more plugin update anxiety. No more security patches at 2am. No more site going down before a big sale. It just works." },
+                                { icon: "⚡", label: "Zero Migration Stress", value: "0 Downtime", detail: "200+ pages, all products and all blog posts moved. No ranking losses were recorded in the monitored post-launch period, which is the same wording the case record uses and the strongest form this evidence supports." },
+                                { icon: "😌", label: "Headache Eliminated", value: "0 Plugins", detail: "No plugin update treadmill and no plugin or theme vulnerabilities to chase. Framework and dependency updates still happen; they run on a schedule we agree rather than arriving whenever a plugin author ships one." },
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>

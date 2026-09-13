@@ -7,9 +7,6 @@ export type ComparisonMetric = {
   metric: string;
   themLabel: string;
   usLabel: string;
-  /** Visual bar width 0-100. Higher = longer bar. Lower "themPct" = them worse. */
-  themPct: number;
-  usPct: number;
   icon: LucideIcon;
 };
 
@@ -210,27 +207,23 @@ export default function PlatformKillerChart({
                           <row.icon className="w-4 h-4 text-cognac" strokeWidth={2} />
                           <span className="text-xs md:text-sm text-charcoal font-semibold tracking-tight">{row.metric}</span>
                         </div>
-                        {/* Them bar — pure CSS bar grow on scroll-into-view via the parent's data-reveal toggle.
-                            We can't animate width through the motion shim (it only handles opacity/transform),
-                            so the bar uses `transition: width 0.6s` and the parent FadeIn flips a class. */}
-                        <div className="flex items-center gap-3">
-                          <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                            <div
-                              className="h-full bg-linear-to-r from-red-300 to-red-400 rounded-full transition-[width] duration-600 ease-out"
-                              style={{ width: `${row.themPct}%`, transitionDelay: `${200 + i * 60}ms` }}
-                            />
+                        {/* BARS REMOVED 14 Sep 2026. Each row used to render themPct and usPct
+                            as comparative bar widths. Those numbers were authored by hand and had
+                            no disclosed basis or defined scale, so the graphic asserted a measured
+                            difference the page could not support -- and it did so most loudly on
+                            the cost row, which tells the reader to add up their own invoices.
+                            Relabelling the rows in 92871cb fixed the words and left the bars, which
+                            was an incomplete correction. This is now a qualitative side-by-side:
+                            the two labels, nothing implied about magnitude. */}
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="rounded-lg bg-stone-50 px-3 py-2">
+                            <p className="text-[10px] uppercase tracking-wider text-stone-500 font-bold mb-0.5">{themLabel}</p>
+                            <p className="text-[11px] md:text-xs text-charcoal font-semibold leading-snug">{row.themLabel}</p>
                           </div>
-                          <span className="text-[11px] md:text-xs text-red-500 font-bold w-[72px] md:w-[96px] text-right shrink-0 tracking-tight truncate">{row.themLabel}</span>
-                        </div>
-                        {/* Us bar */}
-                        <div className="flex items-center gap-3">
-                          <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                            <div
-                              className="h-full bg-linear-to-r from-emerald-400 to-green-500 rounded-full transition-[width] duration-600 ease-out"
-                              style={{ width: `${row.usPct}%`, transitionDelay: `${300 + i * 60}ms` }}
-                            />
+                          <div className="rounded-lg bg-emerald-50/60 px-3 py-2">
+                            <p className="text-[10px] uppercase tracking-wider text-emerald-700/70 font-bold mb-0.5">Custom build</p>
+                            <p className="text-[11px] md:text-xs text-charcoal font-semibold leading-snug">{row.usLabel}</p>
                           </div>
-                          <span className="text-[11px] md:text-xs text-emerald-600 font-bold w-[72px] md:w-[96px] text-right shrink-0 tracking-tight truncate">{row.usLabel}</span>
                         </div>
                       </motion.div>
                     ))}

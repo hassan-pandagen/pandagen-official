@@ -105,12 +105,12 @@ export default function PageContent() {
           comparisonTitle="WordPress vs Custom"
           themLabel="WordPress"
           metrics={[
-            { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at handover",           themPct: 30, usPct: 98, icon: Gauge },
-            { metric: "Monthly Cost", themLabel: "From your invoices", usLabel: "Hosting from $20", themPct: 95, usPct: 13, icon: DollarSign },
-            { metric: "Security",     themLabel: "Plugin and core surface to patch", usLabel: "Dependency surface to patch", themPct: 35, usPct: 80, icon: Shield },
-            { metric: "Maintenance",  themLabel: "Plugin and core updates", usLabel: "Dependency updates", themPct: 90, usPct: 20, icon: RefreshCcw },
-            { metric: "Ownership",    themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", themPct: 30, usPct: 100, icon: Lock },
-            { metric: "AI Search",    themLabel: "Depends on the theme", usLabel: "Server-rendered HTML", themPct: 45, usPct: 90, icon: Eye },
+            { metric: "Load Speed",   themLabel: "Measure yours", usLabel: "Measured at handover", icon: Gauge },
+            { metric: "Monthly Cost", themLabel: "From your invoices", usLabel: "Hosting from $20", icon: DollarSign },
+            { metric: "Security",     themLabel: "Plugin and core surface to patch", usLabel: "Dependency surface to patch", icon: Shield },
+            { metric: "Maintenance",  themLabel: "Plugin and core updates", usLabel: "Dependency updates", icon: RefreshCcw },
+            { metric: "Ownership",    themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", icon: Lock },
+            { metric: "AI Search",    themLabel: "Depends on the theme", usLabel: "Server-rendered HTML", icon: Eye },
           ]}
           costLines={[
             { label: "Managed WordPress hosting",       source: "Host invoice" },

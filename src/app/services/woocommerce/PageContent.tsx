@@ -110,12 +110,12 @@ export default function PageContent() {
         comparisonTitle="WooCommerce vs Custom"
         themLabel="WooCommerce"
         metrics={[
-          { metric: "Load Speed",    themLabel: "Measure yours", usLabel: "Measured at acceptance",       themPct: 35, usPct: 98, icon: Gauge },
-          { metric: "Monthly Cost",  themLabel: "From your invoices", usLabel: "Provider costs",        themPct: 95, usPct: 5,  icon: DollarSign },
-          { metric: "Checkout",      themLabel: "Slow cart", usLabel: "Custom flow",themPct: 40, usPct: 100, icon: CreditCard },
-          { metric: "Security",      themLabel: "Plugin surface to patch", usLabel: "Dependency surface to patch", themPct: 35, usPct: 100, icon: ShieldCheck },
-          { metric: "Maintenance",   themLabel: "Plugin updates", usLabel: "Dependency updates",       themPct: 85, usPct: 5,  icon: Wrench },
-          { metric: "Ownership",     themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", themPct: 30, usPct: 100, icon: Lock },
+          { metric: "Load Speed",    themLabel: "Measure yours", usLabel: "Measured at acceptance", icon: Gauge },
+          { metric: "Monthly Cost",  themLabel: "From your invoices", usLabel: "Provider costs",  icon: DollarSign },
+          { metric: "Checkout",      themLabel: "Slow cart", usLabel: "Custom flow", icon: CreditCard },
+          { metric: "Security",      themLabel: "Plugin surface to patch", usLabel: "Dependency surface to patch", icon: ShieldCheck },
+          { metric: "Maintenance",   themLabel: "Plugin updates", usLabel: "Dependency updates",  icon: Wrench },
+          { metric: "Ownership",     themLabel: "Licensed themes and plugins", usLabel: "Code and accounts transferred to you", icon: Lock },
         ]}
         costLines={[
           { label: "WooCommerce extension renewals",   source: "Woo account" },

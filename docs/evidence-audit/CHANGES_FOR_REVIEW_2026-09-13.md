@@ -3,8 +3,25 @@
 Five commits, **not yet pushed**, sitting on local `main` ahead of `origin/main`.
 20 files, +510 / -72. Nothing below is live; production still serves the uncorrected version.
 
-Each commit is separate on purpose, so each change gets its own measurement window.
-See `BASELINE_2026-09-13.md` for the pre-deploy state and the lock rule.
+**Release strategy, corrected 14 Sep.** An earlier version of this line said each commit
+gets its own measurement window. That was wrong, and a reviewer was right to flag it:
+separate commits isolate *code*, not *visitor exposure*. Deploying them together produces
+one window, not five, and calling it five would have invented an isolation the release does
+not provide.
+
+Pick one and record it in `BASELINE_2026-09-13.md` §5 before deploying:
+
+- **Staged** — push `92871cb` alone, observe 28 days, then push the rest. Matches the
+  baseline's lock rule and is the only option that isolates the corrections from the
+  structural change.
+- **Bundled** — push all of it, measure as one release, and attribute nothing to any
+  individual commit.
+
+Either is defensible. Claiming the second while doing the first is not. And neither is a
+randomised experiment: a staged before/after still does not establish causation on its own.
+
+The baseline's immediate-correction exception still applies to false claims, and must not
+be stretched to let structural consolidation ride along as a "correction".
 
 | Commit | Subject |
 |---|---|
@@ -124,10 +141,16 @@ reported. Volumes are provider estimates, difficulty is a modelled backlink scor
   **"Website redesign and migration services."** That page received 35 impressions and 0
   clicks in 92 days.
 - `src/app/services/page.tsx`: metadata, OG and Twitter titles aligned.
-- `src/components/forms/HeroLeadForm.tsx`: `replyNote` already existed and already rendered
-  *before* the submit button. It was an empty string, so "a founder replies, usually within
-  one business day" only ever reached people who had already overcome the hesitation it was
-  written to remove. Now filled. Confirmed empty on the live site with Playwright first.
+- `src/components/forms/HeroLeadForm.tsx`: `replyNote` already existed and was an empty
+  string, so "a founder replies, usually within one business day" only ever reached people
+  who had already submitted. Now filled.
+
+  **Placement, corrected 14 Sep.** An earlier version of this line said the note renders
+  before the submit button. It does not. The button is at line 225; the note renders at
+  line 264, after the form and after the direct-contact block. The benefit is real — the
+  expectation is now visible without submitting first — but it sits at the foot of the
+  panel, not beside the action. Moving it directly above the button was not done and would
+  be a separate change.
 
 This also closes a gap the external research asked for by name.
 `docs/research/keyword-gap-2026-09-13/README.md` states that "every inferred phrase still
@@ -135,9 +158,16 @@ needs country-specific keyword-volume validation" and asserts no volumes. Valida
 P1 list moved `website redesign services` up and moved priorities #3–#5 down:
 `webflow to nextjs migration`, `migrate webflow cms to nextjs`,
 `gohighlevel website integration`, `export gohighlevel website` and
-`cancel gohighlevel keep website` **all report no volume.** Those buyers are real — the
-Reddit and HighLevel feature-request evidence is sound — but a real problem with no search
-volume is a sales opportunity, not an SEO one.
+`cancel gohighlevel keep website` **all report no volume.**
+
+Those buyers are real; the Reddit and HighLevel feature-request evidence is sound. An
+earlier version of this paragraph said a problem with no volume is "a sales opportunity,
+not an SEO one". **That is too absolute and a reviewer was right to say so.** A phrase
+below the reporting floor can still receive searches, and is often a less common wording of
+a topic that does have demand. The defensible version: these phrases do not justify being
+ranked above a 6,600/mo term at KD 10 in a publishing order, and they do not each justify a
+standalone page. Judge them as one topic on buyer fit and incremental value, not as
+individual keyword targets.
 
 ---
 
