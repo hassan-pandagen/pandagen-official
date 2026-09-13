@@ -12,9 +12,9 @@ files are not blog posts at all — `linkedin-48-sites-post` and
 
 | Draft | Evidence | Cannibalisation | Cluster | Blocking work |
 |---|---|---|---|---|
-| `is-it-cheaper-to-build-your-own-website` | ✅ audited, 8 fixes | 🟢 low | `pricing` | Trim the pricing pitch; add the security link |
-| `perfect-seo-score-no-traffic` | ✅ audited, 3 fixes | 🟡 manageable | `seo-aeo` + `performance` | Enforce study-vs-explainer split; add channel figures to the source JSON |
-| `what-is-llms-txt` | ✅ all 5 resolved, 8 fixes | ✅ cleared 12 Sep | `seo-aeo` | **Ready to convert to TSX** |
+| `is-it-cheaper-to-build-your-own-website` | ✅ audited, 10 fixes | 🟢 low | `pricing` | **Editorial done.** Needs TSX conversion only |
+| `perfect-seo-score-no-traffic` | ✅ audited, 6 fixes | ✅ split enforced | `seo-aeo` + `performance` | 3 skill gates open; then TSX conversion |
+| `what-is-llms-txt` | ✅ all 5 resolved, 8 fixes | ✅ cleared 12 Sep | `seo-aeo` | **Editorial done.** Needs TSX conversion only |
 
 ---
 
@@ -127,6 +127,26 @@ claim everyone repeats and found nothing behind it.
    as another AEO post.
 
 ---
+
+## Work completed 13 September 2026
+
+**`perfect-seo-score-no-traffic`** — 3 further fixes:
+- The header claimed every figure was single-sourced from `first-party-measurements.json`. Four channel rows were not. `byChannel` is now in that file with a note reconciling $72,103 listed against $76,350 gross: $3,350 unattributed plus ~$897 in channels below the top five. The residue is accounted for rather than hand-waved.
+- Study-vs-explainer split now stated in the body: *"That post is the explainer; this one is the measurement."*
+- Citability gate passed and recorded. Hedge density 3 distinct caveats, none restated. Answer-first 10/10 after fixing one section that opened on a setup.
+
+**`is-it-cheaper-to-build-your-own-website`** — 2 further fixes:
+- Pricing pitch cut from a full spec to two sentences pointing at `how-much-does-a-website-cost`, so it stops competing with the cost pillar. The one thing kept is the ask-for-the-minimum advice, which is the page's own contribution.
+- Wordfence figures now link to `wordpress-plugin-security-2026`.
+
+## Still open before publishing
+
+| Item | Applies to |
+|---|---|
+| TSX conversion + register in `blog.ts` + add to cluster in `topical-map.ts` | all three |
+| 3 skill gates: semantic-triples, ai-overview-gap-fill, google-content-audit | `perfect-seo-score-no-traffic` |
+| Reciprocal link from `agentic-browsing-pagespeed-score` to the study | add at publish, not before — the URL does not exist yet |
+| `/ai-info` evidence line for the 48-site study | after publish |
 
 ## Does anything join `/ai-info`?
 

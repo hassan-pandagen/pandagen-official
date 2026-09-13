@@ -57,6 +57,29 @@
         "aiRevenue": 11186.59,
         "aiOrders": 36,
         "aiShareOfRevenue": "14.7%",
+        "byChannel": {
+          "Paid Ads": {
+            "revenueUsd": 22196,
+            "sharePct": 29.1
+          },
+          "Search": {
+            "revenueUsd": 15103,
+            "sharePct": 19.8
+          },
+          "Direct / Other": {
+            "revenueUsd": 12567,
+            "sharePct": 16.5
+          },
+          "AI assistants": {
+            "revenueUsd": 11187,
+            "sharePct": 14.7
+          },
+          "Repeat / Referral": {
+            "revenueUsd": 11050,
+            "sharePct": 14.5
+          }
+        },
+        "byChannelNote": "Top five acquisition channels only. Listed revenue is $72,103 of $76,350 gross, so the shares total 94.6% rather than 100%. Of the $4,247 not listed, $3,350 is the unattributed bucket recorded in `unattributed` and the remaining ~$897 sits in channels below the top five. Figures rounded to the dollar; the AI row is $11,186.59 exact.",
         "byPlatform": {
           "ChatGPT": {
             "orders": 27,
