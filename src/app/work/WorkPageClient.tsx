@@ -1,34 +1,70 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BarChart3, CheckCircle2, FileSearch, Route, ShoppingCart } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { caseStudy } from "@/data/case-study-facts";
+import styles from "./work.module.css";
 
-const evidenceAreas = [
+type Project = {
+  slug: string;
+  category: string;
+  summary: string;
+  image: string;
+  alt: string;
+  surface: string;
+  width?: number;
+  height?: number;
+};
+
+const clientProjects: Project[] = [
   {
-    icon: Route,
-    title: "Website migration",
-    scope: "URL and content inventory, redirect map, content model, integrations, analytics, cutover, monitoring, rollback, and handover.",
-    evidence: "Dated pre/post exports, representative URLs, test profile, Search Console comparison window, launch record, and known limitations.",
+    slug: "ladies-4-jesus",
+    category: "Community & publishing",
+    summary: "A community website with owner-managed publishing, stories and moderated submissions.",
+    image: "/work/ladies-4-jesus.png",
+    alt: "Ladies 4 Jesus homepage with community photography, stories and a Share Your Story button.",
+    surface: styles.community,
   },
   {
-    icon: ShoppingCart,
-    title: "Commerce replatforming",
-    scope: "Catalog, pricing, checkout, payments, customer accounts, analytics, consent, operations, platform trade-offs, and ongoing vendor costs.",
-    evidence: "Comparable cost periods, order and revenue definitions, attribution method, performance conditions, refund state, and owner permission.",
-  },
-  {
-    icon: BarChart3,
-    title: "Operations software",
-    scope: "Roles, workflows, data model, integrations, audit history, reporting, access control, backup, recovery, and support boundaries.",
-    evidence: "Approved requirements, acceptance record, role matrix, test evidence, incident history, measurement period, and authorized screenshots.",
+    slug: "emblematic-studio",
+    category: "Product catalogue & enquiries",
+    summary: "A material-led product catalogue with guides and an artwork-to-quote journey.",
+    image: "/work/emblematic-studio.png",
+    alt: "Emblematic Studio website showing its patch collection and product-led visual design.",
+    surface: styles.catalogue,
   },
 ];
 
-const publicationChecks = [
-  "A dated source record",
-  "A defined baseline and method",
-  "Permission to publish",
-  "The limitation beside the result",
+const affiliatedProjects: Project[] = [
+  {
+    slug: "panda-patches",
+    category: "Custom commerce",
+    summary: "A patch business with custom pricing, checkout and a connected customer portal.",
+    image: "/work/panda-patches.png",
+    alt: "Panda Patches iron-on patch page with product details and a custom quote form.",
+    surface: styles.commerce,
+  },
+  {
+    slug: "enterprise-ops",
+    category: "Internal operations software",
+    summary: "The staff workspace behind Panda Patches: orders, production, payments and reporting.",
+    image: "/work/enterprise-ops.png",
+    alt: "Panda Patches operations dashboard with its production pipeline; sensitive customer and financial data is blurred.",
+    surface: styles.operations,
+    width: 1711,
+    height: 919,
+  },
+];
+
+const migration = caseStudy("mycustompatches");
+const codeLab = caseStudy("panda-codelab");
+const collectionItems = [
+  migration,
+  ...clientProjects.map(({ slug }) => caseStudy(slug)),
+  { name: "NorthDeck Group", href: "https://northdeckgroup.com/" },
+  ...affiliatedProjects.map(({ slug }) => caseStudy(slug)),
+  codeLab,
 ];
 
 const schema = {
@@ -38,10 +74,21 @@ const schema = {
       "@type": "CollectionPage",
       "@id": "https://www.pandacodegen.com/work#webpage",
       url: "https://www.pandacodegen.com/work",
-      name: "Project evidence and case-study methodology",
-      description: "The evidence standard used before PandaCodeGen publishes project outcomes.",
+      name: "Selected work: websites, commerce and custom software",
+      description: "Explore PandaCodeGen website migrations, custom storefronts and operations software, with project scope and client relationships stated.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
+      mainEntity: { "@id": "https://www.pandacodegen.com/work#projects" },
       inLanguage: "en-US",
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.pandacodegen.com/work#projects",
+      itemListElement: collectionItems.map(({ name, href }, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name,
+        url: new URL(href, "https://www.pandacodegen.com").href,
+      })),
     },
     {
       "@type": "BreadcrumbList",
@@ -53,201 +100,158 @@ const schema = {
   ],
 };
 
+function ProjectCard({ project }: { project: Project }) {
+  const study = caseStudy(project.slug);
+  return (
+    <article className={styles.project}>
+      <Link href={study.href} className={styles.projectLink} aria-labelledby={`${project.slug}-title`}>
+        <div className={`${styles.preview} ${project.surface}`}>
+          <Image
+            src={project.image}
+            alt={project.alt}
+            width={project.width ?? 1912}
+            height={project.height ?? 914}
+            sizes="(min-width: 1440px) 600px, (min-width: 768px) 44vw, 90vw"
+            className={styles.screenshot}
+          />
+          <span className={styles.previewArrow} aria-hidden="true"><ArrowUpRight size={22} /></span>
+        </div>
+        <div className={styles.projectMeta}>
+          <span>{project.category}</span>
+          <span>{study.relationship}</span>
+        </div>
+        <h3 id={`${project.slug}-title`} className={styles.projectTitle}>{study.name}</h3>
+        <p className={styles.projectSummary}>{project.summary}</p>
+        <span className={styles.textLink}>Read case study <ArrowUpRight size={17} aria-hidden="true" /></span>
+      </Link>
+    </article>
+  );
+}
+
 export default function WorkPageClient() {
   return (
-    <main className="min-h-screen bg-paper text-charcoal">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <div className={styles.page}>
       <Header />
-
-      <section className="relative isolate overflow-hidden border-b border-stone-300 px-6 pb-16 pt-28 md:pb-24 md:pt-40">
-        <div aria-hidden="true" className="absolute -right-40 top-12 h-[30rem] w-[30rem] rounded-full bg-cognac/[0.07] blur-3xl" />
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cognac to-transparent" />
-
-        <div className="relative mx-auto max-w-7xl">
-          <div className="grid items-end gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 xl:gap-24">
-            <div className="max-w-4xl border-l-2 border-cognac pl-5 md:pl-8">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Project evidence</p>
-              <h1 className="mt-5 text-4xl font-bold leading-[1.04] tracking-[-0.035em] sm:text-5xl md:text-7xl">
-                A case study should show the work, {" "}
-                <span className="font-serif font-normal italic text-cognac">the proof, and the limits.</span>
-              </h1>
-              <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                We label the source behind every result. Owner-confirmed project facts and first-party platform snapshots are not independent studies, ranking promises, or forecasts. Public reviews stay linked to their original source.
-              </p>
+      <main>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <section className={`${styles.container} ${styles.intro}`} aria-labelledby="work-title">
+          <p className={styles.eyebrow}>PandaCodeGen / Websites & software</p>
+          <div className={styles.introGrid}>
+            <h1 id="work-title">Selected <span className="font-serif italic">work.</span></h1>
+            <div className={styles.introCopy}>
+              <p>Website migrations, custom storefronts and the software behind them. Here’s what we built.</p>
+              <Link href="/contact#contact-quote-form" className={styles.textLink}>Discuss your project <ArrowUpRight size={18} aria-hidden="true" /></Link>
             </div>
-
-            <aside className="overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal text-white shadow-[0_24px_70px_-36px_rgba(28,25,23,0.75)]" aria-label="Publication threshold">
-              <div className="border-b border-white/10 px-6 py-5 md:px-7">
-                <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#ffc2a6]">Publication threshold</div>
-                <h2 className="mt-3 font-serif text-2xl font-normal italic leading-snug text-white md:text-3xl">
-                  A result needs a record behind it.
-                </h2>
-              </div>
-              <ul className="grid sm:grid-cols-2 lg:grid-cols-1">
-                {publicationChecks.map((item) => (
-                  <li key={item} className="flex items-center gap-3 border-b border-white/10 px-6 py-4 text-sm text-stone-200 last:border-b-0 sm:odd:border-r lg:border-r-0 md:px-7">
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[#f2a17c]" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </aside>
           </div>
+          <nav className={styles.projectNav} aria-label="Explore work">
+            <span className={styles.exploreLabel}>Explore the projects <ArrowDown size={16} aria-hidden="true" /></span>
+            <div>
+              <a href="#client-work">Client work <span>04</span></a>
+              <a href="#affiliated-work">Founder-affiliated work <span>03</span></a>
+            </div>
+          </nav>
+        </section>
 
-          <div className="mt-12 grid gap-4 lg:grid-cols-[1.08fr_0.92fr]" aria-label="Owner-confirmed project facts">
-            <article className="relative overflow-hidden rounded-[1.75rem] border border-charcoal bg-charcoal p-7 text-white md:p-9">
-              <div aria-hidden="true" className="absolute -right-16 -top-20 h-52 w-52 rounded-full bg-cognac/30 blur-3xl" />
-              <div className="relative grid gap-6 sm:grid-cols-[0.55fr_1.45fr] sm:items-end">
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#ffc2a6]">Owner-confirmed project fact</div>
-                  <div className="mt-5 font-serif text-6xl font-normal italic leading-none text-[#f2a17c] md:text-7xl">22 days</div>
-                </div>
-                <div className="border-t border-white/15 pt-5 sm:border-l sm:border-t-0 sm:pl-7 sm:pt-0">
-                  <h2 className="text-2xl font-bold">MyCustomPatches WordPress migration</h2>
-                  <div className="mt-3 leading-7 text-stone-300">
-                    Owner-confirmed July 21, 2026: a decade-old WordPress site moved to custom Next.js in 22 days.
-                    200+ URLs across 13 distinct templates, zero downtime at cutover, and no rankings lost in the
-                    30 days of Search Console monitoring after launch.
-                  </div>
-                  <div className="mt-3 text-sm leading-6 text-stone-400">
-                    Performance and hosting figures for this project were withdrawn on August 4, 2026 pending
-                    reconciliation of the original test records, and are not stated anywhere on this site until they
-                    are re-measured with a documented method. What remains above is scope and outcome, which the
-                    owner confirmed. These are first-party project records, not an independent benchmark, and no
-                    ranking or conversion result is implied.
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-[1.75rem] border border-cognac/35 bg-white p-7 md:p-9">
-              <div className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Ownership disclosure</div>
-              <div className="mt-5 font-serif text-4xl font-normal italic leading-none text-cognac md:text-5xl">Founder-affiliated</div>
-              <h2 className="mt-5 text-2xl font-bold text-charcoal">Panda Patches</h2>
-              <div className="mt-3 leading-7 text-stone-700">
-                Panda Patches is owned and operated by Imran Raza Ladhani, a PandaCodeGen co-founder. PandaCodeGen built and maintains its technical platform. PandaCodeGen holds no ownership or partnership stake in the business. A June 2026 internal dashboard tagged more than $7,000 in orders as customer-reported AI-assisted referrals. A separate dated Meta Events Manager screenshot reported about 10.4% additional Lead events through Conversions API and displayed 9.0/10 Lead Event Match Quality.
-              </div>
-              <div className="mt-3 text-sm leading-6 text-stone-600">
-                Because the owner is a co-founder, treat this as a founder-affiliated project rather than an independent client engagement. These are first-party attribution and platform-reporting snapshots—not independent endorsements, controlled lift studies, guarantees, or forecasts. The AI referral tags are customer-reported.
-              </div>
-            </article>
+        <section className={`${styles.container} ${styles.clientWork}`} aria-labelledby="client-work">
+          <div className={styles.sectionHeading}>
+            <h2 id="client-work">Built for our clients.</h2>
+            <span className={styles.sectionNote}>From the website to the way it works</span>
           </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-16 md:py-24" aria-labelledby="case-studies">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Project records</p>
-          <h2 id="case-studies" className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">
-            The full write-ups, <span className="font-serif font-normal italic text-cognac">with their limits stated.</span>
-          </h2>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-            Each record states the relationship, the measurement conditions and what the figures do not prove. Three are
-            founder-affiliated and labelled as such; they are operating experience, not independent client proof.
+          <article className={styles.featured}>
+            <Link href={migration.href} className={styles.featuredLink} aria-labelledby="mycustompatches-title">
+              <div className={`${styles.preview} ${styles.migration}`}>
+                <Image
+                  src="/work/mycustompatches.png"
+                  alt="MyCustomPatches product page with a chenille patch gallery, product details and an instant quote action."
+                  width={1912}
+                  height={914}
+                  sizes="(min-width: 1440px) 780px, (min-width: 960px) 58vw, 90vw"
+                  loading="eager"
+                  fetchPriority="high"
+                  className={styles.screenshot}
+                />
+              </div>
+              <div className={styles.featuredCopy}>
+                <p className={styles.eyebrow}>Featured / Website migration</p>
+                <h3 id="mycustompatches-title">{migration.name}</h3>
+                <p className={styles.featuredSummary}>An established WordPress storefront, rebuilt in custom code.</p>
+                <p className={styles.featuredDetail}>The product catalogue, blog and quote journey moved to Next.js, with URL redirects and launch checks.</p>
+                <div className={styles.featuredFooter}>
+                  <span>{migration.relationship}<br /><span className={styles.entity}>{migration.legalEntity}</span></span>
+                  <span className={styles.roundArrow} aria-hidden="true"><ArrowUpRight size={25} /></span>
+                </div>
+                <span className={styles.featuredCta}>Read the migration case study</span>
+              </div>
+            </Link>
+          </article>
+          <div className={styles.projectGrid}>
+            {clientProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+          </div>
+          <article className={styles.liveProject}>
+            <a href="https://northdeckgroup.com/" target="_blank" rel="noopener noreferrer" className={styles.liveProjectLink} aria-labelledby="northdeck-title">
+              <div className={`${styles.preview} ${styles.northdeck}`}>
+                <Image
+                  src="/work/northdeck-group.png"
+                  alt="NorthDeck Group homepage presenting its connected security systems and business services."
+                  width={1912}
+                  height={914}
+                  sizes="(min-width: 1440px) 600px, (min-width: 768px) 44vw, 90vw"
+                  className={styles.screenshot}
+                />
+              </div>
+              <div className={styles.liveProjectCopy}>
+                <p className={styles.eyebrow}>Business website / Client project</p>
+                <h3 id="northdeck-title">NorthDeck Group</h3>
+                <p>A custom website bringing connected security systems and business services under one roof.</p>
+                <span className={styles.textLink}>Visit live website <ArrowUpRight size={18} aria-hidden="true" /></span>
+                <span className={styles.externalNote}>northdeckgroup.com · Opens in a new tab</span>
+              </div>
+            </a>
+          </article>
+          <p className={styles.projectNote}>
+            Explore each case study for the brief, our role and the build details. Project-specific results and their sources are included where available.
+            <Link href="/editorial-policy#publication-controls" className="mt-3 flex min-h-8 w-fit items-center gap-2 font-semibold text-cognac underline underline-offset-4">
+              How we publish results <ArrowRight size={14} aria-hidden="true" />
+            </Link>
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {[
-              { href: "/work/mycustompatches", name: "MyCustomPatches", kind: "Independent client", desc: "WordPress to Next.js migration. Owner-confirmed: 22 days, 200+ URLs on 13 templates, zero downtime, no rankings lost. Performance figures withdrawn pending reconciliation." },
-              { href: "/work/ladies-4-jesus", name: "Ladies 4 Jesus", kind: "Independent client", desc: "Community site migration. Nine content types, five moderated submission paths, owner-run CMS. No before/after claimed: no baseline was captured." },
-              { href: "/work/emblematic-studio", name: "Emblematic Studio", kind: "Independent client", desc: "Product catalogue and quote experience. 20 product types from one typed registry; one runtime route on the whole site. Build record, no traffic claims." },
-              { href: "/work/panda-patches", name: "Panda Patches", kind: "Founder-affiliated", desc: "Headless Next.js, Sanity, Supabase and Square build with a real-time pricing calculator and ops platform." },
-              { href: "/work/enterprise-ops", name: "Enterprise Operations", kind: "Founder-affiliated", desc: "Our own operations platform for the founder-owned Panda Patches business: order tracking, role-based dashboards and reporting replacing spreadsheets." },
-              { href: "/work/panda-codelab", name: "Panda CodeLab", kind: "Founder-affiliated", desc: "Agency site build. Sub-second load times and an accessibility-first component system." },
-            ].map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                className="group rounded-3xl border border-stone-300 bg-white p-7 transition-colors hover:border-cognac md:p-8"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">{c.kind}</span>
-                  <ArrowRight className="h-5 w-5 shrink-0 text-stone-600 transition-transform group-hover:translate-x-1 group-hover:text-cognac" aria-hidden="true" />
-                </div>
-                <h3 className="mt-4 text-2xl font-bold text-charcoal">{c.name}</h3>
-                <p className="mt-3 leading-7 text-stone-700">{c.desc}</p>
-              </Link>
-            ))}
+        </section>
+
+        <section className={styles.affiliatedSection} aria-labelledby="affiliated-work">
+          <div className={styles.container}>
+            <div className={styles.affiliatedIntro}>
+              <div>
+                <p className={styles.eyebrow}>Founder-affiliated work</p>
+                <h2 id="affiliated-work">Behind the storefront.<br /><span className="font-serif italic">Inside the business.</span></h2>
+              </div>
+              <p>We also build for businesses owned by co-founder Imran Raza Ladhani. These projects show that work, with the relationship clearly stated.</p>
+            </div>
+            <div className={styles.projectGrid}>
+              {affiliatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+            </div>
+            <div className={styles.additionalProject}>
+              <div>
+                <p className={styles.eyebrow}>Also in the collection / {codeLab.relationship}</p>
+                <h3>{codeLab.name}</h3>
+                <p>An agency website with a custom component system, motion and 3D scenes.</p>
+              </div>
+              <Link href={codeLab.href} className={styles.textLink}>Explore the build <ArrowUpRight size={19} aria-hidden="true" /></Link>
+            </div>
           </div>
+        </section>
 
-          {/* Live work that does not have a record yet.
-
-              Added 9 Sep 2026. NorthDeck Group is shown on the homepage, and
-              putting it in the grid above would have been wrong: that grid
-              promises a full write-up with its measurement conditions stated,
-              and this project has none captured yet. Saying so is more use to a
-              reader than either hiding the project or publishing a record with
-              nothing measured in it. Client is content for the work to be shown.
-              When the conditions are captured, move it up into the grid. */}
-          <div className="mt-10 rounded-3xl border border-dashed border-stone-300 bg-white/60 p-7 md:p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">Live, no record yet</p>
-            <h3 className="mt-3 text-2xl font-bold text-charcoal">NorthDeck Group</h3>
-            <p className="mt-3 max-w-3xl leading-7 text-stone-700">
-              A connected security and business services site, built as a custom Next.js
-              build and live now at{" "}
-              <a
-                href="https://northdeckgroup.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-cognac underline underline-offset-4"
-              >
-                northdeckgroup.com
-              </a>
-              . There is no write-up above because no baseline or post-launch measurement
-              was captured for it, and a record here has to state the conditions its
-              figures were taken under. It gets one when there is something real to put
-              in it.
-            </p>
+        <section className={`${styles.container} ${styles.contactSection}`} aria-labelledby="project-cta">
+          <div>
+            <p className={styles.eyebrow}>Your next project</p>
+            <h2 id="project-cta">Let’s make<br /><span className="font-serif italic">your next move.</span></h2>
           </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-16 md:py-24" aria-labelledby="project-types">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">Evidence architecture</p>
-          <h2 id="project-types" className="mt-4 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">
-            What each project record <span className="font-serif font-normal italic text-cognac">must contain.</span>
-          </h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {evidenceAreas.map(({ icon: Icon, title, scope, evidence }) => (
-              <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
-                <Icon className="h-7 w-7 text-cognac" aria-hidden="true" />
-                <h3 className="mt-5 text-xl font-bold">{title}</h3>
-                <h4 className="mt-5 text-sm font-bold uppercase tracking-wider text-stone-700">Scope record</h4>
-                <p className="mt-2 leading-7 text-stone-700">{scope}</p>
-                <h4 className="mt-5 text-sm font-bold uppercase tracking-wider text-stone-700">Outcome evidence</h4>
-                <p className="mt-2 leading-7 text-stone-700">{evidence}</p>
-              </article>
-            ))}
+          <div className={styles.contactCopy}>
+            <p>Tell us what your website needs to do, what’s getting in the way and what you want to keep. We’ll help you work out the next step.</p>
+            <Link href="/contact#contact-quote-form" className={styles.contactButton}>Discuss your project <ArrowRight size={20} aria-hidden="true" /></Link>
+            <Link href="/services" className={styles.textLink}>Explore our services <ArrowUpRight size={17} aria-hidden="true" /></Link>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-midnight px-6 py-16 text-white md:py-24" aria-labelledby="publication-gate">
-        <div className="mx-auto max-w-5xl">
-          <FileSearch className="h-8 w-8 text-orange-300" aria-hidden="true" />
-          <h2 id="publication-gate" className="mt-5 text-3xl font-bold md:text-5xl">
-            The <span className="font-serif font-normal italic text-orange-300">publication gate.</span>
-          </h2>
-          <ul className="mt-9 grid gap-4 md:grid-cols-2">
-            {["Client or data-owner permission is recorded", "Baseline and outcome use comparable conditions", "Dates, sample, tools, and definitions are stated", "Third-party costs include assumptions and exclusions", "Testimonials match the approved original text", "Rankings and revenue are not presented as guaranteed causation", "Structured data does not exceed visible evidence", "A review date and withdrawal trigger are assigned"].map((item) => (
-              <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-4 text-stone-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 font-bold text-charcoal hover:bg-orange-100">
-              Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link href="/about" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-500 px-6 font-bold text-white hover:border-white">
-              Review delivery standards
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </main>
+        </section>
+      </main>
+      <Footer showCta={false} />
+    </div>
   );
 }

@@ -138,9 +138,9 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "The public terms governing use of the PandaCodeGen website and its non-binding planning information.",
   },
   "/work": {
-    title: "Selected Work and Evidence",
+    title: "Selected Work",
     label: "PandaCodeGen Work",
-    description: "First-party implementation examples with ownership relationships, measurement boundaries, dates, and limitations stated.",
+    description: "Website migrations, custom storefronts and the software behind them. Explore our projects and case studies.",
   },
   "/work/enterprise-ops": {
     title: "Enterprise Operations Platform",

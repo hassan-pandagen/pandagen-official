@@ -6,9 +6,10 @@ import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 
 interface FooterProps {
   onOpenQuote?: () => void;
+  showCta?: boolean;
 }
 
-export default function Footer({ onOpenQuote }: FooterProps) {
+export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
   const openQuote = () => {
     if (onOpenQuote) onOpenQuote();
     else window.dispatchEvent(new Event("open-quote-modal"));
@@ -18,7 +19,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
     <footer className="bg-[#F5F5F4] pt-10 md:pt-20 border-t border-stone-200">
 
       {/* 1. FLOATING CTA CARD */}
-      <div className="container mx-auto px-6 mb-12 md:mb-24">
+      {showCta && <div className="container mx-auto px-6 mb-12 md:mb-24">
         <div className="relative rounded-[2.5rem] bg-[#0C0A09] overflow-hidden px-6 md:px-8 py-12 md:py-20 text-center shadow-2xl">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cognac/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-stone-800/60 blur-[100px] rounded-full pointer-events-none" />
@@ -50,6 +51,8 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           </div>
         </div>
       </div>
+
+      }
 
       {/* 2. EDITORIAL LINKS */}
       <div className="container mx-auto px-6 pb-10 md:pb-20">
