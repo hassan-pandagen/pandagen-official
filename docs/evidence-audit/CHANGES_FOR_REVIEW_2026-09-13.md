@@ -95,7 +95,14 @@ price in a section heading; none makes the visitor work for one.
 **The method changed, and that is the substance of this commit.** Every prior keyword
 decision on this site came from our own Search Console, which only shows queries we already
 rank for — a survivorship-biased sample that cannot show demand we are invisible for.
-External US volume and difficulty, checked 13 Sep 2026:
+
+External US volume and difficulty, checked 13 Sep 2026. **Source: DataForSEO via the
+Percuity MCP `get_keyword_data` tool, `location_code: 2840`, `language_code: "en"`,
+`include_difficulty: true`.** Raw rows for all five calls, with the provider's own caveats,
+are in `audit/keyword-volume-2026-09-13/` — that folder was written on 14 September after a
+reviewer asked for the provider, which had not been recorded when these figures were first
+reported. Volumes are provider estimates, difficulty is a modelled backlink score, and
+`NO_VOLUME_REPORTED` means below the reporting floor rather than zero.
 
 | Term | Vol/mo | KD |
 |---|---:|---:|
