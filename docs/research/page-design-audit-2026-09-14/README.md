@@ -6,8 +6,8 @@ Completed 14 September 2026. The work index has been redesigned and checked in a
 
 The production preview started for this review is [the redesigned work page](http://127.0.0.1:3002/work). This address is local to the development machine and requires that preview process to remain running. No production deployment or Git push was performed.
 
-- [Desktop preview](../../../audit/work-redesign-2026-09-14/final-production-clean-desktop-top.png)
-- [Mobile preview](../../../audit/work-redesign-2026-09-14/final-production-clean-mobile-top.png)
+- [Desktop preview](../../../audit/work-redesign-2026-09-14/order-desktop-top.png)
+- [Mobile preview](../../../audit/work-redesign-2026-09-14/order-mobile-top.png)
 - [Browser QA summary](../../../audit/work-redesign-2026-09-14/QA_SUMMARY.md)
 - [Six-agency benchmark](competitor-benchmark.md)
 - [Page-by-page audit and recommended changes](site-page-audit.md)
@@ -16,11 +16,11 @@ Screenshots and browser logs are local review artifacts under the ignored `/audi
 
 ## What changed
 
-The work page now starts with a short introduction and visible projects. MyCustomPatches is the featured migration; Ladies 4 Jesus, Emblematic Studio and NorthDeck show additional client work. Panda Patches, its operations platform and Panda CodeLab are clearly identified as founder-affiliated work.
+The work page starts with a short introduction and visible projects. Following the owner's requested ordering, Emblematic Studio is featured first, followed by NorthDeck, Panda Patches, its operations/CRM platform, Ladies 4 Jesus and MyCustomPatches. Panda CodeLab remains a supplementary text entry after those six. The visible sequence and structured-data ItemList match. Panda Patches, its operations platform and Panda CodeLab remain clearly identified as founder-affiliated work.
 
 Six existing project screenshots are displayed with descriptive alternatives and stable dimensions. NorthDeck opens its actual live website; the other six entries link to their existing case studies. CodeLab uses a supplementary text link because its existing screenshot contains unsupported promises; that image was not reused in the new gallery. The operations screenshot retains its existing redactions.
 
-Project names and recorded relationships come from the central case-study source. The gallery explains delivered scope without repeating unsupported or withdrawn outcome figures. The longer methodology blocks have been replaced by a short note directing readers to the relevant case records. Following review, a visible **How we publish results** link beneath the client projects now leads directly to `/editorial-policy#publication-controls`. That policy's existing first-party-results paragraph explicitly retains recorded permission, comparable before-and-after conditions, and stated dates, samples, tools and definitions.
+Project names and recorded relationships come from the central case-study source. The gallery explains delivered scope without repeating unsupported or withdrawn outcome figures. The longer methodology blocks have been replaced by a short note directing readers to the relevant case records. Following review, a visible **How we publish results** link beneath the project collection now leads directly to `/editorial-policy#publication-controls`. That policy's existing first-party-results paragraph explicitly retains recorded permission, comparable before-and-after conditions, and stated dates, samples, tools and definitions.
 
 The warm paper, charcoal and cognac identity remains, with larger previews, clearer typography, responsive layouts, section navigation, keyboard focus and reduced-motion support. The page has one closing enquiry section. A default-on footer option suppresses its extra sales panel on this page while retaining the existing footer behavior elsewhere.
 
@@ -45,3 +45,5 @@ The next priorities are factual consistency across translations and case studies
 No enquiry was submitted, email sent, or client account accessed during the review.
 
 Follow-up publication-link check: the refreshed production build and targeted ESLint checks passed. At 390px and 1440px, keyboard activation of **How we publish results** reached the publication-controls heading below the fixed header; the link had a visible focus outline and no horizontal overflow. The permission, comparison and measurement requirements were verified in the destination text. Local evidence: `audit/work-redesign-2026-09-14/publication-link-qa.json`.
+
+Follow-up project-order check: the production build and targeted ESLint checks passed. At 390px and 1440px, the displayed project sequence and ItemList positions matched the requested order. The relationship disclosures and publication-policy link remained present, with no horizontal overflow or browser errors. Local evidence: `audit/work-redesign-2026-09-14/order-qa.json`.

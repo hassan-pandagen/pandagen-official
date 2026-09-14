@@ -28,14 +28,14 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
 .featuredLink { display: grid; grid-template-columns: 1.55fr 1fr; background: #e9e3d9; }
 .preview { position: relative; display: flex; align-items: center; justify-content: center; min-width: 0; aspect-ratio: 1.62; padding: 30px; overflow: hidden; border-radius: 10px; }
 .screenshot { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 18px 40px -14px rgb(28 25 23 / 30%); transition: transform .45s cubic-bezier(.2, .7, .3, 1); }
-.migration { background: #ded1c1; border-radius: 0; aspect-ratio: auto; min-height: 420px; padding: 38px; }
+.featuredPreview { background: #e0e4d9; border-radius: 0; aspect-ratio: auto; min-height: 420px; padding: 38px; }
 .featuredCopy { display: flex; flex-direction: column; padding: 40px 36px 30px; }
 .featuredCopy > .eyebrow { color: var(--color-stone-600); }
 .featuredCopy h3 { margin-top: 28px; font-size: clamp(26px, 2.5vw, 38px); line-height: 1.15; font-weight: 600; letter-spacing: -.045em; overflow-wrap: anywhere; }
 .featuredSummary { margin-top: 16px; max-width: 330px; font-size: 23px; line-height: 1.4; letter-spacing: -.02em; }
 .featuredDetail { margin-top: 18px; font-size: 14px; line-height: 1.75; color: var(--color-stone-600); }
 .featuredFooter { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: auto; padding-top: 28px; font-size: 12px; line-height: 1.7; }
-.entity { color: var(--color-stone-600); }
+.projectLegal { margin-top: 8px; font-size: 12px; color: var(--color-stone-600); }
 .roundArrow, .previewArrow { display: flex; align-items: center; justify-content: center; border-radius: 50%; flex-shrink: 0; }
 .roundArrow { width: 48px; height: 48px; background: var(--color-charcoal); color: white; transition: background .2s ease; }
 .featuredCta { margin-top: 15px; font-size: 12px; font-weight: 600; }
@@ -48,7 +48,7 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
 .project .textLink { margin-top: 18px; font-size: 12px; }
 .previewArrow { position: absolute; bottom: 18px; right: 18px; width: 42px; height: 42px; background: var(--color-paper); color: var(--color-charcoal); box-shadow: 0 2px 8px rgb(0 0 0 / 8%); transition: background .2s ease, color .2s ease; }
 .community { background: #e9dfe6; }
-.catalogue { background: #e0e4d9; }
+.wordpress { background: #ded1c1; }
 .northdeck { background: #dce3e8; }
 .commerce { background: #3f352c; }
 .operations { background: #293342; }
@@ -75,6 +75,8 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
 .additionalProject h3 { font-size: 24px; font-weight: 500; letter-spacing: -.02em; margin-top: 10px; }
 .additionalProject p:not(.eyebrow) { color: #c6c0b8; font-size: 13px; line-height: 1.8; margin-top: 8px; }
 .additionalProject > a { flex-shrink: 0; }
+.additionalProjectLight { border-color: var(--color-stone-300); }
+.additionalProjectLight .eyebrow, .additionalProjectLight p:not(.eyebrow) { color: var(--color-stone-600); }
 .contactSection { display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: center; padding-block: 100px; }
 .contactSection .eyebrow { color: var(--color-cognac); margin-bottom: 24px; }
 .contactSection h2 { font-size: clamp(42px, 5.5vw, 76px); line-height: 1.1; letter-spacing: -.05em; font-weight: 550; }
@@ -97,7 +99,7 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
   .intro h1 { font-size: 80px; }
   .featuredCopy { padding: 30px 26px; }
   .featuredSummary { font-size: 21px; }
-  .migration { padding: 26px; }
+  .featuredPreview { padding: 26px; }
   .liveProjectCopy { padding-inline: 12px; }
   .affiliatedIntro { gap: 40px; }
 }
@@ -108,7 +110,7 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
   .intro h1 { font-size: clamp(62px, 11vw, 100px); }
   .introCopy { max-width: 580px; }
   .featuredLink { grid-template-columns: 1fr; }
-  .migration { min-height: 0; aspect-ratio: 1.9; padding: 36px; }
+  .featuredPreview { min-height: 0; aspect-ratio: 1.9; padding: 36px; }
   .featuredCopy { padding: 30px 32px; }
   .featuredCopy h3 { margin-top: 14px; font-size: 36px; }
   .featuredSummary { max-width: 560px; font-size: 24px; }
@@ -138,7 +140,7 @@ a.textLink:hover svg { transform: translate(2px, -2px); }
   .sectionHeading { margin-bottom: 20px; }
   .sectionHeading h2 { font-size: 20px; }
   .sectionNote { display: none; }
-  .migration { padding: 20px; aspect-ratio: 1.6; }
+  .featuredPreview { padding: 20px; aspect-ratio: 1.6; }
   .featuredCopy { padding: 25px 24px; }
   .featuredCopy h3 { font-size: 30px; }
   .featuredSummary { font-size: 21px; }
