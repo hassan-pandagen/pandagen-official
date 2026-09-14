@@ -55,27 +55,27 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "ai-seo": [
     {
       q: "Do you sell AI SEO as a monthly service?",
-      a: "Yes, optionally. Monthly services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. The table above sets out what a starting month contains. The one line worth repeating: the improvement is implemented and verified by us, not handed to you as a recommendation to action yourself. Stopping after the build is a normal outcome and nothing you own depends on subscribing.",
+      a: "Yes. Monthly work starts at $500, scoped to your project. The table above shows the focused starting engagement, including an implemented improvement, report and review. Your written quote sets the deliverables, fee, access and approval responsibilities. A retainer is optional. Work requiring a larger scope is quoted before it starts.",
     },
     {
-      q: "What does making a site readable to AI assistants actually involve?",
-      a: "Serving the content in the HTML rather than assembling it in the browser, so important content is available without running JavaScript. Availability is not the same as being retrieved or cited, but it removes one reason to be skipped. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.",
+      q: "What does making a site readable to AI assistants involve?",
+      a: "Make important content available in the page HTML, put relevant business facts into text, use descriptive headings and appropriate structured data, and resolve access problems. This makes content available to systems that do not execute JavaScript; it does not guarantee retrieval or citation.",
     },
     {
       q: "Can you guarantee citations or rankings?",
-      a: "No. Which sources an assistant selects is its own decision and it changes without notice, so a guarantee is not something anyone can honestly give. What we can do is improve your eligibility: make the content available without running JavaScript, make sure the facts a buyer needs are on the page, and fix the access and indexing problems that keep pages out. We agree the objectives, the work and how it is measured, and we show you what we did.",
+      a: "No. Search and AI systems choose their sources. We agree the objectives, the work we will deliver and how it will be checked. You receive a record of the changes and available measurements, with their limits explained.",
     },
     {
-      q: "What evidence do you have that any of it works?",
-      a: "Our own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.",
+      q: "What first-party evidence can you show?",
+      a: "The evidence above records our own Google AI-feature impressions, not visits or sales. It does not prove the monthly service caused those appearances. We also maintain order-source tracking for Panda Patches, which shares an owner with PandaCodeGen. That combines captured referral information and customer-declared discovery; it is not an independent client result.",
     },
     {
       q: "Is llms.txt worth having?",
-      a: "More limited than the marketing suggests. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. Lighthouse's Agentic Browsing category, which is experimental, includes a check for one, and it treats an absent file as not applicable rather than as a failure. You can see whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file, though a fetch shows the file was retrieved and not that it was used in an answer. We add it because it costs nothing, not because it moves you up Google.",
+      a: "It is optional, and Google does not require it for Search. Lighthouse's experimental check treats an absent file as not applicable. A server-log fetch shows retrieval, not use in an answer. Our llms.txt guide explains its limited role.",
     },
     {
-      q: "Our site is on WordPress. Can you do this without rebuilding it?",
-      a: "Sometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.",
+      q: "Can you work on WordPress without rebuilding it?",
+      a: "We assess that before quoting. A rebuild is not an automatic requirement. If the existing site supports the agreed content and technical changes, we can work within that setup. We identify any access, theme or plugin constraints and separate substantial initial work from the monthly scope.",
     },
   ],
   "custom-engineering": [

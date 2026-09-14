@@ -108,7 +108,7 @@
       "instrument": "First-party referrer capture plus email-declared source, recorded in the store's own order system at portal.pandapatches.com",
       "window": "1 to 31 August 2026",
       "note": "AI orders are worth LESS, not more: $310.74 average against a site average of $366.45. Publish that. It runs against the industry narrative and it is the figure that makes the rest credible.",
-      "limitation": "One store, one month, one product category, at a $366 average order. Referrer-based attribution undercounts AI, because assistants frequently pass no referrer, so this is a floor rather than a total. Nothing here transfers to a different price point or sales cycle.",
+      "limitation": "One store, one month, one product category, at a $366 average order. Referrer-based attribution can undercount AI: some journeys pass no referrer, and Google records AI Overview and AI Mode visits as ordinary organic search without identifying the AI step. Calling the combined figure a floor would need inclusion and de-duplication rules that have not been written down, so treat it as a recorded total under the stated method rather than a proven minimum. Nothing here transfers to a different price point or sales cycle.",
       "affiliated": true,
       "affiliationNote": "Panda Patches is founder-owned. State this wherever the figure appears.",
       "verifiedAt": "2026-09-04",

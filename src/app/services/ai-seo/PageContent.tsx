@@ -30,11 +30,21 @@ import { serviceFaqs } from "@/data/service-faqs";
  * company entity, misleading about the relationship, since the businesses share
  * an owner. Both corrected; nothing here is arm's length.
  *
- * ATTRIBUTION. Referrer capture works for most assistants and fails for Google
- * AI Overviews and Meta AI, which pass none. Customer self-report closes much of
- * that gap, and the measurement registry records the instrument as referrer
- * capture plus email-declared source, calling the result a floor. The page says
- * exactly that rather than implying either completeness or futility.
+ * ATTRIBUTION, corrected three times now, so the reasoning is recorded here to
+ * stop the wrong version being reused. Version one implied every enquiry carries
+ * its source. Version two overcorrected into futility. Version three stated
+ * platform absolutes -- "most assistants pass a referrer", "Google AI Overviews
+ * and Meta AI pass none" -- which came from a verbal account containing the
+ * words "i guess" and were published as fact.
+ *
+ * What is actually supported: Google documents AI Overview and AI Mode visits as
+ * Organic Search, so the visit IS attributed to Google and only the AI step is
+ * not separately identified. OpenAI documents utm_source=chatgpt.com, which is a
+ * campaign signal rather than an HTTP referrer. No source was found for a Meta AI
+ * no-referrer policy and a dated firsthand test observed the opposite. Calling a
+ * combined figure a "floor" needs inclusion and de-duplication rules nobody has
+ * written down, so the page reports captured referrals and customer-declared
+ * discovery as two kinds of evidence and keeps them apart.
  *
  * NOT CLAIMED, after the revision-2 audit found it unevidenced: that competitors
  * cannot do attribution. WebFX and Impression both publish downstream revenue
@@ -45,7 +55,7 @@ const MONTHLY: [string, string][] = [
   ["Buyer research", "Ten questions your customers actually ask, across one product or service area and up to five priority pages."],
   ["Visibility monitoring", "Those ten tracked on two agreed AI-search surfaces, read by a person rather than only collected by software."],
   ["Content and technical review", "Those pages checked for missing buyer information, and for access, indexing or structure problems worth acting on."],
-  ["An improvement we ship", "One agreed page improvement or small technical task, implemented and verified, with a revision round. Not a recommendation for someone else to action."],
+  ["An improvement we ship", "One agreed page improvement or small technical task, which we implement and verify with the access and approval agreed in your scope, with a revision round. Where your own team has to release it, the scope says so. Either way it is finished work, not a recommendation handed over."],
   ["Monthly report", "What changed, what the measurements do and do not show, and the next priority."],
   ["Review", "A short call or a recorded walkthrough, whichever suits you."],
 ];
@@ -61,7 +71,7 @@ const BIGGER: [string, string][] = [
 
 const NOT_INCLUDED = [
   "Guaranteed citations, rankings or traffic. We agree objectives, the work and how it is measured; the guarantee is the part nobody can honestly give",
-  "New long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee",
+  "New long-form content, migrations, major integrations or a large technical backlog, which sit outside the starting scope and are quoted before they begin, whether as initial work or inside a larger retainer",
   "Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
 ];
 
@@ -225,12 +235,14 @@ export default function PageContent() {
           <div className="rounded-2xl border border-cognac/25 bg-orange-50/40 p-6">
             <h3 className="font-bold text-charcoal mb-2">What source tracking can and cannot tell you</h3>
             <p className="text-stone-700 leading-relaxed text-sm">
-              Most assistants pass a referrer, so an enquiry or order can carry where it came from. Google AI
-              Overviews and Meta AI pass none, so those arrive unattributed and no amount of engineering
-              recovers them. What closes much of that gap is asking: on our own store a large share of customers
-              say where they found us, which is why the record combines captured referrers with what the
-              customer tells us. It is a floor rather than a total, and we check what your platform already
-              records before quoting any of it.
+              We connect the referral and campaign data your setup makes available to enquiries or orders, with
+              server-side tracking where that is what it takes. Customers can also tell you where they found
+              you, and that is a different kind of evidence from an observed click. On{" "}
+              <Link href="/work/panda-patches" className="font-semibold underline decoration-cognac/40 underline-offset-2">Panda Patches</Link>,
+              a business that shares an owner with us, the records combine both and we keep them apart rather
+              than reporting one total. Some sources stay unknown: a Google AI Overview visit is recorded as
+              Google organic search without separately identifying the AI step. We check what your platform
+              already records before quoting any of it.
             </p>
           </div>
           <p className="text-sm text-stone-600 mt-6 leading-relaxed">
