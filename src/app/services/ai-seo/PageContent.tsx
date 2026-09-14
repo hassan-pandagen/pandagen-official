@@ -52,7 +52,7 @@ const READABLE = [
 
 const NOT_INCLUDED = [
   "A citation, ranking or traffic target of any kind",
-  "Monthly monitoring, unless you take the optional retainer, which is scoped and priced separately from the build",
+  "New long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee",
   "Content written for you, unless copywriting is separately scoped in your quote",
   "Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
 ];
@@ -86,8 +86,9 @@ export default function PageContent() {
                 <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
                   <strong>Monthly AI SEO services from $500.</strong> We quote based on your project&rsquo;s
-                  size and scope, with the work and monthly fee agreed before we begin. It is optional
-                  &mdash; the build does not depend on it.
+                  size and scope, with the work and monthly fee agreed before we begin. We research the
+                  questions your buyers ask, monitor relevant AI-search results, and make agreed improvements
+                  to your content and technical setup. It is optional &mdash; the build does not depend on it.
                 </span>
               </p>
             </div>
@@ -176,6 +177,50 @@ export default function PageContent() {
             <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>,
             a business our co-founder owns. It takes live orders and the attribution runs end to end, but it
             is our own company rather than an independent client, which is why it is labelled that way here.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. WHAT RECURS EVERY MONTH.
+             Added 15 Sep after an external audit found the page's central gap:
+             it named a price and never said what the money buys, so a business
+             with an already server-rendered site could read it and conclude
+             their developer had done the work. "Monitoring and agreed changes"
+             is not a scope anyone can evaluate or staff against.
+             The boundaries below are the owner's adopted entry scope. The
+             differentiator is row four: the comparison of ten published agency
+             offers found most sell recommendations, content or a dashboard, and
+             at least one charges separately for technical deployment. We build
+             the sites, so we ship the change. */}
+      <section className="py-12 md:py-16 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What a $500 month actually contains</h2>
+          <p className="text-stone-600 mb-8">
+            A focused starting engagement. Your written scope names the coverage, the deliverables and who
+            publishes the change. Larger projects are quoted for the work they need, not by counting websites.
+          </p>
+          <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">
+            <table className="w-full text-sm border border-stone-200 rounded-xl overflow-hidden bg-white">
+              <thead>
+                <tr className="bg-stone-50 text-left">
+                  <th className="px-4 py-3 font-bold text-stone-700">Each month</th>
+                  <th className="px-4 py-3 font-bold text-stone-700">The starting boundary</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100">
+                <tr><td className="px-4 py-3 font-medium text-charcoal">Buyer research</td><td className="px-4 py-3 text-stone-600">Ten questions your customers actually ask, across one product or service area and up to five priority pages.</td></tr>
+                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal">Visibility monitoring</td><td className="px-4 py-3 text-stone-600">Those ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.</td></tr>
+                <tr><td className="px-4 py-3 font-medium text-charcoal">Content and technical review</td><td className="px-4 py-3 text-stone-600">The selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.</td></tr>
+                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal"><strong>An improvement we ship</strong></td><td className="px-4 py-3 text-stone-600"><strong>One agreed page improvement or small technical task, implemented, verified, with a revision round.</strong> Not a recommendation for someone else to action.</td></tr>
+                <tr><td className="px-4 py-3 font-medium text-charcoal">Monthly report</td><td className="px-4 py-3 text-stone-600">What changed, what the measurements do and do not show, and the next priority.</td></tr>
+                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal">Review</td><td className="px-4 py-3 text-stone-600">A short call or a recorded walkthrough, whichever suits you.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-stone-600 mt-6 leading-relaxed">
+            The first month sets the baseline and still ships one improvement. If the first look finds a large
+            technical backlog, missing measurement or a rebuild, we quote that separately and say so before you
+            commit &mdash; rather than promising normal monthly output and a setup project for the same fee.
           </p>
         </div>
       </section>
