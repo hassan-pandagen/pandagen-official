@@ -55,7 +55,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "ai-seo": [
     {
       q: "Do you sell AI SEO as a monthly service?",
-      a: "Yes, as an option, and we scope it with you before quoting rather than selling a tier off a page. Agencies who publish their own AEO and GEO rates put entry programmes around $1,500 a month, reaching $8,000 or more for larger ones. Those are their published figures for their own services rather than an independent survey of the market. We can start at $500. That is a starting point rather than a flat rate: we price against your actual site rather than a bracket, so a five-page business site does not carry the same monthly work as a large catalogue, and a brief with a long list of things in it is quoted for properly instead of being forced into the entry price. The readability work itself is part of the build either way, so the retainer is for ongoing monitoring and changes, not for something withheld from the build to be sold back later.",
+      a: "Yes, optionally. Monthly AI SEO services start at $500, and we quote based on your project's size and scope, with the work and the monthly fee agreed in writing before we begin. A five-page business site does not carry the same monthly work as a large catalogue, so the number moves with what is actually there. The technical foundations are part of the build either way, so the retainer covers ongoing monitoring and agreed changes rather than something held back from the build to be sold later. If you would rather take the build and stop there, that is a normal outcome and the site does not depend on a subscription."
     },
     {
       q: "What does making a site readable to AI assistants actually involve?",

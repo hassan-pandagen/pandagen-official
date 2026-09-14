@@ -47,7 +47,7 @@ import { serviceFaqs } from "@/data/service-faqs";
 const READABLE = [
   { icon: Code2, title: "Content in the HTML", body: "The words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them." },
   { icon: FileSearch, title: "Headings that answer", body: "Each section is titled with the question it resolves, so a machine reading for an answer can find where it is." },
-  { icon: Eye, title: "Facts as text", body: "Prices, specifications, hours and terms written out rather than sealed inside an image nothing can read." },
+  { icon: Eye, title: "Facts as text", body: "Prices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image." },
 ];
 
 const NOT_INCLUDED = [
@@ -85,12 +85,8 @@ export default function PageContent() {
               <p className="flex items-start gap-3 text-sm text-charcoal leading-relaxed">
                 <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
-                  <strong>Want it looked after monthly as well? We do that, from $500.</strong> Agencies who
-                  publish their own AEO rates put entry programmes around $1,500 a month, rising to $8,000 and
-                  beyond &mdash; their figures, for their own services, so read them as such. $500 is where it
-                  starts, not what everything costs: we agree the scope with you first and price against your
-                  actual site, so a small site is not charged like a large one and a long list of requests is
-                  quoted for honestly rather than squeezed into the entry rate. It is optional either way
+                  <strong>Monthly AI SEO services from $500.</strong> We quote based on your project&rsquo;s
+                  size and scope, with the work and monthly fee agreed before we begin. It is optional
                   &mdash; the build does not depend on it.
                 </span>
               </p>
@@ -159,7 +155,7 @@ export default function PageContent() {
               </p>
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>57% of it is <strong>one article about hosting bandwidth</strong> &mdash; developer research, not people looking to buy a website.</span>
+                <span><strong>5,583 of them came from one article about hosting bandwidth</strong> &mdash; developer research, not people looking to buy a website.</span>
               </p>
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />

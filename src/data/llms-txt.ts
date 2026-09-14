@@ -80,7 +80,7 @@ const PRIMARY_PAGES = `## Primary pages
 - [Wix migration](${BASE}/services/wix)
 - [Squarespace migration](${BASE}/services/squarespace)
 - [GoHighLevel websites and CRM integration](${BASE}/services/gohighlevel)
-- [AI SEO and answer engine optimisation, built into the site rather than sold monthly](${BASE}/services/ai-seo)
+- [AI SEO and answer engine optimisation: foundations included in the build, optional monthly care from $500](${BASE}/services/ai-seo)
 - [Custom engineering](${BASE}/services/custom-engineering)`;
 
 const PEOPLE_AND_POLICIES = `## People
