@@ -310,7 +310,7 @@ export default function PandaPatchesCaseStudy() {
                         <div className="mb-10 rounded-2xl border border-cognac/30 bg-cognac/5 p-5 max-w-3xl">
                             <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac mb-2">Ownership disclosure</p>
                             <p className="text-sm leading-6 text-stone-600">
-                                Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business. Treat the figures below as owner-reported first-party records, not an independent client testimonial or a controlled study.
+                                Panda Patches is an in-house brand and the founders’ first business, trading since 2023. It is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani, who holds a stake in both companies; PandaCodeGen built and maintains its technical platform. The two businesses therefore share an owner, and nothing here is arm’s length. Treat the figures below as owner-reported first-party records from a founder-owned business, not an independent client testimonial or a controlled study.
                             </p>
                         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, CheckCircle2, XCircle, Code2, FileSearch, Eye } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -11,50 +11,64 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { serviceFaqs } from "@/data/service-faqs";
 
 /**
- * Added 14 September 2026.
+ * Restructured 15 September 2026, in one pass rather than another round of
+ * patches. Three consecutive audits patched this page and each patch created
+ * the next contradiction: the H1 promised "not billed monthly" while the box
+ * beneath it sold a retainer, the offer sat two explanatory sections deep, and
+ * the exclusions concluded that what you buy is a new website.
  *
- * WHY THIS PAGE EXISTS AND WHAT IT DELIBERATELY IS NOT.
+ * ORDER, from the revision-2 audit: the monthly offer first, then what it
+ * contains, then why the work exists, then proof with its limits, then what
+ * enlarges the quote, then boundaries, questions and one close. The readability
+ * explanation used to be the opening argument and is now support: it is the
+ * reason the work exists, not the thing being sold.
  *
- * External keyword data checked 13 Sep: `ai seo agency` 1,600/mo at KD 0,
- * `ai seo services` 1,300 at KD 2, `aeo services` 480 at KD 9. Real commercial
- * demand for a service page we did not have. The eleven posts in the `seo-aeo`
- * cluster all target informational intent -- what is answer engine
- * optimisation, how to measure AI visibility, what is llms.txt -- and none
- * targets "agency" or "services", so this takes nothing from them. The
- * cluster's pillarHref pointed at /editorial-policy, a policy page, which meant
- * eleven articles had no commercial destination at all.
+ * OWNERSHIP. Panda Patches is an in-house brand owned by PandaCodeGen
+ * co-founder Imran Raza Ladhani, who holds a stake in both companies. An
+ * earlier version of this page called it "our own company", and the work page
+ * said PandaCodeGen "holds no ownership or partnership stake" -- true of the
+ * company entity, misleading about the relationship, since the businesses share
+ * an owner. Both corrected; nothing here is arm's length.
  *
- * CORRECTED 14 Sep, same day. The first version of this page carried an amber
- * box reading "if you want a monthly AEO programme, we are the wrong firm",
- * on my assumption that the no-compulsory-retainer line on /pricing meant no
- * retainer was offered at all. Wrong: the owner does offer one, scopes it
- * first, and can start at $500 a month. That box was turning away a customer
- * we would take. It now states the offer, and the $500 floor against a
- * published market entry of about $1,500 is the same shape as the $1,500 build
- * against Pagepro's $25,000 minimum -- which is this firm's actual competitive
- * position, not an exception to it. "No compulsory retainer" on /pricing is
- * about the BUILD not requiring one, and remains true.
+ * ATTRIBUTION. Referrer capture works for most assistants and fails for Google
+ * AI Overviews and Meta AI, which pass none. Customer self-report closes much of
+ * that gap, and the measurement registry records the instrument as referrer
+ * capture plus email-declared source, calling the result a floor. The page says
+ * exactly that rather than implying either completeness or futility.
  *
- * EVERY CLAIM HERE IS BOUNDED ON PURPOSE. The 9,843 figure is our own property
- * and lives in first-party-measurements.json under
- * gsc-generative-ai-impressions-2026-06-to-09 with both its caveats attached:
- * the report has no click column, and 57% of it is one article about hosting
- * bandwidth. Panda Patches is labelled as co-founder-owned, not as an
- * independent client. No citation, ranking or traffic outcome is promised
- * anywhere, because selection is the assistant's decision and not ours.
+ * NOT CLAIMED, after the revision-2 audit found it unevidenced: that competitors
+ * cannot do attribution. WebFX and Impression both publish downstream revenue
+ * attribution. The differentiator is shipping the change, not measuring it.
  */
 
-const READABLE = [
-  { icon: Code2, title: "Content in the HTML", body: "The words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them." },
-  { icon: FileSearch, title: "Headings that answer", body: "Each section is titled with the question it resolves, so a machine reading for an answer can find where it is." },
-  { icon: Eye, title: "Facts as text", body: "Prices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image." },
+const MONTHLY: [string, string][] = [
+  ["Buyer research", "Ten questions your customers actually ask, across one product or service area and up to five priority pages."],
+  ["Visibility monitoring", "Those ten tracked on two agreed AI-search surfaces, read by a person rather than only collected by software."],
+  ["Content and technical review", "Those pages checked for missing buyer information, and for access, indexing or structure problems worth acting on."],
+  ["An improvement we ship", "One agreed page improvement or small technical task, implemented and verified, with a revision round. Not a recommendation for someone else to action."],
+  ["Monthly report", "What changed, what the measurements do and do not show, and the next priority."],
+  ["Review", "A short call or a recorded walkthrough, whichever suits you."],
+];
+
+const BIGGER: [string, string][] = [
+  ["Source tracking for enquiries and orders", "Connecting referral and campaign data to enquiries or orders, with server-side capture where that is what it takes."],
+  ["A reporting dashboard", "Your own, rather than a monthly PDF: visibility, referral and enquiry data in one place on an agreed refresh schedule."],
+  ["More pages, questions, surfaces or markets", "More to investigate and verify each cycle, plus local research and approval if the market is new."],
+  ["Original content", "Interviews, research, drafting and fact checking, which is a different job from editing pages you already have."],
+  ["A larger implementation backlog", "More shipped each month, or engineering work beyond a small task."],
+  ["Ecommerce catalogue work", "Product data, feeds, categories and variants, where that is what the questions are about."],
 ];
 
 const NOT_INCLUDED = [
-  "Guaranteed citations, rankings or traffic. We agree objectives, the work and how it is measured; the guarantee is what we cannot give",
+  "Guaranteed citations, rankings or traffic. We agree objectives, the work and how it is measured; the guarantee is the part nobody can honestly give",
   "New long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee",
-  "Content written for you, unless copywriting is separately scoped in your quote",
   "Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
+];
+
+const LIMITS: [string, string][] = [
+  ["That report has no click column.", "It shows appearances, not visits, and not sales."],
+  ["The hosting-bandwidth article recorded 5,583 page-level impressions in the same period.", "Developer research, not people looking to buy a website."],
+  ["It covers Google's features only.", "It says nothing about ChatGPT, Claude or Perplexity."],
 ];
 
 export default function PageContent() {
@@ -63,35 +77,25 @@ export default function PageContent() {
       <ReadingProgressBar />
       <Header />
 
-      {/* 1. WHAT THIS IS, AND THE DISQUALIFIER IMMEDIATELY AFTER IT.
-             The audit's recommended service sequence leads with fit. For this
-             page fit means telling the monthly-retainer buyer to leave, in the
-             second paragraph, before they invest any more reading. */}
-      <section className="pt-28 md:pt-40 pb-12 px-6">
+      {/* 1. THE OFFER. Previously this sat two explanatory sections deep. */}
+      <section className="pt-28 md:pt-36 pb-10 px-6">
         <div className="container mx-auto max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-4">AI SEO &amp; Answer Engine Optimisation</p>
             <h1 className="text-4xl md:text-6xl font-bold text-charcoal tracking-tight leading-[1.05] mb-6">
-              Websites that AI assistants can read,{" "}
-              <span className="font-serif italic text-cognac">built in from the start.</span>
+              AI SEO services with{" "}
+              <span className="font-serif italic text-cognac">practical improvements every month.</span>
             </h1>
-            <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-5">
-              Some crawlers execute JavaScript and some do not. If your content only appears after JavaScript
-              runs, whether it is read at all depends on which one arrives. We build pages where the words are
-              already in the HTML the server sends, so it is read either way &mdash; and we do it
-              during the build rather than selling it back afterwards.
+            <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-4">
+              We research the questions your buyers ask, monitor an agreed set of AI-search results, and improve
+              the pages they rely on. <strong className="text-charcoal">Monthly services start at $500</strong>,
+              quoted on your project&rsquo;s size and scope, with the work and the fee agreed before we begin.
             </p>
-            <div className="rounded-2xl border border-cognac/20 bg-orange-50/50 p-5 mb-8">
-              <p className="flex items-start gap-3 text-sm text-charcoal leading-relaxed">
-                <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
-                <span>
-                  <strong>Monthly AI SEO services from $500.</strong> We quote based on your project&rsquo;s
-                  size and scope, with the work and monthly fee agreed before we begin. We research the
-                  questions your buyers ask, monitor relevant AI-search results, and make agreed improvements
-                  to your content and technical setup. It is optional &mdash; the build does not depend on it.
-                </span>
-              </p>
-            </div>
+            <p className="text-stone-600 leading-relaxed mb-8">
+              It works on a site you already have. If we build the site, the technical foundations come with it
+              and the monthly work starts from there. Either way the retainer is optional and nothing you own
+              depends on subscribing to it.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event", "cta_click", { cta: "ask_about_site", location: "ai_seo_hero" }); window.dispatchEvent(new Event("open-quote-modal")); } }}
@@ -111,91 +115,10 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* 2. WHAT THE WORK IS. Deliberately unglamorous: the honest version of
-             this service is ordinary good building, and saying so is the
-             differentiator against pages selling it as a dark art. */}
+      {/* 2. WHAT THE MONTH CONTAINS. */}
       <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What &ldquo;readable&rdquo; actually means</h2>
-          <p className="text-stone-600 mb-10 max-w-2xl">
-            It is ordinary good building, which is why it belongs in the build rather than in a separate
-            invoice.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {READABLE.map((item) => (
-              <div key={item.title} className="bg-stone-50 rounded-2xl border border-stone-200 p-6">
-                <item.icon className="w-6 h-6 text-cognac mb-4" aria-hidden="true" />
-                <h3 className="font-bold text-charcoal mb-2">{item.title}</h3>
-                <p className="text-sm text-stone-600 leading-relaxed">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. EVIDENCE, WITH ITS LIMITS IN THE SAME BREATH. The measurement is in
-             first-party-measurements.json; both caveats are stated here rather
-             than in a footnote, because the caveats are the reason to trust it. */}
-      <section className="py-12 md:py-16 px-6">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">Our own numbers, and what they do not show</h2>
-          <div className="rounded-2xl border border-stone-200 bg-white p-7 mb-6">
-            <p className="text-4xl font-bold text-cognac mb-2">9,843</p>
-            <p className="text-sm font-semibold text-charcoal mb-4">
-              AI-feature impressions for pandacodegen.com, 12 June to 11 September 2026
-            </p>
-            <p className="text-stone-600 leading-relaxed mb-4">
-              Google Search Console&rsquo;s Generative AI report counts the times one of our pages appeared in an
-              AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920,
-              so AI features were 6.2% of Web-search impressions.
-            </p>
-            <div className="border-t border-stone-200 pt-4 space-y-2">
-              <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
-                <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>That report has <strong>no click column</strong>. It shows appearances, not visits, and not sales.</span>
-              </p>
-              <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
-                <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>The hosting-bandwidth article recorded <strong>5,583 page-level impressions</strong> in the same period &mdash; developer research, not people looking to buy a website.</span>
-              </p>
-              <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
-                <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>It covers <strong>Google&rsquo;s features only</strong>. It says nothing about ChatGPT, Claude or Perplexity.</span>
-              </p>
-            </div>
-          </div>
-          {/* Byline added after the google-content-audit pass. The page makes
-              first-party measurement claims, so "who measured this" is a fair
-              question and item 13 asks for the answer on the page. */}
-          <p className="text-sm text-stone-500 leading-relaxed mb-6">
-            Measured and written by{" "}
-            <Link href="/about/hassan" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Hassan Jamal</Link>,
-            co-founder, from our own Search Console property. Last checked 13 September 2026.
-          </p>
-          <p className="text-stone-600 leading-relaxed">
-            We also track AI-referred orders on{" "}
-            <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>,
-            a business owned and operated by our co-founder, Imran Raza Ladhani. PandaCodeGen built and
-            maintains its platform and holds no ownership stake in it. It is not an independent client either,
-            which is why it is labelled rather than presented as one.
-          </p>
-        </div>
-      </section>
-
-      {/* 4. WHAT RECURS EVERY MONTH.
-             Added 15 Sep after an external audit found the page's central gap:
-             it named a price and never said what the money buys, so a business
-             with an already server-rendered site could read it and conclude
-             their developer had done the work. "Monitoring and agreed changes"
-             is not a scope anyone can evaluate or staff against.
-             The boundaries below are the owner's adopted entry scope. The
-             differentiator is row four: the comparison of ten published agency
-             offers found most sell recommendations, content or a dashboard, and
-             at least one charges separately for technical deployment. We build
-             the sites, so we ship the change. */}
-      <section className="py-12 md:py-16 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What a $500 month actually contains</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What a $500 month contains</h2>
           <p className="text-stone-600 mb-8">
             A focused starting engagement. Your written scope names the coverage, the deliverables and who
             publishes the change. Larger projects are quoted for the work they need, not by counting websites.
@@ -209,82 +132,116 @@ export default function PageContent() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100">
-                <tr><td className="px-4 py-3 font-medium text-charcoal">Buyer research</td><td className="px-4 py-3 text-stone-600">Ten questions your customers actually ask, across one product or service area and up to five priority pages.</td></tr>
-                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal">Visibility monitoring</td><td className="px-4 py-3 text-stone-600">Those ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.</td></tr>
-                <tr><td className="px-4 py-3 font-medium text-charcoal">Content and technical review</td><td className="px-4 py-3 text-stone-600">The selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.</td></tr>
-                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal"><strong>An improvement we ship</strong></td><td className="px-4 py-3 text-stone-600"><strong>One agreed page improvement or small technical task, implemented, verified, with a revision round.</strong> Not a recommendation for someone else to action.</td></tr>
-                <tr><td className="px-4 py-3 font-medium text-charcoal">Monthly report</td><td className="px-4 py-3 text-stone-600">What changed, what the measurements do and do not show, and the next priority.</td></tr>
-                <tr className="bg-stone-50/50"><td className="px-4 py-3 font-medium text-charcoal">Review</td><td className="px-4 py-3 text-stone-600">A short call or a recorded walkthrough, whichever suits you.</td></tr>
+                {MONTHLY.map(([k, v], i) => (
+                  <tr key={k} className={i % 2 ? "bg-stone-50/50" : ""}>
+                    <td className="px-4 py-3 font-medium text-charcoal align-top">{k}</td>
+                    <td className="px-4 py-3 text-stone-600">{v}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
           <p className="text-sm text-stone-600 mt-6 leading-relaxed">
             The first month sets the baseline and still ships one improvement. If the first look finds a large
             technical backlog, missing measurement or a rebuild, we quote that separately and say so before you
-            commit &mdash; rather than promising normal monthly output and a setup project for the same fee.
+            commit, rather than promising normal monthly output and a setup project for the same fee.
           </p>
         </div>
       </section>
 
-      {/* 5. WHAT MAKES THE QUOTE BIGGER.
-             Added 15 Sep. The owner can also deliver dashboards, lead
-             attribution and deeper reporting, and wanted them on the page.
-             Deliberately NOT written as an open menu: the audit's finding was
-             that an unevaluable offer is the problem, and "tell us how much you
-             want" recreates it in a new form. So the $500 table above stays the
-             fixed anchor and these are named additions that change the quote.
-             Attribution leads because it is the one competitors structurally
-             cannot match -- the comparison of ten published offers found they
-             sell visibility reporting, and connecting an AI referral to an order
-             needs someone who builds the tracking layer. Hedged on platform,
-             because we have done it on a stack we built end to end and a
-             client's existing stack may not allow it. */}
+      {/* 3. WHY THE WORK EXISTS. Was the opening argument; now supports the offer. */}
+      <section className="py-12 md:py-16 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Why the pages need the work</h2>
+          <p className="text-stone-600 leading-relaxed mb-4">
+            Some crawlers execute JavaScript and some do not, so content that appears only after it runs may or
+            may not be read depending on which one arrives. Beyond that the usual problem is not technical at
+            all: the page never states the price basis, the delivery time or the constraint the buyer was asking
+            about, so there is nothing useful to quote even when everything renders perfectly.
+          </p>
+          <p className="text-stone-600 leading-relaxed">
+            The monthly work is mostly that second thing. Put the answers on the page, as text rather than
+            sealed inside an image, under headings that name the question, and fix the access and indexing
+            faults that keep pages out. It is ordinary good building, which is why the foundations belong in a
+            build and the continuing improvement belongs in a retainer.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. PROOF, with its limits beside it and the relationship stated. */}
       <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Where it goes beyond that</h2>
-          <p className="text-stone-600 mb-8">
-            The entry scope is deliberately small so it can be judged. These are the additions that change the
-            quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.
-          </p>
-
-          <div className="rounded-2xl border border-cognac/25 bg-orange-50/40 p-6 mb-6">
-            <h3 className="font-bold text-charcoal mb-2">Source tracking for enquiries and orders</h3>
-            <p className="text-stone-700 leading-relaxed text-sm">
-              Visibility tells you that you appeared. The harder question is whether any of it reached your
-              business. Where your setup allows it, we connect the referral and campaign information that is
-              available to enquiries or orders, adding server-side capture where that is what it takes. Two
-              honest limits: assistants often send no referrer at all, so this counts a floor rather than a
-              total, and some of what you learn will be what a customer tells you rather than what the
-              request carried. We check what your platform already records before quoting any of it.
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">What we can show you</h2>
+          <div className="rounded-2xl border border-stone-200 bg-stone-50/60 p-7 mb-6">
+            <p className="text-4xl font-bold text-cognac mb-2">9,843</p>
+            <p className="text-sm font-semibold text-charcoal mb-4">
+              AI-feature impressions for pandacodegen.com, 12 June to 11 September 2026
             </p>
+            <p className="text-stone-600 leading-relaxed mb-4">
+              Google Search Console&rsquo;s Generative AI report counts the times one of our pages appeared in an
+              AI Overview or AI Mode answer. Over the same window our Web-search impressions were 157,920, so AI
+              features were 6.2% of them.
+            </p>
+            <div className="border-t border-stone-200 pt-4 space-y-2">
+              {LIMITS.map(([a, b]) => (
+                <p key={a} className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
+                  <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
+                  <span><strong>{a}</strong> {b}</span>
+                </p>
+              ))}
+            </div>
           </div>
+          <p className="text-stone-600 leading-relaxed mb-4">
+            We also track AI-referred orders on{" "}
+            <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>,
+            an in-house brand owned by our co-founder Imran Raza Ladhani, who holds a stake in both companies.
+            The two businesses share an owner, so read it as a first-party record rather than an independent
+            client result.
+          </p>
+          <p className="text-sm text-stone-500 leading-relaxed">
+            Measured and written by{" "}
+            <Link href="/about/hassan" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Hassan Jamal</Link>,
+            co-founder, from our own Search Console property. Last checked 13 September 2026.
+          </p>
+        </div>
+      </section>
 
-          <ul className="space-y-3">
-            {[
-              ["A reporting dashboard", "Your own, rather than a monthly PDF: visibility, referral and enquiry data in one place on an agreed refresh schedule, built and handed over like anything else we build."],
-              ["More pages, journeys or templates", "More to investigate, edit and verify each cycle."],
-              ["More questions, surfaces or markets", "Analyst time and tool cost, plus local research and approval if the market is new."],
-              ["Original content", "Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have."],
-              ["A larger implementation backlog", "More shipped each month, or engineering work beyond a small task."],
-              ["Ecommerce catalogue work", "Product data, feeds, categories and variants, where that is what the questions are about."],
-            ].map(([t, d]) => (
+      {/* 5. WHAT ENLARGES THE QUOTE. Named additions, not an open menu. */}
+      <section className="py-12 md:py-16 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Where it goes beyond that</h2>
+          <p className="text-stone-600 mb-7">
+            The entry scope is deliberately small so it can be judged. These are the additions that change the
+            quote. You choose which apply; none is assumed and none is charged for unless it is in your scope.
+          </p>
+          <ul className="space-y-3 mb-7">
+            {BIGGER.map(([t, d]) => (
               <li key={t} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
                 <span className="text-stone-700 leading-relaxed"><strong className="text-charcoal">{t}.</strong> {d}</span>
               </li>
             ))}
           </ul>
-
-          <p className="text-sm text-stone-600 mt-7 leading-relaxed">
-            There is no per-website formula. A large business can commission something narrow, and a small
-            site can need a bigger quote because the work is awkward. We price the work, then write it down
-            before starting.
+          <div className="rounded-2xl border border-cognac/25 bg-orange-50/40 p-6">
+            <h3 className="font-bold text-charcoal mb-2">What source tracking can and cannot tell you</h3>
+            <p className="text-stone-700 leading-relaxed text-sm">
+              Most assistants pass a referrer, so an enquiry or order can carry where it came from. Google AI
+              Overviews and Meta AI pass none, so those arrive unattributed and no amount of engineering
+              recovers them. What closes much of that gap is asking: on our own store a large share of customers
+              say where they found us, which is why the record combines captured referrers with what the
+              customer tells us. It is a floor rather than a total, and we check what your platform already
+              records before quoting any of it.
+            </p>
+          </div>
+          <p className="text-sm text-stone-600 mt-6 leading-relaxed">
+            There is no per-website formula. A large business can commission something narrow, and a small site
+            can need a bigger quote because the work is awkward. We price the work, then write it down before
+            starting.
           </p>
         </div>
       </section>
 
-      {/* 4. WHAT IS NOT INCLUDED. Placed before pricing on purpose: the audit
-             found buyers get scope after price and cannot judge either. */}
+      {/* 6. BOUNDARIES. */}
       <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">What this does not include</h2>
@@ -296,43 +253,24 @@ export default function PageContent() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 rounded-2xl bg-stone-50 border border-stone-200 p-6">
-            <p className="flex items-start gap-3 text-stone-700 leading-relaxed">
-              <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
-              <span>
-                What you do get is a site built this way from the start, at the fixed price in your written
-                quote, with the code and accounts transferred to you. If your existing pages already render
-                server-side and only need better structure, we will tell you that instead &mdash; it is the
-                smaller job and sometimes it is the right one.
-              </span>
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* 5. FAQ. FAQAccordion renders its own h2, so this section deliberately
-             adds no heading of its own: 50 articles on this site currently
-             render two, which the deep audit flagged as a P1 defect. */}
+      {/* FAQAccordion renders its own h2, so this section adds none: 50 articles
+          on this site render two, which the deep audit flagged as a P1 defect. */}
       <section className="py-12 md:py-16 px-6">
         <div className="container mx-auto max-w-3xl">
-          {/* serviceFaqs uses {q,a}; FAQAccordion takes {question,answer}. Mapped
-              here rather than changing either shape, since every other service
-              page reads the {q,a} form. */}
           <FAQAccordion faqs={serviceFaqs["ai-seo"].map(({ q, a }) => ({ question: q, answer: a }))} />
         </div>
       </section>
 
-      {/* 6. CLOSE. Calendar here, where the reader has been through the whole
-             argument, per the owner's direction that forms carry the early
-             asks and the call is kept for high intent. */}
+      {/* 7. ONE CLOSE, asking for what a quote actually needs. */}
       <section className="py-14 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Want to know how yours reads?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tell us what you want customers to find you for</h2>
           <p className="text-stone-300 leading-relaxed mb-8">
-            Run the free check for a technical read of your pages, or send us the URL and a founder will look
-            at it properly and tell you whether it is a build problem or an editing one.
+            Send your site and the product or service you want buyers to reach. A founder will tell you whether
+            this is worth doing for you and what the first month would cover.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -354,9 +292,8 @@ export default function PageContent() {
       </section>
 
       <RelatedServicesGrid currentHref="/services/ai-seo" />
-      {/* showCta={false} because the shared footer CTA is a migration pitch, and this
-          page has already closed on AI SEO. Leaving it in ran a second, unrelated
-          offer after the service close. */}
+      {/* showCta={false}: the shared footer CTA is a migration pitch, and this page
+          has already closed on AI SEO. */}
       <Footer showCta={false} />
     </main>
   );

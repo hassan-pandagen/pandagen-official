@@ -55,7 +55,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "ai-seo": [
     {
       q: "Do you sell AI SEO as a monthly service?",
-      a: "Yes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome."
+      a: "Yes, optionally. Monthly services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. The table above sets out what a starting month contains. The one line worth repeating: the improvement is implemented and verified by us, not handed to you as a recommendation to action yourself. Stopping after the build is a normal outcome and nothing you own depends on subscribing.",
     },
     {
       q: "What does making a site readable to AI assistants actually involve?",
