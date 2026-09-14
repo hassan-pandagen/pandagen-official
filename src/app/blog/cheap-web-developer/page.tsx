@@ -313,7 +313,7 @@ export default function CheapWebDeveloperPage() {
           <div className="my-8 rounded-2xl bg-charcoal text-white p-7">
             <h2 className="text-2xl font-bold mb-3">How we label our own project evidence</h2>
             <p className="text-stone-300 leading-relaxed mb-4">
-              MyCustomPatches is an independent client; its figures are owner-confirmed and published with permission. Panda Patches is owned and operated by PandaCodeGen co-founder <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza Ladhani, so its figures are founder-affiliated rather than independent client proof. PandaCodeGen built its technical platform but holds no ownership stake.
+              MyCustomPatches is an independent client; its figures are owner-confirmed and published with permission. Panda Patches is owned and operated by PandaCodeGen co-founder <Link href="/about/imran" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Imran</Link> Raza Ladhani, so its figures are founder-affiliated rather than independent client proof. PandaCodeGen built its technical platform, and its co-founder holds a stake in both companies.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="rounded-xl border border-white/15 p-4">
