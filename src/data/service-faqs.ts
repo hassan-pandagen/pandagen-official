@@ -55,7 +55,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "ai-seo": [
     {
       q: "Do you sell AI SEO as a monthly service?",
-      a: "No, and that is the main thing to know before reading further. The going rate for an AEO or GEO retainer in 2026 runs from about $1,500 a month at the entry level to $8,000 and beyond for mid-market programmes, and several good agencies do that work properly. We are not one of them. What we do is build the site so assistants can read it, once, as part of a fixed-price build. If you want someone monitoring your visibility every month and reporting on it, hire one of them instead. We would rather say that here than find out on the call.",
+      a: "Yes, as an option, and we scope it with you before quoting rather than selling a tier off a page. Published AEO and GEO retainers generally start around $1,500 a month and reach $8,000 or more for larger programmes. We can start at $500, because we price against your actual site rather than a bracket, and a five-page business site does not need the same monthly work as a large catalogue. The readability work itself is part of the build either way, so the retainer is for ongoing monitoring and changes, not for something withheld from the build to be sold back later.",
     },
     {
       q: "What does making a site readable to AI assistants actually involve?",
