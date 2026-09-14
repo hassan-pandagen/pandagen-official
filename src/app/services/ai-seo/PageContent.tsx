@@ -279,10 +279,15 @@ export default function PageContent() {
       {/* 7. ONE CLOSE, asking for what a quote actually needs. */}
       <section className="py-14 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tell us what you want customers to find you for</h2>
+          {/* "Get cited" / "get recommended" were considered and rejected: the FAQ
+              three sections up says selection is the assistant's decision and cannot
+              be guaranteed, so a button promising it contradicts the page. "Worth
+              citing" is the same energy about the thing we actually control. */}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Make your pages worth citing</h2>
           <p className="text-stone-300 leading-relaxed mb-8">
-            Send your site and the product or service you want buyers to reach. A founder will tell you whether
-            this is worth doing for you and what the first month would cover.
+            Whether an assistant picks you is its call. Whether your pages deserve picking is ours. Send your
+            site and the product or service you want buyers to reach, and a founder will tell you if this is
+            worth doing for you and what the first month would cover.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

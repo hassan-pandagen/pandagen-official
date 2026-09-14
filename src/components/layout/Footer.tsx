@@ -39,7 +39,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
                 onClick={openQuote}
                 className="w-full sm:w-auto px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 transform duration-200"
               >
-                Get your migration plan <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                Ask us about your site <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </button>
               <Link
                 href="/pricing"

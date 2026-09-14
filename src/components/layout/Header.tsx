@@ -51,7 +51,7 @@ const services = [
 
 const workLinks = [
   { name: "Our Work", href: "/work" },
-  { name: "Get your migration plan", href: "/contact" },
+  { name: "Ask us about your site", href: "/contact" },
 ];
 
 // The two founder links were removed in 3e93feb (30 Jul 2026) when the nav was
@@ -90,7 +90,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   }, []);
 
   // Let any CTA across the site open the quote modal via a window event,
-  // e.g. a "Get your migration plan" button. Keeps the modal a single instance.
+  // e.g. an "Ask us about your site" button. Keeps the modal a single instance.
   useEffect(() => {
     const openQuote = () => {
       if (onOpenQuote) onOpenQuote();
@@ -275,7 +275,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={handleOpenQuote}
               className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-cognac"
             >
-              Get your migration plan
+              Ask us about your site
             </button>
           </div>
 
@@ -391,7 +391,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={() => { setIsMobileMenuOpen(false); handleOpenQuote(); }}
               className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-cognac transition-all"
             >
-              Get your migration plan
+              Ask us about your site
             </button>
 
             <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex justify-center">
