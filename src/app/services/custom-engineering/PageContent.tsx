@@ -659,7 +659,7 @@ export default function PageContent() {
               data-cal-config='{"layout":"month_view"}'
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
             >
-              Get your migration plan
+              Book a discovery call
             </button>
           </div>
         </div>
