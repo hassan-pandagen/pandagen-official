@@ -87,9 +87,11 @@ export default function PageContent() {
                 <span>
                   <strong>Want it looked after monthly as well? We do that, from $500.</strong> Agencies who
                   publish their own AEO rates put entry programmes around $1,500 a month, rising to $8,000 and
-                  beyond &mdash; their figures, for their own services, so read them as such. We scope the work
-                  with you first and price it against your actual site, so a small site is not charged like a
-                  large one. It is optional either way &mdash; the build does not depend on it.
+                  beyond &mdash; their figures, for their own services, so read them as such. $500 is where it
+                  starts, not what everything costs: we agree the scope with you first and price against your
+                  actual site, so a small site is not charged like a large one and a long list of requests is
+                  quoted for honestly rather than squeezed into the entry rate. It is optional either way
+                  &mdash; the build does not depend on it.
                 </span>
               </p>
             </div>
