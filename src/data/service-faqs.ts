@@ -55,7 +55,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   "ai-seo": [
     {
       q: "Do you sell AI SEO as a monthly service?",
-      a: "Yes, as an option, and we scope it with you before quoting rather than selling a tier off a page. Published AEO and GEO retainers generally start around $1,500 a month and reach $8,000 or more for larger programmes. We can start at $500, because we price against your actual site rather than a bracket, and a five-page business site does not need the same monthly work as a large catalogue. The readability work itself is part of the build either way, so the retainer is for ongoing monitoring and changes, not for something withheld from the build to be sold back later.",
+      a: "Yes, as an option, and we scope it with you before quoting rather than selling a tier off a page. Agencies who publish their own AEO and GEO rates put entry programmes around $1,500 a month, reaching $8,000 or more for larger ones. Those are their published figures for their own services rather than an independent survey of the market. We can start at $500, because we price against your actual site rather than a bracket, and a five-page business site does not need the same monthly work as a large catalogue. The readability work itself is part of the build either way, so the retainer is for ongoing monitoring and changes, not for something withheld from the build to be sold back later.",
     },
     {
       q: "What does making a site readable to AI assistants actually involve?",
@@ -63,15 +63,15 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Can you get us cited by ChatGPT or in Google's AI Overviews?",
-      a: "No. Nobody can, and anyone who says otherwise is selling something. Which sources an assistant cites is its decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks. We will describe the work and show you our own numbers; we will not put a citation target in a quote.",
+      a: "No, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.",
     },
     {
       q: "What evidence do you have that any of it works?",
-      a: "Our own, and we will label it as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions in that window. Two caveats we would rather state than have you find: that report has no click column, so it shows appearances and not visits, and 57% of those impressions came from one article about hosting bandwidth, which is developer research rather than anyone looking to buy a website. We also track AI-referred orders on Panda Patches, a business our co-founder owns, so it is our own data rather than an independent client result.",
+      a: "Our own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.",
     },
     {
       q: "Is llms.txt worth having?",
-      a: "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, GPTBot fetches it frequently, and Google's own PageSpeed Agentic Browsing category checks for a compliant one. We add it because it costs nothing and some tools use it, not because it moves you up Google.",
+      a: "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.",
     },
     {
       q: "Our site is on WordPress. Can you do this without rebuilding it?",

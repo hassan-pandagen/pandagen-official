@@ -45,16 +45,16 @@ import { serviceFaqs } from "@/data/service-faqs";
  */
 
 const READABLE = [
-  { icon: Code2, title: "Content in the HTML", body: "The words are in the page the server sends, not assembled afterwards in the browser. An assistant that does not execute JavaScript still sees them." },
+  { icon: Code2, title: "Content in the HTML", body: "The words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them." },
   { icon: FileSearch, title: "Headings that answer", body: "Each section is titled with the question it resolves, so a machine reading for an answer can find where it is." },
   { icon: Eye, title: "Facts as text", body: "Prices, specifications, hours and terms written out rather than sealed inside an image nothing can read." },
 ];
 
 const NOT_INCLUDED = [
-  "A citation target, a ranking target or a traffic figure, because which sources an assistant uses is its decision",
+  "A citation, ranking or traffic target of any kind",
   "Monthly monitoring, unless you take the optional retainer, which is scoped and priced separately from the build",
   "Content written for you, unless copywriting is separately scoped in your quote",
-  "Any claim about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
+  "Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
 ];
 
 export default function PageContent() {
@@ -73,21 +73,23 @@ export default function PageContent() {
             <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-cognac mb-4">AI SEO &amp; Answer Engine Optimisation</p>
             <h1 className="text-4xl md:text-6xl font-bold text-charcoal tracking-tight leading-[1.05] mb-6">
               Websites that AI assistants can read,{" "}
-              <span className="font-serif italic text-cognac">built in, not billed monthly.</span>
+              <span className="font-serif italic text-cognac">built in from the start.</span>
             </h1>
             <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-5">
-              Assistants read the HTML your server sends. If your content only appears once JavaScript has
-              run, you are relying on every crawler choosing to execute it. We build pages where the content
-              is simply there, and we do it during the build rather than selling it back afterwards.
+              Some crawlers execute JavaScript and some do not. If your content only appears after JavaScript
+              runs, whether it is read at all depends on which one arrives. We build pages where the words are
+              already in the HTML the server sends, so it is read either way &mdash; and we do it
+              during the build rather than selling it back afterwards.
             </p>
             <div className="rounded-2xl border border-cognac/20 bg-orange-50/50 p-5 mb-8">
               <p className="flex items-start gap-3 text-sm text-charcoal leading-relaxed">
                 <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
-                  <strong>Want it looked after monthly as well? We do that, from $500.</strong> Published AEO
-                  retainers generally start around $1,500 a month and run to $8,000 for larger programmes. We
-                  scope the work with you first and price it against your actual site, so a small site is not
-                  charged like a large one. It is optional either way &mdash; the build does not depend on it.
+                  <strong>Want it looked after monthly as well? We do that, from $500.</strong> Agencies who
+                  publish their own AEO rates put entry programmes around $1,500 a month, rising to $8,000 and
+                  beyond &mdash; their figures, for their own services, so read them as such. We scope the work
+                  with you first and price it against your actual site, so a small site is not charged like a
+                  large one. It is optional either way &mdash; the build does not depend on it.
                 </span>
               </p>
             </div>
@@ -117,8 +119,8 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What &ldquo;readable&rdquo; actually means</h2>
           <p className="text-stone-600 mb-10 max-w-2xl">
-            None of this is exotic. It is what a well-built page has always been, which is exactly why it
-            belongs in the build rather than in a monthly invoice.
+            It is ordinary good building, which is why it belongs in the build rather than in a separate
+            invoice.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {READABLE.map((item) => (
@@ -151,7 +153,7 @@ export default function PageContent() {
             <div className="border-t border-stone-200 pt-4 space-y-2">
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span>That report has <strong>no click column</strong>. It shows appearances, not visits, and certainly not sales.</span>
+                <span>That report has <strong>no click column</strong>. It shows appearances, not visits, and not sales.</span>
               </p>
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
@@ -163,12 +165,19 @@ export default function PageContent() {
               </p>
             </div>
           </div>
+          {/* Byline added after the google-content-audit pass. The page makes
+              first-party measurement claims, so "who measured this" is a fair
+              question and item 13 asks for the answer on the page. */}
+          <p className="text-sm text-stone-500 leading-relaxed mb-6">
+            Measured and written by{" "}
+            <Link href="/about/hassan" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Hassan Jamal</Link>,
+            co-founder, from our own Search Console property. Last checked 13 September 2026.
+          </p>
           <p className="text-stone-600 leading-relaxed">
             We also track AI-referred orders on{" "}
             <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>,
-            a business our co-founder owns. It is a real store taking real orders, and the attribution runs
-            end to end &mdash; but it is our own company rather than an independent client, and we would rather
-            label it than let you assume otherwise.
+            a business our co-founder owns. It takes live orders and the attribution runs end to end, but it
+            is our own company rather than an independent client, which is why it is labelled that way here.
           </p>
         </div>
       </section>
