@@ -1,0 +1,58 @@
+{
+  "typecheck": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit --incremental false",
+    "exitCode": 0
+  },
+  "faqParseDiagnostics": [],
+  "sourceFaqCount": 6,
+  "schemaFaqCount": 6,
+  "sourceAndSchemaMatch": true,
+  "currentFaqWords": 579,
+  "proposedFaqWords": 309,
+  "allServiceGroups": [
+    {
+      "key": "ai-seo",
+      "count": 6
+    },
+    {
+      "key": "custom-engineering",
+      "count": 6
+    },
+    {
+      "key": "ecommerce",
+      "count": 6
+    },
+    {
+      "key": "gohighlevel",
+      "count": 7
+    },
+    {
+      "key": "squarespace",
+      "count": 7
+    },
+    {
+      "key": "webflow",
+      "count": 8
+    },
+    {
+      "key": "wix",
+      "count": 6
+    },
+    {
+      "key": "woocommerce",
+      "count": 11
+    },
+    {
+      "key": "wordpress-migration",
+      "count": 5
+    }
+  ],
+  "internalLinksChecked": 28,
+  "allLocalLinks200": true,
+  "sourceChangesSinceCapture": [
+    "src/app/work/panda-patches/page.tsx",
+    ".next/server/app/services/ai-seo.html"
+  ],
+  "formsSubmitted": false,
+  "appFilesEditedByAudit": false
+}

@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-09-14T21:30:21.207Z",
+  "buildId": "x-tB0xt9AOyOYuzMNfu-2",
+  "inputs": [
+    {
+      "path": "docs/research/ai-seo-page-for-review-2026-09-14.md",
+      "modifiedAt": "2026-09-14T21:17:52.717Z",
+      "sha256": "b361913bf62439b9e6630ed9e66a62849b6effaa0c4e25b49ea1a17c84cfeb14"
+    },
+    {
+      "path": "src/app/services/ai-seo/PageContent.tsx",
+      "modifiedAt": "2026-09-14T21:11:54.923Z",
+      "sha256": "4944051a39d986aab60f683f35df882d2d23e7d125a785e458138ad7685eb18c"
+    },
+    {
+      "path": "src/app/services/ai-seo/page.tsx",
+      "modifiedAt": "2026-09-14T17:47:18.208Z",
+      "sha256": "85cfe1bb40a8cb8c8a279b80c5d4d9288474eb921a46869d80e78d16b413f158"
+    },
+    {
+      "path": "src/data/service-faqs.ts",
+      "modifiedAt": "2026-09-14T21:15:08.561Z",
+      "sha256": "67cb948561bfb7cdf7e24f1f472b4680baaadff161456753e797e9526870fe43"
+    },
+    {
+      "path": "src/app/work/panda-patches/page.tsx",
+      "modifiedAt": "2026-09-14T21:25:19.887Z",
+      "sha256": "92e2affc37b231be0d311237194ddaa09fd84232eecaec6a6914cefed87f48d6"
+    },
+    {
+      "path": "src/app/ai-info/page.tsx",
+      "modifiedAt": "2026-09-10T17:44:12.000Z",
+      "sha256": "2410a83cdb53b458a00578b77794f1d3e866d223218c02740802a099e4a8e109"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "modifiedAt": "2026-09-14T21:00:54.140Z",
+      "sha256": "39eeec78e4c10b3dadfc1064abb5ecd2ce43ca9bc661f4be993cf4d3e921a913"
+    },
+    {
+      "path": "src/components/layout/Footer.tsx",
+      "modifiedAt": "2026-09-14T21:00:54.140Z",
+      "sha256": "951328f2ad649eeba8d8933a4d434b9a8b48f62fa9fc2fe4a48091f24e91f53d"
+    },
+    {
+      "path": ".next/server/app/services/ai-seo.html",
+      "modifiedAt": "2026-09-14T21:25:46.642Z",
+      "sha256": "3b7cb6d83585fa656f1dba514c55afada1981050d0732bfa7c658493608ad183"
+    },
+    {
+      "path": "src/data/first-party-measurements.json",
+      "modifiedAt": "2026-09-14T17:47:18.211Z",
+      "sha256": "280e2427fe2afb181fda4ec07c3f665a6f2ccfd0945710a97f7db938b83e825e"
+    }
+  ],
+  "changedSinceCapture": [
+    "src/app/work/panda-patches/page.tsx",
+    ".next/server/app/services/ai-seo.html"
+  ]
+}
