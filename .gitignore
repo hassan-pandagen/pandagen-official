@@ -122,3 +122,7 @@ outreach/
 
 # Local design-audit screenshots (Playwright before/after, research only)
 /audit/
+
+# Python bytecode from the guard scripts in scripts/. Build artefact, never committed.
+__pycache__/
+*.pyc

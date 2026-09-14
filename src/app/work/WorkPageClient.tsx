@@ -27,12 +27,12 @@ const clientProjects: Project[] = [
     surface: styles.community,
   },
   {
-    slug: "emblematic-studio",
-    category: "Product catalogue & enquiries",
-    summary: "A material-led product catalogue with guides and an artwork-to-quote journey.",
-    image: "/work/emblematic-studio.png",
-    alt: "Emblematic Studio website showing its patch collection and product-led visual design.",
-    surface: styles.catalogue,
+    slug: "mycustompatches",
+    category: "WordPress migration",
+    summary: "A WordPress storefront rebuilt around its product catalogue, blog and quote journey.",
+    image: "/work/mycustompatches.png",
+    alt: "MyCustomPatches product page with a chenille patch gallery, product details and an instant quote action.",
+    surface: styles.wordpress,
   },
 ];
 
@@ -57,13 +57,13 @@ const affiliatedProjects: Project[] = [
   },
 ];
 
-const migration = caseStudy("mycustompatches");
+const featuredStudy = caseStudy("emblematic-studio");
 const codeLab = caseStudy("panda-codelab");
 const collectionItems = [
-  migration,
-  ...clientProjects.map(({ slug }) => caseStudy(slug)),
+  featuredStudy,
   { name: "NorthDeck Group", href: "https://northdeckgroup.com/" },
   ...affiliatedProjects.map(({ slug }) => caseStudy(slug)),
+  ...clientProjects.map(({ slug }) => caseStudy(slug)),
   codeLab,
 ];
 
@@ -121,6 +121,7 @@ function ProjectCard({ project }: { project: Project }) {
           <span>{study.relationship}</span>
         </div>
         <h3 id={`${project.slug}-title`} className={styles.projectTitle}>{study.name}</h3>
+        {study.legalEntity && <p className={styles.projectLegal}>{study.legalEntity}</p>}
         <p className={styles.projectSummary}>{project.summary}</p>
         <span className={styles.textLink}>Read case study <ArrowUpRight size={17} aria-hidden="true" /></span>
       </Link>
@@ -146,23 +147,24 @@ export default function WorkPageClient() {
           <nav className={styles.projectNav} aria-label="Explore work">
             <span className={styles.exploreLabel}>Explore the projects <ArrowDown size={16} aria-hidden="true" /></span>
             <div>
-              <a href="#client-work">Client work <span>04</span></a>
-              <a href="#affiliated-work">Founder-affiliated work <span>03</span></a>
+              <a href="#client-work">Websites</a>
+              <a href="#affiliated-work">Commerce & CRM</a>
+              <a href="#migration-work">Migrations</a>
             </div>
           </nav>
         </section>
 
         <section className={`${styles.container} ${styles.clientWork}`} aria-labelledby="client-work">
           <div className={styles.sectionHeading}>
-            <h2 id="client-work">Built for our clients.</h2>
+            <h2 id="client-work">Websites & catalogues.</h2>
             <span className={styles.sectionNote}>From the website to the way it works</span>
           </div>
           <article className={styles.featured}>
-            <Link href={migration.href} className={styles.featuredLink} aria-labelledby="mycustompatches-title">
-              <div className={`${styles.preview} ${styles.migration}`}>
+            <Link href={featuredStudy.href} className={styles.featuredLink} aria-labelledby="emblematic-studio-title">
+              <div className={`${styles.preview} ${styles.featuredPreview}`}>
                 <Image
-                  src="/work/mycustompatches.png"
-                  alt="MyCustomPatches product page with a chenille patch gallery, product details and an instant quote action."
+                  src="/work/emblematic-studio.png"
+                  alt="Emblematic Studio website showing its patch collection and product-led visual design."
                   width={1912}
                   height={914}
                   sizes="(min-width: 1440px) 780px, (min-width: 960px) 58vw, 90vw"
@@ -172,21 +174,18 @@ export default function WorkPageClient() {
                 />
               </div>
               <div className={styles.featuredCopy}>
-                <p className={styles.eyebrow}>Featured / Website migration</p>
-                <h3 id="mycustompatches-title">{migration.name}</h3>
-                <p className={styles.featuredSummary}>An established WordPress storefront, rebuilt in custom code.</p>
-                <p className={styles.featuredDetail}>The product catalogue, blog and quote journey moved to Next.js, with URL redirects and launch checks.</p>
+                <p className={styles.eyebrow}>Featured / Product catalogue & enquiries</p>
+                <h3 id="emblematic-studio-title">{featuredStudy.name}</h3>
+                <p className={styles.featuredSummary}>A material-led catalogue with a clear path from artwork to quote.</p>
+                <p className={styles.featuredDetail}>Product guides and an artwork-upload quote journey, built as a custom Next.js website.</p>
                 <div className={styles.featuredFooter}>
-                  <span>{migration.relationship}<br /><span className={styles.entity}>{migration.legalEntity}</span></span>
+                  <span>{featuredStudy.relationship}</span>
                   <span className={styles.roundArrow} aria-hidden="true"><ArrowUpRight size={25} /></span>
                 </div>
-                <span className={styles.featuredCta}>Read the migration case study</span>
+                <span className={styles.featuredCta}>Read the catalogue case study</span>
               </div>
             </Link>
           </article>
-          <div className={styles.projectGrid}>
-            {clientProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
-          </div>
           <article className={styles.liveProject}>
             <a href="https://northdeckgroup.com/" target="_blank" rel="noopener noreferrer" className={styles.liveProjectLink} aria-labelledby="northdeck-title">
               <div className={`${styles.preview} ${styles.northdeck}`}>
@@ -208,12 +207,6 @@ export default function WorkPageClient() {
               </div>
             </a>
           </article>
-          <p className={styles.projectNote}>
-            Explore each case study for the brief, our role and the build details. Project-specific results and their sources are included where available.
-            <Link href="/editorial-policy#publication-controls" className="mt-3 flex min-h-8 w-fit items-center gap-2 font-semibold text-cognac underline underline-offset-4">
-              How we publish results <ArrowRight size={14} aria-hidden="true" />
-            </Link>
-          </p>
         </section>
 
         <section className={styles.affiliatedSection} aria-labelledby="affiliated-work">
@@ -228,15 +221,31 @@ export default function WorkPageClient() {
             <div className={styles.projectGrid}>
               {affiliatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
             </div>
-            <div className={styles.additionalProject}>
-              <div>
-                <p className={styles.eyebrow}>Also in the collection / {codeLab.relationship}</p>
-                <h3>{codeLab.name}</h3>
-                <p>An agency website with a custom component system, motion and 3D scenes.</p>
-              </div>
-              <Link href={codeLab.href} className={styles.textLink}>Explore the build <ArrowUpRight size={19} aria-hidden="true" /></Link>
-            </div>
           </div>
+        </section>
+
+        <section className={`${styles.container} ${styles.clientWork}`} aria-labelledby="migration-work">
+          <div className={styles.sectionHeading}>
+            <h2 id="migration-work">A new home for an established website.</h2>
+            <span className={styles.sectionNote}>Client migration projects</span>
+          </div>
+          <div className={styles.projectGrid}>
+            {clientProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+          </div>
+          <div className={`${styles.additionalProject} ${styles.additionalProjectLight}`}>
+            <div>
+              <p className={styles.eyebrow}>Also in the collection / {codeLab.relationship}</p>
+              <h3>{codeLab.name}</h3>
+              <p>An agency website with a custom component system, motion and 3D scenes.</p>
+            </div>
+            <Link href={codeLab.href} className={styles.textLink}>Explore the build <ArrowUpRight size={19} aria-hidden="true" /></Link>
+          </div>
+          <p className={styles.projectNote}>
+            Explore each case study for the brief, our role and the build details. Project-specific results and their sources are included where available.
+            <Link href="/editorial-policy#publication-controls" className="mt-3 flex min-h-8 w-fit items-center gap-2 font-semibold text-cognac underline underline-offset-4">
+              How we publish results <ArrowRight size={14} aria-hidden="true" />
+            </Link>
+          </p>
         </section>
 
         <section className={`${styles.container} ${styles.contactSection}`} aria-labelledby="project-cta">
