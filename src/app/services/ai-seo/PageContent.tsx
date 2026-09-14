@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, CheckCircle2, XCircle, Code2, FileSearch, Eye, AlertTriangle } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle, Code2, FileSearch, Eye } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -24,11 +24,16 @@ import { serviceFaqs } from "@/data/service-faqs";
  * cluster's pillarHref pointed at /editorial-policy, a policy page, which meant
  * eleven articles had no commercial destination at all.
  *
- * It is NOT a standalone AEO retainer. The industry standard is $1,500-8,000
- * a month, which is a different delivery model from fixed-price project work
- * and contradicts the no-compulsory-retainer position stated on /pricing. The
- * page says so in its first FAQ rather than burying it, because a visitor who
- * wants a monthly programme should leave quickly and without irritation.
+ * CORRECTED 14 Sep, same day. The first version of this page carried an amber
+ * box reading "if you want a monthly AEO programme, we are the wrong firm",
+ * on my assumption that the no-compulsory-retainer line on /pricing meant no
+ * retainer was offered at all. Wrong: the owner does offer one, scopes it
+ * first, and can start at $500 a month. That box was turning away a customer
+ * we would take. It now states the offer, and the $500 floor against a
+ * published market entry of about $1,500 is the same shape as the $1,500 build
+ * against Pagepro's $25,000 minimum -- which is this firm's actual competitive
+ * position, not an exception to it. "No compulsory retainer" on /pricing is
+ * about the BUILD not requiring one, and remains true.
  *
  * EVERY CLAIM HERE IS BOUNDED ON PURPOSE. The 9,843 figure is our own property
  * and lives in first-party-measurements.json under
@@ -47,7 +52,7 @@ const READABLE = [
 
 const NOT_INCLUDED = [
   "A citation target, a ranking target or a traffic figure, because which sources an assistant uses is its decision",
-  "Monthly visibility monitoring or prompt tracking, which is the retainer model we do not run",
+  "Monthly monitoring, unless you take the optional retainer, which is scoped and priced separately from the build",
   "Content written for you, unless copywriting is separately scoped in your quote",
   "Any claim about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
 ];
@@ -75,13 +80,14 @@ export default function PageContent() {
               run, you are relying on every crawler choosing to execute it. We build pages where the content
               is simply there, and we do it during the build rather than selling it back afterwards.
             </p>
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-5 mb-8">
+            <div className="rounded-2xl border border-cognac/20 bg-orange-50/50 p-5 mb-8">
               <p className="flex items-start gap-3 text-sm text-charcoal leading-relaxed">
-                <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
                 <span>
-                  <strong>If you want a monthly AEO programme, we are the wrong firm.</strong> That market runs
-                  from roughly $1,500 a month at entry level to $8,000 and up, and several agencies do it well.
-                  We do not run a retainer. Better you know now than on the call.
+                  <strong>Want it looked after monthly as well? We do that, from $500.</strong> Published AEO
+                  retainers generally start around $1,500 a month and run to $8,000 for larger programmes. We
+                  scope the work with you first and price it against your actual site, so a small site is not
+                  charged like a large one. It is optional either way &mdash; the build does not depend on it.
                 </span>
               </p>
             </div>
