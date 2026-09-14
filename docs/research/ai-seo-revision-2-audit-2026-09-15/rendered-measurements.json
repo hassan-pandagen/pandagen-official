@@ -1,0 +1,1396 @@
+[
+  {
+    "name": "desktop",
+    "title": "AI SEO Services and Answer Engine Optimisation | PandaCodeGen",
+    "description": "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.",
+    "canonical": "https://www.pandacodegen.com/services/ai-seo",
+    "robots": [
+      "index, follow"
+    ],
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "pageHeight": 8919,
+    "scrollWidth": 1432,
+    "sections": [
+      {
+        "index": 0,
+        "heading": "Websites that AI assistants can read, built in from the start.",
+        "words": 164,
+        "text": "AI SEO & ANSWER ENGINE OPTIMISATION\n\nWebsites that AI assistants can read, built in from the start.\n\nSome crawlers execute JavaScript and some do not. If your content only appears after JavaScript runs, whether it is read at all depends on which one arrives. We build pages where the words are already in the HTML the server sends, so it is read either way — and we do it during the build rather than selling it back afterwards.\n\nMonthly AI SEO services from $500. We quote based on your project’s size and scope, with the work and monthly fee agreed before we begin. We research the questions your buyers ask, monitor relevant AI-search results, and make agreed improvements to your content and technical setup. It is optional — the build does not depend on it.\n\nAsk us about your site\nCheck your website\n\nA founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
+        "top": 0,
+        "height": 929,
+        "width": 1432
+      },
+      {
+        "index": 1,
+        "heading": "What “readable” actually means",
+        "words": 101,
+        "text": "What “readable” actually means\n\nIt is ordinary good building, which is why it belongs in the build rather than in a separate invoice.\n\nContent in the HTML\n\nThe words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them.\n\nHeadings that answer\n\nEach section is titled with the question it resolves, so a machine reading for an answer can find where it is.\n\nFacts as text\n\nPrices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image.",
+        "top": 929,
+        "height": 515,
+        "width": 1432
+      },
+      {
+        "index": 2,
+        "heading": "Our own numbers, and what they do not show",
+        "words": 168,
+        "text": "Our own numbers, and what they do not show\n\n9,843\n\nAI-feature impressions for pandacodegen.com, 12 June to 11 September 2026\n\nGoogle Search Console’s Generative AI report counts the times one of our pages appeared in an AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920, so AI features were 6.2% of everything.\n\nThat report has no click column. It shows appearances, not visits, and not sales.\n\n5,583 of them came from one article about hosting bandwidth — developer research, not people looking to buy a website.\n\nIt covers Google’s features only. It says nothing about ChatGPT, Claude or Perplexity.\n\nMeasured and written by Hassan Jamal, co-founder, from our own Search Console property. Last checked 13 September 2026.\n\nWe also track AI-referred orders on Panda Patches, a business our co-founder owns. It takes live orders and the attribution runs end to end, but it is our own company rather than an independent client, which is why it is labelled that way here.",
+        "top": 1444,
+        "height": 764,
+        "width": 1432
+      },
+      {
+        "index": 3,
+        "heading": "What a $500 month actually contains",
+        "words": 207,
+        "text": "What a $500 month actually contains\n\nA focused starting engagement. Your written scope names the coverage, the deliverables and who publishes the change. Larger projects are quoted for the work they need, not by counting websites.\n\nEach month\tThe starting boundary\nBuyer research\tTen questions your customers actually ask, across one product or service area and up to five priority pages.\nVisibility monitoring\tThose ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.\nContent and technical review\tThe selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.\nAn improvement we ship\tOne agreed page improvement or small technical task, implemented, verified, with a revision round. Not a recommendation for someone else to action.\nMonthly report\tWhat changed, what the measurements do and do not show, and the next priority.\nReview\tA short call or a recorded walkthrough, whichever suits you.\n\nThe first month sets the baseline and still ships one improvement. If the first look finds a large technical backlog, missing measurement or a rebuild, we quote that separately and say so before you commit — rather than promising normal monthly output and a setup project for the same fee.",
+        "top": 2208,
+        "height": 754,
+        "width": 1432
+      },
+      {
+        "index": 4,
+        "heading": "Where it goes beyond that",
+        "words": 271,
+        "text": "Where it goes beyond that\n\nThe entry scope is deliberately small so it can be judged. These are the additions that change the quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.\n\nLead attribution, if your stack allows it\n\nMost AI-search reporting stops at visibility: you appeared, you were mentioned. The harder question is whether any of it reached your business. We can wire server-side tracking so an enquiry or order carries where it came from, which is how we track AI-referred orders on our own store. Whether it is possible on yours depends on your platform and what it will let us instrument, so we look before we promise it.\n\nA reporting dashboard. Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build.\nMore pages, journeys or templates. More to investigate, edit and verify each cycle.\nMore questions, surfaces or markets. Analyst time and tool cost, plus local research and approval if the market is new.\nOriginal content. Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have.\nA larger implementation backlog. More shipped each month, or engineering work beyond a small task.\nEcommerce catalogue work. Product data, feeds, categories and variants, where that is what the questions are about.\n\nThere is no per-website formula. A large business can commission something narrow, and a small site can need a bigger quote because the work is awkward. We price the work, then write it down before starting.",
+        "top": 2961,
+        "height": 888,
+        "width": 1432
+      },
+      {
+        "index": 5,
+        "heading": "What this does not include",
+        "words": 122,
+        "text": "What this does not include\nA citation, ranking or traffic target of any kind\nNew long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee\nContent written for you, unless copywriting is separately scoped in your quote\nClaims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for\n\nWhat you do get is a site built this way from the start, at the fixed price in your written quote, with the code and accounts transferred to you. If your existing pages already render server-side and only need better structure, we will tell you that instead — it is the smaller job and sometimes it is the right one.",
+        "top": 3849,
+        "height": 546,
+        "width": 1432
+      },
+      {
+        "index": 6,
+        "heading": "Frequently Asked Questions",
+        "words": 594,
+        "text": "Frequently Asked Questions\nDo you sell AI SEO as a monthly service?\n\nYes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome.\n\nWhat does making a site readable to AI assistants actually involve?\n\nServing the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.\n\nCan you get us cited by ChatGPT or in Google's AI Overviews?\n\nNo, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.\n\nWhat evidence do you have that any of it works?\n\nOur own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.\n\nIs llms.txt worth having?\n\nIt depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.\n\nOur site is on WordPress. Can you do this without rebuilding it?\n\nSometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.",
+        "top": 4395,
+        "height": 1938,
+        "width": 1432
+      },
+      {
+        "index": 7,
+        "heading": "Want to know how yours reads?",
+        "words": 51,
+        "text": "Want to know how yours reads?\n\nRun the free check for a technical read of your pages, or send us the URL and a founder will look at it properly and tell you whether it is a build problem or an editing one.\n\nAsk us about your site\nBook a call",
+        "top": 6333,
+        "height": 361,
+        "width": 1432
+      },
+      {
+        "index": 8,
+        "heading": "Explore More Services",
+        "words": 103,
+        "text": "Explore More Services\n\nSee what each one covers, and what it costs.\n\nWordPress Migration\n\nInventory plugins, content, redirects, and migration dependencies.\n\nShopify (Headless)\n\nReview frontend architecture while retaining compatible commerce workflows.\n\nWooCommerce Migration\n\nAssess checkout, plugin dependencies, store data, and migration options.\n\nWebflow Migration\n\nAssess CMS data, interactions, hosting, and migration trade-offs.\n\nWix Migration\n\nMap content, integrations, DNS, and a feasible migration scope.\n\nSquarespace Migration\n\nReview content, commerce, scheduling, and migration requirements.\n\nGoHighLevel\n\nEvaluate a custom public frontend alongside compatible CRM workflows.\n\nCustom Engineering\n\nScope applications, dashboards, APIs, permissions, and integrations.\n\nFor Agencies\n\nDiscuss delivery roles, confidentiality, and terms in a partner agreement.",
+        "top": 6695,
+        "height": 640,
+        "width": 1432
+      }
+    ],
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Websites that AI assistants can read, built in from the start.",
+        "top": 195,
+        "height": 192,
+        "width": 768
+      },
+      {
+        "tag": "H2",
+        "text": "What “readable” actually means",
+        "top": 994,
+        "height": 40,
+        "width": 896
+      },
+      {
+        "tag": "H3",
+        "text": "Content in the HTML",
+        "top": 1205,
+        "height": 27,
+        "width": 233
+      },
+      {
+        "tag": "H3",
+        "text": "Headings that answer",
+        "top": 1205,
+        "height": 27,
+        "width": 233
+      },
+      {
+        "tag": "H3",
+        "text": "Facts as text",
+        "top": 1205,
+        "height": 27,
+        "width": 233
+      },
+      {
+        "tag": "H2",
+        "text": "Our own numbers, and what they do not show",
+        "top": 1508,
+        "height": 80,
+        "width": 768
+      },
+      {
+        "tag": "H2",
+        "text": "What a $500 month actually contains",
+        "top": 2272,
+        "height": 40,
+        "width": 768
+      },
+      {
+        "tag": "H2",
+        "text": "Where it goes beyond that",
+        "top": 3026,
+        "height": 40,
+        "width": 768
+      },
+      {
+        "tag": "H3",
+        "text": "Lead attribution, if your stack allows it",
+        "top": 3190,
+        "height": 27,
+        "width": 718
+      },
+      {
+        "tag": "H2",
+        "text": "What this does not include",
+        "top": 3914,
+        "height": 40,
+        "width": 768
+      },
+      {
+        "tag": "H2",
+        "text": "Frequently Asked Questions",
+        "top": 4539,
+        "height": 40,
+        "width": 768
+      },
+      {
+        "tag": "H3",
+        "text": "Do you sell AI SEO as a monthly service?",
+        "top": 4636,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H3",
+        "text": "What does making a site readable to AI assistants actually involve?",
+        "top": 4967,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H3",
+        "text": "Can you get us cited by ChatGPT or in Google's AI Overviews?",
+        "top": 5246,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H3",
+        "text": "What evidence do you have that any of it works?",
+        "top": 5473,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H3",
+        "text": "Is llms.txt worth having?",
+        "top": 5752,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H3",
+        "text": "Our site is on WordPress. Can you do this without rebuilding it?",
+        "top": 6057,
+        "height": 28,
+        "width": 718
+      },
+      {
+        "tag": "H2",
+        "text": "Want to know how yours reads?",
+        "top": 6413,
+        "height": 40,
+        "width": 672
+      },
+      {
+        "tag": "H2",
+        "text": "Explore More Services",
+        "top": 6760,
+        "height": 32,
+        "width": 1152
+      },
+      {
+        "tag": "H3",
+        "text": "WordPress Migration",
+        "top": 6885,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "Shopify (Headless)",
+        "top": 6885,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "WooCommerce Migration",
+        "top": 6885,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "Webflow Migration",
+        "top": 6885,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "Wix Migration",
+        "top": 7025,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "Squarespace Migration",
+        "top": 7025,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "GoHighLevel",
+        "top": 7025,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "Custom Engineering",
+        "top": 7025,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H3",
+        "text": "For Agencies",
+        "top": 7166,
+        "height": 20,
+        "width": 182
+      },
+      {
+        "tag": "H2",
+        "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+        "top": 7553,
+        "height": 183,
+        "width": 768
+      },
+      {
+        "tag": "H3",
+        "text": "SERVICES",
+        "top": 8005,
+        "height": 33,
+        "width": 120
+      },
+      {
+        "tag": "H3",
+        "text": "COMPANY",
+        "top": 8005,
+        "height": 33,
+        "width": 260
+      },
+      {
+        "tag": "H3",
+        "text": "Project Evidence",
+        "top": 8083,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Agency Pilot",
+        "top": 8171,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "About",
+        "top": 8259,
+        "height": 20,
+        "width": 165
+      },
+      {
+        "tag": "H3",
+        "text": "Hassan Jamal",
+        "top": 8331,
+        "height": 20,
+        "width": 178
+      },
+      {
+        "tag": "H3",
+        "text": "Imran Raza Ladhani",
+        "top": 8403,
+        "height": 20,
+        "width": 180
+      },
+      {
+        "tag": "H3",
+        "text": "Engineering Blog",
+        "top": 8475,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Delivery Principles",
+        "top": 8563,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Contact",
+        "top": 8651,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "RESOURCES",
+        "top": 8005,
+        "height": 33,
+        "width": 260
+      },
+      {
+        "tag": "H3",
+        "text": "Example Scopes",
+        "top": 8083,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Migration Services",
+        "top": 8171,
+        "height": 20,
+        "width": 192
+      },
+      {
+        "tag": "H3",
+        "text": "Facts and Figures",
+        "top": 8243,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Security",
+        "top": 8331,
+        "height": 20,
+        "width": 194
+      },
+      {
+        "tag": "H3",
+        "text": "Editorial Policy",
+        "top": 8403,
+        "height": 20,
+        "width": 196
+      },
+      {
+        "tag": "H3",
+        "text": "Privacy",
+        "top": 8491,
+        "height": 20,
+        "width": 163
+      },
+      {
+        "tag": "H3",
+        "text": "Cookie Choices",
+        "top": 8563,
+        "height": 20,
+        "width": 175
+      },
+      {
+        "tag": "H3",
+        "text": "Website Terms",
+        "top": 8635,
+        "height": 20,
+        "width": 162
+      },
+      {
+        "tag": "H2",
+        "text": "Cookie preferences",
+        "top": 0,
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "ctas": [
+      {
+        "text": "Get your migration plan",
+        "top": 20,
+        "height": 44,
+        "width": 224,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Ask us about your site",
+        "top": 758,
+        "height": 61,
+        "width": 265,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Check your website",
+        "top": 758,
+        "height": 61,
+        "width": 249,
+        "href": "/free-audit",
+        "calLink": null
+      },
+      {
+        "text": "Ask us about your site",
+        "top": 6553,
+        "height": 61,
+        "width": 237,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Book a call",
+        "top": 6553,
+        "height": 61,
+        "width": 150,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Get your migration plan",
+        "top": 7769,
+        "height": 59,
+        "width": 271,
+        "href": null,
+        "calLink": null
+      }
+    ],
+    "links": [
+      "/",
+      "/pricing",
+      "/partners",
+      "/blog",
+      "/free-audit",
+      "/about/hassan",
+      "/work/panda-patches",
+      "/services/wordpress-migration",
+      "/services/ecommerce",
+      "/services/woocommerce",
+      "/services/webflow",
+      "/services/wix",
+      "/services/squarespace",
+      "/services/gohighlevel",
+      "/services/custom-engineering",
+      "/contact",
+      "/work",
+      "/about",
+      "/about/imran",
+      "/manifesto",
+      "/services",
+      "/ai-info",
+      "/security",
+      "/editorial-policy",
+      "/privacy",
+      "/cookies",
+      "/terms"
+    ],
+    "table": {
+      "clientWidth": 768,
+      "scrollWidth": 768
+    },
+    "bodyText": "Skip to main content\nServices\nWork\nPricing\nPartners\nBlog\nAbout\n+1 (302) 773-8982\nGet your migration plan\n\nAI SEO & ANSWER ENGINE OPTIMISATION\n\nWebsites that AI assistants can read, built in from the start.\n\nSome crawlers execute JavaScript and some do not. If your content only appears after JavaScript runs, whether it is read at all depends on which one arrives. We build pages where the words are already in the HTML the server sends, so it is read either way — and we do it during the build rather than selling it back afterwards.\n\nMonthly AI SEO services from $500. We quote based on your project’s size and scope, with the work and monthly fee agreed before we begin. We research the questions your buyers ask, monitor relevant AI-search results, and make agreed improvements to your content and technical setup. It is optional — the build does not depend on it.\n\nAsk us about your site\nCheck your website\n\nA founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.\n\nWhat “readable” actually means\n\nIt is ordinary good building, which is why it belongs in the build rather than in a separate invoice.\n\nContent in the HTML\n\nThe words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them.\n\nHeadings that answer\n\nEach section is titled with the question it resolves, so a machine reading for an answer can find where it is.\n\nFacts as text\n\nPrices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image.\n\nOur own numbers, and what they do not show\n\n9,843\n\nAI-feature impressions for pandacodegen.com, 12 June to 11 September 2026\n\nGoogle Search Console’s Generative AI report counts the times one of our pages appeared in an AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920, so AI features were 6.2% of everything.\n\nThat report has no click column. It shows appearances, not visits, and not sales.\n\n5,583 of them came from one article about hosting bandwidth — developer research, not people looking to buy a website.\n\nIt covers Google’s features only. It says nothing about ChatGPT, Claude or Perplexity.\n\nMeasured and written by Hassan Jamal, co-founder, from our own Search Console property. Last checked 13 September 2026.\n\nWe also track AI-referred orders on Panda Patches, a business our co-founder owns. It takes live orders and the attribution runs end to end, but it is our own company rather than an independent client, which is why it is labelled that way here.\n\nWhat a $500 month actually contains\n\nA focused starting engagement. Your written scope names the coverage, the deliverables and who publishes the change. Larger projects are quoted for the work they need, not by counting websites.\n\nEach month\tThe starting boundary\nBuyer research\tTen questions your customers actually ask, across one product or service area and up to five priority pages.\nVisibility monitoring\tThose ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.\nContent and technical review\tThe selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.\nAn improvement we ship\tOne agreed page improvement or small technical task, implemented, verified, with a revision round. Not a recommendation for someone else to action.\nMonthly report\tWhat changed, what the measurements do and do not show, and the next priority.\nReview\tA short call or a recorded walkthrough, whichever suits you.\n\nThe first month sets the baseline and still ships one improvement. If the first look finds a large technical backlog, missing measurement or a rebuild, we quote that separately and say so before you commit — rather than promising normal monthly output and a setup project for the same fee.\n\nWhere it goes beyond that\n\nThe entry scope is deliberately small so it can be judged. These are the additions that change the quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.\n\nLead attribution, if your stack allows it\n\nMost AI-search reporting stops at visibility: you appeared, you were mentioned. The harder question is whether any of it reached your business. We can wire server-side tracking so an enquiry or order carries where it came from, which is how we track AI-referred orders on our own store. Whether it is possible on yours depends on your platform and what it will let us instrument, so we look before we promise it.\n\nA reporting dashboard. Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build.\nMore pages, journeys or templates. More to investigate, edit and verify each cycle.\nMore questions, surfaces or markets. Analyst time and tool cost, plus local research and approval if the market is new.\nOriginal content. Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have.\nA larger implementation backlog. More shipped each month, or engineering work beyond a small task.\nEcommerce catalogue work. Product data, feeds, categories and variants, where that is what the questions are about.\n\nThere is no per-website formula. A large business can commission something narrow, and a small site can need a bigger quote because the work is awkward. We price the work, then write it down before starting.\n\nWhat this does not include\nA citation, ranking or traffic target of any kind\nNew long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee\nContent written for you, unless copywriting is separately scoped in your quote\nClaims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for\n\nWhat you do get is a site built this way from the start, at the fixed price in your written quote, with the code and accounts transferred to you. If your existing pages already render server-side and only need better structure, we will tell you that instead — it is the smaller job and sometimes it is the right one.\n\nFrequently Asked Questions\nDo you sell AI SEO as a monthly service?\n\nYes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome.\n\nWhat does making a site readable to AI assistants actually involve?\n\nServing the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.\n\nCan you get us cited by ChatGPT or in Google's AI Overviews?\n\nNo, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.\n\nWhat evidence do you have that any of it works?\n\nOur own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.\n\nIs llms.txt worth having?\n\nIt depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.\n\nOur site is on WordPress. Can you do this without rebuilding it?\n\nSometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.\n\nWant to know how yours reads?\n\nRun the free check for a technical read of your pages, or send us the URL and a founder will look at it properly and tell you whether it is a build problem or an editing one.\n\nAsk us about your site\nBook a call\nExplore More Services\n\nSee what each one covers, and what it costs.\n\nWordPress Migration\n\nInventory plugins, content, redirects, and migration dependencies.\n\nShopify (Headless)\n\nReview frontend architecture while retaining compatible commerce workflows.\n\nWooCommerce Migration\n\nAssess checkout, plugin dependencies, store data, and migration options.\n\nWebflow Migration\n\nAssess CMS data, interactions, hosting, and migration trade-offs.\n\nWix Migration\n\nMap content, integrations, DNS, and a feasible migration scope.\n\nSquarespace Migration\n\nReview content, commerce, scheduling, and migration requirements.\n\nGoHighLevel\n\nEvaluate a custom public frontend alongside compatible CRM workflows.\n\nCustom Engineering\n\nScope applications, dashboards, APIs, permissions, and integrations.\n\nFor Agencies\n\nDiscuss delivery roles, confidentiality, and terms in a partner agreement.\n\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nGet your migration plan\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE\nCookie settings",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.pandacodegen.com/#website",
+            "url": "https://www.pandacodegen.com",
+            "name": "PandaCodeGen",
+            "publisher": {
+              "@id": "https://www.pandacodegen.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "legalName": "Panda Group Ventures L.L.C.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12250 S Kirkwood Rd, Apt 1128",
+              "addressLocality": "Stafford",
+              "addressRegion": "TX",
+              "postalCode": "77477",
+              "addressCountry": "US"
+            },
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Hassan Jamal"
+              },
+              {
+                "@type": "Person",
+                "name": "Imran Raza Ladhani"
+              }
+            ],
+            "url": "https://www.pandacodegen.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.pandacodegen.com/logo.png",
+              "width": 655,
+              "height": 113
+            },
+            "telephone": "+13027738982",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "email": "info@pandacodegen.com",
+              "telephone": "+13027738982"
+            },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2026-08-12"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/services/ai-seo#webpage",
+            "url": "https://www.pandacodegen.com/services/ai-seo",
+            "name": "AI SEO Services and Answer Engine Optimisation",
+            "description": "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.",
+            "isPartOf": {
+              "@id": "https://www.pandacodegen.com/#website"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.pandacodegen.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.pandacodegen.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "AI SEO",
+                "item": "https://www.pandacodegen.com/services/ai-seo"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/services/ai-seo#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you sell AI SEO as a monthly service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does making a site readable to AI assistants actually involve?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Serving the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you get us cited by ChatGPT or in Google's AI Overviews?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What evidence do you have that any of it works?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is llms.txt worth having?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our site is on WordPress. Can you do this without rebuilding it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "enquiry-modal",
+    "text": "What would you like help with?\n\nTell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.\n\nNAME *\nEMAIL *\nPHONE (optional)\nPROJECT DETAILS (optional)\n\nFor security, this form does not accept files. We can arrange a safe way to share documents after replying.\n\nLeave this field empty\nSend your question\n\nNo obligation. Your submission is used only to respond to this request as described in our privacy notice.",
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "placeholder": ""
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "name": "details",
+        "type": "textarea",
+        "required": false,
+        "placeholder": "Important URLs, integrations, constraints, or questions"
+      },
+      {
+        "name": "website_url_confirm",
+        "type": "text",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "name": "mobile",
+    "title": "AI SEO Services and Answer Engine Optimisation | PandaCodeGen",
+    "description": "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.",
+    "canonical": "https://www.pandacodegen.com/services/ai-seo",
+    "robots": [
+      "index, follow"
+    ],
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "pageHeight": 15204,
+    "scrollWidth": 390,
+    "sections": [
+      {
+        "index": 0,
+        "heading": "Websites that AI assistants can read, built in from the start.",
+        "words": 164,
+        "text": "AI SEO & ANSWER ENGINE OPTIMISATION\n\nWebsites that AI assistants can read, built in from the start.\n\nSome crawlers execute JavaScript and some do not. If your content only appears after JavaScript runs, whether it is read at all depends on which one arrives. We build pages where the words are already in the HTML the server sends, so it is read either way — and we do it during the build rather than selling it back afterwards.\n\nMonthly AI SEO services from $500. We quote based on your project’s size and scope, with the work and monthly fee agreed before we begin. We research the questions your buyers ask, monitor relevant AI-search results, and make agreed improvements to your content and technical setup. It is optional — the build does not depend on it.\n\nAsk us about your site\nCheck your website\n\nA founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
+        "top": 0,
+        "height": 1139,
+        "width": 390
+      },
+      {
+        "index": 1,
+        "heading": "What “readable” actually means",
+        "words": 101,
+        "text": "What “readable” actually means\n\nIt is ordinary good building, which is why it belongs in the build rather than in a separate invoice.\n\nContent in the HTML\n\nThe words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them.\n\nHeadings that answer\n\nEach section is titled with the question it resolves, so a machine reading for an answer can find where it is.\n\nFacts as text\n\nPrices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image.",
+        "top": 1139,
+        "height": 977,
+        "width": 390
+      },
+      {
+        "index": 2,
+        "heading": "Our own numbers, and what they do not show",
+        "words": 168,
+        "text": "Our own numbers, and what they do not show\n\n9,843\n\nAI-feature impressions for pandacodegen.com, 12 June to 11 September 2026\n\nGoogle Search Console’s Generative AI report counts the times one of our pages appeared in an AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920, so AI features were 6.2% of everything.\n\nThat report has no click column. It shows appearances, not visits, and not sales.\n\n5,583 of them came from one article about hosting bandwidth — developer research, not people looking to buy a website.\n\nIt covers Google’s features only. It says nothing about ChatGPT, Claude or Perplexity.\n\nMeasured and written by Hassan Jamal, co-founder, from our own Search Console property. Last checked 13 September 2026.\n\nWe also track AI-referred orders on Panda Patches, a business our co-founder owns. It takes live orders and the attribution runs end to end, but it is our own company rather than an independent client, which is why it is labelled that way here.",
+        "top": 2117,
+        "height": 1105,
+        "width": 390
+      },
+      {
+        "index": 3,
+        "heading": "What a $500 month actually contains",
+        "words": 207,
+        "text": "What a $500 month actually contains\n\nA focused starting engagement. Your written scope names the coverage, the deliverables and who publishes the change. Larger projects are quoted for the work they need, not by counting websites.\n\nEach month\tThe starting boundary\nBuyer research\tTen questions your customers actually ask, across one product or service area and up to five priority pages.\nVisibility monitoring\tThose ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.\nContent and technical review\tThe selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.\nAn improvement we ship\tOne agreed page improvement or small technical task, implemented, verified, with a revision round. Not a recommendation for someone else to action.\nMonthly report\tWhat changed, what the measurements do and do not show, and the next priority.\nReview\tA short call or a recorded walkthrough, whichever suits you.\n\nThe first month sets the baseline and still ships one improvement. If the first look finds a large technical backlog, missing measurement or a rebuild, we quote that separately and say so before you commit — rather than promising normal monthly output and a setup project for the same fee.",
+        "top": 3222,
+        "height": 1303,
+        "width": 390
+      },
+      {
+        "index": 4,
+        "heading": "Where it goes beyond that",
+        "words": 271,
+        "text": "Where it goes beyond that\n\nThe entry scope is deliberately small so it can be judged. These are the additions that change the quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.\n\nLead attribution, if your stack allows it\n\nMost AI-search reporting stops at visibility: you appeared, you were mentioned. The harder question is whether any of it reached your business. We can wire server-side tracking so an enquiry or order carries where it came from, which is how we track AI-referred orders on our own store. Whether it is possible on yours depends on your platform and what it will let us instrument, so we look before we promise it.\n\nA reporting dashboard. Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build.\nMore pages, journeys or templates. More to investigate, edit and verify each cycle.\nMore questions, surfaces or markets. Analyst time and tool cost, plus local research and approval if the market is new.\nOriginal content. Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have.\nA larger implementation backlog. More shipped each month, or engineering work beyond a small task.\nEcommerce catalogue work. Product data, feeds, categories and variants, where that is what the questions are about.\n\nThere is no per-website formula. A large business can commission something narrow, and a small site can need a bigger quote because the work is awkward. We price the work, then write it down before starting.",
+        "top": 4525,
+        "height": 1536,
+        "width": 390
+      },
+      {
+        "index": 5,
+        "heading": "What this does not include",
+        "words": 122,
+        "text": "What this does not include\nA citation, ranking or traffic target of any kind\nNew long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee\nContent written for you, unless copywriting is separately scoped in your quote\nClaims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for\n\nWhat you do get is a site built this way from the start, at the fixed price in your written quote, with the code and accounts transferred to you. If your existing pages already render server-side and only need better structure, we will tell you that instead — it is the smaller job and sometimes it is the right one.",
+        "top": 6061,
+        "height": 884,
+        "width": 390
+      },
+      {
+        "index": 6,
+        "heading": "Frequently Asked Questions",
+        "words": 594,
+        "text": "Frequently Asked Questions\nDo you sell AI SEO as a monthly service?\n\nYes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome.\n\nWhat does making a site readable to AI assistants actually involve?\n\nServing the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.\n\nCan you get us cited by ChatGPT or in Google's AI Overviews?\n\nNo, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.\n\nWhat evidence do you have that any of it works?\n\nOur own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.\n\nIs llms.txt worth having?\n\nIt depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.\n\nOur site is on WordPress. Can you do this without rebuilding it?\n\nSometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.",
+        "top": 6945,
+        "height": 3466,
+        "width": 390
+      },
+      {
+        "index": 7,
+        "heading": "Want to know how yours reads?",
+        "words": 51,
+        "text": "Want to know how yours reads?\n\nRun the free check for a technical read of your pages, or send us the URL and a founder will look at it properly and tell you whether it is a build problem or an editing one.\n\nAsk us about your site\nBook a call",
+        "top": 10411,
+        "height": 498,
+        "width": 390
+      },
+      {
+        "index": 8,
+        "heading": "Explore More Services",
+        "words": 103,
+        "text": "Explore More Services\n\nSee what each one covers, and what it costs.\n\nWordPress Migration\n\nInventory plugins, content, redirects, and migration dependencies.\n\nShopify (Headless)\n\nReview frontend architecture while retaining compatible commerce workflows.\n\nWooCommerce Migration\n\nAssess checkout, plugin dependencies, store data, and migration options.\n\nWebflow Migration\n\nAssess CMS data, interactions, hosting, and migration trade-offs.\n\nWix Migration\n\nMap content, integrations, DNS, and a feasible migration scope.\n\nSquarespace Migration\n\nReview content, commerce, scheduling, and migration requirements.\n\nGoHighLevel\n\nEvaluate a custom public frontend alongside compatible CRM workflows.\n\nCustom Engineering\n\nScope applications, dashboards, APIs, permissions, and integrations.\n\nFor Agencies\n\nDiscuss delivery roles, confidentiality, and terms in a partner agreement.",
+        "top": 10910,
+        "height": 1259,
+        "width": 390
+      }
+    ],
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Websites that AI assistants can read, built in from the start.",
+        "top": 147,
+        "height": 115,
+        "width": 342
+      },
+      {
+        "tag": "H2",
+        "text": "What “readable” actually means",
+        "top": 1188,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "Content in the HTML",
+        "top": 1459,
+        "height": 27,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "Headings that answer",
+        "top": 1699,
+        "height": 27,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "Facts as text",
+        "top": 1917,
+        "height": 27,
+        "width": 292
+      },
+      {
+        "tag": "H2",
+        "text": "Our own numbers, and what they do not show",
+        "top": 2165,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H2",
+        "text": "What a $500 month actually contains",
+        "top": 3270,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H2",
+        "text": "Where it goes beyond that",
+        "top": 4574,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "Lead attribution, if your stack allows it",
+        "top": 4851,
+        "height": 54,
+        "width": 292
+      },
+      {
+        "tag": "H2",
+        "text": "What this does not include",
+        "top": 6110,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H2",
+        "text": "Frequently Asked Questions",
+        "top": 7033,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "Do you sell AI SEO as a monthly service?",
+        "top": 7154,
+        "height": 56,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "What does making a site readable to AI assistants actually involve?",
+        "top": 7851,
+        "height": 84,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "Can you get us cited by ChatGPT or in Google's AI Overviews?",
+        "top": 8420,
+        "height": 84,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "What evidence do you have that any of it works?",
+        "top": 8833,
+        "height": 56,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "Is llms.txt worth having?",
+        "top": 9348,
+        "height": 28,
+        "width": 292
+      },
+      {
+        "tag": "H3",
+        "text": "Our site is on WordPress. Can you do this without rebuilding it?",
+        "top": 9913,
+        "height": 84,
+        "width": 292
+      },
+      {
+        "tag": "H2",
+        "text": "Want to know how yours reads?",
+        "top": 10467,
+        "height": 72,
+        "width": 342
+      },
+      {
+        "tag": "H2",
+        "text": "Explore More Services",
+        "top": 10951,
+        "height": 32,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "WordPress Migration",
+        "top": 11076,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "Shopify (Headless)",
+        "top": 11197,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "WooCommerce Migration",
+        "top": 11318,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "Webflow Migration",
+        "top": 11439,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "Wix Migration",
+        "top": 11560,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "Squarespace Migration",
+        "top": 11681,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "GoHighLevel",
+        "top": 11802,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "Custom Engineering",
+        "top": 11923,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H3",
+        "text": "For Agencies",
+        "top": 12044,
+        "height": 20,
+        "width": 248
+      },
+      {
+        "tag": "H2",
+        "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+        "top": 12304,
+        "height": 244,
+        "width": 294
+      },
+      {
+        "tag": "H3",
+        "text": "SERVICES",
+        "top": 13165,
+        "height": 33,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "COMPANY",
+        "top": 13599,
+        "height": 33,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "Project Evidence",
+        "top": 13677,
+        "height": 20,
+        "width": 259
+      },
+      {
+        "tag": "H3",
+        "text": "Agency Pilot",
+        "top": 13749,
+        "height": 20,
+        "width": 198
+      },
+      {
+        "tag": "H3",
+        "text": "About",
+        "top": 13821,
+        "height": 20,
+        "width": 165
+      },
+      {
+        "tag": "H3",
+        "text": "Hassan Jamal",
+        "top": 13893,
+        "height": 20,
+        "width": 178
+      },
+      {
+        "tag": "H3",
+        "text": "Imran Raza Ladhani",
+        "top": 13965,
+        "height": 20,
+        "width": 180
+      },
+      {
+        "tag": "H3",
+        "text": "Engineering Blog",
+        "top": 14037,
+        "height": 20,
+        "width": 235
+      },
+      {
+        "tag": "H3",
+        "text": "Delivery Principles",
+        "top": 14109,
+        "height": 20,
+        "width": 242
+      },
+      {
+        "tag": "H3",
+        "text": "Contact",
+        "top": 14181,
+        "height": 20,
+        "width": 252
+      },
+      {
+        "tag": "H3",
+        "text": "RESOURCES",
+        "top": 14272,
+        "height": 33,
+        "width": 342
+      },
+      {
+        "tag": "H3",
+        "text": "Example Scopes",
+        "top": 14350,
+        "height": 20,
+        "width": 202
+      },
+      {
+        "tag": "H3",
+        "text": "Migration Services",
+        "top": 14422,
+        "height": 20,
+        "width": 192
+      },
+      {
+        "tag": "H3",
+        "text": "Facts and Figures",
+        "top": 14494,
+        "height": 20,
+        "width": 278
+      },
+      {
+        "tag": "H3",
+        "text": "Security",
+        "top": 14582,
+        "height": 20,
+        "width": 194
+      },
+      {
+        "tag": "H3",
+        "text": "Editorial Policy",
+        "top": 14654,
+        "height": 20,
+        "width": 267
+      },
+      {
+        "tag": "H3",
+        "text": "Privacy",
+        "top": 14726,
+        "height": 20,
+        "width": 163
+      },
+      {
+        "tag": "H3",
+        "text": "Cookie Choices",
+        "top": 14798,
+        "height": 20,
+        "width": 175
+      },
+      {
+        "tag": "H3",
+        "text": "Website Terms",
+        "top": 14870,
+        "height": 20,
+        "width": 162
+      },
+      {
+        "tag": "H2",
+        "text": "Cookie preferences",
+        "top": 0,
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "ctas": [
+      {
+        "text": "Get your migration plan",
+        "top": 0,
+        "height": 0,
+        "width": 0,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Ask us about your site",
+        "top": 871,
+        "height": 59,
+        "width": 342,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Check your website",
+        "top": 946,
+        "height": 61,
+        "width": 342,
+        "href": "/free-audit",
+        "calLink": null
+      },
+      {
+        "text": "Ask us about your site",
+        "top": 10717,
+        "height": 59,
+        "width": 342,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Book a call",
+        "top": 10793,
+        "height": 61,
+        "width": 342,
+        "href": null,
+        "calLink": null
+      },
+      {
+        "text": "Get your migration plan",
+        "top": 12568,
+        "height": 59,
+        "width": 294,
+        "href": null,
+        "calLink": null
+      }
+    ],
+    "links": [
+      "/",
+      "/pricing",
+      "/partners",
+      "/blog",
+      "/free-audit",
+      "/about/hassan",
+      "/work/panda-patches",
+      "/services/wordpress-migration",
+      "/services/ecommerce",
+      "/services/woocommerce",
+      "/services/webflow",
+      "/services/wix",
+      "/services/squarespace",
+      "/services/gohighlevel",
+      "/services/custom-engineering",
+      "/contact",
+      "/work",
+      "/about",
+      "/about/imran",
+      "/manifesto",
+      "/services",
+      "/ai-info",
+      "/security",
+      "/editorial-policy",
+      "/privacy",
+      "/cookies",
+      "/terms"
+    ],
+    "table": {
+      "clientWidth": 342,
+      "scrollWidth": 342
+    },
+    "bodyText": "Skip to main content\nGet a plan\n\nAI SEO & ANSWER ENGINE OPTIMISATION\n\nWebsites that AI assistants can read, built in from the start.\n\nSome crawlers execute JavaScript and some do not. If your content only appears after JavaScript runs, whether it is read at all depends on which one arrives. We build pages where the words are already in the HTML the server sends, so it is read either way — and we do it during the build rather than selling it back afterwards.\n\nMonthly AI SEO services from $500. We quote based on your project’s size and scope, with the work and monthly fee agreed before we begin. We research the questions your buyers ask, monitor relevant AI-search results, and make agreed improvements to your content and technical setup. It is optional — the build does not depend on it.\n\nAsk us about your site\nCheck your website\n\nA founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.\n\nWhat “readable” actually means\n\nIt is ordinary good building, which is why it belongs in the build rather than in a separate invoice.\n\nContent in the HTML\n\nThe words are in the page the server sends, not assembled afterwards in the browser. A crawler that does not execute JavaScript still sees them.\n\nHeadings that answer\n\nEach section is titled with the question it resolves, so a machine reading for an answer can find where it is.\n\nFacts as text\n\nPrices, specifications, hours and terms written out as text, so nothing depends on a machine choosing to read them off an image.\n\nOur own numbers, and what they do not show\n\n9,843\n\nAI-feature impressions for pandacodegen.com, 12 June to 11 September 2026\n\nGoogle Search Console’s Generative AI report counts the times one of our pages appeared in an AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920, so AI features were 6.2% of everything.\n\nThat report has no click column. It shows appearances, not visits, and not sales.\n\n5,583 of them came from one article about hosting bandwidth — developer research, not people looking to buy a website.\n\nIt covers Google’s features only. It says nothing about ChatGPT, Claude or Perplexity.\n\nMeasured and written by Hassan Jamal, co-founder, from our own Search Console property. Last checked 13 September 2026.\n\nWe also track AI-referred orders on Panda Patches, a business our co-founder owns. It takes live orders and the attribution runs end to end, but it is our own company rather than an independent client, which is why it is labelled that way here.\n\nWhat a $500 month actually contains\n\nA focused starting engagement. Your written scope names the coverage, the deliverables and who publishes the change. Larger projects are quoted for the work they need, not by counting websites.\n\nEach month\tThe starting boundary\nBuyer research\tTen questions your customers actually ask, across one product or service area and up to five priority pages.\nVisibility monitoring\tThose ten questions tracked on two agreed AI-search surfaces, read by a person rather than only collected by software.\nContent and technical review\tThe selected pages checked for missing buyer information, and for access, indexing or structure problems worth acting on.\nAn improvement we ship\tOne agreed page improvement or small technical task, implemented, verified, with a revision round. Not a recommendation for someone else to action.\nMonthly report\tWhat changed, what the measurements do and do not show, and the next priority.\nReview\tA short call or a recorded walkthrough, whichever suits you.\n\nThe first month sets the baseline and still ships one improvement. If the first look finds a large technical backlog, missing measurement or a rebuild, we quote that separately and say so before you commit — rather than promising normal monthly output and a setup project for the same fee.\n\nWhere it goes beyond that\n\nThe entry scope is deliberately small so it can be judged. These are the additions that change the quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.\n\nLead attribution, if your stack allows it\n\nMost AI-search reporting stops at visibility: you appeared, you were mentioned. The harder question is whether any of it reached your business. We can wire server-side tracking so an enquiry or order carries where it came from, which is how we track AI-referred orders on our own store. Whether it is possible on yours depends on your platform and what it will let us instrument, so we look before we promise it.\n\nA reporting dashboard. Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build.\nMore pages, journeys or templates. More to investigate, edit and verify each cycle.\nMore questions, surfaces or markets. Analyst time and tool cost, plus local research and approval if the market is new.\nOriginal content. Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have.\nA larger implementation backlog. More shipped each month, or engineering work beyond a small task.\nEcommerce catalogue work. Product data, feeds, categories and variants, where that is what the questions are about.\n\nThere is no per-website formula. A large business can commission something narrow, and a small site can need a bigger quote because the work is awkward. We price the work, then write it down before starting.\n\nWhat this does not include\nA citation, ranking or traffic target of any kind\nNew long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee\nContent written for you, unless copywriting is separately scoped in your quote\nClaims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for\n\nWhat you do get is a site built this way from the start, at the fixed price in your written quote, with the code and accounts transferred to you. If your existing pages already render server-side and only need better structure, we will tell you that instead — it is the smaller job and sometimes it is the right one.\n\nFrequently Asked Questions\nDo you sell AI SEO as a monthly service?\n\nYes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome.\n\nWhat does making a site readable to AI assistants actually involve?\n\nServing the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.\n\nCan you get us cited by ChatGPT or in Google's AI Overviews?\n\nNo, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.\n\nWhat evidence do you have that any of it works?\n\nOur own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result.\n\nIs llms.txt worth having?\n\nIt depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.\n\nOur site is on WordPress. Can you do this without rebuilding it?\n\nSometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.\n\nWant to know how yours reads?\n\nRun the free check for a technical read of your pages, or send us the URL and a founder will look at it properly and tell you whether it is a build problem or an editing one.\n\nAsk us about your site\nBook a call\nExplore More Services\n\nSee what each one covers, and what it costs.\n\nWordPress Migration\n\nInventory plugins, content, redirects, and migration dependencies.\n\nShopify (Headless)\n\nReview frontend architecture while retaining compatible commerce workflows.\n\nWooCommerce Migration\n\nAssess checkout, plugin dependencies, store data, and migration options.\n\nWebflow Migration\n\nAssess CMS data, interactions, hosting, and migration trade-offs.\n\nWix Migration\n\nMap content, integrations, DNS, and a feasible migration scope.\n\nSquarespace Migration\n\nReview content, commerce, scheduling, and migration requirements.\n\nGoHighLevel\n\nEvaluate a custom public frontend alongside compatible CRM workflows.\n\nCustom Engineering\n\nScope applications, dashboards, APIs, permissions, and integrations.\n\nFor Agencies\n\nDiscuss delivery roles, confidentiality, and terms in a partner agreement.\n\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nGet your migration plan\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE\nCookie settings",
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.pandacodegen.com/#website",
+            "url": "https://www.pandacodegen.com",
+            "name": "PandaCodeGen",
+            "publisher": {
+              "@id": "https://www.pandacodegen.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.pandacodegen.com/#organization",
+            "name": "PandaCodeGen",
+            "alternateName": "Panda Code Gen",
+            "legalName": "Panda Group Ventures L.L.C.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12250 S Kirkwood Rd, Apt 1128",
+              "addressLocality": "Stafford",
+              "addressRegion": "TX",
+              "postalCode": "77477",
+              "addressCountry": "US"
+            },
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Hassan Jamal"
+              },
+              {
+                "@type": "Person",
+                "name": "Imran Raza Ladhani"
+              }
+            ],
+            "url": "https://www.pandacodegen.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.pandacodegen.com/logo.png",
+              "width": 655,
+              "height": 113
+            },
+            "telephone": "+13027738982",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "email": "info@pandacodegen.com",
+              "telephone": "+13027738982"
+            },
+            "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+            "areaServed": "Worldwide",
+            "foundingDate": "2026-08-12"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/services/ai-seo#webpage",
+            "url": "https://www.pandacodegen.com/services/ai-seo",
+            "name": "AI SEO Services and Answer Engine Optimisation",
+            "description": "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.",
+            "isPartOf": {
+              "@id": "https://www.pandacodegen.com/#website"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.pandacodegen.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.pandacodegen.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "AI SEO",
+                "item": "https://www.pandacodegen.com/services/ai-seo"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.pandacodegen.com/services/ai-seo#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you sell AI SEO as a monthly service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, optionally. Monthly AI SEO services start at $500, quoted on your project's size and scope with the work and the fee agreed in writing before we begin. A focused starting engagement covers five priority pages, ten buyer questions tracked on two AI-search surfaces, one page improvement or small technical task that we implement and verify, and a monthly report and review. The difference worth knowing: that improvement is shipped by us, not handed to you as a recommendation to action yourself. The technical foundations are part of the build either way, so the retainer covers the ongoing cycle rather than something held back to be sold later, and stopping after the build is a normal outcome."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does making a site readable to AI assistants actually involve?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Serving the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you get us cited by ChatGPT or in Google's AI Overviews?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What evidence do you have that any of it works?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our own, labelled as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The report counts appearances rather than visits, and the page above sets out what else that figure does not show. Separately, we track AI-referred orders end to end on a store our co-founder owns, which is first-party data rather than an independent client result."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is llms.txt worth having?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Our site is on WordPress. Can you do this without rebuilding it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

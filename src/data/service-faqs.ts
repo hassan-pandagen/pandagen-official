@@ -59,11 +59,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What does making a site readable to AI assistants actually involve?",
-      a: "Serving the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.",
+      a: "Serving the content in the HTML rather than assembling it in the browser, so important content is available without running JavaScript. Availability is not the same as being retrieved or cited, but it removes one reason to be skipped. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.",
     },
     {
-      q: "Can you get us cited by ChatGPT or in Google's AI Overviews?",
-      a: "No, and anyone who says otherwise is selling something. Which sources an assistant cites is its own decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks, so that is what we will quote for and what we will show you evidence of.",
+      q: "Can you guarantee citations or rankings?",
+      a: "No. Which sources an assistant selects is its own decision and it changes without notice, so a guarantee is not something anyone can honestly give. What we can do is improve your eligibility: make the content available without running JavaScript, make sure the facts a buyer needs are on the page, and fix the access and indexing problems that keep pages out. We agree the objectives, the work and how it is measured, and we show you what we did.",
     },
     {
       q: "What evidence do you have that any of it works?",
@@ -71,7 +71,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "Is llms.txt worth having?",
-      a: "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its three checks. You can see for yourself whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs nothing and some tools use it, not because it moves you up Google.",
+      a: "More limited than the marketing suggests. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. Lighthouse's Agentic Browsing category, which is experimental, includes a check for one, and it treats an absent file as not applicable rather than as a failure. You can see whether anything fetches yours by reading your server logs for GPTBot, ClaudeBot and PerplexityBot hits on the file, though a fetch shows the file was retrieved and not that it was used in an answer. We add it because it costs nothing, not because it moves you up Google.",
     },
     {
       q: "Our site is on WordPress. Can you do this without rebuilding it?",

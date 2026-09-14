@@ -51,7 +51,7 @@ const READABLE = [
 ];
 
 const NOT_INCLUDED = [
-  "A citation, ranking or traffic target of any kind",
+  "Guaranteed citations, rankings or traffic. We agree objectives, the work and how it is measured; the guarantee is what we cannot give",
   "New long-form content, migrations, major integrations or a large technical backlog, which are quoted separately rather than absorbed into a monthly fee",
   "Content written for you, unless copywriting is separately scoped in your quote",
   "Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you evidence for",
@@ -147,7 +147,7 @@ export default function PageContent() {
             <p className="text-stone-600 leading-relaxed mb-4">
               Google Search Console&rsquo;s Generative AI report counts the times one of our pages appeared in an
               AI Overview or AI Mode answer. Over the same window our total search impressions were 157,920,
-              so AI features were 6.2% of everything.
+              so AI features were 6.2% of Web-search impressions.
             </p>
             <div className="border-t border-stone-200 pt-4 space-y-2">
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
@@ -156,7 +156,7 @@ export default function PageContent() {
               </p>
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
-                <span><strong>5,583 of them came from one article about hosting bandwidth</strong> &mdash; developer research, not people looking to buy a website.</span>
+                <span>The hosting-bandwidth article recorded <strong>5,583 page-level impressions</strong> in the same period &mdash; developer research, not people looking to buy a website.</span>
               </p>
               <p className="flex items-start gap-2 text-sm text-stone-600 leading-relaxed">
                 <XCircle className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" aria-hidden="true" />
@@ -175,8 +175,9 @@ export default function PageContent() {
           <p className="text-stone-600 leading-relaxed">
             We also track AI-referred orders on{" "}
             <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link>,
-            a business our co-founder owns. It takes live orders and the attribution runs end to end, but it
-            is our own company rather than an independent client, which is why it is labelled that way here.
+            a business owned and operated by our co-founder, Imran Raza Ladhani. PandaCodeGen built and
+            maintains its platform and holds no ownership stake in it. It is not an independent client either,
+            which is why it is labelled rather than presented as one.
           </p>
         </div>
       </section>
@@ -247,19 +248,20 @@ export default function PageContent() {
           </p>
 
           <div className="rounded-2xl border border-cognac/25 bg-orange-50/40 p-6 mb-6">
-            <h3 className="font-bold text-charcoal mb-2">Lead attribution, if your stack allows it</h3>
+            <h3 className="font-bold text-charcoal mb-2">Source tracking for enquiries and orders</h3>
             <p className="text-stone-700 leading-relaxed text-sm">
-              Most AI-search reporting stops at visibility: you appeared, you were mentioned. The harder
-              question is whether any of it reached your business. We can wire server-side tracking so an
-              enquiry or order carries where it came from, which is how we track AI-referred orders on our own
-              store. Whether it is possible on yours depends on your platform and what it will let us
-              instrument, so we look before we promise it.
+              Visibility tells you that you appeared. The harder question is whether any of it reached your
+              business. Where your setup allows it, we connect the referral and campaign information that is
+              available to enquiries or orders, adding server-side capture where that is what it takes. Two
+              honest limits: assistants often send no referrer at all, so this counts a floor rather than a
+              total, and some of what you learn will be what a customer tells you rather than what the
+              request carried. We check what your platform already records before quoting any of it.
             </p>
           </div>
 
           <ul className="space-y-3">
             {[
-              ["A reporting dashboard", "Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build."],
+              ["A reporting dashboard", "Your own, rather than a monthly PDF: visibility, referral and enquiry data in one place on an agreed refresh schedule, built and handed over like anything else we build."],
               ["More pages, journeys or templates", "More to investigate, edit and verify each cycle."],
               ["More questions, surfaces or markets", "Analyst time and tool cost, plus local research and approval if the market is new."],
               ["Original content", "Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have."],
@@ -352,7 +354,10 @@ export default function PageContent() {
       </section>
 
       <RelatedServicesGrid currentHref="/services/ai-seo" />
-      <Footer />
+      {/* showCta={false} because the shared footer CTA is a migration pitch, and this
+          page has already closed on AI SEO. Leaving it in ran a second, unrelated
+          offer after the service close. */}
+      <Footer showCta={false} />
     </main>
   );
 }

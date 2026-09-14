@@ -1,0 +1,75 @@
+{
+  "recordedAt": "2026-09-14T20:43:56.166Z",
+  "localReviewDate": "2026-09-15",
+  "buildId": "ITl3FiEZ1R9qNEFiQWvBw",
+  "inputs": [
+    {
+      "path": "docs/research/ai-seo-page-for-review-2026-09-14.md",
+      "bytes": 12797,
+      "modifiedAt": "2026-09-14T20:28:21.089Z",
+      "sha256": "89b8cb6acdf6c80078b3fca669bc7c1abe554391834703cc9e0c0c33ed7fc30b"
+    },
+    {
+      "path": "src/app/services/ai-seo/PageContent.tsx",
+      "bytes": 23676,
+      "modifiedAt": "2026-09-14T20:25:58.711Z",
+      "sha256": "486797c3799e1ff4c1d9a734b4df68f0c8b4e77a99dc1afc37baa9ff1765eded"
+    },
+    {
+      "path": "src/app/services/ai-seo/page.tsx",
+      "bytes": 1360,
+      "modifiedAt": "2026-09-14T17:47:18.208Z",
+      "sha256": "85cfe1bb40a8cb8c8a279b80c5d4d9288474eb921a46869d80e78d16b413f158"
+    },
+    {
+      "path": "src/data/service-faqs.ts",
+      "bytes": 31860,
+      "modifiedAt": "2026-09-14T20:14:52.349Z",
+      "sha256": "5aff3077021d775d46598e5371d6ef8b691972d080ccc981ca753f750d1a9bcd"
+    },
+    {
+      "path": "src/data/first-party-measurements.json",
+      "bytes": 19835,
+      "modifiedAt": "2026-09-14T17:47:18.211Z",
+      "sha256": "280e2427fe2afb181fda4ec07c3f665a6f2ccfd0945710a97f7db938b83e825e"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "bytes": 17815,
+      "modifiedAt": "2026-09-09T18:43:24.000Z",
+      "sha256": "d44ca8b502e8561e50ab0ee8f01d9cd5a1d28a0d79c820172e171b39e572fddd"
+    },
+    {
+      "path": "src/components/layout/Footer.tsx",
+      "bytes": 16411,
+      "modifiedAt": "2026-09-13T20:20:58.649Z",
+      "sha256": "cfb4c277c32f853d5bec054f6768098cd205b67ea327388b360a0adb7a3defd4"
+    },
+    {
+      "path": "src/components/ui/CalEmbed.tsx",
+      "bytes": 2643,
+      "modifiedAt": "2026-07-22T14:25:40.000Z",
+      "sha256": "2efc42e7743baa221081e122dfc3c3e60a35f3d4c9abe69a6bba4ca20ed2c169"
+    },
+    {
+      "path": "src/components/services/RelatedServicesGrid.tsx",
+      "bytes": 4076,
+      "modifiedAt": "2026-09-14T17:47:18.208Z",
+      "sha256": "54f2b25038320d5dc84179dc29d4e64ce436a24591de57b35106fafe3be9811a"
+    },
+    {
+      "path": "src/data/llms-txt.ts",
+      "bytes": 12602,
+      "modifiedAt": "2026-09-14T17:47:18.210Z",
+      "sha256": "e2490f3b9437a5f61081d29710819a21d5dd57fad0b0231bcc86328c76b51727"
+    },
+    {
+      "path": ".next/server/app/services/ai-seo.html",
+      "bytes": 605240,
+      "modifiedAt": "2026-09-14T20:26:14.870Z",
+      "sha256": "ba4378dce60440f1a315ad18f4e188c23ab9ec61fbda9f6bc2dc03d87cc73c15"
+    }
+  ],
+  "appChangedByAudit": false,
+  "formsSubmitted": false
+}
