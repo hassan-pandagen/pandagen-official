@@ -10,7 +10,6 @@ import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import ConsentManagedServices from "@/components/consent/ConsentManagedServices";
 import CookieConsent from "@/components/consent/CookieConsent";
 import { PHONE } from "@/data/company-facts";
-import { Analytics } from "@vercel/analytics/next";
 
 // Inter is the body font and it is used above the fold on every page, so it is
 // preloaded. It was not, and that was the homepage's largest layout shift.
@@ -187,16 +186,6 @@ export default function RootLayout({
             </div>
           </SmoothScroll>
           <CookieConsent />
-          {/* Mounted 14 Sep 2026, outside ConsentManagedServices on purpose.
-              @vercel/analytics has been a dependency for some time and was never
-              rendered, so the site has had no page-view or referrer data of its
-              own. It is cookieless -- visitors are a hash of the request, valid
-              for one day, discarded after 24h -- so it needs no consent gate and
-              reports on all visitors rather than only those who accept cookies.
-              It answers "which page did they land on, where from"; it does NOT
-              replace Tawk's live visitor monitor, which stays consent-gated
-              because passive monitoring is tracking. */}
-          <Analytics />
       </ConsentProvider>
     </HtmlShell>
   );
