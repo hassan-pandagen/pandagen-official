@@ -59,7 +59,7 @@ export default function SquarespacePageContent() {
               onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"tell_us_about_project",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }}
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Tell us about your project <ArrowRight className="w-5 h-5" />
+              Ask us about your site <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#comparison" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               Scope Squarespace improvements <ArrowRight className="w-5 h-5" />
@@ -278,7 +278,7 @@ export default function SquarespacePageContent() {
                       data-cal-config='{"layout":"month_view"}'
                       className="group px-6 py-3 md:px-8 md:py-4 bg-charcoal text-white font-bold text-sm md:text-base rounded-full hover:bg-cognac transition-all flex items-center justify-center gap-2 hover:scale-105"
                     >
-                      Book a discovery call <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      Book a call <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <button
                       data-cal-namespace="discovery"
@@ -716,7 +716,7 @@ export default function SquarespacePageContent() {
                 data-cal-config='{"layout":"month_view"}'
                 className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all"
               >
-                Book a discovery call
+                Book a call
               </button>
             </div>
           </div>
