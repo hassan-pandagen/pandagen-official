@@ -235,10 +235,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                   <>
                     <div className="mb-6 pr-14">
                       <h2 id="quote-modal-title" className="text-2xl font-bold text-charcoal md:text-3xl">
-                        Request a <span className="font-serif italic text-cognac">migration plan.</span>
+                        What would you like <span className="font-serif italic text-cognac">help with?</span>
                       </h2>
                       <p id="quote-modal-description" className="mt-2 text-sm text-stone-700">
-                        Share the basics so we can assess fit, risks, and the right next step.
+                        Tell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.
                       </p>
                     </div>
 
@@ -315,7 +315,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         disabled={isLoading}
                         className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-5 py-3 font-bold text-white transition-colors hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        <Send className="h-5 w-5" /> {isLoading ? "Sending…" : "Send request"}
+                        <Send className="h-5 w-5" /> {isLoading ? "Sending…" : "Send your question"}
                       </button>
                       <p className="text-center text-xs text-stone-600">
                         No obligation. Your submission is used only to respond to this request as described in our <a href="/privacy" className="font-medium text-cognac underline underline-offset-2 hover:text-orange-800">privacy notice</a>.
