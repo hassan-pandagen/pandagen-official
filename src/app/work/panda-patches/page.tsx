@@ -136,7 +136,7 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business.",
+            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and its co-founder Imran Raza Ladhani holds a stake in both companies, so the two businesses share an owner and this is not an arm’s-length relationship.",
             "email": "info@pandacodegen.com",
             "foundingDate": "2026",
             "areaServed": "Worldwide",
@@ -640,7 +640,7 @@ export default function PandaPatchesCaseStudy() {
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
-                        <p className="text-stone-500 mb-8 max-w-2xl">This is a founder-affiliated project, not an independent client engagement. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform but holds no ownership or partnership stake in the business. We built the technical platform and the business runs on it. These are first-party operating figures reported by the owner, not projections and not independent client proof.</p>
+                        <p className="text-stone-500 mb-8 max-w-2xl">This is a founder-affiliated project, not an independent client engagement. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and its co-founder Imran Raza Ladhani holds a stake in both companies, so the two businesses share an owner and this is not an arm’s-length relationship. We built the technical platform and the business runs on it. These are first-party operating figures reported by the owner, not projections and not independent client proof.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
                                 { icon: "💰", label: "Monthly Revenue", value: "$50K/mo", detail: "Scaled from $38K to about $50K/mo. A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
