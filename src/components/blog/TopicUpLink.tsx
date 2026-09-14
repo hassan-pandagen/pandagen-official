@@ -22,6 +22,7 @@ const MONEY_ANCHOR: Record<string, string> = {
     "/services/wix": "how we scope a Wix migration",
     "/services/woocommerce": "how we scope a WooCommerce migration",
     "/services/gohighlevel": "how we scope a GoHighLevel front-end",
+    "/services/ai-seo": "our AI SEO services",
     "/partners": "how agency partnerships work",
     "/pricing": "what each pricing tier includes",
     "/free-audit": "run a free technical audit of your own site",
