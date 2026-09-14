@@ -224,7 +224,7 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         title: 'SEO and AI Search Guides: Answer Engines, Schema and Indexing',
         description:
             'Guides on search and AI answer engines: what structured data and llms.txt do and do not do, why competitors outrank you, and why a site may not be indexed at all.',
-        moneyAnchor: 'our editorial and evidence policy',
+        moneyAnchor: 'our AI SEO services',
         // The intro's closing sentence links the policy, which is correct.
         // The closing button promises commercial scope, so it goes to pricing.
         ctaHref: '/pricing',

@@ -279,15 +279,18 @@ export default function PageContent() {
       {/* 7. ONE CLOSE, asking for what a quote actually needs. */}
       <section className="py-14 md:py-20 px-6 bg-charcoal">
         <div className="container mx-auto max-w-2xl text-center">
-          {/* "Get cited" / "get recommended" were considered and rejected: the FAQ
-              three sections up says selection is the assistant's decision and cannot
-              be guaranteed, so a button promising it contradicts the page. "Worth
-              citing" is the same energy about the thing we actually control. */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Make your pages worth citing</h2>
+          {/* "Get cited" and "get recommended" were rejected: the FAQ three sections
+              up says selection is the assistant's decision, so a button promising it
+              contradicts the page. "Make your pages worth citing" was the next
+              attempt and was rejected too, as abstract -- and its second sentence,
+              "whether your pages deserve picking is ours", was confidence with no
+              information in it. This states the customer's goal and what they get
+              back, including that the answer may be that monthly support is not
+              worth it for them. */}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Help customers find you in AI search</h2>
           <p className="text-stone-300 leading-relaxed mb-8">
-            Whether an assistant picks you is its call. Whether your pages deserve picking is ours. Send your
-            site and the product or service you want buyers to reach, and a founder will tell you if this is
-            worth doing for you and what the first month would cover.
+            Share your website and the product or service you want customers to find. A founder will explain
+            what we would improve first and whether monthly support makes sense for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -305,6 +308,12 @@ export default function PageContent() {
               Book a call
             </button>
           </div>
+          {/* The reassurance the hero carries, repeated once here because this is
+              the other place someone decides whether to write to us. */}
+          <p className="text-sm text-stone-400 mt-6 leading-relaxed">
+            A founder replies, usually within one business day. Every message gets an answer, whether or not it
+            turns into a quote.
+          </p>
         </div>
       </section>
 
