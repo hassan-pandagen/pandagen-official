@@ -40,6 +40,7 @@ const services = [
   { name: "All Services", href: "/services" },
   { name: "WordPress Migration", href: "/services/wordpress-migration" },
   { name: "Custom Engineering", href: "/services/custom-engineering" },
+  { name: "AI SEO", href: "/services/ai-seo" },
   { name: "E-Commerce", href: "/services/ecommerce" },
   { name: "WooCommerce Migration", href: "/services/woocommerce" },
   { name: "Wix Migration", href: "/services/wix" },

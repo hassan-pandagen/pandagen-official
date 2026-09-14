@@ -1,0 +1,110 @@
+[
+  {
+    "href": "/",
+    "status": 200
+  },
+  {
+    "href": "/pricing",
+    "status": 200
+  },
+  {
+    "href": "/partners",
+    "status": 200
+  },
+  {
+    "href": "/blog",
+    "status": 200
+  },
+  {
+    "href": "/free-audit",
+    "status": 200
+  },
+  {
+    "href": "/about/hassan",
+    "status": 200
+  },
+  {
+    "href": "/work/panda-patches",
+    "status": 200
+  },
+  {
+    "href": "/services/wordpress-migration",
+    "status": 200
+  },
+  {
+    "href": "/services/ecommerce",
+    "status": 200
+  },
+  {
+    "href": "/services/woocommerce",
+    "status": 200
+  },
+  {
+    "href": "/services/webflow",
+    "status": 200
+  },
+  {
+    "href": "/services/wix",
+    "status": 200
+  },
+  {
+    "href": "/services/squarespace",
+    "status": 200
+  },
+  {
+    "href": "/services/gohighlevel",
+    "status": 200
+  },
+  {
+    "href": "/services/custom-engineering",
+    "status": 200
+  },
+  {
+    "href": "/contact",
+    "status": 200
+  },
+  {
+    "href": "/work",
+    "status": 200
+  },
+  {
+    "href": "/about",
+    "status": 200
+  },
+  {
+    "href": "/about/imran",
+    "status": 200
+  },
+  {
+    "href": "/manifesto",
+    "status": 200
+  },
+  {
+    "href": "/services",
+    "status": 200
+  },
+  {
+    "href": "/ai-info",
+    "status": 200
+  },
+  {
+    "href": "/security",
+    "status": 200
+  },
+  {
+    "href": "/editorial-policy",
+    "status": 200
+  },
+  {
+    "href": "/privacy",
+    "status": 200
+  },
+  {
+    "href": "/cookies",
+    "status": 200
+  },
+  {
+    "href": "/terms",
+    "status": 200
+  }
+]
