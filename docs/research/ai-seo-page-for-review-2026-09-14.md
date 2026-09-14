@@ -1,155 +1,163 @@
-# /services/ai-seo — rendered text for review, revision 2
+# /services/ai-seo - rendered text, revision 3
 
-Not deployed. Rendered from the local production build on 15 September 2026 and extracted
-with the repo's own crawler, so this is what a reader and a retrieval system get.
+Not deployed. Rendered from the local production build, 15 September 2026, extracted
+with this repo own crawler.
 
-**1682 words, 9 H2 sections.**
+**1627 service-body words, 7 service H2s.**
 
-## What changed since the 14 September review
+## What changed since the revision-2 audit
 
-That review's central finding was that the page named a price and never said what recurs
-each month, so a business with an already server-rendered site could conclude their
-developer had done the work. Fixed, plus everything else it raised:
+**Restructured in one pass, not patched.** Three rounds of patching produced the
+contradictions that audit found, so the order is rebuilt to its recommendation: offer,
+scope, why the work exists, proof with limits, what enlarges the quote, boundaries,
+questions, one close. The readability explanation opened the page and now supports it.
 
-- **Monthly scope is now concrete** — ten buyer questions, two AI-search surfaces, five
-  priority pages, one improvement shipped, report, review. Adopted by the owner, not invented.
-- **The competitor price comparison is gone**, from hero and FAQ. The audit was right that
-  $1,500–8,000 programmes include content and strategy a $500 engagement does not promise,
-  so the juxtaposition implied an equivalent-service saving however the source was attributed.
-- **Two arithmetic errors corrected.** "57%" divided a Pages.csv numerator by a Chart.csv
-  denominator (5,583 / 9,843); the tables total 9,899 and 9,843 respectively, so the page now
-  states the count rather than a ratio. The evidence record said 91 days; it is 92.
-- **Three stale surfaces fixed** — metadata description, related-services card and llms.txt
-  all still said this was not a monthly service.
-- **Metadata title gains "Services"**, which the page targets and the title omitted.
-- **An image overclaim narrowed** — "nothing can read" ignored OCR and multimodal models.
-- **A byline added**, since the page makes first-party measurement claims.
+**Three false claims corrected.**
 
-## What is new in this revision, and needs the hardest look
+- Ownership. The page called Panda Patches "our own company". The work page said
+  PandaCodeGen "holds no ownership or partnership stake" - true of the company entity,
+  misleading about the relationship. Confirmed by the owner: Panda Patches is the
+  founders first business, trading since 2023, owned by co-founder Imran Raza Ladhani
+  who holds a stake in both companies. Both surfaces now say the businesses share an
+  owner and nothing is arm length.
+- Attribution, corrected twice and in opposite directions. It first implied every
+  enquiry carries its source, then overcorrected into near-futility. The accurate
+  position: most assistants pass a referrer, Google AI Overviews and Meta AI pass none,
+  and a large share of customers say where they found us, which is why the registry
+  records referrer capture plus email-declared source and calls the result a floor.
+- "Most AI-search reporting stops at visibility" is removed. A market-majority claim
+  with no evidence, and WebFX and Impression both publish downstream revenue
+  attribution. The differentiator claimed now is shipping the change, not measuring it.
 
-A section on what increases the quote: dashboards, lead attribution, more pages, markets,
-original content, larger implementation, ecommerce catalogue work.
+Also: 6.2% is of Web-search impressions rather than everything; 5,583 reads as
+page-level impressions rather than a subset of a property total; live dashboard data
+became an agreed refresh schedule; excluding a target of any kind had removed business
+objectives as well as guarantees; the citation FAQ asks the question a buyer has and
+lost its swipe at competitors; availability is no longer conflated with retrieval; the
+llms.txt answer records that Lighthouse treats an absent file as not applicable and that
+a fetch is not use in an answer; the page was added to the header and footer service
+lists, having been in neither; the footer migration CTA is suppressed on this route.
 
-**Lead attribution leads it deliberately.** The reasoning: visibility reporting is what every
-agency in the ten-offer comparison sells, while connecting an AI referral to an order needs
-someone who builds the tracking layer. It is hedged on platform because it has been done on a
-stack built end to end in-house, and a client's existing stack may not permit it.
+## Known and not addressed
 
-The risk to test: the 14 September audit's core objection was an offer a buyer could not
-evaluate. A list of optional additions could recreate that as "we do anything, tell us how
-much you want". The intent is that the $500 table stays the fixed anchor and these are named
-priced additions — but whether it reads that way is exactly what a second opinion is for.
+- Length is 1627 service-body words against the audit suggested 1,200-1,400. The reorder
+  moved material rather than cutting it; the FAQ came down from 594 words to about 419.
+  Cutting further means losing the scope table, the evidence limits or the relationship
+  disclosure. A reviewer should choose which, rather than me guessing.
+- Commitment, notice period and whether tool costs are included remain unstated,
+  because those terms have not been decided. Not inventable.
+- "Book a call" has no calendar URL configured locally and falls back to the enquiry
+  form. Production configuration unverified.
 
-## Questions for the reviewer
+## Questions
 
-1. Does the additions section clarify the offer or dilute the anchor the last revision built?
-2. Is the attribution claim hedged enough, given it rests on one owner-operated store?
-3. Is 1,795 words and 9 sections right for a commercial service page, or is it now doing too much?
-4. Anything left that overclaims, or hedges so hard it stops being useful?
+1. Does the offer now lead clearly enough for a buyer with an existing site?
+2. Is the attribution paragraph accurate in both directions, rather than over- or
+   under-claiming?
+3. Is the ownership wording sufficient, given the businesses share an owner?
+4. What would you cut to reach 1,400 words?
 
 ## The page
 
-Websites that AI assistants can read, built in from the start. Some crawlers execute JavaScript
-and some do not. If your content only appears after JavaScript runs, whether it is read at all
-depends on which one arrives. We build pages where the words are already in the HTML the server
-sends, so it is read either way — and we do it during the build rather than selling it back
-afterwards. Monthly AI SEO services from $500. We quote based on your project’s size and scope,
-with the work and monthly fee agreed before we begin. We research the questions your buyers ask,
-monitor relevant AI-search results, and make agreed improvements to your content and technical
-setup. It is optional — the build does not depend on it. Ask us about your site Check your
+AI SEO services with practical improvements every month. We research the questions your buyers
+ask, monitor an agreed set of AI-search results, and improve the pages they rely on. Monthly
+services start at $500 , quoted on your project’s size and scope, with the work and the fee
+agreed before we begin. It works on a site you already have. If we build the site, the technical
+foundations come with it and the monthly work starts from there. Either way the retainer is
+optional and nothing you own depends on subscribing to it. Ask us about your site Check your
 website A founder replies, usually within one business day. Every message gets an answer,
-whether or not it turns into a quote. What “readable” actually means It is ordinary good
-building, which is why it belongs in the build rather than in a separate invoice. Content in the
-HTML The words are in the page the server sends, not assembled afterwards in the browser. A
-crawler that does not execute JavaScript still sees them. Headings that answer Each section is
-titled with the question it resolves, so a machine reading for an answer can find where it is.
-Facts as text Prices, specifications, hours and terms written out as text, so nothing depends on
-a machine choosing to read them off an image. Our own numbers, and what they do not show 9,843
-AI-feature impressions for pandacodegen.com, 12 June to 11 September 2026 Google Search
-Console’s Generative AI report counts the times one of our pages appeared in an AI Overview or
-AI Mode answer. Over the same window our total search impressions were 157,920, so AI features
-were 6.2% of everything. That report has no click column . It shows appearances, not visits, and
-not sales. 5,583 of them came from one article about hosting bandwidth — developer research, not
-people looking to buy a website. It covers Google’s features only . It says nothing about
-ChatGPT, Claude or Perplexity. Measured and written by Hassan Jamal , co-founder, from our own
-Search Console property. Last checked 13 September 2026. We also track AI-referred orders on
-Panda Patches , a business our co-founder owns. It takes live orders and the attribution runs
-end to end, but it is our own company rather than an independent client, which is why it is
-labelled that way here. What a $500 month actually contains A focused starting engagement. Your
-written scope names the coverage, the deliverables and who publishes the change. Larger projects
-are quoted for the work they need, not by counting websites. Each month The starting boundary
-Buyer research Ten questions your customers actually ask, across one product or service area and
-up to five priority pages. Visibility monitoring Those ten questions tracked on two agreed AI-
+whether or not it turns into a quote. What a $500 month contains A focused starting engagement.
+Your written scope names the coverage, the deliverables and who publishes the change. Larger
+projects are quoted for the work they need, not by counting websites. Each month The starting
+boundary Buyer research Ten questions your customers actually ask, across one product or service
+area and up to five priority pages. Visibility monitoring Those ten tracked on two agreed AI-
 search surfaces, read by a person rather than only collected by software. Content and technical
-review The selected pages checked for missing buyer information, and for access, indexing or
-structure problems worth acting on. An improvement we ship One agreed page improvement or small
-technical task, implemented, verified, with a revision round. Not a recommendation for someone
-else to action. Monthly report What changed, what the measurements do and do not show, and the
-next priority. Review A short call or a recorded walkthrough, whichever suits you. The first
-month sets the baseline and still ships one improvement. If the first look finds a large
-technical backlog, missing measurement or a rebuild, we quote that separately and say so before
-you commit — rather than promising normal monthly output and a setup project for the same fee.
-Where it goes beyond that The entry scope is deliberately small so it can be judged. These are
-the additions that change the quote. You choose which apply; none is assumed, and none is
-charged for unless it is in your scope. Lead attribution, if your stack allows it Most AI-search
-reporting stops at visibility: you appeared, you were mentioned. The harder question is whether
-any of it reached your business. We can wire server-side tracking so an enquiry or order carries
-where it came from, which is how we track AI-referred orders on our own store. Whether it is
-possible on yours depends on your platform and what it will let us instrument, so we look before
-we promise it. A reporting dashboard . Your own, rather than a monthly PDF: live visibility,
-referral and enquiry data in one place, built and handed over like any other thing we build.
-More pages, journeys or templates . More to investigate, edit and verify each cycle. More
-questions, surfaces or markets . Analyst time and tool cost, plus local research and approval if
-the market is new. Original content . Interviews, research, drafting, fact checking and
-revisions, which is a different job from editing pages you already have. A larger implementation
-backlog . More shipped each month, or engineering work beyond a small task. Ecommerce catalogue
-work . Product data, feeds, categories and variants, where that is what the questions are about.
-There is no per-website formula. A large business can commission something narrow, and a small
-site can need a bigger quote because the work is awkward. We price the work, then write it down
-before starting. What this does not include A citation, ranking or traffic target of any kind
-New long-form content, migrations, major integrations or a large technical backlog, which are
-quoted separately rather than absorbed into a monthly fee Content written for you, unless
-copywriting is separately scoped in your quote Claims about ChatGPT, Claude or Perplexity
-behaviour that we cannot show you evidence for What you do get is a site built this way from the
-start, at the fixed price in your written quote, with the code and accounts transferred to you.
-If your existing pages already render server-side and only need better structure, we will tell
-you that instead — it is the smaller job and sometimes it is the right one. Frequently Asked
-Questions Do you sell AI SEO as a monthly service? Yes, optionally. Monthly AI SEO services
-start at $500, quoted on your project's size and scope with the work and the fee agreed in
-writing before we begin. A focused starting engagement covers five priority pages, ten buyer
-questions tracked on two AI-search surfaces, one page improvement or small technical task that
-we implement and verify, and a monthly report and review. The difference worth knowing: that
-improvement is shipped by us, not handed to you as a recommendation to action yourself. The
-technical foundations are part of the build either way, so the retainer covers the ongoing cycle
-rather than something held back to be sold later, and stopping after the build is a normal
-outcome. What does making a site readable to AI assistants actually involve? Serving the content
-in the HTML rather than assembling it in the browser, so an assistant that does not run
-JavaScript still sees the page. Headings that describe what a section answers. Prices,
-specifications and facts as text rather than baked into images. Structured data where it is
-warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a
-trick; it is what a well-built page has always been, which is why we do it during the build
-rather than selling it back to you afterwards. Can you get us cited by ChatGPT or in Google's AI
-Overviews? No, and anyone who says otherwise is selling something. Which sources an assistant
-cites is its own decision and it changes without notice. What we control is whether your pages
-are readable and worth citing when it looks, so that is what we will quote for and what we will
-show you evidence of. What evidence do you have that any of it works? Our own, labelled as such.
-Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com
-between 12 June and 11 September 2026, which was 6.2% of all our impressions that window. The
-report counts appearances rather than visits, and the page above sets out what else that figure
-does not show. Separately, we track AI-referred orders end to end on a store our co-founder
-owns, which is first-party data rather than an independent client result. Is llms.txt worth
-having? It depends who you want reading you, and the honest answer is more limited than the
-marketing. Google states you do not need machine-readable files to appear in Google Search, so
-it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read
-it, and Google's own PageSpeed Agentic Browsing category scores a compliant one as one of its
-three checks. You can see for yourself whether anything fetches yours by reading your server
-logs for GPTBot, ClaudeBot and PerplexityBot hits on the file. We add it because it costs
-nothing and some tools use it, not because it moves you up Google. Our site is on WordPress. Can
-you do this without rebuilding it? Sometimes. If the pages already render their content server-
-side and the problem is structure or missing detail, that is an editing job and you may not need
-us at all. If the content only appears after JavaScript runs, or the theme and plugins fight
-every change, then readability is a symptom and the build is the cause. We will tell you which
-one you have before quoting, and if it is the first we will say so even though it is the smaller
-job. Want to know how yours reads? Run the free check for a technical read of your pages, or
-send us the URL and a founder will look at it properly and tell you whether it is a build
-problem or an editing one. Ask us about your site Book a call
+review Those pages checked for missing buyer information, and for access, indexing or structure
+problems worth acting on. An improvement we ship One agreed page improvement or small technical
+task, implemented and verified, with a revision round. Not a recommendation for someone else to
+action. Monthly report What changed, what the measurements do and do not show, and the next
+priority. Review A short call or a recorded walkthrough, whichever suits you. The first month
+sets the baseline and still ships one improvement. If the first look finds a large technical
+backlog, missing measurement or a rebuild, we quote that separately and say so before you
+commit, rather than promising normal monthly output and a setup project for the same fee. Why
+the pages need the work Some crawlers execute JavaScript and some do not, so content that
+appears only after it runs may or may not be read depending on which one arrives. Beyond that
+the usual problem is not technical at all: the page never states the price basis, the delivery
+time or the constraint the buyer was asking about, so there is nothing useful to quote even when
+everything renders perfectly. The monthly work is mostly that second thing. Put the answers on
+the page, as text rather than sealed inside an image, under headings that name the question, and
+fix the access and indexing faults that keep pages out. It is ordinary good building, which is
+why the foundations belong in a build and the continuing improvement belongs in a retainer. What
+we can show you 9,843 AI-feature impressions for pandacodegen.com, 12 June to 11 September 2026
+Google Search Console’s Generative AI report counts the times one of our pages appeared in an AI
+Overview or AI Mode answer. Over the same window our Web-search impressions were 157,920, so AI
+features were 6.2% of them. That report has no click column. It shows appearances, not visits,
+and not sales. The hosting-bandwidth article recorded 5,583 page-level impressions in the same
+period. Developer research, not people looking to buy a website. It covers Google's features
+only. It says nothing about ChatGPT, Claude or Perplexity. We also track AI-referred orders on
+Panda Patches , an in-house brand owned by our co-founder Imran Raza Ladhani, who holds a stake
+in both companies. The two businesses share an owner, so read it as a first-party record rather
+than an independent client result. Measured and written by Hassan Jamal , co-founder, from our
+own Search Console property. Last checked 13 September 2026. Where it goes beyond that The entry
+scope is deliberately small so it can be judged. These are the additions that change the quote.
+You choose which apply; none is assumed and none is charged for unless it is in your scope.
+Source tracking for enquiries and orders . Connecting referral and campaign data to enquiries or
+orders, with server-side capture where that is what it takes. A reporting dashboard . Your own,
+rather than a monthly PDF: visibility, referral and enquiry data in one place on an agreed
+refresh schedule. More pages, questions, surfaces or markets . More to investigate and verify
+each cycle, plus local research and approval if the market is new. Original content .
+Interviews, research, drafting and fact checking, which is a different job from editing pages
+you already have. A larger implementation backlog . More shipped each month, or engineering work
+beyond a small task. Ecommerce catalogue work . Product data, feeds, categories and variants,
+where that is what the questions are about. What source tracking can and cannot tell you Most
+assistants pass a referrer, so an enquiry or order can carry where it came from. Google AI
+Overviews and Meta AI pass none, so those arrive unattributed and no amount of engineering
+recovers them. What closes much of that gap is asking: on our own store a large share of
+customers say where they found us, which is why the record combines captured referrers with what
+the customer tells us. It is a floor rather than a total, and we check what your platform
+already records before quoting any of it. There is no per-website formula. A large business can
+commission something narrow, and a small site can need a bigger quote because the work is
+awkward. We price the work, then write it down before starting. What this does not include
+Guaranteed citations, rankings or traffic. We agree objectives, the work and how it is measured;
+the guarantee is the part nobody can honestly give New long-form content, migrations, major
+integrations or a large technical backlog, which are quoted separately rather than absorbed into
+a monthly fee Claims about ChatGPT, Claude or Perplexity behaviour that we cannot show you
+evidence for Frequently Asked Questions Do you sell AI SEO as a monthly service? Yes,
+optionally. Monthly services start at $500, quoted on your project's size and scope with the
+work and the fee agreed in writing before we begin. The table above sets out what a starting
+month contains. The one line worth repeating: the improvement is implemented and verified by us,
+not handed to you as a recommendation to action yourself. Stopping after the build is a normal
+outcome and nothing you own depends on subscribing. What does making a site readable to AI
+assistants actually involve? Serving the content in the HTML rather than assembling it in the
+browser, so important content is available without running JavaScript. Availability is not the
+same as being retrieved or cited, but it removes one reason to be skipped. Headings that
+describe what a section answers. Prices, specifications and facts as text rather than baked into
+images. Structured data where it is warranted. An llms.txt file, which some tools read. None of
+this is exotic and none of it is a trick; it is what a well-built page has always been, which is
+why we do it during the build rather than selling it back to you afterwards. Can you guarantee
+citations or rankings? No. Which sources an assistant selects is its own decision and it changes
+without notice, so a guarantee is not something anyone can honestly give. What we can do is
+improve your eligibility: make the content available without running JavaScript, make sure the
+facts a buyer needs are on the page, and fix the access and indexing problems that keep pages
+out. We agree the objectives, the work and how it is measured, and we show you what we did. What
+evidence do you have that any of it works? Our own, labelled as such. Google Search Console's
+Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11
+September 2026, which was 6.2% of all our impressions that window. The report counts appearances
+rather than visits, and the page above sets out what else that figure does not show. Separately,
+we track AI-referred orders end to end on a store our co-founder owns, which is first-party data
+rather than an independent client result. Is llms.txt worth having? More limited than the
+marketing suggests. Google states you do not need machine-readable files to appear in Google
+Search, so it is not a ranking factor there. Lighthouse's Agentic Browsing category, which is
+experimental, includes a check for one, and it treats an absent file as not applicable rather
+than as a failure. You can see whether anything fetches yours by reading your server logs for
+GPTBot, ClaudeBot and PerplexityBot hits on the file, though a fetch shows the file was
+retrieved and not that it was used in an answer. We add it because it costs nothing, not because
+it moves you up Google. Our site is on WordPress. Can you do this without rebuilding it?
+Sometimes. If the pages already render their content server-side and the problem is structure or
+missing detail, that is an editing job and you may not need us at all. If the content only
+appears after JavaScript runs, or the theme and plugins fight every change, then readability is
+a symptom and the build is the cause. We will tell you which one you have before quoting, and if
+it is the first we will say so even though it is the smaller job. Tell us what you want
+customers to find you for Send your site and the product or service you want buyers to reach. A
+founder will tell you whether this is worth doing for you and what the first month would cover.
+Ask us about your site Book a call
