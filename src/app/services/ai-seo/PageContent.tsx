@@ -225,6 +225,62 @@ export default function PageContent() {
         </div>
       </section>
 
+      {/* 5. WHAT MAKES THE QUOTE BIGGER.
+             Added 15 Sep. The owner can also deliver dashboards, lead
+             attribution and deeper reporting, and wanted them on the page.
+             Deliberately NOT written as an open menu: the audit's finding was
+             that an unevaluable offer is the problem, and "tell us how much you
+             want" recreates it in a new form. So the $500 table above stays the
+             fixed anchor and these are named additions that change the quote.
+             Attribution leads because it is the one competitors structurally
+             cannot match -- the comparison of ten published offers found they
+             sell visibility reporting, and connecting an AI referral to an order
+             needs someone who builds the tracking layer. Hedged on platform,
+             because we have done it on a stack we built end to end and a
+             client's existing stack may not allow it. */}
+      <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Where it goes beyond that</h2>
+          <p className="text-stone-600 mb-8">
+            The entry scope is deliberately small so it can be judged. These are the additions that change the
+            quote. You choose which apply; none is assumed, and none is charged for unless it is in your scope.
+          </p>
+
+          <div className="rounded-2xl border border-cognac/25 bg-orange-50/40 p-6 mb-6">
+            <h3 className="font-bold text-charcoal mb-2">Lead attribution, if your stack allows it</h3>
+            <p className="text-stone-700 leading-relaxed text-sm">
+              Most AI-search reporting stops at visibility: you appeared, you were mentioned. The harder
+              question is whether any of it reached your business. We can wire server-side tracking so an
+              enquiry or order carries where it came from, which is how we track AI-referred orders on our own
+              store. Whether it is possible on yours depends on your platform and what it will let us
+              instrument, so we look before we promise it.
+            </p>
+          </div>
+
+          <ul className="space-y-3">
+            {[
+              ["A reporting dashboard", "Your own, rather than a monthly PDF: live visibility, referral and enquiry data in one place, built and handed over like any other thing we build."],
+              ["More pages, journeys or templates", "More to investigate, edit and verify each cycle."],
+              ["More questions, surfaces or markets", "Analyst time and tool cost, plus local research and approval if the market is new."],
+              ["Original content", "Interviews, research, drafting, fact checking and revisions, which is a different job from editing pages you already have."],
+              ["A larger implementation backlog", "More shipped each month, or engineering work beyond a small task."],
+              ["Ecommerce catalogue work", "Product data, feeds, categories and variants, where that is what the questions are about."],
+            ].map(([t, d]) => (
+              <li key={t} className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" aria-hidden="true" />
+                <span className="text-stone-700 leading-relaxed"><strong className="text-charcoal">{t}.</strong> {d}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-sm text-stone-600 mt-7 leading-relaxed">
+            There is no per-website formula. A large business can commission something narrow, and a small
+            site can need a bigger quote because the work is awkward. We price the work, then write it down
+            before starting.
+          </p>
+        </div>
+      </section>
+
       {/* 4. WHAT IS NOT INCLUDED. Placed before pricing on purpose: the audit
              found buyers get scope after price and cannot judge either. */}
       <section className="py-12 md:py-16 px-6 bg-white border-y border-stone-200">
