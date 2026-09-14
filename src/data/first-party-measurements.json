@@ -309,7 +309,7 @@
     },
     "gsc-generative-ai-impressions-2026-06-to-09": {
       "headline": "9,843 AI-feature impressions, no click data",
-      "statement": "Google Search Console Generative AI Features report for pandacodegen.com, 12 June to 11 September 2026: 9,843 impressions where a page of ours appeared in an AI Overview or AI Mode. Over the identical window the Web search report recorded 157,920 impressions, so AI features were 6.2% of all impressions. The report carries impressions only and no click column. Desktop was 8,261, mobile 1,521, tablet 61. One page, /blog/nextjs-hosting-zero-cost, accounted for 5,583 of the 9,843.",
+      "statement": "Google Search Console Generative AI Features report for pandacodegen.com, 12 June to 11 September 2026: 9,843 impressions where a page of ours appeared in an AI Overview or AI Mode. Over the identical window the Web search report recorded 157,920 impressions, so AI features were 6.2% of all impressions. The report carries impressions only and no click column. Desktop was 8,261, mobile 1,521, tablet 61. One page, /blog/nextjs-hosting-zero-cost, recorded 5,583 impressions. Note the two tables do not agree: the daily chart totals 9,843 and the pages table totals 9,899, so 5,583 must be read against 9,899 (56.4%) and not against the chart total.",
       "detail": {
         "aiFeatureImpressions": 9843,
         "webSearchImpressionsSameWindow": 157920,
@@ -326,12 +326,14 @@
           "window": "3 June to 2 September 2026",
           "impressions": 9142,
           "note": "Growth between exports, not a growth rate: the windows overlap and are not equal."
-        }
+        },
+        "pagesTableTotal": 9899,
+        "topPageShareOfPagesTable": "56.4%"
       },
       "instrument": "Google Search Console, Performance > Generative AI, domain property sc-domain:pandacodegen.com, exported 13 September 2026. Compared against the Web search export for the same window.",
       "window": "12 June to 11 September 2026",
       "note": "Google documents that this report covers its own AI Overviews and AI Mode and that those impressions are already included in the Web search totals, so the two must never be added together. It says nothing about ChatGPT, Claude, Perplexity or any other assistant.",
-      "limitation": "Impressions are appearances, not reads, and certainly not citations a user acted on: the report has no click column at all, so no conversion, referral or revenue claim can rest on it. 57% of the total comes from one article about Vercel bandwidth pricing, which is a developer-research query rather than a buying one, so the figure describes where our content is visible and not who is looking. One property, one 91-day window, Google's features only.",
+      "limitation": "Impressions are appearances, not reads, and certainly not citations a user acted on: the report has no click column at all, so no conversion, referral or revenue claim can rest on it. 5,583 impressions, about 56% of the pages table, come from one article about Vercel bandwidth pricing, which is a developer-research query rather than a buying one, so the figure describes where our content is visible and not who is looking. One property, one 92-day window, Google's features only.",
       "affiliated": true,
       "affiliationNote": "Our own Search Console property.",
       "verifiedAt": "2026-09-13",

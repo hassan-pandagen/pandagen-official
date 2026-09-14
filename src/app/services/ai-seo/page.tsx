@@ -5,9 +5,9 @@ import PageContent from "./PageContent";
 import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/ai-seo";
-const name = "AI SEO and Answer Engine Optimisation";
+const name = "AI SEO Services and Answer Engine Optimisation";
 const description =
-  "We build websites that AI assistants can read, as part of the build rather than as a monthly retainer. What that involves, what it does not promise, and the first-party evidence behind it.";
+  "We make website content readable to search systems and AI assistants. The technical foundations are included when we build your site, and optional ongoing monitoring and agreed changes start at $500 a month against a written scope.";
 
 export const metadata: Metadata = {
   title: name,

@@ -1,0 +1,151 @@
+{
+  "routeStatus": 200,
+  "robotsMeta": [
+    {
+      "name": "robots",
+      "content": "index, follow"
+    },
+    {
+      "name": "googlebot",
+      "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+    }
+  ],
+  "links": [
+    {
+      "path": "/",
+      "status": 200,
+      "final": "/"
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "final": "/about"
+    },
+    {
+      "path": "/about/hassan",
+      "status": 200,
+      "final": "/about/hassan"
+    },
+    {
+      "path": "/about/imran",
+      "status": 200,
+      "final": "/about/imran"
+    },
+    {
+      "path": "/ai-info",
+      "status": 200,
+      "final": "/ai-info"
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "final": "/blog"
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "final": "/contact"
+    },
+    {
+      "path": "/cookies",
+      "status": 200,
+      "final": "/cookies"
+    },
+    {
+      "path": "/editorial-policy",
+      "status": 200,
+      "final": "/editorial-policy"
+    },
+    {
+      "path": "/free-audit",
+      "status": 200,
+      "final": "/free-audit"
+    },
+    {
+      "path": "/manifesto",
+      "status": 200,
+      "final": "/manifesto"
+    },
+    {
+      "path": "/partners",
+      "status": 200,
+      "final": "/partners"
+    },
+    {
+      "path": "/pricing",
+      "status": 200,
+      "final": "/pricing"
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "final": "/privacy"
+    },
+    {
+      "path": "/security",
+      "status": 200,
+      "final": "/security"
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "final": "/services"
+    },
+    {
+      "path": "/services/custom-engineering",
+      "status": 200,
+      "final": "/services/custom-engineering"
+    },
+    {
+      "path": "/services/ecommerce",
+      "status": 200,
+      "final": "/services/ecommerce"
+    },
+    {
+      "path": "/services/gohighlevel",
+      "status": 200,
+      "final": "/services/gohighlevel"
+    },
+    {
+      "path": "/services/squarespace",
+      "status": 200,
+      "final": "/services/squarespace"
+    },
+    {
+      "path": "/services/webflow",
+      "status": 200,
+      "final": "/services/webflow"
+    },
+    {
+      "path": "/services/wix",
+      "status": 200,
+      "final": "/services/wix"
+    },
+    {
+      "path": "/services/woocommerce",
+      "status": 200,
+      "final": "/services/woocommerce"
+    },
+    {
+      "path": "/services/wordpress-migration",
+      "status": 200,
+      "final": "/services/wordpress-migration"
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "final": "/terms"
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "final": "/work"
+    },
+    {
+      "path": "/work/panda-patches",
+      "status": 200,
+      "final": "/work/panda-patches"
+    }
+  ],
+  "scope": "Existing local production build; navigation HEAD requests only; no public indexing claim."
+}
