@@ -52,6 +52,32 @@ export interface ServiceFaq {
 }
 
 export const serviceFaqs: Record<string, ServiceFaq[]> = {
+  "ai-seo": [
+    {
+      q: "Do you sell AI SEO as a monthly service?",
+      a: "No, and that is the main thing to know before reading further. The going rate for an AEO or GEO retainer in 2026 runs from about $1,500 a month at the entry level to $8,000 and beyond for mid-market programmes, and several good agencies do that work properly. We are not one of them. What we do is build the site so assistants can read it, once, as part of a fixed-price build. If you want someone monitoring your visibility every month and reporting on it, hire one of them instead. We would rather say that here than find out on the call.",
+    },
+    {
+      q: "What does making a site readable to AI assistants actually involve?",
+      a: "Serving the content in the HTML rather than assembling it in the browser, so an assistant that does not run JavaScript still sees the page. Headings that describe what a section answers. Prices, specifications and facts as text rather than baked into images. Structured data where it is warranted. An llms.txt file, which some tools read. None of this is exotic and none of it is a trick; it is what a well-built page has always been, which is why we do it during the build rather than selling it back to you afterwards.",
+    },
+    {
+      q: "Can you get us cited by ChatGPT or in Google's AI Overviews?",
+      a: "No. Nobody can, and anyone who says otherwise is selling something. Which sources an assistant cites is its decision and it changes without notice. What we control is whether your pages are readable and worth citing when it looks. We will describe the work and show you our own numbers; we will not put a citation target in a quote.",
+    },
+    {
+      q: "What evidence do you have that any of it works?",
+      a: "Our own, and we will label it as such. Google Search Console's Generative AI report recorded 9,843 impressions for pandacodegen.com between 12 June and 11 September 2026, which was 6.2% of all our impressions in that window. Two caveats we would rather state than have you find: that report has no click column, so it shows appearances and not visits, and 57% of those impressions came from one article about hosting bandwidth, which is developer research rather than anyone looking to buy a website. We also track AI-referred orders on Panda Patches, a business our co-founder owns, so it is our own data rather than an independent client result.",
+    },
+    {
+      q: "Is llms.txt worth having?",
+      a: "It depends who you want reading you, and the honest answer is more limited than the marketing. Google states you do not need machine-readable files to appear in Google Search, so it is not a ranking factor there. AI coding tools including Cursor and GitHub Copilot do read it, GPTBot fetches it frequently, and Google's own PageSpeed Agentic Browsing category checks for a compliant one. We add it because it costs nothing and some tools use it, not because it moves you up Google.",
+    },
+    {
+      q: "Our site is on WordPress. Can you do this without rebuilding it?",
+      a: "Sometimes. If the pages already render their content server-side and the problem is structure or missing detail, that is an editing job and you may not need us at all. If the content only appears after JavaScript runs, or the theme and plugins fight every change, then readability is a symptom and the build is the cause. We will tell you which one you have before quoting, and if it is the first we will say so even though it is the smaller job.",
+    },
+  ],
   "custom-engineering": [
     {
       q: "On an application rather than a website, what can our team change without us calling you?",

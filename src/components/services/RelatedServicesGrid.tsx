@@ -10,6 +10,7 @@ const ALL_SERVICES = [
   { href: "/services/squarespace",         icon: Globe,         title: "Squarespace Migration", desc: "Review content, commerce, scheduling, and migration requirements." },
   { href: "/services/webflow",             icon: Globe,         title: "Webflow Migration",     desc: "Assess CMS data, interactions, hosting, and migration trade-offs." },
   { href: "/services/gohighlevel",         icon: Zap,           title: "GoHighLevel",           desc: "Evaluate a custom public frontend alongside compatible CRM workflows." },
+  { href: "/services/ai-seo",              icon: Zap,           title: "AI SEO",                desc: "Pages assistants can read, built in rather than sold as a monthly retainer." },
   { href: "/services/custom-engineering",  icon: Zap,           title: "Custom Engineering",    desc: "Scope applications, dashboards, APIs, permissions, and integrations." },
   { href: "/partners",                     icon: ArrowRightLeft, title: "For Agencies",          desc: "Discuss delivery roles, confidentiality, and terms in a partner agreement." },
 ];

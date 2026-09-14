@@ -214,7 +214,7 @@ export const entities: Record<string, Entity> = {
     id: 'aeo',
     name: 'Answer Engine Optimization (AEO/GEO)',
     type: 'Thing',
-    pillarHref: '/editorial-policy',
+    pillarHref: '/services/ai-seo',
     attributes: {
       popular: ['get cited by ChatGPT', 'AI search', 'show up in AI overviews'],
       prominent: ['llms.txt', 'structured data', 'speakable', 'entity trust'],
@@ -386,7 +386,13 @@ export const clusters: Cluster[] = [
   {
     id: 'seo-aeo',
     label: 'SEO & Answer Engine Optimization',
-    pillarHref: '/editorial-policy',
+    // Repointed 14 Sep 2026. This was '/editorial-policy' -- a policy page --
+    // so eleven articles had no commercial destination and passed their
+    // internal authority to a standards document. /services/ai-seo does not
+    // compete with them: they answer "what is AEO" and "how do I measure it",
+    // it answers "who do I hire". The anti-cannibalisation rule at the top of
+    // this file is not engaged, because no money page existed for this cluster.
+    pillarHref: '/services/ai-seo',
     entityIds: ['aeo', 'core-web-vitals'],
     relatedClusterIds: ['performance', 'migration'],
     postIds: [

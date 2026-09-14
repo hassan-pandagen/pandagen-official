@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 2. Service Pillars
     { path: '/services/wordpress-migration', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-08-03' },
     { path: '/services/ecommerce', changeFrequency: 'monthly', priority: 0.9 , lastModified: '2026-08-03' },
+    { path: '/services/ai-seo', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-09-14' },
     { path: '/services/custom-engineering', changeFrequency: 'monthly', priority: 0.8 , lastModified: '2026-08-03' },
 
     // 3. Platform-Specific Service Pages
