@@ -12,7 +12,7 @@ import type { LeadFormCopy } from "@/lib/i18n/dictionaries/types";
 
 const englishCopy: LeadFormCopy = {
   eyebrow: "Start here",
-  heading: "Have a project or a question in mind?",
+  heading: "What would you like help with?",
   intro:
     "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
   nameLabel: "Name",
@@ -22,7 +22,7 @@ const englishCopy: LeadFormCopy = {
   detailsLabel: "What you have in mind",
   detailsPlaceholder:
     "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty.",
-  submit: "Send it over",
+  submit: "Send your question",
   submitting: "Sending…",
   successHeading: "Thank you, we have it.",
   successBody: "You will hear back from info@pandacodegen.com, usually within one business day.",
@@ -229,6 +229,14 @@ export default function HeroLeadForm({
                 {isLoading ? copy.submitting : copy.submit}
                 {isLoading ? null : <Send className="h-4 w-4" aria-hidden="true" />}
               </button>
+
+              {/* Moved here 15 Sep 2026. This rendered at the foot of the panel,
+                  below the direct-contact block, so the reassurance that removes
+                  hesitation sat forty lines away from the button someone was
+                  hesitating over. */}
+              {copy.replyNote ? (
+                <p className="mt-3 text-center text-xs leading-5 text-stone-500">{copy.replyNote}</p>
+              ) : null}
             </form>
           </>
         )}
@@ -261,7 +269,6 @@ export default function HeroLeadForm({
             {copy.bookLabel}
           </CalModalButton>
         </div>
-        {copy.replyNote ? <p className="mt-3 text-xs leading-5 text-stone-500">{copy.replyNote}</p> : null}
       </div>
     </div>
   );

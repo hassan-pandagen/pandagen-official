@@ -95,7 +95,7 @@ export const COMMERCIAL: readonly Fact[] = [
     // model built for the client's own collections, not through basic editing.
     { label: 'Starter', value: 'From $1,500. Up to 7 pages, with a content editor for your words, images and business details. Set up, documented, and we train you on it.' },
     { label: 'Growth', value: 'From $3,500. 8 to 20 pages, a content model built around your own collections, full migration with redirect map.' },
-    { label: 'Scale', value: 'From $5,000. More than 20 pages, a store, or more than one language.' },
+    { label: 'Scale', value: 'From $5,000. More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. A small store is not automatically this tier: a simple catalogue starts at Starter, which is what /services/ecommerce has always quoted.' },
     { label: 'Above that range', value: 'Quoted after a scoping call. The accepted written terms control the final price.' },
     { label: 'Delivery, Starter', value: '1 to 2 weeks.' },
     { label: 'Delivery, Growth', value: '2 to 4 weeks.' },
