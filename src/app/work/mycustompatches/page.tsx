@@ -393,7 +393,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 <div>
                                     <p className="font-bold mb-2">Facebook Pixel was the only uncontrollable factor</p>
                                     <p className="text-stone-300 text-sm leading-relaxed">
-                                        <code className="text-cognac">fbevents.js</code> (~97 KB) loads <code className="text-cognac">afterInteractive</code> to avoid blocking LCP. Its 20-minute cache TTL and ~35 KB of unused JS are controlled by Meta and cannot be reduced from the codebase. Everything else is fully optimized. The site still scores 90+.
+                                        <code className="text-cognac">fbevents.js</code> (~97 KB) loads <code className="text-cognac">afterInteractive</code> to avoid blocking LCP. Its 20-minute cache TTL and ~35 KB of unused JS are controlled by Meta and cannot be reduced from the codebase. Everything else is fully optimized. The PageSpeed figures for this project are withdrawn pending reconciliation, so no score is quoted here.
                                     </p>
                                 </div>
                             </div>

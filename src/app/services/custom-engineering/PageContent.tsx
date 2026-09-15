@@ -347,7 +347,7 @@ export default function PageContent() {
                   enterprise operations platform
                 </Link>{" "}
                 reports lead volume by channel across search, social, paid ads, AI and LLM referrals,
-                and direct referral, in one place, at 95% process automation.
+                and direct referral, in one place, across twelve reporting modules.
               </p>
               <p className="text-sm text-stone-500 leading-relaxed">
                 <strong className="text-stone-600">What it does not do.</strong> This reports on data you
