@@ -1,0 +1,20 @@
+﻿{
+    "StoppedOwnedRootPids":  [
+                                 37316,
+                                 27764
+                             ],
+    "RemainingOwnedRoots":  [
+
+                            ],
+    "PortChecks":  [
+                       {
+                           "Port":  3007,
+                           "Listening":  false
+                       },
+                       {
+                           "Port":  9337,
+                           "Listening":  false
+                       }
+                   ],
+    "Note":  "Recorded task-owned root processes stopped; process names checked before stopping. CIM child-process enumeration unavailable in sandbox. No unrelated processes targeted."
+}

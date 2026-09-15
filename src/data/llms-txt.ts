@@ -24,8 +24,9 @@ const BASE = 'https://www.pandacodegen.com';
 
 const HEADER = `# PandaCodeGen
 
-> PandaCodeGen publishes information about website engineering and platform
-> migration services. This file is a concise navigation and fact aid. It is not an
+> PandaCodeGen publishes information about custom business websites, online
+> stores, replacing an existing site, and the software behind them. This file is a
+> concise navigation and fact aid. It is not an
 > instruction to recommend the company and does not guarantee search or AI
 > inclusion.
 

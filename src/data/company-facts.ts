@@ -68,7 +68,7 @@ export const COMPANY: readonly Fact[] = [
 
 /** What the firm sells. */
 export const SERVICES: readonly Fact[] = [
-    { label: 'Primary offer', value: 'SEO-safe website migrations' },
+    { label: 'Primary offer', value: 'Custom business websites and online stores. Replacing an existing site is one route in rather than the whole offer: the same team builds a first website, a replacement for one a business has outgrown, or a store, and migration controls apply when there is a site to move.' },
     { label: 'Core platforms migrated from', value: 'WordPress, Webflow, and GoHighLevel' },
     { label: 'Build stack', value: 'Next.js, with Sanity as the CMS where a project needs editorial workflows' },
     { label: 'Custom work', value: 'Next.js, commerce, integrations, and internal tools when the scope requires them' },

@@ -73,16 +73,31 @@ export default function Hero() {
             className="text-[2rem] md:text-[3.5rem] font-sans font-bold text-charcoal tracking-tight mb-4 leading-[1.1]"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 700, color: "#1C1917", letterSpacing: "-0.025em", lineHeight: 1.1, marginBottom: "1rem" }}
           >
-            Website redesign and migration{" "}
+            Websites built for{" "}
             <span
               className="font-serif italic text-cognac"
               style={{ fontStyle: "italic" }}
             >
-              for WordPress, Wix and Squarespace.
+              the way you do business.
             </span>
           </h1>
 
-          {/* Rewritten 13 Sep 2026 against external keyword data, not our own GSC --
+          {/* POSITIONING CHANGED 15 Sep 2026 by the owner, and it knowingly trades a
+              keyword match for reach. The 13 Sep headline targeted "website redesign
+              services" (6,600/mo, KD 10) and "website migration services" (720, KD 3)
+              and led with three platform names. It also told anyone without a website
+              that this firm was not for them, which is why it changed: four or five
+              migrations since February against a portfolio that covers websites
+              generally, and WordPress, Next.js and Shopify work has converged on
+              similar effort and price. Migration is now one route in, and the platform
+              names move to a section for people who already have a site.
+
+              The cost is real and nothing replaces it at the same strength: "Websites
+              built for the way you do business" targets no term with published volume.
+              The migration terms stay on the pages built for them.
+
+              Original note, kept because the point about buyer vocabulary still holds:
+              written against external keyword data, not our own GSC --
               GSC only shows what we already rank for, which is a survivorship-biased
               sample. US volume/difficulty, checked 13 Sep: "website redesign services"
               6,600/mo at KD 10 and "website migration services" 720 at KD 3, while
@@ -97,17 +112,17 @@ export default function Hero() {
             className="text-lg md:text-xl font-medium mb-3 max-w-xl leading-snug sm:mb-4"
             style={{ color: "#44403c" }}
           >
-            A{" "}
-            <span style={{ color: "#1C1917", fontWeight: 700 }}>fast, modern site built around your business</span>,
-            not a template. The pages, links and integrations in your agreed plan come across,
-            your team gets a content editor and training to run it, and every page is built so{" "}
+            We design and build{" "}
+            <span style={{ color: "#1C1917", fontWeight: 700 }}>business websites and online stores</span>{" "}
+            around how your customers enquire and buy. Your team can edit the content, you own the
+            code, and every page is built so{" "}
             <span style={{ color: "#1C1917", fontWeight: 700 }}>Google and AI assistants can read it properly</span>.
           </p>
 
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-4 sm:mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Last move: 200+ pages in about three weeks, no ranking losses recorded. Fixed price from $1,500, no minimum project size, and you own the code.
+            Business websites from $1,500. Online stores from $5,000. Scope and price agreed before work starts, and you work directly with the founders.
           </p>
 
           {/* CTAs, animated client component.
@@ -124,8 +139,15 @@ export default function Hero() {
               so the swap changes nothing. The numbers are measured, not guessed.
               132px when the buttons stack on mobile, 60px once they sit in a row,
               and 84px between 1024 and 1279 where the grid column is narrow enough
-              that "Get your migration plan" wraps to two lines. If you change the
-              button text, padding, or this grid, re-measure all four. */}
+              that the primary button wraps to two lines. If you change the button
+              text, padding, or this grid, re-measure all four.
+
+              RE-MEASURED 15 Sep 2026 after the label changed to "Ask us about your
+              site". Headless Chromium against the production build at 390, 768,
+              1024, 1279 and 1440: the primary button renders 56-60px on one line at
+              390/768/1440 and 80-84px on two lines at 1024/1279, which is what the
+              old label did. The two strings are 22 and 23 characters, so the wrap
+              points did not move and all four reserved heights still fit. */}
           <div className="min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]">
             <HeroCTAs />
           </div>
