@@ -239,8 +239,8 @@ export default function PageContent() {
               server-side tracking where that is what it takes. Customers can also tell you where they found
               you, and that is a different kind of evidence from an observed click. On{" "}
               <Link href="/work/panda-patches" className="font-semibold underline decoration-cognac/40 underline-offset-2">Panda Patches</Link>,
-              a business that shares an owner with us, the records combine both and we keep them apart rather
-              than reporting one total. Some sources stay unknown: a Google AI Overview visit is recorded as
+              a business that shares an owner with us, both kinds of evidence are kept on the order and each
+              order is classified once, so a published figure can say what it combines. Some sources stay unknown: a Google AI Overview visit is recorded as
               Google organic search without separately identifying the AI step. We check what your platform
               already records before quoting any of it.
             </p>
