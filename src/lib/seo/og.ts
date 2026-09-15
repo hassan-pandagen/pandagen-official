@@ -23,7 +23,7 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Custom business websites and online stores, built new or rebuilt, with a content editor your team runs and code you own.",
   },
   "/about": {
-    title: "Engineers Behind the Migration",
+    title: "The Engineers Behind the Build",
     label: "About PandaCodeGen",
     description: "Meet the founders responsible for architecture, implementation, validation, launch, and handover.",
   },
@@ -73,7 +73,7 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Test a scoped white-label or delivery partnership before agreeing repeat commercial terms.",
   },
   "/pricing": {
-    title: "Migration Scope and Pricing",
+    title: "Project Scope and Pricing",
     label: "Plan the Engagement",
     description: "Compare starting scopes, payment milestones, performance acceptance, support, ownership, and change handling.",
   },

@@ -111,7 +111,7 @@ export default function ImranProfilePage() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Architect</p>
               <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Imran Raza Ladhani</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                Imran leads architecture at PandaCodeGen. He decides whether a migration is actually justified, draws the lines between systems and data, and makes sure what we agreed can be operated and handed over without hidden platform or agency lock-in.
+                Imran leads architecture at PandaCodeGen. He decides what a project actually needs to be built from, draws the lines between systems and data, judges whether moving an existing site is justified at all, and makes sure what we agreed can be operated and handed over without hidden platform or agency lock-in.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">

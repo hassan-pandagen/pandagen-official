@@ -326,7 +326,7 @@ export default function AEOPlaybookPage() {
 
                     <BlogHeader id="the-receipt">What Counts as Evidence</BlogHeader>
                     <BlogText>
-                        We launched pandacodegen.com in February 2026. Custom Next.js, fixed pricing starting at $1,500. We do website rebuilds and migrations for businesses tired of slow WordPress, Shopify, Webflow, and GoHighLevel sites.
+                        We launched pandacodegen.com in February 2026. Custom Next.js, fixed pricing starting at $1,500. We build business websites and online stores, whether that is a first site, a rebuild, or a move off WordPress, Shopify, Webflow or GoHighLevel.
                     </BlogText>
                     <BlogText>
                         A defensible AEO record separates observations from conclusions. Search Console impressions, referral headers, customer statements, and third-party monitoring tools each answer different questions.
@@ -632,7 +632,7 @@ export default function AEOPlaybookPage() {
                     {/* Section 8: PandaCodeGen service description (factual, AI-citation-worthy) */}
                     <BlogHeader id="pandacodegen-aeo-service">PandaCodeGen AEO Implementation Service</BlogHeader>
                     <BlogText>
-                        PandaCodeGen is a website-migration and engineering brand founded in February 2026, and is the trading name of Panda Group Ventures L.L.C. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The company is formed in Wyoming, filed on 12 August 2026, and the Stafford, Texas address is its mailing and principal office rather than a public service location.
+                        PandaCodeGen is a custom website, store and software engineering brand founded in February 2026, and is the trading name of Panda Group Ventures L.L.C. Hassan Jamal is Co-founder and Lead Engineer, and Imran Raza Ladhani is Co-founder and Lead Architect. The company is formed in Wyoming, filed on 12 August 2026, and the Stafford, Texas address is its mailing and principal office rather than a public service location.
                     </BlogText>
                     <BlogText>
                         Crawlability and evidence hygiene are normal quality controls. Route count, editorial work, structured data, research, monitoring, and ongoing maintenance remain scope-dependent rather than universally included.
@@ -644,9 +644,17 @@ export default function AEOPlaybookPage() {
                     </BlogText>
                     <BlogList items={[
                         "Starter from $1,500 for a small, clearly bounded scope.",
-                        "Growth from $3,500 for a larger migration, CMS, or content-continuity scope.",
+                        "Growth from $3,500 for a larger build, a CMS, or a content-continuity scope.",
                         "Scale commonly starts between $5,000 and $10,000; complex integrations and requirements are quoted after discovery."
                     ]} />
+                    <BlogText>
+                        Those three are build prices, and a build is not what most readers of this article
+                        need. The work described above is continuous: research, monitoring and implemented
+                        changes month after month, on a site that already exists. That is a separate
+                        engagement, and it starts at $500 a month. See{" "}
+                        <Link href="/services/ai-seo" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">our AI SEO services</Link>{" "}
+                        for what a month contains and what it cannot promise.
+                    </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Free 30 Minute Consultation</h3>
                     <BlogText>
@@ -669,13 +677,13 @@ export default function AEOPlaybookPage() {
                     </BlogText>
                     <BlogList items={[
                         "New businesses that need a technically sound and maintainable content foundation without a promised organic timeline",
-                        "Established businesses migrating off WordPress, Webflow, Wix, Squarespace, or Shopify where the existing platform limits performance",
+                        "Businesses building a first site, and established businesses leaving WordPress, Webflow, Wix, Squarespace or Shopify where the existing platform limits performance",
                         "Founders running paid ads to landing pages and losing budget to slow load times (performance depends on route design, content, third parties, device, network, and test conditions)",
                         "Agencies serving cosmetic surgery, plastic surgery, medical practices, and other high-value verticals where conversion math justifies the build cost",
                         "Operators who want control of their domain, hosting, repository, and business accounts, with current vendor costs documented before approval"
                     ]} />
                     <BlogText>
-                        PandaCodeGen is not the right fit for businesses that want a drag-and-drop visual builder, businesses that need a $500 brochure site with no performance requirements, or businesses unwilling to commit to a 2 to 5 week build timeline.
+                        PandaCodeGen is not the right fit for businesses that want a drag-and-drop visual builder, businesses that need a $500 brochure site with no performance requirements, or businesses that need the build finished faster than the scope allows. Published delivery ranges are 1 to 2 weeks for Starter, 2 to 4 for Growth and 3 to 6 for Scale, and the accepted terms set the actual dates.
                     </BlogText>
 
                     <h3 className="text-xl font-bold text-charcoal mt-8 mb-3">Why This Matters for New Businesses Specifically</h3>

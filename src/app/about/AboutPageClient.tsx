@@ -155,10 +155,10 @@ export default function AboutPageClient() {
             The anti-agency &middot; Founded February 2026 &middot; Co-founder led
           </p>
           <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl">
-            Reduce migration risk <span className="font-serif font-normal italic text-cognac">before writing production code.</span>
+            Decide what to build <span className="font-serif font-normal italic text-cognac">before writing production code.</span>
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-            PandaCodeGen helps businesses plan and implement website migrations when URLs, content, integrations, measurement, and operational control matter. The work begins with evidence and a written scope, not an automatic promise that every site needs a rebuild.
+            PandaCodeGen designs and builds custom business websites, online stores and software. Some clients start from nothing, some replace a site they have outgrown, and some move an existing one where URLs, content, integrations, measurement and operational control matter. Every route begins with evidence and a written scope, not an automatic promise that every site needs a rebuild.
           </p>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
             You will not be handed to an account manager. The two founders who scope your project are the two engineers who build it, and if the evidence says repairing your current site is the better answer, we will tell you that instead of selling you a rebuild.

@@ -54,6 +54,7 @@ const MONEY_LABEL: Record<string, string> = {
     "/services/webflow": "Webflow migration service",
     "/services/squarespace": "Squarespace migration service",
     "/services/custom-engineering": "custom engineering service",
+    "/services/ai-seo": "AI SEO service",
     "/partners": "agency partnership terms",
     "/pricing": "pricing",
     "/free-audit": "free site audit",
@@ -96,10 +97,16 @@ export default async function TopicHubPage({ params }: Params) {
     if (!hub) notFound();
 
     const money = moneyHref(hub);
-    const moneyLabel = MONEY_LABEL[money] ?? "our services";
     // The closing button may point somewhere other than the pillar. See Hub.ctaHref.
     const cta = hub.ctaHref ?? money;
-    const ctaLabel = MONEY_LABEL[cta] ?? "our services";
+    // The whole phrase, not just the noun. The button used to read "See the
+    // {label}" with a bare "our services" fallback, which rendered "See the our
+    // services" on any hub whose target was missing from MONEY_LABEL -- as
+    // seo-and-ai-search was from the moment its ctaHref moved to /services/ai-seo
+    // on 15 Sep 2026. Adding the missing entry fixes that hub; building the
+    // sentence here means the next unmapped route degrades to a grammatical
+    // phrase instead of a broken one.
+    const ctaPhrase = MONEY_LABEL[cta] ? `See the ${MONEY_LABEL[cta]}` : "See our services";
 
     // Resolve post ids to posts, newest first. An id in the taxonomy with no
     // matching post is dropped here and caught by the build check in hubs.ts.
@@ -243,7 +250,7 @@ export default async function TopicHubPage({ params }: Params) {
                             href={cta}
                             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100"
                         >
-                            See the {ctaLabel} <ArrowRight aria-hidden="true" className="h-4 w-4" />
+                            {ctaPhrase} <ArrowRight aria-hidden="true" className="h-4 w-4" />
                         </Link>
                     </section>
 

@@ -141,29 +141,12 @@ export default function Hero() {
             Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.
           </p>
 
-          {/* CTAs, animated client component.
-
-              HeroCTAs is dynamic with ssr:false because it pulls framer-motion,
-              so the server sends nothing here and the buttons appear only after
-              hydration. Measured 9 Sep 2026 at 1024 wide, that was the homepage's
-              single largest layout shift: the slot went from 0 to 84px and, because
-              this grid centres its two columns, the whole left column then moved.
-              Page CLS was 0.128 locally and 0.136 on production, both above the
-              0.1 threshold, and every shift was attributed to this column.
-
-              The fix is the one the right column already uses: reserve the height
-              so the swap changes nothing. The numbers are measured, not guessed.
-              132px when the buttons stack on mobile, 60px once they sit in a row,
-              and 84px between 1024 and 1279 where the grid column is narrow enough
-              that the primary button wraps to two lines. If you change the button
-              text, padding, or this grid, re-measure all four.
-
-              RE-MEASURED 15 Sep 2026 after the label changed to "Ask us about your
-              site". Headless Chromium against the production build at 390, 768,
-              1024, 1279 and 1440: the primary button renders 56-60px on one line at
-              390/768/1440 and 80-84px on two lines at 1024/1279, which is what the
-              old label did. The two strings are 22 and 23 characters, so the wrap
-              points did not move and all four reserved heights still fit. */}
+          {/* Reserve the complete CTA row while the animated component loads.
+              Its loading fallback has the same labels, icons and button padding.
+              Re-measured 15 Sep 2026 with "Talk to the founders" at 320, 390,
+              768, 1024, 1279 and 1440px: the row is 132px when stacked, 60px
+              in the wide layout, and 84px at 1024-1279 where the primary wraps.
+              Recheck these heights if the label, padding or grid changes. */}
           <div className="min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]">
             <HeroCTAs />
           </div>

@@ -518,7 +518,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             cutover and support before recommending native optimization or a hybrid frontend.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
+                            Book a 15-min call <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 

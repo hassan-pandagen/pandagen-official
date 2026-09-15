@@ -165,6 +165,7 @@ export default function HeroLeadForm({
                     required
                     type="text"
                     name="name"
+                    maxLength={100}
                     autoComplete="name"
                     className="mt-1.5 w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
                   />
@@ -175,6 +176,7 @@ export default function HeroLeadForm({
                     required
                     type="email"
                     name="email"
+                    maxLength={254}
                     autoComplete="email"
                     className="mt-1.5 w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
                   />
@@ -186,6 +188,7 @@ export default function HeroLeadForm({
                 <span className="font-normal text-stone-500">({copy.urlHint})</span>
                 <textarea
                   name="details"
+                  maxLength={5000}
                   rows={3}
                   placeholder={copy.detailsPlaceholder}
                   className="mt-1.5 w-full resize-y rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
@@ -206,6 +209,7 @@ export default function HeroLeadForm({
                   type="text"
                   inputMode="url"
                   name="currentUrl"
+                  maxLength={2048}
                   autoComplete="url"
                   placeholder="example.com"
                   className="mt-1.5 w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
