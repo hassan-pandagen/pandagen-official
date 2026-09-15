@@ -12,7 +12,7 @@ import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
-    description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline across 17 statuses, role-based access for 7 roles, automated attendance, profit tracking, and 12 reporting modules.",
+    description: "How we replaced a spreadsheet estate, WhatsApp chains and several SaaS tools with a single custom ops platform. Real-time order pipeline across 17 statuses, role-based access for 7 roles, automated attendance, profit tracking, and 12 reporting modules.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
         description: "Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). 26 Edge Functions. Full case study.",
@@ -35,7 +35,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
-        answer: "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting is quoted against the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month.",
+        answer: "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting is quoted against the number of roles, data tables, and automation requirements. This platform replaced a spreadsheet estate, a disconnected CRM and manual attendance tracking. We have not published what those cost or how many hours they took, because no record of either was kept.",
     },
     {
         question: "What is role-based access control (RBAC) and why does a small business need it?",
@@ -58,7 +58,7 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/enterprise-ops#article",
             "headline": "Enterprise Operations Platform: From Spreadsheets to Real-Time Business Intelligence",
-            "description": "How we replaced spreadsheets, WhatsApp updates, and 3 separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
+            "description": "How we replaced a spreadsheet estate, WhatsApp updates and several separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
             "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2026-03-04T00:00:00Z",
             "dateModified": "2026-08-10T00:00:00Z",
@@ -227,12 +227,17 @@ const integrations = [
 
 // Verified scope from the production codebase.
 const byNumbers = [
-    { value: "23", label: "Staff routes" },
-    { value: "8+", label: "Reporting modules" },
-    { value: "20", label: "Edge Functions" },
-    { value: "13", label: "Order statuses" },
-    { value: "3 · 11", label: "Roles · permissions" },
-    { value: "10", label: "DB migrations" },
+    // Every value here was stale until 15 Sep 2026: this array held the pre-audit
+    // counts (23 / 8+ / 20 / 13 / 3·11 / 10) for a full day after the same six
+    // numbers were corrected in the headline cards and again in the deliverables
+    // list. Three copies of one fact in one file. They should all render from
+    // case-study-facts.json rather than being typed here a fourth time.
+    { value: "27", label: "Staff routes" },
+    { value: "12", label: "Reporting modules" },
+    { value: "26", label: "Edge Functions" },
+    { value: "17", label: "Order statuses" },
+    { value: "7 · 11", label: "Roles · permissions" },
+    { value: "86", label: "DB migrations" },
 ];
 
 const roles = [
@@ -403,7 +408,7 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="grid gap-4 md:grid-cols-2">
                             {[
-                                { title: "Every lead, with where it actually came from", body: "A quote records its source when it arrives: search, paid ads, social, referral, or an AI assistant. Click identifiers from Meta, Google, Microsoft and TikTok are captured with it and carried through to the order, so the channel that produced the money is still attached to it months later. Six server-side functions report purchases and leads back to Meta and reverse them automatically when an order is refunded or cancelled, so the ad platform is not left optimising against revenue that went back. Where a source cannot be observed, the customer can say how they found you, and the two are recorded as what they are rather than merged into one figure." },
+                                { title: "Every lead, with where it actually came from", body: "A quote records its source when it arrives: search, paid ads, social, referral, or an AI assistant. Click identifiers from Meta, Google, Microsoft and TikTok are captured with it and carried through to the order, so the channel that produced the money is still attached to it months later. Six server-side functions report purchases and leads back to Meta and reverse them automatically when an order is refunded or cancelled, so the ad platform is not left optimising against revenue that went back. Where a source cannot be observed, the customer can say how they found you. Both are kept on the order as distinct evidence, so any figure drawn from them later can state which kind it rests on and each order is counted once." },
                                 { title: "Orders that carry their own history", body: "An order moves through a defined lifecycle from enquiry to delivered, with branch states for remakes, cancellations and refunds. Every field change is logged with who changed it and when. Notes, customer messages, mockups, production files and shipping documents live on the order itself, not in somebody's inbox." },
                                 { title: "Agents see their own work, and their own money", body: "A sales agent opens the platform and sees the orders assigned to them, what each is worth, which are still unpaid, and what they earned last month. Commission is calculated from the orders themselves rather than reconciled by hand at month end. An agent cannot see another agent's book, and cannot see cost or margin at all unless that permission is granted." },
                                 { title: "The production floor has its own queue", body: "Digitising and stitching run on a work queue separate from the customer-facing order status, so the floor moves a job along without anyone having to translate that into something a customer would understand. It replaced a Google Sheet the floor had run since August 2025: 1,779 rows were imported and reconciled line for line, and 27 different spellings of the product types were collapsed into 13 canonical ones so a price could attach to each. A digitiser sees the job they were assigned and nothing else: no customer identity, no conversation, no pricing." },
@@ -775,7 +780,7 @@ export default function EnterpriseOpsCaseStudy() {
                             {[
                                 "PostgreSQL schema with Row-Level Security on all 59 tables (86 tracked migrations)",
                                 "17-status order pipeline, 14 of them in live use (NEW_ORDER → DELIVERED, plus DIGITIZING / REMAKE / CANCELLED / REFUNDED / FEEDBACK and more)",
-                                "8+ financial reporting modules (Sales, P&L, Income Statement, Product Mix, Attribution), CSV export",
+                                "12 reporting modules (Sales, Production, Quality & Refunds, Product Mix, Income Statement, P&L, Lead Source, Lead Attribution, Funnel & Attribution, Customer Feedback, Form Feedback, Loyalty), CSV export",
                                 "Payments: Square checkout, public payment links (/pay/:token), payment webhooks, and a paid invoice emailed to the customer",
                                 "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
                                 "Transactional email via ZeptoMail for every order milestone",
