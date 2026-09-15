@@ -197,11 +197,12 @@ export default function IsItCheaperPage() {
                         has to talk back to confirm the money arrived.
                     </BlogText>
                     <BlogText>
-                        An AI builder will write code that calls an API and it will often be correct. What it does not
-                        give you is the account, the key, the permissions, the error handling for when the other service
-                        is down, the retry when a message fails, or the webhook that tells your site the payment went
-                        through. Those are not code problems. They are operational ones, and they only show up when a
-                        real customer hits them. <BlogHighlight>The failure is quiet, which is what makes it
+                        AI builders will write code that calls an API, and they document webhook handling, server
+                        endpoints and their own security and SEO reviews. The code is often correct. What no tool
+                        does for you is hold the account, own the keys and permissions, and prove the thing behaves
+                        when the other service is down, when a message fails and has to retry, or when the payment
+                        provider sends the same notification twice. Those are not code problems. They are
+                        operational ones, and they only show up when a real customer hits them. <BlogHighlight>The failure is quiet, which is what makes it
                         expensive.</BlogHighlight> A form that silently stops delivering looks exactly like a week with
                         no enquiries.
                     </BlogText>
@@ -312,8 +313,9 @@ export default function IsItCheaperPage() {
                         you whether you are a client or a rounding error.
                     </InsightBox>
                     <BlogText>
-                        Hosting is paid straight to the provider, from $20 a month as of August 2026, with no markup from
-                        us. There is no retainer. The pages named in your quote score 90 or better on Lighthouse, mobile
+                        Hosting is arranged per client: some pay the provider directly with no markup from us, some are
+                        hosted in our account as part of an agreed arrangement, and your quote says which. The build
+                        itself carries no subscription. Ongoing work is separate and optional. The pages named in your quote score 90 or better on Lighthouse, mobile
                         and desktop, across three recorded runs before handover &mdash; a lab acceptance target, not a
                         promise about rankings or field data. Ownership is covered in full in{" "}
                         <Link href="/blog/do-you-own-your-website" className={linkClass}>do you own your website</Link>.
@@ -337,9 +339,9 @@ export default function IsItCheaperPage() {
                         its own page text was the one they were shown.
                     </BlogText>
                     <BlogText>
-                        That is the part an AI builder cannot do for you, and it has nothing to do with code quality. It
-                        requires knowing what your buyers are actually blocked by, and writing the answer on the page in
-                        a sentence a machine can lift.
+                        No tool knows that for you, and it has nothing to do with code quality. It requires knowing what
+                        your buyers are actually blocked by, and writing the answer on the page in a sentence a
+                        machine can lift. That is a conversation with your customers, not a prompt.
                     </BlogText>
 
                     <BlogHeader id="summary">The honest summary</BlogHeader>
