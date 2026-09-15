@@ -34,12 +34,28 @@ export default function Hero() {
         {/* --- LEFT: EDITORIAL COPY --- */}
         <div className="max-w-2xl">
 
-          {/* Founder trust pill: replaces generic "Accepting Q2 Clients" with Hassan signature */}
+          {/* Trust pill.
+
+              CHANGED 15 Sep 2026. It read "Website migrations · Fixed scope · Code
+              you own", which survived the positioning change and then sat directly
+              above an H1 about websites generally. It was the first line in the hero
+              and it named the old offer, so the first screen made three different
+              statements about what this company sells: migrations (pill), websites
+              (H1), websites and online stores (subhead).
+
+              The pill now says what you GET rather than what we DO, which is the one
+              job the H1 and subhead below do not already cover, so it stops competing
+              with them. All three are stated facts, not benefits: a content editor
+              ships on every tier, training is part of handover, and the code, design
+              files and accounts are yours at the end. See company-facts.ts.
+
+              Do not put an offer or a platform name back in here. If this needs to
+              say what we sell, the H1 is already saying it two lines down. */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-300 text-xs font-bold uppercase tracking-widest text-stone-600 mb-3 shadow-xs sm:mb-5">
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cognac" />
             </span>
-            Website migrations &middot; Fixed scope &middot; Code you own
+            Content editor &middot; Training &middot; Code you own
           </div>
 
           {/* Headline: LCP candidate, pure server HTML, inline fontFamily forces instant paint.

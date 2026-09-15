@@ -765,7 +765,7 @@ const de: Dictionary = {
     urlHint: "optional",
     detailsLabel: "Worum geht es Ihnen",
     detailsPlaceholder:
-      "Eine Migration, ein Relaunch, schnellere Seiten oder eine Frage, die Sie beantwortet haben möchten. Ein Satz genügt.",
+      "Eine neue Website, ein Online-Shop, ein Relaunch oder eine Frage, die Sie beantwortet haben möchten. Ein Satz genügt.",
     submit: "Absenden",
     submitting: "Wird gesendet…",
     successHeading: "Vielen Dank, Ihre Nachricht ist angekommen.",
