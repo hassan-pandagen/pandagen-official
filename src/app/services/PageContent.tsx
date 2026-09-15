@@ -64,7 +64,7 @@ export default function PageContent() {
             transition={{ delay: 0.3 }}
             className="text-base text-charcoal font-medium max-w-2xl mx-auto mt-4"
           >
-            MyCustomPatches is an independent client, and its owner reports a delivery of about 22 days. We do not hold a dated record of that confirmation, and the performance figures for that project are withdrawn pending reconciliation.
+            MyCustomPatches is an independent client. The delivery of about 22 days is an owner-approved project record dated 21 July 2026, as are the 200+ URLs, 13 templates and zero downtime through cutover. No ranking losses were recorded in the 30 days after launch, which is a monitored window rather than a permanent claim. The load-time, PageSpeed and hosting-cost figures for this project are withdrawn pending reconciliation.
           </motion.p>
         </div>
       </section>

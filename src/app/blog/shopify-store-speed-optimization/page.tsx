@@ -527,7 +527,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Shopify performance planning</p>
                                 <h3 className="text-2xl md:text-3xl font-bold mb-3">Get a plan for the bottleneck you actually have.</h3>
                                 <p className="text-stone-300 mb-5 max-w-xl mx-auto">Send us the store, the pages that matter most, the apps you cannot drop and your budget. We will tell you whether the next step is tuning the theme, replacing it, or a custom build from $1,500, and what each would costion plan.</p>
-                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Get your migration plan <ArrowRight className="w-5 h-5" /></CalModalButton>
+                                <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Book a 15-min call <ArrowRight className="w-5 h-5" /></CalModalButton>
                             </div>
 
                         </div>

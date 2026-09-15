@@ -267,7 +267,7 @@ export function OgArtwork({ content, logoUrl, origin }: { content: OgContent; lo
             <div style={{ display: "flex", width: 548, height: 1, background: "#c9c1b5" }} />
             <div style={{ display: "flex", justifyContent: "space-between", width: 548, alignItems: "center" }}>
               <span style={{ display: "flex", fontSize: 14, color: "#6c665e" }}>{content.path === "/" ? "pandacodegen.com" : clamp(`pandacodegen.com${content.path}`, 50)}</span>
-              <span style={{ display: "flex", fontSize: 12, fontWeight: 800, alignItems: "center", gap: 9 }}>{variant === "journal" ? "READ THE NOTE" : variant === "case-study" ? "VIEW THE EVIDENCE" : "GET YOUR MIGRATION PLAN"}<span style={{ color: orange, fontSize: 19 }}>→</span></span>
+              <span style={{ display: "flex", fontSize: 12, fontWeight: 800, alignItems: "center", gap: 9 }}>{variant === "journal" ? "READ THE NOTE" : variant === "case-study" ? "VIEW THE EVIDENCE" : "ASK US ABOUT YOUR SITE"}<span style={{ color: orange, fontSize: 19 }}>→</span></span>
             </div>
           </div>
         </div>

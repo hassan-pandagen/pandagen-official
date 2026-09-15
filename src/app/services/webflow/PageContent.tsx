@@ -252,7 +252,7 @@ export default function WebflowPageContent() {
               A migration assessment should verify editor workflows, CMS exports, interactions, localization, ecommerce, account costs, performance, and third-party terms. Any white-label arrangement, price, timing, support, confidentiality, access, ownership, or remedy belongs in the written proposal.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-800 transition-all">
-              Get your migration plan →
+              Talk to the founders →
             </a>
           </div>
         </div>
@@ -580,7 +580,7 @@ export default function WebflowPageContent() {
               "Every animation listed, with the ones worth keeping approved by you before we build",
               "Each rebuilt interaction checked so it does not cost you the 90-plus speed score",
             ],
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
           {
             tier: "Growth",
@@ -652,7 +652,7 @@ export default function WebflowPageContent() {
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_quote",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
-                Get your migration plan
+                Ask us about your site
               </button>
             </div>
           </div>

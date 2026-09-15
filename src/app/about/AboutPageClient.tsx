@@ -169,7 +169,7 @@ export default function AboutPageClient() {
               onClick={() => setIsQuoteModalOpen(true)}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac"
             >
-              Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Ask us about your site <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </button>
             <Link
               href="/work"

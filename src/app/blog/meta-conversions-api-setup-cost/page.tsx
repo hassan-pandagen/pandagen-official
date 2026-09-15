@@ -591,14 +591,14 @@ export default function MetaCAPISetupCostPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Scope your tracking setup</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             Bring your event list, platform, CRM or order system and current Meta diagnostics. We will
                             identify the smallest responsible implementation and put the data path, acceptance and
                             operating responsibilities into the scope.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-bold text-white transition hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
+                            Book a 15-min call <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
                     </section>
 

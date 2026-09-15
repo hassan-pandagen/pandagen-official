@@ -507,7 +507,7 @@ export default function WebflowVsCustomWebsitePage() {
                             set. Extra features and pages can be discussed after the inventory.
                         </p>
                         <QuoteModalButton cta="webflow_vs_custom_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

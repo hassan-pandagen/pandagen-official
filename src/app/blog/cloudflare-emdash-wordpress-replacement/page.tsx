@@ -554,7 +554,7 @@ export default function CloudflareEmDashPage() {
                             We will inventory the current URLs, content model, integrations, search signals, operating constraints, and ownership requirements. Then we can tell you whether to maintain WordPress, pilot EmDash, or scope a different rebuild.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-charcoal transition-all hover:bg-stone-100">
-                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
+                            Book a 15-min call <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
                     </div>
 

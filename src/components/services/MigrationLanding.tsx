@@ -92,7 +92,7 @@ export default function MigrationLanding({
           <p data-speakable="true" className="mt-8 max-w-3xl text-lg leading-8 text-stone-700 md:ml-8 md:text-xl">{safeSummary}</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-cognac px-6 font-bold text-white transition-colors hover:bg-charcoal md:ml-8">
-              Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link href="/pricing" className="inline-flex min-h-12 items-center justify-center rounded-full border border-cognac/50 bg-white px-6 font-bold text-charcoal transition-colors hover:border-cognac hover:text-cognac">
               Review example scopes
@@ -235,7 +235,7 @@ export default function MigrationLanding({
           <h2 className="text-3xl font-bold">Start with your current site and the decision you need to make.</h2>
           <p className="mt-5 max-w-3xl leading-7 text-stone-700">We will tell you the next thing to check. A firm price only comes after we understand the scope and what it depends on.</p>
           <Link href="/contact#contact-quote-form" className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
-            Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </section>

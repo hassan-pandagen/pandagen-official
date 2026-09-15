@@ -466,7 +466,7 @@ export default function CheapWebDeveloperPage() {
               Share the URL, platform, page inventory, integrations, and business constraints. We will identify what belongs in an SEO-safe migration plan and what still needs evidence.
             </p>
             <CalModalButton className="inline-flex items-center gap-2 px-7 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-              Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+              Book a 15-min call <ArrowRight className="w-4 h-4" />
             </CalModalButton>
           </div>
 

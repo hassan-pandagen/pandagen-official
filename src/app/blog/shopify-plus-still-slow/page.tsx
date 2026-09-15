@@ -411,13 +411,13 @@ export default function ShopifyPlusStillSlowPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <Gauge className="mb-4 h-7 w-7 text-amber-300" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We will identify the measured constraint, map enterprise dependencies and show whether
                             focused optimization, re-theme work or an SEO-conscious headless migration fits the scope.
                         </p>
                         <QuoteModalButton cta="shopify_plus_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

@@ -583,7 +583,7 @@ export default function ShopifyDawnThemeSlowPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <Gauge className="mb-4 h-7 w-7 text-amber-300" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We will audit representative routes, trace the production configuration and show whether a
                             focused Dawn repair, theme change or SEO-conscious headless migration fits the evidence. Our{" "}
@@ -593,7 +593,7 @@ export default function ShopifyDawnThemeSlowPage() {
                             covers the full transition, including analytics, redirect and structured-data continuity.
                         </p>
                         <QuoteModalButton cta="shopify_dawn_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

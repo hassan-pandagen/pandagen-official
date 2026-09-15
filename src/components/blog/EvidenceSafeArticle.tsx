@@ -98,7 +98,7 @@ export default function EvidenceSafeArticle({
               Share the current URL, platform, goal, traffic band, timeline, and budget. Any recommendation will distinguish measured observations from assumptions.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/contact" className="rounded-full bg-white px-6 py-3 font-bold text-charcoal">Get your migration plan</Link>
+              <Link href="/contact" className="rounded-full bg-white px-6 py-3 font-bold text-charcoal">Talk to the founders</Link>
               <Link href="/editorial-policy" className="rounded-full border border-white/30 px-6 py-3 font-bold text-white">Read the editorial policy</Link>
             </div>
           </section>

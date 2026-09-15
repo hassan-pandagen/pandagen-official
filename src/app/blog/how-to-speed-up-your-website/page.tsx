@@ -598,7 +598,7 @@ export default function WebsiteSpeedGuide() {
                             a search-controlled rebuild under written acceptance criteria.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-4 w-4" />
+                            Book a 15-min call <ArrowRight className="h-4 w-4" />
                         </CalModalButton>
                     </section>
 

@@ -667,7 +667,7 @@ export default function WebflowMigrationCostPage() {
                             tier. Extra pages or features can be discussed against the same written scope.
                         </p>
                         <QuoteModalButton cta="webflow_migration_cost_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

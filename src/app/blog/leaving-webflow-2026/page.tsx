@@ -748,7 +748,7 @@ export default function LeavingWebflow2026Page() {
                             Bring your current URLs, integrations, plan, and roadmap. We will identify whether you should stay, optimize, or scope a migration, then document the next step without forcing a platform decision.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-stone-100 transition-all">
-                            Get your migration plan <ArrowRight className="w-5 h-5" />
+                            Book a 15-min call <ArrowRight className="w-5 h-5" />
                         </CalModalButton>
                     </div>
 

@@ -145,7 +145,7 @@ export default function PageContent() {
               Before you move, someone should check what Wix will not let you change, what you can actually export, your domains, your apps, how the site behaves on a phone, how fast it is now, and what the account really costs you. Your written quote, not this page, has your price, your dates and what happens if something goes wrong.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-              Get your migration plan <ArrowRight className="w-4 h-4" />
+              Talk to the founders <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -409,7 +409,7 @@ export default function PageContent() {
               "Every old web address forwarded, with your titles and descriptions carried over",
               "No editor at this size, so page changes come back to us",
             ],
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
           {
             tier: "Growth",
@@ -423,7 +423,7 @@ export default function PageContent() {
               "Google Search Console compared before and after launch",
             ],
             featured: true,
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
           {
             tier: "Scale",
@@ -436,7 +436,7 @@ export default function PageContent() {
               "Your Wix Stores catalogue, Bookings or members area rebuilt rather than exported",
               "Your indexing rules and structured data checked on the deployed site",
             ],
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
         ]}
       />
@@ -483,7 +483,7 @@ export default function PageContent() {
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Written repository and rights terms</li>
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_plan",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2">
-                Get your migration plan <ArrowRight className="w-5 h-5" />
+                Ask us about your site <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>

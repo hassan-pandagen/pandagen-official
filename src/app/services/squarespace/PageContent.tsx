@@ -200,7 +200,7 @@ export default function SquarespacePageContent() {
               A migration assessment should check what the editor will not let you do, how it behaves on every screen, who controls the domain, what you can export, what your uptime depends on, how fast it is now, and any third-party terms. Your written quote, not this page, has your price, your dates, the support you get, who owns the code at the end, and what happens if something goes wrong.
             </p>
             <a href="/contact#contact-quote-form" className="inline-flex items-center gap-2 px-6 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-amber-700 transition-all">
-              Get your migration plan →
+              Talk to the founders →
             </a>
           </div>
         </div>
@@ -561,7 +561,7 @@ export default function SquarespacePageContent() {
               "Your Fluid Engine layouts rebuilt as components that hold on every screen size",
               "Your Squarespace site stays live the whole time we build",
             ],
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
           {
             tier: "Growth",
@@ -633,7 +633,7 @@ export default function SquarespacePageContent() {
                 <li className="flex items-center gap-3 text-charcoal font-medium"><CheckCircle2 className="w-5 h-5 text-cognac shrink-0" /> Written repository and rights terms</li>
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_migration_plan",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-all shadow-lg flex items-center justify-center gap-2">
-                Get your migration plan <ArrowRight className="w-5 h-5" />
+                Ask us about your site <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
