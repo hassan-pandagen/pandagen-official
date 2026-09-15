@@ -274,11 +274,37 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
-      {/* Answer-first summary, extractable passage placed in the citation zone (first 30% of page) */}
+      {/* Answer-first summary, extractable passage placed in the citation zone (first
+          30% of the page). REWRITTEN 15 Sep 2026. Because it is written to be lifted
+          by an assistant, it was also the densest concentration of stale claims left
+          on the site, and the most likely passage to be quoted:
+
+            - "no retainer" -- contradicted the $500/mo AI SEO service published 14 Sep
+            - "no monthly platform fees" -- contradicted the hosting correction of 13 Sep,
+              where provider costs continue and hosting can be billed
+            - "rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites" --
+              migration-led, and it told the reader their site was slow
+            - "take 2 to 4 weeks" -- a universal timeline
+            - "score 90 or better on Lighthouse, mobile and desktop" -- stated flat, when
+              company-facts scopes it to the representative pages named in the written
+              scope, verified across three recorded runs
+            - "AI assistants such as ChatGPT, Claude and Perplexity can quote" -- implies
+              selection, which the AI SEO page spends a FAQ saying nobody can promise
+            - "web development" linked to an agency-facing blog post, not a service
+
+          Nothing here needs a qualification because nothing here overstates. The
+          timeline, performance target and running costs live on the pages that can
+          state their conditions. */}
       <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen is a custom Next.js <Link href="/blog/for-agencies-offer-custom-web-development" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">web development</Link> studio</strong> that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.
+            <strong className="text-charcoal">PandaCodeGen designs and builds fast business websites and{" "}
+            <Link href="/services/ecommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">online stores</Link>.</strong>{" "}
+            We create new websites and redesign or rebuild existing sites around how your business works. When a
+            project needs a{" "}
+            <Link href="/services" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migration</Link>,
+            we plan how your content, URLs and integrations carry across. You get a content editor, training and
+            code you own.
           </p>
         </div>
       </section>
