@@ -9,8 +9,12 @@ this rather than editing a profile from memory.
 
 ## What the profiles actually say, fetched 16 September 2026
 
-Three fetched successfully. GoodFirms, Sortlist and Crunchbase returned HTTP 403 to an
-automated request and need checking by hand.
+Six fetched: LinkedIn, Clutch and DesignRush directly, then GoodFirms, Sortlist and X
+through Firecrawl after they refused a plain request. Crunchbase sits behind a login and
+still needs a manual check.
+
+**Every profile fetched carries the retired positioning.** Not one of them describes the
+business the site now describes.
 
 **They do not currently work. Two contradictions are commercial, not cosmetic.**
 
@@ -23,6 +27,10 @@ automated request and need checking by hand.
 | LinkedIn | "We **rebuild** websites, improve how search and AI understand them..." | Rebuilding is one route in. The site now leads with building. |
 | DesignRush | "focusing on **migrations** from WordPress and Shopify" | Migration is one delivery situation. |
 | DesignRush | "We Engineer Websites That Make You Money" | An outcome promise the site does not make anywhere. |
+| GoodFirms | "operated by Panda Group Ventures L.L.C., **based in Texas**" | The entity is formed in **Wyoming**, filed 12 August 2026. Texas is the mailing and principal office. company-facts.ts carries a comment about this exact error, corrected on the site on 10 September; the directory still repeats it. |
+| GoodFirms | "Each **migration** begins with a complete URL and content inventory..." | Describes the whole engagement as a migration. |
+| Sortlist | "We rebuild the digital foundation behind your revenue" plus the same "outgrown" paragraph | Same as LinkedIn. |
+| X bio | "We **rebuild** websites, improve how search and AI understand them, and verify tracking when needed." | Rebuild-led, and tracking is described as a service here while the site has no standalone tracking route. |
 
 A buyer who reads "no hourly billing, no minimum project size" on the site and then finds
 an hourly rate and a $1,000 minimum on Clutch has caught us contradicting ourselves, on
@@ -37,6 +45,9 @@ Two things worth keeping, not changing:
   decide whether to publish it or remove it rather than leaving the two unrelated.
 
 Clutch also lists **AI Agents** as 10% of services. Nothing on the site sells that.
+
+The GoodFirms entity error is the one to fix regardless of positioning: a directory saying
+the LLC is based in Texas is the kind of thing a reviewer checks against a filing.
 
 ## Before you change anything
 
