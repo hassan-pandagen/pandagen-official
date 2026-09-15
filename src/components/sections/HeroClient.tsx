@@ -11,7 +11,7 @@ const HeroCTAs = dynamic(
         onClick={() => { if (typeof window !== "undefined") window.dispatchEvent(new Event("open-quote-modal")); }}
         className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-xl cursor-pointer"
       >
-        Get your migration plan
+        Ask us about your site
       </button>
       <a href="/work" className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-charcoal text-charcoal font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-card">
         See our work

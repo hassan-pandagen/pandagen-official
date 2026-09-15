@@ -17,9 +17,9 @@ import { ORGANIZATION_PROFILES } from "@/data/company-facts";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
+  title: "Custom Website Design & Development | PandaCodeGen",
   description:
-    "Move off WordPress, Wix, Squarespace or Webflow onto custom Next.js you own from the start, without losing the traffic you already have. Fixed pricing from $1,500.",
+    "Custom business websites and online stores, with content your team can edit and code you own. Work directly with the founders, scope and price agreed upfront. Fixed pricing from $1,500.",
   // Self-referencing canonical plus reciprocal hreflang to the French and
   // German versions of this page. x-default points at English.
   alternates: alternatesFor("home", "en"),
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.pandacodegen.com",
     siteName: "PandaCodeGen",
-    title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
+    title: "Custom Website Design & Development | PandaCodeGen",
     description:
-      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote. Fixed pricing from $1,500.",
+      "Custom business websites and online stores you own outright. Your team edits the content; we agree scope and price before work starts. Websites from $1,500.",
     images: [
       ogImageForPath("/"),
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Migration to Custom Next.js You Own | PandaCodeGen",
+    title: "Custom Website Design & Development | PandaCodeGen",
     description:
       "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
     images: [ogImageForPath("/")],
@@ -219,7 +219,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://www.pandacodegen.com/#webpage",
         "url": "https://www.pandacodegen.com",
-        "name": "Website Migration to Custom Next.js You Own | PandaCodeGen",
+        "name": "Custom Website Design & Development | PandaCodeGen",
         "description": "Custom Next.js websites you own outright, with fast pages and clear answers that search engines and AI assistants can quote.",
         "isPartOf": {
           "@id": "https://www.pandacodegen.com/#website"
