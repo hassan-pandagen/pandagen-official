@@ -24,8 +24,8 @@ const pricingSchema = {
       "@type": "WebPage",
       "@id": "https://www.pandacodegen.com/pricing#webpage",
       "url": "https://www.pandacodegen.com/pricing",
-      "name": "Website Migration Pricing & Scope | PandaCodeGen",
-      "description": "Website migration packages starting at $1,500, $3,500, and $5,000, adjusted through a written project scope.",
+      "name": "Website & Online Store Pricing | PandaCodeGen",
+      "description": "Website and online store packages starting at $1,500, $3,500, and $5,000, adjusted through a written project scope.",
       "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
       "inLanguage": "en-US"
     },
@@ -60,8 +60,8 @@ export default function PricingPageClient() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-6 leading-[1.08] md:leading-tight break-words"
           >
-            Example migration scopes. <br className="hidden md:inline" />{" "}
-            <span className="font-serif italic text-cognac">A written quote for your actual risk.</span>
+            Example project scopes. <br className="hidden md:inline" />{" "}
+            <span className="font-serif italic text-cognac">A written quote for what you actually need.</span>
           </motion.h1>
 
           <motion.p
@@ -70,18 +70,18 @@ export default function PricingPageClient() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-700 max-w-2xl mx-auto mb-6"
           >
-            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a site of up to 7 pages. No minimum project size, no hourly billing and no retainer. Pay 30% to start and 70% when the site is done, or agree another schedule in writing. You own the code, the design files and the accounts at the end.
+            Pick the closest package, then add or remove pages and features in your written quote. Prices are fixed before we start, from $1,500 for a site of up to 7 pages. No minimum project size and no hourly billing on the build itself. Pay 30% to start and 70% when the site is done, or agree another schedule in writing. You own the code, the design files and the accounts at the end.
           </motion.p>
 
           <button
             type="button"
             onClick={() => {
-              trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_hero" });
+              trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_hero" });
               window.dispatchEvent(new Event("open-quote-modal"));
             }}
             className="mb-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-7 py-3 font-bold text-white transition-colors hover:bg-cognac"
           >
-            Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            Ask us about your site <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </button>
 
           <p className="text-base font-semibold text-charcoal max-w-2xl mx-auto mb-12">
@@ -175,12 +175,12 @@ export default function PricingPageClient() {
             <button
               type="button"
               onClick={() => {
-                trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_starter" });
+                trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_starter" });
                 window.dispatchEvent(new Event("open-quote-modal"));
               }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
             >
-              Get your migration plan
+              Ask us about your site
             </button>
           </motion.div>
 
@@ -198,7 +198,7 @@ export default function PricingPageClient() {
 
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-2xl font-serif italic text-white">Growth</h3>
-              <p className="text-stone-400 mt-1">8 to 20 pages, a Sanity CMS you edit yourself, full migration.</p>
+              <p className="text-stone-400 mt-1">8 to 20 pages, a Sanity CMS you edit yourself, new build or full move.</p>
             </div>
 
             <div className="mb-6 pb-6 border-b border-white/10 min-h-[140px] flex flex-col justify-start">
@@ -221,8 +221,8 @@ export default function PricingPageClient() {
               <Feature dark text="30 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
             </ul>
 
-            <button onClick={() => { trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_growth" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
-                Get your migration plan <ArrowRight className="w-5 h-5" />
+            <button onClick={() => { trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_growth" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
+                Ask us about your site <ArrowRight className="w-5 h-5" />
             </button>
 
             <p className="text-xs text-center text-stone-400 mt-4">
@@ -244,7 +244,7 @@ export default function PricingPageClient() {
           >
             <div className="mb-6 min-h-[64px]">
               <h3 className="text-xl font-bold text-charcoal">Scale</h3>
-              <p className="text-sm text-stone-600 mt-1">More than 20 pages, a shop, or more than one language.</p>
+              <p className="text-sm text-stone-600 mt-1">More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language.</p>
             </div>
 
             <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
@@ -270,12 +270,12 @@ export default function PricingPageClient() {
             <button
               type="button"
               onClick={() => {
-                trackGAEvent("cta_click", { cta: "get_migration_plan", location: "pricing_scale" });
+                trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_scale" });
                 window.dispatchEvent(new Event("open-quote-modal"));
               }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
             >
-              Get your migration plan
+              Ask us about your site
             </button>
 
             <Link href="/services/ecommerce" className="block text-center text-xs text-stone-600 hover:text-cognac transition-colors mt-3 underline underline-offset-2">

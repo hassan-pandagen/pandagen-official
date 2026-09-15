@@ -136,7 +136,7 @@ export default function PageContent() {
             {[
               { tier: "Starter", price: "$1,500", fit: "Simple sites, up to 7 pages" },
               { tier: "Growth", price: "$3,500", fit: "Business sites and blogs, 8 to 20 pages" },
-              { tier: "Scale", price: "From $5,000", fit: "More than 20 pages, a shop, or more than one language" },
+              { tier: "Scale", price: "From $5,000", fit: "More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language" },
             ].map((t) => (
               <div key={t.tier} className="p-5 rounded-2xl bg-stone-50 border border-stone-200 text-center hover:border-cognac/30 transition-colors">
                 <p className="text-[11px] uppercase tracking-[0.22em] font-bold text-stone-500 mb-1">{t.tier}</p>

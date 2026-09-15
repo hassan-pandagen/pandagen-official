@@ -41,7 +41,7 @@ export const pricingFaqs: PricingFaq[] = [
   },
   {
     q: "Which package should I start with?",
-    a: "Starter begins at $1,500 for up to 7 pages, and you can edit your own words, images and business details. Growth begins at $3,500 for 8 to 20 pages, adds a content model built around your own collections, and if you are moving from another platform, every old link forwards to the right new page. Scale begins at $5,000 for more than 20 pages, or a shop, or more than one language. Anything bigger is quoted after a call. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+    a: "Starter begins at $1,500 for up to 7 pages, and you can edit your own words, images and business details. Growth begins at $3,500 for 8 to 20 pages, adds a content model built around your own collections, and if you are moving from another platform, every old link forwards to the right new page. Scale begins at $5,000 for more than 20 pages, or a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. Pick the closest one. Extra pages or features are priced and written into your quote before anything starts. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
   },
   {
     q: "Do I need a long contract for every project?",
