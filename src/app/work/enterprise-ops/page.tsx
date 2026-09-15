@@ -12,10 +12,10 @@ import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
-    description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline, RBAC, automated attendance, profit tracking. Rated 9.0/10 by senior developer review.",
+    description: "How we replaced spreadsheets, WhatsApp chains, and 3 SaaS tools with a single custom ops platform. Real-time order pipeline across 17 statuses, role-based access for 7 roles, automated attendance, profit tracking, and 12 reporting modules.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
+        description: "Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). 26 Edge Functions. Full case study.",
         type: "article",
         url: "https://www.pandacodegen.com/work/enterprise-ops",
         images: [ogImageForPath("/work/enterprise-ops")],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: "Real-time order pipeline. Role-based access for 3 teams. Automated attendance (PKT timezone). 95% process automation. Full case study.",
+        description: "Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). 26 Edge Functions. Full case study.",
     },
     alternates: { canonical: "/work/enterprise-ops" },
 };
@@ -35,7 +35,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
-        answer: "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting typically starts at $10,000 to $25,000 depending on the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month.",
+        answer: "A custom business dashboard replacing spreadsheets, a CRM, and manual reporting is quoted against the number of roles, data tables, and automation requirements. This platform replaced tools costing $80/month plus 20+ hours of manual work per month.",
     },
     {
         question: "What is role-based access control (RBAC) and why does a small business need it?",
@@ -43,7 +43,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Enterprise Operations platform?",
-        answer: "The full platform, a Supabase schema with Row-Level Security, a 13-status order pipeline, 8+ reporting modules, RBAC with RLS policies, payments via Square and Stripe, attendance with PKT timezone, automated profit calculations, and 20 Supabase Edge Functions, was built in 10 weeks. It received a 9.0/10 rating from a senior-developer code review that we commissioned: 9.4/10 code quality, 9.3/10 architecture, 9.0/10 UX. That review is internal and is not an independent third-party audit or certification.",
+        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and 26 Supabase Edge Functions, was built in 10 weeks. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
     },
     {
         question: "Can a custom dashboard work offline?",
@@ -178,8 +178,8 @@ const techStack = [
     { name: "@react-pdf/renderer", role: "Invoices / PDFs", color: "bg-stone-600 text-white" },
     { name: "Framer Motion", role: "UI animations", color: "bg-pink-700 text-white" },
     { name: "Row-Level Security", role: "Per-table DB policies", color: "bg-emerald-700 text-white" },
-    { name: "Edge Functions (Deno)", role: "20 serverless functions", color: "bg-emerald-800 text-white" },
-    { name: "Square + Stripe", role: "Checkout + payouts", color: "bg-blue-800 text-white" },
+    { name: "Edge Functions (Deno)", role: "26 serverless functions", color: "bg-emerald-800 text-white" },
+    { name: "Square", role: "Checkout + payouts", color: "bg-blue-800 text-white" },
     { name: "Meta CAPI", role: "Server-side ad tracking", color: "bg-blue-700 text-white" },
     { name: "Sentry", role: "APM + error tracking", color: "bg-violet-700 text-white" },
 ];
@@ -279,17 +279,17 @@ const platformFeatures = [
     { icon: Clock, title: "Order History & Repeat Customer Flags", desc: "See who&apos;s bought before, how often, and what they spent without digging through files." },
     { icon: Database, title: "Avg Order Value by Category", desc: "Instantly see which product lines are driving revenue and which are just taking up space." },
     { icon: Lock, title: "Profit & Loss by Category", desc: "One click to see which categories are making money and which are bleeding it, no Excel required." },
-    { icon: Shield, title: "Single Dashboard", desc: "What used to live across 7 spreadsheets, 3 SaaS tools, and a WhatsApp group is now one screen. One login. One source of truth." },
+    { icon: Shield, title: "Single Dashboard", desc: "What used to live across a spreadsheet estate, several SaaS tools, and a WhatsApp group is now one screen. One login. One source of truth." },
     { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Any production issue is caught before the team notices." },
     { icon: Zap, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
 ];
 
 const replacedTools = [
-    { tool: "Google Sheets (order tracking)", cost: "Free but 8 hrs/wk", problem: "No real-time sync. 7 team members editing simultaneously caused version conflicts" },
-    { tool: "Separate CRM", cost: "$50/mo", problem: "No connection to orders or production. Duplicate data entry for every customer" },
+    { tool: "Google Sheets (order tracking)", cost: "Free", problem: "No real-time sync. Simultaneous editing caused version conflicts and overwritten rows" },
+    { tool: "Separate CRM", cost: "Subscription", problem: "No connection to orders or production. Duplicate data entry for every customer" },
     { tool: "WhatsApp order updates", cost: "Free but chaotic", problem: "Status updates buried in chat threads. No searchability, no accountability" },
-    { tool: "Manual attendance tracking", cost: "$30/mo", problem: "Clock in/out via WhatsApp messages, no overtime tracking, no payroll export" },
-    { tool: "Spreadsheet reporting", cost: "20 hrs/mo", problem: "Monthly performance reports compiled manually from multiple sheets" },
+    { tool: "Manual attendance tracking", cost: "Subscription", problem: "Clock in/out via WhatsApp messages, no overtime tracking, no payroll export" },
+    { tool: "Spreadsheet reporting", cost: "Manual", problem: "Monthly performance reports compiled manually from multiple sheets" },
 ];
 
 export default function EnterpriseOpsCaseStudy() {
@@ -329,7 +329,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 Custom Business Dashboard
                             </span>
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-bold uppercase tracking-widest">
-                                9.0/10 Dev Rating
+                                7 roles, 11 permissions
                             </span>
                         </div>
 
@@ -345,10 +345,17 @@ export default function EnterpriseOpsCaseStudy() {
                         {/* Key metrics */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
-                                { value: "95%", label: "Process Automation", sub: "was near-zero manual processes" },
-                                { value: "Live", label: "Reporting", sub: "was daily manual CSV exports" },
-                                { value: "10×", label: "Efficiency Gain", sub: "team of 7, one platform" },
-                                { value: "9.0/10", label: "Developer Rating", sub: "Code 9.4 · Arch 9.3 · UX 9.0/10" },
+                                /* 15 Sep 2026. These four used to read 95% Process Automation,
+                                   Live Reporting, 10x Efficiency Gain and 9.0/10 Developer Rating.
+                                   A source audit of the CRM repository found no inventory behind the
+                                   95%, no axis or baseline behind the 10x, and no review document,
+                                   rubric or reviewer behind the 9.0. All three are withdrawn in
+                                   case-study-facts.json and the build now fails if they return.
+                                   What replaced them is counted, and every count says where. */
+                                { value: "26", label: "Edge Functions", sub: "live, all active" },
+                                { value: "59/59", label: "Tables with RLS", sub: "6 of them default-deny" },
+                                { value: "12", label: "Reporting Modules", sub: "each one CSV-exportable" },
+                                { value: "86", label: "DB Migrations", sub: "tracked in the repository" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>
@@ -393,7 +400,7 @@ export default function EnterpriseOpsCaseStudy() {
                                     Spreadsheet Hell
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Order tracking lived in Google Sheets. 7 team members editing simultaneously caused version conflicts, overwritten data, and no audit trail. When an order status changed, someone had to message the team on WhatsApp, and hope they saw it.
+                                    Order tracking lived in Google Sheets. Simultaneous editing caused version conflicts, overwritten data, and no audit trail. When an order status changed, someone had to message the team on WhatsApp, and hope they saw it.
                                 </p>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
@@ -402,7 +409,7 @@ export default function EnterpriseOpsCaseStudy() {
                                     No Single Source of Truth
                                 </h3>
                                 <p className="text-stone-600 text-sm leading-relaxed">
-                                    Customer data lived in a CRM that had no connection to orders. Attendance was tracked via WhatsApp messages. Monthly performance reports took 20 hours to compile manually from multiple spreadsheets. Every number was a guess.
+                                    Customer data lived in a CRM that had no connection to orders. Attendance was tracked via WhatsApp messages. Monthly performance reports were compiled by hand from several spreadsheets.
                                 </p>
                             </div>
                         </div>
@@ -430,7 +437,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Order Pipeline</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">13-status order lifecycle. Fully automated.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">17-status order lifecycle. Fully automated.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
                             Every order moves through a defined lifecycle, from the linear happy path below to branch states like remake, cancellation, and refund. Each status transition is logged with the responsible agent and timestamp. No order can be &quot;lost&quot; in a chat thread, and status changes trigger automated email to the right people.
                         </p>
@@ -554,7 +561,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">One platform. Everything.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            Real-time analytics, payments, RBAC, and automation across 23 staff routes and 20 Supabase Edge Functions, with Row-Level Security on every table. All connected to the same Supabase backend now shared with the customer portal on the marketing site.
+                            Real-time analytics, payments, RBAC, and automation across 27 authenticated routes and 26 Supabase Edge Functions, with Row-Level Security enabled on all 59 tables. All connected to the same Supabase backend now shared with the customer portal on the marketing site.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -624,7 +631,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise level. Every layer.</h2>
                         <p className="text-stone-600 mb-8">
-                            100% TypeScript. Offline-first. APM monitoring. An internal senior-developer code review scored it 9.4/10 for code quality and 9.3/10 for architecture; that review was commissioned by us and is not an independent third-party audit or certification.
+                            100% TypeScript, strict mode, with the build passing clean. Offline-first. APM monitoring. A code-quality review was commissioned by us in 2026; its scores are withdrawn from this page because the review document could not be located during a source audit on 15 September 2026. The engineering facts on this page are counted from the repository instead.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -646,8 +653,8 @@ export default function EnterpriseOpsCaseStudy() {
                         <div className="grid md:grid-cols-2 gap-6">
                             {[
                                 { before: "Order status updates via WhatsApp, buried in threads", after: "Real-time order board. Every agent sees live status. No messages needed." },
-                                { before: "Monthly reports took 20 hours to compile manually", after: "Reports auto-generated. Monthly summaries run via Supabase Edge Functions." },
-                                { before: "7 team members editing the same Google Sheet", after: "One platform with row-level isolation. Zero version conflicts." },
+                                { before: "Monthly reports were compiled by hand from several sheets", after: "Reports auto-generated. Monthly summaries run via Supabase Edge Functions." },
+                                { before: "A whole team editing the same Google Sheet", after: "One platform with row-level isolation, so simultaneous edits cannot overwrite each other." },
                                 { before: "CRM completely disconnected from orders", after: "Customer data, order history, and communications in one view." },
                                 { before: "Attendance tracked by WhatsApp messages", after: "Timestamped clock in/out. Overtime auto-calculated. Payroll export ready." },
                                 { before: "Profit calculated manually from separate sheets", after: "Profit auto-computed per order as a database-generated column. Always accurate." },
@@ -670,12 +677,20 @@ export default function EnterpriseOpsCaseStudy() {
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Result</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-charcoal mb-3">What this actually meant for the business.</h2>
-                        <p className="text-stone-500 mb-8 max-w-2xl">Before this platform, running the business meant opening 7 spreadsheets, scrolling WhatsApp for updates, and hoping nothing fell through the cracks. Now it doesn&apos;t.</p>
+                        <p className="text-stone-500 mb-8 max-w-2xl">Before this platform, running the business meant opening a stack of spreadsheets, scrolling WhatsApp for updates, and hoping nothing fell through the cracks. Now it doesn&apos;t.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "📊", label: "Spreadsheets Replaced", value: "7 → 1", detail: "Order tracking, agent reports, attendance, payments, inventory, profit tracking, and customer records — all in one place. One login. One screen." },
-                                { icon: "⏱", label: "Time Saved Weekly", value: "10+ hrs", detail: "No more manually compiling reports, chasing agents for updates, or cross-referencing files. The dashboard updates in real time." },
-                                { icon: "💡", label: "Decisions Made Faster", value: "1 Click", detail: "Which category is profitable? Who are your repeat customers? What&apos;s owed? The answer used to take 30 minutes. Now it takes one click." },
+                                /* 15 Sep 2026. These read "7 → 1 Spreadsheets Replaced",
+                                   "10+ hrs Time Saved Weekly" and "1 Click Decisions Made Faster,
+                                   the answer used to take 30 minutes". None of the three numbers
+                                   has a record behind it: no named list of seven spreadsheets, no
+                                   time tracking before or after, and nothing separating a measured
+                                   thirty minutes from an illustrative one. All withdrawn in
+                                   case-study-facts.json. What each one replaced is still true and
+                                   still worth saying, so the claims stay and the figures go. */
+                                { icon: "📊", label: "Spreadsheets Replaced", value: "One platform", detail: "Order tracking, agent reports, attendance, payments, inventory, profit tracking, and customer records — all in one place." },
+                                { icon: "⏱", label: "Reporting", value: "Automated", detail: "No more manually compiling reports, chasing agents for updates, or cross-referencing files. The dashboard updates in real time." },
+                                { icon: "💡", label: "Decisions", value: "One click", detail: "Which category is profitable? Who are your repeat customers? What&apos;s owed? Each is a report with a date filter, not an afternoon of cross-referencing." },
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>
@@ -696,8 +711,8 @@ export default function EnterpriseOpsCaseStudy() {
                         <h2 className="text-3xl font-bold text-charcoal mb-6">Everything that was built.</h2>
                         <div className="grid md:grid-cols-2 gap-3">
                             {[
-                                "PostgreSQL schema with Row-Level Security on every table (10 migrations)",
-                                "13-status order pipeline (NEW_ORDER → DELIVERED, plus REMAKE / CANCELLED / REFUNDED / FEEDBACK)",
+                                "PostgreSQL schema with Row-Level Security on all 59 tables (86 tracked migrations)",
+                                "17-status order pipeline, 14 of them in live use (NEW_ORDER → DELIVERED, plus DIGITIZING / REMAKE / CANCELLED / REFUNDED / FEEDBACK and more)",
                                 "8+ financial reporting modules (Sales, P&L, Income Statement, Product Mix, Attribution), CSV export",
                                 "Payments: Square checkout + public payment links (/pay/:token), Stripe payout webhooks",
                                 "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
@@ -711,13 +726,13 @@ export default function EnterpriseOpsCaseStudy() {
                                 "Monthly attendance summaries with overtime/undertime tracking",
                                 "Payroll export (CSV) from attendance_summary table",
                                 "Performance metrics table for goal tracking",
-                                "3 database views: orders_with_details, sales_agent_reports, active_attendance_sessions",
-                                "20 Supabase Edge Functions (user admin, email, Meta CAPI, Square/Stripe payments, webhooks)",
+                                "12 database views, including orders_with_details, sales_agent_reports and active_attendance_sessions",
+                                "26 Supabase Edge Functions (user admin, email, Meta CAPI, Square payments, webhooks)",
                                 "Sentry APM + error tracking integration",
                                 "Offline-first via Service Worker, works on poor connectivity",
                                 "100% TypeScript with zero implicit any",
                                 "TanStack Query for optimistic updates + server state",
-                                "Framer Motion animated UI, rated UX 9.0/10",
+                                "Framer Motion animated UI, dark and light themes",
                             ].map((item, i) => (
                                 <div key={i} className="flex items-start gap-3 p-3 bg-stone-50 border border-stone-100 rounded-lg">
                                     <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -747,25 +762,29 @@ export default function EnterpriseOpsCaseStudy() {
                         </ul>
                     </section>
 
-<section className="mb-12 md:mb-20 p-5 md:p-8 bg-linear-to-br from-blue-50 to-stone-50 border border-blue-100 rounded-3xl">
+<section className="mb-12 md:mb-20 p-5 md:p-8 bg-stone-50 border border-stone-300 rounded-3xl">
+                        {/* 15 Sep 2026. This was a three-tile scorecard reading 9.4 / 9.3 / 9.0
+                            under the heading "Rated 9.0/10 by a senior developer", inside a band
+                            captioned "Independent Review" -- while the paragraph above it said the
+                            review was commissioned by us, which is the opposite of independent.
+                            A source audit of the CRM repository then found no review document, no
+                            rubric and no reviewer identity. The scores are withdrawn in
+                            case-study-facts.json; the build fails if 9.0/10 or 9.4/10 returns to
+                            this page. Restore them only from the document itself, never from
+                            anyone's memory of what it said. */}
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="h-px w-8 bg-blue-400" />
-                            <span className="text-blue-500 text-sm font-bold uppercase tracking-widest">Independent Review</span>
+                            <div className="h-px w-8 bg-stone-400" />
+                            <span className="text-stone-600 text-sm font-bold uppercase tracking-widest">Evidence note</span>
                         </div>
-                        <h2 className="text-2xl font-bold text-charcoal mb-6">Rated 9.0/10 by a senior developer.</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {[
-                                { category: "Code Quality", score: "9.4/10", notes: "Type safety, separation of concerns, zero implicit any" },
-                                { category: "Architecture", score: "9.3/10", notes: "RLS policies, audit trail, RBAC design, DB schema" },
-                                { category: "UX / Design", score: "9.0/10", notes: "Framer Motion transitions, dark/light, accessibility" },
-                            ].map((r) => (
-                                <div key={r.category} className="p-4 md:p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center min-w-0">
-                                    <div className="text-2xl md:text-3xl font-black text-charcoal mb-1">{r.score}</div>
-                                    <div className="text-xs font-bold text-stone-600 uppercase tracking-wider mb-2">{r.category}</div>
-                                    <div className="text-xs text-stone-600 leading-snug">{r.notes}</div>
-                                </div>
-                            ))}
-                        </div>
+                        <h2 className="text-2xl font-bold text-charcoal mb-4">The code-review scores are withdrawn.</h2>
+                        <p className="text-stone-700 leading-relaxed max-w-3xl">
+                            This page used to publish scores from a code review we commissioned. A source audit
+                            on 15 September 2026 could not locate the review document, its rubric or the
+                            reviewer, so the scores are withdrawn rather than restated from memory. They were
+                            also presented as an independent review, which they were not: we commissioned and
+                            paid for them. Everything else on this page is counted from the repository and says
+                            where it was counted.
+                        </p>
                     </section>
 
                     <FAQAccordion faqs={pageFaqs} />

@@ -47,6 +47,7 @@ EXIT CODES
 
 from __future__ import annotations
 import json
+import os
 import pathlib
 import re
 import sys
@@ -88,7 +89,12 @@ def rendered_pages() -> list[tuple[str, str]]:
         # Strip tags so we test what a reader or an extractor sees, but keep
         # <head> content because titles and meta descriptions are where the
         # stale numbers survived last time.
+        # <style> is stripped for the same reason as <script>, added 15 Sep 2026:
+        # a lab()/oklch() colour value is a dense run of digits and percent signs,
+        # and "95%" matched inside one the moment the own-page rule below stopped
+        # requiring proximity to a client name. CSS is not text a reader sees.
         text = re.sub(r"<script[\s\S]*?</script>", " ", html)
+        text = re.sub(r"<style[\s\S]*?</style>", " ", text)
         text = re.sub(r"<[^>]+>", " ", text)
         text = re.sub(r"\s+", " ", text)
         pages.append((str(f.relative_to(BUILD)), text))
@@ -117,14 +123,37 @@ def main() -> int:
     #    which is a different claim from this client's measured PageSpeed. A
     #    guard that fails the build on correct copy gets switched off, so the
     #    test is: does the withdrawn number appear NEAR the client's name.
+    #    ONE EXCEPTION, added 15 Sep 2026. On a case study's OWN page, every
+    #    number is attributed to that case study by definition, so proximity to
+    #    the name is not the test -- the page itself is. This was found by
+    #    injecting "95%" back into the built enterprise-ops HTML and watching the
+    #    guard pass: the first stat tile sits 20,970 characters from the only
+    #    occurrence of "Enterprise operations platform" on the page, roughly a
+    #    hundred times the window. The check could never have fired there, which
+    #    means every case study's own page was the one place its withdrawn
+    #    figures were unguarded. Test a guard by breaking the thing it guards.
     PROXIMITY = 220
+    # The one phrase the own-page rule must not fire on. "90+" is a withdrawn
+    # MyCustomPatches PageSpeed AND our standing service promise, and both appear
+    # on that client's own page. Proximity used to separate them by accident; on
+    # the own page it cannot, so the exception is named instead of implied.
+    SERVICE_BOILERPLATE = ("lighthouse handover target",)
+    own_page = {
+        slug: study["href"].strip("/").replace("/", os.sep) + ".html"
+        for slug, study in studies_by_slug.items()
+        if study.get("href")
+    }
     for m in withdrawn:
         name = studies_by_slug[m["slug"]]["name"]
         for val in values_of(m):
             for page, text in pages:
+                on_own_page = page == own_page.get(m["slug"])
                 for hit in re.finditer(re.escape(val), text, re.I):
                     window = text[max(0, hit.start() - PROXIMITY): hit.start() + PROXIMITY]
-                    if name.lower() not in window.lower():
+                    after = text[hit.end(): hit.end() + 60].lower()
+                    if any(phrase in after for phrase in SERVICE_BOILERPLATE):
+                        continue
+                    if not on_own_page and name.lower() not in window.lower():
                         continue
                     failures.append({
                         "type": "withdrawn-value-rendered",

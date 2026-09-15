@@ -167,7 +167,247 @@
       "relationship": "Founder-affiliated",
       "href": "/work/enterprise-ops",
       "disclosure": "Founder-affiliated, not independent client proof. This is the internal operations and CRM platform that runs Panda Patches, the business owned and operated by co-founder Imran Raza Ladhani. It is our own system, built for our own use, not work delivered to an outside client.",
-      "metrics": []
+      "metrics": [
+        {
+          "id": "staff-routes",
+          "label": "Authenticated app routes",
+          "value": "27",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Counted <Route> entries in the authenticated <Routes> tree in src/App.tsx of the CRM repository: 33 total, less five public-only routes and the catch-all."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "reporting-modules",
+          "label": "Reporting modules",
+          "value": "12",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "The ReportType union and the ADMIN branch of the tabs array in src/pages/ReportsPage.tsx: Sales, Production, Quality & Refunds, Product Mix, Income Statement, Profit & Loss, Lead Source, Lead Attribution, Funnel & Attribution, Customer Feedback, Form Feedback, Loyalty & Reviews."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "edge-functions",
+          "label": "Supabase Edge Functions",
+          "value": "26",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-09-15",
+            "note": "Live listing from the Supabase Management API, all reported ACTIVE. A live listing rather than a count of folders in the repository, though the two agree."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "order-statuses",
+          "label": "Order statuses",
+          "value": "17 defined, 14 in live use",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "The OrderStatus enum in src/types/index.ts has 17 members; SELECT DISTINCT status FROM orders returned 14 of them in live data. AWAITING_SAMPLE is defined and currently unused."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "roles-permissions",
+          "label": "Roles and permissions",
+          "value": "7 roles, 11 permissions",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "The UserRole and Permissions enums in src/types/index.ts. Roles: ADMIN, SALES_AGENT, PRODUCTION, SHIPPING, DIGITIZER, PRODUCTION_SUPERVISOR, RESELLER. The 11 granular permissions apply to the original four roles; the three newer roles carry their own allowlists in src/utils/roleAccess.ts instead."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "db-migrations",
+          "label": "Tracked database migrations",
+          "value": "86",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "File count of supabase/migrations/*.sql in the CRM repository."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "db-views",
+          "label": "Database views",
+          "value": "12",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-09-15",
+            "note": "Live query against the production database: information_schema.views where table_schema = 'public'."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "typescript-strict",
+          "label": "TypeScript strictness",
+          "value": "strict mode on, build clean",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-09-15",
+            "note": "tsconfig.json sets \"strict\": true, which implies noImplicitAny; there is no standalone noImplicitAny line. npx tsc --noEmit was run against the repository on this date and exited zero."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "rls-coverage",
+          "label": "Row-Level Security coverage",
+          "value": "59 of 59 tables, 6 of them default-deny",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-09-15",
+            "note": "pg_tables.rowsecurity for every public table, left-joined against pg_policies. All 59 have RLS enabled. Six carry no policy rows at all, so they deny every non-service-role caller by default rather than being governed by fine-grained rules."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "attendance-config",
+          "label": "Attendance shift rules",
+          "value": "PKT (UTC+5), 5am day cutoff, 10-hour auto-clockout",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "The SHIFT_CONFIG constant in src/hooks/useClockInOut.ts."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "integrations",
+          "label": "Live integrations",
+          "value": "Square, Meta CAPI, Sentry",
+          "status": "verified",
+          "method": {
+            "kind": "field",
+            "date": "2026-09-15",
+            "note": "Code search plus the live Edge Function listing. Square is live and Stripe is decommissioned; the only remaining Stripe reference is a comment describing what replaced it. Meta CAPI runs across six active functions. Sentry is initialised in src/main.tsx and proxied first-party."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "process-automation",
+          "label": "Process automation",
+          "value": "95%",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. There is no process inventory to supply a denominator, so 95% is a percentage of nothing stated. If the founders hold an inventory and a dated before-and-after outside the repository, it can be restored with one."
+        },
+        {
+          "id": "efficiency-gain",
+          "label": "Efficiency gain",
+          "value": "10x",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No axis was ever defined: 10 times what, against what baseline, over what period. Nothing in the repository answers any of the three."
+        },
+        {
+          "id": "developer-rating",
+          "label": "Developer rating",
+          "value": "9.0/10",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No review document, no rubric and no reviewer identity exist in the repository. The page described it as an internal review commissioned by us, which is a disclosure rather than a source. A commissioned review would plausibly live outside a CRM repository, so this is withdrawn pending the document itself, not declared false."
+        },
+        {
+          "id": "developer-rating-breakdown",
+          "label": "Code quality and architecture scores",
+          "value": "9.4/10",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "Withdrawn with the overall rating above, and for the same reason: the sub-scores come from the same unlocated review document."
+        },
+        {
+          "id": "spreadsheets-replaced",
+          "label": "Spreadsheets replaced",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No named list of the seven spreadsheets exists. The claim that a spreadsheet estate was consolidated is supported by the platform itself; the count is not."
+        },
+        {
+          "id": "hours-saved-weekly",
+          "label": "Time saved weekly",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No time-tracking record, before or after."
+        },
+        {
+          "id": "monthly-report-hours",
+          "label": "Time to compile monthly reports, before",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. The origin of the twenty-hour figure is not recorded anywhere."
+        },
+        {
+          "id": "sheets-hours-weekly",
+          "label": "Time spent in the order spreadsheet, before",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. Same as the monthly figure: no origin recorded."
+        },
+        {
+          "id": "replaced-tool-costs",
+          "label": "Cost of the replaced tools",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No invoices or billing records are held in the repository, so the monthly amounts for the previous CRM and attendance tools cannot be confirmed."
+        },
+        {
+          "id": "decision-speed",
+          "label": "Time to answer a reporting question, before",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. Nothing distinguishes a measured thirty minutes from an illustrative one."
+        },
+        {
+          "id": "version-conflicts",
+          "label": "Version conflicts since launch",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No incident log or monitoring record separates 'none observed' from 'none expected by design'. The second is an architectural property and defensible; the first is a measurement nobody took."
+        },
+        {
+          "id": "team-size",
+          "label": "Team size on the previous spreadsheet",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "A source audit of the CRM repository on 15 September 2026 found no record behind this figure: no inventory, no measurement, no dated before-and-after. No historical headcount record."
+        },
+        {
+          "id": "comparable-dashboard-price",
+          "label": "Comparable dashboard price range",
+          "value": "$10,000 to $25,000",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-15",
+          "withdrawnReason": "Withdrawn 15 September 2026. This is a market claim, not an engineering fact, so no repository search could ever source it. It needs a dated market-research citation or it should not be published at all."
+        }
+      ]
     }
   }
 }
