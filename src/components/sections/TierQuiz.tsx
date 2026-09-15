@@ -69,8 +69,9 @@ const steps: Step[] = [
     q: "Do you sell products online?",
     options: [
       { label: "No, brochure or service site", value: "starter" },
-      { label: "No, but I publish a blog or resources", value: "growth" },
-      { label: "Yes, I sell products online", value: "scale" },
+      { label: "A handful of products, or a blog", value: "starter" },
+      { label: "A catalogue I add to regularly", value: "growth" },
+      { label: "A large catalogue, subscriptions or custom checkout logic", value: "scale" },
     ],
   },
   {

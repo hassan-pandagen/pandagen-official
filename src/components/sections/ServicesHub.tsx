@@ -4,20 +4,19 @@ import { motion } from "@/components/ui/motion";
 import { ArrowRight, Code2, Globe, Sparkles, ShoppingBag, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
-// Split 15 Sep 2026. One list headed "We migrate you off" was false for two of the
-// seven: a custom storefront can keep Shopify as the commerce backend, and the
-// GoHighLevel route can keep the CRM and replace only the public site. WooCommerce
-// sits with them because what stays depends on which commerce functions remain.
-const rebuildFrom = [
+// "We migrate you off" over all seven was false for Shopify and GoHighLevel, where
+// the commerce backend or the CRM can stay. Splitting them into leave/stay lists was
+// the next attempt and was also wrong: it pre-decided the outcome the other way, as
+// if WordPress always goes and Shopify always stays. Someone on Shopify may want out
+// entirely and someone on WordPress may want to keep it as a headless CMS, which
+// /services/wordpress-migration explicitly offers. One list; the assessment decides.
+const platforms = [
   { name: "WordPress", href: "/services/wordpress-migration" },
+  { name: "Shopify", href: "/services/ecommerce" },
+  { name: "WooCommerce", href: "/services/woocommerce" },
   { name: "Wix", href: "/services/wix" },
   { name: "Squarespace", href: "/services/squarespace" },
   { name: "Webflow", href: "/services/webflow" },
-];
-
-const assessFirst = [
-  { name: "Shopify", href: "/services/ecommerce" },
-  { name: "WooCommerce", href: "/services/woocommerce" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
@@ -78,21 +77,9 @@ export default function ServicesHub() {
 
               {/* Prominent "we migrate you off" platform block that fills the card */}
               <div className="mt-auto rounded-2xl bg-stone-50/80 border border-stone-200 p-5">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-stone-600 mb-3">We rebuild sites from</p>
+                <p className="text-[11px] font-bold uppercase tracking-widest text-stone-600 mb-3">Already have a website?</p>
                 <div className="flex flex-wrap items-center gap-2.5">
-                  {rebuildFrom.map((p) => (
-                    <Link
-                      key={p.name}
-                      href={p.href}
-                      className="px-3.5 py-1.5 bg-white border border-stone-200 rounded-full text-sm font-bold text-stone-700 hover:border-cognac hover:text-cognac transition-colors"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
-                </div>
-                <p className="text-[11px] font-bold uppercase tracking-widest text-stone-600 mt-5 mb-3">Or we assess what stays</p>
-                <div className="flex flex-wrap items-center gap-2.5">
-                  {assessFirst.map((p) => (
+                  {platforms.map((p) => (
                     <Link
                       key={p.name}
                       href={p.href}
@@ -103,8 +90,10 @@ export default function ServicesHub() {
                   ))}
                 </div>
                 <p className="text-xs text-stone-600 mt-4 leading-relaxed">
-                  A custom storefront can keep Shopify running your products and payments, and a new site can
-                  keep your GoHighLevel CRM. We look at what should stay before recommending what to replace.
+                  Replace it, rebuild it, or keep parts of it running. A custom storefront can still use
+                  Shopify for products and payments, a new site can keep your GoHighLevel CRM, and WordPress
+                  can stay as the editor if that suits you. You decide what stays; we work it out with you
+                  before quoting.
                 </p>
                 <div>
                   <Link
