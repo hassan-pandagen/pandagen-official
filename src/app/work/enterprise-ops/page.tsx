@@ -368,6 +368,66 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                     </div>
 
+                    {/* WHO THIS IS FOR, AND WHAT IT DOES.
+
+                        Added 15 Sep 2026 on the owner's direction, and the criticism behind it
+                        was fair. Everything below this point was written for an engineer:
+                        status enums, RLS, Edge Functions, migration counts. A business owner
+                        reading it could not tell whether the thing solved their problem.
+
+                        The distinction that went missing: evidence discipline applies to
+                        OUTCOMES -- a percentage, a multiple, a rating -- because those need a
+                        denominator and a period before they mean anything. It does not apply to
+                        CAPABILITIES. "An agent sees only their own orders" either exists in the
+                        product or it does not; it has no measurement window and needs no
+                        method. Treating the two the same way is what stripped this page of its
+                        useful half while the withdrawals were being made.
+
+                        Everything in this section is a capability of the running system. None
+                        of it needs a number to be true, and no number was added to make it
+                        sound stronger. */}
+                    <section className="mb-20">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="h-px w-8 bg-cognac" />
+                            <span className="text-cognac text-sm font-bold uppercase tracking-widest">Who this is for</span>
+                        </div>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">If the business runs on spreadsheets and WhatsApp, this is what replaces them.</h2>
+                        <p className="text-stone-600 mb-8 max-w-3xl" data-speakable="true">
+                            You take custom or made-to-order work. Orders arrive from a website, from ads, from
+                            social, and from people who simply message you. A team quotes them, a floor makes them,
+                            and somebody has to know at any moment what is owed, what is late, and which agent is
+                            due commission. If that is your business, this is the shape of the answer. If you sell a
+                            fixed catalogue off a shelf with no production stage, an off-the-shelf store will serve
+                            you better and we will tell you so.
+                        </p>
+
+                        <div className="grid gap-4 md:grid-cols-2">
+                            {[
+                                { title: "Every lead, with where it actually came from", body: "A quote records its source when it arrives: search, paid ads, social, referral, or an AI assistant. Click identifiers from Meta, Google, Microsoft and TikTok are captured with it and carried through to the order, so the channel that produced the money is still attached to it months later. Where a source cannot be observed, the customer can say how they found you, and the two are recorded as what they are rather than merged into one figure." },
+                                { title: "Orders that carry their own history", body: "An order moves through a defined lifecycle from enquiry to delivered, with branch states for remakes, cancellations and refunds. Every field change is logged with who changed it and when. Notes, customer messages, mockups, production files and shipping documents live on the order itself, not in somebody's inbox." },
+                                { title: "Agents see their own work, and their own money", body: "A sales agent opens the platform and sees the orders assigned to them, what each is worth, which are still unpaid, and what they earned last month. Commission is calculated from the orders themselves rather than reconciled by hand at month end. An agent cannot see another agent's book, and cannot see cost or margin at all unless that permission is granted." },
+                                { title: "The production floor has its own queue", body: "Digitising and stitching run on a work queue separate from the customer-facing order status, so the floor moves a job along without anyone having to translate that into something a customer would understand. A digitiser sees the job they were assigned and nothing else: no customer identity, no conversation, no pricing." },
+                                { title: "Invoices and emails that send themselves", body: "Order confirmations, the paid invoice once payment lands, follow-ups and overdue payment reminders all send on their own. Payment runs through Square, by checkout or by a payment link an agent generates for one customer. Nobody has to remember to send anything, which is the point." },
+                                { title: "Repeat customers, recognised as such", body: "Lifetime value, order history and repeat rate sit on the customer record, and loyalty tiers move on their own as that spend grows. Duplicate customer records are detected and merged rather than quietly splitting one buyer's history in two." },
+                                { title: "Reporting that answers a question, not a spreadsheet", body: "Twelve reports behind one date filter: revenue against cost and net profit, an income statement, product mix by type and quantity band, cancellations and refunds with reasons, lead source, funnel and attribution, agent performance, customer feedback and loyalty. Every one exports to CSV. Orders sold below cost are flagged rather than waiting to be noticed." },
+                                { title: "Attendance and hours, without a second system", body: "Staff clock in and out in the same platform. Hours, overtime and undertime are calculated against a fixed business day and export for payroll. Sessions left open are closed automatically rather than inflating somebody's month." },
+                            ].map((c) => (
+                                <div key={c.title} className="rounded-2xl border border-stone-300 bg-white p-6">
+                                    <h3 className="text-lg font-bold text-charcoal mb-2">{c.title}</h3>
+                                    <p className="text-sm text-stone-700 leading-relaxed">{c.body}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <p className="mt-8 max-w-3xl text-stone-700 leading-relaxed">
+                            <span className="font-bold text-charcoal">What it replaced.</span> A spreadsheet estate, a
+                            CRM that did not know about orders, attendance over WhatsApp, and monthly reports compiled
+                            by hand. We have not published a figure for the hours or the subscriptions that removed,
+                            because no record of either was kept and we will not estimate one. What the platform does
+                            is above; what it is built from is below.
+                        </p>
+                    </section>
+
                     {/* BY THE NUMBERS — verified production scope */}
                     <section className="mb-20">
                         <div className="flex items-center gap-3 mb-8">
@@ -394,7 +454,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">The Problem</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-6">7 people. 5 tools. Zero real-time visibility.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-6">One team. Five tools. Zero real-time visibility.</h2>
                         <div className="grid md:grid-cols-2 gap-6 mb-8">
                             <div className="p-6 bg-red-50 border border-red-100 rounded-2xl">
                                 <h3 className="font-bold text-charcoal mb-4 flex items-center gap-2">
@@ -490,7 +550,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Access Control</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Three roles. Zero data leakage.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Seven roles. Zero data leakage.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
                             RBAC enforced at two layers: application logic and Supabase Row-Level Security policies at the database level. Even if someone bypasses the UI, they cannot read data they don&apos;t own. Permissions stored as a granular JSONB column per user.
                         </p>
@@ -583,7 +643,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Reporting &amp; Analytics</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">8+ financial reports. One date-range filter.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Twelve reports. One date-range filter.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
                             The reporting layer is the platform&apos;s core strength: a dedicated Reports page with date-range filtering across every analytical module, each one CSV-exportable and charted with Recharts. From gross-to-net revenue to a full income statement to Meta CAPI attribution quality, the answer is one click, not a 30-minute spreadsheet.
                         </p>
