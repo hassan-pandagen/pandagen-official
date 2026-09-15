@@ -122,7 +122,7 @@ export default function Hero() {
           {/* One proof line with cited proof, ownership, and price in a tight format. */}
           <p className="text-sm font-semibold text-charcoal flex items-center gap-2 mb-4 sm:mb-6">
             <Sparkles className="w-4 h-4 text-cognac shrink-0" />
-            Business websites from $1,500. Online stores from $5,000. Scope and price agreed before work starts, and you work directly with the founders.
+            Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.
           </p>
 
           {/* CTAs, animated client component.

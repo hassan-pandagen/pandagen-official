@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "PandaCodeGen",
     title: "Custom Website Design & Development | PandaCodeGen",
     description:
-      "Custom business websites and online stores you own outright. Your team edits the content; we agree scope and price before work starts. Websites from $1,500.",
+      "Custom business websites and online stores you own outright. Your team edits the content; we agree scope and price before work starts. From $1,500.",
     images: [
       ogImageForPath("/"),
     ],
