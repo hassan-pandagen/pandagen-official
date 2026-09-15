@@ -514,7 +514,7 @@ export default function WebflowUserAccountsSunsetPage() {
                             <Link href="/contact" className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">talk to the team directly</Link>.
                         </p>
                         <QuoteModalButton cta="webflow_user_accounts_recovery_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

@@ -100,7 +100,8 @@ export default function CookieConsent() {
 
                     9 Sep 2026, second pass. Trimming the copy alone was not enough. The
                     banner still opened at y=531 on a 390x844 screen, and the hero's
-                    "Get your migration plan" button also starts at exactly y=531, so
+                    hero button (then labelled "Get your migration plan", now "Ask us
+                    about your site") also starts at exactly y=531, so
                     the primary action was completely covered on a first visit. Three
                     stacked buttons were the height. The granular option moved into the
                     sentence as a real button, which drops a whole row without touching

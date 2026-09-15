@@ -39,8 +39,8 @@ export default function ServicesHub() {
         >
           <span className="text-cognac font-bold tracking-widest uppercase text-xs mb-4 block">Our Expertise</span>
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6 tracking-tight leading-tight">
-            Migrations engineered around{" "}
-            <span className="font-serif font-normal italic text-cognac md:block">what can break.</span>
+            Engineered around how your business runs,{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">and what can break.</span>
           </h2>
         </motion.div>
 

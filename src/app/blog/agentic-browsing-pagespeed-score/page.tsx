@@ -568,7 +568,7 @@ export default function AgenticBrowsingPage() {
 
                     <div className="my-8 p-6 bg-stone-50 border border-stone-200 rounded-2xl text-center">
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
-                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+                            Book a 15-min call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <p className="text-xs text-stone-600 mt-3">Share your URL, platform, and target journey. We will scope the current checks and their limits.</p>
                     </div>
@@ -599,7 +599,7 @@ export default function AgenticBrowsingPage() {
                         <p className="font-bold text-xl mb-2">Put the Right Checks in Your Migration Plan</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">We will identify the relevant accessibility, stability, rendering, and agent-task checks, then define what can be accepted and what remains product-controlled.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-cognac text-white font-bold rounded-full text-sm hover:bg-orange-600 transition-all">
-                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+                            Book a 15-min call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <p className="text-xs text-stone-400 mt-4">Share the URL, platform, and target journey so the test scope is explicit.</p>
                     </div>

@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     // if one reappears. Metadata is where the last drift survived longest,
     // because nobody re-reads a <title> after correcting the body.
     title: { absolute: "MyCustomPatches Case Study: 200+ URLs Off WordPress in 22 Days | PandaCodeGen" },
-    description: "A decade on WordPress, migrated to custom Next.js in 22 days. 200+ URLs on 13 templates, zero downtime, zero rankings lost. Performance figures temporarily withdrawn pending reconciliation. Full scope record and method inside.",
+    description: "A decade on WordPress, migrated to custom Next.js in 22 days. 200+ URLs on 13 templates, zero downtime, and no ranking losses recorded in the 30 days after launch. Performance figures temporarily withdrawn pending reconciliation. Full scope record and method inside.",
     openGraph: {
         title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
-        description: "A decade-old WordPress site rebuilt in custom Next.js in 22 days. 200+ URLs across 13 templates, zero downtime at cutover, no rankings lost. Performance figures withdrawn pending reconciliation.",
+        description: "A decade-old WordPress site rebuilt in custom Next.js in 22 days. 200+ URLs across 13 templates, zero downtime at cutover, and no ranking losses recorded in the 30 days after launch. Performance figures withdrawn pending reconciliation.",
         type: "article",
         url: "https://www.pandacodegen.com/work/mycustompatches",
         images: [ogImageForPath("/work/mycustompatches")],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "MyCustomPatches: 200+ URLs Off WordPress in 22 Days",
-        description: "200+ URLs on 13 templates, zero downtime, no rankings lost. Performance figures withdrawn pending reconciliation.",
+        description: "200+ URLs on 13 templates, zero downtime, and no ranking losses recorded in the 30 days after launch. Performance figures withdrawn pending reconciliation.",
     },
     alternates: { canonical: "/work/mycustompatches" },
 };
@@ -265,7 +265,7 @@ export default function MyCustomPatchesCaseStudy() {
                                 { value: "22 days", label: "Migration", sub: "owner-confirmed" },
                             { value: "200+", label: "URLs migrated", sub: "13 templates" },
                             { value: "zero", label: "Downtime", sub: "at cutover" },
-                                { value: "200+", label: "Pages Migrated", sub: "zero rankings lost" },
+                                { value: "200+", label: "Pages Migrated", sub: "no ranking losses in the 30 days after launch" },
                             ].map((m) => (
                                 <div key={m.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs">
                                     <div className="text-3xl font-black text-charcoal mb-1">{m.value}</div>

@@ -464,14 +464,14 @@ export default function ShopifySlowLosingSalesPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <Calculator className="mb-4 h-7 w-7 text-amber-300" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We will map the performance issue, affected funnel, editable business case and test profile
                             before recommending optimization, re-theme work or a headless migration.
                         </p>
                         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                             <QuoteModalButton cta="shopify_sales_migration_plan" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                                Get your migration plan <ArrowRight className="h-4 w-4" />
+                                Ask us about your site <ArrowRight className="h-4 w-4" />
                             </QuoteModalButton>
                             <Link href="/free-audit" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 font-bold text-white hover:border-white">
                                 Start with the free site audit

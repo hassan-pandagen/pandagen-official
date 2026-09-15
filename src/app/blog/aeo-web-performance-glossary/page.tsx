@@ -600,7 +600,7 @@ export default function GlossaryPage() {
               Send us your URL and what you are on now. We will tell you which access, rendering, evidence and performance checks belong in your migration plan, and write down the limits of each test.
             </p>
             <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-colors">
-              Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+              Book a 15-min call <ArrowRight className="w-4 h-4" />
             </CalModalButton>
           </div>
 

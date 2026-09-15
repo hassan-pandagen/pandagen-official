@@ -390,14 +390,14 @@ export default function SaasPriceIncreases2026TrackerPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Book a call with the founders</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             Bring the current invoices, renewal dates, usage exports and workflow requirements. We will
                             separate seats to remove, plans to right-size, tools to retain and workflows worth scoping
                             as a replacement.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-bold text-white transition hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
+                            Book a 15-min call <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
                     </section>
 

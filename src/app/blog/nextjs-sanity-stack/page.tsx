@@ -559,7 +559,7 @@ export default function NextjsSanityStackPage() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 text-3xl font-bold">Get your migration plan</h2>
+                        <h2 className="mb-3 text-3xl font-bold">Book a call with the founders</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
                             We map your content, what your editors actually have to do each week, the languages you need,
                             what it connects to and who should own what. Only then do we tell you whether Sanity is
@@ -567,7 +567,7 @@ export default function NextjsSanityStackPage() {
                             an acceptance test you can measure.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-bold text-white transition hover:bg-cognac/90">
-                            Get Your Migration Plan <ArrowRight className="h-5 w-5" />
+                            Book a 15-min call <ArrowRight className="h-5 w-5" />
                         </CalModalButton>
                     </section>
 

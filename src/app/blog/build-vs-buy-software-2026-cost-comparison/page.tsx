@@ -284,7 +284,7 @@ export default function BuildVsBuySoftware2026Page() {
                         <p className="font-bold text-charcoal text-lg mb-2">Not sure which side of the line you are on?</p>
                         <p className="text-stone-600 text-sm mb-4 leading-relaxed">Tell us the workflow and what you pay for it monthly. We will run the build-versus-buy math for your specific situation and tell you honestly whether building makes sense. No pitch if it does not.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-6 py-2.5 bg-charcoal text-white font-bold rounded-full text-sm hover:bg-stone-800 transition-all">
-                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+                            Book a 15-min call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                     </div>
 
@@ -332,7 +332,7 @@ export default function BuildVsBuySoftware2026Page() {
                         <p className="font-bold text-xl mb-2">Run the Math on Your Workflow</p>
                         <p className="text-stone-300 mb-5 text-sm max-w-md mx-auto">Bring the current quote, invoice, user and usage counts, workflow map, integration list, and exit requirements. We will scope the replacement inputs and identify what still needs evidence before a build decision.</p>
                         <CalModalButton className="inline-flex items-center gap-2 px-8 py-3 bg-amber-400 text-charcoal font-bold rounded-full text-sm hover:bg-amber-300 transition-all">
-                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+                            Book a 15-min call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                     </div>
 

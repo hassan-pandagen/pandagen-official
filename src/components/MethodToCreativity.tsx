@@ -92,7 +92,7 @@ export default function MethodToCreativity() {
               </p>
 
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"start_your_build",location:"cta"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="px-8 py-4 bg-charcoal text-white rounded-full font-bold hover:bg-stone-800 transition-all w-fit">
-                Get your migration plan
+                Ask us about your site
               </button>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function PageContent() {
       <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 px-6">
         <div className="container mx-auto text-center relative z-10 max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac mb-6">
-            <Zap className="w-4 h-4" /> Shopify Speed Optimization
+            <Zap className="w-4 h-4" /> Online stores, built or rebuilt
           </motion.div>
 
           <motion.h1
@@ -36,11 +36,17 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            {/* Closest to right already: it asked, then said measure before deciding.
-                Sharpened so the cost lands before the method. */}
-            Every app you install slows the storefront that pays for them. <br />
+            {/* 15 Sep 2026: this opened "Every app you install slows the storefront that
+                pays for them", under a pill reading "Shopify Speed Optimization", over a
+                line about migrating high-volume brands. Every word of it assumed an
+                existing, busy Shopify store. The homepage sells online stores from $1,500
+                and company-facts says a simple catalogue starts at Starter, so the buyer
+                opening their first shop arrived here and read a description of somebody
+                else. The diagnostic below is good and stays; it just cannot be the door.
+                Do not put a single-platform or existing-store assumption back in the H1. */}
+            Online stores that stay fast as the catalogue grows. <br />
             <span className="font-serif italic text-cognac">
-              Measure it, then decide whether a theme change or a rebuild is the answer.
+              Built new, or rebuilt from the theme you have.
             </span>
           </motion.h1>
 
@@ -50,7 +56,7 @@ export default function PageContent() {
             transition={{ delay: 0.1 }}
             className="text-xl text-stone-600 leading-relaxed mb-6 max-w-2xl mx-auto"
           >
-            We migrate high-volume brands from standard Shopify themes to high performance custom coded storefronts. <span className="text-charcoal font-medium">Keep the Shopify backend, destroy the frontend limitations.</span>
+            We build online stores from scratch and rebuild existing ones as custom storefronts, with Shopify or WooCommerce staying the system of record for products, orders and checkout. <span className="text-charcoal font-medium">Stores start at $1,500. A large catalogue, subscriptions or custom checkout logic is scoped separately.</span> If you already have a store, we measure it first and tell you whether a theme change or a rebuild is the honest answer.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }} className="flex flex-wrap justify-center gap-3 mb-6">

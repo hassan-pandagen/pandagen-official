@@ -422,7 +422,7 @@ export default function PageContent() {
               "Your GoHighLevel account left untouched, so contacts, pipelines and workflows stay where they are",
               "Named representative pages tested three times for 90 or better on Lighthouse, phone and desktop",
             ],
-            cta: "Get your migration plan",
+            cta: "Ask us about your site",
           },
           {
             tier: "Growth",
@@ -482,7 +482,7 @@ export default function PageContent() {
                 ))}
               </ul>
               <button onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"get_custom_plus_ghl_quote",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }} className="w-full px-6 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all">
-                Get your migration plan
+                Ask us about your site
               </button>
             </div>
 

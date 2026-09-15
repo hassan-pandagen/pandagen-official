@@ -29,7 +29,7 @@ export default function HomeFaqSection({ faqs }: { faqs: Faq[] }) {
           className="text-3xl md:text-4xl font-sans font-bold text-charcoal"
           style={{ marginBottom: "var(--space-heading)" }}
         >
-          Common questions about migrating your platform
+          Common questions about working with us
         </h2>
         <div className="divide-y divide-stone-200">
           {faqs.map((faq, i) => (

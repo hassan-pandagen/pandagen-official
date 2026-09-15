@@ -191,7 +191,7 @@ export default function CompanyReferencePage() {
             <p className="mt-5 text-sm text-stone-600">Published February 15, 2026. Reviewed September 10, 2026.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
-                Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link href="/services" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
                 Review migration services

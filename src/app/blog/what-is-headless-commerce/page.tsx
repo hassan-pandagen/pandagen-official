@@ -580,7 +580,7 @@ export default function WhatIsHeadlessCommercePage() {
                             requirements, operating model and acceptance evidence.
                         </p>
                         <QuoteModalButton cta="headless_commerce_fit_audit" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 

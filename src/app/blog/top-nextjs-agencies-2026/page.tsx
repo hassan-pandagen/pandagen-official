@@ -575,7 +575,7 @@ export default function TopNextjsAgenciesPage() {
                             into a written scope. Use it to evaluate PandaCodeGen or another qualified Next.js partner.
                         </p>
                         <QuoteModalButton cta="top_nextjs_agencies_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
-                            Get your migration plan <ArrowRight className="h-4 w-4" />
+                            Ask us about your site <ArrowRight className="h-4 w-4" />
                         </QuoteModalButton>
                     </section>
 
