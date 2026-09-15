@@ -119,6 +119,38 @@ export const COMMERCIAL: readonly Fact[] = [
 export const OFFER_LINE =
     'PandaCodeGen builds from $1,500 at a fixed price agreed before work starts, has no minimum project size, and the source code, design files and production accounts are yours at the end.';
 
+/**
+ * The company description for the Organization entity, maintained in ONE place.
+ *
+ * Added 15 Sep 2026. A metadata audit found this same @id carrying SIX different
+ * company descriptions: the root layout emitted one on all 145 generated pages,
+ * and the homepage, the WordPress migration guide and three case studies each
+ * added another. They had drifted apart. The homepage copy still said we "rebuild
+ * slow WordPress, Shopify, Webflow and Squarespace sites" and produce answers "AI
+ * assistants can quote" -- two claims retired from the visible homepage on 15 Sep
+ * but still asserted in its structured data. The three case studies described the
+ * PROJECT in the field describing the COMPANY.
+ *
+ * Google's Organization guidance asks for structured data that agrees with the
+ * page. One string, imported everywhere, is the only way that stays true. If a
+ * page needs to describe its own project, that belongs on the project's own
+ * entity, not on this one.
+ *
+ * Derived from `Primary offer` in COMPANY above. Change that first, then this.
+ */
+export const ORGANIZATION_DESCRIPTION =
+    'PandaCodeGen designs and develops custom business websites, online stores and software. The founders work directly with clients on new builds, redesigns, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.';
+
+/**
+ * The LLC formation date from the Articles, for schema.org `foundingDate`.
+ *
+ * The brand has traded since February 2026 and that fact belongs in prose, where
+ * it can say which event it describes. Two different foundingDates on one entity
+ * (root said 2026-08-12, the homepage said 2026-02) express nothing; they just
+ * disagree. See `Founded` in COMPANY.
+ */
+export const FOUNDING_DATE = '2026-08-12';
+
 /** Governance, disclosure and how claims are handled. */
 export const GOVERNANCE: readonly Fact[] = [
     { label: 'Press', value: "Co-founder and Lead Engineer Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work. It is the company's only press placement to date." },

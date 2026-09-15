@@ -1,0 +1,102 @@
+{
+  "checkedDate": "2026-09-15",
+  "method": "Read-only direct HTTP GET of official public pages; titles and named description meta tags parsed from response HTML; H1s are server HTML text, not a visual browser assertion.",
+  "records": [
+    {
+      "url": "https://bejamas.com/",
+      "finalUrl": "https://bejamas.com/",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:13.728Z",
+      "evidence": "HTTP response HTML",
+      "title": "Migrate to a Website Your Team Can Run | Bejamas",
+      "description": "We migrate you off your legacy CMS onto one modern platform your team can run, and run it with you long after launch.",
+      "h1s": [
+        "Migrate to a website your team can run."
+      ]
+    },
+    {
+      "url": "https://bejamas.com/services",
+      "finalUrl": "https://bejamas.com/services",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:14.583Z",
+      "evidence": "HTTP response HTML",
+      "title": "Your Whole Web Team: Audit, Design, Migrate & Run | Bejamas",
+      "description": "We consolidate legacy CMSs into one headless platform your marketers publish to without developers. Audited, migrated, and run by one senior team.",
+      "h1s": [
+        "Your whole web team."
+      ]
+    },
+    {
+      "url": "https://naturaily.com/",
+      "finalUrl": "https://naturaily.com/",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:15.782Z",
+      "evidence": "HTTP response HTML",
+      "title": "Web Development & Design Agency | Naturaily",
+      "description": "Naturaily builds fast, modern websites - web development, UX/UI design, and Shopify expertise. Get an estimate.",
+      "h1s": [
+        "YOUR HOW DID YOU FIND THEM WEB DEVELOPMENT & SHOPIFY AGENCY"
+      ]
+    },
+    {
+      "url": "https://naturaily.com/services",
+      "finalUrl": "https://naturaily.com/services",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:16.951Z",
+      "evidence": "HTTP response HTML",
+      "title": "Web Development, Headless & Shopify Services | Naturaily",
+      "description": "Custom web development, headless CMS, Shopify, e-commerce, and web design. Performance-first, SEO-ready builds with ongoing support. Get an estimate.",
+      "h1s": [
+        "Web development, headless services & Shopify"
+      ]
+    },
+    {
+      "url": "https://focusreactive.com/",
+      "finalUrl": "https://focusreactive.com/",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:17.461Z",
+      "evidence": "HTTP response HTML",
+      "title": "Headless CMS Development Company | Sanity, Storyblok, Next.js | FocusReactive",
+      "description": "We build and run high‑performance, scalable sites using Next.js, Vercel, Sanity, Storyblok, Contentful, Shopify Hydrogen and other headless commerce stacks.",
+      "h1s": [
+        "Headless CMS Development Company, Sanity, Storyblok & more"
+      ]
+    },
+    {
+      "url": "https://focusreactive.com/services/headless-cms-expert-agency/",
+      "finalUrl": "https://focusreactive.com/services/headless-cms-expert-agency/",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:17.997Z",
+      "evidence": "HTTP response HTML",
+      "title": "Headless CMS Development Agency | Sanity, Contentful, Payload CMS, Storyblok builds",
+      "description": "Engineering-led headless CMS development company. Official Sanity, Storyblok, Contentful & Directus partners. We build fast, scalable content platforms with Next.js — and match the right CMS to the right problem.",
+      "h1s": [
+        "Headless CMS Development Agency"
+      ]
+    },
+    {
+      "url": "https://www.blazity.com/",
+      "finalUrl": "https://www.blazity.com/",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:19.435Z",
+      "evidence": "HTTP response HTML",
+      "title": "Enterprise AI Agents & Agentic Workflows on Vercel AI Cloud | Blazity",
+      "description": "We design, build, and maintain AI systems with governance and speed built in. Vercel Certified Gold Partner.",
+      "h1s": [
+        "We are experts in building enterprise AI Agents & workflows"
+      ]
+    },
+    {
+      "url": "https://www.blazity.com/services",
+      "finalUrl": "https://www.blazity.com/services",
+      "status": 200,
+      "checkedAt": "2026-09-15T15:16:19.690Z",
+      "evidence": "HTTP response HTML",
+      "title": "Custom AI software development & Next.js engineering | Blazity",
+      "description": "We build complex AI systems on Vercel AI Cloud: enterprise AI agents & workflows, performance engineering, platform migrations, full app builds.",
+      "h1s": [
+        "Custom AI software development & Next.js engineering services"
+      ]
+    }
+  ]
+}

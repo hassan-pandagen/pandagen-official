@@ -11,7 +11,7 @@ import { BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } from "@/comp
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
-import { ORGANIZATION_PROFILES } from "@/data/company-facts";
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 
 const migrateFAQs = blogPosts.find(p => p.id === 'how-to-migrate-wordpress-to-nextjs')?.faqs ?? [];
 
@@ -122,9 +122,9 @@ const articleSchema = {
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
             "sameAs": [...ORGANIZATION_PROFILES],
             "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@pandacodegen.com" },
-            "description": "PandaCodeGen plans and builds SEO-safe WordPress to Next.js migrations, with URL inventory, redirect validation, staged QA, performance targets, cutover, and handover defined in the signed scope.",
+            "description": ORGANIZATION_DESCRIPTION,
             "areaServed": "Worldwide",
-            "foundingDate": "2026"
+            "foundingDate": FOUNDING_DATE
         },
         {
             "@type": "FAQPage",

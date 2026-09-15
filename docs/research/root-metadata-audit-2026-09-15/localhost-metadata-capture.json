@@ -1,0 +1,420 @@
+{
+  "generatedUtc": "2026-09-15T15:15:10.245Z",
+  "baseUrl": "http://localhost:3000",
+  "isPublicProduction": false,
+  "method": "HTTP GET raw HTML without browser hydration; no mutation/submission/indexing action.",
+  "rows": [
+    {
+      "route": "/",
+      "url": "http://localhost:3000/",
+      "checkedUtc": "2026-09-15T15:15:07.011Z",
+      "finalUrl": "http://localhost:3000/",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 262846,
+      "sha256": "ec72d21a98edb12e54775fdfef36ab87a33abb11f281b214497eedd61a66c9d4",
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "descriptions": [
+        "Custom business websites and online stores, with content your team can edit and code you own. Work directly with the founders, scope and price agreed upfront. Fixed pricing from $1,500."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        },
+        {
+          "name": "googlebot",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com",
+      "ogDescriptions": [
+        "Custom business websites and online stores you own outright. Your team edits the content; we agree scope and price before work starts. From $1,500."
+      ],
+      "twitterDescriptions": [
+        "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        },
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "Custom Next.js web development studio. We rebuild slow WordPress, Shopify, Webflow and Squarespace sites into custom code the client owns outright, with fast pages and clear answers that search engines and AI assistants can quote.",
+          "foundingDate": "2026-02"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/services",
+      "url": "http://localhost:3000/services",
+      "checkedUtc": "2026-09-15T15:15:07.060Z",
+      "finalUrl": "http://localhost:3000/services",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 126845,
+      "sha256": "fd4482b3548c768dae3f4d8e641a11dc81ab1ea8d290acc335d14b212afb0926",
+      "title": "Website Redesign and Migration Services | PandaCodeGen",
+      "descriptions": [
+        "Website redesign and migration services for WordPress, Wix, Squarespace and Webflow sites. Fixed prices from $1,500, 2 to 4 weeks, and you own the code."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        },
+        {
+          "name": "googlebot",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/services",
+      "ogDescriptions": [
+        "Migration and custom build services. Fixed prices from $1,500, and you own the code."
+      ],
+      "twitterDescriptions": [
+        "Migration and engineering services scoped around evidence, acceptance, cutover, and handover."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/blog/woocommerce-too-slow",
+      "url": "http://localhost:3000/blog/woocommerce-too-slow",
+      "checkedUtc": "2026-09-15T15:15:07.061Z",
+      "finalUrl": "http://localhost:3000/blog/woocommerce-too-slow",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 256611,
+      "sha256": "b12d4d8af75b51aaa5692638806030150a81059131513ae56bad80272faa938c",
+      "title": "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide",
+      "descriptions": [
+        "Diagnose a slow WooCommerce store with field data, lab tests, server traces and transaction checks. Prioritize repairs before considering headless or replacement."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/blog/woocommerce-too-slow",
+      "ogDescriptions": [
+        "Diagnose a slow WooCommerce store with field data, lab tests, server traces and transaction checks. Prioritize repairs before considering headless or replacement."
+      ],
+      "twitterDescriptions": [
+        "Diagnose a slow WooCommerce store with field data, lab tests, server traces and transaction checks. Prioritize repairs before considering headless or replacement."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/about",
+      "url": "http://localhost:3000/about",
+      "checkedUtc": "2026-09-15T15:15:08.357Z",
+      "finalUrl": "http://localhost:3000/about",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 103077,
+      "sha256": "1e2cf0ec0911dda4ba4446030a597df6d0ef404d0998e148ca3afa8f420a1882",
+      "title": "About PandaCodeGen | Website Migration Delivery Standards",
+      "descriptions": [
+        "Meet PandaCodeGen's co-founders and review how the company, founded in February 2026, scopes SEO-safe website migrations, acceptance criteria, cutover risk, and handover."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        },
+        {
+          "name": "googlebot",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/about",
+      "ogDescriptions": [
+        "Meet PandaCodeGen's co-founders and review its migration delivery, acceptance, cutover, and handover standards."
+      ],
+      "twitterDescriptions": [
+        "Meet PandaCodeGen's co-founders and review its migration delivery, acceptance, cutover, and handover standards."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/about/hassan",
+      "url": "http://localhost:3000/about/hassan",
+      "checkedUtc": "2026-09-15T15:15:08.358Z",
+      "finalUrl": "http://localhost:3000/about/hassan",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 112493,
+      "sha256": "a300688ee3eb1048f03c6660f2e30299cba3310738d3a7202faf6c5693a9455a",
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "descriptions": [
+        "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for SEO-safe website migrations, Next.js implementation, performance, and technical delivery."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/about/hassan",
+      "ogDescriptions": [
+        "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery."
+      ],
+      "twitterDescriptions": [
+        "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/ai-info",
+      "url": "http://localhost:3000/ai-info",
+      "checkedUtc": "2026-09-15T15:15:08.358Z",
+      "finalUrl": "http://localhost:3000/ai-info",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 184711,
+      "sha256": "ca107b2a0a6bf1d3edfb4e464ed78264e251eba53121af5ad991a00c316ed73d",
+      "title": "PandaCodeGen Company Reference | Migrations, Process, Pricing | PandaCodeGen",
+      "descriptions": [
+        "A factual reference for PandaCodeGen: SEO-safe website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/ai-info",
+      "ogDescriptions": [
+        "Website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details."
+      ],
+      "twitterDescriptions": [
+        "Website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "url": "http://localhost:3000/editorial-policy",
+      "checkedUtc": "2026-09-15T15:15:08.973Z",
+      "finalUrl": "http://localhost:3000/editorial-policy",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 100863,
+      "sha256": "154ccaae52eb77f3f64dfc28c336c18420050081e558c69eb8497f2de68f8a88",
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "descriptions": [
+        "How PandaCodeGen distinguishes sourced facts, first-party observations, estimates, opinions, commercial claims, corrections, and time-sensitive information."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        },
+        {
+          "name": "googlebot",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/editorial-policy",
+      "ogDescriptions": [
+        "How PandaCodeGen handles sources, first-party observations, estimates, commercial claims, corrections, and time-sensitive information."
+      ],
+      "twitterDescriptions": [
+        "How PandaCodeGen handles sources, first-party observations, estimates, commercial claims, corrections, and time-sensitive information."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/privacy",
+      "url": "http://localhost:3000/privacy",
+      "checkedUtc": "2026-09-15T15:15:08.974Z",
+      "finalUrl": "http://localhost:3000/privacy",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 108255,
+      "sha256": "93bfda386e09b3aac707503247fb37f1a1a5606fdc33346cab91d7ef358fd527",
+      "title": "Privacy Policy | PandaCodeGen",
+      "descriptions": [
+        "How PandaCodeGen collects, uses, and protects your data. Last updated July 22, 2026."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/privacy",
+      "ogDescriptions": [
+        "How PandaCodeGen collects, uses, and protects your data."
+      ],
+      "twitterDescriptions": [
+        "How PandaCodeGen collects, uses, and protects your data."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/terms",
+      "url": "http://localhost:3000/terms",
+      "checkedUtc": "2026-09-15T15:15:08.974Z",
+      "finalUrl": "http://localhost:3000/terms",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 89606,
+      "sha256": "c02d6c7d1295a3fbd9e2de6afaa2ee2e9dbd56f7d6c4e5cd62e8be4097c529ac",
+      "title": "Website Terms | PandaCodeGen",
+      "descriptions": [
+        "Terms for using pandacodegen.com, its automated audit, and inquiry forms. Project services follow written terms accepted for each engagement."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/terms",
+      "ogDescriptions": [
+        "Website, automated-audit, and inquiry terms for pandacodegen.com."
+      ],
+      "twitterDescriptions": [
+        "Website, automated-audit, and inquiry terms for pandacodegen.com."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    },
+    {
+      "route": "/cookies",
+      "url": "http://localhost:3000/cookies",
+      "checkedUtc": "2026-09-15T15:15:09.774Z",
+      "finalUrl": "http://localhost:3000/cookies",
+      "status": 200,
+      "xRobotsTag": null,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 91564,
+      "sha256": "6446e75f480029daaeb21e001b86f7dfd9b21341e362e334ec7b660f2c182674",
+      "title": "Cookie Policy | PandaCodeGen",
+      "descriptions": [
+        "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026."
+      ],
+      "matchesRootDescription": false,
+      "robots": [
+        {
+          "name": "robots",
+          "content": "index, follow"
+        }
+      ],
+      "noindex": false,
+      "canonical": "https://www.pandacodegen.com/cookies",
+      "ogDescriptions": [
+        "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026."
+      ],
+      "twitterDescriptions": [
+        "How PandaCodeGen uses cookies and similar technologies."
+      ],
+      "organizations": [
+        {
+          "id": "https://www.pandacodegen.com/#organization",
+          "type": "Organization",
+          "description": "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+          "foundingDate": "2026-08-12"
+        }
+      ],
+      "schemaErrors": []
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
 import Link from "next/link";
@@ -137,7 +138,7 @@ const articleSchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "foundingDate": "2026",
+            "foundingDate": FOUNDING_DATE,
             "email": "info@pandacodegen.com",
             "areaServed": "Worldwide",
             "sameAs": [

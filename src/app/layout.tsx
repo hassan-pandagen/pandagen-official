@@ -9,7 +9,7 @@ import { blogPosts } from "@/data/blog";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import ConsentManagedServices from "@/components/consent/ConsentManagedServices";
 import CookieConsent from "@/components/consent/CookieConsent";
-import { PHONE } from "@/data/company-facts";
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, PHONE } from "@/data/company-facts";
 
 // Inter is the body font and it is used above the fold on every page, so it is
 // preloaded. It was not, and that was the homepage's largest layout shift.
@@ -48,10 +48,14 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.pandacodegen.com'),
   title: {
-    default: "SEO-Safe Website Migrations | PandaCodeGen",
+    default: "Custom Websites & Software | PandaCodeGen",
     template: "%s | PandaCodeGen",
   },
-  description: "SEO-safe website migrations for revenue-generating WordPress, Webflow, and GoHighLevel sites, with URLs, content, analytics, integrations, and cutover mapped before launch.",
+  // Fallback only. A metadata audit on 15 Sep 2026 found zero of 145 generated
+  // pages using it, because every page sets its own description -- so this is
+  // maintenance for future or uncovered routes, not a site-wide switch. The
+  // string that IS on every page is the Organization description below.
+  description: "Custom websites, online stores and software. New builds, redesigns and migrations, with code you own. Work directly with the PandaCodeGen founders.",
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -139,12 +143,12 @@ const siteGraph = {
       // than being retyped here.
       telephone: PHONE.e164,
       contactPoint: { "@type": "ContactPoint", contactType: "Customer Service", email: "info@pandacodegen.com", telephone: PHONE.e164 },
-      description: "PandaCodeGen builds custom Next.js websites and e-commerce stores for businesses migrating from slow or costly platforms. Performance targets, test conditions, acceptance criteria, and remedies are defined in each signed scope.",
+      description: ORGANIZATION_DESCRIPTION,
       areaServed: "Worldwide",
       // The LLC formation date from the Articles, not the brand start date.
       // PandaCodeGen has traded since February 2026; the company was formed
       // on 12 August 2026 and that is the date a KYC reviewer is matching.
-      foundingDate: "2026-08-12",
+      foundingDate: FOUNDING_DATE,
     },
   ],
 };

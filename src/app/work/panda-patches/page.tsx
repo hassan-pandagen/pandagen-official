@@ -7,7 +7,7 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import Footer from "@/components/layout/Footer";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
-import { ORGANIZATION_PROFILES } from "@/data/company-facts";
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 export const metadata: Metadata = {
@@ -136,9 +136,9 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen is a custom software studio that builds and operates its own products, including Panda Patches, a custom embroidered-patches e-commerce business on Next.js, Sanity, Supabase, and Square. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and its co-founder Imran Raza Ladhani holds a stake in both companies, so the two businesses share an owner and this is not an arm’s-length relationship.",
+            "description": ORGANIZATION_DESCRIPTION,
             "email": "info@pandacodegen.com",
-            "foundingDate": "2026",
+            "foundingDate": FOUNDING_DATE,
             "areaServed": "Worldwide",
             "address": {
                 "@type": "PostalAddress",
