@@ -47,9 +47,15 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
           >
-            {/* Named no problem for 2,939 characters, the worst of the eight. */}
-            The tool you need does not exist, so you are running it on spreadsheets.{" "}
-            <span className="font-serif font-normal italic text-cognac md:block">Validate the scope before committing to delivery.</span>
+            {/* An earlier version named no problem for 2,939 characters, the worst of the
+                eight service pages. The fix then overcorrected: it kept the problem but
+                spent the italic half on "Validate the scope before committing to delivery",
+                which is our process, not the reader's problem, and it made the tallest H1
+                on the site -- roughly 450px at 1440, pushing every example below the fold.
+                Scope validation is real and is explained below; it is not the headline.
+                Shortened 16 Sep 2026. Keep this to one idea. */}
+            The tool your business needs does not exist,{" "}
+            <span className="font-serif font-normal italic text-cognac md:block">so you are running it on spreadsheets.</span>
           </motion.h1>
 
           <motion.p

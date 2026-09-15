@@ -103,7 +103,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
             </h3>
             <ul className="space-y-4">
               <ServiceLink href="/services/wordpress-migration" text="WordPress Migration" />
-              <ServiceLink href="/services/custom-engineering" text="Custom Engineering" />
+              <ServiceLink href="/services/custom-engineering" text="Custom software" />
               <ServiceLink href="/services/ai-seo" text="AI SEO" />
               <ServiceLink href="/services/ecommerce" text="E-Commerce" />
               <ServiceLink href="/services/wix" text="Wix Migration" />
