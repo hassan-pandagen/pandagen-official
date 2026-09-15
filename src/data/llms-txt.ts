@@ -32,7 +32,7 @@ const HEADER = `# PandaCodeGen
 
 ## Company facts
 
-- Primary offer: SEO-safe website migrations.
+- Primary offer: custom business websites and online stores, covering first builds, redesigns and replacements. Migration is one delivery situation, with SEO-safe controls when there is an existing site to move.
 - Core platforms: WordPress, Webflow, and GoHighLevel. Also: Wix, Squarespace, Shopify (headless), and WooCommerce.
 - Custom work: Next.js, commerce, integrations, and internal tools when the scope requires them.
 - Founded: PandaCodeGen has traded since February 2026. Panda Group Ventures L.L.C. was formed on 12 August 2026.

@@ -66,7 +66,7 @@ const referenceLinks = [
 const faqs = [
   {
     question: "What does PandaCodeGen do?",
-    answer: "PandaCodeGen plans and implements SEO-safe website migrations for revenue-generating WordPress, Webflow, and GoHighLevel sites. Custom Next.js, commerce, integration, and application work remains available when discovery shows that the migration requires it.",
+    answer: "PandaCodeGen designs and builds custom business websites and online stores, from a first website to the replacement of one a business has outgrown. Migration is one delivery situation rather than the whole offer, and SEO-safe migration controls apply when there is an existing site to move. Custom Next.js, commerce, integration, and application work remains available when discovery shows that the migration requires it.",
   },
   {
     question: "Does SEO-safe mean rankings are guaranteed?",
@@ -291,7 +291,7 @@ export default function CompanyReferencePage() {
                 {[
                   ["Starter", "From $1,500", "Up to 7 pages, with a content editor for your words, images and business details."],
                   ["Growth", "From $3,500", "8 to 20 pages, a CMS you edit yourself, full migration."],
-                  ["Scale", "From $5,000", "More than 20 pages, a store, or more than one language."],
+                  ["Scale", "From $5,000", "More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. A small shop is not automatically this tier."],
                 ].map(([label, price, detail]) => (
                   <div key={label} className="rounded-2xl border border-stone-300 bg-white p-5">
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">{label}</p>

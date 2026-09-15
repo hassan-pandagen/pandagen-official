@@ -225,15 +225,19 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         description:
             'Guides on search and AI answer engines: what structured data and llms.txt do and do not do, why competitors outrank you, and why a site may not be indexed at all.',
         moneyAnchor: 'our AI SEO services',
-        // The intro's closing sentence links the policy, which is correct.
-        // The closing button promises commercial scope, so it goes to pricing.
-        ctaHref: '/pricing',
+        // Repointed 15 Sep 2026 with the cluster's money page. [[money]] used to
+        // resolve to /editorial-policy, so the closing sentence could say the policy
+        // was "written up in" it. Now it resolves to /services/ai-seo, which made
+        // that sentence read "written up in our AI SEO services". The sentence is
+        // rewritten and the closing button follows the cluster to its own service
+        // rather than to general pricing.
+        ctaHref: '/services/ai-seo',
         intro: [
             'AI search generated a large amount of advice very quickly, and a lot of it was published before anyone could test it. The guides in this cluster try to separate the parts that are documented by the platforms from the parts that are inference.',
             'What is documented is narrower than the advice suggests. Structured data can make a page eligible for certain result types; eligibility is not selection, and Google removes support for result types periodically. llms.txt is read by some AI systems and explicitly not used by Google, which makes it cheap to publish and dishonest to sell as a lever. Content in server-rendered HTML is more reliably available to crawlers than content assembled by client-side JavaScript, and that has been true for a long time.',
             'What is not documented is why any specific answer cited any specific source, and no one outside those systems can tell you. Anything written with confidence about citation mechanics, including anything here, is a description of observed patterns rather than of the rules.',
             'The practical throughline is that content which answers a question directly, in HTML, with something in it the other sources do not have, is the part that survives every change to how results are assembled. The rest is hygiene worth doing and not worth overclaiming.',
-            'How we source, date, and correct what we publish is written up in [[money]].',
+            'If you want this work done rather than explained, that is [[money]]. How we source, date and correct what we publish is a separate thing, written up in our editorial policy.',
         ],
     },
 
