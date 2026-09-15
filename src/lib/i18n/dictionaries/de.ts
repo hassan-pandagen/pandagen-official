@@ -658,19 +658,19 @@ const de: Dictionary = {
     },
     summary:
       "Name und E-Mail genügen für den Anfang. Alles andere ist optional und kann später kommen.",
-    checklistHeading: "Das gehört in Ihre Nachricht",
+    checklistHeading: "Hilfreich, wenn Sie es schon wissen, nichts davon ist Pflicht",
     checklist: [
-      "Adresse der aktuellen Website und eingesetzte Plattform (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel oder Individualentwicklung)",
-      "Ihr Hauptziel: Migration ohne SEO-Verluste, Performance, geringere Plattformkosten, Relaunch, Headless-Commerce oder individuelle Integration",
-      "Größenordnung des monatlichen Traffics und ungefähre Anzahl der URLs",
-      "Unverzichtbare Integrationen: CRM, E-Mail-Marketing, Zahlung, Analytics, ERP",
-      "Angestrebter Zeitplan und Budgetrahmen",
-      "Bekannte Einschränkungen: Compliance, Sprachen, Beteiligte, Vertragsverlängerungstermine",
+      "Was Sie bauen oder verbessern möchten, in ein bis zwei Sätzen",
+      "Falls Sie bereits eine Website haben: ihre Adresse und die genutzte Plattform (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel oder Eigenentwicklung)",
+      "Ihr Hauptziel: eine erste Website, ein Onlineshop, ein Relaunch, eine Software für Ihre Abläufe, Performance, oder ein Umzug ohne Verlust Ihrer Sichtbarkeit",
+      "Unverzichtbare Integrationen, falls vorhanden: CRM, E-Mail-Versand, Zahlung, Analyse, ERP",
+      "Zeitrahmen und Budgetrahmen, soweit bekannt",
+      "Bekannte Einschränkungen: Compliance, Sprachen, Beteiligte, Vertragsverlängerungen",
     ],
     emailLabel: "E-Mail",
     addressLabel: "Anschrift",
     formNote:
-      "Das ausführliche Anfrageformular steht derzeit auf Englisch zur Verfügung. Sie können auch direkt auf Deutsch an die oben genannte Adresse schreiben: Die Abstimmung zum Leistungsumfang ist auf Deutsch oder Englisch möglich.",
+      "Das ausführliche Formular ist auf Englisch. Sie können uns auch direkt auf Deutsch an die oben genannte Adresse schreiben: wir lesen und beantworten Nachrichten auf Deutsch mit Hilfe von Übersetzungswerkzeugen. Gespräche und Projektunterlagen laufen auf Englisch.",
     formLinkLabel: "Anfrageformular öffnen (auf Englisch)",
     sections: [
       {
@@ -687,7 +687,7 @@ const de: Dictionary = {
     faq: [
       {
         q: "In welchen Sprachen arbeiten Sie?",
-        a: "Abstimmung und Support laufen auf Englisch; schriftlicher Austausch auf Deutsch ist möglich. Die angenommenen Projektbedingungen werden auf Englisch verfasst und sind die maßgebliche Fassung.",
+        a: "Die Gründer arbeiten auf Englisch. Schriftliche Nachrichten auf Deutsch sind willkommen und werden auf Deutsch beantwortet, mit Hilfe von Übersetzungswerkzeugen. Gespräche finden auf Englisch statt. Die angenommenen Projektbedingungen werden auf Englisch verfasst und sind die maßgebliche Fassung.",
       },
       {
         q: "Wie schnell kommt eine Antwort?",
@@ -777,7 +777,7 @@ const de: Dictionary = {
     errorFallback: "Wir konnten Ihre Anfrage nicht senden. Bitte schreiben Sie an info@pandacodegen.com.",
     honeypotLabel: "Dieses Feld bitte leer lassen",
     replyNote:
-      "Schreiben Sie uns auf Deutsch, wir antworten auf Deutsch. Vertragsunterlagen werden auf Englisch erstellt.",
+      "Schreiben Sie uns auf Deutsch: wir beantworten schriftliche Nachrichten auf Deutsch, mit Hilfe von Übersetzungswerkzeugen. Gespräche und Vertragsunterlagen sind auf Englisch.",
   },
 };
 

@@ -658,19 +658,19 @@ const fr: Dictionary = {
     },
     summary:
       "Le nom et l'e-mail suffisent pour commencer. Tout le reste est facultatif et peut venir ensuite.",
-    checklistHeading: "À inclure dans votre message",
+    checklistHeading: "Utile si vous le savez déjà, rien n'est obligatoire",
     checklist: [
-      "L'adresse du site actuel et la plateforme utilisée (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel ou développement sur mesure)",
-      "Votre objectif principal : migration sans perte de référencement, performance, réduction des coûts de plateforme, refonte, commerce headless ou intégration sur mesure",
-      "L'ordre de grandeur du trafic mensuel et le volume approximatif d'URL",
-      "Les intégrations indispensables : CRM, e-mailing, paiement, mesure d'audience, ERP",
-      "Le calendrier visé et la fourchette budgétaire",
-      "Les contraintes connues : conformité, langues, parties prenantes, dates de renouvellement de contrat",
+      "Ce que vous aimeriez construire ou améliorer, en une ou deux phrases",
+      "Si vous avez déjà un site : son adresse et la plateforme utilisée (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel ou développement sur mesure)",
+      "Votre objectif principal : un premier site, une boutique en ligne, une refonte, un logiciel métier, la performance, ou une migration sans perdre votre référencement",
+      "Les intégrations indispensables, si vous en avez : CRM, e-mailing, paiement, mesure d'audience, ERP",
+      "Le calendrier visé et la fourchette budgétaire, si vous les connaissez",
+      "Les contraintes connues : conformité, langues, parties prenantes, dates de renouvellement de contrat",
     ],
     emailLabel: "E-mail",
     addressLabel: "Adresse",
     formNote:
-      "Le formulaire de demande détaillé est actuellement disponible en anglais. Vous pouvez également écrire directement en français à l'adresse ci-dessus : les échanges de cadrage se font en français ou en anglais.",
+      "Le formulaire détaillé est en anglais. Vous pouvez aussi écrire directement en français à l'adresse ci-dessus : nous lisons et répondons aux messages en français avec l'aide d'outils de traduction. Les appels et les documents de projet se déroulent en anglais.",
     formLinkLabel: "Ouvrir le formulaire de demande (en anglais)",
     sections: [
       {
@@ -687,7 +687,7 @@ const fr: Dictionary = {
     faq: [
       {
         q: "Dans quelles langues travaillez-vous ?",
-        a: "Les échanges de cadrage et le support se déroulent en anglais ; les échanges écrits en français sont possibles. Les conditions de projet acceptées sont rédigées en anglais et constituent la version qui fait foi.",
+        a: "Les fondateurs travaillent en anglais. Les messages écrits en français sont les bienvenus et reçoivent une réponse en français, avec l'aide d'outils de traduction. Les appels se déroulent en anglais. Les conditions de projet acceptées sont rédigées en anglais et constituent la version qui fait foi.",
       },
       {
         q: "Combien de temps avant une réponse ?",
@@ -777,7 +777,7 @@ const fr: Dictionary = {
     errorFallback: "Nous n'avons pas pu envoyer votre demande. Écrivez-nous à info@pandacodegen.com.",
     honeypotLabel: "Laissez ce champ vide",
     replyNote:
-      "Écrivez-nous en français : nous vous répondrons en français. Les documents contractuels sont rédigés en anglais.",
+      "Écrivez-nous en français : nous répondons aux messages écrits en français, avec l'aide d'outils de traduction. Les appels et les documents contractuels sont en anglais.",
   },
 };
 
