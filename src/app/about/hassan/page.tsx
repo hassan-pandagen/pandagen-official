@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Code2, FileCheck2, Gauge, Route } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -8,11 +9,11 @@ import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
   title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
-  description: "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for SEO-safe website migrations, Next.js implementation, performance, and technical delivery.",
+  description: "Meet Hassan Jamal, PandaCodeGen co-founder and Lead Engineer for custom website and store builds, Next.js implementation, performance, migrations, and technical delivery.",
   alternates: { canonical: "/about/hassan" },
   openGraph: {
     title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
-    description: "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery.",
+    description: "Engineering leadership for custom websites and stores, Next.js implementation, performance, migrations, and technical delivery.",
     type: "profile",
     url: "https://www.pandacodegen.com/about/hassan",
     images: [ogImageForPath("/about/hassan")],
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen",
-    description: "Engineering leadership for website migrations, Next.js implementation, performance, and technical delivery.",
+    description: "Engineering leadership for custom websites and stores, Next.js implementation, performance, migrations, and technical delivery.",
     images: [ogImageForPath("/about/hassan")],
   },
   robots: { index: true, follow: true },
@@ -33,6 +34,7 @@ const profileSchema = {
       "@type": "Person",
       "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
       name: "Hassan Jamal",
+      image: "https://www.pandacodegen.com/team/hassan.png",
       jobTitle: "Co-founder and Lead Engineer",
       url: "https://www.pandacodegen.com/about/hassan",
       worksFor: { "@id": "https://www.pandacodegen.com/#organization" },
@@ -101,11 +103,15 @@ export default function HassanProfilePage() {
             Back to PandaCodeGen
           </Link>
           <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <div className="flex aspect-square max-w-sm items-end overflow-hidden rounded-[2.5rem] border border-stone-300 bg-charcoal p-8 text-white shadow-elevated">
-              <div>
-                <p className="font-serif text-8xl font-normal italic text-orange-300" aria-hidden="true">H</p>
-                <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-300">Engineering lead</p>
-              </div>
+            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] border border-stone-300 bg-stone-200 shadow-elevated">
+              <Image
+                src="/team/hassan.png"
+                alt="Hassan Jamal, co-founder of PandaCodeGen"
+                fill
+                sizes="(max-width: 431px) calc(100vw - 48px), 384px"
+                loading="eager"
+                className="object-cover"
+              />
             </div>
             <div className="border-l-2 border-cognac pl-5 md:pl-8">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Engineer</p>
@@ -115,7 +121,7 @@ export default function HassanProfilePage() {
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
-                  Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <a href="https://github.com/hassan-pandagen" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
                   Review public GitHub activity

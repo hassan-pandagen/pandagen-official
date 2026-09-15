@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS, OFFER_LINE, PHONE } from "@/data/company-facts";
+import { FOUNDING_DATE, COMPANY, SERVICES, COMMERCIAL, GOVERNANCE, MIGRATION_CONTROLS, REFERENCE_LINKS, OFFER_LINE, PHONE } from "@/data/company-facts";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FileCheck2, Gauge, Route, Search, ShieldCheck } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -12,13 +12,13 @@ const published = "2026-02-15";
 const modified = "2026-09-10";
 
 export const metadata: Metadata = {
-  title: "PandaCodeGen Company Reference | Migrations, Process, Pricing",
-  description: "A factual reference for PandaCodeGen: SEO-safe website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details.",
+  title: "PandaCodeGen Company Reference | Services, Process, Pricing",
+  description: "A factual reference for PandaCodeGen: websites, online stores and software, delivery process, pricing starting points, founders, evidence policy, and contact details.",
   alternates: { canonical: "/ai-info" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "PandaCodeGen Company Reference",
-    description: "Website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details.",
+    description: "Websites, online stores and software, delivery process, pricing starting points, founders, evidence policy, and contact details.",
     type: "website",
     url: "https://www.pandacodegen.com/ai-info",
     images: [ogImageForPath("/ai-info")],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PandaCodeGen Company Reference",
-    description: "Website migration focus, delivery process, pricing starting points, founders, evidence policy, and contact details.",
+    description: "Websites, online stores and software, delivery process, pricing starting points, founders, evidence policy, and contact details.",
     images: [ogImageForPath("/ai-info")],
   },
 };
@@ -98,7 +98,7 @@ const pageSchema = {
       "@id": "https://www.pandacodegen.com/ai-info#webpage",
       url: "https://www.pandacodegen.com/ai-info",
       name: "PandaCodeGen Company Reference",
-      description: "Factual reference for PandaCodeGen's migration focus, process, pricing starting points, founders, and evidence policy.",
+      description: "Factual reference for PandaCodeGen's services, process, pricing starting points, founders, and evidence policy.",
       datePublished: published,
       dateModified: modified,
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
@@ -111,7 +111,7 @@ const pageSchema = {
       "@id": "https://www.pandacodegen.com/#organization",
       name: "PandaCodeGen",
       url: "https://www.pandacodegen.com",
-      foundingDate: "2026-02",
+      foundingDate: FOUNDING_DATE,
       email: "info@pandacodegen.com",
       address: {
         "@type": "PostalAddress",

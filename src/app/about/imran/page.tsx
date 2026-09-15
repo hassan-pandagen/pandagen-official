@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Boxes, CheckCircle2, Database, FileCheck2, Network, Route } from "lucide-react";
 import Header from "@/components/layout/Header";
@@ -7,11 +8,11 @@ import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
   title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Lead Architect for migration feasibility, system design, data models, integrations, and cutover planning.",
+  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Lead Architect for system design, data models, integrations, migration feasibility, and cutover planning.",
   alternates: { canonical: "/about/imran" },
   openGraph: {
     title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-    description: "Architecture leadership for migration feasibility, system design, integrations, data, and cutover planning.",
+    description: "Architecture leadership for system design, integrations, data models, migration feasibility, and cutover planning.",
     type: "profile",
     url: "https://www.pandacodegen.com/about/imran",
     images: [ogImageForPath("/about/imran")],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-    description: "Architecture leadership for migration feasibility, system design, integrations, data, and cutover planning.",
+    description: "Architecture leadership for system design, integrations, data models, migration feasibility, and cutover planning.",
     images: [ogImageForPath("/about/imran")],
   },
   robots: { index: true, follow: true },
@@ -32,6 +33,7 @@ const profileSchema = {
       "@type": "Person",
       "@id": "https://www.pandacodegen.com/#/schema/person/imran",
       name: "Imran Raza Ladhani",
+      image: "https://www.pandacodegen.com/team/imran.png",
       jobTitle: "Co-founder and Lead Architect",
       url: "https://www.pandacodegen.com/about/imran",
       worksFor: { "@id": "https://www.pandacodegen.com/#organization" },
@@ -95,11 +97,15 @@ export default function ImranProfilePage() {
             Back to PandaCodeGen
           </Link>
           <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
-            <div className="flex aspect-square max-w-sm items-end overflow-hidden rounded-[2.5rem] border border-stone-300 bg-[#faf7f2] p-8 shadow-elevated">
-              <div>
-                <p className="font-serif text-8xl font-normal italic text-cognac" aria-hidden="true">I</p>
-                <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-stone-700">Architecture lead</p>
-              </div>
+            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] border border-stone-300 bg-charcoal shadow-elevated">
+              <Image
+                src="/team/imran.png"
+                alt="Imran Raza Ladhani, co-founder of PandaCodeGen"
+                fill
+                sizes="(max-width: 431px) calc(100vw - 48px), 384px"
+                loading="eager"
+                className="object-cover"
+              />
             </div>
             <div className="border-l-2 border-cognac pl-5 md:pl-8">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Architect</p>
@@ -109,7 +115,7 @@ export default function ImranProfilePage() {
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
-                  Get your migration plan <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <a href="https://www.linkedin.com/in/imran-raza-ladhani/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
                   View LinkedIn profile

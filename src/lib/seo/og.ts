@@ -18,9 +18,9 @@ type StaticOgContent = Omit<OgContent, "path" | "version">;
 
 const staticPages: Record<string, StaticOgContent> = {
   "/": {
-    title: "SEO-Safe Website Migrations",
+    title: "Custom Website Design & Development",
     label: "PandaCodeGen",
-    description: "Move a revenue-generating website with its URLs, content, analytics, integrations, cutover, and handover mapped before launch.",
+    description: "Custom business websites and online stores, built new or rebuilt, with a content editor your team runs and code you own.",
   },
   "/about": {
     title: "Engineers Behind the Migration",
@@ -48,9 +48,9 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Evidence-led guides to website migrations, performance, search continuity, platform cost, analytics, and ownership.",
   },
   "/contact": {
-    title: "Get Your Migration Plan",
+    title: "Talk to the founders",
     label: "Start a Conversation",
-    description: "Share the current website, business constraints, required integrations, and the decision you need to make.",
+    description: "A new website, a better online store, or a question about what comes next. Hear directly from Hassan or Imran.",
   },
   "/cookies": {
     title: "Cookie Policy",
@@ -88,9 +88,9 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Public security practices, reporting guidance, application boundaries, and coordinated disclosure information.",
   },
   "/services": {
-    title: "Website Migration Services",
+    title: "Website, Store and Software Development",
     label: "What We Build",
-    description: "Migration planning and implementation across content, commerce, analytics, integrations, performance, and launch.",
+    description: "New website builds, redesigns and migrations, online stores and custom software, scoped in writing before work starts.",
   },
   "/services/custom-engineering": {
     title: "Custom Engineering",

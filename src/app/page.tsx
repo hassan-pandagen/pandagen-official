@@ -10,7 +10,7 @@ import HomeFaqSection from "@/components/home/HomeFaqSection";
 import WorkPreviews from "@/components/home/WorkPreviews";
 import CustomFeatures from "@/components/home/CustomFeatures";
 import { alternatesFor } from "@/lib/i18n/config";
-import { ORGANIZATION_PROFILES } from "@/data/company-facts";
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 
 // Tell Next.js to statically generate this page at build time
 // so critters can inline critical CSS into the HTML output
@@ -130,9 +130,9 @@ export default function Home() {
           "width": 655,
           "height": 113
         },
-        "description": "Custom Next.js web development studio. We rebuild slow WordPress, Shopify, Webflow and Squarespace sites into custom code the client owns outright, with fast pages and clear answers that search engines and AI assistants can quote.",
+        "description": ORGANIZATION_DESCRIPTION,
         "email": "info@pandacodegen.com",
-        "foundingDate": "2026-02",
+        "foundingDate": FOUNDING_DATE,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "12250 S Kirkwood Rd, Apt 1128",

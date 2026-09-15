@@ -4,20 +4,20 @@ import { ogImageForPath } from "@/lib/seo/og";
 import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
-  title: "Website Redesign and Migration Services",
-  description: "Website redesign and migration services for WordPress, Wix, Squarespace and Webflow sites. Fixed prices from $1,500, 2 to 4 weeks, and you own the code.",
+  title: "Website Design, Redesign and Development Services",
+  description: "Website, online store and software development, redesigns and migrations. Website builds from $1,500, and you own the code. Scope and dates agreed before work starts.",
   alternates: alternatesFor("services", "en"),
   openGraph: {
-    title: "Website Redesign and Migration Services | PandaCodeGen",
-    description: "Migration and custom build services. Fixed prices from $1,500, and you own the code.",
+    title: "Website Design, Redesign and Development Services | PandaCodeGen",
+    description: "New websites, online stores, redesigns, migrations and custom software. Website builds from $1,500, and you own the code.",
     url: "https://www.pandacodegen.com/services",
     type: "website",
     images: [ogImageForPath("/services")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Redesign and Migration Services | PandaCodeGen",
-    description: "Migration and engineering services scoped around evidence, acceptance, cutover, and handover.",
+    title: "Website Design, Redesign and Development Services | PandaCodeGen",
+    description: "Website, store and software services scoped around evidence, acceptance, cutover, and handover.",
     images: [ogImageForPath("/services")],
   },
 };
@@ -29,8 +29,8 @@ const schema = {
       "@type": "CollectionPage",
       "@id": "https://www.pandacodegen.com/services#webpage",
       url: "https://www.pandacodegen.com/services",
-      name: "Website Migration and Custom Web Engineering Services",
-      description: "Service options for website migration, commerce diagnostics, and custom web engineering.",
+      name: "Website, Online Store and Custom Software Development Services",
+      description: "Service options for new website builds, redesigns, migrations, commerce diagnostics, and custom web engineering.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       inLanguage: "en-US",
     },

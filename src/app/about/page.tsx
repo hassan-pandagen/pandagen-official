@@ -4,20 +4,20 @@ import AboutPageClient from "./AboutPageClient";
 import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
-    title: { absolute: "About PandaCodeGen | Website Migration Delivery Standards" },
-    description: "Meet PandaCodeGen's co-founders and review how the company, founded in February 2026, scopes SEO-safe website migrations, acceptance criteria, cutover risk, and handover.",
+    title: { absolute: "About PandaCodeGen | How We Scope and Deliver" },
+    description: "Meet PandaCodeGen's co-founders and review how the company, trading since February 2026, scopes new website builds, redesigns and migrations, with acceptance criteria, cutover risk and handover agreed in writing.",
     alternates: alternatesFor("about", "en"),
     openGraph: {
-        title: "About PandaCodeGen | Website Migration Delivery Standards",
-        description: "Meet PandaCodeGen's co-founders and review its migration delivery, acceptance, cutover, and handover standards.",
+        title: "About PandaCodeGen | How We Scope and Deliver",
+        description: "Meet PandaCodeGen's co-founders and review its delivery, acceptance, cutover and handover standards.",
         url: "https://www.pandacodegen.com/about",
         type: "website",
         images: [ogImageForPath("/about")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "About PandaCodeGen | Website Migration Delivery Standards",
-        description: "Meet PandaCodeGen's co-founders and review its migration delivery, acceptance, cutover, and handover standards.",
+        title: "About PandaCodeGen | How We Scope and Deliver",
+        description: "Meet PandaCodeGen's co-founders and review its delivery, acceptance, cutover and handover standards.",
     },
 };
 

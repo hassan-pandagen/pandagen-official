@@ -41,9 +41,9 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-tight"
           >
-            Website redesign and <br />
+            Website design, redesign <br />
             <span className="font-serif italic text-cognac">
-              migration services.
+              and development.
             </span>
           </motion.h1>
           <motion.p
@@ -52,7 +52,11 @@ export default function PageContent() {
             transition={{ delay: 0.2 }}
             className="text-lg text-stone-600 max-w-2xl mx-auto"
           >
-            We rebuild business websites that already earn their keep: your pages, your links and the tools you already use come across, and your team carries on editing content afterwards. Three service shapes below, all fixed-price against a written scope.
+            We design and build business websites, online stores and custom software. Start with a new
+            build, or improve a site you already have through a redesign, a migration or an integration.
+            When there is a site to move, your pages, your links and the tools you use come across, and
+            your team carries on editing content afterwards. Scope, price and dates are agreed before
+            work starts.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}

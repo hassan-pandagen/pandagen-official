@@ -1,5 +1,6 @@
 "use client";
 
+import { FOUNDING_DATE } from "@/data/company-facts";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -20,7 +21,7 @@ const aboutSchema = {
       "@id": "https://www.pandacodegen.com/about#webpage",
       url: "https://www.pandacodegen.com/about",
       name: "About PandaCodeGen",
-      description: "How PandaCodeGen scopes and delivers website migrations and custom web engineering.",
+      description: "How PandaCodeGen scopes and delivers custom websites, online stores, migrations and web engineering.",
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       about: { "@id": "https://www.pandacodegen.com/#organization" },
       inLanguage: "en-US",
@@ -37,7 +38,7 @@ const aboutSchema = {
       "@id": "https://www.pandacodegen.com/#organization",
       name: "PandaCodeGen",
       url: "https://www.pandacodegen.com",
-      foundingDate: "2026-02",
+      foundingDate: FOUNDING_DATE,
       address: {
         "@type": "PostalAddress",
         streetAddress: "12250 S Kirkwood Rd, Apt 1128",

@@ -1,3 +1,4 @@
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -111,9 +112,9 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen is a custom software studio that builds and operates its own products. This operations platform is PandaCodeGen's own custom CRM and business-intelligence system for the Panda Patches business, replacing spreadsheets, a disconnected CRM, and WhatsApp updates with a single Supabase-backed application.",
+            "description": ORGANIZATION_DESCRIPTION,
             "email": "info@pandacodegen.com",
-            "foundingDate": "2026",
+            "foundingDate": FOUNDING_DATE,
             "areaServed": "Worldwide",
             "address": {
                 "@type": "PostalAddress",

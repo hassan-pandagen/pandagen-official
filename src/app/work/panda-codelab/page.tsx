@@ -1,3 +1,4 @@
+import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -110,9 +111,9 @@ const caseStudySchema = {
             "alternateName": "Panda Code Gen",
             "url": "https://www.pandacodegen.com",
             "logo": { "@type": "ImageObject", "url": "https://www.pandacodegen.com/logo.png", "width": 655, "height": 113 },
-            "description": "PandaCodeGen is a custom software studio that builds premium, hand-coded websites and applications. Panda CodeLab is a separate agency brand PandaCodeGen built and operates on Next.js, React, Framer Motion, and Spline 3D.",
+            "description": ORGANIZATION_DESCRIPTION,
             "email": "info@pandacodegen.com",
-            "foundingDate": "2026",
+            "foundingDate": FOUNDING_DATE,
             "areaServed": "Worldwide",
             "address": {
                 "@type": "PostalAddress",
