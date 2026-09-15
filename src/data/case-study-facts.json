@@ -301,12 +301,12 @@
         {
           "id": "integrations",
           "label": "Live integrations",
-          "value": "Square, Meta CAPI, Sentry",
+          "value": "Square payments, ZeptoMail transactional email, Meta CAPI, Sentry",
           "status": "verified",
           "method": {
             "kind": "field",
             "date": "2026-09-15",
-            "note": "Code search plus the live Edge Function listing. Square is live and Stripe is decommissioned; the only remaining Stripe reference is a comment describing what replaced it. Meta CAPI runs across six active functions. Sentry is initialised in src/main.tsx and proxied first-party."
+            "note": "Code search plus the live Edge Function listing, 15 September 2026. Square is live and Stripe is decommissioned; the only remaining Stripe reference in the CRM repository is a comment describing what replaced it. Meta CAPI runs across six active functions. Sentry is initialised in src/main.tsx and proxied first-party. Transactional email runs through the single send-email function on ZeptoMail. That the customer is emailed a paid invoice once payment lands is stated by the platform's owner rather than confirmed by that repository audit, which did not enumerate the email templates; it is consistent with the invoice PDF renderer and the unpaid-invoice dashboard already in the stack, and should be confirmed against the template list on the next pass."
           },
           "approvedBy": "PandaCodeGen engineering, from the CRM repository",
           "approvedDate": "2026-09-15"
