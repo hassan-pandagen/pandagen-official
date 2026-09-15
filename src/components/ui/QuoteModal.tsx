@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { trackFBEvent } from "@/components/FacebookPixel";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
 import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
+import { takeQuotePrefill } from "@/lib/quotePrefill";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -30,6 +31,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<{ name?: string; email?: string }>({});
+  // Controlled so a surface that collected details before opening the modal --
+  // the homepage quiz -- can put them in front of the visitor to edit, rather
+  // than attaching anything to their enquiry that they cannot see.
+  const [details, setDetails] = useState("");
   const formLoadedAtRef = useRef(0);
   const dialogRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -48,6 +53,11 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       : null;
     document.body.style.overflow = "hidden";
     formLoadedAtRef.current = Date.now();
+
+    // Read once and cleared, so the next visitor to open the modal from a
+    // plain CTA does not inherit somebody else's quiz answers.
+    const prefill = takeQuotePrefill();
+    if (prefill) setDetails(prefill);
 
     const dialogContainer = dialogRef.current?.parentElement ?? null;
     const modalParent = dialogContainer?.parentElement ?? null;
@@ -114,6 +124,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       setIsLoading(false);
       setError(null);
       setFieldErrors({});
+      setDetails("");
       onClose();
     }, 2500);
   };
@@ -288,7 +299,9 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                         <textarea
                           id="quote-details"
                           name="details"
-                          rows={3}
+                          rows={details ? 6 : 3}
+                          value={details}
+                          onChange={(event) => setDetails(event.target.value)}
                           autoComplete="off"
                           placeholder="Important URLs, integrations, constraints, or questions"
                           className="w-full resize-y rounded-xl border border-stone-300 bg-white px-4 py-3 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"

@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { motion } from "@/components/ui/motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { setQuotePrefill } from "@/lib/quotePrefill";
 
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
@@ -12,61 +14,45 @@ type Tier = "Starter" | "Growth" | "Scale";
 
 type Answer = "starter" | "growth" | "scale";
 
-const tierMap: Record<Tier, { name: string; price: string; tagline: string; fits: string[] }> = {
-  Starter: {
-    name: "Starter",
-    price: "$1,500",
-    tagline: "A small business site, up to 7 pages, live quickly.",
-    fits: [
-      "Up to 7 pages",
-      "A brochure or service site. Nothing to buy.",
-      "Edit your own words, images and business details.",
-      "Custom Next.js, with a 90+ Lighthouse target at handover",
-      "1 to 2 weeks delivery",
-    ],
-  },
-  Growth: {
-    name: "Growth (Most Popular)",
-    price: "$3,500",
-    tagline: "A full website and blog move, with redirects and launch checks.",
-    fits: [
-      "8 to 20 pages",
-      "Sanity CMS (you edit content yourself, no developer needed)",
-      "Your blog moves with 301 redirects, so Google keeps finding it",
-      "2 to 4 weeks delivery",
-    ],
-  },
-  Scale: {
-    name: "Scale",
-    price: "From $5,000",
-    tagline: "A headless store, custom integrations, more than 20 pages.",
-    fits: [
-      "More than 20 pages, a shop, or more than one language",
-      "Shopify or WooCommerce headless rebuild",
-      "Custom integrations (HubSpot, Salesforce, Stripe, etc.)",
-      "3 to 6 weeks delivery",
-    ],
-  },
-};
+type Option = { label: string; value: Answer };
 
 type Step = {
   q: string;
-  options: { label: string; value: Answer }[];
+  // Kept short because this text is repeated back to the visitor in the enquiry
+  // form, where a full question would bury their own answer.
+  shortQ: string;
+  options: Option[];
 };
 
-// Page-count boundaries here must touch the pricing page exactly: Starter up to 7,
-// Growth 8 to 20, Scale more than 20. No gap and no overlap between the options.
+// 15 Sep 2026: this section used to end by naming a tier and a price --
+// "Scale / From $5,000" -- after three questions. Three questions cannot price
+// a project. Page count, whether there is a shop, and whether there are
+// integrations do not settle the scope, the content, the data to move or the
+// deadline, so every number it produced was a guess presented to the visitor as
+// an answer, and the highest-answer-wins rule meant one honest click on
+// "several integrations" quoted a small business $5,000.
+//
+// The three-band price grid added on 13 Sep went with it. That change came from
+// a real finding -- three of six competitor homepages put a starting price in a
+// section heading -- and the finding still holds, so the floor stays in the
+// heading and the published packages keep their own page.
+//
+// The quiz now does what it can actually do: collect three answers, hand them
+// to the enquiry form, and let a person quote from them.
 const steps: Step[] = [
   {
     q: "How many pages does your site have today?",
+    shortQ: "Pages today",
     options: [
       { label: "7 pages or fewer", value: "starter" },
       { label: "8 to 20 pages", value: "growth" },
       { label: "More than 20 pages", value: "scale" },
+      { label: "No site yet", value: "starter" },
     ],
   },
   {
     q: "Do you sell products online?",
+    shortQ: "Selling online",
     options: [
       { label: "No, brochure or service site", value: "starter" },
       { label: "A handful of products, or a blog", value: "starter" },
@@ -76,6 +62,7 @@ const steps: Step[] = [
   },
   {
     q: "Do you need third-party integrations? (HubSpot, Salesforce, Stripe, etc.)",
+    shortQ: "Integrations",
     options: [
       { label: "No, just a contact form", value: "starter" },
       { label: "Maybe one or two", value: "growth" },
@@ -84,41 +71,55 @@ const steps: Step[] = [
   },
 ];
 
+// Not shown to the visitor. It is a triage dimension on the GA completion event,
+// so we can see which shape of project the quiz actually attracts.
 function pickTier(answers: Answer[]): Tier {
-  // Take the highest tier across all answers (any "scale" wins, then "growth", then "starter")
   const rank: Record<Answer, number> = { starter: 0, growth: 1, scale: 2 };
   const reverse: Tier[] = ["Starter", "Growth", "Scale"];
   const max = answers.reduce((acc, a) => Math.max(acc, rank[a]), 0);
   return reverse[max];
 }
 
+function summarise(chosen: Option[]): string {
+  const lines = chosen.map((opt, index) => "- " + steps[index].shortQ + ": " + opt.label);
+  return "From the questions on your homepage:\n" + lines.join("\n") + "\n\n";
+}
+
 export default function TierQuiz() {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<Answer[]>([]);
+  const [chosen, setChosen] = useState<Option[]>([]);
 
   const isDone = step >= steps.length;
-  const result = useMemo(() => (isDone ? pickTier(answers) : null), [isDone, answers]);
 
-  function choose(value: Answer) {
+  function choose(option: Option) {
     // Fire quiz_start on the very first answer (engagement signal).
     if (step === 0) {
       trackGAEvent("quiz_start", { quiz: "tier_finder" });
     }
-    const nextAnswers = [...answers, value];
-    setAnswers(nextAnswers);
+    const next = [...chosen, option];
+    setChosen(next);
     setStep(step + 1);
-    // When this answer completes the quiz, fire quiz_complete with the resulting tier.
-    if (nextAnswers.length >= steps.length) {
+    // When this answer completes the quiz, fire quiz_complete with our read.
+    if (next.length >= steps.length) {
       trackGAEvent("quiz_complete", {
         quiz: "tier_finder",
-        recommended_tier: pickTier(nextAnswers),
+        recommended_tier: pickTier(next.map((o) => o.value)),
       });
     }
   }
 
   function reset() {
     setStep(0);
-    setAnswers([]);
+    setChosen([]);
+  }
+
+  function sendToForm() {
+    if (typeof window === "undefined") return;
+    // This lands in the form's own details field, so the visitor can read and
+    // edit everything that travels with their enquiry.
+    setQuotePrefill(summarise(chosen));
+    trackGAEvent("cta_click", { cta: "ask_about_project", location: "tier_quiz" });
+    window.dispatchEvent(new Event("open-quote-modal"));
   }
 
   return (
@@ -127,29 +128,17 @@ export default function TierQuiz() {
         <div className="mb-10 text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Pricing</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal tracking-tight mb-3">
-            Custom websites,{" "}
+            Websites and online stores,{" "}
             <span className="font-serif italic text-cognac">from $1,500.</span>
           </h2>
           <p className="text-lg text-stone-600 max-w-xl mx-auto">
-            The three starting points are below. Answer three questions if you want us to
-            point at one, or read them yourself and skip the quiz.
+            Answer three questions so we know what we are looking at, and a founder
+            comes back with a price. The published packages are on the{" "}
+            <Link href="/pricing" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">
+              pricing page
+            </Link>
+            .
           </p>
-        </div>
-
-        {/* 13 Sep 2026: these numbers already existed in tierMap and rendered only
-            AFTER three questions were answered. Six competitor homepages were read
-            with the same extractor and three of them put a price in a section
-            heading -- "Fixed pricing, from $700", "Know the cost before you write
-            to me". Making a visitor work for a number we already publish is the one
-            thing the comparison showed us doing that nobody else does. */}
-        <div className="grid sm:grid-cols-3 gap-4 mb-10">
-          {(Object.keys(tierMap) as Tier[]).map((key) => (
-            <div key={key} className="bg-white rounded-2xl border border-stone-200 p-5 text-center">
-              <p className="text-sm font-bold text-charcoal mb-1">{tierMap[key].name}</p>
-              <p className="text-2xl font-bold text-cognac mb-2">{tierMap[key].price}</p>
-              <p className="text-xs text-stone-600 leading-relaxed">{tierMap[key].tagline}</p>
-            </div>
-          ))}
         </div>
 
         {!isDone && (
@@ -166,7 +155,7 @@ export default function TierQuiz() {
               {steps[step].options.map((opt) => (
                 <button
                   key={opt.label}
-                  onClick={() => choose(opt.value)}
+                  onClick={() => choose(opt)}
                   className="text-left p-4 rounded-xl border border-stone-200 hover:border-cognac hover:bg-stone-50 transition flex items-center justify-between group"
                 >
                   <span className="font-medium text-charcoal">{opt.label}</span>
@@ -177,44 +166,53 @@ export default function TierQuiz() {
           </motion.div>
         )}
 
-        {isDone && result && (
+        {isDone && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-stone-200"
           >
-            <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Your fit</p>
-            <div className="flex items-baseline justify-between flex-wrap gap-2 mb-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-charcoal">{tierMap[result].name}</h3>
-              <p className="text-2xl md:text-3xl font-bold text-cognac">{tierMap[result].price}</p>
-            </div>
-            <p className="text-lg text-stone-600 mb-6">{tierMap[result].tagline}</p>
-            <ul className="space-y-2 mb-8">
-              {tierMap[result].fits.map((fit) => (
-                <li key={fit} className="flex items-start gap-3 text-stone-700">
-                  <CheckCircle2 className="w-5 h-5 text-cognac flex-shrink-0 mt-0.5" />
-                  <span>{fit}</span>
+            <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">What you told us</p>
+            <ul className="space-y-2 mb-6">
+              {chosen.map((opt, index) => (
+                <li key={steps[index].shortQ} className="flex items-start gap-3 text-stone-700">
+                  <CheckCircle2 className="w-5 h-5 text-cognac shrink-0 mt-0.5" />
+                  <span>
+                    <span className="text-stone-500">{steps[index].shortQ}:</span>{" "}
+                    <span className="font-medium text-charcoal">{opt.label}</span>
+                  </span>
                 </li>
               ))}
             </ul>
+            <p className="text-lg text-stone-600 mb-8">
+              That is enough for us to start on. Send it with your name and email and
+              we will reply with a price and what it covers, usually within one
+              business day. Three questions are not enough for us to quote you from
+              here, so a person reads them.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <CalModalButton className="flex-1 bg-cognac hover:bg-cognac/90 text-white px-6 py-3 rounded-xl font-bold text-center transition">
-                Book a free 15-min call
-              </CalModalButton>
               <button
-                onClick={reset}
-                className="px-6 py-3 rounded-xl font-medium text-stone-700 border border-stone-200 hover:bg-stone-50 transition"
+                onClick={sendToForm}
+                className="flex-1 bg-cognac hover:bg-cognac/90 text-white px-6 py-3 rounded-xl font-bold text-center transition"
               >
-                Start over
+                Send this and get a price
               </button>
+              <CalModalButton className="px-6 py-3 rounded-xl font-medium text-stone-700 border border-stone-200 hover:bg-stone-50 transition text-center">
+                Or book a 15-min call
+              </CalModalButton>
             </div>
+            <button
+              onClick={reset}
+              className="mt-4 text-sm font-medium text-stone-600 underline underline-offset-2 hover:text-charcoal transition-colors"
+            >
+              Start over
+            </button>
             <p className="mt-6 text-sm font-semibold text-charcoal leading-relaxed">
-              If none of these match what you have, call{" "}
+              Prefer to talk first? Call{" "}
               <a href="tel:+13027738982" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">+1 (302) 773-8982</a>{" "}
               or email{" "}
-              <a href="mailto:info@pandacodegen.com" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">info@pandacodegen.com</a>{" "}
-              and we will quote it.
+              <a href="mailto:info@pandacodegen.com" className="text-cognac underline underline-offset-2 hover:text-charcoal transition-colors">info@pandacodegen.com</a>.
             </p>
           </motion.div>
         )}
