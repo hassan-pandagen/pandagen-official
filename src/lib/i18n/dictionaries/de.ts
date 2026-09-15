@@ -341,7 +341,7 @@ const de: Dictionary = {
         {
           title: "Das geistige Eigentum liegt bei Ihnen",
           body:
-            "Wir übergeben den vollständigen Quellcode und deployen auf Ihr Hosting-Konto, nicht auf unseres. Ein monatlicher Wartungsvertrag ist nicht erforderlich: Die Kontrolle bleibt bei Ihnen.",
+            "Wir übergeben den vollständigen Quellcode. Das Hosting wird pro Kunde vereinbart und im Angebot festgehalten: manche Kunden werden auf ihrem eigenen Konto deployt, andere hosten bei uns, mit oder ohne Gebühr, je nach Vereinbarung. Das Hosting kann auf Wunsch auf Ihr Konto übertragen werden. Ein monatliches Paket ist nicht vorgeschrieben.",
         },
       ],
       ctaTitle: "Bereit, mit Ingenieuren statt mit Kundenbetreuung zu arbeiten?",
@@ -361,7 +361,7 @@ const de: Dictionary = {
         value: "22 Tage",
         title: "Projekt MyCustomPatches, unabhängiger Kunde",
         body:
-          "Jede Seite, jedes Produkt und jeder Blogbeitrag wurde in rund 22 Tagen auf einen individuellen Next.js-Build migriert, mit Crawl-Prüfung in der Search Console vor der DNS-Umstellung. Die Performance- und Hosting-Kostenzahlen dieses Projekts sind zurückgezogen, bis sie abgeglichen sind.",
+          "Jede Seite, jedes Produkt und jeder Blogbeitrag wurde in rund 22 Tagen auf einen individuellen Next.js-Build migriert, mit Crawl-Prüfung in der Search Console vor der DNS-Umstellung. Die Performance-Zahlen dieses Projekts sind zurückgezogen, bis sie abgeglichen sind. Die Hosting-Kosten sind endgültig zurückgezogen: es wurden keine Rechnungen aufbewahrt, es gibt also nichts abzugleichen.",
       },
       quotes: [
         {
@@ -586,13 +586,13 @@ const de: Dictionary = {
         number: "07",
         title: "Wem diese Konten gehören",
         body:
-          "Ihr Content-System, Ihre Datenbank und Ihr transaktionaler E-Mail-Dienst werden von Anfang an in Ihren eigenen Konten eingerichtet und nicht erst später übergeben. Wir halten dort Administratorzugang, damit Routinearbeiten, etwa ein ablaufender API-Token, nicht auf Ihrem Schreibtisch landen oder darauf warten, dass Sie Zeit haben. Sie können diesen Zugang jederzeit entziehen, und die Website funktioniert unverändert weiter. Das Hosting ist die einzige Ausnahme und eine Wahl: Solange Sie eine monatliche Betreuung beziehen, hosten wir auf unserem Konto und es gibt keine separate Hosting-Rechnung; andernfalls, oder sobald Sie es wünschen, wechselt es in Ihr eigenes Konto. Ihre Domain und Ihre geschäftliche E-Mail bleiben genau dort, wo sie sind. Wenn Sie jemanden im Haus haben, der die Schlüssel halten und bei einer Störung reagieren kann, übernehmen Sie das Hosting selbst und zahlen uns monatlich nichts.",
+          "Ihr Content-System, Ihre Datenbank und Ihr Dienst für Transaktions-E-Mails werden von Anfang an auf Ihren eigenen Konten eingerichtet und nicht erst später übertragen. Wir behalten dort einen Administratorzugang, damit laufende Aufgaben erledigt werden können, ohne Sie zu blockieren. Das Hosting wird getrennt behandelt: wem das Konto gehört und ob dafür eine Gebühr anfällt, wird mit Ihnen vereinbart und im Angebot festgehalten.",
       },
       {
         number: "08",
         title: "Wenn wir die Website weiter betreuen sollen",
         body:
-          "Es gibt keine verpflichtende Betreuung, und die Website gehört Ihnen in beiden Fällen. Die optionale monatliche Betreuung umfasst Hosting, Wartung, kleine Änderungen, Fehlerbehebungen sowie Such- und Inhaltsarbeit, wo Sie sie wünschen. Sie wird an Ihrer tatsächlichen Website und den angebundenen Systemen bemessen und nicht als feste Stufe verkauft, denn eine Broschüren-Website und eine Website, die Anmeldungen oder Zahlungen abwickelt, sind nicht derselbe Aufwand. Was als neue Funktion oder neues Seitentemplate gilt, wird separat angeboten. Enthält die Betreuung Artikel oder Inhalte, hängt der Zeitplan an Ihrer Freigabe der Entwürfe, und wir halten ausdrücklich fest, was mit einem nicht genutzten Monat geschieht.",
+          "Kein monatliches Paket ist verpflichtend, und die Website gehört in beiden Fällen Ihnen. Die optionale monatliche Betreuung umfasst Wartung, kleinere Änderungen, Fehlerbehebungen sowie die vereinbarte SEO- und Content-Arbeit. Hosting ist darin nicht automatisch enthalten: es wird gesondert vereinbart und in Ihrem Angebot ausgewiesen.",
       },
     ],
     sections: [

@@ -28,19 +28,31 @@ export default function ArticleContents({ label = "On this page" }: { label?: st
 
   useEffect(() => {
     const main = document.querySelector("main") ?? document.body;
+    const seen = new Set<string>();
     const found = Array.from(main.querySelectorAll<HTMLHeadingElement>("h2[id]"))
       .map((h) => ({ id: h.id, text: (h.textContent ?? "").trim() }))
-      .filter((h) => h.id && h.text);
+      .filter((h) => h.id && h.text)
+      // An article that writes its own "Frequently Asked Questions" heading above
+      // <FAQAccordion> produces two entries: its BlogHeader and the accordion's own
+      // h2#faq-heading. Different ids, one destination as far as a reader is
+      // concerned. Keep whichever comes first in the document.
+      .filter((h) => {
+        const key = h.text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return !(h.id === "faq-heading" && seen.has("frequently asked questions"));
+      });
     // Below four entries a contents list costs more attention than it saves.
     //
-    // react-hooks/set-state-in-effect is disabled for this one line deliberately.
-    // The rule exists to stop effects that derive state from props or other state,
-    // which should be computed during render instead. This reads the rendered DOM,
-    // which does not exist until after mount and has no value to derive from. It
-    // runs once, on an empty dependency list, and sets a value that never changes
-    // afterwards. There is no external store to subscribe to, so useSyncExternalStore
-    // would need a cached snapshot to avoid a render loop and would be more
-    // machinery for the same single read.
+    // react-hooks/set-state-in-effect is disabled for this one line deliberately,
+    // and it is a tradeoff rather than a case the rule does not cover. The rule is
+    // about synchronous state updates in effects and the extra render they cause,
+    // not only about values derived from props, so this does incur that extra
+    // render. React documents DOM measurement as a legitimate reason to accept it.
+    // The read happens once on an empty dependency list and the value never changes
+    // afterwards. Do not "fix" this with a setTimeout: that would hide the lint
+    // without removing the render, and would add a frame of delay on top.
+    // https://react.dev/reference/eslint-plugin-react-hooks/lints/set-state-in-effect
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setItems(found.length >= 4 ? found : []);
   }, []);

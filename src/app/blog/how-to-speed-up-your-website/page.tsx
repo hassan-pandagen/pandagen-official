@@ -351,7 +351,7 @@ export default function WebsiteSpeedGuide() {
                         The platform label never diagnoses the problem. Following the request from DNS to render does.
                     </BlogQuote>
 
-                    <BlogHeader>1. Confirm the route and template</BlogHeader>
+                    <BlogHeader id="confirm-route">1. Confirm the route and template</BlogHeader>
                     <BlogText>
                         Test representative templates and states: home, long content, search, product, collection, form,
                         cart, account and error. A homepage result cannot prove a page with different content, scripts
@@ -361,7 +361,7 @@ export default function WebsiteSpeedGuide() {
                         and come back to this list.
                     </BlogText>
 
-                    <BlogHeader>2. Separate field and lab data</BlogHeader>
+                    <BlogHeader id="field-vs-lab">2. Separate field and lab data</BlogHeader>
                     <BlogText>
                         Google&apos;s <a href="https://developers.google.com/speed/docs/insights/v5/about" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline">PageSpeed Insights</a> can show eligible Chrome User Experience Report data and a Lighthouse lab
                         run. Field data describes real-user distributions; the lab result is a simulated diagnostic.
@@ -380,7 +380,7 @@ export default function WebsiteSpeedGuide() {
                         cutoff.
                     </BlogText>
 
-                    <BlogHeader>Which tool answers which question</BlogHeader>
+                    <BlogHeader id="which-tool">Which tool answers which question</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             No single performance tool answers every question, and reaching for the wrong one is how a morning disappears into a metric that was never the constraint. Five tools cover the ground between them, and each has one question it is genuinely best at. Pick by the question you are holding rather than by the tab you already have open.
@@ -401,7 +401,7 @@ export default function WebsiteSpeedGuide() {
                         result is the one that matches how most visitors arrive.
                     </BlogText>
 
-                    <BlogHeader>3. Trace DNS, redirects and connection setup</BlogHeader>
+                    <BlogHeader id="trace-connection">3. Trace DNS, redirects and connection setup</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Everything in this step happens before your own code runs, which is why no amount of front-end work will shorten it. The browser has to resolve the hostname, follow any redirects, negotiate TLS and open a connection before the first byte of your document exists. Three checks cover the whole stage.
@@ -420,7 +420,7 @@ export default function WebsiteSpeedGuide() {
                         navigation, campaign URLs and email links at the final destination rather than relying on a hop.
                     </BlogText>
 
-                    <BlogHeader>4. Profile document and origin time</BlogHeader>
+                    <BlogHeader id="origin-time">4. Profile document and origin time</BlogHeader>
                     <BlogText>
                         Inspect cache status, CDN, origin compute, database, upstream APIs and errors. A host change helps
                         only when the current origin or network path is the constraint. It cannot remove oversized
@@ -435,14 +435,14 @@ export default function WebsiteSpeedGuide() {
                         path, not in image formats.
                     </BlogText>
 
-                    <BlogHeader>5. Identify the real LCP element</BlogHeader>
+                    <BlogHeader id="lcp-element">5. Identify the real LCP element</BlogHeader>
                     <BlogText>
                         Use the trace to find the LCP resource and its delay components. Ensure it is discoverable,
                         prioritized appropriately and not accidentally lazy-loaded. If the element is text, inspect
                         fonts and render-blocking styles rather than optimizing an unrelated image.
                     </BlogText>
 
-                    <BlogHeader>6. Right-size images and video</BlogHeader>
+                    <BlogHeader id="images-video">6. Right-size images and video</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Most image weight on a slow page is dimensions nobody sees, because a file sized for a large desktop display costs a phone visitor the full download whatever slot it lands in. Serving dimensions close to the rendered size is the largest saving available in this step, and it changes nothing about how the page looks.
@@ -458,7 +458,7 @@ export default function WebsiteSpeedGuide() {
                         ]}
                     />
 
-                    <BlogHeader>7. Audit CSS and fonts</BlogHeader>
+                    <BlogHeader id="css-fonts">7. Audit CSS and fonts</BlogHeader>
                     <BlogText>
                         Remove unused style sources carefully, reduce render-blocking work, consolidate where it helps,
                         and verify component states. Limit font families and weights, use appropriate subsets and
@@ -466,7 +466,7 @@ export default function WebsiteSpeedGuide() {
                         strategy and can make debugging or caching worse if applied blindly.
                     </BlogText>
 
-                    <BlogHeader>8. Reduce JavaScript and long tasks</BlogHeader>
+                    <BlogHeader id="javascript-long-tasks">8. Reduce JavaScript and long tasks</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             JavaScript charges the visitor twice, once to download it and once to parse and execute it, and on a mid-range phone the second charge is usually the larger. That is why deleting a small file can beat compressing a large image. The work here is finding the code that ships to this route and is not needed by it.
@@ -489,21 +489,21 @@ export default function WebsiteSpeedGuide() {
                         rather than loading with the document.
                     </BlogText>
 
-                    <BlogHeader>9. Stabilize layout</BlogHeader>
+                    <BlogHeader id="stabilize-layout">9. Stabilize layout</BlogHeader>
                     <BlogText>
                         Reserve media and embed space, keep validation messages predictable, avoid inserting late
                         banners above content, and verify consent, font, ad and personalization states. Exercise loading,
                         success and error paths instead of reading CLS from one clean page load.
                     </BlogText>
 
-                    <BlogHeader>10. Govern third parties and consent</BlogHeader>
+                    <BlogHeader id="third-parties">10. Govern third parties and consent</BlogHeader>
                     <BlogText>
                         Inventory analytics, ads, chat, heatmaps, video, maps, reviews, calendars, experimentation and
                         tag-manager loads. Record purpose, owner, consent category, transfer, load condition, cost and
                         failure behavior. Remove or defer only when product and compliance requirements permit it.
                     </BlogText>
 
-                    <BlogHeader>11. Verify cache and CDN behavior</BlogHeader>
+                    <BlogHeader id="cache-cdn">11. Verify cache and CDN behavior</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             A cache is worth whatever its miss and invalidation behavior is worth, and that is the half nobody tests. A configuration that serves a fast hit and then serves yesterday&apos;s price after an inventory change has bought you nothing. Decide what is cacheable by route and user state, then prove each state behaves the way you decided.
@@ -525,7 +525,7 @@ export default function WebsiteSpeedGuide() {
                         fingerprints those filenames, so check that before extending any lifetime.
                     </BlogText>
 
-                    <BlogHeader>12. Add release and regression controls</BlogHeader>
+                    <BlogHeader id="release-controls">12. Add release and regression controls</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Speed work that is not defended by a repeatable test gets undone by a later release, usually by someone who never knew the constraint existed. What defends it is a recorded baseline rather than a memory of a good afternoon. Four controls make the improvement survive the next deploy.
@@ -556,7 +556,7 @@ export default function WebsiteSpeedGuide() {
                         <Link href="/blog/gohighlevel-website-speed" className="text-cognac hover:underline">GoHighLevel pages</Link>.
                     </BlogText>
 
-                    <BlogHeader>When to optimize and when to rebuild</BlogHeader>
+                    <BlogHeader id="optimize-or-rebuild">When to optimize and when to rebuild</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Optimize unless the platform itself is blocking a requirement you have already accepted, which is a narrower condition than most rebuild conversations assume. The measured constraint decides this, not the age of the site and not a dislike of the current editor. Three positions cover almost every case.
