@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import ArticleContents from "@/components/blog/ArticleContents";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -213,6 +214,7 @@ export default function WooCommerceTooSlowPage() {
                         ))}
                     </div>
 
+                    <ArticleContents />
                     <BlogHeader id="score">Does WooCommerce have a typical PageSpeed score?</BlogHeader>
                     <BlogText>
                         No reliable platform-wide score applies to every WooCommerce store. <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> is a controlled
@@ -582,7 +584,7 @@ export default function WooCommerceTooSlowPage() {
                         </>
                     )}
 
-                    <BlogHeader>Primary sources</BlogHeader>
+                    <BlogHeader id="primary-sources">Primary sources</BlogHeader>
                     <ul className="mb-12 space-y-3 text-sm text-stone-600">
                         {sources.map((source) => (
                             <li key={source.url}>

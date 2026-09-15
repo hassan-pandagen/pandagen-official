@@ -341,7 +341,7 @@ const fr: Dictionary = {
         {
           title: "La propriété intellectuelle vous revient",
           body:
-            "Nous remettons le code source complet et déployons sur votre compte d'hébergement, pas le nôtre. Aucun forfait de maintenance mensuel n'est imposé : vous gardez le contrôle.",
+            "Nous remettons le code source complet. L'hébergement est convenu au cas par cas et écrit dans le devis : certains clients sont déployés sur leur propre compte, d'autres sont hébergés chez nous, avec ou sans frais selon ce qui est convenu. L'hébergement peut être transféré sur votre compte sur simple demande. Aucune formule mensuelle n'est imposée.",
         },
       ],
       ctaTitle: "Prêt à travailler avec des ingénieurs plutôt qu'avec des chargés de compte ?",
@@ -361,7 +361,7 @@ const fr: Dictionary = {
         value: "22 jours",
         title: "Projet MyCustomPatches, client indépendant",
         body:
-          "Chaque page, produit et article de blog a été migré vers une construction Next.js sur mesure en 22 jours environ, avec validation de l'exploration dans la Search Console avant le basculement DNS. Les chiffres de performance et de coût d'hébergement de ce projet sont retirés en attendant leur réconciliation.",
+          "Chaque page, produit et article de blog a été migré vers une construction Next.js sur mesure en 22 jours environ, avec validation de l'exploration dans la Search Console avant le basculement DNS. Les chiffres de performance de ce projet sont retirés en attendant leur réconciliation. Le coût d'hébergement est retiré définitivement : aucune facture n'a été conservée, il n'y a donc rien à réconcilier.",
       },
       quotes: [
         {
@@ -586,13 +586,13 @@ const fr: Dictionary = {
         number: "07",
         title: "À qui appartiennent ces comptes",
         body:
-          "Votre système de contenu, votre base de données et votre service d'e-mails transactionnels sont créés dès le départ sur vos propres comptes, et non transférés plus tard. Nous y conservons un accès administrateur afin que les tâches courantes, un jeton d'API qui expire par exemple, n'atterrissent pas sur votre bureau et n'attendent pas votre disponibilité. Vous pouvez retirer cet accès à tout moment, et rien ne cesse de fonctionner sur le site. L'hébergement est la seule exception, et c'est un choix : tant que vous êtes en formule mensuelle, nous l'hébergeons sur notre compte et il n'y a pas de facture d'hébergement séparée ; sinon, ou dès que vous le demandez, il bascule sur votre propre compte. Votre nom de domaine et votre messagerie professionnelle restent exactement où ils sont. Si vous avez en interne quelqu'un capable de détenir les clés et de réagir en cas de panne, prenez l'hébergement vous-même et ne nous payez rien chaque mois.",
+          "Votre système de contenu, votre base de données et votre service d'e-mails transactionnels sont créés dès le départ sur vos propres comptes, et non transférés plus tard. Nous y conservons un accès administrateur afin que les tâches courantes puissent être faites sans vous bloquer. L'hébergement est traité séparément : la question de savoir qui détient le compte, et si cela entraîne des frais, est convenue avec vous et inscrite dans le devis.",
       },
       {
         number: "08",
         title: "Si vous voulez que nous continuions à nous en occuper",
         body:
-          "Aucune formule mensuelle n'est obligatoire, et le site vous appartient dans les deux cas. Le suivi mensuel optionnel couvre l'hébergement, la maintenance, les petites modifications, les correctifs, ainsi que le travail de référencement et de contenu là où vous le souhaitez. Il est chiffré d'après votre site réel et les systèmes qui y sont connectés plutôt que vendu par palier fixe, car un site vitrine et un site qui gère des inscriptions ou des paiements ne représentent pas la même charge. Ce qui relève d'une nouvelle fonctionnalité ou d'un nouveau gabarit de page est chiffré à part. Lorsque le suivi comprend des articles ou du contenu, le calendrier dépend de votre validation des brouillons, et nous précisons clairement ce qu'il advient d'un mois non utilisé.",
+          "Aucune formule mensuelle n'est obligatoire, et le site vous appartient dans les deux cas. Le suivi mensuel optionnel couvre la maintenance, les petites modifications, les correctifs, ainsi que le travail de référencement et de contenu convenu. L'hébergement n'y est pas automatiquement inclus : il est convenu séparément et indiqué dans votre devis.",
       },
     ],
     sections: [

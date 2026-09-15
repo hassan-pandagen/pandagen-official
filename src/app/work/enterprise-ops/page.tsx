@@ -665,7 +665,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Twelve reports. One date-range filter.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl" data-speakable="true">
-                            The reporting layer is the platform&apos;s core strength: a dedicated Reports page with date-range filtering across every analytical module, each one CSV-exportable and charted with Recharts. From gross-to-net revenue to a full income statement to Meta CAPI attribution quality, the answer is one click, not a 30-minute spreadsheet.
+                            The reporting layer is the platform&apos;s core strength: a dedicated Reports page with date-range filtering across every analytical module, each one CSV-exportable and charted with Recharts. From gross-to-net revenue to a full income statement to Meta CAPI attribution quality, the answer is a report with a date filter, not an afternoon of cross-referencing.
                         </p>
                         <div className="grid md:grid-cols-2 gap-4">
                             {reportingModules.map((m) => (

@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import ArticleContents from "@/components/blog/ArticleContents";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -234,6 +235,7 @@ export default function HighLevelSpeedGuide() {
                         ))}
                     </div>
 
+                    <ArticleContents />
                     <BlogHeader id="which-slow">Two different things get called &ldquo;HighLevel is slow&rdquo;</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
@@ -261,7 +263,7 @@ export default function HighLevelSpeedGuide() {
                         problem.
                     </BlogText>
 
-                    <BlogHeader>What PageSpeed Insights actually tells you</BlogHeader>
+                    <BlogHeader id="what-pagespeed-insights-actually-tells">What PageSpeed Insights actually tells you</BlogHeader>
                     <BlogText>
                         PageSpeed Insights can show field data from the Chrome User Experience Report when the URL or
                         origin has enough eligible data, plus a Lighthouse lab result. These are not interchangeable.
@@ -286,7 +288,7 @@ export default function HighLevelSpeedGuide() {
                         your own routes and compare them against themselves over time.
                     </InsightBox>
 
-                    <BlogHeader>Record a defensible test profile</BlogHeader>
+                    <BlogHeader id="record-a-defensible-test-profile">Record a defensible test profile</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             A HighLevel speed complaint usually arrives as a single screenshot, which settles nothing. Five things make a result defensible enough to act on or to show a client, and three comparable runs is the minimum among them. Record the conditions at the same time as the number, because you cannot reconstruct them afterwards.
@@ -342,7 +344,7 @@ export default function HighLevelSpeedGuide() {
                         profile. Measure your own route before and after each change.
                     </InsightBox>
 
-                    <BlogHeader>Common causes to inspect on a HighLevel page</BlogHeader>
+                    <BlogHeader id="common-causes-to-inspect-on">Common causes to inspect on a HighLevel page</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Most HighLevel slowness comes from what was added to the page rather than from the platform underneath it. Six categories account for nearly all of it, and nesting is the one nobody sees: sections inside rows inside columns still cost the browser layout work even where nothing visible is being rendered.
@@ -367,7 +369,7 @@ export default function HighLevelSpeedGuide() {
                         <Link href="/blog/how-to-speed-up-your-website" className={sourceLinkClass}>how to speed up a website</Link>.
                     </BlogText>
 
-                    <BlogHeader>In-platform fixes to try first</BlogHeader>
+                    <BlogHeader id="in-platform-fixes-to-try">In-platform fixes to try first</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             These fixes stay inside the builder, need no migration, and resolve a large share of the complaints that arrive asking for one. Six of them, in the order worth trying. Retest forms, calendars, attribution and consent after each change, because the quickest way to break a funnel is to speed up the page it runs on.
@@ -404,7 +406,7 @@ export default function HighLevelSpeedGuide() {
                         business requirement.
                     </BlogText>
 
-                    <BlogHeader>Does speed affect GoHighLevel SEO or ads?</BlogHeader>
+                    <BlogHeader id="does-speed-affect-gohighlevel-seo">Does speed affect GoHighLevel SEO or ads?</BlogHeader>
                     <BlogText>
                         Google says Core Web Vitals are used by ranking systems, while also making clear that good scores
                         do not guarantee top rankings and that relevance remains fundamental. Mobile-first indexing is
@@ -446,7 +448,7 @@ export default function HighLevelSpeedGuide() {
                         are worth ruling out first.
                     </BlogText>
 
-                    <BlogHeader>When to keep HighLevel and replace the frontend</BlogHeader>
+                    <BlogHeader id="when-to-keep-highlevel-and">When to keep HighLevel and replace the frontend</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Keeping the CRM and replacing only the frontend is a real option, and it is where most of these conversations should end rather than at a full platform move. The table sets the two columns side by side. What decides it is whether your constraint is the pages themselves or the workflows your team runs behind them.
@@ -499,7 +501,7 @@ export default function HighLevelSpeedGuide() {
                         how we build and connect the hybrid frontend.
                     </BlogText>
 
-                    <BlogHeader>Migration and acceptance controls</BlogHeader>
+                    <BlogHeader id="migration-and-acceptance-controls">Migration and acceptance controls</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             A hybrid build fails at the integration boundary rather than at the page, so acceptance has to test the funnel and not the render. Five controls cover that. Contact fields, duplicate handling, workflows, calendars and error behavior all need naming in the scope, because those are what the business actually runs on.
@@ -525,7 +527,7 @@ export default function HighLevelSpeedGuide() {
                         <Link href="/blog/will-migrating-hurt-my-seo" className={sourceLinkClass}>what happens to search visibility during a migration</Link>.
                     </BlogText>
 
-                    <BlogHeader>Primary sources</BlogHeader>
+                    <BlogHeader id="primary-sources">Primary sources</BlogHeader>
                     <ul className="my-6 list-disc space-y-3 pl-6 text-stone-700">
                         {sources.map((source) => (
                             <li key={source.url}>
