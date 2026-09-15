@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const pageFaqs: { question: string; answer: string }[] = [
     {
         question: "What is a custom business operations platform?",
-        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 8+ financial reporting modules, RBAC, payments via Square and Stripe, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
+        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 12 financial reporting modules, RBAC, Square payments with a paid invoice emailed to the customer, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
     },
     {
         question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
@@ -214,11 +214,13 @@ const reportingModules = [
 
 // Production integrations wired into the platform.
 const integrations = [
-    { name: "Supabase", role: "Postgres · Auth · Storage · Realtime · 20 Edge Functions" },
+    { name: "Supabase", role: "Postgres · Auth · Storage · Realtime · 26 Edge Functions" },
     { name: "Meta CAPI", role: "Server-side purchase/lead events, reversal on refund" },
-    { name: "Square", role: "Public payment links (/pay/:token) + checkout" },
-    { name: "Stripe", role: "Balance & payout webhooks (idempotent)" },
-    { name: "ZeptoMail", role: "Transactional email for every order milestone" },
+    // Stripe was decommissioned in the CRM repo; the only reference left there is a
+    // comment saying the Square payment-link function replaced it. Confirmed by a
+    // source audit of that repository on 15 Sep 2026. Square is the payment system.
+    { name: "Square", role: "Checkout, public payment links (/pay/:token), payment webhooks" },
+    { name: "ZeptoMail", role: "Transactional email for every order milestone, including the paid invoice sent to the customer" },
     { name: "Sentry", role: "APM + error tracking via first-party proxy" },
     { name: "Vercel", role: "Frontend hosting, SPA routing, asset caching" },
 ];
@@ -273,7 +275,7 @@ const roles = [
 ];
 
 const platformFeatures = [
-    { icon: BarChart3, title: "Email Automation", desc: "Order confirmation, follow-up, and overdue payment reminders fire automatically, no manual sending." },
+    { icon: BarChart3, title: "Email Automation", desc: "Order confirmation, the paid invoice once payment lands, follow-up, and overdue payment reminders all fire automatically, no manual sending." },
     { icon: Users, title: "Per-Agent Sales Reports", desc: "Each sales rep logs in and sees only their pipeline, targets, and conversion rate. Managers see the full picture." },
     { icon: TrendingUp, title: "Pending Amounts Dashboard", desc: "Every unpaid invoice, outstanding balance, and overdue account visible at a glance. No more chasing people for what&apos;s owed." },
     { icon: Clock, title: "Order History & Repeat Customer Flags", desc: "See who&apos;s bought before, how often, and what they spent without digging through files." },
@@ -714,7 +716,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "PostgreSQL schema with Row-Level Security on all 59 tables (86 tracked migrations)",
                                 "17-status order pipeline, 14 of them in live use (NEW_ORDER → DELIVERED, plus DIGITIZING / REMAKE / CANCELLED / REFUNDED / FEEDBACK and more)",
                                 "8+ financial reporting modules (Sales, P&L, Income Statement, Product Mix, Attribution), CSV export",
-                                "Payments: Square checkout + public payment links (/pay/:token), Stripe payout webhooks",
+                                "Payments: Square checkout, public payment links (/pay/:token), payment webhooks, and a paid invoice emailed to the customer",
                                 "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
                                 "Transactional email via ZeptoMail for every order milestone",
                                 "Immutable order_history audit log, every change attributed",
