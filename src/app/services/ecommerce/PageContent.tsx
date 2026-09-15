@@ -87,7 +87,7 @@ export default function PageContent() {
       <section className="px-6 pb-6 md:pb-8 bg-paper">
         <div className="container mx-auto max-w-3xl">
           <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen rebuilds slow Shopify and WooCommerce stores as custom headless storefronts on Next.js,</strong> keeping your existing backend for products, orders, and payments. Builds are fixed-price from $1,500 for smaller catalogs and $5,000 for headless commerce, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces storefront app fees with code you own, while Shopify keeps running products, orders and payments on its own subscription, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
+            <strong className="text-charcoal">PandaCodeGen builds online stores as custom storefronts on Next.js, from scratch or as a rebuild of one you already have,</strong> keeping Shopify or WooCommerce as the backend for products, orders, and payments. Builds are fixed-price from $1,500 for a smaller catalogue, $3,500 for a growing one, and $5,000 where a large catalogue, subscriptions or custom checkout logic is involved, target sub-second load times, and ship with a written 90+ Lighthouse handover target on mobile and desktop for the agreed representative pages, verified across three recorded runs. The result replaces storefront app fees with code you own, while Shopify keeps running products, orders and payments on its own subscription, and there is no minimum project size. How much speed improves, and what that is worth commercially, depends on your current theme, apps and catalogue.
           </p>
         </div>
       </section>
@@ -606,7 +606,7 @@ export default function PageContent() {
               { href: "/services/squarespace", icon: Globe, title: "Squarespace Migration", desc: "Outgrow templates. Build something bespoke." },
               { href: "/services/webflow", icon: Globe, title: "Webflow Migration", desc: "Performance ceiling hit? Move to Next.js." },
               { href: "/services/gohighlevel", icon: Zap, title: "GoHighLevel", desc: "GHL site slow? Custom frontend, same CRM." },
-              { href: "/services/custom-engineering", icon: Zap, title: "Custom Engineering", desc: "SaaS, dashboards, APIs built from scratch." },
+              { href: "/services/custom-engineering", icon: Zap, title: "Custom software", desc: "SaaS, dashboards, APIs built from scratch." },
               { href: "/partners", icon: ArrowRightLeft, title: "For Agencies", desc: "White-label dev partnership. You sell, we build." },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="group flex items-start gap-3 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all">

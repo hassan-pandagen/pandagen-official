@@ -93,7 +93,7 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "New website builds, redesigns and migrations, online stores and custom software, scoped in writing before work starts.",
   },
   "/services/custom-engineering": {
-    title: "Custom Engineering",
+    title: "Custom Software",
     label: "Complex Requirements",
     description: "Custom application and integration work scoped around explicit requirements, acceptance criteria, ownership, and handover.",
   },

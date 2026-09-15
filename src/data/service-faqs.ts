@@ -175,7 +175,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does a Squarespace migration cost?",
-      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and an editor you update yourself. From $5,000 for a store, a members area or more than 20 pages. An hourly agency sells you time. We sell you the finished site at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and an editor you update yourself. From $5,000 for a large catalogue, a members area or more than 20 pages. A simple store of a few products starts at Starter, at $1,500. An hourly agency sells you time. We sell you the finished site at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "What if I have a blog on Squarespace?",
@@ -205,7 +205,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does it cost to migrate from Webflow?",
-      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your CMS content moved and every link forwarded. From $5,000 for a store, more than one language or more than 20 pages. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your CMS content moved and every link forwarded. From $5,000 for a large catalogue, more than one language or more than 20 pages. A simple store of a few products starts at Starter, at $1,500. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "Who supplies the words and images?",
@@ -247,7 +247,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How much does it cost to migrate from Wix?",
-      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with an editor and every link forwarded. From $5,000 for a shop, bookings or more than 20 pages. No hourly billing. You pay for the finished site, not for time, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with an editor and every link forwarded. From $5,000 for a large catalogue, bookings or more than 20 pages. A simple store of a few products starts at Starter, at $1,500. No hourly billing. You pay for the finished site, not for time, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
   ],
   "woocommerce": [

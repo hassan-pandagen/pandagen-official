@@ -1,4 +1,5 @@
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
+import { metricValue } from "@/data/case-study-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -227,17 +228,27 @@ const integrations = [
 
 // Verified scope from the production codebase.
 const byNumbers = [
-    // Every value here was stale until 15 Sep 2026: this array held the pre-audit
-    // counts (23 / 8+ / 20 / 13 / 3·11 / 10) for a full day after the same six
-    // numbers were corrected in the headline cards and again in the deliverables
-    // list. Three copies of one fact in one file. They should all render from
-    // case-study-facts.json rather than being typed here a fourth time.
-    { value: "27", label: "Staff routes" },
-    { value: "12", label: "Reporting modules" },
-    { value: "26", label: "Edge Functions" },
-    { value: "17", label: "Order statuses" },
-    { value: "7 · 11", label: "Roles · permissions" },
-    { value: "86", label: "DB migrations" },
+    // IDS, NOT LITERALS. Corrected 16 Sep 2026.
+    //
+    // This array held the pre-audit counts (23 / 8+ / 20 / 13 / 3x11 / 10) for a
+    // full day after the same six numbers had been corrected in the headline cards
+    // and again in the deliverables list. Three copies of one fact in one file, and
+    // two review rounds to find the third. case-study-facts.json says in its own
+    // header: "No metric is ever typed into a page file again." This page was the
+    // standing violation of that rule.
+    //
+    // Each tile now names a metric id and renders whatever the registry holds. A
+    // number can no longer drift here, because there is no number here to drift. If
+    // a metric is withdrawn or the id is wrong, metricValue returns null and the
+    // tile does not render -- silence rather than a stale figure.
+    { id: "staff-routes", label: "Staff routes" },
+    { id: "reporting-modules", label: "Reporting modules" },
+    { id: "edge-functions", label: "Edge Functions" },
+    { id: "order-statuses", label: "Order statuses" },
+    { id: "roles-permissions", label: "Roles and permissions" },
+    { id: "db-migrations", label: "DB migrations" },
+    { id: "db-views", label: "Database views" },
+    { id: "production-rows-imported", label: "Rows imported from the old sheet" },
 ];
 
 const roles = [
@@ -287,7 +298,7 @@ const platformFeatures = [
     { icon: Database, title: "Avg Order Value by Category", desc: "Instantly see which product lines are driving revenue and which are just taking up space." },
     { icon: Lock, title: "Profit & Loss by Category", desc: "One click to see which categories are making money and which are bleeding it, no Excel required." },
     { icon: Shield, title: "Single Dashboard", desc: "What used to live across a spreadsheet estate, several SaaS tools, and a WhatsApp group is now one screen. One login. One source of truth." },
-    { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Any production issue is caught before the team notices." },
+    { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Errors and performance traces are reported automatically rather than waiting for somebody to report them." },
     { icon: Zap, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
 ];
 
@@ -408,11 +419,11 @@ export default function EnterpriseOpsCaseStudy() {
 
                         <div className="grid gap-4 md:grid-cols-2">
                             {[
-                                { title: "Every lead, with where it actually came from", body: "A quote records its source when it arrives: search, paid ads, social, referral, or an AI assistant. Click identifiers from Meta, Google, Microsoft and TikTok are captured with it and carried through to the order, so the channel that produced the money is still attached to it months later. Six server-side functions report purchases and leads back to Meta and reverse them automatically when an order is refunded or cancelled, so the ad platform is not left optimising against revenue that went back. Where a source cannot be observed, the customer can say how they found you. Both are kept on the order as distinct evidence, so any figure drawn from them later can state which kind it rests on and each order is counted once." },
+                                { title: "Every lead, with where it actually came from", body: "A quote records its source when it arrives: search, paid ads, social, referral, or an AI assistant. Click identifiers from Meta, Google, Microsoft and TikTok are captured with it and carried through to the order, so the channel that produced the money is still attached to it months later. Six server-side functions report purchases and leads to Meta from the server rather than the browser, and a refund or cancellation triggers a reversal call for that purchase. What the ad platform then does with it is Meta's behaviour, not ours to promise. Where a source cannot be observed, the customer can say how they found you. Both are kept on the order as distinct evidence, so any figure drawn from them later can state which kind it rests on and each order is counted once." },
                                 { title: "Orders that carry their own history", body: "An order moves through a defined lifecycle from enquiry to delivered, with branch states for remakes, cancellations and refunds. Every field change is logged with who changed it and when. Notes, customer messages, mockups, production files and shipping documents live on the order itself, not in somebody's inbox." },
                                 { title: "Agents see their own work, and their own money", body: "A sales agent opens the platform and sees the orders assigned to them, what each is worth, which are still unpaid, and what they earned last month. Commission is calculated from the orders themselves rather than reconciled by hand at month end. An agent cannot see another agent's book, and cannot see cost or margin at all unless that permission is granted." },
                                 { title: "The production floor has its own queue", body: "Digitising and stitching run on a work queue separate from the customer-facing order status, so the floor moves a job along without anyone having to translate that into something a customer would understand. It replaced a Google Sheet the floor had run since August 2025: 1,779 rows were imported and reconciled line for line, and 27 different spellings of the product types were collapsed into 13 canonical ones so a price could attach to each. A digitiser sees the job they were assigned and nothing else: no customer identity, no conversation, no pricing." },
-                                { title: "Invoices and emails that send themselves", body: "Order confirmations, the paid invoice once payment lands, follow-ups and overdue payment reminders all send on their own, through one email service with a single template system behind it, so a new message is a template rather than a new piece of plumbing. Three were added in the last month alone. Payment runs through Square, by checkout or by a payment link an agent generates for one customer. Nobody has to remember to send anything, which is the point." },
+                                { title: "Invoices and emails that send themselves", body: "Order confirmations, the paid invoice once payment lands, follow-ups and overdue payment reminders all send on their own, through one email service with a single template system behind it, so a new message is a template rather than a new piece of plumbing. Three were added between 10 August and 15 September 2026. Payment runs through Square, by checkout or by a payment link an agent generates for one customer. Nobody has to remember to send anything, which is the point." },
                                 { title: "Repeat customers, recognised as such", body: "Lifetime value, order history and repeat rate sit on the customer record, and loyalty tiers move on their own as that spend grows. Duplicate customer records are detected and merged rather than quietly splitting one buyer's history in two." },
                                 { title: "Reporting that answers a question, not a spreadsheet", body: "Twelve reports behind one date filter: revenue against cost and net profit, an income statement, product mix by type and quantity band, cancellations and refunds with reasons, lead source, funnel and attribution, agent performance, customer feedback and loyalty. Every one exports to CSV. Orders sold below cost are flagged rather than waiting to be noticed." },
                                 { title: "Attendance and hours, without a second system", body: "Staff clock in and out in the same platform. Hours, overtime and undertime are calculated against a fixed business day and export for payroll. Sessions left open are closed automatically rather than inflating somebody's month." },
@@ -444,12 +455,16 @@ export default function EnterpriseOpsCaseStudy() {
                             This is not a prototype. It is the live operating system the business runs on every day, and it keeps growing. The customer-facing portal has since moved to the marketing website; this is the internal staff CRM plus its shared serverless backend.
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                            {byNumbers.map((n) => (
-                                <div key={n.label} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
-                                    <div className="text-3xl font-black text-cognac mb-1">{n.value}</div>
-                                    <div className="text-xs font-bold text-stone-500 uppercase tracking-wider leading-snug">{n.label}</div>
-                                </div>
-                            ))}
+                            {byNumbers.map((n) => {
+                                const value = metricValue("enterprise-ops", n.id);
+                                if (!value) return null;
+                                return (
+                                    <div key={n.id} className="p-5 bg-white border border-stone-300 rounded-2xl shadow-xs text-center">
+                                        <div className="text-2xl font-black text-cognac mb-1 leading-tight">{value}</div>
+                                        <div className="text-xs font-bold text-stone-500 uppercase tracking-wider leading-snug">{n.label}</div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </section>
 
@@ -526,7 +541,7 @@ export default function EnterpriseOpsCaseStudy() {
                             ))}
                         </div>
 
-                        {/* Branch / exception statuses — the other 4 of 13 */}
+                        {/* Branch / exception statuses — the branch states */}
                         <div className="mb-8">
                             <p className="text-xs font-bold text-stone-600 uppercase tracking-widest mb-3">Plus branch statuses (13 total)</p>
                             <div className="flex flex-wrap gap-2">
@@ -555,7 +570,7 @@ export default function EnterpriseOpsCaseStudy() {
                             <div className="h-px w-8 bg-cognac" />
                             <span className="text-cognac text-sm font-bold uppercase tracking-widest">Solution, Access Control</span>
                         </div>
-                        <h2 className="text-3xl font-bold text-charcoal mb-3">Seven roles. Zero data leakage.</h2>
+                        <h2 className="text-3xl font-bold text-charcoal mb-3">Seven roles. Enforced at the database.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
                             RBAC enforced at two layers: application logic and Supabase Row-Level Security policies at the database level. Even if someone bypasses the UI, they cannot read data they don&apos;t own. Permissions stored as a granular JSONB column per user.
                         </p>
@@ -721,10 +736,10 @@ export default function EnterpriseOpsCaseStudy() {
                             {[
                                 { before: "Order status updates via WhatsApp, buried in threads", after: "Real-time order board. Every agent sees live status. No messages needed." },
                                 { before: "Monthly reports were compiled by hand from several sheets", after: "Reports auto-generated. Monthly summaries run via Supabase Edge Functions." },
-                                { before: "A whole team editing the same Google Sheet", after: "One platform with row-level isolation, so simultaneous edits cannot overwrite each other." },
+                                { before: "A whole team editing the same Google Sheet", after: "One platform where each row is written independently, so two people working at once are not editing the same document." },
                                 { before: "CRM completely disconnected from orders", after: "Customer data, order history, and communications in one view." },
                                 { before: "Attendance tracked by WhatsApp messages", after: "Timestamped clock in/out. Overtime auto-calculated. Payroll export ready." },
-                                { before: "Profit calculated manually from separate sheets", after: "Profit auto-computed per order as a database-generated column. Always accurate." },
+                                { before: "Profit calculated manually from separate sheets", after: "Profit computed per order as a database-generated column, from the same inputs every time, rather than re-derived by hand in a sheet." },
                             ].map((r, i) => (
                                 <div key={i} className="flex gap-4">
                                     <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
@@ -849,8 +864,8 @@ export default function EnterpriseOpsCaseStudy() {
                             on 15 September 2026 could not locate the review document, its rubric or the
                             reviewer, so the scores are withdrawn rather than restated from memory. They were
                             also presented as an independent review, which they were not: we commissioned and
-                            paid for them. Everything else on this page is counted from the repository and says
-                            where it was counted.
+                            paid for them. The figures on this page are counted from the repository,
+                            and each one records where it was counted in case-study-facts.json.
                         </p>
                     </section>
 

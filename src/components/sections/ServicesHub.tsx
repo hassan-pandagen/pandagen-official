@@ -120,7 +120,7 @@ export default function ServicesHub() {
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
                 <Code2 className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-3xl font-bold mb-3 font-serif">Custom Engineering</h3>
+              <h3 className="text-3xl font-bold mb-3 font-serif">Custom software</h3>
               <p className="text-stone-600 leading-relaxed mb-6">
                 SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
               </p>

@@ -36,16 +36,32 @@ const navItems: NavItem[] = [
   { name: "About", href: "/about", hasDropdown: true, dropdownKey: "about" },
 ];
 
+// ORDER AND LABELS, reset 16 Sep 2026.
+//
+// This list had ten entries, five of them labelled "Migration", with WordPress
+// Migration first. It was written when migration WAS the offer. After the move to
+// a website-led homepage it became the first thing a new-build buyer saw when they
+// opened the only service menu on the site, and it told them this firm rebuilds
+// other people's sites.
+//
+// What a buyer is buying now leads; the platform they are leaving is grouped after
+// it and still named, because those pages rank and convert on those exact words.
+// Do not delete the platform entries: "wordpress alternative" and its siblings are
+// the terms with published volume. This is an ordering and labelling change only,
+// and no URL moved.
 const services = [
   { name: "All Services", href: "/services" },
-  { name: "WordPress Migration", href: "/services/wordpress-migration" },
-  { name: "Custom Engineering", href: "/services/custom-engineering" },
+  // What you are buying.
+  { name: "Websites", href: "/services" },
+  { name: "Online stores", href: "/services/ecommerce" },
+  { name: "Custom software", href: "/services/custom-engineering" },
   { name: "AI SEO", href: "/services/ai-seo" },
-  { name: "E-Commerce", href: "/services/ecommerce" },
-  { name: "WooCommerce Migration", href: "/services/woocommerce" },
-  { name: "Wix Migration", href: "/services/wix" },
-  { name: "Squarespace Migration", href: "/services/squarespace" },
-  { name: "Webflow Migration", href: "/services/webflow" },
+  // The platform you are leaving, if you have one.
+  { name: "Leaving WordPress", href: "/services/wordpress-migration" },
+  { name: "Leaving WooCommerce", href: "/services/woocommerce" },
+  { name: "Leaving Wix", href: "/services/wix" },
+  { name: "Leaving Squarespace", href: "/services/squarespace" },
+  { name: "Leaving Webflow", href: "/services/webflow" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 
