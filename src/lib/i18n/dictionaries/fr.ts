@@ -765,7 +765,7 @@ const fr: Dictionary = {
     urlHint: "facultatif",
     detailsLabel: "Ce que vous avez en tête",
     detailsPlaceholder:
-      "Une migration, une refonte, des pages plus rapides, ou une question à laquelle vous aimeriez une réponse. Une phrase suffit.",
+      "Un nouveau site, une boutique en ligne, une refonte, ou une question à laquelle vous aimeriez une réponse. Une phrase suffit.",
     submit: "Envoyer",
     submitting: "Envoi en cours…",
     successHeading: "Merci, nous avons bien reçu votre message.",

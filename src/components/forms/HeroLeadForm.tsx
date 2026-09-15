@@ -11,28 +11,28 @@ import { useLeadFormFunnel } from "@/hooks/useLeadFormFunnel";
 import type { LeadFormCopy } from "@/lib/i18n/dictionaries/types";
 
 const englishCopy: LeadFormCopy = {
-  eyebrow: "Start here",
+  eyebrow: "Direct to the founders",
   heading: "What would you like help with?",
   intro:
-    "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
+    "A new website, an online store, a change to an existing site, or a question. Your message goes directly to Hassan and Imran.",
   nameLabel: "Name",
   emailLabel: "Email",
   urlLabel: "Your website",
   urlHint: "optional",
-  detailsLabel: "What you have in mind",
+  detailsLabel: "Your message",
   detailsPlaceholder:
-    "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty.",
-  submit: "Send your question",
+    "What would you like to build, change or ask? A sentence is plenty.",
+  submit: "Send your message",
   submitting: "Sending…",
   successHeading: "Thank you, we have it.",
-  successBody: "You will hear back from info@pandacodegen.com, usually within one business day.",
-  directHeading: "Prefer to talk instead?",
-  directBody: "Email us or book a call. Both reach the founders directly, not a sales desk.",
+  successBody: "Hassan or Imran will reply from info@pandacodegen.com, usually within one business day.",
+  directHeading: "Prefer a call or email?",
+  directBody: "Both reach the founders directly.",
   bookLabel: "Book a discovery call",
   errorFallback: "We could not send your request. Please email info@pandacodegen.com.",
   honeypotLabel: "Leave this field empty",
   replyNote:
-    "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+    "A founder replies, usually within one business day. Every message gets an answer, whether or not it turns into a quote.",
 };
 
 async function responseMessage(response: Response, fallback: string): Promise<string> {
@@ -127,15 +127,15 @@ export default function HeroLeadForm({
   };
 
   return (
-    <div className="relative z-10 w-full max-w-xl rounded-2xl border border-stone-200 bg-white shadow-xl">
-      <div className="flex items-center justify-between border-b border-stone-100 bg-stone-50/80 px-6 py-3">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-cognac">{copy.eyebrow}</span>
+    <div className="relative z-10 w-full max-w-xl overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-[0_16px_48px_-24px_rgba(28,25,23,0.2)]">
+      <div className="px-6 pt-6 md:px-7 md:pt-7">
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-cognac">{copy.eyebrow}</span>
       </div>
 
       {/* min-height holds the card steady when the success panel replaces the form */}
-      <div className="min-h-[27rem] p-6 md:p-7">
+      <div className="min-h-[27rem] px-6 pb-6 pt-3 md:px-7 md:pb-7">
         {isSubmitted ? (
-          <div className="flex h-full min-h-[24rem] flex-col items-center justify-center text-center">
+          <div role="status" aria-live="polite" className="flex h-full min-h-[24rem] flex-col items-center justify-center text-center">
             <CheckCircle2 className="h-12 w-12 text-cognac" aria-hidden="true" />
             <p className="mt-5 text-xl font-bold text-charcoal">{copy.successHeading}</p>
             <p className="mt-2 max-w-xs text-sm leading-6 text-stone-600">{copy.successBody}</p>
@@ -153,12 +153,13 @@ export default function HeroLeadForm({
               }}
               onBlurCapture={formFunnel.onBlurCapture}
               onInvalidCapture={formFunnel.onInvalidCapture}
-              className="mt-5 space-y-3"
+              className="mt-6 space-y-4"
+              aria-busy={isLoading}
               noValidate={false}
             >
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="block text-sm font-semibold text-charcoal">
                   {copy.nameLabel} <span className="text-cognac">*</span>
                   <input
                     required
@@ -168,7 +169,7 @@ export default function HeroLeadForm({
                     className="mt-1.5 w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
                   />
                 </label>
-                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
+                <label className="block text-sm font-semibold text-charcoal">
                   {copy.emailLabel} <span className="text-cognac">*</span>
                   <input
                     required
@@ -180,7 +181,18 @@ export default function HeroLeadForm({
                 </label>
               </div>
 
-              <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
+              <label className="block text-sm font-semibold text-charcoal">
+                {copy.detailsLabel}{" "}
+                <span className="font-normal text-stone-500">({copy.urlHint})</span>
+                <textarea
+                  name="details"
+                  rows={3}
+                  placeholder={copy.detailsPlaceholder}
+                  className="mt-1.5 w-full resize-y rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
+                />
+              </label>
+
+              <label className="block text-sm font-semibold text-charcoal">
                 {copy.urlLabel}{" "}
                 <span className="font-medium normal-case text-stone-500">({copy.urlHint})</span>
                 {/*
@@ -200,16 +212,6 @@ export default function HeroLeadForm({
                 />
               </label>
 
-              <label className="block text-xs font-bold uppercase tracking-wider text-stone-700">
-                {copy.detailsLabel}
-                <textarea
-                  name="details"
-                  rows={3}
-                  placeholder={copy.detailsPlaceholder}
-                  className="mt-1.5 w-full resize-none rounded-xl border border-stone-300 bg-white px-3 py-2.5 text-base font-normal normal-case tracking-normal text-charcoal outline-hidden transition-colors focus:border-cognac focus:ring-1 focus:ring-cognac"
-                />
-              </label>
-
               <div aria-hidden="true" className="absolute left-[-9999px] h-px w-px overflow-hidden">
                 <label htmlFor="hero-website-confirm">{copy.honeypotLabel}</label>
                 <input id="hero-website-confirm" name="website_url_confirm" tabIndex={-1} autoComplete="off" />
@@ -224,18 +226,14 @@ export default function HeroLeadForm({
               <button
                 type="submit"
                 disabled={isLoading}
-                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-6 font-bold text-white transition-colors hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-70"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white transition-colors hover:bg-cognac disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isLoading ? copy.submitting : copy.submit}
                 {isLoading ? null : <Send className="h-4 w-4" aria-hidden="true" />}
               </button>
 
-              {/* Moved here 15 Sep 2026. This rendered at the foot of the panel,
-                  below the direct-contact block, so the reassurance that removes
-                  hesitation sat forty lines away from the button someone was
-                  hesitating over. */}
               {copy.replyNote ? (
-                <p className="mt-3 text-center text-xs leading-5 text-stone-500">{copy.replyNote}</p>
+                <p className="mt-3 text-center text-xs leading-5 text-stone-600">{copy.replyNote}</p>
               ) : null}
             </form>
           </>
@@ -245,23 +243,19 @@ export default function HeroLeadForm({
       {/* The consultative path. Buyers who run a multi-week evaluation want a human,
           not a form, and burying that behind a contact page adds friction for exactly
           the enquiries worth the most. */}
-      <div className="border-t border-stone-100 bg-stone-50/60 px-6 py-4">
-        <p className="text-xs font-bold uppercase tracking-wider text-stone-700">{copy.directHeading}</p>
+      <div className="border-t border-stone-200 bg-stone-50/60 px-6 py-5 md:px-7">
+        <p className="text-sm font-semibold text-charcoal">{copy.directHeading}</p>
         <p className="mt-1.5 text-sm leading-6 text-stone-600">{copy.directBody}</p>
         <div className="mt-2.5 flex flex-wrap items-center gap-x-5 gap-y-1.5">
-          {/* Opens the quote modal rather than a mail client. A mailto hands the
-              visitor to an app that may not be configured, and if it fails the lead
-              is lost with no record it existed. Keeping them on-site captures it. */}
-          <button
-            type="button"
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
             onClick={() => {
               trackGAEvent("cta_click", { cta: "email_founders", location: "hero_lead_form" });
-              window.dispatchEvent(new Event("open-quote-modal"));
             }}
             className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
           >
             {CONTACT_EMAIL}
-          </button>
+          </a>
           <CalModalButton
             fallbackHref="https://cal.com/pandagen/discovery"
             className="text-sm font-bold text-cognac underline-offset-4 hover:text-charcoal hover:underline"
