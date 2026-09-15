@@ -1,0 +1,3341 @@
+{
+  "capturedAt": "2026-09-15T13:36:10.088Z",
+  "build": {
+    "id": "dl6UBJDkM4ldU4H7q9GLn",
+    "modified": "2026-09-15T13:23:56.264Z"
+  },
+  "before": [
+    {
+      "file": "src/components/sections/Hero.tsx",
+      "sha256": "2aa1ba67fba505644b106acd38e96c86a2e0496a0de68b1d918557c1d674b316",
+      "modified": "2026-09-15T13:22:46.632Z"
+    },
+    {
+      "file": "src/components/sections/HeroClient.tsx",
+      "sha256": "da3780289191d5ebc88798fdf8c5b14281d1f715782629d7bfc86e9fc81debb0",
+      "modified": "2026-09-15T13:13:59.682Z"
+    },
+    {
+      "file": "src/components/sections/HeroAnimated.tsx",
+      "sha256": "36965c933f41ef623cf1579b83b4329d16cf21818228e6a28838a04c25f4f9fe",
+      "modified": "2026-09-15T13:13:59.682Z"
+    },
+    {
+      "file": "src/components/forms/HeroLeadForm.tsx",
+      "sha256": "629c80e93bc930a4b7f835d649976d9ee47e0ace7d8035e824d3deb7f821a991",
+      "modified": "2026-09-15T13:23:45.682Z"
+    },
+    {
+      "file": "src/components/layout/Header.tsx",
+      "sha256": "326d892e576d00935a02ca23b8caaf6190ea889f6ffc194c1c118c4c74936564",
+      "modified": "2026-09-15T13:05:03.669Z"
+    },
+    {
+      "file": "src/components/ui/QuoteModal.tsx",
+      "sha256": "295002e681f1b8c8081bfb4a3004f468d149b0521cba7ffeb3014d2927288a56",
+      "modified": "2026-09-14T14:42:38.771Z"
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "50374897686902bc04311b46cbc76e603d6663a3201c25ef902402bd5507df92",
+      "modified": "2026-09-15T13:22:46.752Z"
+    },
+    {
+      "file": "src/data/company-facts.ts",
+      "sha256": "7c564f41fed6371b93826913127d24f73a66caa626947320a58c9edf6312d9c3",
+      "modified": "2026-09-15T13:22:46.508Z"
+    }
+  ],
+  "after": [
+    {
+      "file": "src/components/sections/Hero.tsx",
+      "sha256": "2aa1ba67fba505644b106acd38e96c86a2e0496a0de68b1d918557c1d674b316",
+      "modified": "2026-09-15T13:22:46.632Z"
+    },
+    {
+      "file": "src/components/sections/HeroClient.tsx",
+      "sha256": "da3780289191d5ebc88798fdf8c5b14281d1f715782629d7bfc86e9fc81debb0",
+      "modified": "2026-09-15T13:13:59.682Z"
+    },
+    {
+      "file": "src/components/sections/HeroAnimated.tsx",
+      "sha256": "36965c933f41ef623cf1579b83b4329d16cf21818228e6a28838a04c25f4f9fe",
+      "modified": "2026-09-15T13:13:59.682Z"
+    },
+    {
+      "file": "src/components/forms/HeroLeadForm.tsx",
+      "sha256": "629c80e93bc930a4b7f835d649976d9ee47e0ace7d8035e824d3deb7f821a991",
+      "modified": "2026-09-15T13:23:45.682Z"
+    },
+    {
+      "file": "src/components/layout/Header.tsx",
+      "sha256": "326d892e576d00935a02ca23b8caaf6190ea889f6ffc194c1c118c4c74936564",
+      "modified": "2026-09-15T13:05:03.669Z"
+    },
+    {
+      "file": "src/components/ui/QuoteModal.tsx",
+      "sha256": "295002e681f1b8c8081bfb4a3004f468d149b0521cba7ffeb3014d2927288a56",
+      "modified": "2026-09-14T14:42:38.771Z"
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "50374897686902bc04311b46cbc76e603d6663a3201c25ef902402bd5507df92",
+      "modified": "2026-09-15T13:22:46.752Z"
+    },
+    {
+      "file": "src/data/company-facts.ts",
+      "sha256": "7c564f41fed6371b93826913127d24f73a66caa626947320a58c9edf6312d9c3",
+      "modified": "2026-09-15T13:22:46.508Z"
+    }
+  ],
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "canonical": "https://www.pandacodegen.com/",
+      "scrollWidth": 1432,
+      "pageHeight": 15106,
+      "h1": {
+        "tag": "H1",
+        "text": "Websites built for the way you do business.",
+        "left": 100,
+        "top": 344,
+        "width": 584,
+        "height": 131
+      },
+      "hero": {
+        "tag": "SECTION",
+        "text": "WEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.",
+        "left": 0,
+        "top": 0,
+        "width": 1432,
+        "height": 971
+      },
+      "form": {
+        "tag": "FORM",
+        "text": "NAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+        "left": 777,
+        "top": 333,
+        "width": 518,
+        "height": 404
+      },
+      "mainWords": 3213,
+      "bodyWords": 3219,
+      "headerCtas": [
+        {
+          "tag": "A",
+          "text": "",
+          "left": 100,
+          "top": 31,
+          "width": 131,
+          "height": 23,
+          "href": "/",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Services",
+          "left": 280,
+          "top": 22,
+          "width": 94,
+          "height": 40,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Work",
+          "left": 398,
+          "top": 22,
+          "width": 66,
+          "height": 40,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "Pricing",
+          "left": 488,
+          "top": 30,
+          "width": 56,
+          "height": 24,
+          "href": "/pricing",
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "Partners",
+          "left": 568,
+          "top": 30,
+          "width": 68,
+          "height": 24,
+          "href": "/partners",
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "left": 661,
+          "top": 30,
+          "width": 36,
+          "height": 24,
+          "href": "/blog",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "About",
+          "left": 720,
+          "top": 22,
+          "width": 72,
+          "height": 40,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "+1 (302) 773-8982",
+          "left": 842,
+          "top": 32,
+          "width": 154,
+          "height": 20,
+          "href": "tel:+13027738982",
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "EN\nEnglish",
+          "left": 1011,
+          "top": 30,
+          "width": 19,
+          "height": 24,
+          "href": "/",
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "FR\nFrançais",
+          "left": 1048,
+          "top": 30,
+          "width": 17,
+          "height": 24,
+          "href": "/fr",
+          "ariaLabel": null
+        },
+        {
+          "tag": "A",
+          "text": "DE\nDeutsch",
+          "left": 1082,
+          "top": 30,
+          "width": 19,
+          "height": 24,
+          "href": "/de",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask us about your site",
+          "left": 1116,
+          "top": 20,
+          "width": 216,
+          "height": 44,
+          "href": null,
+          "ariaLabel": null
+        }
+      ],
+      "heroParagraphs": [
+        {
+          "tag": "P",
+          "text": "We design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.",
+          "left": 100,
+          "top": 491,
+          "width": 576,
+          "height": 110
+        },
+        {
+          "tag": "P",
+          "text": "Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.",
+          "left": 100,
+          "top": 617,
+          "width": 584,
+          "height": 40
+        },
+        {
+          "tag": "P",
+          "text": "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
+          "left": 777,
+          "top": 241,
+          "width": 518,
+          "height": 72
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 777,
+          "top": 697,
+          "width": 518,
+          "height": 40
+        },
+        {
+          "tag": "P",
+          "text": "PREFER TO TALK INSTEAD?",
+          "left": 773,
+          "top": 782,
+          "width": 526,
+          "height": 16
+        },
+        {
+          "tag": "P",
+          "text": "Email us or book a call. Both reach the founders directly, not a sales desk.",
+          "left": 773,
+          "top": 804,
+          "width": 526,
+          "height": 24
+        },
+        {
+          "tag": "P",
+          "text": "Just exploring? Run a free technical scan of your site first.",
+          "left": 748,
+          "top": 887,
+          "width": 584,
+          "height": 20
+        }
+      ],
+      "heroCtas": [
+        {
+          "tag": "BUTTON",
+          "text": "Ask us about your site",
+          "left": 100,
+          "top": 681,
+          "width": 265,
+          "height": 56,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "See our work",
+          "left": 381,
+          "top": 681,
+          "width": 195,
+          "height": 60,
+          "href": "/work"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 777,
+          "top": 625,
+          "width": 518,
+          "height": 48,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "info@pandacodegen.com",
+          "left": 773,
+          "top": 838,
+          "width": 178,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Book a discovery call",
+          "left": 971,
+          "top": 838,
+          "width": 145,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "Run a free technical scan",
+          "left": 951,
+          "top": 888,
+          "width": 170,
+          "height": 17,
+          "href": "/free-audit"
+        }
+      ],
+      "formChildren": [
+        {
+          "tag": "DIV",
+          "text": "NAME *\nEMAIL *",
+          "left": 777,
+          "top": 333,
+          "width": 518,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "YOUR WEBSITE (optional)",
+          "left": 777,
+          "top": 413,
+          "width": 518,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "WHAT YOU HAVE IN MIND",
+          "left": 777,
+          "top": 493,
+          "width": 518,
+          "height": 120
+        },
+        {
+          "tag": "DIV",
+          "text": "Leave this field empty",
+          "left": -9250,
+          "top": 625,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 777,
+          "top": 625,
+          "width": 518,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 777,
+          "top": 697,
+          "width": 518,
+          "height": 40
+        }
+      ],
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "NAME *",
+          "placeholder": ""
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "EMAIL *",
+          "placeholder": ""
+        },
+        {
+          "name": "currentUrl",
+          "type": "text",
+          "required": false,
+          "label": "YOUR WEBSITE (optional)",
+          "placeholder": "example.com"
+        },
+        {
+          "name": "details",
+          "type": "textarea",
+          "required": false,
+          "label": "WHAT YOU HAVE IN MIND",
+          "placeholder": "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty."
+        },
+        {
+          "name": "website_url_confirm",
+          "type": "text",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Websites built for the way you do business.",
+          "left": 100,
+          "top": 344,
+          "width": 584,
+          "height": 131
+        },
+        {
+          "tag": "H2",
+          "text": "What would you like help with?",
+          "left": 777,
+          "top": 199,
+          "width": 518,
+          "height": 30
+        },
+        {
+          "tag": "H2",
+          "text": "Look at the work before you read about it.",
+          "left": 76,
+          "top": 1344,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "tag": "H3",
+          "text": "NorthDeck Group",
+          "left": 109,
+          "top": 2136,
+          "width": 204,
+          "height": 32
+        },
+        {
+          "tag": "H3",
+          "text": "MyCustomPatches",
+          "left": 101,
+          "top": 2643,
+          "width": 186,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Emblematic Studio",
+          "left": 761,
+          "top": 2643,
+          "width": 183,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Client words with a source you can open.",
+          "left": 76,
+          "top": 3079,
+          "width": 768,
+          "height": 104
+        },
+        {
+          "tag": "H2",
+          "text": "Migrations engineered around\nwhat can break.",
+          "left": 332,
+          "top": 4438,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "tag": "H3",
+          "text": "Migrations & New Builds",
+          "left": 181,
+          "top": 4747,
+          "width": 678,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "Custom Engineering",
+          "left": 964,
+          "top": 4742,
+          "width": 288,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "Search & AI Foundations",
+          "left": 173,
+          "top": 5289,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Faster E-commerce",
+          "left": 565,
+          "top": 5289,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Not sure where to start?",
+          "left": 957,
+          "top": 5289,
+          "width": 302,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "left": 100,
+          "top": 5707,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "tag": "H3",
+          "text": "A calculator that prices your own work",
+          "left": 129,
+          "top": 6074,
+          "width": 353,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "A finder for your services, courses or locations",
+          "left": 539,
+          "top": 6074,
+          "width": 353,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "An enquiry form that routes by the answer",
+          "left": 950,
+          "top": 6074,
+          "width": 353,
+          "height": 56
+        },
+        {
+          "tag": "H2",
+          "text": "Custom websites, from $1,500.",
+          "left": 356,
+          "top": 6772,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "tag": "H3",
+          "text": "How many pages does your site have today?",
+          "left": 389,
+          "top": 7188,
+          "width": 654,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "text": "From First Call to Launch.",
+          "left": 100,
+          "top": 7612,
+          "width": 1232,
+          "height": 51
+        },
+        {
+          "tag": "H3",
+          "text": "Discovery",
+          "left": 297,
+          "top": 7859,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Architecture",
+          "left": 755,
+          "top": 7859,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Build",
+          "left": 297,
+          "top": 8342,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Launch",
+          "left": 755,
+          "top": 8342,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H2",
+          "text": "Founder-built, not farmed out.",
+          "left": 100,
+          "top": 9089,
+          "width": 1232,
+          "height": 51
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions about migrating your platform",
+          "left": 356,
+          "top": 10071,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "tag": "H3",
+          "text": "If the site is custom code, do I need a developer every time I want to change something?",
+          "left": 356,
+          "top": 10219,
+          "width": 720,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "If the features are built in, is every future feature included too?",
+          "left": 356,
+          "top": 10536,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do I need your monthly plan to keep a custom feature working?",
+          "left": 356,
+          "top": 10799,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you have a minimum project size?",
+          "left": 356,
+          "top": 11114,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much does WordPress to Next.js migration cost?",
+          "left": 356,
+          "top": 11299,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How does the free AI website audit work?",
+          "left": 356,
+          "top": 11640,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much faster will my site be after migrating from WordPress or Shopify?",
+          "left": 356,
+          "top": 11825,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you work with Shopify stores?",
+          "left": 356,
+          "top": 12088,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Will I lose SEO rankings when migrating from WordPress?",
+          "left": 356,
+          "top": 12325,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Why not just use a faster WordPress host or a caching plugin?",
+          "left": 356,
+          "top": 12588,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Latest Insights",
+          "left": 76,
+          "top": 13028,
+          "width": 245,
+          "height": 40
+        },
+        {
+          "tag": "H3",
+          "text": "What Is Headless Commerce? A 2026 Store Owner Guide",
+          "left": 105,
+          "top": 13195,
+          "width": 353,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+          "left": 540,
+          "top": 13195,
+          "width": 353,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+          "left": 974,
+          "top": 13195,
+          "width": 353,
+          "height": 55
+        },
+        {
+          "tag": "H2",
+          "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+          "left": 332,
+          "top": 13740,
+          "width": 768,
+          "height": 183
+        },
+        {
+          "tag": "H3",
+          "text": "SERVICES",
+          "left": 564,
+          "top": 14192,
+          "width": 120,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "COMPANY",
+          "left": 748,
+          "top": 14192,
+          "width": 260,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Project Evidence",
+          "left": 765,
+          "top": 14270,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Agency Pilot",
+          "left": 765,
+          "top": 14358,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "About",
+          "left": 765,
+          "top": 14446,
+          "width": 165,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Hassan Jamal",
+          "left": 765,
+          "top": 14518,
+          "width": 178,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Imran Raza Ladhani",
+          "left": 765,
+          "top": 14590,
+          "width": 180,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Engineering Blog",
+          "left": 765,
+          "top": 14662,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Delivery Principles",
+          "left": 765,
+          "top": 14750,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Contact",
+          "left": 765,
+          "top": 14838,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "RESOURCES",
+          "left": 1072,
+          "top": 14192,
+          "width": 260,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Example Scopes",
+          "left": 1089,
+          "top": 14270,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Migration Services",
+          "left": 1089,
+          "top": 14358,
+          "width": 192,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Facts and Figures",
+          "left": 1089,
+          "top": 14430,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Security",
+          "left": 1089,
+          "top": 14518,
+          "width": 194,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Editorial Policy",
+          "left": 1089,
+          "top": 14590,
+          "width": 196,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Privacy",
+          "left": 1089,
+          "top": 14678,
+          "width": 163,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Cookie Choices",
+          "left": 1089,
+          "top": 14750,
+          "width": 175,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Website Terms",
+          "left": 1089,
+          "top": 14822,
+          "width": 162,
+          "height": 20
+        }
+      ],
+      "mainText": "Services\nWork\nPricing\nPartners\nBlog\nAbout\n+1 (302) 773-8982\nEN\nEnglish\n/\nFR\nFrançais\n/\nDE\nDeutsch\nAsk us about your site\nWEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.\n\nPandaCodeGen is a custom Next.js web development studio that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.\n\nSITES WE FINISHED\n\nLook at the work before you read about it.\n\nEvery screenshot below is a site that is live right now. Open any of them and check it yourself. Where a project has measured figures they are on its record, and where it does not, we say nothing about speed or traffic rather than estimate.\n\nNorthDeck Group\nCLIENT PROJECT\n\nConnected security systems and business services, built as a custom Next.js site. Live, and credited in its own footer.\n\nOpen the live site\nMyCustomPatches\nINDEPENDENT CLIENT\n\nWordPress to Next.js. Owner confirmed 22 days, more than 200 addresses across 13 templates, zero downtime and no rankings lost.\n\nRead the record\nEmblematic Studio\nINDEPENDENT CLIENT\n\nA product catalogue and quote experience. Twenty product types generated from one typed registry, with a single runtime route on the whole site.\n\nRead the record\n\nFour more, including three labelled founder affiliated, are on the work index, alongside the evidence standard each record has to meet before we publish it.\n\nEVIDENCE, NOT THEATER\n\nClient words with a source you can open.\n\nNo stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself. Four of them carry Trustpilot’s own “unprompted” label, meaning we never asked for them.\n\nClutch review\n(opens in a new tab)\nTrustpilot reviews\n(opens in a new tab)\n\nFEATURED IN\n\nWoman’s World\n(opens in a new tab)\n quoted co-founder Hassan Jamal on how remote AI-training work operates.\n\nI was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.\nEtoy McDaniel on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nIt looks premium, loads fast, and perfectly captures Emblematic Studio's brand.\nWaqas Ahmed on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was super helpful and communicative throughout the process.\nMarshall James on Trustpilot\n(opens in a new tab)\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nThey worked with me to make a website that I could afford.\nJames Peace on Trustpilot\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was available to me at any time, and his response time was always less than an hour.\nMatt Conner, Executive, MC Patches LLC on Clutch\nMarch 2026\nVERIFIED\nREVIEW, IDENTITY CHECKED BY CLUTCH\n\nHassan was super helpful and communicative throughout the process. Reviewed by Marshall James on Trustpilot, March 2026.\n\nFOUNDER-AFFILIATED, CLEARLY LABELLED\n\nPanda Patches is owned by a PandaCodeGen co-founder.\n\nWe built its platform but hold no ownership stake. It is presented as operating experience, not as an independent client endorsement.\n\nSee the project records\nOUR EXPERTISE\nMigrations engineered around\nwhat can break.\nEvery old link forwarded\nMigrations & New Builds\n\nWe list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.\n\nWE MIGRATE YOU OFF\n\nWordPress\nShopify\nWooCommerce\nWix\nSquarespace\nWebflow\nGoHighLevel\nExplore Migrations\nCustom Engineering\n\nSaaS dashboards, internal tools, and AI integrations. When “off-the-shelf” isn't enough, we build exactly what you need.\n\nPRICED ON ITS OWN\n\nApps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.\n\nView Architecture\nSearch & AI Foundations\n\nPages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.\n\nReview delivery standards\nFaster E-commerce\n\nHeadless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.\n\nSee e-commerce\nNot sure where to start?\n\nTell us what you're building or what's slowing you down. We'll give you a straight answer. No pitch, no pressure.\n\nChat with our experts\n\nBUILT IN, NOT BOLTED ON\n\nFeatures built around your business. Fewer subscriptions to manage.\n\nA quote calculator, a service finder or an enquiry form that routes itself can be part of the build rather than three more products to license. Each one follows your rules, and the person who runs the business can change how it behaves without booking a developer.\n\nA calculator that prices your own work\n\nSomeone puts in their numbers and gets a figure that follows your pricing rules. Deposits, minimums, volume bands and the jobs you turn down are all part of the logic.\n\nYou edit: Your rates, tiers and the wording of the result\n\nA finder for your services, courses or locations\n\nFilters that match how customers actually choose, and a page for each result that search engines can index on its own.\n\nYou edit: Entries, categories, filter options and the empty-result message\n\nAn enquiry form that routes by the answer\n\nQuestions that change with what the visitor picks, then the enquiry lands in the right inbox with the context already attached.\n\nYou edit: Questions, answer options and where each type of enquiry lands\n\nThe features we build you carry no separate monthly licence, and no vendor can retire one or change its price. That is the part we can promise. Running costs are a different question: hosting, email delivery, your content system and anything taking payments still have their own plans, and your quote names them before you commit. Which of your current subscriptions can actually end, we answer from your invoices rather than a table of list prices.\n\nGet a feature and running-cost comparison\nSee how custom features get scoped\n\nPRICING\n\nCustom websites, from $1,500.\n\nThe three starting points are below. Answer three questions if you want us to point at one, or read them yourself and skip the quiz.\n\nStarter\n\n$1,500\n\nA small business site, up to 7 pages, live quickly.\n\nGrowth (Most Popular)\n\n$3,500\n\nA full website and blog move, with redirects and launch checks.\n\nScale\n\nFrom $5,000\n\nA headless store, custom integrations, more than 20 pages.\n\nQuestion 1 of 3\n\nHow many pages does your site have today?\n7 pages or fewer\n8 to 20 pages\nMore than 20 pages\nFrom First Call to Launch.\n\nFour reviewable stages, with the important decisions recorded before launch.\n\nSTEP 01\nDiscovery\n\nWe inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.\n\nmigration inventory\nURLs\nMapped\nContent\nInventoried\nAnalytics\nBaselined\nIntegrations\nReviewed\nRisks and unknowns become written scope inputs\nSTEP 02\nArchitecture\n\nWe document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.\n\nCURRENT-STACK DECISIONS\n•\nCMS\nKeep or migrate\n•\nForms\nRebuild or connect\n•\nAnalytics\nPreserve\n•\nIntegrations\nTest\n→\nTarget architecture documented\nReviewed\nSTEP 03\nBuild\n\nThe new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.\n\nBUILD CHECKPOINTS\nReviewable\nFoundation\nEnvironment + structure\n✓\nMigration\nContent + features\n✓\nQA\nReview + fixes\n✓\nSTEP 04\nLaunch\n\nBefore cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.\n\nRedirects\nChecked\nOld URL → target\nLead forms\nTested\nValidation → delivery\nAnalytics and rollback plan\nLaunch checklist\nStart with Discovery\n\nTell us your current platform, primary risk, and target timeline.\n\nTHE TEAM\n\nFounder-built, not farmed out.\n\nWhen you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.\n\nHassan Jamal\nCo-founder & Lead Engineer\n\nBuilds the architectures. Writes the code. 900+ GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.\n\nWordPress Migrations\nE-Commerce Builds\nSpeed Optimization\nCustom Platforms\nHassan's Bio\nLinkedIn\nGitHub\nImran Raza Ladhani\nCo-founder & Lead Architect\n\nCo-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.\n\nNext.js Architecture\nPlatform Migrations\nSystem Design\nHeadless Commerce\nImran's Bio\nLinkedIn\n900+ GitHub contributions in the last year. All public. All verifiable.\n\nFAQ\n\nCommon questions about migrating your platform\nIf the site is custom code, do I need a developer every time I want to change something?\n\nNo, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet.\n\nIf the features are built in, is every future feature included too?\n\nNo, and it would not be honest to imply it. Your quote lists the features being built, and those are fixed in price before work starts. Something new later is scoped and priced the same way, before anyone begins. What you do not pay for again is the thing you already bought: a calculator we built you keeps working, keeps being editable, and never arrives with a renewal notice or a price rise. The distinction that matters is between changing what an existing feature does, which is usually a setting you control, and adding a feature the site has never had, which is new work.\n\nDo I need your monthly plan to keep a custom feature working?\n\nNo. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically.\n\nDo you have a minimum project size?\n\nNo. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.\n\nHow much does WordPress to Next.js migration cost?\n\nFrom $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.\n\nHow does the free AI website audit work?\n\nType in your web address and you get your load time, your Google speed scores, your technical SEO and any obvious security problems, with specific things to fix. It takes under a minute. No email, no signup, no sales call. It is a snapshot of your site today, not a claim about money you are losing.\n\nHow much faster will my site be after migrating from WordPress or Shopify?\n\nMost WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.\n\nDo you work with Shopify stores?\n\nYes. We build custom Shopify storefronts using headless architecture: your customers see a fast custom front end while you keep managing products and orders in Shopify as usual. If your store is slow because of app bloat, a heavy theme or unoptimised code, we replace the storefront layer with custom code while your entire Shopify backend stays in place for products, orders and payments. Speed improvement varies by store, so we measure your baseline before quoting.\n\nWill I lose SEO rankings when migrating from WordPress?\n\nNobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.\n\nWhy not just use a faster WordPress host or a caching plugin?\n\nFaster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.\n\nFROM THE BLOG\nLatest Insights\nView All Articles\nE-COMMERCE\n15 min\nWhat Is Headless Commerce? A 2026 Store Owner Guide\n\nUnderstand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified.\n\nMar 14\nRead Article\nPERFORMANCE\n11 min\nHow to Fix a Slow WordPress Site: 8 Evidence-Led Methods\n\nProfile slow routes, isolate server, cache, database, theme, plugin, media and third-party work, then decide whether migration is justified.\n\nFeb 17\nRead Article\nPERFORMANCE\n11 min\nHow to Reach 90+ PageSpeed: A Repeatable 2026 Process\n\nAn eight-step Lighthouse and Core Web Vitals process for improving representative pages without false 100-score promises.\n\nFeb 17\nRead Article\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nAsk us about your site\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nAI SEO\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\nLANGUAGE\n/\nEnglish\n/\nFrançais\n/\nDeutsch\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE",
+      "modal": {
+        "text": "What would you like help with?\n\nTell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.\n\nNAME *\nEMAIL *\nPHONE (optional)\nPROJECT DETAILS (optional)\n\nFor security, this form does not accept files. We can arrange a safe way to share documents after replying.\n\nLeave this field empty\nSend your question\n\nNo obligation. Your submission is used only to respond to this request as described in our privacy notice.",
+        "top": 149,
+        "height": 702,
+        "width": 672,
+        "fields": [
+          {
+            "name": "name",
+            "type": "text",
+            "required": true,
+            "label": "NAME *",
+            "placeholder": ""
+          },
+          {
+            "name": "email",
+            "type": "email",
+            "required": true,
+            "label": "EMAIL *",
+            "placeholder": ""
+          },
+          {
+            "name": "phone",
+            "type": "tel",
+            "required": false,
+            "label": "PHONE (optional)",
+            "placeholder": ""
+          },
+          {
+            "name": "details",
+            "type": "textarea",
+            "required": false,
+            "label": "PROJECT DETAILS (optional)",
+            "placeholder": "Important URLs, integrations, constraints, or questions"
+          },
+          {
+            "name": "website_url_confirm",
+            "type": "text",
+            "required": false,
+            "label": "Leave this field empty",
+            "placeholder": ""
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "Tell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.",
+            "top": 227,
+            "height": 60,
+            "width": 550
+          },
+          {
+            "text": "For security, this form does not accept files. We can arrange a safe way to share documents after replying.",
+            "top": 645,
+            "height": 66,
+            "width": 606
+          },
+          {
+            "text": "No obligation. Your submission is used only to respond to this request as described in our privacy notice.",
+            "top": 802,
+            "height": 16,
+            "width": 606
+          }
+        ],
+        "buttons": [
+          {
+            "text": "",
+            "top": 166,
+            "height": 44,
+            "width": 44
+          },
+          {
+            "text": "Send your question",
+            "top": 731,
+            "height": 51,
+            "width": 606
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "canonical": "https://www.pandacodegen.com/",
+      "scrollWidth": 390,
+      "pageHeight": 25008,
+      "h1": {
+        "tag": "H1",
+        "text": "Websites built for the way you do business.",
+        "left": 24,
+        "top": 138,
+        "width": 342,
+        "height": 74
+      },
+      "hero": {
+        "tag": "SECTION",
+        "text": "WEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.",
+        "left": 0,
+        "top": 0,
+        "width": 390,
+        "height": 1682
+      },
+      "form": {
+        "tag": "FORM",
+        "text": "NAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+        "left": 49,
+        "top": 890,
+        "width": 292,
+        "height": 524
+      },
+      "mainWords": 3194,
+      "bodyWords": 3200,
+      "headerCtas": [
+        {
+          "tag": "A",
+          "text": "",
+          "left": 24,
+          "top": 31,
+          "width": 131,
+          "height": 23,
+          "href": "/",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask a question",
+          "left": 189,
+          "top": 20,
+          "width": 133,
+          "height": 44,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "left": 326,
+          "top": 22,
+          "width": 40,
+          "height": 40,
+          "href": null,
+          "ariaLabel": "Open menu"
+        }
+      ],
+      "heroParagraphs": [
+        {
+          "tag": "P",
+          "text": "We design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.",
+          "left": 24,
+          "top": 228,
+          "width": 342,
+          "height": 149
+        },
+        {
+          "tag": "P",
+          "text": "Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.",
+          "left": 24,
+          "top": 389,
+          "width": 342,
+          "height": 60
+        },
+        {
+          "tag": "P",
+          "text": "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
+          "left": 49,
+          "top": 750,
+          "width": 292,
+          "height": 120
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 49,
+          "top": 1334,
+          "width": 292,
+          "height": 80
+        },
+        {
+          "tag": "P",
+          "text": "PREFER TO TALK INSTEAD?",
+          "left": 49,
+          "top": 1455,
+          "width": 292,
+          "height": 16
+        },
+        {
+          "tag": "P",
+          "text": "Email us or book a call. Both reach the founders directly, not a sales desk.",
+          "left": 49,
+          "top": 1477,
+          "width": 292,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "Just exploring? Run a free technical scan of your site first.",
+          "left": 24,
+          "top": 1610,
+          "width": 342,
+          "height": 40
+        }
+      ],
+      "heroCtas": [
+        {
+          "tag": "BUTTON",
+          "text": "Ask us about your site",
+          "left": 24,
+          "top": 465,
+          "width": 342,
+          "height": 56,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "See our work",
+          "left": 24,
+          "top": 537,
+          "width": 342,
+          "height": 60,
+          "href": "/work"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 49,
+          "top": 1262,
+          "width": 292,
+          "height": 48,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "info@pandacodegen.com",
+          "left": 49,
+          "top": 1535,
+          "width": 178,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Book a discovery call",
+          "left": 49,
+          "top": 1561,
+          "width": 145,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "Run a free technical scan",
+          "left": 137,
+          "top": 1611,
+          "width": 170,
+          "height": 17,
+          "href": "/free-audit"
+        }
+      ],
+      "formChildren": [
+        {
+          "tag": "DIV",
+          "text": "NAME *\nEMAIL *",
+          "left": 49,
+          "top": 890,
+          "width": 292,
+          "height": 148
+        },
+        {
+          "tag": "LABEL",
+          "text": "YOUR WEBSITE (optional)",
+          "left": 49,
+          "top": 1050,
+          "width": 292,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "WHAT YOU HAVE IN MIND",
+          "left": 49,
+          "top": 1130,
+          "width": 292,
+          "height": 120
+        },
+        {
+          "tag": "DIV",
+          "text": "Leave this field empty",
+          "left": -9974,
+          "top": 1262,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 49,
+          "top": 1262,
+          "width": 292,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 49,
+          "top": 1334,
+          "width": 292,
+          "height": 80
+        }
+      ],
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "NAME *",
+          "placeholder": ""
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "EMAIL *",
+          "placeholder": ""
+        },
+        {
+          "name": "currentUrl",
+          "type": "text",
+          "required": false,
+          "label": "YOUR WEBSITE (optional)",
+          "placeholder": "example.com"
+        },
+        {
+          "name": "details",
+          "type": "textarea",
+          "required": false,
+          "label": "WHAT YOU HAVE IN MIND",
+          "placeholder": "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty."
+        },
+        {
+          "name": "website_url_confirm",
+          "type": "text",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Websites built for the way you do business.",
+          "left": 24,
+          "top": 138,
+          "width": 342,
+          "height": 74
+        },
+        {
+          "tag": "H2",
+          "text": "What would you like help with?",
+          "left": 49,
+          "top": 688,
+          "width": 292,
+          "height": 50
+        },
+        {
+          "tag": "H2",
+          "text": "Look at the work before you read about it.",
+          "left": 24,
+          "top": 2174,
+          "width": 342,
+          "height": 124
+        },
+        {
+          "tag": "H3",
+          "text": "NorthDeck Group",
+          "left": 49,
+          "top": 2759,
+          "width": 204,
+          "height": 32
+        },
+        {
+          "tag": "H3",
+          "text": "MyCustomPatches",
+          "left": 49,
+          "top": 3237,
+          "width": 186,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Emblematic Studio",
+          "left": 49,
+          "top": 3686,
+          "width": 183,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Client words with a source you can open.",
+          "left": 24,
+          "top": 4199,
+          "width": 342,
+          "height": 78
+        },
+        {
+          "tag": "H2",
+          "text": "Migrations engineered around what can break.",
+          "left": 24,
+          "top": 5788,
+          "width": 342,
+          "height": 137
+        },
+        {
+          "tag": "H3",
+          "text": "Migrations & New Builds",
+          "left": 57,
+          "top": 6082,
+          "width": 276,
+          "height": 72
+        },
+        {
+          "tag": "H3",
+          "text": "Custom Engineering",
+          "left": 56,
+          "top": 6833,
+          "width": 278,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "Search & AI Foundations",
+          "left": 57,
+          "top": 7386,
+          "width": 276,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Faster E-commerce",
+          "left": 57,
+          "top": 7734,
+          "width": 276,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Not sure where to start?",
+          "left": 57,
+          "top": 8082,
+          "width": 276,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "left": 24,
+          "top": 8383,
+          "width": 342,
+          "height": 110
+        },
+        {
+          "tag": "H3",
+          "text": "A calculator that prices your own work",
+          "left": 49,
+          "top": 8834,
+          "width": 292,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "A finder for your services, courses or locations",
+          "left": 49,
+          "top": 9160,
+          "width": 292,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "An enquiry form that routes by the answer",
+          "left": 49,
+          "top": 9462,
+          "width": 292,
+          "height": 56
+        },
+        {
+          "tag": "H2",
+          "text": "Custom websites, from $1,500.",
+          "left": 24,
+          "top": 10288,
+          "width": 342,
+          "height": 73
+        },
+        {
+          "tag": "H3",
+          "text": "How many pages does your site have today?",
+          "left": 49,
+          "top": 11065,
+          "width": 292,
+          "height": 56
+        },
+        {
+          "tag": "H2",
+          "text": "From First Call to Launch.",
+          "left": 24,
+          "top": 11458,
+          "width": 342,
+          "height": 82
+        },
+        {
+          "tag": "H3",
+          "text": "Discovery",
+          "left": 53,
+          "top": 11764,
+          "width": 284,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Architecture",
+          "left": 53,
+          "top": 12315,
+          "width": 284,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Build",
+          "left": 53,
+          "top": 12853,
+          "width": 284,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Launch",
+          "left": 53,
+          "top": 13387,
+          "width": 284,
+          "height": 39
+        },
+        {
+          "tag": "H2",
+          "text": "Founder-built, not farmed out.",
+          "left": 24,
+          "top": 14113,
+          "width": 342,
+          "height": 82
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions about migrating your platform",
+          "left": 24,
+          "top": 15794,
+          "width": 342,
+          "height": 108
+        },
+        {
+          "tag": "H3",
+          "text": "If the site is custom code, do I need a developer every time I want to change something?",
+          "left": 24,
+          "top": 15946,
+          "width": 342,
+          "height": 72
+        },
+        {
+          "tag": "H3",
+          "text": "If the features are built in, is every future feature included too?",
+          "left": 24,
+          "top": 16513,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "Do I need your monthly plan to keep a custom feature working?",
+          "left": 24,
+          "top": 16978,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "Do you have a minimum project size?",
+          "left": 24,
+          "top": 17547,
+          "width": 342,
+          "height": 24
+        },
+        {
+          "tag": "H3",
+          "text": "How much does WordPress to Next.js migration cost?",
+          "left": 24,
+          "top": 17832,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "How does the free AI website audit work?",
+          "left": 24,
+          "top": 18505,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "How much faster will my site be after migrating from WordPress or Shopify?",
+          "left": 24,
+          "top": 18788,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "Do you work with Shopify stores?",
+          "left": 24,
+          "top": 19279,
+          "width": 342,
+          "height": 24
+        },
+        {
+          "tag": "H3",
+          "text": "Will I lose SEO rankings when migrating from WordPress?",
+          "left": 24,
+          "top": 19668,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H3",
+          "text": "Why not just use a faster WordPress host or a caching plugin?",
+          "left": 24,
+          "top": 20159,
+          "width": 342,
+          "height": 48
+        },
+        {
+          "tag": "H2",
+          "text": "Latest Insights",
+          "left": 24,
+          "top": 20731,
+          "width": 204,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "What Is Headless Commerce? A 2026 Store Owner Guide",
+          "left": 53,
+          "top": 20871,
+          "width": 284,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+          "left": 53,
+          "top": 21204,
+          "width": 284,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+          "left": 53,
+          "top": 21537,
+          "width": 284,
+          "height": 55
+        },
+        {
+          "tag": "H2",
+          "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+          "left": 48,
+          "top": 22016,
+          "width": 294,
+          "height": 244
+        },
+        {
+          "tag": "H3",
+          "text": "SERVICES",
+          "left": 24,
+          "top": 22877,
+          "width": 342,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "COMPANY",
+          "left": 24,
+          "top": 23355,
+          "width": 342,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Project Evidence",
+          "left": 41,
+          "top": 23433,
+          "width": 259,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Agency Pilot",
+          "left": 41,
+          "top": 23505,
+          "width": 198,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "About",
+          "left": 41,
+          "top": 23577,
+          "width": 165,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Hassan Jamal",
+          "left": 41,
+          "top": 23649,
+          "width": 178,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Imran Raza Ladhani",
+          "left": 41,
+          "top": 23721,
+          "width": 180,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Engineering Blog",
+          "left": 41,
+          "top": 23793,
+          "width": 235,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Delivery Principles",
+          "left": 41,
+          "top": 23865,
+          "width": 242,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Contact",
+          "left": 41,
+          "top": 23937,
+          "width": 252,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "RESOURCES",
+          "left": 24,
+          "top": 24028,
+          "width": 342,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Example Scopes",
+          "left": 41,
+          "top": 24106,
+          "width": 202,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Migration Services",
+          "left": 41,
+          "top": 24178,
+          "width": 192,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Facts and Figures",
+          "left": 41,
+          "top": 24250,
+          "width": 278,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Security",
+          "left": 41,
+          "top": 24338,
+          "width": 194,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Editorial Policy",
+          "left": 41,
+          "top": 24410,
+          "width": 267,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Privacy",
+          "left": 41,
+          "top": 24482,
+          "width": 163,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Cookie Choices",
+          "left": 41,
+          "top": 24554,
+          "width": 175,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Website Terms",
+          "left": 41,
+          "top": 24626,
+          "width": 162,
+          "height": 20
+        }
+      ],
+      "mainText": "Ask a question\nWEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.\n\nPandaCodeGen is a custom Next.js web development studio that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.\n\nSITES WE FINISHED\n\nLook at the work before you read about it.\n\nEvery screenshot below is a site that is live right now. Open any of them and check it yourself. Where a project has measured figures they are on its record, and where it does not, we say nothing about speed or traffic rather than estimate.\n\nNorthDeck Group\nCLIENT PROJECT\n\nConnected security systems and business services, built as a custom Next.js site. Live, and credited in its own footer.\n\nOpen the live site\nMyCustomPatches\nINDEPENDENT CLIENT\n\nWordPress to Next.js. Owner confirmed 22 days, more than 200 addresses across 13 templates, zero downtime and no rankings lost.\n\nRead the record\nEmblematic Studio\nINDEPENDENT CLIENT\n\nA product catalogue and quote experience. Twenty product types generated from one typed registry, with a single runtime route on the whole site.\n\nRead the record\n\nFour more, including three labelled founder affiliated, are on the work index, alongside the evidence standard each record has to meet before we publish it.\n\nEVIDENCE, NOT THEATER\n\nClient words with a source you can open.\n\nNo stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself. Four of them carry Trustpilot’s own “unprompted” label, meaning we never asked for them.\n\nClutch review\n(opens in a new tab)\nTrustpilot reviews\n(opens in a new tab)\n\nFEATURED IN\n\nWoman’s World\n(opens in a new tab)\n quoted co-founder Hassan Jamal on how remote AI-training work operates.\n\nI was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.\nEtoy McDaniel on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nIt looks premium, loads fast, and perfectly captures Emblematic Studio's brand.\nWaqas Ahmed on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was super helpful and communicative throughout the process.\nMarshall James on Trustpilot\n(opens in a new tab)\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nThey worked with me to make a website that I could afford.\nJames Peace on Trustpilot\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was available to me at any time, and his response time was always less than an hour.\nMatt Conner, Executive, MC Patches LLC on Clutch\nMarch 2026\nVERIFIED\nREVIEW, IDENTITY CHECKED BY CLUTCH\n\nHassan was super helpful and communicative throughout the process. Reviewed by Marshall James on Trustpilot, March 2026.\n\nFOUNDER-AFFILIATED, CLEARLY LABELLED\n\nPanda Patches is owned by a PandaCodeGen co-founder.\n\nWe built its platform but hold no ownership stake. It is presented as operating experience, not as an independent client endorsement.\n\nSee the project records\nOUR EXPERTISE\nMigrations engineered around what can break.\nEvery old link forwarded\nMigrations & New Builds\n\nWe list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.\n\nWE MIGRATE YOU OFF\n\nWordPress\nShopify\nWooCommerce\nWix\nSquarespace\nWebflow\nGoHighLevel\nExplore Migrations\nCustom Engineering\n\nSaaS dashboards, internal tools, and AI integrations. When “off-the-shelf” isn't enough, we build exactly what you need.\n\nPRICED ON ITS OWN\n\nApps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.\n\nView Architecture\nSearch & AI Foundations\n\nPages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.\n\nReview delivery standards\nFaster E-commerce\n\nHeadless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.\n\nSee e-commerce\nNot sure where to start?\n\nTell us what you're building or what's slowing you down. We'll give you a straight answer. No pitch, no pressure.\n\nChat with our experts\n\nBUILT IN, NOT BOLTED ON\n\nFeatures built around your business. Fewer subscriptions to manage.\n\nA quote calculator, a service finder or an enquiry form that routes itself can be part of the build rather than three more products to license. Each one follows your rules, and the person who runs the business can change how it behaves without booking a developer.\n\nA calculator that prices your own work\n\nSomeone puts in their numbers and gets a figure that follows your pricing rules. Deposits, minimums, volume bands and the jobs you turn down are all part of the logic.\n\nYou edit: Your rates, tiers and the wording of the result\n\nA finder for your services, courses or locations\n\nFilters that match how customers actually choose, and a page for each result that search engines can index on its own.\n\nYou edit: Entries, categories, filter options and the empty-result message\n\nAn enquiry form that routes by the answer\n\nQuestions that change with what the visitor picks, then the enquiry lands in the right inbox with the context already attached.\n\nYou edit: Questions, answer options and where each type of enquiry lands\n\nThe features we build you carry no separate monthly licence, and no vendor can retire one or change its price. That is the part we can promise. Running costs are a different question: hosting, email delivery, your content system and anything taking payments still have their own plans, and your quote names them before you commit. Which of your current subscriptions can actually end, we answer from your invoices rather than a table of list prices.\n\nGet a feature and running-cost comparison\nSee how custom features get scoped\n\nPRICING\n\nCustom websites, from $1,500.\n\nThe three starting points are below. Answer three questions if you want us to point at one, or read them yourself and skip the quiz.\n\nStarter\n\n$1,500\n\nA small business site, up to 7 pages, live quickly.\n\nGrowth (Most Popular)\n\n$3,500\n\nA full website and blog move, with redirects and launch checks.\n\nScale\n\nFrom $5,000\n\nA headless store, custom integrations, more than 20 pages.\n\nQuestion 1 of 3\n\nHow many pages does your site have today?\n7 pages or fewer\n8 to 20 pages\nMore than 20 pages\nFrom First Call to Launch.\n\nFour reviewable stages, with the important decisions recorded before launch.\n\nSTEP 01\nDiscovery\n\nWe inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.\n\nmigration inventory\nURLs\nMapped\nContent\nInventoried\nAnalytics\nBaselined\nIntegrations\nReviewed\nRisks and unknowns become written scope inputs\nSTEP 02\nArchitecture\n\nWe document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.\n\nCURRENT-STACK DECISIONS\n•\nCMS\nKeep or migrate\n•\nForms\nRebuild or connect\n•\nAnalytics\nPreserve\n•\nIntegrations\nTest\n→\nTarget architecture documented\nReviewed\nSTEP 03\nBuild\n\nThe new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.\n\nBUILD CHECKPOINTS\nReviewable\nFoundation\nEnvironment + structure\n✓\nMigration\nContent + features\n✓\nQA\nReview + fixes\n✓\nSTEP 04\nLaunch\n\nBefore cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.\n\nRedirects\nChecked\nOld URL → target\nLead forms\nTested\nValidation → delivery\nAnalytics and rollback plan\nLaunch checklist\nStart with Discovery\n\nTell us your current platform, primary risk, and target timeline.\n\nTHE TEAM\n\nFounder-built, not farmed out.\n\nWhen you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.\n\nHassan Jamal\nCo-founder & Lead Engineer\n\nBuilds the architectures. Writes the code. 900+ GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.\n\nWordPress Migrations\nE-Commerce Builds\nSpeed Optimization\nCustom Platforms\nHassan's Bio\nLinkedIn\nGitHub\nImran Raza Ladhani\nCo-founder & Lead Architect\n\nCo-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.\n\nNext.js Architecture\nPlatform Migrations\nSystem Design\nHeadless Commerce\nImran's Bio\nLinkedIn\n900+ GitHub contributions in the last year. All public. All verifiable.\n\nFAQ\n\nCommon questions about migrating your platform\nIf the site is custom code, do I need a developer every time I want to change something?\n\nNo, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet.\n\nIf the features are built in, is every future feature included too?\n\nNo, and it would not be honest to imply it. Your quote lists the features being built, and those are fixed in price before work starts. Something new later is scoped and priced the same way, before anyone begins. What you do not pay for again is the thing you already bought: a calculator we built you keeps working, keeps being editable, and never arrives with a renewal notice or a price rise. The distinction that matters is between changing what an existing feature does, which is usually a setting you control, and adding a feature the site has never had, which is new work.\n\nDo I need your monthly plan to keep a custom feature working?\n\nNo. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically.\n\nDo you have a minimum project size?\n\nNo. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.\n\nHow much does WordPress to Next.js migration cost?\n\nFrom $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.\n\nHow does the free AI website audit work?\n\nType in your web address and you get your load time, your Google speed scores, your technical SEO and any obvious security problems, with specific things to fix. It takes under a minute. No email, no signup, no sales call. It is a snapshot of your site today, not a claim about money you are losing.\n\nHow much faster will my site be after migrating from WordPress or Shopify?\n\nMost WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.\n\nDo you work with Shopify stores?\n\nYes. We build custom Shopify storefronts using headless architecture: your customers see a fast custom front end while you keep managing products and orders in Shopify as usual. If your store is slow because of app bloat, a heavy theme or unoptimised code, we replace the storefront layer with custom code while your entire Shopify backend stays in place for products, orders and payments. Speed improvement varies by store, so we measure your baseline before quoting.\n\nWill I lose SEO rankings when migrating from WordPress?\n\nNobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.\n\nWhy not just use a faster WordPress host or a caching plugin?\n\nFaster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.\n\nFROM THE BLOG\nLatest Insights\nE-COMMERCE\n15 min\nWhat Is Headless Commerce? A 2026 Store Owner Guide\n\nUnderstand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified.\n\nMar 14\nRead Article\nPERFORMANCE\n11 min\nHow to Fix a Slow WordPress Site: 8 Evidence-Led Methods\n\nProfile slow routes, isolate server, cache, database, theme, plugin, media and third-party work, then decide whether migration is justified.\n\nFeb 17\nRead Article\nPERFORMANCE\n11 min\nHow to Reach 90+ PageSpeed: A Repeatable 2026 Process\n\nAn eight-step Lighthouse and Core Web Vitals process for improving representative pages without false 100-score promises.\n\nFeb 17\nRead Article\nView All Articles\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nAsk us about your site\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nAI SEO\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\nLANGUAGE\n/\nEnglish\n/\nFrançais\n/\nDeutsch\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE",
+      "modal": {
+        "text": "What would you like help with?\n\nTell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.\n\nNAME *\nEMAIL *\nPHONE (optional)\nPROJECT DETAILS (optional)\n\nFor security, this form does not accept files. We can arrange a safe way to share documents after replying.\n\nLeave this field empty\nSend your question\n\nNo obligation. Your submission is used only to respond to this request as described in our privacy notice.",
+        "top": 34,
+        "height": 776,
+        "width": 366,
+        "fields": [
+          {
+            "name": "name",
+            "type": "text",
+            "required": true,
+            "label": "NAME *",
+            "placeholder": ""
+          },
+          {
+            "name": "email",
+            "type": "email",
+            "required": true,
+            "label": "EMAIL *",
+            "placeholder": ""
+          },
+          {
+            "name": "phone",
+            "type": "tel",
+            "required": false,
+            "label": "PHONE (optional)",
+            "placeholder": ""
+          },
+          {
+            "name": "details",
+            "type": "textarea",
+            "required": false,
+            "label": "PROJECT DETAILS (optional)",
+            "placeholder": "Important URLs, integrations, constraints, or questions"
+          },
+          {
+            "name": "website_url_confirm",
+            "type": "text",
+            "required": false,
+            "label": "Leave this field empty",
+            "placeholder": ""
+          }
+        ],
+        "paragraphs": [
+          {
+            "text": "Tell us about your site and what you are trying to fix. A founder replies, usually within one business day, and every message gets an answer whether or not it turns into a quote.",
+            "top": 129,
+            "height": 100,
+            "width": 260
+          },
+          {
+            "text": "For security, this form does not accept files. We can arrange a safe way to share documents after replying.",
+            "top": 677,
+            "height": 86,
+            "width": 316
+          },
+          {
+            "text": "No obligation. Your submission is used only to respond to this request as described in our privacy notice.",
+            "top": 854,
+            "height": 32,
+            "width": 316
+          }
+        ],
+        "buttons": [
+          {
+            "text": "",
+            "top": 51,
+            "height": 44,
+            "width": 44
+          },
+          {
+            "text": "Send your question",
+            "top": 783,
+            "height": 51,
+            "width": 316
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "canonical": "https://www.pandacodegen.com/",
+      "scrollWidth": 1016,
+      "pageHeight": 15385,
+      "h1": {
+        "tag": "H1",
+        "text": "Websites built for the way you do business.",
+        "left": 24,
+        "top": 347,
+        "width": 452,
+        "height": 94
+      },
+      "hero": {
+        "tag": "SECTION",
+        "text": "WEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.",
+        "left": 0,
+        "top": 0,
+        "width": 1016,
+        "height": 1026
+      },
+      "form": {
+        "tag": "FORM",
+        "text": "NAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+        "left": 569,
+        "top": 357,
+        "width": 394,
+        "height": 424
+      },
+      "mainWords": 3194,
+      "bodyWords": 3200,
+      "headerCtas": [
+        {
+          "tag": "A",
+          "text": "",
+          "left": 24,
+          "top": 31,
+          "width": 131,
+          "height": 23,
+          "href": "/",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask a question",
+          "left": 815,
+          "top": 20,
+          "width": 133,
+          "height": 44,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "left": 952,
+          "top": 22,
+          "width": 40,
+          "height": 40,
+          "href": null,
+          "ariaLabel": "Open menu"
+        }
+      ],
+      "heroParagraphs": [
+        {
+          "tag": "P",
+          "text": "We design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.",
+          "left": 24,
+          "top": 457,
+          "width": 452,
+          "height": 165
+        },
+        {
+          "tag": "P",
+          "text": "Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.",
+          "left": 24,
+          "top": 638,
+          "width": 452,
+          "height": 60
+        },
+        {
+          "tag": "P",
+          "text": "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
+          "left": 569,
+          "top": 241,
+          "width": 394,
+          "height": 96
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 569,
+          "top": 721,
+          "width": 394,
+          "height": 60
+        },
+        {
+          "tag": "P",
+          "text": "PREFER TO TALK INSTEAD?",
+          "left": 565,
+          "top": 826,
+          "width": 402,
+          "height": 16
+        },
+        {
+          "tag": "P",
+          "text": "Email us or book a call. Both reach the founders directly, not a sales desk.",
+          "left": 565,
+          "top": 848,
+          "width": 402,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "Just exploring? Run a free technical scan of your site first.",
+          "left": 540,
+          "top": 955,
+          "width": 452,
+          "height": 20
+        }
+      ],
+      "heroCtas": [
+        {
+          "tag": "BUTTON",
+          "text": "Ask us about your site",
+          "left": 24,
+          "top": 722,
+          "width": 251,
+          "height": 80,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "See our work",
+          "left": 291,
+          "top": 722,
+          "width": 185,
+          "height": 84,
+          "href": "/work"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 569,
+          "top": 649,
+          "width": 394,
+          "height": 48,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "info@pandacodegen.com",
+          "left": 565,
+          "top": 906,
+          "width": 178,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Book a discovery call",
+          "left": 763,
+          "top": 906,
+          "width": 145,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "Run a free technical scan",
+          "left": 677,
+          "top": 956,
+          "width": 170,
+          "height": 17,
+          "href": "/free-audit"
+        }
+      ],
+      "formChildren": [
+        {
+          "tag": "DIV",
+          "text": "NAME *\nEMAIL *",
+          "left": 569,
+          "top": 357,
+          "width": 394,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "YOUR WEBSITE (optional)",
+          "left": 569,
+          "top": 437,
+          "width": 394,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "WHAT YOU HAVE IN MIND",
+          "left": 569,
+          "top": 517,
+          "width": 394,
+          "height": 120
+        },
+        {
+          "tag": "DIV",
+          "text": "Leave this field empty",
+          "left": -9458,
+          "top": 649,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 569,
+          "top": 649,
+          "width": 394,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 569,
+          "top": 721,
+          "width": 394,
+          "height": 60
+        }
+      ],
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "NAME *",
+          "placeholder": ""
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "EMAIL *",
+          "placeholder": ""
+        },
+        {
+          "name": "currentUrl",
+          "type": "text",
+          "required": false,
+          "label": "YOUR WEBSITE (optional)",
+          "placeholder": "example.com"
+        },
+        {
+          "name": "details",
+          "type": "textarea",
+          "required": false,
+          "label": "WHAT YOU HAVE IN MIND",
+          "placeholder": "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty."
+        },
+        {
+          "name": "website_url_confirm",
+          "type": "text",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Websites built for the way you do business.",
+          "left": 24,
+          "top": 347,
+          "width": 452,
+          "height": 94
+        },
+        {
+          "tag": "H2",
+          "text": "What would you like help with?",
+          "left": 569,
+          "top": 199,
+          "width": 394,
+          "height": 30
+        },
+        {
+          "tag": "H2",
+          "text": "Look at the work before you read about it.",
+          "left": 24,
+          "top": 1399,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "tag": "H3",
+          "text": "NorthDeck Group",
+          "left": 57,
+          "top": 2173,
+          "width": 204,
+          "height": 32
+        },
+        {
+          "tag": "H3",
+          "text": "MyCustomPatches",
+          "left": 49,
+          "top": 2607,
+          "width": 186,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Emblematic Studio",
+          "left": 553,
+          "top": 2607,
+          "width": 183,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Client words with a source you can open.",
+          "left": 24,
+          "top": 3089,
+          "width": 768,
+          "height": 104
+        },
+        {
+          "tag": "H2",
+          "text": "Migrations engineered around\nwhat can break.",
+          "left": 124,
+          "top": 4468,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "tag": "H3",
+          "text": "Migrations & New Builds",
+          "left": 65,
+          "top": 4777,
+          "width": 555,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "Custom Engineering",
+          "left": 725,
+          "top": 4772,
+          "width": 227,
+          "height": 72
+        },
+        {
+          "tag": "H3",
+          "text": "Search & AI Foundations",
+          "left": 57,
+          "top": 5419,
+          "width": 241,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Faster E-commerce",
+          "left": 388,
+          "top": 5419,
+          "width": 241,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Not sure where to start?",
+          "left": 718,
+          "top": 5419,
+          "width": 241,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "left": 24,
+          "top": 5861,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "tag": "H3",
+          "text": "A calculator that prices your own work",
+          "left": 53,
+          "top": 6228,
+          "width": 265,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "A finder for your services, courses or locations",
+          "left": 375,
+          "top": 6228,
+          "width": 265,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "An enquiry form that routes by the answer",
+          "left": 698,
+          "top": 6228,
+          "width": 265,
+          "height": 56
+        },
+        {
+          "tag": "H2",
+          "text": "Custom websites, from $1,500.",
+          "left": 148,
+          "top": 6950,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "tag": "H3",
+          "text": "How many pages does your site have today?",
+          "left": 181,
+          "top": 7365,
+          "width": 654,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "text": "From First Call to Launch.",
+          "left": 24,
+          "top": 7790,
+          "width": 968,
+          "height": 51
+        },
+        {
+          "tag": "H3",
+          "text": "Discovery",
+          "left": 89,
+          "top": 8036,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Architecture",
+          "left": 547,
+          "top": 8036,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Build",
+          "left": 89,
+          "top": 8519,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Launch",
+          "left": 547,
+          "top": 8519,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H2",
+          "text": "Founder-built, not farmed out.",
+          "left": 24,
+          "top": 9266,
+          "width": 968,
+          "height": 51
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions about migrating your platform",
+          "left": 148,
+          "top": 10234,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "tag": "H3",
+          "text": "If the site is custom code, do I need a developer every time I want to change something?",
+          "left": 148,
+          "top": 10375,
+          "width": 720,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "If the features are built in, is every future feature included too?",
+          "left": 148,
+          "top": 10692,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do I need your monthly plan to keep a custom feature working?",
+          "left": 148,
+          "top": 10955,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you have a minimum project size?",
+          "left": 148,
+          "top": 11270,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much does WordPress to Next.js migration cost?",
+          "left": 148,
+          "top": 11455,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How does the free AI website audit work?",
+          "left": 148,
+          "top": 11796,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much faster will my site be after migrating from WordPress or Shopify?",
+          "left": 148,
+          "top": 11981,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you work with Shopify stores?",
+          "left": 148,
+          "top": 12244,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Will I lose SEO rankings when migrating from WordPress?",
+          "left": 148,
+          "top": 12481,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Why not just use a faster WordPress host or a caching plugin?",
+          "left": 148,
+          "top": 12744,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Latest Insights",
+          "left": 24,
+          "top": 13156,
+          "width": 245,
+          "height": 40
+        },
+        {
+          "tag": "H3",
+          "text": "What Is Headless Commerce? A 2026 Store Owner Guide",
+          "left": 53,
+          "top": 13316,
+          "width": 249,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+          "left": 384,
+          "top": 13316,
+          "width": 249,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+          "left": 714,
+          "top": 13316,
+          "width": 249,
+          "height": 55
+        },
+        {
+          "tag": "H2",
+          "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+          "left": 124,
+          "top": 13847,
+          "width": 768,
+          "height": 183
+        },
+        {
+          "tag": "H3",
+          "text": "SERVICES",
+          "left": 400,
+          "top": 14299,
+          "width": 76,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "COMPANY",
+          "left": 540,
+          "top": 14299,
+          "width": 194,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Project Evidence",
+          "left": 557,
+          "top": 14377,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Agency Pilot",
+          "left": 557,
+          "top": 14481,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "About",
+          "left": 557,
+          "top": 14569,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Hassan Jamal",
+          "left": 557,
+          "top": 14657,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Imran Raza Ladhani",
+          "left": 557,
+          "top": 14745,
+          "width": 130,
+          "height": 40
+        },
+        {
+          "tag": "H3",
+          "text": "Engineering Blog",
+          "left": 557,
+          "top": 14853,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Delivery Principles",
+          "left": 557,
+          "top": 14957,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Contact",
+          "left": 557,
+          "top": 15061,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "RESOURCES",
+          "left": 798,
+          "top": 14299,
+          "width": 194,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Example Scopes",
+          "left": 815,
+          "top": 14377,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Migration Services",
+          "left": 815,
+          "top": 14465,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Facts and Figures",
+          "left": 815,
+          "top": 14553,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Security",
+          "left": 815,
+          "top": 14673,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Editorial Policy",
+          "left": 815,
+          "top": 14761,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Privacy",
+          "left": 815,
+          "top": 14865,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Cookie Choices",
+          "left": 815,
+          "top": 14953,
+          "width": 130,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Website Terms",
+          "left": 815,
+          "top": 15041,
+          "width": 130,
+          "height": 20
+        }
+      ],
+      "mainText": "Ask a question\nWEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.\n\nPandaCodeGen is a custom Next.js web development studio that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.\n\nSITES WE FINISHED\n\nLook at the work before you read about it.\n\nEvery screenshot below is a site that is live right now. Open any of them and check it yourself. Where a project has measured figures they are on its record, and where it does not, we say nothing about speed or traffic rather than estimate.\n\nNorthDeck Group\nCLIENT PROJECT\n\nConnected security systems and business services, built as a custom Next.js site. Live, and credited in its own footer.\n\nOpen the live site\nMyCustomPatches\nINDEPENDENT CLIENT\n\nWordPress to Next.js. Owner confirmed 22 days, more than 200 addresses across 13 templates, zero downtime and no rankings lost.\n\nRead the record\nEmblematic Studio\nINDEPENDENT CLIENT\n\nA product catalogue and quote experience. Twenty product types generated from one typed registry, with a single runtime route on the whole site.\n\nRead the record\n\nFour more, including three labelled founder affiliated, are on the work index, alongside the evidence standard each record has to meet before we publish it.\n\nEVIDENCE, NOT THEATER\n\nClient words with a source you can open.\n\nNo stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself. Four of them carry Trustpilot’s own “unprompted” label, meaning we never asked for them.\n\nClutch review\n(opens in a new tab)\nTrustpilot reviews\n(opens in a new tab)\n\nFEATURED IN\n\nWoman’s World\n(opens in a new tab)\n quoted co-founder Hassan Jamal on how remote AI-training work operates.\n\nI was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.\nEtoy McDaniel on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nIt looks premium, loads fast, and perfectly captures Emblematic Studio's brand.\nWaqas Ahmed on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was super helpful and communicative throughout the process.\nMarshall James on Trustpilot\n(opens in a new tab)\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nThey worked with me to make a website that I could afford.\nJames Peace on Trustpilot\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was available to me at any time, and his response time was always less than an hour.\nMatt Conner, Executive, MC Patches LLC on Clutch\nMarch 2026\nVERIFIED\nREVIEW, IDENTITY CHECKED BY CLUTCH\n\nHassan was super helpful and communicative throughout the process. Reviewed by Marshall James on Trustpilot, March 2026.\n\nFOUNDER-AFFILIATED, CLEARLY LABELLED\n\nPanda Patches is owned by a PandaCodeGen co-founder.\n\nWe built its platform but hold no ownership stake. It is presented as operating experience, not as an independent client endorsement.\n\nSee the project records\nOUR EXPERTISE\nMigrations engineered around\nwhat can break.\nEvery old link forwarded\nMigrations & New Builds\n\nWe list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.\n\nWE MIGRATE YOU OFF\n\nWordPress\nShopify\nWooCommerce\nWix\nSquarespace\nWebflow\nGoHighLevel\nExplore Migrations\nCustom Engineering\n\nSaaS dashboards, internal tools, and AI integrations. When “off-the-shelf” isn't enough, we build exactly what you need.\n\nPRICED ON ITS OWN\n\nApps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.\n\nView Architecture\nSearch & AI Foundations\n\nPages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.\n\nReview delivery standards\nFaster E-commerce\n\nHeadless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.\n\nSee e-commerce\nNot sure where to start?\n\nTell us what you're building or what's slowing you down. We'll give you a straight answer. No pitch, no pressure.\n\nChat with our experts\n\nBUILT IN, NOT BOLTED ON\n\nFeatures built around your business. Fewer subscriptions to manage.\n\nA quote calculator, a service finder or an enquiry form that routes itself can be part of the build rather than three more products to license. Each one follows your rules, and the person who runs the business can change how it behaves without booking a developer.\n\nA calculator that prices your own work\n\nSomeone puts in their numbers and gets a figure that follows your pricing rules. Deposits, minimums, volume bands and the jobs you turn down are all part of the logic.\n\nYou edit: Your rates, tiers and the wording of the result\n\nA finder for your services, courses or locations\n\nFilters that match how customers actually choose, and a page for each result that search engines can index on its own.\n\nYou edit: Entries, categories, filter options and the empty-result message\n\nAn enquiry form that routes by the answer\n\nQuestions that change with what the visitor picks, then the enquiry lands in the right inbox with the context already attached.\n\nYou edit: Questions, answer options and where each type of enquiry lands\n\nThe features we build you carry no separate monthly licence, and no vendor can retire one or change its price. That is the part we can promise. Running costs are a different question: hosting, email delivery, your content system and anything taking payments still have their own plans, and your quote names them before you commit. Which of your current subscriptions can actually end, we answer from your invoices rather than a table of list prices.\n\nGet a feature and running-cost comparison\nSee how custom features get scoped\n\nPRICING\n\nCustom websites, from $1,500.\n\nThe three starting points are below. Answer three questions if you want us to point at one, or read them yourself and skip the quiz.\n\nStarter\n\n$1,500\n\nA small business site, up to 7 pages, live quickly.\n\nGrowth (Most Popular)\n\n$3,500\n\nA full website and blog move, with redirects and launch checks.\n\nScale\n\nFrom $5,000\n\nA headless store, custom integrations, more than 20 pages.\n\nQuestion 1 of 3\n\nHow many pages does your site have today?\n7 pages or fewer\n8 to 20 pages\nMore than 20 pages\nFrom First Call to Launch.\n\nFour reviewable stages, with the important decisions recorded before launch.\n\nSTEP 01\nDiscovery\n\nWe inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.\n\nmigration inventory\nURLs\nMapped\nContent\nInventoried\nAnalytics\nBaselined\nIntegrations\nReviewed\nRisks and unknowns become written scope inputs\nSTEP 02\nArchitecture\n\nWe document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.\n\nCURRENT-STACK DECISIONS\n•\nCMS\nKeep or migrate\n•\nForms\nRebuild or connect\n•\nAnalytics\nPreserve\n•\nIntegrations\nTest\n→\nTarget architecture documented\nReviewed\nSTEP 03\nBuild\n\nThe new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.\n\nBUILD CHECKPOINTS\nReviewable\nFoundation\nEnvironment + structure\n✓\nMigration\nContent + features\n✓\nQA\nReview + fixes\n✓\nSTEP 04\nLaunch\n\nBefore cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.\n\nRedirects\nChecked\nOld URL → target\nLead forms\nTested\nValidation → delivery\nAnalytics and rollback plan\nLaunch checklist\nStart with Discovery\n\nTell us your current platform, primary risk, and target timeline.\n\nTHE TEAM\n\nFounder-built, not farmed out.\n\nWhen you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.\n\nHassan Jamal\nCo-founder & Lead Engineer\n\nBuilds the architectures. Writes the code. 900+ GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.\n\nWordPress Migrations\nE-Commerce Builds\nSpeed Optimization\nCustom Platforms\nHassan's Bio\nLinkedIn\nGitHub\nImran Raza Ladhani\nCo-founder & Lead Architect\n\nCo-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.\n\nNext.js Architecture\nPlatform Migrations\nSystem Design\nHeadless Commerce\nImran's Bio\nLinkedIn\n900+ GitHub contributions in the last year. All public. All verifiable.\n\nFAQ\n\nCommon questions about migrating your platform\nIf the site is custom code, do I need a developer every time I want to change something?\n\nNo, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet.\n\nIf the features are built in, is every future feature included too?\n\nNo, and it would not be honest to imply it. Your quote lists the features being built, and those are fixed in price before work starts. Something new later is scoped and priced the same way, before anyone begins. What you do not pay for again is the thing you already bought: a calculator we built you keeps working, keeps being editable, and never arrives with a renewal notice or a price rise. The distinction that matters is between changing what an existing feature does, which is usually a setting you control, and adding a feature the site has never had, which is new work.\n\nDo I need your monthly plan to keep a custom feature working?\n\nNo. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically.\n\nDo you have a minimum project size?\n\nNo. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.\n\nHow much does WordPress to Next.js migration cost?\n\nFrom $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.\n\nHow does the free AI website audit work?\n\nType in your web address and you get your load time, your Google speed scores, your technical SEO and any obvious security problems, with specific things to fix. It takes under a minute. No email, no signup, no sales call. It is a snapshot of your site today, not a claim about money you are losing.\n\nHow much faster will my site be after migrating from WordPress or Shopify?\n\nMost WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.\n\nDo you work with Shopify stores?\n\nYes. We build custom Shopify storefronts using headless architecture: your customers see a fast custom front end while you keep managing products and orders in Shopify as usual. If your store is slow because of app bloat, a heavy theme or unoptimised code, we replace the storefront layer with custom code while your entire Shopify backend stays in place for products, orders and payments. Speed improvement varies by store, so we measure your baseline before quoting.\n\nWill I lose SEO rankings when migrating from WordPress?\n\nNobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.\n\nWhy not just use a faster WordPress host or a caching plugin?\n\nFaster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.\n\nFROM THE BLOG\nLatest Insights\nView All Articles\nE-COMMERCE\n15 min\nWhat Is Headless Commerce? A 2026 Store Owner Guide\n\nUnderstand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified.\n\nMar 14\nRead Article\nPERFORMANCE\n11 min\nHow to Fix a Slow WordPress Site: 8 Evidence-Led Methods\n\nProfile slow routes, isolate server, cache, database, theme, plugin, media and third-party work, then decide whether migration is justified.\n\nFeb 17\nRead Article\nPERFORMANCE\n11 min\nHow to Reach 90+ PageSpeed: A Repeatable 2026 Process\n\nAn eight-step Lighthouse and Core Web Vitals process for improving representative pages without false 100-score promises.\n\nFeb 17\nRead Article\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nAsk us about your site\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nAI SEO\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\nLANGUAGE\n/\nEnglish\n/\nFrançais\n/\nDeutsch\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE"
+    },
+    {
+      "viewport": {
+        "width": 1279,
+        "height": 900
+      },
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "canonical": "https://www.pandacodegen.com/",
+      "scrollWidth": 1271,
+      "pageHeight": 15471,
+      "h1": {
+        "tag": "H1",
+        "text": "Websites built for the way you do business.",
+        "left": 148,
+        "top": 308,
+        "width": 456,
+        "height": 173
+      },
+      "hero": {
+        "tag": "SECTION",
+        "text": "WEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.",
+        "left": 0,
+        "top": 0,
+        "width": 1271,
+        "height": 1039
+      },
+      "form": {
+        "tag": "FORM",
+        "text": "NAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+        "left": 697,
+        "top": 357,
+        "width": 398,
+        "height": 424
+      },
+      "mainWords": 3194,
+      "bodyWords": 3200,
+      "headerCtas": [
+        {
+          "tag": "A",
+          "text": "",
+          "left": 148,
+          "top": 31,
+          "width": 131,
+          "height": 23,
+          "href": "/",
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Ask a question",
+          "left": 947,
+          "top": 20,
+          "width": 133,
+          "height": 44,
+          "href": null,
+          "ariaLabel": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "left": 1084,
+          "top": 22,
+          "width": 40,
+          "height": 40,
+          "href": null,
+          "ariaLabel": "Open menu"
+        }
+      ],
+      "heroParagraphs": [
+        {
+          "tag": "P",
+          "text": "We design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.",
+          "left": 148,
+          "top": 496,
+          "width": 456,
+          "height": 165
+        },
+        {
+          "tag": "P",
+          "text": "Websites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.",
+          "left": 148,
+          "top": 677,
+          "width": 456,
+          "height": 60
+        },
+        {
+          "tag": "P",
+          "text": "We are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.",
+          "left": 697,
+          "top": 241,
+          "width": 398,
+          "height": 96
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 697,
+          "top": 721,
+          "width": 398,
+          "height": 60
+        },
+        {
+          "tag": "P",
+          "text": "PREFER TO TALK INSTEAD?",
+          "left": 693,
+          "top": 826,
+          "width": 406,
+          "height": 16
+        },
+        {
+          "tag": "P",
+          "text": "Email us or book a call. Both reach the founders directly, not a sales desk.",
+          "left": 693,
+          "top": 848,
+          "width": 406,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "Just exploring? Run a free technical scan of your site first.",
+          "left": 668,
+          "top": 955,
+          "width": 456,
+          "height": 20
+        }
+      ],
+      "heroCtas": [
+        {
+          "tag": "BUTTON",
+          "text": "Ask us about your site",
+          "left": 148,
+          "top": 761,
+          "width": 253,
+          "height": 80,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "See our work",
+          "left": 417,
+          "top": 761,
+          "width": 187,
+          "height": 84,
+          "href": "/work"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 697,
+          "top": 649,
+          "width": 398,
+          "height": 48,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "info@pandacodegen.com",
+          "left": 693,
+          "top": 906,
+          "width": 178,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Book a discovery call",
+          "left": 890,
+          "top": 906,
+          "width": 145,
+          "height": 20,
+          "href": null
+        },
+        {
+          "tag": "A",
+          "text": "Run a free technical scan",
+          "left": 807,
+          "top": 956,
+          "width": 170,
+          "height": 17,
+          "href": "/free-audit"
+        }
+      ],
+      "formChildren": [
+        {
+          "tag": "DIV",
+          "text": "NAME *\nEMAIL *",
+          "left": 697,
+          "top": 357,
+          "width": 398,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "YOUR WEBSITE (optional)",
+          "left": 697,
+          "top": 437,
+          "width": 398,
+          "height": 68
+        },
+        {
+          "tag": "LABEL",
+          "text": "WHAT YOU HAVE IN MIND",
+          "left": 697,
+          "top": 517,
+          "width": 398,
+          "height": 120
+        },
+        {
+          "tag": "DIV",
+          "text": "Leave this field empty",
+          "left": -9330,
+          "top": 649,
+          "width": 1,
+          "height": 1
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Send your question",
+          "left": 697,
+          "top": 649,
+          "width": 398,
+          "height": 48
+        },
+        {
+          "tag": "P",
+          "text": "A founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.",
+          "left": 697,
+          "top": 721,
+          "width": 398,
+          "height": 60
+        }
+      ],
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "label": "NAME *",
+          "placeholder": ""
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "label": "EMAIL *",
+          "placeholder": ""
+        },
+        {
+          "name": "currentUrl",
+          "type": "text",
+          "required": false,
+          "label": "YOUR WEBSITE (optional)",
+          "placeholder": "example.com"
+        },
+        {
+          "name": "details",
+          "type": "textarea",
+          "required": false,
+          "label": "WHAT YOU HAVE IN MIND",
+          "placeholder": "A migration, a redesign, faster pages, or a question you would like answered. A sentence is plenty."
+        },
+        {
+          "name": "website_url_confirm",
+          "type": "text",
+          "required": false,
+          "placeholder": ""
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Websites built for the way you do business.",
+          "left": 148,
+          "top": 308,
+          "width": 456,
+          "height": 173
+        },
+        {
+          "tag": "H2",
+          "text": "What would you like help with?",
+          "left": 697,
+          "top": 199,
+          "width": 398,
+          "height": 30
+        },
+        {
+          "tag": "H2",
+          "text": "Look at the work before you read about it.",
+          "left": 24,
+          "top": 1412,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "tag": "H3",
+          "text": "NorthDeck Group",
+          "left": 57,
+          "top": 2203,
+          "width": 204,
+          "height": 32
+        },
+        {
+          "tag": "H3",
+          "text": "MyCustomPatches",
+          "left": 49,
+          "top": 2698,
+          "width": 186,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Emblematic Studio",
+          "left": 681,
+          "top": 2698,
+          "width": 183,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Client words with a source you can open.",
+          "left": 24,
+          "top": 3134,
+          "width": 768,
+          "height": 104
+        },
+        {
+          "tag": "H2",
+          "text": "Migrations engineered around\nwhat can break.",
+          "left": 252,
+          "top": 4492,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "tag": "H3",
+          "text": "Migrations & New Builds",
+          "left": 189,
+          "top": 4801,
+          "width": 561,
+          "height": 36
+        },
+        {
+          "tag": "H3",
+          "text": "Custom Engineering",
+          "left": 854,
+          "top": 4796,
+          "width": 229,
+          "height": 72
+        },
+        {
+          "tag": "H3",
+          "text": "Search & AI Foundations",
+          "left": 181,
+          "top": 5443,
+          "width": 243,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Faster E-commerce",
+          "left": 514,
+          "top": 5443,
+          "width": 243,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Not sure where to start?",
+          "left": 847,
+          "top": 5443,
+          "width": 243,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "left": 148,
+          "top": 5885,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "tag": "H3",
+          "text": "A calculator that prices your own work",
+          "left": 177,
+          "top": 6252,
+          "width": 268,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "A finder for your services, courses or locations",
+          "left": 502,
+          "top": 6252,
+          "width": 268,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "An enquiry form that routes by the answer",
+          "left": 827,
+          "top": 6252,
+          "width": 268,
+          "height": 56
+        },
+        {
+          "tag": "H2",
+          "text": "Custom websites, from $1,500.",
+          "left": 276,
+          "top": 6974,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "tag": "H3",
+          "text": "How many pages does your site have today?",
+          "left": 309,
+          "top": 7389,
+          "width": 654,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "text": "From First Call to Launch.",
+          "left": 148,
+          "top": 7814,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "tag": "H3",
+          "text": "Discovery",
+          "left": 217,
+          "top": 8061,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Architecture",
+          "left": 675,
+          "top": 8061,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Build",
+          "left": 217,
+          "top": 8543,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H3",
+          "text": "Launch",
+          "left": 675,
+          "top": 8543,
+          "width": 380,
+          "height": 39
+        },
+        {
+          "tag": "H2",
+          "text": "Founder-built, not farmed out.",
+          "left": 148,
+          "top": 9290,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions about migrating your platform",
+          "left": 276,
+          "top": 10272,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "tag": "H3",
+          "text": "If the site is custom code, do I need a developer every time I want to change something?",
+          "left": 276,
+          "top": 10420,
+          "width": 720,
+          "height": 56
+        },
+        {
+          "tag": "H3",
+          "text": "If the features are built in, is every future feature included too?",
+          "left": 276,
+          "top": 10737,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do I need your monthly plan to keep a custom feature working?",
+          "left": 276,
+          "top": 11000,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you have a minimum project size?",
+          "left": 276,
+          "top": 11315,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much does WordPress to Next.js migration cost?",
+          "left": 276,
+          "top": 11500,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How does the free AI website audit work?",
+          "left": 276,
+          "top": 11841,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "How much faster will my site be after migrating from WordPress or Shopify?",
+          "left": 276,
+          "top": 12026,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Do you work with Shopify stores?",
+          "left": 276,
+          "top": 12289,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Will I lose SEO rankings when migrating from WordPress?",
+          "left": 276,
+          "top": 12526,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H3",
+          "text": "Why not just use a faster WordPress host or a caching plugin?",
+          "left": 276,
+          "top": 12789,
+          "width": 720,
+          "height": 28
+        },
+        {
+          "tag": "H2",
+          "text": "Latest Insights",
+          "left": 24,
+          "top": 13229,
+          "width": 245,
+          "height": 40
+        },
+        {
+          "tag": "H3",
+          "text": "What Is Headless Commerce? A 2026 Store Owner Guide",
+          "left": 53,
+          "top": 13397,
+          "width": 334,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+          "left": 469,
+          "top": 13397,
+          "width": 334,
+          "height": 55
+        },
+        {
+          "tag": "H3",
+          "text": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+          "left": 884,
+          "top": 13397,
+          "width": 334,
+          "height": 55
+        },
+        {
+          "tag": "H2",
+          "text": "Need to move platforms without losing track of URLs, content, or integrations?",
+          "left": 252,
+          "top": 13941,
+          "width": 768,
+          "height": 183
+        },
+        {
+          "tag": "H3",
+          "text": "SERVICES",
+          "left": 526,
+          "top": 14393,
+          "width": 77,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "COMPANY",
+          "left": 667,
+          "top": 14393,
+          "width": 196,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Project Evidence",
+          "left": 684,
+          "top": 14471,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Agency Pilot",
+          "left": 684,
+          "top": 14575,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "About",
+          "left": 684,
+          "top": 14663,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Hassan Jamal",
+          "left": 684,
+          "top": 14751,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Imran Raza Ladhani",
+          "left": 684,
+          "top": 14839,
+          "width": 132,
+          "height": 40
+        },
+        {
+          "tag": "H3",
+          "text": "Engineering Blog",
+          "left": 684,
+          "top": 14947,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Delivery Principles",
+          "left": 684,
+          "top": 15035,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Contact",
+          "left": 684,
+          "top": 15139,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "RESOURCES",
+          "left": 928,
+          "top": 14393,
+          "width": 196,
+          "height": 33
+        },
+        {
+          "tag": "H3",
+          "text": "Example Scopes",
+          "left": 945,
+          "top": 14471,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Migration Services",
+          "left": 945,
+          "top": 14559,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Facts and Figures",
+          "left": 945,
+          "top": 14647,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Security",
+          "left": 945,
+          "top": 14767,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Editorial Policy",
+          "left": 945,
+          "top": 14855,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Privacy",
+          "left": 945,
+          "top": 14959,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Cookie Choices",
+          "left": 945,
+          "top": 15047,
+          "width": 132,
+          "height": 20
+        },
+        {
+          "tag": "H3",
+          "text": "Website Terms",
+          "left": 945,
+          "top": 15135,
+          "width": 132,
+          "height": 20
+        }
+      ],
+      "mainText": "Ask a question\nWEBSITE MIGRATIONS · FIXED SCOPE · CODE YOU OWN\nWebsites built for the way you do business.\n\nWe design and build business websites and online stores around how your customers enquire and buy. Your team can edit the content, you own the code, and every page is built so Google and AI assistants can read it properly.\n\nWebsites and online stores from $1,500. Scope and price agreed before work starts, and you work directly with the founders.\n\nAsk us about your site\nSee our work\nSTART HERE\nWhat would you like help with?\n\nWe are here to help. Share your website, or anything about it you would like to discuss, and a founder will reply. Every message gets an answer, whether or not it ever turns into a quote.\n\nNAME *\nEMAIL *\nYOUR WEBSITE (optional)\nWHAT YOU HAVE IN MIND\nLeave this field empty\nSend your question\n\nA founder replies, usually within one business day. The first reply tells you whether we are a fit and what a scope would involve. It is not a sales sequence.\n\nPREFER TO TALK INSTEAD?\n\nEmail us or book a call. Both reach the founders directly, not a sales desk.\n\ninfo@pandacodegen.com\nBook a discovery call\n\nJust exploring? Run a free technical scan of your site first.\n\nPandaCodeGen is a custom Next.js web development studio that rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites into fast custom code you own. Sites start at $1,500 at a fixed price agreed before we start, take 2 to 4 weeks, and score 90 or better on Lighthouse, mobile and desktop, at handover. No minimum project size, no monthly platform fees and no retainer. You own the code, the design files and the accounts at the end. Pages arrive as finished HTML with clear, direct answers that search engines and AI assistants such as ChatGPT, Claude and Perplexity can quote.\n\nSITES WE FINISHED\n\nLook at the work before you read about it.\n\nEvery screenshot below is a site that is live right now. Open any of them and check it yourself. Where a project has measured figures they are on its record, and where it does not, we say nothing about speed or traffic rather than estimate.\n\nNorthDeck Group\nCLIENT PROJECT\n\nConnected security systems and business services, built as a custom Next.js site. Live, and credited in its own footer.\n\nOpen the live site\nMyCustomPatches\nINDEPENDENT CLIENT\n\nWordPress to Next.js. Owner confirmed 22 days, more than 200 addresses across 13 templates, zero downtime and no rankings lost.\n\nRead the record\nEmblematic Studio\nINDEPENDENT CLIENT\n\nA product catalogue and quote experience. Twenty product types generated from one typed registry, with a single runtime route on the whole site.\n\nRead the record\n\nFour more, including three labelled founder affiliated, are on the work index, alongside the evidence standard each record has to meet before we publish it.\n\nEVIDENCE, NOT THEATER\n\nClient words with a source you can open.\n\nNo stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from public review pages, linked so you can read the full context yourself. Four of them carry Trustpilot’s own “unprompted” label, meaning we never asked for them.\n\nClutch review\n(opens in a new tab)\nTrustpilot reviews\n(opens in a new tab)\n\nFEATURED IN\n\nWoman’s World\n(opens in a new tab)\n quoted co-founder Hassan Jamal on how remote AI-training work operates.\n\nI was hesitant at first because the price seemed more than reasonable and I had never heard of them. I am so glad I chose to work with them.\nEtoy McDaniel on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nIt looks premium, loads fast, and perfectly captures Emblematic Studio's brand.\nWaqas Ahmed on Trustpilot\nAugust 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was super helpful and communicative throughout the process.\nMarshall James on Trustpilot\n(opens in a new tab)\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nThey worked with me to make a website that I could afford.\nJames Peace on Trustpilot\nMarch 2026\nUNPROMPTED\nREVIEW, AS LABELLED BY TRUSTPILOT\nHassan was available to me at any time, and his response time was always less than an hour.\nMatt Conner, Executive, MC Patches LLC on Clutch\nMarch 2026\nVERIFIED\nREVIEW, IDENTITY CHECKED BY CLUTCH\n\nHassan was super helpful and communicative throughout the process. Reviewed by Marshall James on Trustpilot, March 2026.\n\nFOUNDER-AFFILIATED, CLEARLY LABELLED\n\nPanda Patches is owned by a PandaCodeGen co-founder.\n\nWe built its platform but hold no ownership stake. It is presented as operating experience, not as an independent client endorsement.\n\nSee the project records\nOUR EXPERTISE\nMigrations engineered around\nwhat can break.\nEvery old link forwarded\nMigrations & New Builds\n\nWe list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.\n\nWE MIGRATE YOU OFF\n\nWordPress\nShopify\nWooCommerce\nWix\nSquarespace\nWebflow\nGoHighLevel\nExplore Migrations\nCustom Engineering\n\nSaaS dashboards, internal tools, and AI integrations. When “off-the-shelf” isn't enough, we build exactly what you need.\n\nPRICED ON ITS OWN\n\nApps and internal tools are quoted after one short call, not sold as a website package. We work out what it does, what data it holds and what it costs to run before anyone talks price.\n\nView Architecture\nSearch & AI Foundations\n\nPages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.\n\nReview delivery standards\nFaster E-commerce\n\nHeadless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.\n\nSee e-commerce\nNot sure where to start?\n\nTell us what you're building or what's slowing you down. We'll give you a straight answer. No pitch, no pressure.\n\nChat with our experts\n\nBUILT IN, NOT BOLTED ON\n\nFeatures built around your business. Fewer subscriptions to manage.\n\nA quote calculator, a service finder or an enquiry form that routes itself can be part of the build rather than three more products to license. Each one follows your rules, and the person who runs the business can change how it behaves without booking a developer.\n\nA calculator that prices your own work\n\nSomeone puts in their numbers and gets a figure that follows your pricing rules. Deposits, minimums, volume bands and the jobs you turn down are all part of the logic.\n\nYou edit: Your rates, tiers and the wording of the result\n\nA finder for your services, courses or locations\n\nFilters that match how customers actually choose, and a page for each result that search engines can index on its own.\n\nYou edit: Entries, categories, filter options and the empty-result message\n\nAn enquiry form that routes by the answer\n\nQuestions that change with what the visitor picks, then the enquiry lands in the right inbox with the context already attached.\n\nYou edit: Questions, answer options and where each type of enquiry lands\n\nThe features we build you carry no separate monthly licence, and no vendor can retire one or change its price. That is the part we can promise. Running costs are a different question: hosting, email delivery, your content system and anything taking payments still have their own plans, and your quote names them before you commit. Which of your current subscriptions can actually end, we answer from your invoices rather than a table of list prices.\n\nGet a feature and running-cost comparison\nSee how custom features get scoped\n\nPRICING\n\nCustom websites, from $1,500.\n\nThe three starting points are below. Answer three questions if you want us to point at one, or read them yourself and skip the quiz.\n\nStarter\n\n$1,500\n\nA small business site, up to 7 pages, live quickly.\n\nGrowth (Most Popular)\n\n$3,500\n\nA full website and blog move, with redirects and launch checks.\n\nScale\n\nFrom $5,000\n\nA headless store, custom integrations, more than 20 pages.\n\nQuestion 1 of 3\n\nHow many pages does your site have today?\n7 pages or fewer\n8 to 20 pages\nMore than 20 pages\nFrom First Call to Launch.\n\nFour reviewable stages, with the important decisions recorded before launch.\n\nSTEP 01\nDiscovery\n\nWe inventory the current URLs, content, forms, analytics, integrations, and measurable baselines before recommending a migration scope.\n\nmigration inventory\nURLs\nMapped\nContent\nInventoried\nAnalytics\nBaselined\nIntegrations\nReviewed\nRisks and unknowns become written scope inputs\nSTEP 02\nArchitecture\n\nWe document what should stay, move, integrate, or be replaced, along with dependencies, risks, acceptance criteria, and operating costs.\n\nCURRENT-STACK DECISIONS\n•\nCMS\nKeep or migrate\n•\nForms\nRebuild or connect\n•\nAnalytics\nPreserve\n•\nIntegrations\nTest\n→\nTarget architecture documented\nReviewed\nSTEP 03\nBuild\n\nThe new implementation is delivered in reviewable checkpoints so content, behavior, integrations, and edge cases can be validated before cutover.\n\nBUILD CHECKPOINTS\nReviewable\nFoundation\nEnvironment + structure\n✓\nMigration\nContent + features\n✓\nQA\nReview + fixes\n✓\nSTEP 04\nLaunch\n\nBefore cutover, we test redirects, forms, analytics, accessibility, metadata, monitoring, and the rollback path against the approved launch checklist.\n\nRedirects\nChecked\nOld URL → target\nLead forms\nTested\nValidation → delivery\nAnalytics and rollback plan\nLaunch checklist\nStart with Discovery\n\nTell us your current platform, primary risk, and target timeline.\n\nTHE TEAM\n\nFounder-built, not farmed out.\n\nWhen you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.\n\nHassan Jamal\nCo-founder & Lead Engineer\n\nBuilds the architectures. Writes the code. 900+ GitHub contributions this year across live client projects. Every commit is visible. US contracts and support. Senior engineering with direct founder access.\n\nWordPress Migrations\nE-Commerce Builds\nSpeed Optimization\nCustom Platforms\nHassan's Bio\nLinkedIn\nGitHub\nImran Raza Ladhani\nCo-founder & Lead Architect\n\nCo-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.\n\nNext.js Architecture\nPlatform Migrations\nSystem Design\nHeadless Commerce\nImran's Bio\nLinkedIn\n900+ GitHub contributions in the last year. All public. All verifiable.\n\nFAQ\n\nCommon questions about migrating your platform\nIf the site is custom code, do I need a developer every time I want to change something?\n\nNo, and this is the part most people get wrong about custom code in 2026. Every package includes an editor built into your own site. You sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. There is no deploy, no ticket and no developer. Ladies 4 Jesus runs that way today: nine content types and five moderated submission paths, run by the owner, not by us. What still needs us is a new page template, a new feature or a change to how something works, and that is quoted like any other work. So the honest line is that you change what the site says, you operate whatever it was built to do, and we build the things it cannot do yet.\n\nIf the features are built in, is every future feature included too?\n\nNo, and it would not be honest to imply it. Your quote lists the features being built, and those are fixed in price before work starts. Something new later is scoped and priced the same way, before anyone begins. What you do not pay for again is the thing you already bought: a calculator we built you keeps working, keeps being editable, and never arrives with a renewal notice or a price rise. The distinction that matters is between changing what an existing feature does, which is usually a setting you control, and adding a feature the site has never had, which is new work.\n\nDo I need your monthly plan to keep a custom feature working?\n\nNo. There is no compulsory retainer, and nothing we build stops working if you never take one. The feature lives in code you own, on accounts in your name. What a feature does still need is the services underneath it: a form needs email delivery, an editable feature needs your content system, and anything taking payments needs a payment provider. Those are billed by those providers, on plans your quote names before you commit, and they carry on whether we are involved or not. Optional monthly support covers maintenance, small changes and the search and content work you choose, and it is quoted against your actual site rather than sold as a fixed tier. Hosting can be part of that arrangement on terms agreed with you, rather than being included automatically.\n\nDo you have a minimum project size?\n\nNo. We start at $1,500 for a site of up to 7 pages, and a small project is quoted the same way as a large one. Most custom Next.js agencies will not start below $10,000, and several will not start below $50,000, so a small business is often told no before it gets a price. You get a fixed price before we begin either way.\n\nHow much does WordPress to Next.js migration cost?\n\nFrom $1,500 for a business site of up to 7 pages. From $3,500 for 8 to 20 pages with your blog moved and every old link forwarded, which is what most people pick. From $5,000 for an online store, more than 20 pages, or more than one language. Anything bigger is quoted after a call. The price is fixed before we start and your written quote has the exact figure. Your content, your Google settings and your design all come across. The representative pages named in your scope are tested to 90 or better on Lighthouse, mobile and desktop. No monthly plugin fees, and you own the code. The representative pages named in your quote score 90 or better on Google's Lighthouse lab test on phone and desktop, and we test three times before handover. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.\n\nHow does the free AI website audit work?\n\nType in your web address and you get your load time, your Google speed scores, your technical SEO and any obvious security problems, with specific things to fix. It takes under a minute. No email, no signup, no sales call. It is a snapshot of your site today, not a claim about money you are losing.\n\nHow much faster will my site be after migrating from WordPress or Shopify?\n\nMost WordPress and Shopify sites we look at take 3 to 8 seconds to load. We build for under a second, and the representative pages named in your scope score 90 or better on Lighthouse, Google's lab test, on phone and desktop. We test three times and show you the results. That lab score is the condition we deliver. The number PageSpeed shows at the top of the report is different: it is Chrome User Experience Report field data, collected from your actual visitors over 28 days, and it depends on their devices, their networks and whatever gets added to the site later. We keep measuring that with you rather than promise it.\n\nDo you work with Shopify stores?\n\nYes. We build custom Shopify storefronts using headless architecture: your customers see a fast custom front end while you keep managing products and orders in Shopify as usual. If your store is slow because of app bloat, a heavy theme or unoptimised code, we replace the storefront layer with custom code while your entire Shopify backend stays in place for products, orders and payments. Speed improvement varies by store, so we measure your baseline before quoting.\n\nWill I lose SEO rankings when migrating from WordPress?\n\nNobody controls Google, so anyone promising your rankings is guessing. What we do is forward every single old web address to its new page, carry across your titles, descriptions and blog content, and watch Google Search Console before and after launch. Your old site stays live until the new one is confirmed working, and if anything is wrong we switch back. On the MyCustomPatches move, confirmed by the owner: 200-plus pages in 22 days, no downtime, and no rankings lost in the 30 days after launch. Speed and hosting figures for that project are withdrawn while we recheck the original test records.\n\nWhy not just use a faster WordPress host or a caching plugin?\n\nFaster hosting and caching help, but they do not change the underlying model: WordPress assembles each page on request by querying the database, loading plugins and rendering the theme. Caching plugins such as WP Rocket or W3 Total Cache put a static copy in front of that work, which helps until the cache misses, the page is personalised or a plugin update changes the output. A statically generated or server-rendered custom build removes the assembly step instead of hiding it, which is why the improvement holds up under load and after updates.\n\nFROM THE BLOG\nLatest Insights\nView All Articles\nE-COMMERCE\n15 min\nWhat Is Headless Commerce? A 2026 Store Owner Guide\n\nUnderstand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified.\n\nMar 14\nRead Article\nPERFORMANCE\n11 min\nHow to Fix a Slow WordPress Site: 8 Evidence-Led Methods\n\nProfile slow routes, isolate server, cache, database, theme, plugin, media and third-party work, then decide whether migration is justified.\n\nFeb 17\nRead Article\nPERFORMANCE\n11 min\nHow to Reach 90+ PageSpeed: A Repeatable 2026 Process\n\nAn eight-step Lighthouse and Core Web Vitals process for improving representative pages without false 100-score promises.\n\nFeb 17\nRead Article\nMIGRATION PLANNING\nNeed to move platforms without losing track of URLs, content, or integrations?\nAsk us about your site\nReview Example Scopes\nPandaCodeGen.\n\nWebsite migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.\n\ninfo@pandacodegen.com\n12250 S Kirkwood Rd, Apt 1128\nStafford, TX 77477, United States\nEmail\nContact form\nSERVICES\nWordPress Migration\nCustom Engineering\nAI SEO\nE-Commerce\nWix Migration\nSquarespace Migration\nWebflow Migration\nWooCommerce Migration\nGoHighLevel\nCOMPANY\nProject Evidence\n\nMethod, permission, and publication controls.\n\nAgency Pilot\n\nTest one scoped engagement first.\n\nAbout\n\nMigration delivery standards.\n\nHassan Jamal\n\nCo-founder and Lead Engineer.\n\nImran Raza Ladhani\n\nCo-founder and Lead Architect.\n\nEngineering Blog\n\nDeep dives into Next.js and performance.\n\nDelivery Principles\n\nScope, evidence, control, and acceptance.\n\nContact\n\nDescribe the current site and migration goal.\n\nRESOURCES\nExample Scopes\n\nPrice drivers and proposal controls.\n\nMigration Services\n\nPlatform and engineering options.\n\nFacts and Figures\n\nPricing, team, case studies and guarantees, stated plainly.\n\nSecurity\n\nReporting and disclosure process.\n\nEditorial Policy\n\nSources, evidence, freshness, and corrections.\n\nPrivacy\n\nData use and visitor choices.\n\nCookie Choices\n\nOptional services and consent.\n\nWebsite Terms\n\nUse of the site and inquiries.\n\nLANGUAGE\n/\nEnglish\n/\nFrançais\n/\nDeutsch\n© 2026 Panda Group Ventures L.L.C., trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States\nPRIVACY\nTERMS\nCOOKIES\nSECURITY\nEDITORIAL\nREPORT A SECURITY ISSUE"
+    }
+  ]
+}
