@@ -12,6 +12,7 @@ import { BlogAuthor, BlogHeader, BlogList, BlogQuote, BlogText, InsightBox } fro
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import { cite, finding } from "@/data/research-facts";
+import ArticleContents from "@/components/blog/ArticleContents";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -232,6 +233,7 @@ export default function WordPressVsNextJsPage() {
                         than the field.
                     </BlogText>
 
+                    <ArticleContents />
                     <BlogHeader id="different">They are different product categories</BlogHeader>
                     <BlogText>
                         WordPress includes a content database, administration interface, themes, users, media and an

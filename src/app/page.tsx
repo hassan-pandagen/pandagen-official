@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom Website Design & Development | PandaCodeGen",
     description:
-      "Custom Next.js websites you own outright. Fast pages with clear answers Google and AI assistants can quote.",
+      "Custom business websites and online stores you own outright, with a content editor your team runs. Scope and price agreed before work starts.",
     images: [ogImageForPath("/")],
   },
 };

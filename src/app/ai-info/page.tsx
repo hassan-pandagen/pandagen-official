@@ -194,7 +194,7 @@ export default function CompanyReferencePage() {
                 Talk to the founders <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <Link href="/services" className="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-400 bg-white px-6 font-bold hover:border-charcoal">
-                Review migration services
+                Review services
               </Link>
             </div>
           </div>

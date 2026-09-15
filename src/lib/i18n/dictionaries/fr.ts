@@ -32,16 +32,16 @@ const fr: Dictionary = {
 
   home: {
     meta: {
-      title: "Migration de site web sans perte de référencement | PandaCodeGen",
+      title: "Création de sites web et boutiques en ligne | PandaCodeGen",
       description:
-        "Migrations depuis WordPress, Wix, Squarespace, Webflow et GoHighLevel vers un site Next.js sur mesure dont vous êtes pleinement propriétaire. Forfaits à partir de 1 500 $.",
+        "Sites web professionnels et boutiques en ligne sur mesure en Next.js, dont vous êtes pleinement propriétaire. À partir de 1 500 $. Périmètre et prix convenus avant le début des travaux.",
     },
     hero: {
-      eyebrow: "Migration et ingénierie web",
-      title: "Vous avez dépassé WordPress ou Wix ?",
-      titleAccent: "Passez à un site conçu pour la façon dont l'IA choisit ses réponses.",
+      eyebrow: "Éditeur de contenu · Formation · Code qui vous appartient",
+      title: "Des sites web conçus pour",
+      titleAccent: "votre façon de travailler.",
       lead:
-        "Nous vous faisons quitter WordPress, Wix, Squarespace, Webflow ou GoHighLevel pour un Next.js sur mesure dont vous êtes pleinement propriétaire, sans perdre le trafic que vous avez déjà. Vos pages se chargent vite et placent une réponse claire là où ChatGPT, Claude, Perplexity et Google AI peuvent la trouver et vous citer.",
+        "Nous concevons et développons des sites web professionnels et des boutiques en ligne autour de la façon dont vos clients vous contactent et achètent. Votre équipe peut modifier le contenu, le code vous appartient, et chaque page est construite pour que Google et les assistants IA puissent la lire correctement. Lorsqu'un site existant doit être repris, nous planifions le transfert des contenus, des URL et des intégrations.",
     },
     summary:
       "PandaCodeGen conçoit et développe des sites web professionnels et des boutiques en ligne rapides, en code Next.js sur mesure dont vous êtes pleinement propriétaire. Nous créons de nouveaux sites et refondons ou reconstruisons des sites existants en fonction du fonctionnement réel de votre entreprise. Lorsqu'un projet nécessite une migration, nous planifions la reprise de vos contenus, de vos URL et de vos intégrations. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, sans taille de projet minimale ni facturation à l'heure. Vous recevez un éditeur de contenu, une formation et un code qui vous appartient.",
@@ -645,19 +645,19 @@ const fr: Dictionary = {
 
   contact: {
     meta: {
-      title: "Demander un plan de migration de site web | PandaCodeGen",
+      title: "Parlez aux fondateurs | PandaCodeGen",
       description:
-        "Décrivez votre plateforme actuelle, vos risques de migration, vos intégrations et votre calendrier cible à PandaCodeGen.",
+        "Dites-nous ce que vous souhaitez construire ou améliorer. Un fondateur vous répond directement par e-mail.",
     },
     hero: {
       eyebrow: "Prise de contact",
-      title: "Demandez un plan de",
-      titleAccent: "migration de site web.",
+      title: "Parlez directement",
+      titleAccent: "aux fondateurs.",
       lead:
-        "Décrivez votre plateforme actuelle, les risques de migration, les intégrations en place et le calendrier visé. Nous documentons les hypothèses et les questions ouvertes avant tout chiffrage.",
+        "Dites-nous ce que vous aimeriez construire ou améliorer : un premier site, une refonte, une boutique en ligne, un logiciel métier, ou simplement une question. Si vous avez déjà un site, son adresse et la plateforme utilisée nous aident, sans être indispensables.",
     },
     summary:
-      "Pour évaluer l'adéquation d'un projet, PandaCodeGen a besoin de l'adresse du site actuel, de la plateforme utilisée, de l'objectif principal, de l'ordre de grandeur du trafic, du calendrier et de la fourchette budgétaire. La réponse initiale décrit les hypothèses, les questions ouvertes et les risques de migration identifiés, avant toute proposition chiffrée.",
+      "Le nom et l'e-mail suffisent pour commencer. Tout le reste est facultatif et peut venir ensuite.",
     checklistHeading: "À inclure dans votre message",
     checklist: [
       "L'adresse du site actuel et la plateforme utilisée (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel ou développement sur mesure)",
@@ -698,16 +698,16 @@ const fr: Dictionary = {
 
   about: {
     meta: {
-      title: "À propos de PandaCodeGen | Standards de livraison des migrations",
+      title: "À propos de PandaCodeGen | Comment nous cadrons et livrons",
       description:
-        "Découvrez les cofondateurs de PandaCodeGen et la manière dont l'entreprise, créée en février 2026, cadre les migrations de sites web, les critères d'acceptation, le risque de bascule et la remise du projet.",
+        "Découvrez les cofondateurs de PandaCodeGen et la manière dont l'entreprise, active depuis février 2026, cadre les nouveaux sites, les refontes et les migrations, avec critères d'acceptation et transfert convenus par écrit.",
     },
     hero: {
       eyebrow: "L'anti-agence · Fondée en février 2026 · Dirigée par ses cofondateurs",
-      title: "Réduire le risque de migration",
+      title: "Décider quoi construire",
       titleAccent: "avant d'écrire du code de production.",
       lead:
-        "PandaCodeGen aide les entreprises à planifier et réaliser des migrations de sites web lorsque les URL, les contenus, les intégrations, la mesure et le contrôle opérationnel comptent. Le travail commence par des preuves et un périmètre écrit, pas par la promesse automatique qu'un site doit être reconstruit.",
+        "PandaCodeGen conçoit et développe des sites web professionnels, des boutiques en ligne et des logiciels sur mesure. Certains clients partent de zéro, d'autres remplacent un site devenu trop petit, d'autres déplacent un site existant dont les URL, les contenus, les intégrations et la mesure comptent. Chaque situation commence par des preuves et un périmètre écrit.",
     },
     summary:
       "PandaCodeGen est un studio de développement web fondé en février 2026 et établi à Stafford, au Texas. L'entreprise est dirigée par ses deux cofondateurs : Hassan Jamal, cofondateur et ingénieur principal, et Imran Raza Ladhani, cofondateur et architecte principal. Les deux personnes qui cadrent un projet sont les deux ingénieurs qui le réalisent.",
