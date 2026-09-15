@@ -354,8 +354,8 @@ export default function WixVsCustomWebsitePage() {
                         <Link href="/work/mycustompatches" className={inlineLinkClass}>MyCustomPatches</Link>{" "}
                         moved every page, product and blog post to a custom build in <strong>about 22 days</strong>,
                         and <Link href="/work/enterprise-ops" className={inlineLinkClass}>an operations platform</Link>{" "}
-                        with twenty edge functions and live profit calculations took <strong>10 weeks</strong>. The
-                        spread between them is scope and integration count, not the choice of custom code. Decision
+                        with twenty-six edge functions and live profit calculations has been in <strong>continuous
+                        development for ten months</strong>. The spread between them is scope and integration count, not the choice of custom code. Decision
                         latency on your side moves it more than most people expect.
                     </BlogText>
 

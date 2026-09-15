@@ -504,8 +504,8 @@ export default function WooCommerceVsCustomWebsitePage() {
                             days</strong>, with a full crawl validation before DNS cutover and rankings stable within
                             two weeks of launch. At the other end,{" "}
                             <Link href="/work/enterprise-ops" className="text-cognac hover:underline font-medium">an operations platform</Link>{" "}
-                            with twenty Supabase Edge Functions, live profit calculations and real user roles took{" "}
-                            <strong>10 weeks</strong>. Same team, same stack, a five-fold difference in elapsed time,
+                            with twenty-six Supabase Edge Functions, live profit calculations and real user roles has been in{" "}
+                            <strong>continuous development for ten months</strong> and is still being added to. Same team, same stack, a very different elapsed time,
                             driven entirely by what was being built.
                         </BlogText>
 

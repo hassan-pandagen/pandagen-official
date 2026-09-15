@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const pageFaqs: { question: string; answer: string }[] = [
     {
         question: "What is a custom business operations platform?",
-        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 12 financial reporting modules, RBAC, Square payments with a paid invoice emailed to the customer, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
+        answer: "A custom business operations platform is a single web application that replaces multiple disconnected SaaS tools, like CRMs, spreadsheets, attendance trackers, and reporting tools. This is PandaCodeGen's own custom ops platform for the Panda Patches business: we replaced multiple separate tools with one Supabase-backed platform featuring real-time order tracking, 12 financial reporting modules, RBAC, Square payments with a PDF invoice emailed once an order is paid in full, server-side Meta CAPI ad tracking, employee attendance, and automated profit calculations.",
     },
     {
         question: "How much does it cost to replace Google Sheets with a custom business dashboard?",
@@ -44,7 +44,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Enterprise Operations platform?",
-        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and 26 Supabase Edge Functions, was built in 10 weeks. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
+        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and 26 Supabase Edge Functions, has been in continuous development since November 2025 and is still being added to. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
     },
     {
         question: "Can a custom dashboard work offline?",
@@ -221,7 +221,7 @@ const integrations = [
     // comment saying the Square payment-link function replaced it. Confirmed by a
     // source audit of that repository on 15 Sep 2026. Square is the payment system.
     { name: "Square", role: "Checkout, public payment links (/pay/:token), payment webhooks" },
-    { name: "ZeptoMail", role: "Transactional email for every order milestone, including the paid invoice sent to the customer" },
+    { name: "ZeptoMail", role: "Transactional email for every order milestone, including the PDF invoice sent when an order is paid in full" },
     { name: "Sentry", role: "APM + error tracking via first-party proxy" },
     { name: "Vercel", role: "Frontend hosting, SPA routing, asset caching" },
 ];
@@ -291,14 +291,14 @@ const roles = [
 ];
 
 const platformFeatures = [
-    { icon: BarChart3, title: "Email Automation", desc: "Order confirmation, the paid invoice once payment lands, follow-up, and overdue payment reminders all fire automatically, no manual sending." },
+    { icon: BarChart3, title: "Email Automation", desc: "Order confirmation, a PDF invoice the moment an order is paid in full, follow-up, and overdue payment reminders all fire automatically, no manual sending. A deposit does not trigger it; staff can send an invoice by hand from the order at any time." },
     { icon: Users, title: "Per-Agent Sales Reports", desc: "Each sales rep logs in and sees only their pipeline, targets, and conversion rate. Managers see the full picture." },
     { icon: TrendingUp, title: "Pending Amounts Dashboard", desc: "Every unpaid invoice, outstanding balance, and overdue account visible at a glance. No more chasing people for what&apos;s owed." },
     { icon: Clock, title: "Order History & Repeat Customer Flags", desc: "See who&apos;s bought before, how often, and what they spent without digging through files." },
     { icon: Database, title: "Avg Order Value by Category", desc: "Instantly see which product lines are driving revenue and which are just taking up space." },
     { icon: Lock, title: "Profit & Loss by Category", desc: "One click to see which categories are making money and which are bleeding it, no Excel required." },
     { icon: Shield, title: "Single Dashboard", desc: "What used to live across a spreadsheet estate, several SaaS tools, and a WhatsApp group is now one screen. One login. One source of truth." },
-    { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry integration for real-time error monitoring and application performance metrics. Errors and performance traces are reported automatically rather than waiting for somebody to report them." },
+    { icon: AlertTriangle, title: "APM + Error Tracking", desc: "Sentry captures browser errors and page-load traces from the staff app, proxied through a first-party route so an ad blocker cannot silence it. The Edge Functions are not covered by it: a failure there is written to the platform logs and has to be looked for." },
     { icon: Zap, title: "Offline-First", desc: "Service Worker caches critical UI and data. Team in Pakistan can access order data during intermittent connectivity. Changes sync on reconnect." },
 ];
 
@@ -423,7 +423,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 { title: "Orders that carry their own history", body: "An order moves through a defined lifecycle from enquiry to delivered, with branch states for remakes, cancellations and refunds. Every field change is logged with who changed it and when. Notes, customer messages, mockups, production files and shipping documents live on the order itself, not in somebody's inbox." },
                                 { title: "Agents see their own work, and their own money", body: "A sales agent opens the platform and sees the orders assigned to them, what each is worth, which are still unpaid, and what they earned last month. Commission is calculated from the orders themselves rather than reconciled by hand at month end. An agent cannot see another agent's book, and cannot see cost or margin at all unless that permission is granted." },
                                 { title: "The production floor has its own queue", body: "Digitising and stitching run on a work queue separate from the customer-facing order status, so the floor moves a job along without anyone having to translate that into something a customer would understand. It replaced a Google Sheet the floor had run since August 2025: 1,779 rows were imported and reconciled line for line, and 27 different spellings of the product types were collapsed into 13 canonical ones so a price could attach to each. A digitiser sees the job they were assigned and nothing else: no customer identity, no conversation, no pricing." },
-                                { title: "Invoices and emails that send themselves", body: "Order confirmations, the paid invoice once payment lands, follow-ups and overdue payment reminders all send on their own, through one email service with a single template system behind it, so a new message is a template rather than a new piece of plumbing. Three were added between 10 August and 15 September 2026. Payment runs through Square, by checkout or by a payment link an agent generates for one customer. Nobody has to remember to send anything, which is the point." },
+                                { title: "Invoices and emails that send themselves", body: "Order confirmations, a PDF invoice the moment an order is paid in full, follow-ups and overdue payment reminders all send on their own, through one email service with a single template system behind it, so a new message is a template rather than a new piece of plumbing. Three were added between 10 August and 15 September 2026. The invoice fires exactly once per order, which matters more than it sounds: the payment provider delivers the same notification several times. Payment runs through Square, by checkout or by a payment link an agent generates for one customer. Nobody has to remember to send anything, which is the point." },
                                 { title: "Repeat customers, recognised as such", body: "Lifetime value, order history and repeat rate sit on the customer record, and loyalty tiers move on their own as that spend grows. Duplicate customer records are detected and merged rather than quietly splitting one buyer's history in two." },
                                 { title: "Reporting that answers a question, not a spreadsheet", body: "Twelve reports behind one date filter: revenue against cost and net profit, an income statement, product mix by type and quantity band, cancellations and refunds with reasons, lead source, funnel and attribution, agent performance, customer feedback and loyalty. Every one exports to CSV. Orders sold below cost are flagged rather than waiting to be noticed." },
                                 { title: "Attendance and hours, without a second system", body: "Staff clock in and out in the same platform. Hours, overtime and undertime are calculated against a fixed business day and export for payroll. Sessions left open are closed automatically rather than inflating somebody's month." },
@@ -796,7 +796,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "PostgreSQL schema with Row-Level Security on all 59 tables (86 tracked migrations)",
                                 "17-status order pipeline, 14 of them in live use (NEW_ORDER → DELIVERED, plus DIGITIZING / REMAKE / CANCELLED / REFUNDED / FEEDBACK and more)",
                                 "12 reporting modules (Sales, Production, Quality & Refunds, Product Mix, Income Statement, P&L, Lead Source, Lead Attribution, Funnel & Attribution, Customer Feedback, Form Feedback, Loyalty), CSV export",
-                                "Payments: Square checkout, public payment links (/pay/:token), payment webhooks, and a paid invoice emailed to the customer",
+                                "Payments: Square checkout, public payment links (/pay/:token), payment webhooks, and a PDF invoice emailed once an order is paid in full",
                                 "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
                                 "Transactional email via ZeptoMail for every order milestone",
                                 "Immutable order_history audit log, every change attributed",

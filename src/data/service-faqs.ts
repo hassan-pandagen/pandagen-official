@@ -85,7 +85,7 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "How long does it take to build a custom app?",
-      a: "A website takes 2 to 4 weeks. An app takes longer. The last one we published, an operations platform with staff logins, payments and attendance tracking, took 10 weeks. You get a written plan with dates before you pay anything, so the timeline is agreed rather than guessed.",
+      a: "A website takes 2 to 4 weeks. An app takes longer. The last one we published, an operations platform with staff logins, payments and attendance tracking, has been in continuous development for ten months. You get a written plan with dates before you pay anything, so the timeline is agreed rather than guessed.",
     },
     {
       q: "How much does custom development cost?",

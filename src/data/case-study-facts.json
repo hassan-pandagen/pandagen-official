@@ -262,12 +262,12 @@
         {
           "id": "typescript-strict",
           "label": "TypeScript strictness",
-          "value": "strict mode on, build clean",
+          "value": "100% TypeScript, strict mode, build clean",
           "status": "verified",
           "method": {
             "kind": "field",
-            "date": "2026-09-15",
-            "note": "tsconfig.json sets \"strict\": true, which implies noImplicitAny; there is no standalone noImplicitAny line. npx tsc --noEmit was run against the repository on this date and exited zero."
+            "date": "2026-09-16",
+            "note": "Stated by the CRM repository's own source audit, 16 September 2026, answering a written evidence request from this site. Verified across every layer on 16 September 2026, not the frontend alone: every file under src/ is .ts or .tsx apart from one .sql schema-reference asset; both Vercel serverless files in api/ are .ts; every source file across the 26 Edge Functions is .ts, the only non-TypeScript files in that tree being two .npmrc config files. tsconfig.json sets \"strict\": true, which implies noImplicitAny, and tsc --noEmit exits clean with zero errors."
           },
           "approvedBy": "PandaCodeGen engineering, from the CRM repository",
           "approvedDate": "2026-09-15"
@@ -306,7 +306,7 @@
           "method": {
             "kind": "field",
             "date": "2026-09-15",
-            "note": "Code search plus the live Edge Function listing, 15 September 2026. Square is live and Stripe is decommissioned; the only remaining Stripe reference in the CRM repository is a comment describing what replaced it. Meta CAPI runs across six active functions. Sentry is initialised in src/main.tsx and proxied first-party. Transactional email runs through the single send-email function on ZeptoMail. That the customer is emailed a paid invoice once payment lands is stated by the platform's owner rather than confirmed by that repository audit, which did not enumerate the email templates; it is consistent with the invoice PDF renderer and the unpaid-invoice dashboard already in the stack, and should be confirmed against the template list on the next pass."
+            "note": "Code search plus the live Edge Function listing, 15 September 2026. Square is live and Stripe is decommissioned; the only remaining Stripe reference in the CRM repository is a comment describing what replaced it. Meta CAPI runs across six active functions. Sentry is initialised in src/main.tsx and proxied first-party. Transactional email runs through the single send-email function on ZeptoMail. The automatic paid invoice was confirmed against the repository on 16 September 2026; see the paid-invoice-automation metric for what it does and does not cover."
           },
           "approvedBy": "PandaCodeGen engineering, from the CRM repository",
           "approvedDate": "2026-09-15"
@@ -375,6 +375,45 @@
           },
           "approvedBy": "PandaCodeGen engineering, from the CRM repository",
           "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "paid-invoice-automation",
+          "label": "Automatic paid invoice",
+          "value": "PDF invoice emailed when an order is paid in full",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-16",
+            "note": "Stated by the CRM repository's own source audit, 16 September 2026, answering a written evidence request from this site. supabase/functions/square-payment-webhook/invoicePdf.ts, added 27 August 2026. When a Square payment completes an order IN FULL, a PDF numbered INV-{orderNumber} is built server-side with pdf-lib and attached to the CUSTOMER_PAYMENT_CONFIRMATION email. A paid_invoice_sent_at stamp is claimed atomically before send, so it fires exactly once per order even though Square delivers a webhook more than once per payment. A separate staff-triggered invoice exists on the order page, rendered in the browser and not emailed. Deposits and partial payments do NOT produce this email, and there is no customer-facing invoice history."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-16"
+        },
+        {
+          "id": "payment-processor-migration",
+          "label": "Payment processor migration",
+          "value": "Stripe to Square, 1 July 2026, in one commit",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-16",
+            "note": "Stated by the CRM repository's own source audit, 16 September 2026, answering a written evidence request from this site. Commit 0785bfc, titled 'stripe out square in'. It deleted supabase/functions/stripe-balance-webhook (324 lines, a working webhook rather than a stub) and its migration, added create-square-payment-link (217 lines), and updated the payment-link and mark-as-paid modals, the email function and the payment webhook in the same change. A live processor was replaced on a trading business in a single atomic commit."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-16"
+        },
+        {
+          "id": "production-monitoring",
+          "label": "Error monitoring",
+          "value": "Client-side error and performance capture (Sentry)",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-16",
+            "note": "Stated by the CRM repository's own source audit, 16 September 2026, answering a written evidence request from this site. @sentry/react captures browser errors and page-load traces, initialised in src/main.tsx and proxied first-party. The 26 Deno Edge Functions have NO error tracking: a failure there writes to Supabase function logs, which raise no alert. Recorded here with that limit because the page previously claimed every production issue is caught before the team notices, and in the two days before this audit three real production faults were found by a person investigating, not by a monitor."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-16"
         },
         {
           "id": "process-automation",
@@ -471,6 +510,14 @@
           "status": "withdrawn",
           "withdrawnDate": "2026-09-15",
           "withdrawnReason": "Withdrawn 15 September 2026. This is a market claim, not an engineering fact, so no repository search could ever source it. It needs a dated market-research citation or it should not be published at all."
+        },
+        {
+          "id": "build-duration",
+          "label": "Build duration",
+          "value": "10 weeks",
+          "status": "withdrawn",
+          "withdrawnDate": "2026-09-16",
+          "withdrawnReason": "Withdrawn 16 September 2026 after a source audit of the CRM repository could not reconcile it. The first commit is 4 November 2025 and three commits titled 'pre-launch' land on 8 and 9 November, four to five days later, so ten weeks is not repository-start to launch. The repository has 339 commits spanning 10.4 months and is still active, so it is not the whole build either. The audit could not tell whether the first commit was a fresh start or an import of earlier local work. Ten weeks may well describe a real milestone; nothing records which one, so it cannot be published until that milestone is named."
         }
       ]
     }
