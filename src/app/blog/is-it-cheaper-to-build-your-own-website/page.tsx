@@ -174,8 +174,8 @@ export default function IsItCheaperPage() {
 
                     <BlogHeader id="builders">What AI website builders genuinely do well</BlogHeader>
                     <BlogText>
-                        AI builders produce a real, working page from one sentence, and for a project with no customers
-                        attached that is the correct tool. Most agency writing on this topic is dishonest about that. The
+                        AI builders produce a real, working page from one sentence, and for a lot of projects that is the
+                        correct tool. Most agency writing on this topic is dishonest about that. The
                         layout is competent, it is responsive, and it reads well on a phone. Ten years ago that was a
                         week of work from a junior developer. Anyone telling you the output is garbage has not used one
                         recently.
@@ -323,7 +323,7 @@ export default function IsItCheaperPage() {
 
                     <BlogHeader id="sales-channel">The machine-readable part is a sales channel</BlogHeader>
                     <BlogText>
-                        Being readable by machines now produces orders, and we can put a number on it. Our founder-owned
+                        Orders are now arriving from assistants, and in one store we can put a number on it. Our founder-owned
                         store, Panda Patches, took{" "}
                         <strong>$11,186.59 across 36 orders from AI assistants in August 2026</strong>, 14.7% of that
                         month&apos;s revenue, with nothing spent on any AI platform. It is a founder-affiliated store and

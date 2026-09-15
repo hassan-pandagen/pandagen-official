@@ -133,7 +133,7 @@ export default function PageContent() {
 
           <div className="space-y-8">
             {[
-              { step: "01", title: "Store Audit & API Architecture", desc: "We audit your apps, theme speed, and conversion data. Then we map how every feature connects through Shopify's Storefront API: products, cart, checkout, customer accounts. AI tooling compresses discovery from days to hours.", duration: "Days 1-3" },
+              { step: "01", title: "Scope & API Architecture", desc: "Building a first store, we agree the catalogue, the checkout and what has to connect. Replacing one, we audit your apps, theme speed and conversion data first. Either way we map how every feature connects through Shopify's Storefront API: products, cart, checkout, customer accounts. AI tooling compresses discovery from days to hours.", duration: "Days 1-3" },
               { step: "02", title: "Custom Storefront Build", desc: "We build your new storefront in Next.js: fast product pages, a cart that holds up under load, and search worth using. The audit in step 01 sorts your apps into kept, replaced and needing a closer look, and step 02 builds the replacements that were agreed. Apps doing backend work keep running and keep billing. AI-paired development, with a named developer responsible for the result, is how we keep that scope affordable to quote.", duration: "Days 4-14" },
               { step: "03", title: "Live Data Testing", desc: "We connect to your real Shopify data. Test every product, every variant, every checkout flow. Your team reviews and approves before anything goes live.", duration: "Days 15-18" },
               { step: "04", title: "Launch & Optimize", desc: "We point your domain to the new storefront. Your Shopify dashboard stays exactly the same. Then we A/B test, monitor Core Web Vitals, and optimize conversion rates.", duration: "Days 19-21" },
@@ -180,7 +180,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { icon: DollarSign, pain: "App Fees Are Eating Your Profit Margin", detail: "Review, page-builder, upsell and subscription apps each carry their own recurring charge, and several bill outside your Shopify invoice. Read your own app bill rather than a list price. That total is worth reconciling against what each app actually does. SaaS fees instead of growth." },
-              { icon: AlertTriangle, pain: "Speed Can Obstruct a Purchase. It Cannot Be Multiplied Into a Number.", detail: "Every app injects JavaScript that loads before your customer sees a single product. No public per-second figure can be multiplied out into your monthly loss, because those studies were measured on other people's stores. Build the case from your own funnel instead: eligible sessions, your measured completion rate, and a tested change." },
+              { icon: AlertTriangle, pain: "Speed Can Obstruct a Purchase. It Cannot Be Multiplied Into a Number.", detail: "Most apps add JavaScript, and some of it loads before a customer sees a single product. No public per-second figure can be multiplied out into your monthly loss, because those studies were measured on other people's stores. Build the case from your own funnel instead: eligible sessions, your measured completion rate, and a tested change." },
               { icon: XCircle, pain: "Shopify's URL Structure Is Fixed, So Plan Canonicals Around It", detail: "Shopify forces /collections/ and /products/ into every URL. You can't clean them up. Competitors with custom storefronts rank for cleaner URLs. Decide how canonicals and internal links handle a product reachable at more than one address." },
               { icon: Code2, pain: "Liquid Blocks the Path to Checkout", detail: "Product discovery, cart, bundling and upsell prompts all sit in front of checkout, and Liquid's template system has boundaries that configuration does not move. Going headless gives you those screens in code. Checkout itself stays with Shopify, which hosts it, and editing its steps is a Shopify Plus entitlement." },
               { icon: XCircle, pain: "Your Store Looks Like 50,000 Other Shopify Stores", detail: "Standard Shopify themes are deployed by hundreds of thousands of stores. Your competitors are literally running the same template. A custom storefront is the only way to build a brand experience that's 100% yours." },
@@ -310,7 +310,7 @@ export default function PageContent() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: ArrowRightLeft, title: "Theme to Custom", desc: "Migrate from Liquid to custom code behind a staged cutover. Products, orders and customers are reconciled against a pre-migration export and any exceptions are reported before cutover." },
-              { icon: Globe, title: "Global CDN Delivery", desc: "Serve your store from the Edge. Instant loading in Dubai, New York, and London. Measured against your own funnel, not a published multiplier." },
+              { icon: Globe, title: "Global CDN Delivery", desc: "Serve your store from the edge, so pages start loading near the customer rather than from one region. Measured against your own funnel, not a published multiplier." },
               { icon: CreditCard, title: "Custom Cart and Pre-Checkout", desc: "Bundling, upsells and subscription selection built in code, then handed to Shopify's hosted checkout. Shopify runs payments; we build every screen in front of it." },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white border border-stone-200 shadow-card hover:border-cognac/30 transition-colors group">
@@ -601,7 +601,7 @@ export default function PageContent() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               { href: "/services/wordpress-migration", icon: Code2, title: "WordPress Migration", desc: "Escape plugin bloat. Load under 1 second." },
-              { href: "/services/woocommerce", icon: ShoppingBag, title: "WooCommerce Migration", desc: "Cut $500/mo in plugins. Own your store." },
+              { href: "/services/woocommerce", icon: ShoppingBag, title: "WooCommerce Migration", desc: "Replace paid plugins with built-in features where your store allows it. Own your store." },
               { href: "/services/wix", icon: Globe, title: "Wix Migration", desc: "Break free from Wix limitations. Own your code." },
               { href: "/services/squarespace", icon: Globe, title: "Squarespace Migration", desc: "Outgrow templates. Build something bespoke." },
               { href: "/services/webflow", icon: Globe, title: "Webflow Migration", desc: "Performance ceiling hit? Move to Next.js." },

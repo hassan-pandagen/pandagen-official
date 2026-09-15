@@ -32,16 +32,16 @@ const de: Dictionary = {
 
   home: {
     meta: {
-      title: "Website-Migration ohne SEO-Verluste planen | PandaCodeGen",
+      title: "Webdesign und Onlineshop-Entwicklung | PandaCodeGen",
       description:
-        "Migrationen von WordPress, Wix, Squarespace, Webflow und GoHighLevel auf eine individuelle Next.js-Website, die Ihnen vollständig gehört. Pakete ab 1.500 $.",
+        "Individuelle Business-Websites und Onlineshops auf Next.js, die vollständig Ihnen gehören. Ab 1.500 $. Leistungsumfang und Preis werden vor Arbeitsbeginn vereinbart.",
     },
     hero: {
-      eyebrow: "Migration und Web-Engineering",
-      title: "WordPress oder Wix zu klein geworden?",
-      titleAccent: "Wechseln Sie zu einer Website, die darauf ausgelegt ist, wie KI ihre Antworten auswählt.",
+      eyebrow: "Content-Editor · Einführung · Code, der Ihnen gehört",
+      title: "Websites, die zu Ihrer",
+      titleAccent: "Arbeitsweise passen.",
       lead:
-        "Wir holen Sie von WordPress, Wix, Squarespace, Webflow oder GoHighLevel auf ein individuelles Next.js, das Ihnen vollständig gehört, ohne den Traffic zu verlieren, den Sie bereits haben. Ihre Seiten laden schnell und stellen eine klare Antwort genau dort bereit, wo ChatGPT, Claude, Perplexity und Google AI sie finden und Sie zitieren können.",
+        "Wir gestalten und entwickeln Business-Websites und Onlineshops rund um die Art, wie Ihre Kunden anfragen und kaufen. Ihr Team pflegt die Inhalte selbst, der Code gehört Ihnen, und jede Seite ist so gebaut, dass Google und KI-Assistenten sie richtig lesen können. Wenn eine bestehende Website übernommen werden soll, planen wir, wie Inhalte, URLs und Integrationen mitgehen.",
     },
     summary:
       "PandaCodeGen gestaltet und entwickelt schnelle Business-Websites und Onlineshops als individuellen Next.js-Code, der vollständig Ihnen gehört. Wir bauen neue Websites und gestalten oder erneuern bestehende Websites entlang der tatsächlichen Abläufe Ihres Unternehmens. Wenn ein Projekt eine Migration erfordert, planen wir, wie Inhalte, URLs und Integrationen übernommen werden. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, ohne Mindestprojektgröße und ohne Abrechnung nach Stunden. Sie erhalten einen Content-Editor, eine Einführung und Code, der Ihnen gehört.",
@@ -645,19 +645,19 @@ const de: Dictionary = {
 
   contact: {
     meta: {
-      title: "Migrationsplan für Ihre Website anfordern | PandaCodeGen",
+      title: "Mit den Gründern sprechen | PandaCodeGen",
       description:
-        "Beschreiben Sie PandaCodeGen Ihre aktuelle Plattform, Ihre Migrationsrisiken, Ihre Integrationen und Ihren Zieltermin.",
+        "Sagen Sie uns, was Sie bauen oder verbessern möchten. Ein Gründer antwortet Ihnen direkt per E-Mail.",
     },
     hero: {
       eyebrow: "Kontaktaufnahme",
-      title: "Fordern Sie einen Plan für Ihre",
-      titleAccent: "Website-Migration an.",
+      title: "Sprechen Sie direkt",
+      titleAccent: "mit den Gründern.",
       lead:
-        "Beschreiben Sie Ihre aktuelle Plattform, die Migrationsrisiken, die vorhandenen Integrationen und den angestrebten Zeitplan. Annahmen und offene Fragen dokumentieren wir vor jeder Kalkulation.",
+        "Sagen Sie uns, was Sie bauen oder verbessern möchten: eine erste Website, einen Relaunch, einen Onlineshop, eine Software für Ihre Abläufe, oder einfach eine Frage. Wenn Sie bereits eine Website haben, helfen uns Adresse und Plattform, nötig sind sie nicht.",
     },
     summary:
-      "Zur Einschätzung eines Projekts benötigt PandaCodeGen die Adresse der aktuellen Website, die eingesetzte Plattform, das Hauptziel, die Größenordnung des Traffics, den Zeitplan und den Budgetrahmen. Die erste Antwort beschreibt Annahmen, offene Fragen und erkannte Migrationsrisiken, bevor ein bepreistes Angebot entsteht.",
+      "Name und E-Mail genügen für den Anfang. Alles andere ist optional und kann später kommen.",
     checklistHeading: "Das gehört in Ihre Nachricht",
     checklist: [
       "Adresse der aktuellen Website und eingesetzte Plattform (WordPress, Webflow, Wix, Squarespace, Shopify, WooCommerce, GoHighLevel oder Individualentwicklung)",
@@ -698,16 +698,16 @@ const de: Dictionary = {
 
   about: {
     meta: {
-      title: "Über PandaCodeGen | Standards für Migrationsprojekte",
+      title: "Über PandaCodeGen | Wie wir Projekte zuschneiden und liefern",
       description:
-        "Lernen Sie die Mitgründer von PandaCodeGen kennen und sehen Sie, wie das im Februar 2026 gegründete Unternehmen Website-Migrationen, Abnahmekriterien, Umschaltrisiko und Übergabe strukturiert.",
+        "Lernen Sie die Gründer von PandaCodeGen kennen und sehen Sie, wie das Unternehmen, seit Februar 2026 aktiv, neue Websites, Relaunches und Migrationen zuschneidet, mit schriftlich vereinbarten Abnahmekriterien und Übergabe.",
     },
     hero: {
       eyebrow: "Die Anti-Agentur · Gegründet im Februar 2026 · Von den Mitgründern geführt",
-      title: "Migrationsrisiko senken,",
+      title: "Entscheiden, was gebaut wird,",
       titleAccent: "bevor Produktionscode entsteht.",
       lead:
-        "PandaCodeGen unterstützt Unternehmen bei Planung und Umsetzung von Website-Migrationen, wenn URLs, Inhalte, Integrationen, Messbarkeit und operative Kontrolle zählen. Die Arbeit beginnt mit Belegen und einem schriftlichen Leistungsumfang, nicht mit dem automatischen Versprechen, dass eine Website neu gebaut werden muss.",
+        "PandaCodeGen gestaltet und entwickelt individuelle Business-Websites, Onlineshops und Software. Manche Kunden starten bei null, manche ersetzen eine Website, die zu klein geworden ist, manche ziehen eine bestehende um, bei der URLs, Inhalte, Integrationen und Messung zählen. Jeder Weg beginnt mit Belegen und einem schriftlichen Leistungsumfang.",
     },
     summary:
       "PandaCodeGen ist ein im Februar 2026 gegründetes Webentwicklungsstudio mit Sitz in Stafford, Texas. Das Unternehmen wird von seinen beiden Mitgründern geführt: Hassan Jamal, Mitgründer und leitender Ingenieur, sowie Imran Raza Ladhani, Mitgründer und leitender Architekt. Die beiden Personen, die ein Projekt kalkulieren, sind die beiden Ingenieure, die es umsetzen.",

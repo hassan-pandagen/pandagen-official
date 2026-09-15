@@ -67,7 +67,7 @@ const PRIMARY_PAGES = `## Primary pages
 - [Services](${BASE}/services): Current service categories.
 - [Pricing](${BASE}/pricing): Tiers, scope controls, and acceptance terms.
 - [Work](${BASE}/work): Project evidence and the publication standard applied to it.
-- [About](${BASE}/about): Team and migration delivery standards.
+- [About](${BASE}/about): Team, and how work is scoped, delivered and handed over.
 - [AI Info](${BASE}/ai-info): Structured company reference for people and machines.
 - [Free audit](${BASE}/free-audit): Automated technical scan of a URL, no signup.
 - [Partners](${BASE}/partners): White-label and delivery-partner pilot for agencies.

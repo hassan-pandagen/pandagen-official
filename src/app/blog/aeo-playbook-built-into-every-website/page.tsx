@@ -12,6 +12,7 @@ import { BlogHeader, BlogText, BlogList, BlogHighlight, BlogQuote, BlogAuthor } 
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
 import type { Metadata } from "next";
+import ArticleContents from "@/components/blog/ArticleContents";
 
 const aeoPlaybookFAQs = blogPosts.find(p => p.id === "aeo-playbook-built-into-every-website")?.faqs ?? [];
 
@@ -236,6 +237,7 @@ export default function AEOPlaybookPage() {
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/Fit_Path_6450, r/aeo, 7 September 2026 · <a href="https://www.reddit.com/r/aeo/comments/1w8n72k/how_can_i_get_my_company_mentioned_in_chatgpt/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     {/* Section 1: The Loss + Opportunity */}
+                    <ArticleContents />
                     <BlogHeader id="are-you-losing">Where to Start if You Are Behind on Both</BlogHeader>
                     <BlogText>
                         Search and AI visibility both reward clear, useful, crawlable evidence, but neither rankings nor citations are guaranteed. Start by measuring how your important pages are indexed, cited, and converted today, then improve the evidence systems can evaluate.

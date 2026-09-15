@@ -11,6 +11,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogHighlight, BlogList, BlogQuote, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import ArticleContents from "@/components/blog/ArticleContents";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
@@ -184,6 +185,7 @@ export default function WebsiteSpeedGuide() {
                         ))}
                     </div>
 
+                    <ArticleContents />
                     <BlogHeader id="where-to-start">Where to start, based on your current score</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>

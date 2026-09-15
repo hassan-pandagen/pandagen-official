@@ -224,7 +224,7 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
 
 /** Where a machine or a person should go for the human-facing version of each area. */
 export const REFERENCE_LINKS: readonly { href: string; title: string; body: string }[] = [
-    { href: '/services', title: 'Migration services', body: 'Platform-specific options and the discovery path.' },
+    { href: '/services', title: 'Services', body: 'Websites, online stores, software, platform-specific options and the discovery path.' },
     { href: '/pricing', title: 'Pricing and scope', body: 'Public starting points, scope drivers, payment examples, and acceptance boundaries.' },
     { href: '/work', title: 'Project evidence', body: 'How project facts, owned brands, results, permissions, and limitations are published.' },
     { href: '/about', title: 'Team and delivery standard', body: 'Founder roles, company facts, and project governance.' },
