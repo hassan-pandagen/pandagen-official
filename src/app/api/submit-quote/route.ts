@@ -135,7 +135,14 @@ export async function POST(request: NextRequest) {
     // visitor actually used. This goes in the subject, not just a row in the body,
     // so the language is visible in the inbox list before the mail is opened.
     const localeNames: Record<string, string> = { FR: "French", DE: "German" };
-    const localeCode = /\((FR|DE)\)\s*$/.exec(fields.service)?.[1] ?? "";
+    // Prefer the explicit `locale` field. The "(FR)"/"(DE)" suffix on `service`
+    // is kept as a fallback for any surface still posting the old shape, but it
+    // is no longer the only signal: the hero form stopped sending `service` when
+    // it was simplified and every localized enquiry silently became English.
+    const explicitLocale = fields.locale.toUpperCase();
+    const localeCode = explicitLocale in localeNames
+      ? explicitLocale
+      : (/\((FR|DE)\)\s*$/.exec(fields.service)?.[1] ?? "");
     const replyLanguage = localeNames[localeCode] ?? "English";
     const subjectPrefix = localeCode ? `[${localeCode}] ` : "";
 

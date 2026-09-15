@@ -19,8 +19,8 @@ const de: Dictionary = {
     blog: "Blog",
   },
   common: {
-    ctaPrimary: "Migrationsplan anfordern",
-    ctaCompact: "Plan anfordern",
+    ctaPrimary: "Mit den Gründern sprechen",
+    ctaCompact: "Nachricht senden",
     ctaSecondary: "Beispiel-Leistungsumfänge ansehen",
     faqHeading: "Häufige Fragen",
     languageLabel: "Sprache",
@@ -44,7 +44,7 @@ const de: Dictionary = {
         "Wir holen Sie von WordPress, Wix, Squarespace, Webflow oder GoHighLevel auf ein individuelles Next.js, das Ihnen vollständig gehört, ohne den Traffic zu verlieren, den Sie bereits haben. Ihre Seiten laden schnell und stellen eine klare Antwort genau dort bereit, wo ChatGPT, Claude, Perplexity und Google AI sie finden und Sie zitieren können.",
     },
     summary:
-      "PandaCodeGen ist ein Studio für individuelle Next.js-Webentwicklung und baut langsame WordPress-, Shopify-, Webflow-, Wix- und Squarespace-Websites in individuellen Code um, der dem Kunden vollständig gehört. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, tragen einen Lighthouse-Zielwert von 90+ bei der Übergabe auf Mobilgeräten und Desktop, geprüft über drei aufgezeichnete Durchläufe, und verursachen keine monatlichen Plattformgebühren. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer. Code, Designdateien und Konten gehören Ihnen bei der Übergabe. Die Seiten kommen als fertiges HTML, mit klaren und direkten Antworten, die Suchmaschinen und KI-Assistenten wie ChatGPT, Claude und Perplexity zitieren können.",
+      "PandaCodeGen gestaltet und entwickelt schnelle Business-Websites und Onlineshops als individuellen Next.js-Code, der vollständig Ihnen gehört. Wir bauen neue Websites und gestalten oder erneuern bestehende Websites entlang der tatsächlichen Abläufe Ihres Unternehmens. Wenn ein Projekt eine Migration erfordert, planen wir, wie Inhalte, URLs und Integrationen übernommen werden. Projekte beginnen bei 1.500 $ zum Festpreis für den schriftlich vereinbarten Leistungsumfang, ohne Mindestprojektgröße und ohne Abrechnung nach Stunden. Sie erhalten einen Content-Editor, eine Einführung und Code, der Ihnen gehört.",
     sections: [
       {
         title: "Wochen statt Monate",
@@ -361,7 +361,7 @@ const de: Dictionary = {
         value: "22 Tage",
         title: "Projekt MyCustomPatches, unabhängiger Kunde",
         body:
-          "Vom Inhaber bestätigter Projektnachweis, festgehalten am 21. Juli 2026: Lieferung in 22 Tagen, Rankings gehalten und Hosting-Kosten im erfassten Zeitraum von 150 $/Monat auf 0 $/Monat gesenkt.",
+          "Jede Seite, jedes Produkt und jeder Blogbeitrag wurde in rund 22 Tagen auf einen individuellen Next.js-Build migriert, mit Crawl-Prüfung in der Search Console vor der DNS-Umstellung. Die Performance- und Hosting-Kostenzahlen dieses Projekts sind zurückgezogen, bis sie abgeglichen sind.",
       },
       quotes: [
         {
@@ -494,7 +494,7 @@ const de: Dictionary = {
         "Wählen Sie das nächstgelegene Startpaket und ergänzen oder streichen Sie Seiten und Funktionen in einem schriftlichen Angebot. Eine übliche Zahlungsstruktur sind 30 % zum Projektstart und 70 % zum Liefermeilenstein, der in den angenommenen Projektbedingungen definiert ist; für ein bestimmtes Projekt kann ein anderer schriftlicher Zahlungsplan vereinbart werden.",
     },
     summary:
-      "Die Migrationspakete von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und ab 5.000 $ (Scale). Alles Größere wird nach einem Gespräch kalkuliert. Der Preis steht fest, bevor die Arbeit beginnt. Keine Mindestprojektgröße, keine Abrechnung nach Stunden, kein Retainer: 30 % zum Start, 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch migriert werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
+      "Die Preise von PandaCodeGen beginnen bei 1.500 $ (Starter), 3.500 $ (Growth) und ab 5.000 $ (Scale), für Websites wie für Onlineshops. Alles Größere wird nach einem Gespräch kalkuliert. Der Preis steht fest, bevor die Arbeit beginnt: keine Mindestprojektgröße, keine Abrechnung nach Stunden, 30 % zum Start und 70 % bei Lieferung. Code, Designdateien und Konten gehören am Ende Ihnen. Monatliche Leistungen wie KI-SEO oder laufender Support sind optional und werden separat kalkuliert. Der Preis hängt von der Menge an Inhalten, den Integrationen und dem ab, was ohne Bruch übernommen werden muss, nicht von der Seitenzahl allein. Ihr schriftliches Angebot nennt den genauen Betrag.",
     tiersHeading: "Beispielhafte Startpakete",
     currencyNote:
       "Alle Beträge in US-Dollar (USD). Währung, Steuern und Fälligkeiten werden in den angenommenen Projektbedingungen festgehalten.",
@@ -533,7 +533,7 @@ const de: Dictionary = {
         name: "Scale",
         price: "Ab 5.000 $",
         priceNote: "Startpaket · exakter Umfang im Angebot",
-        fit: "Mehr als 20 Seiten, ein Shop oder mehr als eine Sprache.",
+        fit: "Mehr als 20 Seiten, ein großer Katalog, Abonnements oder eine individuelle Checkout-Logik, oder mehr als eine Sprache.",
         features: [
           "Headless-Commerce: Shopify- oder WooCommerce-Backend, Next.js-Frontend",
           "Umfang von mehr als 20 Seiten oder Templates für Produkte, Kollektionen, Inhalte und Landingpages",
@@ -618,7 +618,7 @@ const de: Dictionary = {
     faq: [
       {
         q: "Mit welchem Paket sollte ich starten?",
-        a: "Starter beginnt bei 1.500 $ für eine Website mit bis zu 7 Seiten, Growth bei 3.500 $ für 8 bis 20 Seiten, und Scale ab 5.000 $ für mehr als 20 Seiten, einen Shop oder mehr als eine Sprache. Alles Größere wird nach einem Gespräch kalkuliert. Wählen Sie die nächstgelegene Basis; zusätzliche Seiten oder Funktionen werden vor Arbeitsbeginn im schriftlichen Umfang besprochen und bepreist. Wenn nichts davon zu Ihrem Vorhaben passt, rufen Sie +1 (302) 773-8982 an oder schreiben Sie an info@pandacodegen.com, und wir kalkulieren es.",
+        a: "Starter beginnt bei 1.500 $ für eine Website mit bis zu 7 Seiten, Growth bei 3.500 $ für 8 bis 20 Seiten, und Scale ab 5.000 $ für mehr als 20 Seiten, einen großen Katalog, Abonnements oder eine individuelle Checkout-Logik, oder mehr als eine Sprache. Ein kleiner Shop ist nicht automatisch Scale: ein einfacher Katalog mit wenigen Produkten beginnt bei Starter. Alles Größere wird nach einem Gespräch kalkuliert. Wählen Sie die nächstgelegene Basis; zusätzliche Seiten oder Funktionen werden vor Arbeitsbeginn im schriftlichen Umfang besprochen und bepreist. Wenn nichts davon zu Ihrem Vorhaben passt, rufen Sie +1 (302) 773-8982 an oder schreiben Sie an info@pandacodegen.com, und wir kalkulieren es.",
       },
       {
         q: "Brauche ich für jedes Projekt einen langen Vertrag?",

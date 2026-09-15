@@ -51,7 +51,10 @@
       "whatChanged": "The add itself is wc-ajax=add_to_cart on a classic store, or a POST to /wc/store/v1/cart/add-item on a block store. get_refreshed_fragments is the separate follow-up call that redraws the mini-cart. Naming only the second one describes the wrong request.",
       "pattern": "add[ -]to[ -]cart[^.]{0,160}get_refreshed_fragments",
       "historicalOk": false,
-      "requiresNearby": ["wc-ajax=add_to_cart", "/wc/store/v1/cart/add-item"],
+      "requiresNearby": [
+        "wc-ajax=add_to_cart",
+        "/wc/store/v1/cart/add-item"
+      ],
       "supersededBy": "woocommerce-store-api-scope",
       "source": "https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/",
       "correctedOn": "2026-08-31"
@@ -77,6 +80,16 @@
       "supersededBy": null,
       "source": "https://developer.wordpress.org/advanced-administration/wordpress/basic-usage/responsive-images/",
       "correctedOn": "2026-08-31"
+    },
+    {
+      "id": "mcp-hosting-cost-figures",
+      "vendor": "PandaCodeGen (first-party evidence)",
+      "retiredAssertion": "The MyCustomPatches project cut hosting from $150/month to $0/month, and its rankings were held, on a record dated 21 July 2026.",
+      "whatChanged": "The figures are retired rather than pending: no invoices were kept and the client does not recall the amount, so nothing can be reconciled and no figure can honestly be restored. The dated confirmation is not held either. Only the delivery scope stands: every page, product and blog post migrated in about 22 days, with Search Console crawl validation before DNS cutover. Registered after both the French and German dictionaries were found still publishing the withdrawn figure, in a directory this guard did not scan.",
+      "pattern": "(150\\s*\\$|\\$\\s*150)[^.]{0,120}(0\\s*\\$|\\$\\s*0)[^.]{0,14}(month|mois|Monat|mo\\b)",
+      "historicalOk": false,
+      "source": "/work/mycustompatches",
+      "correctedOn": "2026-09-15"
     }
   ]
 }
