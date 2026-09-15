@@ -105,6 +105,8 @@ export default function HeroLeadForm({
       }
       if (attribution.landingPage) formData.append("landingPage", attribution.landingPage);
       formData.append("submittedFrom", window.location.pathname);
+      // Tells the inbox which language to reply in. See ALLOWED_LOCALES.
+      formData.append("locale", locale);
       if (attribution.firstVisit) formData.append("firstVisit", attribution.firstVisit);
 
       const response = await fetch("/api/submit-quote", { method: "POST", body: formData });

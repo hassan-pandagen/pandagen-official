@@ -19,8 +19,8 @@ const fr: Dictionary = {
     blog: "Blog",
   },
   common: {
-    ctaPrimary: "Demander votre plan de migration",
-    ctaCompact: "Demander un plan",
+    ctaPrimary: "Parlez aux fondateurs",
+    ctaCompact: "Nous écrire",
     ctaSecondary: "Consulter les exemples de périmètre",
     faqHeading: "Questions fréquentes",
     languageLabel: "Langue",
@@ -44,7 +44,7 @@ const fr: Dictionary = {
         "Nous vous faisons quitter WordPress, Wix, Squarespace, Webflow ou GoHighLevel pour un Next.js sur mesure dont vous êtes pleinement propriétaire, sans perdre le trafic que vous avez déjà. Vos pages se chargent vite et placent une réponse claire là où ChatGPT, Claude, Perplexity et Google AI peuvent la trouver et vous citer.",
     },
     summary:
-      "PandaCodeGen est un studio de développement web Next.js sur mesure qui reconstruit les sites WordPress, Shopify, Webflow, Wix et Squarespace lents en code sur mesure dont le client est pleinement propriétaire. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, avec un objectif de performance Lighthouse de 90+ à la livraison sur mobile et sur ordinateur, vérifié sur trois passages enregistrés, et sans frais de plateforme mensuels. Aucune taille de projet minimale, aucune facturation à l'heure, aucun abonnement. Le code, les fichiers de design et les comptes vous appartiennent à la livraison. Les pages arrivent en HTML déjà constitué, avec des réponses claires et directes que les moteurs de recherche et les assistants IA comme ChatGPT, Claude et Perplexity peuvent citer.",
+      "PandaCodeGen conçoit et développe des sites web professionnels et des boutiques en ligne rapides, en code Next.js sur mesure dont vous êtes pleinement propriétaire. Nous créons de nouveaux sites et refondons ou reconstruisons des sites existants en fonction du fonctionnement réel de votre entreprise. Lorsqu'un projet nécessite une migration, nous planifions la reprise de vos contenus, de vos URL et de vos intégrations. Les projets démarrent à 1 500 $, à prix fixe pour le périmètre écrit, sans taille de projet minimale ni facturation à l'heure. Vous recevez un éditeur de contenu, une formation et un code qui vous appartient.",
     sections: [
       {
         title: "Des semaines, pas des mois",
@@ -361,7 +361,7 @@ const fr: Dictionary = {
         value: "22 jours",
         title: "Projet MyCustomPatches, client indépendant",
         body:
-          "Enregistrement de projet confirmé par le propriétaire, consigné le 21 juillet 2026 : livraison en 22 jours, classements maintenus, et coût d'hébergement passé de 150 $/mois à 0 $/mois sur la période enregistrée.",
+          "Chaque page, produit et article de blog a été migré vers une construction Next.js sur mesure en 22 jours environ, avec validation de l'exploration dans la Search Console avant le basculement DNS. Les chiffres de performance et de coût d'hébergement de ce projet sont retirés en attendant leur réconciliation.",
       },
       quotes: [
         {
@@ -494,7 +494,7 @@ const fr: Dictionary = {
         "Choisissez le forfait de départ le plus proche, puis ajoutez ou retirez des pages et des fonctionnalités dans un devis écrit. Une structure de paiement courante est 30 % au démarrage et 70 % au jalon de livraison défini dans les conditions de projet acceptées ; un autre échéancier écrit peut être convenu pour un projet particulier.",
     },
     summary:
-      "Les forfaits de migration PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale). Tout projet plus important est chiffré après un appel. Le prix est fixé avant le début des travaux. Aucune taille de projet minimale, aucune facturation à l’heure, aucun abonnement : 30 % au démarrage, 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être migré sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
+      "Les tarifs PandaCodeGen démarrent à 1 500 $ (Starter), 3 500 $ (Growth) et à partir de 5 000 $ (Scale), pour des sites web comme pour des boutiques en ligne. Tout projet plus important est chiffré après un appel. Le prix est fixé avant le début des travaux : aucune taille de projet minimale, aucune facturation à l'heure, 30 % au démarrage et 70 % à la livraison. Le code, les fichiers de design et les comptes vous appartiennent à la fin. Les prestations mensuelles, comme le référencement IA ou le support continu, sont facultatives et chiffrées séparément. Le prix évolue avec le volume de contenu, les intégrations et ce qui doit être repris sans casser, et non avec le seul nombre de pages. Votre devis écrit indique le montant exact.",
     tiersHeading: "Exemples de forfaits de départ",
     currencyNote:
       "Montants indiqués en dollars américains (USD). La devise, les taxes et les échéances figurent dans les conditions de projet acceptées.",
@@ -533,7 +533,7 @@ const fr: Dictionary = {
         name: "Scale",
         price: "À partir de 5 000 $",
         priceNote: "Forfait de départ · périmètre exact dans la proposition",
-        fit: "Plus de 20 pages, une boutique ou plusieurs langues.",
+        fit: "Plus de 20 pages, un grand catalogue, des abonnements ou une logique de commande sur mesure, ou plusieurs langues.",
         features: [
           "E-commerce headless : back-office Shopify ou WooCommerce, interface Next.js",
           "Périmètre de plus de 20 pages ou gabarits pour produits, collections, contenus et pages d'atterrissage",
@@ -618,7 +618,7 @@ const fr: Dictionary = {
     faq: [
       {
         q: "Par quel forfait commencer ?",
-        a: "Starter démarre à 1 500 $ pour un site allant jusqu'à 7 pages, Growth à 3 500 $ pour 8 à 20 pages, et Scale à partir de 5 000 $ pour plus de 20 pages, une boutique ou plusieurs langues. Tout projet plus important est chiffré après un appel. Choisissez la base la plus proche ; les pages ou fonctionnalités supplémentaires sont discutées et chiffrées dans le périmètre écrit avant le démarrage. Si aucun de ces forfaits ne correspond à votre situation, appelez le +1 (302) 773-8982 ou écrivez à info@pandacodegen.com et nous le chiffrerons.",
+        a: "Starter démarre à 1 500 $ pour un site allant jusqu'à 7 pages, Growth à 3 500 $ pour 8 à 20 pages, et Scale à partir de 5 000 $ pour plus de 20 pages, un grand catalogue, des abonnements ou une logique de commande sur mesure, ou plusieurs langues. Une petite boutique ne relève pas automatiquement de Scale : un catalogue simple de quelques produits démarre en Starter. Tout projet plus important est chiffré après un appel. Choisissez la base la plus proche ; les pages ou fonctionnalités supplémentaires sont discutées et chiffrées dans le périmètre écrit avant le démarrage. Si aucun de ces forfaits ne correspond à votre situation, appelez le +1 (302) 773-8982 ou écrivez à info@pandacodegen.com et nous le chiffrerons.",
       },
       {
         q: "Faut-il un contrat long pour chaque projet ?",

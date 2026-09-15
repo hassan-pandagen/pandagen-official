@@ -60,7 +60,17 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "src" / "data" / "retired-claims.json"
-SCAN_DIRS = [ROOT / "src" / "app", ROOT / "src" / "components", ROOT / "src" / "data"]
+# src/lib added 15 Sep 2026. The French and German dictionaries live under
+# src/lib/i18n/dictionaries and were outside every scanned root, so both of them
+# republished the withdrawn MyCustomPatches hosting figure ($150/mo to $0/mo) for
+# weeks after the English page retired it, and this guard reported "clean" the
+# whole time. A guard that cannot see a publishing surface is not guarding it.
+SCAN_DIRS = [
+    ROOT / "src" / "app",
+    ROOT / "src" / "components",
+    ROOT / "src" / "data",
+    ROOT / "src" / "lib",
+]
 SCAN_SUFFIXES = {".tsx", ".ts", ".md", ".mdx"}
 
 # Files that exist to record what changed. The retired wording is the subject

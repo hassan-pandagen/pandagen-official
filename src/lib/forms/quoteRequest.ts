@@ -21,6 +21,8 @@ export interface QuoteScalarFields {
   email: string;
   phone: string;
   service: string;
+  /** "en" | "fr" | "de". Which language site the enquiry came from. */
+  locale: string;
   details: string;
   alreadyTried: string;
   currentUrl: string;
@@ -44,6 +46,7 @@ const ALLOWED_FIELDS = new Set([
   "email",
   "phone",
   "service",
+  "locale",
   "details",
   "alreadyTried",
   "currentUrl",
@@ -62,10 +65,11 @@ const ALLOWED_FIELDS = new Set([
   "_t",
 ]);
 
-// The hero lead form posts a hidden `service` of "Website enquiry", localised as
-// "Website enquiry (FR)" / "(DE)". Those values were never added here, so every
-// submission from the homepage form failed the allowlist with "Invalid service
-// selection." Any new entry point that sets `service` must be added to this set,
+// The hero lead form used to post a hidden `service` of "Website enquiry",
+// localised as "Website enquiry (FR)" / "(DE)". Those values were never added
+// here, so every submission from the homepage form failed the allowlist with
+// "Invalid service selection." Any new entry point that sets `service` must be
+// added to this set,
 // because an unlisted value is rejected rather than ignored.
 const ALLOWED_SERVICES = new Set([
   "",
@@ -77,6 +81,17 @@ const ALLOWED_SERVICES = new Set([
   "Website enquiry (FR)",
   "Website enquiry (DE)",
 ]);
+
+// Which language site the enquiry came from, so the inbox can say which
+// language to reply in.
+//
+// Added 15 Sep 2026. The reply language was read ONLY from a trailing "(FR)" or
+// "(DE)" on `service`, and the hero form stopped sending `service` at all when it
+// was simplified. Every French and German enquiry since then has arrived marked
+// "Reply language: English" with no [FR]/[DE] subject prefix. A hidden field
+// carrying a language inside a service name was the wrong protocol: nothing
+// failed when it disappeared. This is its own validated field.
+const ALLOWED_LOCALES = new Set(["", "en", "fr", "de"]);
 
 const ALLOWED_PLATFORMS = new Set([
   "",
@@ -298,6 +313,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
 
   const phone = scalar(formData, "phone", 50);
   const service = allowlisted(scalar(formData, "service", 100), ALLOWED_SERVICES, "Invalid service selection.");
+  const locale = allowlisted(scalar(formData, "locale", 8), ALLOWED_LOCALES, "Invalid locale.");
   const details = scalar(formData, "details", 5_000, { multiline: true });
   const alreadyTried = scalar(formData, "alreadyTried", 5_000, { multiline: true });
   const currentUrl = normalizeWebsiteUrl(scalar(formData, "currentUrl", 2_048));
@@ -334,6 +350,7 @@ export function validateQuoteScalarFields(formData: FormData): QuoteScalarFields
     email,
     phone,
     service,
+    locale,
     details,
     alreadyTried,
     currentUrl,
