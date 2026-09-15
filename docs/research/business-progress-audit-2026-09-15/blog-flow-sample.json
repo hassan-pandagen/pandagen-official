@@ -1,0 +1,272 @@
+[
+  {
+    "path": "/blog/aeo-playbook-built-into-every-website",
+    "words": 5712,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "AEO Playbook: Build Eligibility for AI Search and Citations"
+      },
+      {
+        "level": 2,
+        "text": "Where to Start if You Are Behind on Both"
+      },
+      {
+        "level": 2,
+        "text": "What AEO Actually Means, and What It Does Not"
+      },
+      {
+        "level": 2,
+        "text": "What Counts as Evidence"
+      },
+      {
+        "level": 2,
+        "text": "What a Citable Passage Actually Looks Like"
+      },
+      {
+        "level": 2,
+        "text": "The Controls We Build In, and When Each One Applies"
+      },
+      {
+        "level": 3,
+        "text": "1. A Governed Page for Your Public Facts"
+      },
+      {
+        "level": 3,
+        "text": "2. Schema Markup That AI Engines Actually Parse"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  },
+  {
+    "path": "/blog/divi-theme-slow",
+    "words": 3663,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "Divi Theme Slow? A 2026 Diagnostic and Fix Guide"
+      },
+      {
+        "level": 2,
+        "text": "The answer in one minute"
+      },
+      {
+        "level": 2,
+        "text": "Why a Divi site can be slow"
+      },
+      {
+        "level": 3,
+        "text": "Loading path"
+      },
+      {
+        "level": 3,
+        "text": "Interaction path"
+      },
+      {
+        "level": 3,
+        "text": "Visual stability"
+      },
+      {
+        "level": 3,
+        "text": "Operational state"
+      },
+      {
+        "level": 2,
+        "text": "How many websites use Divi?"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  },
+  {
+    "path": "/blog/gohighlevel-website-speed",
+    "words": 4144,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "GoHighLevel Site Slow? Diagnose Before You Rebuild"
+      },
+      {
+        "level": 2,
+        "text": "The short answer"
+      },
+      {
+        "level": 2,
+        "text": "The diagnostic order"
+      },
+      {
+        "level": 3,
+        "text": "Field evidence"
+      },
+      {
+        "level": 3,
+        "text": "Lab evidence"
+      },
+      {
+        "level": 3,
+        "text": "Business path"
+      },
+      {
+        "level": 2,
+        "text": "Two different things get called “HighLevel is slow”"
+      },
+      {
+        "level": 2,
+        "text": "What PageSpeed Insights actually tells you"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  },
+  {
+    "path": "/blog/meta-conversions-api-setup-cost",
+    "words": 4530,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "Meta Conversions API Cost Starts With Scope"
+      },
+      {
+        "level": 2,
+        "text": "What a responsible estimate covers"
+      },
+      {
+        "level": 3,
+        "text": "Data map"
+      },
+      {
+        "level": 3,
+        "text": "Delivery"
+      },
+      {
+        "level": 3,
+        "text": "Governance"
+      },
+      {
+        "level": 2,
+        "text": "What Meta Conversions API does"
+      },
+      {
+        "level": 2,
+        "text": "Is the Conversions API free, and what are you actually paying for?"
+      },
+      {
+        "level": 2,
+        "text": "Why cost ranges without scope are misleading"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  },
+  {
+    "path": "/blog/woocommerce-too-slow",
+    "words": 4154,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "WooCommerce Too Slow? Diagnose Before You Rebuild"
+      },
+      {
+        "level": 2,
+        "text": "The short answer"
+      },
+      {
+        "level": 2,
+        "text": "Four kinds of evidence, and what each one settles"
+      },
+      {
+        "level": 3,
+        "text": "Field"
+      },
+      {
+        "level": 3,
+        "text": "Lab"
+      },
+      {
+        "level": 3,
+        "text": "Backend"
+      },
+      {
+        "level": 3,
+        "text": "Commerce"
+      },
+      {
+        "level": 2,
+        "text": "Does WooCommerce have a typical PageSpeed score?"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  },
+  {
+    "path": "/blog/wordpress-vs-nextjs",
+    "words": 3816,
+    "firstHeadings": [
+      {
+        "level": 1,
+        "text": "WordPress vs Next.js: Choose the Operating Model"
+      },
+      {
+        "level": 2,
+        "text": "The short answer"
+      },
+      {
+        "level": 3,
+        "text": "WordPress"
+      },
+      {
+        "level": 3,
+        "text": "Next.js"
+      },
+      {
+        "level": 3,
+        "text": "Features"
+      },
+      {
+        "level": 3,
+        "text": "Quality"
+      },
+      {
+        "level": 3,
+        "text": "Ownership"
+      },
+      {
+        "level": 2,
+        "text": "They are different product categories"
+      }
+    ],
+    "bodyFragmentLinks": [
+      {
+        "href": "#main-content",
+        "text": "Skip to main content",
+        "chrome": false
+      }
+    ]
+  }
+]

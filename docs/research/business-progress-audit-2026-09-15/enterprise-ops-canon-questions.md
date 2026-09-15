@@ -12,14 +12,28 @@ is checked by our build. We are moving every one of them into
    questions below quote what the page currently claims. That is context, not the answer.
    If the repo says something different, the repo wins.
 2. **"I don't know" and "that was an estimate" are correct answers.** They are more
-   useful than a reconstructed number. Anything without a method gets withdrawn from the
-   site, which is a fine outcome. Do not work backwards to justify a published figure.
+   useful than a reconstructed number. Do not work backwards to justify a published
+   figure. Note what "estimate" means downstream: our canon has two states, `verified`
+   and `withdrawn`, and an estimate is not evidence, so it is withdrawn from the site
+   rather than published with a softer label. Telling us it was an estimate is still the
+   most useful possible answer, because it ends the question permanently.
 3. **Give the measurement period and the date** for anything that is not a simple count
    of what exists today.
 4. **Say who measured it** — a script, a person, a commissioned reviewer, an estimate by
    the founders.
 5. Where a number is a count of things in the repo, **say where you counted** (path,
-   table, directory) so we can recount later without asking again.
+   table, directory) so we can recount later without asking again. Include the commit
+   or revision you counted at.
+6. **Separate what the repository contains from what is actually running.** A folder of
+   Edge Functions does not prove they are deployed; a migration file does not prove RLS
+   is enabled on the production database; a payment integration in the code does not
+   prove it is live. Where a claim is about the running system, check the running system
+   and say so. Where you can only check the repository, say that instead — both are
+   useful, they are just different claims.
+7. **This case study describes a system as it was; the system has moved on.** A larger
+   count today does not prove the old count was wrong. If you can tell when a number
+   changed, say so. Do not treat the page's hardcoded `dateModified` as evidence of
+   when the source last changed.
 
 ---
 
@@ -128,25 +142,34 @@ So it can go straight into our canon. One block per claim:
 
 ```json
 {
-  "id": "process-automation",
-  "label": "Process automation",
-  "value": "95% of the 40 processes in the July 2026 inventory",
+  "id": "<SHORT-KEBAB-ID>",
+  "label": "<WHAT THE READER SEES>",
+  "value": "<THE FIGURE, WITH ITS SCOPE IN THE STRING>",
   "status": "verified",
   "method": {
     "kind": "record",
-    "date": "2026-07-14",
-    "note": "Counted against the process inventory at docs/process-inventory.md; before/after measured over June-July 2026."
+    "date": "<YYYY-MM-DD YOU CHECKED>",
+    "note": "<WHAT WAS COUNTED, WHERE, OVER WHAT PERIOD>"
   },
-  "approvedBy": "Imran Raza Ladhani",
-  "approvedDate": "2026-07-14"
+  "sourceLocator": "<PATH, TABLE, OR QUERY — AND THE COMMIT OR REVISION>",
+  "approvedBy": "<WHO IS ANSWERABLE FOR IT>",
+  "approvedDate": "<YYYY-MM-DD>"
 }
 ```
 
+Every angle-bracket value above is a placeholder. **Do not copy the shape and leave a
+plausible-looking number in it** — an illustrative denominator that gets pasted into canon
+is worse than no answer, because it arrives pre-laundered.
+
 - `status` is **`verified`** or **`withdrawn`**. There is no third option, and no
   "pending" — a claim we cannot source comes off the site until it can be sourced.
-- `method.kind` is **`record`** (something written down: an inventory, an invoice, a
-  commit, a review document) or **`field`** (an observation made in a running system:
-  a dashboard reading, a monitored window).
+- `method.kind` is one of four: **`record`** (something written down — an inventory, a
+  commit, a review document), **`field`** (an observation of a running system — a live
+  query, a dashboard reading, a monitored window), **`invoice`** (a billing document),
+  or **`lab`** (a controlled test run under stated conditions). Pick the one that
+  describes how you actually know, not the one that sounds strongest.
+- A **withdrawn** entry needs its real `withdrawnDate` and `withdrawnReason`. Do not
+  invent an approver or a date to fill a field.
 - `method.note` must say what was counted and over what period. "Measured internally" is
   not a method.
 - A `withdrawn` metric needs no value — just tell us it cannot be sourced and why, and we
@@ -161,3 +184,101 @@ the metadata, the OG description and the schema in one change.
 We would rather publish six numbers we can defend than thirty we cannot. This project is
 founder-affiliated and already carries that disclosure, so the bar for its evidence is
 higher than for independent client work, not lower.
+
+---
+
+# Round two — invoices, payments, and three claims the first round missed
+
+Added 15 September 2026, after the first round came back. Same ground rules above.
+Round one settled the counts; these are the claims the site makes that nobody has
+checked yet.
+
+## Section D — the paid invoice email
+
+We have published, on the owner's word, that the platform emails the customer a paid
+invoice once payment lands. It is currently the only claim on that page sourced to a
+person rather than to your repository, so it is the one most worth closing.
+
+- **D1.** Does a paid-invoice email exist? Give the template id or name and the file it
+  is defined in. If it does not exist under that description, say so plainly — we will
+  remove the claim rather than soften it.
+- **D2.** What fires it? A Square webhook on payment captured, an order status change,
+  a manual action, or a cron? Name the trigger.
+- **D3.** Does it fire for **every** payment route, or only some? The routes we know of
+  are Square checkout, the public payment link at `/pay/:token`, and any payment an
+  agent records by hand. If a route is not covered, that matters more than the ones that
+  are.
+- **D4.** Does it **attach a PDF**, link to a hosted invoice, or render the invoice as
+  HTML in the email body? The site lists `@react-pdf/renderer` for "Invoices / PDFs", so
+  we would like to know which of those is actually the invoice.
+- **D5.** What does the invoice show? Specifically: line items, quantity, unit price,
+  tax, shipping, discount or loyalty code, amount paid, and — where a deposit was taken
+  — the balance still outstanding.
+- **D6.** **Partial payments.** If a customer pays a deposit, does the email say "paid"
+  for the deposit, or does it show a balance due? Our published wording is "a paid
+  invoice emailed to the customer on payment", and if a deposit produces the same email,
+  that wording is misleading and we will change it.
+- **D7.** **Refunds and cancellations.** Is anything sent when an order is refunded or
+  cancelled after an invoice went out — a credit note, a corrected invoice, nothing?
+- **D8.** Who receives it? The customer only, or also the CC email and the company
+  contact on B2B accounts?
+- **D9.** Is there a **record that it sent** — a log table, a communications row on the
+  order, a provider message id? This is the difference between "the system sends it" and
+  "the system is supposed to send it". Given that a `send-email` syntax error silently
+  blocked two templates for roughly three weeks until it was found, a delivery record is
+  the claim worth having.
+- **D10.** Currency and tax: is the invoice USD only? Does it show tax for the five
+  shipping countries the platform tracks, or is tax handled outside it?
+
+## Section E — the payment history, which is a better story than the current claim
+
+The owner says the business ran **Stripe and PayPal**, then moved to **Square** because it
+suited the business better. Our page has just been corrected to say Square only, which is
+right for today but throws away the more interesting fact — that a live payment stack was
+migrated on a running business without losing orders.
+
+- **E1.** Confirm the history from the repository: were Stripe and PayPal both live in
+  production, and roughly when was each removed? Commits, migrations, or deleted
+  functions are all fine evidence.
+- **E2.** Is there a **cutover record** — the date Square went live, whether the two ran
+  in parallel, and whether any orders were taken on both?
+- **E3.** Do historical orders still carry Stripe or PayPal payment references, and can
+  a refund still be issued against an old one? This is the honest detail a buyer with an
+  existing payment processor actually wants to know.
+- **E4.** Was anything lost or reconciled by hand during the move — orphaned payments,
+  duplicate records, webhooks that had to be replayed?
+- **E5.** The reason for moving is the owner's to state, not yours. But if the repository
+  shows a **technical** reason (an API limitation, a webhook reliability problem, fees
+  encoded somewhere), say what you can see.
+
+> Why we want this: "we migrated a live payment stack from two processors to one without
+> losing an order" is a claim with a date, a diff and a reconciliation behind it. That is
+> worth more than any of the round-one numbers we just withdrew, and it is the kind of
+> evidence the rest of the site is short of.
+
+## Section F — three claims the first round did not ask about
+
+An external reviewer of round one pointed out that a numbers-only review misses claims
+that are absolute rather than numeric. These three are on the page now.
+
+- **F1. "Built in 10 weeks."** What are the start and end dates, and what marks each? First
+  commit to first production use, or something else? Does the 10 weeks include the work
+  shipped since, or only the original build?
+- **F2. "Any production issue is caught before the team notices."** This is an absolute,
+  and absolutes are hard to hold. What is the actual alerting setup — Sentry alert rules,
+  who is notified, how quickly? Has an issue ever reached the team before the monitoring
+  did? If so the sentence is wrong as written and we will rewrite it to describe the
+  monitoring instead of promising the outcome.
+- **F3. "100% TypeScript with zero implicit any."** Round one confirmed `strict: true` and
+  a clean `tsc`. Those are not the same claim. Is **all** source TypeScript — any `.js`
+  files, any generated code, any `@ts-expect-error` or explicit `any` in the codebase? A
+  file-extension count and a grep for explicit `any` settle it.
+
+## One correction to round one, ours not yours
+
+The example JSON we sent contained a realistic-looking denominator — "95% of the 40
+processes in the July 2026 inventory" — with an illustrative date and approver. There is
+no 40-process inventory; we made the number up to show the shape. That was careless in a
+document whose entire purpose is to stop invented figures reaching canon, and the block
+now uses angle-bracket placeholders. If round one's answers were drafted against the old
+example, check that none of it was carried across.

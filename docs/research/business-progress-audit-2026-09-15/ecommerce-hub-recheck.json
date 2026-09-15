@@ -1,0 +1,845 @@
+{
+  "url": "http://localhost:3000/blog/topic/ecommerce",
+  "path": "/blog/topic/ecommerce",
+  "checkedUtc": "2026-09-15T16:37:39.006576+00:00",
+  "status": 200,
+  "finalUrl": "http://localhost:3000/blog/topic/ecommerce",
+  "sha256": "cb96b83ff09bcf02a2ebe09a2b907932ff4ce1c6eec11c20e69ae1fb46750428",
+  "lang": "en",
+  "titles": [
+    "Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution | PandaCodeGen"
+  ],
+  "meta": [
+    {
+      "charset": "utf-8"
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1, maximum-scale=5"
+    },
+    {
+      "name": "theme-color",
+      "content": "#B8410C"
+    },
+    {
+      "name": "description",
+      "content": "Guides on ecommerce architecture and measurement: what headless commerce is, how storefront speed relates to conversion, and why ad platforms and analytics disagree."
+    },
+    {
+      "name": "author",
+      "content": "PandaCodeGen"
+    },
+    {
+      "name": "creator",
+      "content": "PandaCodeGen"
+    },
+    {
+      "name": "publisher",
+      "content": "PandaCodeGen"
+    },
+    {
+      "name": "robots",
+      "content": "index, follow, max-image-preview:large, max-snippet:-1"
+    },
+    {
+      "name": "vaime-verify",
+      "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+    },
+    {
+      "property": "og:title",
+      "content": "Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution"
+    },
+    {
+      "property": "og:description",
+      "content": "Guides on ecommerce architecture and measurement: what headless commerce is, how storefront speed relates to conversion, and why ad platforms and analytics disagree."
+    },
+    {
+      "property": "og:url",
+      "content": "https://www.pandacodegen.com/blog/topic/ecommerce"
+    },
+    {
+      "property": "og:image",
+      "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Ftopic%2Fecommerce&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+    },
+    {
+      "property": "og:image:width",
+      "content": "1200"
+    },
+    {
+      "property": "og:image:height",
+      "content": "630"
+    },
+    {
+      "property": "og:image:alt",
+      "content": "Ecommerce Strategy and Ad Tracking Guides | PandaCodeGen social preview"
+    },
+    {
+      "property": "og:type",
+      "content": "website"
+    },
+    {
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "name": "twitter:title",
+      "content": "Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution"
+    },
+    {
+      "name": "twitter:description",
+      "content": "Guides on ecommerce architecture and measurement: what headless commerce is, how storefront speed relates to conversion, and why ad platforms and analytics disagree."
+    },
+    {
+      "name": "twitter:image",
+      "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Ftopic%2Fecommerce&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+    },
+    {
+      "name": "twitter:image:alt",
+      "content": "Ecommerce Strategy and Ad Tracking Guides | PandaCodeGen social preview"
+    },
+    {
+      "name": "twitter:image:width",
+      "content": "1200"
+    },
+    {
+      "name": "twitter:image:height",
+      "content": "630"
+    },
+    {
+      "name": "next-size-adjust",
+      "content": ""
+    }
+  ],
+  "links": [
+    {
+      "rel": "preload",
+      "as": "image",
+      "imagesrcset": "/_next/image?url=%2Flogo.png&w=256&q=75 1x, /_next/image?url=%2Flogo.png&w=384&q=75 2x"
+    },
+    {
+      "rel": "stylesheet",
+      "href": "/_next/static/chunks/%5Broot-of-the-server%5D__0el2-f6._.css",
+      "data-precedence": "next_static/chunks/[root-of-the-server]__0el2-f6._.css"
+    },
+    {
+      "rel": "preload",
+      "as": "script",
+      "fetchpriority": "low",
+      "href": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1di75ot._.js"
+    },
+    {
+      "rel": "manifest",
+      "href": "/manifest.json"
+    },
+    {
+      "rel": "canonical",
+      "href": "https://www.pandacodegen.com/blog/topic/ecommerce"
+    },
+    {
+      "rel": "icon",
+      "href": "/favicon.ico"
+    },
+    {
+      "rel": "icon",
+      "href": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "rel": "icon",
+      "href": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "rel": "apple-touch-icon",
+      "href": "/apple-touch-icon.png"
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Ecommerce Strategy and Ad Tracking Guides"
+    },
+    {
+      "level": 2,
+      "text": "Every guide in this topic"
+    },
+    {
+      "level": 3,
+      "text": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed"
+    },
+    {
+      "level": 3,
+      "text": "What Is Headless Commerce? A 2026 Store Owner Guide"
+    },
+    {
+      "level": 3,
+      "text": "Which Website Builders Can Actually Go Headless in 2026"
+    },
+    {
+      "level": 3,
+      "text": "Google Universal Commerce Protocol: Store Readiness in 2026"
+    },
+    {
+      "level": 3,
+      "text": "Slow Shopify Store Losing Sales? Build an Evidence Model"
+    },
+    {
+      "level": 3,
+      "text": "Low Shopify Conversion Rate? Measure Speed in the Funnel"
+    },
+    {
+      "level": 3,
+      "text": "Meta Conversions API Setup Cost: A Scope-Based Guide"
+    },
+    {
+      "level": 3,
+      "text": "Spending More on Ads but Getting Fewer Orders? Audit Tracking"
+    },
+    {
+      "level": 3,
+      "text": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide"
+    },
+    {
+      "level": 2,
+      "text": "Past the reading stage?"
+    },
+    {
+      "level": 2,
+      "text": "Related topics"
+    },
+    {
+      "level": 2,
+      "text": "Have something in mind?"
+    },
+    {
+      "level": 3,
+      "text": "Services"
+    },
+    {
+      "level": 3,
+      "text": "Company"
+    },
+    {
+      "level": 3,
+      "text": "Project Evidence"
+    },
+    {
+      "level": 3,
+      "text": "Agency Pilot"
+    },
+    {
+      "level": 3,
+      "text": "About"
+    },
+    {
+      "level": 3,
+      "text": "Hassan Jamal"
+    },
+    {
+      "level": 3,
+      "text": "Imran Raza Ladhani"
+    },
+    {
+      "level": 3,
+      "text": "Engineering Blog"
+    },
+    {
+      "level": 3,
+      "text": "Delivery Principles"
+    },
+    {
+      "level": 3,
+      "text": "Contact"
+    },
+    {
+      "level": 3,
+      "text": "Resources"
+    },
+    {
+      "level": 3,
+      "text": "Example Scopes"
+    },
+    {
+      "level": 3,
+      "text": "Migration Services"
+    },
+    {
+      "level": 3,
+      "text": "Facts and Figures"
+    },
+    {
+      "level": 3,
+      "text": "Security"
+    },
+    {
+      "level": 3,
+      "text": "Editorial Policy"
+    },
+    {
+      "level": 3,
+      "text": "Privacy"
+    },
+    {
+      "level": 3,
+      "text": "Cookie Choices"
+    },
+    {
+      "level": 3,
+      "text": "Website Terms"
+    }
+  ],
+  "anchors": [
+    {
+      "href": "#main-content",
+      "text": "Skip to main content",
+      "chrome": false
+    },
+    {
+      "href": "/",
+      "text": "",
+      "chrome": true
+    },
+    {
+      "href": "/pricing",
+      "text": "Pricing",
+      "chrome": true
+    },
+    {
+      "href": "/partners",
+      "text": "Partners",
+      "chrome": true
+    },
+    {
+      "href": "/blog",
+      "text": "Blog",
+      "chrome": true
+    },
+    {
+      "href": "tel:+13027738982",
+      "text": "+1 (302) 773-8982",
+      "chrome": true
+    },
+    {
+      "href": "/",
+      "text": "Home",
+      "chrome": true
+    },
+    {
+      "href": "/blog",
+      "text": "Blog",
+      "chrome": true
+    },
+    {
+      "href": "/services/ecommerce",
+      "text": "our commerce engineering service",
+      "chrome": false
+    },
+    {
+      "href": "/about/hassan",
+      "text": "Hassan Jamal",
+      "chrome": false
+    },
+    {
+      "href": "/editorial-policy",
+      "text": "editorial policy",
+      "chrome": false
+    },
+    {
+      "href": "/blog/woocommerce-low-conversion-rate",
+      "text": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed",
+      "chrome": false
+    },
+    {
+      "href": "/blog/what-is-headless-commerce",
+      "text": "What Is Headless Commerce? A 2026 Store Owner Guide",
+      "chrome": false
+    },
+    {
+      "href": "/blog/which-website-builders-can-go-headless",
+      "text": "Which Website Builders Can Actually Go Headless in 2026",
+      "chrome": false
+    },
+    {
+      "href": "/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+      "text": "Google Universal Commerce Protocol: Store Readiness in 2026",
+      "chrome": false
+    },
+    {
+      "href": "/blog/shopify-slow-losing-sales",
+      "text": "Slow Shopify Store Losing Sales? Build an Evidence Model",
+      "chrome": false
+    },
+    {
+      "href": "/blog/shopify-conversion-rate-speed-fix",
+      "text": "Low Shopify Conversion Rate? Measure Speed in the Funnel",
+      "chrome": false
+    },
+    {
+      "href": "/blog/meta-conversions-api-setup-cost",
+      "text": "Meta Conversions API Setup Cost: A Scope-Based Guide",
+      "chrome": false
+    },
+    {
+      "href": "/blog/spending-more-on-ads-fewer-orders-tracking",
+      "text": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+      "chrome": false
+    },
+    {
+      "href": "/blog/fix-meta-ad-tracking-2026",
+      "text": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide",
+      "chrome": false
+    },
+    {
+      "href": "/services/ecommerce",
+      "text": "See the commerce engineering service",
+      "chrome": false
+    },
+    {
+      "href": "/blog/topic/shopify",
+      "text": "Shopify Speed and Migration Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/website-speed",
+      "text": "Website Speed and Core Web Vitals Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/custom-development",
+      "text": "Custom Website Development Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/wordpress",
+      "text": "WordPress Migration Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/webflow",
+      "text": "Webflow Migration Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/squarespace",
+      "text": "Squarespace Migration Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/agencies",
+      "text": "White-Label Web Development Guides for Agencies",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/website-migration",
+      "text": "Website Migration Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/website-cost",
+      "text": "Website Cost and SaaS Spend Guides",
+      "chrome": true
+    },
+    {
+      "href": "/blog/topic/seo-and-ai-search",
+      "text": "SEO and AI Search Guides",
+      "chrome": true
+    },
+    {
+      "href": "/pricing",
+      "text": "Explore pricing",
+      "chrome": true
+    },
+    {
+      "href": "/",
+      "text": "PandaCodeGen .",
+      "chrome": true
+    },
+    {
+      "href": "mailto:info@pandacodegen.com",
+      "text": "info@pandacodegen.com",
+      "chrome": true
+    },
+    {
+      "href": "mailto:info@pandacodegen.com",
+      "text": "Email",
+      "chrome": true
+    },
+    {
+      "href": "/contact",
+      "text": "Contact form",
+      "chrome": true
+    },
+    {
+      "href": "/services/wordpress-migration",
+      "text": "WordPress Migration",
+      "chrome": true
+    },
+    {
+      "href": "/services/custom-engineering",
+      "text": "Custom Engineering",
+      "chrome": true
+    },
+    {
+      "href": "/services/ai-seo",
+      "text": "AI SEO",
+      "chrome": true
+    },
+    {
+      "href": "/services/ecommerce",
+      "text": "E-Commerce",
+      "chrome": true
+    },
+    {
+      "href": "/services/wix",
+      "text": "Wix Migration",
+      "chrome": true
+    },
+    {
+      "href": "/services/squarespace",
+      "text": "Squarespace Migration",
+      "chrome": true
+    },
+    {
+      "href": "/services/webflow",
+      "text": "Webflow Migration",
+      "chrome": true
+    },
+    {
+      "href": "/services/woocommerce",
+      "text": "WooCommerce Migration",
+      "chrome": true
+    },
+    {
+      "href": "/services/gohighlevel",
+      "text": "GoHighLevel",
+      "chrome": true
+    },
+    {
+      "href": "/work",
+      "text": "Project Evidence Method, permission, and publication controls.",
+      "chrome": true
+    },
+    {
+      "href": "/partners",
+      "text": "Agency Pilot Test one scoped engagement first.",
+      "chrome": true
+    },
+    {
+      "href": "/about",
+      "text": "About Migration delivery standards.",
+      "chrome": true
+    },
+    {
+      "href": "/about/hassan",
+      "text": "Hassan Jamal Co-founder and Lead Engineer.",
+      "chrome": true
+    },
+    {
+      "href": "/about/imran",
+      "text": "Imran Raza Ladhani Co-founder and Lead Architect.",
+      "chrome": true
+    },
+    {
+      "href": "/blog",
+      "text": "Engineering Blog Deep dives into Next.js and performance.",
+      "chrome": true
+    },
+    {
+      "href": "/manifesto",
+      "text": "Delivery Principles Scope, evidence, control, and acceptance.",
+      "chrome": true
+    },
+    {
+      "href": "/contact",
+      "text": "Contact Talk directly with Hassan or Imran.",
+      "chrome": true
+    },
+    {
+      "href": "/pricing",
+      "text": "Example Scopes Price drivers and proposal controls.",
+      "chrome": true
+    },
+    {
+      "href": "/services",
+      "text": "Migration Services Platform and engineering options.",
+      "chrome": true
+    },
+    {
+      "href": "/ai-info",
+      "text": "Facts and Figures Pricing, team, case studies and guarantees, stated plainly.",
+      "chrome": true
+    },
+    {
+      "href": "/security",
+      "text": "Security Reporting and disclosure process.",
+      "chrome": true
+    },
+    {
+      "href": "/editorial-policy",
+      "text": "Editorial Policy Sources, evidence, freshness, and corrections.",
+      "chrome": true
+    },
+    {
+      "href": "/privacy",
+      "text": "Privacy Data use and visitor choices.",
+      "chrome": true
+    },
+    {
+      "href": "/cookies",
+      "text": "Cookie Choices Optional services and consent.",
+      "chrome": true
+    },
+    {
+      "href": "/terms",
+      "text": "Website Terms Use of the site and inquiries.",
+      "chrome": true
+    },
+    {
+      "href": "/privacy",
+      "text": "Privacy",
+      "chrome": true
+    },
+    {
+      "href": "/terms",
+      "text": "Terms",
+      "chrome": true
+    },
+    {
+      "href": "/cookies",
+      "text": "Cookies",
+      "chrome": true
+    },
+    {
+      "href": "/security",
+      "text": "Security",
+      "chrome": true
+    },
+    {
+      "href": "/editorial-policy",
+      "text": "Editorial",
+      "chrome": true
+    },
+    {
+      "href": "mailto:info@pandacodegen.com?subject=Security%20report",
+      "text": "Report a security issue",
+      "chrome": true
+    }
+  ],
+  "ids": [
+    "main-content",
+    "_R_"
+  ],
+  "images": [
+    {
+      "alt": "PandaCodeGen",
+      "width": "131",
+      "height": "23",
+      "decoding": "async",
+      "data-nimg": "1",
+      "class": "h-auto",
+      "style": "color:transparent",
+      "srcset": "/_next/image?url=%2Flogo.png&w=256&q=75 1x, /_next/image?url=%2Flogo.png&w=384&q=75 2x",
+      "src": "/_next/image?url=%2Flogo.png&w=384&q=75"
+    }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.pandacodegen.com/#website",
+          "url": "https://www.pandacodegen.com",
+          "name": "PandaCodeGen",
+          "publisher": {
+            "@id": "https://www.pandacodegen.com/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.pandacodegen.com/#organization",
+          "name": "PandaCodeGen",
+          "alternateName": "Panda Code Gen",
+          "legalName": "Panda Group Ventures L.L.C.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12250 S Kirkwood Rd, Apt 1128",
+            "addressLocality": "Stafford",
+            "addressRegion": "TX",
+            "postalCode": "77477",
+            "addressCountry": "US"
+          },
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Hassan Jamal"
+            },
+            {
+              "@type": "Person",
+              "name": "Imran Raza Ladhani"
+            }
+          ],
+          "url": "https://www.pandacodegen.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.pandacodegen.com/logo.png",
+            "width": 655,
+            "height": 113
+          },
+          "telephone": "+13027738982",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "info@pandacodegen.com",
+            "telephone": "+13027738982"
+          },
+          "description": "PandaCodeGen designs and develops custom business websites, online stores and software. The founders work directly with clients on new builds, redesigns, migrations and integrations. Optional monthly AI SEO and ongoing support are scoped separately.",
+          "areaServed": "Worldwide",
+          "foundingDate": "2026-08-12"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.pandacodegen.com/blog/topic/ecommerce#webpage",
+          "url": "https://www.pandacodegen.com/blog/topic/ecommerce",
+          "name": "Ecommerce Strategy and Ad Tracking Guides: Headless, Speed, Attribution",
+          "description": "Guides on ecommerce architecture and measurement: what headless commerce is, how storefront speed relates to conversion, and why ad platforms and analytics disagree.",
+          "isPartOf": {
+            "@id": "https://www.pandacodegen.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://www.pandacodegen.com/blog/topic/ecommerce#breadcrumb"
+          },
+          "significantLink": "https://www.pandacodegen.com/services/ecommerce",
+          "inLanguage": "en-US",
+          "author": {
+            "@type": "Person",
+            "name": "Hassan Jamal",
+            "url": "https://www.pandacodegen.com/about/hassan"
+          },
+          "publisher": {
+            "@id": "https://www.pandacodegen.com/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.pandacodegen.com/blog/topic/ecommerce#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.pandacodegen.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.pandacodegen.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Ecommerce & Tracking",
+              "item": "https://www.pandacodegen.com/blog/topic/ecommerce"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.pandacodegen.com/blog/topic/ecommerce#itemlist",
+          "name": "Ecommerce Strategy and Ad Tracking Guides",
+          "numberOfItems": 9,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://www.pandacodegen.com/blog/woocommerce-low-conversion-rate",
+              "name": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+              "name": "What Is Headless Commerce? A 2026 Store Owner Guide"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://www.pandacodegen.com/blog/which-website-builders-can-go-headless",
+              "name": "Which Website Builders Can Actually Go Headless in 2026"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://www.pandacodegen.com/blog/google-universal-commerce-protocol-what-it-means-for-your-store",
+              "name": "Google Universal Commerce Protocol: Store Readiness in 2026"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://www.pandacodegen.com/blog/shopify-slow-losing-sales",
+              "name": "Slow Shopify Store Losing Sales? Build an Evidence Model"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://www.pandacodegen.com/blog/shopify-conversion-rate-speed-fix",
+              "name": "Low Shopify Conversion Rate? Measure Speed in the Funnel"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "url": "https://www.pandacodegen.com/blog/meta-conversions-api-setup-cost",
+              "name": "Meta Conversions API Setup Cost: A Scope-Based Guide"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "url": "https://www.pandacodegen.com/blog/spending-more-on-ads-fewer-orders-tracking",
+              "name": "Spending More on Ads but Getting Fewer Orders? Audit Tracking"
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "url": "https://www.pandacodegen.com/blog/fix-meta-ad-tracking-2026",
+              "name": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.pandacodegen.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.pandacodegen.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ecommerce & Tracking"
+        }
+      ]
+    }
+  ],
+  "body_text": "Skip to main content 9 guide s Ecommerce Strategy and Ad Tracking Guides This hub covers two things that are usually treated as separate departments and are almost always the same person's problem: how the storefront is built, and whether you can trust what it reports. On architecture, the recurring question is headless, which gets discussed as a tier rather than a trade. Decoupling the storefront from the commerce backend gives you control over rendering, payload, and integration; it also gives you a frontend to maintain that a hosted theme was maintaining for you. Worth it for some catalogues, clearly not for others, and the guides here try to say which is which rather than recommending it generally. On measurement, the problem most stores actually have is that the ad platform, the analytics tool, and the actual order count all disagree, and the gaps widened as browser tracking restrictions tightened. Server-side event forwarding is the usual response, and the guides cover what it involves and what it costs to set up. It is worth being clear that it changes how events are collected and attributed, which is not the same as changing how many orders happen. The link between the two halves is that both are measurement problems before they are engineering problems. Use your own baseline; published conversion statistics were measured on someone else's traffic and cannot tell you what yours is doing. For a store where the architecture decision is already made, our commerce engineering service covers the build scope. PandaCodeGen builds from $1,500 at a fixed price agreed before work starts, has no minimum project size, and the source code, design files and production accounts are yours at the end. Topic introduction written by Hassan Jamal , Lead Engineer, from the scoping and handover work behind these guides. How claims here are sourced, dated and corrected is set out in our editorial policy . Every guide in this topic WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed Published Aug 16 · Updated 2026-08-25 · 10 min read Speed is the usual suspect because it is the easiest thing to have an opinion about. A diagnostic order that finds the funnel stage which actually changed, including the problems WooCommerce creates that no hosted platform does. What Is Headless Commerce? A 2026 Store Owner Guide Published Mar 14 · Updated 2026-08-19 · 15 min read Understand headless commerce architecture, Shopify and Medusa options, performance evidence, cost, operating tradeoffs and when a custom storefront is justified. Which Website Builders Can Actually Go Headless in 2026 Published Aug 18 · Updated 2026-08-19 · 10 min read Checked against each platform's own API documentation rather than its marketing. Shopify, WooCommerce and Wix genuinely support it, Webflow runs the idea in the opposite direction, and Squarespace does not mention headless once. Google Universal Commerce Protocol: Store Readiness in 2026 Published Feb 21 · Updated 2026-08-19 · 12 min read What UCP is, what Google currently documents for direct buying, what remains access-dependent and how merchants can prepare. Slow Shopify Store Losing Sales? Build an Evidence Model Published Feb 10 · Updated 2026-08-19 · 11 min read Join route-level field performance to your funnel, build bounded opportunity scenarios, test the least disruptive remedy and separate measured outcomes from assumptions. Low Shopify Conversion Rate? Measure Speed in the Funnel Published Feb 11 · Updated 2026-08-19 · 16 min read Segment the Shopify funnel by route, device, traffic source, and field performance before attributing conversion changes to speed or choosing a rebuild. Meta Conversions API Setup Cost: A Scope-Based Guide Published Jun 14 · Updated 2026-08-19 · 18 min read Plan Meta Conversions API cost from events, systems, consent, matching, deduplication, QA and monitoring, with a carefully labelled Panda Patches screenshot. Spending More on Ads but Getting Fewer Orders? Audit Tracking Published Jun 4 · Updated 2026-08-19 · 12 min read Reconcile platform events with the system of record, diagnose browser and server coverage, and improve consented measurement without assuming attribution or performance lift. Meta Ad Tracking Not Working? A 2026 Diagnostic Guide Published Jul 6 · Updated 2026-08-19 · 14 min read A consent-aware method for reconciling orders and Meta events, debugging browser and server delivery, and preventing duplicate events. Past the reading stage? These guides describe the decision. If you have made it and want the work scoped against your own site, the commercial terms, acceptance criteria, and exclusions are on one page. See the commerce engineering service",
+  "words_excluding_semantic_navigation": 746
+}

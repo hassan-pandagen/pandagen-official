@@ -38,6 +38,14 @@ jobs:
       - name: Build production application
         run: npm run build
 
+      # Added 15 Sep 2026. guard:all existed as a package script for weeks and was
+      # called by nothing -- not build, not check, not this workflow. Every metric,
+      # link, spec-freshness, glossary, unicode and retired-claim guard in the repo
+      # only ran when somebody remembered to run it by hand, which is the same as
+      # not having them. They read the built HTML, so this must sit after the build.
+      - name: Run content and evidence guards
+        run: npm run guard:all
+
       - name: Run structural SEO release crawl
         shell: bash
         run: |

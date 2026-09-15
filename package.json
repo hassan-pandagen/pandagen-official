@@ -26,7 +26,8 @@
     "smoke:release": "node release-smoke.mjs",
     "seo:check": "node seo-audit.mjs",
     "audit:dependencies": "npm audit --audit-level=high",
-    "indexnow": "node indexnow-ping.mjs"
+    "indexnow": "node indexnow-ping.mjs",
+    "verify": "npm run check && npm run build && npm run guard:all"
   },
   "browserslist": [
     "chrome >= 111",
