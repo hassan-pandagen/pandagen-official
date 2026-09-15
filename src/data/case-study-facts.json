@@ -312,6 +312,71 @@
           "approvedDate": "2026-09-15"
         },
         {
+          "id": "production-rows-imported",
+          "label": "Legacy production rows imported",
+          "value": "1,779",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Stated by the CRM repository's own source audit, 15 September 2026, answering a written evidence request from this site. The physical production floor had run on a Google Sheet since August 2025. Its rows were imported into the production_rows table and reconciled line for line against the workbook. Twenty blank rows produced by the sheet's own fill-down were identified and deleted separately, logged with their sheet-line numbers so the reconciliation still ties."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "patch-type-canonicalisation",
+          "label": "Patch-type spellings normalised",
+          "value": "27 spellings to 13 canonical types",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Stated by the CRM repository's own source audit, 15 September 2026, answering a written evidence request from this site. The production_type_rules and production_type_aliases tables collapse the spreadsheet's 27 raw spellings, case- and punctuation-insensitively, into 13 canonical types through the production_canonical_type() function. A blank type resolves to NULL and falls back to manual pricing rather than blocking the row."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "production-pipeline-states",
+          "label": "Production pipeline states",
+          "value": "5",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Stated by the CRM repository's own source audit, 15 September 2026, answering a written evidence request from this site. production_rows.status runs new_order, assigned, awaiting_approval, production, dispatched, stored as a generated status_rank column. Deliberately independent of the customer-facing order status, with one link back: dispatching a design's last row stamps orders.production_completed_at."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "meta-capi-functions",
+          "label": "Meta Conversions API functions",
+          "value": "6",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Stated by the CRM repository's own source audit, 15 September 2026, answering a written evidence request from this site. Confirmed live in the Supabase Edge Function listing: send-meta-purchase, reverse-meta-purchase, send-meta-lead-event, send-meta-message, meta-webhook, meta-admin. Purchase events reverse automatically on refund or cancellation."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
+          "id": "email-templates-added",
+          "label": "Transactional email templates added since 10 August 2026",
+          "value": "3",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-15",
+            "note": "Stated by the CRM repository's own source audit, 15 September 2026, answering a written evidence request from this site. INTERNAL_ORDER_STOPPED, CUSTOMER_ORDER_UPDATED and INTERNAL_ORDER_UPDATED, added as template ids inside the existing send-email function rather than as new Edge Functions. Two of the three existed in code from about 5 September but could not send until a syntax error in that function was found and fixed on 15 September 2026."
+          },
+          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
+          "approvedDate": "2026-09-15"
+        },
+        {
           "id": "process-automation",
           "label": "Process automation",
           "value": "95%",
