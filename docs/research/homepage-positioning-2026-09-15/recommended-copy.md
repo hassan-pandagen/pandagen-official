@@ -1,5 +1,7 @@
 # Recommended homepage copy
 
+**Superseded pricing, later on 15 September:** do not implement this draft's separate $5,000 minimum for all stores. The owner confirmed, and the existing ecommerce Starter supports, websites and simple online stores from $1,500. Use the [follow-up audit](follow-up-audit.md) and [pricing correction inventory](pricing-follow-up.md) for the current recommendation. The original copy below is retained for revision history.
+
 This proposed copy prioritises business websites and ecommerce, with a separate route for custom software. Prices and inclusions follow the existing [company facts](../../../src/data/company-facts.ts). It is ready for editorial review; no application files have been changed. The [research report](README.md) explains the positioning and evidence.
 
 ## Hero

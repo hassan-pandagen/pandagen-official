@@ -1,0 +1,280 @@
+{
+  "capturedAt": "2026-09-15T18:48:18.993714+00:00",
+  "head": "95339fa27a52c4cf7e9c2ba3744a1712f20449d3",
+  "guard": "scripts/metrics_guard.py",
+  "registry": "src/data/case-study-facts.json",
+  "case": "enterprise-ops",
+  "fixtureIsolation": "TemporaryDirectory; actual DATA and BUILD paths overridden; no application or real .next mutations",
+  "interpretation": "Synthetic detector audit only. Does not validate the real-world correctness of metric declarations or current deployed output.",
+  "results": [
+    {
+      "case": "baseline_current_metric_and_method",
+      "shouldFailUnderAuditPolicy": false,
+      "exit": 0,
+      "matchesAuditPolicy": true,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_meta_only",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "process-automation",
+            "slug": "enterprise-ops",
+            "value": "95%",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"95%\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"process-automation\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_og_only",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "process-automation",
+            "slug": "enterprise-ops",
+            "value": "95%",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"95%\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"process-automation\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_twitter_only",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "process-automation",
+            "slug": "enterprise-ops",
+            "value": "95%",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"95%\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"process-automation\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_jsonld_only",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "process-automation",
+            "slug": "enterprise-ops",
+            "value": "95%",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"95%\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"process-automation\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_far_from_name_own_page",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "process-automation",
+            "slug": "enterprise-ops",
+            "value": "95%",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"95%\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"process-automation\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "verified_method_missing_no_year",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "verified-without-visible-method"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "verified-without-visible-method",
+            "metric": "production-rows-imported",
+            "slug": "enterprise-ops",
+            "value": "1,779",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"1,779\" renders on work\\enterprise-ops.html with no sign of its method date (2026-09-15). A number without a method is how the last one drifted."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "verified_method_missing_copyright_year",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "verified_method_missing_metadata_year_only",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "verified_value_changed",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "undeclared_numeric_claim",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_multiplication_symbol",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_registered_ascii_x",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 1,
+      "matchesAuditPolicy": true,
+      "failureTypes": [
+        "withdrawn-value-rendered"
+      ],
+      "guardResult": {
+        "failures": [
+          {
+            "type": "withdrawn-value-rendered",
+            "metric": "efficiency-gain",
+            "slug": "enterprise-ops",
+            "value": "10x",
+            "page": "work\\enterprise-ops.html",
+            "fix": "\"10x\" renders within 220 chars of \"Enterprise operations platform\" on work\\enterprise-ops.html, but metric \"efficiency-gain\" is withdrawn in case-study-facts.json. Remove it from the page, or set the metric back to verified with a method once it is reconciled."
+          }
+        ],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_numeric_entity",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_single_quote_metadata",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    },
+    {
+      "case": "withdrawn_without_value_registered",
+      "shouldFailUnderAuditPolicy": true,
+      "exit": 0,
+      "matchesAuditPolicy": false,
+      "failureTypes": [],
+      "guardResult": {
+        "failures": [],
+        "checked": 5,
+        "pages": 1
+      }
+    }
+  ]
+}

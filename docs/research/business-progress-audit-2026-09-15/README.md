@@ -4,6 +4,8 @@ Completed 15 September 2026 against checkout **93ec417ae9cc73678c856db51417fd095
 
 **Later source review:** [Follow-up at `10335a6` / `e23be37`](follow-up-10335a6.md) supersedes the affected open items and the immediate homepage-H1 suggestion below. The homepage headings, ecommerce opening and migration-plan CTA mismatch are fixed. MyCustomPatches remains partly inconsistent, and additional Enterprise Ops enforcement gaps are documented. This report's captures, counts and before/after tables remain the original `93ec417` snapshot, not a fresh crawl of the newer checkout.
 
+**Latest Enterprise Ops review:** [Recheck at `95339fa`](enterprise-ops-review-95339fa.md) confirms new case facts, business-workflow copy, metadata extraction and post-build CI guards. It also records still-visible conflicting scope counts, withdrawn FAQ figures and unresolved attribution claims. Read it instead of treating the earlier Enterprise Ops open-items list as current.
+
 ## Executive assessment
 
 **The local site has made substantial progress from a migration-only first impression to a credible website/store offer, with a much clearer enquiry experience and a defined monthly AI SEO service. It has not yet completed the broader website/software/measurement positioning. It is not accurate to say all claims are reconciled or that search and sales results have already improved.**

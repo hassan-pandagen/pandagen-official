@@ -1,0 +1,10 @@
+{
+  "sourceHead": "95339fa",
+  "command": "python scripts/metrics_guard.py --json",
+  "scope": "Existing local build output; no new build performed in this review",
+  "result": {
+    "failures": [],
+    "checked": 37,
+    "pages": 149
+  }
+}

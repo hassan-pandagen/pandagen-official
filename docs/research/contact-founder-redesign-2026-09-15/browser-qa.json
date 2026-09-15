@@ -1,0 +1,4757 @@
+{
+  "checkedAt": "2026-09-15T14:38:02.994Z",
+  "origin": "http://localhost:3000",
+  "safety": "All /api/submit-quote requests intercepted. No real enquiry or email submitted.",
+  "pages": [
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 212,
+          "naturalHeight": 212,
+          "renderedWidth": 270
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 556,
+          "left": 46,
+          "right": 296,
+          "width": 250,
+          "height": 100.78125
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 1286.15625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 108
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 2604.15625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 108
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 3668.15625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 72
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 4230.15625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 72
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 6691.65625,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 122
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 1008.78125,
+          "left": 46,
+          "right": 296,
+          "width": 250,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 6991.65625,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 86.375
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 8504.84375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 8576.84375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 267,
+          "naturalHeight": 267,
+          "renderedWidth": 340
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 626,
+          "left": 46,
+          "right": 366,
+          "width": 320,
+          "height": 50.390625
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 1233.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 108
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 2439.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 72
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 3355.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 72
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 3821.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 72
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 6200.390625,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 82
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 964.390625,
+          "left": 46,
+          "right": 366,
+          "width": 320,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 6434.390625,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 7878.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 7950.390625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 696,
+          "left": 58,
+          "right": 744,
+          "width": 686,
+          "height": 75.59375
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 1236.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 96
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 2014.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 96
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 2822.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 40
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 3176.59375,
+          "left": 24,
+          "right": 576.484375,
+          "width": 552.484375,
+          "height": 96
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 4641.09375,
+          "left": 56,
+          "right": 712,
+          "width": 656,
+          "height": 123
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 963.59375,
+          "left": 58,
+          "right": 285.546875,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 4877.09375,
+          "left": 162.46875,
+          "right": 406.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 6324.15625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 6396.15625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "renderedWidth": 334.953125
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 272,
+          "left": 434.953125,
+          "right": 1000,
+          "width": 565.046875,
+          "height": 75.59375
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 844.59375,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 1510.59375,
+          "left": 24,
+          "right": 395.1875,
+          "width": 371.1875,
+          "height": 192
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 2122.59375,
+          "left": 24,
+          "right": 1000,
+          "width": 976,
+          "height": 40
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 2444.59375,
+          "left": 24,
+          "right": 631.140625,
+          "width": 607.140625,
+          "height": 48
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 3516.59375,
+          "left": 128,
+          "right": 896,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 571.59375,
+          "left": 434.953125,
+          "right": 662.5,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3692.59375,
+          "left": 290.46875,
+          "right": 534.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 4339.28125,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4427.28125,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 1279,
+      "scrollWidth": 1279,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 304.40625,
+          "left": 537.8125,
+          "right": 1215.5,
+          "width": 677.6875,
+          "height": 75.59375
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 845,
+          "left": 63.5,
+          "right": 831.5,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 1483,
+          "left": 63.5,
+          "right": 505.09375,
+          "width": 441.59375,
+          "height": 144
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 2095,
+          "left": 63.5,
+          "right": 1215.5,
+          "width": 1152,
+          "height": 40
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 2417,
+          "left": 63.5,
+          "right": 670.640625,
+          "width": 607.140625,
+          "height": 48
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 3461.5,
+          "left": 255.5,
+          "right": 1023.5,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 572,
+          "left": 537.8125,
+          "right": 765.359375,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3637.5,
+          "left": 417.96875,
+          "right": 661.515625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 4284.1875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4372.1875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/hassan",
+      "status": 200,
+      "errors": [],
+      "title": "Hassan Jamal | Co-founder and Lead Engineer at PandaCodeGen | PandaCodeGen",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Hassan Jamal"
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=384&q=75",
+          "naturalWidth": 300,
+          "naturalHeight": 300,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Hassan Jamal",
+          "top": 304.40625,
+          "left": 618.3125,
+          "right": 1296,
+          "width": 677.6875,
+          "height": 75.59375
+        },
+        {
+          "text": "Engineering follows the written migration plan.",
+          "top": 845,
+          "left": 144,
+          "right": 912,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "What the engineering claim should mean",
+          "top": 1483,
+          "left": 144,
+          "right": 585.59375,
+          "width": 441.59375,
+          "height": 144
+        },
+        {
+          "text": "Quoted in Woman’s World",
+          "top": 2095,
+          "left": 144,
+          "right": 1296,
+          "width": 1152,
+          "height": 40
+        },
+        {
+          "text": "Recent articles by Hassan",
+          "top": 2417,
+          "left": 144,
+          "right": 751.140625,
+          "width": 607.140625,
+          "height": 48
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 3461.5,
+          "left": 336,
+          "right": 1104,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 19.75,
+          "left": 1135.890625,
+          "right": 1336,
+          "width": 200.109375,
+          "height": 44
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 572,
+          "left": 618.3125,
+          "right": 845.859375,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3637.5,
+          "left": 498.46875,
+          "right": 742.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 4252.1875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4324.1875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 272,
+          "naturalHeight": 272,
+          "renderedWidth": 270
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 556,
+          "left": 46,
+          "right": 296,
+          "width": 250,
+          "height": 100.78125
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 1329.78125,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 2739.78125,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 108
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 3884.78125,
+          "left": 57,
+          "right": 263,
+          "width": 206,
+          "height": 180
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 5443.15625,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 122
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 1040.78125,
+          "left": 46,
+          "right": 296,
+          "width": 250,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 5743.15625,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 86.375
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 7256.34375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 7328.34375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 342,
+          "naturalHeight": 342,
+          "renderedWidth": 340
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 626,
+          "left": 46,
+          "right": 366,
+          "width": 320,
+          "height": 100.78125
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 1283.78125,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 108
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 2517.78125,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 72
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 3514.78125,
+          "left": 57,
+          "right": 333,
+          "width": 276,
+          "height": 108
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 4674.78125,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 82
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 1014.78125,
+          "left": 46,
+          "right": 366,
+          "width": 320,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 4908.78125,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 6352.78125,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 6424.78125,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 384,
+          "naturalHeight": 384,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 696,
+          "left": 58,
+          "right": 744,
+          "width": 686,
+          "height": 75.59375
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 1236.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 96
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 2070.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 96
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 2927.59375,
+          "left": 73,
+          "right": 695,
+          "width": 622,
+          "height": 144
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 3795.59375,
+          "left": 56,
+          "right": 712,
+          "width": 656,
+          "height": 123
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 963.59375,
+          "left": 58,
+          "right": 285.546875,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 4031.59375,
+          "left": 162.46875,
+          "right": 406.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 5478.65625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 5550.65625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 384,
+          "naturalHeight": 384,
+          "renderedWidth": 334.953125
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 272,
+          "left": 434.953125,
+          "right": 1000,
+          "width": 565.046875,
+          "height": 151.1875
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 920.1875,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 1614.1875,
+          "left": 24,
+          "right": 395.1875,
+          "width": 371.1875,
+          "height": 192
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 2359.1875,
+          "left": 73,
+          "right": 951,
+          "width": 878,
+          "height": 96
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 3147.1875,
+          "left": 128,
+          "right": 896,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 647.1875,
+          "left": 434.953125,
+          "right": 662.5,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3323.1875,
+          "left": 290.46875,
+          "right": 534.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3969.875,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4057.875,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 1279,
+      "scrollWidth": 1279,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 384,
+          "naturalHeight": 384,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 304.40625,
+          "left": 537.8125,
+          "right": 1215.5,
+          "width": 677.6875,
+          "height": 75.59375
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 845,
+          "left": 63.5,
+          "right": 831.5,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 1483,
+          "left": 63.5,
+          "right": 505.09375,
+          "width": 441.59375,
+          "height": 144
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 2172,
+          "left": 176.5,
+          "right": 1102.5,
+          "width": 926,
+          "height": 96
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 2960,
+          "left": 255.5,
+          "right": 1023.5,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 572,
+          "left": 537.8125,
+          "right": 765.359375,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3136,
+          "left": 417.96875,
+          "right": 661.515625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3782.6875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 3870.6875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/about/imran",
+      "status": 200,
+      "errors": [],
+      "title": "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen | PandaCodeGen",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Imran Raza Ladhani"
+      ],
+      "founderImages": [
+        {
+          "alt": "Imran Raza Ladhani, co-founder of PandaCodeGen",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=384&q=75",
+          "naturalWidth": 384,
+          "naturalHeight": 384,
+          "renderedWidth": 382
+        }
+      ],
+      "headings": [
+        {
+          "text": "Imran Raza Ladhani",
+          "top": 304.40625,
+          "left": 618.3125,
+          "right": 1296,
+          "width": 677.6875,
+          "height": 75.59375
+        },
+        {
+          "text": "The destination follows the operating requirements.",
+          "top": 845,
+          "left": 144,
+          "right": 912,
+          "width": 768,
+          "height": 96
+        },
+        {
+          "text": "Questions answered before implementation",
+          "top": 1483,
+          "left": 144,
+          "right": 585.59375,
+          "width": 441.59375,
+          "height": 144
+        },
+        {
+          "text": "Imran owns Panda Patches. It is not a client testimonial.",
+          "top": 2172,
+          "left": 257,
+          "right": 1183,
+          "width": 926,
+          "height": 96
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 2960,
+          "left": 336,
+          "right": 1104,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 19.75,
+          "left": 1135.890625,
+          "right": 1336,
+          "width": 200.109375,
+          "height": 44
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "A",
+          "href": "/contact#contact-quote-form",
+          "type": null,
+          "top": 572,
+          "left": 618.3125,
+          "right": 845.859375,
+          "width": 227.546875,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 3136,
+          "left": 498.46875,
+          "right": 742.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3750.6875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 3822.6875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 138,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 109.5625
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 789.75,
+          "left": 49,
+          "right": 271,
+          "width": 222,
+          "height": 50
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 2183.125,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 124
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 4262.96875,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 115.390625
+        },
+        {
+          "text": "Migrations engineered around what can break.",
+          "top": 6029.359375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 184
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 9390.359375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 183
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 11688.359375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 109
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 12536.109375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 82
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 15332.421875,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 82
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 17097.421875,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "text": "Latest Insights",
+          "top": 23202.421875,
+          "left": 24,
+          "right": 227.828125,
+          "width": 203.828125,
+          "height": 36
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 24503.421875,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 122
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 569.5625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 56
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 641.5625,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 60
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 1376.75,
+          "left": 49,
+          "right": 271,
+          "width": 222,
+          "height": 54.375
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 24803.421875,
+          "left": 48,
+          "right": 272,
+          "width": 224,
+          "height": 86.375
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 26316.609375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 26388.609375,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 56,
+        "buttonWidth": 272,
+        "groupHeight": 132,
+        "slotHeight": 132,
+        "slotMinHeight": "132px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 138,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 74.375
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 685.0625,
+          "left": 49,
+          "right": 341,
+          "width": 292,
+          "height": 50
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 2000.0625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 124
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 4025.75,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 77.59375
+        },
+        {
+          "text": "Migrations engineered around what can break.",
+          "top": 5614.34375,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 137
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 8390.40625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 110
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 10295.40625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 73
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 11051.15625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 82
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 13706.46875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 82
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 15387.46875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 108
+        },
+        {
+          "text": "Latest Insights",
+          "top": 20324.46875,
+          "left": 24,
+          "right": 227.828125,
+          "width": 203.828125,
+          "height": 36
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 21625.46875,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 82
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 464.875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 56
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 536.875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 60
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 1272.0625,
+          "left": 49,
+          "right": 341,
+          "width": 292,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 21859.46875,
+          "left": 48,
+          "right": 342,
+          "width": 294,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 23303.46875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 23375.46875,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 56,
+        "buttonWidth": 342,
+        "groupHeight": 132,
+        "slotHeight": 132,
+        "slotMinHeight": "132px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 146,
+          "left": 24,
+          "right": 696,
+          "width": 672,
+          "height": 37.1875
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 541.375,
+          "left": 53,
+          "right": 571,
+          "width": 518,
+          "height": 30
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 1593.765625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 123
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 3189.65625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 103.78125
+        },
+        {
+          "text": "Migrations engineered around\nwhat can break.",
+          "top": 4628.4375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 120
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 6393.0625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 150
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 7614.0625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 8350.8125,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 51
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 9895.0625,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 51
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 10902.6875,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "text": "Latest Insights",
+          "top": 13773.28125,
+          "left": 24,
+          "right": 268.59375,
+          "width": 244.59375,
+          "height": 40
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 14433.375,
+          "left": 56,
+          "right": 712,
+          "width": 656,
+          "height": 123
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 389.1875,
+          "left": 24,
+          "right": 271.546875,
+          "width": 247.546875,
+          "height": 56
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 389.1875,
+          "left": 287.546875,
+          "right": 482.203125,
+          "width": 194.65625,
+          "height": 60
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 972.375,
+          "left": 53,
+          "right": 571,
+          "width": 518,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 14669.375,
+          "left": 162.46875,
+          "right": 406.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 16116.4375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 16188.4375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 56,
+        "buttonWidth": 248,
+        "groupHeight": 60,
+        "slotHeight": 60,
+        "slotMinHeight": "60px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 334.046875,
+          "left": 24,
+          "right": 480,
+          "width": 456,
+          "height": 94.09375
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 196.1875,
+          "left": 573,
+          "right": 971,
+          "width": 398,
+          "height": 30
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 1285.375,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 2981.390625,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 103.78125
+        },
+        {
+          "text": "Migrations engineered around\nwhat can break.",
+          "top": 4360.171875,
+          "left": 128,
+          "right": 896,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 5753.546875,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 6842.546875,
+          "left": 152,
+          "right": 872,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 7579.296875,
+          "left": 24,
+          "right": 1000,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 9055.546875,
+          "left": 24,
+          "right": 1000,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 10023.640625,
+          "left": 152,
+          "right": 872,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "text": "Latest Insights",
+          "top": 12945.40625,
+          "left": 24,
+          "right": 268.59375,
+          "width": 244.59375,
+          "height": 40
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 13636.203125,
+          "left": 128,
+          "right": 896,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 709.140625,
+          "left": 24,
+          "right": 270.25,
+          "width": 246.25,
+          "height": 80
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 709.140625,
+          "left": 286.25,
+          "right": 480,
+          "width": 193.75,
+          "height": 84
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 651.1875,
+          "left": 573,
+          "right": 971,
+          "width": 398,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 13812.203125,
+          "left": 290.46875,
+          "right": 534.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 14458.890625,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 14546.890625,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 80,
+        "buttonWidth": 246,
+        "groupHeight": 84,
+        "slotHeight": 84,
+        "slotMinHeight": "84px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 1279,
+      "scrollWidth": 1279,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 294.6875,
+          "left": 151.5,
+          "right": 607.5,
+          "width": 456,
+          "height": 172.796875
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 196.1875,
+          "left": 700.5,
+          "right": 1098.5,
+          "width": 398,
+          "height": 30
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 1298.125,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 3022.015625,
+          "left": 24,
+          "right": 792,
+          "width": 768,
+          "height": 103.78125
+        },
+        {
+          "text": "Migrations engineered around\nwhat can break.",
+          "top": 4380.796875,
+          "left": 255.5,
+          "right": 1023.5,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 5774.171875,
+          "left": 151.5,
+          "right": 919.5,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 6863.171875,
+          "left": 279.5,
+          "right": 999.5,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 7599.921875,
+          "left": 151.5,
+          "right": 1127.5,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 9076.171875,
+          "left": 151.5,
+          "right": 1127.5,
+          "width": 976,
+          "height": 51
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 10058.359375,
+          "left": 279.5,
+          "right": 999.5,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "text": "Latest Insights",
+          "top": 13015.359375,
+          "left": 24,
+          "right": 268.59375,
+          "width": 244.59375,
+          "height": 40
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 13727.296875,
+          "left": 255.5,
+          "right": 1023.5,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 748.484375,
+          "left": 151.5,
+          "right": 397.75,
+          "width": 246.25,
+          "height": 80
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 748.484375,
+          "left": 413.75,
+          "right": 607.5,
+          "width": 193.75,
+          "height": 84
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 651.1875,
+          "left": 700.5,
+          "right": 1098.5,
+          "width": 398,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 13903.296875,
+          "left": 417.96875,
+          "right": 661.515625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 14549.984375,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 14637.984375,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 80,
+        "buttonWidth": 246,
+        "groupHeight": 84,
+        "slotHeight": 84,
+        "slotMinHeight": "84px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "title": "Custom Website Design & Development | PandaCodeGen",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Websites built for the way you do business."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Websites built for the way you do business.",
+          "top": 353,
+          "left": 104,
+          "right": 688,
+          "width": 584,
+          "height": 131.1875
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 196.1875,
+          "left": 781,
+          "right": 1299,
+          "width": 518,
+          "height": 30
+        },
+        {
+          "text": "Look at the work before you read about it.",
+          "top": 1274.1875,
+          "left": 80,
+          "right": 848,
+          "width": 768,
+          "height": 123
+        },
+        {
+          "text": "Client words with a source you can open.",
+          "top": 3010.125,
+          "left": 80,
+          "right": 848,
+          "width": 768,
+          "height": 103.78125
+        },
+        {
+          "text": "Migrations engineered around\nwhat can break.",
+          "top": 4368.90625,
+          "left": 336,
+          "right": 1104,
+          "width": 768,
+          "height": 120
+        },
+        {
+          "text": "Features built around your business. Fewer subscriptions to manage.",
+          "top": 5720.03125,
+          "left": 104,
+          "right": 872,
+          "width": 768,
+          "height": 150
+        },
+        {
+          "text": "Websites and online stores, from $1,500.",
+          "top": 6785.03125,
+          "left": 360,
+          "right": 1080,
+          "width": 720,
+          "height": 42
+        },
+        {
+          "text": "From First Call to Launch.",
+          "top": 7521.78125,
+          "left": 104,
+          "right": 1336,
+          "width": 1232,
+          "height": 51
+        },
+        {
+          "text": "Founder-built, not farmed out.",
+          "top": 8998.03125,
+          "left": 104,
+          "right": 1336,
+          "width": 1232,
+          "height": 51
+        },
+        {
+          "text": "Common questions about migrating your platform",
+          "top": 9980.21875,
+          "left": 360,
+          "right": 1080,
+          "width": 720,
+          "height": 80
+        },
+        {
+          "text": "Latest Insights",
+          "top": 12937.21875,
+          "left": 80,
+          "right": 324.59375,
+          "width": 244.59375,
+          "height": 40
+        },
+        {
+          "text": "Have something in mind?",
+          "top": 13649.15625,
+          "left": 336,
+          "right": 1104,
+          "width": 768,
+          "height": 63
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 19.0625,
+          "left": 1135.890625,
+          "right": 1336,
+          "width": 200.109375,
+          "height": 44
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 690.1875,
+          "left": 104,
+          "right": 351.546875,
+          "width": 247.546875,
+          "height": 56
+        },
+        {
+          "text": "See our work",
+          "tag": "A",
+          "href": "/work",
+          "type": null,
+          "top": 690.1875,
+          "left": 367.546875,
+          "right": 562.203125,
+          "width": 194.65625,
+          "height": 60
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 627.1875,
+          "left": 781,
+          "right": 1299,
+          "width": 518,
+          "height": 48
+        },
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "button",
+          "top": 13825.15625,
+          "left": 498.46875,
+          "right": 742.015625,
+          "width": 243.546875,
+          "height": 59.1875
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 14439.84375,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 14511.84375,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        }
+      ],
+      "heroCta": {
+        "label": "Talk to the founders",
+        "buttonHeight": 56,
+        "buttonWidth": 248,
+        "groupHeight": 60,
+        "slotHeight": 60,
+        "slotMinHeight": "60px",
+        "groupClass": "flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up",
+        "slotClass": "min-h-[132px] sm:min-h-[60px] lg:min-h-[84px] xl:min-h-[60px]"
+      },
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 164,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 88.375
+        },
+        {
+          "text": "Publication controls",
+          "top": 1194.375,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 37.5
+        },
+        {
+          "text": "Review and freshness",
+          "top": 3214.875,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 75
+        },
+        {
+          "text": "Content review status",
+          "top": 3774.875,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 75
+        },
+        {
+          "text": "How this content is produced",
+          "top": 4470.875,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 75
+        },
+        {
+          "text": "Report a correction",
+          "top": 5614.875,
+          "left": 45,
+          "right": 275,
+          "width": 230,
+          "height": 75
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 6163.875,
+          "left": 20,
+          "right": 188.46875,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 7454.25,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 7526.25,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 164,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 88.375
+        },
+        {
+          "text": "Publication controls",
+          "top": 1194.375,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 37.5
+        },
+        {
+          "text": "Review and freshness",
+          "top": 2946.875,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 37.5
+        },
+        {
+          "text": "Content review status",
+          "top": 3385.375,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 37.5
+        },
+        {
+          "text": "How this content is produced",
+          "top": 3959.875,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 75
+        },
+        {
+          "text": "Report a correction",
+          "top": 4923.875,
+          "left": 45,
+          "right": 345,
+          "width": 300,
+          "height": 37.5
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 5407.375,
+          "left": 20,
+          "right": 188.46875,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 6655.75,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 6727.75,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 196,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 93.21875
+        },
+        {
+          "text": "Publication controls",
+          "top": 955.21875,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 45
+        },
+        {
+          "text": "Review and freshness",
+          "top": 2167.21875,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 37.5
+        },
+        {
+          "text": "Content review status",
+          "top": 2509.71875,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 37.5
+        },
+        {
+          "text": "How this content is produced",
+          "top": 2904.21875,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 37.5
+        },
+        {
+          "text": "Report a correction",
+          "top": 3482.71875,
+          "left": 65,
+          "right": 703,
+          "width": 638,
+          "height": 37.5
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 3800.21875,
+          "left": 567.53125,
+          "right": 736,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 5136.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 5208.59375,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 196,
+          "left": 32,
+          "right": 583.375,
+          "width": 551.375,
+          "height": 124.625
+        },
+        {
+          "text": "Publication controls",
+          "top": 702.625,
+          "left": 336,
+          "right": 992,
+          "width": 656,
+          "height": 45
+        },
+        {
+          "text": "Review and freshness",
+          "top": 1970.625,
+          "left": 336,
+          "right": 992,
+          "width": 656,
+          "height": 37.5
+        },
+        {
+          "text": "Content review status",
+          "top": 2313.125,
+          "left": 336,
+          "right": 992,
+          "width": 656,
+          "height": 37.5
+        },
+        {
+          "text": "How this content is produced",
+          "top": 2735.625,
+          "left": 336,
+          "right": 992,
+          "width": 656,
+          "height": 37.5
+        },
+        {
+          "text": "Report a correction",
+          "top": 3342.125,
+          "left": 369,
+          "right": 959,
+          "width": 590,
+          "height": 37.5
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 3659.625,
+          "left": 823.53125,
+          "right": 992,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 4195.625,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4283.625,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 1279,
+      "scrollWidth": 1279,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 196,
+          "left": 63.5,
+          "right": 733.03125,
+          "width": 669.53125,
+          "height": 154.9375
+        },
+        {
+          "text": "Publication controls",
+          "top": 700.9375,
+          "left": 367.5,
+          "right": 1215.5,
+          "width": 848,
+          "height": 45
+        },
+        {
+          "text": "Review and freshness",
+          "top": 1856.9375,
+          "left": 367.5,
+          "right": 1215.5,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "Content review status",
+          "top": 2171.4375,
+          "left": 367.5,
+          "right": 1215.5,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "How this content is produced",
+          "top": 2537.9375,
+          "left": 367.5,
+          "right": 1215.5,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "Report a correction",
+          "top": 3088.4375,
+          "left": 400.5,
+          "right": 1182.5,
+          "width": 782,
+          "height": 37.5
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 3405.9375,
+          "left": 1047.03125,
+          "right": 1215.5,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3941.9375,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4029.9375,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/editorial-policy",
+      "status": 200,
+      "errors": [],
+      "title": "Editorial & Evidence Policy | PandaCodeGen",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Editorial &\nevidence policy."
+      ],
+      "founderImages": [],
+      "headings": [
+        {
+          "text": "Editorial &\nevidence policy.",
+          "top": 196,
+          "left": 144,
+          "right": 813.53125,
+          "width": 669.53125,
+          "height": 158.5
+        },
+        {
+          "text": "Publication controls",
+          "top": 704.5,
+          "left": 448,
+          "right": 1296,
+          "width": 848,
+          "height": 45
+        },
+        {
+          "text": "Review and freshness",
+          "top": 1860.5,
+          "left": 448,
+          "right": 1296,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "Content review status",
+          "top": 2175,
+          "left": 448,
+          "right": 1296,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "How this content is produced",
+          "top": 2541.5,
+          "left": 448,
+          "right": 1296,
+          "width": 848,
+          "height": 37.5
+        },
+        {
+          "text": "Report a correction",
+          "top": 3092,
+          "left": 481,
+          "right": 1263,
+          "width": 782,
+          "height": 37.5
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 19.859375,
+          "left": 1135.890625,
+          "right": 1336,
+          "width": 200.109375,
+          "height": 44
+        },
+        {
+          "text": "Contact the founders",
+          "tag": "A",
+          "href": "/contact",
+          "type": null,
+          "top": 3409.5,
+          "left": 1127.53125,
+          "right": 1296,
+          "width": 168.46875,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3913.5,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 3985.5,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": null,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 320,
+      "scrollWidth": 320,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 148,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 95.25
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 836.6875,
+          "left": 41,
+          "right": 279,
+          "width": 238,
+          "height": 60
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1880.875,
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 538.5,
+          "left": 20,
+          "right": 154,
+          "width": 134,
+          "height": 144.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 538.5,
+          "left": 166,
+          "right": 300,
+          "width": 134,
+          "height": 144.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 1538.875,
+          "left": 41,
+          "right": 279,
+          "width": 238,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 4016.8125,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 4088.8125,
+          "left": 24,
+          "right": 296,
+          "width": 272,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 390,
+      "scrollWidth": 390,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 148,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 95.25
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 807.4375,
+          "left": 41,
+          "right": 349,
+          "width": 308,
+          "height": 60
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1815.625,
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 509.25,
+          "left": 20,
+          "right": 189,
+          "width": 169,
+          "height": 144.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 509.25,
+          "left": 201,
+          "right": 370,
+          "width": 169,
+          "height": 144.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 1493.625,
+          "left": 41,
+          "right": 349,
+          "width": 308,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3837.5625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 3909.5625,
+          "left": 24,
+          "right": 366,
+          "width": 342,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 768,
+      "scrollWidth": 768,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 180,
+          "left": 32,
+          "right": 608,
+          "width": 576,
+          "height": 48.625
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 699.5625,
+          "left": 65,
+          "right": 703,
+          "width": 638,
+          "height": 37.5
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1567.25,
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 465.375,
+          "left": 32,
+          "right": 374,
+          "width": 342,
+          "height": 68.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 465.375,
+          "left": 394,
+          "right": 736,
+          "width": 342,
+          "height": 68.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 1241.25,
+          "left": 65,
+          "right": 703,
+          "width": 638,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 3290.8125,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 3362.8125,
+          "left": 24,
+          "right": 744,
+          "width": 720,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 196,
+          "left": 32,
+          "right": 454.640625,
+          "width": 422.640625,
+          "height": 110.53125
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 177,
+          "left": 551.640625,
+          "right": 959,
+          "width": 407.359375,
+          "height": 75
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1106.1875,
+          "left": 32,
+          "right": 992,
+          "width": 960,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 483.28125,
+          "left": 32,
+          "right": 233.3125,
+          "width": 201.3125,
+          "height": 144.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 483.28125,
+          "left": 253.3125,
+          "right": 454.640625,
+          "width": 201.328125,
+          "height": 144.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 780.1875,
+          "left": 551.640625,
+          "right": 959,
+          "width": 407.359375,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 1981.375,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 2069.375,
+          "left": 543.984375,
+          "right": 740,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 1279,
+      "scrollWidth": 1279,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 196,
+          "left": 63.5,
+          "right": 576.703125,
+          "width": 513.203125,
+          "height": 138.5625
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 177,
+          "left": 673.703125,
+          "right": 1182.5,
+          "width": 508.796875,
+          "height": 37.5
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1044.6875,
+          "left": 63.5,
+          "right": 1215.5,
+          "width": 1152,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 511.3125,
+          "left": 63.5,
+          "right": 310.09375,
+          "width": 246.59375,
+          "height": 144.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 511.3125,
+          "left": 330.09375,
+          "right": 576.703125,
+          "width": 246.609375,
+          "height": 144.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 718.6875,
+          "left": 673.703125,
+          "right": 1182.5,
+          "width": 508.796875,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 1895.875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 80
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 1983.875,
+          "left": 671.484375,
+          "right": 867.5,
+          "width": 196.015625,
+          "height": 100
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "errors": [],
+      "title": "Talk to the founders | PandaCodeGen",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "h1": [
+        "Talk directly to the founders."
+      ],
+      "founderImages": [
+        {
+          "alt": "Hassan Jamal",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fhassan.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        },
+        {
+          "alt": "Imran Raza Ladhani",
+          "src": "http://localhost:3000/_next/image?url=%2Fteam%2Fimran.png&w=64&q=75",
+          "naturalWidth": 64,
+          "naturalHeight": 64,
+          "renderedWidth": 64
+        }
+      ],
+      "headings": [
+        {
+          "text": "Talk directly to the founders.",
+          "top": 196,
+          "left": 144,
+          "right": 657.203125,
+          "width": 513.203125,
+          "height": 156.625
+        },
+        {
+          "text": "What would you like help with?",
+          "top": 177,
+          "left": 754.203125,
+          "right": 1263,
+          "width": 508.796875,
+          "height": 37.5
+        },
+        {
+          "text": "A simple next step.",
+          "top": 1044.6875,
+          "left": 144,
+          "right": 1296,
+          "width": 1152,
+          "height": 32
+        },
+        {
+          "text": "Cookie preferences",
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        }
+      ],
+      "ctas": [
+        {
+          "text": "Talk to the founders",
+          "tag": "BUTTON",
+          "href": null,
+          "type": null,
+          "top": 19.859375,
+          "left": 1135.890625,
+          "right": 1336,
+          "width": 200.109375,
+          "height": 44
+        },
+        {
+          "text": "Hassan Jamal\nCo-founder\nMeet Hassan",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 529.375,
+          "left": 144,
+          "right": 390.59375,
+          "width": 246.59375,
+          "height": 68.1875
+        },
+        {
+          "text": "Imran Raza Ladhani\nCo-founder\nMeet Imran",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 529.375,
+          "left": 410.59375,
+          "right": 657.203125,
+          "width": 246.609375,
+          "height": 68.1875
+        },
+        {
+          "text": "Send your message",
+          "tag": "BUTTON",
+          "href": null,
+          "type": "submit",
+          "top": 718.6875,
+          "left": 754.203125,
+          "right": 1263,
+          "width": 508.796875,
+          "height": 56
+        },
+        {
+          "text": "Hassan Jamal\n\nCo-founder and Lead Engineer.",
+          "tag": "A",
+          "href": "/about/hassan",
+          "type": null,
+          "top": 1863.875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        },
+        {
+          "text": "Imran Raza Ladhani\n\nCo-founder and Lead Architect.",
+          "tag": "A",
+          "href": "/about/imran",
+          "type": null,
+          "top": 1935.875,
+          "left": 752,
+          "right": 1012,
+          "width": 260,
+          "height": 64
+        }
+      ],
+      "heroCta": null,
+      "contactDetailsOpen": false,
+      "brokenAnchors": []
+    }
+  ],
+  "interactions": [
+    {
+      "surface": "contact form",
+      "width": 320,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "contact form",
+      "width": 390,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "contact form",
+      "width": 768,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "contact form",
+      "width": 1024,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "contact form",
+      "width": 1279,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "contact form",
+      "width": 1440,
+      "errors": [],
+      "closedInitially": true,
+      "phoneHiddenInitially": true,
+      "enterOpens": true,
+      "nextFocusAfterOpen": "contact-phone",
+      "spaceCloses": true,
+      "nextFocusAfterClose": {
+        "tag": "BUTTON",
+        "type": "submit",
+        "text": "Send your message"
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "alerts": [
+          "Enter your name.",
+          "Enter your email address."
+        ],
+        "calls": 0
+      },
+      "invalidEmail": {
+        "invalid": "true",
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failure": {
+        "alert": [
+          "QA simulated failure. Please try again."
+        ],
+        "nameRetained": "Browser QA",
+        "messageRetained": "Mocked browser verification. No real submission.",
+        "buttonEnabled": true
+      },
+      "successVisible": true,
+      "reset": {
+        "name": "",
+        "email": "",
+        "detailsClosed": true
+      },
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 320,
+      "errors": [],
+      "headerLabel": "Talk to us",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 12,
+        "y": 36,
+        "width": 296,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 0
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 390,
+      "errors": [],
+      "headerLabel": "Talk to us",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 12,
+        "y": 36,
+        "width": 366,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "pendingCloseReopen": {
+        "freshFormVisible": true,
+        "nameReset": "",
+        "submitEnabled": true,
+        "staleSuccessAbsent": true
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 1
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 1
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 200
+        },
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 768,
+      "errors": [],
+      "headerLabel": "Talk to us",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 96,
+        "y": 36,
+        "width": 576,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 0
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 1024,
+      "errors": [],
+      "headerLabel": "Talk to us",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 224,
+        "y": 36,
+        "width": 576,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 0
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 1279,
+      "errors": [],
+      "headerLabel": "Talk to us",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 351.5,
+        "y": 36,
+        "width": 576,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "pendingCloseReopen": {
+        "freshFormVisible": true,
+        "nameReset": "",
+        "submitEnabled": true,
+        "staleSuccessAbsent": true
+      },
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 1
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 1
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 200
+        },
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    },
+    {
+      "surface": "header / hero / footer and enquiry modal",
+      "width": 1440,
+      "errors": [],
+      "headerLabel": "Talk to the founders",
+      "headerOpensModal": true,
+      "initialFocus": {
+        "id": "",
+        "label": "Close enquiry form"
+      },
+      "modalBounds": {
+        "x": 432,
+        "y": 36,
+        "width": 576,
+        "height": 828
+      },
+      "modalFitsWidth": true,
+      "modalHorizontalOverflow": false,
+      "reverseTabStaysInside": true,
+      "phoneEnterOpens": true,
+      "phoneNextFocus": "quote-phone",
+      "phoneSpaceCloses": true,
+      "emptyValidation": {
+        "name": "true",
+        "email": "true",
+        "calls": 0
+      },
+      "invalidEmail": {
+        "alert": "Enter a valid email address.",
+        "calls": 0
+      },
+      "failurePreservesName": "Browser QA",
+      "successVisible": true,
+      "successRemainsUntilDismissed": true,
+      "doneRestoresFocus": true,
+      "successReopensFreshForm": true,
+      "escapeCloses": true,
+      "focusRestored": true,
+      "heroOpensModal": true,
+      "footerOpensModal": true,
+      "intercepted": [
+        {
+          "method": "POST",
+          "mockStatus": 503
+        },
+        {
+          "method": "POST",
+          "mockStatus": 200
+        }
+      ]
+    }
+  ],
+  "browser": "153.0.8010.12",
+  "lastRun": {
+    "phase": "contact",
+    "checkedAt": "2026-09-15T14:42:14.902Z",
+    "origin": "http://localhost:3000"
+  },
+  "imageVerification": {
+    "cases": 18,
+    "allLoaded": true,
+    "note": "Separate image pass uses decoded optimized image URLs; initial inventory incorrectly excluded encoded /team/ paths."
+  }
+}

@@ -1,5 +1,7 @@
 # PandaCodeGen homepage positioning
 
+**Pricing correction, later on 15 September:** the blanket recommendation below that online stores start at $5,000 is superseded. The existing ecommerce Starter supports simple stores from $1,500. The [follow-up audit](follow-up-audit.md) accepts that correction and identifies remaining contradictions in the homepage quiz, FAQs and other commercial surfaces. The earlier research is retained here as a dated record.
+
 **Recommendation: lead with custom websites and online stores, and move source-platform names into the existing-website service route.** The current opening describes a migration engagement accurately enough to attract that buyer, but gives new-build and other website buyers an unnecessarily narrow picture of the business. The correction needs to cover the opening argument, service paths and search descriptions together.
 
 This is a positioning recommendation, not a finding that WordPress, Wix or Squarespace caused visitors to leave. No experiment or visitor-level evidence establishes that causal claim. The evidence supports a clearer expression of the offer; it cannot identify a statistically best-performing headline.
