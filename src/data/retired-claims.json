@@ -84,8 +84,8 @@
     {
       "id": "mcp-hosting-cost-figures",
       "vendor": "PandaCodeGen (first-party evidence)",
-      "retiredAssertion": "The MyCustomPatches project cut hosting from $150/month to $0/month, and its rankings were held, on a record dated 21 July 2026.",
-      "whatChanged": "The figures are retired rather than pending: no invoices were kept and the client does not recall the amount, so nothing can be reconciled and no figure can honestly be restored. The dated confirmation is not held either. Only the delivery scope stands: every page, product and blog post migrated in about 22 days, with Search Console crawl validation before DNS cutover. Registered after both the French and German dictionaries were found still publishing the withdrawn figure, in a directory this guard did not scan.",
+      "retiredAssertion": "The MyCustomPatches project cut hosting from $150/month to $0/month.",
+      "whatChanged": "Retired, not pending: no hosting invoices were kept and the client does not recall the amount, so nothing can be reconciled and no figure can honestly be restored. See the hosting-cost metric in case-study-facts.json, which carries permanent: true for the same reason. Registered 15 Sep 2026 after the French and German dictionaries were found still publishing the figure in a directory this guard did not scan. SCOPE, corrected the same day: an earlier version of this entry also retired the ranking claim and said no dated confirmation is held. Both were wrong and contradicted the canon. The delivery scope, 200+ URLs, 13 templates and zero downtime are verified against an owner-approved project record dated 21 July 2026, and rankings are verified as none recorded in the 30 days after launch from a Search Console monitoring window. Only the hosting cost is retired here.",
       "pattern": "(150\\s*\\$|\\$\\s*150)[^.]{0,120}(0\\s*\\$|\\$\\s*0)[^.]{0,14}(month|mois|Monat|mo\\b)",
       "historicalOk": false,
       "source": "/work/mycustompatches",
