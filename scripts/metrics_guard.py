@@ -89,6 +89,17 @@ def rendered_pages() -> list[tuple[str, str]]:
         # Strip tags so we test what a reader or an extractor sees, but keep
         # <head> content because titles and meta descriptions are where the
         # stale numbers survived last time.
+        # METADATA AND STRUCTURED DATA ARE PULLED OUT BEFORE THE STRIP, added 15 Sep
+        # 2026. The comment above this function says titles and meta descriptions are
+        # "where the stale numbers survived last time" -- but only <title> survived the
+        # tag strip. A meta description lives in an ATTRIBUTE and JSON-LD lives inside a
+        # <script>, so both were being discarded before any check ran. "95% process
+        # automation" sat in this page's OG and Twitter descriptions for weeks and the
+        # guard could not see it. Both are published text; both are now checked.
+        ld_json = " ".join(re.findall(
+            r'<script[^>]+type="application/ld\+json"[^>]*>([\s\S]*?)</script>', html, re.I))
+        meta_content = " ".join(re.findall(r'<meta[^>]+content="([^"]*)"', html, re.I))
+
         # <style> is stripped for the same reason as <script>, added 15 Sep 2026:
         # a lab()/oklch() colour value is a dense run of digits and percent signs,
         # and "95%" matched inside one the moment the own-page rule below stopped
@@ -96,6 +107,7 @@ def rendered_pages() -> list[tuple[str, str]]:
         text = re.sub(r"<script[\s\S]*?</script>", " ", html)
         text = re.sub(r"<style[\s\S]*?</style>", " ", text)
         text = re.sub(r"<[^>]+>", " ", text)
+        text = " ".join([text, meta_content, ld_json])
         text = re.sub(r"\s+", " ", text)
         pages.append((str(f.relative_to(BUILD)), text))
     return pages
