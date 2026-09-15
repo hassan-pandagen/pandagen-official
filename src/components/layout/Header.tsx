@@ -51,7 +51,7 @@ const services = [
 
 const workLinks = [
   { name: "Our Work", href: "/work" },
-  { name: "Ask us about your site", href: "/contact" },
+  { name: "Talk to the founders", href: "/contact" },
 ];
 
 // The two founder links were removed in 3e93feb (30 Jul 2026) when the nav was
@@ -90,7 +90,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   }, []);
 
   // Let any CTA across the site open the quote modal via a window event,
-  // e.g. an "Ask us about your site" button. Keeps the modal a single instance.
+  // e.g. an "Talk to the founders" button. Keeps the modal a single instance.
   useEffect(() => {
     const openQuote = () => {
       if (onOpenQuote) onOpenQuote();
@@ -275,7 +275,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={handleOpenQuote}
               className="px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 bg-charcoal text-white hover:bg-cognac"
             >
-              Ask us about your site
+              Talk to the founders
             </button>
           </div>
 
@@ -298,7 +298,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={handleOpenQuote}
               className="min-h-11 whitespace-nowrap rounded-full bg-charcoal px-4 text-sm font-bold text-white transition-colors hover:bg-cognac focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
             >
-              Ask a question
+              Talk to us
             </button>
             <button
               ref={mobileMenuButtonRef}
@@ -391,7 +391,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={() => { setIsMobileMenuOpen(false); handleOpenQuote(); }}
               className="w-full max-w-xs py-4 bg-charcoal text-white font-bold rounded-full text-center hover:bg-cognac transition-all"
             >
-              Ask us about your site
+              Talk to the founders
             </button>
 
             <div className="w-full max-w-xs border-t border-stone-200 pt-5 flex justify-center">

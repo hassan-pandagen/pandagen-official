@@ -523,11 +523,11 @@ export default function AiSearchVisibilityTracking() {
                     </BlogText>
                     <BlogText>
                         If your own export shows impressions without clicks, or one page carrying everything, the
-                        diagnosis is usually in the page rather than in the platform. That is the same work as a{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">
-                            platform migration
-                        </Link>{" "}
-                        in reverse: instead of asking what a rebuild would cost, you are asking which pages already earn
+                        diagnosis is usually in the page rather than in the platform. That is the work behind{" "}
+                        <Link href="/services/ai-seo" className="text-cognac hover:underline">
+                            our AI SEO services
+                        </Link>:
+                        instead of asking what a rebuild would cost, you are asking which pages already earn
                         attention and what is stopping them converting it.
                     </BlogText>
 
@@ -567,7 +567,7 @@ export default function AiSearchVisibilityTracking() {
                             <ArrowLeft className="h-4 w-4" /> All articles
                         </Link>
                         <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-cognac hover:underline">
-                            Request a migration plan <ArrowRight className="h-4 w-4" />
+                            Talk to the founders <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
                 </div>

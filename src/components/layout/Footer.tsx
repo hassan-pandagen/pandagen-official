@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Route, Mail, type LucideIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MessageCircle, Mail, type LucideIcon } from "lucide-react";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 
 interface FooterProps {
@@ -26,28 +26,32 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
 
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-stone-300 mb-5 md:mb-8">
-              <Route className="w-3 h-3 text-orange-300" aria-hidden="true" />
-              Migration planning
+              <MessageCircle className="w-3 h-3 text-orange-300" aria-hidden="true" />
+              Work directly with the founders
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-5 md:mb-8 tracking-tight">
-              Need to move platforms without losing track of{" "}
-              <span className="font-serif italic text-orange-300">URLs, content, or integrations?</span>
+              Have something{" "}
+              <span className="font-serif italic text-orange-300">in mind?</span>
             </h2>
+            <p className="mx-auto mb-7 max-w-xl text-base leading-relaxed text-stone-300">
+              A new website, a store to improve, or a workflow to simplify. Tell Hassan or Imran what you need, even if you are still figuring it out.
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 type="button"
                 onClick={openQuote}
                 className="w-full sm:w-auto px-8 py-4 bg-white text-charcoal font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 transform duration-200"
               >
-                Ask us about your site <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                Talk to the founders <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </button>
               <Link
                 href="/pricing"
                 className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white hover:text-charcoal transition-all flex items-center justify-center gap-2"
               >
-                Review Example Scopes
+                Explore pricing
               </Link>
             </div>
+            <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-stone-400">A founder replies by email, usually within one business day. No obligation to start a project.</p>
           </div>
         </div>
       </div>
@@ -65,7 +69,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
                 PandaCodeGen<span className="text-cognac">.</span>
               </Link>
               <p className="mt-6 text-stone-600 leading-relaxed max-w-sm">
-                Website migration and custom web engineering for teams that need a documented URL, content, integration, measurement, cutover, and handover plan.
+                Custom websites, online stores and software. New builds, redesigns and migrations, with founders involved from the first conversation.
               </p>
               <ul className="mt-6 space-y-2 text-sm text-stone-600">
                 <li>
@@ -161,7 +165,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
               <FeaturedLink
                 href="/contact"
                 title="Contact"
-                desc="Describe the current site and migration goal."
+                desc="Talk directly with Hassan or Imran."
               />
             </div>
           </div>

@@ -629,7 +629,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             Starting anchors are $1,500, $3,500, and $5,000. Final pages, integrations, performance protocol, ownership, support, third-party costs, cutover, and remedy are defined in the accepted proposal or SOW.
                         </p>
                         <CalModalButton>
-                            Get Your Migration Plan <ArrowRight className="w-4 h-4" />
+                            Book a 15-min call <ArrowRight className="w-4 h-4" />
                         </CalModalButton>
                         <div className="mt-4 p-4 bg-white/10 border border-white/20 rounded-xl">
                             <p className="text-sm font-bold text-white flex items-center justify-center gap-2"><Scale className="w-4 h-4" /> Written acceptance terms</p>

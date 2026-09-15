@@ -18,12 +18,12 @@ export function HeroCTAs() {
             Opens the quote form (lower friction than Cal.com, better on mobile). */}
         <button
           onClick={() => {
-            trackGAEvent("cta_click", { cta: "get_migration_plan", location: "hero" });
+            trackGAEvent("cta_click", { cta: "talk_to_founders", location: "hero" });
             window.dispatchEvent(new Event("open-quote-modal"));
           }}
           className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full hover:bg-cognac transition-all duration-300 flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
         >
-          Ask us about your site <ArrowRight className="w-5 h-5 text-cognac" />
+          Talk to the founders <ArrowRight className="w-5 h-5 text-cognac" />
         </button>
 
         {/* Secondary CTA: White surface card */}

@@ -100,3 +100,86 @@ Public verification. Everything here is local. After the release, re-capture the
 homepage and `/services` HTML before treating any of it as exposure, and record the
 deployment date against the affected routes. Google's recrawl guidance is days to weeks
 and a request does not accelerate it.
+
+---
+
+# Second pass: the alignment-status table
+
+Applied 15 September 2026 against [alignment-status.md](alignment-status.md). Still
+committed and not deployed.
+
+## A real rendering bug, not a positioning choice
+
+`blog/topic/[topic]/page.tsx` built its closing button as `See the {label}` with a bare
+`"our services"` fallback. Any hub whose target was missing from `MONEY_LABEL` rendered
+**"See the our services"** — and `seo-and-ai-search` had been in exactly that state since
+its `ctaHref` moved to `/services/ai-seo` earlier the same day. That was my own
+regression: I changed the destination and left the label map.
+
+Fixed both the instance and the class. `/services/ai-seo` has an entry, and the button
+now builds the whole phrase, so the next unmapped route degrades to "See our services"
+rather than a broken sentence. Verified by reading the rendered text of all eleven hub
+pages: no fallback left, and `seo-and-ai-search` now reads "See the AI SEO service".
+
+A dead `moneyLabel` variable was removed in the same edit.
+
+## Company pages
+
+| Surface | Was | Now |
+| --- | --- | --- |
+| `/about` H1 | "Reduce migration risk" | "Decide what to build" |
+| `/about` intro | "helps businesses plan and implement website migrations" | Three routes in — from nothing, a replacement, or a move |
+| Hassan intro + H2 | "SEO-safe website migrations…", "Engineering follows the written migration plan." | Builds from scratch first, migrations where there is a site to move |
+| Imran intro | "decides whether a migration is actually justified" | Decides what a project is built from; migration judgement kept |
+| `/ai-info` intro | "moves revenue-generating WordPress, Webflow and GoHighLevel sites" | Builds websites, stores and software; moving an existing site is one route |
+| `/ai-info` company FAQ | application work available "when the migration requires it" | Available on its own terms |
+| `/ai-info` price FAQ | Starter is "up to 7 pages **that we build and update for you**" | "with a content editor for your words, images and business details" |
+
+That last one was a direct contradiction of the hero pill shipped hours earlier, which
+now reads "Content editor · Training · Code you own".
+
+## Social images
+
+`og.ts` "Engineers Behind the Migration" → "The Engineers Behind the Build"; "Migration
+Scope and Pricing" → "Project Scope and Pricing". These are used: the dynamic `/og?path=`
+image is on 145 of 146 pages.
+
+The root fallback `opengraph-image.tsx` ("Move Platforms With a Documented Migration
+Plan") was corrected too, but the audit's caution was warranted and is now measured:
+**exactly one generated page uses it** — `/services/wordpress`, the same 308 redirect
+artifact that is the only consumer of the root meta description. It is corrected for
+accuracy and future routes, not because it is displayed.
+
+## Blog commercial sections
+
+- **AEO playbook** — two narrow company blurbs broadened; "a larger migration" scope
+  reworded; the "2 to 5 week build timeline" requirement replaced with the published
+  per-tier ranges, which are 1–2, 2–4 and 3–6; the fit list now admits first-time
+  builders. A paragraph was added routing readers to `/services/ai-seo` at $500/month,
+  because the work the article describes is continuous and the three prices above it are
+  build prices. The article's subject, title and URL are unchanged.
+- **AI visibility guide** — its service link pointed at `/services/wordpress-migration`
+  from an AI-visibility article; now `/services/ai-seo`. The bottom "Request a migration
+  plan" link to `/contact` now reads "Talk to the founders". Its labelled calendar
+  read-through was left alone, as the status note said it should be.
+
+## CTA labels matched to their actual interaction
+
+Not one replacement across all types — the two kinds were separated first.
+
+- Four **calendar** buttons said "Get Your Migration Plan" while opening a booking
+  widget: `divi-theme-slow`, `gohighlevel-keep-crm-replace-website`,
+  `gohighlevel-website-speed`, `best-website-builder-for-gohighlevel-agencies`. Now
+  "Book a 15-min call".
+- Three **enquiry modal** buttons said the same thing while opening a form:
+  `woocommerce-migration-cost`, `woocommerce-too-slow`, `woocommerce-vs-custom-website`.
+  Now "Ask us about your store".
+- Headings above them keep migration wording where the article is about leaving that
+  platform. A heading is not a button label.
+
+## Not done, on the status document's own reasoning
+
+- The blog index title and H1 still describe migration, SEO and performance guides. That
+  describes a collection of articles and is not a false company claim.
+- The Pricing page's 2–4 weeks stays. It belongs to the Growth card, where it is correct.
+- No specialist page renamed, no article title or URL changed.

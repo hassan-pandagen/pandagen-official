@@ -117,7 +117,7 @@ export default function HassanProfilePage() {
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Engineer</p>
               <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Hassan Jamal</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                Hassan leads implementation at PandaCodeGen. His work covers SEO-safe website migrations, custom Next.js applications, performance engineering, technical QA, and the handover required to keep clients in control of their platform.
+                Hassan leads implementation at PandaCodeGen. His work covers custom Next.js websites and stores built from scratch, applications and integrations, performance engineering, technical QA, SEO-safe migrations when there is a site to move, and the handover required to keep clients in control of their platform.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
@@ -135,7 +135,7 @@ export default function HassanProfilePage() {
       <section className="px-6 py-16 md:py-24" aria-labelledby="hassan-responsibilities">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Delivery responsibility</p>
-          <h2 id="hassan-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">Engineering follows the written migration plan.</h2>
+          <h2 id="hassan-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">Engineering follows the written plan.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {responsibilities.map(({ icon: Icon, title, body }) => (
               <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">

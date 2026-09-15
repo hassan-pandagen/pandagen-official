@@ -2,6 +2,8 @@
 
 Researched 15 September 2026 using repository source, generated HTML, current localhost responses, current public HTTP responses, official search documentation and eight competitor-page HTML captures. Application code was not changed in this research pass.
 
+**Subsequent source update:** the root metadata, shared Organization facts and services introduction/metadata have since been corrected. The original findings below remain the record of the audited version. See [current alignment status](alignment-status.md) for resolved items and the remaining copy/metadata gaps.
+
 ## Verdict
 
 Correct the outdated company positioning and the services timeline. However, the claim that `layout.tsx:54` is the highest-leverage sentence seen by Google and every assistant is not supported by the implementation or search documentation.

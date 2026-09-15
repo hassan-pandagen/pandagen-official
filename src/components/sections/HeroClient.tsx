@@ -2,19 +2,21 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const HeroCTAs = dynamic(
   () => import("./HeroAnimated").then((m) => m.HeroCTAs),
   { ssr: false, loading: () => (
     <div className="flex flex-col sm:flex-row items-start gap-4">
       <button
+        type="button"
         onClick={() => { if (typeof window !== "undefined") window.dispatchEvent(new Event("open-quote-modal")); }}
         className="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-xl cursor-pointer"
       >
-        Ask us about your site
+        Talk to the founders <ArrowRight className="w-5 h-5 text-cognac" aria-hidden="true" />
       </button>
       <a href="/work" className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-charcoal text-charcoal font-bold text-base rounded-full flex items-center justify-center gap-2 shadow-card">
-        See our work
+        See our work <ArrowRight className="w-4 h-4" aria-hidden="true" />
       </a>
     </div>
   )}

@@ -66,7 +66,7 @@ const referenceLinks = [
 const faqs = [
   {
     question: "What does PandaCodeGen do?",
-    answer: "PandaCodeGen designs and builds custom business websites and online stores, from a first website to the replacement of one a business has outgrown. Migration is one delivery situation rather than the whole offer, and SEO-safe migration controls apply when there is an existing site to move. Custom Next.js, commerce, integration, and application work remains available when discovery shows that the migration requires it.",
+    answer: "PandaCodeGen designs and builds custom business websites and online stores, from a first website to the replacement of one a business has outgrown. Migration is one delivery situation rather than the whole offer, and SEO-safe migration controls apply when there is an existing site to move. Custom Next.js, commerce, integration and application work is available on its own terms, not only where a move requires it.",
   },
   {
     question: "Does SEO-safe mean rankings are guaranteed?",
@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     question: "How much does a project cost?",
-    answer: "Public starting points are $1,500 for up to 7 pages that we build and update for you, $3,500 for 8 to 20 pages with a CMS you edit yourself, and $5,000 for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. Discovery can add or remove features and pages. The accepted written scope controls the final price and deliverables.",
+    answer: "Public starting points are $1,500 for up to 7 pages with a content editor for your words, images and business details, $3,500 for 8 to 20 pages with a CMS you edit yourself, and $5,000 for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. Discovery can add or remove features and pages. The accepted written scope controls the final price and deliverables.",
   },
   {
     question: "How are payment and refunds handled?",
@@ -183,7 +183,7 @@ export default function CompanyReferencePage() {
               PandaCodeGen facts, process, and <span className="font-serif font-normal italic text-cognac">commercial starting points.</span>
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-              PandaCodeGen moves revenue-generating WordPress, Webflow and GoHighLevel sites with every existing address mapped and redirected, metadata carried across, and Search Console monitored after cutover. Custom Next.js, commerce, integration and application work remains available when the migration requires it.
+              PandaCodeGen designs and builds custom business websites, online stores and software on Next.js. A project can start from nothing, replace a site a business has outgrown, or move an existing WordPress, Webflow or GoHighLevel site with every existing address mapped and redirected, metadata carried across, and Search Console monitored after cutover.
             </p>
             <p className="mt-5 max-w-3xl rounded-xl border border-stone-200 bg-stone-50 px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">
               {OFFER_LINE}

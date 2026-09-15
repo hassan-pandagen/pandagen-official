@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Mail } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
@@ -33,6 +33,14 @@ const controls = [
   ["Corrections", "Material errors are corrected in the page and its metadata. A correction note should be added when the change affects the conclusion or a reader's commercial decision."],
 ];
 
+const contents = [
+  { id: "publication-controls", label: "Publication controls" },
+  { id: "review-and-freshness", label: "Review and freshness" },
+  { id: "content-review-status", label: "Content review status" },
+  { id: "how-content-is-produced", label: "How content is produced" },
+  { id: "report-a-correction", label: "Report a correction" },
+];
+
 // The five legal pages were the only indexable routes without structured data.
 const pageSchema = {
   "@context": "https://schema.org",
@@ -59,68 +67,138 @@ const pageSchema = {
 
 export default function EditorialPolicyPage() {
   return (
-    <main className="min-h-screen bg-paper text-charcoal">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+    <div className="min-h-screen bg-paper text-charcoal">
       <Header />
-      <section className="px-6 pb-16 pt-28 md:pb-24 md:pt-40">
-        <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-bold uppercase tracking-widest text-cognac">Editorial governance</p>
-          <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">Editorial & Evidence Policy</h1>
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-stone-700">
-            We try to make it obvious which is which: a fact from someone else, something we saw ourselves, an estimate, an opinion, or a commercial term. A page is not evidence for its own claims, and a hyperlink alone is not a completed fact-check.
-          </p>
-          <p className="mt-5 text-sm text-stone-600">Effective: July 20, 2026 · Last reviewed: July 23, 2026</p>
-        </div>
-      </section>
+      <main>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+        <section className="px-5 pb-12 pt-32 sm:px-8 md:pb-16 md:pt-40" aria-labelledby="policy-title">
+          <div className="mx-auto max-w-6xl">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-cognac">How we publish</p>
+            <div className="mt-5 grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-end lg:gap-16">
+              <div>
+                <h1 id="policy-title" className="max-w-3xl text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.04em]">
+                  Editorial &amp;<br />
+                  <span className="font-serif italic text-cognac">evidence policy.</span>
+                </h1>
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">
+                  We try to make it obvious which is which: a fact from someone else, something we saw ourselves, an estimate, an opinion, or a commercial term.
+                </p>
+              </div>
+              <aside className="border-l-2 border-cognac pl-6 lg:mb-1" aria-label="Our approach to evidence">
+                <p className="text-xl font-semibold leading-8 tracking-tight">A page is not evidence for its own claims.</p>
+                <p className="mt-3 leading-7 text-stone-600">And a hyperlink alone is not a completed fact-check.</p>
+              </aside>
+            </div>
+            <div className="mt-10 flex flex-col gap-4 border-t border-stone-300 pt-5 text-sm text-stone-600 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                <p>Effective <time dateTime="2026-07-20" className="font-medium text-charcoal">July 20, 2026</time></p>
+                <p>Last reviewed <time dateTime="2026-07-23" className="font-medium text-charcoal">July 23, 2026</time></p>
+              </div>
+              <a href="#report-a-correction" className="inline-flex min-h-11 w-fit items-center gap-2 font-semibold text-charcoal underline decoration-stone-300 underline-offset-4 transition-colors hover:text-cognac focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac">
+                Something needs correcting? <ArrowDown size={16} aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </section>
 
-      <section className="border-y border-stone-300 bg-white px-6 py-16 md:py-24">
-        <div className="mx-auto max-w-5xl">
-          <h2 id="publication-controls" className="scroll-mt-28 text-3xl font-bold md:text-5xl">Publication controls</h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {controls.map(([title, body]) => (
-              <article key={title} className="rounded-2xl border border-stone-300 bg-paper p-6">
-                <CheckCircle2 className="h-6 w-6 text-cognac" aria-hidden="true" />
-                <h3 className="mt-4 text-xl font-bold">{title}</h3>
-                <p className="mt-3 leading-7 text-stone-700">{body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        <div className="border-t border-stone-300 bg-white px-5 py-10 sm:px-8 md:py-16">
+          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-16">
+            <aside>
+              <nav aria-label="On this page" className="lg:sticky lg:top-28">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-stone-500">On this page</p>
+                <ol className="mt-4 grid gap-1 sm:grid-cols-2 lg:grid-cols-1">
+                  {contents.map(({ id, label }, index) => (
+                    <li key={id}>
+                      <a href={`#${id}`} className="group flex min-h-11 items-center gap-3 rounded-lg py-2 pr-3 text-sm leading-5 text-stone-600 transition-colors hover:text-cognac focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac">
+                        <span className="font-mono text-xs text-stone-500 group-hover:text-cognac" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                        {label}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+                <p className="mt-6 hidden max-w-[14rem] border-t border-stone-200 pt-5 text-sm leading-6 text-stone-600 lg:block">
+                  These standards apply to our articles, comparisons and published project results.
+                </p>
+              </nav>
+            </aside>
 
-      <section className="px-6 py-16 md:py-24">
-        <div className="mx-auto max-w-4xl space-y-10">
-          <div>
-            <h2 className="text-3xl font-bold">Review and freshness</h2>
-            <p className="mt-5 leading-7 text-stone-700">
-              High-volatility pages, including price trackers, product changes, incidents, legal or privacy topics, and current-year comparisons, require a primary-source check before publication and a scheduled recheck. Evergreen technical guidance is reviewed when a relevant platform, standard, or source changes. A visible date does not prove that every fact on a page is current.
-            </p>
+            <div className="min-w-0">
+              <section id="publication-controls" className="scroll-mt-28" aria-labelledby="controls-title">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">01 / The standards</p>
+                <h2 id="controls-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Publication controls</h2>
+                <div className="mt-8 divide-y divide-stone-200 border-y border-stone-200">
+                  {controls.map(([title, body], index) => (
+                    <article key={title} className="grid gap-3 py-7 sm:grid-cols-[2rem_minmax(0,1fr)] sm:gap-4">
+                      <span className="font-mono text-sm text-cognac sm:pt-1" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                      <div>
+                        <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+                        <p className="mt-3 leading-7 text-stone-600">{body}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section id="review-and-freshness" className="scroll-mt-28 border-b border-stone-200 py-10 md:py-12" aria-labelledby="freshness-title">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">02 / Keeping information current</p>
+                <h2 id="freshness-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight">Review and freshness</h2>
+                <p className="mt-5 leading-7 text-stone-600">
+                  High-volatility pages, including price trackers, product changes, incidents, legal or privacy topics, and current-year comparisons, require a primary-source check before publication and a scheduled recheck. Evergreen technical guidance is reviewed when a relevant platform, standard, or source changes.
+                </p>
+                <p className="mt-5 border-l-2 border-cognac pl-5 font-medium leading-7 text-charcoal">A visible date does not prove that every fact on a page is current.</p>
+              </section>
+
+              <section id="content-review-status" className="scroll-mt-28 border-b border-stone-200 py-10 md:py-12" aria-labelledby="review-title">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">03 / Release review</p>
+                <h2 id="review-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight">Content review status</h2>
+                <p className="mt-5 leading-7 text-stone-600">
+                  The July 2026 release review covered every current blog route and its shared search-card and FAQ data. Universal ranking, revenue, performance, hosting, cutover, ownership, refund, and AI-citation promises were removed or bounded, and a repository release gate now checks those prohibited patterns.
+                </p>
+                <p className="mt-4 leading-7 text-stone-600">
+                  Mutable vendor, product, price, incident, market, security, and legal facts still require a dated primary-source check whenever an article is materially updated. Readers should never treat an example as a PandaCodeGen quote, guarantee, or prediction for their project.
+                </p>
+              </section>
+
+              <section id="how-content-is-produced" className="scroll-mt-28 py-10 md:py-12" aria-labelledby="production-title">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-cognac">04 / People and AI assistance</p>
+                <h2 id="production-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight">How this content is produced</h2>
+                <p className="mt-5 leading-7 text-stone-600">
+                  Articles on this site are researched, drafted and edited by a named person with AI assistance, and every one carries a byline that resolves to that person&apos;s background page. AI tools are used the way a research assistant and a copy editor are used: to gather candidate sources, draft and restructure passages, and check prose for clarity. They are not used to publish unreviewed output, and no article is generated and posted without a human reading it in full.
+                </p>
+                <p className="mt-5 leading-7 text-stone-600">
+                  Every factual claim, price, date, limit and quotation is verified against the primary source by a person before publication, and the date of that check is written into the page rather than implied by the timestamp. Where a figure cannot be verified against a primary source, we say so and leave it out rather than repeat it from a secondary summary.
+                </p>
+                <p className="mt-5 leading-7 text-stone-600">
+                  Where we publish an observation of our own, it carries the method and the date so a reader can repeat it. We disclose this because we recommend readers ask vendors the same question, and it would be inconsistent to ask it without answering it here.
+                </p>
+              </section>
+
+              <section id="report-a-correction" className="scroll-mt-28 rounded-2xl border border-stone-200 bg-paper p-6 sm:p-8" aria-labelledby="correction-title">
+                <div className="flex items-center gap-3 text-cognac">
+                  <Mail size={20} aria-hidden="true" />
+                  <p className="text-xs font-bold uppercase tracking-[0.16em]">05 / Open to correction</p>
+                </div>
+                <h2 id="correction-title" className="mt-4 text-3xl font-bold leading-tight tracking-tight">Report a correction</h2>
+                <p className="mt-4 leading-7 text-stone-600">Send the page URL, disputed statement, and supporting primary source to:</p>
+                <a className="mt-4 inline-flex min-h-11 max-w-full items-center gap-2 break-all font-semibold text-cognac underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac" href="mailto:info@pandacodegen.com?subject=Editorial%20correction">
+                  info@pandacodegen.com <ArrowUpRight size={18} className="shrink-0" aria-hidden="true" />
+                </a>
+                <p className="mt-4 leading-7 text-stone-600">We review corrections on their evidence, regardless of whether the sender is a customer, competitor, vendor, or reader.</p>
+              </section>
+
+              <div className="mt-10 flex flex-col gap-4 border-t border-stone-200 pt-7 sm:flex-row sm:items-center sm:justify-between">
+                <Link href="/blog" className="inline-flex min-h-12 w-fit items-center gap-2 rounded-full bg-charcoal px-6 text-sm font-semibold text-white transition-colors hover:bg-cognac focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac">
+                  Browse the blog <ArrowRight size={17} aria-hidden="true" />
+                </Link>
+                <Link href="/contact" className="inline-flex min-h-11 w-fit items-center gap-2 text-sm font-semibold text-charcoal underline decoration-stone-300 underline-offset-4 transition-colors hover:text-cognac focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac">
+                  Contact the founders <ArrowUpRight size={17} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
           </div>
-          <div>
-            <h2 className="text-3xl font-bold">Content review status</h2>
-            <p className="mt-5 leading-7 text-stone-700">
-              The July 2026 release review covered every current blog route and its shared search-card and FAQ data. Universal ranking, revenue, performance, hosting, cutover, ownership, refund, and AI-citation promises were removed or bounded, and a repository release gate now checks those prohibited patterns. Mutable vendor, product, price, incident, market, security, and legal facts still require a dated primary-source check whenever an article is materially updated. Readers should never treat an example as a PandaCodeGen quote, guarantee, or prediction for their project.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">How this content is produced</h2>
-            <p className="mt-5 leading-7 text-stone-700">
-              Articles on this site are researched, drafted and edited by a named person with AI assistance, and every one carries a byline that resolves to that person&apos;s background page. AI tools are used the way a research assistant and a copy editor are used: to gather candidate sources, draft and restructure passages, and check prose for clarity. They are not used to publish unreviewed output, and no article is generated and posted without a human reading it in full.
-            </p>
-            <p className="mt-5 leading-7 text-stone-700">
-              Every factual claim, price, date, limit and quotation is verified against the primary source by a person before publication, and the date of that check is written into the page rather than implied by the timestamp. Where a figure cannot be verified against a primary source, we say so and leave it out rather than repeat it from a secondary summary. Where we publish an observation of our own, it carries the method and the date so a reader can repeat it. We disclose this because we recommend readers ask vendors the same question, and it would be inconsistent to ask it without answering it here.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">Report a correction</h2>
-            <p className="mt-5 leading-7 text-stone-700">
-              Send the page URL, disputed statement, and supporting primary source to <a className="font-bold text-cognac underline" href="mailto:info@pandacodegen.com?subject=Editorial%20correction">info@pandacodegen.com</a>. We review corrections on their evidence, regardless of whether the sender is a customer, competitor, vendor, or reader.
-            </p>
-          </div>
-          <Link href="/blog" className="inline-flex min-h-12 items-center rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">Browse the blog</Link>
         </div>
-      </section>
-      <Footer />
-    </main>
+      </main>
+      <Footer showCta={false} />
+    </div>
   );
 }
