@@ -298,7 +298,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
               onClick={handleOpenQuote}
               className="min-h-11 whitespace-nowrap rounded-full bg-charcoal px-4 text-sm font-bold text-white transition-colors hover:bg-cognac focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal"
             >
-              Get a plan
+              Ask a question
             </button>
             <button
               ref={mobileMenuButtonRef}
