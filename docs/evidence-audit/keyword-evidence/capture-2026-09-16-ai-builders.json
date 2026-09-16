@@ -2,7 +2,11 @@
   "_provenance": {
     "provider": "DataForSEO",
     "accessed_via": "Percuity MCP, tool `get_keyword_data`",
-    "request": { "location_code": 2840, "language_code": "en", "include_difficulty": true },
+    "request": {
+      "location_code": 2840,
+      "language_code": "en",
+      "include_difficulty": true
+    },
     "location": "United States",
     "retrieved": "2026-09-16",
     "purpose": "Demand check for an AI-built-website launch-checklist article. Taken AFTER a GSC-based read produced the wrong answer: GSC returned four matching queries and the strongest was 'lovable.dev blog' at 29 impressions and 0 clicks. GSC only reports queries the site already appears for, so it cannot measure demand for a topic the site does not cover. That is a survivorship-biased sample, and the same mistake is already recorded in the Hero.tsx positioning comment.",
@@ -10,25 +14,176 @@
     "trend_window_note": "Every trend array ends 2026-02, seven months before this capture, so the arrays do not describe recent demand and cannot be reconciled against search_volume arithmetically."
   },
   "keywords": [
-    { "keyword": "ai website builder", "search_volume": 40500, "cpc": 30.78, "competition": "MEDIUM", "competition_index": 57, "keyword_difficulty": 44, "status": "VIABLE" },
-    { "keyword": "ai built website", "search_volume": 480, "cpc": 28.42, "competition": "MEDIUM", "competition_index": 61, "keyword_difficulty": 47, "status": "VIABLE" },
-    { "keyword": "can ai build a website", "search_volume": 320, "cpc": 21.36, "competition": "MEDIUM", "competition_index": 58, "keyword_difficulty": 48, "status": "VIABLE" },
-    { "keyword": "website launch checklist", "search_volume": 140, "cpc": 4.83, "competition": "LOW", "competition_index": 15, "keyword_difficulty": 2, "status": "VIABLE" },
-    { "keyword": "pre launch website checklist", "search_volume": 10, "cpc": 5.73, "competition": "HIGH", "competition_index": 80, "keyword_difficulty": 23, "status": "VIABLE" },
-    { "keyword": "how to test a website before launch", "search_volume": 10, "cpc": null, "competition": "MEDIUM", "competition_index": 48, "keyword_difficulty": 45, "status": "VIABLE" },
-    { "keyword": "contact form not working", "search_volume": 10, "cpc": null, "competition": "LOW", "competition_index": 0, "keyword_difficulty": null, "status": "VIABLE" },
-    { "keyword": "lovable seo", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "is lovable good for seo", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "bolt.new seo", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "v0 vercel seo", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "ai website builder for business", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "website not getting leads", "status": "NO_VOLUME_REPORTED" },
-    { "keyword": "why is my contact form not sending emails", "status": "NO_VOLUME_REPORTED" }
+    {
+      "keyword": "ai website builder",
+      "search_volume": 40500,
+      "cpc": 30.78,
+      "competition": "MEDIUM",
+      "competition_index": 57,
+      "keyword_difficulty": 44,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "ai built website",
+      "search_volume": 480,
+      "cpc": 28.42,
+      "competition": "MEDIUM",
+      "competition_index": 61,
+      "keyword_difficulty": 47,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "can ai build a website",
+      "search_volume": 320,
+      "cpc": 21.36,
+      "competition": "MEDIUM",
+      "competition_index": 58,
+      "keyword_difficulty": 48,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "website launch checklist",
+      "search_volume": 140,
+      "cpc": 4.83,
+      "competition": "LOW",
+      "competition_index": 15,
+      "keyword_difficulty": 2,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "pre launch website checklist",
+      "search_volume": 10,
+      "cpc": 5.73,
+      "competition": "HIGH",
+      "competition_index": 80,
+      "keyword_difficulty": 23,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "how to test a website before launch",
+      "search_volume": 10,
+      "cpc": null,
+      "competition": "MEDIUM",
+      "competition_index": 48,
+      "keyword_difficulty": 45,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "contact form not working",
+      "search_volume": 10,
+      "cpc": null,
+      "competition": "LOW",
+      "competition_index": 0,
+      "keyword_difficulty": null,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "lovable seo",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "is lovable good for seo",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "bolt.new seo",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "v0 vercel seo",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder for business",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "website not getting leads",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "why is my contact form not sending emails",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "best ai website builder",
+      "search_volume": 4400,
+      "cpc": 35.42,
+      "competition": "MEDIUM",
+      "competition_index": 66,
+      "keyword_difficulty": 32,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "ai website builder for small business",
+      "search_volume": 70,
+      "cpc": 29.44,
+      "competition": "LOW",
+      "competition_index": 25,
+      "keyword_difficulty": null,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "ai website builder for ecommerce",
+      "search_volume": 20,
+      "cpc": 5.64,
+      "competition": "LOW",
+      "competition_index": 13,
+      "keyword_difficulty": 32,
+      "status": "VIABLE"
+    },
+    {
+      "keyword": "ai website builder seo",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "do ai websites rank on google",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "are ai website builders any good",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder limitations",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder vs web developer",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "should i use an ai website builder",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder problems",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "fix ai generated website",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder review",
+      "keyword_difficulty": 29,
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "ai website builder pros and cons",
+      "status": "NO_VOLUME_REPORTED"
+    },
+    {
+      "keyword": "is an ai website good enough for business",
+      "status": "NO_VOLUME_REPORTED"
+    }
   ],
   "_reading": {
     "primary_target": "`ai built website`, 480/mo at KD 47 with a $28.42 CPC. The phrase describes someone who already HAS an AI-built site, which is the buyer this article is for, and the CPC says advertisers pay real money for that click.",
     "secondary_target": "`website launch checklist`, 140/mo at KD 2 and LOW competition. Low commercial intent at a $4.83 CPC, but close to free to rank for and a natural second phrase in the same title.",
     "do_not_chase": "`ai website builder` at 40,500/mo. The intent is 'give me a builder', the SERP belongs to the builders themselves, and KD 44 against that field is not a fight worth picking.",
-    "limits": "Volume and difficulty are one provider's modelled estimates on one date, not measured traffic, and no SERP sample was taken. Do not treat KD 2 as a promise of a ranking."
+    "limits": "Volume and difficulty are one provider's modelled estimates on one date, not measured traffic, and no SERP sample was taken. Do not treat KD 2 as a promise of a ranking.",
+    "second_pass_2026_09_16": "Owner's call: do not fight the head term, take the band under it. That band is real. 'best ai website builder' is 4,400/mo at KD 32 against the head term's 40,500 at KD 44, and carries the highest CPC measured in either pass at $35.42 -- evaluation intent rather than 'give me a builder'. 'ai website builder for small business' is only 70/mo but LOW competition at a $29.44 CPC, which is the ICP with almost no one bidding against it.",
+    "format_caution": "Ranking for 'best ai website builder' means writing a comparison that recommends products we compete with. That is defensible only if the recommendations are real; faking a roundup to reach the term is red flag 29 in the content audit, entering a niche for traffic without expertise. We do have dated documentation research on six builders, so an honest evaluation section is supportable. A ranked listicle is not."
   }
 }
