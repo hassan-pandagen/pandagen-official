@@ -4,7 +4,7 @@
   "competitors_reviewed": 10,
   "competitor_profile_pages": 15,
   "profile_targets": 17,
-  "external_updates_saved": "Seven saved by the owner on 16 September 2026: sortlist, linkedin, designrush, trustpilot, crunchbase, goodfirms, instagram. None independently re-fetched yet.",
+  "external_updates_saved": "Ten saved by the owner on 16 September 2026: linkedin, designrush, goodfirms, sortlist, x, crunchbase, g2, trustpilot, f6s, instagram. None independently re-fetched yet.",
   "editing_access": "CUA reports no available browser. User was asked to connect an authenticated browser or paste prepared copy; no response yet.",
   "profiles": [
     {
@@ -104,9 +104,10 @@
         "shortBio"
       ],
       "priority": 1,
-      "save_status": "not_applied_no_authenticated_browser",
-      "saved_at": null,
-      "publicly_verified_at": null
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
     },
     {
       "id": "crunchbase",
@@ -169,9 +170,10 @@
         "field-replacements.md: G2"
       ],
       "priority": 2,
-      "save_status": "not_applied_no_authenticated_browser",
-      "saved_at": null,
-      "publicly_verified_at": null
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
     },
     {
       "id": "dev",
@@ -231,9 +233,10 @@
         "companyAbout"
       ],
       "priority": 3,
-      "save_status": "not_applied_no_authenticated_browser",
-      "saved_at": null,
-      "publicly_verified_at": null
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
     },
     {
       "id": "reddit",
