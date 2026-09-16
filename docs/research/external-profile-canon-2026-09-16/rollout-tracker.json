@@ -1,0 +1,286 @@
+{
+  "date": "2026-09-16",
+  "source_commit": "e39653e",
+  "competitors_reviewed": 10,
+  "competitor_profile_pages": 15,
+  "profile_targets": 17,
+  "external_updates_saved": "Seven saved by the owner on 16 September 2026: sortlist, linkedin, designrush, trustpilot, crunchbase, goodfirms, instagram. None independently re-fetched yet.",
+  "editing_access": "CUA reports no available browser. User was asked to connect an authenticated browser or paste prepared copy; no response yet.",
+  "profiles": [
+    {
+      "id": "linkedin",
+      "name": "LinkedIn company",
+      "url": "https://www.linkedin.com/company/pandacodegen",
+      "capture": "linkedin-direct.json",
+      "read": "Public HTTP 200; Firecrawl unsupported",
+      "finding": "Current tagline/About still lead with rebuilding and outgrown platforms. Older search copy differs; use fresh direct capture.",
+      "fields": [
+        "tagline",
+        "companyAbout"
+      ],
+      "priority": 1,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "clutch",
+      "name": "Clutch",
+      "url": "https://clutch.co/profile/panda-code-gen",
+      "capture": "clutch-co.json",
+      "read": "Firecrawl current-fetch request; usable profile",
+      "finding": "Old About plus retired guarantees in packages/team FAQs; AI Agents and React Native need reconciliation. Software tiers need business confirmation.",
+      "fields": [
+        "compactTagline",
+        "companyAbout",
+        "field-replacements.md: Clutch"
+      ],
+      "priority": 1,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "designrush",
+      "name": "DesignRush",
+      "url": "https://www.designrush.com/agency/profile/pandacodegen",
+      "capture": "designrush-com.json",
+      "read": "Firecrawl current-fetch request; usable profile",
+      "finding": "Outcome tagline, migration-led About, unsupported specialty tags, founder/press copy and CRM project history need alignment.",
+      "fields": [
+        "tagline",
+        "companyAbout",
+        "field-replacements.md: DesignRush"
+      ],
+      "priority": 1,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "goodfirms",
+      "name": "GoodFirms",
+      "url": "https://www.goodfirms.co/company/panda-code-gen",
+      "capture": "goodfirms-co.json",
+      "read": "Firecrawl current-fetch request; usable profile",
+      "finding": "About still leads with businesses leaving platforms; inspect owner-controlled highlights and pricing in editor.",
+      "fields": [
+        "compactTagline",
+        "companyAbout"
+      ],
+      "priority": 2,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "sortlist",
+      "name": "Sortlist",
+      "url": "https://www.sortlist.com/agency/pandacodegen",
+      "capture": "sortlist-com.json",
+      "read": "Firecrawl current-fetch request; usable profile",
+      "finding": "Rebuild-led tagline/About; team and portfolio text retain universal performance and no-monthly-fee claims.",
+      "fields": [
+        "tagline",
+        "companyAbout"
+      ],
+      "priority": 2,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "url": "https://x.com/PandaCodeGen",
+      "capture": "x-com.json",
+      "read": "Firecrawl current-fetch request; usable profile",
+      "finding": "Rebuild-led bio. Use 142-character replacement; review pinned/current-offer posts separately from dated history.",
+      "fields": [
+        "shortBio"
+      ],
+      "priority": 1,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "crunchbase",
+      "name": "Crunchbase",
+      "url": "https://www.crunchbase.com/organization/pandacodegen",
+      "capture": "crunchbase-com.json",
+      "read": "Firecrawl current-fetch request; public description visible",
+      "finding": "Short and longer descriptions retain rebuilding proposition. Headquarters Texas is compatible with Wyoming incorporation.",
+      "fields": [
+        "shortDescription",
+        "companyAbout"
+      ],
+      "priority": 2,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "sanity",
+      "name": "Sanity Exchange",
+      "url": "https://www.sanity.io/exchange/community/pandacodegen",
+      "capture": "sanity-io.json",
+      "read": "Firecrawl current-fetch request; usable personal profile",
+      "finding": "Hassan's bio and project contribution still carry universal score/loading and no-monthly-platform-fee claims.",
+      "fields": [
+        "field-replacements.md: Sanity"
+      ],
+      "priority": 1,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "url": "https://www.behance.net/pandacodegen",
+      "capture": "behance-net.json",
+      "read": "Firecrawl current-fetch request; usable personal profile",
+      "finding": "Hassan's profile includes pasted chat text, old migration/score guarantees, mismatched contact link label and old project-title claim.",
+      "fields": [
+        "founderHassanHeadline",
+        "founderHassanAbout",
+        "field-replacements.md: Behance"
+      ],
+      "priority": 1,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "g2",
+      "name": "G2",
+      "url": "https://www.g2.com/products/pandacodegen",
+      "capture": "g2-com.json",
+      "read": "Firecrawl current-fetch request; usable provider profile",
+      "finding": "Provider About and media captions retain old offer/AI-citation language; linked seller profile also needs editor check.",
+      "fields": [
+        "companyAbout",
+        "field-replacements.md: G2"
+      ],
+      "priority": 2,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "dev",
+      "name": "DEV",
+      "url": "https://dev.to/pandacodegen",
+      "capture": "dev-to.json",
+      "read": "Firecrawl current-fetch request; posts and metadata visible",
+      "finding": "Fresh metadata still says the firm does not build websites and sells revenue systems. Main-content extraction does not show the complete editable bio.",
+      "fields": [
+        "technicalBio"
+      ],
+      "priority": 2,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "hashnode",
+      "name": "Hashnode",
+      "url": "https://pandacodegen.hashnode.dev",
+      "capture": "pandacodegen-hashnode-dev.json",
+      "read": "Firecrawl current-fetch request; empty publication visible",
+      "finding": "Generic publication description and no substantive current company description returned.",
+      "fields": [
+        "technicalBio"
+      ],
+      "priority": 3,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "trustpilot",
+      "name": "Trustpilot",
+      "url": "https://www.trustpilot.com/review/pandacodegen.com",
+      "capture": "trustpilot-com.json",
+      "read": "Fresh fetch returned 403 verification page; cached web page readable",
+      "finding": "Current owner blurb unverified; leave reviews and directory summaries unchanged.",
+      "fields": [
+        "companyAbout"
+      ],
+      "priority": 3,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    },
+    {
+      "id": "f6s",
+      "name": "F6S",
+      "url": "https://www.f6s.com/pandacodegen",
+      "capture": "f6s-com.json",
+      "read": "405 bot-check page",
+      "finding": "Current profile copy unverified.",
+      "fields": [
+        "shortDescription",
+        "companyAbout"
+      ],
+      "priority": 3,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "url": "https://www.reddit.com/user/PandaCodeGen/",
+      "capture": "reddit-com.json",
+      "read": "Web 404; Firecrawl unsupported",
+      "finding": "Account state and editable bio unverified; do not infer deletion or create a replacement account.",
+      "fields": [
+        "shortBio"
+      ],
+      "priority": 3,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61587111848962",
+      "capture": "facebook-com.json",
+      "read": "Link discovered on Crunchbase; Firecrawl unsupported",
+      "finding": "Linked company profile identified; current content and administrator access need inspection.",
+      "fields": [
+        "compactTagline",
+        "companyAbout"
+      ],
+      "priority": 2,
+      "save_status": "not_applied_no_authenticated_browser",
+      "saved_at": null,
+      "publicly_verified_at": null
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/pandacodegen/",
+      "capture": "instagram-com.json",
+      "read": "Link discovered on Behance; Firecrawl unsupported",
+      "finding": "Linked profile identified; current content and administrator access need inspection.",
+      "fields": [
+        "shortBio"
+      ],
+      "priority": 2,
+      "save_status": "saved_by_owner",
+      "saved_at": "2026-09-16",
+      "publicly_verified_at": null,
+      "save_note": "Owner reported saved on 16 September 2026. Not re-fetched since; publicly_verified_at stays null until the live page is read back."
+    }
+  ]
+}
