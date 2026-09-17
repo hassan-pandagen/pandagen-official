@@ -55,21 +55,29 @@ Use only the stages in the actual implementation. A form that sends email direct
 
 | Stage | Observed result | Reference or timestamp |
 | --- | --- | --- |
+| Configured recipient is the intended, monitored address | | |
 | Browser acknowledgement | | |
 | Form dashboard / CRM record, if configured | | |
 | Sending provider accepted the request | | |
 | Provider delivery status | | |
 | Receiving inbox / spam folder checked | | |
 | Responsible person can reply to test address | | |
+| Customer confirmation or auto-reply received, if configured | | |
 | Expected CRM assignment or follow-up, if configured | | |
 
 Delivery to a mail server is not proof of inbox placement or a person reading it. If one stage is unobservable, document the limit. Remove test enquiries from business reporting using the system's supported process.
 
 ## Payment trace: use the provider's test environment
 
+Record the payment method for each test and repeat the applicable scenarios for every method enabled on the site. Mark unsupported sandbox scenarios not verified and record the provider's recommended verification route.
+
+Payment method: ____________________  Provider and test environment: ____________________
+
 | Scenario | Expected result | Observed result and reference |
 | --- | --- | --- |
 | Successful simulated payment | Correct order, amount/currency and paid state | |
+| Quantity, shipping method and price-affecting options | Provider amount matches the total shown to the customer | |
+| Successful payment return or redirect | Customer reaches the intended confirmation page with the correct outcome | |
 | Declined simulated payment | No paid order or fulfilment instruction | |
 | Repeated notification, checked by developer | No duplicate order or fulfilment task | |
 | Simulated refund | Correct refund record, notifications and workflow state | |
@@ -88,6 +96,9 @@ Keep sandbox tests away from real fulfilment. Verify production credentials and 
 | Alert recipient and test result? | |
 | Who acts, within what agreed response window? | |
 | Where are domain, hosting and service accounts controlled? | |
+| Domain, certificate and service renewal/expiry dates; automatic renewal where applicable? | |
+| Billing payment details and renewal alert recipients checked? | |
+| Who owns renewals, and when is the next review? | |
 | What restore/rollback route was demonstrated, where and when? | |
 
 ## Review decision
