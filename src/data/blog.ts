@@ -42,6 +42,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+      id: "ai-built-website-checklist",
+      cardStat: "8 checks",
+      cardStatLabel: "before launch and after changes",
+      title: "AI-Built Website Checklist: 8 Checks Before Launch and After Changes",
+      excerpt: "Check enquiries, payments, mobile use and search access on your AI-built website. Eight practical checks, evidence to save and when to repeat them.",
+      category: "Engineering",
+      readTime: "14 min",
+      date: "Sep 17",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "code",
+      lastModified: "2026-09-17",
+      faqs: [
+        { question: "Can an AI-built website rank on Google?", answer: "Yes. The relevant question is whether the actual pages are accessible, useful and suitable for indexing. A builder's SEO report is useful evidence about its checks, rather than a guarantee of indexing or rankings." },
+        { question: "My form says it sent, but nothing arrives. Where do I look?", answer: "A success screen is not proof of delivery. Read the recipient address the form is configured to notify, then search all mail rather than the inbox alone, including spam and any promotions tab. If the message is still missing, check the sending provider's delivery details and domain-verification status, as described in check 2." },
+        { question: "Do I need all eight checks for a simple website?", answer: "Only the relevant ones. Record payments or accounts as not applicable if the site has neither. Keep the enquiry, usability, offer and operational checks that your business depends on." },
+        { question: "Can AI help run these checks?", answer: "Yes. Supported tools can exercise interfaces, inspect code and interpret logs. Give them the expected result and verify what evidence they actually observed. A tool that cannot access the receiving inbox cannot confirm its contents." },
+        { question: "Does a failed check mean I need a new website?", answer: "No. Investigate the cause first. A configuration change or repair may be sufficient; a rebuild needs a separate reason tied to what the business requires." },
+      ],
+    },
+    {
       id: "is-it-cheaper-to-build-your-own-website",
       cardStat: "DIY or hire?",
       cardStatLabel: "compare cash spending, owner time and ongoing costs",

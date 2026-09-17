@@ -112,3 +112,26 @@ No builder account was exercised, no production enquiry/payment/refund was creat
 Artifact verification: all local Markdown file links and the eight in-article jump links resolved. V3 contains eight numbered checks and approximately 2,300 words including tables, FAQs and its method note. A separate content review found no further material issue in its scope after adding the explicit Search Console HTML-view step. Browser layout, public download and owner usability remain untested.
 
 Original v2 SHA-256 at review: `D505F357504476FA4C915D158DE90727C4DF3B18966598FEC7D6A3F0354E1236`.
+
+## Implementation, 17 September 2026
+
+The article is built at `/blog/ai-built-website-checklist`. Item 3 of "the work that would justify
+the last step" is now done; items 1 and 2, the redacted end-to-end example and the nontechnical
+owner walkthrough, are still outstanding.
+
+Built as advised: cluster `custom`, self-canonical, `index, follow`, one `h1`, Article, FAQPage and
+WebPage schema with a single BreadcrumbList from the shared component, no `speakable`, no metadata
+keyword list, FAQ copy visible on the page. The worksheet action sits near the top and the founder
+CTA after the useful material. Contextual links go to the DIY cost guide, the ownership guide, the
+Lovable indexing diagnostic and the Enterprise Ops case study, plus the cluster's money page. A
+link back from the DIY article was added at the same time.
+
+Browser QA, Chromium at 1440x1000 and 390x664: no horizontal scroll, no elements overflowing the
+viewport, no console errors, one `h1` with no skipped levels, every in-page anchor resolving, 45 tab
+stops each with a visible focus ring, the FAQ accordion opening on Enter, and both tables scrolling
+inside their own box with `role="region"` and `tabindex="0"`. All four sampled contents links land
+100 to 114px from the top, clear of the fixed header.
+
+`npm run check`, `npm run build` and all six guards pass. The link guard confirms the post links its
+hub, its money page and two to four siblings. The worksheet returns 200 locally at
+`/website-check-record.md` and goes public when this is deployed.
