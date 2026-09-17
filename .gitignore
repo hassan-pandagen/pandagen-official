@@ -63,6 +63,9 @@ test-results/
 # Skills are markdown by design and must travel between machines. This negation
 # has to sit AFTER the *.md rule above to win: last matching pattern applies.
 !.claude/skills/**/*.md
+# Anything under public/ is served at a URL, so a .md there is a published
+# asset rather than an internal doc. Same last-match-wins reason as above.
+!public/**/*.md
 PandaCodeGen_*.pdf
 PandaCodeGen_*.docx
 
