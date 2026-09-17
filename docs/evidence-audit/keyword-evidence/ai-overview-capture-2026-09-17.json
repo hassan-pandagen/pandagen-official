@@ -1,0 +1,53 @@
+{
+  "capturedAt": "2026-09-17",
+  "method": "Playwright 1.63.0 driving real Chrome (channel: chrome), headless false, persistent profile, locale en-US, timezone America/New_York. Google queried with gl=us&hl=en&pws=0.",
+  "blocking": "Google served /sorry/ captcha to both bundled Chromium and real Chrome on a cold profile. The captcha was solved by hand in the open window; the cleared cookie carried to the remaining two queries.",
+  "perplexity": "Attempted as a cross-check on all three queries. Returned a Cloudflare interstitial, 0 characters of answer text, no citations. Not usable. Not used.",
+  "queries": {
+    "ai built website checklist": {
+      "google": {
+        "url": "https://www.google.com/search?q=ai%20built%20website%20checklist&gl=us&hl=en&pws=0",
+        "landedOn": "https://www.google.com/search?q=ai%20built%20website%20checklist&gl=us&hl=en&pws=0",
+        "hasOverviewLabel": true,
+        "aiOverviewText": "AI Overview\nReview an AI-generated website before launch using a pre-flight checklist focused on functionality, content accuracy, and technical readiness. \nYouTube\n·Griffin Wooldridge\n +1\nDesign and Responsiveness\nMobile layout: Test every page on phones and tablets to fix broken stacking or cramped text.\nInteractive elements: Verify that buttons, links, and forms actually work instead of acting as static placeholders.\nVisual consistency: Check that fonts scale correctly and images have reserved layout space to prevent shifting. \nwww.codeble.com.au\n +1\nContent and Copy\nPlaceholder text: Erase leftover \"Lorem Ipsum\" or generic AI filler copy.\nFactual accuracy: Confirm real business phone numbers, addresses, pricing, and operational hours.\nBrand voice: Adjust generic AI phrasing so the tone matches your actual business identity. \nWix.com\n +1\nTechnical and SEO Setup\nSearch optimization: Add custom title tags and meta descriptions instead of leaving them blank or auto-generated.\nCustom domain: Connect your permanent web address and ensure an active SSL security certificate.\nForms and tracking: Submit a test message through every contact or checkout form to verify notification delivery. \nYouTube\n·TheFigCo\n +3\nTo tailor this specifically, could you share what type of site you built (e.g., e-commerce store, local service business, portfolio) and which AI tool you used (e.g., Wix, Cursor, Lovable)?\nYouTube\n·\nGriffin Wooldridge\nThe Pre-Launch Checklist for AI-Built Websites\nSep 8, 2026 — The Pre-Launch Checklist for AI-Built Websites ai can build a website ridiculously. fast now you can go from a blank page to somet...\n15:57\nYouTube\n·\nTheFigCo\nHow to Create a Website with AI in 2026 (Step-by-Step)\nJul 21, 2026 — How to Create a Website with AI in 2026 (Step-by-Step) i built this website with AI. no template. and no code because I don't know...\n11:05\nbakry.tech\nAI-Built Website Pre-Launch Checklist | Bakry\nAug 20, 2026 — AI-Built Website Pre-Launch Checklist: 15 Checks Before You Go Live. Use this evidence-first checklist to decide whether an AI-bui...\nShow all\nAI can make mistakes, so double-check responses\nMore",
+        "aiOverviewChars": 2140,
+        "screenshot": "google-ai-built-website-checklist.png (scratch only, not committed)"
+      },
+      "perplexity": {
+        "needsLogin": true,
+        "answerChars": 0,
+        "usable": false
+      }
+    },
+    "how to test a website before launch": {
+      "google": {
+        "url": "https://www.google.com/search?q=how%20to%20test%20a%20website%20before%20launch&gl=us&hl=en&pws=0",
+        "landedOn": "https://www.google.com/search?q=how%20to%20test%20a%20website%20before%20launch&gl=us&hl=en&pws=0",
+        "hasOverviewLabel": true,
+        "aiOverviewText": "AI Overview\nTo test a website before launch, run a complete quality assurance (QA) audit on a staging environment covering functionality, mobile responsiveness, speed, and security. \nHuble Digital\n +2\nEssential Pre-Launch Testing Steps\nFunctionality & Links: Test every button, menu item, form submission, and internal/external link to ensure zero broken paths or failed emails. \nYouTube\n·Payton Clark Smith\n +1\nResponsiveness & Compatibility: Verify the layout adjusts seamlessly across mobile phones, tablets, and desktops using multiple browsers (Chrome, Safari, Firefox, Edge). \nYouTube\n·MapilitMedia Inc.\n +1\nPerformance & Speed: Run optimization checks using tools like Google Lighthouse to compress heavy images and ensure load times stay under 3 seconds. \nYouTube\n·Framer\n +1\nSEO & Metadata: Confirm page titles, meta descriptions, XML sitemaps, and 301 redirects are properly configured before search engines index the site. \nWix.com\n +1\nSecurity & SSL: Ensure your site uses HTTPS with an active SSL certificate and remove any leftover dummy or placeholder text. \nUserTesting\n +2\nTo help tailor this checklist, could you share what type of website you are launching (e.g., e-commerce shop, portfolio, corporate blog) and whether you are using a CMS like WordPress/Framer or custom code?\nUserTesting\nWebsite checklist - test and optimize before launch - UserTesting\nApr 5, 2024 — To help you test and optimize your website effectively, we've compiled a comprehensive website launch checklist you should use bef...\nYouTube\n·\nPayton Clark Smith\nDon't Launch a Website in 2026 (unless you do this...)\nAug 28, 2025 — and it's also going to show you a few tricks to use AI to speed up this whole process so the checklist is broken up into just six ...\n5m\nShow all\nMore",
+        "aiOverviewChars": 1772,
+        "screenshot": "google-how-to-test-a-website-before-launch.png (scratch only, not committed)"
+      },
+      "perplexity": {
+        "needsLogin": false,
+        "answerChars": 0,
+        "usable": false
+      }
+    },
+    "why is my contact form not sending": {
+      "google": {
+        "url": "https://www.google.com/search?q=why%20is%20my%20contact%20form%20not%20sending&gl=us&hl=en&pws=0",
+        "landedOn": "https://www.google.com/search?q=why%20is%20my%20contact%20form%20not%20sending&gl=us&hl=en&pws=0",
+        "hasOverviewLabel": true,
+        "aiOverviewText": "AI Overview\nYour contact form is likely not sending emails because your website's default mail function lacks proper authentication, causing mail providers like Gmail and Yahoo to block or filter the messages as spam. \nGoogle Workspace Help\n +1\nCommon Causes & Fixes\nMissing Domain Authentication: Major inbox providers reject unauthenticated automated mail. Fix: Install an SMTP plugin like WP Mail SMTP to route your form emails through a verified mailer service. \nWP Mail SMTP\n +2\nDisabled PHP Mail: Many modern web hosts disable the default server PHP mail function for security reasons. Fix: Switch your form setup to use SMTP rather than PHP mail. \nReddit\n +2\nMisconfigured \"From\" Address: Using a generic sender address (like wordpress@example.com) or setting the \"From\" address to the user's input email triggers anti-spoofing filters. Fix: Change the \"From\" email in your form settings to a real email address belonging to your actual domain. \nWP Mail SMTP\n +1\nMessages Stuck in Spam: The form might be sending successfully, but the notification is hiding in your junk folder. Fix: Check your spam folder and submit a test entry directly from the live site. \nWPForms\nTo help narrow down the exact fix, let me know:\nWhat platform or builder is your site using? (e.g., WordPress, Shopify, Wix)\nWhich contact form plugin or tool do you have installed? (e.g., Contact Form 7, WPForms, Elementor)\nI can give you step-by-step instructions for your exact setup.\nReddit\nContact Form 7 Isn’t Sending Emails?\nMar 16, 2024 — There are a number of reasons why Contact Form 7 might not be sending emails: * **SPF/DMARC** Google and Yahoo are enforcing SPF/D...\nWP Mail SMTP\n[SOLVED] Why Is Contact Form 7 Not Sending Emails\nMay 19, 2026 — If your web host doesn't support the PHP mail function, (which is very common these days), that could be the reason Contact Form 7...\nGoogle Workspace Help\nTroubleshoot Gmail not getting contact form messages\nSep 10, 2026 — * On this page. * How contact forms send messages to Gmail. Contact form messages are sent to spam or rejected. * Step 1: Verify y...\nShow all\nMore",
+        "aiOverviewChars": 2106,
+        "screenshot": "google-why-is-my-contact-form-not-sending.png (scratch only, not committed)"
+      },
+      "perplexity": {
+        "needsLogin": false,
+        "answerChars": 0,
+        "usable": false
+      }
+    }
+  }
+}
