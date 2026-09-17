@@ -11,10 +11,11 @@ Playwright 1.63.0 driving real Chrome, not the bundled Chromium, with a persiste
 `locale: en-US` and `timezoneId: America/New_York`. Google queried with `gl=us&hl=en&pws=0`,
 per the skill's geo warning.
 
-Google served its `/sorry/index` captcha to the bundled Chromium and to real Chrome alike,
-on a cold profile, so the block is on the automation signature rather than on a particular
-binary. The captcha was solved by hand in the open window. The cleared cookie carried to the
-other two queries.
+Google served its `/sorry/index` captcha to the bundled Chromium and to real Chrome alike, on a
+cold profile. That rules out the binary as the sole cause but does not isolate what triggered it:
+an automation signature, IP reputation, the fresh profile and request rate are all consistent with
+what was observed. Treat the cause as unknown. The captcha was solved by hand in the open window,
+and the cleared cookie carried to the other two queries.
 
 Perplexity was attempted on all three queries as a cross-check. It returned a Cloudflare
 interstitial: zero characters of answer text, no citations. Nothing from it is used here.
@@ -27,9 +28,14 @@ All three Google queries returned a genuine AI Overview, labelled as such.
 | how to test a website before launch | yes | 1,772 chars |
 | why is my contact form not sending | yes | 2,106 chars |
 
-## Who holds this query today
+## What else was on the page, in this one session
 
-Organic results for "ai built website checklist", in position order: Orbit Media (AI
+One session, one geo, one moment. These are reported titles in the order they appeared, not rank
+positions, durable rankings or anything about search volume. Destination hosts were read from the
+rendered SERP text because the `h3` hrefs were Google redirect URLs. The titles and the full SERP
+text are retained in the JSON so the ordering can be rechecked.
+
+Titles for "ai built website checklist", in the order shown: Orbit Media (AI
 readiness, a different intent), Wix's builder product page, local-business-consulting.com
 ("15-point checklist ... forms, accessibility, SEO, security, ownership"), pagelensai.com,
 bakry.tech ("1. Confirm ownership and recovery access — P0 · 2. Create and test a rollback
@@ -38,7 +44,9 @@ videos, codeble.com.au and Wix.
 
 bakry.tech is the closest competitor: evidence-first, priority-ranked, and already covering
 ownership, rollback and secrets. Our check 8 covers ownership, restore and rollback, so that
-ground is held. Note also that its neighbour in the results is titled "10 Checks Before
+ground is held. Checking after launch is not by itself the gap either; earlier research already
+found competitors covering recurring checks. The distinction that holds up is the recordable
+result, the stated pass criteria and instructions an owner can finish. Note also that its neighbour in the results is titled "10 Checks Before
 Launch" against our proposed "8 Checks Before Launch and After Changes"; the differentiator
 has to be the second half of that title, and the draft has to earn it.
 
@@ -62,8 +70,13 @@ Four gaps filled:
 | Tablet width, not phone alone | how to test a website before launch | Check 5 |
 | Things that lapse on a date, not on a change | how to test a website before launch | When to repeat the checks |
 
-The first is the substantive one. Sender authentication is the top cause in that Overview,
-and the draft had zero mentions of SPF, DKIM or DMARC. It belongs in check 2 because it is
+The launch Overview mentions SSL. The domain, certificate, renewal and payment-detail wording that
+went into the article is a reasonable editorial extension of that, not a verbatim fact the Overview
+establishes.
+
+The first is the substantive one. Sender authentication is the first cause that Overview suggests,
+which says nothing about how often it is the actual cause, and the draft had zero mentions of SPF,
+DKIM or DMARC. It belongs in check 2 because it is
 the stage immediately after the sending service reports success, which is where the draft
 stopped. Both sources were fetched and verified before use:
 
@@ -89,4 +102,9 @@ Form 7. Our article is not WordPress-specific and did not adopt that framing.
 
 ## Draft state after the pass
 
-2,700 to 3,035 words, 14 H2s unchanged, 7 FAQ entries, 0 em dashes, 13 outbound hosts.
+After a review of this pass, four sentences were corrected for asserting frequencies and an
+exclusivity the evidence does not carry, the DNS paragraph was shortened to follow the provider's
+own branch rather than naming DNS as the next cause, and three overlapping email FAQs were merged
+into one. 2,700 up to 3,036 and back to 2,826 words, 14 H2s unchanged, 5 FAQ entries, 0 em dashes.
+The byline reads Reviewed, not Published, and the worksheet link stays 404 in public until the
+article and the worksheet deploy together.
