@@ -5,6 +5,7 @@
 // Client components must receive blog data via props from a server-component parent.
 import 'server-only';
 import { UPDATE_STATS, REGISTER_START, longDate } from './google-updates';
+import { COMMERCIAL } from './company-facts';
 
 export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow' | 'migration';
 
@@ -41,11 +42,33 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+      id: "ai-built-website-checklist",
+      cardStat: "8 checks",
+      cardStatLabel: "before launch and after changes",
+      title: "AI-Built Website Checklist: 8 Checks Before Launch and After Changes",
+      excerpt: "Check enquiries, payments, mobile use and search access on your AI-built website. Eight practical checks, evidence to save and when to repeat them.",
+      category: "Engineering",
+      readTime: "14 min",
+      date: "Sep 17",
+      author: "Hassan",
+      role: "Co-founder, Lead Engineer",
+      featured: false,
+      illustrationType: "code",
+      lastModified: "2026-09-17",
+      faqs: [
+        { question: "Can an AI-built website rank on Google?", answer: "Yes. The relevant question is whether the actual pages are accessible, useful and suitable for indexing. A builder's SEO report is useful evidence about its checks, rather than a guarantee of indexing or rankings." },
+        { question: "My form says it sent, but nothing arrives. Where do I look?", answer: "A success screen is not proof of delivery. Read the recipient address the form is configured to notify, then search all mail rather than the inbox alone, including spam and any promotions tab. If the message is still missing, check the sending provider's delivery details and domain-verification status, as described in check 2." },
+        { question: "Do I need all eight checks for a simple website?", answer: "Only the relevant ones. Record payments or accounts as not applicable if the site has neither. Keep the enquiry, usability, offer and operational checks that your business depends on." },
+        { question: "Can AI help run these checks?", answer: "Yes. Supported tools can exercise interfaces, inspect code and interpret logs. Give them the expected result and verify what evidence they actually observed. A tool that cannot access the receiving inbox cannot confirm its contents." },
+        { question: "Does a failed check mean I need a new website?", answer: "No. Investigate the cause first. A configuration change or repair may be sufficient; a rebuild needs a separate reason tied to what the business requires." },
+      ],
+    },
+    {
       id: "is-it-cheaper-to-build-your-own-website",
-      cardStat: "37 of 48",
-      cardStatLabel: "small-business sites we tested fail the check AI assistants use",
-      title: "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
-      excerpt: "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part — and the four costs that follow all arrive after launch.",
+      cardStat: "DIY or hire?",
+      cardStatLabel: "compare cash spending, owner time and ongoing costs",
+      title: "Is It Cheaper to Build Your Own Website? DIY vs Hiring",
+      excerpt: "Compare DIY website costs with hiring a developer: subscriptions, owner time, a one- and three-year example, and when paying for help makes sense.",
       category: "Pricing",
       readTime: "10 min",
       date: "Sep 13",
@@ -53,15 +76,15 @@ export const blogPosts: BlogPost[] = [
       role: "Co-founder, Lead Engineer",
       featured: false,
       illustrationType: "cost",
-      lastModified: "2026-09-13",
+      lastModified: "2026-09-17",
       faqs: [
-        { question: "Is it cheaper to build your own website?", answer: "For a personal site, a portfolio, a one-campaign landing page, or anything you would be happy to delete in six months: yes, and you should. An AI builder will get you something live in an afternoon. For a business that takes orders, bookings or enquiries, the build was never the expensive part. The cost is in integrations, launch, maintenance, machine readability and your own time, and every one of those arrives after the site is live." },
-        { question: "Are AI website builders good enough for a business website?", answer: "They produce a real, working, responsive page from one sentence, and the layout is competent. What they do not give you is the account, the key, the permissions, the error handling for when a payment provider is down, the retry when a message fails, or the webhook that confirms the money arrived. Those are operational problems rather than code problems, and they only appear when a real customer hits them." },
-        { question: "Is $1,500 a good price for a website?", answer: "It depends entirely on what is included and what happens after launch. PandaCodeGen builds a 5 to 7 page custom Next.js site for $1,500 at a price fixed before work starts, with no minimum project size, and hands over the code, design files and accounts. Before comparing any two quotes, ask each supplier for their minimum project size: specialist Next.js shops publish minimums as high as $25,000, while independent suppliers start below us, with published entry tiers at $700 for three pages and $1,250, both checked in September 2026." },
-        { question: "Do I own the code if an agency builds my website?", answer: "With PandaCodeGen, yes. The source, the design files, the CMS and the production accounts are transferred into your name at handover, so a different developer can pick the site up without asking anyone's permission. This is worth confirming in writing with any supplier before you sign, because it is not universal and it is difficult to fix afterwards." },
-        { question: "What does a website cost to run after it is built?", answer: "Hosting is the smallest line. Commercial hosting on Vercel Pro starts at $20 a month paid straight to the provider. The larger costs are the ones that do not arrive as an invoice: the afternoon spent working out why a form stopped delivering, the evening spent reading about DNS records, and the security patching that nobody is watching if the answer to \"who notices\" is \"me, when I next log in\"." },
-        { question: "Can AI assistants read a website built with an AI builder?", answer: "Often not. PandaCodeGen tested 48 small-business websites between 1 and 3 September 2026 and 37 of them failed Google's agent-accessibility-tree audit, while the same sites had a median Lighthouse SEO score of 92 or above. Passing the standard SEO check does not mean software can read and act on the page. You can test your own site in PageSpeed Insights under the Agentic Browsing category." },
-        { question: "Does being readable by AI assistants actually produce sales?", answer: "It can, though the evidence available here is founder-affiliated rather than independent. Panda Patches, a store owned and operated by a PandaCodeGen co-founder, took $11,186.59 from AI assistants across 36 orders in August 2026, which was 14.7% of that month's revenue, with nothing spent on any AI platform. That is one store, one month and one product category, and nothing in it transfers automatically to a longer sales cycle." },
+        { question: "Is it cheaper to build your own website or hire someone?", answer: "DIY usually reduces upfront cash spending when a template and supported features fit. Include subscriptions, extras and your time, then compare them with a written quote for the same scope. Hiring can save work, but still takes your briefing and review time. Neither option is always cheaper over the life of the site." },
+        { question: "What is the cheapest way to build a small-business website?", answer: "Start with the smallest plan that covers your actual requirements, prepare your content and use the included features before buying extras. Check the domain and plan renewal prices. A free plan can help you test an idea, but may not include your own domain or the payment and booking features you need." },
+        { question: "Can I build a business website myself without coding?", answer: "Yes, if a builder's templates and supported features cover the job. Budget time for writing, setup, mobile checks and testing enquiries or orders. You can hire someone for one difficult task without commissioning a whole custom website." },
+        { question: "Is $1,500 a good price for a website?", answer: `It depends on the scope, revisions, handover and support. PandaCodeGen's Starter offer is: ${COMMERCIAL.find(fact => fact.label === 'Starter')?.value ?? ''} Compare the written deliverables and ongoing bills, not just the starting price. Hosting is agreed per client; maintenance is separately scoped and quoted.` },
+        { question: "Are AI website builders cheaper than hiring a developer?", answer: "They can lower the cost of creating and editing a site, but the subscription is only part of the total. Include hosting or cloud usage, connected services, your checking time and any paid help. Some tools provide testing and monitoring; verify the features and limits of your chosen plan." },
+        { question: "How much does a website cost per month after it is built?", answer: "Add the actual platform or hosting charge, domain renewal spread over the year, email, paid tools, usage or payment fees, and any agreed maintenance. Avoid charging hosting twice when it is included in a builder plan. There is no single monthly total that fits a brochure site, an online store and a custom application." },
+        { question: "Do I own my website if I pay someone to build it?", answer: "Check the contract for control of the domain, content, accounts and custom source code. Third-party platform software, plugins and assets can remain licensed rather than owned. PandaCodeGen transfers or creates the custom source, design files, CMS models, documentation and production accounts under client control at handover." },
       ],
     },
     {
