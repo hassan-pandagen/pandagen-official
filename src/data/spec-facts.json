@@ -449,6 +449,73 @@
       "qualifier": "Google described it as a technical measure against abuse and did not address referrer, analytics or ranking impact",
       "verifiedAt": "2026-08-29",
       "source": "https://searchengineland.com/google-confirms-deploying-goto-url-redirects-to-search-results-links-485926"
+    },
+    "lovable-project-monitoring": {
+      "vendor": "Lovable",
+      "plan": "Pro, Business and Enterprise; beta",
+      "label": "Scheduled project monitoring",
+      "value": "Daily or weekly code and visitor-error checks, with owner emails for important findings",
+      "qualifier": "Must be enabled per project. By default scans run only after edits; owners can select every scheduled run. Scans require credits, can miss issues or report false positives, and do not automatically fix findings. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://docs.lovable.dev/features/project-monitoring"
+    },
+    "replit-uptime-monitoring": {
+      "vendor": "Replit",
+      "plan": "Core, Pro and Enterprise",
+      "label": "Recurring uptime monitoring",
+      "value": "Scheduled uptime checks and downtime email alerts when enabled",
+      "qualifier": "Enabled in publish settings; Scheduled Deployments are excluded. Availability checks do not establish completion of an order, enquiry or other business journey. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://docs.replit.com/features/publishing/monitoring-a-deployment"
+    },
+    "replit-post-publish-seo-rating": {
+      "vendor": "Replit",
+      "label": "Automatic SEO Rating after publish",
+      "value": "Lighthouse SEO audit after every successful publish of a public web-facing deployment",
+      "qualifier": "Private and Scheduled Deployments do not produce a rating. An audit result does not guarantee indexing or rankings. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://docs.replit.com/features/publishing/seo-rating"
+    },
+    "bolt-stripe-testing": {
+      "vendor": "Bolt",
+      "label": "Stripe integration and test-mode workflows",
+      "value": "Built-in Stripe payments and subscriptions, webhook handling and test-mode support",
+      "qualifier": "The guide explicitly requires testing successful and failed payments, webhook processing and subscription flows. Built-in handling does not establish that a particular implementation passed those tests. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://support.bolt.new/integrations/stripe"
+    },
+    "v0-browser-testing-and-logs": {
+      "vendor": "v0",
+      "label": "Browser testing and deployment-log investigation",
+      "value": "Browser interaction, terminal test execution and deployment-log investigation are documented agent capabilities",
+      "qualifier": "The documented tools can act when requested; this source does not establish a recurring business-journey monitoring schedule. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://v0.app/docs/agentic-features"
+    },
+    "wix-automation-run-logs": {
+      "vendor": "Wix",
+      "label": "Automation run and step logs",
+      "value": "Each triggered automation has run records and step statuses, including failed or skipped actions",
+      "qualifier": "An automation log helps trace execution but does not prove that the intended recipient received or read an email. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://support.wix.com/en/article/wix-automations-understanding-run-logs"
+    },
+    "framer-form-webhook-retries": {
+      "vendor": "Framer",
+      "label": "Form webhook delivery and retries",
+      "value": "Form submissions are sent by HTTP POST, with retries when the webhook does not return a 2xx response",
+      "qualifier": "A successful HTTP response acknowledges receipt; it does not establish that the intended downstream business action completed. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://www.framer.com/help/articles/framer-form-webhook-setup/"
+    },
+    "webflow-recurring-aeo-agents": {
+      "vendor": "Webflow",
+      "plan": "Team and Enterprise Platform; content agents require Enterprise plus Analyze",
+      "label": "Recurring AEO agent recommendations",
+      "value": "Technical and content recommendations refresh automatically on a recurring schedule",
+      "qualifier": "Availability depends on plan and settings. Users review, apply and publish changes. These recommendations do not establish enquiry delivery, payment correctness or other business outcomes. Documentation review, not a tested project outcome",
+      "verifiedAt": "2026-09-17",
+      "source": "https://help.webflow.com/hc/en-us/articles/51704193319955-AEO-agents-overview"
     }
   }
 }
