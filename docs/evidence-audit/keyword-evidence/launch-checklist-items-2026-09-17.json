@@ -1,0 +1,44 @@
+{
+  "_provenance": {
+    "recorded": "2026-09-17",
+    "source": "Three public checklist videos by Josh Hoeg (Vibe Coding), captured by the site owner from Instagram. Items transcribed by hand from the three screenshots; the captions read 'Your robots sounds too much like a rob...', 'POV: your AI-built site is missing all the l...' and 'Google isn't showing your vibe coded w...'.",
+    "why": "The owner asked how many of these items an AI website builder misses. That question cannot be answered from here without building the same brief in each product and preserving prompts, outputs and tests, which the 16 September builder research says is the only basis for a frequency claim. What can be counted is the shape of the lists themselves, and what our own site scores against them.",
+    "limits": "One creator's three lists, not a survey of the checklist genre. Transcribed from screenshots, so a mis-read item is possible. No AI builder was tested against these items, and no failure rate for any builder is claimed or implied."
+  },
+
+  "counts": {
+    "total_items": 59,
+    "copywriting_judgements": 19,
+    "interface_features": 20,
+    "technical_seo_checks": 20,
+    "items_that_check_an_enquiry_or_payment_completes": 0
+  },
+
+  "_finding": "Across all 59 items, none checks that a form submission reaches a human, that a payment webhook fired once rather than twice, or that a refund stopped a downstream notification. The lists test what a page contains and how it reads. They do not test whether the business works. That is the gap this site's own four documented faults all sit in.",
+
+  "pandacodegen_measured_2026_09_17": {
+    "method": "Scored against the built output in .next/server/app and the source tree, at commit 42502bf. Presence checks only: source presence is not proof a feature works end to end.",
+    "technical_seo": { "present": 16, "measurable": 17, "unverifiable": ["search console verification, which is done by DNS or an HTML file rather than in page metadata"] },
+    "interface": { "present": 19, "measurable": 22 },
+    "absent": [
+      { "item": "scroll back to top", "note": "genuinely absent" },
+      { "item": "copy to clipboard", "note": "absent, and appropriate: nothing on the site needs copying" },
+      { "item": "password visibility toggle", "note": "absent, and appropriate: there is no password field on the site" }
+    ],
+    "corrections_to_the_first_run": [
+      "The scroll progress bar was first reported absent. It exists at src/components/layout/ScrollProgressBar.tsx; the check looked in src/components/ui.",
+      "Internal links were displayed as 0 by a broken format string. The real count is 34 distinct internal hrefs on the homepage."
+    ]
+  },
+
+  "what_vendor_documentation_covers": {
+    "note": "From the 16 September 2026 capability research, not from testing. Establishes that a feature is documented, not that it is enabled or correct on any given project.",
+    "lovable": "Built-in SEO review covers sitemap, robots, metadata, canonicals, alt text, semantic structure, indexing, accessibility, mobile usability and performance. That addresses roughly half the 20 technical items by documentation. Lovable's own docs say SEO elements are not always generated up front and reviews do not rerun on publish.",
+    "webflow_ai": "SEO/AEO audit and generation tools, subject to plan and credit limits and primary-locale restrictions. Its docs note component and CMS audit blind spots; 'no issues found' does not mean every route was checked.",
+    "wix_harmony": "AI-assisted SEO, automatic mobile adaptation and an accessibility wizard with documented coverage limits.",
+    "framer": "Published pages pre-rendered with sitemap and robots infrastructure; June 2026 Agents handle metadata and audit tasks.",
+    "bolt_and_v0": "SEO prerendering and full-stack capability respectively; neither markets a 59-point page checklist."
+  },
+
+  "_conclusion_for_the_article": "The honest line is not that builders miss N of 59. It is that the list is the wrong instrument. A builder can generate most of the interface items, documentation covers much of the SEO half, and no tool can supply the copywriting judgements. Meanwhile the failure that costs money, an enquiry that reports success and goes nowhere, appears nowhere on any of the three lists."
+}
