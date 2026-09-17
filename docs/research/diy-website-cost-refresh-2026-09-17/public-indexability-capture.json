@@ -1,0 +1,1876 @@
+{
+  "method": "Read-only urllib HTTP GET, no JavaScript execution, public access only. Browser user-agent is not a real Googlebot access test.",
+  "requests": [
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "checked_at_utc": "2026-09-17T16:52:37.847558+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "body_bytes": 668915,
+      "sha256": "766515f9326e0026b14ec143d7d2b4364383fd3847d7c70e0b8d4ac656d3a6b5",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153209",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "668915",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:40 GMT",
+        "Etag": "\"ab7cc8aaa4b170398da66c2b9740a916\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/is-it-cheaper-to-build-your-own-website",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::m9z2h-1789663960307-8aa1a546466a",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Is It Cheaper to Build Your Own Website? (2026)",
+      "h1": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
+      "h2": [
+        "What AI website builders genuinely do well",
+        "The four things that change when the site has a job",
+        "The cost nobody puts in the comparison",
+        "When you should build it yourself",
+        "When it stops being cheaper",
+        "What it costs either way",
+        "The machine-readable part is a sales channel",
+        "The honest summary",
+        "Frequently asked questions",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "is it cheaper to build a website myself,build website yourself vs hire,is $1500 a good price for a website,ai website builder for business,diy website vs developer,do i own the code if an agency builds my website,how much does a website cost to run"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "property": "og:description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Build it yourself for a portfolio. For a business that takes orders, the four real costs all arrive after launch."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        }
+      ],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 2910,
+      "article_text": "Is It Cheaper to Build Your Own Website? (2026) Skip to main content Services Work Pricing Partners Blog About +1 (302) 773-8982 Talk to the founders Talk to us Home Blog Custom Development Is it cheaper to build your own website Back to Blog Pricing Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job For a personal site, a portfolio, or a landing page you will throw away in six months: build it yourself, and paying someone $1,500 for that would be a waste of your money. For a business that takes orders, bookings or enquiries, the building was never the expensive part. H Hassan Jamal · Sep 13, 2026 · 10 min read Hassan builds and migrates Next.js sites, and writes down what the costs actually are rather than what makes an agency look necessary. The Short Answer Portfolio, side project, one-campaign landing page: build it yourself. An AI builder gets you live in an afternoon and it will look fine. A site that takes money, bookings or enquiries is an operation, not a page. Four costs follow it, and all four arrive after launch. We tested 48 small-business sites between 1 and 3 September 2026. 37 fail the check that decides whether an AI assistant can read them. What AI website builders genuinely do well AI builders produce a real, working page from one sentence, and for a lot of projects that is the correct tool. Most agency writing on this topic is dishonest about that. The layout is competent, it is responsive, and it reads well on a phone. Ten years ago that was a week of work from a junior developer. Anyone telling you the output is garbage has not used one recently. They are the right answer for a fun project, a side idea you are testing, a one-page site for an event, or a landing page you will run for a month and throw away. Nothing connects to anything, so there is no integration to keep alive, and if it breaks on a Tuesday nobody loses an order. If that describes your project, stop reading and go build it. You do not need us. The four things that change when the site has a job 1. Connecting it to anything The moment your site has to talk to something else, you are not writing a page any more, you are running an integration. A booking form has to reach your calendar. A contact form has to land in your inbox reliably, and not in spam. A shop has to talk to a payment provider, and that provider has to talk back to confirm the money arrived. AI builders will write code that calls an API, and they document webhook handling, server endpoints and their own security and SEO reviews. The code is often correct. What no tool does for you is hold the account, own the keys and permissions, and prove the thing behaves when the other service is down, when a message fails and has to retry, or when the payment provider sends the same notification twice. Those are not code problems. They are operational ones, and they only show up when a real customer hits them. The failure is quiet, which is what makes it expensive. A form that silently stops delivering looks exactly like a week with no enquiries. 2. Getting it live properly Publishing is not the same as launching. Between the two sit the domain, the DNS records, the certificate, and the email routing that must not break while you change the first three. That last one catches people. Point your domain at a new host carelessly and your email stops arriving, and you find out from a customer who says they replied three days ago. It is recoverable, it is a bad afternoon, and it is entirely avoidable if someone knew to check first. 3. Keeping it running Every site is made of parts written by other people, and those parts get security holes. In 2026, two WordPress plugins had critical vulnerabilities under active attack: Super Forms and Elementor Pro, both letting an unauthenticated attacker upload a file and take over the site. Wordfence blocked more than 250,000 attempts against one of them and close to 190,000 against the other. We took both apart, with the CVE identifiers and the dates, in the WordPress plugin security record . Every stack has this, WordPress included and Next.js included. What a business has to answer is who notices, and how fast the fix lands. If the answer is “me, when I next log in”, the honest version is that nobody is watching. 4. Whether machines can actually read it PandaCodeGen tested 48 small-business websites with Google's Lighthouse tools between 1 and 3 September 2026. 37 of the 48 failed Google's agent-accessibility-tree check , while the same sites had a median Lighthouse SEO score of 92 or above. By the standard SEO check those sites are fine. By the check that describes whether software can read and act on the page, most of them are not. On 2 September 2026 we watched one of those failing sites serve GPTBot, ClaudeBot, PerplexityBot and Googlebot an identical response: HTTP 200, and exactly 128,100 bytes to each. Every bot was let in. Every bot got the whole page. The page still failed the check. Access was never the problem. Structure was. We break the category down rule by rule in our agentic browsing guide . Two limits on that finding The sample is 48 sites we selected, not a random sample of the web, so treat it as a signal rather than a population estimate. And the agent-accessibility-tree audit scores binary against a hard-coded rule list, so one violation of any single rule scores zero. A site scoring zero is not necessarily broken everywhere. It has one problem somewhere, and it needs finding. We do not name the sites, their owners, or whoever built them. The cost nobody puts in the comparison Say you build it yourself and it mostly works. Your Saturday still is not free. The afternoon you spend working out why the form stopped delivering is an afternoon you were not selling, quoting, or doing the work customers actually pay you for. The evening you spend reading about DNS records is an evening you do not get back. If you are the one managing the website, who is managing the business? For a lot of owners the honest answer is that both get done badly. The site gets fixed slowly because you are busy, and the business gets attention late because the site broke. Neither failure is dramatic, both are expensive, and neither one shows up as an invoice you could point at. When you should build it yourself ✓ It is a personal site, a portfolio, or a project you are doing for fun. ✓ It is one landing page for one campaign, and you will throw it away after. ✓ Nothing connects to anything: no payments, no bookings, no CRM. ✓ You are testing whether an idea has any interest at all, before it has customers. ✓ You enjoy it. That is a real reason and it counts. In those cases the four costs above are close to zero, because nobody downstream depends on the thing working. When it stops being cheaper ✓ Money moves through it, or bookings do. ✓ Enquiries arriving is how you get customers, so a silent form is lost revenue. ✓ It connects to a CRM, a calendar, an inventory system or a payment provider. ✓ You have search traffic you would notice losing. ✓ You would not know within a day if it went down or stopped delivering mail. ✓ The hours you spend on it are hours the business is not getting. What it costs either way PandaCodeGen builds a 5 to 7 page custom Next.js site for $1,500 , fixed before work starts, in 2 to 4 weeks, with no minimum project size, and you own the code, design files and accounts at handover. The full scope of what that price includes, and what it does not, is set out in how much a website costs and in what a $5,000 build includes rather than repeated here. The one question worth taking from this page Ask for the minimum project size before you ask for a price. Minimums vary far more than the marketing suggests. Specialist Next.js shops do publish high ones — Pagepro's Clutch profile lists a $25,000 minimum, checked 10 September 2026 — while other independent suppliers start below us: Brian Yang publishes a three-page Starter at $700, checked 13 September 2026, and Sanjeewa a $1,250 entry tier, checked 10 September 2026. That one question tells you whether you are a client or a rounding error. Hosting is arranged per client: some pay the provider directly with no markup from us, some are hosted in our account as part of an agreed arrangement, and your quote says which. The build itself carries no subscription. Ongoing work is separate and optional. The pages named in your quote score 90 or better on Lighthouse, mobile and desktop, across three recorded runs before handover — a lab acceptance target, not a promise about rankings or field data. Ownership is covered in full in do you own your website . The machine-readable part is a sales channel Orders are now arriving from assistants, and in one store we can put a number on it. Our founder-owned store, Panda Patches, took $11,186.59 across 36 orders from AI assistants in August 2026 , 14.7% of that month's revenue, with nothing spent on any AI platform. It is a founder-affiliated store and not independent client proof, and we publish it because we would rather show a number we measured than describe a trend. The six-month breakdown is in our AI referral revenue record . Two of those customers told us how they found it, and both had asked an assistant for a constraint rather than a category. One asked for patch companies with no or low minimums. One asked for PVC patches with no mould fee. Neither searched for “custom patches”. They asked for the specific thing that was blocking them, and the store that answered it plainly in its own page text was the one they were shown. No tool knows that for you, and it has nothing to do with code quality. It requires knowing what your buyers are actually blocked by, and writing the answer on the page in a sentence a machine can lift. That is a conversation with your customers, not a prompt. The honest summary Building a website has never been cheaper and for a fun project it is close to free, and you should do exactly that. For a business, the build was never the expensive part. Integrations, launch, maintenance, machine readability and your own time are the expensive parts, and every one of them arrives after the site is live, which is exactly when a DIY build stops having anyone to call. If you are not sure which side of the line you are on, the test is simple. Ask what happens if the site quietly stops working on a Friday afternoon. If the answer is “nothing much”, build it yourself. If the answer involves losing money, you are buying an operation, not a website. Not sure which side of that line you are on? Send us the URL and what you are worried about. We will tell you if a repair is the cheaper answer, and we say so when it is. See what custom engineering includes Frequently asked questions Frequently Asked Questions Is it cheaper to build your own website? For a personal site, a portfolio, a one-campaign landing page, or anything you would be happy to delete in six months: yes, and you should. An AI builder will get you something live in an afternoon. For a business that takes orders, bookings or enquiries, the build was never the expensive part. The cost is in integrations, launch, maintenance, machine readability and your own time, and every one of those arrives after the site is live. Are AI website builders good enough for a business website? They produce a real, working, responsive page from one sentence, and the layout is competent. What they do not give you is the account, the key, the permissions, the error handling for when a payment provider is down, the retry when a message fails, or the webhook that confirms the money arrived. Those are operational problems rather than code problems, and they only appear when a real customer hits them. Is $1,500 a good price for a website? It depends entirely on what is included and what happens after launch. PandaCodeGen builds a 5 to 7 page custom Next.js site for $1,500 at a price fixed before work starts, with no minimum project size, and hands over the code, design files and accounts. Before comparing any two quotes, ask each supplier for their minimum project size: specialist Next.js shops publish minimums as high as $25,000, while independent suppliers start below us, with published entry tiers at $700 for three pages and $1,250, both checked in September 2026. Do I own the code if an agency builds my website? With PandaCodeGen, yes. The source, the design files, the CMS and the production accounts are transferred into your name at handover, so a different developer can pick the site up without asking anyone's permission. This is worth confirming in writing with any supplier before you sign, because it is not universal and it is difficult to fix afterwards. What does a website cost to run after it is built? Hosting is the smallest line. Commercial hosting on Vercel Pro starts at $20 a month paid straight to the provider. The larger costs are the ones that do not arrive as an invoice: the afternoon spent working out why a form stopped delivering, the evening spent reading about DNS records, and the security patching that nobody is watching if the answer to \"who notices\" is \"me, when I next log in\". Can AI assistants read a website built with an AI builder? Often not. PandaCodeGen tested 48 small-business websites between 1 and 3 September 2026 and 37 of them failed Google's agent-accessibility-tree audit, while the same sites had a median Lighthouse SEO score of 92 or above. Passing the standard SEO check does not mean software can read and act on the page. You can test your own site in PageSpeed Insights under the Agentic Browsing category. Does being readable by AI assistants actually produce sales? It can, though the evidence available here is founder-affiliated rather than independent. Panda Patches, a store owned and operated by a PandaCodeGen co-founder, took $11,186.59 from AI assistants across 36 orders in August 2026, which was 14.7% of that month's revenue, with nothing spent on any AI platform. That is one store, one month and one product category, and nothing in it transfers automatically to a longer sales cycle. Where this sits This guide is one of 7 in Custom Website Development Guides . That page collects the whole topic in one place, in reading order. If you have moved past the research stage, see how we scope a custom build . Related Articles WooCommerce 14 min WooCommerce vs Custom Website in 2026: A Requirements Guide Compare WooCommerce, headless WooCommerce and custom commerce across capabilities, editing, performance, security, SEO, data, ownership, operating cost and exit. Read More Guide 11 min Custom Website Starting at $5,000: Scope Guide (2026) How PandaCodeGen scopes its Scale tier, including migration, performance, support, payment, ownership, exclusions, and change control. Read More Measurement 18 min Meta Conversions API Setup Cost: A Scope-Based Guide Plan Meta Conversions API cost from events, systems, consent, matching, deduplication, QA and monitoring, with a carefully labelled Panda Patches screenshot. Read More Work directly with the founders Have something in mind? A new website, a store to improve, or a workflow to simplify. Tell Hassan or Imran what you need, even if you are still figuring it out. Talk to the founders Explore pricing A founder replies by email, usually within one business day. No obligation to start a project. PandaCodeGen . Custom websites, online stores and software. New builds, redesigns and migrations, with founders involved from the first conversation. info@pandacodegen.com 12250 S Kirkwood Rd, Apt 1128 Stafford, TX 77477, United States Email Contact form Services WordPress Migration Custom software AI SEO E-Commerce Wix Migration Squarespace Migration Webflow Migration WooCommerce Migration GoHighLevel Company Project Evidence Method, permission, and publication controls. Agency Pilot Test one scoped engagement first. About Migration delivery standards. Hassan Jamal Co-founder and Lead Engineer. Imran Raza Ladhani Co-founder and Lead Architect. Engineering Blog Deep dives into Next.js and performance. Delivery Principles Scope, evidence, control, and acceptance. Contact Talk directly with Hassan or Imran. Resources Example Scopes Price drivers and proposal controls. Migration Services Platform and engineering options. Facts and Figures Pricing, team, case studies and guarantees, stated plainly. Security Reporting and disclosure process. Editorial Policy Sources, evidence, freshness, and corrections. Privacy Data use and visitor choices. Cookie Choices Optional services and consent. Website Terms Use of the site and inquiries. © 2026 Panda Group Ventures L.L.C. , trading as PandaCodeGen · 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States Privacy Terms Cookies Security Editorial Report a security issue"
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/robots.txt",
+      "checked_at_utc": "2026-09-17T16:52:38.195168+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/robots.txt",
+      "body_bytes": 113,
+      "sha256": "56b46c736b33eb90c2eb6b6f373bbf3f84d63f3aea0a4d344be5cbd7a161fb14",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "42",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"robots.txt\"",
+        "Content-Length": "113",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:40 GMT",
+        "Etag": "\"9a83f0c8438dea324c88ac477eda6e15\"",
+        "Last-Modified": "Thu, 17 Sep 2026 16:51:57 GMT",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/robots.txt",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::htgtw-1789663960639-2501fe62eb26",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "",
+      "h1": "",
+      "h2": [],
+      "meta": [],
+      "canonical": [],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 10,
+      "body": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /_next/data/\n\nSitemap: https://www.pandacodegen.com/sitemap.xml\n"
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/sitemap.xml",
+      "checked_at_utc": "2026-09-17T16:52:38.346614+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/sitemap.xml",
+      "body_bytes": 25316,
+      "sha256": "2b927740ac9364039c6aa255b58c3676e04e291a637cdf971b8867029f5fd41b",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "42",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"sitemap.xml\"",
+        "Content-Length": "25316",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Type": "application/xml",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:41 GMT",
+        "Etag": "\"5c5808eb4e969b588c074746076e7cfa\"",
+        "Last-Modified": "Thu, 17 Sep 2026 16:51:58 GMT",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/sitemap.xml",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::fwnnw-1789663960800-06deb9988679",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "",
+      "h1": "",
+      "h2": [],
+      "meta": [],
+      "canonical": [],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 554,
+      "target_sitemap_entry": [
+        {
+          "loc": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+          "lastmod": "2026-09-13T00:00:00.000Z",
+          "changefreq": "monthly",
+          "priority": "0.7"
+        }
+      ]
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog",
+      "checked_at_utc": "2026-09-17T16:52:38.812174+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog",
+      "body_bytes": 761277,
+      "sha256": "57fd0cdeaad7cc23c48bf34e4f75faf51580962038f13b4b58538cf366bbf0b2",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153222",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "761277",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:41 GMT",
+        "Etag": "\"ae06f4be7dc5cf522b8fb284cb69ea33\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::rzb9j-1789663961266-c3593139428f",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Website Migration, SEO & Performance Blog | PandaCodeGen",
+      "h1": "Website Migration, Speed and SEO Guides.",
+      "h2": [
+        "Browse by topic",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow"
+        },
+        {
+          "name": "googlebot",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Website Migration, SEO & Performance Blog | PandaCodeGen"
+        },
+        {
+          "property": "og:description",
+          "content": "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Migration and Web Engineering Journal | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Website Migration, SEO & Performance Blog | PandaCodeGen"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Migration and Web Engineering Journal | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 1157
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/topic/custom-development",
+      "checked_at_utc": "2026-09-17T16:52:39.273482+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/topic/custom-development",
+      "body_bytes": 612770,
+      "sha256": "df75c89550bf41773212f1ab0098a426d491d3fe3f4a64aaf2397b9637fc4db5",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153234",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "612770",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:41 GMT",
+        "Etag": "\"03c2e0d0a7b794db028b59920299d40f\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/topic/custom-development",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::4cvq2-1789663961720-d047e6ba532d",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Custom Website Development Guides: Scope, Timelines and Ownership | PandaCodeGen",
+      "h1": "Custom Website Development Guides",
+      "h2": [
+        "Every guide in this topic",
+        "Past the reading stage?",
+        "Related topics",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "Guides on commissioning custom web development: what a given budget includes, how long a build takes, what build-versus-buy actually compares, and who owns the result."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Custom Website Development Guides: Scope, Timelines and Ownership"
+        },
+        {
+          "property": "og:description",
+          "content": "Guides on commissioning custom web development: what a given budget includes, how long a build takes, what build-versus-buy actually compares, and who owns the result."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/topic/custom-development"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Ftopic%2Fcustom-development&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Custom Website Development Guides | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Custom Website Development Guides: Scope, Timelines and Ownership"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Guides on commissioning custom web development: what a given budget includes, how long a build takes, what build-versus-buy actually compares, and who owns the result."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Ftopic%2Fcustom-development&v=og-v3-2026-07-28%3Aog-v3-2026-07-28"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Custom Website Development Guides | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/topic/custom-development"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 947
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included",
+      "checked_at_utc": "2026-09-17T16:52:39.885817+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included",
+      "body_bytes": 684274,
+      "sha256": "a70adc643fe23b74f3a521d6688c5c82dca70948adb533e11bb395e270c2ebab",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "151532",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "684274",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:42 GMT",
+        "Etag": "\"3a32b43cf63c4263a830d356c45607bf\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/custom-website-5000-whats-included",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::lfdj6-1789663962341-076bc341e06c",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Custom Website Starting at $5,000: Scope Guide (2026)",
+      "h1": "What a Custom Website Starting at $5,000 Includes",
+      "h2": [
+        "The short answer",
+        "Why $5,000 is a range entry, not a promise",
+        "How many pages does $5,000 get you?",
+        "What a Scale build normally contains",
+        "The part that is easy to miss when comparing quotes",
+        "What the price does not automatically include",
+        "How the 90+ performance target works",
+        "Payment, refund, and change control",
+        "Support after launch",
+        "Who owns the finished work",
+        "How to compare this quote with another provider",
+        "Which tier should you start with?",
+        "Book a call with the founders",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "See how PandaCodeGen scopes its $5,000 Scale tier, including migration, performance, support, payment, ownership, and change-control terms."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "custom website cost,custom website 5000,what does a custom website include,website migration scope,custom website price 2026,Next.js website cost,what do you get for a custom website,custom website what is included,fixed price web development,custom website vs agency quote"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Custom Website Starting at $5,000: Scope Guide (2026)"
+        },
+        {
+          "property": "og:description",
+          "content": "See how PandaCodeGen scopes its $5,000 Scale tier, including migration, performance, support, payment, ownership, and change-control terms."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fcustom-website-5000-whats-included&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Custom Website Starting at $5,000: Scope Guide (2026) | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-06-14"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-08-19"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Custom Website Starting at $5,000: Scope Guide (2026)"
+        },
+        {
+          "name": "twitter:description",
+          "content": "See how PandaCodeGen scopes its $5,000 Scale tier, including migration, performance, support, payment, ownership, and change-control terms."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fcustom-website-5000-whats-included&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Custom Website Starting at $5,000: Scope Guide (2026) | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/custom-website-5000-whats-included"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 3212
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/how-long-does-a-custom-website-take",
+      "checked_at_utc": "2026-09-17T16:52:40.305926+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/how-long-does-a-custom-website-take",
+      "body_bytes": 691584,
+      "sha256": "72bf0a4651a45f70923c282ec0f3ab9ea6b33ea54c9b2e521e7145258970d15d",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "151324",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "691584",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:42 GMT",
+        "Etag": "\"c2b5dd6e76244345d897d9529da860c0\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/how-long-does-a-custom-website-take",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::p5rp8-1789663962751-00b5fbd42410",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "How Long Does a Custom Website Take? A 2026 Schedule Guide",
+      "h1": "How Long Does a Custom Website Take? Build the Schedule From Scope",
+      "h2": [
+        "The useful short answer",
+        "Why the quoted number is usually bigger than the work",
+        "The schedule formula",
+        "Typical timelines by project size",
+        "Scope signals that change the clock",
+        "A phase-based estimate is safer than one headline number",
+        "What the MyCustomPatches example does and does not show",
+        "Client delays are not the only source of delay",
+        "An example of a project that is slow for good reasons",
+        "What “content ready” means",
+        "You do not need a finished design to start",
+        "Can a site launch in one week?",
+        "Quality gates that should not be removed to save time",
+        "What PandaCodeGen puts into the schedule",
+        "Get your migration schedule",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "Build a defensible website schedule from inventory, content, design, integrations, review, QA and cutover instead of relying on an unsupported universal timeline."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "how long does a custom website take,website build timeline,website development schedule,website migration timeline,how fast can a website be built,how long does it take to build a website,custom website timeline,can a website be built in a week,website redesign timeline"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "How Long Does a Custom Website Take? A 2026 Schedule Guide"
+        },
+        {
+          "property": "og:description",
+          "content": "Build a defensible website schedule from inventory, content, design, integrations, review, QA and cutover instead of relying on an unsupported universal timeline."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/how-long-does-a-custom-website-take"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fhow-long-does-a-custom-website-take&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "How Long Does a Custom Website Take? A 2026 Schedule Guide | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-06-03"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-08-19"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "How Long Does a Custom Website Take? A 2026 Schedule Guide"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Build a defensible website schedule from inventory, content, design, integrations, review, QA and cutover instead of relying on an unsupported universal timeline."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fhow-long-does-a-custom-website-take&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "How Long Does a Custom Website Take? A 2026 Schedule Guide | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/how-long-does-a-custom-website-take"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 3008
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/do-you-own-your-website",
+      "checked_at_utc": "2026-09-17T16:52:41.108233+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/do-you-own-your-website",
+      "body_bytes": 701419,
+      "sha256": "9b9f605ba0a7348dcba74d10929ff5e2d171858959faf353324ae1714a5fede7",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "151322",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "701419",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:43 GMT",
+        "Etag": "\"1b47c0c6387099aaa33ab232fbd169e6\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/do-you-own-your-website",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::zccwx-1789663963561-099abcc0af4f",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Do You Own Your Website? A Contract and Control Checklist",
+      "h1": "Do You Own Your Website? Check the Contract and the Controls",
+      "h2": [
+        "The short answer",
+        "The legal default is more nuanced than “the developer owns it”",
+        "Does a “work made for hire” clause mean you own the website?",
+        "Do website builders own your website?",
+        "Eight things to control or document",
+        "Source code access is not the same as unlimited ownership",
+        "Account control needs an operating plan",
+        "Five ways lock-in actually happens",
+        "What PandaCodeGen intends to put in the project terms",
+        "Refunds and incomplete work need separate language",
+        "One question to ask before you sign",
+        "Questions to put in the SOW before onboarding",
+        "Primary legal references",
+        "Book a call with the founders",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "Website ownership is more than source code. Check copyright, licenses, domain, hosting, repository, business accounts, data, access, payment, and handover terms."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "do I own my website,who owns my website,website source code ownership,website copyright transfer,domain and hosting ownership,website handover checklist,does my developer own my website,developer holding website hostage,what happens if my web developer disappears,website source code transfer contract"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Do You Own Your Website? A Contract and Control Checklist"
+        },
+        {
+          "property": "og:description",
+          "content": "Website ownership is more than source code. Check copyright, licenses, domain, hosting, repository, business accounts, data, access, payment, and handover terms."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/do-you-own-your-website"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fdo-you-own-your-website&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Do You Own Your Website? A Contract and Control Checklist | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-06-03"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-08-19"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Do You Own Your Website? A Contract and Control Checklist"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Website ownership is more than source code. Check copyright, licenses, domain, hosting, repository, business accounts, data, access, payment, and handover terms."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fdo-you-own-your-website&v=og-v3-2026-07-28%3A2026-08-19"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Do You Own Your Website? A Contract and Control Checklist | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/do-you-own-your-website"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 3351
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
+      "checked_at_utc": "2026-09-17T16:52:42.163271+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison",
+      "body_bytes": 676350,
+      "sha256": "efa65bec8a669891ce31b3dc195f35c3507792ed0e6af8a53e9781e3346d0d27",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "151385",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "676350",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:44 GMT",
+        "Etag": "\"b953593c33d9584d07fee99dc34fc23a\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/build-vs-buy-software-2026-cost-comparison",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::68q2j-1789663964606-b32b90620d93",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Build vs Buy Software 2026: A Cost Framework",
+      "h1": "Should You Build or Buy Software in 2026? Use the Full-Cost Test",
+      "h2": [
+        "The Scenario Test That Replaces a Spend Threshold",
+        "The three scenarios, and where they cross",
+        "How to price a CRM decision: what to collect before you compare",
+        "The AI Caveat: Why Cheap-to-Build Is Not the Same as Build-It-Yourself",
+        "When Buying Still Wins (Be Honest About This)",
+        "Mutable vendor references checked July 24, 2026",
+        "Frequently Asked Questions",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "Compare SaaS with custom software using current quotes, migration, maintenance, security, adoption, operating risk, and scenario-based break-even."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "build vs buy software 2026,custom software vs saas,is it cheaper to build a custom crm,build vs buy decision framework,custom crm cost vs hubspot,saas vs custom code cost,when to build custom software,3 year cost of saas,replace saas with custom software,should I build my own CRM,custom software vs subscription cost,when is custom software worth it"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Build vs Buy Software in 2026: A Cost Framework"
+        },
+        {
+          "property": "og:description",
+          "content": "A scenario-based build-versus-buy framework with no universal spend or payback threshold."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fbuild-vs-buy-software-2026-cost-comparison&v=og-v3-2026-07-28%3A2026-08-01"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Should You Build or Buy Software in 2026? A Cost Framework | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-05-31T00:00:00-05:00"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-08-01T00:00:00-05:00"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Build vs Buy Software in 2026: A Cost Framework"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Compare current quotes and operating risks; no universal monthly-spend or payback rule."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fbuild-vs-buy-software-2026-cost-comparison&v=og-v3-2026-07-28%3A2026-08-01"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Should You Build or Buy Software in 2026? A Cost Framework | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/build-vs-buy-software-2026-cost-comparison"
+        }
+      ],
+      "target_anchor_links": [
+        "/blog/is-it-cheaper-to-build-your-own-website"
+      ],
+      "visible_word_count_including_shared_ui": 2783
+    },
+    {
+      "requested_url": "https://pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "checked_at_utc": "2026-09-17T16:52:42.973169+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "body_bytes": 668915,
+      "sha256": "766515f9326e0026b14ec143d7d2b4364383fd3847d7c70e0b8d4ac656d3a6b5",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153214",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "668915",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:45 GMT",
+        "Etag": "\"ab7cc8aaa4b170398da66c2b9740a916\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/is-it-cheaper-to-build-your-own-website",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::wcfcr-1789663965844-683fa25edf84",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Is It Cheaper to Build Your Own Website? (2026)",
+      "h1": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
+      "h2": [
+        "What AI website builders genuinely do well",
+        "The four things that change when the site has a job",
+        "The cost nobody puts in the comparison",
+        "When you should build it yourself",
+        "When it stops being cheaper",
+        "What it costs either way",
+        "The machine-readable part is a sales channel",
+        "The honest summary",
+        "Frequently asked questions",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "is it cheaper to build a website myself,build website yourself vs hire,is $1500 a good price for a website,ai website builder for business,diy website vs developer,do i own the code if an agency builds my website,how much does a website cost to run"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "property": "og:description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Build it yourself for a portfolio. For a business that takes orders, the four real costs all arrive after launch."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        }
+      ],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 2910
+    },
+    {
+      "requested_url": "http://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "checked_at_utc": "2026-09-17T16:52:43.772902+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "body_bytes": 668915,
+      "sha256": "766515f9326e0026b14ec143d7d2b4364383fd3847d7c70e0b8d4ac656d3a6b5",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153215",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "668915",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:46 GMT",
+        "Etag": "\"ab7cc8aaa4b170398da66c2b9740a916\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/is-it-cheaper-to-build-your-own-website",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::bblcm-1789663966314-2d7d62f6cb2c",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Is It Cheaper to Build Your Own Website? (2026)",
+      "h1": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
+      "h2": [
+        "What AI website builders genuinely do well",
+        "The four things that change when the site has a job",
+        "The cost nobody puts in the comparison",
+        "When you should build it yourself",
+        "When it stops being cheaper",
+        "What it costs either way",
+        "The machine-readable part is a sales channel",
+        "The honest summary",
+        "Frequently asked questions",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "is it cheaper to build a website myself,build website yourself vs hire,is $1500 a good price for a website,ai website builder for business,diy website vs developer,do i own the code if an agency builds my website,how much does a website cost to run"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "property": "og:description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Build it yourself for a portfolio. For a business that takes orders, the four real costs all arrive after launch."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        }
+      ],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 2910
+    },
+    {
+      "requested_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website/",
+      "checked_at_utc": "2026-09-17T16:52:44.162132+00:00",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "final_url": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website",
+      "body_bytes": 668915,
+      "sha256": "766515f9326e0026b14ec143d7d2b4364383fd3847d7c70e0b8d4ac656d3a6b5",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "153215",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline",
+        "Content-Length": "668915",
+        "Content-Security-Policy": "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests",
+        "Content-Security-Policy-Report-Only": "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://connect.facebook.net https://www.clarity.ms https://scripts.clarity.ms https://widget.trustpilot.com https://cal.com https://app.cal.com https://va.vercel-scripts.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://www.facebook.com https://*.facebook.com https://*.tawk.to https://embed.tawk.to https://widget.trustpilot.com https://cal.com https://app.cal.com; font-src 'self' data: https://*.tawk.to https://cal.com https://app.cal.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com https://www.facebook.com https://connect.facebook.net https://*.tawk.to wss://*.tawk.to https://cal.com https://app.cal.com https://api.cal.com https://vitals.vercel-insights.com; frame-src https://embed.tawk.to https://*.tawk.to https://cal.com https://app.cal.com https://widget.trustpilot.com; worker-src 'self' blob:; manifest-src 'self'; media-src 'self' https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+        "Date": "Thu, 17 Sep 2026 16:52:46 GMT",
+        "Etag": "\"ab7cc8aaa4b170398da66c2b9740a916\"",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "Vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-Matched-Path": "/blog/is-it-cheaper-to-build-your-own-website",
+        "X-Nextjs-Prerender": "1",
+        "X-Nextjs-Stale-Time": "300",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "bom1::7c9bk-1789663966780-286b0d4fc9c7",
+        "X-Xss-Protection": "0",
+        "Connection": "close"
+      },
+      "title": "Is It Cheaper to Build Your Own Website? (2026)",
+      "h1": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job",
+      "h2": [
+        "What AI website builders genuinely do well",
+        "The four things that change when the site has a job",
+        "The cost nobody puts in the comparison",
+        "When you should build it yourself",
+        "When it stops being cheaper",
+        "What it costs either way",
+        "The machine-readable part is a sales channel",
+        "The honest summary",
+        "Frequently asked questions",
+        "Frequently Asked Questions",
+        "Related Articles",
+        "Have something",
+        " ",
+        "in mind?"
+      ],
+      "meta": [
+        {
+          "charset": "utf-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1, maximum-scale=5"
+        },
+        {
+          "name": "next-size-adjust",
+          "content": ""
+        },
+        {
+          "name": "theme-color",
+          "content": "#B8410C"
+        },
+        {
+          "name": "description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "name": "author",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "keywords",
+          "content": "is it cheaper to build a website myself,build website yourself vs hire,is $1500 a good price for a website,ai website builder for business,diy website vs developer,do i own the code if an agency builds my website,how much does a website cost to run"
+        },
+        {
+          "name": "creator",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "publisher",
+          "content": "PandaCodeGen"
+        },
+        {
+          "name": "robots",
+          "content": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+        },
+        {
+          "name": "vaime-verify",
+          "content": "vaime-site-MxabpGKunFfb2RLT9ixdfDrjlxSzz0Gw"
+        },
+        {
+          "property": "og:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "property": "og:description",
+          "content": "For a portfolio or a one-campaign landing page, build it yourself. For a business that takes orders, the build was never the expensive part, and the four costs that follow all arrive after launch."
+        },
+        {
+          "property": "og:url",
+          "content": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "property": "og:type",
+          "content": "article"
+        },
+        {
+          "property": "article:published_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:modified_time",
+          "content": "2026-09-13T00:00:00-05:00"
+        },
+        {
+          "property": "article:author",
+          "content": "Hassan Jamal"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Build it yourself for a portfolio. For a business that takes orders, the four real costs all arrive after launch."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://www.pandacodegen.com/og?path=%2Fblog%2Fis-it-cheaper-to-build-your-own-website&v=og-v3-2026-07-28%3A2026-09-13"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Is It Cheaper to Build Your Own Website? Yes, Until It Has a Job | PandaCodeGen social preview"
+        },
+        {
+          "name": "twitter:image:width",
+          "content": "1200"
+        },
+        {
+          "name": "twitter:image:height",
+          "content": "630"
+        }
+      ],
+      "canonical": [
+        {
+          "rel": "canonical",
+          "href": "https://www.pandacodegen.com/blog/is-it-cheaper-to-build-your-own-website"
+        }
+      ],
+      "target_anchor_links": [],
+      "visible_word_count_including_shared_ui": 2910
+    }
+  ]
+}
