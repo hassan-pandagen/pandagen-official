@@ -73,7 +73,7 @@ Prices and workload are held constant for illustration. Tax, transaction fees, p
 
 Local edits do not change the live page or establish a new Search Console status. After deployment: verify the exact URL's public title, canonical, updated answer and dates, then inspect in GSC and request indexing once if eligible. Do not change the URL or repeatedly submit unchanged pages to address the supplied screenshot.
 
-The separate AI-built launch-checklist article remains unpublished. This refresh deliberately does not link to an unavailable route. When that article is implemented and verified, add a contextual link from the short AI testing paragraph; keep the detailed launch checklist there and the cost decision here.
+The separate AI-built launch-checklist article was implemented later the same day at `/blog/ai-built-website-checklist`, so the contextual link from the AI testing paragraph is now in place. The detailed launch checklist lives there and the cost decision stays here.
 
 ## Validation
 
