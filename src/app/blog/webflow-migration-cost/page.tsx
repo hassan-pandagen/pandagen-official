@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-25",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-18",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-migration-cost")],
@@ -51,6 +51,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "Webflow pricing", url: "https://webflow.com/pricing" },
+    { name: "Webflow Team plan bundle", url: "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" },
     { name: "Webflow site plans", url: "https://help.webflow.com/hc/en-us/articles/33961232582419-Choose-a-Site-plan" },
     { name: "Webflow code export", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
     { name: "Webflow CMS import and export", url: "https://help.webflow.com/hc/en-us/articles/33961290794771-How-do-I-import-content-into-the-Webflow-CMS" },
@@ -68,7 +69,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-18",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -114,7 +115,7 @@ const articleSchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-25",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-18",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -329,7 +330,9 @@ export default function WebflowMigrationCostPage() {
                     <div data-speakable="true">
                         <BlogText>
                             Enterprise Webflow work carries two price tags and they are set in different places. Webflow
-                            publishes the platform side: Team is $2,500/mo on an annual contract, and Enterprise is
+                            publishes the platform side: Team is $2,500/mo on an annual contract, including a site and
+                            Workspace, with additional sites and extras quoted by Webflow. We rechecked the Team bundle
+                            on September 18, 2026. Enterprise is
                             quoted on request with no figure published anywhere on webflow.com, read August 2, 2026. The
                             migration side is not published by anyone, ours included, because at this size the cost is
                             governance rather than pages. Our Scale tier starts at $5,000 and enterprise
@@ -524,8 +527,10 @@ export default function WebflowMigrationCostPage() {
                             Basic at $15/mo billed yearly and Premium at $25/mo billed yearly, all quoted per site in
                             USD before tax. Basic is described as being for &ldquo;simple sites that don&apos;t need a
                             CMS&rdquo; and carries 300 static pages and 10 GB of bandwidth, so a single Collection puts
-                            you on Premium. Platform plans start at Team, $2,500/mo on an annual contract, with
-                            Enterprise quoted on request. Selling adds a separate Ecommerce plan: Standard $29/mo with a
+                            you on Premium. Team is $2,500/mo on an annual contract and bundles a site and Workspace,
+                            rather than adding a surcharge to the included site&apos;s plan. Additional sites and extras
+                            require a Webflow quote; we rechecked the Team bundle on September 18, 2026. Enterprise is
+                            quoted on request. Selling adds a separate Ecommerce plan: Standard $29/mo with a
                             2% transaction fee, Plus $74/mo and Advanced $212/mo at 0%. Add-ons sit on top and are
                             priced by usage: Optimize from $299/mo, Analyze from $9/mo, Localize from $9/mo.
                         </BlogText>

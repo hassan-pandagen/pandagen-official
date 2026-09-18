@@ -1,0 +1,21 @@
+{
+  "source_url": "https://dchouse.pl/documents/dc-house-raport-wydajnosci-2026.pdf",
+  "verified_date": "2026-09-16",
+  "sha256": "33a0f5a357d1287a93bfe85bfdc18afad7a825ed25ec23bb809b765928e24df5",
+  "pages": 14,
+  "annotations": [],
+  "mentions": [
+    {
+      "page": 5,
+      "text": "Źródła: corewebvitals.io / WordPress Performance Guide 2026, Steven Studio Benchmark 2026, Pandacodegen 2026, DigitalApplied 2026"
+    },
+    {
+      "page": 13,
+      "text": "dchouse.pl   •   kontakt@dchouse.pl   •   Wrocław, Polska"
+    },
+    {
+      "page": 13,
+      "text": "• Pandacodegen — WordPress vs Next.js: Real Speed, Cost, SEO Comparison"
+    }
+  ]
+}

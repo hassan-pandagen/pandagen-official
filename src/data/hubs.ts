@@ -104,11 +104,11 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
         h1: 'Webflow Migration Guides',
         title: 'Webflow Migration Guides: Costs, CMS Limits and Moving to Next.js',
         description:
-            'Guides on leaving Webflow: the full cost of the plan stack, the CMS item ceiling, localisation pricing, and what a migration to a custom Next.js build involves.',
-        moneyAnchor: 'our Webflow migration service',
+            'Guides to Webflow costs, CMS and integration requirements, platform alternatives, and what moving to a custom Next.js website involves.',
+        moneyAnchor: 'our Webflow optimization and migration service',
         intro: [
-            'Webflow is a strong design tool, and teams rarely leave it because they dislike building in it. They leave when they hit a boundary the plan cannot move: a CMS item ceiling, localisation priced as an add-on, a workflow that needs server-side logic the platform does not run.',
-            'The guides here try to price that boundary honestly. The published plan figure is usually the smallest part of the real bill once you add the seats, the localisation tier, and whatever sits alongside Webflow to cover what it does not do. Several posts in this cluster exist to get that full number written down, because a migration decision made against the plan price alone is being made against the wrong number.',
+            'A Webflow site can need faster pages, a different publishing workflow, better search or new integrations. Current plans and capabilities may already cover the requirement. These guides help you compare improving the existing site with changing its platform.',
+            'Start with the bill and the work your site needs to do. Site plans, Workspace access, bandwidth, languages and connected services can affect the total, with some plans bundling several of them. Compare that total with the build and ongoing costs of a replacement.',
             'The other recurring theme is what leaving actually involves. Webflow exports code, but an export is not a working application, and the CMS content, the redirects, and the form handling all need somewhere to land. Knowing that in advance is the difference between a planned migration and a stalled one.',
             'Platform pricing changes, so figures in these posts are dated and sourced, and the official pricing page is the authority on the day you read this. If you are costing a specific move, [[money]] sets out scope and exclusions.',
         ],

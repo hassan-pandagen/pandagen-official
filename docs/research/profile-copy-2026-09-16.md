@@ -1,5 +1,9 @@
 # External profile copy
 
+**Superseded on 16 September 2026 by the researched [profile canon and rollout record](external-profile-canon-2026-09-16/README.md). Use its [ready-to-paste copy](external-profile-canon-2026-09-16/ready-to-paste.md) and [field replacements](external-profile-canon-2026-09-16/field-replacements.md), not the historical drafts below. No external profile updates have been saved by that review.**
+
+Corrections to this earlier note: being based in Texas does not contradict formation in Wyoming; a coarse directory budget bucket can include a US$1,500 starting price; valid address/phone formatting need not match character for character. The medium draft below is too long for a compact tagline, and the short draft can imply that software also starts at US$1,500. The new pack separates those scopes and supplies measured character counts. A website's declared company facts are the source; publication status still requires verification.
+
 Written for: someone pasting into LinkedIn, Clutch and the other directory profiles.
 Generated 16 September 2026 from `src/data/company-facts.ts` as deployed at `94b9a98`.
 

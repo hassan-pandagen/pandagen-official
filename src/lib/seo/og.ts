@@ -113,9 +113,9 @@ const staticPages: Record<string, StaticOgContent> = {
     description: "Move content, forms, domains, analytics, URLs, and integrations with a documented cutover and redirect plan.",
   },
   "/services/webflow": {
-    title: "Webflow Website Migration",
-    label: "Migration Service",
-    description: "Plan CMS export, asset ownership, URL continuity, forms, integrations, redirects, validation, and handover.",
+    title: "Webflow Optimization & Migration Services",
+    label: "Webflow Website Help",
+    description: "Assess slow pages, CMS limits, forms and integrations. Scope improvements within Webflow or a rebuild in Next.js.",
   },
   "/services/wix": {
     title: "Wix Website Migration",

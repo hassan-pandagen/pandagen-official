@@ -1,0 +1,140 @@
+{
+  "version": "2026-09-16",
+  "based_on_commit": "e39653e",
+  "maintained_facts": "src/data/company-facts.ts",
+  "scope_sources": [
+    "src/app/services/ai-seo/PageContent.tsx",
+    "src/data/case-study-facts.json",
+    "src/app/about/hassan/page.tsx",
+    "src/app/about/imran/page.tsx"
+  ],
+  "publication_status": "prepared_not_published",
+  "note": "A distribution snapshot of the website canon. Check current facts and field limits before saving. No software starting price or standalone attribution price is inferred.",
+  "copy": {
+    "tagline": "Custom websites, online stores & software. Work directly with the founders.",
+    "compactTagline": "Custom websites, stores & software",
+    "shortBio": "Websites & stores from $1,500. Custom software. AI SEO from $500/mo. New builds, redesigns & migrations. Work with the founders. Code you own.",
+    "shortDescription": "PandaCodeGen builds custom websites, online stores and software. Website and simple-store builds start at US$1,500. Work directly with the founders, with scope and price agreed before work starts.",
+    "companyAbout": "PandaCodeGen designs and builds custom business websites, online stores and software. We work with owners and marketing teams launching a first site, improving an existing one or connecting the systems behind their business.\n\nWebsite and simple-store builds start at US$1,500, with scope and fixed price agreed before work starts. You work directly with co-founders Hassan Jamal and Imran Raza Ladhani. Website builds include an editor for the agreed content, training and code you own.\n\nOur work includes:\n- New websites, redesigns and migrations, with URLs, content and integrations planned when an existing site needs to move.\n- Online stores with product, ordering and payment workflows scoped around the business.\n- Custom software, CRMs, dashboards and integrations, quoted for the work required.\n- Optional monthly AI SEO services from US$500, with coverage, deliverables and the monthly fee agreed before we begin.\n\nWhere needed, we also scope Meta Conversions API implementation and lead attribution as part of the project. What can be recorded depends on the platform, access and available source data.\n\nWe build with Next.js and use Sanity where the project needs it. Hosting and ongoing support are agreed separately. Search rankings, AI citations and sales are outcomes we measure, not guarantees.\n\nSee our work: https://www.pandacodegen.com/work\nTalk directly with the founders: https://www.pandacodegen.com/contact",
+    "technicalBio": "We build websites, stores and business software with Next.js, TypeScript and Sanity where needed. We share implementation notes from client work and clearly labelled founder-affiliated projects.",
+    "founderHassanHeadline": "Co-founder & Lead Engineer at PandaCodeGen | Custom websites, ecommerce & business software",
+    "founderImranHeadline": "Co-founder & Lead Architect at PandaCodeGen | Website, ecommerce & software planning",
+    "founderHassanAbout": "I co-founded PandaCodeGen with Imran Raza Ladhani. I lead the engineering behind our websites, online stores and business software, including new builds, redesigns, migrations and integrations. Clients work directly with us from scope through handover. See our work at https://www.pandacodegen.com/work.",
+    "founderImranAbout": "I co-founded PandaCodeGen with Hassan Jamal. I lead project architecture and scoping, turning business requirements into a written plan for websites, online stores and software. Clients work directly with us to agree what to build, what it costs and how it will be handed over. See our work at https://www.pandacodegen.com/work.",
+    "press": "Hassan Jamal was quoted in Woman's World about remote AI-training work on 29 May 2026.",
+    "legalIdentity": "PandaCodeGen is the trading name of Panda Group Ventures L.L.C., a Wyoming-formed company with its principal and mailing office in Stafford, Texas. The brand has traded since February 2026; the LLC was formed on 12 August 2026.",
+    "contactCta": "Talk directly with the founders",
+    "bannerLine": "Websites. Online stores. Custom software.",
+    "bannerSupport": "Work directly with the founders. Code you own."
+  },
+  "character_counts": {
+    "tagline": 75,
+    "compactTagline": 34,
+    "shortBio": 142,
+    "shortDescription": 196,
+    "companyAbout": 1429,
+    "technicalBio": 194,
+    "founderHassanHeadline": 91,
+    "founderImranHeadline": 84,
+    "founderHassanAbout": 303,
+    "founderImranAbout": 328,
+    "press": 86,
+    "legalIdentity": 227,
+    "contactCta": 31,
+    "bannerLine": 41,
+    "bannerSupport": 46
+  },
+  "identity": {
+    "trading_name": "PandaCodeGen",
+    "alternate_name": "Panda Code Gen",
+    "legal_name": "Panda Group Ventures L.L.C.",
+    "brand_started": "2026-02",
+    "legal_formation_date": "2026-08-12",
+    "legal_formation_state": "Wyoming",
+    "principal_and_mailing_office": "12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States",
+    "phone": "+1 (302) 773-8982",
+    "website": "https://www.pandacodegen.com",
+    "contact": "https://www.pandacodegen.com/contact",
+    "email": "info@pandacodegen.com",
+    "working_language": "English; AI-assisted written French/German exchanges where offered"
+  },
+  "offer": {
+    "website_and_simple_store_starting_price_usd": 1500,
+    "custom_software": "Quoted by scope; no canonical starting price confirmed",
+    "monthly_ai_seo_from_usd": 500,
+    "hosting": "Agreed separately per client in the quote",
+    "ongoing_support": "Optional and separately scoped",
+    "tracking": "Project capability; no standalone package or universal attribution coverage promised"
+  },
+  "platforms": {
+    "LinkedIn": {
+      "tagline": "tagline",
+      "about": "companyAbout",
+      "website": "https://www.pandacodegen.com",
+      "cta": "contactCta"
+    },
+    "Clutch": {
+      "tagline": "compactTagline",
+      "description": "companyAbout",
+      "additional_fields": "See field-replacements.md; packages, FAQs and team story require separate edits."
+    },
+    "DesignRush": {
+      "tagline": "tagline",
+      "description": "companyAbout",
+      "additional_fields": "See field-replacements.md; remove unsupported specialties and reconcile portfolio."
+    },
+    "GoodFirms": {
+      "tagline": "compactTagline",
+      "description": "companyAbout"
+    },
+    "Sortlist": {
+      "tagline": "tagline",
+      "description": "companyAbout"
+    },
+    "X": {
+      "bio": "shortBio"
+    },
+    "Instagram": {
+      "bio": "shortBio"
+    },
+    "Facebook": {
+      "intro": "compactTagline",
+      "about": "companyAbout"
+    },
+    "Crunchbase": {
+      "short_description": "shortDescription",
+      "long_description": "companyAbout"
+    },
+    "F6S": {
+      "short_description": "shortDescription",
+      "about": "companyAbout"
+    },
+    "G2": {
+      "description": "companyAbout",
+      "additional_fields": "Also seller profile and media captions."
+    },
+    "Trustpilot": {
+      "business_description": "companyAbout",
+      "note": "Only owner-controlled description; leave third-party reviews unchanged."
+    },
+    "Behance": {
+      "headline": "founderHassanHeadline",
+      "about": "founderHassanAbout",
+      "note": "Observed account is Hassan Jamal's portfolio, not a company page."
+    },
+    "Sanity": {
+      "bio": "founderHassanAbout",
+      "note": "Observed profile is Hassan Jamal's; use the tailored Sanity version in field-replacements.md."
+    },
+    "DEV": {
+      "bio": "technicalBio"
+    },
+    "Hashnode": {
+      "publication_description": "technicalBio"
+    },
+    "Reddit": {
+      "bio": "shortBio",
+      "note": "Account identity remains unverified in this pass; do not create an account or edit posts."
+    }
+  }
+}

@@ -61,7 +61,7 @@ const services = [
   { name: "Leaving WooCommerce", href: "/services/woocommerce" },
   { name: "Leaving Wix", href: "/services/wix" },
   { name: "Leaving Squarespace", href: "/services/squarespace" },
-  { name: "Leaving Webflow", href: "/services/webflow" },
+  { name: "Webflow", href: "/services/webflow" },
   { name: "GoHighLevel", href: "/services/gohighlevel" },
 ];
 

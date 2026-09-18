@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-18",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-18",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-true-cost")],
@@ -51,6 +51,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "Webflow pricing", url: "https://webflow.com/pricing" },
+    { name: "Webflow Team plan bundle", url: "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" },
     { name: "Webflow site plans", url: "https://help.webflow.com/hc/en-us/articles/33961232582419-Choose-a-Site-plan" },
     { name: "Webflow feature availability", url: "https://help.webflow.com/hc/en-us/articles/46729546856211-Understanding-feature-availability-in-Webflow" },
     { name: "Webflow form submissions", url: "https://help.webflow.com/hc/en-us/articles/33961344521235-Form-submissions" },
@@ -68,7 +69,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-18",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-18",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -112,7 +113,7 @@ const articleSchema = {
             description,
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             datePublished: "2026-03-18",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-18",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -213,8 +214,11 @@ export default function WebflowTrueCostPage() {
                         before tax. Basic carries 300 static pages and 10 GB of monthly bandwidth but no CMS at all;
                         Webflow states Basic is &ldquo;specifically for sites that do not use any CMS or Ecommerce
                         features&rdquo;, so a single Collection puts the site on Premium. Platform plans are Team at
-                        $2,500/mo on an annual contract and Enterprise, for which Webflow publishes no figure. A paid
-                        Workspace plan is separate again, from $19/mo billed yearly for Core. Those are the plan
+                        $2,500/mo on an annual contract and Enterprise, for which Webflow publishes no figure. Team
+                        includes a site and Workspace; do not add another Site plan charge for its included site.
+                        Additional sites and extras require a quote from Webflow. We rechecked that bundle on September 18, 2026.
+                        For standalone Site plans, a paid Workspace plan may be a separate purchase, from $19/mo
+                        billed yearly for Core in the August snapshot. Those are the plan
                         numbers; the rest of this page is what your invoice adds on top. Verify against the
                         {" "}<a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>current pricing page</a>
                         {" "}rather than copying an old annual price table. If you are also pricing the other side of

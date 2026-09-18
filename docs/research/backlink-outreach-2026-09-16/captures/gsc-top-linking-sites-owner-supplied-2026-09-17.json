@@ -1,0 +1,72 @@
+{
+  "capturedAt": "2026-09-17",
+  "source": "Google Search Console Top linking sites table supplied by the owner",
+  "property": "PandaCodeGen property; exact property scope and export date range not supplied",
+  "limitations": [
+    "Google describes the Links report as a sample, not a complete backlink index.",
+    "Linking pages are not equivalent to unique referring domains or independent endorsements.",
+    "Repeated links from one domain can be sitewide navigation, attribution, profiles or syndication.",
+    "The target-page URLs were not included in the supplied table."
+  ],
+  "totals": {
+    "linkingSites": 22,
+    "linkingPagesShown": 249,
+    "targetPagesShown": 2
+  },
+  "topTargetPages": [
+    {
+      "url": "https://www.pandacodegen.com/",
+      "incomingLinks": 247,
+      "linkingSites": 21
+    },
+    {
+      "url": "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+      "incomingLinks": 2,
+      "linkingSites": 2,
+      "linkingSiteDetails": [
+        {
+          "site": "dev.to",
+          "links": 1,
+          "classification": "owner_authored_canonical_distribution",
+          "independentEditorialValidation": false,
+          "sourcePageUrl": null,
+          "note": "Owner states this is their own article with a canonical link back."
+        },
+        {
+          "site": "storeownertips.com",
+          "links": 1,
+          "classification": "inaccurate_numerical_attribution",
+          "independentEditorialValidation": false,
+          "sourcePageUrl": "https://storeownertips.com/glossary/json-web-token-jwt/",
+          "anchorText": "0.8 to 1.2 seconds",
+          "rel": "noopener noreferrer",
+          "note": "The PandaCodeGen destination does not report or substantiate this benchmark and explicitly publishes no speed-uplift figure."
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {"site": "pandapatches.com", "linkingPages": 171, "targetPages": 1},
+    {"site": "designrush.com", "linkingPages": 27, "targetPages": 1},
+    {"site": "goodfirms.co", "linkingPages": 11, "targetPages": 1},
+    {"site": "trustpilot.com", "linkingPages": 8, "targetPages": 1},
+    {"site": "ladies4jesus.com", "linkingPages": 6, "targetPages": 1},
+    {"site": "crunchbase.com", "linkingPages": 4, "targetPages": 1},
+    {"site": "msn.com", "linkingPages": 3, "targetPages": 1},
+    {"site": "vercel.com", "linkingPages": 3, "targetPages": 1},
+    {"site": "dev.to", "linkingPages": 2, "targetPages": 2},
+    {"site": "seznam.cz", "linkingPages": 2, "targetPages": 1},
+    {"site": "aol.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "connectively.us", "linkingPages": 1, "targetPages": 1},
+    {"site": "f6s.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "indiehackers.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "mnplasticsurgery.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "qwoted.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "reddit.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "sanity.io", "linkingPages": 1, "targetPages": 1},
+    {"site": "storeownertips.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "twitter.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "womansworld.com", "linkingPages": 1, "targetPages": 1},
+    {"site": "wordpress-website-design-agency-in-united-states.com", "linkingPages": 1, "targetPages": 1}
+  ]
+}

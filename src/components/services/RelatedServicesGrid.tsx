@@ -8,7 +8,7 @@ const ALL_SERVICES = [
   { href: "/services/woocommerce",         icon: ShoppingBag,   title: "WooCommerce Migration", desc: "Assess checkout, plugin dependencies, store data, and migration options." },
   { href: "/services/wix",                 icon: Globe,         title: "Wix Migration",         desc: "Map content, integrations, DNS, and a feasible migration scope." },
   { href: "/services/squarespace",         icon: Globe,         title: "Squarespace Migration", desc: "Review content, commerce, scheduling, and migration requirements." },
-  { href: "/services/webflow",             icon: Globe,         title: "Webflow Migration",     desc: "Assess CMS data, interactions, hosting, and migration trade-offs." },
+  { href: "/services/webflow",             icon: Globe,         title: "Webflow Help & Migration", desc: "Assess slow pages, CMS limits and integrations, then scope improvements or a move." },
   { href: "/services/gohighlevel",         icon: Zap,           title: "GoHighLevel",           desc: "Evaluate a custom public frontend alongside compatible CRM workflows." },
   { href: "/services/ai-seo",              icon: Zap,           title: "AI SEO",                desc: "Pages assistants can read, included in the build, with optional monthly care from $500." },
   { href: "/services/custom-engineering",  icon: Zap,           title: "Custom software",    desc: "Scope applications, dashboards, APIs, permissions, and integrations." },

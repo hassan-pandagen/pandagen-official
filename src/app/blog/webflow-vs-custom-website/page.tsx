@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-27",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-18",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/webflow-vs-custom-website")],
@@ -51,6 +51,7 @@ export const metadata: Metadata = {
 
 const sources = [
     { name: "Webflow pricing", url: "https://webflow.com/pricing" },
+    { name: "Webflow Team plan bundle", url: "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026" },
     { name: "Webflow site plans", url: "https://help.webflow.com/hc/en-us/articles/33961232582419-Choose-a-Site-plan" },
     { name: "Webflow content editor", url: "https://help.webflow.com/hc/en-us/articles/33961251014931-Edit-site-content-as-a-content-editor" },
     { name: "Webflow code export", url: "https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" },
@@ -67,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/webflow-vs-custom-website"),
             description,
             datePublished: "2026-03-27",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-18",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -284,13 +285,17 @@ export default function WebflowVsCustomWebsitePage() {
                                 <tr className="border-b border-stone-200"><td className="py-2 pr-4">Starter</td><td className="py-2 pr-4">Free</td><td className="py-2">webflow.io subdomain, 2 static pages, 1 GB bandwidth, 50 form submissions</td></tr>
                                 <tr className="border-b border-stone-200"><td className="py-2 pr-4">Basic</td><td className="py-2 pr-4">$15/mo</td><td className="py-2">Custom domain, 300 static pages, 10 GB bandwidth, no CMS</td></tr>
                                 <tr className="border-b border-stone-200"><td className="py-2 pr-4">Premium</td><td className="py-2 pr-4">$25/mo</td><td className="py-2">Adds Webflow CMS, selectable bandwidth, site search, code components</td></tr>
-                                <tr className="border-b border-stone-200"><td className="py-2 pr-4"><strong>Team</strong> (Platform plan)</td><td className="py-2 pr-4"><strong>$2,500/mo</strong></td><td className="py-2">Annual contract required. Adds Localize, AEO agents, publishing workflows, governance</td></tr>
+                                <tr className="border-b border-stone-200"><td className="py-2 pr-4"><strong>Team</strong> (Platform plan)</td><td className="py-2 pr-4"><strong>$2,500/mo</strong></td><td className="py-2">Annual contract required. Includes a site and Workspace, Localize, AEO agents, publishing workflows and governance; additional sites and extras are quoted by Webflow</td></tr>
                                 <tr className="border-b border-stone-200"><td className="py-2 pr-4">Optimize add-on</td><td className="py-2 pr-4">$299/mo</td><td className="py-2">Scales on page views</td></tr>
                                 <tr className="border-b border-stone-200"><td className="py-2 pr-4">Analyze add-on</td><td className="py-2 pr-4">$9/mo</td><td className="py-2">Scales on sessions</td></tr>
                                 <tr><td className="py-2 pr-4">Localize</td><td className="py-2 pr-4">$9 or $29/mo</td><td className="py-2">$9 covers 1-3 locales, $29 covers 1-10</td></tr>
                             </tbody>
                         </table>
                     </div>
+                    <BlogText>
+                        Team&apos;s price and included site and Workspace were rechecked on September 18, 2026.
+                        Do not add a separate Site plan charge for the site included in that bundle.
+                    </BlogText>
                     <BlogText>
                         Two things to take from that table rather than from the headline number. The jump that decides
                         most comparisons is <strong>$25 to $2,500</strong>: there is no tier between Premium and Team, so
