@@ -97,8 +97,8 @@
       "plan": "Team",
       "label": "Team platform plan price",
       "value": "$2,500 a month",
-      "qualifier": "annual contract required. This is a platform plan, charged on top of the per-site plans, not instead of them. Google's AI Overview stated this as $2,500 a year when checked",
-      "verifiedAt": "2026-08-05",
+      "qualifier": "USD; annual contract required. Includes a site and Workspace. Additional sites and extras must be agreed with Webflow sales; the included site does not require a separate Site plan charge",
+      "verifiedAt": "2026-09-18",
       "source": "https://webflow.com/pricing"
     },
     "webflow-optimize-addon": {

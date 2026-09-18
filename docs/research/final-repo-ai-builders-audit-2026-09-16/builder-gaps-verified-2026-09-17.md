@@ -1,5 +1,7 @@
 # What the builders hand back to you, from their own documentation
 
+> **Correction, 17 September 2026:** the universal conclusions below about no recurring checks are superseded. Current official documentation describes Lovable scheduled Project monitoring, Replit uptime alerts and post-publish SEO audits, and recurring Webflow AEO-agent recommendations. The Lovable SEO-review limitation applies to that feature, not its whole product. “No builder writes the content” is also unsupported. Do not reuse those conclusions in a published article. See the [seven-vendor verification](../ai-builder-article-review-2026-09-17/vendor-verification.md) and [revised article review](../ai-builder-article-review-2026-09-17/README.md). The earlier text is retained below as a record of the reasoning being corrected.
+
 Researched 17 September 2026 to answer a direct question: how many of the 59 checklist items
 does an AI website builder miss? **That number cannot be produced without building the same
 brief in each product and preserving the prompts, outputs and tests.** No builder was tested

@@ -5,8 +5,8 @@ import PageContent from "./PageContent";
 import { serviceFaqs } from "@/data/service-faqs";
 
 const path = "/services/webflow";
-const name = "Webflow Website Migration";
-const description = "Plan a Webflow migration around content collections, URLs, metadata, interactions, forms, integrations, accessibility, analytics, cutover, and ownership.";
+const name = "Webflow Optimization & Migration Services";
+const description = "Get help with slow Webflow pages, CMS limits, forms and integrations. Scope improvements or a Next.js rebuild. Custom rebuilds from $1,500.";
 
 export const metadata: Metadata = {
   title: name,
@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function WebflowServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Webflow migration" faqs={serviceFaqs["webflow"]} /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="Webflow services" faqs={serviceFaqs["webflow"]} /><PageContent /></>;
 }

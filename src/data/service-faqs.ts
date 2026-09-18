@@ -192,6 +192,10 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   ],
   "webflow": [
     {
+      q: "Can you improve my Webflow site without migrating it?",
+      a: "Yes, where a review shows a feasible fix within Webflow. We can audit performance, forms, connected tools and content workflows, then scope the work around the issue. Current publishing options, a better content model or an integration may be enough. Improvements are quoted separately from a full rebuild; the $1,500 starting price is for a custom rebuild, not every repair. If the requirements justify moving, we explain the migration scope and ongoing costs before you decide.",
+    },
+    {
       q: "Is custom code harder to use than Webflow's visual editor?",
       a: "For everyday edits, no. Text, images, posts and pages are changed in a simple visual editor with no code, set up the way your team already works. Adding a brand new page layout is a developer job rather than drag and drop. We say that upfront and show you the editor before you sign.",
     },
@@ -201,11 +205,11 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What about Webflow's CMS?",
-      a: "Your collections move over field by field into a new editor, and every item keeps its web address so nothing breaks in Google. Webflow exports most of it cleanly. Anything it won't, we rebuild by hand and tell you which. CMS migration is included from $3,500.",
+      a: "We map the collections and fields in your scope into a new editor, preserve existing URLs where possible, and document changed addresses in a redirect map. We validate the migrated content and redirects before launch. Export gaps and anything that needs rebuilding are identified in your quote. These controls reduce avoidable migration risk; they cannot guarantee Google's indexing or rankings. CMS migration is included from $3,500.",
     },
     {
       q: "How much does it cost to migrate from Webflow?",
-      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with your CMS content moved and every link forwarded. From $5,000 for a large catalogue, more than one language or more than 20 pages. A simple store of a few products starts at Starter, at $1,500. You're not buying hours, you're buying the finished site, at a fixed price. Pay 30% to start and 70% when it's done. No retainer, no plan tier to renew, and your written quote has the exact figure. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
+      a: "From $1,500 for a site of up to 7 pages. From $3,500 for 8 to 20 pages with CMS migration and an agreed redirect map. From $5,000 for a large catalogue, more than one language or more than 20 pages. A simple store of a few products starts at Starter, at $1,500. The build has a fixed price agreed before work starts. A common payment structure is 30% at onboarding and 70% at the delivery milestone; your accepted terms set the payments and exact price. Ongoing support and AI SEO are optional, scoped and quoted separately. If none of these match what you have, call +1 (302) 773-8982 or email info@pandacodegen.com and we will quote it.",
     },
     {
       q: "Who supplies the words and images?",
@@ -213,15 +217,15 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
     },
     {
       q: "What will I still be paying for after the site is live?",
-      a: "Three separate lines, and your quote keeps them separate. The build fee is one fixed payment. Provider bills continue and are paid straight to the provider, not marked up by us: commercial hosting on Vercel Pro starts at $20 a month as of August 2026, plus your domain and any third-party service the site uses. Panda support is optional, quoted against a scope you choose, and is not required for the site to keep running. Leaving Webflow removes the plan tier and the seat charges; it does not remove hosting.",
+      a: "Your quote separates the build price, hosting and connected services, and optional ongoing work. Hosting is agreed per client rather than included as standard: some clients use PandaCodeGen's hosting account at no extra charge and others are billed for it. The arrangement and any charge are written into your quote. Hosting moves to your account on request or when an engagement ends. Budget separately for your domain and any CMS or third-party services your site uses. Panda support is optional and scoped separately; the site does not require a support subscription to keep running.",
     },
     {
       q: "What if Webflow adds the features I need later?",
-      a: "It might, and if waiting is the better answer we'll say so. Several of our guides exist to talk people out of a migration they don't need. The difference after moving is that the features are yours, on your own account. No plan tier decides what your site can do, and no price change lands in your inbox.",
+      a: "It might, and if waiting or improving the current site is the better answer we'll say so. We compare the requirements you have now with Webflow's supported options before recommending a move. A custom build gives you control of the source code and architecture, but hosting, a CMS and connected services can still have plan limits and price changes. Ownership does not remove those dependencies.",
     },
     {
       q: "How long does a Webflow migration take?",
-      a: "Two to four weeks for most sites, about three on average. A site of up to 7 pages ships in 1 to 2 weeks. Lots of CMS content, animations or languages take longer, and every stage has a date in your written plan. The clock starts when three things are in place: the scope is agreed in writing, we have the access we need to your Webflow account and domain, and the content and images for the agreed pages are with us. Waiting on any of those is queue time, not build time, and we will tell you which one we are waiting for.",
+      a: "The planning ranges are 1 to 2 weeks for Starter, 2 to 4 weeks for Growth and 3 to 6 weeks for Scale. The ranges overlap: CMS relationships, interactions, languages and integrations affect the work, and your accepted written scope sets the dates for your project. The clock starts when three things are in place: the scope is agreed in writing, we have the access we need to your Webflow account and domain, and the content and images for the agreed pages are with us. Waiting on any of those is queue time, not build time, and we will tell you which one we are waiting for.",
     },
   ],
   "wix": [

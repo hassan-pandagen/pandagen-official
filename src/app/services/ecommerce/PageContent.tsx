@@ -604,7 +604,7 @@ export default function PageContent() {
               { href: "/services/woocommerce", icon: ShoppingBag, title: "WooCommerce Migration", desc: "Replace paid plugins with built-in features where your store allows it. Own your store." },
               { href: "/services/wix", icon: Globe, title: "Wix Migration", desc: "Break free from Wix limitations. Own your code." },
               { href: "/services/squarespace", icon: Globe, title: "Squarespace Migration", desc: "Outgrow templates. Build something bespoke." },
-              { href: "/services/webflow", icon: Globe, title: "Webflow Migration", desc: "Performance ceiling hit? Move to Next.js." },
+              { href: "/services/webflow", icon: Globe, title: "Webflow Help & Migration", desc: "Review performance, CMS needs and the options for your next stage." },
               { href: "/services/gohighlevel", icon: Zap, title: "GoHighLevel", desc: "GHL site slow? Custom frontend, same CRM." },
               { href: "/services/custom-engineering", icon: Zap, title: "Custom software", desc: "SaaS, dashboards, APIs built from scratch." },
               { href: "/partners", icon: ArrowRightLeft, title: "For Agencies", desc: "White-label dev partnership. You sell, we build." },
