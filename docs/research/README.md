@@ -1,62 +1,49 @@
 # Research and Audits
 
-This folder contains competitive analysis, product audits, keyword research, and evidence-gathering work conducted in preparation for releases and strategic decisions. Each audit is self-contained and includes its own scope, methodology, findings, and action items.
+This folder contains competitive analysis, product audits, keyword research, and evidence-gathering work conducted in preparation for releases and strategic decisions. Audits are organized by active work and historical archive.
 
-## 2026 Audits by priority and recency
+**Active audits** are current, informing live decisions. **Archive** contains completed research from earlier phases — searchable but not part of the active workflow.
 
-### Sep 2026: Site health and indexing (active)
+## Active Audits (Sep 2026 — Current)
 
-| Audit | Date | Purpose | Status |
+| Audit | Date | Purpose | Files |
 |---|---|---|---|
-| [Audits 2026-09-19 (master index)](AUDITS_2026-09-19.md) | Sep 19 | Three coordinated audits: ten-page intent, indexing verification, and sitewide cannibalization | **UNTRACKED** — ready to commit with page changes |
-| [Webflow indexing 2026-09-18](webflow-indexing-2026-09-18/) | Sep 18 | Webflow service page indexing mystery; baseline for the revised page | Historical snapshot |
-| [WordPress migration audit 2026-09-18](wordpress-migration-audit-2026-09-18/) | Sep 18 | Complete audit of `/services/wordpress-migration` with competitor comparison and proof strategy | Recommendations partially implemented |
+| [Audits 2026-09-19 (index)](AUDITS_2026-09-19.md) | Sep 19 | Three coordinated audits: ten-page intent, indexing verification, sitewide cannibalization | 3 |
+| [WordPress migration 2026-09-18](wordpress-migration-audit-2026-09-18/) | Sep 18 | `/services/wordpress-migration` audit: competitor comparison, proof strategy, implementation plan | 8 |
+| [Webflow indexing 2026-09-18](webflow-indexing-2026-09-18/) | Sep 18 | Webflow service page indexing baseline; explains prior failed crawls before rewrite | 4 |
+| [AI builder article 2026-09-17](ai-builder-article-review-2026-09-17/) | Sep 17 | AI-built website article: competitor, intent, claims, first-party evidence audit | 8 |
+| [AI SEO revision 3 2026-09-15](ai-seo-revision-3-audit-2026-09-15/) | Sep 15 | `/services/ai-seo` page: attribution, deliverables, FAQ (supersedes earlier revisions) | 4 |
+| [Homepage audit 2026-09-15](homepage-audit-2026-09-15/) | Sep 15 | Homepage keyword language, positioning, benchmarks (consolidated from 2 audits) | 13 |
+| [Backlink outreach 2026-09-16](backlink-outreach-2026-09-16/) | Sep 16 | Prospect research, editorial opportunities, HARO screening, tools and sender setup | 8 |
 
-### Jul-Aug 2026: Business audit and positioning
+## Archive (Jul-Aug 2026 — Completed work)
 
-| Audit | Date | Purpose | File count |
-|---|---|---|---|
-| [Business progress audit 2026-09-15](business-progress-audit-2026-09-15/) | Sep 15 | Enterprise/ops offer scope, competitive feature gaps, proof and keyword fit | 7 files |
-| [Homepage positioning 2026-09-15](homepage-positioning-2026-09-15/) | Sep 15 | Homepage copy, H1, metadata, and positioning against freelancers/agencies/platforms | 9 files |
-| [AI SEO revision 3 audit 2026-09-15](ai-seo-revision-3-audit-2026-09-15/) | Sep 15 | `/services/ai-seo` page with attribution, deliverables and FAQ review | 4 files |
-| [Positioning rollout 2026-09-15](positioning-rollout-2026-09-15/) | Sep 15 | Brand positioning statement and rollout to all channels | 4 files |
-| [Homepage keyword copy 2026-09-15](homepage-keyword-copy-2026-09-15/) | Sep 15 | Homepage H1 and body copy keyword audit | 5 files |
-| [International expansion 2026-09-15](international-expansion-2026-09-15/) | Sep 15 | Non-US market viability and localisation needs | 4 files |
+Historical audits are in [ARCHIVE_2026-08/](ARCHIVE_2026-08/) and remain searchable. They informed earlier releases and strategic decisions now implemented. No action items remain open.
 
-### Late Aug 2026: Early audits
+**What's in the archive:**
+- Business progress and competitive analysis (Sep 15)
+- Contact form redesign (Sep 15) — complete with UX screenshots
+- Service and blog deep audit (Sep 14)
+- Root, metadata, page design audits (Sep 14-15)
+- Brand positioning and rollout (Sep 15)
+- Keyword gap, international expansion, profile canon (Sep 13-16)
+- AI visibility strategy (Aug 19)
 
-| Audit | Date | Purpose | File count |
-|---|---|---|---|
-| [AI builder article review 2026-09-17](ai-builder-article-review-2026-09-17/) | Sep 17 | "Is it cheaper to build a website with AI?" article competitor, intent, claims audit | 8 files |
-| [DIY website cost refresh 2026-09-17](diy-website-cost-refresh-2026-09-17/) | Sep 17 | "How much does a website cost?" cost and platform data refresh | 5 files |
-| [Final repo audit 2026-09-16](final-repo-ai-builders-audit-2026-09-16/) | Sep 16 | Site-wide AI builder capability and messaging audit | 6 files |
-| [External profile canon 2026-09-16](external-profile-canon-2026-09-16/) | Sep 16 | LinkedIn, Twitter, GitHub and profile consistency | 5 files |
-| [Backlink outreach 2026-09-16](backlink-outreach-2026-09-16/) | Sep 16 | Prospect list, HARO screening, and broken-link opportunities | 8 files |
-| [Contact form redesign 2026-09-15](contact-founder-redesign-2026-09-15/) | Sep 15 | Form UX, error messaging, and enquiry flow improvements | 2 files |
-| [Root metadata audit 2026-09-15](root-metadata-audit-2026-09-15/) | Sep 15 | Homepage OG, Twitter tags, canonical and structured data | 6 files |
-| [AI SEO audit 2026-09-14](ai-seo-audit-2026-09-14/) | Sep 14 | `/services/ai-seo` initial audit; buyer positioning, attribution, proof | 6 files |
-| [AI SEO revision 2 audit 2026-09-15](ai-seo-revision-2-audit-2026-09-15/) | Sep 15 | Second `/services/ai-seo` review after copy revisions | 3 files |
-| [Service & blog deep audit 2026-09-14](service-blog-deep-audit-2026-09-14/) | Sep 14 | Migration service and blog messaging audit | 7 files |
-| [Page design audit 2026-09-14](page-design-audit-2026-09-14/) | Sep 14 | Service page layout and CTA placement | 3 files |
-| [Keyword gap 2026-09-13](keyword-gap-2026-09-13/) | Sep 13 | Keyword demand and GSC gap analysis | 5 files |
+**When to use:** Reference when understanding past decisions or context for current work. Most findings have been integrated into active pages and projects.
 
-### Earlier 2026
-
-| Audit | Date | Purpose |
-|---|---|---|
-| [AI visibility concentration 2026-08-19](ai-visibility-concentration-2026-08-19.md) | Aug 19 | AI Overview and AI citation strategy |
+---
 
 ## How to navigate
 
-- **Start here for release prep:** check the active audits section and read the master index for the current release
-- **Looking for a specific topic:** use Ctrl+F on this page or scan the audit title keywords
-- **Need evidence for a claim:** check the supporting file list in each audit's README
-- **Committing an audit:** move it from untracked to git, then update this README with the status
+- **For current work:** start with the active audits table above
+- **For a specific topic:** scan audit titles or check ARCHIVE if the work is from earlier
+- **For evidence or sources:** each audit's README lists supporting files
+- **AI SEO edits:** all three earlier versions are consolidated into revision-3; search that folder
 
-## File organization conventions
+## File organization
 
 Each audit folder contains:
-- **README.md** — the main entry point with scope, findings, and action items
-- **Supporting files** — evidence tables, vendor comparisons, keyword maps, or detailed source links
+- **README.md** — scope, methodology, findings, action items
+- **Supporting files** — keyword maps, competitor comparisons, technical detail
 
-Single-file audits may not have a folder. Always start with the README or .md file name to understand the audit's scope before diving into supporting files.
+Archive folders follow the same structure, organized by date and topic.

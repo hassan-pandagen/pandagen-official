@@ -148,6 +148,7 @@ export default function WebsiteSpeedGuide() {
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How to Speed Up Your Website <span className="italic text-cognac">With 12 Route-Level Diagnostics</span>
                         </h1>
+<p className="mt-5 text-base leading-7"><Link href="/free-audit" className="underline underline-offset-4">Want measurements for your own page? Run a free technical website audit before choosing a fix.</Link></p>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Platform labels do not diagnose performance. Follow the request from DNS and document
                             delivery through rendering and interaction, fix the measured constraint, and compare the

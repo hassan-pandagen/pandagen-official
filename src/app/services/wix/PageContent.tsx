@@ -84,6 +84,7 @@ export default function PageContent() {
         <div className="container mx-auto max-w-4xl">
           <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Linked Community Discussions</div>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">Examples of Issues to Investigate</h2>
+<p className="mb-6 text-base leading-7 text-stone-600">Check before deciding to rebuild. Our <Link href="/free-audit" className="font-semibold underline underline-offset-4">free website audit</Link> explains the technical findings and offers a free founder review.</p>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
             These April 2026 posts describe individual experiences and are not representative performance or pricing evidence. Follow the links for context, then verify relevant issues against your own account and current provider documentation.
           </p>

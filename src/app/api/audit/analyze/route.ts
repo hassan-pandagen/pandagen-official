@@ -196,7 +196,8 @@ export async function POST(request: NextRequest) {
     };
     const leadToken = await issueAuditLeadToken(normalizedUrl, result);
 
-    return jsonResponse({ success: true, data: result, leadToken }, 200);
+    const reviewToken = await issueAuditLeadToken(normalizedUrl, result, Date.now(), 'review');
+    return jsonResponse({ success: true, data: result, leadToken, reviewToken }, 200);
   } catch (error) {
     if (error instanceof AuditLeadRequestError) {
       return jsonResponse({ error: error.message }, error.status);

@@ -181,6 +181,8 @@ export default async function TopicHubPage({ params }: Params) {
                         ))}
                     </div>
 
+                    {hub.slug === 'seo-and-ai-search' && <p className="mb-6 text-base leading-7">For a baseline on your own page, <Link href="/free-audit" className="font-semibold underline underline-offset-4">run a free technical website audit</Link>. It checks public technical signals; it does not predict citations or confirm Google indexing.</p>}
+
                     {/* The owned commercial facts, one sentence from company-facts, so
                         every hub states them inside its first 500 words. Added 6 Sep 2026. */}
                     <p className="mb-6 rounded-xl border border-stone-200 bg-white px-5 py-4 leading-relaxed text-charcoal" data-speakable="true">

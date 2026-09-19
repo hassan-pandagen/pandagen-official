@@ -21,6 +21,7 @@ return value
 
 export interface AuditLeadRecord {
   version: 1;
+  action?: 'report' | 'review';
   url: string;
   auditData: PageSpeedResult;
   issuedAt: number;
@@ -130,12 +131,14 @@ function parseRecord(serialized: string, now: number): AuditLeadRecord {
 export async function issueAuditLeadToken(
   url: string,
   auditData: PageSpeedResult,
-  now = Date.now()
+  now = Date.now(),
+  action: 'report' | 'review' = 'report'
 ): Promise<string> {
   const backend = getAuditBackend();
   const token = randomBytes(32).toString('base64url');
   const record: AuditLeadRecord = {
     version: 1,
+    action,
     url,
     auditData,
     issuedAt: now,

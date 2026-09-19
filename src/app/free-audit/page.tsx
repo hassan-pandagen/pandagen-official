@@ -10,9 +10,9 @@ const AuditWidget = dynamicImport(() => import("@/components/audit/AuditWidget")
 
 export const dynamic = "force-static";
 
-const title = "Free Technical Website Audit";
+const title = "Free Website Audit: SEO, Speed & Expert Review";
 const description =
-  "Run a free technical scan of your site: measured load time, Core Web Vitals, technical SEO and common security-header gaps. Point-in-time diagnostic, no signup.";
+  "Check your website's technical SEO and mobile lab speed. Get plain-English findings, email your report, or request a free founder review.";
 const canonicalUrl = "https://www.pandacodegen.com/free-audit";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "free website audit",
     "technical website audit",
     "website speed test",
-    "core web vitals check",
+    "website audit report",
     "technical SEO audit",
   ],
   openGraph: {
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 const checks = [
   {
     icon: Gauge,
-    title: "Measured performance",
-    body: "Load time and Core Web Vitals as they are recorded for the page you enter, not a generic platform average.",
+    title: "Mobile lab performance",
+    body: "A point-in-time Lighthouse test of the page you enter, with first content appearance clearly labelled.",
   },
   {
     icon: ListChecks,
@@ -49,7 +49,7 @@ const checks = [
   },
   {
     icon: ShieldCheck,
-    title: "Common security gaps",
+    title: "Security-header signals",
     body: "Transport security and the response headers most often missing on a production site.",
   },
 ];
@@ -87,16 +87,13 @@ export default function FreeAuditPage() {
           <div className="max-w-xl">
             <p className="text-sm font-bold uppercase tracking-widest text-cognac">Free technical audit</p>
             <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              See what your site <span className="font-serif font-normal italic text-cognac">actually reports.</span>
+              Free website audit. <span className="font-serif font-normal italic text-cognac">Know what to fix next.</span>
             </h1>
             <p className="mt-8 text-lg leading-8 text-stone-700">
-              Enter a URL and the scan returns what the tests found for that page: measured load time, Core Web Vitals,
-              technical SEO signals and common security-header gaps. It takes well under a minute and needs no signup.
+              Check a public page for speed and technical SEO issues. See what the tests found, what it means, and what to do next, with guidance for your website platform.
             </p>
             <p className="mt-5 text-base leading-7 text-stone-600">
-              This is a point-in-time technical review. It is not a diagnosis of lost revenue, a ranking prediction, or
-              a quote. If something in the result needs interpreting, we would rather look at it properly than guess
-              from a score.
+              Results on screen. No signup required. Email yourself the findings or request a free founder review of up to three public pages, delivered within 24 hours.
             </p>
 
             <div className="mt-10 space-y-5">
@@ -114,7 +111,7 @@ export default function FreeAuditPage() {
             </div>
           </div>
 
-          <div id="audit-widget" className="scroll-mt-28">
+          <div className="min-w-0">
             <AuditWidget />
           </div>
         </div>
@@ -123,20 +120,17 @@ export default function FreeAuditPage() {
       <section className="px-6 py-16 md:py-24" aria-labelledby="after-the-scan">
         <div className="mx-auto max-w-5xl">
           <h2 id="after-the-scan" className="text-3xl font-bold md:text-5xl">
-            What happens after the scan
+            Understand the result. Choose your next step.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-            The scan tells you what a set of automated tests observed. It does not tell you which of those findings
-            matter for your business, which are cheap to fix, or whether any of them are worth a rebuild. That part
-            takes a person reading your specific situation, so if you want that we will do it properly rather than
-            auto-generating a verdict from a score.
+            Your automated report includes observations and suggested next steps. A founder can then review your goal and up to three public pages, and email up to three prioritized recommendations. The review is free; implementation and account-level testing are separate work, agreed before we begin. A flagged check does not mean you need a rebuild.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/contact#contact-quote-form"
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac"
             >
-              Send us the details <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              Talk to a founder <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link
               href="/pricing"
@@ -148,6 +142,14 @@ export default function FreeAuditPage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <h2 className="text-3xl font-bold">A useful starting point for your platform</h2>
+        <p className="mt-5 leading-7">Select WordPress / WooCommerce, Wix, Squarespace, Shopify, Webflow or custom. We explain where to start in your editor and where a developer may need to help. Public scans cannot inspect private settings or prove that payments, bookings or emails arrive.</p>
+        <h2 className="mt-10 text-2xl font-bold">What does the free review include?</h2>
+        <p className="mt-4 leading-7">Up to three public pages, your main business concern and up to three recommendations from a founder. We email the review within 24 hours, including weekends. No obligation to hire us. Do not send passwords or private customer data.</p>
+        <h2 className="mt-8 text-2xl font-bold">Does a good result mean everything works?</h2>
+        <p className="mt-4 leading-7">No. These checks are a technical snapshot, not a complete crawl or a certification. A human still needs to test important journeys. Use our <Link href="/blog/ai-built-website-checklist" className="underline">website launch checklist</Link> and <Link href="/blog/how-to-speed-up-your-website" className="underline">guide to diagnosing a slow website</Link> for the next steps.</p>
+      </section>
       <Footer />
     </main>
   );

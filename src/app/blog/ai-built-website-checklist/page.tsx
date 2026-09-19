@@ -148,6 +148,7 @@ export default function AiBuiltWebsiteChecklistPage() {
                         AI-Built Website Checklist:{" "}
                         <span className="font-serif italic text-cognac">8 Checks Before Launch and After Changes</span>
                     </h1>
+<p className="mt-5 text-base leading-7"><Link href="/free-audit" className="underline underline-offset-4">Start the automated checks with our free website audit, then complete the manual launch tests below.</Link></p>
                     <p className="text-lg text-stone-600 leading-relaxed mb-6">
                         An AI website builder can get your small business online, connect services and help you test
                         the result. Some now monitor published sites and alert you to problems. The useful question is
