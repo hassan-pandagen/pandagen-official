@@ -2,6 +2,7 @@
 
 import { motion } from "@/components/ui/motion";
 import { ArrowRight, type LucideIcon } from "lucide-react";
+import Link from "next/link";
 
 export type ComparisonMetric = {
   metric: string;
@@ -50,8 +51,6 @@ type Props = {
   costsTitle: string;
   /** One line under it saying what to do with the list. */
   costsSubtitle: string;
-  /** Optional: pre-click handler for the "Calculate Savings" button. */
-  onOpenQuote?: () => void;
 };
 
 export default function PlatformKillerChart({
@@ -67,7 +66,6 @@ export default function PlatformKillerChart({
   costLines,
   costsTitle,
   costsSubtitle,
-  onOpenQuote,
 }: Props) {
   return (
     <section className="py-12 md:py-24 relative overflow-hidden">
@@ -113,12 +111,12 @@ export default function PlatformKillerChart({
                 )}
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button
-                    onClick={onOpenQuote}
+                  <Link
+                    href="/contact"
                     className="group px-6 py-3 md:px-8 md:py-4 bg-charcoal text-white font-bold text-sm md:text-base rounded-full hover:bg-stone-800 transition-all flex items-center justify-center gap-2 hover:scale-105"
                   >
-                    Calculate Savings <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                    Ask a founder to compare costs <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                   <button
                     data-cal-namespace="discovery"
                     data-cal-link="pandagen/discovery"

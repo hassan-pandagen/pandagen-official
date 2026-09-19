@@ -3,7 +3,6 @@
 import { motion } from "@/components/ui/motion";
 import { verifiedMetrics, withdrawalNotice } from "@/data/case-study-facts";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Database, Server, FileSearch, Wrench, Rocket, HelpCircle, ShoppingBag, CreditCard, Package, Network, Truck, RefreshCw, LayoutTemplate, Unplug } from "lucide-react";
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
@@ -30,7 +29,6 @@ const comparisonRows = [
 ];
 
 export default function PageContent() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden">
@@ -574,23 +572,14 @@ export default function PageContent() {
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <motion.div
-                key={i}
+                key={faq.q}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
+                className="p-5 rounded-xl bg-white border border-stone-200"
               >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left p-5 rounded-xl bg-white border border-stone-200 hover:border-cognac/30 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
-                    </div>
-                  </div>
-                  <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                </button>
+                <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
+                <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
               </motion.div>
             ))}
           </div>
