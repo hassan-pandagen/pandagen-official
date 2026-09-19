@@ -37,6 +37,7 @@ src/
   proxy.ts                Response security headers
 docs/
   audit-2026-07-20/       Audit, remediation status, and rescoring
+  product/                Product plans, strategy, feature specifications, and roadmaps
   research/               Competitive analysis, product audits, and keyword research by date
   operations/             Performance, release, and incident runbooks
 ```
