@@ -21,6 +21,8 @@
  *    reviews are fine elsewhere on the site; an aggregate is not supportable.
  */
 
+import { MIGRATION_PROJECT_DETAILS } from './migration-projects';
+
 export interface Fact {
     label: string;
     value: string;
@@ -211,10 +213,10 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // pending reconciliation as of 4 Aug 2026 and must not be restated here until
     // that reconciliation is finished. See the tracker entry dated 8 Aug 2026.
     { name: 'MyCustomPatches', relationship: 'Independent client', href: '/work/mycustompatches', fact: 'Every page, product and blog post migrated to a custom Next.js build in about 22 days, with Search Console crawl validation before DNS cutover. The performance figures for this project are withdrawn pending reconciliation of the original test records. The hosting-cost figure is retired permanently: no invoices were kept, so there is nothing to reconcile it against.' },
-    { name: 'Panda Patches', relationship: 'Founder-owned property, not independent client proof', href: '/work/panda-patches', fact: 'Migrated to a custom Next.js storefront. Owned by co-founder Imran Raza Ladhani, so it is labelled as a founder-affiliated project rather than presented as client evidence.' },
+    { name: 'Panda Patches', relationship: 'Founder-owned property, not independent client proof', href: '/work/panda-patches', fact: `${MIGRATION_PROJECT_DETAILS.pandaPatches.summary} ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} Owned by co-founder Imran Raza Ladhani, so it is labelled as a founder-affiliated project rather than presented as client evidence.` },
     { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and 26 Supabase Edge Functions, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'Custom build. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
-    { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: 'Migration to a self-manageable CMS. No before-and-after performance figures are published, because the previous platform baseline was never captured.' },
+    { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} The migrated site is live. No before-and-after performance figures are published, because the previous platform baseline was never captured.` },
 
     // Added 10 Sep 2026. The reference page states it covers every published
     // project, and six work pages exist while this list held five. An external

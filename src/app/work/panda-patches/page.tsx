@@ -9,13 +9,16 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
+import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
+
+const description = `A founder-owned WordPress store rebuilt with Next.js, a Sanity editor and custom pricing. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory}`;
 
 export const metadata: Metadata = {
     title: "Panda Patches: WordPress to Next.js Migration, Zero SEO Drops",
-    description: "3-year-old WordPress store migrated to a headless Next.js + Sanity + Supabase + Square stack. No ranking losses recorded in Search Console during the monitored post-launch period. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
+    description,
     openGraph: {
         title: "Panda Patches: WordPress to Next.js Migration (Zero SEO Drops)",
-        description: "3-year-old WordPress site migrated to a headless stack with zero Google ranking drops. Revenue scaled from $38K to about $50K/mo on about $55/mo tooling.",
+        description,
         type: "article",
         url: "https://www.pandacodegen.com/work/panda-patches",
         images: [ogImageForPath("/work/panda-patches")],
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-        description: "3-year-old WordPress e-commerce site migrated to Next.js + Sanity + Supabase + Square. No ranking losses recorded in the monitored post-launch period. Scaled from $38K to about $50K/mo on about $55/mo tooling.",
+        description,
     },
     alternates: { canonical: "/work/panda-patches" },
 };
@@ -35,7 +38,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "Can you replace Shopify with a custom coded e-commerce store?",
-        answer: "Yes, but this project is not the evidence for it. Panda Patches ran on WordPress and WooCommerce and was never on Shopify, so it shows we can replace a hosted commerce stack with a custom Next.js storefront — not that we have moved a store off Shopify. What transfers is the method: we rebuilt the storefront, checkout and pricing engine on Sanity, Supabase and Square, and the store now runs with no platform plan fee. For an actual Shopify store there are two different jobs with very different costs: a headless storefront that keeps Shopify running products, orders and payments, or a full replacement of commerce as well. We scope those separately. Panda Patches is founder-affiliated, not an independent client engagement. You own 100% of the code.",
+        answer: `Yes, but this project is not the evidence for it. Panda Patches ran on WordPress and WooCommerce and was never on Shopify, so it shows we can replace a WordPress commerce stack with a custom Next.js storefront, not that we have moved a store off Shopify. The current platform uses Sanity, Supabase and Square. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} For a Shopify store there are two different jobs: a headless storefront that keeps Shopify running products, orders and payments, or a full replacement of commerce as well. We scope those separately. Panda Patches is founder-affiliated, not an independent client engagement.`,
     },
     {
         question: "How does a real-time pricing calculator work without API calls?",
@@ -51,7 +54,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Panda Patches platform?",
-        answer: "The storefront, custom real-time pricing, Sanity CMS, AI patch generator, Square checkout with BNPL, customer portal, and the server-side conversion-tracking stack, was built and launched within 8 weeks. The connected staff CRM that runs order operations is a separate application sharing the same Supabase backend. The Lighthouse score is 90+ across all Core Web Vitals.",
+        answer: `The initial storefront rebuild launched within 8 weeks. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} The current storefront includes custom pricing, Sanity CMS, an AI patch generator, a customer portal and server-side conversion tracking; the current feature set should not be read as the original launch scope. The connected staff CRM is a separate application sharing the same Supabase backend.`,
     },
 ];
 
@@ -62,10 +65,10 @@ const caseStudySchema = {
             "@type": "Article",
             "@id": "https://www.pandacodegen.com/work/panda-patches#article",
             "headline": "Panda Patches: WordPress to Next.js Migration with Zero SEO Drops",
-            "description": "A 3-year-old WordPress e-commerce site migrated to a headless stack (Next.js + Sanity + Supabase + Square) with no ranking losses recorded in Search Console during the monitored post-launch period. Includes a real-time pricing calculator handling 9 patch types. Revenue grew from $38,000 to about $50,000/month on about $55/month tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).",
+            "description": description,
             "image": ogImageUrlForPath("/work/panda-patches"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": "2026-08-10T00:00:00Z",
+            "dateModified": "2026-09-18T00:00:00Z",
             "articleSection": "Case Study",
             "inLanguage": "en-US",
             "wordCount": 2100,
@@ -304,7 +307,7 @@ export default function PandaPatchesCaseStudy() {
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We migrated it to a complete headless stack (Next.js + Sanity + Supabase + Square) with a real-time pricing calculator and a custom ops platform. No ranking losses were recorded in Google Search Console during the 30-day post-launch monitoring window. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We rebuilt the storefront with Next.js, Sanity, Supabase and a custom pricing calculator, connected to a separate operations platform. {MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} No ranking losses were recorded in Google Search Console during the 30-day post-launch monitoring window. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
 
                         <div className="mb-10 rounded-2xl border border-cognac/30 bg-cognac/5 p-5 max-w-3xl">
@@ -546,8 +549,9 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Far past a migration. A conversion machine.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            The storefront kept growing after launch. Today it generates and converts demand end-to-end: an AI mockup generator pulls people in, Square checkout with installment options closes the sale, a customer portal handles self-serve reorders, and a server-side tracking stack measures every step without slowing the page down.
+                            The storefront kept growing after launch. {MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} Today the site includes an AI mockup generator, checkout with installment options, a customer portal for reorders and server-side conversion tracking.
                         </p>
+                        <p className="text-stone-600 mb-8 max-w-2xl">{PAYMENT_INTEGRATION_SCOPE}</p>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                             {storefrontFeatures.map((f) => (
                                 <div key={f.title} className="p-5 bg-white border border-stone-300 rounded-xl shadow-xs">

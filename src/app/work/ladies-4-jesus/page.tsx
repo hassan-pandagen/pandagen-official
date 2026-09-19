@@ -9,11 +9,12 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import OtherReviews from "@/components/work/OtherReviews";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/ladies-4-jesus";
 const title = "Ladies 4 Jesus Case Study: A Moderated Community an Owner Runs Alone";
 const description =
-    "A faith community site migrated to Next.js 16 and Sanity, where every visitor submission is moderated before it appears publicly and a non-technical owner runs all content without a developer. Build record: no before-and-after is claimed, because no baseline was captured.";
+    `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} Build record: no before-and-after performance comparison is claimed, because no baseline was captured.`;
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },
@@ -178,10 +179,8 @@ export default function Ladies4JesusCaseStudy() {
                             Ladies 4 Jesus: <span className="italic text-cognac">a moderated community the owner runs alone</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            A faith community site where women submit testimonies, questions and comments, and where
-                            nothing a visitor writes appears in public until the owner has read and approved it. The
-                            interesting engineering here is not speed. It is that a non-technical owner runs the entire
-                            site — content, moderation, gallery and settings — without a developer in the loop.
+                            {MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} Women submit testimonies, questions and comments;
+                            nothing a visitor writes appears publicly until the owner has read and approved it.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Published August 7, 2026. Live at{" "}

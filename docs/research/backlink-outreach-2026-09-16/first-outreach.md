@@ -1,8 +1,10 @@
 # First outreach packet
 
-Prepared 16 September 2026 and updated 17 September 2026. The DC House correction has been sent and verified in Zoho Sent. Other messages and applications remain drafts. Sender: Hassan Jamal, `hassan@mail.pandacodegen.com`; authenticated Zoho sending access is confirmed. Each route below is an individual approach, not a mailing list.
+Prepared 16 September 2026 and updated 19 September 2026. The DC House correction and Sanity agency-eligibility enquiry have been sent and verified in Zoho Sent. Other messages and applications remain drafts. Sender: Hassan Jamal, `hassan@mail.pandacodegen.com`; authenticated Zoho sending access is confirmed. Each route below is an individual approach, not a mailing list.
 
 ## 1. Sanity: agency eligibility enquiry / application introduction
+
+**Status:** Sent to Sanity's officially published partner contact, `sales@sanity.io`, on 19 September 2026 and verified in Zoho Sent. Provider message ID: `1789768606090138300`.
 
 **Route:** [Sanity agency partners](https://www.sanity.io/agency-partners), Become a partner. Use the vendor's intake, not a competitor's contact form. The form requests size, region, typical project size and an example; provide actual values when requested. US$1,500 is our advertised starting website price, not a known average project value.
 
