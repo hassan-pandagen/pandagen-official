@@ -9,7 +9,7 @@ import { COMMERCIAL, FACTS_VERIFIED } from "@/data/company-facts";
 export const dynamic = "force-static";
 
 const canonicalUrl = "https://www.pandacodegen.com/ai-info/pricing-and-guarantees";
-const title = "Pricing and Guarantees | PandaCodeGen Reference";
+const title = "PandaCodeGen Pricing and Guarantees Reference";
 const description = "PandaCodeGen published starting prices, payment structure, refund terms, performance acceptance target and handover ownership.";
 
 export const metadata: Metadata = {

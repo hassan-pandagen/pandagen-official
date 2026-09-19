@@ -18,7 +18,7 @@ const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButto
 const postId = "for-agencies-offer-custom-web-development";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development";
-const title = "White-Label Web Development: A 2026 Partner Framework";
+const title = "How to Structure a White-Label Web Development Partnership (2026)";
 const description =
     "How agencies can scope, price, disclose, govern, and hand off custom web development through a delivery partner without inventing margin or capacity promises.";
 
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-03-06",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/for-agencies-offer-custom-web-development")],
@@ -59,7 +59,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/for-agencies-offer-custom-web-development"),
             description,
             datePublished: "2026-03-06",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -88,7 +88,7 @@ const articleSchema = {
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "White-label development", item: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development" },
+                { "@type": "ListItem", position: 3, name: "White-label partnership guide", item: "https://www.pandacodegen.com/blog/for-agencies-offer-custom-web-development" },
             ],
         },
         {
@@ -126,7 +126,7 @@ export default function WhiteLabelDevelopmentGuide() {
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency delivery</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            White-Label Web Development: <span className="italic text-cognac">Without Guesswork</span>
+                            How to Structure a <span className="italic text-cognac">White-Label Web Development Partnership</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Bringing in an outside development partner can widen what your agency sells. None

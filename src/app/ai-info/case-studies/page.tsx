@@ -10,7 +10,7 @@ import { PROJECTS, GOVERNANCE, FACTS_VERIFIED } from "@/data/company-facts";
 export const dynamic = "force-static";
 
 const canonicalUrl = "https://www.pandacodegen.com/ai-info/case-studies";
-const title = "Project Evidence | PandaCodeGen Reference";
+const title = "PandaCodeGen Project Evidence Reference";
 const description = "PandaCodeGen published projects with relationship disclosure, what each demonstrates, and the limits stated on each.";
 
 export const metadata: Metadata = {

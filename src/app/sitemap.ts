@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/partners', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
 
     // 4. Dynamic Content
-    { path: '/work', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-09-19' },
     { path: '/work/mycustompatches', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6 },
@@ -59,12 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
-    { path: '/ai-info', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-08-08' },
-    { path: '/ai-info/pricing-and-guarantees', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-08' },
-    { path: '/ai-info/migration-services', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-08' },
-    { path: '/ai-info/case-studies', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-08' },
-    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-08' },
-    { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/ai-info', changeFrequency: 'monthly', priority: 0.7 , lastModified: '2026-09-19' },
+    { path: '/ai-info/pricing-and-guarantees', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
+    { path: '/ai-info/migration-services', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
+    { path: '/ai-info/case-studies', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
+    { path: '/ai-info/team-and-company', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-09-19' },
+    { path: '/blog', changeFrequency: 'weekly', priority: 0.8, lastModified: '2026-09-19' },
     { path: '/manifesto', changeFrequency: 'monthly', priority: 0.8 },
 
     // 5. Legal Pages

@@ -149,10 +149,10 @@ const HUB_CONTENT: Record<string, Omit<Hub, 'clusterId'>> = {
     agency: {
         slug: 'agencies',
         shortLabel: 'For Agencies',
-        h1: 'White-Label Web Development Guides for Agencies',
-        title: 'White-Label Web Development Guides for Agencies and Studios',
+        h1: 'Web Development Partnership Guides for Agencies',
+        title: 'Agency Web Development Partnerships: Scope, Handover and White Label',
         description:
-            'Guides for agencies subcontracting web development: how white-label engagements are structured, how to evaluate a development partner, and what cheap development actually costs.',
+            'Guides for agencies choosing and managing web development partners: delivery models, scope, handover, confidentiality and white-label work.',
         moneyAnchor: 'our agency partnership terms',
         intro: [
             'Agencies that sell design, brand, or marketing regularly need custom development they do not staff for, and the usual options are hiring, refusing the work, or subcontracting it. The guides here are about the third one.',

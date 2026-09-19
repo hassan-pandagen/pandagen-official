@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/why-competitor-outranks-you")],
@@ -50,6 +50,11 @@ export const metadata: Metadata = {
 };
 
 const sources = [
+    { name: "Google: how Search ranking works", url: "https://www.google.com/search/howsearchworks/how-search-works/ranking-results/" },
+    { name: "Google: creating helpful, reliable, people-first content", url: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content" },
+    { name: "Google: Search Console performance report", url: "https://support.google.com/webmasters/answer/7576553" },
+    { name: "Google: spam policies for web search", url: "https://developers.google.com/search/docs/essentials/spam-policies" },
+    { name: "Google: AI features and your website", url: "https://developers.google.com/search/docs/appearance/ai-features" },
     { name: "Bing AI Performance", url: "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview" },
 ];
 
@@ -63,7 +68,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/why-competitor-outranks-you"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -139,7 +144,7 @@ export default function WhyCompetitorOutranksYouPage() {
                             place, the same device, the same day, the same kind of result. Then make the smallest fix
                             your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on September 19, 2026.</p>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="7 min read" />
@@ -295,13 +300,14 @@ export default function WhyCompetitorOutranksYouPage() {
                         A competitor rarely wins on everything. Usually it is one gap in one of seven comparable areas.
                     </BlogQuote>
 
-                    <BlogHeader id="links">Links: the gap most likely to explain it, and the metric that will not</BlogHeader>
+                    <BlogHeader id="links">Links: compare page-level evidence, not a vendor score</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             If a competitor consistently outranks you on commercial queries and your content and
-                            technical evidence are comparable, <strong>who links to them is the most common remaining
-                            explanation</strong>. Links are still among the strongest signals Google uses. What will
-                            not explain it is the number most tools put in front of you:{" "}
+                            technical evidence look comparable, its page-level link evidence is worth investigating.
+                            That does not make links the proven cause: Google uses many systems and does not publish a
+                            universal weight you can apply to this query. What will not explain it is the number most
+                            tools put in front of you:{" "}
                             <strong>&quot;Domain Authority&quot; is a third-party estimate, not a Google metric.</strong>{" "}
                             Google has said repeatedly that it does not use domain authority, and that its ranking
                             systems work at the level of individual pages rather than assigning a site-wide authority
@@ -410,34 +416,28 @@ export default function WhyCompetitorOutranksYouPage() {
                         .
                     </BlogText>
 
-                    <BlogHeader id="our-offer">PandaCodeGen&apos;s SEO-safe migration offer</BlogHeader>
+                    <BlogHeader id="our-offer">PandaCodeGen&apos;s AI SEO and implementation offer</BlogHeader>
                     <BlogText>
-                        We start with a free fit audit, separate repair from migration, and prepare a plan for
-                        revenue-generating WordPress, Webflow or GoHighLevel sites. If we recommend migrating, that comes with every URL listed, the evidence
-                        you sign off against, what protects your search traffic, and the conditions under which we
-                        roll it back. We do not
-                        promise ranking retention, a traffic multiplier, revenue lift or AI citations. Service detail
-                        sits under{" "}
-                        <Link href="/services/wordpress-migration" className="text-cognac hover:underline">
-                            WordPress migration
-                        </Link>{" "}
-                        and{" "}
-                        <Link href="/services/custom-engineering" className="text-cognac hover:underline">
-                            custom engineering
+                        We can turn the gap analysis into a bounded implementation plan: fix crawl and rendered-output
+                        faults, strengthen pages with evidence, repair internal linking, and measure ordinary search
+                        and AI-search visibility separately. We recommend a rebuild only when the current platform
+                        blocks an accepted requirement. We do not promise rankings, traffic multipliers, revenue lift
+                        or AI citations. The recurring scope and its limits sit under{" "}
+                        <Link href="/services/ai-seo" className="text-cognac hover:underline">
+                            AI SEO services
                         </Link>
-                        , and recent builds are on the{" "}
+                        , implementation examples are on the{" "}
                         <Link href="/work" className="text-cognac hover:underline">
                             work page
                         </Link>
                         .
                     </BlogText>
                     <BlogText>
-                        <Link href="/pricing" className="text-cognac hover:underline">
-                            PandaCodeGen planning tiers
+                        <Link href="/services/ai-seo" className="text-cognac hover:underline">
+                            Monthly AI SEO work
                         </Link>{" "}
-                        start at $1,500 Starter, $3,500 Growth and $5,000 Scale.
-                        A common payment option is 30 percent at onboarding and 70 percent at the delivery milestone, and another written schedule may be agreed. Refund is tied to
-                        failure to deliver the signed scope. Where the accepted project terms record it, Starter includes 15 business days of launch defect support; Growth and Scale include 30.
+                        starts from $500, with the work and monthly fee agreed from the project&apos;s size and scope
+                        before we begin.
                     </BlogText>
 
                     {postFAQs.length > 0 && (
