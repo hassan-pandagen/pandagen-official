@@ -9,7 +9,7 @@ import { COMPANY, GOVERNANCE, FACTS_VERIFIED } from "@/data/company-facts";
 export const dynamic = "force-static";
 
 const canonicalUrl = "https://www.pandacodegen.com/ai-info/team-and-company";
-const title = "Team and Company | PandaCodeGen Reference";
+const title = "PandaCodeGen Team and Company Reference";
 const description = "PandaCodeGen formation, founders, mailing address, service area, contracting basis and governance policies.";
 
 export const metadata: Metadata = {

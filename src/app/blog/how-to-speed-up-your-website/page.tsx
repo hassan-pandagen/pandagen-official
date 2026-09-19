@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-30",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/how-to-speed-up-your-website")],
@@ -57,6 +57,8 @@ export const metadata: Metadata = {
 const sources = [
     { name: "Google Search Central: Core Web Vitals", url: "https://developers.google.com/search/docs/appearance/core-web-vitals" },
     { name: "Chrome: Lighthouse performance scoring", url: "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" },
+    { name: "web.dev: field data and lab data", url: "https://web.dev/articles/lab-and-field-data-differences" },
+    { name: "Chrome UX Report methodology", url: "https://developer.chrome.com/docs/crux/methodology" },
 ];
 
 const articleSchema = {
@@ -68,7 +70,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -112,7 +114,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -152,7 +154,7 @@ export default function WebsiteSpeedGuide() {
                             same page state after each change.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed August 8, 2026 against current Google and Chrome guidance.
+                            Reviewed September 19, 2026 against current Google, Chrome and CrUX guidance.
                         </p>
                     </header>
 
@@ -211,17 +213,17 @@ export default function WebsiteSpeedGuide() {
                                 <thead>
                                     <tr className="bg-stone-100 text-left">
                                         <th scope="col" className="px-4 py-3 font-bold text-charcoal">Where you are</th>
-                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">What it usually means</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">What the result establishes</th>
                                         <th scope="col" className="px-4 py-3 font-bold text-charcoal whitespace-nowrap">Start at</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[
-                                        ["Below 50", "One or two things dominate everything else. Almost always an oversized LCP image or render-blocking CSS and JavaScript in the head.", "Steps 5 to 7"],
-                                        ["50 to 89", "No single cause left. Script execution, long tasks and third-party tags are usually splitting the remaining time between them.", "Steps 8 and 10"],
-                                        ["90 or above", "The lab score is no longer your constraint. Check field INP and CLS, which a lab run measures poorly or not at all.", "Steps 2 and 9"],
-                                        ["Field data says “insufficient data”", "Not enough Chrome traffic to report. You are not being penalised for this. Test on a real mid-range phone on cellular instead.", "Step 2"],
-                                        ["Fast for you, slow for visitors", "You are testing on better hardware, a better network, and a warm cache. The 75th percentile is the number that matters.", "Steps 1 and 2"],
+                                        ["Below 50", "This lab run has substantial improvement opportunities. The score does not identify the cause; inspect the audit details and trace.", "Steps 5 to 10"],
+                                        ["50 to 89", "This lab run still found measurable work. Rank the named opportunities by route impact instead of assuming one category.", "Steps 5 to 10"],
+                                        ["90 or above", "This lab run met Lighthouse's good band. It does not prove good field experience or that important interactions work.", "Steps 2 and 9"],
+                                        ["Field data says “insufficient data”", "CrUX does not have enough eligible samples for this URL or origin. Use repeatable lab tests and your own real-user monitoring if available.", "Step 2"],
+                                        ["Fast for you, slow for visitors", "Your local visit and the reported user population differ. Compare device, network, geography, cache, consent and page state.", "Steps 1 and 2"],
                                     ].map(([where, means, start]) => (
                                         <tr key={where} className="border-t border-stone-200 align-top">
                                             <td className="px-4 py-3 font-semibold text-charcoal">{where}</td>
@@ -321,13 +323,15 @@ export default function WebsiteSpeedGuide() {
                         a useful thing to understand and a bad thing to optimise against.
                     </BlogText>
                     <BlogText>
-                        The part that actually matters passed: every sentence in this article, including the
-                        uncomfortable one above, is present in that raw response before a line of JavaScript executes.
-                        That is the test to run on your own site, and it takes one command. Fetch your page as a bot
-                        with <code>curl -A &quot;GPTBot&quot; https://yoursite.com/</code> and search the output for a
-                        sentence only a human reader would see. If it is there, machines can read you and your
-                        JavaScript weight is a speed question. If it is missing, no amount of optimisation will help,
-                        because the content was never in the response. We wrote up what that failure looks like in{" "}
+                        The raw-response check passed: every sentence in this article, including the uncomfortable one
+                        above, is present before client-side JavaScript executes. That is one useful crawlability check,
+                        and it takes one command. Fetch your page with a named user agent using{" "}
+                        <code>curl -A &quot;GPTBot&quot; https://yoursite.com/</code> and search the output for a
+                        sentence only a human reader would see. If it is there, that crawler can receive the text in
+                        the initial response and the JavaScript weight remains a separate performance question. If it
+                        is missing, investigate rendering and crawler access with the tools for the search or assistant
+                        you care about; this curl check alone does not prove what every crawler renders. We wrote up
+                        what that failure can look like in{" "}
                         <Link href="/blog/lovable-site-not-showing-on-google" className="text-cognac hover:underline">why AI-built sites are invisible</Link>.
                     </BlogText>
                     <InsightBox variant="warning" label="What this run does not show">
@@ -594,10 +598,10 @@ export default function WebsiteSpeedGuide() {
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
-                        <h2 className="mb-3 font-serif text-3xl">Get your performance migration plan</h2>
+                        <h2 className="mb-3 font-serif text-3xl">Bring us the route that feels slow</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will baseline representative routes, isolate the slow layer and compare native fixes with
-                            a search-controlled rebuild under written acceptance criteria.
+                            We will baseline representative routes, isolate the slow layer and tell you whether a
+                            focused fix, a larger rebuild or no development work is justified.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
                             Book a 15-min call <ArrowRight className="h-4 w-4" />

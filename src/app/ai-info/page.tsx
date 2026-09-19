@@ -12,7 +12,7 @@ const published = "2026-02-15";
 const modified = "2026-09-10";
 
 export const metadata: Metadata = {
-  title: "PandaCodeGen Company Reference | Services, Process, Pricing",
+  title: { absolute: "PandaCodeGen Company Reference | Services, Process, Pricing" },
   description: "A factual reference for PandaCodeGen: websites, online stores and software, delivery process, pricing starting points, founders, evidence policy, and contact details.",
   alternates: { canonical: "/ai-info" },
   robots: { index: true, follow: true },

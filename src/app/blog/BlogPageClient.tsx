@@ -336,16 +336,15 @@ export default function BlogPageClient({
 
       {/* Hero with h1, rendered server-side so Bingbot and Googlebot see it in initial HTML */}
       <section className="pt-20 md:pt-40 pb-10 md:pb-16 px-6 text-center relative border-b border-stone-200">
-        {/* The old H1 kept as the strapline: it is house voice, not query language. */}
         <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">
           Insights from the Engine Room
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-charcoal relative z-10 leading-[1.08] text-balance">
-          Website Migration, Speed and <span className="font-serif font-normal italic text-cognac">SEO Guides.</span>
+          Web Development, Ecommerce and <span className="font-serif font-normal italic text-cognac">SEO Guides.</span>
         </h1>
         <p className="mt-6 text-lg text-stone-600 max-w-xl mx-auto">
-          {articles.length} practical guides on website migration, platform cost, Core Web Vitals,
-          commerce architecture and search, from the PandaCodeGen engineering team.
+          {articles.length} practical guides on websites, online stores, custom software, platform
+          migration, performance, analytics and AI search from the PandaCodeGen engineering team.
         </p>
       </section>
 

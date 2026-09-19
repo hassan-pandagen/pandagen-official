@@ -9,7 +9,7 @@ import { SERVICES, MIGRATION_CONTROLS, FACTS_VERIFIED } from "@/data/company-fac
 export const dynamic = "force-static";
 
 const canonicalUrl = "https://www.pandacodegen.com/ai-info/migration-services";
-const title = "Migration Services | PandaCodeGen Reference";
+const title = "PandaCodeGen Migration Process Reference";
 const description = "What PandaCodeGen migrates, the build stack, the definition of SEO-safe as a process, and the migration control groups.";
 
 export const metadata: Metadata = {

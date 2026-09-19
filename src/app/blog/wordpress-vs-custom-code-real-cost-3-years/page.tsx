@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-02-20",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/wordpress-vs-custom-code-real-cost-3-years")],
@@ -67,7 +67,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/wordpress-vs-custom-code-real-cost-3-years"),
             description,
             datePublished: "2026-02-20",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -145,7 +145,7 @@ export default function WordPressVsCustomCostPage() {
                             page gives you instead is the arithmetic: the same capabilities, demand and labor on both
                             sides, with every term visible so the result can be checked rather than taken on trust.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked July 24, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Platform and commercial references checked September 19, 2026.</p>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="11 min read" />
@@ -353,7 +353,7 @@ export default function WordPressVsCustomCostPage() {
                     <div data-speakable="true">
                         <BlogText>
                             A method you cannot see run is hard to trust, so here is the model above with figures in it.
-                            <strong> These are illustrative inputs for one scenario, not a quote</strong>, and the whole
+                            <strong> These are constructed inputs for one scenario, not observed market ranges or a quote</strong>, and the whole
                             point of the exercise is that you replace them with yours. The scenario: a 15-page marketing
                             site for a small business, a CMS the team edits themselves, no ecommerce, and someone
                             in-house spending a couple of hours a month on the site either way.
@@ -418,12 +418,10 @@ export default function WordPressVsCustomCostPage() {
                         </BlogText>
 
                         <InsightBox variant="info">
-                            Published figures for a custom build usually start around $5,000 and run past $20,000, which
-                            is why custom looks like the expensive column. Our Growth package is $3,500 for a comparable
-                            8 to 20 page scope with a CMS, so in this scenario the custom column lands inside the
-                            WordPress range rather than above it. That is a statement about our pricing, not about
-                            custom builds in general — plug your own quotes in, because a $15,000 build changes the
-                            conclusion completely.
+                            The custom-build input uses our $3,500 Growth package; the WordPress figures are deliberately
+                            chosen scenario assumptions so the formula can be inspected. They do not establish a market
+                            average. Replace both columns with current quotes and invoices before using the result in a
+                            decision.
                         </InsightBox>
 
                         <BlogText>

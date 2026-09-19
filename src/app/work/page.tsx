@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import WorkPageClient from "./WorkPageClient";
 
 export const metadata: Metadata = {
-    title: "Our Work: Website Migrations & Custom Software",
-    description: "Explore PandaCodeGen website migrations, custom storefronts and operations software. See the finished projects, what we built and the stories behind them.",
+    title: "Website, Ecommerce & Software Projects",
+    description: "Explore PandaCodeGen websites, online stores, migrations and operations software. See finished projects, what we built, the relationship and the evidence limits.",
     alternates: {
         canonical: "/work",
     },
     openGraph: {
         title: "Selected Work | PandaCodeGen",
-        description: "Website migrations, custom storefronts and the software behind them. Explore the projects and case studies.",
+        description: "Websites, online stores, migrations and the software behind them. Explore the projects, relationships and case studies.",
         url: "https://www.pandacodegen.com/work",
         type: "website",
         images: [ogImageForPath("/work")],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Selected Work | PandaCodeGen",
-        description: "Website migrations, custom storefronts and the software behind them. Explore the projects and case studies.",
+        description: "Websites, online stores, migrations and the software behind them. Explore the projects, relationships and case studies.",
     },
 };
 

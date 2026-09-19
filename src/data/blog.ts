@@ -921,7 +921,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-09-19",
     faqs: [
       { question: "What is the 3 second rule in website design?", answer: "It is a planning heuristic, not a Google requirement or universal abandonment point. Different routes, devices, networks, audiences and tasks behave differently. Use the property's field performance and funnel evidence rather than applying one cutoff to every visitor." },
       { question: "Does website speed affect Google rankings?", answer: "Google uses Core Web Vitals in broader ranking systems but says good scores do not guarantee top rankings and relevance remains fundamental. Lighthouse is a lab diagnostic, not a direct ranking cutoff. Diagnose search changes with Search Console, content, links, indexing and release evidence." },
@@ -1024,7 +1024,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-09-19",
     faqs: [
       { question: "How much does a website rebuild cost in 2026?", answer: "PandaCodeGen planning tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale. A rebuild can require custom scope when strategy, content, applications, data, compliance or governance expands. Final price belongs to a signed statement of work." },
       { question: "What's the difference between a website rebuild, a redesign, and a migration?", answer: "A redesign changes the experience while retaining the current platform. A migration changes the platform while preserving much of the approved structure and experience. A rebuild changes the platform and materially reworks the structure, experience or content system." },
@@ -1801,7 +1801,7 @@ export const blogPosts: BlogPost[] = [
     id: "for-agencies-offer-custom-web-development",
     cardStat: "4 services",
     cardStatLabel: "Referral, co-delivery or documented white-label delivery",
-    title: "White-Label Web Development: A 2026 Partner Framework",
+    title: "How to Structure a White-Label Web Development Partnership (2026)",
     excerpt: "How agencies can scope, price, disclose, govern and hand off a custom web project through a delivery partner.",
     category: "Agency",
     readTime: "14 min",
@@ -1810,7 +1810,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'saas',
-    lastModified: "2026-08-19",
+    lastModified: "2026-09-19",
     faqs: [
       { question: "What is white-label web development?", answer: "It is a delivery arrangement in which an agency leads the client relationship while another team performs defined development work. Branding, disclosure, access, confidentiality, ownership and support must be written into the partner and client terms." },
       { question: "What margin can an agency make?", answer: "There is no promised margin. Use the partner's project-specific quote, then price your sales, strategy, creative, management, revisions, risk, tax, payment fees and support. The agency controls its retail price and remains responsible for its own economics." },
@@ -1855,7 +1855,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'cost',
-    lastModified: "2026-08-19",
+    lastModified: "2026-09-19",
     faqs: [
       { question: "What is the total cost of WordPress over three years?", answer: "Calculate it from actual hosting, software, support and incident invoices plus internal operating labor, planned roadmap work and any exit work inside the period. There is no representative total for every WordPress business site." },
       { question: "Is a custom website cheaper than WordPress long term?", answer: "Sometimes, but not automatically. Compare the same capabilities, demand, service level and period. Include custom build and migration, providers, dependencies, releases, support, internal labor and exit. Publish payback only when the inputs are visible and verified." },
@@ -2195,7 +2195,7 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'ranking',
-    lastModified: "2026-08-19",
+    lastModified: "2026-09-19",
     faqs: [
       {
         question: "Why does my competitor rank higher on Google than me?",

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         description,
         type: "article",
         publishedTime: "2026-04-19",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-09-19",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/website-rebuild-cost-2026")],
@@ -64,7 +64,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/website-rebuild-cost-2026"),
             description,
             datePublished: "2026-04-19",
-            dateModified: "2026-08-19",
+            dateModified: "2026-09-19",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -141,7 +141,7 @@ export default function WebsiteRebuildCostPage() {
                             or content system. Price it as a coordinated strategy, design, engineering and migration
                             project, not as a universal market band.
                         </p>
-                        <p className="mt-4 text-xs text-stone-500">Reviewed August 8, 2026.</p>
+                        <p className="mt-4 text-xs text-stone-500">Reviewed September 19, 2026.</p>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="13 min read" />
@@ -282,30 +282,26 @@ export default function WebsiteRebuildCostPage() {
                         <Link href="/blog/website-developer-agency" className={linkClass}>guide to choosing a web development agency</Link>.
                     </BlogText>
                     <BlogText>
-                        Published market rates cluster in fairly predictable places: freelancers are usually quoted
-                        somewhere around $25 to $100 per hour, and agencies around $100 to $250 or more. Those numbers
-                        are worth knowing and close to useless on their own. <strong>You are buying rate multiplied by
-                        hours, and the buyer can see the rate but not the hours.</strong> A $40 per hour engagement that
+                        Hourly rates do not make unlike proposals comparable. <strong>You are buying rate multiplied by
+                        hours, and the buyer can see the rate but not the hours.</strong> A lower-rate engagement that
                         needs constant direction, redoes work after each review round and has no defined acceptance can
-                        cost more in fees and considerably more in your own time than a $150 per hour team that scoped
+                        cost more in fees and considerably more in your own time than a higher-rate team that scoped
                         the work properly and finished it. Compare total quoted cost against a written scope. A rate
-                        card compared against nothing tells you which provider is cheaper per hour, which is not the
-                        question you are trying to answer.
+                        card compared against nothing answers the wrong question.
                     </BlogText>
 
-                    <BlogHeader id="published-ranges">Why published rebuild ranges are higher than our packages</BlogHeader>
+                    <BlogHeader id="published-ranges">Why another rebuild quote may be higher than ours</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            If you have read any other guide on this, or the summary Google puts above the results, you
-                            have been told a small-business rebuild of 8 to 20 pages costs somewhere between $15,000
-                            and $40,000. Our comparable package for that page count starts at $3,500. That gap is large
-                            enough that it deserves an explanation rather than a boast, because a number well below the
-                            stated market is just as likely to mean a smaller job as a better deal.
+                            Our Growth package starts at $3,500. If another provider quotes more for the same page
+                            count, neither number proves better value. The two scopes may include different research,
+                            content, design, integrations, governance or support. Normalize those lines before you
+                            compare the totals.
                         </BlogText>
 
                         <BlogText>
                             First, the like-for-like. Our <strong>Growth</strong> package is the one that matches that
-                            description: 10 to 20 custom pages, Sanity CMS so the team edits content without touching
+                            description: 8 to 20 custom pages, Sanity CMS so the team edits content without touching
                             code, blog migration with every URL listed and a redirect map, a 90+ Lighthouse target on
                             mobile and desktop evidenced by three passing runs per agreed page, third-party costs listed
                             before approval, and 30 business days of support. <strong>Our $1,500 Starter is not that
@@ -314,8 +310,8 @@ export default function WebsiteRebuildCostPage() {
                         </BlogText>
 
                         <BlogText>
-                            Second, what the published band contains that ours does not. Those ranges generally bundle
-                            work that is genuinely expensive and genuinely optional: original photography and video,
+                            A broader proposal may bundle work that is genuinely expensive and genuinely optional:
+                            original photography and video,
                             UX research with recruited participants, brand and identity development, copywriting for
                             pages that do not exist yet, and the account-management layer that coordinates all of it.
                             Those are real costs. If your rebuild needs them, they will push any provider&apos;s number

@@ -4,8 +4,8 @@ import BlogPageClient from "./BlogPageClient";
 import { blogPosts } from "@/data/blog";
 import { hubs, hubPostIds, parentForPost } from "@/data/hubs";
 
-const HUB_TITLE = "Website Migration, SEO & Performance Blog | PandaCodeGen";
-const HUB_DESCRIPTION = "Guides on WordPress, Webflow and GoHighLevel migrations, Shopify performance, Next.js, Core Web Vitals, analytics and SEO-safe rebuilds.";
+const HUB_TITLE = "Web Development, Ecommerce & SEO Guides | PandaCodeGen";
+const HUB_DESCRIPTION = "Practical guides for business websites, online stores and software: development costs, platform migrations, performance, analytics, AI search and ownership.";
 
 const MONTH_NUMBER: Record<string, string> = {
     Jan: "01",
