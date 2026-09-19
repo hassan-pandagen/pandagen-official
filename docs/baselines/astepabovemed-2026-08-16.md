@@ -300,3 +300,17 @@ before-and-after belongs in those two posts first, and on the case-study page se
 Both of those posts currently argue without a single first-hand measurement, which is why
 `woocommerce-low-conversion-rate` scored a weak item 12 on the 32-grade. This client is one
 of the two ways to close that. The other is a platform scan.
+
+---
+
+## Status addendum — 18 September 2026
+
+Hassan Jamal confirmed that A Step Above Medical is migrating from WordPress and the rebuild is **almost done**, while Ladies 4 Jesus is already live. The Next.js and Sanity destination was recorded in the August source review above. This owner update establishes **in progress, launch pending**; it does not establish a completed cutover or any post-launch outcome.
+
+The owner explicitly requested showing the project alongside Panda Patches and Ladies 4 Jesus on the WordPress migration service. The scoped implementation therefore permits a **text-only in-progress mention**, dated September 18, with no link to the still-old public website, no screenshot of that old site as PandaCodeGen's work, no completed case-study route and no numerical result. This narrow status mention supersedes the earlier blanket instruction to make no mention before launch; it does not clear publication of the August measurements or a completed-work case study.
+
+The status now lives in `src/data/migration-projects.ts`; A Step Above Medical remains outside `case-study-facts.json`, whose existing publication surfaces do not distinguish pending work. No new launch check or post-launch capture was performed for this addendum. The August measurements and correction log above are retained unchanged as historical baseline evidence. Their timing and limitations must not be repurposed as September observations.
+
+Before publishing a completed migration or measured before-and-after, record the actual launch, rerun comparable checks, confirm the exact delivered scope and retain the client's written permission with its date. The earlier note records verbal permission to name the client, not a newly inspected written release. Do not infer medical outcomes, compliance certification, appointments, payment features or other delivery details from the business's industry.
+
+Implementation scope: [September 18 migration proof follow-up](../research/wordpress-migration-audit-2026-09-18/implementation-follow-up.md).

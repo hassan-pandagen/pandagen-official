@@ -1,0 +1,27 @@
+[
+  {
+    "route": "/services/wordpress-migration",
+    "status": 200,
+    "assertions": "passed"
+  },
+  {
+    "route": "/work/panda-patches",
+    "status": 200,
+    "assertions": "passed"
+  },
+  {
+    "route": "/work/ladies-4-jesus",
+    "status": 200,
+    "assertions": "passed"
+  },
+  {
+    "route": "/ai-info/case-studies",
+    "status": 200,
+    "assertions": "passed"
+  },
+  {
+    "route": "/llms.txt",
+    "status": 200,
+    "assertions": "passed"
+  }
+]
