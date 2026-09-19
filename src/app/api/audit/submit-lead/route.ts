@@ -1,3 +1,6 @@
+import { createHash } from 'node:crypto';
+import { parseLeadDetails, reviewDueAt } from '@/lib/audit/leadDetails';
+import { platformAdvice } from '@/lib/audit/advice';
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import type { PageSpeedResult } from '@/lib/audit/pagespeed';
@@ -31,7 +34,7 @@ const fmt = (n: number | null) => n === null
   ? UNAVAILABLE
   : n >= 1000 ? `${(n / 1000).toFixed(1)}s` : `${Math.round(n)}ms`;
 const fmtScore = (n: number | null) => n === null ? UNAVAILABLE : `${n}/100`;
-const MAX_LEAD_REQUEST_BYTES = 2_048;
+const MAX_LEAD_REQUEST_BYTES = 8_192;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 class AuditLeadDeliveryError extends Error {
@@ -84,7 +87,10 @@ function buildUserConfirmationText(url: string, data: PageSpeedResult): string {
     text += `Platform: ${data.platformDetected}\n`;
   }
   if (issueCount > 0) text += `Issues found: ${issueCount}\n`;
-  text += `\nReply if you want us to review the migration context or clarify a finding. Any manual review, scope, timing, and deliverable will be confirmed separately.\n\n`;
+  for (const check of data.deepChecks?.checks ?? []) {
+    text += `\n${check.name} (${check.status}):\n${check.findings.map(f => `- ${f}`).join('\n')}\nNext step: ${check.fix}\n`;
+  }
+  text += `\nReply if you want us to clarify a finding. Implementation, account access and any paid work require a separately agreed scope.\n\n`;
   text += `PandaCodeGen\nhttps://www.pandacodegen.com\n`;
   return text;
 }
@@ -93,7 +99,8 @@ function buildOwnerNotification(
   email: string,
   url: string,
   auditData: PageSpeedResult,
-  geo: { country: string; city: string; region: string }
+  geo: { country: string; city: string; region: string },
+  issuedAt: number
 ): string {
   const hasDeep = auditData.deepChecks && auditData.deepChecks.checks.length > 0;
   const failCount = hasDeep
@@ -105,7 +112,7 @@ function buildOwnerNotification(
   const issueCount = failCount + warnCount;
   const emailDomain = email.split('@')[1] || '';
 
-  let text = `NEW AUDIT LEAD\n${new Date().toUTCString()}\n\n`;
+  let text = `NEW AUDIT LEAD\n${new Date(issuedAt).toUTCString()}\n\n`;
   text += `LEAD\nEmail: ${email}\nDomain: ${emailDomain}\nWebsite: ${url}\n`;
   text += `Platform: ${auditData.platformDetected ?? 'Not detected'}\n\n`;
   text += `LOCATION\nCountry: ${geo.country || 'Unknown'}\n`;
@@ -116,8 +123,8 @@ function buildOwnerNotification(
   // null case falls through to the issue count rather than being treated as 0.
   const performanceScore = auditData.performanceScore;
   text += `VERDICT: ${performanceScore !== null && performanceScore >= 80 && failCount === 0
-    ? 'Healthy site (soft CTA sent)'
-    : `${issueCount} issues found (urgency CTA sent)`}\n\n`;
+    ? 'No failing automated checks detected; not a complete website assessment'
+    : `${issueCount} automated checks flagged for review`}\n\n`;
   text += `SCORES\nPerformance: ${fmtScore(performanceScore)}\n`;
   text += `SEO: ${fmtScore(auditData.seoScore)}\n`;
   text += `Accessibility: ${fmtScore(auditData.accessibilityScore)}\n`;
@@ -168,6 +175,8 @@ export async function POST(request: NextRequest) {
     }
 
     const raw = body as Record<string, unknown>;
+    let details: ReturnType<typeof parseLeadDetails>;
+    try { details = parseLeadDetails(raw); } catch (error) { throw new AuditLeadRequestError(400, error instanceof Error ? error.message : 'Invalid request.'); }
     const email = typeof raw.email === 'string' ? raw.email.trim() : '';
     const leadToken = typeof raw.leadToken === 'string' ? raw.leadToken : '';
     if (!email || email.length > 254 || !EMAIL_PATTERN.test(email)) {
@@ -195,6 +204,9 @@ export async function POST(request: NextRequest) {
 
     claimedToken = leadToken;
     claimedRecord = await consumeAuditLeadToken(leadToken);
+    if ((claimedRecord.action ?? 'report') !== details.action) {
+      throw new AuditLeadRequestError(400, 'This session belongs to a different audit action.');
+    }
     const { url, auditData } = claimedRecord;
     const geo = readVercelApproximateGeo(request.headers);
 
@@ -203,32 +215,36 @@ export async function POST(request: NextRequest) {
       throw new AuditLeadDeliveryError(503, 'Audit email delivery is not configured.');
     }
 
-    const confirmation = await getResend().emails.send({
-      from: fromEmail,
-      to: email,
-      subject: 'Your automated website audit summary',
-      text: buildUserConfirmationText(url, auditData),
-    });
-    if (confirmation.error) {
-      throw new AuditLeadDeliveryError(502, 'The confirmation email could not be sent.');
-    }
-    confirmationSent = true;
-
+    const requestId = createHash('sha256').update(leadToken).digest('hex');
+    const contactId = createHash('sha256').update(email.toLowerCase()).digest('hex').slice(0, 16);
+    const dueAt = details.action === 'review' ? reviewDueAt(claimedRecord.issuedAt) : null;
+    const context = `Lead type: ${details.action}\nContact reference: ${contactId}\nRequest: ${requestId}\nOwner-selected platform: ${details.platform || 'Not sure'}\nGoal: ${details.goal || 'General check'}\nConcern: ${details.concern || 'Not supplied'}\nExtra pages (owner-supplied, not scanned):\n${details.pages.join('\n') || 'None'}\n${dueAt ? `Review due by: ${dueAt} (UTC)\nScope: up to three public pages, three recommendations.\n` : ''}`;
     const notifyEmail = process.env.AUDIT_NOTIFY_EMAIL || fromEmail;
+    // Owner delivery is required: this inbox is the pilot's review queue.
+    // Stable keys avoid repeat emails if a later step fails and the visitor retries.
     const ownerNotification = await getResend().emails.send({
       from: fromEmail,
       to: notifyEmail,
-      subject: `NEW AUDIT FOLLOW-UP REQUEST: ${auditData.performanceScore === null ? 'no lab data' : `${auditData.performanceScore}/100`} | ${auditData.platformDetected ?? 'Platform not detected'} | ${geo.country} | ${email}`,
-      text: buildOwnerNotification(email, url, auditData, geo),
-    }).catch((error) => {
-      console.error('Owner notification failed:', error);
-      return null;
-    });
-    if (ownerNotification?.error) {
-      console.error('Owner notification failed:', ownerNotification.error.name);
-    }
+      replyTo: email,
+      subject: `${details.action === 'review' ? 'FOUNDER REVIEW - 24H' : 'AUDIT REPORT LEAD'} | ${contactId}`,
+      text: context + '\n' + buildOwnerNotification(email, url, auditData, geo, claimedRecord.issuedAt),
+    }, { idempotencyKey: `audit-owner-${requestId}` });
+    if (ownerNotification.error) throw new AuditLeadDeliveryError(502, 'We could not record your request. Please try again.');
 
-    return jsonResponse({ success: true, message: 'Audit summary sent' }, 200);
+    const confirmation = await getResend().emails.send({
+      from: fromEmail,
+      to: email,
+      replyTo: notifyEmail,
+      subject: details.action === 'review' ? 'Your free founder review request' : 'Your website audit report',
+      text: (dueAt ? `Your free founder review is requested. We will review up to three public pages and email our recommendations by ${new Date(dueAt).toUTCString()}. No obligation to hire us.\n\n` : '')
+        + buildUserConfirmationText(url, auditData)
+        + `\nPlatform guidance (based on your selection): ${platformAdvice(details.platform)}\n`
+        + (dueAt ? '' : '\nWant a free founder review? Return to your open audit and select Request my free founder review, or reply with your main concern and up to two additional public pages. We will confirm the review timing by email.\n'),
+    }, { idempotencyKey: `audit-customer-${requestId}` });
+    if (confirmation.error) throw new AuditLeadDeliveryError(502, 'Your request was recorded, but the confirmation could not be sent. Please retry.');
+    confirmationSent = true;
+    return jsonResponse({ success: true, message: details.action === 'review' ? 'Review requested' : 'Audit report sent', dueAt }, 200);
+
   } catch (error) {
     if (claimedRecord && !confirmationSent) {
       try {

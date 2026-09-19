@@ -69,7 +69,7 @@ function extractHeadings(html: string): { level: number; text: string }[] {
 
 function checkVisualHierarchy(html: string): DeepCheckResult {
   const id = 'visual-hierarchy';
-  const name = 'Visual Hierarchy';
+  const name = 'Heading signals';
   const findings: string[] = [];
   let score = 100;
 
@@ -122,7 +122,7 @@ function checkVisualHierarchy(html: string): DeepCheckResult {
 
 function checkMobileFirstUX(html: string, pageSpeed: PageSpeedResult | null): DeepCheckResult {
   const id = 'mobile-first-ux';
-  const name = 'Mobile First UX';
+  const name = 'Mobile markup signals';
   const findings: string[] = [];
   let score = 100;
 
@@ -173,7 +173,7 @@ function checkMobileFirstUX(html: string, pageSpeed: PageSpeedResult | null): De
 
 function checkCTAPlacement(html: string): DeepCheckResult {
   const id = 'cta-placement';
-  const name = 'CTA Placement';
+  const name = 'Contact and action-link signals';
   const findings: string[] = [];
   let score = 60; // baseline
 
@@ -211,7 +211,7 @@ function checkCTAPlacement(html: string): DeepCheckResult {
   }
 
   if (ctaCount > 0) {
-    findings.push(`${ctaCount} CTA element(s) found above the fold (first 50% of page)`);
+    findings.push(`${ctaCount} CTA element(s) found in the first half of the HTML (not a viewport measurement)`);
     score += ctaCount * 10;
   } else {
     findings.push('No clear CTA keywords found in first half of page');
@@ -230,7 +230,7 @@ function checkCTAPlacement(html: string): DeepCheckResult {
   }
 
   score = clamp(score);
-  return { id, name, score, status: status(score), findings, fix: ctaCount === 0 ? 'Add a clear call-to-action button above the fold with action-oriented text.' : 'CTA placement looks reasonable. Test variations for conversion improvement.' };
+  return { id, name, score, status: status(score), findings, fix: ctaCount === 0 ? 'Review whether visitors can find the next step. This English keyword check cannot measure visible placement or test a button.' : 'Action words were detected in the HTML. Check visibility, keyboard access and behavior in a browser.' };
 }
 
 function checkHeadingStructure(html: string): DeepCheckResult {
@@ -471,7 +471,7 @@ function checkIndexingSpeed(html: string, robotsTxt: string, robotsOk: boolean, 
   }
 
   score = clamp(score);
-  return { id, name, score, status: status(score), findings, fix: score < 70 ? 'Ensure sitemap.xml exists with valid XML, add a canonical tag, and remove any noindex directives.' : 'Indexing signals look good.' };
+  return { id, name, score, status: status(score), findings, fix: score < 70 ? 'Ensure sitemap.xml exists with valid XML, add a canonical tag, and review whether any noindex directive is intentional before changing it.' : 'Indexing signals look good.' };
 }
 
 function checkTrustSignals(html: string, url: string): DeepCheckResult {

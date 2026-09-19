@@ -1,610 +1,161 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Globe, ArrowRight, Search, CheckCircle2, AlertTriangle, XCircle, Bot, Gauge, TrendingDown, Calendar, Mail } from "lucide-react";
-import lazyLoad from "next/dynamic";
-import AuditLoadingState from "./AuditLoadingState";
+
+
+import { useRef, useState } from "react";
+
+import Link from "next/link";
+
 import AuditEmailGate from "./AuditEmailGate";
-import { getScoreTextClass } from "@/lib/audit/scoring";
+
 import type { PageSpeedResult } from "@/lib/audit/pagespeed";
+
+import { auditPlatforms, auditGoals, platformAdvice } from "@/lib/audit/advice";
+
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+
 import { safeAuditAnalyticsSummary } from "@/lib/audit/analyticsSummary";
 
-const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 
-type WidgetState = "idle" | "loading" | "results";
-
-// Shown when the target site could not be fetched. Without the HTML there is
-// nothing to measure, so no score of any kind may be displayed.
-const SITE_UNREACHABLE_MESSAGE =
-  "We could not reach that site, so there is nothing to score yet. This is usually a temporary block or a redirect. Try again, or send us the address and we will look manually.";
-
-// Shown when Google's PageSpeed lab run did not return. The 11 technical checks
-// still ran, so they are reported; the lab metrics are marked unavailable and
-// no performance number of any kind is shown.
-const PAGESPEED_UNAVAILABLE_MESSAGE =
-  "Google's lab run did not return for this scan, so the performance score and Core Web Vitals are not shown. The technical checks below ran normally. Google measures a URL fresh the first time it sees it, so a second scan in a minute usually returns the lab data.";
-
-const DESKTOP_URL_INPUT_ID = "audit-url-desktop";
-const DESKTOP_URL_ERROR_ID = "audit-url-desktop-error";
-const MOBILE_URL_INPUT_ID = "audit-url-mobile";
-const MOBILE_URL_ERROR_ID = "audit-url-mobile-error";
-
-// An explicitly illustrative preview of the checks, not a verdict about the visitor's site.
-const sampleScanLines = [
-  { name: "Search & AI foundations", verdict: "Crawl, content, and evidence signals need review", status: "warn" as const },
-  { name: "Mobile FCP (lab)", verdict: "4.2s in this illustrative sample", status: "fail" as const },
-  { name: "Core Web Vitals", verdict: "Needs improvement in this illustrative sample", status: "warn" as const },
-  { name: "Structured data", verdict: "No machine-readable entity context detected", status: "warn" as const },
-  { name: "Security headers", verdict: "3 of 6 recommended headers missing", status: "warn" as const },
-  { name: "Heading structure", verdict: "OK", status: "pass" as const },
-];
 
 export default function AuditWidget() {
-  const [state, setState] = useState<WidgetState>("idle");
+
   const [url, setUrl] = useState("");
-  const [auditData, setAuditData] = useState<PageSpeedResult | null>(null);
-  const [leadToken, setLeadToken] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [isEmailGateOpen, setIsEmailGateOpen] = useState(false);
 
-  const handleAnalyze = async () => {
-    const trimmed = url.trim();
-    if (!trimmed) { setError("Enter your website URL to scan"); return; }
-    if (trimmed.includes("@") && !trimmed.startsWith("http")) {
-      setError("That looks like an email. Paste your website URL (e.g. yourwebsite.com)");
-      return;
-    }
-    if (!trimmed.includes(".") || /\s/.test(trimmed)) {
-      setError("Enter a valid website URL (e.g. yourwebsite.com)");
-      return;
-    }
+  const [platform, setPlatform] = useState<string>("Not sure");
 
-    setError(null);
-    setState("loading");
+  const [goal, setGoal] = useState<string>("General check");
+
+  const [data, setData] = useState<PageSpeedResult | null>(null);
+
+  const [tokens, setTokens] = useState({ report: "", review: "" });
+
+  const [delivered, setDelivered] = useState({ report: false, review: false });
+
+  const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState("");
+
+  const [action, setAction] = useState<"report" | "review" | null>(null);
+
+  const resultHeading = useRef<HTMLHeadingElement>(null);
+
+  const field = "w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-charcoal";
+
+  async function scan(e: React.FormEvent) {
+
+    e.preventDefault();
+
+    if (loading) return;
+
+    setLoading(true); setError(""); setData(null);
+
+    trackGAEvent("audit_started", { platform, goal });
 
     try {
-      const response = await fetch("/api/audit/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: trimmed }),
-      });
 
-      const contentType = response.headers.get("content-type") || "";
-      if (!contentType.includes("application/json")) {
-        throw new Error("We couldn't analyze that URL. Double-check the address and try again.");
-      }
+      const response = await fetch("/api/audit/analyze", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ url: url.trim() }) });
 
       const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "Analysis failed. Check the URL and try again.");
-      if (typeof result.leadToken !== "string" || !result.leadToken) {
-        throw new Error("The report session could not be created. Please run the audit again.");
-      }
 
-      // No fetch, no scores. When the target HTML never arrived, the deep checks
-      // ran against an empty document and their numbers describe nothing.
-      if (result.data?.deepChecks && result.data.deepChecks.htmlFetched === false) {
-        throw new Error(SITE_UNREACHABLE_MESSAGE);
-      }
+      if (!response.ok) throw new Error(result.error || "The scan could not finish. Please try again.");
 
-      setAuditData(result.data);
-      setLeadToken(result.leadToken);
-      setState("results");
+      if (!result.data || !result.leadToken || !result.reviewToken) throw new Error("The report session could not be created. Please try again.");
 
-      trackGAEvent("audit_url_submit", safeAuditAnalyticsSummary(result.data));
+      if (result.data.deepChecks?.htmlFetched === false) throw new Error("We could not read this public page, so we have no findings to show. You can still contact a founder below.");
+
+      setData(result.data); setTokens({ report: result.leadToken, review: result.reviewToken }); setDelivered({ report: false, review: false });
+
+      trackGAEvent("audit_completed", safeAuditAnalyticsSummary(result.data));
+
+      requestAnimationFrame(() => resultHeading.current?.focus());
+
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Try again.");
-      setState("idle");
-    }
-  };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") handleAnalyze();
-  };
+      setError(err instanceof Error ? err.message : "The scan could not finish.");
 
-  const handleReset = () => {
-    setState("idle");
-    setUrl("");
-    setAuditData(null);
-    setLeadToken("");
-    setError(null);
-  };
+      trackGAEvent("audit_failed", { reason: "scan_unavailable" });
 
-  useEffect(() => {
-    if (window.location.hash === "#audit-widget") {
-      setTimeout(() => {
-        const el = document.getElementById("audit-widget");
-        if (el) el.scrollIntoView({ block: "start" });
-      }, 500);
-    }
-  }, []);
+    } finally { setLoading(false); }
 
-  // The site's HTML never arrived, so every check ran against an empty document.
-  // Both render paths must suppress scores when this is true.
-  const siteUnreachable = auditData?.deepChecks?.htmlFetched === false;
-
-  // PageSpeed did not answer, so every lab-derived field is null. The deep
-  // checks are still shown; the lab metrics render as unavailable, never as 0.
-  const pageSpeedUnavailable = auditData?.pageSpeedAvailable === false;
-
-  // Derived hero diagnostics from a real result
-  const aiCheck = auditData?.deepChecks?.checks.find((c) => c.id === "ai-readiness");
-  const totalFails = auditData?.deepChecks
-    ? auditData.deepChecks.checks.filter((c) => c.status === "fail").length
-    : (auditData?.criticalIssues ?? 0);
-
-  return (
-    <div id="audit-widget">
-      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
-        {state === "loading"
-          ? "Audit in progress."
-          : state === "results"
-            ? "Audit complete. Results are available below."
-            : ""}
-      </p>
-      {/* ============ DESKTOP ============ */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="relative flex max-lg:hidden justify-center items-center"
-      >
-        <div className="relative w-full max-w-xl bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-elevated">
-          {/* Terminal chrome */}
-          <div className="flex items-center justify-between px-6 py-3 border-b border-gray-100 bg-stone-50/80">
-            <div className="flex items-center gap-1.5">
-              <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-              <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-              <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[10px] font-bold text-[#c2410c] uppercase tracking-wider">Technical Website Audit</span>
-            </div>
-          </div>
-
-          <div className="p-6 md:p-8">
-            <AnimatePresence mode="wait">
-              {/* ---------- IDLE: honest hook + 3 hero diagnostics + sample scan ---------- */}
-              {state === "idle" && (
-                <motion.div key="idle" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-5">
-                  <div>
-                    <p className="text-xs text-stone-600 mb-2">Automated technical review · results shown on screen</p>
-                    <h2 className="text-xl font-bold text-charcoal leading-tight">
-                      Illustrative example of the automated checks.
-                    </h2>
-                    <p className="text-sm text-stone-600 mt-1">A focused look at access, evidence, and mobile lab performance:</p>
-                  </div>
-
-                  {/* 3 hero diagnostics shown failing on a typical site */}
-                  <div className="space-y-2.5">
-                    <HeroDiag icon={Bot} q="Are the page's search foundations clear?" verdict="Checks crawl access, indexability, content, and evidence" />
-                    <HeroDiag icon={Gauge} q="When does content first appear on mobile?" verdict="Illustrative mobile lab FCP: 4.2s" bad />
-                    <HeroDiag icon={TrendingDown} q="Can visitors verify who is behind the content?" verdict="Checks identity, policy, and provenance signals" />
-                  </div>
-
-                  {/* Live sample scan ticker */}
-                  <div className="rounded-xl border border-stone-200 bg-stone-50/60 overflow-hidden">
-                    <div className="px-4 py-2 border-b border-stone-100 flex items-center justify-between">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-stone-600">Illustrative sample</span>
-                      <span className="text-[10px] font-bold font-mono text-stone-600">Example only</span>
-                    </div>
-                    <div className="divide-y divide-stone-100">
-                      {sampleScanLines.map((line, i) => (
-                        <motion.div
-                          key={line.name}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 0.15 * i, duration: 0.4 }}
-                          className="flex items-center gap-2.5 px-4 py-1.5"
-                        >
-                          {line.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-700 shrink-0" />}
-                          {line.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
-                          {line.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
-                          <span className="text-xs font-medium text-stone-700 flex-1">{line.name}</span>
-                          <span className={`text-[11px] font-mono ${line.status === "pass" ? "text-green-700" : line.status === "warn" ? "text-orange-700" : "text-red-600"}`}>{line.verdict}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* URL input + soft CTA */}
-                  <div className="space-y-3">
-                    <div className="relative">
-                      <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-600" />
-                      <input
-                        id={DESKTOP_URL_INPUT_ID}
-                        type="text"
-                        value={url}
-                        onChange={(e) => setUrl(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        placeholder="yourwebsite.com"
-                        aria-label="Website URL to audit"
-                        aria-invalid={Boolean(error)}
-                        aria-describedby={error ? DESKTOP_URL_ERROR_ID : undefined}
-                        className="w-full bg-stone-50 border border-gray-300 rounded-xl pl-12 pr-4 py-4 text-charcoal placeholder:text-gray-600 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all text-base font-medium"
-                      />
-                    </div>
-                    {error && <p id={DESKTOP_URL_ERROR_ID} className="text-red-600 text-sm" role="alert">{error}</p>}
-                    <button
-                      onClick={handleAnalyze}
-                      className="w-full py-4 bg-charcoal hover:bg-stone-800 text-white font-bold text-base rounded-xl transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group"
-                    >
-                      Run automated audit
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <p className="text-center text-xs text-stone-600">Heuristic 11-check snapshot on screen. No email required.</p>
-                  </div>
-                </motion.div>
-              )}
-
-              {state === "loading" && (
-                <motion.div key="loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <AuditLoadingState url={url} />
-                </motion.div>
-              )}
-
-              {/* ---------- UNAVAILABLE: fetch failed, so no scores may be shown ---------- */}
-              {state === "results" && auditData && siteUnreachable && (
-                <motion.div key="unreachable" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <SiteUnreachable url={url} onRetry={handleReset} />
-                </motion.div>
-              )}
-
-              {/* ---------- RESULTS: 3 hero answers + all 11 unblurred + dual CTA ---------- */}
-              {state === "results" && auditData && !siteUnreachable && (
-                <motion.div key="results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
-                  <div className="flex items-center gap-2 text-sm text-stone-600">
-                    <Search className="w-4 h-4 text-cognac" />
-                    <span className="truncate">{url}</span>
-                    {auditData.platformDetected && auditData.platformDetected !== "Unknown" && (
-                      <span className="ml-auto text-[10px] font-bold uppercase tracking-wider text-stone-600">{auditData.platformDetected}</span>
-                    )}
-                  </div>
-
-                  {pageSpeedUnavailable && (
-                    <div className="flex items-start gap-3 rounded-xl border border-orange-100 bg-orange-50/50 px-4 py-3">
-                      <AlertTriangle className="w-5 h-5 text-orange-700 shrink-0 mt-0.5" />
-                      <p className="text-xs text-stone-700 leading-relaxed">{PAGESPEED_UNAVAILABLE_MESSAGE}</p>
-                    </div>
-                  )}
-
-                  {/* 3 hero answers, now personalized */}
-                  <div className="space-y-2.5">
-                    {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" />}
-                    {auditData.fcp !== null
-                      ? <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} />
-                      : <HeroUnavailable icon={Gauge} q="Mobile FCP (lab)" />}
-                    {auditData.performanceScore !== null
-                      ? <HeroResult icon={Search} q="Performance score" score={auditData.performanceScore} suffix="/100" />
-                      : <HeroUnavailable icon={Search} q="Performance score" />}
-                  </div>
-
-                  {/* All 11 checks are UNBLURRED. Generosity beats the email wall. */}
-                  {auditData.deepChecks && (
-                    <div className="border border-stone-200 rounded-xl overflow-hidden">
-                      <div className="px-4 py-2.5 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-stone-600">Heuristic technical snapshot</span>
-                        <span className={`text-xs font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>
-                          {auditData.deepChecks.overallScore}/100
-                        </span>
-                      </div>
-                      <div
-                        data-lenis-prevent
-                        className="divide-y divide-stone-100 max-h-[200px] overflow-y-auto"
-                        role="region"
-                        aria-label="Detailed audit checks"
-                        tabIndex={0}
-                      >
-                        {auditData.deepChecks.checks.map((check) => (
-                          <div key={check.id} className="flex items-center gap-2.5 px-4 py-2">
-                            {check.status === "pass" && <CheckCircle2 className="w-3.5 h-3.5 text-green-700 shrink-0" />}
-                            {check.status === "warn" && <AlertTriangle className="w-3.5 h-3.5 text-orange-700 shrink-0" />}
-                            {check.status === "fail" && <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />}
-                            <span className="text-xs font-medium text-stone-700 flex-1">{check.name}</span>
-                            <span className={`text-xs font-bold font-mono ${getScoreTextClass(check.score)}`}>{check.score}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="border-t border-stone-100 bg-stone-50 px-4 py-2 text-[10px] leading-relaxed text-stone-600">
-                        Proprietary automated average; not a certification, legal review, penetration test, ranking signal, or outcome guarantee.
-                      </p>
-                    </div>
-                  )}
-
-                  {totalFails > 0 && (
-                    <p className="text-sm text-stone-700">
-                      <span className="font-bold text-red-600">{totalFails} {totalFails === 1 ? "check needs" : "checks need"} attention.</span> Review the measured findings below before deciding what to fix first.
-                    </p>
-                  )}
-
-                  {/* Optional follow-up paths */}
-                  <CalModalButton className="w-full py-4 bg-cognac text-white font-bold rounded-xl hover:bg-amber-700 transition-all flex items-center justify-center gap-2 hover:scale-[1.01] group">
-                    <Calendar className="w-5 h-5" />
-                    Book an Optional Review
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </CalModalButton>
-                  <button
-                    onClick={() => setIsEmailGateOpen(true)}
-                    className="w-full py-3 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-sm"
-                  >
-                    <Mail className="w-4 h-4 text-stone-600" />
-                    Email Me This Automated Audit Summary
-                  </button>
-                  <button onClick={handleReset} className="w-full min-h-6 text-center text-sm text-gray-600 hover:text-cognac transition-colors">
-                    Scan another site
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* ============ MOBILE ============ */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-        className="lg:hidden mt-8 max-w-md mx-auto"
-      >
-        <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-card">
-          <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 bg-stone-50/80">
-            <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-red-400" />
-              <div className="w-2 h-2 rounded-full bg-yellow-400" />
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-            </div>
-            <div className="flex items-center gap-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-charcoal animate-pulse" />
-              <span className="text-[9px] font-bold text-[#c2410c] uppercase tracking-wider">Technical Audit</span>
-            </div>
-          </div>
-
-          <div className="p-5">
-            <AnimatePresence mode="wait">
-              {state === "idle" && (
-                <motion.div key="m-idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
-                  <div>
-                    <p className="text-[10px] text-stone-600 mb-1">Automated technical review · example below</p>
-                    <h2 className="text-lg font-bold text-charcoal leading-tight">Illustrative example of the automated checks.</h2>
-                  </div>
-                  <div className="space-y-2">
-                    <HeroDiag icon={Bot} q="Are search foundations clear?" verdict="Checks access, content, and evidence" compact />
-                    <HeroDiag icon={Gauge} q="When does content first appear?" verdict="Example mobile lab FCP: 4.2s" bad compact />
-                    <HeroDiag icon={TrendingDown} q="Is content accountable?" verdict="Checks identity and provenance" compact />
-                  </div>
-                  <div className="relative">
-                    <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
-                    <input
-                      id={MOBILE_URL_INPUT_ID}
-                      type="text"
-                      value={url}
-                      onChange={(e) => setUrl(e.target.value)}
-                      onKeyDown={handleKeyDown}
-                      placeholder="yourwebsite.com"
-                      aria-label="Website URL to audit"
-                      aria-invalid={Boolean(error)}
-                      aria-describedby={error ? MOBILE_URL_ERROR_ID : undefined}
-                      className="w-full bg-stone-50 border border-gray-300 rounded-xl pl-10 pr-4 py-3 text-charcoal placeholder:text-gray-600 focus:outline-hidden focus:border-cognac focus:ring-2 focus:ring-cognac/20 transition-all"
-                    />
-                  </div>
-                  {error && <p id={MOBILE_URL_ERROR_ID} className="text-red-600 text-sm" role="alert">{error}</p>}
-                  <button
-                    onClick={handleAnalyze}
-                    className="w-full py-3 bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group"
-                  >
-                    Run automated audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <p className="text-center text-[10px] text-stone-600">Full breakdown on screen. No email required.</p>
-                </motion.div>
-              )}
-
-              {state === "loading" && (
-                <motion.div key="m-loading" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <AuditLoadingState url={url} />
-                </motion.div>
-              )}
-
-              {state === "results" && auditData && siteUnreachable && (
-                <motion.div key="m-unreachable" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <SiteUnreachable url={url} onRetry={handleReset} compact />
-                </motion.div>
-              )}
-
-              {state === "results" && auditData && !siteUnreachable && (
-                <motion.div key="m-results" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-3">
-                  <div className="text-sm text-stone-600 truncate">{url}</div>
-                  {pageSpeedUnavailable && (
-                    <div className="flex items-start gap-2 rounded-xl border border-orange-100 bg-orange-50/50 px-3 py-2">
-                      <AlertTriangle className="w-4 h-4 text-orange-700 shrink-0 mt-0.5" />
-                      <p className="text-[11px] text-stone-700 leading-relaxed">{PAGESPEED_UNAVAILABLE_MESSAGE}</p>
-                    </div>
-                  )}
-                  <div className="space-y-2">
-                    {aiCheck && <HeroResult icon={Bot} q="Search & AI foundations" score={aiCheck.score} suffix="/100" compact />}
-                    {auditData.fcp !== null
-                      ? <HeroResult icon={Gauge} q="Mobile FCP (lab)" score={auditData.fcp / 1000} suffix="s" lowerIsBetter goodUnder={1.8} okUnder={3} compact />
-                      : <HeroUnavailable icon={Gauge} q="Mobile FCP (lab)" compact />}
-                    {auditData.performanceScore !== null
-                      ? <HeroResult icon={Search} q="Performance" score={auditData.performanceScore} suffix="/100" compact />
-                      : <HeroUnavailable icon={Search} q="Performance" compact />}
-                  </div>
-                  {auditData.deepChecks && (
-                    <div className="border border-stone-200 rounded-xl overflow-hidden">
-                      <div className="px-3 py-2 bg-stone-50 border-b border-stone-100 flex items-center justify-between">
-                        <span className="text-[9px] font-bold uppercase tracking-widest text-stone-600">Heuristic technical snapshot</span>
-                        <span className={`text-[10px] font-bold font-mono ${getScoreTextClass(auditData.deepChecks.overallScore)}`}>{auditData.deepChecks.overallScore}/100</span>
-                      </div>
-                      <div
-                        data-lenis-prevent
-                        className="divide-y divide-stone-100 max-h-[180px] overflow-y-auto"
-                        role="region"
-                        aria-label="Detailed audit checks"
-                        tabIndex={0}
-                      >
-                        {auditData.deepChecks.checks.map((check) => (
-                          <div key={check.id} className="flex items-center gap-2 px-3 py-1.5">
-                            {check.status === "pass" && <CheckCircle2 className="w-3 h-3 text-green-700 shrink-0" />}
-                            {check.status === "warn" && <AlertTriangle className="w-3 h-3 text-orange-700 shrink-0" />}
-                            {check.status === "fail" && <XCircle className="w-3 h-3 text-red-600 shrink-0" />}
-                            <span className="text-[11px] font-medium text-stone-700 flex-1">{check.name}</span>
-                            <span className={`text-[11px] font-bold font-mono ${getScoreTextClass(check.score)}`}>{check.score}</span>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="border-t border-stone-100 bg-stone-50 px-3 py-2 text-[9px] leading-relaxed text-stone-600">
-                        Proprietary automated average; not a certification or outcome guarantee.
-                      </p>
-                    </div>
-                  )}
-                  <CalModalButton className="w-full py-3 bg-cognac text-white font-bold rounded-xl hover:bg-amber-700 transition-all flex items-center justify-center gap-2 text-sm group">
-                    <Calendar className="w-4 h-4" /> Book an Optional Review <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </CalModalButton>
-                  <button
-                    onClick={() => setIsEmailGateOpen(true)}
-                    className="w-full py-2.5 bg-white border border-stone-200 text-charcoal font-semibold rounded-xl hover:border-cognac/40 transition-all flex items-center justify-center gap-2 text-xs"
-                  >
-                    <Mail className="w-3.5 h-3.5 text-stone-600" /> Email This Automated Summary
-                  </button>
-                  <button onClick={handleReset} className="w-full min-h-6 text-center text-xs text-gray-600 hover:text-cognac transition-colors">
-                    Scan another site
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Email summary modal: optional, never an audit wall */}
-      <AuditEmailGate
-        isOpen={isEmailGateOpen}
-        onClose={() => setIsEmailGateOpen(false)}
-        url={url}
-        auditData={auditData}
-        leadToken={leadToken}
-      />
-    </div>
-  );
-}
-
-/* --- Hero diagnostic (idle state, shows a typical failing site) --- */
-function HeroDiag({
-  icon: Icon,
-  q,
-  verdict,
-  bad,
-  compact,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  q: string;
-  verdict: string;
-  bad?: boolean;
-  compact?: boolean;
-}) {
-  return (
-    <div className={`flex items-start gap-3 rounded-xl border ${bad ? "border-red-100 bg-red-50/50" : "border-stone-200 bg-stone-50"} ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${bad ? "text-red-600" : "text-stone-600"} shrink-0 mt-0.5`} />
-      <div className="min-w-0 flex-1">
-        <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>{q}</p>
-        <p className={`${compact ? "text-[10px]" : "text-xs"} ${bad ? "text-red-600" : "text-stone-600"} mt-0.5`}>{verdict}</p>
-      </div>
-    </div>
-  );
-}
-
-/* --- Site could not be fetched: honest message, no scores of any kind --- */
-function SiteUnreachable({
-  url,
-  onRetry,
-  compact,
-}: {
-  url: string;
-  onRetry: () => void;
-  compact?: boolean;
-}) {
-  return (
-    <div className={compact ? "space-y-3" : "space-y-4"}>
-      <div className={`flex items-start gap-3 rounded-xl border border-orange-100 bg-orange-50/50 ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-        <AlertTriangle className={`${compact ? "w-4 h-4" : "w-5 h-5"} text-orange-700 shrink-0 mt-0.5`} />
-        <div className="min-w-0 flex-1">
-          <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal leading-tight`}>No results for {url || "that address"}</p>
-          <p className={`${compact ? "text-[11px]" : "text-xs"} text-stone-700 mt-1 leading-relaxed`}>{SITE_UNREACHABLE_MESSAGE}</p>
-        </div>
-      </div>
-      <button
-        onClick={onRetry}
-        className={`w-full ${compact ? "py-3" : "py-4"} bg-charcoal hover:bg-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 group`}
-      >
-        Try again
-        <ArrowRight className={`${compact ? "w-4 h-4" : "w-5 h-5"} group-hover:translate-x-1 transition-transform`} />
-      </button>
-    </div>
-  );
-}
-
-/* --- Hero metric with no measurement behind it. Deliberately prints a word,
-       not a number: no zero, no dash that could read as a value, no colour
-       that would imply a good or bad result. --- */
-function HeroUnavailable({
-  icon: Icon,
-  q,
-  compact,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  q: string;
-  compact?: boolean;
-}) {
-  return (
-    <div className={`flex items-center gap-3 rounded-xl border border-stone-200 bg-stone-50 ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} text-stone-600 shrink-0`} />
-      <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal flex-1 leading-tight`}>{q}</p>
-      <span className={`font-mono font-bold uppercase tracking-wider text-stone-600 ${compact ? "text-[10px]" : "text-xs"}`}>
-        Not measured
-      </span>
-    </div>
-  );
-}
-
-/* --- Hero result (results state, personalized score) --- */
-function HeroResult({
-  icon: Icon,
-  q,
-  score,
-  suffix,
-  lowerIsBetter,
-  goodUnder,
-  okUnder,
-  compact,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  q: string;
-  score: number;
-  suffix: string;
-  lowerIsBetter?: boolean;
-  goodUnder?: number;
-  okUnder?: number;
-  compact?: boolean;
-}) {
-  // Color logic: score metrics use 90/50 thresholds; FCP uses goodUnder/okUnder.
-  let tone: "good" | "ok" | "bad";
-  if (lowerIsBetter && goodUnder !== undefined && okUnder !== undefined) {
-    tone = score <= goodUnder ? "good" : score <= okUnder ? "ok" : "bad";
-  } else {
-    tone = score >= 90 ? "good" : score >= 50 ? "ok" : "bad";
   }
-  const toneClass = tone === "good" ? "text-green-700" : tone === "ok" ? "text-orange-700" : "text-red-600";
-  const borderClass = tone === "good" ? "border-green-100 bg-green-50/50" : tone === "ok" ? "border-orange-100 bg-orange-50/50" : "border-red-100 bg-red-50/50";
 
-  return (
-    <div className={`flex items-center gap-3 rounded-xl border ${borderClass} ${compact ? "px-3 py-2" : "px-4 py-3"}`}>
-      <Icon className={`${compact ? "w-4 h-4" : "w-5 h-5"} ${toneClass} shrink-0`} />
-      <p className={`${compact ? "text-xs" : "text-sm"} font-bold text-charcoal flex-1 leading-tight`}>{q}</p>
-      <span className={`font-mono font-bold ${compact ? "text-base" : "text-xl"} ${toneClass}`}>
-        {suffix === "s" ? score.toFixed(1) : Math.round(score)}{suffix}
-      </span>
-    </div>
-  );
+  const checks = [...(data?.deepChecks?.checks ?? [])].sort((a, b) => Number(a.status === "pass") - Number(b.status === "pass"));
+
+  return <div id="audit-widget" className="scroll-mt-28 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm sm:p-8">
+
+    <form onSubmit={scan} className="space-y-4">
+
+      <label htmlFor="audit-url" className="block text-lg font-bold">Start with your website</label>
+
+      <input id="audit-url" autoComplete="url" required maxLength={2048} value={url} onChange={e => setUrl(e.target.value)} placeholder="example.com" className={field} disabled={loading || Boolean(data)} aria-describedby="audit-scope" />
+
+      <div className="grid gap-4 sm:grid-cols-2">
+
+        <label className="text-sm font-semibold">Your platform (optional)<select value={platform} disabled={loading || Boolean(data)} onChange={e => setPlatform(e.target.value)} className={`${field} mt-2`}>{auditPlatforms.map(p => <option key={p}>{p}</option>)}</select></label>
+
+        <label className="text-sm font-semibold">Your main concern (optional)<select value={goal} disabled={loading || Boolean(data)} onChange={e => setGoal(e.target.value)} className={`${field} mt-2`}>{auditGoals.map(g => <option key={g}>{g}</option>)}</select></label>
+
+      </div>
+
+      <p id="audit-scope" className="text-sm leading-6 text-stone-600">One public page plus supporting site files. No login, purchases or form submissions. Results on screen without an email.</p>
+
+      {!data && <button disabled={loading} className="min-h-12 w-full rounded-full bg-charcoal px-5 py-3 font-bold text-white disabled:opacity-60">{loading ? "Checking your page..." : "Check my website"}</button>}
+
+      <p role="status" aria-live="polite" className="text-sm text-stone-600">{loading ? "Running the technical checks and mobile lab test. This can take a little while." : data ? "Your scan is complete." : ""}</p>
+
+      {error && <div role="alert" className="rounded-xl bg-orange-50 p-4 text-sm"><p>{error}</p><Link href="/contact#contact-quote-form" className="mt-2 inline-block underline">Ask a founder about your website</Link></div>}
+
+    </form>
+
+    {data && <section className="mt-8 space-y-6" aria-labelledby="audit-results">
+
+      <div><h2 id="audit-results" ref={resultHeading} tabIndex={-1} className="text-2xl font-bold">Your findings and next steps</h2><p className="mt-2 break-all text-sm text-stone-600">{url}</p></div>
+
+      <div className="grid grid-cols-2 gap-3">
+
+        <div className="rounded-xl bg-stone-50 p-4"><p className="text-sm">Mobile lab performance</p><p className="text-2xl font-bold">{data.performanceScore === null ? "Unavailable" : `${data.performanceScore}/100`}</p></div>
+
+        <div className="rounded-xl bg-stone-50 p-4"><p className="text-sm">First content appears (FCP)</p><p className="text-2xl font-bold">{data.fcp === null ? "Unavailable" : `${(data.fcp / 1000).toFixed(1)}s`}</p></div>
+
+      </div>
+
+      <p className="text-sm leading-6 text-stone-600">These are point-in-time lab measurements, not real-user Core Web Vitals or total load time. {data.pageSpeedAvailable === false && "The lab service did not return measurements; the available technical findings are shown below."}</p>
+
+      <aside className="rounded-xl border border-stone-200 p-4"><h3 className="font-bold">Where to make changes</h3><p className="mt-2 text-sm leading-6">{platformAdvice(platform)}</p><p className="mt-2 text-xs text-stone-600">Detected platform: {data.platformDetected || "Unknown"}. Your selection: {platform}. Detection is not a complete inventory.</p></aside>
+
+      <div><h3 className="mb-3 font-bold">Review these checks</h3><p className="mb-3 text-sm text-stone-600">Flagged checks appear first. Open a finding for the evidence and next step. These heuristics need context, not automatic fixes.</p>
+
+        {checks.map((check, i) => <details key={check.id} open={i < 3 && check.status !== "pass"} className="border-t border-stone-200 py-4">
+
+          <summary className="cursor-pointer font-semibold">{check.name} <span className="ml-2 text-xs font-normal text-stone-600">{check.applicable === false ? "Not applicable" : check.status === "pass" ? "No issue flagged" : "Review suggested"}</span></summary>
+
+          <ul className="my-3 list-disc space-y-2 pl-5 text-sm leading-6">{check.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>
+
+          <p className="text-sm leading-6"><strong>Next step:</strong> {check.fix}</p>
+
+        </details>)}
+
+      </div>
+
+      <p className="text-xs leading-5 text-stone-600">This scan cannot certify security, accessibility, indexing, AI citations, conversion tracking or checkout behavior. Confirm whether a flagged setting is intentional before changing it.</p>
+
+      <div className="rounded-xl bg-stone-50 p-5"><h3 className="text-xl font-bold">Want a founder's opinion?</h3><p className="my-3 text-sm leading-6">We will review up to three public pages and email up to three prioritized recommendations within 24 hours. Free, with no obligation to hire us.</p>
+
+        <button disabled={delivered.review} onClick={() => setAction("review")} className="min-h-12 w-full rounded-full bg-charcoal px-4 py-3 font-bold text-white disabled:opacity-60">{delivered.review ? "Founder review requested" : "Request my free founder review"}</button>
+
+        <button disabled={delivered.report} onClick={() => setAction("report")} className="mt-3 min-h-12 w-full rounded-full border border-stone-400 bg-white px-4 py-3 font-semibold disabled:opacity-60">{delivered.report ? "Report sent" : "Email my audit report"}</button>
+
+      </div>
+
+      <div className="flex flex-wrap gap-4 text-sm underline"><Link href="/blog/how-to-speed-up-your-website">Understand speed findings</Link><Link href="/blog/ai-built-website-checklist">Check what automation misses</Link></div>
+
+      <button onClick={() => { setData(null); setTokens({ report: "", review: "" }); }} className="min-h-11 text-sm underline">Check another page</button>
+
+    </section>}
+
+    <AuditEmailGate isOpen={action !== null} onClose={() => setAction(null)} url={url} auditData={data} leadToken={tokens[action ?? "report"]} action={action ?? "report"} platform={platform} goal={goal} onDelivered={() => { if (action) setDelivered(previous => ({ ...previous, [action]: true })); }} />
+
+  </div>;
+
 }

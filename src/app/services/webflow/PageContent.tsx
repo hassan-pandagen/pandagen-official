@@ -71,6 +71,7 @@ export default function WebflowPageContent() {
           <div className="text-center mb-8 md:mb-12">
             <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">What needs to work better?</p>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Webflow problems we can help you assess</h2>
+<p className="mb-6 text-base leading-7 text-stone-600">Check before deciding to rebuild. Our <Link href="/free-audit" className="font-semibold underline underline-offset-4">free website audit</Link> explains the technical findings and offers a free founder review.</p>
             <p className="text-stone-600 max-w-2xl mx-auto">
               Start with the issue you are seeing. We check what is causing it and what can be improved in your current setup before pricing a rebuild.
             </p>

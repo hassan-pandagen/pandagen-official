@@ -235,3 +235,17 @@ test('Redis-backed tokens use atomic consume semantics', async () => {
     restoreEnvironment();
   }
 });
+
+
+test('report and review tokens are independent one-time actions for the same scan', async () => {
+  const restore = preserveEnvironment(['NODE_ENV', 'AUDIT_RATE_LIMIT_MODE', 'AUDIT_RATE_LIMIT_SECRET']);
+  try {
+    useDevelopmentMemory();
+    const report = await issueAuditLeadToken('https://example.com/', auditResult());
+    const review = await issueAuditLeadToken('https://example.com/', auditResult(), Date.now(), 'review');
+    assert.equal((await consumeAuditLeadToken(report)).action, 'report');
+    assert.equal((await consumeAuditLeadToken(review)).action, 'review');
+    await assert.rejects(consumeAuditLeadToken(report), AuditLeadTokenError);
+    await assert.rejects(consumeAuditLeadToken(review), AuditLeadTokenError);
+  } finally { resetAuditLeadTokenMemoryForTests(); restore(); }
+});

@@ -16,11 +16,18 @@ interface AuditEmailGateProps {
   url: string;
   auditData: PageSpeedResult | null;
   leadToken: string;
+  action?: 'report' | 'review';
+  platform?: string;
+  goal?: string;
+  onDelivered?: () => void;
 }
 
-export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadToken }: AuditEmailGateProps) {
+export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadToken, action = 'report', platform = '', goal = '', onDelivered }: AuditEmailGateProps) {
   const prefersReducedMotion = useReducedMotion();
   const [email, setEmail] = useState("");
+  const [concern, setConcern] = useState("");
+  const [pages, setPages] = useState("");
+  const [dueAt, setDueAt] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -37,7 +44,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
     setIsSubmitted(false);
     setIsLoading(false);
     setError(null);
-    setEmail("");
+    setDueAt(null);
     setHoneypot("");
     onClose();
   }, [onClose]);
@@ -143,7 +150,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
       const response = await fetch("/api/audit/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), leadToken }),
+        body: JSON.stringify({ email: email.trim(), leadToken, action, platform, goal, concern, pages }),
       });
 
       if (!response.ok) {
@@ -156,17 +163,20 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
         throw new Error("Server error. Please try again in a moment.");
       }
 
+      const receipt = await response.json();
+      setDueAt(typeof receipt.dueAt === 'string' ? receipt.dueAt : null);
+      onDelivered?.();
       formFunnel.markSubmitted();
 
       trackFBEvent("Lead", {
-        content_name: "Automated Website Audit Summary",
+        content_name: action === "review" ? "Founder Review Request" : "Automated Website Audit Report",
         content_category: "Audit Tool",
         value: 0,
         currency: "USD",
       });
 
       // Fire GA4 conversion event for the actual lead capture (bottom of funnel)
-      trackGAEvent("audit_lead_submit", safeAuditAnalyticsSummary(auditData));
+      trackGAEvent("audit_lead_submit", { ...safeAuditAnalyticsSummary(auditData), lead_type: action });
 
       setIsSubmitted(true);
       setIsLoading(false);
@@ -200,7 +210,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={prefersReducedMotion ? { duration: 0 } : undefined}
-              className="bg-white border border-stone-200 w-full max-w-md rounded-3xl shadow-elevated overflow-hidden pointer-events-auto"
+              className="bg-white border border-stone-200 w-full max-w-md rounded-3xl shadow-elevated max-h-[90dvh] overflow-y-auto pointer-events-auto"
               role="dialog"
               aria-modal="true"
               aria-labelledby="audit-summary-dialog-title"
@@ -217,12 +227,12 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                   >
                     <CheckCircle2 className="w-10 h-10" />
                   </motion.div>
-                  <h3 id="audit-summary-dialog-title" className="text-2xl font-bold text-charcoal mb-2">Audit Summary Sent</h3>
+                  <h3 id="audit-summary-dialog-title" className="text-2xl font-bold text-charcoal mb-2">{action === 'review' ? 'Founder review requested' : 'Audit report sent'}</h3>
                   <p id="audit-summary-dialog-description" className="text-stone-600 mb-2">
-                    Check your inbox for a copy of the automated result and its measurement limitations.
+                    {dueAt ? `We will email your recommendations by ${new Date(dueAt).toLocaleString()}.` : 'Check your inbox for the findings, next steps and measurement limitations.'}
                   </p>
                   <p className="text-stone-600 text-sm">
-                    Reply if you want to ask about a finding or migration context.
+                    You can reply to the email with questions about your website.
                   </p>
                   <button
                     ref={closeButtonRef}
@@ -252,7 +262,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                     </div>
 
                     <h2 id="audit-summary-dialog-title" className="text-xl font-bold text-white mb-1">
-                      Email This Audit Summary
+                      {action === 'review' ? 'Request my free founder review' : 'Email my audit report'}
                     </h2>
                     <p className="text-stone-600 text-sm font-mono truncate">
                       {url}
@@ -272,15 +282,15 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                   {/* Form body */}
                   <div className="p-8">
                     <p id="audit-summary-dialog-description" className="text-sm text-stone-600 mb-4 leading-relaxed">
-                      Send yourself a point-in-time copy of the automated checks shown here. A manual review or project scope is a separate, confirmed engagement.
+                      {action === 'review' ? 'A founder will review up to three public pages and send up to three prioritized recommendations within 24 hours. No obligation to hire us. Implementation and account-level checks are not included.' : 'Receive the findings, suggested next steps and limitations. No signup or marketing subscription required.'}
                     </p>
                     <div className="space-y-2 mb-6">
-                      {[
-                        "Automated score and issue-count summary",
+                      {(action === "review" ? ["Up to three public pages reviewed by a founder", "Up to three prioritized recommendations", "Plain-English next steps within 24 hours"] : [
+                        "Measured findings and suggested next steps",
                         "Submitted website and detected platform",
                         "First Contentful Paint clearly labelled",
                         "Measurement limitations included",
-                      ].map((item) => (
+                      ]).map((item) => (
                         <div key={item} className="flex items-center gap-2 text-sm text-stone-600">
                           <CheckCircle2 className="w-4 h-4 text-cognac shrink-0" />
                           <span>{item}</span>
@@ -297,7 +307,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                     >
                       <div>
                         <label htmlFor="audit-email" className="block text-xs font-bold text-charcoal uppercase tracking-wide mb-2">
-                          Where should we send the summary?
+                          {action === "review" ? "Where should we send your review?" : "Where should we send the report?"}
                         </label>
                         <div className="relative">
                           <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-stone-600" />
@@ -317,6 +327,13 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                         </div>
                       </div>
 
+                      {action === 'review' && <>
+                        <label className="block text-sm font-semibold" htmlFor="audit-concern">What would you like your website to do better?</label>
+                        <textarea id="audit-concern" required minLength={10} maxLength={1500} value={concern} onChange={e => setConcern(e.target.value)} className="w-full rounded-xl border border-stone-300 p-3" rows={3} />
+                        <label className="block text-sm font-semibold" htmlFor="audit-pages">Two other public pages (optional, one full URL per line)</label>
+                        <textarea id="audit-pages" maxLength={4200} value={pages} onChange={e => setPages(e.target.value)} className="w-full rounded-xl border border-stone-300 p-3" rows={2} />
+                        <p className="text-xs text-stone-600">Do not include passwords, private links or customer information.</p>
+                      </>}
                       {/* HONEYPOT */}
                       <div className="absolute opacity-0 top-0 left-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true" tabIndex={-1}>
                         <label htmlFor="audit_company_url">Leave this empty</label>
@@ -341,7 +358,7 @@ export default function AuditEmailGate({ isOpen, onClose, url, auditData, leadTo
                           </>
                         ) : (
                           <>
-                            Email My Audit Summary
+                            {action === 'review' ? 'Request my free founder review' : 'Email my audit report'}
                             <ArrowRight className="w-4 h-4" />
                           </>
                         )}
