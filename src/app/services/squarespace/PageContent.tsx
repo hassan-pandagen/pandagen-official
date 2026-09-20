@@ -2,7 +2,6 @@
 
 import FadeIn from "@/components/ui/FadeIn";
 import { SEARCH_IMPLEMENTATION_AUDIT, AI_DISCOVERABILITY_AUDIT } from "@/data/assessment-controls";
-import { useState } from "react";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Gauge, Lock, Palette, Search, HelpCircle, FileSearch, Wrench, Rocket, PenTool, Heart, AlertOctagon, Anchor, Wallet, Layout, Smartphone, Check, ChevronDown, Unlock } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
@@ -24,7 +23,6 @@ const squarespaceComparison = [
 const faqs = serviceFaqs["squarespace"];
 
 export default function SquarespacePageContent() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
@@ -41,7 +39,7 @@ export default function SquarespacePageContent() {
             <Zap className="w-4 h-4" /> Squarespace Migration Service
           </div>
 
-          <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words animate-fade-in-up">
+          <h1 className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.1] md:leading-[1.05] break-words animate-fade-in-up">
             {/* Same abstraction as Wix. The real Squarespace boundary is control:
                 markup, schema and template behaviour are the platform's to decide. */}
             The change you need on your Squarespace site is one the platform decides.{" "}
@@ -310,8 +308,8 @@ export default function SquarespacePageContent() {
                     {squarespaceComparison.map((row, i) => (
                       <FadeIn
                         key={i}
-                        className="grid grid-cols-2 sm:grid-cols-[minmax(0,1fr)_96px_96px] md:grid-cols-[minmax(0,1fr)_110px_110px] gap-2 md:gap-3 items-stretch sm:items-center p-3 rounded-xl border border-stone-200/70 sm:border-transparent hover:bg-white hover:border-stone-200 transition-all group cursor-default"
-                        style={{ transitionDelay: `${i * 60}ms` }}
+                        className="grid grid-cols-2 sm:grid-cols-[minmax(0,1fr)_96px_96px] md:grid-cols-[minmax(0,1fr)_110px_110px] gap-2 md:gap-3 items-stretch sm:items-center p-3 rounded-xl border border-stone-200/70 sm:border-transparent hover:bg-white hover:border-stone-200 transition-[background-color,border-color] group"
+                        delay={Math.min(i, 8) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8}
                       >
                         <div className="col-span-2 sm:col-span-1 flex min-w-0 items-center gap-3">
                           <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:bg-stone-50 group-hover:border-stone-200 transition-colors shrink-0">
@@ -652,36 +650,12 @@ export default function SquarespacePageContent() {
 
           <div className="space-y-3">
             {faqs.map((faq, i) => {
-              const isOpen = openFaq === i;
-              const buttonId = `squarespace-faq-button-${i}`;
-              const panelId = `squarespace-faq-panel-${i}`;
 
               return (
                 <FadeIn key={faq.q} style={{ transitionDelay: `${i * 50}ms` }}>
                   <div className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50/50">
-                    <h3>
-                      <button
-                        id={buttonId}
-                        type="button"
-                        aria-expanded={isOpen}
-                        aria-controls={panelId}
-                        onClick={() => setOpenFaq(isOpen ? null : i)}
-                        className="w-full p-5 text-left transition-all hover:text-cognac"
-                      >
-                        <span className="flex items-center justify-between gap-4">
-                          <span className="text-base font-medium text-charcoal">{faq.q}</span>
-                          <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-50 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
-                            <span className="text-sm font-bold text-charcoal">+</span>
-                          </span>
-                        </span>
-                      </button>
-                    </h3>
-                    <div
-                      id={panelId}
-                      role="region"
-                      aria-labelledby={buttonId}
-                      className="border-t border-stone-200 px-5 py-4"
-                    >
+                    <h3 className="p-5 text-base font-medium text-charcoal">{faq.q}</h3>
+                    <div className="border-t border-stone-200 px-5 py-4">
                       <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                     </div>
                   </div>

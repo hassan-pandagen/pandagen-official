@@ -32,7 +32,7 @@ export default function PageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-200 text-sm text-cognac font-semibold mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-charcoal animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-charcoal" />
             What We Build
           </motion.div>
 
@@ -236,7 +236,7 @@ function ServiceSection({ id, title, subtitle, description, tags, features, alig
               ))}
            </div>
 
-           <Link href={href} className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-cognac hover:gap-3 transition-all shadow-lg shadow-stone-900/10">
+           <Link href={href} className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-colors shadow-lg shadow-stone-900/10 [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1">
               Explore {title} <ArrowRight className="w-5 h-5" />
            </Link>
 
@@ -271,7 +271,7 @@ function MigrationDecoration() {
                 <motion.div
                     animate={{ left: ["0%", "100%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                    className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-stone-500 rounded-full shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                    className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-stone-500 rounded-full shadow-[0_0_12px_rgba(173,61,11,0.6)]"
                 />
             </div>
 
@@ -342,16 +342,11 @@ function DashboardDecoration() {
     return (
         <div className="w-full max-w-sm md:max-w-md">
             <motion.div
-                initial={{ rotate: -3 }}
-                whileHover={{ rotate: 0 }}
                 className="bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-elevated transform -rotate-3 group-hover:rotate-0 transition-transform duration-700"
             >
                 {/* Window Chrome */}
                 <div className="h-11 bg-stone-50 border-b border-stone-200 flex items-center px-4 gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                    <div className="w-3 h-3 rounded-full bg-green-400" />
-                    <span className="ml-3 text-xs font-mono text-stone-600">dashboard.tsx</span>
+                    <span className="text-xs font-mono text-stone-600">dashboard.tsx</span>
                 </div>
 
                 {/* Dashboard Content */}
@@ -454,9 +449,9 @@ function EcommerceDecoration() {
                             <span className="text-xl font-bold text-charcoal">$168</span>
                             <span className="text-sm text-stone-600 line-through">$240</span>
                         </div>
-                        <button className="px-4 py-2 bg-charcoal text-white text-xs font-bold rounded-lg shadow-xs">
+                        <span className="px-4 py-2 bg-charcoal text-white text-xs font-bold rounded-lg shadow-xs">
                             Add to Cart
-                        </button>
+                        </span>
                     </div>
                 </div>
             </motion.div>

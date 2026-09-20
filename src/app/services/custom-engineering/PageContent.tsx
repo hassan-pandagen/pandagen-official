@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Lock, Cpu, Users, Palette, HelpCircle, FileSearch, Lightbulb, Code, Rocket, Gauge, ShoppingBag, Wrench, Layers, Database, KeyRound, Plug, Server, GitBranch } from "lucide-react";
 import Link from "next/link";
@@ -25,7 +24,6 @@ const comparisonData = [
 const faqData = serviceFaqs["custom-engineering"];
 
 export default function PageContent() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main className="bg-paper min-h-screen selection:bg-charcoal selection:text-white overflow-x-hidden">
@@ -45,7 +43,7 @@ export default function PageContent() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.1] md:leading-[1.05] break-words"
           >
             {/* An earlier version named no problem for 2,939 characters, the worst of the
                 eight service pages. The fix then overcorrected: it kept the problem but
@@ -600,9 +598,6 @@ export default function PageContent() {
 
           <div className="space-y-3">
             {faqData.map((faq, i) => {
-              const isOpen = openFaq === i;
-              const buttonId = `custom-engineering-faq-button-${i}`;
-              const panelId = `custom-engineering-faq-panel-${i}`;
 
               return (
                 <motion.div
@@ -612,29 +607,8 @@ export default function PageContent() {
                   transition={{ delay: i * 0.05 }}
                   className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50"
                 >
-                  <h3>
-                    <button
-                      id={buttonId}
-                      type="button"
-                      aria-expanded={isOpen}
-                      aria-controls={panelId}
-                      onClick={() => setOpenFaq(isOpen ? null : i)}
-                      className="w-full p-5 text-left transition-all hover:text-cognac"
-                    >
-                      <span className="flex items-center justify-between gap-4">
-                        <span className="text-base font-medium text-charcoal">{faq.q}</span>
-                        <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-100 transition-transform ${isOpen ? 'rotate-45' : ''}`}>
-                          <span className="text-sm font-bold text-charcoal">+</span>
-                        </span>
-                      </span>
-                    </button>
-                  </h3>
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={buttonId}
-                    className="border-t border-stone-200 px-5 py-4"
-                  >
+                  <h3 className="p-5 text-base font-medium text-charcoal">{faq.q}</h3>
+                  <div className="border-t border-stone-200 px-5 py-4">
                     <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
                   </div>
                 </motion.div>

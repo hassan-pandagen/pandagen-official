@@ -218,7 +218,7 @@ export default async function TopicHubPage({ params }: Params) {
                     <ul className="mb-16 space-y-4">
                         {posts.map((post) => (
                             <li key={post.id}>
-                                <article className="rounded-2xl border border-stone-200 bg-white p-6 transition-all hover:border-stone-300 hover:shadow-lg">
+                                <article className="rounded-2xl border border-stone-200 bg-white p-6">
                                     <Link href={`/blog/${post.id}`} className="group block">
                                         <h3 className="text-xl font-bold leading-snug text-charcoal group-hover:text-cognac">
                                             {post.title}

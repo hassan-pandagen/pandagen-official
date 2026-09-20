@@ -73,7 +73,7 @@ export default function ArticleContents({ label = "On this page" }: { label?: st
   if (mounted && items.length === 0) return null;
 
   return (
-    <details className="group my-10 rounded-2xl border border-stone-300 bg-stone-50">
+    <details open className="group my-10 rounded-2xl border border-stone-300 bg-stone-50">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-6 py-4 text-xs font-bold uppercase tracking-widest text-stone-600 transition-colors hover:text-cognac">
         <span>
           {label}
@@ -83,7 +83,7 @@ export default function ArticleContents({ label = "On this page" }: { label?: st
             </span>
           )}
         </span>
-        <span aria-hidden="true" className="text-lg leading-none text-stone-400 transition-transform group-open:rotate-45">
+        <span aria-hidden="true" className="text-lg leading-none text-stone-500 transition-transform group-open:rotate-45">
           +
         </span>
       </summary>
@@ -91,7 +91,7 @@ export default function ArticleContents({ label = "On this page" }: { label?: st
         <ol className="space-y-2">
           {items.map((item, i) => (
             <li key={item.id} className="flex gap-3 text-base leading-snug">
-              <span aria-hidden="true" className="w-5 shrink-0 text-right font-bold text-stone-400">
+              <span aria-hidden="true" className="w-5 shrink-0 text-right font-bold text-stone-500">
                 {i + 1}
               </span>
               <a

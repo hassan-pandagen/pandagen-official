@@ -37,7 +37,7 @@ export default function PageContent() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.1] md:leading-[1.05] break-words"
           >
             {/* Problem before pitch. This read "How fast is your WordPress site,
                 really? We rebuild it on Next.js in 2 to 4 weeks" — a question
