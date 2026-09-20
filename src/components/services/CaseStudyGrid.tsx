@@ -4,41 +4,25 @@ import { motion } from "@/components/ui/motion";
 import { ExternalLink, ArrowRight, ArrowRightLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { metricValue, withdrawalNotice } from "@/data/case-study-facts";
-
-/** A metric that must render as a number, or null when we do not have it. */
-function numericMetric(slug: string, id: string): number | null {
-  const raw = metricValue(slug, id);
-  if (!raw) return null;
-  const n = Number(raw.replace(/[^0-9.]/g, ""));
-  return Number.isFinite(n) && n > 0 ? n : null;
-}
+import {
+  disclosure,
+  verifiedMetrics,
+  withdrawalNotice,
+  type CaseStudyMetric,
+} from "@/data/case-study-facts";
 
 /**
- * One stat tile. Only ever rendered for a figure we hold: absent figures are
- * filtered out upstream rather than drawn as an em-dash, so a card with nothing
- * to show drops the row instead of displaying empty slots under live labels.
- * It must still never render a zero or the word describing why it is absent.
+ * One stat tile. Only ever rendered for a verified metric read out of
+ * case-study-facts.json, so it cannot display a zero, the word describing why a
+ * figure is absent, or a number nobody can source.
  */
-function Stat({ value, label, tone }: { value: string | number; label: string; tone: string }) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div>
-      <p className={`text-2xl font-black leading-none tracking-tight ${tone}`}>{value}</p>
-      <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">{label}</p>
+    <div className="min-w-[7rem]">
+      <p className="text-xl md:text-2xl font-black leading-none tracking-tight text-charcoal">{value}</p>
+      <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1.5 font-bold">{label}</p>
     </div>
   );
-}
-
-/** The figures we hold for a client, in display order, absent ones dropped. */
-type StatTile = { value: string | number; label: string; tone: string };
-
-function presentStats(client: CaseStudyClient): StatTile[] {
-  const all: { value: string | number | null; label: string; tone: string }[] = [
-    { value: client.pagespeed, label: "PageSpeed", tone: "text-emerald-600" },
-    { value: client.loadTime, label: "Load Time", tone: "text-charcoal" },
-    { value: client.saved, label: "Outcome", tone: "text-cognac" },
-  ];
-  return all.filter((s): s is StatTile => s.value !== null && s.value !== undefined && s.value !== "");
 }
 
 export type CaseStudyClient = {
@@ -48,18 +32,29 @@ export type CaseStudyClient = {
   category: string;
   platform: string;
   /**
-   * The three stat tiles. `null` means "we do not have this figure" and renders
-   * as a muted em-dash.
+   * What this client got, in a buyer's terms. This leads the card.
    *
-   * These were `pagespeed: number` and `loadTime: string` until 10 Aug 2026, and
-   * both encodings produced a lie. `0` rendered as a bold zero next to a
-   * withdrawal note; the string "Withdrawn" rendered as though it were the
-   * measurement. Absent is its own state and has to be representable as one.
+   * It used to open with the relationship disclosure and, for MyCustomPatches,
+   * with ~70 words on why three figures had been withdrawn — so the first thing
+   * a prospect read was our bookkeeping rather than the work. The disclosure and
+   * the withdrawal are both still rendered verbatim, below, where they belong.
    */
-  pagespeed: number | null;
-  loadTime: string | null;
-  saved: string | null;
-  note: string;
+  lead: string;
+  /**
+   * Slug in case-study-facts.json. Its verified metrics and its verbatim
+   * disclosure render from there; a client without one renders neither.
+   *
+   * There is no field here for a figure, deliberately. Until 20 Sep 2026 this
+   * file typed PageSpeed 92 / 96 / 95 and three "< 1s" load times directly into
+   * the roster for clients that have no entry in the source of truth at all.
+   * metrics_guard.py never caught them because it can only police metrics the
+   * JSON declares, and case-study-facts.ts already records that the 95 "was
+   * never a real value of anything". If a number belongs on a card, it goes in
+   * case-study-facts.json with a method first.
+   */
+  slug?: string;
+  /** Which of that slug's verified metrics to surface, in order. */
+  statIds?: string[];
   /**
    * Screenshot under /public/work. Omitted where we do not have one — the card
    * then renders text-only rather than showing a placeholder, because a
@@ -83,12 +78,10 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     href: "https://pandapatches.com",
     category: "Custom Patches E-Commerce",
     platform: "WordPress → Custom",
-    pagespeed: 92,
-    loadTime: "< 1s",
-    saved: "~$55/mo",
+    slug: "panda-patches",
     image: "/work/panda-patches.png",
     imageAlt: "Panda Patches storefront, showing custom patch products and a quote form.",
-    note: "Founder-affiliated, not an independent client: owned and operated by co-founder Imran Raza Ladhani, with PandaCodeGen building and maintaining the platform but holding no ownership stake. Migrated from WordPress + WooCommerce. The owner reports the entire plugin and hosting stack now runs on about $55/mo total tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator), and over 1 million patches delivered to date.",
+    lead: "Our own WordPress and WooCommerce store, rebuilt on Next.js with a Sanity editor, custom product pricing and checkout, and a separate Supabase system running orders, production and reporting.",
   },
   myCustomPatches: {
     name: "MyCustomPatches",
@@ -96,15 +89,15 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     href: "https://mycustompatches.net",
     category: "Custom Patches (US Market)",
     platform: "WordPress → Custom",
-    // Read from case-study-facts.json, not declared here. Every withdrawn metric
-    // resolves to null and renders as an em-dash; restoring one after
-    // reconciliation is a one-file edit that reaches this card automatically.
-    pagespeed: numericMetric("mycustompatches", "pagespeed"),
-    loadTime: metricValue("mycustompatches", "load-time"),
-    saved: metricValue("mycustompatches", "hosting-cost"),
+    slug: "mycustompatches",
+    // Verified and method-backed in case-study-facts.json. These were sitting
+    // unused while the card rendered three em-dashes under PageSpeed / Load
+    // Time / Outcome — labels whose figures are withdrawn — so the one client
+    // with genuinely evidenced delivery facts showed none of them.
+    statIds: ["delivery-days", "urls-migrated", "downtime"],
     image: "/work/mycustompatches.png",
     imageAlt: "MyCustomPatches storefront home page.",
-    note: `Independent client. WordPress to custom Next.js migration. ${withdrawalNotice("mycustompatches") ?? ""}`.trim(),
+    lead: "A WordPress store rebuilt as a custom Next.js storefront, with every URL inventoried before cutover and the DNS switch monitored start to finish.",
   },
   saforne: {
     name: "Saforne",
@@ -112,38 +105,44 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     href: "https://saforne.com",
     category: "Luxury Leather DTC",
     platform: "Custom Next.js Build",
-    pagespeed: 96,
-    loadTime: "< 1s",
-    saved: "Premium UX",
     image: "/work/saforne.png",
     imageAlt: "Saforne storefront home page, showing the hooded jacket hero.",
-    note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Recently launched, still being refined.",
+    lead: "A handcrafted UK leather brand's storefront, built custom on Next.js with Stripe payments, a Sanity editor and multi-currency pricing. Recently launched and still being refined.",
   },
   // UNRESOLVED as of 2026-09-20: https://obare.vercel.app returns HTTP 404, so
-  // this card links a prospect from a "Real Clients" grid to a dead page, and
-  // the three figures below cannot currently be re-verified against anything.
-  // The Wix migration post (src/app/blog/wix-migration-cost/page.tsx:279) also
-  // says Obare is "in its final stages rather than launched, so treat this as a
-  // work note rather than a case study" — which contradicts its presence here.
+  // this card links a prospect from a "Real Clients" grid to a dead page.
   // Needs the live domain, or removal from the roster. Do not paper over it by
   // dropping the link and keeping the card.
+  //
+  // The lead below now matches what the Wix migration post already says
+  // (src/app/blog/wix-migration-cost/page.tsx:279) — "in its final stages
+  // rather than launched, so treat this as a work note rather than a case
+  // study". The card previously contradicted that, presenting it as delivered
+  // work with three measured-looking scores.
   obare: {
     name: "Obare Magazine",
     url: "obare.vercel.app",
     href: "https://obare.vercel.app",
     category: "Editorial Magazine",
     platform: "Wix → Custom",
-    pagespeed: 95,
-    loadTime: "< 1s",
-    saved: "225K IG",
-    note: "Editorial design magazine with 225K Instagram following. Migrated from Wix to custom Next.js for $1,350. Build delivered in 7 days; launching on the client's domain.",
+    lead: "An editorial magazine moving off Wix to Next.js with Sanity as the editor, running eight content categories. In its final stages rather than launched, so this is a work note rather than a case study.",
   },
 };
+
+/** The verified metrics a card surfaces, read only from the source of truth. */
+function statsFor(client: CaseStudyClient): { value: string; label: string }[] {
+  if (!client.slug || !client.statIds) return [];
+  const verified = verifiedMetrics(client.slug);
+  return client.statIds
+    .map((id) => verified.find((m) => m.id === id))
+    .filter((m): m is CaseStudyMetric => Boolean(m?.value))
+    .map((m) => ({ value: m.value as string, label: m.label }));
+}
 
 type Props = {
   /** Which client key to feature first (most relevant to this service page). */
   highlight?: keyof typeof ALL_CLIENTS;
-  /** Optional override for the section heading. Pass the WHOLE heading. */
+  /** Optional override for the heading. Pass the WHOLE heading. */
   heading?: string;
   /** Styled tail rendered after the heading. Pass "" to render none. */
   headingTail?: string;
@@ -164,7 +163,11 @@ export default function CaseStudyGrid({
   // If a caller wants a styled tail, it passes one via `headingTail`.
   heading = "We ship what we",
   headingTail = "promise.",
-  subheading = "Four stores we built or migrated. Live URLs, verifiable PageSpeed scores, honest before/after numbers.",
+  // This used to promise "Live URLs, verifiable PageSpeed scores, honest
+  // before/after numbers". The grid renders no before/after anywhere, the
+  // scores it did render verified against nothing, and one of the four is a
+  // magazine rather than a store.
+  subheading = "Four projects we have built or migrated, and only the figures we can evidence.",
   label = "Real Clients. Real Migrations.",
 }: Props) {
   // Order clients: highlight first (if provided), then the rest in default order
@@ -193,58 +196,69 @@ export default function CaseStudyGrid({
 
         <div className="grid md:grid-cols-2 gap-5">
           {clients.map((client, i) => {
-            const stats = presentStats(client);
+            const stats = statsFor(client);
+            const relationship = client.slug ? disclosure(client.slug) : null;
+            const withdrawn = client.slug ? withdrawalNotice(client.slug) : null;
             return (
-            <motion.a
-              key={client.name}
-              href={client.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="group block overflow-hidden rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-[border-color,box-shadow] duration-200"
-            >
-              {client.image && (
-                <div className="relative aspect-16/10 w-full overflow-hidden border-b border-stone-200 bg-stone-50">
-                  <Image
-                    src={client.image}
-                    alt={client.imageAlt ?? `${client.name} website`}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover object-top"
-                  />
-                </div>
-              )}
-              <div className="p-6 md:p-7">
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="min-w-0">
-                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-1">{client.category}</p>
-                  <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
-                  <p className="text-sm text-stone-500 mt-1">{client.url}</p>
-                </div>
-                <ExternalLink className="w-4 h-4 text-stone-600 group-hover:text-cognac transition-colors shrink-0 mt-1" />
-              </div>
+              <motion.a
+                key={client.name}
+                href={client.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="group flex flex-col overflow-hidden rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-[border-color,box-shadow] duration-200"
+              >
+                {client.image && (
+                  <div className="relative aspect-16/10 w-full overflow-hidden border-b border-stone-200 bg-stone-50">
+                    <Image
+                      src={client.image}
+                      alt={client.imageAlt ?? `${client.name} website`}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                )}
 
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">
-                <ArrowRightLeft className="w-3 h-3" /> {client.platform}
-              </div>
+                <div className="flex flex-1 flex-col p-6 md:p-7">
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div className="min-w-0">
+                      <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-1">{client.category}</p>
+                      <h3 className="text-xl md:text-2xl font-bold text-charcoal group-hover:text-cognac transition-colors truncate">{client.name}</h3>
+                      <p className="text-sm text-stone-500 mt-1">{client.url}</p>
+                    </div>
+                    <ExternalLink className="w-4 h-4 text-stone-600 group-hover:text-cognac transition-colors shrink-0 mt-1" />
+                  </div>
 
-              <p className="text-sm text-stone-600 leading-relaxed mb-5">{client.note}</p>
+                  <div className="inline-flex self-start items-center gap-2 px-2.5 py-1 rounded-full bg-stone-50 border border-stone-200 text-[11px] font-bold text-cognac mb-4">
+                    <ArrowRightLeft className="w-3 h-3" /> {client.platform}
+                  </div>
 
-              {/* Only the figures we actually hold. Three em-dashes under three
-                  labels read as a broken template, not as honesty; the note
-                  above already says which figures were withdrawn and why. */}
-              {stats.length > 0 && (
-                <div className="flex flex-wrap gap-x-8 gap-y-3 pt-4 border-t border-stone-200">
-                  {stats.map((s) => (
-                    <Stat key={s.label} value={s.value} label={s.label} tone={s.tone} />
-                  ))}
+                  <p className="text-sm text-stone-600 leading-relaxed">{client.lead}</p>
+
+                  {stats.length > 0 && (
+                    <div className="flex flex-wrap gap-x-8 gap-y-4 mt-5 pt-5 border-t border-stone-200">
+                      {stats.map((s) => (
+                        <Stat key={s.label} value={s.value} label={s.label} />
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Rendered verbatim from case-study-facts.json, and kept last
+                      rather than first. The disclosure is required and the
+                      withdrawal wording is canonical, but neither is what a
+                      prospect is here to read. */}
+                  {(relationship || withdrawn) && (
+                    <div className="mt-5 pt-4 border-t border-stone-200 space-y-2 text-xs leading-relaxed text-stone-500">
+                      {relationship && <p>{relationship}</p>}
+                      {withdrawn && <p>{withdrawn}</p>}
+                    </div>
+                  )}
                 </div>
-              )}
-              </div>
-            </motion.a>
+              </motion.a>
             );
           })}
         </div>
