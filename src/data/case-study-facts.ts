@@ -160,6 +160,26 @@ export function metricValue(slug: string, id: string): string | null {
     return metric.value ?? null;
 }
 
+/**
+ * A verified metric's value, or a build failure.
+ *
+ * For prose that names a figure mid-sentence. metricValue returns null on a
+ * withdrawn metric, which is correct for a stat tile that should collapse but
+ * silently leaves a hole in a sentence like "revenue is /mo". Withdrawing a
+ * figure quoted in prose has to break the build so the sentence gets rewritten,
+ * the same reason verifiedMetrics throws on a missing method.
+ */
+export function requiredMetric(slug: string, id: string): string {
+    const value = metricValue(slug, id);
+    if (value === null) {
+        throw new Error(
+            `Metric "${id}" on "${slug}" is not verified, but prose renders it inline. ` +
+            `Rewrite the sentences that quote it before changing its status.`
+        );
+    }
+    return value;
+}
+
 /** True when anything is withdrawn, so surfaces know to show the disclosure. */
 export function hasWithdrawn(slug: string): boolean {
     return withdrawnMetrics(slug).length > 0;
