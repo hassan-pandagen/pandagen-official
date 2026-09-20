@@ -1,17 +1,8 @@
 "use client";
 
-/**
- * Apple-designed service card with:
- * - Translucent glass material (depth hierarchy)
- * - Spring animations on hover (interruptible)
- * - Pointer-down feedback (instant response)
- * - Color-coded accent for visual distinctiveness
- * - Proper typography hierarchy
- */
-
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { AppleSprings } from "@/components/ui/AppleMotion";
@@ -21,157 +12,80 @@ interface AppleServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  accentColor?: "orange" | "blue" | "green" | "purple" | "pink" | "amber";
   featured?: boolean;
 }
-
-const accentColors = {
-  // PandaCodeGen brand colors — cognac (primary), charcoal, stone
-  orange: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-  blue: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-  green: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-  purple: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-  pink: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-  amber: {
-    bg: "bg-white",
-    border: "border-stone-200/60 hover:border-cognac/40",
-    icon: "bg-stone-100 text-cognac",
-    text: "text-charcoal",
-    hover: "group-hover:shadow-md",
-  },
-};
 
 export default function AppleServiceCard({
   href,
   icon: Icon,
   title,
   description,
-  accentColor = "orange",
   featured = false,
 }: AppleServiceCardProps) {
-  const prefersReducedMotion = useReducedMotion();
-  const colors = accentColors[accentColor];
+  const reduced = useReducedMotion();
+
+  // Hover states are driven by variant labels on the card so they propagate to
+  // every child at once. A child's own whileHover would only fire while the
+  // pointer is literally over that child, which makes it flicker on and off as
+  // the cursor crosses it.
+  const cardVariants: Variants = {
+    rest: { y: 0, scale: 1 },
+    hover: { y: reduced ? 0 : -4, scale: 1 },
+    press: { y: 0, scale: reduced ? 1 : 0.99 },
+  };
+  const iconVariants: Variants = {
+    rest: { scale: 1 },
+    hover: { scale: reduced ? 1 : 1.06 },
+  };
+  const arrowVariants: Variants = {
+    rest: { x: 0 },
+    hover: { x: reduced ? 0 : 4 },
+  };
 
   return (
     <motion.div
-      initial={prefersReducedMotion ? {} : { opacity: 0, y: 8 }}
-      whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+      initial={reduced ? false : { opacity: 0, y: 8 }}
+      whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-      transition={prefersReducedMotion ? {} : { duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="h-full"
     >
-      <Link href={href}>
+      <Link href={href} className="block h-full">
         <motion.div
-          whileHover={prefersReducedMotion ? {} : { y: -4 }}
-          transition={AppleSprings.graceful}
-          className={`
-            group h-full
-            relative overflow-hidden
-            rounded-2xl
-            p-6
-            cursor-pointer
-
-            /* Glass material background (translucent depth) */
-            bg-gradient-to-br ${colors.bg} bg-white/80
-            backdrop-blur-sm
-
-            /* Border with accent color on hover */
-            border transition-all
-            ${colors.border}
-
-            /* Depth shadows */
-            shadow-sm hover:shadow-lg
-
-            /* Smooth all transitions */
-            transition-all duration-300
-          `}
+          variants={cardVariants}
+          initial="rest"
+          animate="rest"
+          whileHover="hover"
+          whileTap="press"
+          transition={AppleSprings.default}
+          className="group relative flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-[border-color,box-shadow] duration-200 hover:border-stone-300 hover:shadow-md"
         >
-          {/* Featured badge (for highlighted services) */}
           {featured && (
-            <div className="absolute top-4 right-4">
-              <span className={`text-[10px] font-bold uppercase tracking-wider ${colors.text} px-2 py-1 rounded-full bg-white/60 backdrop-blur`}>
-                Popular
-              </span>
-            </div>
+            <span className="absolute right-4 top-4 rounded-full bg-cognac/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-cognac">
+              Popular
+            </span>
           )}
 
+          <motion.div
+            variants={iconVariants}
+            transition={AppleSprings.snappy}
+            className="mb-4 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-stone-100 text-cognac transition-colors duration-200 group-hover:bg-cognac/10"
+          >
+            <Icon className="h-5 w-5" strokeWidth={1.75} />
+          </motion.div>
 
-          {/* Content */}
-          <div className="relative z-10 flex flex-col h-full">
-            {/* Icon with colored background (scaled on hover) */}
-            <motion.div
-              whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: 6 }}
-              transition={AppleSprings.default}
-              className={`
-                w-12 h-12
-                rounded-xl
-                ${colors.icon}
-                flex items-center justify-center
-                mb-4
-                flex-shrink-0
-                backdrop-blur-sm
-                transition-all duration-300
-              `}
-            >
-              <Icon className="w-6 h-6" />
-            </motion.div>
+          <h3 className="mb-2 text-base font-semibold leading-snug tracking-[-0.01em] text-charcoal">
+            {title}
+          </h3>
 
-            {/* Title (optical sizing for legibility) */}
-            <h3 className="text-charcoal font-bold text-base mb-2 group-hover:text-charcoal transition-colors">
-              {title}
-            </h3>
+          <p className="mb-4 grow text-sm leading-relaxed text-stone-600">{description}</p>
 
-            {/* Description (comfortable line-height, measured leading) */}
-            <p className="text-stone-600 text-sm leading-relaxed flex-grow mb-3">
-              {description}
-            </p>
-
-            {/* CTA with arrow (appears on hover, spring animation) */}
-            <motion.div
-              initial={prefersReducedMotion ? {} : { opacity: 0, x: -4 }}
-              whileHover={prefersReducedMotion ? {} : { opacity: 1, x: 0 }}
-              transition={AppleSprings.default}
-              className={`flex items-center gap-2 ${colors.text} font-semibold text-sm`}
-            >
-              Learn more
-              <motion.div
-                whileHover={prefersReducedMotion ? {} : { x: 4 }}
-                transition={AppleSprings.snappy}
-              >
-                <ArrowRight className="w-4 h-4" />
-              </motion.div>
-            </motion.div>
-          </div>
-
+          <span className="flex items-center gap-1.5 text-sm font-semibold text-charcoal transition-colors duration-200 group-hover:text-cognac">
+            Learn more
+            <motion.span variants={arrowVariants} transition={AppleSprings.snappy} className="inline-flex">
+              <ArrowRight className="h-4 w-4" strokeWidth={2} />
+            </motion.span>
+          </span>
         </motion.div>
       </Link>
     </motion.div>

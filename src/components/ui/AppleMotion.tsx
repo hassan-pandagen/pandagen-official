@@ -18,47 +18,51 @@ import type { CSSProperties } from "react";
  * Spring presets matching Apple's shipped values
  * From SKILL.md and Apple WWDC talks
  */
+/**
+ * Framer Motion's `bounce` + `duration` spring API maps to Apple's
+ * damping-ratio + response. Do not switch these to `damping`/`stiffness`:
+ * Framer's `damping` is a raw coefficient, not a ratio, so Apple's
+ * "damping 1.0" translates to a coefficient of 2*sqrt(stiffness*mass) —
+ * passing 1.0 directly gives a ratio of 0.05 and oscillates for seconds.
+ */
 export const AppleSprings = {
-  // Default UI: smooth, no overshoot
+  // Default UI: critically damped, no overshoot
   default: {
     type: "spring" as const,
-    damping: 1.0,
-    stiffness: 100,
-    mass: 1,
+    bounce: 0,
+    duration: 0.4,
   },
 
-  // Momentum interaction: slight bounce from flick/drag
+  // Momentum interaction: slight bounce, only after a flick/drag
   momentum: {
     type: "spring" as const,
-    damping: 0.8,
-    stiffness: 100,
-    mass: 1,
+    bounce: 0.2,
+    duration: 0.4,
   },
 
-  // Fast response (0.3s settle time)
+  // Fast response
   snappy: {
     type: "spring" as const,
-    damping: 1.0,
-    stiffness: 130,
-    mass: 1,
+    bounce: 0,
+    duration: 0.3,
   },
 
-  // Slower, more graceful response (0.4s settle time)
+  // Slower, more graceful response
   graceful: {
     type: "spring" as const,
-    damping: 1.0,
-    stiffness: 80,
-    mass: 1,
+    bounce: 0,
+    duration: 0.5,
   },
 
-  // For drawer/sheet animations
+  // Drawer/sheet: momentum-driven, so a little bounce is correct
   sheet: {
     type: "spring" as const,
-    damping: 0.8,
-    stiffness: 120,
-    mass: 1,
+    bounce: 0.2,
+    duration: 0.3,
   },
 } as const;
+
+export type AppleSpring = (typeof AppleSprings)[keyof typeof AppleSprings];
 
 /**
  * Reduced motion fallback: cross-fade instead of slide/scale
@@ -82,7 +86,7 @@ export function getPointerDownStyle(): CSSProperties {
 /**
  * Get appropriate transition based on user's reduced-motion preference
  */
-export function getTransition(spring: typeof AppleSprings.default) {
+export function useAppleTransition(spring: AppleSpring) {
   const prefersReducedMotion = useReducedMotion();
   return prefersReducedMotion ? ReducedMotionTransition : spring;
 }

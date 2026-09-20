@@ -98,7 +98,7 @@ export default function ServicesHub() {
                 <div>
                   <Link
                     href="/services"
-                    className="mt-4 inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all duration-300"
+                    className="mt-4 inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac transition-colors duration-300 [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1"
                   >
                     Explore all services <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -121,7 +121,7 @@ export default function ServicesHub() {
                 <Code2 className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-3xl font-bold mb-3 font-serif">Custom software</h3>
-              <p className="text-stone-600 leading-relaxed mb-6">
+              <p className="text-stone-300 leading-relaxed mb-6">
                 SaaS dashboards, internal tools, and AI integrations. When &ldquo;off-the-shelf&rdquo; isn&apos;t enough, we build exactly what you need.
               </p>
               <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
@@ -133,7 +133,7 @@ export default function ServicesHub() {
             </div>
             <Link
               href="/services/custom-engineering"
-              className="relative z-10 inline-flex items-center gap-3 text-white font-bold group-hover:gap-4 hover:text-cognac transition-all duration-300"
+              className="relative z-10 inline-flex items-center gap-3 text-white font-bold hover:text-cognac transition-colors duration-300 [&>svg]:transition-transform [&>svg]:duration-200 group-hover:[&>svg]:translate-x-1"
             >
               View Architecture <ArrowRight className="w-5 h-5 text-cognac" />
             </Link>
@@ -156,7 +156,7 @@ export default function ServicesHub() {
                 Pages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.
               </p>
             </div>
-            <Link href="/about" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
+            <Link href="/about" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac transition-colors [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1">
               Review delivery standards <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
@@ -178,7 +178,7 @@ export default function ServicesHub() {
                 Headless Shopify and WooCommerce storefronts, when you have measured that the theme or an integration is genuinely the limit. Keep the commerce backend where it remains the right fit.
               </p>
             </div>
-            <Link href="/services/ecommerce" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac hover:gap-3 transition-all">
+            <Link href="/services/ecommerce" className="inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:text-cognac transition-colors [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1">
               See e-commerce <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
@@ -205,7 +205,7 @@ export default function ServicesHub() {
               onClick={() => {
                 if (typeof window !== "undefined") (window as { __openChat?: () => void }).__openChat?.();
               }}
-              className="inline-flex items-center gap-2 text-cognac font-bold text-sm hover:gap-3 transition-all self-start"
+              className="inline-flex items-center gap-2 text-cognac font-bold text-sm transition-colors [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1 self-start"
             >
               Chat with our experts <ArrowRight className="w-4 h-4" />
             </button>

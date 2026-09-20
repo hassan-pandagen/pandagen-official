@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+
 
 interface Faq {
   q: string;
@@ -35,7 +35,7 @@ export default function HomeFaqSection({ faqs }: { faqs: Faq[] }) {
           {faqs.map((faq, i) => (
             <div key={i} className="py-5">
               <h3 className="flex items-start gap-3 text-base md:text-lg font-semibold text-charcoal">
-                <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+                <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cognac" aria-hidden="true" />
                 <span>{faq.q}</span>
               </h3>
               <p className="mt-3 text-base leading-relaxed text-stone-600">

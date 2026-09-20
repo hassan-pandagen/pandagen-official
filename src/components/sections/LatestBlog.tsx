@@ -3,13 +3,10 @@
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blog";
-import type { IllustrationType } from "@/data/blog";
 
-// Brand-consistent accent color for decorative elements
-const accentColor = (_type: IllustrationType): string => "#c2410c"; // cognac
-
-// Brand-consistent text color for category badges
-const textColor = (_type: IllustrationType): string => "#c2410c"; // cognac
+// Literal rather than var(--color-cognac) because the badge appends an alpha
+// suffix to it (`${ACCENT}15`), which only works on a hex value.
+const ACCENT = "#ad3d0b";
 
 export default function LatestBlog() {
   const latestPosts = [...blogPosts].reverse().slice(0, 3);
@@ -36,7 +33,7 @@ export default function LatestBlog() {
           </div>
           <Link
             href="/blog"
-            className="hidden md:inline-flex items-center gap-2 text-charcoal font-bold text-sm hover:gap-3 transition-all"
+            className="hidden md:inline-flex items-center gap-2 text-charcoal font-bold text-sm transition-colors [&>svg]:transition-transform [&>svg]:duration-200 hover:[&>svg]:translate-x-1"
           >
             View All Articles <ArrowRight className="w-4 h-4" />
           </Link>
@@ -45,16 +42,14 @@ export default function LatestBlog() {
         {/* Blog Cards Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {latestPosts.map((post) => {
-            const color = accentColor(post.illustrationType);
-            const tColor = textColor(post.illustrationType);
             return (
               <Link
                 key={post.id}
                 href={`/blog/${post.id}`}
-                className="group bg-white border border-stone-300 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-stone-300 transition-all duration-300 flex flex-col"
+                className="group bg-white border border-stone-300 rounded-2xl overflow-hidden hover:shadow-lg hover:-translate-y-1 hover:border-cognac/30 transition-all duration-300 flex flex-col"
               >
                 {/* Thin accent bar, all the color this card needs */}
-                <div className="h-1 w-full shrink-0" style={{ backgroundColor: color }} />
+                <div className="h-1 w-full shrink-0" style={{ backgroundColor: ACCENT }} />
 
                 {/* Card Body */}
                 <div className="p-7 flex flex-col flex-1">
@@ -62,7 +57,7 @@ export default function LatestBlog() {
                   <div className="flex items-center justify-between mb-5">
                     <span
                       className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider"
-                      style={{ backgroundColor: `${color}15`, color: tColor }}
+                      style={{ backgroundColor: `${ACCENT}15`, color: ACCENT }}
                     >
                       {post.category}
                     </span>
@@ -85,7 +80,7 @@ export default function LatestBlog() {
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-6 pt-5 border-t border-stone-100">
                     <span className="text-xs text-stone-600">{post.date}</span>
-                    <div className="flex items-center gap-1.5 text-sm font-bold group-hover:gap-2.5 transition-all" style={{ color: tColor }}>
+                    <div className="flex items-center gap-1.5 text-sm font-bold transition-colors [&>svg]:transition-transform [&>svg]:duration-200 group-hover:[&>svg]:translate-x-1" style={{ color: ACCENT }}>
                       Read Article
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>

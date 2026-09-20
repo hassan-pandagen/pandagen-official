@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CLIENT_REVIEWS } from "@/data/reviews";
 import StaggerTestimonials from "@/components/ui/StaggerTestimonials";
-import { ArrowRight, ArrowUpRight, Building2, Clock, Quote } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Building2 } from "lucide-react";
 
 // Reviews live in src/data/reviews.ts so the home page and the case-study
 // strips cannot drift apart on what someone actually said.
