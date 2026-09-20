@@ -3,6 +3,7 @@
 import { motion } from "@/components/ui/motion";
 import { ExternalLink, ArrowRight, ArrowRightLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { metricValue, withdrawalNotice } from "@/data/case-study-facts";
 
 /** A metric that must render as a number, or null when we do not have it. */
@@ -14,19 +15,30 @@ function numericMetric(slug: string, id: string): number | null {
 }
 
 /**
- * One stat tile. Absent renders as a muted em-dash, never as a zero, never as
- * the word describing why it is absent, and never as an empty bold slot.
+ * One stat tile. Only ever rendered for a figure we hold: absent figures are
+ * filtered out upstream rather than drawn as an em-dash, so a card with nothing
+ * to show drops the row instead of displaying empty slots under live labels.
+ * It must still never render a zero or the word describing why it is absent.
  */
-function Stat({ value, label, tone }: { value: string | number | null; label: string; tone: string }) {
-  const present = value !== null && value !== undefined && value !== "";
+function Stat({ value, label, tone }: { value: string | number; label: string; tone: string }) {
   return (
     <div>
-      <p className={`text-2xl font-black leading-none tracking-tight ${present ? tone : "text-stone-400"}`}>
-        {present ? value : "—"}
-      </p>
+      <p className={`text-2xl font-black leading-none tracking-tight ${tone}`}>{value}</p>
       <p className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 font-bold">{label}</p>
     </div>
   );
+}
+
+/** The figures we hold for a client, in display order, absent ones dropped. */
+type StatTile = { value: string | number; label: string; tone: string };
+
+function presentStats(client: CaseStudyClient): StatTile[] {
+  const all: { value: string | number | null; label: string; tone: string }[] = [
+    { value: client.pagespeed, label: "PageSpeed", tone: "text-emerald-600" },
+    { value: client.loadTime, label: "Load Time", tone: "text-charcoal" },
+    { value: client.saved, label: "Outcome", tone: "text-cognac" },
+  ];
+  return all.filter((s): s is StatTile => s.value !== null && s.value !== undefined && s.value !== "");
 }
 
 export type CaseStudyClient = {
@@ -48,6 +60,14 @@ export type CaseStudyClient = {
   loadTime: string | null;
   saved: string | null;
   note: string;
+  /**
+   * Screenshot under /public/work. Omitted where we do not have one yet — the
+   * card then renders text-only rather than showing a placeholder, because a
+   * stand-in image on a "real clients" grid is the one thing worse than no
+   * image. Saforne and Obare still need captures.
+   */
+  image?: string;
+  imageAlt?: string;
 };
 
 // The full 4-client roster. Individual service pages can reorder
@@ -62,6 +82,8 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 92,
     loadTime: "< 1s",
     saved: "~$55/mo",
+    image: "/work/panda-patches.png",
+    imageAlt: "Panda Patches storefront, showing custom patch products and a quote form.",
     note: "Founder-affiliated, not an independent client: owned and operated by co-founder Imran Raza Ladhani, with PandaCodeGen building and maintaining the platform but holding no ownership stake. Migrated from WordPress + WooCommerce. The owner reports the entire plugin and hosting stack now runs on about $55/mo total tooling (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator), and over 1 million patches delivered to date.",
   },
   myCustomPatches: {
@@ -76,6 +98,8 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: numericMetric("mycustompatches", "pagespeed"),
     loadTime: metricValue("mycustompatches", "load-time"),
     saved: metricValue("mycustompatches", "hosting-cost"),
+    image: "/work/mycustompatches.png",
+    imageAlt: "MyCustomPatches storefront home page.",
     note: `Independent client. WordPress to custom Next.js migration. ${withdrawalNotice("mycustompatches") ?? ""}`.trim(),
   },
   saforne: {
@@ -154,7 +178,9 @@ export default function CaseStudyGrid({
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {clients.map((client, i) => (
+          {clients.map((client, i) => {
+            const stats = presentStats(client);
+            return (
             <motion.a
               key={client.name}
               href={client.href}
@@ -164,8 +190,20 @@ export default function CaseStudyGrid({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group block p-6 md:p-7 rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-all"
+              className="group block overflow-hidden rounded-2xl bg-white border border-stone-200 hover:border-cognac/40 shadow-card hover:shadow-elevated transition-[border-color,box-shadow] duration-200"
             >
+              {client.image && (
+                <div className="relative aspect-16/10 w-full overflow-hidden border-b border-stone-200 bg-stone-50">
+                  <Image
+                    src={client.image}
+                    alt={client.imageAlt ?? `${client.name} website`}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+              )}
+              <div className="p-6 md:p-7">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-500 mb-1">{client.category}</p>
@@ -181,13 +219,20 @@ export default function CaseStudyGrid({
 
               <p className="text-sm text-stone-600 leading-relaxed mb-5">{client.note}</p>
 
-              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-100">
-                <Stat value={client.pagespeed} label="PageSpeed" tone="text-emerald-600" />
-                <Stat value={client.loadTime} label="Load Time" tone="text-charcoal" />
-                <Stat value={client.saved} label="Outcome" tone="text-cognac" />
+              {/* Only the figures we actually hold. Three em-dashes under three
+                  labels read as a broken template, not as honesty; the note
+                  above already says which figures were withdrawn and why. */}
+              {stats.length > 0 && (
+                <div className="flex flex-wrap gap-x-8 gap-y-3 pt-4 border-t border-stone-200">
+                  {stats.map((s) => (
+                    <Stat key={s.label} value={s.value} label={s.label} tone={s.tone} />
+                  ))}
+                </div>
+              )}
               </div>
             </motion.a>
-          ))}
+            );
+          })}
         </div>
 
         <div className="text-center mt-10">

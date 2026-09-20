@@ -648,16 +648,14 @@ export default function SquarespacePageContent() {
           </div>
           <p className="text-stone-600 text-center mb-12">Everything you need to know about migrating from Squarespace.</p>
 
-          <div className="space-y-3">
+          <div className="space-y-6">
             {faqs.map((faq, i) => {
 
               return (
                 <FadeIn key={faq.q} style={{ transitionDelay: `${i * 50}ms` }}>
-                  <div className="overflow-hidden rounded-xl border border-stone-200 bg-stone-50/50">
-                    <h3 className="p-5 text-base font-medium text-charcoal">{faq.q}</h3>
-                    <div className="border-t border-stone-200 px-5 py-4">
-                      <p className="text-sm leading-relaxed text-stone-600">{faq.a}</p>
-                    </div>
+                  <div className="border-b border-stone-200 pb-6">
+                    <h3 className="text-base md:text-lg font-semibold text-charcoal mb-2">{faq.q}</h3>
+                    <p className="text-sm md:text-base leading-relaxed text-stone-600">{faq.a}</p>
                   </div>
                 </FadeIn>
               );
