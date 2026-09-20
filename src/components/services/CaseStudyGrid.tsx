@@ -61,10 +61,14 @@ export type CaseStudyClient = {
   saved: string | null;
   note: string;
   /**
-   * Screenshot under /public/work. Omitted where we do not have one yet — the
-   * card then renders text-only rather than showing a placeholder, because a
+   * Screenshot under /public/work. Omitted where we do not have one — the card
+   * then renders text-only rather than showing a placeholder, because a
    * stand-in image on a "real clients" grid is the one thing worse than no
-   * image. Saforne and Obare still need captures.
+   * image.
+   *
+   * Obare has none because https://obare.vercel.app returned 404 when captures
+   * were taken on 2026-09-20. Do not add one until that card points at a live
+   * URL; see the note on the obare entry below.
    */
   image?: string;
   imageAlt?: string;
@@ -111,8 +115,18 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     pagespeed: 96,
     loadTime: "< 1s",
     saved: "Premium UX",
+    image: "/work/saforne.png",
+    imageAlt: "Saforne storefront home page, showing the hooded jacket hero.",
     note: "Handcrafted UK leather brand. Custom ecommerce with Stripe, Sanity, multi-currency support. Recently launched, still being refined.",
   },
+  // UNRESOLVED as of 2026-09-20: https://obare.vercel.app returns HTTP 404, so
+  // this card links a prospect from a "Real Clients" grid to a dead page, and
+  // the three figures below cannot currently be re-verified against anything.
+  // The Wix migration post (src/app/blog/wix-migration-cost/page.tsx:279) also
+  // says Obare is "in its final stages rather than launched, so treat this as a
+  // work note rather than a case study" — which contradicts its presence here.
+  // Needs the live domain, or removal from the roster. Do not paper over it by
+  // dropping the link and keeping the card.
   obare: {
     name: "Obare Magazine",
     url: "obare.vercel.app",
