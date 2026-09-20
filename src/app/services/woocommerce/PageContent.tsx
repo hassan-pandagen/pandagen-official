@@ -168,6 +168,10 @@ export default function PageContent() {
         highlight="pandaPatches"
         label="Real WooCommerce Migrations"
         heading="WooCommerce to custom, done"
+        // Without this the default tail still renders and the page reads
+        // "WooCommerce to custom, done promise." — the exact bug the comment
+        // on headingTail in CaseStudyGrid describes.
+        headingTail=""
       />
 
       {/* 2b. SOCIAL PROOF — moved up for concentrated proof flow */}
