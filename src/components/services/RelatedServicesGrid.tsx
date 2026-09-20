@@ -1,18 +1,27 @@
-import Link from "next/link";
 import { Code2, ShoppingBag, Globe, Zap, ArrowRightLeft } from "lucide-react";
 import { getRelatedServiceHrefs } from "@/data/topical-map";
+import AppleServiceCard from "./AppleServiceCard";
+import type { ComponentProps } from "react";
 
-const ALL_SERVICES = [
-  { href: "/services/wordpress-migration", icon: Code2,         title: "WordPress Migration",   desc: "Inventory plugins, content, redirects, and migration dependencies." },
-  { href: "/services/ecommerce",           icon: ShoppingBag,   title: "Shopify (Headless)",    desc: "Review frontend architecture while retaining compatible commerce workflows." },
-  { href: "/services/woocommerce",         icon: ShoppingBag,   title: "WooCommerce Migration", desc: "Assess checkout, plugin dependencies, store data, and migration options." },
-  { href: "/services/wix",                 icon: Globe,         title: "Wix Migration",         desc: "Map content, integrations, DNS, and a feasible migration scope." },
-  { href: "/services/squarespace",         icon: Globe,         title: "Squarespace Migration", desc: "Review content, commerce, scheduling, and migration requirements." },
-  { href: "/services/webflow",             icon: Globe,         title: "Webflow Help & Migration", desc: "Assess slow pages, CMS limits and integrations, then scope improvements or a move." },
-  { href: "/services/gohighlevel",         icon: Zap,           title: "GoHighLevel",           desc: "Evaluate a custom public frontend alongside compatible CRM workflows." },
-  { href: "/services/ai-seo",              icon: Zap,           title: "AI SEO",                desc: "Pages assistants can read, included in the build, with optional monthly care from $500." },
-  { href: "/services/custom-engineering",  icon: Zap,           title: "Custom software",    desc: "Scope applications, dashboards, APIs, permissions, and integrations." },
-  { href: "/partners",                     icon: ArrowRightLeft, title: "For Agencies",          desc: "Discuss delivery roles, confidentiality, and terms in a partner agreement." },
+type CardAccentColor = ComponentProps<typeof AppleServiceCard>["accentColor"];
+
+const ALL_SERVICES: Array<{
+  href: string;
+  icon: typeof Code2;
+  title: string;
+  desc: string;
+  accentColor: CardAccentColor;
+}> = [
+  { href: "/services/wordpress-migration", icon: Code2,         title: "WordPress Migration",   desc: "Inventory plugins, content, redirects, and migration dependencies.", accentColor: "orange" },
+  { href: "/services/ecommerce",           icon: ShoppingBag,   title: "Shopify (Headless)",    desc: "Review frontend architecture while retaining compatible commerce workflows.", accentColor: "green" },
+  { href: "/services/woocommerce",         icon: ShoppingBag,   title: "WooCommerce Migration", desc: "Assess checkout, plugin dependencies, store data, and migration options.", accentColor: "green" },
+  { href: "/services/wix",                 icon: Globe,         title: "Wix Migration",         desc: "Map content, integrations, DNS, and a feasible migration scope.", accentColor: "blue" },
+  { href: "/services/squarespace",         icon: Globe,         title: "Squarespace Migration", desc: "Review content, commerce, scheduling, and migration requirements.", accentColor: "blue" },
+  { href: "/services/webflow",             icon: Globe,         title: "Webflow Help & Migration", desc: "Assess slow pages, CMS limits and integrations, then scope improvements or a move.", accentColor: "blue" },
+  { href: "/services/gohighlevel",         icon: Zap,           title: "GoHighLevel",           desc: "Evaluate a custom public frontend alongside compatible CRM workflows.", accentColor: "purple" },
+  { href: "/services/ai-seo",              icon: Zap,           title: "AI SEO",                desc: "Pages assistants can read, included in the build, with optional monthly care from $500.", accentColor: "amber" },
+  { href: "/services/custom-engineering",  icon: Zap,           title: "Custom software",    desc: "Scope applications, dashboards, APIs, permissions, and integrations.", accentColor: "purple" },
+  { href: "/partners",                     icon: ArrowRightLeft, title: "For Agencies",          desc: "Discuss delivery roles, confidentiality, and terms in a partner agreement.", accentColor: "pink" },
 ];
 
 type Props = {
@@ -40,19 +49,14 @@ export default function RelatedServicesGrid({ currentHref }: Props) {
         <p className="text-stone-600 text-center mb-10 text-sm">See what each one covers, and what it costs.</p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {services.map((s) => (
-            <Link
+            <AppleServiceCard
               key={s.href}
               href={s.href}
-              className="group flex items-start gap-3 p-5 rounded-2xl bg-white border border-stone-200 hover:border-cognac/30 hover:shadow-md transition-all"
-            >
-              <div className="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center shrink-0 group-hover:bg-stone-100 transition-colors">
-                <s.icon className="w-5 h-5 text-cognac" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-charcoal font-bold text-sm group-hover:text-cognac transition-colors">{s.title}</h3>
-                <p className="text-stone-600 text-xs mt-1 leading-relaxed">{s.desc}</p>
-              </div>
-            </Link>
+              icon={s.icon}
+              title={s.title}
+              description={s.desc}
+              accentColor={s.accentColor}
+            />
           ))}
         </div>
       </div>
