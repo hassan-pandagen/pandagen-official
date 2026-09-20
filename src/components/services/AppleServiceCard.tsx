@@ -26,47 +26,48 @@ interface AppleServiceCardProps {
 }
 
 const accentColors = {
+  // PandaCodeGen brand colors — cognac (primary), charcoal, stone
   orange: {
-    bg: "from-orange-500/10 to-orange-500/0",
-    border: "border-orange-200/50 hover:border-orange-300/80",
-    icon: "bg-orange-100/60 text-orange-600",
-    text: "text-orange-600",
-    hover: "group-hover:bg-orange-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
   blue: {
-    bg: "from-blue-500/10 to-blue-500/0",
-    border: "border-blue-200/50 hover:border-blue-300/80",
-    icon: "bg-blue-100/60 text-blue-600",
-    text: "text-blue-600",
-    hover: "group-hover:bg-blue-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
   green: {
-    bg: "from-green-500/10 to-green-500/0",
-    border: "border-green-200/50 hover:border-green-300/80",
-    icon: "bg-green-100/60 text-green-600",
-    text: "text-green-600",
-    hover: "group-hover:bg-green-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
   purple: {
-    bg: "from-purple-500/10 to-purple-500/0",
-    border: "border-purple-200/50 hover:border-purple-300/80",
-    icon: "bg-purple-100/60 text-purple-600",
-    text: "text-purple-600",
-    hover: "group-hover:bg-purple-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
   pink: {
-    bg: "from-pink-500/10 to-pink-500/0",
-    border: "border-pink-200/50 hover:border-pink-300/80",
-    icon: "bg-pink-100/60 text-pink-600",
-    text: "text-pink-600",
-    hover: "group-hover:bg-pink-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
   amber: {
-    bg: "from-amber-500/10 to-amber-500/0",
-    border: "border-amber-200/50 hover:border-amber-300/80",
-    icon: "bg-amber-100/60 text-amber-600",
-    text: "text-amber-600",
-    hover: "group-hover:bg-amber-50/40",
+    bg: "bg-white",
+    border: "border-stone-200/60 hover:border-cognac/40",
+    icon: "bg-stone-100 text-cognac",
+    text: "text-charcoal",
+    hover: "group-hover:shadow-md",
   },
 };
 
@@ -123,8 +124,6 @@ export default function AppleServiceCard({
             </div>
           )}
 
-          {/* Decorative gradient accent (bottom right) */}
-          <div className={`absolute -bottom-12 -right-12 w-32 h-32 rounded-full bg-gradient-to-br ${colors.bg} opacity-0 group-hover:opacity-50 transition-opacity duration-500 pointer-events-none`} />
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full">
@@ -173,8 +172,6 @@ export default function AppleServiceCard({
             </motion.div>
           </div>
 
-          {/* Top border accent line (Apple's detail) */}
-          <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${colors.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
         </motion.div>
       </Link>
     </motion.div>
