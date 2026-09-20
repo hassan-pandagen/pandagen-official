@@ -1,0 +1,256 @@
+/**
+ * Apple Design System: Global styles and animations
+ * Based on WWDC 2018 "Designing Fluid Interfaces"
+ */
+
+/* ============================================================================
+   Base Typography: Optical Sizing
+   ============================================================================ */
+
+:root {
+  /* System font with optical sizing support */
+  font-family: system-ui, -apple-system, sans-serif;
+  font-optical-sizing: auto;
+
+  /* Base sizing and leading */
+  font-size: 16px;
+  line-height: 1.5;
+
+  /* Smooth text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Large display text: tighter leading, negative tracking */
+.display {
+  font-size: clamp(1.875rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Headings: balanced size and leading */
+h1, h2, h3 {
+  font-optical-sizing: auto;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h2 { font-size: clamp(1.25rem, 3vw, 1.875rem); }
+h3 { font-size: 1.125rem; }
+
+/* Body text: comfortable leading, near-zero tracking */
+p, li {
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* ============================================================================
+   Material & Depth: Translucent Layers
+   ============================================================================ */
+
+/* Translucent toolbar/navbar pattern (Apple's material design) */
+.toolbar, .navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Translucent card with depth */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================================
+   Interaction Feedback: Pointer States
+   ============================================================================ */
+
+/* Instant feedback on pointer-down (from SKILL.md §1) */
+button,
+[role="button"],
+a,
+input[type="checkbox"],
+input[type="radio"] {
+  /* Respond on pointer-down with a subtle change */
+  transition: transform 100ms ease-out, box-shadow 100ms ease-out;
+
+  /* Active state: scale down slightly */
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Focus ring for keyboard navigation (Apple's approach) */
+:focus-visible {
+  outline: 2px solid #d4633f; /* cognac from Tailwind config */
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================================================
+   Reduced Motion Support (WCAG compliance)
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all transitions and animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep instantaneous feedback for critical interactions */
+  button:active,
+  [role="button"]:active {
+    transform: none;
+    transition: none;
+  }
+
+  /* Replace slides/scales with cross-fades */
+  .modal {
+    animation: none;
+    opacity: 1 !important;
+  }
+
+  /* No parallax or moving backgrounds */
+  [data-parallax] {
+    transform: none !important;
+  }
+}
+
+/* Reduced transparency support */
+@media (prefers-reduced-transparency: reduce) {
+  .toolbar, .navbar, .glass-card {
+    background-color: white;
+    backdrop-filter: none;
+  }
+}
+
+/* Higher contrast mode support */
+@media (prefers-contrast: more) {
+  .toolbar, .navbar, .glass-card {
+    border-width: 2px;
+    border-color: currentColor;
+  }
+}
+
+/* ============================================================================
+   Spring Animations (Framer Motion integration)
+   ============================================================================ */
+
+/* Fade-in-up animation (used by custom motion.tsx) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Reveal animation (used by custom motion.tsx) */
+[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+[data-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* ============================================================================
+   Scroll Edge Effects (instead of hard dividers)
+   ============================================================================ */
+
+/* Sticky header with fade overlay (Apple's approach) */
+.sticky-header-overlay {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+
+  /* Fade mask where content meets header */
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08), transparent);
+    pointer-events: none;
+  }
+}
+
+/* ============================================================================
+   Gesture Feedback (haptics + visual combined)
+   ============================================================================ */
+
+/* Successful action feedback */
+.success-feedback {
+  animation: successPulse 0.3s ease-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Error state: subtle shake */
+.error-feedback {
+  animation: errorShake 0.4s ease-out;
+}
+
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* ============================================================================
+   Helpful Utilities
+   ============================================================================ */
+
+/* Prevent layout shift on scroll (important for smooth motion) */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+/* Prevent text selection on interactive elements */
+button, [role="button"], a {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Ensure images scale responsively */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hardware acceleration for animations */
+.will-animate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
