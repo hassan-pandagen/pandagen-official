@@ -6,15 +6,16 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
+import { setQuotePrefill } from "@/lib/quotePrefill";
 import { pricingFaqs } from "@/data/pricing-faqs";
 
 const comparisonRows = [
-  { label: "Scope", agency: "May be described at a high level", pandagen: "Every URL, all the content, what it connects to, and what is not included", isPain: false },
-  { label: "Performance", agency: "Target may be unspecified", pandagen: "90+ Lighthouse target, pages, profile, and three-run handover check written into scope", isPain: false },
-  { label: "Migration", agency: "Redirect and cutover detail varies", pandagen: "A full inventory, a redirect map, the testing, and a way back", isPain: false },
-  { label: "Ownership", agency: "Depends on the contract", pandagen: "Ownership and license terms stated in the proposal", isPain: false },
-  { label: "Ongoing cost", agency: "Platform and vendor charges vary", pandagen: "Known third-party costs documented before approval", isPain: false },
-  { label: "Changes", agency: "Process varies", pandagen: "Out-of-scope work requires a separate written quote", isPain: false },
+  { label: "Scope", agency: "May be described at a high level", pandagen: "Every URL, all the content, what it connects to, and what is not included" },
+  { label: "Performance", agency: "Target may be unspecified", pandagen: "90+ Lighthouse target, pages, profile, and three-run handover check written into scope" },
+  { label: "Migration", agency: "Redirect and cutover detail varies", pandagen: "A full inventory, a redirect map, the testing, and a way back" },
+  { label: "Ownership", agency: "Depends on the contract", pandagen: "Ownership and license terms stated in the proposal" },
+  { label: "Ongoing cost", agency: "Platform and vendor charges vary", pandagen: "Known third-party costs documented before approval" },
+  { label: "Changes", agency: "Process varies", pandagen: "Out-of-scope work requires a separate written quote" },
 ];
 
 const pricingSchema = {
@@ -58,7 +59,7 @@ export default function PricingPageClient() {
           <motion.h1
             initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-6 leading-[1.08] md:leading-tight break-words"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-6 leading-[1.1] md:leading-[1.05] break-words"
           >
             Example project scopes. <br className="hidden md:inline" />{" "}
             <span className="font-serif italic text-cognac">A written quote for what you actually need.</span>
@@ -95,17 +96,6 @@ export default function PricingPageClient() {
             transition={{ delay: 0.2 }}
             className="flex justify-center items-center gap-4 mb-8"
           >
-            <div className="flex -space-x-3">
-              <div className="w-10 h-10 rounded-full border-2 border-paper bg-stone-300 overflow-hidden">
-                <div className="w-full h-full bg-linear-to-br from-stone-300 to-stone-400" />
-              </div>
-              <div className="w-10 h-10 rounded-full border-2 border-paper bg-stone-400 overflow-hidden">
-                <div className="w-full h-full bg-linear-to-br from-stone-400 to-stone-500" />
-              </div>
-              <div className="w-10 h-10 rounded-full border-2 border-paper bg-stone-500 overflow-hidden">
-                <div className="w-full h-full bg-linear-to-br from-stone-500 to-stone-700" />
-              </div>
-            </div>
             <span className="text-sm font-bold text-stone-600 uppercase tracking-widest">
               URL inventory · Content model · Integrations · Cutover risk
             </span>
@@ -116,7 +106,7 @@ export default function PricingPageClient() {
             initial={{ opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-wrap md:flex-nowrap justify-center gap-3"
+            className="flex flex-wrap justify-center gap-3"
           >
             {[
               { icon: <Zap className="w-4 h-4" />, text: "Acceptance test in writing" },
@@ -150,10 +140,10 @@ export default function PricingPageClient() {
               <p className="text-sm text-stone-600 mt-1">Small business sites, up to 7 pages. You edit your own words, images and business details, and we set it up and train you on it.</p>
             </div>
 
-            <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
+            <div className="mb-8 pb-8 border-b border-stone-200 min-h-[140px] flex flex-col justify-start">
               <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-4xl font-black text-charcoal">$1,500</span>
+                <span className="text-4xl font-black text-charcoal tabular-nums">$1,500</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
                 <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
@@ -176,6 +166,7 @@ export default function PricingPageClient() {
               type="button"
               onClick={() => {
                 trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_starter" });
+                setQuotePrefill("Package I am asking about: Starter ($1,500 starting) — small business site, up to 7 pages.");
                 window.dispatchEvent(new Event("open-quote-modal"));
               }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
@@ -204,7 +195,7 @@ export default function PricingPageClient() {
             <div className="mb-6 pb-6 border-b border-white/10 min-h-[140px] flex flex-col justify-start">
               <div className="text-xs font-black text-orange-300 uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-4xl font-black text-white">$3,500</span>
+                <span className="text-4xl font-black text-white tabular-nums">$3,500</span>
               </div>
               <div className="inline-block bg-white/10 px-3 py-1 rounded-md border border-white/10">
                 <p className="text-sm font-bold text-stone-300">Starting package · exact scope in proposal</p>
@@ -221,7 +212,8 @@ export default function PricingPageClient() {
               <Feature dark text="30 business days of included support for the agreed deliverables; start point and coverage stated in the accepted project terms" />
             </ul>
 
-            <button onClick={() => { trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_growth" }); window.dispatchEvent(new Event("open-quote-modal")); }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
+            <button onClick={() => { trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_growth" });
+                setQuotePrefill("Package I am asking about: Growth ($3,500 starting) — 8 to 20 pages with a CMS I edit myself."); window.dispatchEvent(new Event("open-quote-modal")); }} className="w-full py-5 rounded-xl bg-white text-charcoal font-bold hover:bg-cognac hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,255,255,0.15)]">
                 Ask us about your site <ArrowRight className="w-5 h-5" />
             </button>
 
@@ -247,10 +239,10 @@ export default function PricingPageClient() {
               <p className="text-sm text-stone-600 mt-1">More than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language.</p>
             </div>
 
-            <div className="mb-8 pb-8 border-b border-stone-100 min-h-[140px] flex flex-col justify-start">
+            <div className="mb-8 pb-8 border-b border-stone-200 min-h-[140px] flex flex-col justify-start">
               <div className="text-xs font-black text-cognac uppercase tracking-widest mb-2">Commercial terms</div>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-4xl font-black text-charcoal">From $5,000</span>
+                <span className="text-4xl font-black text-charcoal tabular-nums">From $5,000</span>
               </div>
               <div className="inline-block bg-stone-100 px-3 py-1 rounded-md border border-stone-200">
                 <p className="text-sm font-bold text-stone-700">Starting package · exact scope in proposal</p>
@@ -271,6 +263,7 @@ export default function PricingPageClient() {
               type="button"
               onClick={() => {
                 trackGAEvent("cta_click", { cta: "ask_about_your_site", location: "pricing_scale" });
+                setQuotePrefill("Package I am asking about: Scale (from $5,000) — 20+ pages, large catalogue, or custom commerce logic.");
                 window.dispatchEvent(new Event("open-quote-modal"));
               }}
               className="w-full py-4 rounded-xl bg-charcoal text-white font-bold hover:bg-cognac transition-colors duration-300"
@@ -387,7 +380,7 @@ export default function PricingPageClient() {
               // that it is quoted; let the proposal carry the price.
               { num: "08", title: "If you want us to keep looking after it", body: "There is no compulsory retainer, and the site is yours whether you take one or not. Optional monthly support covers maintenance, small changes, bug fixes, and search and content work where you want it. Hosting can form part of that arrangement on terms agreed with you, rather than being an automatic inclusion. It is quoted against your actual site and the systems connected to it rather than sold as a fixed tier, because a brochure site and a site running registrations or payments are not the same amount of work. Anything that counts as a new feature or a new page template is quoted separately. Where the work includes articles or content, the schedule depends on you approving drafts, and we will say plainly what happens to a month you do not use." },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+              <div key={i} className="flex items-start gap-4 pb-5 border-b border-stone-200 last:border-b-0 last:pb-0">
                 <div className="text-xs font-black text-stone-600 tracking-widest w-6 shrink-0 pt-0.5">{item.num}</div>
                 <div>
                   <div className="text-charcoal font-bold mb-1">{item.title}</div>
@@ -438,10 +431,10 @@ export default function PricingPageClient() {
               className="p-4 border-b border-stone-200 text-sm md:p-0 md:grid md:grid-cols-[1fr_1.4fr_1.4fr]"
             >
               <div role="rowheader" className="text-charcoal font-bold mb-3 md:mb-0 md:px-5 md:py-4 md:flex md:items-center">{row.label}</div>
-              <div role="cell" className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${row.isPain ? "text-red-600 md:bg-red-50/40" : "text-stone-600"}`}>
+              <div role="cell" className={`flex items-center justify-between gap-3 mb-2 md:mb-0 md:justify-start md:gap-2.5 md:px-5 md:py-4 md:border-l md:border-stone-200 font-medium ${"text-stone-600"}`}>
                 <span className="md:hidden text-[11px] font-bold uppercase tracking-wider text-stone-600 not-italic">High-level quote</span>
                 <span className="flex items-center gap-2.5">
-                  {row.isPain ? <X className="w-4 h-4 text-red-600 shrink-0" /> : <Minus className="w-4 h-4 text-stone-600 shrink-0" />}
+                  <Minus className="w-4 h-4 text-stone-600 shrink-0" aria-hidden="true" />
                   {row.agency}
                 </span>
               </div>
@@ -520,11 +513,9 @@ export default function PricingPageClient() {
 
 function Feature({ text, dark }: { text: string; dark?: boolean }) {
   return (
-    <li className="flex items-center gap-3">
-      <span className="text-cognac font-bold text-base shrink-0 leading-none">&#x2713;</span>
-      <span className={`text-sm font-medium ${dark ? "text-stone-300" : "text-stone-600"}`}
-        dangerouslySetInnerHTML={{ __html: text }}
-      />
+    <li className="flex items-start gap-3">
+      <span aria-hidden="true" className="text-cognac font-bold text-base shrink-0 leading-none mt-1">&#x2713;</span>
+      <span className={`text-sm font-medium ${dark ? "text-stone-300" : "text-stone-600"}`}>{text}</span>
     </li>
   );
 }

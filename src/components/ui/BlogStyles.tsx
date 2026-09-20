@@ -37,7 +37,7 @@ export function BlogHighlight({ children }: { children: React.ReactNode }) {
 export function BlogQuote({ children }: { children: React.ReactNode }) {
   return (
     <blockquote className="relative my-12 p-8 bg-stone-50 border-l-4 border-cognac rounded-r-xl italic text-xl md:text-2xl text-charcoal font-serif leading-relaxed">
-      <span className="absolute top-0 left-2 text-6xl text-cognac opacity-30">"</span>
+      <span aria-hidden="true" className="absolute -top-1 left-1 text-6xl leading-none text-cognac opacity-30">&ldquo;</span>
       {children}
     </blockquote>
   );
@@ -116,7 +116,7 @@ export function CodeWindow({ children, filename = "code" }: { children: string; 
         <pre className="font-mono text-sm leading-relaxed">
           {lines.map((line, i) => (
             <div key={i} className="flex gap-4">
-              <span className="select-none text-white/20 text-xs w-5 shrink-0 text-right pt-0.5">{i + 1}</span>
+              <span aria-hidden="true" className="select-none text-white/40 text-xs w-5 shrink-0 text-right pt-0.5">{i + 1}</span>
               <span className="text-orange-200">{line}</span>
             </div>
           ))}
@@ -150,7 +150,7 @@ export function ComparisonGrid({
         <ul className="space-y-2">
           {left.items.map((item, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-red-800">
-              <span className="text-red-700 mt-0.5 shrink-0">, </span>
+              <span aria-hidden="true" className="text-red-700 mt-0.5 shrink-0">&minus;</span>
               {item}
             </li>
           ))}

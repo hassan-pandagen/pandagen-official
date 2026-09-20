@@ -1,4 +1,3 @@
-import { ChevronRight } from 'lucide-react';
 
 interface FAQ {
   question: string;
@@ -41,10 +40,10 @@ export function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
         {faqs.map((faq, i) => (
           <div
             key={i}
-            className="border border-gray-200 rounded-2xl bg-white p-6 transition-colors duration-200 hover:border-cognac/30"
+            className="border border-gray-200 rounded-2xl bg-white p-6"
           >
             <h3 className="flex items-start gap-3 text-lg font-semibold text-charcoal">
-              <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-cognac" aria-hidden="true" />
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cognac" aria-hidden="true" />
               <span>{faq.question}</span>
             </h3>
             <p className="mt-3 border-t border-gray-200 pt-4 text-base leading-relaxed text-stone-600">

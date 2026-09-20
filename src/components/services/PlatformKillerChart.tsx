@@ -86,7 +86,7 @@ export default function PlatformKillerChart({
               {/* LEFT: Pain hero */}
               <div className="p-6 md:p-14 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-200 rounded-full w-fit mb-6">
-                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-red-500 rounded-full" />
                   <span className="text-[11px] font-bold text-red-600 uppercase tracking-[0.22em]">{badge}</span>
                 </div>
 

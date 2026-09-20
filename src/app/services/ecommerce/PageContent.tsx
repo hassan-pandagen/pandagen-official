@@ -2,7 +2,6 @@
 
 import { motion } from "@/components/ui/motion";
 import { CheckCircle2, XCircle, ArrowRight, Zap, ShieldCheck, DollarSign, TrendingUp, AlertTriangle, Code2, Globe, CreditCard, ArrowRightLeft, ExternalLink, ShoppingBag, HelpCircle } from "lucide-react";
-import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -16,7 +15,6 @@ import { serviceFaqs } from "@/data/service-faqs";
 const faqs = serviceFaqs["ecommerce"];
 
 export default function PageContent() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <main className="bg-paper min-h-screen overflow-x-hidden">
@@ -34,7 +32,7 @@ export default function PageContent() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.08] md:leading-tight break-words"
+            className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.1] md:leading-[1.05] break-words"
           >
             {/* 15 Sep 2026: this opened "Every app you install slows the storefront that
                 pays for them", under a pill reading "Shopify Speed Optimization", over a
@@ -526,18 +524,10 @@ export default function PageContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full text-left p-5 rounded-xl bg-white border border-stone-200 hover:border-gray-300 transition-all"
-                >
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
-                    <div className={`w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center shrink-0 transition-transform ${openFaq === i ? 'rotate-45' : ''}`}>
-                      <span className="text-charcoal text-sm font-bold">+</span>
-                    </div>
-                  </div>
+                <div className="rounded-xl bg-white border border-stone-200 p-5">
+                  <h3 className="text-charcoal font-medium text-base">{faq.q}</h3>
                   <p className="text-stone-600 text-sm leading-relaxed mt-4 border-t border-stone-200 pt-4">{faq.a}</p>
-                </button>
+                </div>
               </motion.div>
             ))}
           </div>

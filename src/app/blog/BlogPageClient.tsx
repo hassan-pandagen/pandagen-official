@@ -115,7 +115,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
           <BlogSearch />
 
           {/* Category Filters: horizontal scroll on mobile, wrap on desktop */}
-          <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none" tabIndex={0} role="region" aria-label="Scrollable table">
+          <div className="w-full md:w-auto flex items-center gap-2 overflow-x-auto md:overflow-visible md:flex-wrap scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory md:snap-none" tabIndex={0} role="region" aria-label="Filter articles by category">
             <Filter aria-hidden="true" className="w-4 h-4 text-stone-600 shrink-0" />
             {categories.map((category) => (
               <button
@@ -183,7 +183,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
                     {heroArticle.title}
                   </h2>
                   <p className="text-stone-600 leading-relaxed">{heroArticle.excerpt}</p>
-                  <div className="flex items-center gap-2 font-bold text-charcoal group-hover:gap-3 transition-all mt-6">
+                  <div className="flex items-center gap-2 font-bold text-charcoal transition-colors [&>svg]:transition-transform [&>svg]:duration-200 group-hover:[&>svg]:translate-x-1 mt-6">
                     Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: heroDisplay.statColor }} />
                   </div>
                 </div>
@@ -223,7 +223,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
                           <h2 className="text-lg md:text-xl font-bold text-charcoal leading-snug line-clamp-3 group-hover:text-stone-700 transition-colors">
                             {article.title}
                           </h2>
-                          <div className="flex items-center gap-1.5 font-bold text-charcoal group-hover:gap-2.5 transition-all mt-4 text-sm">
+                          <div className="flex items-center gap-1.5 font-bold text-charcoal transition-colors [&>svg]:transition-transform [&>svg]:duration-200 group-hover:[&>svg]:translate-x-1 mt-4 text-sm">
                             Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: sd.statColor }} />
                           </div>
                         </div>
@@ -299,7 +299,7 @@ function BlogArticlesSection({ articles, parents }: { articles: BlogPostMeta[]; 
                   <h3 className="text-xl font-bold text-charcoal leading-snug line-clamp-2 group-hover:text-stone-700 transition-colors">
                     {article.title}
                   </h3>
-                  <div className="flex items-center gap-1.5 mt-auto pt-5 text-sm font-bold text-charcoal group-hover:gap-2.5 transition-all">
+                  <div className="flex items-center gap-1.5 mt-auto pt-5 text-sm font-bold text-charcoal transition-colors [&>svg]:transition-transform [&>svg]:duration-200 group-hover:[&>svg]:translate-x-1">
                     Read Analysis <ArrowRight aria-hidden="true" className="w-4 h-4" style={{ color: display.statColor }} />
                   </div>
                 </div>
