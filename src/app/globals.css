@@ -118,6 +118,10 @@
   --animate-fade-in-up-5: fadeInUp 0.5s ease-out 0.25s backwards;
   --animate-fade-in: fadeIn 0.5s ease-out backwards;
   --animate-slide-in-left: slideInLeft 0.4s ease-out backwards;
+  /* Popovers scale from their trigger, not their own centre, so the spatial
+     relationship between button and panel stays obvious. Pair with an explicit
+     transform-origin on the panel. */
+  --animate-popover-in: popoverIn 0.14s ease-out;
 
   @keyframes marquee {
     0% {
@@ -163,6 +167,16 @@
       transform: translateY(0);
     }
   }
+  @keyframes popoverIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.96) translateY(-2px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -204,7 +218,12 @@
     animation: reveal-content-safety 0s linear 1s forwards;
   }
   [data-reveal] {
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+    /* --reveal-duration comes from the motion shim's transition={{duration}}.
+       A Tailwind duration-* utility on the same element still overrides this,
+       because utilities are a later layer than components. */
+    transition-duration: var(--reveal-duration, 0.5s);
   }
   [data-reveal="visible"] {
     opacity: 1;

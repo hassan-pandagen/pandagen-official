@@ -57,7 +57,10 @@ function ReviewCard({ review, position, cardSize, reduceMotion, onSelect }: Card
             onClick={() => !isCentre && onSelect(position)}
             className={cn(
                 "absolute left-1/2 top-1/2 flex flex-col rounded-[1.75rem] border p-6 md:p-7",
-                reduceMotion ? "" : "transition-all duration-500 ease-in-out",
+                // Not transition-all: that also animated the inline width/height
+                // for 500ms on every resize, and made the background cards'
+                // hover border take 500ms to arrive.
+                reduceMotion ? "" : "transition-[transform,opacity] duration-500 ease-in-out",
                 isCentre
                     ? "z-10 border-charcoal bg-charcoal text-white shadow-2xl shadow-charcoal/20"
                     : "z-0 cursor-pointer border-stone-300 bg-white text-charcoal hover:border-cognac/40"

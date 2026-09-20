@@ -215,9 +215,13 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           // Not transition-all: that animated `padding` too, reflowing the
           // header's children for 300ms while the user is still scrolling.
           "fixed top-0 left-0 right-0 z-[60] transition-[background-color,box-shadow,border-color] duration-300",
+          // Translucent + blur so content reads as passing under the bar, and a
+          // shadow rather than a 1px rule for the edge. At /95 with no blur the
+          // page text ghosted through instead.
+          "backdrop-blur-xl backdrop-saturate-150",
           isScrolled
-            ? "bg-white/95 border-b border-stone-200 py-3 shadow-card"
-            : "bg-paper/90 py-5"
+            ? "bg-white/75 py-3 shadow-card"
+            : "bg-paper/70 py-5"
         )}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -252,7 +256,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
                      {isOpen && (
                         <div
                           id={`desktop-${dropdownKey}-submenu`}
-                         className="absolute top-full left-0 mt-0 w-56 bg-white border border-stone-200 rounded-lg shadow-elevated z-50 pointer-events-auto"
+                         className="absolute top-full left-0 mt-0 w-56 bg-white border border-stone-200 rounded-lg shadow-elevated z-50 pointer-events-auto origin-top-left animate-popover-in motion-reduce:animate-none"
                        >
                          <div className="py-2">
                            {dropdownItems.map((dropItem) => (
@@ -344,7 +348,10 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay. Enter is 200ms rather than the theme's 500ms:
+          this is a full-viewport opaque surface, and it unmounts instantly on
+          close, so a long enter makes the asymmetry obvious. A real exit needs
+          the close paths routed through one handler. */}
       {isMobileMenuOpen && (
       <div
         ref={mobileMenuRef}
@@ -352,7 +359,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         role="dialog"
         aria-modal="true"
         aria-label="Site navigation"
-        className="fixed inset-0 z-50 flex flex-col xl:hidden overflow-hidden animate-fade-in"
+        className="fixed inset-0 z-50 flex flex-col xl:hidden overflow-hidden animate-fade-in [animation-duration:200ms] motion-reduce:animate-none"
       >
         {/* Background layers */}
         <div className="absolute inset-0 bg-paper" />

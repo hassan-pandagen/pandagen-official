@@ -74,6 +74,10 @@ function createComponent(tag: string) {
     };
 
     const delayMs = typeof transition?.delay === "number" ? transition.delay * 1000 : 0;
+    // Passed as a custom property, not as inline transition-duration, so a
+    // Tailwind duration-* utility on the same element still wins. An inline
+    // duration would also apply to that element's hover transitions.
+    const durationMs = typeof transition?.duration === "number" ? transition.duration * 1000 : 0;
     const cleanProps = stripMotionProps(props);
     delete cleanProps.className;
     delete cleanProps.style;
@@ -91,6 +95,7 @@ function createComponent(tag: string) {
           style={{
             ...baseStyle,
             transitionDelay: delayMs ? `${delayMs}ms` : baseStyle.transitionDelay,
+            ...(durationMs ? { ["--reveal-duration" as string]: `${durationMs}ms` } : null),
           }}
         >
           {children}
@@ -107,6 +112,7 @@ function createComponent(tag: string) {
           style={{
             ...baseStyle,
             animationDelay: delayMs ? `${delayMs}ms` : baseStyle.animationDelay,
+            animationDuration: durationMs ? `${durationMs}ms` : baseStyle.animationDuration,
           }}
         >
           {children}
