@@ -153,7 +153,19 @@
       "relationship": "Founder-affiliated",
       "href": "/work/panda-patches",
       "disclosure": "Founder-affiliated, not independent client proof. Owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains the platform, and co-founder Imran Raza Ladhani holds a stake in both companies, so the two share an owner.",
-      "metrics": []
+      "metrics": [
+        {
+          "id": "monthly-revenue",
+          "label": "Monthly revenue",
+          "value": "$55K+/mo",
+          "status": "verified",
+          "method": {
+            "kind": "record",
+            "date": "2026-09-20",
+            "note": "Owner-reported, 20 September 2026. Panda Patches is founder-affiliated, so this is a first-party record from a founder-owned business, not an independent measurement or an audited figure. It supersedes the $50K/mo figure this site carried until that date. No starting baseline is published alongside it: the $38K figure previously quoted was roughly two months old and the business has moved since, so quoting it as the current point of comparison would have been misleading. It is retired as stale rather than withdrawn for lack of evidence, which is why there is no withdrawal record for it."
+          }
+        }
+      ]
     },
     "panda-codelab": {
       "name": "Panda CodeLab",

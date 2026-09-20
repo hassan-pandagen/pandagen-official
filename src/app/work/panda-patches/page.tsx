@@ -10,6 +10,12 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
 import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
+import { requiredMetric } from "@/data/case-study-facts";
+
+// Owner-reported monthly revenue, read from case-study-facts.json so the six
+// places this page states it cannot drift apart. requiredMetric throws if it
+// is ever withdrawn, because these are sentences, not collapsible tiles.
+const REVENUE = requiredMetric("panda-patches", "monthly-revenue");
 
 const description = `A founder-owned WordPress store rebuilt with Next.js, a Sanity editor and custom pricing. ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory}`;
 
@@ -303,11 +309,11 @@ export default function PandaPatchesCaseStudy() {
 
                         <h1 className="text-5xl md:text-7xl font-bold text-charcoal tracking-tighter mb-6 leading-[0.95]">
                             Panda Patches.<br />
-                            <span className="font-serif italic text-cognac">$50K/mo. $55 in tooling.</span>
+                            <span className="font-serif italic text-cognac">{REVENUE}. $55 in tooling.</span>
                         </h1>
 
                         <p className="text-xl text-stone-600 leading-relaxed max-w-3xl mb-10">
-                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We rebuilt the storefront with Next.js, Sanity, Supabase and a custom pricing calculator, connected to a separate operations platform. {MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} No ranking losses were recorded in Google Search Console during the 30-day post-launch monitoring window. Revenue has scaled from $38K to about $50K/month on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                            A 3-year-old WordPress e-commerce site with real search traffic, existing customers, and a pricing problem WordPress couldn&apos;t solve. We rebuilt the storefront with Next.js, Sanity, Supabase and a custom pricing calculator, connected to a separate operations platform. {MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} No ranking losses were recorded in Google Search Console during the 30-day post-launch monitoring window. Revenue is {REVENUE} (owner-reported, 20 September 2026) on about $55/month in total tooling costs (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
 
                         <div className="mb-10 rounded-2xl border border-cognac/30 bg-cognac/5 p-5 max-w-3xl">
@@ -320,7 +326,7 @@ export default function PandaPatchesCaseStudy() {
                         {/* Key metrics */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
-                                { value: "$50K/mo", label: "Monthly Revenue", sub: "up from $38K · powered by $55/mo in tooling" },
+                                { value: REVENUE, label: "Monthly revenue", sub: "Owner-reported, 20 September 2026 · on $55/mo in tooling" },
                                 { value: "No losses", label: "Rankings, monitored period", sub: "Search Console, 30 days post-launch" },
                                 { value: "7 → 1", label: "Tools Replaced", sub: "CRM · ops · store · tracking" },
                                 { value: "3 yr", label: "Legacy Site Migrated", sub: "full content + SEO equity" },
@@ -596,7 +602,7 @@ export default function PandaPatchesCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">Enterprise architecture. Startup cost.</h2>
                         <p className="text-stone-600 mb-8">
-                            Started free on Vercel. Scaled to $20/mo on Vercel Pro once the store hit $38K/mo in revenue; it has since scaled to about $50K/mo. Sanity and Cloudflare still run on free tiers. Total tooling: about $55/mo (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
+                            Started free on Vercel, then $20/mo on Vercel Pro as the store grew; revenue is now {REVENUE}. Sanity and Cloudflare still run on free tiers. Total tooling: about $55/mo (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator).
                         </p>
                         <div className="flex flex-wrap gap-3">
                             {techStack.map((t) => (
@@ -621,7 +627,7 @@ export default function PandaPatchesCaseStudy() {
                                 { before: "Customers waited 24+ hours for a manual quote", after: "Customers see the price instantly. Self-serve checkout." },
                                 { before: "$200+/mo across 3 separate tools + hosting", after: "About $55/mo total (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). CRM, ops, store, and hosting." },
                                 { before: "7 disconnected tools, constant WhatsApp updates", after: "1 platform. All 7 team members on the same real-time data." },
-                                { before: "WordPress pricing ceiling blocked growth", after: "Scaled from $38K to about $50K/mo revenue. Pricing engine scales to any complexity." },
+                                { before: "WordPress pricing ceiling blocked growth", after: `Revenue is now ${REVENUE}. Pricing engine scales to any complexity.` },
                                 { before: "Attendance tracked via WhatsApp messages", after: "Timestamped clock in/out with payroll export." },
                                 { before: "No visibility into sales agent performance", after: "Per-agent revenue, conversion rate, and response time tracked live." },
                                 { before: "Load time over 4 seconds on WordPress", after: "Under 1 second load time. Lighthouse 90+ on Core Web Vitals." },
@@ -647,9 +653,9 @@ export default function PandaPatchesCaseStudy() {
                         <p className="text-stone-500 mb-8 max-w-2xl">This is a founder-affiliated project, not an independent client engagement. Panda Patches is owned and operated by PandaCodeGen co-founder Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and its co-founder Imran Raza Ladhani holds a stake in both companies, so the two businesses share an owner and this is not an arm’s-length relationship. We built the technical platform and the business runs on it. These are first-party operating figures reported by the owner, not projections and not independent client proof.</p>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { icon: "💰", label: "Monthly Revenue", value: "$50K/mo", detail: "Scaled from $38K to about $50K/mo. A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
+                                { icon: "💰", label: "Monthly Revenue", value: REVENUE, detail: "A patch business running on custom Next.js + a bespoke ops platform. No Shopify cut. No app fees. No platform holding the business hostage." },
                                 { icon: "🔧", label: "Tools Replaced", value: "7 to 1", detail: "WordPress and WooCommerce, a separate CRM, Google Sheets for order tracking, an attendance tracker, and WhatsApp for team comms, all replaced by one custom platform built exactly for how this business actually operates." },
-                                { icon: "📈", label: "Cost vs Revenue", value: "$55/mo", detail: "The entire tech stack — storefront, ops dashboard, email, hosting, AI patch generator — costs about $55 a month to run (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The revenue it processes has scaled from $38,000 to about $50,000." },
+                                { icon: "📈", label: "Cost vs Revenue", value: "$55/mo", detail: `The entire tech stack — storefront, ops dashboard, email, hosting, AI patch generator — costs about $55 a month to run (Supabase ~$25, Vercel ~$20, and ~$10 for the FAL Flux Schnell AI patch generator). The revenue it processes is ${REVENUE}.` },
                             ].map((item) => (
                                 <div key={item.label} className="bg-white border border-stone-300 rounded-2xl p-6">
                                     <div className="text-2xl mb-3">{item.icon}</div>

@@ -326,7 +326,7 @@ export default function CheapWebDeveloperPage() {
                 <p className="font-bold text-cognac mb-1">
                   <Link href="/work/panda-patches" className="hover:underline">Panda Patches</Link>
                 </p>
-                <p className="text-sm text-stone-300">Owner-approved internal reporting recorded revenue rising from about $38,000 to $50,000 per month during the owner-operated period. It is not independently audited and is not attributed solely to the rebuild.</p>
+                <p className="text-sm text-stone-300">Owner-approved internal reporting recorded revenue of $55K+ per month as of 20 September 2026. It is not independently audited and is not attributed solely to the rebuild.</p>
               </div>
             </div>
           </div>

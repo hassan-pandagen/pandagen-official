@@ -79,6 +79,7 @@ const ALL_CLIENTS: Record<string, CaseStudyClient> = {
     category: "Custom Patches E-Commerce",
     platform: "WordPress → Custom",
     slug: "panda-patches",
+    statIds: ["monthly-revenue"],
     image: "/work/panda-patches.png",
     imageAlt: "Panda Patches storefront, showing custom patch products and a quote form.",
     lead: "Our own WordPress and WooCommerce store, rebuilt on Next.js with a Sanity editor, custom product pricing and checkout, and a separate Supabase system running orders, production and reporting.",
