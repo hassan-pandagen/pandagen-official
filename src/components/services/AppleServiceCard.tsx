@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import { useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { AppleSprings } from "./AppleMotion";
+import { AppleSprings } from "@/components/ui/AppleMotion";
 
 interface AppleServiceCardProps {
   href: string;
