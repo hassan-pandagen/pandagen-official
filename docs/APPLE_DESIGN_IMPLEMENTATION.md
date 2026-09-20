@@ -151,17 +151,21 @@ interface AppleFormFieldProps extends React.InputHTMLAttributes<HTMLInputElement
 
 ## Global Styles
 
-**Location:** `src/styles/apple-design.css`  
-**Imported in:** `src/app/globals.css`
+There is no separate Apple stylesheet. An earlier version of this guide
+described `src/styles/apple-design.css`; it was deleted on 2026-09-20 because
+it was appended to `globals.css` unlayered, which made it beat every Tailwind
+utility and override the site's own (better-tuned) typography, focus rings,
+scroll offset and `[data-reveal]` reveal system. See the commit for the full
+list of what it was clobbering.
 
-This file provides:
-- Optical font sizing (responsive tracking and leading)
-- Translucent material patterns (glass-card, toolbar)
-- Pointer feedback (scale on active)
-- Reduced-motion media queries
-- Spring animation keyframes
-- Scroll edge effects
-- Gesture feedback (success pulse, error shake)
+Global styling lives in `src/app/globals.css` only. Two rules for editing it:
+
+1. **Anything that should be overridable by a Tailwind class goes in a
+   `@layer`.** Unlayered CSS wins against every `@layer`, so an unlayered rule
+   silently kills utilities on the same element.
+2. **Never re-declare something the file already defines later in the
+   cascade.** Check before adding — `fadeInUp`, `[data-reveal]`,
+   `:focus-visible` and the scroll offsets all already exist.
 
 ---
 
@@ -275,14 +279,22 @@ All new components automatically detect and respect user preferences:
 
 ## Animation Timing Reference
 
-From SKILL.md and Apple WWDC:
+**Use `bounce` + `duration`, never `damping` + `stiffness`.** Framer's
+`damping` is a raw coefficient, not a damping ratio: critical damping is
+`2*sqrt(stiffness*mass)`, so writing Apple's "damping 1.0" literally at
+stiffness 100 gives a ratio of **0.05** and oscillates for seconds. Framer's
+`{bounce, duration}` API maps 1:1 onto Apple's damping-ratio + response, so
+the values from SKILL.md §4 transfer directly.
 
-| Interaction | Damping | Stiffness | Settle Time |
-|---|---|---|---|
-| Default UI | 1.0 | 100 | ~0.3s |
-| Momentum (flick) | 0.8 | 100 | ~0.4s |
-| Snappy response | 1.0 | 130 | ~0.25s |
-| Sheet/drawer | 0.8 | 120 | ~0.35s |
+| Preset | `bounce` | `duration` | Apple equivalent | Use for |
+|---|---|---|---|---|
+| `default` | 0 | 0.4s | damping 1.0, response 0.4 | most UI |
+| `momentum` | 0.2 | 0.4s | damping 0.8, response 0.4 | after a flick/drag |
+| `snappy` | 0 | 0.3s | damping 1.0, response 0.3 | small, immediate feedback |
+| `graceful` | 0 | 0.5s | damping 1.0, response 0.5 | large or slow moves |
+| `sheet` | 0.2 | 0.3s | damping 0.8, response 0.3 | drawers and sheets |
+
+Bounce above 0 only when a gesture carried momentum into the animation.
 
 ---
 
@@ -296,6 +308,16 @@ From SKILL.md and Apple WWDC:
 - Use haptic feedback sparingly (only for meaningful actions)
 
 ### ❌ Don't
+- **Put `whileHover` on a child and expect it to react to the parent's hover.**
+  It fires only while the pointer is literally over that child, so a label that
+  fades in this way blinks on and off as the cursor crosses it. Put
+  `initial="rest" animate="rest" whileHover="hover"` on the parent and give
+  children `variants={{ rest: …, hover: … }}` — Framer propagates the label.
+- **Put `transition-all` on a `motion.*` element.** CSS and the spring then
+  both drive `transform`. Name the properties instead:
+  `transition-[border-color,box-shadow]`.
+- **Animate layout properties on hover** (`gap`, `margin`, `padding`, `width`).
+  Every frame forces a reflow. Animate `transform`/`translate` and `opacity`.
 - Use CSS `transition` for interactions (springs are better)
 - Disable `pointer-events` during animations (breaks interruptibility)
 - Force fixed animation durations (springs adapt to velocity)
