@@ -93,6 +93,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
   const [internalQuoteOpen, setInternalQuoteOpen] = useState(false);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const desktopNavRef = useRef<HTMLElement>(null);
   const mobileMenuReturnFocusRef = useRef<HTMLElement | null>(null);
 
   const handleOpenQuote = onOpenQuote ?? (() => setInternalQuoteOpen(true));
@@ -131,8 +132,19 @@ export default function Header({ onOpenQuote }: HeaderProps) {
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpenDropdown(null);
     };
+    // Without these the panel stays open over the page once you click away.
+    // focusin covers tabbing out, which pointerdown alone misses.
+    const closeOnOutside = (event: Event) => {
+      if (!desktopNavRef.current?.contains(event.target as Node)) setOpenDropdown(null);
+    };
     document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
+    document.addEventListener("pointerdown", closeOnOutside);
+    document.addEventListener("focusin", closeOnOutside);
+    return () => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("pointerdown", closeOnOutside);
+      document.removeEventListener("focusin", closeOnOutside);
+    };
   }, [openDropdown]);
 
   useEffect(() => {
@@ -200,7 +212,9 @@ export default function Header({ onOpenQuote }: HeaderProps) {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-[60] transition-all duration-300",
+          // Not transition-all: that animated `padding` too, reflowing the
+          // header's children for 300ms while the user is still scrolling.
+          "fixed top-0 left-0 right-0 z-[60] transition-[background-color,box-shadow,border-color] duration-300",
           isScrolled
             ? "bg-white/95 border-b border-stone-200 py-3 shadow-card"
             : "bg-paper/90 py-5"
@@ -212,7 +226,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-           <nav className="hidden xl:flex items-center gap-6 2xl:gap-8" aria-label="Primary navigation">
+           <nav ref={desktopNavRef} className="hidden xl:flex items-center gap-6 2xl:gap-8" aria-label="Primary navigation">
              {navItems.map((item) => {
                if (item.hasDropdown) {
                  const dropdownKey = item.dropdownKey || "services";

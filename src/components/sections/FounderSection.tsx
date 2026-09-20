@@ -59,7 +59,7 @@ export default function FounderSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-cognac/40 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300"
+              className="group bg-white/5 rounded-2xl border border-white/10 p-8 hover:border-cognac/40 hover:shadow-[0_0_30px_rgba(173,61,11,0.18)] transition-[border-color,box-shadow] duration-300"
             >
               {/* Photo + Name */}
               <div className="flex items-center gap-4 mb-6">

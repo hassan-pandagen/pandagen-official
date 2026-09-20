@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "@/components/ui/motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
@@ -91,7 +91,18 @@ export default function TierQuiz() {
 
   const isDone = step >= steps.length;
 
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null);
+  // Clicking an option unmounts the focused button, dropping focus to <body>.
+  // Move it to the new question so keyboard and screen-reader users keep their
+  // place. Gated on interaction so the quiz never steals focus on page load.
+  const hasInteracted = useRef(false);
+
+  useEffect(() => {
+    if (hasInteracted.current) stepHeadingRef.current?.focus();
+  }, [step]);
+
   function choose(option: Option) {
+    hasInteracted.current = true;
     // Fire quiz_start on the very first answer (engagement signal).
     if (step === 0) {
       trackGAEvent("quiz_start", { quiz: "tier_finder" });
@@ -108,7 +119,15 @@ export default function TierQuiz() {
     }
   }
 
+  function back() {
+    if (step === 0) return;
+    hasInteracted.current = true;
+    setChosen(chosen.slice(0, -1));
+    setStep(step - 1);
+  }
+
   function reset() {
+    hasInteracted.current = true;
     setStep(0);
     setChosen([]);
   }
@@ -149,20 +168,47 @@ export default function TierQuiz() {
             transition={{ duration: 0.3 }}
             className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-stone-200"
           >
-            <p className="text-sm text-stone-500 mb-2">Question {step + 1} of {steps.length}</p>
-            <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-6">{steps[step].q}</h3>
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex flex-1 gap-1.5" aria-hidden="true">
+                {steps.map((s, i) => (
+                  <span
+                    key={s.q}
+                    className={`h-1 flex-1 rounded-full ${i <= step ? "bg-cognac" : "bg-stone-200"}`}
+                  />
+                ))}
+              </div>
+              <p className="shrink-0 text-sm text-stone-500">
+                Question {step + 1} of {steps.length}
+              </p>
+            </div>
+            <h3
+              ref={stepHeadingRef}
+              tabIndex={-1}
+              className="text-xl md:text-2xl font-bold text-charcoal mb-6 outline-none"
+            >
+              {steps[step].q}
+            </h3>
             <div className="grid gap-3">
               {steps[step].options.map((opt) => (
                 <button
                   key={opt.label}
                   onClick={() => choose(opt)}
-                  className="text-left p-4 rounded-xl border border-stone-200 hover:border-cognac hover:bg-stone-50 transition flex items-center justify-between group"
+                  className="text-left p-4 rounded-xl border border-stone-200 hover:border-cognac hover:bg-stone-50 active:bg-stone-100 active:scale-[0.99] transition-[border-color,background-color,scale] duration-150 flex items-center justify-between group"
                 >
                   <span className="font-medium text-charcoal">{opt.label}</span>
-                  <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-cognac transition" />
+                  <ArrowRight className="w-5 h-5 text-stone-600 group-hover:text-cognac transition-colors" />
                 </button>
               ))}
             </div>
+            {step > 0 && (
+              <button
+                onClick={back}
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-stone-600 hover:text-charcoal transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back
+              </button>
+            )}
           </motion.div>
         )}
 

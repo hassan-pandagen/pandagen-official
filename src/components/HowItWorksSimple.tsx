@@ -72,7 +72,7 @@ function BuildDiagram() {
       <div className="flex items-center justify-between">
         <span className="text-xs font-bold text-stone-600 uppercase tracking-wider">Build checkpoints</span>
         <div className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-stone-100 border border-stone-200">
-          <div className="w-1.5 h-1.5 rounded-full bg-cognac animate-pulse" />
+          <div className="w-1.5 h-1.5 rounded-full bg-cognac" />
           <span className="text-[10px] font-bold text-stone-600">Reviewable</span>
         </div>
       </div>
@@ -90,7 +90,9 @@ function BuildDiagram() {
             <div className="flex-1 h-2 bg-stone-200 rounded-full overflow-hidden">
               <div className={`h-full rounded-full ${s.done ? "bg-emerald-700" : "bg-cognac"}`} style={{ width: s.w }} />
             </div>
-            <span className={`text-xs font-bold ${s.done ? "text-emerald-700" : "text-stone-600"}`}>✓</span>
+            <span className={`text-xs font-bold tabular-nums ${s.done ? "text-emerald-700" : "text-stone-600"}`}>
+              {s.done ? "✓" : s.w}
+            </span>
           </div>
         </div>
       ))}
@@ -181,7 +183,7 @@ export default function HowItWorksSimple() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative bg-white rounded-2xl border border-stone-300 p-7 flex flex-col gap-5 hover:-translate-y-1 hover:shadow-xl hover:border-stone-400 transition-all duration-300 cursor-default"
+                className="group relative bg-white rounded-2xl border border-stone-300 p-7 flex flex-col gap-5"
               >
                 {/* Step number */}
                 <div className="text-[11px] font-black tracking-widest text-cognac uppercase">

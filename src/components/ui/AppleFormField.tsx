@@ -49,35 +49,17 @@ export const AppleFormField = forwardRef<HTMLInputElement, AppleFormFieldProps>(
           <input
             ref={ref}
             type={type}
-            className={`
-              w-full
-              rounded-lg
-              border border-stone-200
-              bg-stone-50/50
-              px-4 py-3
-              text-base
-              text-charcoal
-              placeholder:text-stone-400
-              transition-all duration-150
-
-              /* Focus state: Apple design — stronger border and shadow */
-              focus:outline-none
-              focus:border-cognac
-              focus:bg-white
-              focus:shadow-md
-              focus:ring-0
-
-              /* Error state */
-              ${hasError ? "border-red-300 focus:border-red-500 focus:shadow-red-100" : ""}
-
-              /* Disabled state */
-              disabled:bg-stone-100
-              disabled:text-stone-500
-              disabled:cursor-not-allowed
-              disabled:opacity-60
-
-              ${className}
-            `}
+            className={[
+              "w-full rounded-lg border border-stone-200 bg-stone-50/50 px-4 py-3",
+              "text-base text-charcoal placeholder:text-stone-400",
+              "transition-[border-color,background-color,box-shadow] duration-150",
+              "focus:outline-none focus:border-cognac focus:bg-white focus:shadow-md focus:ring-0",
+              hasError ? "border-red-300 focus:border-red-500 focus:shadow-red-100" : "",
+              "disabled:bg-stone-100 disabled:text-stone-500 disabled:cursor-not-allowed disabled:opacity-60",
+              className,
+            ]
+              .filter(Boolean)
+              .join(" ")}
             aria-invalid={hasError}
             aria-describedby={error ? `error-${label}` : helperText ? `helper-${label}` : undefined}
             {...props}

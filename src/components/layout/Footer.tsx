@@ -314,7 +314,7 @@ function ServiceLink({ href, text }: { href: string; text: string }) {
         href={href}
         className="group flex items-center gap-2 text-stone-600 font-medium hover:text-charcoal transition-colors"
       >
-        <ArrowRight className="w-3 h-3 opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all text-cognac" />
+        <ArrowRight className="w-3 h-3 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-[opacity,translate] duration-200 text-cognac" />
         {text}
       </Link>
     </li>
