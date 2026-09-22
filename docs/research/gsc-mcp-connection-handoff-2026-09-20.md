@@ -18,9 +18,17 @@ This fails *silently* from the client's point of view — the MCP server simply 
 
 This machine is pinned to mcp 1.30.0. If the server ever disappears after an upgrade, check this first.
 
-## Publishing status caveat
+## Publishing status: In production, so the token does not expire
 
-The app is on **Testing**, so the refresh token expires after 7 days and the mint command must be re-run. To stop that, complete the Branding page in the Google Auth Platform and click **Publish app** — the button stays greyed out until Branding is complete. Publishing an unverified app using a sensitive scope is fine for owner-only use; the sign-in shows an "unverified app" interstitial that you pass via Advanced → Go to gsc-readonly.
+Resolved 22 September 2026. While the app sat on **Testing**, refresh tokens expired after 7 days and the mint command would have needed re-running every week.
+
+Publishing requires more than the greyed-out button suggests. The tooltip on that button is the only place Google states the actual requirement: **a valid app name, support email, homepage URL and privacy policy URL**. The Branding page presents the last two as optional. They are not, for production. Entering them then fails validation a second time with "Missing domain", because every URL must sit on a domain listed under **Authorised domains** — add the bare `pandacodegen.com`, no scheme and no `www`.
+
+Do **not** upload an app logo. The Branding page says plainly that uploading one forces the app into verification, and it is not required to publish.
+
+The token then has to be minted **again**. A refresh token carries its expiry from the moment it is issued, so the one minted under Testing kept its 7-day life even after the app went to production. Re-verified after re-minting: granted scope still exactly `webmasters.readonly`, same three properties.
+
+`webmasters.readonly` is a sensitive scope, so sign-in still shows the "unverified app" interstitial regardless of publishing status — pass it with Advanced → Go to gsc-readonly. Verification only removes that screen and lifts the 100-user cap; neither matters for single-owner use. **Back to testing** on the Audience page reverses all of this if it ever becomes a nuisance.
 
 ## Secret handling
 
