@@ -227,7 +227,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-600 font-medium uppercase tracking-wide">
           <div className="flex flex-wrap gap-6 items-center">
             {/* Renders only on pages that have a French and German version. */}
-            <LocaleSwitcher label="Language" className="normal-case tracking-normal" />
+            <LocaleSwitcher label="Language" className="normal-case tracking-normal" fallbackToHome />
             {/* Legal entity and address on every page, added 10 Sep 2026 for the
                 business banking application. A reviewer opens the site and matches
                 it to the Articles, so the legal name has to be visible rather than
