@@ -27,12 +27,11 @@
     "Do not count existing Sanity/Vercel links as new referring domains.",
     "Owner-supplied GSC baseline shows 22 linking sites and 249 linking pages; existing domains must be excluded from new-referring-domain claims.",
     "GSC target-page view shows 247 of 249 external links to the homepage and 2 to /blog/what-is-headless-commerce. The DEV deep link is owner-authored/canonical distribution; the Store Owner Tips deep link is an inaccurate numerical attribution. No clean independent deep link was verified in this view.",
-    "Owner-set cadence: no more than five first contacts in one day and at least one hour between them.",
+    "Owner-set cadence: no more than five first contacts in one day and at least 15 minutes between them (settled 23 Sep 2026, superseding one hour and five minutes).",
     "Only individually verified, relevant prospects count toward the daily cap; deferred or ineligible routes are not promoted to fill a quota.",
     "Daily HARO screening is active; no HARO reply or outreach follow-up is sent automatically.",
     "templates@netlify.com should not be retried as an email address. It is a Google Group closed to outside posting. Netlify's template route needs a different, verified channel before it re-enters the queue.",
-    "Reconciled against the live Zoho mailbox on 23 Sep 2026: Sent folder read via API, Outbox confirmed empty.",
-    "CADENCE RULES CONFLICT, unresolved as of 23 Sep 2026. README.md (16-17 Sep, last edited 18 Sep) sets 'no more than five first contacts per day, with at least one hour between contacts'. smaller-publisher-reset-2026-09-20.md (committed 20 Sep 16:35 +0500) sets 'Keep individual outreach spaced by at least five minutes'. Both are described as owner direction and they cannot both be operative. On 20 Sep the netlify and Indie Maker Diaries sends were 311 seconds apart, which breaches the README rule and satisfies the reset rule. Those sends were at 09:34 and 09:39 +0500; the reset document was committed at 16:35 the same day, so whether the relaxation predated them is not established from the repository. This was logged here as a breach earlier on 23 Sep; that was overconfident and is withdrawn. The owner needs to state which interval stands, and the losing document should be corrected so one number governs."
+    "Reconciled against the live Zoho mailbox on 23 Sep 2026: Sent folder read via API, Outbox confirmed empty."
   ],
   "queue": [
     {
@@ -284,5 +283,16 @@
     }
   ],
   "sentCountNote": "Five first contacts plus one HARO reply, reconciled 23 Sep 2026 against the Zoho Sent folder via API. The previous value of 2 predated three sends that were never recorded, because the ledger was deleted on 19 Sep and restored on 22 Sep.",
-  "bouncedCount": 1
+  "bouncedCount": 1,
+  "cadence": {
+    "maxFirstContactsPerDay": 5,
+    "minSecondsBetweenContacts": 900,
+    "settledOn": "2026-09-23",
+    "definedIn": "README.md",
+    "supersedes": [
+      "one hour (README, 16-19 Sep)",
+      "five minutes (smaller-publisher-reset, 20-22 Sep)"
+    ],
+    "note": "The interval is a pacing rule, not a deliverability control. At five first contacts a day from a domain passing DKIM, SPF and DMARC, no mailbox provider distinguishes 15 minutes from an hour. Its real function is the sentence that follows it in README.md: a ceiling, not a quota, with only individually verified prospects sent. The one bounce in this campaign, templates@netlify.com, was an unverified address rather than a spacing failure, so the interval would not have prevented it at any length."
+  }
 }

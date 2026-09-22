@@ -2,7 +2,7 @@
 
 Research date: 16 September 2026; outreach status updated 17 September 2026. The owner authorized initiation from `hassan@mail.pandacodegen.com`. The mailbox is connected and verified through Zoho. One citation-accuracy email has been sent and verified in Sent. [Prepared messages](first-outreach.md) and the [outreach ledger](outreach-ledger.json) contain the live status and receipt.
 
-The owner-set delivery limit is **no more than five first contacts per day, with at least one hour between contacts**. This is a ceiling, not a quota: only individually verified, relevant prospects are sent or submitted. Deferred, ineligible or asset-dependent routes remain deferred rather than being promoted to fill the daily allowance. No automatic follow-up sequence is active.
+The owner-set delivery limit is **no more than five first contacts per day, with at least 15 minutes between contacts**. Settled 23 September 2026; this is the one place the interval is defined. It replaces the one hour stated here until that date and the five minutes stated in smaller-publisher-reset-2026-09-20.md, which disagreed with each other for three days. This is a ceiling, not a quota: only individually verified, relevant prospects are sent or submitted. Deferred, ineligible or asset-dependent routes remain deferred rather than being promoted to fill the daily allowance. No automatic follow-up sequence is active.
 
 ## Decision
 

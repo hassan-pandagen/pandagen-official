@@ -1,6 +1,6 @@
 # Smaller publisher outreach reset
 
-Owner direction: prioritize approachable niche publishers and founder-run communities over major platform partnerships. Keep individual outreach spaced by at least five minutes. Never infer that a smaller publisher guarantees acceptance or a backlink.
+Owner direction: prioritize approachable niche publishers and founder-run communities over major platform partnerships. Spacing is defined once in README.md and is not restated here; as of 23 September 2026 it is 15 minutes. Never infer that a smaller publisher guarantees acceptance or a backlink.
 
 ## Screening on 20 September 2026
 
