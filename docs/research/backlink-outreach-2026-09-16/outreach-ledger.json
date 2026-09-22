@@ -139,7 +139,18 @@
       "sentAt": null,
       "messageId": null,
       "receipt": null,
-      "publishedUrl": null
+      "publishedUrl": null,
+      "reVerified": {
+        "checkedOn": "2026-09-23",
+        "sourcePage": "https://storeownertips.com/glossary/json-web-token-jwt/",
+        "stillLive": true,
+        "anchorText": "0.8 to 1.2 seconds",
+        "anchorHref": "https://www.pandacodegen.com/blog/what-is-headless-commerce",
+        "rel": "noopener noreferrer",
+        "surroundingSentence": "moving to this headless style cuts mobile load times down to a reported 0.8 to 1.2 seconds in one benchmark",
+        "ourArticleCheck": "Fetched the live destination article and stripped script/style plus all tags. Its 28,225 characters of visible text contain zero occurrences of '0.8', '1.2', 'benchmark' or 'load time'. Three raw-HTML matches for '0.8' are CSS/JS values, not content. The attribution is unsupported by the page it cites.",
+        "routeCheck": "https://storeownertips.com/contact/ returns 200 and exposes a form only: no mailto link and no email address anywhere in the markup. There is no email route to this publisher, so the correction cannot be sent from the Zoho mailbox."
+      }
     },
     {
       "id": "a-list-apart-verification-pitch",
