@@ -14,10 +14,12 @@
     "requestedSenderAvailable": true,
     "senderMismatch": false,
     "replyCapabilityConfirmed": false,
-    "dkimVerified": false
+    "dkimVerified": true,
+    "dkimEvidence": "Verified 22-23 Sep 2026 from two independent sources, not self-assessment. Google's DMARC aggregate report for mail.pandacodegen.com covering 19 Sep 2026 shows 4/4 messages with dkim=pass (selector zoho) and spf=pass, disposition none, against a published p=quarantine policy. The netlify bounce headers independently show dkim=pass, spf=pass and dmarc=pass.",
+    "connectionNote": "connectedPrimaryMailbox describes whichever assistant connection is in use. A Zoho connector authenticated to a different mailbox (e.g. lance@pandapatches.com) cannot send as hassan@mail.pandacodegen.com; verify with getMailAccounts before sending."
   },
   "outreachStatus": "initiated",
-  "sentCount": 2,
+  "sentCount": 5,
   "externalSubmissionsCount": 0,
   "acquiredLinksCount": 0,
   "notes": [
@@ -27,7 +29,10 @@
     "GSC target-page view shows 247 of 249 external links to the homepage and 2 to /blog/what-is-headless-commerce. The DEV deep link is owner-authored/canonical distribution; the Store Owner Tips deep link is an inaccurate numerical attribution. No clean independent deep link was verified in this view.",
     "Owner-set cadence: no more than five first contacts in one day and at least one hour between them.",
     "Only individually verified, relevant prospects count toward the daily cap; deferred or ineligible routes are not promoted to fill a quota.",
-    "Daily HARO screening is active; no HARO reply or outreach follow-up is sent automatically."
+    "Daily HARO screening is active; no HARO reply or outreach follow-up is sent automatically.",
+    "CADENCE BREACH, 20 Sep 2026: templates@netlify.com at 04:34:02Z and mvpopuk@gmail.com at 04:39:13Z are 311 seconds apart. The owner-set rule is at least one hour between first contacts. Every other interval in the campaign complies. Zoho's send API supports scheduled send (scheduleType 6 with an explicit scheduleTime), so spacing can be queued in one sitting instead of depending on someone waiting at the keyboard.",
+    "templates@netlify.com should not be retried as an email address. It is a Google Group closed to outside posting. Netlify's template route needs a different, verified channel before it re-enters the queue.",
+    "Reconciled against the live Zoho mailbox on 23 Sep 2026: Sent folder read via API, Outbox confirmed empty."
   ],
   "queue": [
     {
@@ -144,7 +149,7 @@
       "route": "https://alistapart.com/about/contribute/",
       "channel": "email",
       "recipientEmail": "submit@alistapart.com",
-      "status": "scheduled_in_zoho_outbox",
+      "status": "sent_verified_in_sent_folder",
       "draft": null,
       "existingPublisherLink": false,
       "evidence": "Official A List Apart contributor page accepts submissions at submit@alistapart.com",
@@ -153,8 +158,8 @@
         "Do not pitch the same article elsewhere while it is under editorial consideration without disclosure"
       ],
       "scheduledAt": "2026-09-19T18:49:26+05:00",
-      "sentAt": null,
-      "messageId": "1789822166956138400",
+      "sentAt": "2026-09-19T20:49:26Z",
+      "messageId": "1789825766466152200",
       "receipt": {
         "provider": "Zoho Mail",
         "mailId": "<1a0b9b6e7a5.41161f97345503.6483484395957862810@mail.pandacodegen.com>",
@@ -162,6 +167,37 @@
         "outboxVerified": true,
         "scheduleType": "one_hour"
       },
+      "publishedUrl": null,
+      "note": "Was recorded as scheduled_in_zoho_outbox. It sent. The Outbox is empty as of 23 Sep 2026."
+    },
+    {
+      "id": "netlify-templates",
+      "priority": 2,
+      "kind": "community_template_enquiry",
+      "channel": "email",
+      "recipientEmail": "templates@netlify.com",
+      "status": "sent_and_bounced",
+      "sentAt": "2026-09-20T04:34:02Z",
+      "messageId": "1789853642426138400",
+      "bounce": {
+        "detectedAt": "2026-09-20T04:34:06Z",
+        "reportedBy": "mailer-daemon@googlemail.com",
+        "reason": "templates@netlify.com is a Google Group that rejected the post: \"the group you tried to contact (templates) may not exist, or you may not have permission to post messages to the group\".",
+        "authenticationAtBounce": "dkim=pass, spf=pass, dmarc=pass \u2014 the failure is the target address, not deliverability.",
+        "classification": "prospect_verification_failure"
+      },
+      "publishedUrl": null
+    },
+    {
+      "id": "indie-maker-diaries",
+      "priority": 2,
+      "kind": "podcast_guest_enquiry",
+      "channel": "email",
+      "recipientEmail": "mvpopuk@gmail.com",
+      "status": "sent_awaiting_reply",
+      "sentAt": "2026-09-20T04:39:13Z",
+      "messageId": "1789853953175155300",
+      "draft": "indie-maker-diaries-outreach-2026-09-20.md",
       "publishedUrl": null
     }
   ],
@@ -246,5 +282,7 @@
       "status": "paid_sponsorship_not_recommended_for_link_alone",
       "route": "https://gitnation.com/sponsors"
     }
-  ]
+  ],
+  "sentCountNote": "Five first contacts plus one HARO reply, reconciled 23 Sep 2026 against the Zoho Sent folder via API. The previous value of 2 predated three sends that were never recorded, because the ledger was deleted on 19 Sep and restored on 22 Sep.",
+  "bouncedCount": 1
 }
