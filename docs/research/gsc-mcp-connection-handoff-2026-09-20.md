@@ -1,6 +1,8 @@
 # GSC MCP connection handoff
 
-Status: Codex server registration created. Google authorization and a real property read are still pending. Registration alone does not establish access.
+Status: Codex and Claude Code server registrations created. Google authorization and a real property read are still pending. Registration alone does not establish access.
+
+Updated 22 September 2026: verified on this machine that the repository is cloned, the `.venv` and `search-console-mcp.exe` are built, and `scripts/mint_token.py` is present. `gsc-readonly-credentials.json` does **not** exist, so no call can succeed yet. The server was added to `~/.claude.json` under top-level `mcpServers`, merged alongside the existing `firecrawl` entry, with a timestamped backup of that file taken first. The only outstanding work is the Google OAuth grant below, which needs an interactive browser sign-in and cannot be done from a non-interactive agent session.
 
 ## Local installation
 
