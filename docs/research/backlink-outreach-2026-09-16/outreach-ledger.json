@@ -129,7 +129,7 @@
       "route": "https://storeownertips.com/contact/",
       "channel": "official_contact_form",
       "recipientEmail": null,
-      "status": "draft_ready_spacing_and_form_submission_pending",
+      "status": "closed_owner_declined",
       "draft": "first-outreach.md#5-store-owner-tips-correct-an-unsupported-numerical-attribution",
       "existingPublisherLink": true,
       "evidence": "https://storeownertips.com/glossary/json-web-token-jwt/",
@@ -151,7 +151,8 @@
         "surroundingSentence": "moving to this headless style cuts mobile load times down to a reported 0.8 to 1.2 seconds in one benchmark",
         "ourArticleCheck": "Fetched the live destination article and stripped script/style plus all tags. Its 28,225 characters of visible text contain zero occurrences of '0.8', '1.2', 'benchmark' or 'load time'. Three raw-HTML matches for '0.8' are CSS/JS values, not content. The attribution is unsupported by the page it cites.",
         "routeCheck": "https://storeownertips.com/contact/ returns 200 and exposes a form only: no mailto link and no email address anywhere in the markup. There is no email route to this publisher, so the correction cannot be sent from the Zoho mailbox."
-      }
+      },
+      "ownerDecision": "23 Sep 2026: owner declined to send. storeownertips.com already appears in GSC Top linking sites, and the owner chose to keep the link rather than request a correction. Recorded because first-outreach.md section 5 and README.md both state the opposite position \u2014 'citation accuracy takes priority over retaining a backlink', and 'removal of the inaccurate link is a successful outcome'. The underlying facts are unchanged and re-verified on 23 Sep: their anchor reads '0.8 to 1.2 seconds' and our cited article contains that figure zero times. Reopen only on a fresh owner decision."
     },
     {
       "id": "a-list-apart-verification-pitch",
