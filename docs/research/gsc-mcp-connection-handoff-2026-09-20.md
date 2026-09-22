@@ -1,8 +1,30 @@
 # GSC MCP connection handoff
 
-Status: Codex and Claude Code server registrations created. Google authorization and a real property read are still pending. Registration alone does not establish access.
+Status: **CONNECTED AND VERIFIED, 22 September 2026.**
 
-Updated 22 September 2026: verified on this machine that the repository is cloned, the `.venv` and `search-console-mcp.exe` are built, and `scripts/mint_token.py` is present. `gsc-readonly-credentials.json` does **not** exist, so no call can succeed yet. The server was added to `~/.claude.json` under top-level `mcpServers`, merged alongside the existing `firecrawl` entry, with a timestamped backup of that file taken first. The only outstanding work is the Google OAuth grant below, which needs an interactive browser sign-in and cannot be done from a non-interactive agent session.
+Google Cloud project `gsc-readonly-509416`, Search Console API enabled, OAuth consent screen External with publishing status Testing and `hassanjamal5004@gmail.com` as the single test user, Desktop OAuth client `gsc-readonly-desktop`. Token minted to `gsc-readonly-credentials.json`. The server is registered in `~/.claude.json` alongside the existing `firecrawl` entry.
+
+Verified rather than assumed, in this order: the credential file carries a refresh token; Google's `tokeninfo` endpoint reports the granted scope as exactly `https://www.googleapis.com/auth/webmasters.readonly` and nothing broader; a direct `sites.list` call returns three properties, all `siteOwner` — `pandacodegen.com`, `pandapatches.com`, `astepabovemed.com`; and finally the MCP server itself was driven over stdio through `initialize` → `tools/list` → `tools/call list_sites`, which returned the same three properties.
+
+## The one thing that breaks a fresh install
+
+`pyproject.toml` declares `mcp>=1.2.0` with **no upper bound**, so a clean install resolves to mcp 2.x, where `FastMCP` was renamed to `MCPServer`. `server.py` still imports `from mcp.server.fastmcp import FastMCP`, so the binary dies on startup with `ModuleNotFoundError: No module named 'mcp.server.fastmcp'`.
+
+This fails *silently* from the client's point of view — the MCP server simply never appears, with no error surfaced in chat. Fix:
+
+```
+.venv\Scripts\python.exe -m pip install "mcp<2"
+```
+
+This machine is pinned to mcp 1.30.0. If the server ever disappears after an upgrade, check this first.
+
+## Publishing status caveat
+
+The app is on **Testing**, so the refresh token expires after 7 days and the mint command must be re-run. To stop that, complete the Branding page in the Google Auth Platform and click **Publish app** — the button stays greyed out until Branding is complete. Publishing an unverified app using a sensitive scope is fine for owner-only use; the sign-in shows an "unverified app" interstitial that you pass via Advanced → Go to gsc-readonly.
+
+## Secret handling
+
+The client secret was pasted into a chat transcript during setup on 22 Sep 2026. Google treats Desktop-app client secrets as non-confidential and the app is restricted to one test user, so exposure is low-risk, but the client should be deleted and recreated when convenient. `client_secret.json` and `gsc-readonly-credentials.json` both live in the server clone, which `.gitignore`s `client_secret*`, `credentials*` and `*.json` — confirmed with `git check-ignore`.
 
 ## Local installation
 
