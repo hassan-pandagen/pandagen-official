@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowUp, X } from "lucide-react";
 import { setQuotePrefill } from "@/lib/quotePrefill";
+import { T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // The website assistant: an inline prompt that opens a conversation panel.
@@ -26,10 +27,10 @@ type Message = { role: "user" | "assistant"; content: string; sources?: Source[]
 const STORE = "pcg-assistant-v1";
 const SUGGESTIONS = ["What exactly do you do?", "What does a website cost?", "Will I lose my rankings if I move?"];
 
-const INK = "#15120F";
-const BODY = "#3D3833";
-const QUIET = "#59524A";
-const ACCENT = "#7A2E0E";
+const INK = T.ink;
+const BODY = T.body;
+const QUIET = T.quiet;
+const ACCENT = T.accentText;
 
 function track(name: string, params: Record<string, unknown> = {}) {
   (window as { gtag?: (...a: unknown[]) => void }).gtag?.("event", name, params);
@@ -141,7 +142,7 @@ export default function AskAssistant() {
         <p className="mb-3 flex items-center gap-2 text-[15px]" style={{ color: INK }}>
           <span
             className="rounded-full border px-1.5 py-px text-[11px] font-medium"
-            style={{ borderColor: "rgba(21,18,15,0.25)", color: QUIET }}
+            style={{ borderColor: "rgba(28,25,23,0.25)", color: QUIET }}
           >
             AI
           </span>
@@ -171,7 +172,7 @@ export default function AskAssistant() {
                 type="button"
                 onClick={() => ask(s)}
                 className="rounded-full border px-4 py-2 text-left text-[15px] transition-colors hover:bg-black/[0.04]"
-                style={{ borderColor: "rgba(21,18,15,0.18)", color: INK }}
+                style={{ borderColor: "rgba(28,25,23,0.18)", color: INK }}
               >
                 {s}
               </button>
@@ -185,7 +186,7 @@ export default function AskAssistant() {
             ask(input);
           }}
           className="flex items-center gap-2 rounded-full py-1.5 pl-5 pr-1.5"
-          style={{ backgroundColor: "rgba(21,18,15,0.06)" }}
+          style={{ backgroundColor: "rgba(28,25,23,0.06)" }}
         >
           <label htmlFor="assistant-inline" className="sr-only">
             Ask a question
@@ -196,7 +197,7 @@ export default function AskAssistant() {
             onChange={(e) => setInput(e.target.value)}
             maxLength={600}
             placeholder="How long does a rebuild take?"
-            className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#59524A]"
+            className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#5E5B55]"
             style={{ color: INK }}
           />
           <button
@@ -227,7 +228,7 @@ export default function AskAssistant() {
             aria-modal="true"
             aria-labelledby="assistant-title"
             className="absolute inset-0 flex flex-col sm:inset-y-3 sm:left-auto sm:right-3 sm:w-[520px]"
-            style={{ backgroundColor: "#EFE8DD" }}
+            style={{ backgroundColor: T.paper }}
           >
             <div className="flex items-start justify-between gap-4 px-6 pb-4 pt-6 sm:px-8">
               <div>
@@ -266,7 +267,7 @@ export default function AskAssistant() {
               {messages.map((m, i) =>
                 m.role === "user" ? (
                   <div key={i} className="flex justify-end">
-                    <p className="max-w-[85%] rounded-[4px] px-4 py-3 text-[15px]" style={{ backgroundColor: "#F8F4EE", color: INK }}>
+                    <p className="max-w-[85%] rounded-[4px] px-4 py-3 text-[15px]" style={{ backgroundColor: T.paperHi, color: INK }}>
                       {m.content}
                     </p>
                   </div>
@@ -290,7 +291,7 @@ export default function AskAssistant() {
                       </ul>
                     )}
                     {m.handoff && i === messages.length - 1 && (
-                      <div className="mt-4 border-l-2 px-4 py-4" style={{ borderColor: ACCENT, backgroundColor: "#F8F4EE" }}>
+                      <div className="mt-4 border-l-2 px-4 py-4" style={{ borderColor: ACCENT, backgroundColor: T.paperHi }}>
                         <p className="text-[15px]" style={{ color: INK }}>
                           Want Hassan and Imran to look at this? Your questions go into the enquiry form so you
                           don&apos;t have to repeat yourself. You can edit everything before sending.
@@ -322,7 +323,7 @@ export default function AskAssistant() {
               }}
               className="px-6 pb-4 pt-2 sm:px-8"
             >
-              <div className="flex items-end gap-2 border bg-[#F8F4EE] p-2" style={{ borderColor: "rgba(21,18,15,0.2)" }}>
+              <div className="flex items-end gap-2 border bg-[#F5F4F0] p-2" style={{ borderColor: "rgba(28,25,23,0.2)" }}>
                 <label htmlFor="assistant-panel" className="sr-only">
                   Write a message
                 </label>
@@ -340,7 +341,7 @@ export default function AskAssistant() {
                     }
                   }}
                   placeholder="Write a message"
-                  className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#59524A]"
+                  className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#5E5B55]"
                   style={{ color: INK }}
                 />
                 <button

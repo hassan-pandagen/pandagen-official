@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Slow folds of light across warm paper, drawn by one small fragment shader.
+// Slow folds of light across grey paper, drawn by one small fragment shader.
 // ─────────────────────────────────────────────────────────────────────────────
 // Added 23 Sep 2026 for the homepage redesign preview. No video, no image, no
 // library: the whole effect is the GLSL below, so it costs a few kilobytes and
@@ -12,11 +12,11 @@ import { useEffect, useRef } from "react";
 // pauses when the hero is off screen or the tab is hidden, and draws a single
 // still frame for visitors who ask for reduced motion.
 //
-// Tones are bounded for legibility, measured 23 Sep 2026. The darkest tone the
-// shader produces under text is #DBCEB9, which keeps the rail's small grey text
-// (#59524A) at 4.96:1 before grain. With grain the measured worst case on
-// rendered frames was the figure to re-check; see the commit that set it. Only the far right edge, where no small text sits, is
-// allowed to go deeper (#C6B59B). If you change the palette, re-measure.
+// Tones are bounded for legibility, re-measured 24 Sep 2026 for the grey
+// palette (see redesign/tokens.ts). The darkest tone under text, #E0DDD6, keeps
+// the small grey labels (#5E5B55) at 4.99:1 before grain. Only the far right
+// edge, where no small text sits, goes deeper (#D2CEC5). Change the palette,
+// re-measure on rendered frames, not just the constants.
 //
 // Whatever sits underneath (the CSS gradient fallback) shows until the first
 // frame is drawn, and permanently if WebGL is unavailable.
@@ -57,10 +57,10 @@ void main(){
   float light=clamp(1.15-uv.x*.55+uv.y*.35,0.,1.);
   float ridge=smoothstep(.38,.72,f);
 
-  vec3 hi=vec3(.984,.969,.941);   // #FBF7F0
-  vec3 mid=vec3(.929,.894,.839);  // #EDE4D6
-  vec3 lo=vec3(.859,.808,.725);   // #DBCEB9  (legibility floor under text)
-  vec3 deep=vec3(.776,.710,.608); // #C6B59B  (right edge only)
+  vec3 hi=vec3(.969,.965,.949);   // #F7F6F2
+  vec3 mid=vec3(.922,.914,.894);  // #EBE9E4  (the page paper)
+  vec3 lo=vec3(.878,.867,.839);   // #E0DDD6  (legibility floor under text)
+  vec3 deep=vec3(.824,.808,.773); // #D2CEC5  (right edge only)
 
   vec3 c=mix(lo,mid,ridge);
   c=mix(c,hi,smoothstep(.55,1.,ridge*light+.12*light));

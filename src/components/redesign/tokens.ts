@@ -1,0 +1,38 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Redesign palette. One place, so every section of the new homepage agrees.
+// ─────────────────────────────────────────────────────────────────────────────
+// Chosen 24 Sep 2026: grey paper and near-black ink, after the owner reviewed
+// grigoletti.ch, with the studio's own charcoal and cognac kept for identity.
+// Every pair below was measured (WCAG relative luminance) the same day:
+//
+//   ink on paper            14.41   charcoal is the ink
+//   body on paper            ~11
+//   quiet on paper            5.58   and 4.99 on the shader's darkest (#E0DDD6)
+//   accentText on paper       7.78   links; cognac itself fell to 4.19 on shadow
+//   white on accent           6.09   cognac is fine as a fill
+//   onDark on dark           14.41
+//   onDarkQuiet on dark       7.04
+//   onDarkAccent on dark      5.90
+//
+// Not used: grigoletti's #FF4C24. It measured 2.74 as text on this paper and
+// 3.33 behind white text, and it is his colour, not ours.
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const T = {
+  paper: "#EBE9E4",
+  paperHi: "#F5F4F0",
+  ink: "#1C1917",
+  body: "#3A3733",
+  quiet: "#5E5B55",
+  rule: "rgba(28,25,23,0.16)",
+  accent: "#AD3D0B",
+  accentText: "#7A2E0E",
+  dark: "#1C1917",
+  onDark: "#EBE9E4",
+  onDarkQuiet: "#A8A49C",
+  onDarkAccent: "#E8763A",
+  onDarkRule: "rgba(235,233,228,0.16)",
+} as const;
+
+export const DISPLAY = "Zodiak, Georgia, serif";
+export const MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";

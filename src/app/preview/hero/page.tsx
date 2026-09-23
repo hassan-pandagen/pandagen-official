@@ -5,6 +5,8 @@ import SiteNav from "@/components/layout/SiteNav";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
+import WorkIndex from "@/components/redesign/WorkIndex";
+import { T } from "@/components/redesign/tokens";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
 // beside the live one so the two can be compared before anything replaces it.
@@ -32,10 +34,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const INK = "#15120F";
-const BODY = "#3D3833";
-const QUIET = "#59524A"; // 4.77:1 on #D8CAB5, the shader's darkest tone under text (see PaperShader)
-const ACCENT = "#7A2E0E"; // white on it 9.44:1; as link text on paper 7.97:1
+const INK = T.ink;
+const BODY = T.body;
+const QUIET = T.quiet; // 4.99:1 on #E0DDD6, the shader's darkest tone under text
+const ACCENT = T.accentText; // text links: 7.78:1 on paper
 
 const principles = [
   "Founder-built",
@@ -58,7 +60,7 @@ const grain =
 
 export default function HeroPreview() {
   return (
-    <main style={{ backgroundColor: "#F1EBE2" }}>
+    <main style={{ backgroundColor: T.paper }}>
       <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
       <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
       <SiteNav />
@@ -71,9 +73,9 @@ export default function HeroPreview() {
           className="pointer-events-none absolute inset-0"
           style={{
             background: [
-              "radial-gradient(120% 90% at 8% 0%, rgba(255,251,244,0.95) 0%, rgba(255,251,244,0) 55%)",
-              "radial-gradient(70% 60% at 92% 40%, rgba(150,112,80,0.13) 0%, rgba(150,112,80,0) 70%)",
-              "linear-gradient(115deg, rgba(0,0,0,0) 48%, rgba(96,78,60,0.07) 62%, rgba(0,0,0,0) 76%)",
+              "radial-gradient(120% 90% at 8% 0%, rgba(250,249,246,0.9) 0%, rgba(250,249,246,0) 55%)",
+              "radial-gradient(70% 60% at 92% 40%, rgba(120,114,104,0.12) 0%, rgba(120,114,104,0) 70%)",
+              "linear-gradient(115deg, rgba(0,0,0,0) 48%, rgba(90,85,78,0.06) 62%, rgba(0,0,0,0) 76%)",
             ].join(","),
           }}
         />
@@ -88,6 +90,13 @@ export default function HeroPreview() {
             SVG grain must stay UNDER the canvas: on top it darkened the shader's
             tones by a few percent and pushed the rail's grey text to 4.53:1. */}
         <PaperShader className="pointer-events-none absolute inset-0 h-full w-full" />
+        {/* Fade the moving background into flat paper so the next section starts
+            without a seam. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+          style={{ background: `linear-gradient(to bottom, rgba(235,233,228,0), ${T.paper})` }}
+        />
 
       <section className="relative">
         <div className="relative mx-auto grid max-w-[1440px] gap-12 px-6 pb-20 pt-32 md:px-10 lg:grid-cols-12 lg:gap-8 lg:pb-28 lg:pt-44">
@@ -140,7 +149,7 @@ export default function HeroPreview() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <QuoteModalButton
                 cta="preview_hero_talk"
-                className="inline-flex items-center justify-center gap-3 bg-[#7A2E0E] px-7 py-4 text-[17px] font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-3 bg-[#1C1917] px-7 py-4 text-[17px] font-medium text-white transition-opacity hover:opacity-90"
               >
                 <span className="flex -space-x-2" aria-hidden="true">
                   <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
@@ -151,7 +160,7 @@ export default function HeroPreview() {
               <Link
                 href="/work"
                 className="inline-flex items-center justify-center px-7 py-4 text-[17px] font-medium transition-colors"
-                style={{ color: INK, backgroundColor: "rgba(21,18,15,0.07)" }}
+                style={{ color: INK, border: `1px solid ${INK}` }}
               >
                 See the work
               </Link>
@@ -169,7 +178,7 @@ export default function HeroPreview() {
       <section className="relative px-6 pb-24 md:px-10">
         <p
           className="mx-auto max-w-[44rem] border-t pt-10 text-[18px] leading-[1.65]"
-          style={{ color: BODY, borderColor: "rgba(21,18,15,0.12)" }}
+          style={{ color: BODY, borderColor: "rgba(28,25,23,0.12)" }}
         >
           <strong style={{ color: INK }}>
             PandaCodeGen designs and builds fast business websites and{" "}
@@ -189,6 +198,7 @@ export default function HeroPreview() {
       </section>
       </div>
 
+      <WorkIndex />
     </main>
   );
 }

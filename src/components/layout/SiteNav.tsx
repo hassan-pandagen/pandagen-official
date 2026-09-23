@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 import { PHONE } from "@/data/company-facts";
+import { T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Floating navigation bar with a full-screen menu. Redesign candidate, 23 Sep 2026.
@@ -27,10 +28,10 @@ import { PHONE } from "@/data/company-facts";
 
 const QuoteModal = dynamic(() => import("@/components/ui/QuoteModal"), { ssr: false, loading: () => null });
 
-const INK = "#15120F";
-const QUIET = "#59524A";
-const ACCENT = "#7A2E0E";
-const PAPER = "#F3EDE3";
+const INK = T.ink;
+const QUIET = T.quiet;
+const ACCENT = T.accent; // logo dot and hover only; fills below use INK
+const PAPER = T.paper;
 
 const primary = [
   { name: "Work", href: "/work" },
@@ -157,11 +158,11 @@ export default function SiteNav() {
         <div
           className="pointer-events-auto flex w-full max-w-[560px] items-center justify-between gap-3 py-2 pl-5 pr-2 transition-shadow duration-300"
           style={{
-            backgroundColor: "rgba(243,237,227,0.86)",
+            backgroundColor: "rgba(235,233,228,0.86)",
             backdropFilter: "blur(14px) saturate(1.2)",
             WebkitBackdropFilter: "blur(14px) saturate(1.2)",
-            border: "1px solid rgba(21,18,15,0.08)",
-            boxShadow: scrolled ? "0 10px 30px -12px rgba(40,28,16,0.28)" : "0 1px 0 rgba(255,255,255,0.5) inset",
+            border: "1px solid rgba(28,25,23,0.08)",
+            boxShadow: scrolled ? "0 10px 30px -12px rgba(28,25,23,0.28)" : "0 1px 0 rgba(255,255,255,0.5) inset",
           }}
         >
           <Link href="/" className="text-[19px] tracking-[-0.01em]" style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700 }}>
@@ -171,8 +172,8 @@ export default function SiteNav() {
             <button
               type="button"
               onClick={openQuote}
-              className="hidden px-4 py-2.5 text-[14px] font-medium text-white transition-opacity hover:opacity-90 sm:inline-flex"
-              style={{ backgroundColor: ACCENT }}
+              className="hidden px-4 py-2.5 text-[14px] font-medium transition-opacity hover:opacity-90 sm:inline-flex"
+              style={{ backgroundColor: INK, color: PAPER }}
             >
               Talk to the founders
             </button>
@@ -183,11 +184,11 @@ export default function SiteNav() {
               aria-controls="site-menu"
               onClick={() => setOpen(true)}
               className="group flex h-11 w-11 flex-col items-center justify-center gap-[5px]"
-              style={{ backgroundColor: INK }}
+              style={{ border: `1px solid ${INK}` }}
             >
               <span className="sr-only">Open menu</span>
-              <span className="h-px w-5 bg-white transition-transform group-hover:translate-x-0.5" />
-              <span className="h-px w-5 bg-white transition-transform group-hover:-translate-x-0.5" />
+              <span className="h-px w-5 bg-[#1C1917] transition-transform group-hover:translate-x-0.5" />
+              <span className="h-px w-5 bg-[#1C1917] transition-transform group-hover:-translate-x-0.5" />
             </button>
           </div>
         </div>
@@ -237,7 +238,7 @@ export default function SiteNav() {
                     href={l.href}
                     onClick={() => close(false)}
                     aria-current={pathname === l.href ? "page" : undefined}
-                    className="inline-block text-[44px] leading-[1.08] tracking-[-0.02em] no-underline transition-colors hover:text-[#7A2E0E] md:text-[64px]"
+                    className="inline-block text-[44px] leading-[1.08] tracking-[-0.02em] no-underline transition-colors hover:text-[#AD3D0B] md:text-[64px]"
                     style={{ color: INK, fontFamily: "Zodiak, Georgia, serif", fontWeight: 700, textDecoration: "none" }}
                   >
                     {l.name}
@@ -287,7 +288,7 @@ export default function SiteNav() {
                     transitionDelay: open ? `${160 + i * 90}ms` : "0ms",
                     opacity: open ? 1 : 0,
                     transform: open ? `rotate(${[-2, 1.5, -1][i]}deg)` : "translateY(24px)",
-                    boxShadow: "0 18px 40px -18px rgba(40,28,16,0.45)",
+                    boxShadow: "0 18px 40px -18px rgba(28,25,23,0.45)",
                   }}
                 >
                   <Image
@@ -300,7 +301,7 @@ export default function SiteNav() {
                   />
                   <span
                     className="absolute bottom-2 left-2 px-2 py-1 text-[12px]"
-                    style={{ backgroundColor: "rgba(243,237,227,0.92)", color: INK }}
+                    style={{ backgroundColor: "rgba(235,233,228,0.92)", color: INK }}
                   >
                     {s.name}
                   </span>
@@ -313,8 +314,8 @@ export default function SiteNav() {
             <button
               type="button"
               onClick={openQuote}
-              className="px-7 py-4 text-[17px] font-medium text-white"
-              style={{ backgroundColor: ACCENT }}
+              className="px-7 py-4 text-[17px] font-medium"
+              style={{ backgroundColor: INK, color: PAPER }}
             >
               Talk to the founders
             </button>
@@ -344,7 +345,7 @@ function MenuGroup({
       <ul className="space-y-1.5">
         {links.map((l) => (
           <li key={l.href + l.name}>
-            <Link href={l.href} onClick={onPick} style={{ color: INK }} className="hover:text-[#7A2E0E]">
+            <Link href={l.href} onClick={onPick} style={{ color: INK }} className="hover:text-[#AD3D0B]">
               {l.name}
             </Link>
           </li>
