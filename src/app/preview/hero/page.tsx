@@ -6,6 +6,7 @@ import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
+import ServicesStack from "@/components/redesign/ServicesStack";
 import { T } from "@/components/redesign/tokens";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
@@ -199,6 +200,7 @@ export default function HeroPreview() {
       </div>
 
       <WorkIndex />
+      <ServicesStack />
     </main>
   );
 }
