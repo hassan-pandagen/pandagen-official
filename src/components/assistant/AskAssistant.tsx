@@ -28,7 +28,7 @@ const SUGGESTIONS = ["What exactly do you do?", "What does a website cost?", "Wi
 
 const INK = "#15120F";
 const BODY = "#3D3833";
-const QUIET = "#6B635B";
+const QUIET = "#59524A";
 const ACCENT = "#7A2E0E";
 
 function track(name: string, params: Record<string, unknown> = {}) {
@@ -196,7 +196,7 @@ export default function AskAssistant() {
             onChange={(e) => setInput(e.target.value)}
             maxLength={600}
             placeholder="How long does a rebuild take?"
-            className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#6B635B]"
+            className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-[#59524A]"
             style={{ color: INK }}
           />
           <button
@@ -340,7 +340,7 @@ export default function AskAssistant() {
                     }
                   }}
                   placeholder="Write a message"
-                  className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#6B635B]"
+                  className="min-h-[48px] flex-1 resize-none bg-transparent px-2 py-2 text-[16px] outline-none placeholder:text-[#59524A]"
                   style={{ color: INK }}
                 />
                 <button

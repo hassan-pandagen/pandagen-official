@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
+import SiteNav from "@/components/layout/SiteNav";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import AskAssistant from "@/components/assistant/AskAssistant";
+import PaperShader from "@/components/visual/PaperShader";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
 // beside the live one so the two can be compared before anything replaces it.
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
 
 const INK = "#15120F";
 const BODY = "#3D3833";
-const QUIET = "#6B635B"; // 4.98:1 on #F1EBE2, 5.72:1 where the light wash is brightest
+const QUIET = "#59524A"; // 4.77:1 on #D8CAB5, the shader's darkest tone under text (see PaperShader)
 const ACCENT = "#7A2E0E"; // white on it 9.44:1; as link text on paper 7.97:1
 
 const principles = [
@@ -60,14 +61,14 @@ export default function HeroPreview() {
     <main style={{ backgroundColor: "#F1EBE2" }}>
       <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
       <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
-      <Header />
+      <SiteNav />
 
       <div className="relative overflow-hidden">
         {/* Paper and light: a warm wash from the top left, a soft fold of shadow
             across the right, and grain over both. No image request. */}
         <div
           aria-hidden="true"
-          className="hero-drift pointer-events-none absolute -inset-[15%]"
+          className="pointer-events-none absolute inset-0"
           style={{
             background: [
               "radial-gradient(120% 90% at 8% 0%, rgba(255,251,244,0.95) 0%, rgba(255,251,244,0) 55%)",
@@ -78,9 +79,15 @@ export default function HeroPreview() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-multiply"
+          className="pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-multiply"
           style={{ backgroundImage: grain }}
         />
+        {/* The shader is opaque and draws its own grain, so it covers the
+            gradient and the SVG grain above once WebGL is ready. Those two are
+            what shows before the first frame and if WebGL is unavailable. The
+            SVG grain must stay UNDER the canvas: on top it darkened the shader's
+            tones by a few percent and pushed the rail's grey text to 4.53:1. */}
+        <PaperShader className="pointer-events-none absolute inset-0 h-full w-full" />
 
       <section className="relative">
         <div className="relative mx-auto grid max-w-[1440px] gap-12 px-6 pb-20 pt-32 md:px-10 lg:grid-cols-12 lg:gap-8 lg:pb-28 lg:pt-44">
@@ -182,17 +189,6 @@ export default function HeroPreview() {
       </section>
       </div>
 
-      {/* Slow drift of the light layer: 40s per pass, transform only so it stays
-          on the compositor and never triggers layout. Off for reduced motion. */}
-      <style>{`
-        @keyframes hero-drift {
-          0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
-          50%  { transform: translate3d(-4%, 3%, 0) rotate(-3deg) scale(1.06); }
-          100% { transform: translate3d(3%, -2%, 0) rotate(2deg) scale(1.02); }
-        }
-        .hero-drift { animation: hero-drift 40s ease-in-out infinite alternate; will-change: transform; }
-        @media (prefers-reduced-motion: reduce) { .hero-drift { animation: none; } }
-      `}</style>
     </main>
   );
 }
