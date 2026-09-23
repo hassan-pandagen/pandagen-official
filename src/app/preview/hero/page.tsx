@@ -7,6 +7,7 @@ import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import ServicesStack from "@/components/redesign/ServicesStack";
+import ProcessSplit from "@/components/redesign/ProcessSplit";
 import { T } from "@/components/redesign/tokens";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
@@ -201,6 +202,7 @@ export default function HeroPreview() {
 
       <WorkIndex />
       <ServicesStack />
+      <ProcessSplit />
     </main>
   );
 }
