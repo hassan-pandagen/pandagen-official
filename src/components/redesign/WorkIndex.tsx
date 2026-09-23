@@ -24,11 +24,11 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 type Row = {
   name: string;
   label: string;
-  relationship: "Client" | "Founder-affiliated";
+  relationship: "Client" | "Founder-affiliated" | "Demo";
   href: string;
   /** Omitted for work that is not live: no screenshot of a site we did not build. */
   image?: string;
-  status?: "In progress";
+  status?: "In progress" | "Preview";
   external?: boolean;
 };
 
@@ -42,6 +42,14 @@ type Row = {
 // page, which describes the project with its status. This also keeps the
 // section's sentence true: every screenshot here is a live site we built.
 //
+// Saforne: recorded as a client (CaseStudyGrid.tsx). On 24 Sep saforne.com did
+// not respond and the build at dtc-brand-alpha.vercel.app reads "Design preview
+// / not yet for sale", so it is labelled Preview and links to that build.
+//
+// Medical template: our own practice template. The site's title and banner say
+// "Fictional portfolio demo ... not a medical provider", so it is labelled
+// Demo, never Client. Screenshot taken 24 Sep: public/work/medical-template.png.
+//
 // Enterprise Ops and Panda CodeLab were left out of this list by the owner;
 // both remain on /work with their founder-affiliated labels.
 const rows: Row[] = [
@@ -49,8 +57,10 @@ const rows: Row[] = [
   { name: "Emblematic Studio", label: "Product catalogue", relationship: "Client", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },
   { name: "MyCustomPatches", label: "WordPress migration", relationship: "Client", href: "/work/mycustompatches", image: "/work/mycustompatches.png" },
   { name: "Ladies 4 Jesus", label: "Community & publishing", relationship: "Client", href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
+  { name: "Saforne", label: "Luxury leather DTC", relationship: "Client", status: "Preview", href: "https://dtc-brand-alpha.vercel.app/", image: "/work/saforne.png", external: true },
   { name: "A Step Above Medical", label: "WordPress rebuild", relationship: "Client", status: "In progress", href: "/services/wordpress-migration" },
   { name: "Panda Patches", label: "Custom commerce", relationship: "Founder-affiliated", href: "/work/panda-patches", image: "/work/panda-patches.png" },
+  { name: "Medical Template", label: "Practice website", relationship: "Demo", href: "https://pandacodegen-medical-template.vercel.app/", image: "/work/medical-template.png", external: true },
 ];
 
 export default function WorkIndex() {
