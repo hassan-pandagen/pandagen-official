@@ -50,6 +50,11 @@ type Row = {
 // "Fictional portfolio demo ... not a medical provider", so it is labelled
 // Demo, never Client. Screenshot taken 24 Sep: public/work/medical-template.png.
 //
+// Panda Publisher: a concept per the owner (24 Sep); its own page also says its
+// cover gallery is "not client work". Sleek Jackets: undecided between our own
+// brand and a client-run store (owner, 24 Sep), so it is a Demo until that is
+// settled. Relabel it the day it is; do not guess ahead of it.
+//
 // Enterprise Ops and Panda CodeLab were left out of this list by the owner;
 // both remain on /work with their founder-affiliated labels.
 const rows: Row[] = [
@@ -61,6 +66,8 @@ const rows: Row[] = [
   { name: "A Step Above Medical", label: "WordPress rebuild", relationship: "Client", status: "In progress", href: "/services/wordpress-migration" },
   { name: "Panda Patches", label: "Custom commerce", relationship: "Founder-affiliated", href: "/work/panda-patches", image: "/work/panda-patches.png" },
   { name: "Medical Template", label: "Practice website", relationship: "Demo", href: "https://pandacodegen-medical-template.vercel.app/", image: "/work/medical-template.png", external: true },
+  { name: "Panda Publisher", label: "Author services", relationship: "Demo", href: "https://pandapublisher-eight.vercel.app/", image: "/work/panda-publisher.png", external: true },
+  { name: "Sleek Jackets", label: "Outerwear store", relationship: "Demo", href: "https://sleek-jackets.vercel.app/", image: "/work/sleek-jackets.png", external: true },
 ];
 
 export default function WorkIndex() {
