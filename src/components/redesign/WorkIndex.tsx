@@ -70,6 +70,9 @@ const rows: Row[] = [
   { name: "Sleek Jackets", label: "Outerwear store", relationship: "Demo", href: "https://sleek-jackets.vercel.app/", image: "/work/sleek-jackets.png", external: true },
 ];
 
+const clientWork = rows.filter((r) => r.relationship !== "Demo");
+const concepts = rows.filter((r) => r.relationship === "Demo");
+
 export default function WorkIndex() {
   return (
     <section aria-labelledby="work-title" className="relative px-6 py-24 md:px-10 md:py-32" style={{ backgroundColor: T.paper }}>
@@ -89,52 +92,22 @@ export default function WorkIndex() {
           </p>
         </div>
 
-        <ul className="work-index mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
-          {rows.map((r) => (
-            <li key={r.name} className="border-b" style={{ borderColor: T.rule }}>
-              <Link
-                href={r.href}
-                {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="work-row group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-1 rounded-[6px] px-0 py-5 no-underline outline-none md:grid-cols-12 md:py-6"
-                style={{ textDecoration: "none" }}
-              >
-                <span
-                  className="work-label col-span-2 text-[12px] uppercase tracking-[0.08em] md:col-span-4 md:text-[13px]"
-                  style={{ fontFamily: MONO, color: T.quiet }}
-                >
-                  {r.label} · {r.relationship}
-                  {r.status ? ` · ${r.status}` : ""}
-                </span>
+        <RowList list={clientWork} showRelationship className="mt-16 md:mt-24" />
 
-                <span className="col-span-1 flex items-center gap-5 md:col-span-7">
-                  <span className="work-thumb relative hidden h-[112px] shrink-0 overflow-hidden rounded-[4px] md:block" aria-hidden="true">
-                    {r.image ? (
-                      <Image src={r.image} alt="" fill sizes="240px" className="object-cover object-top" />
-                    ) : (
-                      <span
-                        className="flex h-full w-full items-center justify-center text-[12px] uppercase tracking-[0.12em]"
-                        style={{ fontFamily: MONO, backgroundColor: "#2A2623", color: T.onDarkQuiet }}
-                      >
-                        {r.status ?? "Coming soon"}
-                      </span>
-                    )}
-                  </span>
-                  <span
-                    className="work-name md:whitespace-nowrap"
-                    style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.9rem, 3.6vw, 3.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
-                  >
-                    {r.name}
-                  </span>
-                </span>
-
-                <span className="work-arrow col-span-1 flex justify-end" style={{ color: T.ink }}>
-                  <ArrowUpRight className="h-6 w-6" aria-hidden="true" />
-                  {r.external && <span className="sr-only"> (opens in a new tab)</span>}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Concept builds: our own sites, grouped under one heading that says they
+            are not client work, instead of a "Demo" tag on every row. */}
+        <div className="mt-24 grid gap-6 md:mt-32 lg:grid-cols-12">
+          <h3
+            className="lg:col-span-7"
+            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3.2rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
+          >
+            Concept builds
+          </h3>
+          <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
+            Sites we designed and built to show what&apos;s possible. Not client work.
+          </p>
+        </div>
+        <RowList list={concepts} showRelationship={false} className="mt-10 md:mt-14" />
       </div>
 
       {/* Hover and focus states live here so the rows stay server-rendered. The
@@ -154,5 +127,57 @@ export default function WorkIndex() {
         }
       `}</style>
     </section>
+  );
+}
+
+function RowList({ list, showRelationship, className = "" }: { list: Row[]; showRelationship: boolean; className?: string }) {
+  return (
+    <ul className={`work-index border-t ${className}`} style={{ borderColor: T.rule }}>
+      {list.map((r) => (
+        <li key={r.name} className="border-b" style={{ borderColor: T.rule }}>
+          <Link
+            href={r.href}
+            {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="work-row group grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-1 rounded-[6px] px-0 py-5 no-underline outline-none md:grid-cols-12 md:py-6"
+            style={{ textDecoration: "none" }}
+          >
+            <span
+              className="work-label col-span-2 text-[12px] uppercase tracking-[0.08em] md:col-span-4 md:text-[13px]"
+              style={{ fontFamily: MONO, color: T.quiet }}
+            >
+              {r.label}
+              {showRelationship ? ` · ${r.relationship}` : ""}
+              {r.status ? ` · ${r.status}` : ""}
+            </span>
+
+            <span className="col-span-1 flex items-center gap-5 md:col-span-7">
+              <span className="work-thumb relative hidden h-[112px] shrink-0 overflow-hidden rounded-[4px] md:block" aria-hidden="true">
+                {r.image ? (
+                  <Image src={r.image} alt="" fill sizes="240px" className="object-cover object-top" />
+                ) : (
+                  <span
+                    className="flex h-full w-full items-center justify-center text-[12px] uppercase tracking-[0.12em]"
+                    style={{ fontFamily: MONO, backgroundColor: "#2A2623", color: T.onDarkQuiet }}
+                  >
+                    {r.status ?? "Coming soon"}
+                  </span>
+                )}
+              </span>
+              <span
+                className="work-name md:whitespace-nowrap"
+                style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.9rem, 3.6vw, 3.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
+              >
+                {r.name}
+              </span>
+            </span>
+
+            <span className="work-arrow col-span-1 flex justify-end" style={{ color: T.ink }}>
+              <ArrowUpRight className="h-6 w-6" aria-hidden="true" />
+              {r.external && <span className="sr-only"> (opens in a new tab)</span>}
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
