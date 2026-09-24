@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Anton } from "next/font/google";
 import SiteNav from "@/components/layout/SiteNav";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
+import WorkCard from "@/components/redesign/WorkCard";
 import ServicesStack from "@/components/redesign/ServicesStack";
 import ProcessSplit from "@/components/redesign/ProcessSplit";
 import TickerBand from "@/components/redesign/TickerBand";
@@ -48,33 +50,30 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+// Heading font under comparison (owner, 24 Sep): Zodiak by default, Anton with
+// ?font=anton. Anton is OFL, so next/font self-hosts it with no licence issue.
+// Anton ships one weight; font-synthesis:none stops the browser faking a bold.
+const anton = Anton({ subsets: ["latin"], weight: "400", display: "swap", variable: "--font-anton" });
+
 const INK = T.ink;
 const BODY = T.body;
 const QUIET = T.quiet; // 4.99:1 on #E0DDD6, the shader's darkest tone under text
 const ACCENT = T.accentText; // text links: 7.78:1 on paper
 
-const principles = [
-  "Founder-built",
-  "Fixed scope",
-  "Code you own",
-  "Content editor",
-  "Measured at handover",
-];
 
-const work = [
-  { name: "NorthDeck Group", href: "/work" },
-  { name: "Emblematic Studio", href: "/work/emblematic-studio" },
-  { name: "MyCustomPatches", href: "/work/mycustompatches" },
-];
 
 // Fine grain, drawn once as an SVG and tiled. Cheaper than a noise PNG and
 // sharp at any pixel density.
 const grain =
   "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")";
 
-export default function HeroPreview() {
+export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const condensed = (await searchParams).font === "anton";
+  const fontVars = condensed
+    ? { "--display": "var(--font-anton)", "--hero-size": "clamp(3.4rem, 9.4vw, 11rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
+    : { "--display": "Zodiak", "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
   return (
-    <>
+    <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
       <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
       <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
       <SiteNav />
@@ -114,76 +113,54 @@ export default function HeroPreview() {
         />
 
       <section className="relative">
-        <div className="relative mx-auto grid max-w-[1440px] gap-12 px-6 pb-20 pt-32 md:px-10 lg:grid-cols-12 lg:gap-8 lg:pb-28 lg:pt-44">
-          {/* Left rail: how we work, and the work itself. */}
-          <div className="order-2 grid grid-cols-2 gap-x-10 gap-y-8 whitespace-nowrap text-[16px] leading-[1.95] sm:grid-cols-[auto_auto] sm:justify-start lg:order-1 lg:grid-cols-1 lg:content-start lg:gap-y-7 lg:col-span-4 lg:pt-5 xl:col-span-3">
-            <ul aria-label="How we work" style={{ color: QUIET }}>
-              {principles.map((p) => (
-                <li key={p} style={{ whiteSpace: "nowrap" }}>{p}</li>
-              ))}
-            </ul>
-            <ul aria-label="Recent work">
-              {work.map((w) => (
-                <li key={w.name}>
-                  <Link
-                    href={w.href}
-                    className="transition-colors"
-                    style={{ color: QUIET }}
-                  >
-                    {w.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="col-span-2 mt-4 whitespace-normal lg:col-span-1 lg:mt-10">
+        <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-between px-6 pb-12 pt-32 md:px-10 lg:pt-36">
+          {/* The headline carries the page, as on grigoletti.ch: full width, huge.
+              Words unchanged from the live hero (positioning decision, 15 Sep). */}
+          <h1
+            className="hero-h1"
+            style={{ fontFamily: "var(--display), Georgia, serif", fontWeight: 700, color: INK, fontSize: "var(--hero-size)", lineHeight: "var(--hero-lh)", letterSpacing: "var(--hero-ls)" }}
+          >
+            Websites built for the way you do business<span style={{ color: T.accent }}>.</span>
+          </h1>
+
+          <div className="mt-16 grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
+            <div className="lg:col-span-4">
+              <p className="max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
+                We design and build business websites and online stores around how your customers enquire and buy.
+                Your team can edit the content, you own the code, and every page is built so Google and AI assistants
+                can read it properly.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <QuoteModalButton
+                  cta="preview_hero_talk"
+                  className="inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+                >
+                  <span className="flex -space-x-2" aria-hidden="true">
+                    <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
+                    <Image src="/team/imran.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
+                  </span>
+                  Talk to the founders
+                </QuoteModalButton>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center px-6 py-4 text-[16px] font-medium"
+                  style={{ color: INK, border: `1px solid ${INK}` }}
+                >
+                  See the work
+                </Link>
+              </div>
+              <p className="mt-5 text-[14px]" style={{ color: QUIET }}>
+                From $1,500. Scope and price agreed before work starts.
+              </p>
+            </div>
+
+            <div className="lg:col-span-4 lg:col-start-5">
               <AskAssistant />
             </div>
-          </div>
 
-          <div className="order-1 lg:order-2 lg:col-span-8 xl:col-span-9">
-            <h1
-              className="max-w-[15ch]"
-              style={{
-                fontFamily: "Zodiak, Georgia, serif",
-                fontWeight: 700,
-                color: INK,
-                fontSize: "clamp(2.9rem, 7vw, 7rem)",
-                lineHeight: 0.98,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Websites built for the way you do business.
-            </h1>
-
-            <p className="mt-8 max-w-[38rem] text-[19px] leading-[1.55] md:text-[21px]" style={{ color: BODY }}>
-              We design and build business websites and online stores around how your customers enquire and buy.
-              Your team can edit the content, you own the code, and every page is built so Google and AI
-              assistants can read it properly.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <QuoteModalButton
-                cta="preview_hero_talk"
-                className="inline-flex items-center justify-center gap-3 bg-[#1C1917] px-7 py-4 text-[17px] font-medium text-white transition-opacity hover:opacity-90"
-              >
-                <span className="flex -space-x-2" aria-hidden="true">
-                  <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
-                  <Image src="/team/imran.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
-                </span>
-                Talk to the founders
-              </QuoteModalButton>
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center px-7 py-4 text-[17px] font-medium transition-colors"
-                style={{ color: INK, border: `1px solid ${INK}` }}
-              >
-                See the work
-              </Link>
+            <div className="lg:col-span-4 lg:col-start-9">
+              <WorkCard />
             </div>
-
-            <p className="mt-6 text-[15px]" style={{ color: QUIET }}>
-              From $1,500. Scope and price agreed before work starts.
-            </p>
           </div>
         </div>
       </section>
@@ -228,7 +205,9 @@ export default function HeroPreview() {
       <GuidesList />
       </main>
       <SiteFooter />
-    </>
+      {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
+      <style>{`[data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }`}</style>
+    </div>
   );
 }
 

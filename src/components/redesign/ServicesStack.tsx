@@ -88,15 +88,17 @@ export default function ServicesStack() {
           {services.flatMap((s, i) => [
             <div
               key={`h-${i}`}
-              className="services-head z-10 grid grid-cols-[auto_1fr_auto] items-center gap-6 border-t md:grid-cols-12"
+              className={`services-head grid grid-cols-[auto_1fr_auto] items-center gap-6 border-t md:grid-cols-12 ${i === 0 ? "services-head-first" : ""}`}
               style={{
                 borderColor: T.onDarkRule,
                 backgroundColor: T.dark,
                 ["--top" as string]: `${NAV + i * ROW}px`,
                 minHeight: ROW,
-                // The first stuck heading also paints the strip above it, so text
-                // scrolling up does not show between the nav and the stack.
-                boxShadow: i === 0 ? `0 -${NAV}px 0 ${T.dark}` : undefined,
+                // Earlier headings sit ABOVE later ones. At the end of the stack the
+                // last heading is released first; with the default order it slid up
+                // over 02 and 03 (owner's screenshot, 24 Sep). Reversed, each one
+                // tucks under the heading before it instead.
+                zIndex: 20 + services.length - i,
               }}
             >
               <span className="md:col-span-5" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 3vw, 2.8rem)", lineHeight: 1 }}>
@@ -175,6 +177,10 @@ export default function ServicesStack() {
       <style>{`
         @media (min-width: 768px) {
           .services-head { position: sticky; top: var(--top); }
+          /* Solid strip from the top of the screen down to the first stuck
+             heading. A box-shadow did this before but was 8px short (row 88,
+             nav 96), and body text showed through that gap while scrolling. */
+          .services-head-first::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: ${NAV + 8}px; background: ${T.dark}; }
         }
         .services-sub span:last-child { transition: color .25s ease, transform .25s ease; display: inline-block; }
         .services-sub:hover span:last-child, .services-sub:focus-visible span:last-child { color: ${T.onDarkAccent}; transform: translateX(6px); }

@@ -34,5 +34,6 @@ export const T = {
   onDarkRule: "rgba(235,233,228,0.16)",
 } as const;
 
-export const DISPLAY = "Zodiak, Georgia, serif";
+// Resolves to Zodiak unless a wrapper sets --display (the preview compares Anton).
+export const DISPLAY = "var(--display, Zodiak), Georgia, serif";
 export const MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
