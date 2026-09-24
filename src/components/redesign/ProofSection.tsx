@@ -6,7 +6,9 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 // ─────────────────────────────────────────────────────────────────────────────
 // Proof: client words with a source. Redesign candidate, 24 Sep 2026.
 // ─────────────────────────────────────────────────────────────────────────────
-// Copy unchanged from SocialProof.tsx. Quotes come from reviews.ts and are
+// Heading and intro changed by the owner, 24 Sep 2026: the old wording ("with a
+// source you can open", "no star theatre") read as defensive. Otherwise copy
+// unchanged from SocialProof.tsx. Quotes come from reviews.ts and are
 // rendered VERBATIM (`quote`, never a paraphrase), each linked to its source.
 // Badges follow reviews.ts: "Unprompted" is Trustpilot's own label and is shown
 // as Trustpilot's; "Verified" is Clutch's. No aggregate rating anywhere.
@@ -46,13 +48,13 @@ export default function ProofSection() {
             className="lg:col-span-6"
             style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
           >
-            Client words with a source you can open.
+            What our clients say.
           </h2>
           <div className="lg:col-span-5 lg:col-start-8">
             <p className="text-[17px] leading-[1.6]" style={{ color: T.body }}>
-              No stock portraits, rotating star theatre, or anonymous outcome claims. These are short excerpts from
-              public review pages, linked so you can read the full context yourself. Four of them carry
-              Trustpilot&rsquo;s own &ldquo;unprompted&rdquo; label, meaning we never asked for them.
+              Short excerpts from our public review pages, linked so you can read each one in full. Four of them
+              carry Trustpilot&rsquo;s own &ldquo;unprompted&rdquo; label, meaning the client left it without being
+              asked.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               {[

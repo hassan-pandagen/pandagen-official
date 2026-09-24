@@ -13,7 +13,10 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 //   Measured at handover company-facts performance target, shortened; keeps
 //                       "the pages named in your scope" and "before handover",
 //                       which are the conditions that make it true
-//   Optional support    company-facts ongoing work, shortened
+//   Support after launch owner, 24 Sep 2026: 15-30 days free support by project,
+//                       then optional. Training: company-facts ("we train you on
+//                       it"). NOT yet in company-facts.ts, so llms.txt and the
+//                       assistant do not know it; add it there before launch.
 // Do not add a row without a source. Dimmed text is #8C877F on charcoal
 // (4.9:1), so the resting state still passes AA; on touch screens nothing dims.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -24,7 +27,7 @@ const rows = [
   { label: "Code you own.", Icon: KeyRound, text: "Source code, design files, CMS models and production accounts end up under your control." },
   { label: "Content editor.", Icon: PencilLine, text: "Every package includes an editor built into your own site." },
   { label: "Measured at handover.", Icon: Gauge, text: "A 90+ Lighthouse target on mobile and desktop for the pages named in your scope, checked before handover." },
-  { label: "Optional support.", Icon: LifeBuoy, text: "Ongoing work is separate and optional. No build requires a subscription." },
+  { label: "Support after launch.", Icon: LifeBuoy, text: "15 to 30 days of free support after launch, depending on the project, and we train your team on the content editor. After that, ongoing support is up to you." },
 ];
 
 export default function HowWeWork() {
