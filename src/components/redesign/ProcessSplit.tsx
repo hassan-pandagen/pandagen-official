@@ -63,7 +63,7 @@ const steps = [
 
 export default function ProcessSplit() {
   return (
-    <section aria-labelledby="process-title" className="relative px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paper }}>
+    <section aria-labelledby="process-title" className="relative px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paperHi }}>
       <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-12 lg:gap-8">
         {/* Pinned column (sticky from lg; overflow-x: clip on html/body allows it). */}
         <div className="lg:col-span-5">

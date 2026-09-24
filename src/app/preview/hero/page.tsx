@@ -8,6 +8,14 @@ import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import ServicesStack from "@/components/redesign/ServicesStack";
 import ProcessSplit from "@/components/redesign/ProcessSplit";
+import TickerBand from "@/components/redesign/TickerBand";
+import ProofSection from "@/components/redesign/ProofSection";
+import FeaturesTrio from "@/components/redesign/FeaturesTrio";
+import PricingFinder from "@/components/redesign/PricingFinder";
+import FoundersDark from "@/components/redesign/FoundersDark";
+import FaqOpen from "@/components/redesign/FaqOpen";
+import GuidesList from "@/components/redesign/GuidesList";
+import SiteFooter from "@/components/redesign/SiteFooter";
 import { T } from "@/components/redesign/tokens";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
@@ -62,10 +70,11 @@ const grain =
 
 export default function HeroPreview() {
   return (
-    <main style={{ backgroundColor: T.paper }}>
+    <>
       <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
       <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
       <SiteNav />
+      <main style={{ backgroundColor: T.paper }}>
 
       <div className="relative overflow-hidden">
         {/* Paper and light: a warm wash from the top left, a soft fold of shadow
@@ -200,9 +209,18 @@ export default function HeroPreview() {
       </section>
       </div>
 
+      <TickerBand />
       <WorkIndex />
+      <ProofSection />
       <ServicesStack />
+      <FeaturesTrio />
+      <PricingFinder />
       <ProcessSplit />
-    </main>
+      <FoundersDark />
+      <FaqOpen />
+      <GuidesList />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
