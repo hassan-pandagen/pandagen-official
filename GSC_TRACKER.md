@@ -99,6 +99,7 @@
 | May 31, 2026 | ~80 (62 in current build) | — | — (40.9K impressions, 71 clicks 3-mo) |
 | Aug 28, 2026 | **122** (sitemap-filtered) | **17** | — (129 indexed / 231 not indexed across ALL known URLs) |
 | Sep 4, 2026 (read Sep 8) | **132** (sitemap, 142 URLs) | **10** | — (134 indexed / 226 not indexed across ALL known URLs) |
+| Sep 21, 2026 (read Sep 25, verified live via URL Inspection API) | **140** | **6** | — |
 
 > **Aug 28 indexing breakdown:** 122 indexed of 139 in the sitemap (88%), up +42
 > from the 80 logged on May 15. The 17 not indexed split 14 "Crawled - currently
@@ -122,6 +123,32 @@
 > and wordpress-plugins-destroy-speed (both named in the 31 Aug diagnosis, both
 > absent from today's seven) and /work/enterprise-ops (noted 4 Sep). Rule from
 > here: every indexing snapshot records the not-indexed URLs by name.
+
+> **Sep 21 snapshot, read 25 Sep 2026 via the GSC UI screenshot AND independently
+> verified live through the URL Inspection API (read-only) the same day, both
+> agreeing exactly: 6 of 146.**
+>
+> All 7 of the Sep 4 "Crawled - currently not indexed" pages were re-inspected
+> live. Six flipped to "Submitted and indexed" (googleCanonical confirmed,
+> crawled 19 Sep): wix-vs-custom-website, why-competitor-outranks-you,
+> shopify-conversion-rate-speed-fix, for-agencies-offer-custom-web-development,
+> shopify-plus-still-slow, wordpress-vs-custom-code-real-cost-3-years. One did
+> not: **cheap-web-developer**, still stuck at its 24 May crawl date -- the same
+> date recorded on 4 Sep. This is now the longest-standing single-URL holdout
+> in this log (crawled once, 24 May, never revisited, four consecutive
+> snapshots).
+>
+> Two new entrants joined "Crawled - currently not indexed" that were not in
+> the 4 Sep list: **webflow-true-cost** (last crawled 6 Aug; this page has
+> flip-flopped before -- named as a "flapper WITH real impressions" back in the
+> Jul 7 entry) and **meta-conversions-api-setup-cost** (last crawled 16 Sep, so
+> only 9 days old at read time -- too soon to call a problem).
+>
+> "Discovered - currently not indexed" is unchanged at 3, same three URLs,
+> confirmed live as "URL is unknown to Google": /de, /fr/pricing,
+> /services/webflow. These have not moved since the Aug 31 diagnosis (not in
+> sitemap.ts) or since first flagged Jul 7 (/services/webflow specifically).
+> That diagnosis has not been acted on in six-plus weeks.
 
 > **Aug 31 diagnosis of the 14 "Crawled - currently not indexed":** it is a
 > recrawl problem, not a content problem. All 13 blog posts in the group carry
