@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CLIENT_REVIEWS, type ClientReview } from "@/data/reviews";
-import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Proof: client words with a source. Redesign candidate, 24 Sep 2026.
@@ -16,6 +16,16 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const FEATURED = "emblematic-studio";
+
+// Website named beside a review, ONLY where reviews.ts sets `caseStudy`, i.e.
+// where the site already publishes that client relationship. Marshall James and
+// James Peace have no case study, and reviews.ts is explicit that a Trustpilot
+// review is not permission to name their business here.
+const SITE_BY_CASE: Record<string, string> = {
+  "/work/ladies-4-jesus": "Ladies 4 Jesus",
+  "/work/emblematic-studio": "Emblematic Studio",
+  "/work/mycustompatches": "MyCustomPatches",
+};
 
 function badge(r: ClientReview) {
   if (r.unprompted) return `${r.platform} label: Unprompted`;
@@ -86,7 +96,7 @@ export default function ProofSection() {
             </span>
             {featured.caseStudy && (
               <Link href={featured.caseStudy} style={{ color: T.accentText }}>
-                The project
+                Website: {SITE_BY_CASE[featured.caseStudy] ?? "the project"}
               </Link>
             )}
           </figcaption>
@@ -100,11 +110,18 @@ export default function ProofSection() {
               className="flex flex-col justify-between gap-8 border-b py-8 md:px-6 md:first:pl-0 lg:border-b-0"
               style={{ borderColor: T.rule, borderLeft: i > 0 ? `1px solid ${T.rule}` : undefined }}
             >
-              <blockquote className="text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY, color: T.ink }}>
+              <blockquote className="text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY_SM, color: T.ink }}>
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
               <div className="text-[14px]" style={{ color: T.body }}>
                 <p style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
+                {r.caseStudy && SITE_BY_CASE[r.caseStudy] && (
+                  <p className="mt-1">
+                    <Link href={r.caseStudy} style={{ color: T.ink }}>
+                      Website: {SITE_BY_CASE[r.caseStudy]}
+                    </Link>
+                  </p>
+                )}
                 <p className="mt-1">
                   <a href={r.href} target="_blank" rel="noopener noreferrer" style={{ color: T.accentText }}>
                     {r.platform}, {r.date}

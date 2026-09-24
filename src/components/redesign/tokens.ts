@@ -36,4 +36,8 @@ export const T = {
 
 // Resolves to Zodiak unless a wrapper sets --display (the preview compares Anton).
 export const DISPLAY = "var(--display, Zodiak), Georgia, serif";
+// Display text under ~28px (review quotes, FAQ questions, card titles). Zodiak
+// by default; in condensed mode it becomes the body sans, because Anton is only
+// legible large. grigoletti.ch does the same with its own condensed face.
+export const DISPLAY_SM = "var(--display-sm, Zodiak), Georgia, serif";
 export const MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";

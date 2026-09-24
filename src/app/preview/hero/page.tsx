@@ -8,6 +8,7 @@ import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
 import WorkIndex from "@/components/redesign/WorkIndex";
 import WorkCard from "@/components/redesign/WorkCard";
+import HowWeWork from "@/components/redesign/HowWeWork";
 import ServicesStack from "@/components/redesign/ServicesStack";
 import ProcessSplit from "@/components/redesign/ProcessSplit";
 import TickerBand from "@/components/redesign/TickerBand";
@@ -50,8 +51,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-// Heading font under comparison (owner, 24 Sep): Zodiak by default, Anton with
-// ?font=anton. Anton is OFL, so next/font self-hosts it with no licence issue.
+// Heading font (owner, 24 Sep): Anton by default after comparing against
+// grigoletti.ch; ?font=zodiak shows the serif version. Anton is OFL, so next/font self-hosts it with no licence issue.
 // Anton ships one weight; font-synthesis:none stops the browser faking a bold.
 const anton = Anton({ subsets: ["latin"], weight: "400", display: "swap", variable: "--font-anton" });
 
@@ -68,9 +69,9 @@ const grain =
   "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")";
 
 export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
-  const condensed = (await searchParams).font === "anton";
+  const condensed = (await searchParams).font !== "zodiak";
   const fontVars = condensed
-    ? { "--display": "var(--font-anton)", "--hero-size": "clamp(3.4rem, 9.4vw, 11rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
+    ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)", "--hero-size": "clamp(3.4rem, 9.4vw, 11rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
     : { "--display": "Zodiak", "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
   return (
     <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
@@ -165,9 +166,13 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         </div>
       </section>
 
+      </div>
+
+      <TickerBand />
+      <WorkIndex />
       {/* Answer-first summary, unchanged in wording from the live page, where it
-          must stay in the first 30% for extraction. Restyled only. */}
-      <section className="relative px-6 pb-24 md:px-10">
+          must stay in the first 30% for extraction (after Work it sits at ~22%). Restyled only. */}
+      <section className="relative px-6 pb-24 md:px-10" style={{ backgroundColor: T.paper }}>
         <p
           className="mx-auto max-w-[44rem] border-t pt-10 text-[18px] leading-[1.65]"
           style={{ color: BODY, borderColor: "rgba(28,25,23,0.12)" }}
@@ -188,10 +193,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
           code you own.
         </p>
       </section>
-      </div>
-
-      <TickerBand />
-      <WorkIndex />
+      <HowWeWork />
       <ProofSection />
       <ServicesStack />
       <FeaturesTrio />

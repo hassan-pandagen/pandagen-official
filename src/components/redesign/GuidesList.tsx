@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { blogPosts } from "@/data/blog";
-import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // Latest guides, redesign candidate, 24 Sep 2026. Same selection as
 // LatestBlog.tsx (the last three entries in blog.ts), shown as rows in the same
@@ -32,7 +32,7 @@ export default function GuidesList() {
                   {p.category} · {p.readTime}
                 </span>
                 <span className="md:col-span-8">
-                  <span className="guide-title block" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", lineHeight: 1.12 }}>
+                  <span className="guide-title block" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", lineHeight: 1.12 }}>
                     {p.title}
                   </span>
                   <span className="guide-ex mt-2 block max-w-[46rem] text-[16px] leading-[1.6]" style={{ color: T.body }}>

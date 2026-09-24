@@ -1,5 +1,5 @@
 import { homeFaqs } from "@/data/home-faqs";
-import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // Homepage FAQ, redesign candidate, 24 Sep 2026. ANSWERS ALWAYS VISIBLE: the
 // live homepage emits FAQPage JSON-LD for these exact answers, and structured
@@ -25,7 +25,7 @@ export default function FaqOpen() {
                 <span className="block text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="mt-3 block" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
+                <span className="mt-3 block" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
                   {f.q}
                 </span>
               </dt>

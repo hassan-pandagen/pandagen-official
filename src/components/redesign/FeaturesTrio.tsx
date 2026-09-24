@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // Built-in features. Redesign candidate, 24 Sep 2026. Copy, links and
 // destinations unchanged from CustomFeatures.tsx; the three icon cards become
@@ -53,7 +53,7 @@ export default function FeaturesTrio() {
               <span style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.accent, fontSize: "3.4rem", lineHeight: 1 }}>
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-8" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "1.75rem", lineHeight: 1.1 }}>
+              <h3 className="mt-8" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.75rem", lineHeight: 1.1 }}>
                 {f.title}
               </h3>
               <p className="mt-4 text-[16px] leading-[1.6]" style={{ color: T.body }}>

@@ -1,18 +1,18 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowDownLeft, ArrowRight } from "lucide-react";
-import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
+import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 import ChatExpertsButton from "@/components/redesign/ChatExpertsButton";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Services as a stack of sticky headings on a dark section. Redesign candidate,
 // 24 Sep 2026. Copy, links and destinations are unchanged from ServicesHub.tsx.
 // ─────────────────────────────────────────────────────────────────────────────
-// How the stacking works: every heading row and every body is a direct child of
-// ONE container, and each heading row is position:sticky with its own top
-// (nav clearance + index x row height). Because they share a parent, earlier
-// headings stay stuck while later ones slide up beneath them, and each body
-// scrolls up under the headings above it. Wrapping a heading and its body in a
-// per-item element would break this: sticky only holds inside its own parent.
+// How the stacking works: items are nested, each heading is position:sticky with
+// its own top (nav clearance + index x row height), and the wrappers are sized
+// so all four headings let go on the same frame (see renderItem). Owner, 24 Sep:
+// "it should stop on 4, then move to the next section". A CSS grid version was
+// tried first; Chrome holds sticky grid items to the whole grid, not their area.
 //
 // Below md the headings are not sticky. Four stuck rows would cover most of a
 // phone screen.
@@ -72,6 +72,84 @@ const services: Service[] = [
 ];
 
 export default function ServicesStack() {
+  // Item i = [heading i, body i, item i+1]. A sticky heading is held inside its
+  // parent wrapper, so wrapper i's end decides when heading i lets go. Each
+  // inner wrapper ends ROW px LATER than its parent (margin-bottom: -ROW on the
+  // child, a tail element in the innermost), which exactly matches each
+  // heading's extra ROW of offset from the top: all four release on the same
+  // frame and the whole stack leaves together.
+  function renderItem(i: number): ReactNode {
+    const s = services[i];
+    if (!s) return null;
+    return (
+      <div className={`services-item ${i > 0 ? "services-item-inner" : ""}`}>
+              <div
+                className={`services-head grid grid-cols-[auto_1fr_auto] items-center gap-6 border-t md:grid-cols-12 ${i === 0 ? "services-head-first" : ""}`}
+                style={{
+                  borderColor: T.onDarkRule,
+                  backgroundColor: T.dark,
+                  ["--top" as string]: `${NAV + i * ROW}px`,
+                  minHeight: ROW,
+                  zIndex: 20 + services.length - i,
+                }}
+              >
+                <span className="md:col-span-5" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 3vw, 2.8rem)", lineHeight: 1 }}>
+                  {String(i + 1).padStart(2, "0")}.
+                </span>
+                <h3 className="md:col-span-6" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 3vw, 2.8rem)", lineHeight: 1, letterSpacing: "-0.01em" }}>
+                  {s.title}
+                </h3>
+                <ArrowDownLeft className="h-7 w-7 justify-self-end md:col-span-1" style={{ color: T.onDarkQuiet }} aria-hidden="true" />
+              </div>
+
+              <div className="grid gap-8 pb-20 pt-6 md:grid-cols-12 md:pb-28 md:pt-8">
+                <div className="md:col-span-6 md:col-start-6">
+                  <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.onDark }}>
+                    {s.body}
+                  </p>
+
+                  {s.list && (
+                    <ol className="mt-8 border-t" style={{ borderColor: T.onDarkRule }}>
+                      {platforms.map((p, n) => (
+                        <li key={p.name} className="border-b" style={{ borderColor: T.onDarkRule }}>
+                          <Link href={p.href} className="services-sub flex items-baseline gap-6 py-3" style={{ color: T.onDark, textDecoration: "none" }}>
+                            <span className="text-[13px]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
+                              {String(n + 1).padStart(2, "0")}
+                            </span>
+                            <span style={{ fontFamily: DISPLAY_SM, fontWeight: 700, fontSize: "1.5rem", lineHeight: 1.2 }}>{p.name}</span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+
+                  {s.note && (
+                    <div className="mt-8">
+                      <p className="mb-2 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
+                        {s.note.label}
+                      </p>
+                      <p className="max-w-[36rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
+                        {s.note.text}
+                      </p>
+                    </div>
+                  )}
+
+                  <Link
+                    href={s.link.href}
+                    className="services-link mt-8 inline-flex items-center gap-2 text-[16px] font-medium"
+                    style={{ color: T.onDark, textDecoration: "none", borderBottom: `1px solid ${T.onDarkQuiet}` }}
+                  >
+                    {s.link.label} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
+        {renderItem(i + 1)}
+        {/* Sticky ignores padding, so the last item's extra length is an element. */}
+        {i === services.length - 1 && <div aria-hidden="true" className="services-tail" />}
+      </div>
+    );
+  }
+
   return (
     <section aria-labelledby="services-title" className="relative px-6 pb-24 pt-24 md:px-10 md:pb-40 md:pt-32" style={{ backgroundColor: T.dark, color: T.onDark }}>
       <div className="mx-auto max-w-[1440px]">
@@ -83,76 +161,10 @@ export default function ServicesStack() {
           Engineered around how your business runs, and what can break.
         </h2>
 
-        {/* One flat container: see the note at the top of the file. */}
-        <div className="services-stack mt-16 md:mt-24">
-          {services.flatMap((s, i) => [
-            <div
-              key={`h-${i}`}
-              className={`services-head grid grid-cols-[auto_1fr_auto] items-center gap-6 border-t md:grid-cols-12 ${i === 0 ? "services-head-first" : ""}`}
-              style={{
-                borderColor: T.onDarkRule,
-                backgroundColor: T.dark,
-                ["--top" as string]: `${NAV + i * ROW}px`,
-                minHeight: ROW,
-                // Earlier headings sit ABOVE later ones. At the end of the stack the
-                // last heading is released first; with the default order it slid up
-                // over 02 and 03 (owner's screenshot, 24 Sep). Reversed, each one
-                // tucks under the heading before it instead.
-                zIndex: 20 + services.length - i,
-              }}
-            >
-              <span className="md:col-span-5" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 3vw, 2.8rem)", lineHeight: 1 }}>
-                {String(i + 1).padStart(2, "0")}.
-              </span>
-              <h3 className="md:col-span-6" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.6rem, 3vw, 2.8rem)", lineHeight: 1, letterSpacing: "-0.01em" }}>
-                {s.title}
-              </h3>
-              <ArrowDownLeft className="h-7 w-7 justify-self-end md:col-span-1" style={{ color: T.onDarkQuiet }} aria-hidden="true" />
-            </div>,
-
-            <div key={`b-${i}`} className="grid gap-8 pb-20 pt-6 md:grid-cols-12 md:pb-28 md:pt-8">
-              <div className="md:col-span-6 md:col-start-6">
-                <p className="max-w-[36rem] text-[18px] leading-[1.6]" style={{ color: T.onDark }}>
-                  {s.body}
-                </p>
-
-                {s.list && (
-                  <ol className="mt-8 border-t" style={{ borderColor: T.onDarkRule }}>
-                    {platforms.map((p, n) => (
-                      <li key={p.name} className="border-b" style={{ borderColor: T.onDarkRule }}>
-                        <Link href={p.href} className="services-sub flex items-baseline gap-6 py-3" style={{ color: T.onDark, textDecoration: "none" }}>
-                          <span className="text-[13px]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
-                            {String(n + 1).padStart(2, "0")}
-                          </span>
-                          <span style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "1.5rem", lineHeight: 1.2 }}>{p.name}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ol>
-                )}
-
-                {s.note && (
-                  <div className="mt-8">
-                    <p className="mb-2 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.onDarkQuiet }}>
-                      {s.note.label}
-                    </p>
-                    <p className="max-w-[36rem] text-[16px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
-                      {s.note.text}
-                    </p>
-                  </div>
-                )}
-
-                <Link
-                  href={s.link.href}
-                  className="services-link mt-8 inline-flex items-center gap-2 text-[16px] font-medium"
-                  style={{ color: T.onDark, textDecoration: "none", borderBottom: `1px solid ${T.onDarkQuiet}` }}
-                >
-                  {s.link.label} <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>,
-          ])}
-        </div>
+        {/* One grid: see the note at the top of the file. */}
+        {/* Nested items: see renderItem below and the note at the top of the file. */}
+        <div className="services-stack mt-16 md:mt-24">{renderItem(0)}</div>
+        <div aria-hidden="true" className="services-spacer" />
 
         {/* Closing row, unchanged copy. */}
         <div className="grid gap-6 border-t pt-12 md:grid-cols-12" style={{ borderColor: T.onDarkRule }}>
@@ -176,7 +188,18 @@ export default function ServicesStack() {
 
       <style>{`
         @media (min-width: 768px) {
-          .services-head { position: sticky; top: var(--top); }
+          /* Exactly one row tall: the release maths assumes it. Left to size
+             itself, the first heading measured 180px and the others 91-135px, so
+             they let go at different moments. */
+          .services-head { position: sticky; top: var(--top); height: ${ROW}px; }
+          /* flow-root: without it the negative margins collapse into one another
+             and the wrappers all end at the same place. */
+          .services-item { display: flow-root; }
+          .services-item-inner { margin-bottom: -${ROW}px; }
+          .services-tail { height: ${(services.length - 1) * ROW}px; }
+          /* The inner wrappers overhang the list by (n-1) rows; this keeps the
+             closing row below them. At release it sits under headings 02-04. */
+          .services-spacer { height: ${(services.length - 1) * ROW}px; }
           /* Solid strip from the top of the screen down to the first stuck
              heading. A box-shadow did this before but was 8px short (row 88,
              nav 96), and body text showed through that gap while scrolling. */
