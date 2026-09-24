@@ -71,7 +71,7 @@ const grain =
 export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   const condensed = (await searchParams).font !== "zodiak";
   const fontVars = condensed
-    ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)", "--hero-size": "clamp(3.4rem, 9.4vw, 11rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
+    ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)", "--hero-size": "clamp(3.4rem, 8.4vw, 10rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
     : { "--display": "Zodiak", "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
   return (
     <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
@@ -114,7 +114,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         />
 
       <section className="relative">
-        <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-between px-6 pb-12 pt-32 md:px-10 lg:pt-36">
+        <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-between gap-12 px-6 pb-12 pt-28 md:px-10 lg:pt-28">
           {/* The headline carries the page, as on grigoletti.ch: full width, huge.
               Words unchanged from the live hero (positioning decision, 15 Sep). */}
           <h1
@@ -124,7 +124,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
             Websites built for the way you do business<span style={{ color: T.accent }}>.</span>
           </h1>
 
-          <div className="mt-16 grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
+          <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
             <div className="lg:col-span-4">
               <p className="max-w-[30rem] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: BODY }}>
                 We design and build business websites and online stores around how your customers enquire and buy.

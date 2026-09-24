@@ -5,15 +5,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { MONO, T } from "@/components/redesign/tokens";
 
-// Hero card that cycles through real client screenshots (the Grigoletti hero
-// shows a live project in the same corner). Client work only; each slide links
-// to its record. Stands still on the first slide for reduced motion, and pauses
+// Hero card that cycles through real project screenshots (the Grigoletti hero
+// shows a live project in the same corner). Client work, plus Panda Patches
+// with its founder-affiliated label; each slide links to its record. Stands
+// still on the first slide for reduced motion, and pauses
 // while hovered or focused so nobody chases a moving link.
 
-const slides = [
+const slides: { src: string; name: string; href: string; external?: boolean; tag?: string }[] = [
   { src: "/work/northdeck-group.png", name: "NorthDeck Group", href: "https://northdeckgroup.com/", external: true },
   { src: "/work/emblematic-studio.png", name: "Emblematic Studio", href: "/work/emblematic-studio" },
   { src: "/work/mycustompatches.png", name: "MyCustomPatches", href: "/work/mycustompatches" },
+  // Our own store, added by the owner 24 Sep. Always carries its label here, as
+  // it does everywhere else on the site.
+  { src: "/work/panda-patches.png", name: "Panda Patches", href: "/work/panda-patches", tag: "Founder-affiliated" },
 ];
 
 export default function WorkCard() {
@@ -52,6 +56,7 @@ export default function WorkCard() {
       <div className="mt-3 flex items-center justify-between gap-4 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
         <span>
           Selected work · <span style={{ color: T.ink }}>{s.name}</span>
+          {s.tag ? ` · ${s.tag}` : ""}
         </span>
         <span className="flex gap-1.5" aria-hidden="true">
           {slides.map((sl, n) => (
