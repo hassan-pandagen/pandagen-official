@@ -12,7 +12,9 @@ import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
-import FoundersDark from "@/components/redesign/FoundersDark";
+// Founders: the live FounderSection is kept as-is (owner, 24 Sep). A new
+// treatment will be designed separately; FoundersDark.tsx is parked, unused.
+import FounderSection from "@/components/sections/FounderSection";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
 import SiteFooter from "@/components/redesign/SiteFooter";
@@ -216,7 +218,7 @@ export default function HeroPreview() {
       <FeaturesTrio />
       <PricingFinder />
       <ProcessSplit />
-      <FoundersDark />
+      <FounderSection />
       <FaqOpen />
       <GuidesList />
       </main>
