@@ -12,9 +12,11 @@ import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
-// Founders: the live FounderSection is kept as-is (owner, 24 Sep). A new
-// treatment will be designed separately; FoundersDark.tsx is parked, unused.
+// Founders: both versions shown for comparison (owner, 24 Sep). Option A is the
+// live FounderSection, unchanged; Option B is FoundersDark. Remove the loser and
+// the two OptionLabel strips once a choice is made.
 import FounderSection from "@/components/sections/FounderSection";
+import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
 import SiteFooter from "@/components/redesign/SiteFooter";
@@ -218,11 +220,23 @@ export default function HeroPreview() {
       <FeaturesTrio />
       <PricingFinder />
       <ProcessSplit />
+      <OptionLabel text="Founders · Option A: current section" />
       <FounderSection />
+      <OptionLabel text="Founders · Option B: redesign" />
+      <FoundersDark />
       <FaqOpen />
       <GuidesList />
       </main>
       <SiteFooter />
     </>
+  );
+}
+
+// Preview-only divider naming a design option. Not for production.
+function OptionLabel({ text }: { text: string }) {
+  return (
+    <div className="px-6 py-3 text-center text-[12px] uppercase tracking-[0.16em] md:px-10" style={{ backgroundColor: T.accent, color: "#FFFFFF", fontFamily: "ui-monospace, Menlo, Consolas, monospace" }}>
+      {text}
+    </div>
   );
 }
