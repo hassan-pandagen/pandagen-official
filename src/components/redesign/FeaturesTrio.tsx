@@ -2,23 +2,25 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
-// Built-in features. Redesign candidate, 24 Sep 2026. Copy, links and
+// Built-in features. Redesign candidate, 24 Sep 2026. Body copy, links and
 // destinations unchanged from CustomFeatures.tsx; the three icon cards become
-// three numbered columns on hairlines.
+// three numbered columns on hairlines. Titles renamed by the owner (24 Sep):
+// the original phrasing ("A calculator that...") read as a description, not a
+// named, searchable service, so each is now the term a buyer would type.
 
 const features = [
   {
-    title: "A calculator that prices your own work",
+    title: "Quote & pricing calculators",
     body: "Someone puts in their numbers and gets a figure that follows your pricing rules. Deposits, minimums, volume bands and the jobs you turn down are all part of the logic.",
     edits: "Your rates, tiers and the wording of the result",
   },
   {
-    title: "A finder for your services, courses or locations",
+    title: "Service & location finders",
     body: "Filters that match how customers actually choose, and a page for each result that search engines can index on its own.",
     edits: "Entries, categories, filter options and the empty-result message",
   },
   {
-    title: "An enquiry form that routes by the answer",
+    title: "Routed enquiry forms",
     body: "Questions that change with what the visitor picks, then the enquiry lands in the right inbox with the context already attached.",
     edits: "Questions, answer options and where each type of enquiry lands",
   },

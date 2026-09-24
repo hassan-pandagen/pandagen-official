@@ -42,10 +42,14 @@ type Service = {
 const services: Service[] = [
   {
     title: "Migrations & New Builds",
-    body: "We list every page, every piece of content, your analytics, your forms and everything they connect to before we build anything. Then we test the switchover against criteria you signed off.",
+    // Plain-English editing line, verbatim from the homepage FAQ (home-faqs.ts,
+    // "do I need a developer every time"), swapped in for the owner (24 Sep):
+    // the inventory description read too technical for this spot. The
+    // inventory work is real and still happens; it now sits in the note below.
+    body: "You get a website that is simple to run yourself. Sign in, change the words, swap a photo, update your opening hours or add a staff member, and the live site updates in about a minute. No deploy, no ticket and no developer.",
     note: {
       label: "Already have a website?",
-      text: "Replace it, rebuild it, or keep parts of it running. A custom storefront can still use Shopify for products and payments, a new site can keep your GoHighLevel CRM, and WordPress can stay as the editor if that suits you. You decide what stays; we work it out with you before quoting.",
+      text: "We list every page, every piece of content, your analytics, your forms and everything they connect to, then test the switchover against criteria you sign off. A custom storefront can still use Shopify for products and payments, a new site can keep your GoHighLevel CRM, and WordPress can stay as the editor if that suits you. You decide what stays; we work it out with you before quoting.",
     },
     link: { label: "Explore all services", href: "/services" },
     list: true,
@@ -61,7 +65,7 @@ const services: Service[] = [
   },
   {
     title: "Search & AI Foundations",
-    body: "Pages a crawler can read, a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.",
+    body: "Pages that ChatGPT, Claude and Perplexity can actually read: a business described the same way everywhere, structured data that matches what visitors see, and claims backed by a source. We cannot guarantee a citation.",
     link: { label: "Review delivery standards", href: "/about" },
   },
   {
