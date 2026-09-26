@@ -174,6 +174,30 @@
       "disclosure": "Founder-affiliated, not independent client proof. Owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains the platform, and co-founder Imran Raza Ladhani holds a stake in both companies, so the two share an owner.",
       "metrics": []
     },
+    "medical-template": {
+      "name": "Medical Template",
+      "relationship": "Demo, not client work",
+      "href": "/work/medical-template",
+      "url": "pandacodegen-medical-template.vercel.app",
+      "disclosure": "Demo, not client work. A fictional portfolio practice built by PandaCodeGen to demonstrate a medical-practice website. Its own header states it directly: not a medical provider, and its names, credentials, testimonials and locations are intentionally fictional.",
+      "metrics": []
+    },
+    "panda-publisher": {
+      "name": "Panda Publisher",
+      "relationship": "Demo, not client work",
+      "href": "/work/panda-publisher",
+      "url": "pandapublisher-eight.vercel.app",
+      "disclosure": "Demo, not client work. Built by PandaCodeGen to demonstrate an author-services website. Its cover gallery is captioned \"Concept cover gallery, not client work\"; there is no operating publishing business behind the site.",
+      "metrics": []
+    },
+    "sleek-jackets": {
+      "name": "Sleek Jackets",
+      "relationship": "Demo, not client work",
+      "href": "/work/sleek-jackets",
+      "url": "sleek-jackets.vercel.app",
+      "disclosure": "Demo, not client work. A private-preview outerwear storefront built by PandaCodeGen; its own banner states purchases are not live. Ownership is undecided between a founder-owned brand and a client-run store, so it is held as a demo until that is settled.",
+      "metrics": []
+    },
     "enterprise-ops": {
       "name": "Enterprise operations platform",
       "relationship": "Founder-affiliated",

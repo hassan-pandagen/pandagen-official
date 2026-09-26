@@ -1,8 +1,11 @@
 /**
- * Delivery facts confirmed by Hassan Jamal on 18 September 2026.
- * These describe implementation and status, not measured migration outcomes.
- * A Step Above Medical stays outside the completed case-study registry until
- * launch. Its public domain still must not be presented as our delivered build.
+ * Delivery facts confirmed by Hassan Jamal, dated per entry (18 Sep 2026
+ * unless noted). These describe implementation and status, not measured
+ * migration outcomes. A Step Above Medical stays outside the completed
+ * case-study registry until launch. Its public domain still must not be
+ * presented as our delivered build.
+ *
+ * 27 Sep 2026: testing start date added for A Step Above Medical.
  */
 export const MIGRATION_PROJECT_DETAILS = {
   pandaPatches: {
@@ -20,7 +23,8 @@ export const MIGRATION_PROJECT_DETAILS = {
     name: "A Step Above Medical",
     status: "In progress",
     summary: "A WordPress website being rebuilt with Next.js and Sanity. The migration is nearing completion; launch is pending.",
-    confirmedOn: "2026-09-18",
+    testingStarts: "2026-10-01",
+    confirmedOn: "2026-09-27",
   },
 } as const;
 

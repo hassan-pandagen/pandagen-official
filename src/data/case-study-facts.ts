@@ -142,6 +142,18 @@ export function isFounderAffiliated(slug: string): boolean {
 }
 
 /**
+ * True for our own concept/demo builds -- no client or founder-owned business
+ * behind them at all. Added 27 Sep 2026 for Medical Template, Panda Publisher
+ * and Sleek Jackets: RelationshipDisclosure's amber/emerald choice assumes a
+ * real relationship (founder-affiliated or independent client) on one side or
+ * the other, and a demo is neither -- rendering it with the emerald "verified
+ * client" treatment would overstate it.
+ */
+export function isDemo(slug: string): boolean {
+    return caseStudy(slug).relationship.toLowerCase().startsWith('demo');
+}
+
+/**
  * A single metric's value, or null when it is withdrawn or does not exist.
  *
  * Renderers must treat null as "print an em-dash", never as 0 and never as the

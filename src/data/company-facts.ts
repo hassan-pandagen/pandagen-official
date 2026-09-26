@@ -217,6 +217,11 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and 26 Supabase Edge Functions, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'Custom build. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
     { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} The migrated site is live. No before-and-after performance figures are published, because the previous platform baseline was never captured.` },
+    // Added 27 Sep 2026: confirmed on 18 Sep, in progress since, testing-start
+    // date confirmed 27 Sep. No case study yet -- see migration-projects.ts's
+    // own rule: the public domain still runs the client's previous WordPress
+    // site and must not be presented as our delivered build until launch.
+    { name: 'A Step Above Medical', relationship: 'Client project, in progress', href: '/services/wordpress-migration', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} Testing begins ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.testingStarts}; launch is pending. The current public domain still serves the client's previous WordPress site.` },
 
     // Added 10 Sep 2026. The reference page states it covers every published
     // project, and six work pages exist while this list held five. An external
