@@ -100,9 +100,9 @@ export default function WorkIndex() {
             Look at the work before you read about it.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
-            Every screenshot below is a site that is live right now. Open any of them and check it yourself. Where a
-            project has measured figures they are on its record, and where it does not, we say nothing about speed or
-            traffic rather than estimate.
+            Open any project below and check it yourself. Preview builds and in-progress work are labelled as such.
+            Where a project has measured figures they are on its record, and where it does not, we say nothing about
+            speed or traffic rather than estimate.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function WorkIndex() {
         .work-row:hover .work-label, .work-row:focus-visible .work-label { color: ${T.onDarkQuiet} !important; }
         .work-row:hover .work-name, .work-row:focus-visible .work-name,
         .work-row:hover .work-arrow, .work-row:focus-visible .work-arrow { color: ${T.onDark} !important; }
-        .work-row:hover .work-thumb, .work-row:focus-visible .work-thumb { width: 200px; opacity: 1; }
+        .work-row:hover .work-thumb:not(.work-thumb-featured), .work-row:focus-visible .work-thumb:not(.work-thumb-featured) { width: 200px; opacity: 1; }
         @media (min-width: 768px) {
           .work-row .work-thumb-featured { width: 160px; }
           .work-row:hover .work-thumb-featured, .work-row:focus-visible .work-thumb-featured { width: 200px; }

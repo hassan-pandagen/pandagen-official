@@ -54,7 +54,7 @@ export default function FaqOpen() {
         <div className="mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
           {faqs.map((f, i) => (
             <details key={f.q} className="faq-item border-b" style={{ borderColor: T.rule }} open={i === 0}>
-              <summary className="faq-summary flex cursor-pointer list-none items-start justify-between gap-6 py-10 md:py-12">
+              <summary className="faq-summary flex cursor-pointer list-none items-start justify-between gap-6 py-6 md:py-8">
                 <span className="flex gap-5 md:gap-8">
                   <span className="shrink-0 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
                     {String(i + 1).padStart(2, "0")}
@@ -65,7 +65,7 @@ export default function FaqOpen() {
                 </span>
                 <ChevronDown className="faq-chevron mt-2 h-5 w-5 shrink-0" style={{ color: T.quiet }} aria-hidden="true" />
               </summary>
-              <p className="max-w-[44rem] pb-10 pl-[3.2rem] text-[17px] leading-[1.7] md:pb-12 md:pl-[4.5rem]" style={{ color: T.body }}>
+              <p className="max-w-[44rem] pb-6 pl-[3.2rem] text-[17px] leading-[1.7] md:pb-8 md:pl-[4.5rem]" style={{ color: T.body }}>
                 {f.a}
               </p>
             </details>
