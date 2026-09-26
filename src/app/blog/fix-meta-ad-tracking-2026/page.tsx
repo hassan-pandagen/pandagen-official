@@ -509,7 +509,7 @@ export default function MetaAdTrackingGuide() {
 
                     <BlogHeader>What to demand when someone hands this over</BlogHeader>
                     <BlogText>
-                        If the person who built it cannot produce this list, you do not own the integration, you are renting an arrangement only they understand. Six artifacts: a dated event dictionary and data-flow map, consent-state test results, redacted request evidence from both paths, deduplication and refund checks, a reconciliation separating delivery from attribution from business records, and named owners for monitoring and incidents.
+                        Ask for a handover your next developer can use: a list of tracked actions and where their data goes, permission checks, examples of browser and server messages with personal details removed, duplicate and refund tests, and a comparison with your business records. It should distinguish data reaching Meta from Meta attributing a sale, and name who investigates failures.
                     </BlogText>
                     <BlogList
                         items={[
@@ -517,7 +517,7 @@ export default function MetaAdTrackingGuide() {
                             "Consent-state test results for representative regions and journeys.",
                             "Browser and server request evidence with secrets and personal data redacted.",
                             "Deduplication, value, currency, timestamp, refund, and test-traffic checks.",
-                            "A reconciliation report that separates delivery, attribution, and business records.",
+                            "A report comparing what reached Meta, which sales Meta attributed to ads, and the orders in your own records.",
                             "Named owners for monitoring, vendor changes, incident response, retention, and deletion.",
                         ]}
                     />

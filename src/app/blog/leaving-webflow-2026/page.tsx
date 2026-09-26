@@ -461,7 +461,7 @@ export default function LeavingWebflow2026Page() {
                         </BlogText>
 
                         <BlogText>
-                            CMS and Ecommerce records can be exported separately as CSV files, but content migration still requires reconciliation. Reference fields, rich text, asset URLs, locales, slugs, drafts, redirects, and relationships need to be checked. Webflow also warns that exported CSV files can point to assets hosted on the original site, and those links can break if the old site is deleted. A migration plan should download or re-home required assets instead of assuming a CSV alone is a durable backup.
+                            CMS and Ecommerce records can be exported separately as CSV files, but you still need to compare the transferred content with the original. Check formatting, images and files, language versions, page addresses, drafts, redirects and links between records. Webflow also warns that exported CSV files can point to assets hosted on the original site, and those links can break if the old site is deleted. A migration plan should download or re-home required assets instead of assuming a CSV alone is a durable backup.
                         </BlogText>
 
                         <div className="rounded-2xl border border-stone-200 bg-stone-50 p-6">

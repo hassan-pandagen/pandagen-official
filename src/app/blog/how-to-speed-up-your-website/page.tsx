@@ -511,13 +511,13 @@ export default function WebsiteSpeedGuide() {
                     <BlogHeader id="cache-cdn">11. Verify cache and CDN behavior</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            A cache is worth whatever its miss and invalidation behavior is worth, and that is the half nobody tests. A configuration that serves a fast hit and then serves yesterday&apos;s price after an inventory change has bought you nothing. Decide what is cacheable by route and user state, then prove each state behaves the way you decided.
+                            Check more than how fast a saved page loads. What happens on the first visit, after a price changes, or when a customer signs in? Decide which pages and information can be stored temporarily, and test that visitors still receive the right version.
                         </BlogText>
                     </div>
                     <BlogList
                         items={[
                             "Define what can be cached and for how long by route and user state.",
-                            "Verify hit, miss, stale and invalidation behavior after content or inventory changes.",
+                            "Test saved pages, first visits and outdated copies. Confirm that changes to content or stock replace the old information.",
                             "Keep private, cart, account and personalized data out of shared caches.",
                             "Test cold and warm conditions and document which state the acceptance method uses.",
                         ]}

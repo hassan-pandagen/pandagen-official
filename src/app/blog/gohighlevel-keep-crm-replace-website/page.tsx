@@ -206,7 +206,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                                 "Integration layer: server endpoints that validate input, apply abuse controls and call HighLevel under scoped credentials.",
                                 "HighLevel keeps your contacts, calendars, workflows, pipeline and conversations, plus whatever else you agreed it handles.",
                                 "Webhooks: signed event notifications for the approved synchronization paths.",
-                                "Observability: request IDs, safe logs, alerts, reconciliation and a failure-recovery procedure.",
+                                "Spot and recover from failures: reference numbers for enquiries, logs that protect personal data, alerts, checks against CRM records and a recovery procedure.",
                             ]}
                         />
                     </section>
@@ -349,7 +349,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             "Collect only approved fields and show accurate notice and consent behavior before submission.",
                             "Validate and normalize data on the server. Rate-limit, apply bot controls, and reject unexpected fields.",
                             "Use the current approved HighLevel endpoint, integration type, scope, and duplicate-contact policy.",
-                            "Return a safe visitor state while recording a correlation ID for support and reconciliation.",
+                            "Show the visitor a clear result and record a reference number so support can trace the submission and check whether it reached the CRM.",
                             "Test that a contact is created with the right source, tags and custom fields, that duplicates are handled, that the workflow fires, and that errors, retries and notifications all behave.",
                         ]}
                     />
@@ -414,7 +414,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         items={[
                             "Verify the signature against the unmodified request body before processing.",
                             "HighLevel's webhook guide says to return 200 OK immediately and process asynchronously, so acknowledge first and move slow work to a durable queue.",
-                            "Make handlers idempotent so retries do not duplicate actions.",
+                            "Make repeated delivery safe (idempotency), so retrying a failed request does not create duplicate contacts or send the same message twice.",
                             "Record a safe event identifier, type, result and retry state without leaking secrets or unnecessary personal data.",
                             "Alert on failures and reconcile missed events; do not treat a 2xx response as business completion.",
                         ]}
@@ -488,7 +488,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                             "Run contact, workflow, calendar, notification, analytics and consent tests with disposable records.",
                             "Verify errors, retries, rate limits, webhook signatures, token refresh and vendor-outage behavior.",
                             "Transfer the agreed repository, deployment, documentation and business accounts under the accepted terms.",
-                            "Monitor public routes and business events after cutover, then close only after reconciliation and acceptance.",
+                            "After launch, check the public pages and key actions such as form submissions. Finish the migration only when the records match and the agreed checks pass.",
                         ]}
                     />
                     <BlogText>

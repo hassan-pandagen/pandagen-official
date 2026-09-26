@@ -196,7 +196,7 @@ export default function ShopifyHeadlessPage() {
                         />
                     </section>
 
-                    <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">The four dimensions a headless decision splits along</h2>
+                    <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">Four parts of your business to check before replacing the storefront</h2>
                     <p className="mb-2 leading-relaxed text-stone-700">
                         Score a headless proposal on all four of these or it will look better than it is. Commerce
                         mostly stays where it is, which is the reassuring part. Experience is what you are buying.
@@ -345,7 +345,7 @@ export default function ShopifyHeadlessPage() {
                             "Search and recommendations, plus anything bolted on: subscriptions, bundles, loyalty, reviews, wish lists.",
                             "Tax, shipping, click and collect, returns, answering customers, and getting orders out.",
                             "Selling to businesses, selling abroad, other languages, and making it usable for everyone.",
-                            "Whether each app still works headless: does it have an API, does its UI survive, do its webhooks and checkout hooks fire.",
+                            "Whether each app works with the new storefront: can it exchange the required data, display its customer-facing features and still respond correctly to orders and checkout actions.",
                         ]}
                     />
                     <BlogText>

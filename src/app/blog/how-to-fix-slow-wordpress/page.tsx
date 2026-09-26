@@ -156,7 +156,7 @@ export default function SlowWordPressGuide() {
                             items={[
                                 "Measure representative routes and separate field data from lab diagnostics.",
                                 "Profile the origin, PHP, database, external requests and background work.",
-                                "Verify page, object, browser and edge caching under correct invalidation rules.",
+                                "Check saved copies of pages and data across the site, browser and delivery network. Confirm they refresh when the underlying content changes.",
                                 "Update and tune the supported server and WordPress environment on staging.",
                                 "Isolate theme and plugin cost by measured component, not raw plugin count.",
                                 "Optimize media, fonts, CSS and document discovery.",
@@ -242,14 +242,14 @@ export default function SlowWordPressGuide() {
                     <BlogHeader>3. Verify cache layers</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            A cache that reports hits you never receive is worse than no cache, because it hides the constraint behind a number that looks healthy. Five checks confirm what is actually being stored and served. Test the miss and invalidation paths as carefully as the hit path, since that is where correctness problems live.
+                            A cache dashboard can look healthy while visitors still receive slow or outdated pages. Check what is saved, what visitors receive when nothing is saved, and what happens after a change. A faster page is not useful if it shows yesterday&apos;s price.
                         </BlogText>
                     </div>
                     <BlogList
                         items={[
                             "Confirm anonymous HTML can be cached where business and identity rules permit it.",
                             "Measure cache hit and miss behavior at page, object, edge and browser layers.",
-                            "Define invalidation for content, inventory, price, user state and personalization.",
+                            "Define when saved copies must refresh after content, stock, prices, login status or personalised information changes.",
                             "Exclude checkout, account and other sensitive dynamic paths correctly.",
                             "Retest warm and cold states and verify stale content or privacy leaks are not introduced.",
                         ]}

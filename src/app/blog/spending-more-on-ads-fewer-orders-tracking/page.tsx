@@ -200,7 +200,7 @@ export default function SpendingMoreOnAdsTrackingPage() {
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
                         {[
                             { icon: DatabaseZap, title: "Truth", body: "Order, lead, refund and value in the source system." },
-                            { icon: Waypoints, title: "Delivery", body: "Browser and server payloads, timing and errors." },
+                            { icon: Waypoints, title: "Delivery", body: "What the browser and server send, when they send it, and whether delivery fails." },
                             { icon: GitCompareArrows, title: "Reconcile", body: "Coverage, duplicates, match and attribution." },
                             { icon: ShieldCheck, title: "Govern", body: "Consent, purpose, minimization, access and retention." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
