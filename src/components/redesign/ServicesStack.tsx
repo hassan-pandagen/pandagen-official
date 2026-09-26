@@ -181,7 +181,7 @@ export default function ServicesStack() {
               pitch, no pressure.
             </p>
             <ChatExpertsButton
-              className="mt-6 inline-flex items-center gap-2 px-6 py-3.5 text-[16px] font-medium"
+              className="cta-solid mt-6 inline-flex items-center gap-2 px-6 py-3.5 text-[16px] font-medium"
               style={{ backgroundColor: T.onDark, color: T.dark }}
             >
               Chat with our experts <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -212,7 +212,9 @@ export default function ServicesStack() {
         .services-sub span:last-child { transition: color .25s ease, transform .25s ease; display: inline-block; }
         .services-sub:hover span:last-child, .services-sub:focus-visible span:last-child { color: ${T.onDarkAccent}; transform: translateX(6px); }
         .services-link:hover, .services-link:focus-visible { color: ${T.onDarkAccent} !important; border-color: ${T.onDarkAccent} !important; }
-        @media (prefers-reduced-motion: reduce) { .services-sub span:last-child { transition: none; } }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .services-sub span:last-child { transition: none; } .cta-solid { transition: none; } }
       `}</style>
     </section>
   );

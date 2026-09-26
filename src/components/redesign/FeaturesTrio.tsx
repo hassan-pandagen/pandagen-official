@@ -112,7 +112,7 @@ export default function FeaturesTrio() {
           <div className="flex flex-col items-start gap-4 md:col-span-4 md:items-end">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 text-[15px] font-medium"
+              className="cta-solid inline-flex items-center gap-2 px-6 py-3.5 text-[15px] font-medium"
               style={{ backgroundColor: T.ink, color: T.paper }}
             >
               Discuss a feature for your website <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -132,7 +132,9 @@ export default function FeaturesTrio() {
         }
         .feature-num { transition: color .3s ease; }
         .feature-col:hover .feature-num, .feature-col:focus-within .feature-num { color: ${T.ink}; }
-        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num { transition: none; } }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .feature-col, .feature-num, .cta-solid { transition: none; } }
       `}</style>
     </section>
   );

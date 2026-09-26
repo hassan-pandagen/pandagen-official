@@ -172,7 +172,7 @@ export default function SiteNav() {
             <button
               type="button"
               onClick={openQuote}
-              className="hidden px-4 py-2.5 text-[14px] font-medium transition-opacity hover:opacity-90 sm:inline-flex"
+              className="cta-solid hidden px-4 py-2.5 text-[14px] font-medium sm:inline-flex"
               style={{ backgroundColor: INK, color: PAPER }}
             >
               Talk to the founders
@@ -314,7 +314,7 @@ export default function SiteNav() {
             <button
               type="button"
               onClick={openQuote}
-              className="px-7 py-4 text-[17px] font-medium"
+              className="cta-solid px-7 py-4 text-[17px] font-medium"
               style={{ backgroundColor: INK, color: PAPER }}
             >
               Talk to the founders
@@ -324,6 +324,11 @@ export default function SiteNav() {
       </div>
 
       {quoteOpen && <QuoteModal isOpen={quoteOpen} onClose={() => setQuoteOpen(false)} />}
+      <style>{`
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
+      `}</style>
     </>
   );
 }

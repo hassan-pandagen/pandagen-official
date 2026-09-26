@@ -82,7 +82,7 @@ export default function SiteFooter() {
             <QuoteModalButton
               cta="footer_talk"
               location="footer"
-              className="inline-flex items-center gap-3 bg-[#EBE9E4] px-7 py-4 text-[17px] font-medium text-[#1C1917] transition-opacity hover:opacity-90"
+              className="cta-solid inline-flex items-center gap-3 bg-[#EBE9E4] px-7 py-4 text-[17px] font-medium text-[#1C1917]"
             >
               <span className="flex -space-x-2" aria-hidden="true">
                 <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
@@ -224,6 +224,9 @@ export default function SiteFooter() {
         .foot-lang li:first-child { color: ${T.onDarkQuiet} !important; }
         .foot-lang a:hover, .foot-lang a:focus-visible { color: ${T.onDarkAccent} !important; }
         .foot-lang [aria-hidden="true"] { color: ${T.onDarkRule} !important; }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
       `}</style>
     </footer>
   );

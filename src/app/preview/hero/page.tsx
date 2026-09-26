@@ -133,7 +133,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <QuoteModalButton
                   cta="preview_hero_talk"
-                  className="inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white transition-opacity hover:opacity-90"
+                  className="cta-solid inline-flex items-center justify-center gap-3 bg-[#1C1917] px-6 py-4 text-[16px] font-medium text-white"
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
                     <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
@@ -204,7 +204,12 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       </main>
       <SiteFooter />
       {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
-      <style>{`[data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }`}</style>
+      <style>{`
+        [data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
+      `}</style>
     </div>
   );
 }

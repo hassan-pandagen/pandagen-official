@@ -80,7 +80,7 @@ export default function ProcessSplit() {
             <QuoteModalButton
               cta="start_discovery"
               location="process"
-              className="mt-10 inline-flex items-center bg-[#1C1917] px-7 py-4 text-[17px] font-medium text-[#EBE9E4] transition-opacity hover:opacity-90"
+              className="cta-solid mt-10 inline-flex items-center bg-[#1C1917] px-7 py-4 text-[17px] font-medium text-[#EBE9E4]"
             >
               Start with Discovery
             </QuoteModalButton>
@@ -134,6 +134,9 @@ export default function ProcessSplit() {
         @supports not (animation-timeline: view()) {
           .process-fill { display: none; }
         }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
       `}</style>
     </section>
   );

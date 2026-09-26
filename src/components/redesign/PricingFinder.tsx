@@ -165,7 +165,7 @@ export default function PricingFinder() {
                 <button
                   type="button"
                   onClick={sendToForm}
-                  className="inline-flex items-center justify-center gap-3 px-6 py-4 text-[16px] font-medium"
+                  className="cta-solid inline-flex items-center justify-center gap-3 px-6 py-4 text-[16px] font-medium"
                   style={{ backgroundColor: T.ink, color: T.paper }}
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
@@ -203,7 +203,9 @@ export default function PricingFinder() {
         .finder-cal { border-color: ${T.ink}; color: ${T.ink}; }
         .finder-step { animation: finder-in .45s cubic-bezier(.2,.7,.2,1) both; }
         @keyframes finder-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-        @media (prefers-reduced-motion: reduce) { .finder-step { animation: none; } .finder-opt { transition: none; } }
+        .cta-solid { transition: background-color .3s ease, color .3s ease; }
+        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
+        @media (prefers-reduced-motion: reduce) { .finder-step { animation: none; } .finder-opt, .cta-solid { transition: none; } }
       `}</style>
     </section>
   );
