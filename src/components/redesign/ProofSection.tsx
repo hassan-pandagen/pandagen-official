@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CLIENT_REVIEWS, type ClientReview } from "@/data/reviews";
@@ -27,6 +28,15 @@ const SITE_BY_CASE: Record<string, string> = {
   "/work/ladies-4-jesus": "Ladies 4 Jesus",
   "/work/emblematic-studio": "Emblematic Studio",
   "/work/mycustompatches": "MyCustomPatches",
+};
+
+// Same screenshots WorkIndex.tsx already uses. Only reviews with both a case
+// study and a screenshot on file get the hover flip below; the other two
+// reviews (no case study) keep the plain dark-invert hover.
+const SITE_IMAGE_BY_CASE: Record<string, string> = {
+  "/work/ladies-4-jesus": "/work/ladies-4-jesus.png",
+  "/work/emblematic-studio": "/work/emblematic-studio.png",
+  "/work/mycustompatches": "/work/mycustompatches.png",
 };
 
 function badge(r: ClientReview) {
@@ -106,36 +116,65 @@ export default function ProofSection() {
 
         {/* The other reviews, verbatim, on a hairline grid. */}
         <ul className="mt-16 grid border-t md:grid-cols-2 lg:grid-cols-4" style={{ borderColor: T.rule }}>
-          {rest.map((r, i) => (
-            <li
-              key={r.id}
-              className="proof-card flex flex-col justify-between gap-8 rounded-[4px] border-b py-8 md:px-6 md:first:pl-0 lg:border-b-0"
-              style={{ borderColor: T.rule, borderLeft: i > 0 ? `1px solid ${T.rule}` : undefined }}
-            >
-              <blockquote className="proof-quote text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY_SM, color: T.ink }}>
-                &ldquo;{r.quote}&rdquo;
-              </blockquote>
-              <div className="proof-meta text-[14px]" style={{ color: T.body }}>
-                <p className="proof-name" style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
-                {r.caseStudy && SITE_BY_CASE[r.caseStudy] && (
-                  <p className="mt-1">
-                    <Link href={r.caseStudy} className="proof-name" style={{ color: T.ink }}>
-                      Website: {SITE_BY_CASE[r.caseStudy]}
+          {rest.map((r, i) => {
+            const siteImage = r.caseStudy ? SITE_IMAGE_BY_CASE[r.caseStudy] : undefined;
+            return (
+              <li
+                key={r.id}
+                className={`proof-card relative overflow-hidden rounded-[4px] border-b lg:border-b-0 ${siteImage ? "proof-card-flip" : ""}`}
+                style={{ borderColor: T.rule, borderLeft: i > 0 ? `1px solid ${T.rule}` : undefined, perspective: "1600px" }}
+              >
+                <div className="proof-flip relative h-full">
+                  <div className={`proof-face proof-face-front flex h-full flex-col justify-between gap-8 py-8 md:px-6 ${i === 0 ? "md:pl-0" : ""}`}>
+                    <blockquote className="proof-quote text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY_SM, color: T.ink }}>
+                      &ldquo;{r.quote}&rdquo;
+                    </blockquote>
+                    <div className="proof-meta text-[14px]" style={{ color: T.body }}>
+                      <p className="proof-name" style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
+                      {r.caseStudy && SITE_BY_CASE[r.caseStudy] && (
+                        <p className="mt-1">
+                          <Link href={r.caseStudy} className="proof-name" style={{ color: T.ink }}>
+                            Website: {SITE_BY_CASE[r.caseStudy]}
+                          </Link>
+                        </p>
+                      )}
+                      <p className="mt-1">
+                        <a href={r.href} target="_blank" rel="noopener noreferrer" className="proof-source" style={{ color: T.accentText }}>
+                          {r.platform}, {r.date}
+                          <span className="sr-only"> (opens in a new tab)</span>
+                        </a>
+                      </p>
+                      <p className="proof-badge mt-2 text-[11px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+                        {badge(r)}
+                      </p>
+                    </div>
+                  </div>
+
+                  {siteImage && (
+                    <Link
+                      href={r.caseStudy!}
+                      className="proof-face proof-face-back absolute inset-0 block"
+                      aria-label={`Visit the ${SITE_BY_CASE[r.caseStudy!]} website`}
+                    >
+                      <Image src={siteImage} alt="" fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover object-top" />
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0"
+                        style={{ background: "linear-gradient(to top, rgba(28,25,23,0.9), rgba(28,25,23,0) 60%)" }}
+                      />
+                      <span
+                        className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 px-5 py-5 text-[15px] font-medium"
+                        style={{ color: T.onDark }}
+                      >
+                        {SITE_BY_CASE[r.caseStudy!]}
+                        <ArrowUpRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+                      </span>
                     </Link>
-                  </p>
-                )}
-                <p className="mt-1">
-                  <a href={r.href} target="_blank" rel="noopener noreferrer" className="proof-source" style={{ color: T.accentText }}>
-                    {r.platform}, {r.date}
-                    <span className="sr-only"> (opens in a new tab)</span>
-                  </a>
-                </p>
-                <p className="proof-badge mt-2 text-[11px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-                  {badge(r)}
-                </p>
-              </div>
-            </li>
-          ))}
+                  )}
+                </div>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Press, and the founder-affiliated disclosure. Copy unchanged. */}
@@ -186,7 +225,11 @@ export default function ProofSection() {
         .proof-card:hover .proof-meta, .proof-card:focus-within .proof-meta,
         .proof-card:hover .proof-badge, .proof-card:focus-within .proof-badge { color: ${T.onDarkQuiet} !important; }
         .proof-card:hover .proof-source, .proof-card:focus-within .proof-source { color: ${T.onDarkAccent} !important; }
-        @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card * { transition: none !important; } }
+        .proof-card-flip .proof-flip { transition: transform .6s cubic-bezier(.2,.7,.2,1); transform-style: preserve-3d; }
+        .proof-card-flip:hover .proof-flip, .proof-card-flip:focus-within .proof-flip { transform: rotateY(180deg); }
+        .proof-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .proof-face-back { transform: rotateY(180deg); }
+        @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card *, .proof-card-flip .proof-flip { transition: none !important; } }
       `}</style>
     </section>
   );
