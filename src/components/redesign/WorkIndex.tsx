@@ -21,12 +21,20 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 // screenshot in .work-thumb when they arrive; that needs a small client
 // component to start and stop playback on hover. Not built yet.
 //
-// 26 Sep: two fixes from a design review.
+// 26-27 Sep: two fixes from a design review, plus one revision.
 // 1. The thumbnail was `hidden md:block` and hover-only, so touch devices
 //    (any phone, any touch laptop) never showed a single project image in
-//    this section -- only the name text. The first row's thumbnail is now
-//    always visible, at every width, independent of hover; the rest keep the
-//    hover reveal as a bonus for mouse users, not a requirement.
+//    this section. First fix (26 Sep): made the first row's thumbnail always
+//    visible. Reverted the next day, owner's call: one row looking different
+//    from the rest read as a bug ("why is this one stuck?"), not a
+//    deliberate accessibility fix, and consistency won over it. Final fix
+//    (27 Sep): removed `hidden md:block` from every row (the thumbnail now
+//    exists in layout at every width, starting at width:0/opacity:0) and
+//    added `:active` alongside `:hover`/`:focus-visible` in the reveal CSS
+//    below. `:hover` alone doesn't reliably fire on tap, but `:active` does,
+//    across browsers, with no JS -- so a press-and-hold now reveals the same
+//    thumbnail on a touchscreen that a mouse hover does, uniformly on every
+//    row, with nothing singled out.
 // 2. "Concept builds" (Medical Template, Panda Publisher, Sleek Jackets) is
 //    dropped from the homepage -- real client work only. Checked first: the
 //    live /work page reads a different data source (case-study-facts.ts) and
@@ -109,22 +117,21 @@ export default function WorkIndex() {
         <RowList list={clientWork} showRelationship className="mt-16 md:mt-24" />
       </div>
 
-      {/* Hover and focus states live here so the rows stay server-rendered. The
-          thumbnail animates width, which reflows only its own row. */}
+      {/* Hover, focus and active states live here so the rows stay server-
+          rendered. The thumbnail animates width, which reflows only its own
+          row. :active is included alongside :hover/:focus-visible so a
+          press-and-hold on a touchscreen reveals the same thumbnail a mouse
+          hover does -- :hover alone doesn't reliably fire on tap, but :active
+          does, consistently, without any JS. */}
       <style>{`
         .work-row { transition: background-color .35s ease, padding .35s ease; }
         .work-row .work-label, .work-row .work-name, .work-row .work-arrow { transition: color .35s ease; }
         .work-row .work-thumb { width: 0; opacity: 0; transition: width .45s cubic-bezier(.2,.7,.2,1), opacity .3s ease; }
-        .work-row .work-thumb-featured { width: 88px; opacity: 1; }
-        .work-row:hover, .work-row:focus-visible { background-color: ${T.dark}; padding-left: 20px; padding-right: 20px; }
-        .work-row:hover .work-label, .work-row:focus-visible .work-label { color: ${T.onDarkQuiet} !important; }
-        .work-row:hover .work-name, .work-row:focus-visible .work-name,
-        .work-row:hover .work-arrow, .work-row:focus-visible .work-arrow { color: ${T.onDark} !important; }
-        .work-row:hover .work-thumb:not(.work-thumb-featured), .work-row:focus-visible .work-thumb:not(.work-thumb-featured) { width: 200px; opacity: 1; }
-        @media (min-width: 768px) {
-          .work-row .work-thumb-featured { width: 160px; }
-          .work-row:hover .work-thumb-featured, .work-row:focus-visible .work-thumb-featured { width: 200px; }
-        }
+        .work-row:hover, .work-row:focus-visible, .work-row:active { background-color: ${T.dark}; padding-left: 20px; padding-right: 20px; }
+        .work-row:hover .work-label, .work-row:focus-visible .work-label, .work-row:active .work-label { color: ${T.onDarkQuiet} !important; }
+        .work-row:hover .work-name, .work-row:focus-visible .work-name, .work-row:active .work-name,
+        .work-row:hover .work-arrow, .work-row:focus-visible .work-arrow, .work-row:active .work-arrow { color: ${T.onDark} !important; }
+        .work-row:hover .work-thumb, .work-row:focus-visible .work-thumb, .work-row:active .work-thumb { width: 200px; opacity: 1; }
         .work-row:focus-visible { box-shadow: 0 0 0 3px ${T.accent}; }
         @media (prefers-reduced-motion: reduce) {
           .work-row, .work-row * { transition: none !important; }
@@ -137,7 +144,7 @@ export default function WorkIndex() {
 function RowList({ list, showRelationship, className = "" }: { list: Row[]; showRelationship: boolean; className?: string }) {
   return (
     <ul className={`work-index border-t ${className}`} style={{ borderColor: T.rule }}>
-      {list.map((r, i) => (
+      {list.map((r) => (
         <li key={r.name} className="border-b" style={{ borderColor: T.rule }}>
           <Link
             href={r.href}
@@ -156,9 +163,7 @@ function RowList({ list, showRelationship, className = "" }: { list: Row[]; show
 
             <span className="col-span-1 flex items-center gap-5 md:col-span-7">
               <span
-                className={`work-thumb relative shrink-0 overflow-hidden rounded-[4px] ${
-                  i === 0 ? "work-thumb-featured block h-20 w-[88px] md:h-[112px] md:w-[160px]" : "hidden h-[112px] md:block"
-                }`}
+                className="work-thumb relative block h-20 shrink-0 overflow-hidden rounded-[4px] md:h-[112px]"
                 aria-hidden="true"
               >
                 {r.image ? (
