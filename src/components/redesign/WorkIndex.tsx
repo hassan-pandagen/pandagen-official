@@ -4,7 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Work, as an index of rows. Redesign candidate, 24 Sep 2026.
+// Work, as an index of rows. Redesign pass, 26 Sep 2026 (second pass -- see
+// the 24 Sep note in git history for the first).
 // ─────────────────────────────────────────────────────────────────────────────
 // Each row: a small mono label, the project name large, an arrow. On hover (or
 // keyboard focus) the row turns dark and a screenshot slides in beside the
@@ -19,6 +20,20 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 // The editor's hover clips (1280x720 MP4 loops, public/work/) will replace the
 // screenshot in .work-thumb when they arrive; that needs a small client
 // component to start and stop playback on hover. Not built yet.
+//
+// 26 Sep: two fixes from a design review.
+// 1. The thumbnail was `hidden md:block` and hover-only, so touch devices
+//    (any phone, any touch laptop) never showed a single project image in
+//    this section -- only the name text. The first row's thumbnail is now
+//    always visible, at every width, independent of hover; the rest keep the
+//    hover reveal as a bonus for mouse users, not a requirement.
+// 2. "Concept builds" (Medical Template, Panda Publisher, Sleek Jackets) is
+//    dropped from the homepage -- real client work only. Checked first: the
+//    live /work page reads a different data source (case-study-facts.ts) and
+//    does not carry these three today, so this is not "already covered
+//    elsewhere" -- it's a real gap to fill when /work gets its own redesign
+//    pass. The `rows` array below still defines them; only the render is
+//    trimmed, so nothing here needs rebuilding when that pass happens.
 // ─────────────────────────────────────────────────────────────────────────────
 
 type Row = {
@@ -71,7 +86,6 @@ const rows: Row[] = [
 ];
 
 const clientWork = rows.filter((r) => r.relationship !== "Demo");
-const concepts = rows.filter((r) => r.relationship === "Demo");
 
 export default function WorkIndex() {
   return (
@@ -93,21 +107,6 @@ export default function WorkIndex() {
         </div>
 
         <RowList list={clientWork} showRelationship className="mt-16 md:mt-24" />
-
-        {/* Concept builds: our own sites, grouped under one heading that says they
-            are not client work, instead of a "Demo" tag on every row. */}
-        <div className="mt-24 grid gap-6 md:mt-32 lg:grid-cols-12">
-          <h3
-            className="lg:col-span-7"
-            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3.2rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
-          >
-            Concept builds
-          </h3>
-          <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
-            Sites we designed and built to show what&apos;s possible. Not client work.
-          </p>
-        </div>
-        <RowList list={concepts} showRelationship={false} className="mt-10 md:mt-14" />
       </div>
 
       {/* Hover and focus states live here so the rows stay server-rendered. The
@@ -116,11 +115,16 @@ export default function WorkIndex() {
         .work-row { transition: background-color .35s ease, padding .35s ease; }
         .work-row .work-label, .work-row .work-name, .work-row .work-arrow { transition: color .35s ease; }
         .work-row .work-thumb { width: 0; opacity: 0; transition: width .45s cubic-bezier(.2,.7,.2,1), opacity .3s ease; }
+        .work-row .work-thumb-featured { width: 88px; opacity: 1; }
         .work-row:hover, .work-row:focus-visible { background-color: ${T.dark}; padding-left: 20px; padding-right: 20px; }
         .work-row:hover .work-label, .work-row:focus-visible .work-label { color: ${T.onDarkQuiet} !important; }
         .work-row:hover .work-name, .work-row:focus-visible .work-name,
         .work-row:hover .work-arrow, .work-row:focus-visible .work-arrow { color: ${T.onDark} !important; }
         .work-row:hover .work-thumb, .work-row:focus-visible .work-thumb { width: 200px; opacity: 1; }
+        @media (min-width: 768px) {
+          .work-row .work-thumb-featured { width: 160px; }
+          .work-row:hover .work-thumb-featured, .work-row:focus-visible .work-thumb-featured { width: 200px; }
+        }
         .work-row:focus-visible { box-shadow: 0 0 0 3px ${T.accent}; }
         @media (prefers-reduced-motion: reduce) {
           .work-row, .work-row * { transition: none !important; }
@@ -133,7 +137,7 @@ export default function WorkIndex() {
 function RowList({ list, showRelationship, className = "" }: { list: Row[]; showRelationship: boolean; className?: string }) {
   return (
     <ul className={`work-index border-t ${className}`} style={{ borderColor: T.rule }}>
-      {list.map((r) => (
+      {list.map((r, i) => (
         <li key={r.name} className="border-b" style={{ borderColor: T.rule }}>
           <Link
             href={r.href}
@@ -151,7 +155,12 @@ function RowList({ list, showRelationship, className = "" }: { list: Row[]; show
             </span>
 
             <span className="col-span-1 flex items-center gap-5 md:col-span-7">
-              <span className="work-thumb relative hidden h-[112px] shrink-0 overflow-hidden rounded-[4px] md:block" aria-hidden="true">
+              <span
+                className={`work-thumb relative shrink-0 overflow-hidden rounded-[4px] ${
+                  i === 0 ? "work-thumb-featured block h-20 w-[88px] md:h-[112px] md:w-[160px]" : "hidden h-[112px] md:block"
+                }`}
+                aria-hidden="true"
+              >
                 {r.image ? (
                   <Image src={r.image} alt="" fill sizes="240px" className="object-cover object-top" />
                 ) : (

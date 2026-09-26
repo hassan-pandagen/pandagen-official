@@ -1,12 +1,45 @@
+import { ChevronDown } from "lucide-react";
 import { homeFaqs } from "@/data/home-faqs";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
-// Homepage FAQ, redesign candidate, 24 Sep 2026. ANSWERS ALWAYS VISIBLE: the
-// live homepage emits FAQPage JSON-LD for these exact answers, and structured
-// data must describe text a visitor can see (see HomeFaqSection.tsx). So this is
-// an open two-column list, never an accordion. Same data file as the live page.
+// ─────────────────────────────────────────────────────────────────────────────
+// Homepage FAQ, redesign pass, 26 Sep 2026 (second pass -- see the 24 Sep note
+// in git history for the first, an always-open two-column list).
+// ─────────────────────────────────────────────────────────────────────────────
+// Why the change: the first pass kept every answer permanently open on the
+// premise that Google's FAQPage rich result required the answer to be
+// visible without interaction. That rich result no longer exists -- Google
+// retired it 7 May 2026 and pulled the documentation in June -- so the
+// premise is gone. What still matters, and what this keeps: the answer text
+// stays in the server-rendered HTML regardless of open/closed state. Native
+// <details>/<summary> does exactly that -- nothing is fetched or inserted on
+// click, only the CSS state changes -- so there's no crawlability cost to
+// collapsing by default. (This route also doesn't emit FAQPage JSON-LD --
+// only the live homepage does, via HomeFaqSection.tsx -- so there was never
+// a schema conflict here either.)
+//
+// Also curated down from all ten homeFaqs to five buying-decision questions
+// (developer dependency, feature-cost transparency, the retainer question,
+// minimum project size, migration SEO risk). The other five are migration-
+// or platform-specific (WordPress pricing detail, the audit tool, Shopify,
+// caching plugins) and belong on their relevant service pages, not a
+// homepage that's already long -- moving them there is future work, not done
+// in this pass. This file filters the shared home-faqs.ts by question text;
+// it does not touch that file, so the live homepage's ten questions and its
+// FAQPage JSON-LD are unaffected.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const HOMEPAGE_FAQS = [
+  "If the site is custom code, do I need a developer every time I want to change something?",
+  "If the features are built in, is every future feature included too?",
+  "Do I need your monthly plan to keep a custom feature working?",
+  "Do you have a minimum project size?",
+  "Will I lose SEO rankings when migrating from WordPress?",
+];
 
 export default function FaqOpen() {
+  const faqs = HOMEPAGE_FAQS.map((q) => homeFaqs.find((f) => f.q === q)).filter((f): f is (typeof homeFaqs)[number] => !!f);
+
   return (
     <section aria-labelledby="faq-title" className="px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paper }}>
       <div className="mx-auto max-w-[1440px]">
@@ -18,24 +51,34 @@ export default function FaqOpen() {
           Common questions about working with us
         </h2>
 
-        <dl className="mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
-          {homeFaqs.map((f, i) => (
-            <div key={f.q} className="grid gap-4 border-b py-10 md:grid-cols-12 md:gap-8 md:py-12" style={{ borderColor: T.rule }}>
-              <dt className="md:col-span-5">
-                <span className="block text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-                  {String(i + 1).padStart(2, "0")}
+        <div className="mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
+          {faqs.map((f, i) => (
+            <details key={f.q} className="faq-item border-b" style={{ borderColor: T.rule }} open={i === 0}>
+              <summary className="faq-summary flex cursor-pointer list-none items-start justify-between gap-6 py-10 md:py-12">
+                <span className="flex gap-5 md:gap-8">
+                  <span className="shrink-0 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
+                    {f.q}
+                  </span>
                 </span>
-                <span className="mt-3 block" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
-                  {f.q}
-                </span>
-              </dt>
-              <dd className="max-w-[44rem] text-[17px] leading-[1.7] md:col-span-6 md:col-start-7" style={{ color: T.body }}>
+                <ChevronDown className="faq-chevron mt-2 h-5 w-5 shrink-0" style={{ color: T.quiet }} aria-hidden="true" />
+              </summary>
+              <p className="max-w-[44rem] pb-10 pl-[3.2rem] text-[17px] leading-[1.7] md:pb-12 md:pl-[4.5rem]" style={{ color: T.body }}>
                 {f.a}
-              </dd>
-            </div>
+              </p>
+            </details>
           ))}
-        </dl>
+        </div>
       </div>
+
+      <style>{`
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-chevron { transition: transform .3s ease; }
+        .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+        @media (prefers-reduced-motion: reduce) { .faq-chevron { transition: none; } }
+      `}</style>
     </section>
   );
 }
