@@ -49,8 +49,8 @@ export default function FoundersDark() {
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5 lg:col-start-8" style={{ color: T.onDarkQuiet }}>
             When you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts
-            and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice,
-            no account managers, no white-label outsourcing.
+            are US-based, delivered remotely, with dedicated support: a founder replies, not a bot or an outsourced
+            agent. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.
           </p>
         </div>
 

@@ -79,8 +79,32 @@ export default function AskAssistant() {
   useEffect(() => {
     if (!open) return;
     panelInputRef.current?.focus();
+    // Focus trap, mirrored from QuoteModal.tsx's proven implementation: Tab
+    // and Shift+Tab loop within the panel instead of escaping to the page
+    // behind it. Flagged in a design review (26 Sep) -- this dialog had
+    // role="dialog"/aria-modal but no actual trap, so a keyboard user could
+    // tab straight through it into the background.
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
+      if (e.key === "Escape") {
+        close();
+        return;
+      }
+      if (e.key !== "Tab" || !panelRef.current) return;
+      const focusable = Array.from(
+        panelRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => el.getClientRects().length > 0);
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
@@ -185,7 +209,7 @@ export default function AskAssistant() {
             e.preventDefault();
             ask(input);
           }}
-          className="flex items-center gap-2 rounded-full py-1.5 pl-5 pr-1.5"
+          className="flex items-center gap-2 rounded-full py-1.5 pl-5 pr-1.5 ring-2 ring-transparent ring-offset-2 transition-shadow focus-within:ring-[#AD3D0B]"
           style={{ backgroundColor: "rgba(28,25,23,0.06)" }}
         >
           <label htmlFor="assistant-inline" className="sr-only">
@@ -323,7 +347,7 @@ export default function AskAssistant() {
               }}
               className="px-6 pb-4 pt-2 sm:px-8"
             >
-              <div className="flex items-end gap-2 border bg-[#F5F4F0] p-2" style={{ borderColor: "rgba(28,25,23,0.2)" }}>
+              <div className="flex items-end gap-2 border border-[rgba(28,25,23,0.2)] bg-[#F5F4F0] p-2 transition-colors focus-within:border-[#AD3D0B]">
                 <label htmlFor="assistant-panel" className="sr-only">
                   Write a message
                 </label>
