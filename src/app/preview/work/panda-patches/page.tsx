@@ -5,6 +5,7 @@ import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import CalculatorToggle from "@/components/redesign/case-study/CalculatorToggle";
+import EditorScrollDeck from "@/components/redesign/case-study/EditorScrollDeck";
 import { requiredMetric } from "@/data/case-study-facts";
 import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
@@ -178,32 +179,29 @@ export default function PandaPatchesCaseStudyPreview() {
 
       {/* ── 2. How people use it (moved earlier, owner's call: content
           ownership is the thing most visitors to THIS site are actually
-          checking for, more than any one client's calculator mechanics) ── */}
-      <section className="px-6 py-20 md:px-10 md:py-28" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[900px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
-          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", lineHeight: 1.1 }}>
+          checking for, more than any one client's calculator mechanics).
+          Charcoal, matching the homepage's dark-section treatment -- owner's
+          call, 27 Sep 2026, after the first pass left this on paper while the
+          rest of the dark sections (storefront->ops, next step) used T.dark.
+          Three real Sanity Studio screenshots now, not one: the homepage
+          process copy, a blog post, and a bulk case-study page, walked
+          through with EditorScrollDeck as the reader scrolls. ── */}
+      <section className="px-6 py-20 md:px-10 md:py-28" style={{ backgroundColor: T.dark, color: T.onDark }}>
+        <div className="mx-auto max-w-[1100px]">
+          <span style={{ fontFamily: MONO, color: T.onDarkAccent, fontSize: "13px" }}>02</span>
+          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", lineHeight: 1.1 }}>
             The team edits it themselves.
           </h2>
+          <p className="mt-4 max-w-[36rem] text-[15px] leading-[1.7]" style={{ color: T.onDarkQuiet }}>
+            This is Sanity Studio, the real editor behind the storefront. No deploy, no developer — the team opens
+            it directly for copy, a new blog post, or a new case study.
+          </p>
 
-          <figure className="mt-10">
-            <Image
-              src="/work/panda-patches-editor.png"
-              alt="The Sanity Studio content editor, open on the homepage's process section: a heading, a sub-heading and three ordered steps."
-              width={1920}
-              height={902}
-              sizes="(min-width: 900px) 820px, 100vw"
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-            <figcaption className="mt-3 max-w-[36rem] text-[14px] leading-[1.6]" style={{ color: T.quiet }}>
-              This is Sanity Studio, the real editor, open on the homepage&apos;s &ldquo;how we make your patches&rdquo;
-              section. The team rewrites headings, swaps the step order, or updates a sub-heading here directly — no
-              deploy, no developer.
-            </figcaption>
-          </figure>
+          <div className="mt-12">
+            <EditorScrollDeck />
+          </div>
 
-          <p className="mt-10 max-w-[36rem] text-[15px] leading-[1.7]" style={{ color: T.body }}>
+          <p className="mt-4 max-w-[36rem] text-[15px] leading-[1.7]" style={{ color: T.onDarkQuiet }}>
             Customers get a portal of their own too — order history, tracking, and a one-click reorder at the price
             they paid before. It&apos;s behind a login, so there&apos;s no public screen to show yet; that&apos;s the
             one part of this build we&apos;re describing rather than picturing.
