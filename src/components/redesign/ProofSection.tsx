@@ -109,28 +109,28 @@ export default function ProofSection() {
           {rest.map((r, i) => (
             <li
               key={r.id}
-              className="flex flex-col justify-between gap-8 border-b py-8 md:px-6 md:first:pl-0 lg:border-b-0"
+              className="proof-card flex flex-col justify-between gap-8 rounded-[4px] border-b py-8 md:px-6 md:first:pl-0 lg:border-b-0"
               style={{ borderColor: T.rule, borderLeft: i > 0 ? `1px solid ${T.rule}` : undefined }}
             >
-              <blockquote className="text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY_SM, color: T.ink }}>
+              <blockquote className="proof-quote text-[19px] leading-[1.5]" style={{ fontFamily: DISPLAY_SM, color: T.ink }}>
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
-              <div className="text-[14px]" style={{ color: T.body }}>
-                <p style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
+              <div className="proof-meta text-[14px]" style={{ color: T.body }}>
+                <p className="proof-name" style={{ color: T.ink, fontWeight: 600 }}>{r.name}</p>
                 {r.caseStudy && SITE_BY_CASE[r.caseStudy] && (
                   <p className="mt-1">
-                    <Link href={r.caseStudy} style={{ color: T.ink }}>
+                    <Link href={r.caseStudy} className="proof-name" style={{ color: T.ink }}>
                       Website: {SITE_BY_CASE[r.caseStudy]}
                     </Link>
                   </p>
                 )}
                 <p className="mt-1">
-                  <a href={r.href} target="_blank" rel="noopener noreferrer" style={{ color: T.accentText }}>
+                  <a href={r.href} target="_blank" rel="noopener noreferrer" className="proof-source" style={{ color: T.accentText }}>
                     {r.platform}, {r.date}
                     <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </p>
-                <p className="mt-2 text-[11px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+                <p className="proof-badge mt-2 text-[11px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
                   {badge(r)}
                 </p>
               </div>
@@ -178,6 +178,15 @@ export default function ProofSection() {
       <style>{`
         .proof-btn { transition: background-color .25s ease, color .25s ease; }
         .proof-btn:hover, .proof-btn:focus-visible { background-color: ${T.ink}; color: ${T.paper} !important; }
+        .proof-card { transition: background-color .35s ease; }
+        .proof-card :is(.proof-quote, .proof-name, .proof-meta, .proof-badge, .proof-source) { transition: color .35s ease; }
+        .proof-card:hover, .proof-card:focus-within { background-color: ${T.dark}; }
+        .proof-card:hover .proof-quote, .proof-card:focus-within .proof-quote,
+        .proof-card:hover .proof-name, .proof-card:focus-within .proof-name { color: ${T.onDark} !important; }
+        .proof-card:hover .proof-meta, .proof-card:focus-within .proof-meta,
+        .proof-card:hover .proof-badge, .proof-card:focus-within .proof-badge { color: ${T.onDarkQuiet} !important; }
+        .proof-card:hover .proof-source, .proof-card:focus-within .proof-source { color: ${T.onDarkAccent} !important; }
+        @media (prefers-reduced-motion: reduce) { .proof-card, .proof-card * { transition: none !important; } }
       `}</style>
     </section>
   );

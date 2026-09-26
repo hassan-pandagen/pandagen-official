@@ -113,7 +113,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
         />
 
       <section className="relative">
-        <div className="relative mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-between gap-12 px-6 pb-12 pt-28 md:px-10 lg:pt-28">
+        <div className="relative mx-auto flex min-h-[88svh] max-w-[1600px] flex-col justify-between gap-12 px-6 pb-16 pt-28 md:px-10 lg:pt-28">
           {/* The headline carries the page, as on grigoletti.ch: full width, huge.
               Words unchanged from the live hero (positioning decision, 15 Sep). */}
           <h1

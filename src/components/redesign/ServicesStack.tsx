@@ -159,8 +159,8 @@ export default function ServicesStack() {
       <div className="mx-auto max-w-[1440px]">
         <h2
           id="services-title"
-          className="max-w-[18ch]"
-          style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
+          className="max-w-[32ch]"
+          style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
         >
           Engineered around how your business runs, and what can break.
         </h2>
