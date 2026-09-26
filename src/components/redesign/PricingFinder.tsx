@@ -22,11 +22,15 @@ const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 // says, so a person reads them.
 // What changed from the first pass: it was flagged as needing a fresher look.
 // The step progress is now a mono index (01/02/03) instead of plain dashes,
-// matching the numbering used in Work/Services/Faq. Each option row now
-// carries its own mono index too. The final CTA carries the founder avatar
-// pair used in the hero and footer ("Talk to the founders") -- the promise
-// this section makes is literally "a founder replies with a price," so the
-// same two faces belong on the button that sends it.
+// matching the numbering used in Work/Services/Faq. The final CTA carries
+// the founder avatar pair used in the hero and footer ("Talk to the
+// founders") -- the promise this section makes is literally "a founder
+// replies with a price," so the same two faces belong on the button that
+// sends it.
+// 26 Sep: each option row briefly carried its own mono index too, alongside
+// the step progress above -- two numbering systems for two different things
+// (which question vs. which answer) read as redundant. Dropped the
+// per-option index; the step progress is the one that actually orients you.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function PricingFinder() {
@@ -112,18 +116,15 @@ export default function PricingFinder() {
                 {steps[step].q}
               </h3>
               <ul className="mt-8 border-t" style={{ borderColor: T.rule }}>
-                {steps[step].options.map((opt, i) => (
+                {steps[step].options.map((opt) => (
                   <li key={opt.label} className="border-b" style={{ borderColor: T.rule }}>
                     <button
                       type="button"
                       onClick={() => choose(opt)}
-                      className="finder-opt flex w-full items-center gap-6 rounded-[4px] py-5 text-left text-[18px]"
+                      className="finder-opt flex w-full items-center justify-between gap-6 rounded-[4px] py-5 text-left text-[18px]"
                       style={{ color: T.ink }}
                     >
-                      <span className="finder-opt-num shrink-0 text-[13px]" style={{ fontFamily: MONO, color: T.quiet }}>
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="flex-1">{opt.label}</span>
+                      {opt.label}
                       <ArrowRight className="h-5 w-5 shrink-0" aria-hidden="true" />
                     </button>
                   </li>
@@ -199,7 +200,6 @@ export default function PricingFinder() {
       <style>{`
         .finder-opt { transition: background-color .3s ease, color .3s ease, padding .3s ease; }
         .finder-opt:hover, .finder-opt:focus-visible { background-color: ${T.dark}; color: ${T.onDark} !important; padding-left: 18px; padding-right: 18px; }
-        .finder-opt:hover .finder-opt-num, .finder-opt:focus-visible .finder-opt-num { color: ${T.onDarkQuiet} !important; }
         .finder-cal { border-color: ${T.ink}; color: ${T.ink}; }
         .finder-step { animation: finder-in .45s cubic-bezier(.2,.7,.2,1) both; }
         @keyframes finder-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
