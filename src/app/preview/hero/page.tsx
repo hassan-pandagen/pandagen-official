@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Anton } from "next/font/google";
-import SiteNav from "@/components/layout/SiteNav";
+import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import AskAssistant from "@/components/assistant/AskAssistant";
 import PaperShader from "@/components/visual/PaperShader";
@@ -21,7 +20,6 @@ import PricingFinder from "@/components/redesign/PricingFinder";
 import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
-import SiteFooter from "@/components/redesign/SiteFooter";
 import { T } from "@/components/redesign/tokens";
 
 // PREVIEW ONLY, 23 Sep 2026. A redesign candidate for the homepage hero, built
@@ -35,25 +33,10 @@ import { T } from "@/components/redesign/tokens";
 // with an italic accent word, no pill label, no grid texture, no hero form.
 // The form's removal is the open question for the owner, not a settled change.
 
-// Zodiak, Indian Type Foundry, ITF Free Font License v2.0 (17 Aug 2026):
-// free for commercial use on our own site. Loaded from Fontshare's CDN on
-// purpose, NOT self-hosted: this repo is public on GitHub, and the licence
-// forbids making the font files available through "a repository" or any
-// "publicly accessible servers" beyond our own site's use. If the repo goes
-// private, self-hosting the shipped woff2 unmodified is allowed and faster.
-// The licence also forbids subsetting or converting the files, so do not run
-// them through a font tool if they are ever self-hosted.
-const ZODIAK_CSS = "https://api.fontshare.com/v2/css?f[]=zodiak@700&display=swap";
-
 export const metadata: Metadata = {
   title: "Hero preview",
   robots: { index: false, follow: false },
 };
-
-// Heading font (owner, 24 Sep): Anton by default after comparing against
-// grigoletti.ch; ?font=zodiak shows the serif version. Anton is OFL, so next/font self-hosts it with no licence issue.
-// Anton ships one weight; font-synthesis:none stops the browser faking a bold.
-const anton = Anton({ subsets: ["latin"], weight: "400", display: "swap", variable: "--font-anton" });
 
 const INK = T.ink;
 const BODY = T.body;
@@ -69,17 +52,12 @@ const grain =
 
 export default async function HeroPreview({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   const condensed = (await searchParams).font !== "zodiak";
-  const fontVars = condensed
-    ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)", "--hero-size": "clamp(3.4rem, 8.4vw, 10rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
-    : { "--display": "Zodiak", "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
+  const heroVars = condensed
+    ? { "--hero-size": "clamp(3.4rem, 8.4vw, 10rem)", "--hero-lh": "0.9", "--hero-ls": "-0.01em" }
+    : { "--hero-size": "clamp(3rem, 8.6vw, 10.4rem)", "--hero-lh": "0.94", "--hero-ls": "-0.03em" };
   return (
-    <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
-      <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
-      <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
-      <SiteNav />
-      <main style={{ backgroundColor: T.paper }}>
-
-      <div className="relative overflow-hidden">
+    <PreviewShell condensed={condensed}>
+      <div className="relative overflow-hidden" style={heroVars as React.CSSProperties}>
         {/* Paper and light: a warm wash from the top left, a soft fold of shadow
             across the right, and grain over both. No image request. */}
         <div
@@ -201,15 +179,6 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <FoundersDark />
       <FaqOpen />
       <GuidesList />
-      </main>
-      <SiteFooter />
-      {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
-      <style>{`
-        [data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }
-        .cta-solid { transition: background-color .3s ease, color .3s ease; }
-        .cta-solid:hover, .cta-solid:focus-visible { background-color: ${T.accent} !important; color: #FFFFFF !important; }
-        @media (prefers-reduced-motion: reduce) { .cta-solid { transition: none; } }
-      `}</style>
-    </div>
+    </PreviewShell>
   );
 }
