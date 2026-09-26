@@ -277,16 +277,16 @@ export default function MetaCAPISetupCostPage() {
 
                     <BlogHeader>A practical discovery worksheet</BlogHeader>
                     <BlogText>
-                        Acceptance, cure, support and change-control terms get written before a price is attached, not after. Six things fill in first: each event with its trigger and authoritative record, the shared event ID used for deduplication, every customer parameter mapped to source and permission, the delivery route with its recurring charges named, and the reconciliation tolerance you will accept. A quote produced without these is pricing a different project.
+                        Before asking for a price, agree what will be tracked, which business records will be used to check it, and how you will know the work is complete. The worksheet below also covers permission to send customer information, recurring costs, support and the process for fixing failed checks. These details let you compare quotes for the same work.
                     </BlogText>
                     <BlogList
                         items={[
-                            "List each event, its trigger and its authoritative record, including cancellation, refund and test-event rules.",
+                            "List each tracked action, what triggers it and which record confirms it happened. Include rules for cancellations, refunds and test activity.",
                             "Record the browser event name, server event name and shared event ID used for deduplication.",
                             "Map every customer-information parameter to its source, normalization, permission and transmission rule.",
                             "Choose direct, partner or gateway delivery and name every processor, account owner and recurring charge.",
-                            "Define Test Events evidence, production reconciliation tolerance, alerting, logs and retry limits.",
-                            "Write acceptance, cure, support and change-control terms before attaching a price.",
+                            "Agree what to demonstrate in Test Events, how closely live tracking must match business records, who receives alerts and how failed deliveries are recorded and retried.",
+                            "Agree the sign-off checks, the time allowed to fix failures, the support included and how later changes will be priced.",
                         ]}
                     />
 
@@ -563,9 +563,9 @@ export default function MetaCAPISetupCostPage() {
                         ]}
                     />
 
-                    <BlogHeader>Acceptance evidence</BlogHeader>
+                    <BlogHeader>What to check before signing off the work</BlogHeader>
                     <BlogText>
-                        Never double-counts is not a responsible guarantee, so acceptance is demonstrated rather than asserted. Six artifacts do it: a signed event matrix matching what was deployed, consent and suppression tested per region, browser and server examples visible in Test Events, production events reconciling to the source of truth within a written tolerance, duplicate and refund behavior shown working, and the secrets, monitoring and change ownership handed over.
+                        Ask the developer to demonstrate how duplicates, refunds and failures are handled. Compare live tracking with your business records over an agreed period, and check that customer permission is respected. The evidence below should show what was built, whether it passed the agreed tests and who maintains it after handover.
                     </BlogText>
                     <BlogList
                         items={[

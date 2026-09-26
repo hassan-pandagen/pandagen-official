@@ -1,0 +1,17 @@
+Item,Provider or invoice,Monthly recurring USD,Annual-only USD,One-time USD,Annual variable fees USD,Internal hours per year,Internal hourly cost USD,Renewal date,Notes
+Site plan,,,,,,,,,Enter an annual subscription in the annual-only column OR its monthly equivalent in monthly recurring; not both
+Workspace allocation,,,,,,,,,Allocate a shared Workspace once; do not add a Site plan already included in Team
+Additional seats,,,,,,,,,Subtract access included in your arrangement
+Webflow add-ons and bandwidth,,,,,,,,,Use the current usage tier and next renewal terms
+Domain renewal,,,,,,,,,Annual-only charge
+Business email,,,,,,,,,Include only the share attributable to the website decision
+CRM or automation,,,,,,,,,Record the workflow before cancelling
+Forms or search vendor,,,,,,,,,Mark included services as zero
+Membership or other tools,,,,,,,,,Mark unused services as zero
+Design or build work,,,,,,,,,One-time quote; separate from subscription
+Maintenance and changes,,,,,,,,,Do not duplicate internal hours as supplier spend
+Commerce and payment fees,,,,,,,,,Use eligible sales and processor statements
+Tax,,,,,,,,,Use applicable tax for your invoices
+Internal work,,,,,,,,,Hours multiplied by chosen hourly cost; keep separate from cash spend
+METHOD,,,,,,,,,Annual cash = 12 times monthly recurring + annual-only + one-time + annual variable fees
+METHOD,,,,,,,,,Ownership total = annual cash + internal hours per year times internal hourly cost

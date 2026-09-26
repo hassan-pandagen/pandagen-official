@@ -96,6 +96,8 @@ remotion/assets/*.mov
 
 # GSC + AirOps + analytics exports (never commit; data is local-only research)
 *.csv
+# Public blank worksheet, with no analytics or customer records.
+!public/resources/webflow-cost-worksheet.csv
 GSC/
 airops/
 exports/

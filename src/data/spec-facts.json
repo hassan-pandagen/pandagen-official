@@ -79,8 +79,8 @@
       "plan": "Basic",
       "label": "Basic site plan price",
       "value": "$15 a month",
-      "qualifier": "billed yearly, per site, plus tax; custom domain, 300 static pages, 10 GB bandwidth. The monthly-billing toggle did not re-render when this was read, so no monthly figure is verified",
-      "verifiedAt": "2026-08-05",
+      "qualifier": "USD; billed yearly, per site, plus tax; custom-domain Site plan without CMS. Monthly billing is recorded separately.",
+      "verifiedAt": "2026-09-25",
       "source": "https://webflow.com/pricing"
     },
     "webflow-premium-price": {
@@ -88,8 +88,8 @@
       "plan": "Premium",
       "label": "Premium site plan price",
       "value": "$25 a month",
-      "qualifier": "billed yearly, per site, plus tax; the tier that adds the CMS, site search and code components. Previously named the CMS plan",
-      "verifiedAt": "2026-08-05",
+      "qualifier": "USD; base rate billed yearly, per site, plus tax; includes CMS. Usage tiers and extras can change the total.",
+      "verifiedAt": "2026-09-25",
       "source": "https://webflow.com/pricing"
     },
     "webflow-team-price": {
@@ -98,7 +98,7 @@
       "label": "Team platform plan price",
       "value": "$2,500 a month",
       "qualifier": "USD; annual contract required. Includes a site and Workspace. Additional sites and extras must be agreed with Webflow sales; the included site does not require a separate Site plan charge",
-      "verifiedAt": "2026-09-18",
+      "verifiedAt": "2026-09-25",
       "source": "https://webflow.com/pricing"
     },
     "webflow-optimize-addon": {
@@ -516,6 +516,42 @@
       "qualifier": "Availability depends on plan and settings. Users review, apply and publish changes. These recommendations do not establish enquiry delivery, payment correctness or other business outcomes. Documentation review, not a tested project outcome",
       "verifiedAt": "2026-09-17",
       "source": "https://help.webflow.com/hc/en-us/articles/51704193319955-AEO-agents-overview"
+    },
+    "webflow-basic-monthly-price": {
+      "vendor": "Webflow",
+      "plan": "Basic",
+      "label": "Basic plan price",
+      "value": "$25 a month",
+      "qualifier": "USD; monthly billing, per site, plus tax; existing-account renewal terms can differ.",
+      "verifiedAt": "2026-09-25",
+      "source": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026"
+    },
+    "webflow-premium-monthly-price": {
+      "vendor": "Webflow",
+      "plan": "Premium",
+      "label": "Premium plan price",
+      "value": "$39 a month",
+      "qualifier": "USD; base rate on monthly billing, per site, plus tax; usage tiers and extras can change the total.",
+      "verifiedAt": "2026-09-25",
+      "source": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026"
+    },
+    "webflow-core-price": {
+      "vendor": "Webflow",
+      "plan": "Core",
+      "label": "Core plan price",
+      "value": "$19 a month",
+      "qualifier": "USD; in-house Workspace plan billed yearly, plus tax. Additional paid seats and published Site plans are separate.",
+      "verifiedAt": "2026-09-25",
+      "source": "https://webflow.com/pricing"
+    },
+    "webflow-growth-price": {
+      "vendor": "Webflow",
+      "plan": "Growth",
+      "label": "Growth plan price",
+      "value": "$49 a month",
+      "qualifier": "USD; in-house Workspace plan billed yearly, plus tax. Additional paid seats and published Site plans are separate.",
+      "verifiedAt": "2026-09-25",
+      "source": "https://webflow.com/pricing"
     }
   }
 }

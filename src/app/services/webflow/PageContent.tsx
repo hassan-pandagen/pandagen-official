@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/components/ui/motion";
-import { CheckCircle2, ArrowRight, Zap, ShieldCheck, DollarSign, Code2, Gauge, Server, Database, Globe, FileSearch, Wrench, HelpCircle } from "lucide-react";
+import { CheckCircle2, ArrowRight, Zap, ShieldCheck, DollarSign, Code2, Gauge, Database, Globe, FileSearch, Wrench, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -9,6 +9,7 @@ import ReadingProgressBar from "@/components/ui/ReadingProgressBar";
 import PricingTiers from "@/components/services/PricingTiers";
 import RelatedServicesGrid from "@/components/services/RelatedServicesGrid";
 import { serviceFaqs } from "@/data/service-faqs";
+import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 
 const faqData = serviceFaqs["webflow"];
 
@@ -34,9 +35,9 @@ export default function WebflowPageContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-[2rem] sm:text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight md:tracking-tighter mb-4 leading-[1.1] md:leading-[1.05] break-words"
           >
-            Get more from your{" "}
+            Webflow optimization{" "}
             <span className="font-serif font-normal italic text-cognac md:block">
-              Webflow website.
+              and migration services.
             </span>
           </motion.h1>
 
@@ -55,13 +56,19 @@ export default function WebflowPageContent() {
               onClick={() => { if (typeof window !== "undefined") { (window as any).gtag?.("event","cta_click",{cta:"tell_us_about_project",location:"service_page"}); window.dispatchEvent(new Event("open-quote-modal")); } }}
               className="px-8 py-4 bg-charcoal text-white font-bold rounded-full hover:bg-cognac transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
-              Ask about your Webflow site <ArrowRight className="w-5 h-5" />
+              Talk to a founder about Webflow <ArrowRight className="w-5 h-5" />
             </button>
             <Link href="#when-to-migrate" className="px-8 py-4 bg-white border border-cognac/30 text-cognac font-bold rounded-full hover:bg-cognac hover:text-white transition-all flex items-center justify-center gap-2">
               What we can help with <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
           <p className="text-sm text-stone-600 mt-4 text-center max-w-xl mx-auto leading-relaxed">Share your Webflow address and what you need it to do. A founder will reply with the next step. Any paid work is scoped and quoted before it starts.</p>
+          <nav aria-label="Webflow service sections" className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-cognac underline underline-offset-4">
+            <a href="#review-deliverables">What we check</a>
+            <a href="#migration-scope">What moves to Next.js</a>
+            <a href="#relevant-work">Relevant work</a>
+            <a href="#pricing">Rebuild pricing</a>
+          </nav>
         </div>
       </section>
 
@@ -71,7 +78,7 @@ export default function WebflowPageContent() {
           <div className="text-center mb-8 md:mb-12">
             <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-4">What needs to work better?</p>
             <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Webflow problems we can help you assess</h2>
-<p className="mb-6 text-base leading-7 text-stone-600">Check before deciding to rebuild. Our <Link href="/free-audit" className="font-semibold underline underline-offset-4">free website audit</Link> explains the technical findings and offers a free founder review.</p>
+            <p className="mb-6 text-base leading-7 text-stone-600">Start with our <Link href="/free-audit" className="font-semibold underline underline-offset-4">free website audit</Link> for public technical checks and an optional founder review. Private CMS, billing and CRM checks need access and a separately agreed scope.</p>
             <p className="text-stone-600 max-w-2xl mx-auto">
               Start with the issue you are seeing. We check what is causing it and what can be improved in your current setup before pricing a rebuild.
             </p>
@@ -99,7 +106,7 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 px-6 bg-white">
+      <section id="review-deliverables" className="scroll-mt-24 py-12 md:py-16 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-8">The right amount of work for your site</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -119,13 +126,23 @@ export default function WebflowPageContent() {
             </div>
           </div>
           <p className="text-center text-sm text-stone-600 mt-7">Explore our <Link href="/work" className="text-cognac underline underline-offset-4">website and software work</Link>, or read <Link href="/blog/webflow-vs-custom-website" className="text-cognac underline underline-offset-4">when Webflow or custom development makes sense</Link>.</p>
+          <div className="mt-10 rounded-2xl border border-stone-200 p-6 md:p-8">
+            <h3 className="text-2xl font-bold text-charcoal mb-4">What a scoped Webflow review gives you</h3>
+            <p className="text-stone-600 leading-relaxed mb-5">You need a decision you can act on. We agree the pages and workflows to investigate, then document the finding, the proposed work and how we will check the result. For example:</p>
+            <dl className="space-y-5 text-sm leading-relaxed">
+              <div><dt className="font-bold text-charcoal">A slow product or landing page</dt><dd className="text-stone-600">Identify the image, animation, embed or script contributing to the delay. Record the test conditions and compare the same page after the agreed change; a framework switch is not the starting assumption.</dd></div>
+              <div><dt className="font-bold text-charcoal">An enquiry missing from your CRM</dt><dd className="text-stone-600">Follow a labelled test submission through the form, notification and integration. Check failure handling and duplicate records with the tools your site uses, then agree who owns future failures.</dd></div>
+              <div><dt className="font-bold text-charcoal">A CMS that is difficult to publish into</dt><dd className="text-stone-600">Walk through an actual publishing task with your editor. Compare a collection or template change with a different CMS, including preview, permissions and training.</dd></div>
+            </dl>
+            <p className="mt-5 text-sm text-stone-600">These are examples of review scope, not claims about defects on your site. Access, deliverables and any fee are agreed first.</p>
+          </div>
         </div>
       </section>
 
       {/* 5. HOW WE MIGRATE */}
       <section className="py-12 md:py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How We Migrate Your Webflow Site</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">How a Webflow to Next.js migration works</h2>
           <p className="text-stone-600 text-center mb-8 md:mb-16 max-w-2xl mx-auto">If a move is the right fit, these four stages cover the rebuild. Your quote lists the content and integrations included, the dates, and the checks before launch.</p>
 
           <div className="grid md:grid-cols-4 gap-6 relative">
@@ -220,37 +237,48 @@ export default function WebflowPageContent() {
         </div>
       </section>
 
-      {/* 6. WHAT YOU GET */}
-      <section className="py-10 md:py-14 px-6 border-y border-stone-200 bg-stone-50">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-cognac/20 text-sm text-cognac mb-6">
-            <Code2 className="w-4 h-4" /> What You Get
+      <section id="migration-scope" className="scroll-mt-24 py-12 md:py-16 px-6 border-y border-stone-200 bg-stone-50">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-5">What moves from Webflow, and what needs rebuilding?</h2>
+          <p className="text-stone-600 leading-relaxed mb-8">A code export can help recover the presentation. It does not deliver a complete Next.js application. We agree a destination and a launch check for each part of your site, including what your team will edit afterwards.</p>
+          <div className="overflow-x-auto rounded-xl border border-stone-200 bg-white" tabIndex={0} role="region" aria-label="Webflow migration scope and launch checks">
+            <table className="w-full min-w-[640px] text-left text-sm">
+              <thead className="bg-stone-100"><tr><th scope="col" className="p-4">Part of your site</th><th scope="col" className="p-4">Work to agree</th><th scope="col" className="p-4">Check before launch</th></tr></thead>
+              <tbody className="divide-y divide-stone-200 text-stone-600">
+                {[
+                  ["Pages and CMS collections", "Map layouts, fields, references, slugs and media into the chosen editor.", "Reconcile scoped records and URLs; review representative templates with real content."],
+                  ["Search visibility", "Carry across relevant titles, descriptions, canonicals and structured data; map changed URLs.", "Crawl the preview and test redirects, sitemap entries and indexability. Rankings cannot be guaranteed."],
+                  ["Forms and CRM", "Replace form processing and reconnect the agreed destinations.", "Submit an approved test enquiry; confirm delivery and failure handling."],
+                  ["Search, languages and restricted pages", "Choose replacement search, locale routes and access controls where required.", "Test searches, language links and both permitted and denied access."],
+                  ["Editing and operations", "Set up publishing, access, hosting and handover responsibilities.", "Have your editor complete an agreed task and confirm who owns support and recurring bills."],
+                ].map(([part, work, check]) => <tr key={part}><th scope="row" className="p-4 font-semibold text-charcoal">{part}</th><td className="p-4">{work}</td><td className="p-4">{check}</td></tr>)}
+              </tbody>
+            </table>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-6">
-            Define What the Replacement Must Do.
-          </h2>
-          <p className="text-stone-600 text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
-            A custom build gives you control Webflow does not. Your written quote says what speed we hit, what it costs to run each month, what support you get, and that the code is yours at the end.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {[
-              { icon: Gauge, title: "Measured Experience", desc: "Define visual, responsive, accessibility, and performance acceptance checks for representative pages and interactions." },
-              { icon: Server, title: "Scoped Application Logic", desc: "Assess authentication, payments, data, and API integrations against security, provider, and operational requirements." },
-              { icon: DollarSign, title: "Documented Operating Model", desc: "Estimate hosting and connected services, then state maintenance, support, repository access, licensing, and handover responsibilities." },
-            ].map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-stone-50 border border-stone-200 hover:border-cognac/30 transition-colors group">
-                <div className="w-12 h-12 rounded-xl bg-stone-50 flex items-center justify-center mb-4 group-hover:bg-stone-100 transition-colors">
-                  <item.icon className="w-6 h-6 text-cognac" />
-                </div>
-                <h3 className="text-lg font-bold text-charcoal mb-2">{item.title}</h3>
-                <p className="text-stone-600 text-base leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-5 text-sm text-stone-600">Webflow documents its <a href="https://help.webflow.com/hc/en-us/articles/33961386739347-How-do-I-export-my-Webflow-site-code" className="text-cognac underline underline-offset-4">code export exclusions</a>. Existing CMS data may have a separate export path; transferring the data and rebuilding the feature are different tasks. Your quote names which are included.</p>
         </div>
       </section>
 
+      <section id="relevant-work" className="scroll-mt-24 py-12 md:py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-5">Relevant CMS and integration work</h2>
+          <p className="text-stone-600 leading-relaxed mb-8">These projects show our work with editors and connected systems. Both started on WordPress; they are not Webflow migration case studies. Your Webflow content and export requirements still need their own assessment.</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-stone-200 p-6">
+              <h3 className="text-xl font-bold text-charcoal mb-3">Panda Patches</h3>
+              <p className="text-sm text-cognac mb-3">Live ? Founder-affiliated business</p>
+              <p className="text-stone-600 text-sm leading-relaxed">{MIGRATION_PROJECT_DETAILS.pandaPatches.summary}</p>
+              <Link href="/work/panda-patches" className="inline-block mt-4 text-cognac underline underline-offset-4">See the editor, storefront and integration scope</Link>
+            </div>
+            <div className="rounded-2xl border border-stone-200 p-6">
+              <h3 className="text-xl font-bold text-charcoal mb-3">Ladies 4 Jesus</h3>
+              <p className="text-sm text-cognac mb-3">Live ? WordPress rebuild</p>
+              <p className="text-stone-600 text-sm leading-relaxed">{MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary}</p>
+              <Link href="/work/ladies-4-jesus" className="inline-block mt-4 text-cognac underline underline-offset-4">See the publishing and moderation workflow</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-paper py-12 md:py-16">
         <div className="mx-auto max-w-5xl px-6">
@@ -264,10 +292,10 @@ export default function WebflowPageContent() {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             {[
-              { h: "How many templates, not how many pages", b: "Two hundred pages built from eleven templates is a smaller job than forty pages each laid out by hand. Count the distinct layouts before you count URLs." },
-              { h: "How much of the CMS is relational", b: "Flat collections port cleanly. Multi-reference fields, nested collections and anything driving conditional visibility have to be modelled again, and that is design work rather than export work." },
-              { h: "What the interactions are load-bearing for", b: "A scroll animation is decoration. An interaction that gates a form step or drives a pricing calculator is application logic in an animation costume, and it gets rebuilt." },
-              { h: "Which integrations hold state", b: "Embeds are cheap to move. Anything storing member data, orders or submissions inside Webflow needs an export path confirmed before a date is agreed, not after." },
+              { h: "How many templates, not how many pages", b: "Count distinct layouts as well as URLs. Repeated templates can reduce design work, but content cleanup, media and integration checks still affect the quote." },
+              { h: "How much of the CMS is relational", b: "Check field types, references, rich text and media. Even a flat collection needs validation; relationships and conditional display rules add mapping and testing work." },
+              { h: "What the interactions do", b: "Record which animations to retain and which interactions control forms, navigation or calculations. Test keyboard access and the underlying business action as well as the appearance." },
+              { h: "Which integrations hold state", b: "Check account access, stored records, API support and credentials. A working embed may be reusable; order, member or submission data needs an agreed transfer and validation path." },
             ].map((x) => (
               <div key={x.h} className="rounded-xl border border-stone-200 bg-white p-6">
                 <h4 className="mb-2 font-bold text-charcoal">{x.h}</h4>
@@ -284,7 +312,7 @@ export default function WebflowPageContent() {
           </p>
           <ul className="space-y-3">
             {[
-              "Hosting, which for a static marketing site is often materially cheaper, and occasionally free at low volume.",
+              "Hosting, with a plan that permits your commercial use and supports the traffic, bandwidth and application features you need.",
               "The CMS, if you take one. Some are free at your size, some are per-seat, and the seat count is what moves it.",
               "Anything Webflow was bundling that you were not costing separately: forms handling, search, localization, analytics.",
               "Maintenance. Dependency updates and security patching do not disappear because the platform did. They change hands.",

@@ -339,10 +339,10 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         actually move onto it, because the answer is sometimes no and it is rarely stated on the page.
                     </InsightBox>
 
-                    <BlogHeader>4. Map capability and data dependencies</BlogHeader>
+                    <BlogHeader>4. Check what relies on each tool before cancelling it</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            This is the section that separates unused from quietly load-bearing. Five surfaces need inventorying before a subscription can safely be touched: what it does, what regulated data it holds, what it is wired into, what you could get out of it, and who knows how to run it. A tool nobody logs into can still be carrying a scheduled job the business depends on.
+                            A tool nobody logs into may still run an important scheduled task. Before cancelling, check what it does, which sensitive records it holds, which systems it connects to, what data you can export and who knows how to run it.
                         </BlogText>
                     </div>
                     <BlogList
@@ -407,7 +407,7 @@ export default function SaasSoftwarePricingAudit2026Page() {
                     />
                     <BlogText>
                         Custom software is not a zero-recurring-cost category. Vercel, Sanity, databases, email,
-                        observability and other dependencies have current plans and terms. A custom system also needs
+                        error-monitoring tools and other connected services have their own plans and terms. A custom system also needs
                         security updates, maintenance, monitoring and support. Build when the requirements and
                         scenarios justify control, not because a monthly threshold guarantees payback. Our note on{" "}
                         <Link href="/blog/nextjs-hosting-zero-cost" className="text-cognac hover:underline font-medium">what a Next.js hosting bill actually contains</Link>{" "}
@@ -417,18 +417,18 @@ export default function SaasSoftwarePricingAudit2026Page() {
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline font-medium">custom engineering</Link> work.
                     </BlogText>
 
-                    <BlogHeader>8. Set change and acceptance controls</BlogHeader>
+                    <BlogHeader>8. Assign someone to check that each change works</BlogHeader>
                     <BlogText>
-                        A decision to cancel is not the same as a saving that sticks. Six controls make it stick: a named owner and rollback trigger per change, exit evidence including deletion, acceptance testing where a replacement is involved, post-change monitoring against a dated baseline, contract-specific remedy for anything custom, and a procurement gate for the next purchase. Without that last one, the spend reappears on someone's expense claim within a quarter.
+                        Before cancelling a tool, name who will check the change and when to restore the previous setup if something fails. Confirm that the data has been moved or deleted as required, test any replacement and compare the results with your starting records. Also agree who approves new subscriptions so the same expense does not quietly return.
                     </BlogText>
                     <BlogList
                         items={[
                             "Named owner, approval, change window, test script, rollback trigger and communication path.",
-                            "Data export, reconciliation, access removal and deletion evidence.",
+                            "Evidence that the required data was exported and checked, old access was removed and agreed deletions were completed.",
                             "Functional, security, accessibility, performance and integration acceptance where relevant.",
                             "Post-change monitoring and a dated comparison with the baseline.",
                             "Contract-specific support, cure and remedy for any custom replacement.",
-                            "An agreed route for buying the next tool: who approves it, which card it goes on, and who adds it to the register. Without that, the spend you just removed reappears on someone's expense claim within a quarter and the audit has to start again.",
+                            "An agreed route for buying the next tool: who approves it, which card pays for it and who records the subscription.",
                         ]}
                     />
                     <BlogText>

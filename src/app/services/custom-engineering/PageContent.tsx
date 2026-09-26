@@ -138,8 +138,8 @@ export default function PageContent() {
                   <Users className="w-8 h-8 text-cognac" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-charcoal mb-3">Internal Tools</h3>
-                  <p className="text-stone-600 text-base leading-relaxed mb-6">Custom dashboards, admin panels, and workflow automation that replace spreadsheets and manual processes with real-time, automated systems.</p>
+                  <h3 className="text-2xl font-bold text-charcoal mb-3">Keep your team working from the same information</h3>
+                  <p className="text-stone-600 text-base leading-relaxed mb-6">When orders, stock and updates live in separate spreadsheets, your team has to piece them together. We can bring the agreed workflows into one place, with access matched to each person&apos;s role. Useful for manufacturers, wholesalers and service teams.</p>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {["Operations & logistics dashboards", "Inventory management systems", "Employee onboarding portals", "Real-time analytics & reporting", "Workflow automation engines", "Custom admin panels"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
@@ -163,10 +163,10 @@ export default function PageContent() {
                   <Cpu className="w-8 h-8 text-cognac" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-charcoal mb-3">AI-Powered Products</h3>
-                  <p className="text-stone-600 text-base leading-relaxed mb-6">OpenAI and Claude integration built natively into your product. Chat with your data, intelligent automation, and AI features that give you a competitive edge.</p>
+                  <h3 className="text-2xl font-bold text-charcoal mb-3">Answer customer questions after hours</h3>
+                  <p className="text-stone-600 text-base leading-relaxed mb-6">Help visitors find answers in your approved guides, policies and FAQs, even when your team is offline. We build RAG chatbots that retrieve relevant business information, with enquiry capture and human follow-up included in the agreed scope. Useful for software companies, equipment suppliers and training providers.</p>
                   <div className="grid sm:grid-cols-2 gap-3">
-                    {["AI chatbots trained on your data", "Automated document processing", "Intelligent search & recommendations", "Content generation engines", "Smart data extraction pipelines", "Conversational interfaces (AI-powered search)"].map((ex, i) => (
+                    {["Answers from approved business documents", "Source links visitors can check", "Questions and contact details for follow-up", "Handoff when an answer is unavailable", "Document search for customers or staff", "Access controls for private information"].map((ex, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-stone-600">
                         <CheckCircle2 className="w-4 h-4 text-cognac mt-0.5 shrink-0" /> {ex}
                       </div>

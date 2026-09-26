@@ -192,6 +192,14 @@ export const serviceFaqs: Record<string, ServiceFaq[]> = {
   ],
   "webflow": [
     {
+      q: "Can you move Webflow CMS content to Next.js?",
+      a: "Yes, with a content model and editor agreed for the replacement. We map the collections, fields, references, media and URLs included in your scope, then validate the transferred records and rendered pages. A Webflow code export alone does not reproduce CMS functionality. Forms, search, languages and restricted content need their own replacement and testing plan where they are in scope.",
+    },
+    {
+      q: "Will a Webflow to Next.js migration preserve my Google rankings?",
+      a: "No supplier can guarantee rankings or indexing. We inventory the existing URLs, preserve suitable addresses, map changed URLs to redirects, carry over relevant metadata and structured data, and check the new site's rendered pages and sitemap. We agree the launch and monitoring plan before switching the domain. These checks reduce avoidable errors; Google still decides what to index and rank.",
+    },
+    {
       q: "Can you improve my Webflow site without migrating it?",
       a: "Yes, where a review shows a feasible fix within Webflow. We can audit performance, forms, connected tools and content workflows, then scope the work around the issue. Current publishing options, a better content model or an integration may be enough. Improvements are quoted separately from a full rebuild; the $1,500 starting price is for a custom rebuild, not every repair. If the requirements justify moving, we explain the migration scope and ongoing costs before you decide.",
     },
