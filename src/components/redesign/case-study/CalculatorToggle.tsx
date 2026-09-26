@@ -1,20 +1,18 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import { MONO, T } from "@/components/redesign/tokens";
 
-// One real interaction on this page, per the design brief: switch between
-// actual screenshots of the two steps the live calculator has today.
+// Side by side, not a click-to-reveal toggle. 27 Sep 2026, owner's call after
+// seeing the first version live: with only two states to show, forcing a
+// click to see the second one added an interaction for its own sake. Side by
+// side shows the whole "configure, then send it" story at a glance, no
+// interaction required to see either image -- and it's a server component
+// again now that there's no state to hold.
+//
 // Screenshots taken live, 27 Sep 2026, walking https://www.pandapatches.com's
 // embroidered-patch calculator: select options, then the form asks for name
 // and email before "Check Best Prices." That second step was NOT clicked
-// (would submit a real name/email into the live lead system) -- the two
+// (would submit a real name/email into the live lead system) -- these two
 // images stop at "configure" and "the submit form", not "price shown".
-//
-// aria-pressed buttons rather than a full tablist pattern: this is a simple
-// two-state toggle, not a widget with arrow-key navigation, and aria-pressed
-// says exactly what it is without half-implementing a bigger pattern.
 const STEPS = [
   {
     key: "configure",
@@ -31,44 +29,16 @@ const STEPS = [
 ];
 
 export default function CalculatorToggle() {
-  const [active, setActive] = useState(0);
   return (
-    <div>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Calculator steps">
-        {STEPS.map((s, i) => (
-          <button
-            key={s.key}
-            type="button"
-            aria-pressed={active === i}
-            onClick={() => setActive(i)}
-            className="calc-toggle-btn px-4 py-2 text-[13px] font-medium"
-            style={{
-              fontFamily: MONO,
-              border: `1px solid ${T.rule}`,
-              backgroundColor: active === i ? T.ink : "transparent",
-              color: active === i ? T.paper : T.body,
-            }}
-          >
-            {s.label}
-          </button>
-        ))}
-      </div>
-
-      <div
-        className="relative mt-4 flex items-center justify-center overflow-hidden border"
-        style={{ height: 440, backgroundColor: T.paperHi, borderColor: T.rule }}
-      >
-        <div key={STEPS[active].key} className="calc-toggle-frame relative h-full w-full">
-          <Image src={STEPS[active].src} alt={STEPS[active].alt} fill sizes="(min-width: 768px) 700px, 100vw" className="object-contain" />
+    <div className="grid gap-6 sm:grid-cols-2">
+      {STEPS.map((s) => (
+        <div key={s.key}>
+          <p className="mb-2 text-[13px] font-medium" style={{ fontFamily: MONO, color: T.body }}>{s.label}</p>
+          <div className="relative flex h-[360px] items-center justify-center overflow-hidden border" style={{ backgroundColor: T.paperHi, borderColor: T.rule }}>
+            <Image src={s.src} alt={s.alt} fill sizes="(min-width: 640px) 350px, 100vw" className="object-contain" />
+          </div>
         </div>
-      </div>
-
-      <style>{`
-        .calc-toggle-btn { transition: background-color .2s ease, color .2s ease; }
-        .calc-toggle-frame { animation: calc-fade-in .3s ease; }
-        @keyframes calc-fade-in { from { opacity: 0; } to { opacity: 1; } }
-        @media (prefers-reduced-motion: reduce) { .calc-toggle-btn, .calc-toggle-frame { transition: none; animation: none; } }
-      `}</style>
+      ))}
     </div>
   );
 }

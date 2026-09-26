@@ -176,10 +176,45 @@ export default function PandaPatchesCaseStudyPreview() {
         <div className="h-16 md:h-24" />
       </div>
 
-      {/* ── 2. The calculator ─────────────────────────────────────────── */}
+      {/* ── 2. How people use it (moved earlier, owner's call: content
+          ownership is the thing most visitors to THIS site are actually
+          checking for, more than any one client's calculator mechanics) ── */}
+      <section className="px-6 py-20 md:px-10 md:py-28" style={{ backgroundColor: T.paper }}>
+        <div className="mx-auto max-w-[900px]">
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", lineHeight: 1.1 }}>
+            The team edits it themselves.
+          </h2>
+
+          <figure className="mt-10">
+            <Image
+              src="/work/panda-patches-editor.png"
+              alt="The Sanity Studio content editor, open on the homepage's process section: a heading, a sub-heading and three ordered steps."
+              width={1920}
+              height={902}
+              sizes="(min-width: 900px) 820px, 100vw"
+              className="w-full border"
+              style={{ borderColor: T.rule }}
+            />
+            <figcaption className="mt-3 max-w-[36rem] text-[14px] leading-[1.6]" style={{ color: T.quiet }}>
+              This is Sanity Studio, the real editor, open on the homepage&apos;s &ldquo;how we make your patches&rdquo;
+              section. The team rewrites headings, swaps the step order, or updates a sub-heading here directly — no
+              deploy, no developer.
+            </figcaption>
+          </figure>
+
+          <p className="mt-10 max-w-[36rem] text-[15px] leading-[1.7]" style={{ color: T.body }}>
+            Customers get a portal of their own too — order history, tracking, and a one-click reorder at the price
+            they paid before. It&apos;s behind a login, so there&apos;s no public screen to show yet; that&apos;s the
+            one part of this build we&apos;re describing rather than picturing.
+          </p>
+        </div>
+      </section>
+
+      {/* ── 3. The calculator ─────────────────────────────────────────── */}
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
             Choose your patch. Send it for a price.
           </h2>
@@ -194,16 +229,16 @@ export default function PandaPatchesCaseStudyPreview() {
             person ever sees the request.
           </p>
 
-          <div className="mt-8 max-w-[46rem]">
+          <div className="mt-8">
             <CalculatorToggle />
           </div>
         </div>
       </section>
 
-      {/* ── 3. Storefront -> operations ───────────────────────────────── */}
+      {/* ── 4. Storefront -> operations ───────────────────────────────── */}
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">
-          <span style={{ fontFamily: MONO, color: T.onDarkAccent, fontSize: "13px" }}>03</span>
+          <span style={{ fontFamily: MONO, color: T.onDarkAccent, fontSize: "13px" }}>04</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
             One backend behind the storefront.
           </h2>
@@ -250,39 +285,6 @@ export default function PandaPatchesCaseStudyPreview() {
           <Link href="/work/enterprise-ops" className="mt-8 inline-flex items-center gap-2 text-[14px] font-semibold" style={{ color: T.onDarkAccent }}>
             Read the full operations case study <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
-        </div>
-      </section>
-
-      {/* ── 4. How people use it (quiet, different rhythm) ─────────────── */}
-      <section className="px-6 py-20 md:px-10 md:py-32" style={{ backgroundColor: T.paper }}>
-        <div className="mx-auto max-w-[900px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
-          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", lineHeight: 1.1 }}>
-            The team edits it themselves.
-          </h2>
-
-          <figure className="mt-10">
-            <Image
-              src="/work/panda-patches-editor.png"
-              alt="The Sanity Studio content editor, open on the homepage's process section: a heading, a sub-heading and three ordered steps."
-              width={1920}
-              height={902}
-              sizes="(min-width: 900px) 820px, 100vw"
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-            <figcaption className="mt-3 max-w-[36rem] text-[14px] leading-[1.6]" style={{ color: T.quiet }}>
-              This is Sanity Studio, the real editor, open on the homepage&apos;s &ldquo;how we make your patches&rdquo;
-              section. The team rewrites headings, swaps the step order, or updates a sub-heading here directly — no
-              deploy, no developer.
-            </figcaption>
-          </figure>
-
-          <p className="mt-10 max-w-[36rem] text-[15px] leading-[1.7]" style={{ color: T.body }}>
-            Customers get a portal of their own too — order history, tracking, and a one-click reorder at the price
-            they paid before. It&apos;s behind a login, so there&apos;s no public screen to show yet; that&apos;s the
-            one part of this build we&apos;re describing rather than picturing.
-          </p>
         </div>
       </section>
 
