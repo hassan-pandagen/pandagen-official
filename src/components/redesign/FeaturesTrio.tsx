@@ -1,22 +1,35 @@
+"use client";
+
 import { businessFeatureCopy, businessFeatures } from "@/data/business-features";
 import Link from "next/link";
+import { motion, MotionConfig } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Built-in features. Redesign pass, 26 Sep 2026 (second pass -- see the 24 Sep
-// note in git history for the first). Copy is the shared business-features.ts
-// data (four named jobs, not three vague descriptions); this file only changes
-// presentation.
+// Built-in features. Redesign pass, 26 Sep 2026 (third pass -- see 24/26 Sep
+// notes in git history for the first two). Copy is the shared
+// business-features.ts data; this file only changes presentation.
 // ─────────────────────────────────────────────────────────────────────────────
-// What changed from the first pass: it was flagged as the flattest section on
-// the page -- a static grid next to sections that all have a device (Work's
-// hover row, the Services stack, Process's scroll-fill, How-we-work's dim/
-// undim). This gives each card a hover state (warm fill, card lifts, number
-// inverts from cognac to ink) so it behaves like the rest of the page instead
-// of sitting still. Four cards now (was three), laid out 4-across at lg so the
-// numbers read as one row, like the Services sub-list.
+// Owner reference, 26 Sep: reactbits.dev/micro/folder-float -- a stack that
+// fans out floating sticky notes on hover. That component's premise (a folder
+// collecting design feedback) doesn't fit this section's content, so this
+// borrows the physicality (small rotated notes, spring stagger) rather than
+// the object: each card's own "Good for" segments (already real copy, split
+// on commas/and) pop out as floating chips on hover/focus. Decorative only --
+// aria-hidden, since the same words are already in the visible paragraph
+// below, so nothing depends on hover to be readable or crawlable.
 // ─────────────────────────────────────────────────────────────────────────────
+
+const CHIP_ROTATE = [-7, 4, -3];
+
+function fitTags(fit: string): string[] {
+  return fit
+    .replace(/ and /gi, ", ")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
 
 export default function FeaturesTrio() {
   return (
@@ -25,8 +38,8 @@ export default function FeaturesTrio() {
         <div className="grid gap-10 lg:grid-cols-12">
           <h2
             id="features-title"
-            className="lg:col-span-7"
-            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 5.4vw, 5.2rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}
+            className="max-w-[36ch] lg:col-span-7"
+            style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.6rem, 4.6vw, 4.4rem)", lineHeight: 1, letterSpacing: "-0.02em" }}
           >
             {businessFeatureCopy.heading}
           </h2>
@@ -35,16 +48,43 @@ export default function FeaturesTrio() {
           </p>
         </div>
 
+        <MotionConfig reducedMotion="user">
         <ol className="feature-grid mt-16 grid border-t md:mt-24 md:grid-cols-2 lg:grid-cols-4" style={{ borderColor: T.rule }}>
           {businessFeatures.map((f, i) => (
-            <li
+            <motion.li
               key={f.title}
+              initial="rest"
+              whileHover="hover"
+              whileFocus="hover"
               className="feature-col relative flex flex-col border-b border-l pb-10 pt-8 md:px-7 md:first:border-l-0 lg:pb-12 lg:pt-10"
               style={{ borderColor: T.rule }}
             >
-              <span className="feature-num" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.accent, fontSize: "2.8rem", lineHeight: 1 }}>
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <div className="flex items-start justify-between gap-3">
+                <span className="feature-num" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.accent, fontSize: "2.8rem", lineHeight: 1 }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="flex flex-wrap justify-end gap-1.5 pt-1" aria-hidden="true">
+                  {fitTags(f.fit).map((tag, ti) => (
+                    <motion.span
+                      key={tag}
+                      variants={{ rest: { opacity: 0, y: 10, scale: 0.85 }, hover: { opacity: 1, y: 0, scale: 1 } }}
+                      transition={{ type: "spring", stiffness: 320, damping: 20, delay: ti * 0.07 }}
+                      style={{
+                        rotate: CHIP_ROTATE[ti % CHIP_ROTATE.length],
+                        fontFamily: MONO,
+                        fontSize: "10.5px",
+                        color: T.ink,
+                        backgroundColor: T.paper,
+                        border: `1px solid ${T.rule}`,
+                        boxShadow: "0 4px 10px -4px rgba(28,25,23,0.25)",
+                      }}
+                      className="rounded-full px-2.5 py-1 whitespace-nowrap"
+                    >
+                      {tag}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
               <h3 className="mt-7" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.2 }}>
                 {f.title}
               </h3>
@@ -60,9 +100,10 @@ export default function FeaturesTrio() {
                 </span>{" "}
                 {f.edits}
               </p>
-            </li>
+            </motion.li>
           ))}
         </ol>
+        </MotionConfig>
 
         <div className="mt-16 grid gap-8 border-t pt-10 md:grid-cols-12" style={{ borderColor: T.rule }}>
           <p className="max-w-[46rem] text-[16px] leading-[1.7] md:col-span-8" style={{ color: T.body }}>
