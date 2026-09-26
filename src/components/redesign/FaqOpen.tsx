@@ -1,31 +1,37 @@
-import { ChevronDown } from "lucide-react";
 import { homeFaqs } from "@/data/home-faqs";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Homepage FAQ, redesign pass, 26 Sep 2026 (second pass -- see the 24 Sep note
-// in git history for the first, an always-open two-column list).
+// Homepage FAQ, redesign pass, 27 Sep 2026 (third pass -- see 24/26 Sep notes
+// in git history for the first two).
 // ─────────────────────────────────────────────────────────────────────────────
-// Why the change: the first pass kept every answer permanently open on the
-// premise that Google's FAQPage rich result required the answer to be
-// visible without interaction. That rich result no longer exists -- Google
-// retired it 7 May 2026 and pulled the documentation in June -- so the
-// premise is gone. What still matters, and what this keeps: the answer text
-// stays in the server-rendered HTML regardless of open/closed state. Native
-// <details>/<summary> does exactly that -- nothing is fetched or inserted on
-// click, only the CSS state changes -- so there's no crawlability cost to
-// collapsing by default. (This route also doesn't emit FAQPage JSON-LD --
-// only the live homepage does, via HomeFaqSection.tsx -- so there was never
-// a schema conflict here either.)
+// 26 Sep: converted this to a native <details>/<summary> accordion, reasoning
+// that server-rendered content in the initial HTML is enough regardless of
+// open/closed state, since Google's FAQPage rich result (the original reason
+// for "always open") was retired 7 May 2026.
 //
-// Also curated down from all ten homeFaqs to five buying-decision questions
-// (developer dependency, feature-cost transparency, the retainer question,
-// minimum project size, migration SEO risk). The other five are migration-
-// or platform-specific (WordPress pricing detail, the audit tool, Shopify,
-// caching plugins) and belong on their relevant service pages, not a
-// homepage that's already long -- moving them there is future work, not done
-// in this pass. This file filters the shared home-faqs.ts by question text;
-// it does not touch that file, so the live homepage's ten questions and its
+// 27 Sep: reverted. src/components/ui/FAQAccordion.tsx -- this site's OWN
+// proven-safe FAQ component, used on live case-study and pricing pages --
+// carries a dated history of exactly this mistake: a CSS-collapsed FAQ (grid-
+// rows-[0fr]) scored 0 of 26 answers on an external extraction sweep on 4 Aug
+// 2026, because the pipeline filtered on COMPUTED VISIBILITY, not DOM
+// presence, and a collapsed container computes to zero. Verified directly
+// with Playwright before reverting: collapsed <details> answers here scored
+// checkVisibility() === false and innerText.length === 0, the identical
+// signature, while textContent.length stayed >0 -- present in the markup,
+// invisible to anything that renders the page. The always-visible control
+// (this same check against FAQAccordion.tsx on /work/emblematic-studio)
+// passed cleanly on every metric. "In the DOM" and "visible" are not the same
+// thing, and this site has already paid once to learn that the hard way.
+//
+// So: always-visible again, but keeping the two things worth keeping from the
+// accordion pass -- the tighter spacing (compact instead of the original
+// py-10/py-12) and the curation to 5 buying-decision questions (developer
+// dependency, feature-cost transparency, the retainer question, minimum
+// project size, migration SEO risk) out of the shared 10. The other 5 are
+// migration/platform-specific and belong on their service pages -- future
+// work, not done here. This file filters home-faqs.ts by question text; it
+// does not touch that file, so the live homepage's ten questions and its
 // FAQPage JSON-LD are unaffected.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -51,34 +57,24 @@ export default function FaqOpen() {
           Common questions about working with us
         </h2>
 
-        <div className="mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
+        <dl className="mt-16 border-t md:mt-24" style={{ borderColor: T.rule }}>
           {faqs.map((f, i) => (
-            <details key={f.q} className="faq-item border-b" style={{ borderColor: T.rule }} open={i === 0}>
-              <summary className="faq-summary flex cursor-pointer list-none items-start justify-between gap-6 py-6 md:py-8">
-                <span className="flex gap-5 md:gap-8">
-                  <span className="shrink-0 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
-                    {f.q}
-                  </span>
+            <div key={f.q} className="grid gap-3 border-b py-6 md:grid-cols-12 md:gap-8 md:py-8" style={{ borderColor: T.rule }}>
+              <dt className="md:col-span-5">
+                <span className="block text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <ChevronDown className="faq-chevron mt-2 h-5 w-5 shrink-0" style={{ color: T.quiet }} aria-hidden="true" />
-              </summary>
-              <p className="max-w-[44rem] pb-6 pl-[3.2rem] text-[17px] leading-[1.7] md:pb-8 md:pl-[4.5rem]" style={{ color: T.body }}>
+                <span className="mt-2 block" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "clamp(1.4rem, 2.2vw, 1.9rem)", lineHeight: 1.15 }}>
+                  {f.q}
+                </span>
+              </dt>
+              <dd className="max-w-[44rem] text-[17px] leading-[1.7] md:col-span-6 md:col-start-7" style={{ color: T.body }}>
                 {f.a}
-              </p>
-            </details>
+              </dd>
+            </div>
           ))}
-        </div>
+        </dl>
       </div>
-
-      <style>{`
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-chevron { transition: transform .3s ease; }
-        .faq-item[open] .faq-chevron { transform: rotate(180deg); }
-        @media (prefers-reduced-motion: reduce) { .faq-chevron { transition: none; } }
-      `}</style>
     </section>
   );
 }
