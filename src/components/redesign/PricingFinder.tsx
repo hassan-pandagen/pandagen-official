@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { trackGAEvent } from "@/components/GoogleAnalytics";
@@ -12,13 +13,20 @@ import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 const CalModalButton = dynamic(() => import("@/components/ui/CalModalButton"));
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Pricing with the three-question tier finder. Redesign candidate, 24 Sep 2026.
+// Pricing with the three-question tier finder. Redesign pass, 26 Sep 2026
+// (second pass -- first pass noted 24 Sep 2026 in git history).
 // ─────────────────────────────────────────────────────────────────────────────
 // Same questions, scoring, analytics events and hand-off as TierQuiz.tsx (both
 // read src/lib/tier-quiz.ts). The answers go to the enquiry form, never to a
 // price on screen: three questions are not enough to quote, which the copy
 // says, so a person reads them.
-// Options are styled like the Work rows: a full-width line that turns dark.
+// What changed from the first pass: it was flagged as needing a fresher look.
+// The step progress is now a mono index (01/02/03) instead of plain dashes,
+// matching the numbering used in Work/Services/Faq. Each option row now
+// carries its own mono index too. The final CTA carries the founder avatar
+// pair used in the hero and footer ("Talk to the founders") -- the promise
+// this section makes is literally "a founder replies with a price," so the
+// same two faces belong on the button that sends it.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function PricingFinder() {
@@ -85,34 +93,37 @@ export default function PricingFinder() {
         <div className="lg:col-span-6 lg:col-start-7" aria-live="polite">
           {!isDone ? (
             <div key={step} className="finder-step">
-              <div className="flex items-center justify-between">
-                <p className="text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-                  Question {step + 1} of {steps.length}
-                </p>
-                <div className="flex gap-1.5" aria-hidden="true">
-                  {steps.map((s, i) => (
-                    <span key={s.q} className="h-[3px] w-10" style={{ backgroundColor: i <= step ? T.ink : T.rule }} />
-                  ))}
-                </div>
+              <div className="flex items-center gap-4" style={{ fontFamily: MONO }}>
+                {steps.map((s, i) => (
+                  <span key={s.q} className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em]" style={{ color: i <= step ? T.ink : T.quiet }}>
+                    {String(i + 1).padStart(2, "0")}
+                    {i < steps.length - 1 && (
+                      <span aria-hidden="true" className="h-px w-6" style={{ backgroundColor: i < step ? T.ink : T.rule }} />
+                    )}
+                  </span>
+                ))}
               </div>
               <h3
                 ref={headingRef}
                 tabIndex={-1}
                 className="mt-6 outline-none"
-                style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", lineHeight: 1.08 }}
+                style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.2vw, 2.8rem)", lineHeight: 1.08 }}
               >
                 {steps[step].q}
               </h3>
               <ul className="mt-8 border-t" style={{ borderColor: T.rule }}>
-                {steps[step].options.map((opt) => (
+                {steps[step].options.map((opt, i) => (
                   <li key={opt.label} className="border-b" style={{ borderColor: T.rule }}>
                     <button
                       type="button"
                       onClick={() => choose(opt)}
-                      className="finder-opt flex w-full items-center justify-between gap-6 rounded-[4px] py-5 text-left text-[18px]"
+                      className="finder-opt flex w-full items-center gap-6 rounded-[4px] py-5 text-left text-[18px]"
                       style={{ color: T.ink }}
                     >
-                      {opt.label}
+                      <span className="finder-opt-num shrink-0 text-[13px]" style={{ fontFamily: MONO, color: T.quiet }}>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="flex-1">{opt.label}</span>
                       <ArrowRight className="h-5 w-5 shrink-0" aria-hidden="true" />
                     </button>
                   </li>
@@ -153,9 +164,13 @@ export default function PricingFinder() {
                 <button
                   type="button"
                   onClick={sendToForm}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 text-[16px] font-medium"
+                  className="inline-flex items-center justify-center gap-3 px-6 py-4 text-[16px] font-medium"
                   style={{ backgroundColor: T.ink, color: T.paper }}
                 >
+                  <span className="flex -space-x-2" aria-hidden="true">
+                    <Image src="/team/hassan.png" alt="" width={26} height={26} className="rounded-full ring-2 ring-[#EBE9E4]" />
+                    <Image src="/team/imran.png" alt="" width={26} height={26} className="rounded-full ring-2 ring-[#EBE9E4]" />
+                  </span>
                   Send this and get a price <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </button>
                 <CalModalButton className="finder-cal inline-flex items-center justify-center border px-6 py-4 text-[16px] font-medium">
@@ -184,6 +199,7 @@ export default function PricingFinder() {
       <style>{`
         .finder-opt { transition: background-color .3s ease, color .3s ease, padding .3s ease; }
         .finder-opt:hover, .finder-opt:focus-visible { background-color: ${T.dark}; color: ${T.onDark} !important; padding-left: 18px; padding-right: 18px; }
+        .finder-opt:hover .finder-opt-num, .finder-opt:focus-visible .finder-opt-num { color: ${T.onDarkQuiet} !important; }
         .finder-cal { border-color: ${T.ink}; color: ${T.ink}; }
         .finder-step { animation: finder-in .45s cubic-bezier(.2,.7,.2,1) both; }
         @keyframes finder-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }

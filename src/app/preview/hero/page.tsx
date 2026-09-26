@@ -15,10 +15,9 @@ import TickerBand from "@/components/redesign/TickerBand";
 import ProofSection from "@/components/redesign/ProofSection";
 import FeaturesTrio from "@/components/redesign/FeaturesTrio";
 import PricingFinder from "@/components/redesign/PricingFinder";
-// Founders: both versions shown for comparison (owner, 24 Sep). Option A is the
-// live FounderSection, unchanged; Option B is FoundersDark. Remove the loser and
-// the two OptionLabel strips once a choice is made.
-import FounderSection from "@/components/sections/FounderSection";
+// Founders: FoundersDark (owner, 26 Sep), chosen over the live FounderSection
+// for consistency with the rest of this redesign -- the rounded cards and
+// italic accent word are the template look the redesign moved away from.
 import FoundersDark from "@/components/redesign/FoundersDark";
 import FaqOpen from "@/components/redesign/FaqOpen";
 import GuidesList from "@/components/redesign/GuidesList";
@@ -199,9 +198,6 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <FeaturesTrio />
       <PricingFinder />
       <ProcessSplit />
-      <OptionLabel text="Founders · Option A: current section" />
-      <FounderSection />
-      <OptionLabel text="Founders · Option B: redesign" />
       <FoundersDark />
       <FaqOpen />
       <GuidesList />
@@ -209,15 +205,6 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
       <SiteFooter />
       {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
       <style>{`[data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }`}</style>
-    </div>
-  );
-}
-
-// Preview-only divider naming a design option. Not for production.
-function OptionLabel({ text }: { text: string }) {
-  return (
-    <div className="px-6 py-3 text-center text-[12px] uppercase tracking-[0.16em] md:px-10" style={{ backgroundColor: T.accent, color: "#FFFFFF", fontFamily: "ui-monospace, Menlo, Consolas, monospace" }}>
-      {text}
     </div>
   );
 }
