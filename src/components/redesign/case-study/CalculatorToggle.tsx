@@ -28,13 +28,16 @@ const STEPS = [
   },
 ];
 
-export default function CalculatorToggle() {
+export default function CalculatorToggle({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
       {STEPS.map((s) => (
         <div key={s.key}>
-          <p className="mb-2 text-[13px] font-medium" style={{ fontFamily: MONO, color: T.body }}>{s.label}</p>
-          <div className="relative flex h-[360px] items-center justify-center overflow-hidden border" style={{ backgroundColor: T.paperHi, borderColor: T.rule }}>
+          <p className="mb-1.5 text-[13px] font-medium" style={{ fontFamily: MONO, color: T.body }}>{s.label}</p>
+          <div
+            className="relative flex items-center justify-center overflow-hidden border"
+            style={{ height: compact ? "clamp(200px, 30vh, 280px)" : "360px", backgroundColor: T.paperHi, borderColor: T.rule }}
+          >
             <Image src={s.src} alt={s.alt} fill sizes="(min-width: 640px) 350px, 100vw" className="object-contain" />
           </div>
         </div>
