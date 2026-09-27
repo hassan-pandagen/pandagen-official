@@ -1,10 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
-import CalculatorToggle from "@/components/redesign/case-study/CalculatorToggle";
+import PandaPatchesWalkthrough from "@/components/redesign/case-study/PandaPatchesWalkthrough";
 import { requiredMetric } from "@/data/case-study-facts";
 import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
@@ -90,30 +89,6 @@ const techStack = [
   { name: "Vercel", role: "Hosting, CDN and cron" },
 ];
 
-const editorShots = [
-  {
-    key: "process",
-    src: "/work/panda-patches-editor.png",
-    alt: "Sanity Studio open on the homepage's process section: a heading, a sub-heading and three ordered steps (Sketch, Mockup, Patch).",
-    label: "Homepage copy",
-    body: "Rewrite the homepage's “how we make your patches” steps directly in the editor.",
-  },
-  {
-    key: "blog",
-    src: "/work/panda-patches-editor-blog.png",
-    alt: "Sanity Studio open on a blog post: title, URL slug and a main image field for a custom hockey patches guide.",
-    label: "Blog posts",
-    body: "Publish a new guide, the same editor that runs the storefront's 63-post blog.",
-  },
-  {
-    key: "case-study",
-    src: "/work/panda-patches-editor-case-study.png",
-    alt: "Sanity Studio open on a bulk case study page: title, description and a patch photo field for a law enforcement client.",
-    label: "Case studies",
-    body: "Add a case study for a new industry with the same fields every sales page uses.",
-  },
-];
-
 const fullScope = [
   "9 product category pages (embroidered, woven, PVC, chenille, leather, silicone, printed, sequin, 3D)",
   "4 additional product pages (lapel pins, challenge coins, keychains, PVC shoe charms)",
@@ -133,20 +108,8 @@ const fullScope = [
 export default function PandaPatchesCaseStudyPreview() {
   return (
     <PreviewShell condensed>
-      {/* ── Pinned-deck rebuild, 27 Sep 2026, v2. ──────────────────────────
-          Every screen below is the same shape: one full-viewport pinned
-          card, uniformly, no exceptions per section or per device. It holds
-          in place while the next one rises up and covers it -- no GSAP
-          needed, because the covering screen doesn't need any special CSS
-          at all; an ordinary block later in the DOM already paints over an
-          earlier `position: sticky` one as it scrolls up over it. Only the
-          element that should HOLD needs .pin-run/.pin-card.
-          If a screen's content runs taller than one viewport, that screen
-          gets its own internal scrollbar (overflow-y: auto) rather than
-          either hiding the extra content or being pulled out of the pinned
-          sequence -- so Results, Tech Stack and the editor's three
-          screenshots are full pinned screens too, same as everything else,
-          on every screen size. ── */}
+      <div className="panda-story">
+      {/* Natural page flow surrounds one connected product walkthrough. */}
 
       {/* ── 1. Opening ────────────────────────────────────────────────── */}
       <div className="pin-run">
@@ -164,8 +127,8 @@ export default function PandaPatchesCaseStudyPreview() {
             </p>
 
             <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-              A 3-year-old WordPress store, rebuilt on Next.js, Sanity and Square. The thing WordPress genuinely
-              couldn&apos;t do was price a custom patch — every order needed a manual quote. We built a configurator to
+              A 3-year-old WordPress store, rebuilt on Next.js, Sanity and Square. The previous setup
+              did not price a custom patch — every order needed a manual quote. We built a configurator to
               replace that, and connected the storefront to a separate system the team runs orders, production and
               payments through.
             </p>
@@ -201,145 +164,15 @@ export default function PandaPatchesCaseStudyPreview() {
         </section>
       </div>
 
-      {/* ── The storefront, full reveal ──────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
-          <div className="mx-auto max-w-[1100px]">
-            <p className="text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>The storefront</p>
-            <div className="relative mt-5 w-full border" style={{ height: "min(64vh, 640px)", borderColor: T.rule }}>
-              <Image
-                src="/work/panda-patches.png"
-                alt="The Panda Patches storefront home page, showing the product range and the calculator's entry point."
-                fill
-                sizes="(min-width: 1100px) 1050px, 100vw"
-                priority
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* ── 2. How people use it ──────────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
-          <div className="mx-auto max-w-[1100px]">
-            <span style={{ fontFamily: MONO, color: T.onDarkAccent, fontSize: "13px" }}>02</span>
-            <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", lineHeight: 1.1 }}>
-              The team edits it themselves.
-            </h2>
-            <p className="mt-4 max-w-[36rem] text-[15px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
-              This is Sanity Studio, the real editor behind the storefront. No deploy, no developer — the team opens
-              it directly for copy, a new blog post, or a new case study.
-            </p>
-
-            <div className="mt-8 grid gap-6 sm:grid-cols-3">
-              {editorShots.map((s) => (
-                <div key={s.key}>
-                  <div className="relative border" style={{ aspectRatio: "1912 / 914", borderColor: T.onDarkRule }}>
-                    <Image src={s.src} alt={s.alt} fill sizes="(min-width: 640px) 350px, 100vw" className="object-cover object-top" />
-                  </div>
-                  <p className="mt-2 text-[11px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.onDarkAccent }}>{s.label}</p>
-                  <p className="mt-1 text-[13px] leading-[1.4]" style={{ color: T.onDarkQuiet }}>{s.body}</p>
-                </div>
-              ))}
-            </div>
-
-            <p className="mt-6 max-w-[36rem] text-[14px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
-              Customers get a portal of their own too — order history, tracking, and a one-click reorder at the price
-              they paid before. It&apos;s behind a login, so there&apos;s no public screen to show yet; that&apos;s the
-              one part of this build we&apos;re describing rather than picturing.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      {/* ── 3. The calculator ─────────────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paperHi }}>
-          <div className="mx-auto max-w-[1100px]">
-            <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
-            <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-              Choose your patch. Send it for a price.
-            </h2>
-            <p className="mt-5 max-w-[40rem] text-[16px] leading-[1.7]" style={{ color: T.body }}>
-              Before, a customer described what they wanted in a contact form and waited 24 hours or more for someone
-              to work out a price by hand and email it back. Most didn&apos;t wait. Now they configure the patch
-              exactly — backing, shape, border, size, quantity, artwork — on the product page itself, and send that
-              configuration straight to the team for a price, instead of starting from a blank message.
-            </p>
-            <p className="mt-3 max-w-[40rem] text-[14px] leading-[1.6]" style={{ color: T.quiet }}>
-              9 patch types · 4 backing options · 5 border styles · any size · 8+ quantity tiers, all captured before a
-              person ever sees the request.
-            </p>
-
-            <div className="mt-8">
-              <CalculatorToggle />
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* ── 4. Storefront -> operations ───────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
-          <div className="mx-auto max-w-[1100px]">
-            <span style={{ fontFamily: MONO, color: T.onDarkAccent, fontSize: "13px" }}>04</span>
-            <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-              One backend behind the storefront.
-            </h2>
-            <p className="mt-4 max-w-[40rem] text-[15px] leading-[1.6]" style={{ color: T.onDarkQuiet }}>
-              The configurator hands off into a separate operations platform, built on the same Supabase backend, that
-              the team runs the rest of the business through. It replaced a separate CRM, Google Sheets, a spreadsheet
-              for attendance, and WhatsApp update chains.
-            </p>
-
-            <div className="mt-5 flex flex-wrap items-center gap-3" style={{ fontFamily: MONO, fontSize: "13px" }}>
-              {["Enquiry", "Quote", "Payment", "Production", "Delivery"].map((step, i, arr) => (
-                <span key={step} className="flex items-center gap-3">
-                  <span className="border px-3 py-1.5" style={{ borderColor: T.onDarkRule }}>{step}</span>
-                  {i < arr.length - 1 && <ArrowRight className="h-3.5 w-3.5" style={{ color: T.onDarkQuiet }} aria-hidden="true" />}
-                </span>
-              ))}
-            </div>
-
-            <div className="relative mt-6 w-full overflow-hidden border" style={{ height: "min(38vh, 380px)", borderColor: T.onDarkRule }}>
-              <Image
-                src="/work/enterprise-ops.png"
-                alt="The Panda Patches operations dashboard with its production pipeline; sensitive customer and financial data is blurred."
-                fill
-                sizes="(min-width: 1100px) 1050px, 100vw"
-                className="object-cover object-top"
-              />
-            </div>
-
-            <div className="mt-6 grid gap-4 border-t pt-5 md:grid-cols-3" style={{ borderColor: T.onDarkRule }}>
-              {[
-                { label: "At Quote", body: "7 sales agents work the same pipeline instead of 7 separate message threads. Every enquiry is one record from the moment it arrives." },
-                { label: "At Production", body: "Role-based access: production sees pending orders, sales sees their own pipeline, admins see everything. Nobody sees data they don't need." },
-                { label: "Throughout", body: "Every change is logged with a timestamp and an author, so a status dispute has an answer instead of a guess." },
-              ].map((r) => (
-                <div key={r.label}>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.onDarkAccent }}>{r.label}</p>
-                  <p className="mt-1.5 text-[14px] leading-[1.5]" style={{ color: T.onDarkQuiet }}>{r.body}</p>
-                </div>
-              ))}
-            </div>
-
-            <Link href="/work/enterprise-ops" className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold" style={{ color: T.onDarkAccent }}>
-              Read the full operations case study <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
-        </section>
-      </div>
+      <PandaPatchesWalkthrough />
 
       {/* ── 5. Results, consolidated ───────────────────────────────────── */}
       <div className="pin-run">
         <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paperHi }}>
           <div className="mx-auto max-w-[1100px]">
-            <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>05</span>
+            <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
             <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-              What&apos;s actually supported.
+              The business behind the build.
             </h2>
             <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
               Panda Patches is founder-affiliated: owned and operated by co-founder Imran Raza Ladhani, who holds a
@@ -368,7 +201,7 @@ export default function PandaPatchesCaseStudyPreview() {
       <div className="pin-run">
         <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
           <div className="mx-auto max-w-[1100px]">
-            <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>06 · Stack</p>
+            <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>05 · Stack</p>
             <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.55]" style={{ color: T.quiet }}>
               {PAYMENT_INTEGRATION_SCOPE} Total tooling runs about $55/month today (Supabase ~$25, Vercel ~$20, ~$10 for
               the AI patch generator) — a prose figure from the project record, not one this site independently
@@ -425,32 +258,11 @@ export default function PandaPatchesCaseStudyPreview() {
       </div>
 
       <style>{`
-        /* Every screen: the same rule, on every device. A pinned card
-           taller than the viewport scrolls internally instead of hiding
-           its lower content -- so nothing here needs per-section or
-           per-breakpoint exceptions to stay honest about what's shown. */
-        .pin-run { position: relative; min-height: 200vh; }
-        .pin-card {
-          position: sticky;
-          top: 0;
-          height: 100vh;
-          overflow-y: auto;
-        }
-        @supports (animation-timeline: view()) {
-          @media (prefers-reduced-motion: no-preference) {
-            .pin-run { view-timeline-name: --pin-reveal; view-timeline-axis: block; }
-            .pin-card {
-              animation: pin-in linear both;
-              animation-timeline: --pin-reveal;
-              animation-range: entry 0% entry 35%;
-            }
-            @keyframes pin-in {
-              from { opacity: 0; transform: translateY(56px); }
-              to { opacity: 1; transform: none; }
-            }
-          }
-        }
+        .panda-story .pin-run { position: relative; }
+        .panda-story .pin-card { position: relative; height: auto; overflow: visible; padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
+        .panda-story .pin-run:first-child .pin-card { padding-top: 9rem; }
       `}</style>
+      </div>
     </PreviewShell>
   );
 }
