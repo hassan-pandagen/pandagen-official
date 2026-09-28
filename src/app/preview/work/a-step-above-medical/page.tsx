@@ -53,6 +53,13 @@ const previewShot = {
   alt: "A build-in-progress preview of the new A Step Above Medical homepage, showing the hero copy, certification checklist and an upcoming IV Therapy Training Course card.",
 };
 
+const portalCapabilities = [
+  "Class scheduling with live rosters, seat capacity and waitlists across every city on the calendar.",
+  "A single “needs attention” queue that catches anything blocking a class email or a certificate — an unapproved venue, an unassigned instructor, a bounced confirmation — before it reaches a student incomplete.",
+  "Automated PDF certificates on approval, with corrections, reissues and voids all logged rather than just overwritten.",
+  "A permanent, unchangeable activity log, plus reporting and export across enrollment, attendance, certificates and outstanding balances.",
+];
+
 export default function AStepAboveMedicalStatusPreview() {
   return (
     <PreviewShell condensed>
@@ -132,6 +139,53 @@ export default function AStepAboveMedicalStatusPreview() {
             from the data shown above. This is a preview of work in progress, not the site that&apos;s publicly live
             today.
           </p>
+        </div>
+      </section>
+
+      {/* ── The operations portal. A separate deliverable from the public
+          site -- scoped and sold on its own, and substantially built
+          already, unlike the still-in-progress public site above. The
+          screenshot is labelled "Design preview. Sample data." on its own
+          banner, so the names, balances and counts pictured are not
+          real student or financial records -- only the capability list
+          below is stated as fact. ── */}
+      <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paper }}>
+        <div className="mx-auto max-w-[1100px]">
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
+          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
+            A separate operations portal, mostly built.
+          </h2>
+          <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
+            Alongside the public site, a registration and operations portal replaces what the team used to track by
+            hand: class rosters, instructor assignments, certificates and payments. It runs on the client&apos;s own
+            Supabase account.
+          </p>
+
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            <div>
+              <div className="relative overflow-hidden border" style={{ aspectRatio: "1425 / 1475", borderColor: T.rule }}>
+                <Image
+                  src="/work/a-step-above-medical-portal-dashboard.png"
+                  alt="A Step Above Medical's operations portal, showing a Classes dashboard with a needs-attention queue and a table of scheduled classes. The banner at the top reads 'Design preview. Sample data. Nothing on this screen saves yet.'"
+                  fill
+                  sizes="(min-width: 768px) 500px, 100vw"
+                  className="object-cover object-top"
+                />
+              </div>
+              <p className="mt-2 text-[12px] leading-[1.5]" style={{ color: T.quiet }}>
+                Shown with sample data — the banner on the screen itself says so. The names, dollar figures and
+                class counts pictured here are placeholders, not real student or financial records.
+              </p>
+            </div>
+
+            <dl>
+              {portalCapabilities.map((body, i) => (
+                <div key={i} className="border-b py-4 first:pt-0" style={{ borderColor: T.rule }}>
+                  <dd className="text-[14px] leading-[1.6]" style={{ color: T.body }}>{body}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </section>
 
