@@ -53,11 +53,21 @@ const previewShot = {
   alt: "A build-in-progress preview of the new A Step Above Medical homepage, showing the hero copy, certification checklist and an upcoming IV Therapy Training Course card.",
 };
 
-const portalCapabilities = [
-  "Class scheduling with live rosters, seat capacity and waitlists across every city on the calendar.",
-  "A single “needs attention” queue that catches anything blocking a class email or a certificate — an unapproved venue, an unassigned instructor, a bounced confirmation — before it reaches a student incomplete.",
-  "Automated PDF certificates on approval, with corrections, reissues and voids all logged rather than just overwritten.",
-  "A permanent, unchangeable activity log, plus reporting and export across enrollment, attendance, certificates and outstanding balances.",
+const portalShots = [
+  {
+    key: "classes",
+    src: "/work/a-step-above-medical-portal-classes.png",
+    alt: "The A Step Above Medical operations portal's Classes view: upcoming classes, students enrolled, outstanding balances and certificates awaiting sign-off, above a class schedule table with a readiness status per class and a needs-attention panel.",
+    label: "Classes",
+    body: "Every class, its enrollment and its readiness status in one table — venue, instructor assignment and sign-offs all tracked per class, not per spreadsheet.",
+  },
+  {
+    key: "exports",
+    src: "/work/a-step-above-medical-portal-exports.png",
+    alt: "The A Step Above Medical operations portal's Exports view, listing CSV downloads for Students, Classes, Registrations, Attendance and completion, Payments, Certificates, Terms acceptances and Terms versions.",
+    label: "Exports",
+    body: "Every record type — students, classes, registrations, attendance, payments, certificates, terms acceptances — downloadable as a CSV, with the export itself logged.",
+  },
 ];
 
 export default function AStepAboveMedicalStatusPreview() {
@@ -144,11 +154,18 @@ export default function AStepAboveMedicalStatusPreview() {
 
       {/* ── The operations portal. A separate deliverable from the public
           site -- scoped and sold on its own, and substantially built
-          already, unlike the still-in-progress public site above. The
-          screenshot is labelled "Design preview. Sample data." on its own
-          banner, so the names, balances and counts pictured are not
-          real student or financial records -- only the capability list
-          below is stated as fact. ── */}
+          already, unlike the still-in-progress public site above. These
+          screenshots (29 Sep 2026, replacing an earlier, visibly-labelled
+          "Design preview / Sample data" mockup) carry no such banner and
+          show the real navigation -- Classes, Capacity, Students, Merge
+          profiles, Substitute attendee, Needs attention, Certificates,
+          Reports, Exports, Emails, Activity log, Accounts. The near-zero
+          enrollment figures visible in the Classes view are consistent
+          with the public site not having launched yet (nothing to
+          register for), not with the screen being a mockup -- so this
+          caption doesn't wave those numbers away the way the old one did,
+          but it also doesn't make anything of them; they're an artifact of
+          timing, not a result worth stating. ── */}
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paper }}>
         <div className="mx-auto max-w-[1100px]">
           <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
@@ -161,30 +178,16 @@ export default function AStepAboveMedicalStatusPreview() {
             Supabase account.
           </p>
 
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            <div>
-              <div className="relative overflow-hidden border" style={{ aspectRatio: "1425 / 1475", borderColor: T.rule }}>
-                <Image
-                  src="/work/a-step-above-medical-portal-dashboard.png"
-                  alt="A Step Above Medical's operations portal, showing a Classes dashboard with a needs-attention queue and a table of scheduled classes. The banner at the top reads 'Design preview. Sample data. Nothing on this screen saves yet.'"
-                  fill
-                  sizes="(min-width: 768px) 500px, 100vw"
-                  className="object-cover object-top"
-                />
-              </div>
-              <p className="mt-2 text-[12px] leading-[1.5]" style={{ color: T.quiet }}>
-                Shown with sample data — the banner on the screen itself says so. The names, dollar figures and
-                class counts pictured here are placeholders, not real student or financial records.
-              </p>
-            </div>
-
-            <dl>
-              {portalCapabilities.map((body, i) => (
-                <div key={i} className="border-b py-4 first:pt-0" style={{ borderColor: T.rule }}>
-                  <dd className="text-[14px] leading-[1.6]" style={{ color: T.body }}>{body}</dd>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {portalShots.map((s) => (
+              <div key={s.key}>
+                <div className="relative overflow-hidden border" style={{ aspectRatio: "1912 / 914", borderColor: T.rule }}>
+                  <Image src={s.src} alt={s.alt} fill sizes="(min-width: 640px) 520px, 100vw" className="object-cover object-top" />
                 </div>
-              ))}
-            </dl>
+                <p className="mt-2 text-[11px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.accent }}>{s.label}</p>
+                <p className="mt-1 text-[13px] leading-[1.5]" style={{ color: T.quiet }}>{s.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
