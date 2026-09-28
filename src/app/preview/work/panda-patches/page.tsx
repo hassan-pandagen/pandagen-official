@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
@@ -112,13 +113,15 @@ export default function PandaPatchesCaseStudyPreview() {
       {/* Natural page flow surrounds one connected product walkthrough. */}
 
       {/* ── 1. Opening ────────────────────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
+      <div className="story-block">
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
           <div className="mx-auto max-w-[1100px]">
             <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
               <Link href="/preview/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches / Founder-affiliated
             </p>
 
+            <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
+            <div>
             <h1 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
               Panda Patches.
             </h1>
@@ -127,10 +130,8 @@ export default function PandaPatchesCaseStudyPreview() {
             </p>
 
             <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-              A 3-year-old WordPress store, rebuilt on Next.js, Sanity and Square. The previous setup
-              did not price a custom patch — every order needed a manual quote. We built a configurator to
-              replace that, and connected the storefront to a separate system the team runs orders, production and
-              payments through.
+              A 3-year-old WordPress store, rebuilt with a patch configurator, an editor the team controls,
+              and a connected system for orders, production and payments.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -146,7 +147,15 @@ export default function PandaPatchesCaseStudyPreview() {
               </a>
             </div>
 
-            <RelationshipDisclosure slug="panda-patches" />
+            </div>
+            <a href="#panda-walkthrough" className="panda-hero-preview block w-full max-w-[480px] justify-self-center lg:justify-self-end" style={{ color: T.accentText }}>
+              <Image src="/work/panda-patches.png" alt="Panda Patches storefront preview. Explore the complete build below." width={1912} height={914} sizes="(min-width: 1024px) 470px, (min-width: 528px) 480px, calc(100vw - 48px)" className="h-auto w-full border" style={{ borderColor: T.rule }} />
+              <span className="mt-4 flex items-center justify-between gap-4 text-[14px] font-semibold leading-relaxed">
+                Explore the website, editor &amp; operations <span aria-hidden="true">↓</span>
+              </span>
+            </a>
+            </div>
+            <RelationshipDisclosure slug="panda-patches" variant="editorial" />
 
             <div className="mt-2 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
               {[
@@ -167,8 +176,8 @@ export default function PandaPatchesCaseStudyPreview() {
       <PandaPatchesWalkthrough />
 
       {/* ── 5. Results, consolidated ───────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paperHi }}>
+      <div className="story-block">
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paperHi }}>
           <div className="mx-auto max-w-[1100px]">
             <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
             <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
@@ -198,8 +207,8 @@ export default function PandaPatchesCaseStudyPreview() {
       </div>
 
       {/* ── 6. Tech stack, secondary ───────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
+      <div className="story-block">
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
           <div className="mx-auto max-w-[1100px]">
             <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>05 · Stack</p>
             <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.55]" style={{ color: T.quiet }}>
@@ -231,8 +240,8 @@ export default function PandaPatchesCaseStudyPreview() {
       </div>
 
       {/* ── 7. Next step ────────────────────────────────────────────────── */}
-      <div className="pin-run">
-        <section className="pin-card px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
+      <div className="story-block">
+        <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
           <div className="mx-auto max-w-[1100px]">
             <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "clamp(2rem, 3.6vw, 2.8rem)", lineHeight: 1.05 }}>
               Need your website and order workflow to work together?
@@ -258,9 +267,14 @@ export default function PandaPatchesCaseStudyPreview() {
       </div>
 
       <style>{`
-        .panda-story .pin-run { position: relative; }
-        .panda-story .pin-card { position: relative; height: auto; overflow: visible; padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
-        .panda-story .pin-run:first-child .pin-card { padding-top: 9rem; }
+        .panda-hero-preview:focus-visible { outline: 2px solid ${T.accentText}; outline-offset: 8px; }
+        .panda-hero-preview:hover > span { text-decoration: underline; text-underline-offset: 4px; }
+        /* Vertical rhythm for the sections outside the walkthrough (opening,
+           results, stack, next step) -- generous, consistent top/bottom
+           padding so each reads as its own beat in the page's scroll. */
+        .panda-story .story-block { position: relative; }
+        .panda-story .story-section { padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
+        .panda-story .story-block:first-child .story-section { padding-top: 9rem; }
       `}</style>
       </div>
     </PreviewShell>

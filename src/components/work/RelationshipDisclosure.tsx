@@ -17,8 +17,16 @@ import { disclosure, isDemo, isFounderAffiliated } from "@/data/case-study-facts
  * builds (isDemo) -- no client or founder-owned business behind them, so the
  * emerald "verified client" styling would overstate the relationship.
  */
-export default function RelationshipDisclosure({ slug }: { slug: string }) {
+export default function RelationshipDisclosure({ slug, variant = "panel" }: { slug: string; variant?: "panel" | "editorial" }) {
     const text = disclosure(slug);
+    if (variant === "editorial") {
+        return (
+            <aside data-relationship-disclosure className="my-8 border-t border-stone-400/30 pt-5">
+                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em] text-stone-600">Relationship disclosure</p>
+                <p className="max-w-[65rem] text-sm leading-relaxed text-stone-700">{text}</p>
+            </aside>
+        );
+    }
     const demo = isDemo(slug);
     const affiliated = !demo && isFounderAffiliated(slug);
     const Icon = demo ? Info : affiliated ? AlertCircle : BadgeCheck;

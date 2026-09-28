@@ -1,4 +1,4 @@
-.walkthrough { background: var(--walk-paper); color: var(--walk-ink); padding: 2rem 1.5rem 5rem; }
+.walkthrough { scroll-margin-top: 7rem; background: var(--walk-paper); color: var(--walk-ink); padding: 2rem 1.5rem 5rem; }
 .intro, .chapter, .handoff { max-width: 1440px; margin-inline: auto; }
 .intro { display: grid; gap: 2.5rem; padding-block: 2rem 3.5rem; }
 .introCopy { min-width: 0; }

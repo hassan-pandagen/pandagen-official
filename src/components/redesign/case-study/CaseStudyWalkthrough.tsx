@@ -48,6 +48,7 @@ export default function CaseStudyWalkthrough({
 
   return (
     <section
+      id={`${slug}-walkthrough`}
       aria-labelledby={titleId}
       className={styles.walkthrough}
       style={{ "--walk-paper": T.paper, "--walk-ink": T.ink, "--walk-body": T.body, "--walk-quiet": T.quiet, "--walk-accent": T.accentText, "--walk-rule": T.rule } as CSSProperties}
