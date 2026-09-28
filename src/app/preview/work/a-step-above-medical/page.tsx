@@ -1,18 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// A Step Above Medical, status page, 28 Sep 2026. Not a case study -- this
-// project isn't finished, and company-facts.ts already carries the rule this
-// page has to follow: "the public domain still runs the client's previous
-// WordPress site and must not be presented as our delivered build until
-// launch." So no "Visit the live site" link (that domain is still the OLD
-// site), no "what's built" claims beyond what MIGRATION_PROJECT_DETAILS
-// already confirms, and no screenshots yet -- those come once the owner
-// shares them, same as the other client pages.
+// A Step Above Medical, status page, 28 Sep 2026, updated same day with the
+// first real screenshots (2 from the Sanity Studio, 1 from the new site
+// itself, all owner-supplied). Still not a case study -- this project isn't
+// finished, and company-facts.ts already carries the rule this page has to
+// follow: "the public domain still runs the client's previous WordPress site
+// and must not be presented as our delivered build until launch." So still
+// no "Visit the live site" link and no claim that the screenshot below is
+// what's publicly live today -- it's captioned as a build-in-progress
+// preview, not a finished product, same distinction the disclosure draws.
 //
 // Deliberately does NOT use RelationshipDisclosure / case-study-facts.json.
 // link_guard.py requires every case-study-facts.json entry to have a live,
@@ -28,6 +30,28 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const details = MIGRATION_PROJECT_DETAILS.aStepAboveMedical;
+
+const shots = [
+  {
+    key: "locations",
+    src: "/work/a-step-above-medical-editor-locations.png",
+    alt: "Sanity Studio open on the Locations content type, showing the Chicago, IL entry with its web address field, an active toggle and a city photograph.",
+    label: "Locations",
+    body: "One entry per city the training runs in -- close to 20 are listed as Active. Each carries its own URL, a toggle to pull a city from the list without deleting its page, and an optional city photo.",
+  },
+  {
+    key: "courses",
+    src: "/work/a-step-above-medical-editor-courses.png",
+    alt: "Sanity Studio open on the Courses content type, showing the IV Therapy Training Course entry with its duration field and course photograph.",
+    label: "Courses",
+    body: "Each course -- IV Therapy, Phlebotomy -- has its own duration, description and photo, editable the same way as a location.",
+  },
+];
+
+const previewShot = {
+  src: "/work/a-step-above-medical-preview-homepage.png",
+  alt: "A build-in-progress preview of the new A Step Above Medical homepage, showing the hero copy, certification checklist and an upcoming IV Therapy Training Course card.",
+};
 
 export default function AStepAboveMedicalStatusPreview() {
   return (
@@ -68,6 +92,46 @@ export default function AStepAboveMedicalStatusPreview() {
               finished case study.
             </p>
           </aside>
+        </div>
+      </section>
+
+      {/* ── What's taking shape. Explicitly a preview, not a delivered
+          build -- see the file-level note on why no "visit the live site"
+          link exists here. ── */}
+      <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
+        <div className="mx-auto max-w-[1100px]">
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
+            What&apos;s taking shape.
+          </h2>
+          <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
+            Content lives in Sanity, organized by location and by course, so the team can open a new city or update
+            a course without a developer once this launches.
+          </p>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {shots.map((s) => (
+              <div key={s.key}>
+                <div className="relative overflow-hidden border" style={{ aspectRatio: "1912 / 914", borderColor: T.rule }}>
+                  <Image src={s.src} alt={s.alt} fill sizes="(min-width: 640px) 520px, 100vw" className="object-cover object-top" />
+                </div>
+                <p className="mt-2 text-[11px] uppercase tracking-[0.08em]" style={{ fontFamily: MONO, color: T.accent }}>{s.label}</p>
+                <p className="mt-1 text-[13px] leading-[1.5]" style={{ color: T.quiet }}>{s.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-10 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
+            A build-in-progress preview
+          </p>
+          <div className="relative mt-4 w-full border" style={{ height: "min(60vh, 600px)", borderColor: T.rule }}>
+            <Image src={previewShot.src} alt={previewShot.alt} fill sizes="(min-width: 1100px) 1050px, 100vw" className="object-cover object-top" />
+          </div>
+          <p className="mt-3 max-w-[42rem] text-[13px] leading-[1.5]" style={{ color: T.quiet }}>
+            The new homepage, mid-build -- location- and course-driven, with an upcoming-class card pulling directly
+            from the data shown above. This is a preview of work in progress, not the site that&apos;s publicly live
+            today.
+          </p>
         </div>
       </section>
 
