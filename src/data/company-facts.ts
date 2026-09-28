@@ -261,6 +261,15 @@ export const REFERENCE_LINKS: readonly { href: string; title: string; body: stri
  *    and do not belong here. Those go on the Person node.
  *
  * Verified 28 August 2026.
+ *
+ * 29 Sep 2026: added the Tracxn profile after it surfaced in Search Console's
+ * backlink report. Fetched and checked before adding: it resolves to a real,
+ * accurate (if thin, unclaimed) company profile -- name, 2026 founding and
+ * Missouri City location all match. A second candidate from the same report,
+ * edverise.com/profile/panda-code-gen, was checked and rejected: it carries a
+ * wrong HQ address (Austin, not Stafford -- the same error already corrected
+ * once, see the FACTS_VERIFIED note below) and a stale $48K/mo revenue figure
+ * against the current $55K+/mo. Do not add it until it's claimed and fixed.
  */
 export const ORGANIZATION_PROFILES: readonly string[] = [
     'https://www.linkedin.com/company/pandacodegen',
@@ -278,6 +287,7 @@ export const ORGANIZATION_PROFILES: readonly string[] = [
     'https://dev.to/pandacodegen',
     'https://pandacodegen.hashnode.dev',
     'https://www.reddit.com/user/PandaCodeGen/',
+    'https://tracxn.com/d/companies/pandacodegen/__qpvdxfi8vGoRc7AIAP-dxF4KLqQPxP-BQ4kqcjuTgOA',
 ];
 
 /**
