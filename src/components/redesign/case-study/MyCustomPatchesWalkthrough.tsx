@@ -67,6 +67,7 @@ export default function MyCustomPatchesWalkthrough() {
   return (
     <CaseStudyWalkthrough
       slug="mycustompatches"
+      projectName="MyCustomPatches"
       eyebrow="One storefront, one template, one process."
       heading={<>A store built on one template,<br />backed by a real process.</>}
       lead={<>The <strong>storefront</strong> customers browse, the <strong>product template</strong> that runs every category page, and the <strong>order process</strong> behind each purchase.</>}

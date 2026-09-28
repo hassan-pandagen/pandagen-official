@@ -1,29 +1,25 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
+import Ladies4JesusWalkthrough from "@/components/redesign/case-study/Ladies4JesusWalkthrough";
 import { MIGRATION_PROJECT_DETAILS } from "@/data/migration-projects";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Ladies 4 Jesus, hero + facts pass, 28 Sep 2026. Strongest match of the
-// three non-Panda client projects for a future CaseStudyWalkthrough: it
-// genuinely has a Sanity Studio (embedded at /studio) plus a real
-// moderation workflow, per the live /work page's own FAQ. Only one
-// screenshot exists today (ladies-4-jesus.png, the homepage) -- Studio
-// screenshots, a moderation-queue screenshot and the video-upload flow
-// still need to be captured before those chapters can be built, so this
-// page stops after the hero and a plain "what's built" list, same as
-// Emblematic Studio and MyCustomPatches.
+// Ladies 4 Jesus, rebuild 2, 28 Sep 2026. First pass (same day, earlier)
+// stopped after a hero and a plain facts list -- only one screenshot existed.
+// Five real screenshots arrived from the owner (3 of the live public site,
+// 2 of the Sanity Studio), enough to build the same real CaseStudyWalkthrough
+// pattern MyCustomPatches and Panda Patches use. The moderation workflow and
+// video-upload cleanup are real, already-published facts (from the live
+// /work page's own FAQ) but have no screenshot of their own yet, so they
+// stay in the "also in scope" list below rather than becoming a chapter with
+// no image to back it.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const built = [
-  {
-    label: "A CMS the owner runs alone",
-    body: "Sanity Studio is embedded at /studio. Content edits reach the live site in about sixty seconds through incremental regeneration -- no deploy, no developer. Schema changes (the shape of the data, not its contents) still ship through a normal code push.",
-  },
   {
     label: "Nothing goes public until she approves it",
     body: "Five of the site's nine content types are visitor-submitted -- testimonies, questions, comments, contact messages, content reports. Each is written to the CMS in a pending state by a server-side route, filtered out of every public query until the owner sets it to approved.",
@@ -71,28 +67,17 @@ export default function Ladies4JesusCaseStudyPreview() {
             </a>
           </div>
 
-          <div className="mt-10">
-            <Image
-              src="/work/ladies-4-jesus.png"
-              alt="The Ladies 4 Jesus community home page, showing the welcome hero, the section navigation for stories, devotionals and Q&A, and the Share Your Story entry point."
-              width={1912}
-              height={914}
-              sizes="(min-width: 1100px) 1050px, 100vw"
-              priority
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-          </div>
-
           <RelationshipDisclosure slug="ladies-4-jesus" variant="editorial" />
         </div>
       </section>
 
+      <Ladies4JesusWalkthrough />
+
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>03</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-            What&apos;s actually built.
+            Also in scope.
           </h2>
           <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
             No before-and-after performance numbers are quoted here -- nobody recorded the previous platform&apos;s

@@ -7,7 +7,7 @@ type Shot = { key: string; src: string; width: number; height: number; alt: stri
 
 /** Server-rendered screenshot sequence with a progressive scroll reveal.
  * Complete images and captions remain available without JavaScript or motion. */
-export default function ScreenshotDeck({ shots, id, chapter }: { shots: Shot[]; id: string; chapter: string }) {
+export default function ScreenshotDeck({ shots, id, project, chapter }: { shots: Shot[]; id: string; project: string; chapter: string }) {
   return (
     <div style={{ "--deck-paper": T.paperHi, "--deck-ink": T.ink, "--deck-accent": T.accentText, "--deck-rule": T.rule } as CSSProperties}>
       <nav aria-label={`Screenshots: ${chapter}`}>
@@ -31,7 +31,7 @@ export default function ScreenshotDeck({ shots, id, chapter }: { shots: Shot[]; 
               <a href={shot.src} target="_blank" rel="noopener noreferrer" className={styles.imageLink} aria-label={`Open full-size ${shot.label.toLowerCase()} screenshot (new tab)`}>
                 <Image src={shot.src} alt={shot.alt} width={shot.width} height={shot.height} sizes="(min-width: 1536px) 1080px, (min-width: 1024px) 70vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)" className={styles.image} />
               </a>
-              <div className={styles.footer}><span>Panda Patches / {chapter}</span><span>Open full-size image ↗</span></div>
+              <div className={styles.footer}><span>{project} / {chapter}</span><span>Open full-size image ↗</span></div>
             </figure>
           </li>
         ))}

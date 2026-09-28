@@ -63,6 +63,7 @@ export default function PandaPatchesWalkthrough() {
   return (
     <CaseStudyWalkthrough
       slug="panda"
+      projectName="Panda Patches"
       eyebrow="One business. Three connected parts."
       heading={<>Your customers shop.<br />Your team keeps things moving.</>}
       lead={<>The <strong>storefront</strong> customers see, the <strong>content editor</strong> your team controls, and the <strong>operations system</strong> behind each order.</>}

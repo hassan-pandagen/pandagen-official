@@ -29,6 +29,7 @@ export type WalkthroughChapter = {
  */
 export default function CaseStudyWalkthrough({
   slug,
+  projectName,
   eyebrow,
   heading,
   lead,
@@ -37,6 +38,8 @@ export default function CaseStudyWalkthrough({
   handoff,
 }: {
   slug: string;
+  /** Real project name, e.g. "Ladies 4 Jesus" -- shown in each screenshot's caption footer. */
+  projectName: string;
   eyebrow: string;
   heading: ReactNode;
   lead: ReactNode;
@@ -85,7 +88,7 @@ export default function CaseStudyWalkthrough({
             )}
           </div>
           <div className={styles.screens}>
-            <ScreenshotDeck id={`${slug}-${chapter.id}-screen`} chapter={chapter.label} shots={chapter.shots} />
+            <ScreenshotDeck id={`${slug}-${chapter.id}-screen`} project={projectName} chapter={chapter.label} shots={chapter.shots} />
           </div>
         </section>
       ))}
