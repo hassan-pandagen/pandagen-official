@@ -4,24 +4,27 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
+import MyCustomPatchesWalkthrough from "@/components/redesign/case-study/MyCustomPatchesWalkthrough";
 import { requiredMetric, clientIdentity } from "@/data/case-study-facts";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// MyCustomPatches, hero + facts pass, 28 Sep 2026. Same caveat as Emblematic
-// Studio: only one screenshot exists (mycustompatches.png), so this stops
-// after the hero and a plain "what's built" list rather than inventing
-// chapter screenshots that don't exist yet.
+// MyCustomPatches, rebuild 2, 28 Sep 2026. First pass (same day, earlier)
+// stopped after a hero and a plain facts list because only one screenshot
+// existed. Four chapter-specific screenshots arrived from the owner (real,
+// taken live on mycustompatches.net) -- storefront category grid, one
+// product-template page in detail, and the four-step order process page --
+// enough to build the same real CaseStudyWalkthrough pattern Panda Patches
+// and MyCustomPatches's sibling pages use, instead of describing these
+// things in prose only.
 //
-// One open question before a full walkthrough gets built: the live
+// One open question still unresolved from the first pass: the live
 // /work/mycustompatches page's own Before/After list says "the team edits
 // content directly, no deploy required," but nothing else on that page --
 // not the tech stack table, not the FAQ, not the schema -- names a CMS.
-// Every content/form system described there (product pages via a shared
-// template, quote forms via React Hook Form + Web3Forms, blog posts) reads
-// as code-level, not editor-level. That line is left OUT of this page until
-// it's confirmed: either a real CMS exists and isn't documented yet, or the
-// live claim is unsupported and needs fixing at the source.
+// Confirmed 28 Sep 2026: there genuinely is no CMS today; the owner is
+// adding Sanity and will share screenshots once it's live. That line stays
+// out of both this page and the walkthrough until then.
 //
 // Metrics below come from case-study-facts.json via requiredMetric(), the
 // same accessor Panda Patches uses -- if metrics_guard.py ever withdraws
@@ -32,10 +35,6 @@ const built = [
   {
     label: "Off a decade of WordPress, in about 22 days",
     body: "Migrated to Next.js in roughly three weeks: every existing URL, canonical tag, meta description and structured-data block preserved exactly, with 301 redirects wherever a URL structure changed.",
-  },
-  {
-    label: "One product template, eight categories",
-    body: "A shared product-page template drives all 8 product categories, so a change to how a product page works applies everywhere at once instead of needing eight separate edits.",
   },
   {
     label: "Forms with no server to maintain",
@@ -112,11 +111,13 @@ export default function MyCustomPatchesCaseStudyPreview() {
         </div>
       </section>
 
+      <MyCustomPatchesWalkthrough />
+
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
-            What&apos;s actually built.
+            Also in scope.
           </h2>
           <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
             Search rankings lost, per Google Search Console: {requiredMetric("mycustompatches", "rankings")}.
