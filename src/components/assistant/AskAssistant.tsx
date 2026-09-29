@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowUp, X } from "lucide-react";
 import { setQuotePrefill } from "@/lib/quotePrefill";
 import { T } from "@/components/redesign/tokens";
+import CalModalButton from "@/components/ui/CalModalButton";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // The website assistant: an inline prompt that opens a conversation panel.
@@ -19,6 +20,12 @@ import { T } from "@/components/redesign/tokens";
 // The conversation is kept in sessionStorage so it survives navigation within
 // the visit and disappears when the tab closes. Every access is wrapped because
 // storage can be unavailable (private windows, blocked site data).
+//
+// 29 Sep 2026: from the visitor's second question, and whenever the assistant
+// cannot answer, the panel offers a call with Hassan: book a time directly
+// (CalModalButton, which handles the calendar's consent choice) or leave an
+// email and phone through the enquiry form, pre-filled with the conversation.
+// Contact details still go only through that form, never into the chat.
 // ─────────────────────────────────────────────────────────────────────────────
 
 type Source = { title: string; url: string };
@@ -133,11 +140,23 @@ export default function AskAssistant() {
         body: JSON.stringify({ messages: next.map(({ role, content }) => ({ role, content })) }),
       });
       const data = await res.json();
-      setMessages([...next, { role: "assistant", content: data.answer, sources: data.sources ?? [], handoff: Boolean(data.handoff) }]);
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content: data.answer || "Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com.",
+          sources: data.sources ?? [],
+          handoff: Boolean(data.handoff),
+        },
+      ]);
     } catch {
       setMessages([
         ...next,
-        { role: "assistant", content: "Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com." },
+        {
+          role: "assistant",
+          content: "Sorry, something went wrong. You can reach Hassan and Imran at info@pandacodegen.com.",
+          handoff: true,
+        },
       ]);
     } finally {
       setLoading(false);
@@ -314,20 +333,39 @@ export default function AskAssistant() {
                         ))}
                       </ul>
                     )}
-                    {m.handoff && i === messages.length - 1 && (
+                    {m.handoff && i === messages.length - 1 && !loading && (
                       <div className="mt-4 border-l-2 px-4 py-4" style={{ borderColor: ACCENT, backgroundColor: T.paperHi }}>
-                        <p className="text-[15px]" style={{ color: INK }}>
-                          Want Hassan and Imran to look at this? Your questions go into the enquiry form so you
-                          don&apos;t have to repeat yourself. You can edit everything before sending.
+                        <p className="text-[15px] font-medium" style={{ color: INK }}>
+                          Talk it through with Hassan
                         </p>
-                        <button
-                          type="button"
-                          onClick={handoff}
-                          className="mt-3 px-5 py-3 text-[15px] font-medium text-white"
-                          style={{ backgroundColor: ACCENT }}
-                        >
-                          Send to the founders
-                        </button>
+                        <p className="mt-1 text-[15px]" style={{ color: BODY }}>
+                          Hassan, our lead engineer, can answer this properly for your project on a short call. Book a
+                          time, or leave your email and phone and we&apos;ll get back to you. Your questions come
+                          with it, so you don&apos;t have to repeat yourself.
+                        </p>
+                        <div className="mt-3 flex flex-wrap items-center gap-3">
+                          <span
+                            onClickCapture={() => {
+                              track("assistant_book_call");
+                              setOpen(false);
+                            }}
+                          >
+                            <CalModalButton
+                              fallbackHref="https://cal.com/pandagen/discovery"
+                              className="bg-[#7A2E0E] px-5 py-3 text-[15px] font-medium text-white"
+                            >
+                              Book a call
+                            </CalModalButton>
+                          </span>
+                          <button
+                            type="button"
+                            onClick={handoff}
+                            className="px-5 py-3 text-[15px] font-medium underline underline-offset-4"
+                            style={{ color: INK }}
+                          >
+                            Leave your email or phone
+                          </button>
+                        </div>
                       </div>
                     )}
                   </div>
