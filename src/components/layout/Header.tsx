@@ -79,7 +79,7 @@ const workLinks = [
 const aboutLinks = [
   { name: "About PandaCodeGen", href: "/about" },
   { name: "Hassan Jamal, Lead Engineer", href: "/about/hassan" },
-  { name: "Imran Raza Ladhani, Lead Architect", href: "/about/imran" },
+  { name: "Imran Raza Ladhani, Head of Marketing", href: "/about/imran" },
   { name: "Our Manifesto", href: "/manifesto" },
   { name: "Editorial Policy", href: "/editorial-policy" },
   { name: "Security", href: "/security" },

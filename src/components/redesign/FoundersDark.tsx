@@ -4,10 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import { DISPLAY, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Founders, on dark. Redesign candidate, 24 Sep 2026. Copy and links unchanged
-// from FounderSection.tsx. The names carry the scale; portraits stay at ~200px
-// because /team/hassan.png is 300x300 and would soften on a 2x screen if set
-// larger. Replace it with a larger original before making the photos bigger.
+// Founders, on dark. Redesign candidate, 24 Sep 2026. The names carry the
+// scale; portraits stay secondary to the founders' roles and project evidence.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const founders = [
@@ -25,10 +23,10 @@ const founders = [
   {
     first: "Imran Raza",
     last: "Ladhani",
-    title: "Co-founder & Lead Architect",
-    image: "/team/imran.png",
-    bio: "Co-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.",
-    tags: ["Next.js Architecture", "Platform Migrations", "System Design", "Headless Commerce"],
+    title: "Co-founder & Head of Marketing",
+    image: "/team/imran-editorial.png",
+    bio: "Brings marketing experience across different fields to PandaCodeGen. He leads positioning, messaging and customer journeys so buyers can understand the offer and the next step.",
+    tags: ["Positioning", "Customer Journeys", "Ecommerce", "Marketing Strategy"],
     about: "/about/imran",
     linkedin: "https://www.linkedin.com/in/imran-raza-ladhani/",
     github: null as string | null,
@@ -48,7 +46,7 @@ export default function FoundersDark() {
             Founder-built, not farmed out.
           </h2>
           <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5 lg:col-start-8" style={{ color: T.onDarkQuiet }}>
-            When you book a call, Hassan answers. He writes every line of code. Imran leads the architecture. Contracts
+            When you book a call, Hassan answers. He writes every line of code. Imran leads marketing. Contracts
             are US-based, with dedicated support: a founder replies, not a bot or an outsourced agent. No Manhattan
             office rent in your invoice, no account managers, no white-label outsourcing.
           </p>

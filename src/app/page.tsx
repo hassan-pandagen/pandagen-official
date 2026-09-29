@@ -100,7 +100,7 @@ export default function Home() {
             "@type": "Person",
             "@id": "https://www.pandacodegen.com/about/imran#person",
             "name": "Imran Raza Ladhani",
-            "jobTitle": "Co-founder and Lead Architect",
+            "jobTitle": "Co-founder and Head of Marketing",
             "url": "https://www.pandacodegen.com/about/imran",
             "sameAs": [
               "https://www.linkedin.com/in/imran-raza-ladhani/"

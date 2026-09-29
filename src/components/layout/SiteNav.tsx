@@ -60,7 +60,7 @@ const leaving = [
 
 const company = [
   { name: "Hassan Jamal, Lead Engineer", href: "/about/hassan" },
-  { name: "Imran Raza Ladhani, Lead Architect", href: "/about/imran" },
+  { name: "Imran Raza Ladhani, Head of Marketing", href: "/about/imran" },
   { name: "Partners", href: "/partners" },
   { name: "Manifesto", href: "/manifesto" },
   { name: "Editorial policy", href: "/editorial-policy" },

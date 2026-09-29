@@ -49,7 +49,7 @@ const aboutSchema = {
       },
       founder: [
         { "@type": "Person", name: "Hassan Jamal", jobTitle: "Co-founder and Lead Engineer", url: "https://www.pandacodegen.com/about/hassan" },
-        { "@type": "Person", name: "Imran Raza Ladhani", jobTitle: "Co-founder and Lead Architect", url: "https://www.pandacodegen.com/about/imran" },
+        { "@type": "Person", name: "Imran Raza Ladhani", jobTitle: "Co-founder and Head of Marketing", url: "https://www.pandacodegen.com/about/imran" },
       ],
     },
   ],
@@ -123,19 +123,16 @@ const founders: Founder[] = [
     href: "/about/hassan",
   },
   {
-    discipline: "Architecture",
+    discipline: "Marketing",
     name: "Imran Raza Ladhani",
-    role: "Co-founder and Lead Architect",
-    photo: "/team/imran.png",
+    role: "Co-founder and Head of Marketing",
+    photo: "/team/imran-editorial.png",
     accountableFor:
-      "Decides the platform and data model before a line is written, and owns the operations side: the internal systems that run a business day to day rather than the pages a visitor sees.",
+      "Leads the agency's positioning and customer journey: how we explain the offer, present project evidence, and turn a first question into a useful conversation.",
     credentials: [
-      // Stated as ownership, not as a client win. Panda Patches is
-      // founder-affiliated and the disclosure travels with the fact everywhere
-      // it appears, including here.
-      { label: "Owns and operates Panda Patches, which we built and maintain", href: "/work/panda-patches" },
-      { label: "Designed the internal operations platform that runs it", href: "/work/enterprise-ops" },
-      { label: "Architecture and data-model decisions on every build" },
+      { label: "Marketing experience across different fields" },
+      { label: "Focuses on positioning, messaging, and the path to enquiry" },
+      { label: "Works with engineering to connect the offer with what a site actually delivers" },
     ],
     href: "/about/imran",
   },
@@ -161,7 +158,7 @@ export default function AboutPageClient() {
             PandaCodeGen designs and builds custom business websites, online stores and software. Some clients start from nothing, some replace a site they have outgrown, and some move an existing one where URLs, content, integrations, measurement and operational control matter. Every route begins with evidence and a written scope, not an automatic promise that every site needs a rebuild.
           </p>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-            You will not be handed to an account manager. The two founders who scope your project are the two engineers who build it, and if the evidence says repairing your current site is the better answer, we will tell you that instead of selling you a rebuild.
+            You will not be handed to an account manager. Hassan leads engineering and Imran leads marketing; both founders stay involved in the project. If the evidence says repairing your current site is the better answer, we will tell you that instead of selling you a rebuild.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <button

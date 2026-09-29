@@ -18,13 +18,13 @@ const founders = [
   },
   {
     name: "Imran Raza Ladhani",
-    title: "Co-founder & Lead Architect",
-    bio: "Co-founded PandaCodeGen with Hassan and leads the architecture. He decides whether a migration is worth doing, designs how the pieces fit, and plans cutovers that do not take you offline. Hassan writes the code. Imran makes sure it scales.",
-    image: "/team/imran.png",
+    title: "Co-founder & Head of Marketing",
+    bio: "Brings marketing experience across different fields to PandaCodeGen. He leads positioning, messaging and customer journeys so buyers can understand the offer and the next step.",
+    image: "/team/imran-editorial.png",
     github: null,
     linkedin: "https://www.linkedin.com/in/imran-raza-ladhani/",
     about: "/about/imran",
-    tags: ["Next.js Architecture", "Platform Migrations", "System Design", "Headless Commerce"],
+    tags: ["Positioning", "Customer Journeys", "Ecommerce", "Marketing Strategy"],
   },
 ];
 
@@ -47,7 +47,7 @@ export default function FounderSection() {
           </h2>
           <p className="text-lg text-gray-400 max-w-xl">
             When you book a call, Hassan answers. He writes every line of code.
-            Imran leads the architecture. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.
+            Imran leads marketing and brings an owner-operator view to the customer journey. Contracts and support are US-based, and you get a founder on every project. No Manhattan office rent in your invoice, no account managers, no white-label outsourcing.
           </p>
         </motion.div>
 

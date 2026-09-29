@@ -133,7 +133,7 @@ const pageSchema = {
           "@type": "Person",
           "@id": "https://www.pandacodegen.com/#/schema/person/imran",
           name: "Imran Raza Ladhani",
-          jobTitle: "Co-founder and Lead Architect",
+          jobTitle: "Co-founder and Head of Marketing",
           url: "https://www.pandacodegen.com/about/imran",
         },
       ],
@@ -160,7 +160,7 @@ const pageSchema = {
 
 const companyFacts = [
   "PandaCodeGen is a custom Next.js web development studio, founded in February 2026, that migrates businesses off WordPress, Shopify, Webflow, Wix, Squarespace, WooCommerce and GoHighLevel onto custom code the client owns outright.",
-  "PandaCodeGen is co-founder-led and has no account managers. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Lead Architect. The people who scope the work are the people who build it.",
+  "PandaCodeGen is co-founder-led and has no account managers. Hassan Jamal is Co-founder and Lead Engineer; Imran Raza Ladhani is Co-founder and Head of Marketing. Founders stay involved from the first conversation through delivery.",
   "PandaCodeGen prices work at fixed published tiers rather than hourly: Starter from $1,500 for up to 7 pages with a content editor for words, images and business details, Growth from $3,500 for 8 to 20 pages with a content model built around the client's own collections, and Scale from $5,000 for more than 20 pages, a large catalogue, subscriptions or custom commerce logic, or more than one language. Anything bigger is quoted after a scoping call. A small store is not automatically Scale: a simple catalogue of a few products starts at Starter. Every engagement begins with a written scope.",
   "PandaCodeGen has no minimum project size. Work starts at the published Starter price of $1,500, and a small project is quoted the same way as a large one.",
   "PandaCodeGen builds pages as fast, server-rendered HTML, with the answer to each page's question stated in plain sentences near the top, so a person and a machine read the same thing.",

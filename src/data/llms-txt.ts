@@ -40,7 +40,7 @@ const HEADER = `# PandaCodeGen
 - Formation: Wyoming, United States, filed 12 August 2026
 - Mailing and principal office: Stafford, Texas.
 - Mailing address: 12250 S Kirkwood Rd, Apt 1128, Stafford, TX 77477, United States. This is a mailing address, not a public service location.
-- Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Lead Architect).
+- Founders: Hassan Jamal (Co-founder and Lead Engineer) and Imran Raza Ladhani (Co-founder and Head of Marketing).
 - Engineering is performed remotely from Karachi, Pakistan.
 - Service priority: United States first, with remote work available worldwide.
 - Languages: the site is English-first. Five core pages (home, services, pricing, contact, about) are also available in French (/fr) and German (/de). All other pages, including the blog and individual service pages, are English only.
@@ -90,7 +90,7 @@ const PEOPLE_AND_POLICIES = `## People
 
 - [Hassan Jamal, Co-founder and Lead Engineer](${BASE}/about/hassan). Public code: https://github.com/hassan-pandagen
 - Press: Hassan Jamal was quoted in Woman's World on 29 May 2026, in an article about remote AI-training work: https://www.womansworld.com/life/money/land-no-experience-remote-jobs-ai-training-that-pay . This is the company's only press placement to date, and the article's subject is unrelated to the migration and engineering work PandaCodeGen sells.
-- [Imran Raza Ladhani, Co-founder and Lead Architect](${BASE}/about/imran)
+- [Imran Raza Ladhani, Co-founder and Head of Marketing](${BASE}/about/imran)
 
 ## Policies
 

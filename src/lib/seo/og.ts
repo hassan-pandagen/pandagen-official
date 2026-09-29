@@ -34,8 +34,8 @@ const staticPages: Record<string, StaticOgContent> = {
   },
   "/about/imran": {
     title: "Imran Raza Ladhani",
-    label: "Co-founder and Lead Architect",
-    description: "Architecture, operating systems, platform decisions, and delivery strategy at PandaCodeGen.",
+    label: "Co-founder and Head of Marketing",
+    description: "Positioning, customer journeys, and marketing direction at PandaCodeGen.",
   },
   "/ai-info": {
     title: "Facts About PandaCodeGen",

@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Boxes, CheckCircle2, Database, FileCheck2, Network, Route } from "lucide-react";
+import { ArrowRight, BarChart3, CheckCircle2, FileCheck2, Megaphone, Target } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ogImageForPath } from "@/lib/seo/og";
 
 export const metadata: Metadata = {
-  title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Lead Architect for system design, data models, integrations, migration feasibility, and cutover planning.",
+  title: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+  description: "Meet Imran Raza Ladhani, PandaCodeGen co-founder and Head of Marketing. He focuses on positioning, the customer journey, and how the agency explains and presents its work.",
   alternates: { canonical: "/about/imran" },
   openGraph: {
-    title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-    description: "Architecture leadership for system design, integrations, data models, migration feasibility, and cutover planning.",
+    title: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    description: "Marketing direction, positioning, and the customer journey at PandaCodeGen.",
     type: "profile",
     url: "https://www.pandacodegen.com/about/imran",
     images: [ogImageForPath("/about/imran")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
-    description: "Architecture leadership for system design, integrations, data models, migration feasibility, and cutover planning.",
+    title: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
+    description: "Marketing direction, positioning, and the customer journey at PandaCodeGen.",
     images: [ogImageForPath("/about/imran")],
   },
   robots: { index: true, follow: true },
@@ -33,25 +33,25 @@ const profileSchema = {
       "@type": "Person",
       "@id": "https://www.pandacodegen.com/#/schema/person/imran",
       name: "Imran Raza Ladhani",
-      image: "https://www.pandacodegen.com/team/imran.png",
-      jobTitle: "Co-founder and Lead Architect",
+      image: "https://www.pandacodegen.com/team/imran-editorial.png",
+      jobTitle: "Co-founder and Head of Marketing",
       url: "https://www.pandacodegen.com/about/imran",
       worksFor: { "@id": "https://www.pandacodegen.com/#organization" },
       sameAs: ["https://www.linkedin.com/in/imran-raza-ladhani/"],
       knowsAbout: [
-        "System architecture",
-        "Website migration",
-        "Content modeling",
-        "Headless commerce",
-        "Database design",
-        "API integration",
+        "Marketing strategy",
+        "Website positioning",
+        "Customer journey",
+        "Ecommerce operations",
+        "Conversion paths",
+        "Client communication",
       ],
     },
     {
       "@type": "ProfilePage",
       "@id": "https://www.pandacodegen.com/about/imran#webpage",
       url: "https://www.pandacodegen.com/about/imran",
-      name: "Imran Raza Ladhani | Co-founder and Lead Architect at PandaCodeGen",
+      name: "Imran Raza Ladhani | Co-founder and Head of Marketing at PandaCodeGen",
       mainEntity: { "@id": "https://www.pandacodegen.com/#/schema/person/imran" },
       isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
       inLanguage: "en-US",
@@ -69,19 +69,19 @@ const profileSchema = {
 
 const responsibilities = [
   {
-    icon: Route,
-    title: "Migration feasibility",
-    body: "Review platform constraints, content, URLs, integrations, access, business dependencies, and rollback needs before a replacement is recommended.",
+    icon: Target,
+    title: "Positioning and audience",
+    body: "Define who a website needs to reach, what those visitors need to understand, and which claims the business can support with real evidence.",
   },
   {
-    icon: Database,
-    title: "Data and content architecture",
-    body: "Define content models, data ownership, application boundaries, APIs, and the account structure required for a maintainable handover.",
+    icon: Megaphone,
+    title: "Clearer website messaging",
+    body: "Turn the offer, service pages, project examples, and calls to action into a coherent path from first visit to enquiry.",
   },
   {
-    icon: Network,
-    title: "Operational design",
-    body: "Map authentication, payments, forms, analytics, automation, monitoring, support, and third-party responsibilities into the approved scope.",
+    icon: BarChart3,
+    title: "Marketing and measurement",
+    body: "Decide what to learn from enquiries and site behaviour, then use that feedback to improve the message and customer journey without inventing outcomes.",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function ImranProfilePage() {
           <div className="mt-8 grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
             <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-[2rem] border border-stone-300 bg-charcoal shadow-elevated">
               <Image
-                src="/team/imran.png"
+                src="/team/imran-editorial.png"
                 alt="Imran Raza Ladhani, co-founder of PandaCodeGen"
                 fill
                 sizes="(max-width: 431px) calc(100vw - 48px), 384px"
@@ -108,10 +108,10 @@ export default function ImranProfilePage() {
               />
             </div>
             <div className="border-l-2 border-cognac pl-5 md:pl-8">
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Lead Architect</p>
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Co-founder and Head of Marketing</p>
               <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">Imran Raza Ladhani</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-stone-700 md:text-xl">
-                Imran leads architecture at PandaCodeGen. He decides what a project actually needs to be built from, draws the lines between systems and data, judges whether moving an existing site is justified at all, and makes sure what we agreed can be operated and handed over without hidden platform or agency lock-in.
+                Imran brings marketing experience across different fields to PandaCodeGen. He leads how we position the offer, explain real project work, and shape the customer journey from a first question to a useful conversation.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact#contact-quote-form" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">
@@ -128,8 +128,8 @@ export default function ImranProfilePage() {
 
       <section className="px-6 py-16 md:py-24" aria-labelledby="imran-responsibilities">
         <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Architecture responsibility</p>
-          <h2 id="imran-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">The destination follows the operating requirements.</h2>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-cognac">Marketing responsibility</p>
+          <h2 id="imran-responsibilities" className="mt-3 max-w-3xl text-3xl font-bold md:text-5xl">A website should make the business easier to understand.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {responsibilities.map(({ icon: Icon, title, body }) => (
               <article key={title} className="rounded-3xl border border-stone-300 bg-white p-7">
@@ -142,18 +142,18 @@ export default function ImranProfilePage() {
         </div>
       </section>
 
-      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="architecture-review">
+      <section className="bg-charcoal px-6 py-16 text-white md:py-24" aria-labelledby="marketing-review">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <Boxes className="h-8 w-8 text-orange-300" aria-hidden="true" />
-            <h2 id="architecture-review" className="mt-5 text-3xl font-bold md:text-5xl">Questions answered before implementation</h2>
+            <Megaphone className="h-8 w-8 text-orange-300" aria-hidden="true" />
+            <h2 id="marketing-review" className="mt-5 text-3xl font-bold md:text-5xl">Questions answered before a page goes live</h2>
           </div>
           <ul className="space-y-4">
             {[
-              "What is worth keeping, and what is genuinely holding you back enough to replace?",
-              "Which data, content, commerce, logins and integrations have to still work the morning after?",
-              "Which accounts are yours, and what are you still paying for once it is live?",
-              "How you sign it off, how we reverse it, what gets documented, what support you get, which licences, and who owns it. All of that in writing.",
+              "Who needs this page, and what decision are they trying to make?",
+              "What can we show from real work to make the offer credible?",
+              "Does the route from the first answer to the next action make sense?",
+              "Which enquiries and behaviours will tell us what to improve after launch?",
             ].map((item) => (
               <li key={item} className="flex gap-3 rounded-2xl border border-stone-700 bg-stone-900 p-5 text-stone-200">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-orange-300" aria-hidden="true" />
@@ -170,7 +170,7 @@ export default function ImranProfilePage() {
           <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-cognac">Owner-operated reference</p>
           <h2 id="owner-operator-evidence" className="mt-3 text-3xl font-bold md:text-5xl">Imran owns Panda Patches. It is not a client testimonial.</h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-stone-700">
-            <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link> is owned and operated by Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and its co-founder Imran Raza Ladhani holds a stake in both companies, so the two businesses share an owner and this is not an arm’s-length relationship. It can be used as an implementation reference for architecture, tooling, and operating decisions. Any public performance, cost, or revenue figure still needs its date, source, definition, and measurement conditions so a founder-affiliated project is not presented as independent client proof.
+            <Link href="/work/panda-patches" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Panda Patches</Link> is owned and operated by Imran Raza Ladhani. PandaCodeGen built and maintains its technical platform, and Imran holds a stake in both companies, so this is not an arm’s-length client relationship. It provides an owner-operated example of catalogue, checkout, customer journey, and technical decisions. Any public performance, cost, or revenue figure still needs its date, source, definition, and measurement conditions; a founder-affiliated project is not independent client proof.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href="/work" className="inline-flex min-h-12 items-center justify-center rounded-full bg-charcoal px-6 font-bold text-white hover:bg-cognac">See the project records</Link>

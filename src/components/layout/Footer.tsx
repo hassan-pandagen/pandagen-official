@@ -150,7 +150,7 @@ export default function Footer({ onOpenQuote, showCta = true }: FooterProps) {
               <FeaturedLink
                 href="/about/imran"
                 title="Imran Raza Ladhani"
-                desc="Co-founder and Lead Architect."
+                desc="Co-founder and Head of Marketing."
               />
               <FeaturedLink
                 href="/blog"

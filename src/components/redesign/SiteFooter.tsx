@@ -33,7 +33,7 @@ const company = [
   { href: "/partners", title: "Agency Pilot", desc: "Test one scoped engagement first." },
   { href: "/about", title: "About", desc: "Migration delivery standards." },
   { href: "/about/hassan", title: "Hassan Jamal", desc: "Co-founder and Lead Engineer." },
-  { href: "/about/imran", title: "Imran Raza Ladhani", desc: "Co-founder and Lead Architect." },
+  { href: "/about/imran", title: "Imran Raza Ladhani", desc: "Co-founder and Head of Marketing." },
   { href: "/blog", title: "Engineering Blog", desc: "Deep dives into Next.js and performance." },
   { href: "/manifesto", title: "Delivery Principles", desc: "Scope, evidence, control, and acceptance." },
   { href: "/contact", title: "Contact", desc: "Talk directly with Hassan or Imran." },
