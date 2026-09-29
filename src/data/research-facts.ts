@@ -1,5 +1,35 @@
 import raw from './research-facts.json';
 
+/*
+ * Notes on research-facts.json, moved here from its "$comment" key on 30 Sep 2026.
+ * The JSON is bundled into browser code wherever a client component
+ * imports this module, so anything in the JSON, notes included, ships to
+ * the browser. A comment here does not. Keep notes here, not in the JSON.
+ *
+ * THIRD-PARTY RESEARCH FINDINGS we cite, each with its source and method.
+ *
+ * SEPARATE FROM spec-facts.json ON PURPOSE. That file holds vendor pricing and
+ * limits, which change without notice and carry a 90/180-day staleness clock.
+ * These are published studies. A study does not go stale in 90 days; it is
+ * superseded when the next edition appears. Different lifecycle, different file.
+ *
+ * THE RULE. Every figure here was read off the source page and verified, not
+ * taken from a research summary. Two figures in the dossier these came from
+ * were nearly rejected as fabricated during verification, and both turned out
+ * correct: one number coincidentally matched an unrelated row, and one differed
+ * only by a thousands separator. Check against the source itself, and check
+ * carefully, because a wrong rejection is as bad as a wrong acceptance.
+ *
+ * CORRELATION IS NOT OUR RESULT. The framework and CMS breakdowns describe
+ * sites built on those technologies across a million-page sample. They are not
+ * statements about work we did, and must never be written as though they were.
+ * Nothing here may be phrased as evidence that our builds are more accessible.
+ *
+ * WHAT IS DELIBERATELY ABSENT. Anything the source did not state a method for.
+ * Roughly a third of the research dossier these came from was flagged
+ * UNVERIFIED METHOD by its own author; none of that is here.
+ */
+
 /**
  * Typed access to third-party research findings we cite.
  *

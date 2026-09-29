@@ -1,5 +1,38 @@
 import raw from './first-party-measurements.json';
 
+/*
+ * Notes on first-party-measurements.json, moved here from its "$comment" key on 30 Sep 2026.
+ * The JSON is bundled into browser code wherever a client component
+ * imports this module, so anything in the JSON, notes included, ships to
+ * the browser. A comment here does not. Keep notes here, not in the JSON.
+ *
+ * MEASUREMENTS WE TOOK OURSELVES. Not vendor specs, not published studies.
+ *
+ * WHY A THIRD FILE. spec-facts.json holds other companies' prices and limits on a
+ * 90/180-day clock, because a vendor can change one this afternoon.
+ * research-facts.json holds published studies, which do not decay on a clock but
+ * are superseded when the next edition appears. These are neither. A measurement
+ * we took on a stated date with a stated instrument is true of that date forever,
+ * and becomes misleading the moment it is presented as current. Different
+ * lifecycle again, so a different file.
+ *
+ * THE RULE THAT MATTERS MOST HERE. We are the source, so nobody else will catch
+ * an error. Every entry carries the instrument, the window, the limitation, and
+ * whether the subject is founder-affiliated. A first-party number published
+ * without its method is marketing, and this site's own editorial policy calls it
+ * that.
+ *
+ * AFFILIATION IS NOT OPTIONAL. Panda Patches is founder-owned. Every figure drawn
+ * from it renders with that stated, per the brand canon. The July audit named
+ * unlabelled affiliated claims as the site's first entity liability.
+ *
+ * WHAT THESE DO NOT LICENSE. None of this proves that passing a Lighthouse check
+ * causes revenue. pandacodegen.com scores 3 of 3 and has too little traffic to
+ * register in the Chrome UX Report, which is the counter-example kept in this file
+ * deliberately. State the measurements, state the testimony, and let the reader
+ * join them.
+ */
+
 /**
  * Typed access to measurements we took ourselves.
  *

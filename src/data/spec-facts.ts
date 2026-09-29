@@ -1,5 +1,33 @@
 import raw from './spec-facts.json';
 
+/*
+ * Notes on spec-facts.json, moved here from its "$comment" key on 30 Sep 2026.
+ * The JSON is bundled into browser code wherever a client component
+ * imports this module, so anything in the JSON, notes included, ships to
+ * the browser. A comment here does not. Keep notes here, not in the JSON.
+ *
+ * THIRD-PARTY PLATFORM SPECS, each with the date it was last verified.
+ *
+ * WHY THIS FILE EXISTS. 49% of this site's search impressions are year-qualified
+ * queries ('vercel free tier bandwidth 100gb 2025', '...limit 100gb 2026'). In the
+ * Vercel cluster it is 69%. Half the demand is explicitly asking AS OF WHEN, and
+ * the page answering it dated 17 of its 319 sentences. A spec sentence that does
+ * not carry its own date cannot be lifted into an answer as a dateable fact.
+ *
+ * WHY IT IS DATA AND NOT PROSE. Writing 'as of August 2026' inline fifty times is
+ * prose-carried fact-state: the same class that produced the PageSpeed drift and
+ * the fabricated 95 on /services/ecommerce. Typed once, rendered everywhere, one
+ * edit moves every date on the page.
+ *
+ * THESE ARE OTHER COMPANIES' NUMBERS. We do not control them and they change
+ * without notice. Every value here must be read off the vendor's own published
+ * page and carry the URL it came from. Never carry a value forward on memory.
+ *
+ * ENFORCEMENT. scripts/spec_freshness.py warns at 90 days and FAILS the build at
+ * 180. A stale third-party price presented as current is the same defect class as
+ * a withdrawn metric that keeps rendering.
+ */
+
 /**
  * Typed access to third-party platform specs.
  *

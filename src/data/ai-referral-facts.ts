@@ -1,5 +1,33 @@
 import raw from './ai-referral-data.json';
 
+/*
+ * Notes on ai-referral-data.json, moved here from its "$comment" key on 30 Sep 2026.
+ * The JSON is bundled into browser code wherever a client component
+ * imports this module, so anything in the JSON, notes included, ships to
+ * the browser. A comment here does not. Keep notes here, not in the JSON.
+ *
+ * FIRST-PARTY AI REFERRAL DATA from Panda Patches, a founder-affiliated store.
+ *
+ * WHY THIS FILE EXISTS. Almost no business can break out AI assistants as a
+ * revenue source. Most report near-zero AI traffic, and the reason is
+ * measurement rather than reality: ChatGPT strips referrers, its mobile apps
+ * do not pass them, and a large share of people read an answer and then type
+ * the domain directly. Panda Patches captures referrer WHERE IT SURVIVES and
+ * asks the customer where it does not, which is why these numbers are not zero.
+ *
+ * RELATIONSHIP, STATED NOT BURIED. Panda Patches is owned and operated by a
+ * PandaCodeGen co-founder. This is operating experience, not independent client
+ * proof, and any page rendering it must say so.
+ *
+ * WHAT IS DELIBERATELY ABSENT: lead-to-order conversion rates. The lead card
+ * and the order card do not share a window, and repeat orders appear to inherit
+ * the original lead source. Computing a rate across them produced Claude at
+ * 133% and Facebook at 96%, which is structurally impossible. Rather than
+ * publish a softened version of a broken number, the rate is omitted and this
+ * note explains why. Do not add it back without confirming both cards cover
+ * the same range and that repeat orders are excluded.
+ */
+
 /**
  * Typed access to the first-party AI referral dataset.
  *

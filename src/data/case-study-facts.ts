@@ -1,5 +1,42 @@
 import raw from './case-study-facts.json';
 
+/*
+ * Notes on case-study-facts.json, moved here from its "$comment" key on 30 Sep 2026.
+ * The JSON is bundled into browser code wherever a client component
+ * imports this module, so anything in the JSON, notes included, ships to
+ * the browser. A comment here does not. Keep notes here, not in the JSON.
+ *
+ * SINGLE SOURCE OF TRUTH for every case-study metric on this site.
+ *
+ * WHY THIS FILE EXISTS. These metrics used to be prose, typed into 25+ places.
+ * A PageSpeed claim drifted upward on its own across surfaces: a 90+ baseline
+ * became 97/100 on one page and '100 PageSpeed' on another, which contradicts
+ * brand canon. On 4 Aug 2026 five service surfaces withdrew the MyCustomPatches
+ * performance figures while the case study, the work index and llms.txt kept
+ * asserting them. Four surfaces disagreed with five about one client's numbers.
+ *
+ * THE RULE. A metric appears here once. Every surface renders from here:
+ * page title, meta description, OG, Twitter, body, work-index cards, schema.
+ * No metric is ever typed into a page file again.
+ *
+ * STATUS. 'verified' renders the number and MUST carry a method.
+ * 'withdrawn' renders the dated withdrawal note INSTEAD of the number, on every
+ * surface at once. Flipping one field flips the whole site in one deploy.
+ *
+ * ENFORCEMENT. scripts/metrics_guard.py reads this file and the built HTML and
+ * fails the build if a withdrawn value appears anywhere, or a verified metric
+ * renders without its method. Drift is now a build error, not a memory.
+ *
+ * RELATIONSHIP. Every case study declares one, and it renders on the page.
+ * Added 10 Aug 2026 after an audit found 3 of 6 /work pages carrying NO
+ * relationship disclosure at all: mycustompatches (the independent-client
+ * proof, which never said so on its own page), panda-codelab (founder-
+ * affiliated, disclosed in llms.txt but not on the page), and enterprise-ops
+ * (presented as client work; it is the internal CRM for Panda Patches).
+ * `disclosure` is the sentence surfaces render verbatim. scripts/link_guard.py
+ * fails the build if a /work page renders without it.
+ */
+
 /**
  * Typed access to the case-study metrics.
  *
@@ -8,7 +45,7 @@ import raw from './case-study-facts.json';
  * A guard that reparsed a .ts file could drift from what the site renders, which
  * is the failure mode this whole structure exists to remove.
  *
- * Read the $comment block in the JSON before changing anything here.
+ * Read the notes above, moved from the JSON, before changing anything here.
  */
 
 export type MetricStatus = 'verified' | 'withdrawn';
@@ -63,8 +100,6 @@ export interface CaseStudy {
      * legal entity. If it is the same company, MyCustomPatches is
      * founder-affiliated, and its relationship, disclosure and the Clutch review
      * wording must all change. Do not restore the name until that is settled.
-     * This note lives here, not in the JSON's $comment, because the JSON is
-     * imported by client components and its $comment ships to the browser.
      */
     legalEntity?: string;
     relationship: string;
