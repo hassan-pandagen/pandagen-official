@@ -131,3 +131,8 @@ outreach/
 # Python bytecode from the guard scripts in scripts/. Build artefact, never committed.
 __pycache__/
 *.pyc
+
+# Scratch output from local audit/browser tooling (e.g. a Chrome profile under
+# .tmp/preview-audit). Ignored so it is never committed, and so Tailwind v4,
+# which skips gitignored paths, does not try to read its locked files.
+.tmp/

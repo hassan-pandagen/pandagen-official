@@ -30,7 +30,7 @@ const built = [
   },
   {
     label: "One runtime route, sitewide",
-    body: "Every page is pre-rendered at build time. The only route that runs server code per request is the quote endpoint itself, because sending an email needs it -- everything else simply can't fail at request time.",
+    body: "Every page is pre-rendered at build time. The only route that runs server code per request is the quote endpoint itself, because sending an email needs it. That leaves one server-side route to secure and monitor, instead of a whole site.",
   },
 ];
 

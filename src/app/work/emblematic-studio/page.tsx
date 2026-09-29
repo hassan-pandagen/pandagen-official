@@ -11,9 +11,9 @@ import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/emblematic-studio";
-const title = "Emblematic Studio Case Study: One Catalogue, Twenty Products, One Server Route";
+const title = "Emblematic Studio Case Study: One Catalogue, 22 Products, One Server Route";
 const description =
-    "A material-led product catalogue and quote experience for a custom patch studio. Twenty product types generated from a single typed registry, and exactly one runtime route on the entire site. Build record, no traffic claims.";
+    "A material-led product catalogue and quote experience for a custom patch studio. 22 product types generated from a single typed registry, and exactly one runtime route on the entire site. Build record, no traffic claims.";
 
 export const metadata: Metadata = {
     title: { absolute: `${title} | PandaCodeGen` },
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     ],
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     openGraph: {
-        title: "Emblematic Studio: One Catalogue, Twenty Products, One Server Route",
+        title: "Emblematic Studio: One Catalogue, 22 Products, One Server Route",
         description:
-            "Twenty product types from a single typed registry that also drives navigation, quote validation and the sitemap. One runtime route on the whole site.",
+            "22 product types from a single typed registry that also drives navigation, quote validation and the sitemap. One runtime route on the whole site.",
         type: "article",
         url: canonicalUrl,
         images: [ogImageForPath("/work/emblematic-studio")],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Emblematic Studio: One Catalogue, Twenty Products, One Server Route",
-        description: "Twenty product types from a single typed registry. One runtime route on the whole site.",
+        title: "Emblematic Studio: One Catalogue, 22 Products, One Server Route",
+        description: "22 product types from a single typed registry. One runtime route on the whole site.",
     },
     alternates: { canonical: "/work/emblematic-studio" },
 };
@@ -55,8 +55,8 @@ const pageFaqs: { question: string; answer: string }[] = [
         answer: "Every page on the site is prerendered at build time. The only route that executes server code per request is the quote endpoint, because sending email requires a Node runtime. Product, material and guide pages are generated from the catalogue with dynamic parameters disabled, so an unknown slug returns the standard not-found page rather than attempting to render. The practical consequence is that almost nothing can fail at request time, and the surface area anyone has to secure or monitor is one endpoint rather than a site.",
     },
     {
-        question: "Why does a twenty-product catalogue need a typed registry?",
-        answer: "Because the same twenty products appear in seven places: the desktop mega-menu, the mobile navigation, the catalogue index, the individual product pages, related-product cards, the quote form's options, and the sitemap. Without a single source they drift, and the failure is silent -- a product quietly missing from the quote dropdown, or a sitemap entry for a page that no longer exists. Adding a product here means extending one typed union and one object; everything else follows from it, including the server-side validation that rejects a product value the catalogue does not contain.",
+        question: "Why does a 22-product catalogue need a typed registry?",
+        answer: "Because the same 22 products appear in seven places: the desktop mega-menu, the mobile navigation, the catalogue index, the individual product pages, related-product cards, the quote form's options, and the sitemap. Without a single source they drift, and the failure is silent -- a product quietly missing from the quote dropdown, or a sitemap entry for a page that no longer exists. Adding a product here means extending one typed union and one object; everything else follows from it, including the server-side validation that rejects a product value the catalogue does not contain.",
     },
     {
         question: "What happens to artwork a visitor uploads with a quote?",
@@ -86,7 +86,7 @@ const caseStudySchema = {
             description,
             image: ogImageUrlForPath("/work/emblematic-studio"),
             datePublished: "2026-08-07T00:00:00-05:00",
-            dateModified: "2026-08-10T00:00:00-05:00",
+            dateModified: "2026-09-29T00:00:00-05:00",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -128,7 +128,7 @@ const caseStudySchema = {
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-08-07T00:00:00-05:00",
-            dateModified: "2026-08-10T00:00:00-05:00",
+            dateModified: "2026-09-29T00:00:00-05:00",
             inLanguage: "en-US",
         },
         {
@@ -147,7 +147,7 @@ const decisions = [
     {
         icon: Boxes,
         title: "One registry, seven consumers",
-        body: "Twenty product types live in a single typed catalogue that drives the mega-menu, mobile navigation, catalogue index, product pages, related cards, quote options and the sitemap. Adding a product is one union member and one object.",
+        body: "22 product types live in a single typed catalogue that drives the mega-menu, mobile navigation, catalogue index, product pages, related cards, quote options and the sitemap. Adding a product is one union member and one object.",
     },
     {
         icon: Gauge,
@@ -194,11 +194,11 @@ export default function EmblematicStudioCaseStudy() {
                             Independent client · Build record
                         </p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Emblematic Studio: <span className="italic text-cognac">one catalogue, twenty products, one server route</span>
+                            Emblematic Studio: <span className="italic text-cognac">one catalogue, 22 products, one server route</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             A material-led product site and quote experience for a custom patch studio. The interesting
-                            decision is not the motion design, it is that twenty product types across four families are
+                            decision is not the motion design, it is that 22 product types across four families are
                             generated from a single typed registry — and that the entire public site runs on exactly one
                             server route.
                         </p>
@@ -289,7 +289,7 @@ export default function EmblematicStudioCaseStudy() {
                     <section className="mb-14">
                         <h2 className="mb-6 text-3xl font-bold text-charcoal">The problem was drift, not design</h2>
                         <p className="mb-4 text-lg leading-8 text-stone-700">
-                            A catalogue of twenty products across patches, keychains, enamel pins and coins does not fail
+                            A catalogue of 22 products across patches, keychains, enamel pins and coins does not fail
                             because a page looks wrong. <strong>It fails because the same product exists in seven places
                             and they stop agreeing.</strong> A product is added to the menu but missing from the quote
                             dropdown. A page is removed but stays in the sitemap. A related-products card points somewhere

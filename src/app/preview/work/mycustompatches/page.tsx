@@ -34,15 +34,15 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 const built = [
   {
     label: "Off a decade of WordPress, in about 22 days",
-    body: "Migrated to Next.js in roughly three weeks: every existing URL, canonical tag, meta description and structured-data block preserved exactly, with 301 redirects wherever a URL structure changed.",
+    body: "Migrated more than 200 URLs to Next.js in roughly three weeks. The team inventoried search metadata and mapped redirects where URL paths changed.",
   },
   {
     label: "Forms with no server to maintain",
-    body: "Quote and contact forms run on React Hook Form with Zod validation, delivered by Web3Forms -- no backend required. Design-file uploads go straight to Cloudinary.",
+    body: "Quote and contact forms run on React Hook Form with Zod validation, delivered by Web3Forms -- no custom form backend to run. Design-file uploads go straight to Cloudinary.",
   },
   {
     label: "A single DNS cutover, not a slow migration",
-    body: "The new build ran in parallel on staging while the WordPress site stayed live. After full QA -- every URL, form, image and SEO tag checked -- a single DNS cutover with pre-lowered TTL made the switch near-instant.",
+    body: "The new build ran in parallel on staging while the WordPress site stayed live. After QA, a single DNS cutover with a pre-lowered TTL made the switch, and the project record shows zero downtime at cutover.",
   },
 ];
 
@@ -59,12 +59,13 @@ export default function MyCustomPatchesCaseStudyPreview() {
             MyCustomPatches.
           </h1>
           <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A decade-old WordPress store, off it in about 22 days with zero downtime.
+            A decade-old WordPress store, off it in about 22 days, with zero downtime recorded at cutover.
           </p>
 
           <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
             {clientIdentity("mycustompatches")} ran on WordPress for years before moving to a custom Next.js build --
-            every URL, redirect and search ranking carried across the cutover deliberately, not by accident.
+            URL mapping and redirects were planned before cutover. The project record reports no ranking losses
+            in the 30-day post-launch monitoring window.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -121,8 +122,8 @@ export default function MyCustomPatchesCaseStudyPreview() {
           </h2>
           <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
             Search rankings lost, per Google Search Console: {requiredMetric("mycustompatches", "rankings")}.
-            Performance and hosting figures from this project were withdrawn pending reconciliation of the original
-            test records and aren&apos;t restated here.
+            Performance figures were withdrawn pending reconciliation of the original test records. The old hosting
+            cost figure was retired because no invoice or reliable recollection exists to support it.
           </p>
 
           <dl className="mt-8 border-t" style={{ borderColor: T.rule }}>

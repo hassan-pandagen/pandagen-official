@@ -46,10 +46,10 @@ type Row = {
 };
 
 const clientWork: Row[] = [
-  { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "https://northdeckgroup.com/", image: "/work/northdeck-group.png", external: true },
-  { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: caseStudy("emblematic-studio").href, image: "/work/emblematic-studio.png" },
-  { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: caseStudy("mycustompatches").href, image: "/work/mycustompatches.png" },
-  { name: caseStudy("ladies-4-jesus").name, label: "Community & publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: caseStudy("ladies-4-jesus").href, image: "/work/ladies-4-jesus.png" },
+  { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "/preview/work/northdeck-group", image: "/work/northdeck-group.png" },
+  { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: "/preview/work/emblematic-studio", image: "/work/emblematic-studio.png" },
+  { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: "/preview/work/mycustompatches", image: "/work/mycustompatches.png" },
+  { name: caseStudy("ladies-4-jesus").name, label: "Community & publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/preview/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
 ];
 
 // In progress, not a built case study: migration-projects.ts is explicit that
@@ -60,11 +60,11 @@ const inProgress: Row = {
   label: "WordPress migration",
   relationship: "Client, in progress",
   status: `Testing begins ${formatIsoDate(MIGRATION_PROJECT_DETAILS.aStepAboveMedical.testingStarts)}`,
-  href: "/services/wordpress-migration",
+  href: "/preview/work/a-step-above-medical",
 };
 
 const founderAffiliated: Row[] = [
-  { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: caseStudy("panda-patches").href, image: "/work/panda-patches.png" },
+  { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/preview/work/panda-patches", image: "/work/panda-patches.png" },
   { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: caseStudy("enterprise-ops").href, image: "/work/enterprise-ops.png" },
   { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: caseStudy("panda-codelab").href, image: "/work/pandacodelab.png" },
 ];
@@ -88,8 +88,8 @@ export default function WorkPreview() {
               Look at the work before you read about it.
             </h1>
             <p className="max-w-[34rem] self-end text-[17px] leading-[1.6] lg:col-span-5" style={{ color: T.body }}>
-              Every screenshot below is a site that is live right now, unless the row says otherwise. Open any of them
-              and check it yourself. Where a project has measured figures they are on its record, and where it does
+              Client work, one project still in progress, and a few concept builds, each labelled for what it is. Open
+              any of them and check it yourself. Where a project has measured figures they are on its record, and where it does
               not, we say nothing about speed or traffic rather than estimate.
             </p>
           </div>

@@ -46,7 +46,7 @@ const built = [
   },
   {
     label: "Real photography, self-hosted type, no CMS",
-    body: "Built on Next.js 16, with real editorial photography and self-hosted variable typefaces (Instrument Sans, Instrument Serif, IBM Plex Mono) rather than a font CDN. Per the project's own README, there's no database, authentication, storage, CMS or third-party API key in the build -- content lives in code.",
+    body: "Built on Next.js 16, with real editorial photography and locally served fonts (Instrument Sans, Instrument Serif, IBM Plex Mono) rather than a font CDN. Per the project's own README, there's no database, authentication, storage, CMS or third-party API key in the build -- content lives in code.",
   },
   {
     label: "Motion that explains the system, not just decorates it",

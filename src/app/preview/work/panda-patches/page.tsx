@@ -103,7 +103,7 @@ const fullScope = [
   "Sanity CMS, 25 document types, content edited without code",
   "63-post blog library feeding the topical cluster",
   "Supabase ops portal: order pipeline, sales dashboards, clock in/out, role-based access, full audit log",
-  "100% mobile responsive; Lighthouse 90+ on core web vitals",
+  "Responsive storefront with a touch-friendly configuration flow",
 ];
 
 export default function PandaPatchesCaseStudyPreview() {
@@ -194,7 +194,7 @@ export default function PandaPatchesCaseStudyPreview() {
                 { term: "Revenue", detail: `${REVENUE}. Owner-reported, 20 September 2026.` },
                 { term: "Search rankings", detail: "No ranking losses recorded in Google Search Console during the 30 days after launch. Full URL export, 301 redirects and a fresh sitemap preceded the cutover." },
                 { term: "Wise / Nasdaq activation", detail: "9,600 woven patches across 16 designs, delivered in two shipments (4 and 7 May 2026) for Wise's Nasdaq listing activation in Times Square, ordered, produced and tracked through this platform." },
-                { term: "Independent reputation", detail: "Panda Patches is rated 4.8/5 by 72+ customers on Trustpilot, with 1,000,000+ patches delivered historically." },
+                { term: "Independent reputation", detail: "Customer reviews are available on Trustpilot. Panda Patches reports more than one million patches delivered historically; that is a business figure, not an independent platform measurement." },
               ].map((r) => (
                 <div key={r.term} className="grid gap-2 border-b py-4 md:grid-cols-12 md:gap-8" style={{ borderColor: T.rule }}>
                   <dt className="font-semibold md:col-span-3" style={{ color: T.ink }}>{r.term}</dt>
@@ -212,9 +212,8 @@ export default function PandaPatchesCaseStudyPreview() {
           <div className="mx-auto max-w-[1100px]">
             <p className="text-[12px] uppercase tracking-[0.1em]" style={{ fontFamily: MONO, color: T.quiet }}>05 · Stack</p>
             <p className="mt-4 max-w-[40rem] text-[14px] leading-[1.55]" style={{ color: T.quiet }}>
-              {PAYMENT_INTEGRATION_SCOPE} Total tooling runs about $55/month today (Supabase ~$25, Vercel ~$20, ~$10 for
-              the AI patch generator) — a prose figure from the project record, not one this site independently
-              re-measures each time it's shown.
+              {PAYMENT_INTEGRATION_SCOPE} The owner estimates current tooling at about $55/month (Supabase ~$25, Vercel
+              ~$20, ~$10 for the AI patch generator). That&apos;s an owner estimate, not a reconciled accounting total.
             </p>
             <div className="mt-4 border-t" style={{ borderColor: T.rule }}>
               {techStack.map((t) => (

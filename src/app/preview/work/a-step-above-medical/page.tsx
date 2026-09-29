@@ -97,7 +97,9 @@ export default function AStepAboveMedicalStatusPreview() {
             </div>
             <div className="max-w-[20rem]">
               <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>Testing begins</p>
-              <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>{details.testingStarts}</p>
+              <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>
+                {new Date(`${details.testingStarts}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}
+              </p>
             </div>
           </div>
 
