@@ -65,14 +65,17 @@ const inProgress: Row = {
 
 const founderAffiliated: Row[] = [
   { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/preview/work/panda-patches", image: "/work/panda-patches.png" },
-  { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: caseStudy("enterprise-ops").href, image: "/work/enterprise-ops.png" },
-  { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: caseStudy("panda-codelab").href, image: "/work/pandacodelab.png" },
+  { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: "/preview/work/enterprise-ops", image: "/work/enterprise-ops.png" },
+  // Not /work/pandacodelab.png: that capture shows pandacodelab.com's "Why
+  // Panda?" section, with "99/100 Google Speed scores. Sub-second load times
+  // guaranteed." and a "Rank #1" snippet, claims this site does not make.
+  { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: "/preview/work/panda-codelab", image: "/work/pandacodelab-services.png" },
 ];
 
 const conceptBuilds: Row[] = [
-  { name: caseStudy("medical-template").name, label: "Practice website", relationship: caseStudy("medical-template").relationship, href: caseStudy("medical-template").href, image: "/work/medical-template.png" },
-  { name: caseStudy("panda-publisher").name, label: "Author services", relationship: caseStudy("panda-publisher").relationship, href: caseStudy("panda-publisher").href, image: "/work/panda-publisher.png" },
-  { name: caseStudy("sleek-jackets").name, label: "Outerwear store", relationship: caseStudy("sleek-jackets").relationship, href: caseStudy("sleek-jackets").href, image: "/work/sleek-jackets.png" },
+  { name: caseStudy("medical-template").name, label: "Practice website", relationship: caseStudy("medical-template").relationship, href: "/preview/work/medical-template", image: "/work/medical-template-hero.png" },
+  { name: caseStudy("panda-publisher").name, label: "Author services", relationship: caseStudy("panda-publisher").relationship, href: "/preview/work/panda-publisher", image: "/work/panda-publisher-library.png" },
+  { name: caseStudy("sleek-jackets").name, label: "Outerwear store", relationship: caseStudy("sleek-jackets").relationship, href: "/preview/work/sleek-jackets", image: "/work/sleek-jackets-hero.png" },
 ];
 
 export default function WorkPreview() {
