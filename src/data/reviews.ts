@@ -138,7 +138,9 @@ export const CLIENT_REVIEWS: readonly ClientReview[] = [
         // render it that way: Clutch signs the review "Executive, MC Patches
         // LLC" and GoodFirms shows "Matt Conner, Executive at MC Patches LLC".
         // This said "owner" until 10 Sep 2026, which was our word, not his.
-        name: 'Matt Conner, Executive, MC Patches LLC',
+        // 29 Sep 2026: the company name is left off on the owners' instruction.
+        // Read the note on legalEntity in case-study-facts.ts before adding it back.
+        name: 'Matt Conner, Executive',
         platform: 'Clutch',
         date: 'March 2026',
         href: 'https://clutch.co/profile/panda-code-gen#reviews',

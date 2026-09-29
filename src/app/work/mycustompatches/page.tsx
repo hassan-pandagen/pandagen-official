@@ -79,10 +79,12 @@ const caseStudySchema = {
                 // grounding model those are one company, and the only
                 // third-party-VERIFIED review on this site stays orphaned from the
                 // case study it is about.
+                // 29 Sep 2026: legalName removed while the owners confirm whether
+                // this MC Patches LLC is Panda Patches' entity; see the dated note
+                // in case-study-facts.json before adding it back.
                 {
                     "@type": "Organization",
                     "name": "MyCustomPatches",
-                    "legalName": "MC Patches LLC",
                     "url": "https://www.mycustompatches.net",
                     "sameAs": ["https://clutch.co/profile/panda-code-gen#reviews"]
                 },

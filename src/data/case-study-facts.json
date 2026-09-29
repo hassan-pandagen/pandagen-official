@@ -33,7 +33,6 @@
   "caseStudies": {
     "mycustompatches": {
       "name": "MyCustomPatches",
-      "legalEntity": "MC Patches LLC",
       "relationship": "Independent client",
       "href": "/work/mycustompatches",
       "url": "mycustompatches.net",
@@ -132,7 +131,7 @@
           "permanent": true
         }
       ],
-      "disclosure": "Independent client. MyCustomPatches is operated by MC Patches LLC. PandaCodeGen has no ownership or financial stake in the business."
+      "disclosure": "Independent client. PandaCodeGen has no ownership or financial stake in the business."
     },
     "emblematic-studio": {
       "name": "Emblematic Studio",

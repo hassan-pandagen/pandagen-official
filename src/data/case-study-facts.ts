@@ -56,6 +56,15 @@ export interface CaseStudy {
      * or a grounding model arriving at one had no stated route to the other,
      * which quietly weakens the only third-party-verified review on the site.
      * State the identity once, here, and let every surface render it.
+     *
+     * 29 Sep 2026: MyCustomPatches' legalEntity was removed from the JSON, and
+     * the name from every page, on the owners' instruction while they confirm
+     * one thing: pandapatches.com names MC Patches LLC as Panda Patches' own
+     * legal entity. If it is the same company, MyCustomPatches is
+     * founder-affiliated, and its relationship, disclosure and the Clutch review
+     * wording must all change. Do not restore the name until that is settled.
+     * This note lives here, not in the JSON's $comment, because the JSON is
+     * imported by client components and its $comment ships to the browser.
      */
     legalEntity?: string;
     relationship: string;
