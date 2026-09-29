@@ -201,15 +201,15 @@
         {
           "id": "edge-functions",
           "label": "Supabase Edge Functions",
-          "value": "26",
+          "value": "36",
           "status": "verified",
           "method": {
-            "kind": "field",
-            "date": "2026-09-15",
-            "note": "Live listing from the Supabase Management API, all reported ACTIVE. A live listing rather than a count of folders in the repository, though the two agree."
+            "kind": "record",
+            "date": "2026-09-30",
+            "note": "Stated by the owner on 30 September 2026, and matching the CRM README of the same date, which heads its function list 'Supabase Edge Functions (36)' and refers to 'these 36'. The README's grouped list names 37 functions, so one listed function is presumably not deployed; that was not reconciled. Supersedes the 15 September 2026 live listing of 26 from the Supabase Management API. The growth is mostly the wholesale-partner, production-floor and shipping work added since."
           },
-          "approvedBy": "PandaCodeGen engineering, from the CRM repository",
-          "approvedDate": "2026-09-15"
+          "approvedBy": "Owner, from the CRM repository's README",
+          "approvedDate": "2026-09-30"
         },
         {
           "id": "order-statuses",
@@ -240,15 +240,15 @@
         {
           "id": "db-migrations",
           "label": "Tracked database migrations",
-          "value": "86",
+          "value": "191",
           "status": "verified",
           "method": {
             "kind": "record",
-            "date": "2026-09-15",
-            "note": "File count of supabase/migrations/*.sql in the CRM repository."
+            "date": "2026-09-30",
+            "note": "File count of supabase/migrations/*.sql in the CRM repository at its 30 September 2026 commit, the same method as the 15 September count of 86. The CRM README of the same date gives the same figure; most of the growth is the wholesale-partner and invoicing work."
           },
           "approvedBy": "PandaCodeGen engineering, from the CRM repository",
-          "approvedDate": "2026-09-15"
+          "approvedDate": "2026-09-30"
         },
         {
           "id": "db-views",

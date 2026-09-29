@@ -1,5 +1,5 @@
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
-import { metricValue } from "@/data/case-study-facts";
+import { metricValue, requiredMetric } from "@/data/case-study-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -11,12 +11,20 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import CaseStudyShot from "@/components/work/CaseStudyShot";
 
+// 30 Sep 2026: "26 Edge Functions" and "86 tracked migrations" were typed into
+// this file in six places and went stale when the CRM grew to 36 and 191, and
+// a "3 roles" line contradicted the page's own 7. The figure tiles below
+// already read the registry; the prose now reads it too.
+const EDGE_FUNCTIONS = requiredMetric("enterprise-ops", "edge-functions");
+const MIGRATIONS = requiredMetric("enterprise-ops", "db-migrations");
+const ROLES = requiredMetric("enterprise-ops", "roles-permissions");
+
 export const metadata: Metadata = {
     title: { absolute: "Enterprise Operations Platform Case Study, Custom Business Dashboard | PandaCodeGen" },
     description: "How we replaced a spreadsheet estate, WhatsApp chains and several SaaS tools with a single custom ops platform. Real-time order pipeline across 17 statuses, role-based access for 7 roles, automated attendance, profit tracking, and 12 reporting modules.",
     openGraph: {
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: "Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). 26 Edge Functions. Full case study.",
+        description: `Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). ${EDGE_FUNCTIONS} Edge Functions. Full case study.`,
         type: "article",
         url: "https://www.pandacodegen.com/work/enterprise-ops",
         images: [ogImageForPath("/work/enterprise-ops")],
@@ -24,7 +32,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Enterprise Operations Platform Case Study, Custom Business Dashboard",
-        description: "Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). 26 Edge Functions. Full case study.",
+        description: `Real-time order pipeline. Role-based access for 7 roles. Automated attendance (PKT timezone). ${EDGE_FUNCTIONS} Edge Functions. Full case study.`,
     },
     alternates: { canonical: "/work/enterprise-ops" },
 };
@@ -44,7 +52,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How long did it take to build the Enterprise Operations platform?",
-        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and 26 Supabase Edge Functions, has been in continuous development since November 2025 and is still being added to. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
+        answer: "The full platform, a Supabase schema with Row-Level Security, a 17-status order pipeline, 12 reporting modules, RBAC with RLS policies, payments via Square, attendance with PKT timezone, automated profit calculations, and " + EDGE_FUNCTIONS + " Supabase Edge Functions, has been in continuous development since November 2025 and is still being added to. A code review was commissioned by us in 2026, but its scores are withdrawn from this site: the review document, its rubric and the reviewer could not be located during a source audit on 15 September 2026.",
     },
     {
         question: "Can a custom dashboard work offline?",
@@ -62,7 +70,7 @@ const caseStudySchema = {
             "description": "How we replaced a spreadsheet estate, WhatsApp updates and several separate SaaS tools with a single full-stack business intelligence platform. Real-time order tracking, RBAC, automated attendance, and profit analytics.",
             "image": ogImageUrlForPath("/work/enterprise-ops"),
             "datePublished": "2026-03-04T00:00:00Z",
-            "dateModified": "2026-08-10T00:00:00Z",
+            "dateModified": "2026-09-30T00:00:00Z",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -215,7 +223,7 @@ const reportingModules = [
 
 // Production integrations wired into the platform.
 const integrations = [
-    { name: "Supabase", role: "Postgres · Auth · Storage · Realtime · 26 Edge Functions" },
+    { name: "Supabase", role: `Postgres · Auth · Storage · Realtime · ${EDGE_FUNCTIONS} Edge Functions` },
     { name: "Meta CAPI", role: "Server-side purchase/lead events, reversal on refund" },
     // Stripe was decommissioned in the CRM repo; the only reference left there is a
     // comment saying the Square payment-link function replaced it. Confirmed by a
@@ -643,7 +651,7 @@ export default function EnterpriseOpsCaseStudy() {
                         </div>
                         <h2 className="text-3xl font-bold text-charcoal mb-3">One platform. Everything.</h2>
                         <p className="text-stone-600 mb-8 max-w-2xl">
-                            Real-time analytics, payments, RBAC, and automation across 27 authenticated routes and 26 Supabase Edge Functions, with Row-Level Security enabled on all 59 tables. All connected to the same Supabase backend now shared with the customer portal on the marketing site.
+                            Real-time analytics, payments, RBAC, and automation across 27 authenticated routes and {EDGE_FUNCTIONS} Supabase Edge Functions, with Row-Level Security enabled on all 59 tables. All connected to the same Supabase backend now shared with the customer portal on the marketing site.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -793,14 +801,14 @@ export default function EnterpriseOpsCaseStudy() {
                         <h2 className="text-3xl font-bold text-charcoal mb-6">Everything that was built.</h2>
                         <div className="grid md:grid-cols-2 gap-3">
                             {[
-                                "PostgreSQL schema with Row-Level Security on all 59 tables (86 tracked migrations)",
+                                `PostgreSQL schema with Row-Level Security on all 59 tables (${MIGRATIONS} tracked migrations)`,
                                 "17-status order pipeline, 14 of them in live use (NEW_ORDER → DELIVERED, plus DIGITIZING / REMAKE / CANCELLED / REFUNDED / FEEDBACK and more)",
                                 "12 reporting modules (Sales, Production, Quality & Refunds, Product Mix, Income Statement, P&L, Lead Source, Lead Attribution, Funnel & Attribution, Customer Feedback, Form Feedback, Loyalty), CSV export",
                                 "Payments: Square checkout, public payment links (/pay/:token), payment webhooks, and a PDF invoice emailed once an order is paid in full",
                                 "Server-side Meta Conversions API with refund reversal + attribution-quality scoring",
                                 "Transactional email via ZeptoMail for every order milestone",
                                 "Immutable order_history audit log, every change attributed",
-                                "RBAC: ADMIN, SALES, PRODUCTION roles with 11 granular JSONB permissions",
+                                `RBAC: ${ROLES}, from admin to digitizer`,
                                 "Sales agent dashboards, revenue, conversion rate, response time per agent",
                                 "Customer quote management with email template system",
                                 "Automated profit calculation: order_amount − production − shipping − marketing",
@@ -809,7 +817,7 @@ export default function EnterpriseOpsCaseStudy() {
                                 "Payroll export (CSV) from attendance_summary table",
                                 "Performance metrics table for goal tracking",
                                 "12 database views, including orders_with_details, sales_agent_reports and active_attendance_sessions",
-                                "26 Supabase Edge Functions (user admin, email, Meta CAPI, Square payments, webhooks)",
+                                `${EDGE_FUNCTIONS} Supabase Edge Functions (user admin, email, Meta CAPI, Square payments, webhooks)`,
                                 "Sentry APM + error tracking integration",
                                 "Offline-first via Service Worker, works on poor connectivity",
                                 "100% TypeScript with zero implicit any",
