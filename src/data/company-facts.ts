@@ -217,6 +217,12 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and 26 Supabase Edge Functions, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'Custom build. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
     { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} The migrated site is live. No before-and-after performance figures are published, because the previous platform baseline was never captured.` },
+    // Added 29 Sep 2026 from the project's own README (C:\Projects\Northdeckgroup),
+    // supplied for this entry. A real, independent client; there is no /work page for
+    // it yet, so it links to the live site. The homepage's case study is a
+    // representative scenario by the README's own statement, so nothing here
+    // presents it as a client result.
+    { name: 'NorthDeck Group', relationship: 'Independent client', href: 'https://www.northdeckgroup.com', fact: 'A motion-led marketing website for a company that designs connected commercial security systems and runs a 12-service back-office (BPO) practice. Built with Next.js 16, Tailwind CSS and Motion, with self-hosted fonts and no database, CMS or third-party API keys. A three-question enquiry brief opens a pre-filled email, so no visitor data is stored. The homepage case study is labelled as a representative scenario, not a client result, and no performance figures are published.' },
     // Added 27 Sep 2026: confirmed on 18 Sep, in progress since, testing-start
     // date confirmed 27 Sep. No case study yet -- see migration-projects.ts's
     // own rule: the public domain still runs the client's previous WordPress

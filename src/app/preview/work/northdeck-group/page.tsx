@@ -50,7 +50,7 @@ const built = [
   },
   {
     label: "Motion that explains the system, not just decorates it",
-    body: "Interactive system-layer panels (video, access, intrusion, intercom, system care) and a scroll-driven incident-response sequence, built with the `motion` library -- used to walk a visitor through how the pieces connect, not as ambient decoration.",
+    body: "Interactive system-layer panels (video, access, intrusion, intercom, system care) and a five-step tabbed walkthrough of how an incident is handled, from detect to respond, built with the `motion` library -- used to walk a visitor through how the pieces connect, not as ambient decoration. Every animation switches off for visitors who have reduced motion turned on.",
   },
   {
     label: "A design scenario, labelled as one",

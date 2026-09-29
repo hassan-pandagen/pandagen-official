@@ -124,7 +124,8 @@ function projectPassages(): Passage[] {
     id: `work-${slug(p.name)}`,
     title: `Our work: ${p.name}`,
     text: `${p.name} (${p.relationship}). ${p.fact}`,
-    url: `${BASE}${p.href}`,
+    // A client without a /work page yet (NorthDeck Group) links to its own site.
+    url: p.href.startsWith("http") ? p.href : `${BASE}${p.href}`,
   }));
   for (const s of allCaseStudySlugs()) {
     const metrics = verifiedMetrics(s);
@@ -344,10 +345,12 @@ const TOPICS: Topic[] = [
   },
 ];
 
-// A dozen pinned passages is about 8,000 characters, comfortably inside the
+// Fourteen pinned passages is about 9,000 characters, comfortably inside the
 // model's prompt; the cap stops a question that touches every topic from
-// crowding out the keyword results.
-const MAX_PINNED = 12;
+// crowding out the keyword results. A "show me your work" question pins the
+// four project-record chunks plus every PROJECTS entry, so the cap has to
+// grow with that list.
+const MAX_PINNED = 14;
 
 export interface Retrieval {
   passages: Passage[];

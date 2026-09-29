@@ -88,10 +88,10 @@ export default function Page() {
           <h2 className="mt-10 mb-3 text-2xl font-bold text-charcoal">How evidence is published</h2>
           <FactTable facts={GOVERNANCE} caption="PandaCodeGen evidence policy, regulated-data position, crawl policy and corrections handling." />
           <p className="mb-4 leading-relaxed text-stone-700">
-            Two entries above carry no performance figures at all. That is deliberate: one site is too new for
-            that evidence to exist, and on the other the previous platform baseline was never captured before
-            switchover. Reconstructing a before-and-after after the fact would be a guess presented as a
-            measurement.
+            Several entries above carry no performance figures at all. That is deliberate: a figure is published
+            only when a documented measurement exists. One site is too new for that evidence to exist, and on
+            another the previous platform baseline was never captured before switchover. Reconstructing a
+            before-and-after after the fact would be a guess presented as a measurement.
           </p>
           <p className="mt-10 text-sm text-stone-500">
             This is one of the PandaCodeGen reference pages. The full set is indexed on the{" "}
