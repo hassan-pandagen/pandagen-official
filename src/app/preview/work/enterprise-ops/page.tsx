@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
-import { requiredMetric } from "@/data/case-study-facts";
+import { caseStudy, requiredMetric } from "@/data/case-study-facts";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -20,10 +20,50 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 //
 // Every figure below comes through requiredMetric(), so it reads the dated,
 // verified record in case-study-facts.json, and the build fails if any of them
-// is ever withdrawn rather than quietly rendering a stale number.
+// is ever withdrawn rather than quietly rendering a stale number. The date
+// they were counted is read from the same records and shown on the page.
+//
+// "Added since the last count" comes from the CRM's README as of 30 Sep 2026,
+// supplied by the owners: capabilities only, no figures, and no partner
+// names (those are Panda Patches' business relationships, not ours to
+// publish). The README's own Edge Function count disagrees with itself (25,
+// 36 and a list of 37), so no new count is taken from it; the 15 Sep record
+// stands until a live listing is repeated.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const SLUG = "enterprise-ops";
+
+const FIGURES = [
+  "order-statuses",
+  "roles-permissions",
+  "rls-coverage",
+  "production-rows-imported",
+  "production-pipeline-states",
+  "reporting-modules",
+  "integrations",
+  "staff-routes",
+];
+
+function countedOn(): string {
+  const dates = [...new Set(FIGURES.map((id) => caseStudy(SLUG).metrics.find((m) => m.id === id)?.method?.date).filter(Boolean))].sort() as string[];
+  const fmt = (iso: string) => new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  return dates.length > 1 ? `between ${fmt(dates[0])} and ${fmt(dates[dates.length - 1])}` : `on ${fmt(dates[0])}`;
+}
+
+const added = [
+  {
+    label: "Wholesale orders, priced automatically",
+    body: "Wholesale partners order through their own portal. Each order is priced by the same engine as the public storefront, then invoiced and sent a payment link without anyone touching it. If any line can't be priced, the whole order goes to a manual quote instead of a guess, and nothing is ever invoiced at zero.",
+  },
+  {
+    label: "Mockup work, ranked by deadline",
+    body: "Free quote requests become mockup tasks with due dates counted in working days, holidays included. The queue ranks them by urgency and warns the team before a deadline is missed.",
+  },
+  {
+    label: "Deliveries confirmed by the carrier",
+    body: "DHL shipments are checked daily and marked delivered from the carrier's own record, so the review request goes out after a real delivery, not a guessed one.",
+  },
+];
 
 const built = [
   {
@@ -48,7 +88,7 @@ const built = [
   },
   {
     label: "Still growing",
-    body: `${requiredMetric(SLUG, "staff-routes")} signed-in app routes so far, built and extended since November 2025 while the business runs on it every day.`,
+    body: `${requiredMetric(SLUG, "staff-routes")} signed-in app routes when last counted, built and extended since November 2025 while the business runs on it every day.`,
   },
 ];
 
@@ -109,10 +149,22 @@ export default function EnterpriseOpsCaseStudyPreview() {
             ))}
           </dl>
           <p className="mt-6 max-w-[42rem] text-[14px] leading-[1.6]" style={{ color: T.quiet }}>
-            Every figure here comes from the project record, each counted or checked on a stated date. Earlier
+            Every figure above comes from the project record and was counted or checked {countedOn()}. Earlier
             claims about time saved and efficiency gains were withdrawn because no measurement backed them, and
             they are not repeated.
           </p>
+
+          <h3 className="mt-14" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.2 }}>
+            Added since the last count.
+          </h3>
+          <dl className="mt-5 border-t" style={{ borderColor: T.rule }}>
+            {added.map((b) => (
+              <div key={b.label} className="grid gap-2 border-b py-5 md:grid-cols-12 md:gap-8" style={{ borderColor: T.rule }}>
+                <dt className="font-semibold md:col-span-3" style={{ color: T.ink }}>{b.label}</dt>
+                <dd className="text-[14px] leading-[1.6] md:col-span-9" style={{ color: T.body }}>{b.body}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

@@ -214,7 +214,11 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // that reconciliation is finished. See the tracker entry dated 8 Aug 2026.
     { name: 'MyCustomPatches', relationship: 'Independent client', href: '/work/mycustompatches', fact: 'Every page, product and blog post migrated to a custom Next.js build in about 22 days, with Search Console crawl validation before DNS cutover. The performance figures for this project are withdrawn pending reconciliation of the original test records. The hosting-cost figure is retired permanently: no invoices were kept, so there is nothing to reconcile it against.' },
     { name: 'Panda Patches', relationship: 'Founder-owned property, not independent client proof', href: '/work/panda-patches', fact: `${MIGRATION_PROJECT_DETAILS.pandaPatches.summary} ${MIGRATION_PROJECT_DETAILS.pandaPatches.paymentHistory} Owned by co-founder Imran Raza Ladhani, so it is labelled as a founder-affiliated project rather than presented as client evidence.` },
-    { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance and 26 Supabase Edge Functions, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
+    // 30 Sep 2026: "26 Supabase Edge Functions" removed. That count is a dated
+    // record (case-study-facts.json, 15 Sep) and the CRM has grown since; its
+    // own README now gives 25, 36 and a list of 37. Stated here without a date
+    // it read as current. The wholesale portal is live per the same README.
+    { name: 'Enterprise Ops', relationship: 'Founder-affiliated, not independent client proof', href: '/work/enterprise-ops', fact: 'An operations platform with role-based access, payments, attendance, a production floor queue, and a wholesale partner portal that prices, invoices and sends payment links automatically, in continuous development since November 2025. PandaCodeGen built it for its own use, running the founder-owned Panda Patches business, so it is operating experience rather than independent client evidence.' },
     // Fact rewritten 29 Sep 2026 from the project's README, checked against the
     // repo (C:\Projects\Emblematic-studio): 22 entries in lib/data/catalog.ts,
     // one API route (app/api/quote), the 900px/touch/reduced-motion gate in
