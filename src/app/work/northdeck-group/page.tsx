@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import { NorthDeckGroupCaseStudyPreview as RedesignNorthDeckGroupCaseStudy } from "@/app/preview/work/northdeck-group/page";
+import { NorthDeckGroupCaseStudyPreview as RedesignNorthDeckGroupCaseStudy } from "@/app/preview/work/northdeck-group/Design";
 
 // 30 Sep 2026: new live route, from the redesign built as
 // /preview/work/northdeck-group. An independent client (the owners' own

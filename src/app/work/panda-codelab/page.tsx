@@ -1,7 +1,7 @@
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import { PandaCodeLabCaseStudyPreview as RedesignPandaCodelabCaseStudy } from "@/app/preview/work/panda-codelab/page";
+import { PandaCodeLabCaseStudyPreview as RedesignPandaCodelabCaseStudy } from "@/app/preview/work/panda-codelab/Design";
 
 export const metadata: Metadata = {
     title: { absolute: "Panda CodeLab, Custom Agency Website, Spline 3D + Framer Motion + WCAG 2.1 AA | PandaCodeGen" },

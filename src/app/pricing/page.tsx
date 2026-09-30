@@ -1,6 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import PricingPreview, { pricingPageFaqs } from "@/app/preview/pricing/page";
+import { PricingPreview, pricingPageFaqs } from "@/app/preview/pricing/PricingDesign";
 import { alternatesFor } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import { MedicalTemplateCaseStudyPreview as RedesignMedicalTemplateCaseStudy } from "@/app/preview/work/medical-template/page";
+import { MedicalTemplateCaseStudyPreview as RedesignMedicalTemplateCaseStudy } from "@/app/preview/work/medical-template/Design";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/medical-template";
 const title = "Medical Template: a Practice Website Concept Build";

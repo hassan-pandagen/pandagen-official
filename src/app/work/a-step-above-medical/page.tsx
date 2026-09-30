@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import { AStepAboveMedicalStatusPreview as RedesignAStepAboveMedical } from "@/app/preview/work/a-step-above-medical/page";
+import { AStepAboveMedicalStatusPreview as RedesignAStepAboveMedical } from "@/app/preview/work/a-step-above-medical/Design";
 
 // 30 Sep 2026: new live route, from the redesign built as
 // /preview/work/a-step-above-medical. The project is still in progress:

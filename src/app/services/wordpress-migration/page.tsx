@@ -1,7 +1,7 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import WordPressMigrationPreview, { migrationFaqs } from "@/app/preview/services/wordpress-migration/page";
+import { WordPressMigrationPreview, migrationFaqs } from "@/app/preview/services/wordpress-migration/MigrationDesign";
 // 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
 // stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
