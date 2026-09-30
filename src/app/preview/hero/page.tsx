@@ -115,7 +115,7 @@ export default async function HeroPreview({ searchParams }: { searchParams: Prom
                 >
                   <span className="flex -space-x-2" aria-hidden="true">
                     <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
-                    <Image src="/team/imran.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
+                    <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-white/40" />
                   </span>
                   Talk to the founders
                 </QuoteModalButton>

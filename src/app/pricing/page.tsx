@@ -1,8 +1,7 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import PricingPageClient from "./PricingPageClient";
+import PricingPreview, { pricingPageFaqs } from "@/app/preview/pricing/page";
 import { alternatesFor } from "@/lib/i18n/config";
-import { pricingFaqs } from "@/data/pricing-faqs";
 
 export const metadata: Metadata = {
     title: { absolute: "Website & Online Store Pricing | PandaCodeGen" },
@@ -36,11 +35,36 @@ export const metadata: Metadata = {
  * FAQPage, and consistency with the rest of the corpus. Do not reintroduce this
  * anywhere as a Google SERP play.
  */
+// 30 Sep 2026: /pricing renders the redesign (built as /preview/pricing).
+// The FAQPage data lists only the questions the redesign shows, and the
+// WebPage and breadcrumb data moved here from PricingPageClient.
+const pageSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://www.pandacodegen.com/pricing#webpage",
+            "url": "https://www.pandacodegen.com/pricing",
+            "name": "Website & Online Store Pricing | PandaCodeGen",
+            "description": "Website and online store packages starting at $1,500, $3,500, and $5,000, adjusted through a written project scope.",
+            "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pandacodegen.com" },
+                { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.pandacodegen.com/pricing" }
+            ]
+        }
+    ]
+};
+
 const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": "https://www.pandacodegen.com/pricing#faq",
-    mainEntity: pricingFaqs.map((faq) => ({
+    mainEntity: pricingPageFaqs().map((faq) => ({
         "@type": "Question",
         name: faq.q,
         acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -54,7 +78,11 @@ export default function PricingPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
             />
-            <PricingPageClient />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+            />
+            <PricingPreview />
         </>
     );
 }

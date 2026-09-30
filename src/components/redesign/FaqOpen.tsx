@@ -43,8 +43,16 @@ const HOMEPAGE_FAQS = [
   "Will I lose SEO rankings when migrating from WordPress?",
 ];
 
+/**
+ * The homepage FAQs this section shows, in order. The live homepage builds its
+ * FAQPage data from this (30 Sep 2026), so it lists only visible questions.
+ */
+export function homepageFaqs() {
+  return HOMEPAGE_FAQS.map((q) => homeFaqs.find((f) => f.q === q)).filter((f): f is (typeof homeFaqs)[number] => !!f);
+}
+
 export default function FaqOpen() {
-  const faqs = HOMEPAGE_FAQS.map((q) => homeFaqs.find((f) => f.q === q)).filter((f): f is (typeof homeFaqs)[number] => !!f);
+  const faqs = homepageFaqs();
 
   return (
     <section aria-labelledby="faq-title" className="px-6 py-24 md:px-10 md:py-36" style={{ backgroundColor: T.paper }}>

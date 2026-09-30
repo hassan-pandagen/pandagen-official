@@ -1,17 +1,9 @@
-import Link from "next/link";
 import { ogImageForPath } from "@/lib/seo/og";
-import lazyLoad from "next/dynamic";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Hero from "@/components/sections/Hero";
-import ScrollProgressBar from "@/components/layout/ScrollProgressBar";
-import HomeFaqSection from "@/components/home/HomeFaqSection";
-import WorkPreviews from "@/components/home/WorkPreviews";
-import CustomFeatures from "@/components/home/CustomFeatures";
 import { alternatesFor } from "@/lib/i18n/config";
 import { FOUNDING_DATE, ORGANIZATION_DESCRIPTION, ORGANIZATION_PROFILES } from "@/data/company-facts";
-import { homeFaqs } from "@/data/home-faqs";
+import { homepageFaqs } from "@/components/redesign/FaqOpen";
+import HeroPreview from "@/app/preview/hero/page";
 
 // Tell Next.js to statically generate this page at build time
 // so critters can inline critical CSS into the HTML output
@@ -44,14 +36,6 @@ export const metadata: Metadata = {
     images: [ogImageForPath("/")],
   },
 };
-
-// Lazy load below-the-fold components
-const SocialProof = lazyLoad(() => import("@/components/home/SocialProof"));
-const ServicesHub = lazyLoad(() => import("@/components/sections/ServicesHub"));
-const HowItWorksSimple = lazyLoad(() => import("@/components/HowItWorksSimple"));
-const FounderSection = lazyLoad(() => import("@/components/sections/FounderSection"));
-const LatestBlog = lazyLoad(() => import("@/components/sections/LatestBlog"));
-const TierQuiz = lazyLoad(() => import("@/components/sections/TierQuiz"));
 
 // homeFaqs moved to src/data/home-faqs.ts (24 Sep 2026), unchanged.
 export default function Home() {
@@ -176,7 +160,7 @@ export default function Home() {
       {
         "@type": "FAQPage",
         "@id": "https://www.pandacodegen.com/#faqpage",
-        "mainEntity": homeFaqs.map((faq) => ({
+        "mainEntity": homepageFaqs().map((faq) => ({
           "@type": "Question",
           "name": faq.q,
           "acceptedAnswer": {
@@ -188,125 +172,17 @@ export default function Home() {
     ]
   };
 
+  // 30 Sep 2026: the homepage renders the redesign (built as /preview/hero).
+  // The structured data above is unchanged except that the FAQPage lists only
+  // the five questions the redesign shows. The page stays static, so the
+  // redesign gets the default (condensed) font rather than reading ?font=.
   return (
-    <main className="bg-paper min-h-screen overflow-x-hidden">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-
-      {/* Paper grain texture */}
-      <div className="fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.03]"></div>
-
-      {/* Scroll Progress Bar */}
-      <ScrollProgressBar />
-
-      {/* SECTIONS REMOVED 13 Sep 2026, components kept and still importable.
-          Measured against eleven competitor homepages with the same extractor:
-          median 9 H2 sections, longest 12, this page 17. The excess was not
-          spread evenly -- it sat in four services blocks, three pricing blocks,
-          three "who we are" blocks and two CTAs, twelve blocks doing the work of
-          five. Nothing here was cut to hit a word count; the auditor withdrew
-          that target on 13 Sep as unvalidated. Each removal below is a
-          duplicate or a block the audit named. To restore one, re-add its tag. */}
-      <Header />
-
-      {/* Hero */}
-      <Hero />
-
-      {/* Answer-first summary, extractable passage placed in the citation zone (first
-          30% of the page). REWRITTEN 15 Sep 2026. Because it is written to be lifted
-          by an assistant, it was also the densest concentration of stale claims left
-          on the site, and the most likely passage to be quoted:
-
-            - "no retainer" -- contradicted the $500/mo AI SEO service published 14 Sep
-            - "no monthly platform fees" -- contradicted the hosting correction of 13 Sep,
-              where provider costs continue and hosting can be billed
-            - "rebuilds slow WordPress, Shopify, Webflow, Wix and Squarespace sites" --
-              migration-led, and it told the reader their site was slow
-            - "take 2 to 4 weeks" -- a universal timeline
-            - "score 90 or better on Lighthouse, mobile and desktop" -- stated flat, when
-              company-facts scopes it to the representative pages named in the written
-              scope, verified across three recorded runs
-            - "AI assistants such as ChatGPT, Claude and Perplexity can quote" -- implies
-              selection, which the AI SEO page spends a FAQ saying nobody can promise
-            - "web development" linked to an agency-facing blog post, not a service
-
-          Nothing here needs a qualification because nothing here overstates. The
-          timeline, performance target and running costs live on the pages that can
-          state their conditions. */}
-      <section className="px-6 pt-2 pb-6 md:pb-8 bg-paper">
-        <div className="container mx-auto max-w-3xl">
-          <p data-speakable="true" className="text-base md:text-lg text-stone-600 leading-relaxed text-center">
-            <strong className="text-charcoal">PandaCodeGen designs and builds fast business websites and{" "}
-            <Link href="/services/ecommerce" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">online stores</Link>.</strong>{" "}
-            We create new websites and redesign or rebuild existing sites around how your business works. When a
-            project needs a{" "}
-            <Link href="/services" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">migration</Link>,
-            we plan how your content, URLs and integrations carry across. You get a content editor, training and
-            code you own.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION ORDER, resequenced 10 Sep 2026.
-
-          A structure audit measured the mobile homepage at ~30,000px and found
-          that the buying decisions arrived late: situation-based service
-          selection began around 9,787px, the tier finder around 22,058. Adding
-          the work previews the day before had pushed selection down further, to
-          11,699. The audit's recommended sequence is outcome and scope, then
-          real projects, then a review, then service choices, then packages,
-          then a short process, then a focused FAQ.
-
-          This is a pure reorder. No section was cut and no copy changed, so
-          nothing measured elsewhere is invalidated. Two constraints held it in
-          place: the answer-first summary above stays in the first 30% of the
-          page for extraction, and no two adjacent sections share a background,
-          which is why the migration standard sits between services and the tier
-          finder rather than immediately after the hero. */}
-
-      {/* Real finished sites, before any claim about them. Projects precede the
-          standards that describe how we build them. */}
-      <WorkPreviews />
-
-      {/* Public reviews and owner-confirmed project records */}
-      <SocialProof />
-
-
-      {/* Services Bento, premium bento grid (Paper) */}
-      <ServicesHub />
-
-
-      {/* What actually gets built, and who can change it afterwards. Placed
-          where the 10 Sep feature audit asked for it: after a real project and
-          before the packages, so the reader knows what a package contains
-          before being asked to pick one. White between the charcoal band above
-          and the paper of the tier finder below, which keeps the homepage rule
-          that no two adjacent sections share a background. */}
-      <CustomFeatures />
-
-      {/* Tier Finder Quiz, "Which tier is right for me?" Packages, immediately
-          after service selection rather than 22,000px below it. */}
-      <TierQuiz />
-
-      {/* How It Works, 4 Steps with Visual Diagrams */}
-      <HowItWorksSimple />
-
-
-
-
-      {/* Founders */}
-      <FounderSection />
-
-
-      {/* FAQ Section */}
-      <HomeFaqSection faqs={homeFaqs} />
-
-      {/* Latest Blog Posts */}
-      <LatestBlog />
-
-      <Footer />
-    </main>
+      <HeroPreview searchParams={Promise.resolve({})} />
+    </>
   );
 }
