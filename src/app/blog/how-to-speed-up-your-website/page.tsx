@@ -267,11 +267,9 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                         </table>
                     </div>
                     <BlogText>
-                        Read the first two rows together, because that pairing is the most useful thing on this page. An
-                        81 ms first byte against a 1,952 ms DOMContentLoaded says the server did its job and the cost is
-                        downstream, so anyone selling us faster hosting would be selling a fix for a problem we do not
-                        have. That is the single most common misdiagnosis in this whole subject, and you can rule it in
-                        or out in about a minute on your own site.
+                        Read the first two rows together. An 81 ms first byte against a 1,952 ms DOMContentLoaded
+                        points to work after the server responds. Faster hosting would not address the main delay here. Check the same
+                        two timings on your own site before paying for a hosting change.
                     </BlogText>
                     <BlogText>
                         The JavaScript row is the uncomfortable one and it stays in. <strong>On an article that is largely
@@ -366,7 +364,7 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                     <BlogHeader id="which-tool">Which tool answers which question</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            No single performance tool answers every question, and reaching for the wrong one is how a morning disappears into a metric that was never the constraint. Five tools cover the ground between them, and each has one question it is genuinely best at. Pick by the question you are holding rather than by the tab you already have open.
+                            These five tools answer different questions. Start with the problem you are trying to locate, then choose the tool that measures it.
                         </BlogText>
                     </div>
                     <BlogList
@@ -511,7 +509,7 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                     <BlogHeader id="release-controls">12. Add release and regression controls</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Speed work that is not defended by a repeatable test gets undone by a later release, usually by someone who never knew the constraint existed. What defends it is a recorded baseline rather than a memory of a good afternoon. Four controls make the improvement survive the next deploy.
+                            Record a baseline and repeat the same test after each release. These four checks show whether a later release has slowed the site.
                         </BlogText>
                     </div>
                     <BlogList

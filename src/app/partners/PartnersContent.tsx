@@ -273,7 +273,7 @@ export default function PartnersContent() {
             includes: [
               "Combined offering with co-branded deliverables",
               "50/50 revenue split on jointly sourced clients",
-              "A shared channel with us rather than a ticket queue",
+              "A shared channel with our team",
               "Sales collateral and pitch decks provided",
               "Quarterly strategy session with Hassan",
               "Co-invested marketing, including mutual case studies",

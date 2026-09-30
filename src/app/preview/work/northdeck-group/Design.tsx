@@ -50,8 +50,8 @@ const built = [
     body: "Built on Next.js 16, with real editorial photography and locally served fonts (Instrument Sans, Instrument Serif, IBM Plex Mono) rather than a font CDN. Per the project's own README, there's no database, authentication, storage, CMS or third-party API key in the build -- content lives in code.",
   },
   {
-    label: "Motion that explains the system, not just decorates it",
-    body: "Interactive system-layer panels (video, access, intrusion, intercom, system care) and a five-step tabbed walkthrough of how an incident is handled, from detect to respond, built with the `motion` library -- used to walk a visitor through how the pieces connect, not as ambient decoration. Every animation switches off for visitors who have reduced motion turned on.",
+    label: "See how the security layers work together",
+    body: "Interactive panels show video, access, intrusion, intercom and system care. A five-step walkthrough follows an incident from detection to response. The animations use the `motion` library and switch off for visitors who have reduced motion turned on.",
   },
   {
     label: "A design scenario, labelled as one",

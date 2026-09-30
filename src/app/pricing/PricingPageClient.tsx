@@ -402,8 +402,8 @@ export default function PricingPageClient() {
         >
           <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Contract clarity</p>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal">
-            Compare the scope,{" "}
-            <span className="font-serif italic text-cognac">not just the headline price.</span>
+            Check what the{" "}
+            <span className="font-serif italic text-cognac">quote covers.</span>
           </h2>
         </motion.div>
 

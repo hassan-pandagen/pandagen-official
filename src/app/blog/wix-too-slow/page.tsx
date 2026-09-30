@@ -199,10 +199,8 @@ export default function WixTooSlowPage() {
                         ]}
                     />
                     <BlogText>
-                        This matters because the two get answered with the same advice and only one of them is about
-                        your business. Closing browser tabs and disabling extensions is real advice for a laggy editor
-                        and does nothing for a slow site. The rest of this page is about the published site — the one
-                        that costs you customers.
+                        Closing browser tabs or disabling extensions can help a laggy editor. They will not speed up
+                        the published site your customers visit. The rest of this guide deals with that published site.
                     </BlogText>
 
                     <BlogHeader id="is-it-slow">How do you know whether the Wix site is slow?</BlogHeader>

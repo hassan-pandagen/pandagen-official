@@ -426,7 +426,7 @@ export default function ShopifyHeadlessPage() {
                         sets out the field metrics that acceptance criterion is measured against later.
                     </BlogText>
 
-                    <BlogHeader>What does headless Shopify cost to run, not just build?</BlogHeader>
+                    <BlogHeader>What does headless Shopify cost to build and run?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             The build is one line in a headless budget, and it is rarely the line that decides whether the project was worth doing. Six cost categories run for as long as the storefront does, and two of them, security updates and API version upgrades, arrive on Shopify&apos;s schedule rather than yours. Price the whole column.

@@ -309,7 +309,7 @@ export default function WooCommerceLowConversionRatePage() {
                         people arriving were never going to buy.
                     </BlogText>
 
-                    <BlogHeader id="offer">What if the problem is the offer rather than the store?</BlogHeader>
+                    <BlogHeader id="offer">Could the offer be holding sales back?</BlogHeader>
                     <BlogText>
                         This is the cause a technical article is least equipped to fix and most likely to skip. Price
                         against the alternatives your buyer is actually comparing, delivery cost and timing, returns
