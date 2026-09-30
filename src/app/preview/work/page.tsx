@@ -46,10 +46,14 @@ type Row = {
 };
 
 const clientWork: Row[] = [
-  { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "/preview/work/northdeck-group", image: "/work/northdeck-group.png" },
-  { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: "/preview/work/emblematic-studio", image: "/work/emblematic-studio.png" },
-  { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: "/preview/work/mycustompatches", image: "/work/mycustompatches.png" },
-  { name: caseStudy("ladies-4-jesus").name, label: "Community & publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/preview/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
+  { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "/work/northdeck-group", image: "/work/northdeck-group.png" },
+  { name: caseStudy("emblematic-studio").name, label: "Product catalogue", relationship: caseStudy("emblematic-studio").relationship, href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },
+  { name: caseStudy("mycustompatches").name, label: "WordPress migration", relationship: caseStudy("mycustompatches").relationship, href: "/work/mycustompatches", image: "/work/mycustompatches.png" },
+  { name: caseStudy("ladies-4-jesus").name, label: "Community & publishing", relationship: caseStudy("ladies-4-jesus").relationship, href: "/work/ladies-4-jesus", image: "/work/ladies-4-jesus.png" },
+  // Confirmed as a real client by the owners, 30 Sep 2026; until then it was
+  // held apart as unconfirmed. The storefront itself is still a preview build
+  // (its own label: "design preview, not yet for sale"), so the row says so.
+  { name: "Saforne", label: "Leather goods store", relationship: "Client", status: "Preview build, not yet selling", href: "https://dtc-brand-alpha.vercel.app/", image: "/work/saforne.png", external: true },
 ];
 
 // In progress, not a built case study: migration-projects.ts is explicit that
@@ -60,23 +64,28 @@ const inProgress: Row = {
   label: "WordPress migration",
   relationship: "Client, in progress",
   status: `Testing begins ${formatIsoDate(MIGRATION_PROJECT_DETAILS.aStepAboveMedical.testingStarts)}`,
-  href: "/preview/work/a-step-above-medical",
+  href: "/work/a-step-above-medical",
 };
 
 const founderAffiliated: Row[] = [
-  { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/preview/work/panda-patches", image: "/work/panda-patches.png" },
-  { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: "/preview/work/enterprise-ops", image: "/work/enterprise-ops.png" },
+  { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/work/panda-patches", image: "/work/panda-patches.png" },
+  { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: "/work/enterprise-ops", image: "/work/enterprise-ops.png" },
   // Not /work/pandacodelab.png: that capture shows pandacodelab.com's "Why
   // Panda?" section, with "99/100 Google Speed scores. Sub-second load times
   // guaranteed." and a "Rank #1" snippet, claims this site does not make.
-  { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: "/preview/work/panda-codelab", image: "/work/pandacodelab-services.png" },
+  { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: "/work/panda-codelab", image: "/work/pandacodelab-services.png" },
 ];
 
 const conceptBuilds: Row[] = [
-  { name: caseStudy("medical-template").name, label: "Practice website", relationship: caseStudy("medical-template").relationship, href: "/preview/work/medical-template", image: "/work/medical-template-hero.png" },
-  { name: caseStudy("panda-publisher").name, label: "Author services", relationship: caseStudy("panda-publisher").relationship, href: "/preview/work/panda-publisher", image: "/work/panda-publisher-library.png" },
-  { name: caseStudy("sleek-jackets").name, label: "Outerwear store", relationship: caseStudy("sleek-jackets").relationship, href: "/preview/work/sleek-jackets", image: "/work/sleek-jackets-hero.png" },
+  { name: caseStudy("medical-template").name, label: "Practice website", relationship: caseStudy("medical-template").relationship, href: "/work/medical-template", image: "/work/medical-template-hero.png" },
+  { name: caseStudy("panda-publisher").name, label: "Author services", relationship: caseStudy("panda-publisher").relationship, href: "/work/panda-publisher", image: "/work/panda-publisher-library.png" },
+  { name: caseStudy("sleek-jackets").name, label: "Outerwear store", relationship: caseStudy("sleek-jackets").relationship, href: "/work/sleek-jackets", image: "/work/sleek-jackets-hero.png" },
 ];
+
+/** Every row, in display order: the live /work page builds its ItemList from this. */
+export function workIndexItems(): { name: string; href: string }[] {
+  return [...clientWork, inProgress, ...founderAffiliated, ...conceptBuilds].map(({ name, href }) => ({ name, href }));
+}
 
 export default function WorkPreview() {
   return (
@@ -105,41 +114,6 @@ export default function WorkPreview() {
         <div className="mx-auto max-w-[1440px] border-t" style={{ borderColor: T.rule }} />
       </div>
       <WorkSection title="In progress" note="Not yet launched" rows={[inProgress]} compact />
-
-      <div className="px-6 md:px-10" style={{ backgroundColor: T.paperHi }}>
-        <div className="mx-auto max-w-[1440px] py-10 md:py-14">
-          <p className="text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            Preview — not yet confirmed
-          </p>
-          <div className="mt-4 grid gap-6 border-t pt-6 md:grid-cols-12" style={{ borderColor: T.rule }}>
-            <div className="overflow-hidden rounded-[4px] md:col-span-4">
-              <a href="https://dtc-brand-alpha.vercel.app/" target="_blank" rel="noopener noreferrer" className="block">
-                <Image src="/work/saforne.png" alt="Saforne preview build, a leather goods storefront design not yet confirmed as a live client relationship." width={640} height={306} className="w-full object-cover" />
-              </a>
-            </div>
-            <div className="md:col-span-8">
-              <h2 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "1.6rem", lineHeight: 1.1 }}>
-                Saforne
-              </h2>
-              <p className="mt-3 max-w-[40rem] text-[15px] leading-[1.6]" style={{ color: T.body }}>
-                A leather-goods storefront design. The build itself is labelled &ldquo;design preview, not yet for
-                sale&rdquo; on its own site, and the client relationship shown here has not yet been personally
-                reconfirmed, so it is held separately from the client work above rather than presented alongside it.
-              </p>
-              <a
-                href="https://dtc-brand-alpha.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium"
-                style={{ color: T.ink }}
-              >
-                View the preview build <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <WorkSection title="Founder-affiliated" note="Owned by co-founder Imran Raza Ladhani" rows={founderAffiliated} dark />
       <WorkSection

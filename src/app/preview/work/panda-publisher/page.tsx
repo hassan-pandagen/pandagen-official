@@ -5,6 +5,7 @@ import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import PandaPublisherWalkthrough from "@/components/redesign/case-study/PandaPublisherWalkthrough";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Panda Publisher, redesign preview, 30 Sep 2026. A concept build with no
@@ -14,13 +15,13 @@ import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 // against the concept's code, so it is not repeated here.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default function PandaPublisherCaseStudyPreview() {
+export default function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
         <div className="mx-auto max-w-[1100px]">
           <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/preview/work" style={{ color: T.quiet }}>Work</Link> / Panda Publisher / Concept build
+            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Publisher / Concept build
           </p>
 
           <h1 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
@@ -53,6 +54,8 @@ export default function PandaPublisherCaseStudyPreview() {
       </section>
 
       <PandaPublisherWalkthrough />
+
+      <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">

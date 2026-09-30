@@ -7,6 +7,7 @@ import RelationshipDisclosure from "@/components/work/RelationshipDisclosure";
 import MyCustomPatchesWalkthrough from "@/components/redesign/case-study/MyCustomPatchesWalkthrough";
 import { requiredMetric, clientIdentity } from "@/data/case-study-facts";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // MyCustomPatches, rebuild 2, 28 Sep 2026. First pass (same day, earlier)
@@ -46,13 +47,13 @@ const built = [
   },
 ];
 
-export default function MyCustomPatchesCaseStudyPreview() {
+export default function MyCustomPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
         <div className="mx-auto max-w-[1100px]">
           <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-            <Link href="/preview/work" style={{ color: T.quiet }}>Work</Link> / MyCustomPatches / Independent client
+            <Link href="/work" style={{ color: T.quiet }}>Work</Link> / MyCustomPatches / Independent client
           </p>
 
           <h1 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
@@ -136,6 +137,8 @@ export default function MyCustomPatchesCaseStudyPreview() {
           </dl>
         </div>
       </section>
+
+      <CaseStudyFaqs faqs={faqs} />
 
       <section className="px-6 py-20 md:px-10" style={{ backgroundColor: T.dark, color: T.onDark }}>
         <div className="mx-auto max-w-[1100px]">

@@ -8,6 +8,7 @@ import PandaPatchesWalkthrough from "@/components/redesign/case-study/PandaPatch
 import { requiredMetric } from "@/data/case-study-facts";
 import { MIGRATION_PROJECT_DETAILS, PAYMENT_INTEGRATION_SCOPE } from "@/data/migration-projects";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
+import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Panda Patches case study, rebuild 2, 27 Sep 2026. The first pass (same day)
@@ -106,7 +107,7 @@ const fullScope = [
   "Responsive storefront with a touch-friendly configuration flow",
 ];
 
-export default function PandaPatchesCaseStudyPreview() {
+export default function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <div className="panda-story">
@@ -117,7 +118,7 @@ export default function PandaPatchesCaseStudyPreview() {
         <section className="story-section px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
           <div className="mx-auto max-w-[1100px]">
             <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
-              <Link href="/preview/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches / Founder-affiliated
+              <Link href="/work" style={{ color: T.quiet }}>Work</Link> / Panda Patches / Founder-affiliated
             </p>
 
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
@@ -237,6 +238,8 @@ export default function PandaPatchesCaseStudyPreview() {
           </div>
         </section>
       </div>
+
+      <CaseStudyFaqs faqs={faqs} />
 
       {/* ── 7. Next step ────────────────────────────────────────────────── */}
       <div className="story-block">

@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/partners', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
 
     // 4. Dynamic Content
-    { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-09-19' },
+    { path: '/work', changeFrequency: 'monthly', priority: 0.8, lastModified: '2026-09-28' },
     { path: '/work/mycustompatches', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6 },
@@ -56,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // contradicted their own robots directive. seo-audit.mjs flagged both.
     { path: '/work/emblematic-studio', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/ladies-4-jesus', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/medical-template', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/work/panda-publisher', changeFrequency: 'yearly', priority: 0.4 },
+    { path: '/work/sleek-jackets', changeFrequency: 'yearly', priority: 0.4 },
+    // Added 30 Sep 2026 with the redesign switch: both are new live pages.
+    { path: '/work/northdeck-group', changeFrequency: 'yearly', priority: 0.6 },
+    { path: '/work/a-step-above-medical', changeFrequency: 'monthly', priority: 0.5 },
     { path: '/about', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/about/hassan', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
     { path: '/about/imran', changeFrequency: 'monthly', priority: 0.6 , lastModified: '2026-08-03' },
