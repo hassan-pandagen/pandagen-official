@@ -292,7 +292,7 @@ const de: Dictionary = {
       title: "Von den Gründern gebaut,",
       titleAccent: "nicht ausgelagert.",
       lead:
-        "Wenn Sie ein Gespräch buchen, antwortet Hassan. Er schreibt den Code. Imran verantwortet die Architektur. Verträge und Support aus den USA, mit direktem Zugang zu den Gründern in jedem Projekt: keine Kundenbetreuung dazwischen, kein White-Label-Outsourcing.",
+        "Wenn Sie ein Gespräch buchen, antwortet Hassan. Er schreibt den Code. Imran verantwortet Marketing und Kundenreise. Verträge und Support aus den USA, mit direktem Zugang zu den Gründern in jedem Projekt: keine Kundenbetreuung dazwischen, kein White-Label-Outsourcing.",
       people: [
         {
           name: "Hassan Jamal",
@@ -308,14 +308,14 @@ const de: Dictionary = {
         },
         {
           name: "Imran Raza Ladhani",
-          role: "Mitgründer und leitender Architekt",
+          role: "Mitgründer und Marketingleiter",
           bio:
-            "Hat PandaCodeGen gemeinsam mit Hassan gegründet und verantwortet die Architektur: Machbarkeit von Migrationen, Systemdesign und Umschaltungen ohne Ausfallzeit.",
+            "Hat PandaCodeGen gemeinsam mit Hassan gegründet und verantwortet das Marketing: Positionierung, Website-Botschaften und Kundenreise. Seine Perspektive als Inhaber von Panda Patches fließt in die Arbeit ein.",
           tags: [
-            "Next.js-Architektur",
-            "Plattform-Migrationen",
-            "Systemdesign",
-            "Headless-Commerce",
+            "Positionierung",
+            "Kundenreise",
+            "E-Commerce",
+            "Marketingstrategie",
           ],
         },
       ],
@@ -681,7 +681,7 @@ const de: Dictionary = {
       {
         title: "Was wir nicht tun",
         body:
-          "Wir sagen keine Suchmaschinen-Rankings zu, und wir empfehlen keinen Neubau, wenn die Belege dafür sprechen, die bestehende Website zu reparieren. Sie werden nicht an eine Kundenbetreuung übergeben: Die beiden Mitgründer, die Ihr Projekt kalkulieren, sind die beiden Ingenieure, die es umsetzen.",
+          "Wir sagen keine Suchmaschinen-Rankings zu, und wir empfehlen keinen Neubau, wenn die Belege dafür sprechen, die bestehende Website zu reparieren. Sie werden nicht an eine Kundenbetreuung übergeben: Hassan leitet die Entwicklung, Imran das Marketing, und beide Gründer bleiben am Projekt beteiligt.",
       },
     ],
     faq: [
@@ -710,7 +710,7 @@ const de: Dictionary = {
         "PandaCodeGen gestaltet und entwickelt individuelle Business-Websites, Onlineshops und Software. Manche Kunden starten bei null, manche ersetzen eine Website, die zu klein geworden ist, manche ziehen eine bestehende um, bei der URLs, Inhalte, Integrationen und Messung zählen. Jeder Weg beginnt mit Belegen und einem schriftlichen Leistungsumfang.",
     },
     summary:
-      "PandaCodeGen ist ein im Februar 2026 gegründetes Webentwicklungsstudio mit Sitz in Stafford, Texas. Das Unternehmen wird von seinen beiden Mitgründern geführt: Hassan Jamal, Mitgründer und leitender Ingenieur, sowie Imran Raza Ladhani, Mitgründer und leitender Architekt. Die beiden Personen, die ein Projekt kalkulieren, sind die beiden Ingenieure, die es umsetzen.",
+      "PandaCodeGen ist ein im Februar 2026 gegründetes Webentwicklungsstudio mit Sitz in Stafford, Texas. Das Unternehmen wird von seinen beiden Mitgründern geführt: Hassan Jamal, Mitgründer und leitender Ingenieur, sowie Imran Raza Ladhani, Mitgründer und Marketingleiter. Die Gründer bleiben vom ersten Gespräch bis zur Lieferung beteiligt.",
     sections: [
       {
         title: "Migrationskontinuität",
@@ -741,7 +741,7 @@ const de: Dictionary = {
     faq: [
       {
         q: "Wer führt die Arbeit tatsächlich aus?",
-        a: "Die beiden Mitgründer. Hassan Jamal ist Mitgründer und leitender Ingenieur; Imran Raza Ladhani ist Mitgründer und leitender Architekt. Nach der Beauftragung erfolgt keine Übergabe an eine Kundenbetreuung.",
+        a: "Die beiden Mitgründer. Hassan Jamal ist Mitgründer und leitender Ingenieur; Imran Raza Ladhani ist Mitgründer und Marketingleiter. Nach der Beauftragung erfolgt keine Übergabe an eine Kundenbetreuung.",
       },
       {
         q: "Empfehlen Sie immer einen Neubau?",

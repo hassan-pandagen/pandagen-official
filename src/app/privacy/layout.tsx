@@ -1,3 +1,4 @@
+import RestyledShell from "@/components/redesign/RestyledShell";
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -19,10 +20,12 @@ export const metadata: Metadata = {
   },
 }
 
+// 30 Sep 2026: the redesign shell for this route; the page content is
+// unchanged. See src/components/redesign/RestyledShell.tsx.
 export default function PrivacyLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return <RestyledShell kind="legal">{children}</RestyledShell>
 }

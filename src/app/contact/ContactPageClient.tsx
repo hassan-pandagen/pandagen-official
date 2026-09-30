@@ -169,7 +169,7 @@ export default function ContactPageClient() {
             <div className="mt-8 grid grid-cols-2 gap-3 border-y border-stone-200 py-6 sm:gap-5 lg:mt-10">
               {[
                 { name: "Hassan Jamal", photo: "/team/hassan.png", href: "/about/hassan" },
-                { name: "Imran Raza Ladhani", photo: "/team/imran.png", href: "/about/imran" },
+                { name: "Imran Raza Ladhani", photo: "/team/imran-editorial.png", href: "/about/imran" },
               ].map((founder) => (
                 <Link key={founder.href} href={founder.href} className="group flex min-w-0 flex-col items-start gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cognac sm:flex-row lg:flex-col xl:flex-row">
                   <Image src={founder.photo} alt={founder.name} width={64} height={64} sizes="64px" className="h-16 w-16 shrink-0 rounded-2xl object-cover" loading="eager" />

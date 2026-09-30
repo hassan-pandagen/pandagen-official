@@ -292,7 +292,7 @@ const fr: Dictionary = {
       title: "Construit par les fondateurs,",
       titleAccent: "pas sous-traité.",
       lead:
-        "Quand vous réservez un échange, c'est Hassan qui répond. Il écrit le code. Imran dirige l'architecture. Contrats et support aux États-Unis, avec un accès direct aux fondateurs sur chaque projet : pas de chargé de compte, pas de sous-traitance en marque blanche.",
+        "Quand vous réservez un échange, c'est Hassan qui répond. Il écrit le code. Imran dirige le marketing et le parcours client. Contrats et support aux États-Unis, avec un accès direct aux fondateurs sur chaque projet : pas de chargé de compte, pas de sous-traitance en marque blanche.",
       people: [
         {
           name: "Hassan Jamal",
@@ -308,14 +308,14 @@ const fr: Dictionary = {
         },
         {
           name: "Imran Raza Ladhani",
-          role: "Cofondateur et architecte principal",
+          role: "Cofondateur et responsable marketing",
           bio:
-            "A cofondé PandaCodeGen avec Hassan et dirige l'architecture : faisabilité des migrations, conception système et bascules sans interruption de service.",
+            "A cofondé PandaCodeGen avec Hassan et dirige le marketing : positionnement, messages du site et parcours client. Il apporte aussi son expérience de propriétaire de Panda Patches.",
           tags: [
-            "Architecture Next.js",
-            "Migrations de plateforme",
-            "Conception système",
-            "Commerce headless",
+            "Positionnement",
+            "Parcours client",
+            "E-commerce",
+            "Stratégie marketing",
           ],
         },
       ],
@@ -681,7 +681,7 @@ const fr: Dictionary = {
       {
         title: "Ce que nous ne faisons pas",
         body:
-          "Nous ne promettons pas de classement dans les moteurs de recherche et nous ne recommandons pas une reconstruction si les preuves indiquent qu'une réparation du site actuel est la meilleure réponse. Vous n'êtes pas confié à un chargé de compte : les deux cofondateurs qui cadrent votre projet sont les deux ingénieurs qui le réalisent.",
+          "Nous ne promettons pas de classement dans les moteurs de recherche et nous ne recommandons pas une reconstruction si les preuves indiquent qu'une réparation du site actuel est la meilleure réponse. Vous n'êtes pas confié à un chargé de compte : Hassan dirige l'ingénierie et Imran le marketing, et les deux fondateurs restent impliqués dans le projet.",
       },
     ],
     faq: [
@@ -710,7 +710,7 @@ const fr: Dictionary = {
         "PandaCodeGen conçoit et développe des sites web professionnels, des boutiques en ligne et des logiciels sur mesure. Certains clients partent de zéro, d'autres remplacent un site devenu trop petit, d'autres déplacent un site existant dont les URL, les contenus, les intégrations et la mesure comptent. Chaque situation commence par des preuves et un périmètre écrit.",
     },
     summary:
-      "PandaCodeGen est un studio de développement web fondé en février 2026 et établi à Stafford, au Texas. L'entreprise est dirigée par ses deux cofondateurs : Hassan Jamal, cofondateur et ingénieur principal, et Imran Raza Ladhani, cofondateur et architecte principal. Les deux personnes qui cadrent un projet sont les deux ingénieurs qui le réalisent.",
+      "PandaCodeGen est un studio de développement web fondé en février 2026 et établi à Stafford, au Texas. L'entreprise est dirigée par ses deux cofondateurs : Hassan Jamal, cofondateur et ingénieur principal, et Imran Raza Ladhani, cofondateur et responsable marketing. Les fondateurs restent impliqués du premier échange à la livraison.",
     sections: [
       {
         title: "Continuité de migration",
@@ -741,7 +741,7 @@ const fr: Dictionary = {
     faq: [
       {
         q: "Qui réalise réellement le travail ?",
-        a: "Les deux cofondateurs. Hassan Jamal est cofondateur et ingénieur principal ; Imran Raza Ladhani est cofondateur et architecte principal. Il n'y a pas de transfert vers un chargé de compte après la signature.",
+        a: "Les deux cofondateurs. Hassan Jamal est cofondateur et ingénieur principal ; Imran Raza Ladhani est cofondateur et responsable marketing. Il n'y a pas de transfert vers un chargé de compte après la signature.",
       },
       {
         q: "Recommandez-vous toujours une reconstruction ?",
