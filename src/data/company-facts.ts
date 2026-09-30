@@ -237,11 +237,12 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // site and must not be presented as our delivered build until launch.
     { name: 'A Step Above Medical', relationship: 'Client project, in progress', href: '/services/wordpress-migration', fact: `${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.summary} Testing begins ${MIGRATION_PROJECT_DETAILS.aStepAboveMedical.testingStarts}; launch is pending. The current public domain still serves the client's previous WordPress site.` },
 
-    // Added 10 Sep 2026. The reference page states it covers every published
-    // project, and six work pages exist while this list held five. An external
-    // auditor caught the overclaim. Adding the missing record is the honest fix;
-    // weakening the sentence to "selected projects" would have been the lazy one.
-    { name: 'Panda CodeLab', relationship: 'Founder-affiliated, not independent client proof', href: '/work/panda-codelab', fact: 'A separate agency brand at pandacodelab.com, designed and built by the same team. It is our own property, so it demonstrates build capability rather than independent client evidence.' },];
+    // Panda CodeLab (added 10 Sep 2026, when an auditor found a /work page with
+    // no record here) was removed on 30 Sep 2026 together with its /work page,
+    // at the owner's request. The rule still holds: the reference page says it
+    // covers every published project, so a record and its page come and go
+    // together.
+];
 
 /** Where a machine or a person should go for the human-facing version of each area. */
 export const REFERENCE_LINKS: readonly { href: string; title: string; body: string }[] = [

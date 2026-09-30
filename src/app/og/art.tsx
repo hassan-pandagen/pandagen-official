@@ -26,7 +26,6 @@ type OgVariant = "migration" | "journal" | "case-study" | "engagement" | "profil
 const caseStudyImages: Record<string, string> = {
   "/work/mycustompatches": "/work/mycustompatches.png",
   "/work/panda-patches": "/work/panda-patches.png",
-  "/work/panda-codelab": "/work/pandacodelab.png",
   "/work/ladies-4-jesus": "/work/ladies-4-jesus.png",
   "/work/emblematic-studio": "/work/emblematic-studio.png",
   // Redacted 29 Aug 2026. Customer names, sales-agent email addresses, order

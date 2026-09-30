@@ -152,11 +152,6 @@ const staticPages: Record<string, StaticOgContent> = {
     label: "Selected Work",
     description: "An owner-confirmed website migration example with its delivery period, performance evidence, costs, and limitations labelled.",
   },
-  "/work/panda-codelab": {
-    title: "Panda CodeLab",
-    label: "Selected Work",
-    description: "A PandaCodeGen implementation reference for custom tooling, experimentation, and product engineering.",
-  },
   "/work/panda-patches": {
     title: "Panda Patches",
     label: "Founder-Owned Brand",

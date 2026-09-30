@@ -78,8 +78,9 @@ type Row = {
 // brand and a client-run store (owner, 24 Sep), so it is a Demo until that is
 // settled. Relabel it the day it is; do not guess ahead of it.
 //
-// Enterprise Ops and Panda CodeLab were left out of this list by the owner;
-// both remain on /work with their founder-affiliated labels.
+// Enterprise Ops was left out of this list by the owner and remains on /work
+// with its founder-affiliated label. Panda CodeLab was removed from the site
+// on 30 Sep 2026.
 const rows: Row[] = [
   { name: "NorthDeck Group", label: "Security systems", relationship: "Client", href: "https://northdeckgroup.com/", image: "/work/northdeck-group.png", external: true },
   { name: "Emblematic Studio", label: "Product catalogue", relationship: "Client", href: "/work/emblematic-studio", image: "/work/emblematic-studio.png" },

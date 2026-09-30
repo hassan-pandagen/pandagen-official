@@ -65,10 +65,9 @@ const inProgress: Row = {
 const founderAffiliated: Row[] = [
   { name: caseStudy("panda-patches").name, label: "Custom commerce", relationship: caseStudy("panda-patches").relationship, href: "/work/panda-patches", image: "/work/panda-patches.png" },
   { name: caseStudy("enterprise-ops").name, label: "Internal operations", relationship: caseStudy("enterprise-ops").relationship, href: "/work/enterprise-ops", image: "/work/enterprise-ops.png" },
-  // Not /work/pandacodelab.png: that capture shows pandacodelab.com's "Why
-  // Panda?" section, with "99/100 Google Speed scores. Sub-second load times
-  // guaranteed." and a "Rank #1" snippet, claims this site does not make.
-  { name: caseStudy("panda-codelab").name, label: "Agency website", relationship: caseStudy("panda-codelab").relationship, href: "/work/panda-codelab", image: "/work/pandacodelab-services.png" },
+  // Panda CodeLab was removed from the site on 30 Sep 2026, at the owner's
+  // request: a third "Panda" and a second agency brand weakened the portfolio,
+  // and its own site makes speed and ranking claims this site does not.
 ];
 
 const conceptBuilds: Row[] = [

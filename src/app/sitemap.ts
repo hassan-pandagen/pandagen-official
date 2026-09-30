@@ -50,7 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/work/mycustompatches', changeFrequency: 'yearly', priority: 0.7 },
     { path: '/work/panda-patches', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/work/enterprise-ops', changeFrequency: 'yearly', priority: 0.6 },
-    { path: '/work/panda-codelab', changeFrequency: 'yearly', priority: 0.6 },
     // Added 28 Aug 2026. Both pages were live, linked from /work and declaring
     // index:true, but had been missed here when they shipped, so the sitemap
     // contradicted their own robots directive. seo-audit.mjs flagged both.

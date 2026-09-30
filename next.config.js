@@ -100,6 +100,13 @@ const nextConfig = {
         destination: '/blog/google-algorithm-updates',
         permanent: true,
       },
+      // Panda CodeLab was taken off the portfolio on 30 Sep 2026 (owner's call).
+      // Old links and search results land on the work index instead of a 404.
+      {
+        source: '/work/panda-codelab',
+        destination: '/work',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],

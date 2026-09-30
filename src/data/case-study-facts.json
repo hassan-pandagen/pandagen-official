@@ -135,13 +135,6 @@
         }
       ]
     },
-    "panda-codelab": {
-      "name": "Panda CodeLab",
-      "relationship": "Founder-affiliated",
-      "href": "/work/panda-codelab",
-      "disclosure": "Founder-affiliated, not independent client proof. Owned and operated by co-founder Imran Raza Ladhani. PandaCodeGen built and maintains the platform, and co-founder Imran Raza Ladhani holds a stake in both companies, so the two share an owner.",
-      "metrics": []
-    },
     "medical-template": {
       "name": "Medical Template",
       "relationship": "Demo, not client work",

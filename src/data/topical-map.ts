@@ -319,7 +319,7 @@ export const clusters: Cluster[] = [
     pillarHref: '/services/custom-engineering',
     entityIds: ['custom-engineering', 'nextjs'],
     relatedClusterIds: ['wordpress', 'shopify', 'pricing', 'agency'],
-    caseStudyHrefs: ['/work/emblematic-studio', '/work/ladies-4-jesus', '/work/panda-patches', '/work/panda-codelab'],
+    caseStudyHrefs: ['/work/emblematic-studio', '/work/ladies-4-jesus', '/work/panda-patches'],
     postIds: [
       'woocommerce-vs-custom-website',
       'custom-website-5000-whats-included', 'how-long-does-a-custom-website-take', 'do-you-own-your-website',
