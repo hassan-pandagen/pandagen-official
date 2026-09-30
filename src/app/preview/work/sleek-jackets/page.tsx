@@ -14,7 +14,7 @@ import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-stu
 // purchases are not live, and nothing here says otherwise.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default function SleekJacketsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function SleekJacketsCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -82,4 +82,12 @@ export default function SleekJacketsCaseStudyPreview({ faqs = [] }: { faqs?: Cas
       </section>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/sleek-jackets route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <SleekJacketsCaseStudyPreview />;
 }

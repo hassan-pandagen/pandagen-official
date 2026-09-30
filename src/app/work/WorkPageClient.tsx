@@ -57,6 +57,33 @@ const affiliatedProjects: Project[] = [
   },
 ];
 
+const conceptProjects: Project[] = [
+  {
+    slug: "medical-template",
+    category: "Practice website concept",
+    summary: "A fictional practice site showing a booking path, provider bios and service pages.",
+    image: "/work/medical-template.png",
+    alt: "Medical Template practice website concept with a booking-focused homepage.",
+    surface: styles.community,
+  },
+  {
+    slug: "panda-publisher",
+    category: "Author services concept",
+    summary: "A service catalogue and enquiry journey with an illustrative book-cover gallery.",
+    image: "/work/panda-publisher.png",
+    alt: "Panda Publisher author-services website concept with an illustrative cover gallery.",
+    surface: styles.wordpress,
+  },
+  {
+    slug: "sleek-jackets",
+    category: "Storefront concept",
+    summary: "A product-led outerwear storefront preview; purchases are not live.",
+    image: "/work/sleek-jackets.png",
+    alt: "Sleek Jackets outerwear storefront concept in private preview.",
+    surface: styles.commerce,
+  },
+];
+
 const featuredStudy = caseStudy("emblematic-studio");
 const codeLab = caseStudy("panda-codelab");
 const collectionItems = [
@@ -65,6 +92,7 @@ const collectionItems = [
   ...affiliatedProjects.map(({ slug }) => caseStudy(slug)),
   ...clientProjects.map(({ slug }) => caseStudy(slug)),
   codeLab,
+  ...conceptProjects.map(({ slug }) => caseStudy(slug)),
 ];
 
 const schema = {
@@ -150,6 +178,7 @@ export default function WorkPageClient() {
               <a href="#client-work">Websites</a>
               <a href="#affiliated-work">Commerce & CRM</a>
               <a href="#migration-work">Migrations</a>
+              <a href="#concept-work">Concepts</a>
             </div>
           </nav>
         </section>
@@ -246,6 +275,16 @@ export default function WorkPageClient() {
               How we publish results <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </p>
+        </section>
+
+        <section className={`${styles.container} ${styles.clientWork}`} aria-labelledby="concept-work">
+          <div className={styles.sectionHeading}>
+            <h2 id="concept-work">Ideas made visible.</h2>
+            <span className={styles.sectionNote}>Concept builds · Not client work</span>
+          </div>
+          <div className={styles.projectGrid}>
+            {conceptProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+          </div>
         </section>
 
         <section className={`${styles.container} ${styles.contactSection}`} aria-labelledby="project-cta">

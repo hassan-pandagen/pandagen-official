@@ -107,7 +107,7 @@ const fullScope = [
   "Responsive storefront with a touch-friendly configuration flow",
 ];
 
-export default function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <div className="panda-story">
@@ -281,4 +281,12 @@ export default function PandaPatchesCaseStudyPreview({ faqs = [] }: { faqs?: Cas
       </div>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/panda-patches route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <PandaPatchesCaseStudyPreview />;
 }

@@ -1,7 +1,7 @@
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import RedesignMyCustomPatchesCaseStudy from "@/app/preview/work/mycustompatches/page";
+import { MyCustomPatchesCaseStudyPreview as RedesignMyCustomPatchesCaseStudy } from "@/app/preview/work/mycustompatches/page";
 
 export const metadata: Metadata = {
     // Metadata renders the same verified facts as the body. Do not type a metric

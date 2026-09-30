@@ -15,7 +15,7 @@ import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-stu
 // against the concept's code, so it is not repeated here.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export default function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -82,4 +82,12 @@ export default function PandaPublisherCaseStudyPreview({ faqs = [] }: { faqs?: C
       </section>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/panda-publisher route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <PandaPublisherCaseStudyPreview />;
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import RedesignPandaPublisherCaseStudy from "@/app/preview/work/panda-publisher/page";
+import { PandaPublisherCaseStudyPreview as RedesignPandaPublisherCaseStudy } from "@/app/preview/work/panda-publisher/page";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/panda-publisher";
 const title = "Panda Publisher: an Author Services Concept Build";

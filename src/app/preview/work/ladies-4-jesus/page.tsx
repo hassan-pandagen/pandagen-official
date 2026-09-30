@@ -35,7 +35,7 @@ const built = [
   },
 ];
 
-export default function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -124,4 +124,12 @@ export default function Ladies4JesusCaseStudyPreview({ faqs = [] }: { faqs?: Cas
       </section>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/ladies-4-jesus route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <Ladies4JesusCaseStudyPreview />;
 }

@@ -59,7 +59,7 @@ const built = [
   },
 ];
 
-export default function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -172,4 +172,12 @@ export default function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: C
       </section>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/northdeck-group route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <NorthDeckGroupCaseStudyPreview />;
 }

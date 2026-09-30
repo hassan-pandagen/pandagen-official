@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ogImageForPath } from "@/lib/seo/og";
-import RedesignSleekJacketsCaseStudy from "@/app/preview/work/sleek-jackets/page";
+import { SleekJacketsCaseStudyPreview as RedesignSleekJacketsCaseStudy } from "@/app/preview/work/sleek-jackets/page";
 
 const canonicalUrl = "https://www.pandacodegen.com/work/sleek-jackets";
 const title = "Sleek Jackets: an Outerwear Storefront Concept Build";

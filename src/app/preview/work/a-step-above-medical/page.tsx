@@ -71,7 +71,7 @@ const portalShots = [
   },
 ];
 
-export default function AStepAboveMedicalStatusPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
+export function AStepAboveMedicalStatusPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
       <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
@@ -218,4 +218,12 @@ export default function AStepAboveMedicalStatusPreview({ faqs = [] }: { faqs?: C
       </section>
     </PreviewShell>
   );
+}
+
+// A page component cannot take custom props (the production type check
+// rejects them), so the design above is a named export the live
+// /work/a-step-above-medical route renders with its FAQs, and this default export is the
+// preview route itself.
+export default function Page() {
+  return <AStepAboveMedicalStatusPreview />;
 }
