@@ -1,0 +1,794 @@
+[
+  {
+    "id": "ai-built-website-checklist",
+    "title": "AI-Built Website Checklist: 8 Checks Before Launch and After Changes",
+    "scenario": "architecture",
+    "photo": "site-plan",
+    "subject": "editorial photograph",
+    "file": "ai-built-website-checklist.webp",
+    "ogFile": "og/ai-built-website-checklist.webp"
+  },
+  {
+    "id": "is-it-cheaper-to-build-your-own-website",
+    "title": "Is It Cheaper to Build Your Own Website? DIY vs Hiring",
+    "scenario": "cost",
+    "photo": "invoice-detail",
+    "subject": "editorial photograph",
+    "file": "is-it-cheaper-to-build-your-own-website.webp",
+    "ogFile": "og/is-it-cheaper-to-build-your-own-website.webp"
+  },
+  {
+    "id": "what-is-llms-txt",
+    "title": "What Is llms.txt? Here Is Ours, and Who Actually Reads It",
+    "scenario": "search",
+    "photo": "ai-closeup",
+    "subject": "editorial photograph",
+    "file": "what-is-llms-txt.webp",
+    "ogFile": "og/what-is-llms-txt.webp"
+  },
+  {
+    "id": "nextjs-sanity-stack",
+    "title": "Next.js and Sanity in 2026: Fit, Cost and Tradeoffs",
+    "scenario": "editor",
+    "photo": "code-notes",
+    "subject": "editorial photograph",
+    "file": "nextjs-sanity-stack.webp",
+    "ogFile": "og/nextjs-sanity-stack.webp"
+  },
+  {
+    "id": "aeo-web-performance-glossary",
+    "title": "AEO & Web Performance Glossary: 26 Terms Defined (2026)",
+    "scenario": "performance",
+    "photo": "stopwatch-phone",
+    "subject": "editorial photograph",
+    "file": "aeo-web-performance-glossary.webp",
+    "ogFile": "og/aeo-web-performance-glossary.webp"
+  },
+  {
+    "id": "lovable-site-not-showing-on-google",
+    "title": "Lovable Site Not Showing on Google? A 2026 Diagnostic",
+    "scenario": "search",
+    "photo": "google-screen",
+    "subject": "editorial photograph",
+    "file": "lovable-site-not-showing-on-google.webp",
+    "ogFile": "og/lovable-site-not-showing-on-google.webp"
+  },
+  {
+    "id": "fix-meta-ad-tracking-2026",
+    "title": "Meta Ad Tracking Not Working? A 2026 Diagnostic Guide",
+    "scenario": "analytics",
+    "photo": "analytics-print",
+    "subject": "editorial photograph",
+    "file": "fix-meta-ad-tracking-2026.webp",
+    "ogFile": "og/fix-meta-ad-tracking-2026.webp"
+  },
+  {
+    "id": "wix-migration-cost",
+    "title": "Wix Migration Cost in 2026: Scope, Tiers and Export Guide",
+    "scenario": "migration",
+    "photo": "migration-board",
+    "subject": "editorial photograph",
+    "file": "wix-migration-cost.webp",
+    "ogFile": "og/wix-migration-cost.webp"
+  },
+  {
+    "id": "woocommerce-migration-cost",
+    "title": "WooCommerce Migration Cost in 2026: Data, Scope and Tiers",
+    "scenario": "migration",
+    "photo": "parcel-bench",
+    "subject": "editorial photograph",
+    "file": "woocommerce-migration-cost.webp",
+    "ogFile": "og/woocommerce-migration-cost.webp"
+  },
+  {
+    "id": "woocommerce-vs-custom-website",
+    "title": "WooCommerce vs Custom Website in 2026: A Requirements Guide",
+    "scenario": "commerce",
+    "photo": "site-plan",
+    "subject": "editorial photograph",
+    "file": "woocommerce-vs-custom-website.webp",
+    "ogFile": "og/woocommerce-vs-custom-website.webp"
+  },
+  {
+    "id": "agentic-browsing-pagespeed-score",
+    "title": "Lighthouse Agentic Browsing Checks Explained (2026)",
+    "scenario": "performance",
+    "photo": "performance-alt",
+    "subject": "editorial photograph",
+    "file": "agentic-browsing-pagespeed-score.webp",
+    "ogFile": "og/agentic-browsing-pagespeed-score.webp"
+  },
+  {
+    "id": "custom-website-5000-whats-included",
+    "title": "Custom Website Starting at $5,000: Scope Guide (2026)",
+    "scenario": "cost",
+    "photo": "contract-handover",
+    "subject": "editorial photograph",
+    "file": "custom-website-5000-whats-included.webp",
+    "ogFile": "og/custom-website-5000-whats-included.webp"
+  },
+  {
+    "id": "meta-conversions-api-setup-cost",
+    "title": "Meta Conversions API Setup Cost: A Scope-Based Guide",
+    "scenario": "cost",
+    "photo": "invoice-detail",
+    "subject": "editorial photograph",
+    "file": "meta-conversions-api-setup-cost.webp",
+    "ogFile": "og/meta-conversions-api-setup-cost.webp"
+  },
+  {
+    "id": "spending-more-on-ads-fewer-orders-tracking",
+    "title": "Spending More on Ads but Getting Fewer Orders? Audit Tracking",
+    "scenario": "analytics",
+    "photo": "analytics",
+    "subject": "editorial photograph",
+    "file": "spending-more-on-ads-fewer-orders-tracking.webp",
+    "ogFile": "og/spending-more-on-ads-fewer-orders-tracking.webp"
+  },
+  {
+    "id": "will-migrating-hurt-my-seo",
+    "title": "Will Migrating My Website Hurt SEO? A 2026 Risk Guide",
+    "scenario": "migration",
+    "photo": "search-closeup",
+    "subject": "editorial photograph",
+    "file": "will-migrating-hurt-my-seo.webp",
+    "ogFile": "og/will-migrating-hurt-my-seo.webp"
+  },
+  {
+    "id": "how-long-does-a-custom-website-take",
+    "title": "How Long Does a Custom Website Take? A 2026 Schedule Guide",
+    "scenario": "architecture",
+    "photo": "wireframe-wall",
+    "subject": "editorial photograph",
+    "file": "how-long-does-a-custom-website-take.webp",
+    "ogFile": "og/how-long-does-a-custom-website-take.webp"
+  },
+  {
+    "id": "do-you-own-your-website",
+    "title": "Do You Own Your Website? A Contract and Control Checklist",
+    "scenario": "architecture",
+    "photo": "contract-handover",
+    "subject": "editorial photograph",
+    "file": "do-you-own-your-website.webp",
+    "ogFile": "og/do-you-own-your-website.webp"
+  },
+  {
+    "id": "saas-price-increases-2026-tracker",
+    "title": "SaaS Price Changes in 2026: A Verified Watchlist",
+    "scenario": "architecture",
+    "photo": "subscription-papers",
+    "subject": "editorial photograph",
+    "file": "saas-price-increases-2026-tracker.webp",
+    "ogFile": "og/saas-price-increases-2026-tracker.webp"
+  },
+  {
+    "id": "build-vs-buy-software-2026-cost-comparison",
+    "title": "Should You Build or Buy Software in 2026? A Cost Framework",
+    "scenario": "cost",
+    "photo": "code-notes",
+    "subject": "editorial photograph",
+    "file": "build-vs-buy-software-2026-cost-comparison.webp",
+    "ogFile": "og/build-vs-buy-software-2026-cost-comparison.webp"
+  },
+  {
+    "id": "how-to-cut-saas-bill-2026",
+    "title": "How to Cut a SaaS Bill in 2026: An Evidence-First Audit",
+    "scenario": "cost",
+    "photo": "invoice-detail",
+    "subject": "editorial photograph",
+    "file": "how-to-cut-saas-bill-2026.webp",
+    "ogFile": "og/how-to-cut-saas-bill-2026.webp"
+  },
+  {
+    "id": "saas-software-pricing-audit-2026",
+    "title": "2026 SaaS Pricing Audit: An Evidence-First Method",
+    "scenario": "cost",
+    "photo": "pricing",
+    "subject": "editorial photograph",
+    "file": "saas-software-pricing-audit-2026.webp",
+    "ogFile": "og/saas-software-pricing-audit-2026.webp"
+  },
+  {
+    "id": "top-nextjs-agencies-2026",
+    "title": "Next.js Development Agencies in 2026: A Disclosed Shortlist",
+    "scenario": "agency",
+    "photo": "agency-room",
+    "subject": "editorial photograph",
+    "file": "top-nextjs-agencies-2026.webp",
+    "ogFile": "og/top-nextjs-agencies-2026.webp"
+  },
+  {
+    "id": "wordpress-april-2026-evidence",
+    "title": "WordPress in April 2026: Three Security and Product Records",
+    "scenario": "editor",
+    "photo": "wordpress-screen",
+    "subject": "editorial photograph",
+    "file": "wordpress-april-2026-evidence.webp",
+    "ogFile": "og/wordpress-april-2026-evidence.webp"
+  },
+  {
+    "id": "aeo-playbook-built-into-every-website",
+    "title": "AEO Playbook: Improve Eligibility for AI Search Citations",
+    "scenario": "search",
+    "photo": "chatgpt-business",
+    "subject": "editorial photograph",
+    "file": "aeo-playbook-built-into-every-website.webp",
+    "ogFile": "og/aeo-playbook-built-into-every-website.webp"
+  },
+  {
+    "id": "website-developer-agency",
+    "title": "Website Developer Agency: Services, Costs and Selection in 2026",
+    "scenario": "agency",
+    "photo": "agency",
+    "subject": "editorial photograph",
+    "file": "website-developer-agency.webp",
+    "ogFile": "og/website-developer-agency.webp"
+  },
+  {
+    "id": "how-much-does-a-website-cost",
+    "title": "How Much Does a Website Cost in 2026? A Scope-First Guide",
+    "scenario": "cost",
+    "photo": "pricing-alt",
+    "subject": "editorial photograph",
+    "file": "how-much-does-a-website-cost.webp",
+    "ogFile": "og/how-much-does-a-website-cost.webp"
+  },
+  {
+    "id": "why-is-my-website-loading-so-slow",
+    "title": "Why Is My Website Loading So Slow? 12 Causes + Fixes",
+    "scenario": "performance",
+    "photo": "server-cables",
+    "subject": "editorial photograph",
+    "file": "why-is-my-website-loading-so-slow.webp",
+    "ogFile": "og/why-is-my-website-loading-so-slow.webp"
+  },
+  {
+    "id": "shopify-store-speed-optimization",
+    "title": "Shopify Store Speed Optimization: What Actually Works (2026)",
+    "scenario": "performance",
+    "photo": "shopify",
+    "subject": "editorial photograph",
+    "file": "shopify-store-speed-optimization.webp",
+    "ogFile": "og/shopify-store-speed-optimization.webp"
+  },
+  {
+    "id": "is-squarespace-bad-for-seo",
+    "title": "Is Squarespace Bad for SEO? A 2026 Diagnostic",
+    "scenario": "search",
+    "photo": "google-screen",
+    "subject": "editorial photograph",
+    "file": "is-squarespace-bad-for-seo.webp",
+    "ogFile": "og/is-squarespace-bad-for-seo.webp"
+  },
+  {
+    "id": "gohighlevel-keep-crm-replace-website",
+    "title": "Keep Your GoHighLevel CRM. Replace Just the Website.",
+    "scenario": "migration",
+    "photo": "migration-board",
+    "subject": "editorial photograph",
+    "file": "gohighlevel-keep-crm-replace-website.webp",
+    "ogFile": "og/gohighlevel-keep-crm-replace-website.webp"
+  },
+  {
+    "id": "pagepro-alternatives",
+    "title": "Pagepro Alternatives in 2026: Compare Scope and Fit",
+    "scenario": "architecture",
+    "photo": "wireframe-wall",
+    "subject": "editorial photograph",
+    "file": "pagepro-alternatives.webp",
+    "ogFile": "og/pagepro-alternatives.webp"
+  },
+  {
+    "id": "website-redesign-cost",
+    "title": "Website Redesign Cost in 2026: Scope, Tiers and Buyer Guide",
+    "scenario": "migration",
+    "photo": "site-plan",
+    "subject": "editorial photograph",
+    "file": "website-redesign-cost.webp",
+    "ogFile": "og/website-redesign-cost.webp"
+  },
+  {
+    "id": "cheap-web-developer",
+    "title": "Cheap Web Developer: How to Hire Without Getting Burned (2026)",
+    "scenario": "cost",
+    "photo": "contract-handover",
+    "subject": "editorial photograph",
+    "file": "cheap-web-developer.webp",
+    "ogFile": "og/cheap-web-developer.webp"
+  },
+  {
+    "id": "how-to-speed-up-your-website",
+    "title": "How to Speed Up Your Website in 2026: 12 Diagnostics",
+    "scenario": "performance",
+    "photo": "stopwatch-phone",
+    "subject": "editorial photograph",
+    "file": "how-to-speed-up-your-website.webp",
+    "ogFile": "og/how-to-speed-up-your-website.webp"
+  },
+  {
+    "id": "website-migration-cost-2026",
+    "title": "Website Migration Cost in 2026: Seven-Platform Scope Guide",
+    "scenario": "migration",
+    "photo": "migration-alt",
+    "subject": "editorial photograph",
+    "file": "website-migration-cost-2026.webp",
+    "ogFile": "og/website-migration-cost-2026.webp"
+  },
+  {
+    "id": "shopify-stocky-sunset-date-2026",
+    "title": "Shopify Stocky Sunset: August 31, 2026 Migration Guide",
+    "scenario": "migration",
+    "photo": "parcel-bench",
+    "subject": "editorial photograph",
+    "file": "shopify-stocky-sunset-date-2026.webp",
+    "ogFile": "og/shopify-stocky-sunset-date-2026.webp"
+  },
+  {
+    "id": "webflow-user-accounts-sunset-date-2026",
+    "title": "Webflow User Accounts Sunset: January 29, 2026 Recovery Guide",
+    "scenario": "migration",
+    "photo": "webflow",
+    "subject": "editorial photograph",
+    "file": "webflow-user-accounts-sunset-date-2026.webp",
+    "ogFile": "og/webflow-user-accounts-sunset-date-2026.webp"
+  },
+  {
+    "id": "website-rebuild-cost-2026",
+    "title": "Website Rebuild Cost in 2026: Scope, Tiers and Decision Guide",
+    "scenario": "migration",
+    "photo": "invoice-detail",
+    "subject": "editorial photograph",
+    "file": "website-rebuild-cost-2026.webp",
+    "ogFile": "og/website-rebuild-cost-2026.webp"
+  },
+  {
+    "id": "woocommerce-low-conversion-rate",
+    "title": "WooCommerce Low Conversion Rate: Diagnose It Before You Blame Speed",
+    "scenario": "analytics",
+    "photo": "commerce-conversion",
+    "subject": "editorial photograph",
+    "file": "woocommerce-low-conversion-rate.webp",
+    "ogFile": "og/woocommerce-low-conversion-rate.webp"
+  },
+  {
+    "id": "which-website-builders-can-go-headless",
+    "title": "Which Website Builders Can Actually Go Headless in 2026",
+    "scenario": "architecture",
+    "photo": "code-notes",
+    "subject": "editorial photograph",
+    "file": "which-website-builders-can-go-headless.webp",
+    "ogFile": "og/which-website-builders-can-go-headless.webp"
+  },
+  {
+    "id": "ai-search-visibility-tracking",
+    "title": "AI Visibility Tracking: What 77 Pages and 6,700 AI Impressions Showed",
+    "scenario": "analytics",
+    "photo": "chatgpt-screen",
+    "subject": "editorial photograph",
+    "file": "ai-search-visibility-tracking.webp",
+    "ogFile": "og/ai-search-visibility-tracking.webp"
+  },
+  {
+    "id": "ai-referral-revenue-2026",
+    "title": "ChatGPT Out-Earned Our Google Ads by 6.7x: Six Months of AI Referral Revenue",
+    "scenario": "analytics",
+    "photo": "analytics-print",
+    "subject": "editorial photograph",
+    "file": "ai-referral-revenue-2026.webp",
+    "ogFile": "og/ai-referral-revenue-2026.webp"
+  },
+  {
+    "id": "cms-market-share-2026",
+    "title": "CMS Market Share 2015 to 2026: WordPress Peaked in 2022",
+    "scenario": "editor",
+    "photo": "wordpress-screen",
+    "subject": "editorial photograph",
+    "file": "cms-market-share-2026.webp",
+    "ogFile": "og/cms-market-share-2026.webp"
+  },
+  {
+    "id": "web-accessibility-glossary",
+    "title": "Web Accessibility Glossary: 29 Terms Defined (2026)",
+    "scenario": "accessibility",
+    "photo": "keyboard-access",
+    "subject": "editorial photograph",
+    "file": "web-accessibility-glossary.webp",
+    "ogFile": "og/web-accessibility-glossary.webp"
+  },
+  {
+    "id": "web-accessibility-statistics-2026",
+    "title": "Web Accessibility Statistics 2026: What the Data Actually Shows",
+    "scenario": "accessibility",
+    "photo": "accessibility",
+    "subject": "editorial photograph",
+    "file": "web-accessibility-statistics-2026.webp",
+    "ogFile": "og/web-accessibility-statistics-2026.webp"
+  },
+  {
+    "id": "core-web-vitals-explained",
+    "title": "Core Web Vitals Explained: A 2026 Business Guide",
+    "scenario": "performance",
+    "photo": "stopwatch-phone",
+    "subject": "editorial photograph",
+    "file": "core-web-vitals-explained.webp",
+    "ogFile": "og/core-web-vitals-explained.webp"
+  },
+  {
+    "id": "squarespace-vs-custom-website",
+    "title": "Squarespace vs Custom Website in 2026: How to Choose",
+    "scenario": "editor",
+    "photo": "wireframe-wall",
+    "subject": "editorial photograph",
+    "file": "squarespace-vs-custom-website.webp",
+    "ogFile": "og/squarespace-vs-custom-website.webp"
+  },
+  {
+    "id": "wix-vs-custom-website",
+    "title": "Wix vs Custom Website in 2026: A Requirements-Led Comparison",
+    "scenario": "editor",
+    "photo": "webflow-alt",
+    "subject": "editorial photograph",
+    "file": "wix-vs-custom-website.webp",
+    "ogFile": "og/wix-vs-custom-website.webp"
+  },
+  {
+    "id": "squarespace-migration-cost",
+    "title": "Squarespace Migration Cost in 2026: Scope and Pricing",
+    "scenario": "migration",
+    "photo": "migration-board",
+    "subject": "editorial photograph",
+    "file": "squarespace-migration-cost.webp",
+    "ogFile": "og/squarespace-migration-cost.webp"
+  },
+  {
+    "id": "top-custom-web-development-agencies-usa-2026",
+    "title": "Top Custom Web Development Agencies USA (2026): A Disclosed Shortlist",
+    "scenario": "agency",
+    "photo": "agency-alt",
+    "subject": "editorial photograph",
+    "file": "top-custom-web-development-agencies-usa-2026.webp",
+    "ogFile": "og/top-custom-web-development-agencies-usa-2026.webp"
+  },
+  {
+    "id": "divi-theme-slow",
+    "title": "Divi Theme Slow? A 2026 Diagnostic and Fix Guide",
+    "scenario": "performance",
+    "photo": "wordpress-screen",
+    "subject": "editorial photograph",
+    "file": "divi-theme-slow.webp",
+    "ogFile": "og/divi-theme-slow.webp"
+  },
+  {
+    "id": "wix-too-slow",
+    "title": "Wix Website Too Slow? A 2026 Diagnostic and Fix Guide",
+    "scenario": "performance",
+    "photo": "performance",
+    "subject": "editorial photograph",
+    "file": "wix-too-slow.webp",
+    "ogFile": "og/wix-too-slow.webp"
+  },
+  {
+    "id": "leaving-webflow-2026",
+    "title": "Leaving Webflow in 2026: Stay, Optimize, or Migrate?",
+    "scenario": "migration",
+    "photo": "migration",
+    "subject": "editorial photograph",
+    "file": "leaving-webflow-2026.webp",
+    "ogFile": "og/leaving-webflow-2026.webp"
+  },
+  {
+    "id": "cloudflare-emdash-wordpress-replacement",
+    "title": "Cloudflare EmDash vs WordPress: 2026 Readiness Guide",
+    "scenario": "migration",
+    "photo": "server-cables",
+    "subject": "editorial photograph",
+    "file": "cloudflare-emdash-wordpress-replacement.webp",
+    "ogFile": "og/cloudflare-emdash-wordpress-replacement.webp"
+  },
+  {
+    "id": "google-algorithm-updates",
+    "title": "Google Algorithm Updates: Every Confirmed Update Since 2021",
+    "scenario": "search",
+    "photo": "google-screen",
+    "subject": "editorial photograph",
+    "file": "google-algorithm-updates.webp",
+    "ogFile": "og/google-algorithm-updates.webp"
+  },
+  {
+    "id": "webflow-vs-custom-website",
+    "title": "Webflow vs Custom Website in 2026: A Four-Factor Decision",
+    "scenario": "editor",
+    "photo": "wireframe-wall",
+    "subject": "editorial photograph",
+    "file": "webflow-vs-custom-website.webp",
+    "ogFile": "og/webflow-vs-custom-website.webp"
+  },
+  {
+    "id": "shopify-vs-custom-website",
+    "title": "Shopify vs Custom Website in 2026: A Decision Framework",
+    "scenario": "commerce",
+    "photo": "commerce",
+    "subject": "editorial photograph",
+    "file": "shopify-vs-custom-website.webp",
+    "ogFile": "og/shopify-vs-custom-website.webp"
+  },
+  {
+    "id": "squarespace-too-slow",
+    "title": "Squarespace Too Slow in 2026? Diagnose Before Migrating",
+    "scenario": "performance",
+    "photo": "stopwatch-phone",
+    "subject": "editorial photograph",
+    "file": "squarespace-too-slow.webp",
+    "ogFile": "og/squarespace-too-slow.webp"
+  },
+  {
+    "id": "woocommerce-too-slow",
+    "title": "WooCommerce Too Slow? A 2026 Diagnosis and Fix Guide",
+    "scenario": "performance",
+    "photo": "performance-alt",
+    "subject": "editorial photograph",
+    "file": "woocommerce-too-slow.webp",
+    "ogFile": "og/woocommerce-too-slow.webp"
+  },
+  {
+    "id": "webflow-migration-cost",
+    "title": "Webflow Migration Cost in 2026: Scope, Tiers and Evidence",
+    "scenario": "migration",
+    "photo": "site-plan",
+    "subject": "editorial photograph",
+    "file": "webflow-migration-cost.webp",
+    "ogFile": "og/webflow-migration-cost.webp"
+  },
+  {
+    "id": "wordpress-migration-cost",
+    "title": "WordPress to Next.js Migration Cost in 2026: Scope and Tiers",
+    "scenario": "migration",
+    "photo": "migration-board",
+    "subject": "editorial photograph",
+    "file": "wordpress-migration-cost.webp",
+    "ogFile": "og/wordpress-migration-cost.webp"
+  },
+  {
+    "id": "gohighlevel-website-speed",
+    "title": "GoHighLevel Site Slow? Diagnose and Fix It in 2026",
+    "scenario": "performance",
+    "photo": "server-cables",
+    "subject": "editorial photograph",
+    "file": "gohighlevel-website-speed.webp",
+    "ogFile": "og/gohighlevel-website-speed.webp"
+  },
+  {
+    "id": "best-website-builder-for-gohighlevel-agencies",
+    "title": "Best Website Builder for GoHighLevel Agencies in 2026",
+    "scenario": "agency",
+    "photo": "agency-room",
+    "subject": "editorial photograph",
+    "file": "best-website-builder-for-gohighlevel-agencies.webp",
+    "ogFile": "og/best-website-builder-for-gohighlevel-agencies.webp"
+  },
+  {
+    "id": "shopify-app-costs-real-monthly-bill",
+    "title": "Shopify App Costs in 2026: Audit the Real Bill",
+    "scenario": "cost",
+    "photo": "subscription-papers",
+    "subject": "editorial photograph",
+    "file": "shopify-app-costs-real-monthly-bill.webp",
+    "ogFile": "og/shopify-app-costs-real-monthly-bill.webp"
+  },
+  {
+    "id": "webflow-true-cost",
+    "title": "Webflow Pricing 2026: Monthly Costs and an Annual Budget",
+    "scenario": "cost",
+    "photo": "pricing",
+    "subject": "editorial photograph",
+    "file": "webflow-true-cost.webp",
+    "ogFile": "og/webflow-true-cost.webp"
+  },
+  {
+    "id": "nextjs-hosting-zero-cost",
+    "title": "Is Vercel Free? 2026 Hobby Limits and Business Pricing",
+    "scenario": "cost",
+    "photo": "server-cables",
+    "subject": "editorial photograph",
+    "file": "nextjs-hosting-zero-cost.webp",
+    "ogFile": "og/nextjs-hosting-zero-cost.webp"
+  },
+  {
+    "id": "how-to-migrate-wordpress-to-nextjs",
+    "title": "WordPress to Next.js Migration: Step-by-Step Without Losing SEO (2026)",
+    "scenario": "migration",
+    "photo": "wordpress-screen",
+    "subject": "editorial photograph",
+    "file": "how-to-migrate-wordpress-to-nextjs.webp",
+    "ogFile": "og/how-to-migrate-wordpress-to-nextjs.webp"
+  },
+  {
+    "id": "wordpress-vs-nextjs",
+    "title": "WordPress vs Next.js in 2026: Requirements, Cost and Migration",
+    "scenario": "editor",
+    "photo": "code-notes",
+    "subject": "editorial photograph",
+    "file": "wordpress-vs-nextjs.webp",
+    "ogFile": "og/wordpress-vs-nextjs.webp"
+  },
+  {
+    "id": "how-website-speed-affects-seo",
+    "title": "How Website Speed Affects SEO: Evidence and Limits in 2026",
+    "scenario": "performance",
+    "photo": "search-closeup",
+    "subject": "editorial photograph",
+    "file": "how-website-speed-affects-seo.webp",
+    "ogFile": "og/how-website-speed-affects-seo.webp"
+  },
+  {
+    "id": "shopify-dawn-theme-slow",
+    "title": "Shopify Dawn Theme Slow? Diagnose the Store, Not the Name",
+    "scenario": "performance",
+    "photo": "shopify",
+    "subject": "editorial photograph",
+    "file": "shopify-dawn-theme-slow.webp",
+    "ogFile": "og/shopify-dawn-theme-slow.webp"
+  },
+  {
+    "id": "for-agencies-offer-custom-web-development",
+    "title": "How to Structure a White-Label Web Development Partnership (2026)",
+    "scenario": "agency",
+    "photo": "agency-room",
+    "subject": "editorial photograph",
+    "file": "for-agencies-offer-custom-web-development.webp",
+    "ogFile": "og/for-agencies-offer-custom-web-development.webp"
+  },
+  {
+    "id": "why-we-chose-nextjs-over-wordpress-2026",
+    "title": "Why We Choose Next.js for Some WordPress Migrations in 2026",
+    "scenario": "editor",
+    "photo": "code",
+    "subject": "editorial photograph",
+    "file": "why-we-chose-nextjs-over-wordpress-2026.webp",
+    "ogFile": "og/why-we-chose-nextjs-over-wordpress-2026.webp"
+  },
+  {
+    "id": "wordpress-vs-custom-code-real-cost-3-years",
+    "title": "WordPress vs Custom Code: A 3-Year Cost Model for 2026",
+    "scenario": "cost",
+    "photo": "invoice-detail",
+    "subject": "editorial photograph",
+    "file": "wordpress-vs-custom-code-real-cost-3-years.webp",
+    "ogFile": "og/wordpress-vs-custom-code-real-cost-3-years.webp"
+  },
+  {
+    "id": "google-universal-commerce-protocol-what-it-means-for-your-store",
+    "title": "Google Universal Commerce Protocol: Store Readiness in 2026",
+    "scenario": "search",
+    "photo": "google-screen",
+    "subject": "editorial photograph",
+    "file": "google-universal-commerce-protocol-what-it-means-for-your-store.webp",
+    "ogFile": "og/google-universal-commerce-protocol-what-it-means-for-your-store.webp"
+  },
+  {
+    "id": "wordpress-plugin-security-2026",
+    "title": "WordPress Plugin Security in 2026: Speed Is the Only Real Defence",
+    "scenario": "security",
+    "photo": "plugin-papers",
+    "subject": "editorial photograph",
+    "file": "wordpress-plugin-security-2026.webp",
+    "ogFile": "og/wordpress-plugin-security-2026.webp"
+  },
+  {
+    "id": "wordpress-ai-security-risk-2026",
+    "title": "WordPress AI Plugin Security in 2026: AI Engine Advisory Guide",
+    "scenario": "security",
+    "photo": "security",
+    "subject": "editorial photograph",
+    "file": "wordpress-ai-security-risk-2026.webp",
+    "ogFile": "og/wordpress-ai-security-risk-2026.webp"
+  },
+  {
+    "id": "wordpress-killer",
+    "title": "WordPress 3-Year Cost in 2026: An Invoice-Led TCO Guide",
+    "scenario": "editor",
+    "photo": "wordpress-screen",
+    "subject": "editorial photograph",
+    "file": "wordpress-killer.webp",
+    "ogFile": "og/wordpress-killer.webp"
+  },
+  {
+    "id": "shopify-headless",
+    "title": "Headless Shopify in 2026: Architecture and Migration Guide",
+    "scenario": "commerce",
+    "photo": "parcel-bench",
+    "subject": "editorial photograph",
+    "file": "shopify-headless.webp",
+    "ogFile": "og/shopify-headless.webp"
+  },
+  {
+    "id": "elementor-kills-seo",
+    "title": "Does Elementor Hurt SEO? A 2026 Evidence Guide",
+    "scenario": "search",
+    "photo": "elementor-screen",
+    "subject": "editorial photograph",
+    "file": "elementor-kills-seo.webp",
+    "ogFile": "og/elementor-kills-seo.webp"
+  },
+  {
+    "id": "wordpress-plugins-destroy-speed",
+    "title": "Do WordPress Plugins Slow Your Site? A 2026 Audit Guide",
+    "scenario": "security",
+    "photo": "plugin-papers",
+    "subject": "editorial photograph",
+    "file": "wordpress-plugins-destroy-speed.webp",
+    "ogFile": "og/wordpress-plugins-destroy-speed.webp"
+  },
+  {
+    "id": "shopify-plus-still-slow",
+    "title": "Shopify Plus Speed Problems: An Enterprise Diagnostic",
+    "scenario": "performance",
+    "photo": "performance",
+    "subject": "editorial photograph",
+    "file": "shopify-plus-still-slow.webp",
+    "ogFile": "og/shopify-plus-still-slow.webp"
+  },
+  {
+    "id": "wordpress-traffic-drop-speed",
+    "title": "WordPress Traffic Drop in 2026: Speed, SEO, Tracking or Demand?",
+    "scenario": "performance",
+    "photo": "search-closeup",
+    "subject": "editorial photograph",
+    "file": "wordpress-traffic-drop-speed.webp",
+    "ogFile": "og/wordpress-traffic-drop-speed.webp"
+  },
+  {
+    "id": "shopify-slow-losing-sales",
+    "title": "Slow Shopify Store Losing Sales? Build an Evidence Model",
+    "scenario": "analytics",
+    "photo": "commerce-alt",
+    "subject": "editorial photograph",
+    "file": "shopify-slow-losing-sales.webp",
+    "ogFile": "og/shopify-slow-losing-sales.webp"
+  },
+  {
+    "id": "shopify-conversion-rate-speed-fix",
+    "title": "Low Shopify Conversion Rate? Measure Speed in the Funnel",
+    "scenario": "analytics",
+    "photo": "analytics-print",
+    "subject": "editorial photograph",
+    "file": "shopify-conversion-rate-speed-fix.webp",
+    "ogFile": "og/shopify-conversion-rate-speed-fix.webp"
+  },
+  {
+    "id": "why-competitor-outranks-you",
+    "title": "Why Does My Competitor Outrank Me? An Evidence-Led SEO Gap Analysis",
+    "scenario": "search",
+    "photo": "google-screen",
+    "subject": "editorial photograph",
+    "file": "why-competitor-outranks-you.webp",
+    "ogFile": "og/why-competitor-outranks-you.webp"
+  },
+  {
+    "id": "how-to-achieve-100-pagespeed",
+    "title": "How to Reach 90+ PageSpeed: A Repeatable 2026 Process",
+    "scenario": "performance",
+    "photo": "performance-alt",
+    "subject": "editorial photograph",
+    "file": "how-to-achieve-100-pagespeed.webp",
+    "ogFile": "og/how-to-achieve-100-pagespeed.webp"
+  },
+  {
+    "id": "how-to-fix-slow-wordpress",
+    "title": "How to Fix a Slow WordPress Site: 8 Evidence-Led Methods",
+    "scenario": "performance",
+    "photo": "stopwatch-phone",
+    "subject": "editorial photograph",
+    "file": "how-to-fix-slow-wordpress.webp",
+    "ogFile": "og/how-to-fix-slow-wordpress.webp"
+  },
+  {
+    "id": "what-is-headless-commerce",
+    "title": "What Is Headless Commerce? A 2026 Store Owner Guide",
+    "scenario": "commerce",
+    "photo": "code-notes",
+    "subject": "editorial photograph",
+    "file": "what-is-headless-commerce.webp",
+    "ogFile": "og/what-is-headless-commerce.webp"
+  }
+]

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Blocks, Braces, FileText, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -159,6 +160,7 @@ export default function WordPressVsNextJsPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="8 min read" />
+                    <BlogCoverFigure id="wordpress-vs-nextjs" />
 
                     <BlogText>
                         What the WordPress founder and two working developers said about the platform in April 2026, quoted as written and linked to where they said it.

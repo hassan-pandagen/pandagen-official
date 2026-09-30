@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Building2, ClipboardCheck, Scale, Search } from "lucide-react";
 import Link from "next/link";
@@ -230,6 +231,7 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
+                    <BlogCoverFigure id="top-custom-web-development-agencies-usa-2026" />
 
                     <BlogText>
                         Three people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.

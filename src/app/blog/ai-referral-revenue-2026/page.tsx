@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -154,6 +155,7 @@ export default function AiReferralRevenuePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="18 August 2026" readTime="11 min" />
+                    <BlogCoverFigure id="ai-referral-revenue-2026" />
 
                     <BlogHeader>Why almost nobody else can publish this</BlogHeader>
                     <BlogText>

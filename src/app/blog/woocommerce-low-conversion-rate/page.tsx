@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -167,6 +168,7 @@ export default function WooCommerceLowConversionRatePage() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WooCommerce stores that have outgrown the plugin stack holding them together."
                     />
+                    <BlogCoverFigure id="woocommerce-low-conversion-rate" />
 
                     <BlogHeader id="short-answer">What actually causes a low WooCommerce conversion rate?</BlogHeader>
                     <BlogText>

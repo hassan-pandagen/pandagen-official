@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, CircleDollarSign, FileCheck2, ReceiptText } from "lucide-react";
 import Link from "next/link";
@@ -174,6 +175,7 @@ export default function WebsiteCostGuide() {
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan scopes the migrations and integrations, and writes acceptance terms you can actually measure."
                     />
+                    <BlogCoverFigure id="how-much-does-a-website-cost" />
 
                     <div className="my-10">
                         <CostStackVisual />

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Bug, Gauge, ListChecks, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -147,6 +148,7 @@ export default function WordPressPluginPerformancePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 5, 2026" readTime="6 min read" />
+                    <BlogCoverFigure id="wordpress-plugins-destroy-speed" />
 
                     <BlogText>
                         Two WordPress developers put the database problem more bluntly than we would, in a thread from April 2026. Their words are unchanged and each one links to the original comment.

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CircleDollarSign, FileSearch, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -181,6 +182,7 @@ export default function ShopifyAppCostsPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 19, 2026" readTime="9 min read" />
+                    <BlogCoverFigure id="shopify-app-costs-real-monthly-bill" />
 
                     <BlogText>
                         Three Shopify store owners describe the app bill in their own words below. Each post is linked so you can read the full thread.

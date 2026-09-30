@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -207,6 +208,7 @@ export default function GoogleAlgorithmUpdatesPage() {
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="google-algorithm-updates" />
                     </div>
 
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

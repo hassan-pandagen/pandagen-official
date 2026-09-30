@@ -227,6 +227,10 @@ export function ogContentForPath(inputPath: string): OgContent {
 
 export function ogImageUrlForPath(path: string) {
   const content = ogContentForPath(path);
+  if (content.path.startsWith("/blog/")) {
+    const post = blogPosts.find((candidate) => `/blog/${candidate.id}` === content.path);
+    if (post) return new URL(`/blog-covers/og/${post.id}.webp?v=20260929c`, SITE_URL).toString();
+  }
   const url = new URL("/og", SITE_URL);
   url.searchParams.set("path", content.path);
   url.searchParams.set("v", `${OG_VERSION}:${content.version}`);
@@ -235,14 +239,18 @@ export function ogImageUrlForPath(path: string) {
 
 export function ogAltForPath(path: string) {
   const content = ogContentForPath(path);
+  if (content.path.startsWith("/blog/") && blogPosts.some((post) => `/blog/${post.id}` === content.path)) {
+    return `Editorial visual for ${content.title}`;
+  }
   return `${content.title} | PandaCodeGen social preview`;
 }
 
 export function ogImageForPath(path: string) {
+  const isBlogPost = blogPosts.some((post) => `/blog/${post.id}` === normalizePath(path));
   return {
     url: ogImageUrlForPath(path),
     width: 1200,
-    height: 630,
+    height: isBlogPost ? 675 : 630,
     alt: ogAltForPath(path),
   };
 }

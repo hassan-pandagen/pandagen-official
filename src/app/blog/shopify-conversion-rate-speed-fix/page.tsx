@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, BarChart3, FlaskConical, Gauge, Route } from "lucide-react";
 import Link from "next/link";
@@ -176,6 +177,7 @@ export default function ShopifyConversionRateSpeedFixPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="6 min read" />
+                    <BlogCoverFigure id="shopify-conversion-rate-speed-fix" />
 
                     <BlogText>
                         The quotes below are Shopify merchants describing what moved, or wrecked, their conversion rate, in their own words. The link after each one goes to the original post.

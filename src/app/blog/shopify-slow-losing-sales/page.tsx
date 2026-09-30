@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, ChartNoAxesCombined, Gauge, Scale } from "lucide-react";
 import Link from "next/link";
@@ -165,6 +166,7 @@ export default function ShopifySlowLosingSalesPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 10, 2026" readTime="11 min read" />
+                    <BlogCoverFigure id="shopify-slow-losing-sales" />
 
                     <div className="my-10">
                         <SalesImpactAnimation />

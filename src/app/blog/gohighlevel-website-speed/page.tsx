@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Microscope, Route } from "lucide-react";
 import Link from "next/link";
@@ -179,6 +180,7 @@ export default function HighLevelSpeedGuide() {
                         bio="Hassan is PandaCodeGen's co-founder and lead engineer. He runs repeatable performance diagnostics and builds hybrid frontends that keep HighLevel as the CRM while the public site is served as custom Next.js."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="gohighlevel-website-speed" />
 
                     <div className="my-10">
                         <PageSpeedAnimation />

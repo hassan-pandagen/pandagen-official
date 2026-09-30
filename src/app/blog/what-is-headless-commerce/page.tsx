@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Cable, Gauge, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -170,6 +171,7 @@ export default function WhatIsHeadlessCommercePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="11 min read" />
+                    <BlogCoverFigure id="what-is-headless-commerce" />
 
                     <BlogText>
                         Three Shopify store owners and developers, in their own words on r/shopify, on what apps and admin changes do to a themed store. Each quote links to the original post.

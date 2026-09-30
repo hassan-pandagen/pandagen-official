@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { AlertTriangle, ArrowLeft, ArrowRight, CalendarDays, MessageSquareText, ShieldAlert } from "lucide-react";
 import Link from "next/link";
@@ -176,6 +177,7 @@ export default function WordPressAprilEvidencePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 23, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="wordpress-april-2026-evidence" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What the record shows</h2>

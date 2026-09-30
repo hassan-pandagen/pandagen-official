@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, Layers3, RefreshCcw, Scale } from "lucide-react";
 import Link from "next/link";
@@ -145,6 +146,7 @@ export default function WebsiteRebuildCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="13 min read" />
+                    <BlogCoverFigure id="website-rebuild-cost-2026" />
 
                     <BlogText>
                         One voice worth hearing before any pricing table is the founder of WordPress, quoted word for word from his own post, with a link to the report that carried it.

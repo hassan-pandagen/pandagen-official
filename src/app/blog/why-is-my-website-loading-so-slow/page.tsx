@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -364,6 +365,7 @@ export default function SlowWebsitePage() {
               bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He diagnoses slow sites, does the technical SEO, and runs migrations with recorded baselines and acceptance criteria."
               linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
             />
+            <BlogCoverFigure id="why-is-my-website-loading-so-slow" />
           </div>
 
           <div className="mb-12">

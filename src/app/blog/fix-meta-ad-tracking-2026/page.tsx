@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, GitCompareArrows, ShieldCheck, Wrench } from "lucide-react";
 import Image from "next/image";
@@ -200,6 +201,7 @@ export default function MetaAdTrackingGuide() {
                         bio="Hassan works on consent-aware measurement integrations and custom commerce systems."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="fix-meta-ad-tracking-2026" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

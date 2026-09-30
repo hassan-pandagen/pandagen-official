@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { AlertTriangle, ArrowLeft, ArrowRight, Bot, KeyRound, ListChecks, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -181,6 +182,7 @@ export default function WordPressAiSecurityRiskPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 23, 2026" readTime="7 min read" />
+                    <BlogCoverFigure id="wordpress-ai-security-risk-2026" />
 
                     <BlogText>
                         Two WooCommerce developers reacting to the April 2026 Essential Plugin backdoor, quoted word for word from r/woocommerce with a link to the thread.

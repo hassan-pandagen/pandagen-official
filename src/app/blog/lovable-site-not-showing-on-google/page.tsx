@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Bot, CheckCircle2, Code2, SearchCheck } from "lucide-react";
 import Link from "next/link";
@@ -175,6 +176,7 @@ export default function LovableSiteNotShowingPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 12, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="lovable-site-not-showing-on-google" />
 
                     <div className="my-10">
                         <CrawlerBlindAnimation />

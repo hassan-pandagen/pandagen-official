@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Archive, CalendarClock, ClipboardCheck, Workflow } from "lucide-react";
 import Link from "next/link";
@@ -172,6 +173,7 @@ export default function ShopifyStockySunsetPage() {
                     </InsightBox>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="10 min read" />
+                    <BlogCoverFigure id="shopify-stocky-sunset-date-2026" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-red-200 bg-red-50 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Confirmed timeline and impact</h2>

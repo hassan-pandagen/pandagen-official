@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Code2, Gauge, Image as ImageIcon, Type } from "lucide-react";
 import Link from "next/link";
@@ -166,6 +167,7 @@ export default function SquarespaceTooSlowPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="5 min read" />
+                    <BlogCoverFigure id="squarespace-too-slow" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The diagnostic sequence</h2>

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { Activity, ArrowLeft, ArrowRight, Database, Gauge, ShoppingCart, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -173,6 +174,7 @@ export default function WooCommerceTooSlowPage() {
                         bio="Hassan is PandaCodeGen's co-founder and lead engineer. He audits WooCommerce stores layer by layer, from field data down to the database, and rebuilds storefronts as custom Next.js when the measurement supports it."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="woocommerce-too-slow" />
 
                     <div className="my-10">
                         <PageSpeedAnimation />

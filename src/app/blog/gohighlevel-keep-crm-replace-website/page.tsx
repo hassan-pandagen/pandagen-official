@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Database, Globe2, Workflow } from "lucide-react";
 import Link from "next/link";
@@ -168,6 +169,7 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan designs CRM-connected websites and search-sensitive migrations."
                     />
+                    <BlogCoverFigure id="gohighlevel-keep-crm-replace-website" />
 
                     <BlogText>
                         Agency owners and developers have been describing the same website-builder problem on the HighLevel Ideas board and r/gohighlevel since 2024. These are their words, unedited, with a link to each original post.

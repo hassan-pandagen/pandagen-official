@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileInput, ListChecks, Route } from "lucide-react";
 import Link from "next/link";
@@ -162,6 +163,7 @@ export default function WebsiteMigrationCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="website-migration-cost-2026" />
 
                     <BlogText>
                         Owners and developers on the platforms this page covers, quoted in their own words, with a link to each original post so you can check the context yourself.

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Calculator, ShoppingBag, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -165,6 +166,7 @@ export default function ShopifyVsCustomWebsitePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 30, 2026" readTime="5 min read" />
+                    <BlogCoverFigure id="shopify-vs-custom-website" />
 
                     <BlogText>
                         These are merchants on r/shopify explaining, in their own words, why they started looking at leaving the platform. Every quote links to the original post.

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, DatabaseZap, Gauge, PlugZap } from "lucide-react";
 import Link from "next/link";
@@ -149,6 +150,7 @@ export default function SlowWordPressGuide() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" />
+                    <BlogCoverFigure id="how-to-fix-slow-wordpress" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The eight-method ladder</h2>

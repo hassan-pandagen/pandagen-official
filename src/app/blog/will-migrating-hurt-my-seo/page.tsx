@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, TrendingUp, Link2, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -170,6 +171,7 @@ export default function WillMigratingHurtSeoPage() {
                             bio="Hassan plans SEO-conscious migrations using URL inventories, page-level redirect maps, rendered-output checks, and post-launch monitoring. Search outcomes remain controlled by search engines."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="will-migrating-hurt-my-seo" />
                     </div>
                 </div>
             </section>

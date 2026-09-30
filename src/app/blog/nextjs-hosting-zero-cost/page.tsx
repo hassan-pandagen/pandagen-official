@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -175,6 +176,7 @@ export default function NextjsHostingZeroCostPage() {
                             bio="Hassan is PandaCodeGen's co-founder and lead engineer. He plans Next.js migrations around four things: speed you can measure, search traffic that survives the move, code someone else can maintain, and infrastructure the client owns."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="nextjs-hosting-zero-cost" />
                     </div>
 
                     {/* Feature Visual */}

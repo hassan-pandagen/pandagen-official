@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardList, GitPullRequest, Rocket } from "lucide-react";
 import Link from "next/link";
@@ -153,6 +154,7 @@ export default function WebsiteTimelineGuide() {
                         bio="Hassan scopes the migrations, the integrations, and what has to be true before a release is accepted."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="how-long-does-a-custom-website-take" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The useful short answer</h2>

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -128,6 +129,7 @@ export default function AiSearchVisibilityTracking() {
                 </h1>
 
                 <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="15 min" />
+                <BlogCoverFigure id="ai-search-visibility-tracking" />
 
                 <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">Seventy-seven pages, 6,700 AI impressions over 88 days, and the pages Google&apos;s AI quoted were not the ones that ranked best. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
 
@@ -552,7 +554,7 @@ export default function AiSearchVisibilityTracking() {
                             concentration is a strength or a risk. No obligation to build anything afterwards.
                         </p>
                         <div className="mt-5">
-                            <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 font-bold text-cream hover:bg-stone-800">
+                            <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 font-bold text-white hover:bg-stone-800">
                                 Book a 30-minute read-through <ArrowRight className="h-4 w-4" />
                             </CalModalButton>
                         </div>

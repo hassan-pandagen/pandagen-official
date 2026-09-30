@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import {
     ArrowLeft,
@@ -254,6 +255,7 @@ export default function LeavingWebflow2026Page() {
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="leaving-webflow-2026" />
                     </header>
 
                     <BlogText>

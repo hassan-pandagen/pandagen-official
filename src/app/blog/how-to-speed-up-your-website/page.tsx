@@ -1,5 +1,7 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
+import Image from "next/image";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Network, ScanSearch } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
@@ -19,9 +21,9 @@ const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButto
 const postId = "how-to-speed-up-your-website";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "How to Speed Up Your Website in 2026: 12 Diagnostics";
+const title = "How to Speed Up Your Website in 2026: 12 Checks";
 const description =
-    "A route-level performance guide covering field and lab measurement, server, cache, media, fonts, JavaScript, layout, third parties and migration decisions.";
+    "Find what slows a page down, understand your PageSpeed result and choose the right fix before changing platforms.";
 
 export const dynamic = "force-static";
 
@@ -70,7 +72,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-04-30",
-            dateModified: "2026-09-19",
+            dateModified: "2026-09-29",
             image: ogImageUrlForPath(`/blog/${postId}`),
             author: {
                 "@type": "Person",
@@ -86,7 +88,6 @@ const articleSchema = {
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Performance",
             inLanguage: "en-US",
-            wordCount: 3119,
             timeRequired: "PT14M",
             about: [
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
@@ -114,7 +115,7 @@ const articleSchema = {
             description,
             isPartOf: { "@id": "https://www.pandacodegen.com/#website" },
             datePublished: "2026-04-30",
-            dateModified: "2026-09-19",
+            dateModified: "2026-09-29",
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             inLanguage: "en-US",
         },
@@ -131,81 +132,57 @@ const articleSchema = {
 };
 
 
-export default function WebsiteSpeedGuide() {
+function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
+    const Container = preview ? "div" : "main";
     return (
         <>
-            <Header />
-            <main className="min-h-screen bg-white pb-24 pt-28">
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-                <article className="mx-auto max-w-4xl px-5 sm:px-8">
-                    <Breadcrumb items={postCrumbs(postId, "Speed up your website")} />
-                    <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
+            {!preview && <Header />}
+            <Container className={preview ? "article-preview-main" : "min-h-screen bg-white pb-24 pt-28"}>
+                {!preview && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />}
+                <article className={preview ? "article-preview-content" : "mx-auto max-w-4xl px-5 sm:px-8"}>
+                    {!preview && <Breadcrumb items={postCrumbs(postId, "Speed up your website")} />}
+                    <Link href={preview ? "/preview/blog" : "/blog"} className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
                     <header className="mb-10 border-b border-stone-200 pb-8">
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            How to Speed Up Your Website <span className="italic text-cognac">With 12 Route-Level Diagnostics</span>
+                            How to Speed Up Your Website. <span className="italic text-cognac">Find the slow part first.</span>
                         </h1>
-<p className="mt-5 text-base leading-7"><Link href="/free-audit" className="underline underline-offset-4">Want measurements for your own page? Run a free technical website audit before choosing a fix.</Link></p>
+                        <p className="mt-5 text-base leading-7"><Link href="/free-audit" className="underline underline-offset-4">Want us to check your page? Run a free website audit.</Link></p>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Platform labels do not diagnose performance. Follow the request from DNS and document
-                            delivery through rendering and interaction, fix the measured constraint, and compare the
-                            same page state after each change.
+                            Pick one page that feels slow. Find out where the wait happens, make one useful change,
+                            then test that same page again. This guide shows you how to do it without guessing from
+                            a platform name or one score.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed September 19, 2026 against current Google, Chrome and CrUX guidance.
+                            Last reviewed September 19, 2026. Sources and testing notes are linked throughout.
                         </p>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    {preview ? <div data-article-byline className="flex items-center gap-3"><Image src="/team/hassan.png" alt="Hassan Jamal" width={56} height={56} className="h-14 w-14 object-cover" /><p><Link href="/about/hassan" className="font-semibold underline underline-offset-4">Hassan Jamal</Link><span className="block text-sm">Co-founder and Lead Engineer · April 30, 2026 · 14 min read</span></p></div> : <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />}
+                    <BlogCoverFigure id="how-to-speed-up-your-website" />
 
-                    <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Before the 12 diagnostics</h2>
-                        <BlogList
-                            items={[
-                                "Name the page, what the visitor was doing, the device, the region, what they consented to, and what it is costing you.",
-                                "Separate Chrome field data from a Lighthouse lab result.",
-                                "Keep at least three comparable runs per agreed profile and preserve raw reports.",
-                                "Do not use a universal three-second rule, platform ceiling or sub-second promise.",
-                                "After speed work, retest that it still works, is still accessible, still tracks, and still respects consent.",
-                            ]}
-                        />
-                    </section>
-
-                    <div className="my-8 grid gap-4 sm:grid-cols-3">
-                        {[
-                            { icon: Network, title: "Delivery", body: "Everything between the click and the first byte." },
-                            { icon: ScanSearch, title: "Rendering", body: "Everything between the first byte and a usable page." },
-                            { icon: Gauge, title: "Experience", body: "Field LCP, INP and CLS plus the actual visitor journey." },
-                        ].map(({ icon: Icon, title: cardTitle, body }) => (
-                            <div key={cardTitle} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
-                                <Icon className="mb-3 h-5 w-5 text-cognac" />
-                                <h3 className="mb-2 font-bold text-charcoal">{cardTitle}</h3>
-                                <p className="text-sm leading-relaxed text-stone-600">{body}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <ArticleContents />
-                    <BlogHeader id="where-to-start">Where to start, based on your current score</BlogHeader>
+                    <BlogHeader id="where-to-start">Start with the page that feels slow</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Twelve diagnostics is the full sweep. You rarely need all twelve, and which ones matter
-                            depends on where you are starting from. Get a number first, then jump to the step that
-                            fits it.
+                            You do not need to work through all twelve checks. Choose one page that matters to your
+                            visitors, get a result for that page, and start with the part causing the wait.
                         </BlogText>
+
+                        <ArticleContents initiallyOpen={false} />
 
                         <BlogText>
-                            <strong>If you do not have a score yet:</strong> run{" "}
+                            <strong>If you do not have a result yet:</strong> run{" "}
                             <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="text-charcoal underline underline-offset-2 hover:text-stone-600 transition-colors">PageSpeed Insights</a>{" "}
-                            on one specific URL, not your homepage by habit. Read the top panel first, not the score.
-                            That panel is Chrome field data: real visits, the slowest quarter of them, over the last 28
-                            days. The coloured score underneath is a lab simulation of a single load on a throttled
-                            mid-range phone. When the two disagree, the field data is the one describing your visitors.
+                            on one specific URL. The top panel shows real Chrome visits when enough data exists; this
+                            is called field data. The score below comes from one simulated load, called a lab test.
+                            If the two disagree, start with what real visitors experienced, then use the lab details
+                            to investigate the cause.
                         </BlogText>
 
+                        {preview && <p className="mb-2 text-xs text-stone-500 sm:hidden">Swipe the table sideways to see every column.</p>}
                         <div className="my-8 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                             <table className="w-full min-w-[32rem] border-collapse text-sm">
                                 <caption className="sr-only">
@@ -214,17 +191,17 @@ export default function WebsiteSpeedGuide() {
                                 <thead>
                                     <tr className="bg-stone-100 text-left">
                                         <th scope="col" className="px-4 py-3 font-bold text-charcoal">Where you are</th>
-                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">What the result establishes</th>
+                                        <th scope="col" className="px-4 py-3 font-bold text-charcoal">What this tells you</th>
                                         <th scope="col" className="px-4 py-3 font-bold text-charcoal whitespace-nowrap">Start at</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[
-                                        ["Below 50", "This lab run has substantial improvement opportunities. The score does not identify the cause; inspect the audit details and trace.", "Steps 5 to 10"],
-                                        ["50 to 89", "This lab run still found measurable work. Rank the named opportunities by route impact instead of assuming one category.", "Steps 5 to 10"],
-                                        ["90 or above", "This lab run met Lighthouse's good band. It does not prove good field experience or that important interactions work.", "Steps 2 and 9"],
-                                        ["Field data says “insufficient data”", "CrUX does not have enough eligible samples for this URL or origin. Use repeatable lab tests and your own real-user monitoring if available.", "Step 2"],
-                                        ["Fast for you, slow for visitors", "Your local visit and the reported user population differ. Compare device, network, geography, cache, consent and page state.", "Steps 1 and 2"],
+                                        ["Below 50", "There is room to improve, but the score alone will not tell you what caused the delay. Open the details for this page.", "Steps 5 to 10"],
+                                        ["50 to 89", "Some changes may help. Start with the issues affecting this page.", "Steps 5 to 10"],
+                                        ["90 or above", "This test looks good. Check whether real visitors and important actions have the same experience.", "Steps 2 and 9"],
+                                        ["Not enough visitor data", "There were not enough visits for a reliable real visitor view. Repeat the test and use your own monitoring if you have it.", "Step 2"],
+                                        ["Fast for you, slow for visitors", "Their phone, connection, location or page may differ from yours. Compare those conditions first.", "Steps 1 and 2"],
                                     ].map(([where, means, start]) => (
                                         <tr key={where} className="border-t border-stone-200 align-top">
                                             <td className="px-4 py-3 font-semibold text-charcoal">{where}</td>
@@ -272,6 +249,7 @@ export default function WebsiteSpeedGuide() {
                             and never a verdict.
                         </BlogText>
                     </div>
+                    {preview && <p className="mb-2 text-xs text-stone-500 sm:hidden">Swipe the table sideways to see every column.</p>}
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[560px] border-collapse text-left text-sm">
                             <thead className="bg-stone-100 text-charcoal">
@@ -614,8 +592,12 @@ export default function WebsiteSpeedGuide() {
 
                     <RelatedPosts currentPostId={postId} />
                 </article>
-            </main>
-            <Footer />
+            </Container>
+            {!preview && <Footer />}
         </>
     );
+}
+
+export default function WebsiteSpeedGuide() {
+    return <WebsiteSpeedGuideContent />;
 }

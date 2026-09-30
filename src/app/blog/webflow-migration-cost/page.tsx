@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, Database, FileCode2, ListChecks } from "lucide-react";
 import Link from "next/link";
@@ -166,6 +167,7 @@ export default function WebflowMigrationCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 25, 2026" readTime="12 min read" />
+                    <BlogCoverFigure id="webflow-migration-cost" />
 
                     <BlogText>
                         These are Webflow site owners posting during the April 13, 2026 outage, in their own words, with a link to each original comment.

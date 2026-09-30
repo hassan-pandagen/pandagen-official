@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardCheck, Handshake, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -145,6 +146,7 @@ export default function WhiteLabelDevelopmentGuide() {
                         readTime="5 min read"
                         bio="Hassan scopes search-sensitive migrations and partner delivery systems."
                     />
+                    <BlogCoverFigure id="for-agencies-offer-custom-web-development" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The workable model</h2>

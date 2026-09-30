@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, FileCode2, KeyRound, Server, UserRoundCog } from "lucide-react";
 import Link from "next/link";
@@ -184,6 +185,7 @@ export default function DoYouOwnYourWebsitePage() {
                         bio="Hassan leads PandaCodeGen's engineering handover, account-control, and migration planning work."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="do-you-own-your-website" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

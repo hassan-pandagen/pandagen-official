@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Code2, FileArchive, LayoutTemplate, Users } from "lucide-react";
 import Link from "next/link";
@@ -150,6 +151,7 @@ export default function WebflowVsCustomWebsitePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 27, 2026" readTime="7 min read" />
+                    <BlogCoverFigure id="webflow-vs-custom-website" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -489,7 +491,7 @@ export default function WebflowVsCustomWebsitePage() {
                     </ul>
 
                     <section className="my-12 rounded-2xl bg-charcoal p-8 text-white">
-                        <h2 className="mb-4 text-2xl font-bold text-charcoal">Where Webflow does well: agent readability</h2>
+                        <h2 className="mb-4 text-2xl font-bold text-white">Where Webflow does well: agent readability</h2>
                 <p className="mb-6 text-lg leading-relaxed text-stone-700">
                     One place the comparison goes in Webflow&apos;s favour, and it is worth saying because most
                     comparison articles never concede anything. PageSpeed Insights now reports an Agentic Browsing

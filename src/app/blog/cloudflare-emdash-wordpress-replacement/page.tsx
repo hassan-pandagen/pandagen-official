@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -223,6 +224,7 @@ export default function CloudflareEmDashPage() {
                             readTime="13 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="cloudflare-emdash-wordpress-replacement" />
                         <p className="mt-2 text-xs text-stone-500">Repository figures on this page were read from GitHub&apos;s public API on August 2, 2026 and are reproducible by anyone.</p>
                     </header>
 

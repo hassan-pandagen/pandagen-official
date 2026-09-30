@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -162,6 +163,7 @@ export default function ShopifySpeedOptimizationPage() {
                             Shopify Store Speed Optimization: <span className="font-serif italic text-cognac">What Actually Works</span>
                         </h1>
                         <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Updated August 1, 2026" readTime="17 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                        <BlogCoverFigure id="shopify-store-speed-optimization" />
                     </div>
                 </div>
 

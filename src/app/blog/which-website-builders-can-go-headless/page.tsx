@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -221,6 +222,7 @@ export default function WhichBuildersHeadlessPage() {
                         date="18 August 2026"
                         readTime="10 min"
                     />
+                    <BlogCoverFigure id="which-website-builders-can-go-headless" />
 
                     <BlogHeader>What has to be true before a platform counts as headless</BlogHeader>
                     <BlogText>

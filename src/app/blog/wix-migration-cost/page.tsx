@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Database, FileOutput, Route, Scale } from "lucide-react";
 import Link from "next/link";
@@ -162,6 +163,7 @@ export default function WixMigrationCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jul 3, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="wix-migration-cost" />
 
                     <div className="my-10">
                         <ExportLockAnimation />

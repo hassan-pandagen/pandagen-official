@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { Activity, ArrowLeft, ArrowRight, CheckCircle2, Gauge, MousePointerClick } from "lucide-react";
 import Link from "next/link";
@@ -176,6 +177,7 @@ export default function CoreWebVitalsExplainedPage() {
                         date="May 6, 2026"
                         readTime="9 min read"
                     />
+                    <BlogCoverFigure id="core-web-vitals-explained" />
 
                     <BlogText>
                         Three site owners described the problem in their own words on Reddit in April 2026. Each quote below links to the original thread so you can read the full discussion.

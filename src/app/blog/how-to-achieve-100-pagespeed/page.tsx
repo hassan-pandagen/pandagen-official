@@ -1,6 +1,8 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Repeat2, TestTube2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -14,7 +16,6 @@ import { blogPosts } from "@/data/blog";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = dynamicImport(() => import("@/components/ui/CalModalButton"));
-const PageSpeedAnimation = dynamicImport(() => import("@/components/blog/PageSpeedAnimation"));
 
 const postId = "how-to-achieve-100-pagespeed";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
@@ -158,10 +159,7 @@ export default function PageSpeedProcessGuide() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-
-                    <div className="my-10">
-                        <PageSpeedAnimation />
-                    </div>
+                    <BlogCoverFigure id="how-to-achieve-100-pagespeed" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First understand the number</h2>
@@ -209,6 +207,12 @@ export default function PageSpeedProcessGuide() {
                     </BlogText>
 
                     <BlogHeader id="run-the-test">Run the test before you read the rest</BlogHeader>
+                    <figure className="my-10 overflow-hidden rounded-xl border border-stone-200 bg-stone-50">
+                        <Image src="/blog-images/pagespeed-insights-real-result.webp" alt="Cropped real PageSpeed Insights mobile report for PandaCodeGen on June 20, 2026" width={660} height={570} sizes="(min-width: 768px) 640px, 90vw" className="h-auto w-full" />
+                        <figcaption className="px-4 py-3 text-xs leading-relaxed text-stone-600">
+                            PandaCodeGen PageSpeed Insights snapshot, June 20, 2026. One lab run illustrates the tool; it is not a current score or a result other sites should expect.
+                        </figcaption>
+                    </figure>
                     <div data-speakable="true">
                         <BlogText>
                             PageSpeed Insights is free and needs no account. Open{" "}

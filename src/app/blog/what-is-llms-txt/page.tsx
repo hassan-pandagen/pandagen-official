@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, Bot, FileText } from "lucide-react";
 import Link from "next/link";
@@ -164,6 +165,7 @@ export default function WhatIsLlmsTxtPage() {
                             bio="Hassan builds and migrates Next.js sites, and writes down what actually moves machine readability rather than what sounds like it should."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="what-is-llms-txt" />
                     </div>
                 </div>
             </section>

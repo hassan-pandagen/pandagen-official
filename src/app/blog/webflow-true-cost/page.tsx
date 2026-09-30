@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -153,6 +154,7 @@ export default function WebflowTrueCostPage() {
                         <p className="mt-4 text-sm text-stone-600">Updated September 25, 2026. USD before tax. Annual-billing rates are monthly equivalents paid on a yearly cycle; existing accounts may have different renewal terms.</p>
                     </header>
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="9 min read" />
+                    <BlogCoverFigure id="webflow-true-cost" />
 
                     <nav aria-label="Article contents" className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6">
                         <p className="mb-3 font-bold text-charcoal">Find your answer</p>

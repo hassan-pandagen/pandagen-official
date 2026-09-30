@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, ClipboardCheck, Package } from "lucide-react";
 import Link from "next/link";
@@ -174,6 +175,7 @@ export default function CustomWebsite5000Page() {
                         bio="Hassan leads PandaCodeGen's engineering work on scoped, search-sensitive migrations and custom builds."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
+                    <BlogCoverFigure id="custom-website-5000-whats-included" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

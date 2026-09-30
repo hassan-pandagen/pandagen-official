@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileArchive, LayoutTemplate, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -167,6 +168,7 @@ export default function SquarespaceVsCustomWebsitePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="6 min read" />
+                    <BlogCoverFigure id="squarespace-vs-custom-website" />
 
                     <BlogText>
                         Squarespace users wrote the following themselves, on r/squarespace, about the editor, mobile layouts and an outage. Each quote links to the post it came from.

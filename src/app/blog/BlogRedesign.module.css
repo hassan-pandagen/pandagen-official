@@ -1,0 +1,221 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   The blog in the redesign, 30 Sep 2026. Applied by src/app/blog/layout.tsx to
+   every page under /blog, so the 88 article files stay untouched. Follows the
+   article design prototyped at /preview/blog/how-to-speed-up-your-website
+   (paper page, dark title band, serif headings, one reading column) and folds
+   in the earlier BlogTypography.module.css pass.
+
+   The articles come in three templates (57 wide, 26 "card", a few older
+   section-based ones); every rule below targets structure they share: main,
+   article, article > header (71 of 88 have it), the shared Blog* components'
+   class names (.blog-section-heading, .blog-copy) and plain elements.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.surface {
+  background: #ebe9e4;
+  color: #1c1917;
+  min-height: 100vh;
+  /* The title band is full-bleed; clip rather than hidden, so nothing inside
+     becomes a scroll container and sticky elements keep working. */
+  overflow-x: clip;
+}
+
+/* Old site chrome: PreviewShell supplies the new header and footer. No blog
+   page uses a <footer> of its own, so this only matches the old site footer. */
+.surface :global(header.fixed),
+.surface :global(footer) {
+  display: none !important;
+}
+
+/* Page and article backgrounds: paper everywhere, and the old white "card"
+   around 26 articles removed so every article reads the same way. */
+.surface :global(main) {
+  background: #ebe9e4 !important;
+  color: #1c1917;
+}
+.surface :global(main article) {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ── Title band (articles with article > header: 71 of 88) ──────────────── */
+.surface :global(main article > header) {
+  position: relative;
+  margin: 8px calc(50% - 50vw) 0;
+  padding: 72px max(24px, calc((100vw - 1080px) / 2)) 88px;
+  background: #1c1917;
+  color: #ebe9e4;
+  border: 0 !important;
+}
+.surface :global(main article > header > p:first-child) {
+  font: 500 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e8763a !important;
+  margin: 0 0 24px;
+}
+.surface :global(main article > header h1) {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2.6rem, 5.4vw, 5.4rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.045em !important;
+  text-transform: none !important;
+  text-wrap: balance;
+  max-width: 1000px;
+  color: #ebe9e4 !important;
+  margin: 0 0 24px;
+}
+.surface :global(main article > header h1 span) {
+  font-family: inherit !important;
+  font-style: normal !important;
+  color: #e8763a !important;
+}
+.surface :global(main article > header p) {
+  color: #d1cbc2 !important;
+  max-width: 760px;
+}
+.surface :global(main article > header p[data-speakable]) {
+  font-size: clamp(18px, 1.5vw, 22px) !important;
+  line-height: 1.6 !important;
+}
+.surface :global(main article > header a) {
+  color: #f1b18b !important;
+  text-underline-offset: 5px;
+}
+/* Topic labels written for paper in brand orange read at 2.87:1 on the band;
+   lift them to the light orange. */
+.surface :global(main article > header :is(div, span, p)[class*="text-cognac"]) {
+  color: #e8763a !important;
+}
+
+/* ── Titles elsewhere (older articles, topic pages): serif on paper ─────── */
+.surface :global(main h1) {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2.4rem, 4.6vw, 4.4rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+  text-transform: none !important;
+  text-wrap: balance;
+  color: #1c1917;
+}
+.surface :global(main h1 span) {
+  font-family: inherit !important;
+  font-style: normal !important;
+  color: #ad3d0b !important;
+}
+
+/* ── Reading column ─────────────────────────────────────────────────────── */
+.surface :global(main .blog-section-heading),
+.surface :global(main article h2[id]) {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2rem, 3vw, 2.9rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em;
+  text-transform: none !important;
+  text-wrap: balance;
+  color: #1c1917 !important;
+  border-top: 1px solid rgba(28, 25, 23, 0.22);
+  padding-top: 34px;
+  margin-top: 72px !important;
+  scroll-margin-top: 110px;
+}
+.surface :global(main .blog-section-heading)::before,
+.surface :global(main article h2[id])::before {
+  content: "/";
+  display: block;
+  margin-bottom: 16px;
+  font: 500 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0;
+  color: #ad3d0b;
+}
+.surface :global(main .blog-copy) {
+  font-size: clamp(17px, 1.3vw, 19px) !important;
+  line-height: 1.78 !important;
+  color: #3a3733 !important;
+}
+/* Plain links on paper. Links that set their own colour, and links inside the
+   dark boxes some articles use, keep theirs: this colour is 1.85:1 on dark. */
+.surface :global(main article :is(p, li) a:not([class*="bg-"]):not([class*="text-"]):not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)) {
+  color: #7a2e0e;
+}
+
+/* Yes / No / Partial labels in comparison tables were picked for white and
+   read at 4.1 to 4.45:1 on the paper; one step darker each (5.3 to 6.3:1). */
+.surface :global(main [class*="text-red-600"]:not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)) {
+  color: #b91c1c !important;
+}
+.surface :global(main :is([class*="text-emerald-600"], [class*="text-green-700"]):not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)) {
+  color: #166534 !important;
+}
+.surface :global(main [class*="text-orange-600"]:not(:where([class*="bg-charcoal"], [class*="bg-stone-9"], [class*="bg-black"]) *)) {
+  color: #9a3412 !important;
+}
+
+/* Checklists (BlogList): flat rows with rules instead of floating cards. */
+.surface :global(main ul.space-y-3 > li) {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(28, 25, 23, 0.18) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 16px 0 !important;
+  line-height: 1.65;
+}
+.surface :global(main ul.space-y-3 > li:last-child) {
+  border-bottom: 1px solid rgba(28, 25, 23, 0.18) !important;
+}
+
+.surface :global(main blockquote) {
+  background: #f5f4f0 !important;
+  border-radius: 0 !important;
+  border-left-color: #ad3d0b !important;
+}
+.surface :global(main details) {
+  background: #f5f4f0;
+  border-radius: 0 !important;
+  border-color: rgba(28, 25, 23, 0.2) !important;
+}
+
+/* Cover image (BlogCoverFigure). */
+.surface :global(main article figure) {
+  border-radius: 0 !important;
+  border-color: rgba(28, 25, 23, 0.16) !important;
+  background: #d8d3ca !important;
+}
+.surface :global(main article figure figcaption) {
+  color: #4a4540 !important;
+}
+
+/* The redesign is square-edged: flatten the old rounded boxes and cards in
+   articles and topic pages, but keep avatars and pills (rounded-full) round. */
+.surface :global(main [class*="rounded"]:not([class*="rounded-full"])) {
+  border-radius: 0 !important;
+}
+
+.surface :global(main :is(a, button, summary):focus-visible) {
+  outline: 2px solid #ad3d0b;
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .surface :global(main article > header) {
+    padding: 52px 20px 64px;
+  }
+  .surface :global(main article > header h1) {
+    font-size: clamp(2.2rem, 9.5vw, 3.4rem) !important;
+    letter-spacing: -0.035em !important;
+  }
+  .surface :global(main h1) {
+    font-size: clamp(2.1rem, 9vw, 3.2rem) !important;
+  }
+  .surface :global(main .blog-section-heading),
+  .surface :global(main article h2[id]) {
+    font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+    margin-top: 56px !important;
+  }
+}

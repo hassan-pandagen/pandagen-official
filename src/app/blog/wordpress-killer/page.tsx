@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Calculator, FileSpreadsheet, ReceiptText, Scale } from "lucide-react";
 import Link from "next/link";
@@ -153,6 +154,7 @@ export default function WordPressCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 8, 2026" readTime="6 min read" />
+                    <BlogCoverFigure id="wordpress-killer" />
 
                     <BlogText>
                         Before you open a spreadsheet, hear from three people closer to WordPress than we are. The founder and two developers on r/Wordpress said this in April 2026, in their own words, and each quote links to the original post.

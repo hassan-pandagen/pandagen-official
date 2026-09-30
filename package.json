@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next build && npm run pagefind",
     "pagefind": "node pagefind-clean.mjs && pagefind --site .next/server/app --output-path public/_pagefind --glob \"blog/**/*.html\"",
+    "blog:covers": "node scripts/generate-blog-covers.mjs",
     "analyze": "cross-env ANALYZE=true NODE_OPTIONS=--max-old-space-size=8192 next build --webpack",
     "start": "next start",
     "lint": "eslint .",

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
@@ -186,6 +187,7 @@ export default function AEOPlaybookPage() {
                             bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on making sure search engines and AI assistants can actually read a site, and that what they read is backed by evidence. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="aeo-playbook-built-into-every-website" />
                     </div>
                 </div>
             </section>

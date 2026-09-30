@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -170,6 +171,7 @@ export default function WordPressPluginSecurity2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WordPress and Shopify stores as custom Next.js applications, and patches the dependencies underneath them."
                     />
+                    <BlogCoverFigure id="wordpress-plugin-security-2026" />
 
                     <BlogHeader id="short-answer">Is WordPress less secure than a custom-coded site?</BlogHeader>
                     <BlogText>

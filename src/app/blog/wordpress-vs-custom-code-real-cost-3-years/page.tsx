@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Braces, Calculator, FileSpreadsheet, Scale, Workflow } from "lucide-react";
 import Link from "next/link";
@@ -149,6 +150,7 @@ export default function WordPressVsCustomCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 20, 2026" readTime="11 min read" />
+                    <BlogCoverFigure id="wordpress-vs-custom-code-real-cost-3-years" />
 
                     <BlogText>
                         Before the model, here is how the founder of WordPress and two people who run it every day described the platform in April 2026. The words are theirs, and each links to the original post.

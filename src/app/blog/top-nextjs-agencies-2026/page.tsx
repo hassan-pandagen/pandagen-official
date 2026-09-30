@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Braces, ClipboardCheck, Gauge, Search } from "lucide-react";
 import Link from "next/link";
@@ -225,6 +226,7 @@ export default function TopNextjsAgenciesPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 25, 2026" readTime="8 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="top-nextjs-agencies-2026" />
 
                     <InsightBox variant="warning" label="Commercial disclosure">
                         PandaCodeGen publishes this comparison, provides Next.js services, and is one of the eight

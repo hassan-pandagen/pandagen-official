@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, ClipboardCheck } from "lucide-react";
 import Link from "next/link";
@@ -158,6 +159,7 @@ export default function AiBuiltWebsiteChecklistPage() {
                     <BlogAuthor date="Sep 17, 2026" readTime="14 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this guide includes the checks you can complete yourself without hiring anyone."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="ai-built-website-checklist" />
                     <p className="mt-3 text-sm text-stone-500">Published <time dateTime="2026-09-17">September 17, 2026</time> · Vendor documentation checked on that date.</p>
                 </div>
             </section>

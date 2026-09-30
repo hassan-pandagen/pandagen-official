@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
@@ -177,6 +178,7 @@ export default function MigrateWordPressToNextJSPage() {
                             bio="Hassan plans WordPress to Next.js migrations around four things: performance you can measure, URLs that keep working, crawling the staged site before anyone sees it, and a handover that does not surprise you."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="how-to-migrate-wordpress-to-nextjs" />
                     </div>
 
                     {/* Animation */}

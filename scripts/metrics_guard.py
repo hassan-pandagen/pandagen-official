@@ -79,13 +79,51 @@ def load_metrics() -> list[dict]:
     return out
 
 
+def split_site_menu(html: str) -> tuple[str, str]:
+    """Return (page without the site menu, the site menu's HTML).
+
+    THE SITE MENU IS CHECKED AS ITS OWN TEXT, added 30 Sep 2026. The redesign's
+    full-screen menu (SiteNav, <div id="site-menu">) is in the HTML of every
+    page, hidden until opened, and its work cards name MyCustomPatches. Once the
+    blog moved into the redesign, the menu's last card sat right before the
+    breadcrumb "90+ PageSpeed process" and the title "How to Reach 90+
+    PageSpeed", so the name and a withdrawn value fell inside one window with
+    no claim made. Cutting the menu out and checking it separately keeps both
+    directions: a value in the menu next to a name in the menu still fails.
+    """
+    at = html.find('id="site-menu"')
+    if at < 0:
+        return html, ""
+    start = html.rfind("<div", 0, at)
+    depth = 0
+    for tag in re.finditer(r"<(/?)div\b[^>]*>", html[start:]):
+        depth += -1 if tag.group(1) else 1
+        if depth == 0:
+            end = start + tag.end()
+            return html[:start] + html[end:], html[start:end]
+    return html, ""
+
+
+def flatten(html: str) -> str:
+    text = re.sub(r"<script[\s\S]*?</script>", " ", html)
+    text = re.sub(r"<style[\s\S]*?</style>", " ", text)
+    return re.sub(r"<[^>]+>", " ", text)
+
+
 def rendered_pages() -> list[tuple[str, str]]:
     if not BUILD.exists():
         print("metrics_guard: no build output. Run `next build` first.", file=sys.stderr)
         sys.exit(2)
     pages = []
+    menus: set[str] = set()
     for f in BUILD.rglob("*.html"):
         html = f.read_text(encoding="utf-8", errors="ignore")
+        html, menu = split_site_menu(html)
+        if menu:
+            menu_text = re.sub(r"\s+", " ", flatten(menu))
+            if menu_text not in menus:
+                menus.add(menu_text)
+                pages.append((f"{f.relative_to(BUILD)} (site menu)", menu_text))
         # Strip tags so we test what a reader or an extractor sees, but keep
         # <head> content because titles and meta descriptions are where the
         # stale numbers survived last time.
@@ -104,9 +142,7 @@ def rendered_pages() -> list[tuple[str, str]]:
         # a lab()/oklch() colour value is a dense run of digits and percent signs,
         # and "95%" matched inside one the moment the own-page rule below stopped
         # requiring proximity to a client name. CSS is not text a reader sees.
-        text = re.sub(r"<script[\s\S]*?</script>", " ", html)
-        text = re.sub(r"<style[\s\S]*?</style>", " ", text)
-        text = re.sub(r"<[^>]+>", " ", text)
+        text = flatten(html)
         text = " ".join([text, meta_content, ld_json])
         text = re.sub(r"\s+", " ", text)
         pages.append((str(f.relative_to(BUILD)), text))

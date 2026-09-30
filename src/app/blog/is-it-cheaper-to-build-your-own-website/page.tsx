@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Wallet } from "lucide-react";
 import Link from "next/link";
@@ -113,6 +114,7 @@ export default function IsItCheaperPage() {
                     <BlogAuthor date="Sep 13, 2026" readTime="10 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this comparison includes situations where DIY is the better fit."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                    <BlogCoverFigure id="is-it-cheaper-to-build-your-own-website" />
                     <p className="mt-3 text-sm text-stone-500">Updated <time dateTime="2026-09-17">September 17, 2026</time> · Prices and sources checked on that date.</p>
                 </div>
             </section>

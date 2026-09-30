@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
@@ -146,6 +147,7 @@ export default function BuildVsBuySoftware2026Page() {
                             bio="Hassan scopes custom CRMs, dashboards and operations tools only after writing down how you work today, what it costs you, what could go wrong, and who ends up owning it."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="build-vs-buy-software-2026-cost-comparison" />
                     </div>
                 </div>
             </section>

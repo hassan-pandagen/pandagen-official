@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Layers3, SearchCheck } from "lucide-react";
 import Link from "next/link";
@@ -164,6 +165,7 @@ export default function ElementorSeoPage() {
                         readTime="5 min read"
                         bio="Hassan leads measured WordPress performance diagnostics and search-sensitive migrations."
                     />
+                    <BlogCoverFigure id="elementor-kills-seo" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

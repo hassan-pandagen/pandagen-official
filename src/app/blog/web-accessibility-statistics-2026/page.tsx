@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -174,6 +175,7 @@ export default function WebAccessibilityStatistics2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan builds and migrates production websites, and writes the engineering guides on this site."
                     />
+                    <BlogCoverFigure id="web-accessibility-statistics-2026" />
 
                     <BlogHeader>The headline number, and the part that matters more</BlogHeader>
                     <BlogText>

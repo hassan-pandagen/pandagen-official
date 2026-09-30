@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
+import PreviewShell from "@/components/redesign/PreviewShell";
+import styles from "./BlogRedesign.module.css";
 
-// Blog posts opt out of the root "%s | PandaCodeGen" title template: post titles
-// are written to fit the ~60-char SERP limit on their own, and the brand suffix
-// was pushing every post title into truncation (audit, Jul 13 2026).
-export const metadata: Metadata = {
-  title: { template: "%s", default: "Web Development & Performance Blog | PandaCodeGen" },
-};
-
-export default function BlogLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return <>{children}</>
+// 30 Sep 2026: every page under /blog (index, 88 articles, 11 topic pages)
+// gets the redesign's header and footer here, and BlogRedesign.module.css
+// restyles the article templates, so the article files stay untouched.
+export default function BlogLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <PreviewShell condensed contentTag="div">
+      <div className={styles.surface}>{children}</div>
+    </PreviewShell>
+  );
 }

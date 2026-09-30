@@ -3,7 +3,7 @@ import React from "react";
 
 export function BlogHeader({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
-    <h2 id={id} className="text-3xl md:text-4xl font-sans font-bold text-charcoal mt-16 mb-6 leading-tight">
+    <h2 id={id} className="blog-section-heading text-3xl md:text-4xl font-sans font-bold text-charcoal mt-16 mb-6 leading-tight">
       {children}
     </h2>
   );
@@ -11,7 +11,7 @@ export function BlogHeader({ children, id }: { children: React.ReactNode; id?: s
 
 export function BlogText({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-lg md:text-xl text-stone-700 leading-relaxed mb-8">
+    <p className="blog-copy text-lg md:text-xl text-stone-700 leading-relaxed mb-8">
       {children}
     </p>
   );

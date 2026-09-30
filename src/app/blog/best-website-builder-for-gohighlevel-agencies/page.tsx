@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Zap, Scale } from "lucide-react";
 import Link from "next/link";
@@ -178,6 +179,7 @@ export default function BestWebsiteBuilderForGoHighLevelAgenciesPage() {
                             bio="Hassan builds GHL-connected Next.js frontends with scope-defined integrations, repository terms, and repeatable performance acceptance tests."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="best-website-builder-for-gohighlevel-agencies" />
                     </div>
                 </div>
             </section>

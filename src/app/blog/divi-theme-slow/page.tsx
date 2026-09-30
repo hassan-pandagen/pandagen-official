@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Search, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -202,6 +203,7 @@ export default function DiviThemeSlowPage() {
                         readTime="9 min read"
                         bio="Hassan works on measured WordPress migrations, performance diagnostics, and testable delivery criteria."
                     />
+                    <BlogCoverFigure id="divi-theme-slow" />
 
                     <div className="my-10">
                         <PageSpeedAnimation />

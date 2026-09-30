@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, SearchCheck, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -154,6 +155,7 @@ export default function CheapWebDeveloperPage() {
             bio="Hassan scopes WordPress, Webflow and GoHighLevel migrations with your search traffic in mind, and writes down the acceptance conditions before anyone starts building."
             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
           />
+          <BlogCoverFigure id="cheap-web-developer" />
         </div>
       </section>
 

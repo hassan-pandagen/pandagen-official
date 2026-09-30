@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Blocks, Database, FileSearch, Gauge, Route } from "lucide-react";
 import Link from "next/link";
@@ -164,6 +165,7 @@ export default function WordPressMigrationCostPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 22, 2026" readTime="8 min read" />
+                    <BlogCoverFigure id="wordpress-migration-cost" />
 
                     <BlogText>
                         Two things the developer who founded WordPress said about his own platform in April 2026, quoted as he wrote them, with a link to the report that published each one.

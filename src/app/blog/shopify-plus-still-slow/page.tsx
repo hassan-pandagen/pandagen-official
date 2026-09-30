@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Building2, Gauge, Network, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -169,6 +170,7 @@ export default function ShopifyPlusStillSlowPage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="10 min read" />
+                    <BlogCoverFigure id="shopify-plus-still-slow" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The correct starting point</h2>

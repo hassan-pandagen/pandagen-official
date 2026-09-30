@@ -1,6 +1,6 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import BlogPageClient from "./BlogPageClient";
+import { BlogIndexDesign } from "@/app/preview/blog/BlogIndexDesign";
 import { blogPosts } from "@/data/blog";
 import { hubs, hubPostIds, parentForPost } from "@/data/hubs";
 
@@ -61,7 +61,12 @@ export const metadata: Metadata = {
     },
 };
 
-export default function BlogPage() {
+// 30 Sep 2026: /blog renders the redesign (built as /preview/blog); the
+// structured data is unchanged. Search and topic filters use the query
+// string, so this page now renders per request instead of statically.
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ q?: string; topic?: string }> }) {
+    const params = await searchParams;
+    const q = typeof params.q === "string" ? params.q.trim() : "";
     // Strip faqs from each post. The listing UI never renders them, and faqs alone
     // are ~50KB serialized per post when shipped to the client RSC payload.
     // Faqs stay server-only on individual blog post pages where they're actually rendered.
@@ -153,5 +158,10 @@ export default function BlogPage() {
         ]
     };
 
-    return <BlogPageClient articles={articles} blogSchema={blogSchema} topics={topics} parents={parents} />;
+    return (
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+            <BlogIndexDesign q={q} topicSlug={params.topic} />
+        </>
+    );
 }

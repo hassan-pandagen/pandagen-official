@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, Boxes, Code2, Pencil, Scale } from "lucide-react";
 import Link from "next/link";
@@ -152,6 +153,7 @@ export default function WixVsCustomWebsitePage() {
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="6 min read" />
+                    <BlogCoverFigure id="wix-vs-custom-website" />
 
                     <BlogText>
                         Here is what leaving Wix sounds like from people who tried it. All three are Wix users writing in their own words on r/WIX, and each one links to the original thread.

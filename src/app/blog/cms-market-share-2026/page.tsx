@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -177,6 +178,7 @@ export default function CmsMarketShare2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan migrates production websites off these platforms, and writes the engineering guides on this site."
                     />
+                    <BlogCoverFigure id="cms-market-share-2026" />
 
                     <BlogHeader>The numbers</BlogHeader>
                     <BlogText>

@@ -1,3 +1,4 @@
+import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, Bot, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -160,6 +161,7 @@ export default function AgenticBrowsingPage() {
                             bio="Hassan builds and migrates Next.js sites, and writes down how rendering, accessibility, layout stability and performance get signed off."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                        <BlogCoverFigure id="agentic-browsing-pagespeed-score" />
                     </div>
                 </div>
             </section>
