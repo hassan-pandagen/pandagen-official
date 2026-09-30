@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import PageContent from "./PageContent";
+import ServicesPreviewIndex from "@/app/preview/services/page";
+
+// 30 Sep 2026: /services renders the redesign (built as /preview/services);
+// metadata and structured data stay here.
 import { ogImageForPath } from "@/lib/seo/og";
 import { alternatesFor } from "@/lib/i18n/config";
 
@@ -48,7 +51,7 @@ export default function ServicesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <PageContent />
+      <ServicesPreviewIndex />
     </>
   );
 }

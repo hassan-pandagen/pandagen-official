@@ -1,8 +1,13 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import PageContent from "./PageContent";
-import { serviceFaqs } from "@/data/service-faqs";
+import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
+import { servicePreview } from "@/app/preview/services/service-data";
+import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+
+// 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
+// stay here; the FAQ structured data now comes from the FAQs the redesign shows.
+
 
 const path = "/services/woocommerce";
 const name = "WooCommerce Storefront Migration";
@@ -17,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function WooCommerceServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce migration" faqs={serviceFaqs["woocommerce"]} /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WooCommerce migration" faqs={previewServiceFaqs("woocommerce")} /><ServiceDetailPreview service={servicePreview("woocommerce")} /></>;
 }

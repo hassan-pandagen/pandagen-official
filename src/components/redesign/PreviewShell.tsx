@@ -20,17 +20,18 @@ const ZODIAK_CSS = "https://api.fontshare.com/v2/css?f[]=zodiak@700&display=swap
 // font-synthesis:none stops the browser faking a bold.
 const anton = Anton({ subsets: ["latin"], weight: "400", display: "swap", variable: "--font-anton" });
 
-export default function PreviewShell({ condensed, children }: { condensed: boolean; children: ReactNode }) {
+export default function PreviewShell({ condensed, children, contentTag = "main", showChrome = true }: { condensed: boolean; children: ReactNode; contentTag?: "main" | "div"; showChrome?: boolean }) {
   const fontVars = condensed
     ? { "--display": "var(--font-anton)", "--display-sm": "var(--font-sans)" }
     : { "--display": "Zodiak" };
+  const Content = contentTag;
   return (
     <div className={anton.variable} data-font={condensed ? "anton" : "zodiak"} style={{ ...fontVars, fontSynthesis: "none" } as React.CSSProperties}>
       <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
       <link rel="stylesheet" href={ZODIAK_CSS} precedence="default" />
-      <SiteNav />
-      <main style={{ backgroundColor: T.paper }}>{children}</main>
-      <SiteFooter />
+      {showChrome && <SiteNav />}
+      <Content style={{ backgroundColor: T.paper }}>{children}</Content>
+      {showChrome && <SiteFooter />}
       {/* Condensed mode sets section and row headings in capitals, as grigoletti.ch does. */}
       <style>{`
         [data-font=anton] h1, [data-font=anton] h2, [data-font=anton] .work-name { text-transform: uppercase; }

@@ -79,6 +79,7 @@ export default function SiteNav() {
   const [open, setOpen] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -99,11 +100,26 @@ export default function SiteNav() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let previousY = window.scrollY;
+    let frame = 0;
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        setScrolled(currentY > 24);
+        if (currentY < 80 || open) setHidden(false);
+        else if (Math.abs(currentY - previousY) > 6) setHidden(currentY > previousY);
+        previousY = currentY;
+        frame = 0;
+      });
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [open]);
 
   // Close on navigation, including back/forward, which no link click sees.
   // Adjusted during render rather than in an effect (React's documented pattern
@@ -154,7 +170,10 @@ export default function SiteNav() {
   return (
     <>
       {/* ── Floating bar ─────────────────────────────────────────────────── */}
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-4 pt-4 md:pt-5">
+      <header
+        onFocusCapture={() => setHidden(false)}
+        className={`pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-4 pt-4 transition-transform duration-300 motion-reduce:transition-none md:pt-5 ${hidden ? "-translate-y-full" : "translate-y-0"}`}
+      >
         <div
           className="pointer-events-auto flex w-full max-w-[560px] items-center justify-between gap-3 py-2 pl-5 pr-2 transition-shadow duration-300"
           style={{

@@ -1,8 +1,9 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import PageContent from "./PageContent";
-import { serviceFaqs } from "@/data/service-faqs";
+import WordPressMigrationPreview, { migrationFaqs } from "@/app/preview/services/wordpress-migration/page";
+// 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
+// stay here; the FAQ structured data now comes from the FAQs the redesign shows.
 
 const path = "/services/wordpress-migration";
 const name = "WordPress Website Migration";
@@ -17,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function MigrationPage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WordPress migration" faqs={serviceFaqs["wordpress-migration"]} /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="WordPress migration" faqs={migrationFaqs()} /><WordPressMigrationPreview /></>;
 }

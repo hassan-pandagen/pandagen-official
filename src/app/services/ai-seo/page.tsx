@@ -1,8 +1,13 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
 import ServicePageSchema from "@/components/services/ServicePageSchema";
-import PageContent from "./PageContent";
-import { serviceFaqs } from "@/data/service-faqs";
+import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
+import { servicePreview } from "@/app/preview/services/service-data";
+import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+
+// 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
+// stay here; the FAQ structured data now comes from the FAQs the redesign shows.
+
 
 const path = "/services/ai-seo";
 const name = "AI SEO Services and Answer Engine Optimisation";
@@ -27,5 +32,5 @@ export const metadata: Metadata = {
 };
 
 export default function AiSeoServicePage() {
-  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="AI SEO" faqs={serviceFaqs["ai-seo"]} /><PageContent /></>;
+  return <><ServicePageSchema path={path} name={name} description={description} breadcrumb="AI SEO" faqs={previewServiceFaqs("ai-seo")} /><ServiceDetailPreview service={servicePreview("ai-seo")} /></>;
 }

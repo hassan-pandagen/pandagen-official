@@ -86,7 +86,7 @@ export default function SiteFooter() {
             >
               <span className="flex -space-x-2" aria-hidden="true">
                 <Image src="/team/hassan.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
-                <Image src="/team/imran.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
+                <Image src="/team/imran-editorial.png" alt="" width={28} height={28} className="rounded-full ring-2 ring-[#1C1917]" />
               </span>
               Talk to the founders
             </QuoteModalButton>
@@ -175,9 +175,22 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        {/* Legal line. */}
+      </div>
+
+      {/* The oversized wordmark is decorative; the first-column logo remains the home link. */}
+      <div aria-hidden="true" className="mx-auto max-w-[1500px] overflow-hidden px-6 pb-7 pt-2 md:px-10">
+        <p
+          className="footer-wordmark select-none whitespace-nowrap text-center"
+          style={{ fontFamily: DISPLAY, fontWeight: 700, lineHeight: 0.95, letterSpacing: "-0.055em", color: "#817A72" }}
+        >
+          PandaCodeGen<span style={{ color: T.onDarkAccent }}>.</span>
+        </p>
+      </div>
+
+      {/* Legal details follow the brand rather than appearing above it. */}
+      <div className="px-6 pb-8 md:px-10">
         <div
-          className="mx-auto mt-16 flex max-w-[1440px] flex-col gap-4 border-t pt-8 text-[13px] md:flex-row md:items-center md:justify-between"
+          className="mx-auto flex max-w-[1440px] flex-col gap-4 border-t pt-6 text-[13px] md:flex-row md:items-center md:justify-between"
           style={{ borderColor: T.onDarkRule, color: T.onDarkQuiet }}
         >
           <p>
@@ -207,17 +220,9 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      {/* Oversized wordmark, decorative. */}
-      <div aria-hidden="true" className="overflow-hidden px-4 pb-4 md:px-8">
-        <p
-          className="select-none whitespace-nowrap text-center"
-          style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: "11.6vw", lineHeight: 0.8, letterSpacing: "-0.04em", color: "#2A2623" }}
-        >
-          PandaCodeGen.
-        </p>
-      </div>
-
       <style>{`
+        .footer-wordmark { font-size: clamp(2rem, 10vw, 10rem); }
+        @media (min-width: 768px) { .footer-wordmark { font-size: min(13.8vw, 14rem); } }
         .foot-link { transition: color .25s ease; }
         .foot-link:hover, .foot-link:focus-visible { color: ${T.onDarkAccent} !important; }
         .foot-lang li, .foot-lang a { color: ${T.onDark} !important; }

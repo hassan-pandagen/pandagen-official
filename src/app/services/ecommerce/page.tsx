@@ -1,7 +1,12 @@
 import { ogImageForPath } from "@/lib/seo/og";
 import type { Metadata } from "next";
-import PageContent from "./PageContent";
-import { serviceFaqs } from "@/data/service-faqs";
+import ServiceDetailPreview from "@/app/preview/services/ServiceDetailPreview";
+import { servicePreview } from "@/app/preview/services/service-data";
+import { previewServiceFaqs } from "@/app/preview/services/preview-faqs";
+
+// 30 Sep 2026: renders the redesign (built under /preview/services). Metadata
+// stay here; the FAQ structured data now comes from the FAQs the redesign shows.
+
 
 const canonical = "https://www.pandacodegen.com/services/ecommerce";
 
@@ -46,12 +51,12 @@ export default function EcommercePage() {
         ],
       },
       {
-        // Same array PageContent renders, so the schema cannot assert an answer
+        // Same list the redesign renders, so the schema cannot assert an answer
         // the visitor cannot see. This page builds its graph inline rather than
         // using ServicePageSchema, which is why the node is spelled out here.
         "@type": "FAQPage",
         "@id": `${canonical}#faq`,
-        mainEntity: serviceFaqs["ecommerce"].map((faq) => ({
+        mainEntity: previewServiceFaqs("ecommerce").map((faq) => ({
           "@type": "Question",
           name: faq.q,
           acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -63,7 +68,7 @@ export default function EcommercePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <PageContent />
+      <ServiceDetailPreview service={servicePreview("ecommerce")} />
     </>
   );
 }
