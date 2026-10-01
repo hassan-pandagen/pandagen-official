@@ -147,7 +147,8 @@ export default function WordPressPluginSecurity2026Page() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress plugin security:{" "}
@@ -164,6 +165,10 @@ export default function WordPressPluginSecurity2026Page() {
                             Every CVE number, score, version and date below was read at its primary record on 26 August
                             2026 and is linked. Where two sources disagree, both are given.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-plugin-security-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -171,7 +176,6 @@ export default function WordPressPluginSecurity2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WordPress and Shopify stores as custom Next.js applications, and patches the dependencies underneath them."
                     />
-                    <BlogCoverFigure id="wordpress-plugin-security-2026" />
 
                     <BlogHeader id="short-answer">Is WordPress less secure than a custom-coded site?</BlogHeader>
                     <BlogText>

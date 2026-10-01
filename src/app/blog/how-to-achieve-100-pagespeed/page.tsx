@@ -142,7 +142,8 @@ export default function PageSpeedProcessGuide() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Performance engineering</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How to Reach 90+ PageSpeed <span className="italic text-cognac">Without Chasing a Screenshot</span>
@@ -156,10 +157,13 @@ export default function PageSpeedProcessGuide() {
                         <p className="mt-4 text-xs text-stone-500">
                             Every threshold and metric definition here was re-checked against Chrome&apos;s primary Lighthouse documentation on August 3, 2026. Where a claim can be verified in your own browser, this page tells you how to verify it rather than asking you to take a citation on trust.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="how-to-achieve-100-pagespeed" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="how-to-achieve-100-pagespeed" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First understand the number</h2>

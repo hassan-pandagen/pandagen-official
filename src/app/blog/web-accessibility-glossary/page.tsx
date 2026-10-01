@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, BookMarked, Hash } from "lucide-react";
+import { ArrowRight, BookMarked, Hash } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -350,11 +350,9 @@ export default function WebAccessibilityGlossaryPage() {
                 <section className="relative px-6 pb-10 pt-24 md:pt-40">
                     <div className="mx-auto max-w-3xl">
                         <Breadcrumb items={postCrumbs(postId, "Web Accessibility Glossary")} />
-                        <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-sm text-stone-500 transition-colors hover:text-charcoal">
-                            <ArrowLeft className="h-4 w-4" /> Back to Blog
-                        </Link>
-
                         <div className="mb-8">
+                            <div data-article-hero="split" data-article-hero-variant="nested">
+                              <div data-article-hero-copy>
                             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-cognac/10 px-3 py-1 text-xs font-semibold text-cognac">
                                 <BookMarked className="h-3 w-3" /> Glossary
                             </div>
@@ -373,7 +371,11 @@ export default function WebAccessibilityGlossaryPage() {
                                 bio="Hassan builds custom Next.js sites and writes the engineering guides on this site."
                                 linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                             />
+                              </div>
+                              <div data-article-hero-screen>
                             <BlogCoverFigure id="web-accessibility-glossary" />
+                              </div>
+                            </div>
                         </div>
 
                         {/* Answer-first intro, extractable */}

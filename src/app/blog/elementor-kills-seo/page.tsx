@@ -2,6 +2,7 @@ import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
 import { ArrowLeft, ArrowRight, CheckCircle2, Gauge, Layers3, SearchCheck } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
@@ -137,7 +138,8 @@ export default function ElementorSeoPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress and SEO</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Does Elementor Hurt SEO? <span className="italic text-cognac">Test the Site, Not the Label</span>
@@ -156,6 +158,10 @@ export default function ElementorSeoPage() {
                             put optimizing in place ahead of rebuilding, and publish no score, penalty or traffic
                             figure for Elementor.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="elementor-kills-seo" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -165,7 +171,6 @@ export default function ElementorSeoPage() {
                         readTime="5 min read"
                         bio="Hassan leads measured WordPress performance diagnostics and search-sensitive migrations."
                     />
-                    <BlogCoverFigure id="elementor-kills-seo" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
@@ -232,6 +237,12 @@ export default function ElementorSeoPage() {
                     </div>
 
                     <BlogHeader>How a builder adds work to a page</BlogHeader>
+                    <figure className="my-10 overflow-hidden rounded-xl border border-stone-200 bg-stone-50">
+                        <Image src="/blog-images/elementor-editor-official.png" alt="Elementor editor with its widget panel, top bar and editing canvas" width={993} height={773} sizes="(min-width: 768px) 640px, 90vw" className="h-auto w-full" />
+                        <figcaption className="px-4 py-3 text-xs leading-relaxed text-stone-600">
+                            Elementor editor interface. Screenshot from <a href="https://elementor.com/help/explore-the-elementor-editor/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Elementor Help Center</a>; it illustrates the editing layout, not a performance or SEO result.
+                        </figcaption>
+                    </figure>
                     <BlogText>
                         The useful question is not whether Elementor is heavy in the abstract but which of these
                         behaviors your own pages exhibit. Each one is observable in a browser trace on your site, and

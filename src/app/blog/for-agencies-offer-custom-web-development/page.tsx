@@ -124,7 +124,8 @@ export default function WhiteLabelDevelopmentGuide() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency delivery</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How to Structure a <span className="italic text-cognac">White-Label Web Development Partnership</span>
@@ -137,6 +138,10 @@ export default function WhiteLabelDevelopmentGuide() {
                             sells the project.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Offer and terms reviewed August 8, 2026.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="for-agencies-offer-custom-web-development" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -146,7 +151,6 @@ export default function WhiteLabelDevelopmentGuide() {
                         readTime="5 min read"
                         bio="Hassan scopes search-sensitive migrations and partner delivery systems."
                     />
-                    <BlogCoverFigure id="for-agencies-offer-custom-web-development" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The workable model</h2>

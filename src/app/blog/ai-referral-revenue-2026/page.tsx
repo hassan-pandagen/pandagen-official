@@ -135,7 +135,8 @@ export default function AiReferralRevenuePage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Research</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             ChatGPT out-earned our Google Ads by{" "}
@@ -152,10 +153,13 @@ export default function AiReferralRevenuePage() {
                             {provenance.relationship.slice(1)} We publish the relationship because it changes how you
                             should read the numbers. Figures read on {window_.verifiedAt}.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="ai-referral-revenue-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="18 August 2026" readTime="11 min" />
-                    <BlogCoverFigure id="ai-referral-revenue-2026" />
 
                     <BlogHeader>Why almost nobody else can publish this</BlogHeader>
                     <BlogText>

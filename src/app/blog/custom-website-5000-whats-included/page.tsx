@@ -146,7 +146,8 @@ export default function CustomWebsite5000Page() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cognac/20 bg-cognac/5 px-3 py-1 text-xs font-semibold text-cognac">
                             <Package className="h-3.5 w-3.5" /> Pricing and scope
                         </div>
@@ -165,6 +166,10 @@ export default function CustomWebsite5000Page() {
                         <p className="mt-4 text-xs text-stone-500">
                             Offer terms reviewed July 31, 2026. A signed proposal or SOW controls if it differs from this guide.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="custom-website-5000-whats-included" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -175,7 +180,6 @@ export default function CustomWebsite5000Page() {
                         bio="Hassan leads PandaCodeGen's engineering work on scoped, search-sensitive migrations and custom builds."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
-                    <BlogCoverFigure id="custom-website-5000-whats-included" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

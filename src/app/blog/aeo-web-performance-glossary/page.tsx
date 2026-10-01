@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, BookMarked, Hash } from "lucide-react";
+import { ArrowRight, BookMarked, Hash } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -264,11 +264,9 @@ export default function GlossaryPage() {
       <section className="relative pt-24 md:pt-40 pb-10 px-6">
         <div className="max-w-3xl mx-auto">
           <Breadcrumb items={postCrumbs("aeo-web-performance-glossary", "AEO & Web Performance Glossary")} />
-          <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Back to Blog
-          </Link>
-
           <div className="mb-8">
+            <div data-article-hero="split" data-article-hero-variant="nested">
+              <div data-article-hero-copy>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/10 text-cognac rounded-full text-xs font-semibold mb-4">
               <BookMarked className="w-3 h-3" /> Glossary
             </div>
@@ -285,7 +283,11 @@ export default function GlossaryPage() {
               bio="Hassan builds custom Next.js sites engineered to be fast for people and readable by AI search."
               linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
             />
+              </div>
+              <div data-article-hero-screen>
             <BlogCoverFigure id="aeo-web-performance-glossary" />
+              </div>
+            </div>
           </div>
 
           {/* Answer-first intro, extractable */}

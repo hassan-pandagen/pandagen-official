@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, CheckCircle2, AlertTriangle, Bot, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertTriangle, Bot, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
@@ -140,11 +140,9 @@ export default function AgenticBrowsingPage() {
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={postCrumbs("agentic-browsing-pagespeed-score", "Lighthouse agentic browsing checks")} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
-                    </Link>
-
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 text-cognac border border-cognac/20 rounded-full text-xs font-semibold mb-4">
                             <Bot className="w-3 h-3" /> AI Search
                         </div>
@@ -161,7 +159,11 @@ export default function AgenticBrowsingPage() {
                             bio="Hassan builds and migrates Next.js sites, and writes down how rendering, accessibility, layout stability and performance get signed off."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="agentic-browsing-pagespeed-score" />
+                          </div>
+                        </div>
                     </div>
                 </div>
             </section>

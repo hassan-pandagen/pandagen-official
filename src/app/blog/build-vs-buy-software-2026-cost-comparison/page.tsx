@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
+import { ArrowRight, Scale, AlertTriangle, CheckCircle2, TrendingDown } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -126,11 +126,9 @@ export default function BuildVsBuySoftware2026Page() {
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={postCrumbs("build-vs-buy-software-2026-cost-comparison", "Build vs Buy Software 2026")} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
-                    </Link>
-
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-semibold mb-4">
                             <Scale className="w-3 h-3" /> Pricing
                         </div>
@@ -147,7 +145,11 @@ export default function BuildVsBuySoftware2026Page() {
                             bio="Hassan scopes custom CRMs, dashboards and operations tools only after writing down how you work today, what it costs you, what could go wrong, and who ends up owning it."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="build-vs-buy-software-2026-cost-comparison" />
+                          </div>
+                        </div>
                     </div>
                 </div>
             </section>

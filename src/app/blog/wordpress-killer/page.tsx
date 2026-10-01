@@ -139,7 +139,8 @@ export default function WordPressCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Total cost of ownership</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress 3-Year Cost: <span className="italic text-cognac">Use Your Invoices</span>
@@ -151,10 +152,13 @@ export default function WordPressCostPage() {
                             alternatives against that same list.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Commercial and platform references checked July 24, 2026.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-killer" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 8, 2026" readTime="6 min read" />
-                    <BlogCoverFigure id="wordpress-killer" />
 
                     <BlogText>
                         Before you open a spreadsheet, hear from three people closer to WordPress than we are. The founder and two developers on r/Wordpress said this in April 2026, in their own words, and each quote links to the original post.

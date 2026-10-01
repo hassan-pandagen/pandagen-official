@@ -156,6 +156,8 @@ export default function ShopifySpeedOptimizationPage() {
                         <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-charcoal hover:text-cognac transition mt-4 mb-8">
                             <ArrowLeft className="w-4 h-4" /> Back to Blog
                         </Link>
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <div className="mb-6">
                             <span className="inline-block bg-cognac/10 text-cognac text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Shopify performance</span>
                         </div>
@@ -163,7 +165,11 @@ export default function ShopifySpeedOptimizationPage() {
                             Shopify Store Speed Optimization: <span className="font-serif italic text-cognac">What Actually Works</span>
                         </h1>
                         <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Updated August 1, 2026" readTime="17 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="shopify-store-speed-optimization" />
+                          </div>
+                        </div>
                     </div>
                 </div>
 

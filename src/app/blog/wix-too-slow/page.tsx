@@ -135,7 +135,8 @@ export default function WixTooSlowPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Wix performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Why Is My Wix Site So Slow? <span className="italic text-cognac">Measure Before Migrating</span>
@@ -145,10 +146,13 @@ export default function WixTooSlowPage() {
                             property&apos;s real-user and lab evidence to identify the slow layer before paying for a fix.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Wix and Google documentation on July 24, 2026.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wix-too-slow" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 10, 2026" readTime="5 min read" />
-                    <BlogCoverFigure id="wix-too-slow" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

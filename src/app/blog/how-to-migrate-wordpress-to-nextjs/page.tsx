@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
+import { ArrowRight, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -155,13 +155,10 @@ export default function MigrateWordPressToNextJSPage() {
 
                     <Breadcrumb items={postCrumbs("how-to-migrate-wordpress-to-nextjs", "How to Migrate WordPress to Next.js")} />
 
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
-
                     {/* Title & Meta */}
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <span className="inline-block bg-stone-100 text-stone-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">WordPress</span>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             How to Migrate WordPress to <span className="font-serif italic text-cognac">Next.js</span> Without Losing SEO
@@ -178,7 +175,11 @@ export default function MigrateWordPressToNextJSPage() {
                             bio="Hassan plans WordPress to Next.js migrations around four things: performance you can measure, URLs that keep working, crawling the staged site before anyone sees it, and a handover that does not surprise you."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="how-to-migrate-wordpress-to-nextjs" />
+                          </div>
+                        </div>
                     </div>
 
                     {/* Animation */}

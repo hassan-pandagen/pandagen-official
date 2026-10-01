@@ -199,7 +199,8 @@ export default function WhichBuildersHeadlessPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Research</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Which website builders can{" "}
@@ -214,6 +215,10 @@ export default function WhichBuildersHeadlessPage() {
                             Every claim here was read off the vendor&apos;s own API documentation in {checkedOn}, not
                             from its marketing pages. Sources and check dates are listed against each platform.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="which-website-builders-can-go-headless" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -222,7 +227,6 @@ export default function WhichBuildersHeadlessPage() {
                         date="18 August 2026"
                         readTime="10 min"
                     />
-                    <BlogCoverFigure id="which-website-builders-can-go-headless" />
 
                     <BlogHeader>What has to be true before a platform counts as headless</BlogHeader>
                     <BlogText>

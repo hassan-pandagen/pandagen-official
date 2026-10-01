@@ -144,7 +144,8 @@ export default function ShopifyStockySunsetPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify operations</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Shopify Stocky Sunset: <span className="italic text-cognac">August 31, 2026</span>
@@ -159,6 +160,10 @@ export default function ShopifyStockySunsetPage() {
                             Status verified August 8, 2026 against Shopify&apos;s current migration guidance, and
                             re-checked on 13 September 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-stocky-sunset-date-2026" />
+                      </div>
                     </header>
 
                     <InsightBox variant="warning" label="Update: this date has passed">
@@ -173,7 +178,6 @@ export default function ShopifyStockySunsetPage() {
                     </InsightBox>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 25, 2026" readTime="10 min read" />
-                    <BlogCoverFigure id="shopify-stocky-sunset-date-2026" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-red-200 bg-red-50 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">Confirmed timeline and impact</h2>

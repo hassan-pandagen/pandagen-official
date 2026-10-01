@@ -152,7 +152,8 @@ export default function ShopifyHeadlessPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify architecture</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Headless Shopify in 2026: <span className="italic text-cognac">Architecture Before Hype</span>
@@ -173,10 +174,13 @@ export default function ShopifyHeadlessPage() {
                             interest in one side of this decision. That is why the sections below publish no speed
                             uplift, no price band for the market and no payback period.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-headless" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="5 min read" />
-                    <BlogCoverFigure id="shopify-headless" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The 2026 decision in one view</h2>

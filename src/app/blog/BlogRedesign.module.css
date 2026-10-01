@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    The blog in the redesign, 30 Sep 2026. Applied by src/app/blog/layout.tsx to
-   every page under /blog, so the 88 article files stay untouched. Follows the
+   every page under /blog. Follows the
    article design prototyped at /preview/blog/how-to-speed-up-your-website
    (paper page, dark title band, serif headings, one reading column) and folds
    in the earlier BlogTypography.module.css pass.
@@ -89,6 +89,161 @@
    lift them to the light orange. */
 .surface :global(main article > header :is(div, span, p)[class*="text-cognac"]) {
   color: #e8763a !important;
+}
+
+/* Article openings share one band for the headline and cover, then return to
+   the normal reading column. */
+.surface :global(main article > header[data-article-hero="split"]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: center;
+  gap: clamp(36px, 4vw, 76px);
+  padding-top: 54px;
+  padding-bottom: 60px;
+}
+.surface :global(main article > header[data-article-hero="split"] > [data-article-hero-copy]) {
+  min-width: 0;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-article-hero-copy] > p:first-child) {
+  font: 500 11px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace !important;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #e8763a !important;
+  margin: 0 0 24px;
+}
+.surface :global(main article > header[data-article-hero="split"] h1) {
+  font-size: clamp(3rem, 3.4vw, 4.25rem) !important;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen]) {
+  min-width: 0;
+  padding: 8px;
+  background: #d8d3ca;
+  border: 1px solid #8d8982;
+  box-shadow: 18px 18px 0 rgba(235, 233, 228, .08);
+}
+.surface :global(main article > header[data-article-hero="split"] [data-article-hero-screen])::before {
+  content: "•••";
+  display: block;
+  height: 19px;
+  color: #7a2e0e;
+  font: 700 13px/12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 3px;
+}
+.surface :global(main article > header[data-article-hero="split"] figure) {
+  margin: 0 !important;
+  border: 0 !important;
+  background: #1c1917 !important;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+.surface :global(main article > header[data-article-hero="split"] figure img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-website-example] figure) {
+  aspect-ratio: auto;
+  background: transparent !important;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-website-example]) {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-website-example])::before {
+  display: none;
+}
+.surface :global(main article > header[data-article-hero="split"] [data-website-example] figure img) {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-position: center top;
+}
+/* Older article templates keep their breadcrumbs in their original container.
+   Their opening copy and cover use the same full-width band. */
+.surface :global(main [data-article-hero-variant="nested"]) {
+  position: relative;
+  left: 50%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  align-items: center;
+  gap: clamp(36px, 4vw, 76px);
+  width: 100vw;
+  margin: 0 0 36px;
+  padding: 54px max(24px, calc((100vw - 1080px) / 2)) 60px;
+  transform: translateX(-50%);
+  background: #1c1917;
+  color: #ebe9e4;
+}
+.surface :global(main [data-article-hero-variant="nested"] h1) {
+  max-width: 1000px;
+  margin: 0 0 24px;
+  color: #ebe9e4 !important;
+  font: 500 clamp(3rem, 3.4vw, 4.25rem)/1.05 Georgia, "Times New Roman", serif !important;
+  letter-spacing: -.045em;
+  text-transform: none !important;
+}
+.surface :global(main [data-article-hero-variant="nested"] h1 span[class*="text-cognac"]) {
+  color: #e8763a !important;
+}
+.surface :global(main [data-article-hero-variant="nested"] p) {
+  color: #d1cbc2 !important;
+}
+.surface :global(main [data-article-hero-variant="nested"] a) {
+  color: #f1b18b !important;
+}
+/* Eyebrow pills with a translucent cognac fill (bg-cognac/10 text-cognac)
+   were styled for paper: the ~10% tint reads as the dark band showing
+   through, so the full-strength cognac text sits on it directly and
+   measures 2.87:1. Lift to the light orange, same as the split-header's own
+   eyebrow labels just above. Scoped to bg-cognac specifically: a pill with
+   its own light background (bg-orange-50 text-cognac, elsewhere in these
+   articles) is already correct and must keep its darker text. */
+.surface :global(main [data-article-hero-variant="nested"] :is(div, span)[class*="bg-cognac"][class*="text-cognac"]) {
+  color: #e8763a !important;
+}
+.surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen]) {
+  min-width: 0;
+  padding: 8px;
+  background: #d8d3ca;
+  border: 1px solid #8d8982;
+  box-shadow: 18px 18px 0 rgba(235, 233, 228, .08);
+}
+.surface :global(main [data-article-hero-variant="nested"] [data-article-hero-screen])::before {
+  content: "•••";
+  display: block;
+  height: 19px;
+  color: #7a2e0e;
+  font: 700 13px/12px ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 3px;
+}
+.surface :global(main [data-article-hero-variant="nested"] figure) {
+  margin: 0 !important;
+  border: 0 !important;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+.surface :global(main [data-article-hero-variant="nested"] figure img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.surface :global(main:has(article > header[data-article-hero="split"])) {
+  padding-top: 96px !important;
+}
+.surface :global(main article > a[href="/blog"]:has(+ header[data-article-hero="split"])) {
+  display: none !important;
+}
+.surface :global(main :has(> [data-article-hero-variant="nested"]) > a[href="/blog"]) {
+  display: none !important;
+}
+.surface :global(main section:has([data-article-hero-variant="nested"])) {
+  padding-top: 84px !important;
+  padding-bottom: 0 !important;
+}
+.surface :global(main article:has(> [data-article-hero-variant="nested"])) {
+  padding-top: 84px !important;
 }
 
 /* ── Titles elsewhere (older articles, topic pages): serif on paper ─────── */
@@ -217,5 +372,34 @@
   .surface :global(main article h2[id]) {
     font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
     margin-top: 56px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .surface :global(main article > header[data-article-hero="split"]) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .surface :global(main article > header[data-article-hero="split"] h1) {
+    font-size: clamp(2.2rem, 9.5vw, 3.4rem) !important;
+  }
+  .surface :global(main article > header[data-article-hero="split"] figure) {
+    aspect-ratio: 16 / 9;
+  }
+  .surface :global(main [data-article-hero-variant="nested"]) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .surface :global(main [data-article-hero-variant="nested"] h1) {
+    font-size: clamp(2.2rem, 9.5vw, 3.4rem) !important;
+  }
+  .surface :global(main [data-article-hero-variant="nested"] figure) {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 640px) {
+  .surface :global(main [data-article-hero-variant="nested"]) {
+    padding: 52px 20px 64px;
   }
 }

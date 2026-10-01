@@ -1,7 +1,7 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { FOUNDING_DATE } from "@/data/company-facts";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, Scale, TrendingUp, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -165,11 +165,9 @@ export default function AEOPlaybookPage() {
             <section className="relative pt-24 md:pt-40 pb-10 px-6">
                 <div className="max-w-3xl mx-auto">
                     <Breadcrumb items={postCrumbs("aeo-playbook-built-into-every-website", "AEO Playbook")} />
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Blog
-                    </Link>
-
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-cognac/10 text-cognac rounded-full text-xs font-semibold mb-4">
                             <Zap className="w-3 h-3" /> AEO
                         </div>
@@ -187,7 +185,11 @@ export default function AEOPlaybookPage() {
                             bio="Hassan is PandaCodeGen's Co-founder and Lead Engineer. He works on making sure search engines and AI assistants can actually read a site, and that what they read is backed by evidence. Any AI referral described here is a dated first-party observation, not a citation guarantee."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="aeo-playbook-built-into-every-website" />
+                          </div>
+                        </div>
                     </div>
                 </div>
             </section>

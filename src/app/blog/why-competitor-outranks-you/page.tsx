@@ -135,7 +135,8 @@ export default function WhyCompetitorOutranksYouPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">SEO analysis</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Why Does My Competitor Outrank Me? <span className="italic text-cognac">Find the Actual Gap</span>
@@ -146,10 +147,13 @@ export default function WhyCompetitorOutranksYouPage() {
                             your evidence actually supports. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed against current Google and Bing guidance on September 19, 2026.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="why-competitor-outranks-you" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="7 min read" />
-                    <BlogCoverFigure id="why-competitor-outranks-you" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

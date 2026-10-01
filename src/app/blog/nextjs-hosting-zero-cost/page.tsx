@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -151,13 +151,10 @@ export default function NextjsHostingZeroCostPage() {
                     <Breadcrumb items={postCrumbs("nextjs-hosting-zero-cost", "Is Vercel Free? 2026 Hobby Limits and Business Pricing")} />
 
                     {/* Back Button */}
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
-
                     {/* Title & Meta */}
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Is Vercel Free? The <span className="font-serif italic text-cognac">2026 Cost</span> of Next.js Hosting
                         </h1>
@@ -176,7 +173,11 @@ export default function NextjsHostingZeroCostPage() {
                             bio="Hassan is PandaCodeGen's co-founder and lead engineer. He plans Next.js migrations around four things: speed you can measure, search traffic that survives the move, code someone else can maintain, and infrastructure the client owns."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="nextjs-hosting-zero-cost" />
+                          </div>
+                        </div>
                     </div>
 
                     {/* Feature Visual */}

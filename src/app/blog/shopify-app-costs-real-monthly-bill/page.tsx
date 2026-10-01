@@ -162,7 +162,8 @@ export default function ShopifyAppCostsPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify operations</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Shopify App Costs in 2026: <span className="italic text-cognac">Audit the Real Bill</span>
@@ -179,10 +180,13 @@ export default function ShopifyAppCostsPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current Shopify documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-app-costs-real-monthly-bill" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 19, 2026" readTime="9 min read" />
-                    <BlogCoverFigure id="shopify-app-costs-real-monthly-bill" />
 
                     <BlogText>
                         Three Shopify store owners describe the app bill in their own words below. Each post is linked so you can read the full thread.

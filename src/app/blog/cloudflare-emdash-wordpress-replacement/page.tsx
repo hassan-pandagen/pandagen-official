@@ -209,7 +209,8 @@ export default function CloudflareEmDashPage() {
                         Back to Blog
                     </Link>
 
-                    <header className="mb-10">
+                    <header data-article-hero="split" className="mb-10">
+                        <div data-article-hero-copy>
                         <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cognac">Platform readiness</p>
                         <h1 className="mb-5 text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
                             Is Cloudflare EmDash a WordPress <span className="font-serif font-normal italic text-cognac">Replacement?</span>
@@ -224,8 +225,11 @@ export default function CloudflareEmDashPage() {
                             readTime="13 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                        <BlogCoverFigure id="cloudflare-emdash-wordpress-replacement" />
                         <p className="mt-2 text-xs text-stone-500">Repository figures on this page were read from GitHub&apos;s public API on August 2, 2026 and are reproducible by anyone.</p>
+                        </div>
+                        <div data-article-hero-screen>
+                            <BlogCoverFigure id="cloudflare-emdash-wordpress-replacement" />
+                        </div>
                     </header>
 
                     <section className="mb-12 grid gap-3 sm:grid-cols-3" aria-label="Current EmDash status summary">

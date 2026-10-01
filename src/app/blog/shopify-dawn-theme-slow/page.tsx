@@ -157,7 +157,8 @@ export default function ShopifyDawnThemeSlowPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Shopify Dawn Theme Slow? <span className="italic text-cognac">Diagnose the Store</span>
@@ -170,10 +171,13 @@ export default function ShopifyDawnThemeSlowPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current Shopify documentation and the Dawn repository.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-dawn-theme-slow" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 7, 2026" readTime="9 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="shopify-dawn-theme-slow" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

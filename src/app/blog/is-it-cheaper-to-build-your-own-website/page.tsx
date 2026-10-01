@@ -99,6 +99,8 @@ export default function IsItCheaperPage() {
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8">
                         <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to Blog
                     </Link>
+                    <div data-article-hero="split" data-article-hero-variant="nested">
+                      <div data-article-hero-copy>
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 text-cognac border border-cognac/20 rounded-full text-xs font-semibold mb-5">
                         <Wallet className="w-3 h-3" aria-hidden="true" /> Pricing
                     </div>
@@ -114,7 +116,11 @@ export default function IsItCheaperPage() {
                     <BlogAuthor date="Sep 13, 2026" readTime="10 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this comparison includes situations where DIY is the better fit."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                      </div>
+                      <div data-article-hero-screen>
                     <BlogCoverFigure id="is-it-cheaper-to-build-your-own-website" />
+                      </div>
+                    </div>
                     <p className="mt-3 text-sm text-stone-500">Updated <time dateTime="2026-09-17">September 17, 2026</time> · Prices and sources checked on that date.</p>
                 </div>
             </section>

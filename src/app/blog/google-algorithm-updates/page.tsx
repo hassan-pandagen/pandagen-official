@@ -1,6 +1,6 @@
 import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import lazyLoad from "next/dynamic";
 import Header from "@/components/layout/Header";
@@ -188,12 +188,9 @@ export default function GoogleAlgorithmUpdatesPage() {
 
                     <Breadcrumb items={postCrumbs("google-algorithm-updates", "Google Algorithm Updates")} />
 
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-charcoal hover:text-stone-700 mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
-
                     <div className="mb-10">
+                        <div data-article-hero="split" data-article-hero-variant="nested">
+                          <div data-article-hero-copy>
                         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                             Google Algorithm Updates: <span className="font-serif italic font-normal text-cognac">Every Confirmed Update Since 2021</span>
                         </h1>
@@ -208,7 +205,11 @@ export default function GoogleAlgorithmUpdatesPage() {
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
+                          </div>
+                          <div data-article-hero-screen>
                         <BlogCoverFigure id="google-algorithm-updates" />
+                          </div>
+                        </div>
                     </div>
 
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">

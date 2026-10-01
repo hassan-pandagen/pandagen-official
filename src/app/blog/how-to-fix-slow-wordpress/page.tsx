@@ -135,7 +135,8 @@ export default function SlowWordPressGuide() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How to Fix a Slow WordPress Site <span className="italic text-cognac">Without Guessing</span>
@@ -147,10 +148,13 @@ export default function SlowWordPressGuide() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current WordPress and Google primary guidance.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="how-to-fix-slow-wordpress" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="February 17, 2026" readTime="7 min read" />
-                    <BlogCoverFigure id="how-to-fix-slow-wordpress" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The eight-method ladder</h2>

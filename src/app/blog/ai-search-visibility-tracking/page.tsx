@@ -123,13 +123,19 @@ export default function AiSearchVisibilityTracking() {
             <article className="container mx-auto max-w-3xl px-6 pt-28 pb-20 md:pt-36">
                 <Breadcrumb items={postCrumbs(postId, title)} />
 
+                <div data-article-hero="split" data-article-hero-variant="nested">
+                  <div data-article-hero-copy>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-cognac">Research</p>
                 <h1 className="mt-3 text-4xl font-bold leading-tight text-charcoal md:text-5xl">
                     AI visibility tracking: what 77 pages and 6,700 AI impressions showed
                 </h1>
 
                 <BlogAuthor name="Hassan Jamal" role="Lead Engineer" date="28 August 2026" readTime="15 min" />
+                  </div>
+                  <div data-article-hero-screen>
                 <BlogCoverFigure id="ai-search-visibility-tracking" />
+                  </div>
+                </div>
 
                 <p data-speakable="true" className="mt-6 text-lg leading-relaxed text-stone-700">Seventy-seven pages, 6,700 AI impressions over 88 days, and the pages Google&apos;s AI quoted were not the ones that ranked best. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
 

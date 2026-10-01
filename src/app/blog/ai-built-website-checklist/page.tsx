@@ -142,6 +142,8 @@ export default function AiBuiltWebsiteChecklistPage() {
                     <Link href="/blog" className="inline-flex items-center gap-2 text-stone-500 hover:text-charcoal text-sm mb-8">
                         <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to Blog
                     </Link>
+                    <div data-article-hero="split" data-article-hero-variant="nested">
+                      <div data-article-hero-copy>
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 text-cognac border border-cognac/20 rounded-full text-xs font-semibold mb-5">
                         <ClipboardCheck className="w-3 h-3" aria-hidden="true" /> Guide
                     </div>
@@ -159,7 +161,11 @@ export default function AiBuiltWebsiteChecklistPage() {
                     <BlogAuthor date="Sep 17, 2026" readTime="14 min read"
                         bio="Hassan builds websites, online stores and custom software at PandaCodeGen. We sell development services; this guide includes the checks you can complete yourself without hiring anyone."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
+                      </div>
+                      <div data-article-hero-screen>
                     <BlogCoverFigure id="ai-built-website-checklist" />
+                      </div>
+                    </div>
                     <p className="mt-3 text-sm text-stone-500">Published <time dateTime="2026-09-17">September 17, 2026</time> · Vendor documentation checked on that date.</p>
                 </div>
             </section>

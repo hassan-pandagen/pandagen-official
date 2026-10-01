@@ -154,7 +154,8 @@ export default function LovableSiteNotShowingPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <div className="mb-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-cognac">
                             <Bot className="h-4 w-4" /> SEO and AEO
                         </div>
@@ -173,10 +174,13 @@ export default function LovableSiteNotShowingPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Checked against current Lovable and Google documentation on July 31, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="lovable-site-not-showing-on-google" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 12, 2026" readTime="7 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="lovable-site-not-showing-on-google" />
 
                     <div className="my-10">
                         <CrawlerBlindAnimation />

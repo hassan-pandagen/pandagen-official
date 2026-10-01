@@ -141,7 +141,8 @@ export default function NextjsSanityStackPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Next.js and CMS architecture</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Next.js and Sanity: <span className="italic text-cognac">Fit, Cost and Tradeoffs</span>
@@ -155,10 +156,13 @@ export default function NextjsSanityStackPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Assessed July 24, 2026 against current Sanity, Next.js and Google documentation. Pricing rechecked July 31, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="nextjs-sanity-stack" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="July 23, 2026" readTime="11 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="nextjs-sanity-stack" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>

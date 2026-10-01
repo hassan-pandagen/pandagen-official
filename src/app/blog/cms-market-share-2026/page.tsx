@@ -155,7 +155,8 @@ export default function CmsMarketShare2026Page() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Research</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             CMS market share, 2015 to 2026:{" "}
@@ -171,6 +172,10 @@ export default function CmsMarketShare2026Page() {
                             Figures read from the source table on {source.verifiedAt}. Method and limits are stated in
                             full at the end, because a market-share number without them is decoration.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="cms-market-share-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -178,7 +183,6 @@ export default function CmsMarketShare2026Page() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan migrates production websites off these platforms, and writes the engineering guides on this site."
                     />
-                    <BlogCoverFigure id="cms-market-share-2026" />
 
                     <BlogHeader>The numbers</BlogHeader>
                     <BlogText>

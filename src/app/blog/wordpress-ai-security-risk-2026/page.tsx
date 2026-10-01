@@ -158,7 +158,8 @@ export default function WordPressAiSecurityRiskPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress security</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress AI Plugin Security: <span className="italic text-cognac">Read the Advisory Precisely</span>
@@ -179,10 +180,13 @@ export default function WordPressAiSecurityRiskPage() {
                             build pipeline. Anyone telling you a rebuilt site cannot be compromised is selling
                             something. Both models need someone who owns patching.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-ai-security-risk-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jun 23, 2026" readTime="7 min read" />
-                    <BlogCoverFigure id="wordpress-ai-security-risk-2026" />
 
                     <BlogText>
                         Two WooCommerce developers reacting to the April 2026 Essential Plugin backdoor, quoted word for word from r/woocommerce with a link to the thread.

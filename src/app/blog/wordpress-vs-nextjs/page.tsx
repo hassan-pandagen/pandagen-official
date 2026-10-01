@@ -141,7 +141,8 @@ export default function WordPressVsNextJsPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Platform comparison</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress vs Next.js: <span className="italic text-cognac">Choose the Operating Model</span>
@@ -157,10 +158,13 @@ export default function WordPressVsNextJsPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current WordPress, Next.js and Google documentation on July 24, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-vs-nextjs" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 15, 2026" readTime="8 min read" />
-                    <BlogCoverFigure id="wordpress-vs-nextjs" />
 
                     <BlogText>
                         What the WordPress founder and two working developers said about the platform in April 2026, quoted as written and linked to where they said it.

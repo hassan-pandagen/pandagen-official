@@ -145,16 +145,20 @@ export default function WebflowTrueCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Webflow pricing and running costs</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">How much does Webflow cost in 2026?</h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             For a custom-domain website, Basic starts at {spec("webflow-basic-price").value} billed yearly; Premium with a CMS starts at {spec("webflow-premium-price").value} billed yearly. Your full budget also depends on the people editing it, enabled extras and the work needed to keep it useful.
                         </p>
                         <p className="mt-4 text-sm text-stone-600">Updated September 25, 2026. USD before tax. Annual-billing rates are monthly equivalents paid on a yearly cycle; existing accounts may have different renewal terms.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="webflow-true-cost" />
+                      </div>
                     </header>
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 18, 2026" readTime="9 min read" />
-                    <BlogCoverFigure id="webflow-true-cost" />
 
                     <nav aria-label="Article contents" className="my-8 rounded-2xl border border-stone-200 bg-stone-50 p-6">
                         <p className="mb-3 font-bold text-charcoal">Find your answer</p>

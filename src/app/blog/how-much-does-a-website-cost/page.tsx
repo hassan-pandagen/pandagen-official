@@ -146,7 +146,8 @@ export default function WebsiteCostGuide() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website pricing</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How Much Does a Website Cost in 2026? <span className="italic text-cognac">Price the Scope, Not the Label</span>
@@ -165,6 +166,10 @@ export default function WebsiteCostGuide() {
                         <p className="mt-4 text-xs text-stone-500">
                             PandaCodeGen offer and vendor links reviewed August 1, 2026. Vendor prices can change.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="how-much-does-a-website-cost" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -175,7 +180,6 @@ export default function WebsiteCostGuide() {
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         bio="Hassan scopes the migrations and integrations, and writes acceptance terms you can actually measure."
                     />
-                    <BlogCoverFigure id="how-much-does-a-website-cost" />
 
                     <div className="my-10">
                         <CostStackVisual />

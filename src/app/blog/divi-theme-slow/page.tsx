@@ -177,7 +177,8 @@ export default function DiviThemeSlowPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Divi Theme Slow? A <span className="italic text-cognac">2026 Diagnostic and Fix Guide</span>
@@ -194,6 +195,10 @@ export default function DiviThemeSlowPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current Elegant Themes and Google primary documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="divi-theme-slow" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -203,7 +208,6 @@ export default function DiviThemeSlowPage() {
                         readTime="9 min read"
                         bio="Hassan works on measured WordPress migrations, performance diagnostics, and testable delivery criteria."
                     />
-                    <BlogCoverFigure id="divi-theme-slow" />
 
                     <div className="my-10">
                         <PageSpeedAnimation />

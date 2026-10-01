@@ -152,7 +152,8 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website platforms</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Squarespace vs Custom Website: <span className="italic text-cognac">How to Choose in 2026</span>
@@ -165,10 +166,13 @@ export default function SquarespaceVsCustomWebsitePage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Squarespace and Google documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="squarespace-vs-custom-website" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 14, 2026" readTime="6 min read" />
-                    <BlogCoverFigure id="squarespace-vs-custom-website" />
 
                     <BlogText>
                         Squarespace users wrote the following themselves, on r/squarespace, about the editor, mobile layouts and an outage. Each quote links to the post it came from.

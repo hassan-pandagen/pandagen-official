@@ -174,7 +174,8 @@ export default function MetaAdTrackingGuide() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Measurement and privacy</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Meta Ad Tracking Not Working? <span className="italic text-cognac">Diagnose the Data Path</span>
@@ -191,6 +192,10 @@ export default function MetaAdTrackingGuide() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 31, 2026 against current Meta, Shopify, and WebKit documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="fix-meta-ad-tracking-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -201,7 +206,6 @@ export default function MetaAdTrackingGuide() {
                         bio="Hassan works on consent-aware measurement integrations and custom commerce systems."
                         linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                     />
-                    <BlogCoverFigure id="fix-meta-ad-tracking-2026" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

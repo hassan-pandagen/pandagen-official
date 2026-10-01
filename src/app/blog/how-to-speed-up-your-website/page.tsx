@@ -1,7 +1,6 @@
-import BlogCoverFigure from "@/components/blog/BlogCoverFigure";
 import Image from "next/image";
 import { ogImageForPath, ogImageUrlForPath } from "@/lib/seo/og";
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import dynamicImport from "next/dynamic";
 import type { Metadata } from "next";
@@ -141,11 +140,8 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                 {!preview && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />}
                 <article className={preview ? "article-preview-content" : "mx-auto max-w-4xl px-5 sm:px-8"}>
                     {!preview && <Breadcrumb items={postCrumbs(postId, "Speed up your website")} />}
-                    <Link href={preview ? "/preview/blog" : "/blog"} className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
-                        <ArrowLeft className="h-4 w-4" /> Back to Insights
-                    </Link>
-
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                        <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website performance</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             How to Speed Up Your Website. <span className="italic text-cognac">Find the slow part first.</span>
@@ -159,11 +155,15 @@ function WebsiteSpeedGuideContent({ preview = false }: { preview?: boolean }) {
                         <p className="mt-4 text-xs text-stone-500">
                             Last reviewed September 19, 2026. Sources and testing notes are linked throughout.
                         </p>
+                        </div>
+                        <div data-article-hero-screen data-website-example>
+                            <figure>
+                                <Image src="/blog-covers/how-to-speed-up-your-website.webp?v=20260930" alt="Illustrative website beside a page inspection panel for images, scripts and server response" width={1200} height={750} sizes="(min-width: 900px) 480px, 90vw" unoptimized />
+                            </figure>
+                        </div>
                     </header>
 
                     {preview ? <div data-article-byline className="flex items-center gap-3"><Image src="/team/hassan.png" alt="Hassan Jamal" width={56} height={56} className="h-14 w-14 object-cover" /><p><Link href="/about/hassan" className="font-semibold underline underline-offset-4">Hassan Jamal</Link><span className="block text-sm">Co-founder and Lead Engineer · April 30, 2026 · 14 min read</span></p></div> : <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="April 30, 2026" readTime="14 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />}
-                    <BlogCoverFigure id="how-to-speed-up-your-website" />
-
                     <BlogHeader id="where-to-start">Start with the page that feels slow</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>

@@ -143,7 +143,8 @@ export default function WordPressMigrationCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WordPress migration pricing</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress to Next.js Migration Cost: <span className="italic text-cognac">Scope Before Price</span>
@@ -162,10 +163,13 @@ export default function WordPressMigrationCostPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current WordPress, Google and host documentation on August 2, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-migration-cost" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 22, 2026" readTime="8 min read" />
-                    <BlogCoverFigure id="wordpress-migration-cost" />
 
                     <BlogText>
                         Two things the developer who founded WordPress said about his own platform in April 2026, quoted as he wrote them, with a link to the report that published each one.

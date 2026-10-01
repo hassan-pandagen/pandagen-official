@@ -153,7 +153,8 @@ export default function SaasPriceIncreases2026TrackerPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Software procurement</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             SaaS Price Changes in 2026: <span className="italic text-cognac">Verified Watchlist</span>
@@ -169,10 +170,13 @@ export default function SaasPriceIncreases2026TrackerPage() {
                             as current as its most recent check, so open the linked vendor page before acting on any figure here.
                             Vendor dashboards, contracts and invoices remain the source of truth for a specific account.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="saas-price-increases-2026-tracker" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 31, 2026" readTime="5 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="saas-price-increases-2026-tracker" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The verified watchlist</h2>

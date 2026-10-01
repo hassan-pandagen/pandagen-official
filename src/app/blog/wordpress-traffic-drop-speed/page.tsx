@@ -129,7 +129,8 @@ export default function WordPressTrafficDropPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Search diagnostics</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WordPress Traffic Drop: <span className="italic text-cognac">Find the Cause Before the Fix</span>
@@ -143,10 +144,13 @@ export default function WordPressTrafficDropPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed against current Google Search guidance on July 24, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="wordpress-traffic-drop-speed" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Jan 28, 2026" readTime="5 min read" />
-                    <BlogCoverFigure id="wordpress-traffic-drop-speed" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">First response</h2>

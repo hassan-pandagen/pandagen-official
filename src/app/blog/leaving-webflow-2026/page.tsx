@@ -236,7 +236,8 @@ export default function LeavingWebflow2026Page() {
                         Back to Blog
                     </Link>
 
-                    <header className="mb-10">
+                    <header data-article-hero="split" className="mb-10">
+                        <div data-article-hero-copy>
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-stone-100 border border-stone-200 rounded-full text-charcoal text-xs font-bold uppercase tracking-wider mb-6">
                             Webflow / Migration strategy
                         </div>
@@ -255,7 +256,10 @@ export default function LeavingWebflow2026Page() {
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He scopes platform migrations around content, integrations, performance, redirects, testing, launch, and handover."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                        <BlogCoverFigure id="leaving-webflow-2026" />
+                        </div>
+                        <div data-article-hero-screen>
+                            <BlogCoverFigure id="leaving-webflow-2026" />
+                        </div>
                     </header>
 
                     <BlogText>

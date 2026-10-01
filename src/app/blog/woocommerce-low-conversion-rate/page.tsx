@@ -144,7 +144,8 @@ export default function WooCommerceLowConversionRatePage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">WooCommerce</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             WooCommerce low conversion rate:{" "}
@@ -161,6 +162,10 @@ export default function WooCommerceLowConversionRatePage() {
                             depend on your own catalogue and margin, and a number borrowed from someone else&apos;s
                             store is worse than no number.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="woocommerce-low-conversion-rate" />
+                      </div>
                     </header>
 
                     <BlogAuthor
@@ -168,7 +173,6 @@ export default function WooCommerceLowConversionRatePage() {
                         role="Co-founder and Lead Engineer"
                         bio="Hassan rebuilds WooCommerce stores that have outgrown the plugin stack holding them together."
                     />
-                    <BlogCoverFigure id="woocommerce-low-conversion-rate" />
 
                     <BlogHeader id="short-answer">What actually causes a low WooCommerce conversion rate?</BlogHeader>
                     <BlogText>

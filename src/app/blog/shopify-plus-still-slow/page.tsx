@@ -153,7 +153,8 @@ export default function ShopifyPlusStillSlowPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Enterprise Shopify</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Shopify Plus Speed Problems: <span className="italic text-cognac">An Enterprise Diagnostic</span>
@@ -167,10 +168,13 @@ export default function ShopifyPlusStillSlowPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Shopify documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-plus-still-slow" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 6, 2026" readTime="10 min read" />
-                    <BlogCoverFigure id="shopify-plus-still-slow" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The correct starting point</h2>

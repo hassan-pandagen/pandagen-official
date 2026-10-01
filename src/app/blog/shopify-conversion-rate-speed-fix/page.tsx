@@ -161,7 +161,8 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify analytics</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Low Shopify Conversion Rate? <span className="italic text-cognac">Measure Speed in the Funnel</span>
@@ -174,10 +175,13 @@ export default function ShopifyConversionRateSpeedFixPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 24, 2026 against current Shopify documentation.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="shopify-conversion-rate-speed-fix" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 11, 2026" readTime="6 min read" />
-                    <BlogCoverFigure id="shopify-conversion-rate-speed-fix" />
 
                     <BlogText>
                         The quotes below are Shopify merchants describing what moved, or wrecked, their conversion rate, in their own words. The link after each one goes to the original post.

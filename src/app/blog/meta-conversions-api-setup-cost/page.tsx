@@ -151,7 +151,8 @@ export default function MetaCAPISetupCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Measurement architecture</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Meta Conversions API Cost <span className="italic text-cognac">Starts With Scope</span>
@@ -167,10 +168,13 @@ export default function MetaCAPISetupCostPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed July 31, 2026 against current Meta documentation and founder-affiliated first-party evidence.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="meta-conversions-api-setup-cost" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="June 14, 2026" readTime="18 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="meta-conversions-api-setup-cost" />
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What a responsible estimate covers</h2>

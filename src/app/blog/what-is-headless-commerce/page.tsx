@@ -150,7 +150,8 @@ export default function WhatIsHeadlessCommercePage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">E-commerce architecture</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             What Is Headless Commerce? <span className="italic text-cognac">A Store Owner Guide</span>
@@ -168,10 +169,13 @@ export default function WhatIsHeadlessCommercePage() {
                         one side of this question. That is why this page publishes no speed uplift, no conversion
                         figure and no market cost band, and why it puts the case for staying on a theme first.
                     </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="what-is-headless-commerce" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 14, 2026" readTime="11 min read" />
-                    <BlogCoverFigure id="what-is-headless-commerce" />
 
                     <BlogText>
                         Three Shopify store owners and developers, in their own words on r/shopify, on what apps and admin changes do to a themed store. Each quote links to the original post.

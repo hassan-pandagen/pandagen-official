@@ -137,6 +137,8 @@ export default function CheapWebDeveloperPage() {
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
 
+          <div data-article-hero="split" data-article-hero-variant="nested">
+            <div data-article-hero-copy>
           <div className="inline-block px-3 py-1 text-xs font-medium bg-stone-100 text-stone-600 rounded-full mb-4">Pricing</div>
           <h1 className="text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
             Cheap Web Developer:{" "}
@@ -155,7 +157,11 @@ export default function CheapWebDeveloperPage() {
             bio="Hassan scopes WordPress, Webflow and GoHighLevel migrations with your search traffic in mind, and writes down the acceptance conditions before anyone starts building."
             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
           />
+            </div>
+            <div data-article-hero-screen>
           <BlogCoverFigure id="cheap-web-developer" />
+            </div>
+          </div>
         </div>
       </section>
 

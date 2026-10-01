@@ -214,7 +214,8 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Agency selection</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Custom Web Development Partners: <span className="italic text-cognac">A Disclosed 2026 Shortlist</span>
@@ -228,10 +229,13 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Researched July 24, 2026. Service pages change, so confirm scope and terms directly.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="top-custom-web-development-agencies-usa-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
-                    <BlogCoverFigure id="top-custom-web-development-agencies-usa-2026" />
 
                     <BlogText>
                         Three people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.

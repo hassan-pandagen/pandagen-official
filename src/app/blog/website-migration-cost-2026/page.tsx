@@ -146,7 +146,8 @@ export default function WebsiteMigrationCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Website Migration Cost: <span className="italic text-cognac">Seven-Platform Scope Guide</span>
@@ -160,10 +161,13 @@ export default function WebsiteMigrationCostPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current platform and Google documentation; export links re-checked August 1, 2026. Quote sourcing and pricing claims re-audited September 12, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="website-migration-cost-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="May 6, 2026" readTime="13 min read" linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/" />
-                    <BlogCoverFigure id="website-migration-cost-2026" />
 
                     <BlogText>
                         Owners and developers on the platforms this page covers, quoted in their own words, with a link to each original post so you can check the context yourself.

@@ -147,7 +147,8 @@ export default function WebflowMigrationCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Webflow migration</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Webflow Migration Cost: <span className="italic text-cognac">Scope, Tiers and Evidence</span>
@@ -164,10 +165,13 @@ export default function WebflowMigrationCostPage() {
                         <p className="mt-4 text-xs text-stone-500">
                             Every Webflow figure on this page was re-checked against Webflow&apos;s own pricing page and help centre on August 2, 2026.
                         </p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="webflow-migration-cost" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 25, 2026" readTime="12 min read" />
-                    <BlogCoverFigure id="webflow-migration-cost" />
 
                     <BlogText>
                         These are Webflow site owners posting during the April 13, 2026 outage, in their own words, with a link to each original comment.

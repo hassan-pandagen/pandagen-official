@@ -132,7 +132,8 @@ export default function WebsiteRebuildCostPage() {
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
-                    <header className="mb-10 border-b border-stone-200 pb-8">
+                    <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
+                      <div data-article-hero-copy>
                         <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Website pricing</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
                             Website Rebuild Cost: <span className="italic text-cognac">Scope, Tiers and Decisions</span>
@@ -143,10 +144,13 @@ export default function WebsiteRebuildCostPage() {
                             project, not as a universal market band.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">Reviewed September 19, 2026.</p>
+                      </div>
+                      <div data-article-hero-screen>
+                        <BlogCoverFigure id="website-rebuild-cost-2026" />
+                      </div>
                     </header>
 
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 19, 2026" readTime="13 min read" />
-                    <BlogCoverFigure id="website-rebuild-cost-2026" />
 
                     <BlogText>
                         One voice worth hearing before any pricing table is the founder of WordPress, quoted word for word from his own post, with a link to the report that carried it.
