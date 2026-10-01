@@ -57,13 +57,16 @@ const blocked = [
   },
 ];
 
+// The contracted forms were added on 1 Oct 2026, when the deslop skill started
+// recommending contractions in blog copy: "doesn't guarantee" is the same
+// caveat as "does not guarantee", and must suppress the same findings.
 const allowedContext = [
   /not (?:promised|guaranteed)/i,
   /no (?:universal|guarantee)/i,
   /no fixed/i,
-  /does not guarantee/i,
-  /cannot guarantee/i,
-  /do not (?:promise|guarantee|present)/i,
+  /(?:does not|doesn['’]t) guarantee/i,
+  /(?:cannot|can['’]t|won['’]t) guarantee/i,
+  /(?:do not|don['’]t|won['’]t) (?:promise|guarantee|present)/i,
   /without promising/i,
   /rather than promising/i,
   /question:/i,

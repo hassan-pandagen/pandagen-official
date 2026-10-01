@@ -161,12 +161,12 @@ export default function HighLevelSpeedGuide() {
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             Three things decide how fast a GoHighLevel page loads, and you can check all three on your
-                            own page in about five minutes: how much of the content arrives as HTML rather than after
-                            JavaScript runs, how much script loads regardless of what the page contains, and whether
-                            the response is cached at the edge. Your images, fonts and third-party scripts matter as
-                            well, and those you can fix inside HighLevel. The first three sit in the platform&apos;s
-                            hands rather than yours. GoHighLevel sites do not share one PageSpeed score, so measure
-                            your own route rather than trusting a quoted range.
+                            own page in about five minutes: how much of the content arrives as HTML before any
+                            JavaScript runs, how much script loads whatever the page contains, and whether the
+                            response is cached at the edge. Your images, fonts and third-party scripts count too, and
+                            you can fix those inside HighLevel. The first three are in the platform&apos;s hands, not
+                            yours. GoHighLevel sites don&apos;t share one PageSpeed score, so measure your own route
+                            instead of trusting a quoted range.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 3, 2026 against current Google, Chrome and HighLevel primary guidance.
@@ -194,16 +194,15 @@ export default function HighLevelSpeedGuide() {
                         <h2 className="mb-3 text-sm font-bold uppercase tracking-wide text-charcoal">The short answer</h2>
                         <p className="mb-4 text-sm leading-relaxed text-stone-700">
                             Most of what makes a GoHighLevel page slow is your own content, and you can fix it without
-                            leaving the builder. What you cannot change is how the platform renders and delivers the
-                            page. Work the fixable half first, measure your own routes rather than a quoted score
-                            range, and only cost a frontend replacement once the remaining causes are the ones you do
-                            not control. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
+                            leaving the builder. What you can&apos;t change is how the platform renders and delivers the
+                            page. Work the fixable half first, measure your own routes (not a quoted score range), and
+                            only cost a frontend replacement once the causes left are the ones you don&apos;t control. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
                         <ul className="space-y-3 text-sm leading-relaxed text-stone-700">
-                            <li><strong>Why is my GoHighLevel site slow?</strong> Usually because of what is on the page rather than what HighLevel does with it: oversized images, a page built from stacked sections, animations and hidden blocks, and third-party scripts sitting on the critical path. HighLevel documents all three itself, and they are yours to fix. What is left after that is architectural, and that part is real: content that arrives only after JavaScript runs, a bundle sized for every possible page rather than yours, and per-request assembly instead of edge caching all delay the largest paint.</li>
-                            <li><strong>Can I fix it inside HighLevel?</strong> Partly. Media, fonts, layout depth, embeds and third-party scripts are yours to fix, and HighLevel ships its own Optimize Javascript and Image optimization toggles in funnel settings. Rendering and delivery are not yours to fix.</li>
+                            <li><strong>Why is my GoHighLevel site slow?</strong> Usually because of what&apos;s on the page, not what HighLevel does with it: oversized images, a page built from stacked sections, animations and hidden blocks, and third-party scripts sitting on the critical path. HighLevel documents all three itself, and they&apos;re yours to fix. What&apos;s left after that is architectural, and that part is real: content that arrives only after JavaScript runs, a bundle built to serve every possible page and not yours in particular, and per-request assembly instead of edge caching all delay the largest paint.</li>
+                            <li><strong>Can I fix it inside HighLevel?</strong> Partly. Media, fonts, layout depth, embeds and third-party scripts are yours to fix, and HighLevel ships its own Optimize Javascript and Image optimization toggles in funnel settings. Rendering and delivery aren&apos;t.</li>
                             <li><strong>How do I find out what my site actually scores?</strong> Run PageSpeed Insights on the routes that carry your business, not just the homepage, and record the profile: device, network, cache state, consent choice and date. Take at least three runs and compare the page against itself over time.</li>
-                            <li><strong>When is replacing the frontend justified?</strong> When you have made the realistic in-platform fixes, the agreed requirements are still missed, and the residual causes are the architectural ones rather than your own content.</li>
+                            <li><strong>When is replacing the frontend justified?</strong> When you&apos;ve made the realistic in-platform fixes, the agreed requirements are still missed, and the causes left over are architectural, not your own content.</li>
                         </ul>
                     </div>
 
@@ -222,7 +221,7 @@ export default function HighLevelSpeedGuide() {
                                 "Check field Core Web Vitals where eligible data exists; use repeated lab runs to diagnose.",
                                 "Then name the cause: images, fonts, layout, custom code, a third-party script, an embed, the content itself, the hosting, or GoHighLevel doing what GoHighLevel does.",
                                 "Apply one controlled change at a time and compare under the same test profile.",
-                                "Decide between fixing it in HighLevel, a lighter rebuild, or keeping the CRM and replacing the site, based on what is actually still slow after you have tried.",
+                                "Decide between fixing it in HighLevel, a lighter rebuild, or keeping the CRM and replacing the site, based on what's still slow after you've tried.",
                             ]}
                         />
                     </section>
@@ -245,40 +244,39 @@ export default function HighLevelSpeedGuide() {
                     <BlogHeader id="which-slow">Two different things get called &ldquo;HighLevel is slow&rdquo;</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Before going further, check which problem you actually have, because they share a sentence
-                            and share almost nothing else. One is your public site: a funnel or page a visitor loads,
-                            measured with field data and lab traces, fixed with media, scripts and rendering. The other
-                            is the HighLevel interface itself feeling laggy for your team, typically on a sub-account
-                            with a large contact list, where the slowness is in the application you log into rather
-                            than in anything a visitor ever sees.
+                            Before going further, check which problem you have, because the two share a sentence and
+                            almost nothing else. One is your public site: a funnel or page a visitor loads, measured
+                            with field data and lab traces, fixed with media, scripts and rendering. The other is the
+                            HighLevel interface itself feeling laggy for your team, usually on a sub-account with a
+                            large contact list, where the slowness lives in the app you log into, not in anything a
+                            visitor ever sees.
                         </BlogText>
                     </div>
                     <BlogText>
                         The test takes a minute. Open one of your public pages in a private window while signed out,
-                        on a phone connection, and see whether it is slow. If it is, you have a page-delivery problem
-                        and the rest of this article is about it. If the public page is fine and the drag only appears
-                        once you are logged in and working through contacts, conversations or bulk actions, that is a
-                        back-office problem. Nothing in a page-speed audit will fix it, and optimizing images will not
-                        make your contact list load faster.
+                        on a phone connection, and see whether it&apos;s slow. If it is, you have a page-delivery
+                        problem and the rest of this article is about it. If the public page is fine and the drag only
+                        shows up once you&apos;re logged in and working through contacts, conversations or bulk
+                        actions, that&apos;s a back-office problem. Nothing in a page-speed audit will fix it, and
+                        optimizing images won&apos;t make your contact list load faster.
                     </BlogText>
                     <BlogText>
-                        We do not publish a diagnosis for the second one, because we have not measured it under
-                        conditions we could stand behind and it sits inside HighLevel rather than in anything we
-                        build. Take that to HighLevel support with the sub-account, the record counts and what you
-                        were doing when it lagged. Saying so is more useful than pointing you at a fix for a different
-                        problem.
+                        We don&apos;t publish a diagnosis for the second one. We haven&apos;t measured it under
+                        conditions we could stand behind, and it lives inside HighLevel, not in anything we build.
+                        Take it to HighLevel support with the sub-account, the record counts and what you were doing
+                        when it lagged. That&apos;s a better answer than pointing you at a fix for a different problem.
                     </BlogText>
 
-                    <BlogHeader id="what-pagespeed-insights-actually-tells">What PageSpeed Insights actually tells you</BlogHeader>
+                    <BlogHeader id="what-pagespeed-insights-actually-tells">What PageSpeed Insights does and doesn&apos;t tell you</BlogHeader>
                     <BlogText>
                         PageSpeed Insights can show field data from the Chrome User Experience Report when the URL or
-                        origin has enough eligible data, plus a Lighthouse lab result. These are not interchangeable.
-                        Field data describes a rolling population of real experiences. A lab run is a simulated test
-                        useful for diagnosis and can change across runs.
+                        origin has enough eligible data, plus a Lighthouse lab result. The two aren&apos;t
+                        interchangeable. Field data describes a rolling population of real user experiences. A lab
+                        run is a simulated test, good for diagnosis, and it can change from one run to the next.
                     </BlogText>
                     <BlogText>
                         Lighthouse labels 90 to 100 as a “good” performance score in its current scoring guidance, but
-                        that score is not Google&apos;s Core Web Vitals threshold and is not a direct ranking grade.
+                        that score isn&apos;t Google&apos;s Core Web Vitals threshold, and it isn&apos;t a direct ranking grade.
                         Google&apos;s current field thresholds evaluate LCP, INP and CLS at the 75th percentile:
                         LCP within 2.5 seconds, INP within 200 milliseconds, and CLS at or below 0.1. Our{" "}
                         <Link href="/blog/core-web-vitals-explained" className={sourceLinkClass}>Core Web Vitals reference</Link>{" "}
@@ -287,17 +285,17 @@ export default function HighLevelSpeedGuide() {
                         covers why the lab number moves between runs.
                     </BlogText>
                     <InsightBox variant="info" label="Why there is no universal HighLevel score range">
-                        We do not publish a typical score range for HighLevel sites. A number like that only means
-                        something with the sampled URLs, the test profile, the run count and the dates attached, and
-                        without those it tells you nothing about your own funnel. Any range you see quoted without that
-                        method behind it, including ours, should be treated as marketing rather than measurement. Test
-                        your own routes and compare them against themselves over time.
+                        We don&apos;t publish a typical score range for HighLevel sites. A number like that only means
+                        something with the sampled URLs, the test profile, the run count and the dates attached;
+                        without them it tells you nothing about your own funnel. Treat any range quoted without that
+                        method behind it, ours included, as marketing, not measurement. Test your own routes and
+                        compare them against themselves over time.
                     </InsightBox>
 
                     <BlogHeader id="record-a-defensible-test-profile">Record a defensible test profile</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            A HighLevel speed complaint usually arrives as a single screenshot, which settles nothing. Five things make a result defensible enough to act on or to show a client, and three comparable runs is the minimum among them. Record the conditions at the same time as the number, because you cannot reconstruct them afterwards.
+                            A HighLevel speed complaint usually arrives as a single screenshot, which settles nothing. Five things make a result defensible enough to act on or to show a client, and three comparable runs is the minimum among them. Record the conditions at the same time as the number, because you can&apos;t reconstruct them afterwards.
                         </BlogText>
                     </div>
                     <BlogList
@@ -312,9 +310,9 @@ export default function HighLevelSpeedGuide() {
                     <BlogText>
                         Test the homepage only if it represents the acceptance scope. Landing pages, long service pages,
                         calendars, forms, location pages and thank-you routes can have different content and scripts.
-                        Lazy loading does not make the rest of a site irrelevant; every important template and journey
-                        needs an appropriate test. If you are starting from scratch on the symptom rather than the
-                        platform, our general{" "}
+                        Lazy loading doesn&apos;t make the rest of a site irrelevant; every important template and
+                        journey needs its own test. If you&apos;re starting from the symptom and not the platform, our
+                        general{" "}
                         <Link href="/blog/why-is-my-website-loading-so-slow" className={sourceLinkClass}>slow-site diagnostic order</Link>{" "}
                         applies to any stack.
                     </BlogText>
@@ -323,44 +321,44 @@ export default function HighLevelSpeedGuide() {
                         Three things decide how fast a HighLevel page loads, and you can check all three yourself in about five minutes.
                     </BlogQuote>
 
-                    <BlogHeader id="architecture">What you control on a HighLevel page, and what you do not</BlogHeader>
+                    <BlogHeader id="architecture">What you control on a HighLevel page, and what you don&apos;t</BlogHeader>
                     <BlogText>
-                        Most GoHighLevel speed advice stops at images and scripts. Those matter, and they are yours to
-                        fix. The rest of what shapes a load time sits in how the platform renders and delivers the
-                        page, and that is not exposed to you as a setting. Rather than take our word for which is
-                        which, check your own page: open it, view source, and watch the Network panel on a cold load.
+                        Most GoHighLevel speed advice stops at images and scripts. Those count, and they&apos;re yours
+                        to fix. The rest of a load time comes from how the platform renders and delivers the page,
+                        and HighLevel doesn&apos;t give you a setting for that. Don&apos;t take our word for which is
+                        which. Check your own page: open it, view source, and watch the Network panel on a cold load.
                         Five observations tell you which bucket your problem is in.
                     </BlogText>
                     <BlogList
                         items={[
-                            "How much arrives as HTML. View source and look for your headline and body copy. If the meaningful content is not in the initial HTML response and only appears after JavaScript executes, the browser has to download, parse and run script before anything useful paints, and a crawler or answer engine has to do the same work to read you.",
-                            "How much JavaScript loads regardless of the page. Compare the script payload on a simple one-section page against a complex funnel. If they are similar, you are shipping builder capability the page never uses. That is the cost of a hosted page builder: the bundle serves every possible page, not yours specifically.",
-                            "Whether the response is cached at the edge. Check response headers for cache status and compare a first load against a repeat load from a different region. Static or edge-cached HTML answers from close to the user; a page assembled per request does not, and the gap shows up hardest on mobile connections and distant geographies.",
-                            "Where fonts and hero media sit in the waterfall. Fonts discovered late, or a hero image discovered only after script runs, push back the largest paint no matter how well compressed the asset is. Order matters as much as size.",
+                            "How much arrives as HTML. View source and look for your headline and body copy. If they aren't in the initial HTML response and only appear after JavaScript runs, the browser has to download, parse and run script before anything useful paints, and a crawler or answer engine has to do the same work to read you.",
+                            "How much JavaScript loads regardless of the page. Compare the script payload on a simple one-section page against a complex funnel. If they're similar, you're shipping builder features the page never uses. That's the cost of a hosted page builder: the bundle serves every possible page, not yours specifically.",
+                            "Whether the response is cached at the edge. Check response headers for cache status and compare a first load against a repeat load from a different region. Static or edge-cached HTML answers from close to the user; a page assembled per request doesn't, and the gap shows up hardest on mobile connections and in far-off regions.",
+                            "Where fonts and hero media sit in the waterfall. Fonts discovered late, or a hero image discovered only after script runs, push back the largest paint no matter how well compressed the asset is. Getting the order right counts as much as shrinking the file.",
                             "What third parties do to the critical path. Chat, heatmaps, review widgets and tag managers often load early and block. One vendor's slow response becomes your LCP.",
                         ]}
                     />
-                    <InsightBox variant="info" label="Why this is the useful frame">
+                    <InsightBox variant="info" label="What the two buckets tell you">
                         The first three observations describe how a hosted page builder works, not mistakes you made.
-                        Sorting your findings into the two buckets is the point of the exercise: images, fonts, layout
-                        depth and embeds are yours to change, while rendering and delivery are settings HighLevel does
-                        not expose. That tells you whether the next hour is better spent optimizing or costing a
-                        frontend replacement. It does not tell you what either one will score. We publish no ceiling
-                        figure and no expected gain, because both would depend on the page, the route and the test
-                        profile. Measure your own route before and after each change.
+                        Sort your findings into the two buckets: images, fonts, layout depth and embeds are yours to
+                        change, while rendering and delivery are settings HighLevel doesn&apos;t expose. That tells
+                        you whether the next hour is better spent optimizing or costing a frontend replacement. It
+                        won&apos;t tell you what either one will score. We publish no ceiling figure and no expected
+                        gain, because both depend on the page, the route and the test profile. Measure your own route
+                        before and after each change.
                     </InsightBox>
 
                     <BlogHeader id="common-causes-to-inspect-on">Common causes to inspect on a HighLevel page</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Most HighLevel slowness comes from what was added to the page rather than from the platform underneath it. Six categories account for nearly all of it, and nesting is the one nobody sees: sections inside rows inside columns still cost the browser layout work even where nothing visible is being rendered.
+                            Most HighLevel slowness comes from what was added to the page, not the platform underneath it. Six categories account for nearly all of it, and nesting is the one nobody sees: sections inside rows inside columns still cost the browser layout work even where nothing visible is being rendered.
                         </BlogText>
                     </div>
                     <BlogList
                         items={[
                             "Oversized hero and background media, incorrect dimensions, eager offscreen images and video.",
                             "Font families, weights, origins, preload choices and render-blocking styles.",
-                            "Sections inside rows inside columns inside elements. Animations. Sliders. Popups. And duplicate blocks nobody can see but the browser still loads.",
+                            "Sections inside rows inside columns inside elements, plus animations, sliders, popups, and duplicate blocks nobody can see but the browser still loads.",
                             "Chat, analytics, tracking pixels, heatmaps, review widgets, calendars, maps and anything else you embedded.",
                             "Header and footer tracking code, page-level custom code and scripts added by snapshots or templates.",
                             "Late consent changes, tag-manager sequencing, errors, redirects and slow third-party responses.",
@@ -378,7 +376,7 @@ export default function HighLevelSpeedGuide() {
                     <BlogHeader id="in-platform-fixes-to-try">In-platform fixes to try first</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            These fixes stay inside the builder, need no migration, and resolve a large share of the complaints that arrive asking for one. Six of them, in the order worth trying. Retest forms, calendars, attribution and consent after each change, because the quickest way to break a funnel is to speed up the page it runs on.
+                            These fixes stay inside the builder, need no migration, and settle many of the complaints that arrive asking for one. Here are six, in the order to try them. Retest forms, calendars, attribution and consent after each change, because the quickest way to break a funnel is to speed up the page it runs on.
                         </BlogText>
                     </div>
                     <BlogList
@@ -398,34 +396,34 @@ export default function HighLevelSpeedGuide() {
                     </BlogText>
                     <BlogList
                         items={[
-                            "Enable Optimize Javascript and Image optimization in funnel settings. These are platform toggles, not third-party plugins, and they are the closest thing HighLevel gives you to a rendering control.",
-                            "Use native HighLevel forms rather than third-party embeds where the requirement allows it, since an embedded form loads another vendor's script on your critical path.",
-                            "Resize images before upload rather than after, and use WebP or JPG for photographs and PNG only where transparency is needed. As a working target, get hero images under about 150 KB and everything else well below that; the exact number matters less than checking what you actually shipped.",
+                            "Enable Optimize Javascript and Image optimization in funnel settings. These are platform toggles, not third-party plugins, and they're the closest thing HighLevel gives you to a rendering control.",
+                            "Use native HighLevel forms instead of third-party embeds where the requirement allows it, since an embedded form loads another vendor's script on your critical path.",
+                            "Resize images before you upload them, not after, and use WebP or JPG for photographs and PNG only where transparency is needed. As a working target, get hero images under about 150 KB and everything else well below that; hitting the figure is less important than checking what you shipped.",
                             "Reuse blocks with HighLevel's Global Sections instead of duplicating a header, footer or CTA across pages. Duplicated blocks are edited in several places and loaded as separate work.",
-                            "Keep the domain setup clean with a custom domain and SSL so requests are not spending time on avoidable redirects.",
+                            "Keep the domain setup clean with a custom domain and SSL so requests aren't spending time on avoidable redirects.",
                             "Remove unused sections and flatten layouts. HighLevel calls this out directly, because nested rows and columns cost render time even when nothing is visible.",
                         ]}
                     />
                     <BlogText>
-                        Do not disable functionality merely to improve a lab score. A fast page with a broken form,
+                        Don&apos;t switch off features just to improve a lab score. A fast page with a broken form,
                         inaccessible booking flow, missing consent control or inaccurate measurement has failed the
                         business requirement.
                     </BlogText>
 
                     <BlogHeader id="does-speed-affect-gohighlevel-seo">Does speed affect GoHighLevel SEO or ads?</BlogHeader>
                     <BlogText>
-                        Google says Core Web Vitals are used by ranking systems, while also making clear that good scores
-                        do not guarantee top rankings and that relevance remains fundamental. Mobile-first indexing is
-                        about the mobile version&apos;s content for indexing; it does not mean a mobile Lighthouse score
-                        alone decides rank. Page experience is one part of a larger set of signals. We set out that
+                        Google says Core Web Vitals are used by ranking systems, and also makes clear that good scores
+                        don&apos;t guarantee top rankings and that relevance remains fundamental. Mobile-first indexing
+                        is about the mobile version&apos;s content for indexing; it doesn&apos;t mean a mobile Lighthouse
+                        score decides rank on its own. Page experience is one part of a larger set of signals. We set out that
                         relationship in{" "}
                         <Link href="/blog/how-website-speed-affects-seo" className={sourceLinkClass}>how site speed interacts with search</Link>,
                         and the other factors worth checking first in{" "}
                         <Link href="/blog/why-competitor-outranks-you" className={sourceLinkClass}>why a competitor outranks you</Link>.
                     </BlogText>
                     <BlogText>
-                        A before-and-after speed change does not by itself prove a fixed conversion, lead, CPC or
-                        revenue effect. To estimate business impact, define the funnel and compare stable periods while
+                        A before-and-after speed change doesn&apos;t prove a fixed conversion, lead, CPC or revenue
+                        effect on its own. To estimate business impact, define the funnel and compare stable periods while
                         allowing for who was visiting, which campaigns were live, the creative, the offer, the time of
                         year, any form changes, and other
                         releases. Present the result as measured first-party evidence with limitations, not a platform
@@ -436,20 +434,20 @@ export default function HighLevelSpeedGuide() {
 
                     <div data-speakable="true">
                         <BlogText>
-                            HighLevel sites are indexable and can rank. HighLevel does not block search engines, and
+                            HighLevel sites are indexable and can rank. HighLevel doesn&apos;t block search engines, and
                             it gives you control of titles, descriptions, URLs, headings and alt text. What it constrains
-                            is the delivery layer, and that shows up in Core Web Vitals, which is one input among many
-                            rather than the deciding one.
+                            is the delivery layer. That&apos;s what Core Web Vitals pick up, and they&apos;re one input
+                            among many, not the deciding one.
                         </BlogText>
                     </div>
 
                     <BlogText>
-                        In practice most HighLevel sites that underperform in search are not losing on speed. They are
-                        losing on thin pages, one landing page trying to rank for everything, no internal linking between
-                        related pages, and no depth on the topics the business actually competes for. Those are content
-                        decisions, and they are fixable without leaving HighLevel. Fix them first, because a faster
-                        page that says nothing still has nothing to rank. If you have done that work and the remaining
-                        gap is delivery, that is when the frontend question becomes worth costing, and{" "}
+                        Most HighLevel sites that underperform in search aren&apos;t losing on speed. They&apos;re losing
+                        on thin pages, one landing page trying to rank for everything, no internal linking between
+                        related pages, and no depth on the topics the business competes for. Those are content
+                        decisions, and you can fix them without leaving HighLevel. Fix them first, because a faster
+                        page that says nothing still has nothing to rank. If you&apos;ve done that work and the gap
+                        left is delivery, that&apos;s when the frontend question is worth costing, and{" "}
                         <Link href="/blog/why-competitor-outranks-you" className={sourceLinkClass}>the other reasons a competitor outranks you</Link>{" "}
                         are worth ruling out first.
                     </BlogText>
@@ -457,7 +455,7 @@ export default function HighLevelSpeedGuide() {
                     <BlogHeader id="when-to-keep-highlevel-and">When to keep HighLevel and replace the frontend</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Keeping the CRM and replacing only the frontend is a real option, and it is where most of these conversations should end rather than at a full platform move. The table sets the two columns side by side. What decides it is whether your constraint is the pages themselves or the workflows your team runs behind them.
+                            Keeping the CRM and replacing only the frontend is a real option, and most of these conversations should end there, not with a full platform move. The table compares the two. It comes down to whether your constraint is the pages themselves or the workflows your team runs behind them.
                         </BlogText>
                     </div>
                     <p className="md:hidden text-xs font-bold text-cognac mt-4 mb-2 swipe-hint">&larr; Swipe to see more &rarr;</p>
@@ -475,13 +473,13 @@ export default function HighLevelSpeedGuide() {
                                 <tr><td className="p-4 font-bold">What stays fixed</td><td data-label="Keep optimizing" className="p-4">How the page is rendered and delivered</td><td data-label="Hybrid" className="p-4">Contacts, workflows, calendars, pipelines stay in HighLevel</td></tr>
                                 <tr><td className="p-4 font-bold">Effort</td><td data-label="Keep optimizing" className="p-4">Hours, repeatable in-house, no integration work</td><td data-label="Hybrid" className="p-4">A custom build from $1,500, plus connecting it to HighLevel and testing it</td></tr>
                                 <tr><td className="p-4 font-bold">Ongoing ownership</td><td data-label="Keep optimizing" className="p-4">None added</td><td data-label="Hybrid" className="p-4">Integration monitoring, vendor-change ownership, a tested recovery plan</td></tr>
-                                <tr><td className="p-4 font-bold">Right call when</td><td data-label="Keep optimizing" className="p-4">Your own content and embeds are the measured cause, or search is not an acquisition channel</td><td data-label="Hybrid" className="p-4">The realistic fixes are done, requirements are still missed, and the residual causes are architectural</td></tr>
+                                <tr><td className="p-4 font-bold">Right call when</td><td data-label="Keep optimizing" className="p-4">Your own content and embeds are the measured cause, or search isn&apos;t an acquisition channel</td><td data-label="Hybrid" className="p-4">The realistic fixes are done, requirements are still missed, and the residual causes are architectural</td></tr>
                             </tbody>
                         </table>
                     </div>
                     <BlogList
                         items={[
-                            "You have made the fixes that are realistic, and it still misses what you wrote down for speed, accessibility, design, content or search.",
+                            "You've made the realistic fixes, and it still misses what you wrote down for speed, accessibility, design, content or search.",
                             "HighLevel remains valuable for contacts, workflows, calendars, pipelines or agency operations.",
                             "The organization accepts an integration layer, monitoring, vendor-change ownership and a tested recovery plan.",
                             "A comparable total-cost and risk model supports migration over continued optimization.",
@@ -491,8 +489,8 @@ export default function HighLevelSpeedGuide() {
                         A hybrid site can submit approved data to HighLevel through supported APIs or webhooks and can
                         use supported calendar options. HighLevel&apos;s{" "}
                         <a href="https://marketplace.gohighlevel.com/docs/intro/index.html" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>marketplace API documentation</a>{" "}
-                        is where the available endpoints and their authentication model are defined, and it is worth
-                        reading before scoping the integration rather than after. Every workflow dependency must be
+                        is where the available endpoints and their authentication model are defined, and it&apos;s worth
+                        reading before you scope the integration, not after. Every workflow dependency must be
                         inventoried and tested. For the detailed architecture, see the{" "}
                         <Link href="/blog/gohighlevel-keep-crm-replace-website" className={sourceLinkClass}>
                             guide to keeping HighLevel and replacing the website
@@ -510,12 +508,12 @@ export default function HighLevelSpeedGuide() {
                     <BlogHeader id="migration-and-acceptance-controls">Migration and acceptance controls</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            A hybrid build fails at the integration boundary rather than at the page, so acceptance has to test the funnel and not the render. Five controls cover that. Contact fields, duplicate handling, workflows, calendars and error behavior all need naming in the scope, because those are what the business actually runs on.
+                            A hybrid build fails at the integration boundary, not at the page, so acceptance has to test the funnel and not the render. Five controls cover that. Contact fields, duplicate handling, workflows, calendars and error behavior all need naming in the scope, because the business runs on those.
                         </BlogText>
                     </div>
                     <BlogList
                         items={[
-                            "Carry across every URL you agreed to keep, with its metadata, canonical, content, internal links, media and structured data.",
+                            "Carry over every URL you agreed to keep, with its metadata, canonical, content, internal links, media and structured data.",
                             "Create and test page-level redirects for every approved URL change.",
                             "Test it properly: contact fields, how duplicates are handled, the workflows, calendars, consent, analytics, what happens on an error, whether it retries, and who gets notified.",
                             "Test the agreed pages on phone and desktop, and keep the reports so you can compare them later.",
@@ -546,8 +544,8 @@ export default function HighLevelSpeedGuide() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get your GoHighLevel migration plan</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will benchmark representative routes, identify controllable work, test native fixes and
-                            scope a hybrid frontend only when the evidence supports it.
+                            We&apos;ll benchmark representative routes, find the work you can control, test the native
+                            fixes, and scope a hybrid frontend only when the evidence supports it.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white hover:bg-cognac/90">
                             Book a 15-min call <ArrowRight className="h-4 w-4" />

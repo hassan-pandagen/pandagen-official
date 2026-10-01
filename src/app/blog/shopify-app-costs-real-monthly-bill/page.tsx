@@ -169,13 +169,13 @@ export default function ShopifyAppCostsPage() {
                             Shopify App Costs in 2026: <span className="italic text-cognac">Audit the Real Bill</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Published entry prices for the apps Shopify stores most often run sit between $0 and about
+                            Published entry prices for the apps Shopify stores most often run go from $0 to about
                             $100 a month each: Gorgias Starter $10, Judge.me Awesome $15, Smile Essential $15, PageFly
                             Builder $24, Vitals All-in-One $29.99, Loox Convert $49.99, and Recharge Starter $99 plus
                             1.49% and 19&cent; per transaction. Every figure comes from the vendor&apos;s own Shopify App
                             Store listing or pricing page, checked August 2, 2026, and each is linked in the table below.
-                            Your actual bill is not the sum of those numbers. It is Shopify-billed subscriptions, usage
-                            charges, externally billed services and the operational dependencies each app creates.
+                            Your actual bill isn&apos;t the sum of those numbers. It&apos;s Shopify-billed subscriptions,
+                            usage charges, externally billed services and the operational dependencies each app creates.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
                             Reviewed August 2, 2026 against current Shopify documentation.
@@ -208,15 +208,15 @@ export default function ShopifyAppCostsPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">How to work out your real monthly app bill</h2>
                         <p className="mb-4 leading-relaxed text-stone-700">
                             Your real app bill is four separate charge streams plus whatever vendors bill you outside
-                            Shopify, so the sum of the list prices on the App Store is not it. Recurring charges,
-                            usage-based charges, per-transaction percentages and one-off charges each behave
-                            differently as the store grows, and the externally billed ones do not appear on your
-                            Shopify invoice at all. Build the register from actual bills before you touch anything. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
+                            Shopify, so adding up the App Store list prices won&apos;t give you the number. Recurring
+                            charges, usage-based charges, per-transaction percentages and one-off charges each behave
+                            differently as the store grows, and the externally billed ones don&apos;t appear on your
+                            Shopify invoice at all. Build the register from real bills before you touch anything. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
                         </p>
                         <BlogList
                             items={[
                                 "Export actual Shopify bills and vendor invoices before comparing public list prices.",
-                                "Separate the charges out: what recurs, what is usage-based, what is per transaction, what is one-off, plus tax and currency conversion.",
+                                "Separate the charges out: what recurs, what's usage-based, what's per transaction, what's one-off, plus tax and currency conversion.",
                                 "Map the workflows, data and theme code attached to each app before uninstalling it.",
                                 "Measure app value and performance impact by route, device and reporting period.",
                                 "Replace or rebuild only when the accepted requirements and total cost support the decision.",
@@ -226,14 +226,14 @@ export default function ShopifyAppCostsPage() {
 
                     <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">Three questions to ask of every app on the list</h2>
                     <p className="mb-2 leading-relaxed text-stone-700">
-                        Price alone does not decide whether an app stays. A $15 app loading a script on every route can
-                        cost more than a $99 one that loads on two, and an app that owns data you cannot export costs
-                        the most of all when you try to leave. Ask all three questions of each app before you rank them
+                        Price alone doesn&apos;t decide whether an app stays. A $15 app loading a script on every route
+                        can cost more than a $99 one that loads on two, and an app that holds data you can&apos;t
+                        export costs the most of all when you try to leave. Ask all three questions of each app before you rank them
                         by invoice line.
                     </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-3">
                         {[
-                            { icon: CircleDollarSign, title: "Money", body: "What you paid, what it is billed on, and what renews." },
+                            { icon: CircleDollarSign, title: "Money", body: "What you paid, what it's billed on, and what renews." },
                             { icon: Gauge, title: "Experience", body: "Field Core Web Vitals, script work, route coverage and feature use." },
                             { icon: ShieldCheck, title: "Dependency", body: "What breaks if you remove it, and whether you get your data back." },
                         ].map(({ icon: Icon, title: cardTitle, body }) => (
@@ -249,7 +249,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         Start with twelve months of Shopify bills, card statements and vendor invoices. Record the app,
                         account owner, billing channel, currency, tax, interval, base fee, metered unit, overage and
-                        renewal date. A public App Store price is not evidence of what your store paid. The same register
+                        renewal date. A public App Store price isn&apos;t evidence of what your store paid. The same register
                         method works across the rest of the stack, and{" "}
                         <Link href="/blog/saas-software-pricing-audit-2026" className={sourceLinkClass}>our software pricing audit walkthrough</Link>{" "}
                         sets out the columns in more detail.
@@ -264,7 +264,7 @@ export default function ShopifyAppCostsPage() {
                         ]}
                     />
 
-                    <BlogHeader id="charge-types">2. Know which of the four charge types you are looking at</BlogHeader>
+                    <BlogHeader id="charge-types">2. Know which of the four charge types you&apos;re looking at</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             Shopify groups app charges on your bill into four types: subscription charges for recurring
@@ -276,20 +276,20 @@ export default function ShopifyAppCostsPage() {
                         </BlogText>
                     </div>
                     <BlogText>
-                        One line confuses more merchants than the rest of the invoice combined, and it is not an app at
-                        all. Your Shopify bill carries the <strong>platform subscription for the store itself</strong>
-                        {" "}alongside the four app charge types above. If a charge appears that you cannot match to
+                        One line confuses more merchants than the rest of the invoice combined, and it isn&apos;t an app
+                        at all. Your Shopify bill carries the <strong>platform subscription for the store itself</strong>
+                        {" "}alongside the four app charge types above. If a charge appears that you can&apos;t match to
                         anything in the register, check the plan line before hunting for a rogue app subscription. That
                         amount also moves when you switch between monthly and annual billing, or when a trial or an
-                        introductory discount ends, which is usually what has happened when a familiar bill changes size
+                        introductory discount ends, which is usually what&apos;s happened when a familiar bill changes size
                         without anyone installing anything. Match every line to either the platform plan or a named app
                         before drawing conclusions, because an audit that files the plan fee under app spend will go
                         looking for savings that were never there.
                     </BlogText>
                     <BlogText>
                         Usage meters are limited to five active meters per plan and six pricing tiers per meter, they
-                        bill monthly, and Shopify notes that usage caps are not currently supported. That last point is
-                        why a usage-metered app can produce a bill nobody budgeted for: there is no ceiling to set.
+                        bill monthly, and Shopify notes that usage caps are not currently supported, which is why a
+                        usage-metered app can produce a bill nobody budgeted for: there&apos;s no ceiling to set.
                         Checked August 2, 2026 against{" "}
                         <a href="https://help.shopify.com/en/manual/your-account/manage-billing/your-invoice/apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s guide to app charges on your bills</a>{" "}
                         and{" "}
@@ -298,17 +298,17 @@ export default function ShopifyAppCostsPage() {
 
                     <BlogHeader>3. Find charges outside Shopify</BlogHeader>
                     <BlogText>
-                        Shopify states that some third-party apps bill outside Shopify and those charges do not appear on
-                        the Shopify bill. Check card and bank records, team email, password management and procurement
-                        systems. Confirm the exact workspace and subscription before anyone cancels it. Once you have the
+                        Shopify states that some third-party apps bill outside Shopify and those charges don&apos;t
+                        appear on the Shopify bill. Check card and bank records, team email, password management and
+                        procurement systems. Confirm which workspace and subscription it is before anyone cancels it. Once you have the
                         full list,{" "}
                         <Link href="/blog/how-to-cut-saas-bill-2026" className={sourceLinkClass}>our method for cutting a software bill</Link>{" "}
-                        covers what to do with it.
+                        is the next step.
                     </BlogText>
-                    <InsightBox variant="info" label="What uninstalling does and does not cancel">
+                    <InsightBox variant="info" label="What uninstalling does and doesn't cancel">
                         Shopify&apos;s own documentation states: &ldquo;Uninstalling a paid app cancels future recurring
                         charges, but you might still be billed for the current billing cycle.&rdquo; On externally billed
-                        apps it is explicit: &ldquo;Uninstalling the app from your Shopify admin doesn&apos;t cancel
+                        apps it&apos;s explicit: &ldquo;Uninstalling the app from your Shopify admin doesn&apos;t cancel
                         external charges.&rdquo; Cancel those in the vendor&apos;s own account, confirm the cancellation
                         in writing, and if you want the current cycle refunded, Shopify says to contact the app developer
                         before uninstalling. Read from <a href="https://help.shopify.com/en/manual/apps/uninstalling-apps" target="_blank" rel="nofollow noopener noreferrer" className={sourceLinkClass}>Shopify&apos;s uninstalling-apps documentation</a> on August 2, 2026.
@@ -316,10 +316,10 @@ export default function ShopifyAppCostsPage() {
 
                     <BlogHeader id="published-prices">What the common apps publish, checked August 2, 2026</BlogHeader>
                     <BlogText>
-                        An expensive app bill is rarely one expensive app. It is a stack that grew one decision at a time.
-                        Below is the published entry price for a common set of them, taken from
+                        An expensive app bill is rarely one expensive app. It&apos;s a stack that grew one decision at a
+                        time. Below is the published entry price for a common set of them, taken from
                         each vendor&apos;s own Shopify App Store listing or pricing page on August 2, 2026. Prices move, so
-                        recheck before you budget, and record what your store actually paid rather than the list price.
+                        recheck before you budget, and record what your store paid, not the list price.
                         We log vendor price movements in our{" "}
                         <Link href="/blog/saas-price-increases-2026-tracker" className={sourceLinkClass}>running log of software price changes</Link>.
                     </BlogText>
@@ -348,18 +348,18 @@ export default function ShopifyAppCostsPage() {
                         </table>
                     </div>
                     <BlogText>
-                        Two patterns matter more than any single figure. Volume-metered pricing means the bill tracks
-                        your list size, order count or message volume rather than staying flat, so a tier that fits in
-                        January can be the wrong tier by November. And a platform fee plus a percentage of subscription
+                        Two patterns count for more than any one figure. Volume-metered pricing means the bill moves
+                        with your list size, order count or message volume instead of staying flat, so a tier that fits
+                        in January can be the wrong tier by November. And a platform fee plus a percentage of subscription
                         revenue is two charges, not one: Recharge Starter publishes $99 a month plus 1.49% and 19&cent;
                         per transaction, Bold Launch publishes $24.99 a month plus 2%. Model the percentage against your
                         own subscription revenue before comparing it with a flat monthly fee.
                     </BlogText>
                     <InsightBox variant="info" label="Two costs, not one">
-                        A page builder or theme extension has a monthly price and, depending on how it is implemented and
+                        A page builder or theme extension has a monthly price and, depending on how it&apos;s built and
                         which routes it loads on, a page-weight cost. The invoice is easy to find; the second cost only
                         shows up when you measure your own storefront before and after. The performance section below
-                        covers how to test that on your store rather than assuming it, and{" "}
+                        covers how to test that on your store instead of assuming it, and{" "}
                         <Link href="/blog/shopify-store-speed-optimization" className={sourceLinkClass}>our Shopify store speed guide</Link>{" "}
                         works through the fixes once you know which app is responsible.
                     </InsightBox>
@@ -385,27 +385,27 @@ export default function ShopifyAppCostsPage() {
                         processor. Only the second one is a lever you control by switching, and on Basic it is worth 2% of
                         every order.
                     </BlogText>
-                    <InsightBox variant="warning" label="Do not trust a card rate you read in an article, including this one">
+                    <InsightBox variant="warning" label="Don't trust a card rate you read in an article, including this one">
                         Shopify quotes card processing rates per country, and shopify.com/pricing geo-redirects. Checked on
                         August 2, 2026 from outside the US, the request landed on a regional pricing page where the card-rate
-                        rows are <strong>absent entirely</strong>, because Shopify Payments is not offered in that market.
-                        A US rate copied into a blog post can therefore describe a product you cannot buy. Open your own
+                        rows are <strong>absent entirely</strong>, because Shopify Payments isn&apos;t offered in that
+                        market. A US rate copied into a blog post can describe a product you can&apos;t buy. Open your own
                         country&apos;s Shopify pricing page, or the Payments section of your admin, and read the rate that
                         applies to your store and plan.
                     </InsightBox>
                     <BlogText>
-                        For the audit above, this matters twice. A gateway you kept for one legacy reason may be costing a
-                        percentage of revenue that dwarfs every app on your invoice, and it will never appear in the app
-                        charges you have been reconciling. Put the payment line in the same register as the apps.
+                        This belongs in the audit above. A gateway you kept for one legacy reason may be costing you a
+                        percentage of revenue that dwarfs every app on your invoice, and it&apos;ll never show up in the
+                        app charges you&apos;ve been reconciling. Put the payment line in the same register as the apps.
                     </BlogText>
 
                     <BlogQuote>
-                        A lower price is not automatically equivalent. Compare what each app actually does, not what it costs.
+                        A cheaper app may not do the same job. Compare what each one does, not what it costs.
                     </BlogQuote>
 
                     <BlogHeader>4. Measure value before comparing prices</BlogHeader>
                     <BlogText>
-                        A lower-priced product is not automatically equivalent. Document the requirement each app
+                        A cheaper product may not cover the same ground. Document the requirement each app
                         satisfies, the people and routes that use it, the data it owns, its integrations and the failure
                         mode if it disappears. Then compare candidates against the same acceptance criteria.
                     </BlogText>
@@ -433,28 +433,28 @@ export default function ShopifyAppCostsPage() {
                         give real-user LCP, INP and CLS by time, URL and page type. Both read August 2, 2026. Pair that
                         field view with repeatable lab tests and a script inventory. If those metric names are unfamiliar,{" "}
                         <Link href="/blog/core-web-vitals-explained" className={sourceLinkClass}>Core Web Vitals explained</Link>{" "}
-                        covers what each one measures, and{" "}
+                        defines each one, and{" "}
                         <Link href="/blog/shopify-dawn-theme-slow" className={sourceLinkClass}>our analysis of a slow Dawn theme</Link>{" "}
                         shows how theme code and apps compound. For the revenue side of the same question, see{" "}
                         <Link href="/blog/shopify-conversion-rate-speed-fix" className={sourceLinkClass}>how to measure speed inside the conversion funnel</Link>{" "}
                         and{" "}
                         <Link href="/blog/shopify-slow-losing-sales" className={sourceLinkClass}>how to build a revenue-side evidence model</Link>;
-                        on Plus, <Link href="/blog/shopify-plus-still-slow" className={sourceLinkClass}>the plan tier does not change the app arithmetic</Link>.
+                        on Plus, <Link href="/blog/shopify-plus-still-slow" className={sourceLinkClass}>the plan tier doesn&apos;t change the app arithmetic</Link>.
                     </BlogText>
                     <BlogList
                         items={[
                             "Record the affected route, device mix, consent state, geography and test date.",
-                            "Compare a controlled preview or release window rather than unrelated before-and-after screenshots.",
+                            "Compare a controlled preview or release window, not unrelated before-and-after screenshots.",
                             "Check whether the app loads globally when the feature appears on only a few routes.",
                             "Verify that deferred loading preserves accessibility, analytics and purchase behavior.",
-                            "Do not convert a speed association into a guaranteed revenue or conversion claim.",
+                            "Don't turn a speed association into a guaranteed revenue or conversion claim.",
                         ]}
                     />
 
                     <BlogHeader>6. Remove an app safely</BlogHeader>
                     <BlogText>
                         Uninstalling in the Shopify admin is the last step of a removal, not the first, and on its own
-                        it does not cancel a charge the vendor bills you directly. Export the data first, find the
+                        it doesn&apos;t cancel a charge the vendor bills you directly. Export the data first, find the
                         theme code and embeds the app left behind, cancel any external billing in the vendor&apos;s own
                         account, and only then uninstall. Six steps in that order.
                     </BlogText>
@@ -472,18 +472,18 @@ export default function ShopifyAppCostsPage() {
                     <BlogHeader>7. Decide whether custom code belongs in the comparison</BlogHeader>
                     <BlogText>
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Custom code</Link> can remove a vendor dependency when the requirement is stable and the business is
-                        prepared to own it. It does not make the function free. Include design, engineering, migration,
+                        prepared to own it. It doesn&apos;t make the function free. Include design, engineering, migration,
                         hosting, monitoring, security, maintenance, provider changes, support and recovery in the total.
                         Our{" "}
                         <Link href="/services/ecommerce" className={sourceLinkClass}>ecommerce development service</Link>{" "}
                         sets out how we scope that work,{" "}
                         <Link href="/blog/shopify-vs-custom-website" className={sourceLinkClass}>Shopify versus a custom build</Link>{" "}
                         compares the two operating models, and{" "}
-                        <Link href="/blog/what-is-headless-commerce" className={sourceLinkClass}>what headless commerce actually means</Link>{" "}
+                        <Link href="/blog/what-is-headless-commerce" className={sourceLinkClass}>what headless commerce means</Link>{" "}
                         covers the middle option of keeping Shopify as a backend.
                     </BlogText>
                     <InsightBox variant="info" label="First-party context">
-                        Panda Patches is owned by a PandaCodeGen co-founder and informs our operational experience. We are not
+                        Panda Patches is owned by a PandaCodeGen co-founder and informs our operational experience. We&apos;re not
                         publishing unreconciled revenue, app-cost or performance figures as proof that another merchant
                         will achieve the same result. A client comparison must use that client&apos;s invoices and data.
                         The store itself is written up in our{" "}
@@ -494,14 +494,14 @@ export default function ShopifyAppCostsPage() {
 
                     <BlogHeader>8. Produce an auditable decision</BlogHeader>
                     <BlogText>
-                        Every app ends the audit with one of six recorded verdicts, and each verdict has a condition that justifies it. Retain, right-size, consolidate, replace, rebuild, or investigate. That last one matters: no decision is a legitimate outcome when the owner, the contract, the usage or a dependency is still unresolved, and recording it stops the same app being re-argued next quarter.
+                        Every app ends the audit with one of six recorded verdicts, and each verdict has a condition that justifies it. Retain, right-size, consolidate, replace, rebuild, or investigate. Don&apos;t skip the last one: no decision is a legitimate outcome when the owner, the contract, the usage or a dependency is still unresolved, and recording it stops the same app being re-argued next quarter.
                     </BlogText>
                     <BlogList
                         items={[
                             "Retain when the capability is used, required and acceptably priced.",
                             "Right-size when measured use fits a lower tier without unacceptable peak or entitlement risk.",
                             "Consolidate when one tested product covers the accepted workflows and migration cost is justified.",
-                            "Replace when a tested alternative offers better total value, not merely a lower sticker price.",
+                            "Replace when a tested alternative offers better total value, not just a lower sticker price.",
                             "Rebuild when ownership and flexibility justify the full lifecycle cost.",
                             "Investigate when the owner, contract, usage, data or dependency is unresolved.",
                         ]}
@@ -518,8 +518,8 @@ export default function ShopifyAppCostsPage() {
                         <FileSearch className="mb-4 h-7 w-7 text-amber-300" />
                         <h2 className="mb-3 text-3xl font-bold">Tell us what you have</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will map the current stack, required workflows, migration risks and test conditions before
-                            recommending theme optimization, app consolidation or a headless build.
+                            We&apos;ll map your current stack, required workflows, migration risks and test conditions
+                            before we recommend theme optimization, app consolidation or a headless build.
                         </p>
                         <QuoteModalButton cta="shopify_app_costs_migration_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
                             Ask us about your site <ArrowRight className="h-4 w-4" />
@@ -528,8 +528,8 @@ export default function ShopifyAppCostsPage() {
 
                     <InsightBox variant="warning" label="Stocky access ended on 31 August 2026">
                         That date has passed. If your operation depended on Stocky for purchase orders, transfers or
-                        demand forecasting, it is already unavailable and its APIs stopped on the same date, so anything
-                        that called them is failing now rather than later. It was delisted from the App Store in
+                        demand forecasting, it&apos;s already unavailable and its APIs stopped on the same date, so
+                        anything that called them is failing now. It was delisted from the App Store in
                         February 2026. Shopify has said it provides read-only access for a limited time without
                         publishing an end date, so exporting purchase orders, stock counts and supplier records is the
                         one step still worth doing today. This was never a cost decision.
@@ -537,7 +537,7 @@ export default function ShopifyAppCostsPage() {
                     <BlogText>
                         The{" "}
                         <Link href="/blog/shopify-stocky-sunset-date-2026" className="text-cognac hover:underline font-medium">Stocky sunset guide</Link>{" "}
-                        covers what to export while read-only access lasts.
+                        lists what to export while read-only access lasts.
                     </BlogText>
 
                     <BlogHeader>Primary sources</BlogHeader>

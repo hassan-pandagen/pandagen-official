@@ -217,8 +217,8 @@ export default function DiviThemeSlowPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The answer in one minute</h2>
                         <BlogList
                             items={[
-                                "Divi's side contributor worth checking first is styling and scripts sent to pages that do not need them, which its Performance options exist to control. Check their state before anything else.",
-                                <>{"Do not diagnose Divi from one "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" score or a generic theme benchmark."}</>,
+                                "Divi's side contributor worth checking first is styling and scripts sent to pages that don't need them, which its Performance options exist to control. Check their state before anything else.",
+                                <>{"Don't diagnose Divi from one "}<Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link>{" score or a generic theme benchmark."}</>,
                                 "Check field Core Web Vitals where available, then repeat controlled lab tests on representative templates.",
                                 "Keep theme and compatibility-mode work separate from the hosting, plugins, media, fonts, tags, database, caching and the application itself.",
                                 "Divi 5 officially left beta on February 26, 2026, but legacy or unsupported modules can still load backward compatibility mode.",
@@ -235,7 +235,7 @@ export default function DiviThemeSlowPage() {
                         media, fonts, analytics, consent controls, chat, advertising tags, embeds, and cache behavior.
                         Any combination can affect loading, responsiveness, and visual stability. Our{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={sourceLinkClass}>WordPress plugin audit guide</Link>{" "}
-                        covers how to attribute that work to a named component.
+                        explains how to trace that work to a named component.
                     </BlogText>
                     <BlogText>
                         Divi&apos;s own contribution has a specific shape. Design choices are stored and turned into
@@ -243,8 +243,8 @@ export default function DiviThemeSlowPage() {
                         styling to pages where those modules never appear. Elegant Themes documents the controls for
                         exactly this: its Dynamic Module Framework is described as loading &ldquo;only the modules that
                         are used on the page,&rdquo; and Dynamic CSS as generating &ldquo;only the assets necessary for
-                        the features and modules you use.&rdquo; Both are settings, which means their state on your
-                        install is a fact to check rather than assume. Animations, layered shadows and deeply nested
+                        the features and modules you use.&rdquo; Both are settings, so check their state on your
+                        install; don&apos;t assume it. Animations, layered shadows and deeply nested
                         rows add rendering and interaction work on top, independently of file size.
                     </BlogText>
 
@@ -281,7 +281,7 @@ export default function DiviThemeSlowPage() {
 
                     <BlogText>
                         This is why claims such as &quot;Divi always scores 64,&quot; &quot;caching adds 15 points,&quot;
-                        or &quot;Divi cannot exceed 80&quot; are not defensible without a named sample and method. A
+                        or &quot;Divi cannot exceed 80&quot; aren&apos;t defensible without a named sample and method. A
                         theme demo, a client route, and a plugin-heavy store are different test subjects.
                     </BlogText>
 
@@ -291,55 +291,56 @@ export default function DiviThemeSlowPage() {
                             Elegant Themes publishes a customer count, not a website count. On{" "}
                             <a href="https://www.elegantthemes.com/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>elegantthemes.com</a>{" "}
                             on August 2, 2026, that counter read 974,872 customers, and the same figure appears on its
-                            membership page. Because a Divi license covers unlimited installs, the customer figure is
-                            not the number of live Divi websites. On its showcase page the company describes the site
+                            membership page. Because a Divi license covers unlimited installs, the customer figure
+                            isn&apos;t the number of live Divi websites. On its showcase page the company describes the site
                             total only in words, saying that &ldquo;hundreds of thousands of Divi users have built
                             millions of Divi websites,&rdquo; without giving a number.
                         </BlogText>
                     </div>
                     <BlogText>
-                        So the specific install counts that circulate for Divi, whether 1.58 million or 4 million, do
-                        not come from Elegant Themes. They come from third-party technology detectors that scan a
-                        sample of the web and extrapolate, and each one uses a different sample, a different detection
-                        method and a different refresh date. If you need a figure for a proposal or a slide, cite the
-                        detector by name and date rather than presenting it as the vendor&apos;s own. The counter above
-                        is live and increases, so it is only accurate as of the date we checked it.
+                        So the install counts that circulate for Divi, whether 1.58 million or 4 million, don&apos;t
+                        come from Elegant Themes. They come from third-party technology detectors that scan a sample of
+                        the web and extrapolate, and each one uses a different sample, a different detection method and
+                        a different refresh date. If you need a figure for a proposal or a slide, cite the detector by
+                        name and date, and don&apos;t present it as the vendor&apos;s own. The counter above is live
+                        and increases, so it&apos;s only accurate as of the date we checked it.
                     </BlogText>
 
                     <BlogHeader id="what-changed-with-divi-5">What changed with Divi 5</BlogHeader>
                     <BlogText>
                         Is Divi 5 slow? Not by design, and the version number is the wrong variable to argue about.
-                        Elegant Themes describes the Divi 5 framework as loading only the modules a page actually uses.
-                        What produces a slow Divi 5 site is a <em>partial</em> migration: the vendor states that pages
-                        left in backward compatibility mode do not receive all Divi 5 performance improvements. A site
-                        can therefore be &quot;on Divi 5&quot; and still behave like Divi 4 on exactly the complicated
-                        pages that were already the slowest ones.
+                        Elegant Themes describes the Divi 5 framework as loading only the modules a page uses. What
+                        produces a slow Divi 5 site is a <em>partial</em> migration: the vendor states that pages left
+                        in backward compatibility mode don&apos;t receive all Divi 5 performance improvements. So a
+                        site can be &quot;on Divi 5&quot; and still behave like Divi 4 on exactly the complicated pages
+                        that were already the slowest ones.
                     </BlogText>
                     <BlogText>
-                        There is also a practical trap in most Divi speed advice published elsewhere, including Google&apos;s
+                        There&apos;s also a trap in most Divi speed advice published elsewhere, including Google&apos;s
                         own AI summary for this question: it tells you to enable{" "}
                         <strong>Static CSS File Generation</strong>. That setting belongs to <strong>Divi 4</strong>,
                         under Theme Options &gt; Builder &gt; Advanced. Elegant Themes&apos; Divi 5 Theme Options
                         documentation puts the performance controls at <strong>Divi &gt; Theme Options &gt; General &gt;
                         Performance</strong> and describes them as dynamic CSS, dynamic icons, critical CSS and deferring
-                        scripts. It does not mention Static CSS File Generation. If you are on Divi 5 and cannot find the
-                        toggle every guide tells you to switch on, that is the reason, and nothing is broken.
+                        scripts. It doesn&apos;t mention Static CSS File Generation. If you&apos;re on Divi 5 and
+                        can&apos;t find the toggle every guide tells you to switch on, that&apos;s why, and nothing is
+                        broken.
                     </BlogText>
                     <BlogText>
                         Elegant Themes officially ended the Divi 5 beta on February 26, 2026. As of this article&apos;s
                         August 2 review, its official update log lists Divi 5.9.0 released July 9, 2026. Divi 5 uses a
                         newer framework and has continued to receive features, improvements, and bug fixes. Elegant
                         Themes also stated at release that it would continue supporting Divi 4 for at least twelve
-                        months, so an upgrade is a decision to schedule rather than an emergency.
+                        months, so an upgrade is something to schedule, not an emergency.
                     </BlogText>
                     <BlogText>
                         Existing sites still need a careful upgrade. Elegant Themes instructs owners to back up the
                         site, test on staging, run the migrator, and inspect the result. Pages containing a legacy Divi
                         4 module or an unsupported third-party module can run in backward compatibility mode. The vendor
-                        states that those pages do not receive all Divi 5 performance improvements.
+                        states that those pages don&apos;t receive all Divi 5 performance improvements.
                     </BlogText>
                     <BlogText>
-                        The practical question is therefore not simply &quot;Are we on Divi 5?&quot; Record which pages
+                        So the question isn&apos;t just &quot;Are we on Divi 5?&quot; Record which pages
                         migrated, which modules remain in compatibility mode, which custom CSS changed, and which
                         third-party products support the new architecture. Test business-critical page states before
                         production.
@@ -353,7 +354,7 @@ export default function DiviThemeSlowPage() {
                     <BlogText>
                         Start with the routes that represent both traffic and architecture: homepage, main landing
                         template, service or product template, article template, contact or lead form, and any
-                        transaction-critical flow. A homepage-only test can miss the template that actually needs work.
+                        transaction-critical flow. A homepage-only test can miss the template that needs the work.
                     </BlogText>
                     <BlogList
                         items={[
@@ -368,15 +369,16 @@ export default function DiviThemeSlowPage() {
                     <BlogText>
                         Google&apos;s current good field thresholds are LCP within 2.5 seconds, INP under 200
                         milliseconds, and CLS under 0.1 at the 75th percentile. These are experience targets.
-                        Passing them does not guarantee a ranking position, and failing them does not reveal a fixed
-                        revenue loss. Each metric is defined in our{" "}
+                        Passing them doesn&apos;t guarantee a ranking position, and failing them doesn&apos;t reveal a
+                        fixed revenue loss. Each metric is defined in our{" "}
                         <Link href="/blog/core-web-vitals-explained" className={sourceLinkClass}>Core Web Vitals explainer</Link>.
                     </BlogText>
 
                     <BlogHeader id="a-divi-optimization-order-that">A Divi optimization order that produces evidence</BlogHeader>
                     <BlogText>
-                        Change one meaningful group at a time and re-test. If ten plugins and a CDN are added at once,
-                        the team cannot tell which change helped, which did nothing, or which created a new defect.
+                        Change one group of related things at a time and re-test. If ten plugins and a CDN are added at
+                        once, the team can&apos;t tell which change helped, which did nothing, or which created a new
+                        defect.
                     </BlogText>
                     <BlogList
                         items={[
@@ -391,10 +393,10 @@ export default function DiviThemeSlowPage() {
                         ]}
                     />
                     <BlogText>
-                        A cache or CDN can reduce repeated delivery work, but it does not fix every cause. It cannot make
-                        a required third-party script smaller, correct a slow interaction handler, reserve missing
-                        layout space, or remove a legacy module. Conversely, a migration is excessive when an oversized
-                        hero image or one unnecessary tag is the measured problem. The same order applied to WordPress
+                        A cache or CDN can reduce repeated delivery work, but it doesn&apos;t fix every cause. It
+                        can&apos;t make a required third-party script smaller, correct a slow interaction handler,
+                        reserve missing layout space, or remove a legacy module. And a migration is overkill when an
+                        oversized hero image or one unnecessary tag is the measured problem. The same order applied to WordPress
                         more broadly is set out in our{" "}
                         <Link href="/blog/how-to-fix-slow-wordpress" className={sourceLinkClass}>evidence-led methods for fixing a slow WordPress site</Link>.
                     </BlogText>
@@ -402,29 +404,29 @@ export default function DiviThemeSlowPage() {
                     <BlogHeader id="divi-agentic-browsing">Divi and the new agent-readability check</BlogHeader>
                     <BlogText>
                         Google added an <Link href="/blog/agentic-browsing-pagespeed-score" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Agentic Browsing</Link> category to PageSpeed Insights, and builder-heavy sites do
-                        badly in it for a reason that is not speed. One of its three checks asks whether the
+                        badly in it for a reason that isn&apos;t speed. One of its three checks asks whether the
                         accessibility tree is well formed: whether your buttons are buttons, your headings run in
                         order, and your controls carry names a machine can read. Divi composes pages from nested
-                        module wrappers, and a Divi button is frequently a div with a click handler rather than a
-                        button element. A screen reader struggles with that, and so does an assistant, because they
+                        module wrappers, and a Divi button is often a div with a click handler instead of a button
+                        element. A screen reader struggles with that, and so does an assistant, because they
                         read the page through the same structure.
                     </BlogText>
                     <BlogText>
                         Two Divi sites we measured on 29 August 2026 scored 0 of 3 and 0 of 2. Both failed the
                         accessibility-tree check and both failed on layout shift, one of them at 0.906 against a
-                        threshold of 0.1. That is the same instability this article is about, showing up in a second
-                        report under a different name. Run your own at pagespeed.web.dev and look at the Agentic
-                        Browsing figure next to Performance; if the tree check fails, the fix is semantic markup
-                        rather than another caching plugin.
+                        threshold of 0.1. That&apos;s the same instability this article is about, showing up in a
+                        second report under a different name. Run your own at pagespeed.web.dev and look at the Agentic
+                        Browsing figure next to Performance; if the tree check fails, the fix is semantic markup, not
+                        another caching plugin.
                     </BlogText>
 
-                    <BlogHeader id="what-each-fix-addresses">What each common fix actually addresses</BlogHeader>
+                    <BlogHeader id="what-each-fix-addresses">What each common fix addresses</BlogHeader>
                     <BlogText>
                         The usual advice is a shopping list without a diagnosis, which is how people spend money in the
                         wrong order. Costs below are the published vendor ranges at the time of writing and move around,
-                        so check the current price before buying. We deliberately do not publish a &ldquo;points gained&rdquo;
-                        column: the gain depends entirely on which bottleneck your site actually has, and a fix aimed at
-                        the wrong bottleneck returns close to nothing.
+                        so check the current price before buying. We don&apos;t publish a &ldquo;points gained&rdquo;
+                        column, on purpose: the gain depends on which bottleneck your site has, and a fix aimed at the
+                        wrong one returns close to nothing.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
                         <table className="w-full min-w-[700px] border-collapse text-left text-sm">
@@ -432,15 +434,15 @@ export default function DiviThemeSlowPage() {
                                 <tr>
                                     <th className="p-4">Fix</th>
                                     <th className="p-4">Typical cost</th>
-                                    <th className="p-4">What it actually addresses</th>
+                                    <th className="p-4">What it addresses</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
-                                <tr><td className="p-4 font-bold">Caching plugin (WP Rocket, LiteSpeed)</td><td className="p-4">~$49 to $199/year</td><td className="p-4">Repeated server assembly on cacheable pages. Check how yours is configured for logged-in views, cart and checkout, because caching does not reduce the size of what you ship in the first place.</td></tr>
-                                <tr><td className="p-4 font-bold">CDN (Cloudflare, BunnyCDN)</td><td className="p-4">~$20 to $200/month</td><td className="p-4">Distance between user and server. Helps most for geographically distant traffic; does not by itself reduce script execution, and whether it changes transferred weight depends on which features you enable.</td></tr>
+                                <tr><td className="p-4 font-bold">Caching plugin (WP Rocket, LiteSpeed)</td><td className="p-4">~$49 to $199/year</td><td className="p-4">Repeated server assembly on cacheable pages. Check how yours is configured for logged-in views, cart and checkout, because caching doesn&apos;t reduce the size of what you ship in the first place.</td></tr>
+                                <tr><td className="p-4 font-bold">CDN (Cloudflare, BunnyCDN)</td><td className="p-4">~$20 to $200/month</td><td className="p-4">Distance between user and server. Helps most for geographically distant traffic; doesn&apos;t reduce script execution on its own, and whether it changes transferred weight depends on which features you enable.</td></tr>
                                 <tr><td className="p-4 font-bold">Image optimization plugin</td><td className="p-4">~$50 to $150/year</td><td className="p-4">Oversized media and missing modern formats. Worth checking early because the measurement is unambiguous: compare the transferred bytes of the LCP image with its rendered size.</td></tr>
                                 <tr><td className="p-4 font-bold">Faster hosting plan</td><td className="p-4">~$50 to $300/month</td><td className="p-4">Server response time and database query speed. Only helps if your measurement shows a slow TTFB.</td></tr>
-                                <tr><td className="p-4 font-bold">Developer optimization work</td><td className="p-4">~$500 to $2,000</td><td className="p-4">Module bloat, nesting depth, render-blocking assets and third-party sequencing: the causes a plugin cannot reach.</td></tr>
+                                <tr><td className="p-4 font-bold">Developer optimization work</td><td className="p-4">~$500 to $2,000</td><td className="p-4">Module bloat, nesting depth, render-blocking assets and third-party sequencing: the causes a plugin can&apos;t reach.</td></tr>
                                 <tr><td className="p-4 font-bold">Frontend rebuild</td><td className="p-4">Quoted per scope</td><td className="p-4">The rendering and delivery model itself. Justified only when the measurement shows the ceiling is architectural, not incidental.</td></tr>
                             </tbody>
                         </table>
@@ -454,9 +456,9 @@ export default function DiviThemeSlowPage() {
                     <BlogHeader id="should-you-keep-divi-rebuild">Should you keep Divi, rebuild in WordPress, or migrate?</BlogHeader>
                     <BlogText>
                         Keep Divi when the measurement points at removable causes and your editors are productive in
-                        it. Upgrade to Divi 5 when you are still on Divi 4 and the compatibility scan comes back clean
-                        enough to schedule. Rebuild inside WordPress when the builder or template is the constraint but
-                        the plugins and workflows around it still earn their place. Migrate only when a required
+                        it. Upgrade to Divi 5 when you&apos;re still on Divi 4 and the compatibility scan comes back
+                        clean enough to schedule. Rebuild inside WordPress when the builder or template is the
+                        constraint but the plugins and workflows around it still pull their weight. Migrate only when a required
                         outcome stays blocked after that work and the cost of continuing to work around it is no
                         longer sensible. The table below is the evidence to demand for each.
                     </BlogText>
@@ -497,10 +499,11 @@ export default function DiviThemeSlowPage() {
                     </div>
 
                     <BlogText>
-                        A custom Next.js build is not automatically faster, safer, or cheaper. It offers a different
-                        control surface and dependency model. The implementation, data, third parties, hosting, and
-                        operating process still determine the outcome. Compare the two operating models in{" "}
-                        <Link href="/blog/wordpress-vs-nextjs" className={sourceLinkClass}>WordPress and Next.js side by side</Link>, and
+                        A custom Next.js build isn&apos;t faster, safer, or cheaper just because it&apos;s custom. You
+                        get a different control surface and dependency model. The implementation, data, third
+                        parties, hosting, and operating process still determine the outcome. Compare the two operating
+                        models in{" "}
+                        <Link href="/blog/wordpress-vs-nextjs" className={sourceLinkClass}>WordPress and Next.js compared</Link>, and
                         the ownership side in our{" "}
                         <Link href="/blog/wordpress-vs-custom-code-real-cost-3-years" className={sourceLinkClass}>three-year cost model for WordPress and custom code</Link>.
                     </BlogText>
@@ -526,7 +529,7 @@ export default function DiviThemeSlowPage() {
                     <BlogHeader id="seo-controls-for-a-divi">SEO controls for a Divi migration</BlogHeader>
                     <BlogText>
                         Moving away from Divi can reduce avoidable search risk when the migration keeps useful content
-                        and signals intact. It cannot guarantee stable rankings or a recovery date because Google
+                        and signals intact. It can&apos;t guarantee stable rankings or a recovery date, because Google
                         controls crawling, indexing, and ranking. We look at that question directly in{" "}
                         <Link href="/blog/will-migrating-hurt-my-seo" className={sourceLinkClass}>will migrating my website hurt my SEO</Link>.
                     </BlogText>
@@ -571,9 +574,9 @@ export default function DiviThemeSlowPage() {
                         <CheckCircle2 className="mb-5 h-8 w-8 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get your Divi migration plan</h2>
                         <p className="mb-6 leading-relaxed text-stone-300">
-                            We will test representative routes, inventory modules and integrations, preserve
+                            We&apos;ll test representative routes, inventory modules and integrations, preserve
                             search-sensitive URLs, and compare in-place optimization with a lighter rebuild. You get
-                            the evidence and scope before choosing a platform.
+                            the evidence and the scope before you choose a platform.
                         </p>
                         <CalModalButton className="inline-flex items-center gap-2 rounded-full bg-cognac px-6 py-3 font-semibold text-white transition-colors hover:bg-cognac/90">
                             Book a 15-min call <ArrowRight className="h-4 w-4" />

@@ -176,7 +176,7 @@ export default function ShopifySpeedOptimizationPage() {
                 <div className="container mx-auto px-6 mt-8 md:mt-12">
                     <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-stone-200 p-6 md:p-10">
                         <p className="text-stone-700 leading-relaxed mb-6 text-lg" data-speakable="true">
-                            Speeding up a Shopify store starts with measuring it, not with installing a booster app and not with someone promising you a perfect score. Your homepage, a collection page, a product page, the cart and a blog post will all score differently, because each one loads a different set of theme sections, images, app scripts, analytics and things customers can click. This guide shows how to find the real bottleneck, improve the current theme where that is sensible, and decide whether a theme refresh or <Link href="/services/ecommerce" className={sourceLink}>headless storefront</Link> is justified by business requirements. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
+                            Speeding up a Shopify store starts with measuring it, not with installing a booster app and not with someone promising you a perfect score. Your homepage, a collection page, a product page, the cart and a blog post will all score differently, because each one loads a different set of theme sections, images, app scripts, analytics and things customers can click. You&apos;ll find the real bottleneck, improve the current theme where that&apos;s sensible, and decide whether a theme refresh or <Link href="/services/ecommerce" className={sourceLink}>headless storefront</Link> is justified by business requirements. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                         </p>
 
                         <div className="mb-12 rounded-2xl border border-stone-200 bg-stone-50 p-5 md:p-7">
@@ -196,19 +196,19 @@ export default function ShopifySpeedOptimizationPage() {
                         </div>
 
                         <div className="space-y-8">
-                            <BlogHeader>Why Shopify Speed Optimization Matters</BlogHeader>
+                            <BlogHeader>What Speed Changes on a Shopify Store</BlogHeader>
 
                             <BlogText>
                                 Performance affects how quickly shoppers can see a product, choose a variant, open a cart, and complete a task. Shopify says that themes, installed apps, and manually added third-party code are the major controllable factors in online store performance. Its guidance also connects a better customer experience with discoverability and conversion, while avoiding a universal promise about how much either metric will change. Read Shopify&apos;s current <a href="https://help.shopify.com/en/manual/online-store/web-performance/improving-web-performance" target="_blank" rel="noopener noreferrer" className={sourceLink}>online store performance guidance</a> before acting on generic scanner advice.
                             </BlogText>
 
                             <BlogText>
-                                Core Web Vitals are used by Google&apos;s ranking systems, but they are not a standalone ranking formula. <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLink}>Google explicitly says</a> that a good report does not guarantee top rankings and that relevance can still outweigh a weaker page experience. Treat speed as one part of a useful, secure, mobile-friendly shopping experience, not as a shortcut that replaces product content, internal linking, technical SEO, or demand. We unpack that relationship in <Link href="/blog/how-website-speed-affects-seo" className={sourceLink}>how site speed interacts with search</Link>, and the metrics themselves in our <Link href="/blog/core-web-vitals-explained" className={sourceLink}>Core Web Vitals reference</Link>.
+                                Core Web Vitals are used by Google&apos;s ranking systems, but they aren&apos;t a standalone ranking formula. <a href="https://developers.google.com/search/docs/appearance/page-experience" target="_blank" rel="noopener noreferrer" className={sourceLink}>Google says plainly</a> that a good report doesn&apos;t guarantee top rankings and that relevance can still outweigh a weaker page experience. Treat speed as one part of a useful, secure, mobile-friendly shopping experience, not as a shortcut that replaces product content, internal linking, technical SEO, or demand. We unpack that relationship in <Link href="/blog/how-website-speed-affects-seo" className={sourceLink}>how site speed interacts with search</Link>, and the metrics themselves in our <Link href="/blog/core-web-vitals-explained" className={sourceLink}>Core Web Vitals reference</Link>.
                             </BlogText>
 
                             <BlogList items={[
                                 "Customer experience: slow visual loading, delayed taps, and layout shifts can interrupt product discovery and cart actions.",
-                                "Search resilience: page experience is one input among many, so speed work protects a page that already deserves to rank rather than rescuing one that does not.",
+                                "Search resilience: page experience is one input among many, so speed work protects a page that already deserves to rank; it won't rescue one that doesn't.",
                                 "Measurement quality: performance work creates a controlled baseline for testing conversion and engagement changes instead of guessing at revenue.",
                                 "Operational stability: an app, tag, or theme release can be connected to a performance change when monitoring is already in place.",
                             ]} />
@@ -216,7 +216,7 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Shopify Speed Score, Core Web Vitals, and PageSpeed Are Different</BlogHeader>
 
                             <BlogText>
-                                There is no single Shopify speed number that explains every visitor&apos;s experience. Shopify&apos;s Web Performance reports use real-user monitoring data and show loading, interactivity, and visual stability over time. PageSpeed Insights can show Chrome User Experience Report field data for the previous 28-day period when a URL or origin has enough eligible traffic. It also runs Lighthouse in a simulated lab environment. Those views answer different questions.
+                                No one Shopify speed number explains every visitor&apos;s experience. Shopify&apos;s Web Performance reports use real-user monitoring data and show loading, interactivity, and visual stability over time. PageSpeed Insights can show Chrome User Experience Report field data for the previous 28-day period when a URL or origin has enough eligible traffic. It also runs Lighthouse in a simulated lab environment. Those views answer different questions.
                             </BlogText>
 
                             <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -238,44 +238,44 @@ export default function ShopifySpeedOptimizationPage() {
                             </div>
 
                             <BlogText>
-                                For field data, a page or origin passes the Core Web Vitals assessment when the 75th percentile is good for all three metrics: Largest Contentful Paint at 2.5 seconds or less, Interaction to Next Paint at 200 milliseconds or less, and Cumulative Layout Shift at 0.1 or less. Lighthouse labels a lab performance score of 90 or higher as good, but Google warns that good lab data does not necessarily mean real users have a good experience. The distinction matters when people search for a good Shopify speed score.
+                                For field data, a page or origin passes the Core Web Vitals assessment when the 75th percentile is good for all three metrics: Largest Contentful Paint at 2.5 seconds or less, Interaction to Next Paint at 200 milliseconds or less, and Cumulative Layout Shift at 0.1 or less. Lighthouse labels a lab performance score of 90 or higher as good, but Google warns that good lab data doesn&apos;t necessarily mean real users have a good experience. Keep the two apart when someone asks what a good Shopify speed score is.
                             </BlogText>
 
                             <BlogHeader>How to Test Shopify Store Speed Without Fooling Yourself</BlogHeader>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">1. Build a template-level URL set</h3>
                             <BlogText>
-                                Test the homepage, a high-traffic collection, a representative product page, the cart, and any content template that earns meaningful organic traffic. Add variants for templates with video, subscriptions, reviews, personalization, or a large option set. A single homepage test cannot represent Shopify mobile speed across the store.
+                                Test the homepage, a high-traffic collection, a representative product page, the cart, and any content template that gets real organic traffic. Add variants for templates with video, subscriptions, reviews, personalization, or a large option set. A single homepage test can&apos;t represent Shopify mobile speed across the store.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">2. Start with real-user reports</h3>
                             <BlogText>
-                                In Shopify admin, open Online Store, Themes, and the Web Performance area. Review mobile and desktop distributions, URLs, page types, and the timeline around theme updates, new code, or app changes. Shopify&apos;s own <a href={spec("shopify-speed-report-lag").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Web Performance report documentation</a> states the data can lag by {spec("shopify-speed-report-lag").value}, so do not judge a release from the first few minutes after deployment. The report holds only the last {spec("shopify-speed-report-retention").value} and reports the {spec("shopify-speed-report-percentile").value} percentile by default, as of {asOf("shopify-speed-report-lag")}, so export what you need before a comparison window closes. A new or password-protected store may show no metrics at all, and a low-traffic store will swing more between readings.
+                                In Shopify admin, open Online Store, Themes, and the Web Performance area. Review mobile and desktop distributions, URLs, page types, and the timeline around theme updates, new code, or app changes. Shopify&apos;s own <a href={spec("shopify-speed-report-lag").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Web Performance report documentation</a> states the data can lag by {spec("shopify-speed-report-lag").value}, so don&apos;t judge a release from the first few minutes after deployment. The report holds only the last {spec("shopify-speed-report-retention").value} and reports the {spec("shopify-speed-report-percentile").value} percentile by default, as of {asOf("shopify-speed-report-lag")}, so export what you need before a comparison window closes. A new or password-protected store may show no metrics at all, and a low-traffic store will swing more between readings.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">3. Use PageSpeed Insights correctly</h3>
                             <BlogText>
-                                Run <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className={sourceLink}>PageSpeed Insights</a> on each representative URL. Read field data first when it is available. Use the Lighthouse section to form a diagnostic hypothesis about the LCP resource, unused JavaScript, main-thread work, layout shifts, or request chains. Record whether PSI is showing URL-level or origin-level field data. Our note on <Link href="/blog/how-to-achieve-100-pagespeed" className={sourceLink}>what a PageSpeed score does and does not represent</Link> explains why one run is a weak basis for a decision.
+                                Run <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className={sourceLink}>PageSpeed Insights</a> on each representative URL. Read field data first when it&apos;s available. Use the Lighthouse section to form a diagnostic hypothesis about the LCP resource, unused JavaScript, main-thread work, layout shifts, or request chains. Record whether PSI is showing URL-level or origin-level field data. Our note on <Link href="/blog/how-to-achieve-100-pagespeed" className={sourceLink}>what a PageSpeed score does and doesn&apos;t represent</Link> explains why one run is a weak basis for a decision.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">4. Repeat lab tests and preserve context</h3>
                             <BlogText>
-                                Lab results vary because of test location, device contention, page state, and third-party responses. Run multiple mobile tests, use the median rather than the best result, and record the URL, time, device profile, logged-in state, consent state, and theme version. Compare like with like. A changed score without the test context is not a reliable receipt.
+                                Lab results vary because of test location, device contention, page state, and third-party responses. Run multiple mobile tests, use the median, not the best result, and record the URL, time, device profile, logged-in state, consent state, and theme version. Compare like with like. A changed score without the test context isn&apos;t a reliable receipt.
                             </BlogText>
 
                             <div className="my-6 rounded-r-xl border-l-4 border-cognac bg-stone-50 p-5" data-speakable="true">
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-2">If you only do one thing today</p>
-                                <p className="text-sm leading-relaxed text-stone-700">Run PageSpeed Insights on your busiest product page and find the line naming the LCP element. Most owners assume it is the hero image and go straight to compressing photos. Often it is a heading waiting on a web font, a promotional banner an app injects, or a video poster frame. Five minutes of reading that one line tells you which of the next twenty hours is worth spending, and it costs nothing.</p>
+                                <p className="text-sm leading-relaxed text-stone-700">Run PageSpeed Insights on your busiest product page and find the line naming the LCP element. Most owners assume it&apos;s the hero image and go straight to compressing photos. Often it is a heading waiting on a web font, a promotional banner an app injects, or a video poster frame. Five minutes of reading that one line tells you which of the next twenty hours is worth spending, and it costs nothing.</p>
                             </div>
 
                             <BlogQuote>
                                 Speeding up a Shopify store starts with measuring it, not with an app, and not with someone promising a perfect score.
                             </BlogQuote>
 
-                            <BlogHeader>What Actually Slows Down a Shopify Store</BlogHeader>
+                            <BlogHeader>What Slows Down a Shopify Store</BlogHeader>
 
                             <BlogText>
-                                Shopify already provides global hosting, a CDN, compression, caching, image transformations, and CSS and JavaScript minification where applicable. That makes server-level advice such as adding another generic CDN or changing Shopify&apos;s cache headers a poor starting point. Focus on the storefront features that your team controls. Our walkthrough of <Link href="/blog/shopify-dawn-theme-slow" className={sourceLink}>diagnosing a slow Shopify theme</Link> covers the section-level inspection in more depth, and <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why a Plus plan does not change the storefront model</Link> explains what upgrading does not fix. The platform-agnostic version of this diagnosis is in{" "}
+                                Shopify already provides global hosting, a CDN, compression, caching, image transformations, and CSS and JavaScript minification where applicable. That makes server-level advice such as adding another generic CDN or changing Shopify&apos;s cache headers a poor starting point. Focus on the storefront features that your team controls. Our walkthrough of <Link href="/blog/shopify-dawn-theme-slow" className={sourceLink}>diagnosing a slow Shopify theme</Link> covers the section-level inspection in more depth, and <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why a Plus plan doesn&apos;t change the storefront model</Link> explains what upgrading doesn&apos;t fix. The platform-agnostic version of this diagnosis is in{" "}
                                 <Link href="/blog/why-is-my-website-loading-so-slow" className={sourceLink}>why a website loads slowly</Link>.
                             </BlogText>
 
@@ -285,7 +285,7 @@ export default function ShopifySpeedOptimizationPage() {
                                     { title: "Apps and extensions", text: "Review widgets, subscriptions, personalization, chat, search, and marketing tools can add requests and main-thread work." },
                                     { title: "Media", text: "Oversized hero images, unbounded responsive images, autoplay video, animated GIFs, and lazy-loaded above-the-fold assets can hurt LCP." },
                                     { title: "Tags and consent", text: "Analytics, advertising, tag managers, session replay, and consent sequencing can change both load and interaction performance." },
-                                    { title: "Fonts", text: "Too many families, weights, or remote font hosts can delay text and cause layout movement when fallback metrics do not match." },
+                                    { title: "Fonts", text: "Too many families, weights, or remote font hosts can delay text and cause layout movement when fallback metrics don't match." },
                                     { title: "Template logic", text: "Complex Liquid work, broad collection loops, and features rendered on every page can create avoidable overhead." },
                                 ].map((item) => (
                                     <div key={item.title} className="rounded-xl border border-stone-200 bg-stone-50 p-5">
@@ -302,16 +302,16 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogList items={[
-                                "Reduce unused JavaScript: identify the file owner in the network panel, then check whether it is needed on that template or can load after interaction.",
+                                "Reduce unused JavaScript: identify the file owner in the network panel, then check whether it's needed on that template or can load after interaction.",
                                 "Eliminate render-blocking resources: inspect whether the stylesheet or script is necessary for the first viewport before deferring or splitting it.",
                                 "Properly size images: trace the requested intrinsic size, rendered dimensions, responsive candidates, and device pixel ratio instead of choosing one universal upload width.",
                                 "Preload the LCP image: confirm the same asset is consistently the LCP element and is discovered late before adding a preload hint.",
                                 "Reduce initial server response time: separate a repeatable storefront issue from a transient scanner response and from time spent on redirects or external connections.",
-                                "Minimize main-thread work: use a performance trace to locate long tasks and their script owner. A bundle-size number alone does not show execution cost.",
+                                "Minimize main-thread work: use a performance trace to locate long tasks and their script owner. A bundle-size number alone doesn't show execution cost.",
                             ]} />
 
                             <BlogText>
-                                Some scanner recommendations are already handled by Shopify or cannot be changed at the merchant level. Shopify specifically calls out its CDN, browser caching, compression, and minification as platform optimizations. Prioritize recommendations tied to the store&apos;s content and features. If a proposed fix changes native Shopify behavior, verify it against current Shopify documentation and a duplicate theme before production.
+                                Some scanner recommendations are already handled by Shopify or can&apos;t be changed at the merchant level. Shopify specifically calls out its CDN, browser caching, compression, and minification as platform optimizations. Prioritize recommendations tied to the store&apos;s content and features. If a proposed fix changes native Shopify behavior, verify it against current Shopify documentation and a duplicate theme before production.
                             </BlogText>
 
                             <BlogHeader>A Shopify Theme Performance Code Review</BlogHeader>
@@ -325,7 +325,7 @@ export default function ShopifySpeedOptimizationPage() {
                                     { title: "Layout and template scope", text: "Confirm that snippets, sections, app blocks, styles, and scripts load only where the customer experience needs them." },
                                     { title: "Critical path", text: "Map the first HTML response, blocking styles, font requests, LCP request discovery, and any synchronous third-party script." },
                                     { title: "Interaction path", text: "Trace menus, filters, variant selectors, recommendations, add to cart, drawers, and search after all app code initializes." },
-                                    { title: "Theme editor resilience", text: "Verify that optimization does not remove merchant controls, break dynamic sections, or create behavior that fails in preview." },
+                                    { title: "Theme editor resilience", text: "Verify that optimization doesn't remove merchant controls, break dynamic sections, or create behavior that fails in preview." },
                                     { title: "App extension scope", text: "Use app embeds and blocks so features can be controlled and, where supported, loaded only on the templates that need them." },
                                     { title: "Regression evidence", text: "Keep repeatable tests and functional checks in the release process so later theme or app changes reveal what regressed." },
                                 ].map((item) => (
@@ -337,7 +337,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </div>
 
                             <BlogText>
-                                Shopify tests submitted themes against a benchmark shop, and its published bar for acceptance, per the <a href={spec("shopify-theme-store-min-perf").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Theme Store requirements</a>, is a minimum average Lighthouse performance score of {spec("shopify-theme-store-min-perf").value} across the home, product and collection pages, on both desktop and mobile, with those pages carrying real images and content rather than empty sections. The same requirements page sets a minimum average accessibility score of {spec("shopify-theme-store-min-a11y").value}, read {asOf("shopify-theme-store-min-a11y")}. That is the closest thing to an official Shopify speed target that exists, and it is a floor for a clean theme carrying sample data rather than a goal for a live store carrying your catalog, your apps and your tags. Repeat the assessment on your own templates.
+                                Shopify tests submitted themes against a benchmark shop, and its published bar for acceptance, per the <a href={spec("shopify-theme-store-min-perf").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>Theme Store requirements</a>, is a minimum average Lighthouse performance score of {spec("shopify-theme-store-min-perf").value} across the home, product and collection pages, on both desktop and mobile, with those pages carrying real images and content, not empty sections. The same requirements page sets a minimum average accessibility score of {spec("shopify-theme-store-min-a11y").value}, read {asOf("shopify-theme-store-min-a11y")}. That&apos;s the closest thing to an official Shopify speed target, and it&apos;s a floor for a clean theme carrying sample data, not a goal for a live store carrying your catalog, your apps and your tags. Repeat the assessment on your own templates.
                             </BlogText>
 
                             <BlogHeader>Seven High-Impact Shopify Speed Optimization Steps</BlogHeader>
@@ -345,8 +345,8 @@ export default function ShopifySpeedOptimizationPage() {
                             <div className="space-y-4 my-6">
                                 {[
                                     { num: "1", title: "Inventory apps, tags, and theme code", body: "Map every storefront app, app embed, tag, script, stylesheet, and external host to an owner and business purpose. Disable one item at a time in a duplicate theme, then test the templates where it loads. Shopify warns that uninstalling an app might not remove all theme code, so inspect for documented leftovers before deleting anything." },
-                                    { num: "2", title: "Fix the LCP request path", body: "Identify the actual LCP element on each important template. Give the primary image an appropriate source size and responsive srcset, avoid lazy loading it, and preload only when the browser would otherwise discover it late. Do not preload every possible hero or carousel slide." },
-                                    { num: "3", title: "Lazy load what starts below the fold", body: "Use native lazy loading for below-the-fold images and defer optional video or embed code until it approaches the viewport or receives an interaction. Shopify explicitly says above-the-fold content should not be lazy loaded." },
+                                    { num: "2", title: "Fix the LCP request path", body: "Identify the actual LCP element on each important template. Give the primary image an appropriate source size and responsive srcset, avoid lazy loading it, and preload only when the browser would otherwise discover it late. Don't preload every possible hero or carousel slide." },
+                                    { num: "3", title: "Lazy load what starts below the fold", body: "Use native lazy loading for below-the-fold images and defer optional video or embed code until it approaches the viewport or receives an interaction. Shopify says outright that above-the-fold content shouldn't be lazy loaded." },
                                     { num: "4", title: "Reduce JavaScript before rearranging it", body: "Remove unused dependencies and features first. Then load non-critical scripts with an appropriate deferred, async, interaction, or template-specific strategy. Cart, variant, consent, and payment behavior needs functional testing before changing execution order." },
                                     { num: "5", title: "Keep layout dimensions stable", body: "Reserve image, video, banner, review, and recommendation space. Match fallback font metrics where possible. Test cookie banners, sticky headers, personalization, and app-injected UI because layout shifts often appear only after those tools initialize." },
                                     { num: "6", title: "Use Shopify-hosted assets and responsive images", body: "Shopify recommends serving theme assets from its CDN and using its image filters to request appropriate widths. This reduces extra connections and avoids sending desktop-sized media to every mobile device." },
@@ -366,27 +366,27 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Largest Contentful Paint</h3>
                             <BlogText>
-                                LCP measures when the largest content element in the viewport finishes rendering. On a product page it might be the primary product image, but it can also be a heading, promotional banner, poster frame, or another element. Inspect the LCP element instead of assuming it is always the hero. Separate server response, resource discovery, download time, and render delay so the fix addresses the correct part of the chain.
+                                LCP measures when the largest content element in the viewport finishes rendering. On a product page it might be the primary product image, but it can also be a heading, promotional banner, poster frame, or another element. Inspect the LCP element instead of assuming it&apos;s always the hero. Separate server response, resource discovery, download time, and render delay so the fix addresses the correct part of the chain.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Interaction to Next Paint</h3>
                             <BlogText>
-                                INP reflects responsiveness across user interactions. On Shopify, long JavaScript tasks from theme features, apps, analytics, and tag managers are common suspects. Test variant changes, menus, filtering, search, quantity controls, add to cart, and cart drawers. A fast initial render does not prove that the storefront remains responsive after third-party code has loaded.
+                                INP reflects responsiveness across user interactions. On Shopify, long JavaScript tasks from theme features, apps, analytics, and tag managers are common suspects. Test variant changes, menus, filtering, search, quantity controls, add to cart, and cart drawers. A fast initial render doesn&apos;t prove the storefront stays responsive after third-party code has loaded.
                             </BlogText>
 
                             <h3 className="text-xl font-bold text-charcoal mt-6 mb-3">Cumulative Layout Shift</h3>
                             <BlogText>
-                                CLS measures unexpected movement. Images without reserved dimensions, late banners, consent UI, review summaries, recommendations, and font swaps can move the product title or purchase controls. Capture a trace and identify the shifting element. Adding dimensions to images is useful, but it will not fix every source of layout instability.
+                                CLS measures unexpected movement. Images without reserved dimensions, late banners, consent UI, review summaries, recommendations, and font swaps can move the product title or purchase controls. Capture a trace and identify the shifting element. Adding dimensions to images helps, but it won&apos;t fix every source of layout instability.
                             </BlogText>
 
                             <BlogHeader>Shopify App Speed: Measure Value and Cost Together</BlogHeader>
 
                             <BlogText>
-                                An app costs you twice: a monthly subscription line and a share of the storefront&apos;s performance budget. Neither is visible from the install count, and an app is not automatically bad for performance. Some apps do not affect the storefront. Others load only on selected templates through app embed blocks. A smaller number of heavy scripts can cost more than many admin-only apps. Evaluate each tool using its revenue or operational purpose, where its code loads, field metrics, lab traces, error logs, and the cost of replacing it. Our <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLink}>guide to auditing Shopify app cost and storefront impact</Link> pairs the subscription line with the code each app ships.
+                                An app costs you twice: a monthly subscription line and a share of the storefront&apos;s performance budget. Neither is visible from the install count, and an app isn&apos;t automatically bad for performance. Some apps don&apos;t touch the storefront at all. Others load only on selected templates through app embed blocks. A smaller number of heavy scripts can cost more than many admin-only apps. Evaluate each tool using its revenue or operational purpose, where its code loads, field metrics, lab traces, error logs, and the cost of replacing it. Our <Link href="/blog/shopify-app-costs-real-monthly-bill" className={sourceLink}>guide to auditing Shopify app cost and storefront impact</Link> pairs the subscription line with the code each app ships.
                             </BlogText>
 
                             <BlogText>
-                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact and publishes no page-type weighting, only that an app should show low or no negative impact on real merchant stores over time. The absence of a number is itself useful to know before you go looking for one: test your own product, collection and home templates directly rather than assuming Shopify grades them on a published curve. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey is not an optimization.
+                                Shopify&apos;s app guidance recommends theme app extensions, Shopify-hosted assets, and loading resources only on the pages that need them. It sets no numeric threshold for app impact and publishes no page-type weighting, only that an app should show low or no negative impact on real merchant stores over time. Knowing there&apos;s no number saves you hunting for one: test your own product, collection and home templates directly instead of assuming Shopify grades them on a published curve. When testing removal, preserve consent, analytics attribution, subscriptions, reviews, search, localization, accessibility, and checkout behavior. A faster page that breaks a required customer journey isn&apos;t an optimization.
                             </BlogText>
 
                             <BlogQuote>
@@ -395,15 +395,14 @@ export default function ShopifySpeedOptimizationPage() {
 
                             <BlogHeader>Shopify Image and Font Optimization</BlogHeader>
                     <BlogText>
-                        Shopify already serves WebP where the browser supports it and compresses JPGs automatically, so re-compressing a photo before upload rarely moves the number. Requesting the wrong width does. Match the requested width to the rendered slot, never lazy-load the likely LCP image, reserve space with explicit aspect ratios, and cut font families and weights you are not using.
+                        Shopify already serves WebP where the browser supports it and compresses JPGs automatically, so re-compressing a photo before upload rarely moves the number. Requesting the wrong width does. Match the requested width to the rendered slot, never lazy-load the likely LCP image, reserve space with explicit aspect ratios, and cut font families and weights you aren&apos;t using.
                     </BlogText>
 
                             <BlogList items={[
-                                "Shopify already serves images in WebP where the browser supports it and compresses JPGs automatically, so re-compressing a photo in a desktop tool before upload rarely moves the number. Requesting the wrong width does.",
                             "Request an image width that matches the rendered slot and provide responsive candidates for different viewports.",
-                                "Do not lazy load the likely LCP image. Use native lazy loading for media that starts below the fold.",
+                                "Don't lazy load the likely LCP image. Use native lazy loading for media that starts below the fold.",
                                 "Replace autoplay background video with a poster and an intentional play action when the video is not essential above the fold.",
-                            "Convert large animated GIFs to a looped, muted MP4 or WebM. Google's guidance on replacing GIFs with video is old but unchanged, and the file-size difference on a product page is usually not close.",
+                            "Convert large animated GIFs to a looped, muted MP4 or WebM. Google's guidance on replacing GIFs with video is old but unchanged, and the file-size difference on a product page usually isn't close.",
                                 "Use explicit aspect ratios or dimensions so product cards, galleries, and editorial media reserve their space.",
                                 "Reduce unused font families, styles, and weights. Consider system fonts when brand requirements allow it.",
                                 "Preload only a truly critical font or image. Too many preloads compete with the resources needed for the first render.",
@@ -412,12 +411,12 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Content-Heavy Shopify Pages Need Their Own Budget</BlogHeader>
 
                             <BlogText>
-                                Give editorial templates their own performance budget rather than letting them inherit the product page&apos;s, because they carry different weight. About pages, lookbooks, buying guides, and long-form blog posts often use different sections and media from product templates. They should be part of the URL test set, especially when they attract search traffic. Use responsive editorial images, click-to-play video, constrained embeds, and a deliberate section count. Preserve the content that satisfies the query rather than deleting useful copy just to improve a lab score.
+                                Give editorial templates their own performance budget instead of letting them inherit the product page&apos;s; they carry different weight. About pages, lookbooks, buying guides, and long-form blog posts often use different sections and media from product templates. They should be part of the URL test set, especially when they attract search traffic. Use responsive editorial images, click-to-play video, constrained embeds, and only the sections the page needs. Keep the content that answers the query, and don&apos;t delete useful copy just to improve a lab score.
                             </BlogText>
 
                             <BlogHeader>Shopify Speed Optimization Mistakes to Avoid</BlogHeader>
                     <BlogText>
-                        Most of these are the same error in different clothes: acting before measuring. Installing a speed app before you know the bottleneck, reading one Lighthouse run as a ranking report, stacking another CDN in front of Shopify's own, or switching theme without a dependency map. Chasing a perfect score at the cost of analytics, accessibility, consent or checkout reliability is the version that actually costs money.
+                        Most of these are the same error in different clothes: acting before measuring. Installing a speed app before you know the bottleneck, reading one Lighthouse run as a ranking report, stacking another CDN in front of Shopify's own, or switching theme without a dependency map. Chasing a perfect score at the cost of analytics, accessibility, consent or checkout reliability is the version that costs real money.
                     </BlogText>
 
                             <BlogList items={[
@@ -432,21 +431,21 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Did Google Introduce a New Shopify Speed Threshold?</BlogHeader>
 
                             <BlogText>
-                                No official Google source announced a Shopify-specific PageSpeed threshold or a March 2026 rule that awards rankings to stores with a particular Lighthouse score. Google says Core Web Vitals are used by its ranking systems, while also warning that good scores do not guarantee top positions. Do not turn a traffic change and a slow lab test into a causal claim without evidence.
+                                No official Google source announced a Shopify-specific PageSpeed threshold or a March 2026 rule that awards rankings to stores with a particular Lighthouse score. Google says Core Web Vitals are used by its ranking systems, while also warning that good scores don&apos;t guarantee top positions. Don&apos;t turn a traffic change and a slow lab test into a causal claim without evidence.
                             </BlogText>
 
                             <BlogText>
-                                If visibility does move, compare the dates, affected queries, pages, countries, devices, indexing state, releases and Core Web Vitals trend before blaming speed. A core update, a seasonal dip, a competitor change, a broken tracking tag and a genuine performance regression all look identical in a traffic graph, and each needs a different response. Our <Link href="/blog/google-algorithm-updates" className={sourceLink}>Google update diagnostic guide</Link> walks through telling them apart.
+                                If visibility does move, compare the dates, affected queries, pages, countries, devices, indexing state, releases and Core Web Vitals trend before blaming speed. A core update, a seasonal dip, a competitor change, a broken tracking tag and a real performance regression all look identical in a traffic graph, and each needs a different response. Our <Link href="/blog/google-algorithm-updates" className={sourceLink}>Google update diagnostic guide</Link> separates them step by step.
                             </BlogText>
 
                             <BlogHeader>Theme Optimization, Theme Refresh, or Headless Shopify?</BlogHeader>
 
                             <BlogText>
-                                A Liquid theme does not have one universal PageSpeed ceiling. Results depend on the template, how the theme was built, your apps, your images, outside scripts, who is visiting and how you test. A headless storefront is also not automatically fast. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce actually means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
+                                A Liquid theme doesn&apos;t have one universal PageSpeed ceiling. Results depend on the template, how the theme was built, your apps, your images, outside scripts, who is visiting and how you test. A headless storefront isn&apos;t automatically fast either. It replaces some theme constraints with new responsibilities for data loading, caching, analytics, consent, search, merchandising, preview, localization, deployment, and monitoring. Start with <Link href="/blog/what-is-headless-commerce" className={sourceLink}>what headless commerce means</Link> for the architecture, then <Link href="/blog/shopify-headless" className={sourceLink}>when a headless Shopify storefront makes sense</Link> for the decision criteria. If the question is whether to stay on the platform at all, compare <Link href="/blog/shopify-vs-custom-website" className={sourceLink}>Shopify against a custom build</Link>.
                             </BlogText>
 
                             <BlogText>
-                                Upgrading your <a href={spec("shopify-plan-basic").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>plan tier</a> does not change the rendering model your theme uses. Basic runs {spec("shopify-plan-basic").value}, Grow {spec("shopify-plan-grow").value}, Advanced {spec("shopify-plan-advanced").value}, and Plus {spec("shopify-plan-plus").value} as of {asOf("shopify-plan-plus")}, and all four serve the same theme through the same storefront rendering path. What changes between tiers is checkout customization, staff accounts, reporting depth and negotiated rates, not how fast a Liquid page renders. We cover the specific Plus case in <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why Plus does not fix a slow storefront</Link>.
+                                Upgrading your <a href={spec("shopify-plan-basic").source} target="_blank" rel="noopener noreferrer" className={sourceLink}>plan tier</a> doesn&apos;t change the rendering model your theme uses. Basic runs {spec("shopify-plan-basic").value}, Grow {spec("shopify-plan-grow").value}, Advanced {spec("shopify-plan-advanced").value}, and Plus {spec("shopify-plan-plus").value} as of {asOf("shopify-plan-plus")}, and all four serve the same theme through the same storefront rendering path. What changes between tiers is checkout customization, staff accounts, reporting depth and negotiated rates, not how fast a Liquid page renders. We cover the specific Plus case in <Link href="/blog/shopify-plus-still-slow" className={sourceLink}>why Plus doesn&apos;t fix a slow storefront</Link>.
                             </BlogText>
 
                             <div className="overflow-x-auto my-6" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -472,7 +471,7 @@ export default function ShopifySpeedOptimizationPage() {
                             </BlogText>
 
                             <BlogQuote>
-                                A higher plan tier buys you checkout customization and reporting depth. It does not buy your theme a faster rendering model.
+                                A higher plan tier buys you checkout customization and reporting depth. It doesn&apos;t buy your theme a faster rendering model.
                             </BlogQuote>
 
                             <BlogHeader>A Controlled Shopify Optimization and Migration Plan</BlogHeader>
@@ -481,7 +480,7 @@ export default function ShopifySpeedOptimizationPage() {
                                 {[
                                     { num: "1", title: "Baseline", body: "Capture field reports, repeatable lab tests, conversion context, error rates, and a representative URL set before changing code." },
                                     { num: "2", title: "Dependency map", body: "Document theme sections, app embeds, tags, fonts, APIs, consent, analytics, search, reviews, subscriptions, localization, and checkout touchpoints." },
-                                    { num: "3", title: "Prioritized hypotheses", body: "Rank changes by affected traffic, expected user benefit, implementation risk, and ease of rollback. Work on measured causes rather than a generic checklist." },
+                                    { num: "3", title: "Prioritized hypotheses", body: "Rank changes by affected traffic, expected user benefit, implementation risk, and ease of rollback. Work on measured causes, not a generic checklist." },
                                     { num: "4", title: "Staged implementation", body: "Use a duplicate theme or preview environment. Change one performance system at a time when possible and retain a known-good rollback point." },
                                     { num: "5", title: "Functional and SEO QA", body: "Test mobile and desktop browsing, variants, cart, discounts, checkout handoff, analytics, consent, indexing controls, metadata, structured data, canonicals, internal links, and redirects." },
                                     { num: "6", title: "Controlled launch", body: "Record the deployment time and version, monitor errors and orders, and compare like-for-like field and business data after enough observations accumulate." },
@@ -499,21 +498,21 @@ export default function ShopifySpeedOptimizationPage() {
                             <BlogHeader>Does Shopify speed work pay for itself?</BlogHeader>
 
                             <BlogText>
-                                Sometimes, and only your own numbers can tell you. Do not apply a universal conversion percentage to store revenue and call the result proven ROI. Define the intervention, date, affected templates, traffic mix, conversion event, attribution window, and confounders. Compare performance distributions and business metrics before and after the release, or run a controlled experiment when traffic and tooling permit. Our notes on <Link href="/blog/shopify-conversion-rate-speed-fix" className={sourceLink}>how a speed change relates to conversion rate</Link> and on <Link href="/blog/shopify-slow-losing-sales" className={sourceLink}>reading a slow store against its sales data</Link> set out the confounders to control for.
+                                Sometimes, and only your own numbers can tell you. Don&apos;t apply a universal conversion percentage to store revenue and call the result proven ROI. Define the intervention, date, affected templates, traffic mix, conversion event, attribution window, and confounders. Compare performance distributions and business metrics before and after the release, or run a controlled experiment when traffic and tooling permit. Our notes on <Link href="/blog/shopify-conversion-rate-speed-fix" className={sourceLink}>how a speed change relates to conversion rate</Link> and on <Link href="/blog/shopify-slow-losing-sales" className={sourceLink}>reading a slow store against its sales data</Link> set out the confounders to control for.
                             </BlogText>
 
                             <BlogText>
-                                Costs and outcomes also depend on scope. Cleaning up images, auditing apps, reworking a theme, replacing a theme and a full custom build are five different jobs at five different prices. Hosting, observability, search, preview, CMS, and ongoing engineering can change the total cost of a headless storefront. Any score target, acceptance test, support period, price, or refund term should live in the signed scope of work, with the representative URLs, device profile, environment, number of test runs, and exclusions stated clearly. Our <Link href="/pricing" className={sourceLink}>planning tiers</Link> show where each engagement type starts, and the <Link href="/blog/website-rebuild-cost-2026" className={sourceLink}>rebuild scoping guide</Link> covers how a replatform is priced line by line.
+                                Costs and outcomes also depend on scope. Cleaning up images, auditing apps, reworking a theme, replacing a theme and a full custom build are five different jobs at five different prices. Hosting, observability, search, preview, CMS, and ongoing engineering can change the total cost of a headless storefront. Any score target, acceptance test, support period, price, or refund term should live in the signed scope of work, with the representative URLs, device profile, environment, number of test runs, and exclusions stated clearly. Our <Link href="/pricing" className={sourceLink}>planning tiers</Link> show where each engagement type starts, and the <Link href="/blog/website-rebuild-cost-2026" className={sourceLink}>rebuild scoping guide</Link> prices a replatform line by line.
                             </BlogText>
 
                             <div className="rounded-2xl border border-cognac/30 bg-cognac/5 p-5 md:p-6">
                                 <p className="font-bold text-charcoal mb-2">Evidence boundary</p>
-                                <p className="text-sm leading-relaxed text-stone-700">This guide explains a diagnostic method. It does not promise a ranking, revenue increase, Lighthouse score, delivery window, or refund. Those commitments are project-specific and should be agreed in writing after the current store, required functionality, measurement environment, and launch risks are reviewed.</p>
+                                <p className="text-sm leading-relaxed text-stone-700">This is a diagnostic method. It does not promise a ranking, revenue increase, Lighthouse score, delivery window, or refund. Those commitments are project-specific and should be agreed in writing after the current store, required functionality, measurement environment, and launch risks are reviewed.</p>
                             </div>
 
                             <BlogHeader>When to Hire a Shopify Performance Specialist</BlogHeader>
                     <BlogText>
-                        Hire someone who will show you the evidence, not just a score, and judge them on what they put in writing. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope rather than asserted about websites in general.
+                        Hire someone who will show you the evidence, not just a score, and judge them on what they put in writing. Six things a credible provider will commit to before starting: a template-level baseline separating field from lab, per-recommendation evidence naming the actual culprit, regression checks beyond performance, a rollback plan with the exact version tested, and an <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> written into the scope, not asserted about websites in general.
                     </BlogText>
 
                             <BlogList items={[
@@ -521,20 +520,20 @@ export default function ShopifySpeedOptimizationPage() {
                                 "Ask which theme, app, script, image, font, or request-chain evidence supports each recommendation.",
                                 "Require functional, analytics, consent, accessibility, and SEO regression checks, not only a new screenshot of a score.",
                                 "Request a rollback plan and a record of the exact theme or storefront version that was tested.",
-                                "If headless is proposed, ask which requirement cannot be solved safely in the theme and who owns the new integrations after launch.",
+                                "If headless is proposed, ask which requirement can't be solved safely in the theme and who owns the new integrations after launch.",
                                 "Get the speed number and what happens if it is missed written into your quote, not left as a general claim on a website.",
                             ]} />
 
                             <BlogHeader>Your Shopify Speed Optimization Action Plan</BlogHeader>
 
                             <BlogText>
-                                Start with Shopify&apos;s real-user Web Performance report, then use PageSpeed Insights and browser traces to explain what shoppers experience on each important template. Fix the largest measured bottleneck, validate required storefront behavior, release with a rollback point, and wait for an appropriate field-data window before declaring the result. Continue monitoring after app, theme, campaign, and content changes because Shopify performance is a system, not a one-time score. If that work points at a rebuild rather than a repair, our <Link href="/services/ecommerce" className={sourceLink}>ecommerce engineering service</Link> covers the storefront side, and <Link href="/work/mycustompatches" className={sourceLink}>the MyCustomPatches project</Link> shows the shape of a store build we have delivered.
+                                Start with Shopify&apos;s real-user Web Performance report, then use PageSpeed Insights and browser traces to explain what shoppers experience on each important template. Fix the largest measured bottleneck, validate required storefront behavior, release with a rollback point, and wait for an appropriate field-data window before declaring the result. Continue monitoring after app, theme, campaign, and content changes because Shopify performance is a system, not a one-time score. If that work points at a rebuild, not a repair, our <Link href="/services/ecommerce" className={sourceLink}>ecommerce engineering service</Link> covers the storefront side, and <Link href="/work/mycustompatches" className={sourceLink}>the MyCustomPatches project</Link> shows the shape of a store build we&apos;ve delivered.
                             </BlogText>
 
                             <div className="my-10 md:my-12 p-6 md:p-8 bg-charcoal text-white rounded-2xl text-center">
                                 <p className="text-xs font-bold uppercase tracking-widest text-cognac mb-3">Shopify performance planning</p>
-                                <h3 className="text-2xl md:text-3xl font-bold mb-3">Get a plan for the bottleneck you actually have.</h3>
-                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">Send us the store, the pages that matter most, the apps you cannot drop and your budget. We will tell you whether the next step is tuning the theme, replacing it, or a custom build from $1,500, and what each would costion plan.</p>
+                                <h3 className="text-2xl md:text-3xl font-bold mb-3">Get a plan for the bottleneck you have.</h3>
+                                <p className="text-stone-300 mb-5 max-w-xl mx-auto">Send us the store, the pages that matter most, the apps you can&apos;t drop and your budget. We&apos;ll tell you whether the next step is tuning the theme, replacing it, or a custom build from $1,500, and what each would cost.</p>
                                 <CalModalButton className="inline-flex items-center gap-2 px-6 py-3 bg-cognac hover:bg-cognac/90 text-white font-bold rounded-full transition-all">Book a 15-min call <ArrowRight className="w-5 h-5" /></CalModalButton>
                             </div>
 

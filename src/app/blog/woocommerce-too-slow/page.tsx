@@ -157,8 +157,8 @@ export default function WooCommerceTooSlowPage() {
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
                             WooCommerce is usually slow for a reason you can name and locate: every uncached page is
                             assembled per request by PHP and the database, WooCommerce loads cart-refreshing JavaScript
-                            across the whole site rather than only the shop, and cart, checkout and account pages cannot
-                            be full-page cached because they hold customer state. Extensions, media and hosting then add
+                            across the whole site, not only the shop, and cart, checkout and account pages can&apos;t be
+                            full-page cached because they hold customer state. Extensions, media and hosting then add
                             to whichever of those is already hurting. Find which layer is responsible on your store
                             before buying another plugin or committing to a new architecture.
                         </p>
@@ -188,7 +188,7 @@ export default function WooCommerceTooSlowPage() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "There is no defensible universal PageSpeed range for WooCommerce stores. Test this store, its pages and its real users.",
+                                "There's no defensible universal PageSpeed range for WooCommerce stores. Test this store, its pages and its real users.",
                                 "Use Chrome UX Report field data for user experience and controlled lab runs for diagnosis. They answer different questions.",
                                 "Cache public pages where safe, but keep customer-specific cart, checkout and account data dynamic.",
                                 "Repair hosting, queries, extensions, assets and transaction flows before deciding that WooCommerce itself must be replaced.",
@@ -200,9 +200,9 @@ export default function WooCommerceTooSlowPage() {
                     <h2 className="mt-12 mb-3 text-2xl font-bold text-charcoal">Four kinds of evidence, and what each one settles</h2>
                     <p className="mb-2 leading-relaxed text-stone-700">
                         A WooCommerce speed argument usually stalls because two people are holding different evidence.
-                        Field data tells you what real customers experienced and cannot tell you why. A lab trace tells
-                        you why and cannot tell you how common it is. Backend measurement is the only thing that sees
-                        server time, and commerce timing is the only thing that sees whether the order actually got
+                        Field data tells you what real customers experienced and can&apos;t tell you why. A lab trace
+                        tells you why and can&apos;t tell you how common it is. Backend measurement is the only thing
+                        that sees server time, and commerce timing is the only thing that sees whether the order got
                         placed. Collect all four before deciding anything. If the evidence does point to a rebuild, ours is a fixed price from $1,500 with no minimum project size, and you own the code at the end.
                     </p>
                     <div className="my-8 grid gap-4 sm:grid-cols-4">
@@ -226,12 +226,12 @@ export default function WooCommerceTooSlowPage() {
                         No reliable platform-wide score applies to every WooCommerce store. <Link href="/blog/how-to-achieve-100-pagespeed" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">Lighthouse</Link> is a controlled
                         lab test, and its score changes with the tested URL, device profile, network, CPU, content and
                         run conditions. PageSpeed Insights may also show Chrome UX Report field data collected from real
-                        users. Record which dataset you are discussing.
+                        users. Record which dataset you&apos;re discussing.
                     </BlogText>
                     <InsightBox variant="warning" label="A common reporting error">
-                        A Lighthouse score of 90 or above is Lighthouse&apos;s own good-score band. It is not a Google ranking
-                        threshold. Core Web Vitals are used by Google&apos;s ranking systems, but relevance and many other
-                        signals also matter, and a passing result does not guarantee rankings or revenue. For what each
+                        A Lighthouse score of 90 or above is Lighthouse&apos;s own good-score band. It isn&apos;t a Google
+                        ranking threshold. Core Web Vitals are used by Google&apos;s ranking systems, but relevance and
+                        many other signals count too, and a passing result doesn&apos;t guarantee rankings or revenue. For what each
                         metric measures, see{" "}
                         <Link href="/blog/core-web-vitals-explained" className={inlineLinkClass}>Core Web Vitals explained</Link>,
                         and for the relationship between the two,{" "}
@@ -244,7 +244,7 @@ export default function WooCommerceTooSlowPage() {
                         Segment field data where enough traffic exists. For lab work, keep the same URL, device profile,
                         network, test region, consent state, account state and data set. Run each case multiple times and
                         keep the median plus the raw results. Note releases, promotions and traffic spikes that could
-                        distort comparisons. If you have not narrowed the problem to a layer yet,{" "}
+                        distort comparisons. If you haven&apos;t narrowed the problem to a layer yet,{" "}
                         <Link href="/blog/why-is-my-website-loading-so-slow" className={inlineLinkClass}>our walkthrough for tracing a slow-loading site</Link>{" "}
                         is the wider starting point.
                     </BlogText>
@@ -287,16 +287,16 @@ export default function WooCommerceTooSlowPage() {
                     </div>
 
                     <BlogQuote>
-                        Every uncached page is assembled per request. That is the mechanism, not a general complaint about the platform.
+                        Every uncached page is assembled per request. That&apos;s the mechanism, not a general complaint about the platform.
                     </BlogQuote>
 
                     <BlogHeader id="fix-ladder">How to speed up WooCommerce: a measured fix ladder</BlogHeader>
                     <BlogText>
                         Fix a WooCommerce store from the bottom of the stack upward: environment first, then caching,
-                        then assets, then the code that runs on each request. That order matters because a tuning
+                        then assets, then the code that runs on each request. The order counts, because a tuning
                         change made on an under-provisioned server or an unsupported PHP version measures nothing.
-                        Change one meaningful variable at a time and retest the same pages and the same transaction
-                        flows after each step.
+                        Change one variable at a time and retest the same pages and the same transaction flows after
+                        each step.
                     </BlogText>
                     <BlogList
                         items={[
@@ -311,17 +311,16 @@ export default function WooCommerceTooSlowPage() {
                         ]}
                     />
                     <BlogText>
-                        Change one meaningful variable at a time where practical. A faster home page is not enough if
-                        search, product variations or checkout become incorrect. Performance work is complete only when
-                        functional acceptance still passes. The generic version of this ladder, with the frontend steps
+                        A faster home page isn&apos;t enough if search, product variations or checkout stop working
+                        correctly. Performance work is complete only when functional acceptance still passes. The generic version of this ladder, with the frontend steps
                         expanded, is in{" "}
                         <Link href="/blog/how-to-speed-up-your-website" className={inlineLinkClass}>our guide to speeding up a website</Link>.
                     </BlogText>
 
-                    <BlogHeader id="mechanisms">Two mechanisms worth understanding before you buy a plugin</BlogHeader>
+                    <BlogHeader id="mechanisms">Two mechanisms to understand before you buy a plugin</BlogHeader>
                     <BlogText>
                         Most WooCommerce speed advice skips the mechanism and jumps to a product recommendation. These two
-                        explain a large share of what a real audit finds, and knowing them changes which fix you reach for.
+                        explain much of what a real audit finds, and knowing them changes which fix you reach for.
                     </BlogText>
 
                     <h3 className="mt-6 text-xl font-bold text-charcoal">Cart fragments load wherever the mini-cart renders</h3>
@@ -332,46 +331,46 @@ export default function WooCommerceTooSlowPage() {
                         enqueued in code. The catch is how often one of those is true. Storefront and many commercial
                         themes hardcode the mini-cart into the header template, so it renders everywhere and the script
                         comes with it. Where that happens, an AJAX request to refresh cart state fires on your homepage,
-                        About page and contact page, and because the response varies per visitor, page caching does not
-                        remove it. Check your own store rather than assuming either way: load a page that has no cart on
-                        it and look for <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-cart-fragments</code> in the network panel. If it is there,
+                        About page and contact page, and because the response varies per visitor, page caching
+                        doesn&apos;t remove it. Check your own store instead of assuming either way: load a page that
+                        has no cart on it and look for <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-cart-fragments</code> in the network panel. If it&apos;s there,
                         WooCommerce publishes a filter to scope it to shop pages, and the mini-cart block avoids the API
                         altogether. The same compounding pattern across the wider plugin set is covered
                         in{" "}
                         <Link href="/blog/wordpress-plugins-destroy-speed" className={inlineLinkClass}>how plugins accumulate into a page-weight problem</Link>.
                     </BlogText>
 
-                    <h3 className="mt-6 text-xl font-bold text-charcoal">WooCommerce does not modernize your images for you</h3>
+                    <h3 className="mt-6 text-xl font-bold text-charcoal">WooCommerce doesn&apos;t modernize your images for you</h3>
                     <BlogText>
                         WooCommerce generates cropped thumbnails, and WordPress core has emitted
                         <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">srcset</code> and <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">sizes</code> markup since version 4.4, so responsive
                         candidates do exist. What neither does is convert uploads to WebP or AVIF, or enforce an upload
                         size limit. Upload a full-resolution DSLR product photo and the largest candidate mobile
                         browsers can pick is still very close to it.
-                        Google reports WebP lossy images as 25 to 34% smaller than comparable JPEG at equivalent SSIM quality index, which is the qualifier that makes the number meaningful: it is a saving at matched quality, not a free one. AVIF is typically smaller
+                        Google reports WebP lossy images as 25 to 34% smaller than comparable JPEG at equivalent SSIM quality index, and without that qualifier the number means little: it&apos;s a saving at matched quality, not a free one. AVIF is typically smaller
                         again. On a product page carrying eight unoptimized photos, that difference is the gap between a
-                        page that renders quickly on mobile data and one that does not.
+                        page that renders quickly on mobile data and one that doesn&apos;t.
                     </BlogText>
 
                     <BlogHeader id="cache">Why cart, checkout and account need different caching rules</BlogHeader>
                     <BlogText>
                         WooCommerce&apos;s caching guide says Cart, Checkout and My Account should stay dynamic because
-                        they contain customer and session-specific information. That does not mean these journeys cannot
-                        be improved. It means a full-page cache must not serve one customer&apos;s state to another.
-                        Optimize application work, database access, object caching, APIs and frontend behavior while
-                        preserving correctness.
+                        they contain customer and session-specific information. That doesn&apos;t mean these journeys
+                        can&apos;t be improved. It means a full-page cache must not serve one customer&apos;s state to another.
+                        Optimize application work, database access, object caching, APIs and frontend behavior, and
+                        keep every result correct.
                     </BlogText>
 
                     <BlogHeader id="add-to-cart">Why is WooCommerce add to cart slow?</BlogHeader>
                     <BlogText>
-                        WooCommerce add to cart is slow because the click is not a local update. It is a server round trip that runs
+                        WooCommerce add to cart is slow because the click isn&apos;t a local update. It&apos;s a server round trip that runs
                         WordPress, resolves the product, checks stock and pricing, writes the cart to the session, and
                         then hands back a fragment for the mini-cart to redraw. In a browser network panel a classic store
                         shows the add itself as <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=add_to_cart</code>, usually followed by a second
                         request, <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wc-ajax=get_refreshed_fragments</code>, that redraws the mini-cart. A
                         block-based store uses the Store API instead and posts to <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">/wc/store/v1/cart/add-item</code>.
-                        Either way it is two round trips where the shopper expects one instant update. On a variable
-                        product it also has to match the chosen variation. Because the response differs per visitor it cannot be served from a
+                        Either way it&apos;s two round trips where the shopper expects one instant update. On a variable
+                        product it also has to match the chosen variation. Because the response differs per visitor it can&apos;t be served from a
                         page cache, so it lands on PHP every time, competing for the same workers as everything else on
                         the site. Any extension hooked into the add-to-cart action, such as bundles, add-ons,
                         subscriptions or upsell logic, runs inside that same request.
@@ -392,7 +391,7 @@ export default function WooCommerceTooSlowPage() {
 
                     <BlogHeader id="checkout">Why is WooCommerce checkout slow?</BlogHeader>
                     <BlogText>
-                        WooCommerce checkout is the slowest page in most stores because it is the one page that can never be
+                        WooCommerce checkout is the slowest page in most stores because it&apos;s the one page that can never be
                         full-page cached. WooCommerce&apos;s own caching guidance is explicit that Cart, Checkout and My
                         Account must stay dynamic, since they carry customer and session-specific data. So every load
                         runs the full stack: it holds customer state, calculates shipping and tax, and checks stock.
@@ -408,7 +407,7 @@ export default function WooCommerceTooSlowPage() {
                         changes, repeated recalculation, payment-provider latency, fraud services, webhooks and order
                         hooks. Simulate third-party slowness and failure, not only the happy path.
                     </BlogText>
-                    <InsightBox variant="info" label="Do not optimize away correctness">
+                    <InsightBox variant="info" label="Don't optimize away correctness">
                         The WooCommerce Cart and Checkout documentation treats the server as the source of truth for
                         transactional data such as totals, addresses, shipping and coupons. A faster interface still
                         needs authoritative server validation.
@@ -417,9 +416,9 @@ export default function WooCommerceTooSlowPage() {
                     <BlogHeader id="admin">Why is the WooCommerce backend (wp-admin) slow?</BlogHeader>
                     <BlogText>
                         A slow WooCommerce admin is a different problem from a slow storefront, and it usually comes from the
-                        database rather than the frontend. Two causes account for most of it: options in
+                        database, not the frontend. Two causes account for most of it: options in
                         <code className="mx-1 rounded bg-stone-100 px-1.5 py-0.5 text-[0.9em]">wp_options</code>
-                        set to autoload, which are read on every single request and accumulate as extensions come and
+                        set to autoload, which are read on every request and accumulate as extensions come and
                         go; and order storage, because before High-Performance Order Storage every order lived in the
                         same table as posts, so the Orders screen slowed down as the store grew. Background work such as
                         scheduled actions, imports and feeds competes for the same resources and makes both worse.
@@ -434,14 +433,14 @@ export default function WooCommerceTooSlowPage() {
                         covers layer by layer.
                     </BlogText>
 
-                    <BlogHeader id="hpos">What HPOS can and cannot prove</BlogHeader>
+                    <BlogHeader id="hpos">What HPOS can and can&apos;t prove</BlogHeader>
                     <BlogText>
                         High-Performance Order Storage uses dedicated order tables and indexes. WooCommerce enables it by
                         default for new installations from version 8.2, and on an existing store you turn it on at
                         <strong> WooCommerce &rarr; Settings &rarr; Advanced &rarr; Features</strong>. Compatibility mode
                         keeps the legacy post tables in sync while you transition, which is the safe way to move but also
-                        means you are writing orders twice until you turn it off. It can improve order-data operations, but it is
-                        not a universal storefront cure and no fixed speedup applies to every store. Test on a
+                        means you&apos;re writing orders twice until you turn it off. It can improve order-data operations, but it
+                        isn&apos;t a universal storefront cure and no fixed speedup applies to every store. Test on a
                         production-like copy, verify extension compatibility, synchronize and reconcile data, exercise
                         every payment path and keep a rollback plan.
                     </BlogText>
@@ -462,15 +461,15 @@ export default function WooCommerceTooSlowPage() {
                         Define the affected journey and compare performance cohorts in your own analytics. Watch product
                         discovery, add-to-cart, checkout start, payment success, errors and support contacts. Control for
                         campaign, price, stock, device, geography and seasonality where possible. Faster pages can
-                        improve experience, but a public benchmark does not prove the conversion or revenue result for
-                        this store.
+                        improve experience, but a public benchmark doesn&apos;t prove the conversion or revenue result
+                        for this store.
                     </BlogText>
                     <BlogText>
                         If the funnel numbers point somewhere other than performance, diagnose that instead of optimising
                         further. Our companion guide to{" "}
                         <Link href="/blog/woocommerce-low-conversion-rate" className={inlineLinkClass}>a low WooCommerce conversion rate</Link>{" "}
-                        works through the four stages separately, because a drop between product view and add to cart is
-                        not a speed problem and will not respond to one.
+                        works through the four stages separately, because a drop between product view and add to cart
+                        isn&apos;t a speed problem and won&apos;t respond to a speed fix.
                     </BlogText>
 
                     <BlogHeader id="options">Repair, headless WooCommerce or replace?</BlogHeader>
@@ -479,7 +478,7 @@ export default function WooCommerceTooSlowPage() {
                         does what the business needs. Go headless when the back office is working and the storefront
                         is the thing holding you back, accepting that you now run two systems and whatever sits between them.
                         Replace WooCommerce only when the core workflows, the data model or the scale no longer fit,
-                        because that is the option that costs a data migration and a retraining exercise on top of the
+                        because that&apos;s the option that costs a data migration and a retraining exercise on top of the
                         build.
                     </BlogText>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -496,7 +495,7 @@ export default function WooCommerceTooSlowPage() {
                     </div>
                     <BlogText>
                         Each row has its own write-up:{" "}
-                        <Link href="/blog/what-is-headless-commerce" className={inlineLinkClass}>what headless commerce actually means</Link>{" "}
+                        <Link href="/blog/what-is-headless-commerce" className={inlineLinkClass}>what headless commerce means</Link>{" "}
                         for the middle option, and{" "}
                         <Link href="/blog/woocommerce-vs-custom-website" className={inlineLinkClass}>WooCommerce compared with a custom build</Link>{" "}
                         for the third.
@@ -505,7 +504,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogHeader id="self-check">Signals that point each way</BlogHeader>
                     <BlogText>
                         None of these is a threshold that decides for you, and none of them replaces the measurement work
-                        above. They are the patterns we see most often on either side of the decision, offered so you can
+                        above. They&apos;re the patterns we see most often on either side of the decision, offered so you can
                         place your own store before you spend anything. If the signals point toward moving,{" "}
                         <Link href="/blog/woocommerce-migration-cost" className={inlineLinkClass}>our WooCommerce migration cost breakdown</Link>{" "}
                         sets out what drives the scope.
@@ -516,7 +515,7 @@ export default function WooCommerceTooSlowPage() {
                             <ul className="mt-4 space-y-2 text-sm leading-6 text-stone-700">
                                 <li>Mobile field data sits well below your desktop data and the gap persists across templates.</li>
                                 <li>A long plugin list where several overlap, and nobody can say what would break if one were removed.</li>
-                                <li>Mobile is a large share of sessions, so the weakest experience is also the most common one.</li>
+                                <li>Mobile is a big part of your sessions, so the weakest experience is also the most common one.</li>
                                 <li>Your own analytics show the drop-off concentrating on the slowest templates, not spread evenly.</li>
                                 <li>Repairs have already been attempted and the retest moved little.</li>
                             </ul>
@@ -538,7 +537,7 @@ export default function WooCommerceTooSlowPage() {
                         Headless adds APIs, deployment boundaries, content preview, cache invalidation and distributed
                         debugging. It may be poor value for a simple catalog, a team dependent on visual theme editing,
                         or a store whose measured bottleneck is an unoptimized backend or payment integration that would
-                        remain. Do not choose it solely to obtain a Lighthouse screenshot.
+                        remain. Don&apos;t choose it just to get a Lighthouse screenshot.
                     </BlogText>
 
                     <BlogHeader id="future">Agentic commerce and protocol claims</BlogHeader>
@@ -546,7 +545,7 @@ export default function WooCommerceTooSlowPage() {
                         Commerce APIs and agent-facing protocols are evolving. Treat roadmap announcements,
                         experimental features and third-party connectors as changeable integration inputs. Verify the
                         current WooCommerce documentation, authentication model, permissions, data handling and support
-                        status during discovery. Do not migrate because a speculative feature is presented as inevitable.
+                        status during discovery. Don&apos;t migrate because a speculative feature is sold as inevitable.
                     </BlogText>
 
                     <BlogHeader id="provider">What to ask a WooCommerce performance provider</BlogHeader>
@@ -556,7 +555,7 @@ export default function WooCommerceTooSlowPage() {
                     <BlogList
                         items={[
                             "Which field and lab evidence will be captured before changes?",
-                            "Which pages, which devices, logged in or out, and which checkout steps will actually be tested?",
+                            "Which pages, which devices, logged in or out, and which checkout steps will be tested?",
                             "How will server, database, extension and third-party time be separated?",
                             "What has to work, load fast and be accessible before you sign it off?",
                             "Which changes are reversible, and what are the release and rollback triggers?",
@@ -605,7 +604,7 @@ export default function WooCommerceTooSlowPage() {
                         <Wrench className="mb-4 h-7 w-7 text-cognac" />
                         <h2 className="mb-3 font-serif text-3xl">Get evidence before choosing the fix</h2>
                         <p className="mb-6 max-w-2xl leading-relaxed text-stone-300">
-                            We will find the slow paths, see where one system hands off to another, and agree what done looks like before recommending
+                            We&apos;ll find the slow paths, see where one system hands off to another, and agree what done looks like before we recommend
                             optimization, headless WooCommerce or a full migration.
                         </p>
                         <QuoteModalButton cta="woocommerce_speed_plan" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-bold text-charcoal hover:bg-stone-100">
