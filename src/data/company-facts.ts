@@ -225,6 +225,11 @@ export const PROJECTS: readonly { name: string; relationship: string; href: stri
     // lib/motion.ts. It replaces "Custom build.", which told a reader nothing.
     { name: 'Emblematic Studio', relationship: 'Client project', href: '/work/emblematic-studio', fact: 'A website and quote experience for a New York custom patch studio. One typed catalogue holds 22 product types across patches, keychains, enamel pins and challenge coins, with eight in-depth patch material pages. The homepage tells the story in eight sections, including a 120-frame animation of a drawing becoming an embroidered patch; small screens, touch devices and reduced-motion settings get a still version instead. The only part that runs on a server is the quote form, which emails the brief and any artwork to the studio. There is no CMS: the copy lives in one typed file. Published without performance or traffic claims, because the site is too new for that evidence to exist.' },
     { name: 'Ladies 4 Jesus', relationship: 'Client project', href: '/work/ladies-4-jesus', fact: `${MIGRATION_PROJECT_DETAILS.ladies4Jesus.summary} The migrated site is live. No before-and-after performance figures are published, because the previous platform baseline was never captured.` },
+    // Added 1 Oct 2026, filling a gap a hard-question test found: the assistant
+    // had no record of this client at all and declined the question instead of
+    // answering it. Confirmed as a real client by the owner on 30 Sep 2026;
+    // matches the /work card's own wording.
+    { name: 'Saforne', relationship: 'Client project', href: 'https://dtc-brand-alpha.vercel.app/', fact: 'A leather goods storefront, built for the client and reachable at its own preview address rather than a PandaCodeGen URL. It is a design preview build and not yet open for sale, so no commerce, traffic or performance figures are published for it.' },
     // Added 29 Sep 2026 from the project's own README (C:\Projects\Northdeckgroup),
     // supplied for this entry. A real, independent client; there is no /work page for
     // it yet, so it links to the live site. The homepage's case study is a
