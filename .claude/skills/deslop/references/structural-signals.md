@@ -57,8 +57,8 @@ sentence to cut. This is rule 8 (Trust readers) and rule 10 (Do not dilute), mea
 
 The paper notes AI "avoids naming real brands, places, or works."
 
-This is the single most portable finding in the study, and it is rule 5 (Be specific) with
-a number attached. Every "industry experts", "a leading platform", "several studies" is
+Of everything in the study, this carries over to non-fiction most directly. It is rule 5
+(Be specific) with a number attached. Every "industry experts", "a leading platform", "several studies" is
 the AI-shaped choice. Name the vendor, the version, the author, the date.
 
 ### 3. Humans write to someone; AI writes as if nobody is there
@@ -114,7 +114,7 @@ the less human one.
 qualifies, never says "this next bit contradicts what I just told you" may be exhibiting
 the same shape.
 
-If a claim genuinely has a boundary, state it once and leave it there. This is not a
+If a claim has a real boundary, state it once and leave it there. This is not a
 licence to hedge, which rule 5 and the citability-audit skill both forbid.
 
 ## Checks

@@ -2,7 +2,7 @@
 
 **Recorded:** 30 September 2026  
 **Scope:** PandaCodeGen's 88 `/blog/*` articles and other public marketing copy  
-**Status:** Recheck when Graphite publishes the Claude Opus 5.5 terms and frames.
+**Status:** Graphite published the Opus 5.5 data on 1 October 2026. Measurements and next steps are in [graphite-ai-tells-scan-2026-10-01.md](graphite-ai-tells-scan-2026-10-01.md).
 
 ## Sources and publication state
 

@@ -30,6 +30,8 @@ Avoid binary contrasts ("Not X. Y."), negative listings ("Not a X. Not a Y. A Z.
 
 Watch for the full catalog of AI writing tells: "quietly" and other magic adverbs, "delve" and its cousins, the "serves as" dodge, false ranges ("from X to Y" where the range is meaningless), superficial participle analyses ("highlighting its importance"), invented concept labels ("the supervision paradox"), grandiose stakes inflation, patronizing analogies, and false vulnerability. See [references/tropes.md](references/tropes.md) for the complete list with examples.
 
+Each model family has its own measured habits, and 65% of them belong to one family only. Claude announces importance ("this matters", 116x the human rate), sums up ("taken together these", never seen in the human articles) and rates instead of describing ("dependable", 23x). GPT corrects ("rather than", "not simply"). Gemini intensifies ("incredibly", "furthermore"). Check a draft against the family that wrote it: [references/measured-tells.md](references/measured-tells.md).
+
 ### 4. Use active voice with human subjects
 
 Prefer active constructions with named actors. "The complaint becomes a fix" is wrong. "The team fixed it" is right. If no specific person fits, use "we" in scientific prose or "you" in blog posts.
@@ -42,17 +44,17 @@ In scientific writing, domain terminology is fine and expected. "Weighted interv
 
 ### 6. Match register to context
 
-In blog posts and newsletters, put the reader in the room. "You" beats "People." Specifics beat abstractions. No narrator-from-a-distance voice.
+In blog posts and newsletters, put the reader in the room. "You" beats "People." Specifics beat abstractions. No narrator-from-a-distance voice. Use contractions where a person would say them ("it's", "don't", "you'll"). They are the top human theme in Graphite's 2026 study, and current models have nearly stopped producing them; "does not" every time is a register choice, and a measured machine one.
 
 In scientific writing, maintain appropriate formality. Use "we" for your own work, cite specific authors instead of "researchers have shown," and avoid both the distant narrator ("It has long been recognized that...") and the overly casual blog voice. State claims and back them with citations.
 
 ### 7. Vary rhythm
 
-Mix sentence lengths. Two items beat three. End paragraphs differently. No em dashes. Do not stack short punchy fragments for manufactured emphasis. Do not write listicles disguised as prose ("The first wall... The second wall...").
+Mix sentence lengths widely. People average about 26 words a sentence with a spread (standard deviation) of 17; every model measured sits between 16 and 19 words with a spread of 6 to 8. "Shorter" is the wrong fix: let a sentence run long when the thought does, then stop short. Use as many items as the content has. Three-item lists are a tell, and so are tidy pairs ("the first is... the second is", "taken together"). End paragraphs differently. No em dashes: on this site that is the owner's house style, enforced by `scripts/unicode_guard.py`, not a detection rule (current models barely use them). Do not stack short punchy fragments for manufactured emphasis. Do not write listicles disguised as prose ("The first wall... The second wall...").
 
 ### 8. Trust readers
 
-State facts directly. Skip softening, justification, hand-holding. No "Let's break this down." No "Think of it as..." No pedagogical voice unless the audience genuinely needs it. No fractal summaries (telling the reader what you are about to say, saying it, then summarizing what you said).
+State facts directly. Skip softening, justification, hand-holding. No "Let's break this down." No "Think of it as..." No pedagogical voice unless the audience needs it. No fractal summaries (telling the reader what you are about to say, saying it, then summarizing what you said).
 
 ### 9. Watch formatting tells
 
@@ -75,6 +77,21 @@ So after a style pass, check the structure: is there a paragraph telling the rea
 the evidence meant, a vague referent where a name belongs, and does the piece ever address
 the reader at all. See [references/structural-signals.md](references/structural-signals.md)
 for the full findings, including which are fiction-only and must not be generalised.
+
+### 12. Measure, then read
+
+For anything longer than a few paragraphs, run the scanner before reading:
+
+    python .claude/skills/deslop/scripts/scan.py draft.md
+    python .claude/skills/deslop/scripts/scan.py http://localhost:3001/blog/<slug>
+
+It reports sentence length and spread, vocabulary variety and contractions against
+Graphite's human and model averages, then every measured phrase it finds with its rate.
+On three pre-ChatGPT Paul Graham essays it found 3 to 5 phrases per 1,000 words, and
+none on a plain first-person sample. Use a hit as a pointer to a sentence worth rereading. Then
+rewrite for the reader, keep the claim identical, and never edit to make a number move.
+Word lists go stale with each model release (55% to 72% of tells change between
+versions), so the structural fixes in rules 5, 7 and 8 outlast any single swap.
 
 ## Quick Checks
 
@@ -107,6 +124,16 @@ Run these before delivering any prose:
 - Vague referent where a name, version or date belongs? Name it.
 - Does the piece address the reader as "you" anywhere? If not, ask why not.
 - Every question it raises also answered inside it? Real subjects have loose ends.
+- "This matters because", "why X matters", "just as importantly"? Delete the announcement and show the consequence.
+- "Taken together", "the takeaway is", "the result is a ... that"? Do not sum up what the reader just read.
+- Rating words (dependable, steady, thoughtful, modest, genuine, meaningful, practical, smoother)? Replace with the fact that earns them, or cut.
+- "Rather than" more than once in a section? State the point without the foil.
+- "This guide walks you through", "this article explains"? Open with the first fact.
+- "Can help you", "makes it easier", "helps you avoid"? Say what happens.
+- "Without sacrificing/losing/compromising/requiring"? Name the cost, or check there is none.
+- No contractions anywhere in a blog post? Check the register.
+- Sentence lengths all within a few words of each other? Let one run long.
+- Swapped one intensifier for another ("genuinely" to "truly")? Delete it instead.
 
 ## Scoring
 
@@ -132,6 +159,8 @@ Consult these for detailed catalogs when writing or editing:
 - [references/examples.md](references/examples.md): Before/after transformations showing how to fix common patterns
 - [references/structural-signals.md](references/structural-signals.md): The layer under the style. Measured differences that survive a style edit (StoryScope, COLM 2026), marked as transfers / fiction-only / inferred
 - [references/grammatical-signals.md](references/grammatical-signals.md): The non-fiction counterpart. Measured grammatical distributions (PNAS 2025, ACL 2025) — participial clauses, nominalizations, phrasal coordination, elegant variation — plus what is NOT a tell, and why detector scores are never cited
+- [references/measured-tells.md](references/measured-tells.md): Graphite's 2026 counts (100,000 articles, ten models): style numbers, and the phrases Claude Opus 5.5 and 5, GPT-6 Astra and Gemini 3.1 Pro overuse, with what to write instead. The scanner's lists are in `measured-tells.json`
+- `scripts/scan.py`: measures a file or URL against those lists and baselines. `scripts/build_measured_tells.py` rebuilds the lists when Graphite adds a model
 
 ## Examples
 

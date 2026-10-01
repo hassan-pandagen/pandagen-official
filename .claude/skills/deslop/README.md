@@ -60,13 +60,20 @@ Below 35/50: revise.
 
 ```
 deslop/
-├── SKILL.md              # Core rules, quick checks, scoring rubric
-├── README.md             # This file
-└── references/
-    ├── phrases.md        # Phrases to remove or replace
-    ├── structures.md     # Structural patterns to avoid
-    ├── tropes.md         # Full catalog of AI writing tropes
-    └── examples.md       # Before/after transformations
+├── SKILL.md                     # Core rules, quick checks, scoring rubric
+├── README.md                    # This file
+├── references/
+│   ├── phrases.md               # Phrases to remove or replace
+│   ├── structures.md            # Structural patterns to avoid
+│   ├── tropes.md                # Full catalog of AI writing tropes
+│   ├── examples.md              # Before/after transformations
+│   ├── structural-signals.md    # What survives a style edit (StoryScope, COLM 2026)
+│   ├── grammatical-signals.md   # Measured grammar in non-fiction (PNAS 2025, ACL 2025)
+│   ├── measured-tells.md        # Graphite's 2026 counts per model family, and the edits
+│   └── measured-tells.json      # The curated lists scan.py reads
+└── scripts/
+    ├── scan.py                  # Measure a file or URL against the lists and baselines
+    └── build_measured_tells.py  # Rebuild the lists from Graphite's published data
 ```
 
 ## Acknowledgments
@@ -75,6 +82,7 @@ This skill was built in part by combining and synthesizing material from two ope
 
 - **AI writing tropes catalog** from [tropes.fyi](https://tropes.fyi/) by [Ossama Hassanein](https://ossama.is). The `references/tropes.md` file is adapted from this source, and trope patterns are integrated throughout the other reference files.
 - **stop-slop** from [github.com/hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) by [Hardik Pandya](https://hvpandya.com). The phrase lists, structural patterns, before/after examples, scoring rubric, and quick checks draw from this project.
+- **AI Tells** from [Graphite](https://graphite.io/five-percent/research/ai-tells) (Gregory Druck, Jose Luis Paredes, Ethan Smith), including the [Opus 5.5 update](https://graphite.io/five-percent/research/ai-tells-opus-5-5-update). `references/measured-tells.json` is a filtered subset of the data Graphite publishes with those articles; ratios, counts, themes and feature means are theirs. Added to this copy of the skill on 1 Oct 2026.
 
 ## License
 

@@ -2,7 +2,7 @@
 
 ## Binary Contrasts (Negative Parallelism)
 
-The single most commonly identified AI writing tell. Creates false drama by framing everything as a surprising reframe. One in a piece can work; multiple instances per piece is a strong AI signal. Before LLMs, people did not write like this at scale.
+The most commonly identified AI writing tell. Creates false drama by framing everything as a surprising reframe. One in a piece can work; multiple instances per piece is a strong AI signal. Before LLMs, people did not write like this at scale.
 
 | Pattern                                                       | Problem                        |
 | ------------------------------------------------------------- | ------------------------------ |

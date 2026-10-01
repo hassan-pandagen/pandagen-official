@@ -83,8 +83,8 @@ repetition; it destroys precision.
 > Shopify... the platform... the ecommerce solution... the hosted system...
 
 Four names for one thing makes a reader wonder whether they're four things. **Repeat the
-correct noun.** In technical and pricing writing this matters more than the repetition
-does — a reader tracking which plan you mean cannot afford the guesswork.
+correct noun.** In technical and pricing writing the repetition costs less than the
+confusion: a reader tracking which plan you mean cannot afford the guesswork.
 
 Same rule for plan and product names: "Growth", not "the mid-tier", not "the middle
 option", not "the $3,500 package".
@@ -97,7 +97,11 @@ these can have a dozen human causes.
 
 **Em dashes specifically.** A 2026 preprint tested twelve models from five providers and
 found substantial variation in dash production, and in whether dashes survived formatting
-instructions. The character is model-dependent, not a signature.
+instructions. The character is model-dependent, not a signature. Graphite's 2026 counts
+(see `measured-tells.md`) make the point sharper: people averaged 3.1 em dashes per 1,000
+words, Claude Opus 5 about the same, while Opus 5.5 and Gemini 3.1 Pro almost never use
+them and GPT-6 Astra uses an eighth as many. A dash-free page now looks, if anything, more
+like a current model than a person.
 
 This does not overturn the `SKILL.md` rule that removes em dashes — that rule is about
 voice and rhythm, and it stands. What changes is the justification: strip em dashes
@@ -118,7 +122,7 @@ all produce them.
   sentence in front of you.
 - **Do not sacrifice accuracy to voice.** If a deslop edit changes what a sentence claims,
   the edit is wrong. Re-check meaning after every rewrite — especially after cutting a
-  participial clause, which can quietly drop a qualifier.
+  participial clause, which can drop a qualifier without anyone noticing.
 
 ## Related
 
