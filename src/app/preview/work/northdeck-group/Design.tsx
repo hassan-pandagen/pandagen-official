@@ -5,6 +5,7 @@ import PreviewShell from "@/components/redesign/PreviewShell";
 import QuoteModalButton from "@/components/ui/QuoteModalButton";
 import { DISPLAY, DISPLAY_SM, MONO, T } from "@/components/redesign/tokens";
 import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-study/CaseStudyFaqs";
+import NorthDeckGroupWalkthrough from "@/components/redesign/case-study/NorthDeckGroupWalkthrough";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // NorthDeck Group, hero + facts pass, 28 Sep 2026. Built from the project's
@@ -38,6 +39,13 @@ import CaseStudyFaqs, { type CaseStudyFaq } from "@/components/redesign/case-stu
 // check the same way it would have for A Step Above Medical. The sentence
 // below matches the disclosure wording already established for Emblematic
 // Studio, MyCustomPatches and Ladies 4 Jesus verbatim.
+//
+// Rebuild 2, 2 Oct 2026: the hero + facts pass had two full-width images and
+// no walkthrough, so it looked nothing like the other case studies. It now
+// uses the Panda Patches layout (two-column opening, facts row, the shared
+// CaseStudyWalkthrough). The old second image was captioned as the services
+// page but showed the process section, with the browser's scrollbar baked
+// into its right edge; every screenshot is now retaken from the live site.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const built = [
@@ -47,7 +55,7 @@ const built = [
   },
   {
     label: "Real photography, self-hosted type, no CMS",
-    body: "Built on Next.js 16, with real editorial photography and locally served fonts (Instrument Sans, Instrument Serif, IBM Plex Mono) rather than a font CDN. Per the project's own README, there's no database, authentication, storage, CMS or third-party API key in the build -- content lives in code.",
+    body: "Built on Next.js 16, with real editorial photography and locally served fonts (Instrument Sans, Instrument Serif, IBM Plex Mono) rather than a font CDN. Per the project's own README, there's no database, authentication, storage, CMS or third-party API key in the build; content lives in code.",
   },
   {
     label: "See how the security layers work together",
@@ -55,55 +63,52 @@ const built = [
   },
   {
     label: "A design scenario, labelled as one",
-    body: "The homepage's \u201cDesign scenario\u201d section is an illustrative walkthrough of NorthDeckGroup's own design method for a logistics property -- marked throughout as a representative study, not a real deployment. Its own copy states plainly that client identity, site data, project photography, measured results and testimonial evidence \u201cwill only be published when they are supplied and approved.\u201d",
+    body: "The homepage's \u201cDesign scenario\u201d section is an illustrative walkthrough of NorthDeckGroup's own design method for a logistics property, marked throughout as a representative study, not a real deployment. Its own copy states plainly that client identity, site data, project photography, measured results and testimonial evidence \u201cwill only be published when they are supplied and approved.\u201d",
   },
 ];
 
 export function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudyFaq[] }) {
   return (
     <PreviewShell condensed>
-      <section className="px-6 pb-16 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
+      <section className="px-6 pb-10 pt-28 md:px-10" style={{ backgroundColor: T.paper }}>
         <div className="mx-auto max-w-[1100px]">
           <p className="mb-6 text-[12px] uppercase tracking-[0.12em]" style={{ fontFamily: MONO, color: T.quiet }}>
             <Link href="/work" style={{ color: T.quiet }}>Work</Link> / NorthDeck Group / Independent client
           </p>
 
-          <h1 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
-            NorthDeck Group.
-          </h1>
-          <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
-            A motion-led site for a connected security and back-office services company.
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
+            <div>
+              <h1 style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 0.98, letterSpacing: "-0.02em" }}>
+                NorthDeck Group.
+              </h1>
+              <p className="mt-3 max-w-[38rem]" style={{ fontFamily: DISPLAY_SM, fontWeight: 700, color: T.ink, fontSize: "1.4rem", lineHeight: 1.3 }}>
+                A motion-led site for a connected security and back-office services company.
+              </p>
 
-          <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
-            NorthDeckGroup designs and installs connected CCTV, access and intrusion systems, and separately runs a
-            back-office services practice. The site had to carry both without either one reading like filler.
-          </p>
+              <p className="mt-6 max-w-[40rem] text-[17px] leading-[1.65]" style={{ color: T.body }}>
+                NorthDeckGroup designs and installs connected CCTV, access and intrusion systems, and separately runs a
+                back-office services practice. The site had to carry both without either one reading like filler.
+              </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://www.northdeckgroup.com"
-              target="_blank"
-              rel="noopener"
-              className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
-              style={{ backgroundColor: T.ink, color: T.paper }}
-            >
-              Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-              <span className="sr-only"> northdeckgroup.com (opens in a new tab)</span>
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://www.northdeckgroup.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="cta-solid inline-flex items-center gap-2 px-5 py-3 text-[14px] font-medium"
+                  style={{ backgroundColor: T.ink, color: T.paper }}
+                >
+                  Visit the live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  <span className="sr-only"> northdeckgroup.com (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <a href="#northdeck-walkthrough" className="northdeck-hero-preview block w-full max-w-[480px] justify-self-center lg:justify-self-end" style={{ color: T.accentText }}>
+              <Image src="/work/northdeck-group-home.png" alt="NorthDeckGroup homepage preview. Explore the complete build below." width={1440} height={900} sizes="(min-width: 1024px) 470px, (min-width: 528px) 480px, calc(100vw - 48px)" priority className="h-auto w-full border" style={{ borderColor: T.rule }} />
+              <span className="mt-4 flex items-center justify-between gap-4 text-[14px] font-semibold leading-relaxed">
+                Explore the security systems, services &amp; process <span aria-hidden="true">↓</span>
+              </span>
             </a>
-          </div>
-
-          <div className="mt-10">
-            <Image
-              src="/work/northdeck-group-hero.png"
-              alt="The NorthDeckGroup home page hero: a security camera installation with an overlaid 'You're already in frame' headline and a call to request a security assessment."
-              width={1912}
-              height={914}
-              sizes="(min-width: 1100px) 1050px, 100vw"
-              priority
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
           </div>
 
           <aside data-relationship-disclosure className="my-8 border-t border-stone-400/30 pt-5">
@@ -112,27 +117,30 @@ export function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudy
               Independent client. PandaCodeGen has no ownership or financial stake in the business.
             </p>
           </aside>
+
+          <div className="mt-2 flex flex-wrap gap-x-10 gap-y-3 border-t pt-6" style={{ borderColor: T.rule }}>
+            {[
+              { label: "The business", value: "Connected security systems, plus a 12-service back-office practice" },
+              { label: "Built with", value: "Next.js 16, Tailwind CSS and Motion. No database, CMS or API keys." },
+              { label: "Results", value: "No performance figures published" },
+            ].map((f) => (
+              <div key={f.label} className="max-w-[20rem]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.1em]" style={{ color: T.quiet }}>{f.label}</p>
+                <p className="mt-1 text-[14px] leading-[1.5]" style={{ color: T.body }}>{f.value}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
+      <NorthDeckGroupWalkthrough />
+
       <section className="px-6 py-16 md:px-10 md:py-24" style={{ backgroundColor: T.paperHi }}>
         <div className="mx-auto max-w-[1100px]">
-          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>02</span>
+          <span style={{ fontFamily: MONO, color: T.accent, fontSize: "13px" }}>04</span>
           <h2 className="mt-2" style={{ fontFamily: DISPLAY, fontWeight: 700, color: T.ink, fontSize: "clamp(2rem, 3.6vw, 3rem)", lineHeight: 1 }}>
             What&apos;s actually built.
           </h2>
-
-          <div className="mt-8">
-            <Image
-              src="/work/northdeck-group-services.png"
-              alt="The NorthDeckGroup services page showing four of the site's twelve back-office and BPO service cards: Chat & Call Support, Digital Marketing, Web Development and App Development."
-              width={1912}
-              height={914}
-              sizes="(min-width: 1100px) 1050px, 100vw"
-              className="w-full border"
-              style={{ borderColor: T.rule }}
-            />
-          </div>
 
           <dl className="mt-8 border-t" style={{ borderColor: T.rule }}>
             {built.map((b) => (
@@ -170,6 +178,11 @@ export function NorthDeckGroupCaseStudyPreview({ faqs = [] }: { faqs?: CaseStudy
           </div>
         </div>
       </section>
+
+      <style>{`
+        .northdeck-hero-preview:focus-visible { outline: 2px solid ${T.accentText}; outline-offset: 8px; }
+        .northdeck-hero-preview:hover > span { text-decoration: underline; text-underline-offset: 4px; }
+      `}</style>
     </PreviewShell>
   );
 }

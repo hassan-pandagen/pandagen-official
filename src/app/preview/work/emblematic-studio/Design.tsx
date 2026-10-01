@@ -82,7 +82,7 @@ export function EmblematicStudioCaseStudyPreview({ faqs = [] }: { faqs?: CaseStu
             Also in scope.
           </h2>
           <p className="mt-4 max-w-[42rem] text-[15px] leading-[1.6]" style={{ color: T.quiet }}>
-            No traffic or ranking figures are quoted here -- the production build only became indexable on 7 August
+            No traffic or ranking figures are quoted here. The production build only became indexable on 7 August
             2026, so there isn&apos;t a meaningful search history yet. What&apos;s verifiable today is the build itself.
           </p>
 
