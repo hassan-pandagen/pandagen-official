@@ -19,9 +19,14 @@ import {
 } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { spec } from "@/data/spec-facts";
 import type { Metadata } from "next";
 
 const emdashFAQs = blogPosts.find((post) => post.id === "cloudflare-emdash-wordpress-replacement")?.faqs ?? [];
+
+// 4 Oct 2026: rewritten for EmDash 1.0. Version, sandbox limits and the registry
+// count come from spec-facts.json, each read off the source that day.
+const v = (id: string) => spec(id).value;
 
 const RelatedPosts = lazyLoad(() => import("@/components/ui/RelatedPosts"));
 const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
@@ -29,7 +34,7 @@ const CalModalButton = lazyLoad(() => import("@/components/ui/CalModalButton"));
 export const dynamic = "force-static";
 
 const pageTitle = "Cloudflare EmDash vs WordPress in 2026: Readiness Guide";
-const pageDescription = "Cloudflare announced EmDash on April 1, 2026, so people reasonably ask whether it is a joke. Repository figures read on August 2, 2026, plus what the beta status, plugin sandbox and Cloudflare dependency mean for a real migration decision.";
+const pageDescription = "EmDash 1.0 shipped on 28 September 2026. What changed since Cloudflare's April launch, what the plugin sandbox and registry mean, whether it works with Next.js, and when a WordPress site should pilot it.";
 
 export const metadata: Metadata = {
     title: pageTitle,
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
         description: pageDescription,
         type: "article",
         publishedTime: "2026-04-04",
-        modifiedTime: "2026-08-06T00:00:00-05:00",
+        modifiedTime: "2026-10-04T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement",
         images: [ogImageForPath("/blog/cloudflare-emdash-wordpress-replacement")],
@@ -75,7 +80,7 @@ const articleSchema = {
             "description": pageDescription,
             "image": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement"),
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-08-06T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -89,8 +94,8 @@ const articleSchema = {
                     "https://github.com/hassan-pandagen",
                 ],
             },
-            "wordCount": 3107,
-            "timeRequired": "PT16M",
+            "wordCount": 3894,
+            "timeRequired": "PT19M",
             "publisher": { "@id": "https://www.pandacodegen.com/#organization" },
             "mainEntityOfPage": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#webpage" },
             "articleSection": "WordPress",
@@ -124,9 +129,29 @@ const articleSchema = {
                     "url": "https://blog.cloudflare.com/emdash-wordpress/",
                 },
                 {
+                    "@type": "CreativeWork",
+                    "name": "Cloudflare: EmDash 1.0, the stable CMS with a secure plugin registry",
+                    "url": "https://blog.cloudflare.com/emdash-cms-plugin-registry/",
+                },
+                {
                     "@type": "SoftwareSourceCode",
                     "name": "EmDash official repository and status",
                     "url": "https://github.com/emdash-cms/emdash",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "EmDash docs: Configure the plugin sandbox",
+                    "url": "https://docs.emdashcms.com/deployment/plugin-sandbox/",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "EmDash docs: Migrate from WordPress",
+                    "url": "https://docs.emdashcms.com/migration/from-wordpress/",
+                },
+                {
+                    "@type": "CreativeWork",
+                    "name": "Cloudflare: Introducing Vinext 1.0",
+                    "url": "https://blog.cloudflare.com/vinext-nextjs-on-vite/",
                 },
                 {
                     "@type": "CreativeWork",
@@ -173,7 +198,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/cloudflare-emdash-wordpress-replacement") },
             "datePublished": "2026-04-04T00:00:00-05:00",
-            "dateModified": "2026-08-06T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/cloudflare-emdash-wordpress-replacement#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -217,15 +242,15 @@ export default function CloudflareEmDashPage() {
                         </h1>
 
                         <p className="mb-6 text-xl leading-relaxed text-stone-600">
-                            Cloudflare calls EmDash the spiritual successor to WordPress. The project is real, open source, and ambitious. It is also still a pre-1.0 preview, though that is closer to changing than it was when we first wrote this: on 26 August 2026 Cloudflare said a version 1.0 release is coming, after running EmDash on its own high-traffic blog. Coming is not shipped, and dogfooding one blog is not the same as a plugin ecosystem, so the advice below has not changed. Re-check the release status before you act on any of it. Here is the evidence-based way to compare EmDash, WordPress, and a custom rebuild without treating a launch announcement as a migration order. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Cloudflare calls EmDash the spiritual successor to WordPress. When we first wrote this guide in April it was a beta preview. It isn&apos;t anymore: EmDash 1.0 shipped on {v("emdash-1-0-release-date")}, and Cloudflare says it is &quot;ready to power a production website&quot;. Version {v("emdash-current-version")} followed on 1 October. Stable software and a mature ecosystem are different things, though. The new plugin registry listed {v("emdash-registry-plugin-count")} entries on 4 October, and EmDash runs only inside Astro, so it is not an option for a Next.js site. Here is how to compare EmDash, WordPress and a custom rebuild on the evidence. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
                         </p>
 
                         <BlogAuthor
                             date="Apr 4, 2026"
-                            readTime="13 min read"
+                            readTime="19 min read"
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
                         />
-                        <p className="mt-2 text-xs text-stone-500">Repository figures on this page were read from GitHub&apos;s public API on August 2, 2026 and are reproducible by anyone.</p>
+                        <p className="mt-2 text-xs text-stone-500">Updated October 4, 2026 for EmDash 1.0. Release, repository and registry figures were read from npm, GitHub&apos;s public API and the EmDash plugin registry that day, and anyone can repeat the check.</p>
                         </div>
                         <div data-article-hero-screen>
                             <BlogCoverFigure id="cloudflare-emdash-wordpress-replacement" />
@@ -234,8 +259,8 @@ export default function CloudflareEmDashPage() {
 
                     <section className="mb-12 grid gap-3 sm:grid-cols-3" aria-label="Current EmDash status summary">
                         {[
-                            ["Status", "Beta preview"],
-                            ["Core stack", "TypeScript and Astro"],
+                            ["Status", `Stable, version ${v("emdash-current-version")}`],
+                            ["Core stack", "TypeScript and Astro only"],
                             ["Deployment", "Cloudflare or Node.js"],
                         ].map(([label, value]) => (
                             <div key={label} className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
@@ -249,23 +274,31 @@ export default function CloudflareEmDashPage() {
                         <BlogHeader>What Cloudflare actually launched</BlogHeader>
 
                         <BlogText>
-                            Cloudflare announced EmDash on April 1, 2026 and described it as the &quot;spiritual successor to WordPress.&quot; That phrase is Cloudflare&apos;s positioning, not evidence that WordPress has been replaced. The launch post introduced an early developer beta, while the project&apos;s current official repository still labels EmDash a <BlogHighlight>beta preview</BlogHighlight>. Both details matter when a business is deciding whether to investigate, pilot, or migrate.
+                            Cloudflare announced EmDash on April 1, 2026 and described it as the &quot;spiritual successor to WordPress.&quot; That phrase is Cloudflare&apos;s positioning, not evidence that WordPress has been replaced. The launch post introduced an early developer beta. Six months later, on {v("emdash-1-0-release-date")}, Cloudflare released{" "}
+                            <a href="https://blog.cloudflare.com/emdash-cms-plugin-registry/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                EmDash 1.0
+                            </a>{" "}
+                            and called it <BlogHighlight>&quot;a stable, free, and open source CMS built on Astro&quot;</BlogHighlight>. The release notes add the promise that matters most to anyone building on it: from 1.0, breaking changes ship only in a new major version. One loose end is worth knowing about. The status section of the repository&apos;s README still said &quot;beta preview&quot; when we read it on October 3, so go by the release notes, not the README.
                         </BlogText>
 
                         <BlogText>
-                            The product itself is more substantial than a concept demo. According to the{" "}
+                            The product is far more than a concept demo. According to the{" "}
                             <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 official EmDash repository
                             </a>
-                            , it is a full-stack TypeScript CMS built with Astro 6.0. The current feature list includes an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import paths. That is a meaningful foundation, but the repository&apos;s beta label is still the controlling status statement.
+                            , it is a full-stack TypeScript CMS built on Astro. It has an admin panel, custom content types, rich-text editing, drafts, revisions, scheduled publishing, media management, authentication, roles, a REST API, search, starter templates, a plugin API, an MCP server, and WordPress import. Version 1.1 added a publishing calendar, HTML and embed blocks that run in sandboxed iframes, and Microsoft Entra ID sign-in.
                         </BlogText>
 
                         <BlogQuote>
-                            &quot;Spiritual successor&quot; describes Cloudflare&apos;s design ambition. &quot;Beta preview&quot; describes the current adoption risk. A serious platform decision has to hold both facts at once.
+                            &quot;Stable&quot; describes the software. It does not describe the ecosystem around it, which is six months old. A serious platform decision has to hold both facts at once.
                         </BlogQuote>
 
                         <BlogText>
-                            EmDash uses Portable Text for structured content and provides import routes for WordPress WXR exports and the WordPress REST API. It can run on Cloudflare with D1, R2, KV, and Workers, or on a compatible Node.js setup with alternatives such as SQLite and S3-compatible storage. This makes it more accurate to call EmDash a new WordPress alternative than a completed one-for-one WordPress replacement.
+                            EmDash stores structured content as Portable Text. For WordPress it has{" "}
+                            <a href="https://docs.emdashcms.com/migration/from-wordpress/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                two import routes
+                            </a>
+                            : upload a WXR export file, or install the EmDash Exporter plugin on the WordPress site. The exporter brings more across, including comments, menus, site settings, Yoast or Rank Math SEO fields, and Advanced Custom Fields values when the new collection has matching fields. Pointing EmDash at a WordPress URL without the exporter only probes the public REST API; it can count your posts but can&apos;t import them. Scheduled posts arrive as drafts, and the docs say scheduled dates aren&apos;t reconstructed, so check every imported draft before you publish it. EmDash runs on Cloudflare with D1, R2, KV and Workers, or on Node.js with SQLite, Turso, or PostgreSQL, S3-compatible or local storage, and Redis or file sessions. That makes it a real WordPress alternative, not a one-for-one replacement.
                         </BlogText>
 
                         <BlogText>
@@ -276,12 +309,13 @@ export default function CloudflareEmDashPage() {
                             anyone visits or not. On a site with uneven traffic that is a genuinely different cost shape
                             from a VPS. It is a shape, though, not a discount: usage pricing rewards a quiet site and
                             charges more for inefficient code, so the saving depends on what you run, not on the platform
-                            you picked.
+                            you picked. New EmDash projects deploy on the Workers free plan. Turning on sandboxed plugins
+                            on Cloudflare moves you to the {v("emdash-sandbox-cloudflare-plan")} plan.
                         </BlogText>
 
                         <BlogText>
-                            One capability here has no equivalent on the other side of the comparison. EmDash ships
-                            built-in support for <BlogHighlight>x402</BlogHighlight>, which lets a publisher charge for a
+                            One capability here has no equivalent on the other side of the comparison. EmDash has an
+                            official add-on package for <BlogHighlight>x402</BlogHighlight>, which lets a publisher charge for a
                             single article without putting the reader through a subscription or an account. Whether that
                             matters depends entirely on whether you sell content; for most business sites it will not,
                             and it is listed here because it is real and specific rather than because it is a reason to
@@ -293,11 +327,16 @@ export default function CloudflareEmDashPage() {
                         <div data-speakable="true">
                             <BlogText>
                                 No, and the announcement date is the only reason to wonder. Cloudflare published EmDash on
-                                April 1, 2026, which is a fair thing to be suspicious about, so here is the check anyone
-                                can repeat rather than an assurance. Read from GitHub&apos;s public API on August 2, 2026,
-                                four months after the announcement, the <BlogHighlight>emdash-cms/emdash</BlogHighlight>{" "}
-                                repository was created on April 1, 2026, was last pushed to on July 31, 2026, and carries
-                                11,486 stars, 1,071 forks and 258 open issues under an MIT license. A joke repository does not keep receiving commits, and it does not accumulate a thousand forks. What those figures show is that the project is alive, not that it is adopted, stable or production-ready.
+                                April 1, 2026, and the project&apos;s own 1.0 announcement admits that &quot;a lot of people
+                                thought it wasn&apos;t real&quot;. Here is the check anyone can repeat. Read from GitHub&apos;s public API on
+                                October 4, 2026, six months after the announcement, the{" "}
+                                <BlogHighlight>emdash-cms/emdash</BlogHighlight> repository was created on April 1, 2026,
+                                was last pushed to on October 3, 2026, and carries 13,326 stars, 1,259 forks and 365 open
+                                issues and pull requests under an MIT license. It shipped version 1.0 on {v("emdash-1-0-release-date")}.
+                                npm recorded 151,593 downloads of the emdash package in the 30 days to October 1, a count
+                                that includes automated installs, so it isn&apos;t a count of websites. A joke doesn&apos;t
+                                ship a 1.0. What these figures show is that the project is alive and moving, not how many
+                                businesses run it.
                             </BlogText>
                         </div>
 
@@ -311,16 +350,18 @@ export default function CloudflareEmDashPage() {
                             <a href="https://github.com/emdash-cms/templates" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
                                 emdash-cms/templates
                             </a>
-                            , the starter templates, last pushed July 24, 2026. Note the organization name while you are there: the code lives under <BlogHighlight>emdash-cms</BlogHighlight>, not under Cloudflare&apos;s own GitHub organization, which is a detail worth knowing before you write a dependency into
+                            , the starter templates, last pushed October 1, 2026. Note the organization name while you are there: the code lives under <BlogHighlight>emdash-cms</BlogHighlight>, not under Cloudflare&apos;s own GitHub organization, which is a detail worth knowing before you write a dependency into
                             an architecture document.
                         </BlogText>
 
-                        <InsightBox variant="info" label="What the version numbers say that the marketing does not">
-                            Every published EmDash package is still on a 0.x version. The most recent release on 2 August
-                            2026 was <code>@emdash-cms/plugin-embeds@0.1.39</code>, published 24 July, pulling in{" "}
-                            <code>@emdash-cms/blocks@0.31.1</code>. That is a healthy release cadence and it is also, in
-                            the project&apos;s own numbering, pre-1.0. &ldquo;Beta preview&rdquo; is not a hedge somebody
-                            added to a blog post. It is what the package registry says.
+                        <InsightBox variant="info" label="What the version numbers say">
+                            The 1.0 release is tagged <code>emdash@1.0.1</code> and was published on{" "}
+                            {v("emdash-1-0-release-date")}; <code>emdash@{v("emdash-current-version")}</code> followed
+                            on 1 October. The core packages (emdash, admin, auth, blocks and the Cloudflare adapter) are
+                            all on 1.1.0, while some side packages are still 0.x, including the Node.js sandbox runner,{" "}
+                            <code>@emdash-cms/sandbox-workerd@0.9.2</code>. One trap: npm also lists an{" "}
+                            <code>emdash@1.0.0</code> from 27 April 2026 that was later deprecated. It isn&apos;t the 1.0
+                            release, so date the 1.0 from the GitHub release, not from the version number.
                         </InsightBox>
 
                         <BlogHeader>What the plugin-security claim means</BlogHeader>
@@ -346,7 +387,21 @@ export default function CloudflareEmDashPage() {
                         </InsightBox>
 
                         <BlogText>
-                            The official repository also makes an important portability distinction. EmDash can run on Cloudflare or a Node.js server, but its isolated plugin execution depends on Cloudflare Dynamic Workers and a paid Cloudflare account. The Node.js path can host the CMS, yet it does not reproduce the same Worker-isolate boundary. A security review therefore needs to evaluate the exact deployment mode rather than assigning one blanket risk score to the product.
+                            Since 1.0 the sandbox isn&apos;t Cloudflare-only. On Node.js, EmDash starts workerd, the open-source Workers runtime, as a separate process and runs each plugin as an isolated service inside it, with the same manifests and permission-gated APIs. Each plugin gets its own private storage but no access to the site&apos;s content, users, secrets, filesystem or network. The two runtimes don&apos;t enforce the same limits, though. According to the{" "}
+                            <a href="https://docs.emdashcms.com/deployment/plugin-sandbox/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                sandbox documentation
+                            </a>
+                            , Cloudflare stops a plugin at {v("emdash-sandbox-cpu-limit")} of CPU time or {v("emdash-sandbox-subrequest-limit")} subrequests, and both runtimes stop it after {v("emdash-sandbox-wall-time")} of wall time. On Node.js only the wall-time limit applies. A security review still has to name the deployment mode. One risk score for the whole product won&apos;t do.
+                        </BlogText>
+
+                        <BlogHeader id="plugin-registry">The EmDash plugin registry</BlogHeader>
+
+                        <BlogText>
+                            EmDash 1.0 came with an official plugin registry at{" "}
+                            <a href="https://plugins.emdashcms.com/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                plugins.emdashcms.com
+                            </a>
+                            . Site owners can find, inspect and install sandboxed plugins from it, and authors publish with an account on AT Protocol, the open network behind Bluesky, so no single company controls the listing. Only free plugins are listed today; Cloudflare says it aims to add paid ones. On 4 October 2026 the registry showed {v("emdash-registry-plugin-count")} entries, one of them a test entry. They cover contact forms, SEO checks, analytics, email sending through Resend or SMTP, image optimization and AI alt text. That&apos;s a real start and a long way from WordPress&apos;s plugin directory.
                         </BlogText>
 
                         <BlogHeader>EmDash vs WordPress is a requirements comparison</BlogHeader>
@@ -356,21 +411,21 @@ export default function CloudflareEmDashPage() {
                         </BlogText>
 
                         <BlogText>
-                            EmDash starts with a modern TypeScript and Astro build, structured content, serverless hosting, plugins that only get the permissions they ask for, and tooling built in for developers and agents. Its tradeoffs come from being new: beta stability, a younger extension ecosystem, fewer experienced operators, and more responsibility for validating integrations that WordPress users may currently obtain from established plugins.
+                            EmDash starts with a modern TypeScript and Astro build, structured content, serverless hosting, plugins that only get the permissions they ask for, and tooling built in for developers and agents. Its tradeoffs come from being new: a 1.0 released in September 2026, a younger extension ecosystem, fewer experienced operators, and more responsibility for validating integrations that WordPress users may currently obtain from established plugins.
                         </BlogText>
 
                         <div className="my-10 overflow-hidden rounded-2xl border border-stone-200">
                             <div className="grid grid-cols-1 bg-charcoal p-5 text-white sm:grid-cols-3">
                                 <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Decision area</p>
                                 <p className="mt-2 font-semibold sm:mt-0">WordPress</p>
-                                <p className="mt-2 font-semibold text-orange-200 sm:mt-0">EmDash beta</p>
+                                <p className="mt-2 font-semibold text-orange-200 sm:mt-0">EmDash 1.x</p>
                             </div>
                             {[
-                                ["Ecosystem", "Mature plugins, themes, hosts, and specialists", "Growing first-party foundation and early community"],
+                                ["Ecosystem", "Mature plugins, themes, hosts, and specialists", `Official registry with ${v("emdash-registry-plugin-count")} entries (October 2026) and a young community`],
                                 ["Content model", "Flexible, often shaped by themes and plugins", "Structured content with Portable Text and typed collections"],
-                                ["Security", "Requires plugin governance, patching, and host controls", "Capability model with Cloudflare isolate option"],
-                                ["Portability", "Broad hosting support, with plugin and theme dependencies", "Cloudflare and Node.js paths, with deployment-specific differences"],
-                                ["Risk of adopting it", "Well understood, but carrying years of old baggage", "Still in beta, and far fewer people who can help"],
+                                ["Security", "Requires plugin governance, patching, and host controls", "Sandboxed plugins on Cloudflare or Node.js, with more limits enforced on Cloudflare"],
+                                ["Portability", "Broad hosting support, with plugin and theme dependencies", "Cloudflare or Node.js; Astro only, so no Next.js front end"],
+                                ["Risk of adopting it", "Well understood, but carrying years of old baggage", "Stable since September 2026, with far fewer people who can help"],
                             ].map(([area, wordpress, emdash]) => (
                                 <div key={area} className="grid grid-cols-1 gap-2 border-t border-stone-200 p-5 text-sm leading-relaxed sm:grid-cols-3 sm:gap-5">
                                     <p className="font-bold text-charcoal">{area}</p>
@@ -383,7 +438,7 @@ export default function CloudflareEmDashPage() {
                         <BlogHeader>Is EmDash production ready in 2026?</BlogHeader>
 
                         <BlogText>
-                            There is no honest universal yes or no. The project owners call it a beta preview, so a regulated portal, high-volume store, or mission-critical publishing operation should not infer production suitability from the feature list alone. A low-risk campaign site, internal prototype, or isolated content pilot may have a very different risk tolerance.
+                            Cloudflare says yes: it calls 1.0 &quot;ready to power a production website&quot;, and it moved its own blog onto EmDash on 12 August 2026, where it normally serves about 75 requests a second with spikes above 5,000. For your site the answer still depends on the site. The software is stable by its makers&apos; account; the ecosystem around it is six months old. A campaign site, internal prototype or isolated content pilot is a reasonable first use. A regulated portal, a high-volume store or a publishing operation that can&apos;t go down should pilot first and decide on the evidence, not on the version number.
                         </BlogText>
 
                         <BlogText>
@@ -393,7 +448,7 @@ export default function CloudflareEmDashPage() {
                         <BlogList
                             items={[
                                 "Build a representative pilot with real content and the hardest integration, not only the homepage template.",
-                                "Read the current beta release notes, the open bugs and the upgrade instructions, and know how you would undo it, before you pick a launch date.",
+                                "Read the current release notes, the open bugs and the upgrade instructions, and know how you would undo it, before you pick a launch date.",
                                 "Threat-model the chosen deployment mode, including plugin permissions, secrets, roles, backups, logs, and recovery.",
                                 "Load-test the real application path and measure field data after launch instead of promising a lab score in advance.",
                                 "Document who owns the domain, repository, Cloudflare or hosting account, database, storage, and third-party services.",
@@ -406,49 +461,72 @@ export default function CloudflareEmDashPage() {
                         </BlogText>
 
                         <BlogText>
-                            Two specifics are worth having before anyone schedules a pilot. The release is{" "}
-                            <BlogHighlight>v0.1.0 preview</BlogHighlight>, which is the number sitting behind the words
-                            &quot;beta preview&quot; and a more useful thing to put in front of a stakeholder than the
-                            label. And the admin can be tried before anything is installed: Cloudflare runs an EmDash
-                            Playground, so the person who will actually write on the site can judge the editing
-                            experience without a deployment or a migration decision attached to it.
+                            Two specifics are worth having before anyone schedules a pilot. The number to put in front
+                            of a stakeholder is the version, {v("emdash-current-version")} as of October 2026, along with
+                            the release notes for it. And the admin can be tried before anything is installed: the
+                            EmDash Playground at try.emdashcms.com lets the person who will actually write on the site
+                            judge the editor without a deployment or a migration decision attached to it.
                         </BlogText>
 
                         <BlogText>
                             The gap most likely to decide this for a WordPress owner is what is absent.{" "}
-                            <BlogHighlight>There is no page builder and no theme marketplace.</BlogHighlight> If the
-                            people who maintain your site work by dragging sections around a canvas and buying a theme
-                            when the design needs to change, a migration does not fail on infrastructure. It fails on the
-                            first afternoon somebody needs to move a section and finds that the job now belongs to a
-                            developer. That is a staffing and budget question, and it should be answered before any
-                            technical pilot rather than after one.
+                            <BlogHighlight>There is no drag-and-drop page builder and no theme switcher.</BlogHighlight>{" "}
+                            Editors can add and reorder blocks that a developer has defined, and edit text in place, but
+                            an EmDash theme is a whole Astro project chosen once at the start. Changing the design means
+                            a developer, not a purchase in the admin. If the people who maintain your site work by
+                            dragging sections around a canvas and buying a theme when the design needs to change, a
+                            migration won&apos;t fail on infrastructure. It fails on the first afternoon somebody needs to
+                            move a section and finds the job now belongs to a developer. That&apos;s a staffing and budget
+                            question, and it should be answered before any technical pilot.
                         </BlogText>
 
-                        <BlogText>
-                            More usefully, the extensions are no longer all first-party, which is the real test of whether
-                            a plugin API works. A GitHub API search on August 2, 2026 returns independent projects built
-                            against it and still being maintained: <BlogHighlight>dashcommerce</BlogHighlight>, described
-                            by its authors as the WooCommerce-equivalent commerce plugin for EmDash, created 16 April and
-                            last pushed 9 July; <BlogHighlight>emdashlearn</BlogHighlight>, an open-source LMS plugin
-                            created on 2 April, the day after the announcement, and pushed on 27 July; an EmDash email
-                            plugin delivering through Cloudflare Email; and Astro starter kits pairing EmDash with SQLite
-                            and R2 storage. None of them is large. All of them are third parties who read the plugin API
-                            and shipped against it, which is more informative than a star count.
-                        </BlogText>
+                        <BlogHeader id="who-runs-emdash">Who runs EmDash today</BlogHeader>
 
                         <BlogText>
-                            Hold that against WordPress honestly. A handful of maintained community plugins is not a
-                            marketplace, and the gap between the two ecosystems is the single largest practical
-                            difference between them. What the check does tell you is the direction of travel and that the
-                            extension model is usable by people outside the project, which is the question that actually
-                            matters if you are considering building on it. Re-run the search yourself before you decide;
-                            it takes a minute and the answer will have moved.
+                            The best-documented production site is Cloudflare&apos;s own.{" "}
+                            <a href="https://blog.cloudflare.com/cloudflare-blog-uses-emdash/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                The Cloudflare Blog moved to EmDash on 12 August 2026
+                            </a>
+                            , and Cloudflare reports normal load of about 75 requests a second with spikes above 5,000.
+                            In its 1.0 post Cloudflare also named Avulux, which converted a custom microsite to EmDash
+                            after what it called the maintenance burden of WordPress; Empress, a multi-site platform
+                            built on EmDash; Urumi, a WooCommerce specialist building EmDash&apos;s first e-commerce
+                            plugin; and Lexington Themes, which sells 44 Astro themes with EmDash versions. These are the
+                            names Cloudflare chose to feature. Nobody publishes a count of live EmDash sites, so treat
+                            them as early adopters, not a market share.
+                        </BlogText>
+
+                        <BlogHeader id="nextjs">Does EmDash work with Next.js?</BlogHeader>
+
+                        <div data-speakable="true">
+                            <BlogText>
+                                No. EmDash runs inside an Astro application: the CMS and the website are one deployed app,
+                                not a separate content service you can point a Next.js front end at. We found no Next.js
+                                integration in EmDash&apos;s documentation or release notes on 4 October 2026. The project
+                                says it chose Astro because it is &quot;the best framework for content-driven sites&quot;.
+                            </BlogText>
+                        </div>
+
+                        <BlogText>
+                            Cloudflare&apos;s Next.js news that week was a different product.{" "}
+                            <a href="https://blog.cloudflare.com/vinext-nextjs-on-vite/" target="_blank" rel="noopener noreferrer" className={sourceLinkClass}>
+                                Vinext 1.0
+                            </a>
+                            , announced on 28 September 2026, the same day as EmDash 1.0, runs existing Next.js
+                            applications on Vite so they can deploy to platforms including the Cloudflare Workers free
+                            plan, Netlify and AWS Lambda. Vinext moves a Next.js app; it doesn&apos;t give it a CMS. If
+                            your site is built on Next.js, or you want it to be, you&apos;d pair it with a headless CMS
+                            instead, the way our{" "}
+                            <Link href="/blog/nextjs-sanity-stack" className={internalLinkClass}>
+                                Next.js and Sanity guide
+                            </Link>{" "}
+                            describes.
                         </BlogText>
 
                         <BlogHeader>Is EmDash locked to Cloudflare?</BlogHeader>
 
                         <BlogText>
-                            Not in the absolute sense. The official project says EmDash runs on Cloudflare or a Node.js server and documents alternatives for database, object storage, and sessions. That portability is valuable. However, its flagship plugin-sandbox design uses Cloudflare Dynamic Workers. Moving the CMS to another runtime can therefore change a central security property even when the content and application remain portable.
+                            Less than it was. EmDash runs on Cloudflare or on a Node.js server, with documented alternatives for the database, file storage and sessions, and since 1.0 the plugin sandbox runs on Node.js too. The project&apos;s 1.0 post goes further: &quot;There is no lock-in, because all features work anywhere that you can deploy Node.js apps.&quot; What still changes when you move is how tightly plugins are held. Off Cloudflare, the CPU and subrequest limits aren&apos;t enforced, so moving runtimes can weaken one security property even though the content and the application move with you.
                         </BlogText>
 
                         <BlogText>
@@ -494,7 +572,7 @@ export default function CloudflareEmDashPage() {
                         <BlogHeader>When to pilot EmDash or consider a custom rebuild</BlogHeader>
 
                         <BlogText>
-                            An EmDash trial is worth considering when a team wants structured content, already works in TypeScript and Astro, hosts on Cloudflare, likes that plugins get limited permissions, and is willing to test beta software. Keep the pilot away from the most sensitive workflow until publishing, recovery, upgrades, and integrations have survived realistic use.
+                            An EmDash trial is worth considering when a team wants structured content, already works in TypeScript and Astro, hosts on Cloudflare or Node.js, likes that plugins get limited permissions, and is comfortable being an early adopter of a platform that reached 1.0 in September 2026. Keep the pilot away from the most sensitive workflow until publishing, recovery, upgrades, and integrations have survived realistic use.
                         </BlogText>
 
                         <BlogText>
@@ -537,7 +615,7 @@ export default function CloudflareEmDashPage() {
                         </BlogText>
 
                         <BlogText>
-                            The useful question is not &quot;Which platform won?&quot; It is &quot;Which system can satisfy our documented content, integration, security, performance, search, ownership, and operating requirements at an acceptable risk and total cost?&quot; EmDash deserves a place in that evaluation. Its beta status means it also deserves a pilot, evidence, and an exit plan before it receives production trust.
+                            The useful question is not &quot;Which platform won?&quot; It is &quot;Which system can satisfy our documented content, integration, security, performance, search, ownership, and operating requirements at an acceptable risk and total cost?&quot; EmDash deserves a place in that evaluation. The 1.0 label means it has earned a real look. A six-month-old ecosystem means it still needs a pilot, evidence and an exit plan before it gets production trust.
                         </BlogText>
                     </div>
 
@@ -545,9 +623,9 @@ export default function CloudflareEmDashPage() {
                         <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-cognac">Decision summary</p>
                         <h2 className="mb-5 text-2xl font-bold text-stone-900">Cloudflare EmDash vs WordPress in one minute</h2>
                         <ol className="list-inside list-decimal space-y-3 leading-relaxed text-stone-700">
-                            <li><strong>EmDash is still a beta preview:</strong> the features underneath it are credible, but you would need to test it against your own project before trusting it in production.</li>
-                            <li><strong>The security model is real, but it only goes so far:</strong> plugins run isolated in Cloudflare Dynamic Workers, and you still have to secure everything around them yourself.</li>
-                            <li><strong>It is portable, with a catch:</strong> EmDash runs on Cloudflare or on Node.js, but how it behaves and how safe it is can change depending on which one you pick.</li>
+                            <li><strong>EmDash reached 1.0 on {v("emdash-1-0-release-date")}:</strong> the software is stable by its makers&apos; account, but the ecosystem around it is six months old, so test it against your own project before trusting it in production.</li>
+                            <li><strong>The security model is real, but it only goes so far:</strong> plugins run sandboxed on Cloudflare and, since 1.0, on Node.js, with fewer limits enforced on Node.js. You still have to secure everything around them yourself.</li>
+                            <li><strong>It runs on Cloudflare or Node.js, and only with Astro:</strong> there is no Next.js version. Cloudflare&apos;s Next.js project, Vinext, is a separate product.</li>
                             <li><strong>WordPress is not automatically the wrong answer:</strong> if it is looked after and it does what your team needs, it can still be the right call.</li>
                             <li><strong>What protects your search traffic is discipline, not the framework:</strong> mapping every URL, getting the redirects right, checking the content came across, testing it, watching it afterwards, and being able to roll back.</li>
                         </ol>

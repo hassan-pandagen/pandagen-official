@@ -578,6 +578,62 @@
       "qualifier": "Oxygen doesn't support a proxy in front of a deployment",
       "verifiedAt": "2026-10-03",
       "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
+    },
+    "emdash-current-version": {
+      "vendor": "EmDash",
+      "label": "Current EmDash release",
+      "value": "1.1.0",
+      "qualifier": "published to npm on 1 October 2026; 1.0 was released on 28 September 2026 as emdash@1.0.1. An earlier emdash 1.0.0 on npm (27 April 2026) is deprecated and is not the 1.0 release",
+      "verifiedAt": "2026-10-04",
+      "source": "https://www.npmjs.com/package/emdash"
+    },
+    "emdash-1-0-release-date": {
+      "vendor": "EmDash",
+      "label": "EmDash 1.0 release date",
+      "value": "28 September 2026",
+      "qualifier": "Cloudflare: \"a stable, free, and open source CMS built on Astro, ready to power a production website\"",
+      "verifiedAt": "2026-10-04",
+      "source": "https://blog.cloudflare.com/emdash-cms-plugin-registry/"
+    },
+    "emdash-sandbox-cpu-limit": {
+      "vendor": "EmDash",
+      "label": "Plugin sandbox CPU time limit",
+      "value": "50 ms",
+      "qualifier": "enforced on Cloudflare Workers by the Worker Loader; not enforced on Node.js",
+      "verifiedAt": "2026-10-04",
+      "source": "https://docs.emdashcms.com/deployment/plugin-sandbox"
+    },
+    "emdash-sandbox-subrequest-limit": {
+      "vendor": "EmDash",
+      "label": "Plugin sandbox subrequest limit",
+      "value": "10",
+      "qualifier": "enforced on Cloudflare Workers by the Worker Loader; not enforced on Node.js",
+      "verifiedAt": "2026-10-04",
+      "source": "https://docs.emdashcms.com/deployment/plugin-sandbox"
+    },
+    "emdash-sandbox-wall-time": {
+      "vendor": "EmDash",
+      "label": "Plugin sandbox wall time limit",
+      "value": "30 s",
+      "qualifier": "enforced on both Cloudflare Workers and Node.js",
+      "verifiedAt": "2026-10-04",
+      "source": "https://docs.emdashcms.com/deployment/plugin-sandbox"
+    },
+    "emdash-sandbox-cloudflare-plan": {
+      "vendor": "EmDash",
+      "label": "Plan needed for the plugin sandbox on Cloudflare",
+      "value": "Workers Paid",
+      "qualifier": "Dynamic Workers need the Workers Paid plan; new projects deploy on the Workers free plan unless sandboxed plugins are enabled. On Node.js the sandbox needs only the workerd package",
+      "verifiedAt": "2026-10-04",
+      "source": "https://docs.emdashcms.com/deployment/plugin-sandbox"
+    },
+    "emdash-registry-plugin-count": {
+      "vendor": "EmDash",
+      "label": "Plugins listed in the EmDash plugin registry",
+      "value": "38",
+      "qualifier": "entries on the registry listing page, one of them a test entry; free plugins only so far",
+      "verifiedAt": "2026-10-04",
+      "source": "https://plugins.emdashcms.com/"
     }
   }
 }

@@ -232,8 +232,8 @@ export default function WordPressVsNextJsPage() {
                         <a href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">its own launch post</a>{" "}
                         as the spiritual successor to WordPress. Read from{" "}
                         <a href="https://github.com/emdash-cms/emdash" target="_blank" rel="noopener noreferrer" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">the project repository</a>{" "}
-                        on August 2, 2026 it was still being committed to, and every published package was still on a
-                        0.x version, so it is a pilot rather than a production decision. Our{" "}
+                        on October 4, 2026 it had reached version 1.0, released on 28 September 2026. It runs only
+                        inside Astro, though, so it isn&apos;t a CMS you can put behind a Next.js site. Our{" "}
                         <Link href="/blog/cloudflare-emdash-wordpress-replacement" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">full review of EmDash</Link>{" "}
                         has the dated figures. A comparison written as WordPress against Next.js is already narrower
                         than the field.
