@@ -170,11 +170,11 @@ export default function WordPressCostPage() {
                     <BlogQuote>
                         The dictator, who micromanaged the project for two decades, says community is to blame for the results.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Rarst · r/Wordpress · Apr 14, 2026 · 128 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Rarst · r/Wordpress · Apr 15, 2026 · 128 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1sm8h38/continuing_the_trend_matt_mullenweg_says_the/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        Having a db is not a problem, it is that WP database structure is straight from hell, and it is like that for the sake of being retrocompatible. They should have made a breaking change with v5 or v6 and completely redesign it.
+                        Having a db is not a problem, it&apos;s that wp&apos;s db structure is straight from hell.. and it&apos;s like that for the sake of being retrocompatible. They should have made a breaking change with v5 or v6 and completely redesign it.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/zenotds · r/Wordpress · Apr 14, 2026 · 4 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/oghfw0f/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/zenotds · r/Wordpress · Apr 16, 2026 · 6 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/oghfw0f/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

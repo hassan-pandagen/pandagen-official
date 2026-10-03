@@ -160,20 +160,12 @@ export default function WixVsCustomWebsitePage() {
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="6 min read" />
 
                     <BlogText>
-                        Here is what leaving Wix sounds like from people who tried it. All three are Wix users writing in their own words on r/WIX, and each one links to the original thread.
+                        Here is what Wix lock-in sounds like from someone who lived with it: a Wix user writing in their own words on r/WIX, linked to the original comment.
                     </BlogText>
                     <BlogQuote>
-                        You are completely locked in. You cannot export your data, your code, anything. They want you trapped on their crappy service and paying them forever. Everything that they can do to make leaving difficult, they do.
+                        The vendor lock in is extreme. I had a hobby site on wix. I didnt know this was not &quot;wix studio&quot;, and the site wouldn&apos;t load on any ios apple device. … I then was so fed up I paid a wix studio developer $500 to rebuild it on wix studio. Great. It finally expired and I did not even bother with it anymore just money flushed down the drain and many hours wasted because of this awful company and vendor lock in.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Temporary-Mix8022 · r/WIX · Apr 3, 2026 · 60 upvotes, 70 comments · <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
-                    <BlogQuote>
-                        The vendor lock in is extreme. I had a hobby site on Wix. The site would not load on any iOS Apple device. I spent hours with their support. I then was so fed up I paid a Wix Studio developer $500 to rebuild it on Wix Studio. It finally expired and I did not even bother with it anymore. Just money flushed down the drain and many hours wasted.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/jn024 · r/WIX · Apr 3, 2026 · 7 upvotes · <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
-                    <BlogQuote>
-                        I am so fed up and broke because of years of paying for Wix where I host 3 websites. It just feels like a very expensive scam for what you get. Also, you still need to spend hours making it mobile responsive.
-                    </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/Big-Link-9451 · r/WIX · Apr 28, 2026 · 6 upvotes · <a href="https://www.reddit.com/r/WIX/comments/1sygwki/i_really_want_to_liberate_myself_from_my_wix_jail/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/jn024 · r/WIX · Apr 4, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>

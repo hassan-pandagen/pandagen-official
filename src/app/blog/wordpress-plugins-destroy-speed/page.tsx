@@ -158,11 +158,11 @@ export default function WordPressPluginPerformancePage() {
                         Two WordPress developers put the database problem more bluntly than we would, in a thread from April 2026. Their words are unchanged and each one links to the original comment.
                     </BlogText>
                     <BlogQuote>
-                        Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.
+                        Every time you load a page or post, WP wants to retrieve info from the database. While that may have made sense in the beginning, we are long since past the point where the content on pages (and posts for that matter) don&apos;t change enough to matter. WP architecture should really have switched over to treating the site cache as the primary site, with the database being treated as the backup.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/user_number_666 · r/Wordpress · Apr 14, 2026 · 103 upvotes on 160-upvote thread · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/user_number_666 · r/Wordpress · Apr 14, 2026 · 103 upvotes on 160-upvote thread · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5b5kc/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        CMS should just generate a static HTML + CSS ONCE and then just let the server serve it, instead of hammering the DB every single time — unless someone installed enough caching plugins to fix this.
+                        Of course - CMS should just generate a static HTML + CSS - ONCE and then just let nginx serve it - instead of hammering the DB every-single-time (unless someone installed enough caching plugins to fix this)
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/Myth_Thrazz (Jack of All Trades) · r/Wordpress · Apr 14, 2026 · 44 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5bmvs/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 

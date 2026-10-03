@@ -150,8 +150,8 @@ export default function SquarespacePageContent() {
                 One user described difficulty applying local typography changes and maintaining image layouts across responsive breakpoints.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 8, 2026</span>
-                <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
+                <span><strong className="text-charcoal">u/WholeHuckleberry7081</strong> · r/squarespace · Apr 7, 2026</span>
+                <a href="https://www.reddit.com/r/squarespace/comments/1sec045/hate_ss_but_unsure_what_platform_to_move_to/oepxfgt/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 
@@ -174,7 +174,7 @@ export default function SquarespacePageContent() {
                 A user described repeated difficulty obtaining the authorization code needed for a domain transfer.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/alihusain007</strong> · r/squarespace · Apr 7, 2026</span>
+                <span><strong className="text-charcoal">u/alihusain007</strong> · r/squarespace · Apr 10, 2026</span>
                 <a href="https://www.reddit.com/r/squarespace/comments/1sha064/squarespace_will_not_send_auth_code_to_transfer/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function SquarespacePageContent() {
                 A user described a service incident that affected a booking path and dissatisfaction with the support response.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/sandywilli</strong> · r/squarespace · Apr 25, 2026</span>
+                <span><strong className="text-charcoal">u/sandywilli</strong> · r/squarespace · Apr 27, 2026</span>
                 <a href="https://www.reddit.com/r/squarespace/comments/1sx6skq/503_service_unavailable/oiksgiq/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>

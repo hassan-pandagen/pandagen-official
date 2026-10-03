@@ -192,13 +192,13 @@ export default function WordPressAiSecurityRiskPage() {
                         Two WooCommerce developers reacting to the April 2026 Essential Plugin backdoor, quoted word for word from r/woocommerce with a link to the thread.
                     </BlogText>
                     <BlogQuote>
-                        The backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it is going to be difficult to avoid. The other step is trying to rely less on plugins wherever possible.
+                        And truth be told the backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it&apos;s going to be difficult to avoid<br />The other step is trying to rely less on plugins wherever possible
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/BNfreelance · r/woocommerce · Apr 7, 2026 · on Essential Plugin backdoor thread · <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/BNfreelance · r/woocommerce · Apr 13, 2026 · on Essential Plugin backdoor thread · <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/ofzj6uj/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        It is alarming and according to the article this is the second time this has happened. The guy paid 6 figures for the plugins.
+                        It&apos;s big time alarming and according to the article this is the second time this has happened. The guy paid 6 figures for the plugins.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/shiftification · r/woocommerce · Apr 7, 2026 · 53-upvote thread · <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/shiftification · r/woocommerce · Apr 13, 2026 · 53-upvote thread · <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/ofxuktg/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">What site owners should do</h2>

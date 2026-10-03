@@ -164,13 +164,13 @@ export default function WordPressVsCustomCostPage() {
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">Matt Mullenweg (WordPress co-founder) · April 14, 2026 · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        Every time you load a page or post, WP wants to retrieve info from the database. We are long since past the point where the content on pages does not change enough to matter. This will reduce the footprint for most sites from 400MB down to 10MB to 30MB.
+                        Every time you load a page or post, WP wants to retrieve info from the database. While that may have made sense in the beginning, we are long since past the point where the content on pages (and posts for that matter) don&apos;t change enough to matter. WP architecture should really have switched over to treating the site cache as the primary site, with the database being treated as the backup.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/user_number_666 · r/Wordpress · Apr 14, 2026 · 103 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/user_number_666 · r/Wordpress · Apr 14, 2026 · 103 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/og5b5kc/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        It is only when you check out some other CMS out there that you realise WordPress, even with its many flaws, is pretty well-rounded and user-friendly.
+                        It&apos;s only when you check out some other CMS&apos;s out there (not even just the free ones) that you realise WordPress, even with its many flaws, is pretty well-rounded and user-friendly.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/hetsteentje · r/Wordpress · Apr 14, 2026 · 9 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/hetsteentje · r/Wordpress · Apr 15, 2026 · 9 upvotes · <a href="https://www.reddit.com/r/Wordpress/comments/1slbbht/wordpress_is_a_lie/ogay68t/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>

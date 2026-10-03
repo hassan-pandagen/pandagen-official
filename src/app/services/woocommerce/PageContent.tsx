@@ -183,7 +183,7 @@ export default function PageContent() {
           <div className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest bg-charcoal text-white rounded-full mb-4">Real Reddit Threads. April 2026. Verifiable.</div>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-3">What WooCommerce Operators Are Actually Saying Right Now</h2>
           <p className="text-stone-600 text-lg leading-relaxed mb-8 max-w-2xl">
-            Not curated testimonials. Real Reddit threads from r/woocommerce in the last 30 days, including public discussion from a WooCommerce contributor and an independent study of 10,000 stores. Click the links to verify every quote.
+            Not curated testimonials. Real Reddit threads from r/woocommerce in April 2026, including public discussion from a WooCommerce contributor and a plugin seller&apos;s count of the plugins on its own customers&apos; stores. Click the links to read each thread.
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
@@ -191,10 +191,10 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                Plugin fatigue: people mention WooCommerce not working out of the box for their use case, or having to install 30+ plugins and then when something goes wrong, troubleshooting becomes a nightmare. Fear of updating: people are scared that updating might break something. Performance: people mentioning the store becoming sluggish.
+                Plugin fatigue: people mention WooCommerce not working out of the box for their usecase, or having to install 30+ plugins and then when something goes wrong, troubleshooting becomes a nightmare. Fear of updating: people are scared that updating might break something basically. … Performance: people mentioning the store becoming sluggish.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/sunyatasattva</strong> · WooCommerce Core team lead · Apr 16, 2026 · 21 upvotes</span>
+                <span><strong className="text-charcoal">u/sunyatasattva</strong> · WooCommerce Core team lead · Apr 20, 2026 · 21 upvotes</span>
                 <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -209,20 +209,8 @@ export default function PageContent() {
                 I tested 10,000 WooCommerce stores and found they use on average 30 plugins. I think a lot of stores can do a lot with just a handful of Woo plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/beloved-wombat</strong> · r/woocommerce · Apr 16, 2026 · Studio Wombat scrape. Not independent: the sample comes from their own plugin-customer database, so every site had already bought at least one plugin, which pushes a plugin-count average up. Their published write-up states 15,000 sites; the comment above says 10,000</span>
+                <span><strong className="text-charcoal">u/beloved-wombat</strong> · r/woocommerce · Apr 20, 2026 · Studio Wombat scrape. Not independent: the sample comes from their own plugin-customer database, so every site had already bought at least one plugin, which pushes a plugin-count average up. Their published write-up states 15,000 sites; the comment above says 10,000</span>
                 <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/oh9orf3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-              </div>
-            </div>
-
-            {/* Quote 3: 5-year dev frustration */}
-            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
-              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-stone-700 leading-relaxed mb-4 italic">
-                I have been developing WordPress and WooCommerce for 5 years. The more I dive deeper I get more and more annoyed and frustrated. Basic features required plugin. Each plugin have its own UI, analytics and more importantly its own bloat. Basic features like variations switches, cart recovery, better analytics. It is a big list. God help you when you decide to change the theme or plugin.
-              </p>
-              <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/Investmaan</strong> · r/woocommerce · Apr 28, 2026 · 21 upvotes, 37 comments</span>
-                <a href="https://www.reddit.com/r/woocommerce/comments/1t2r2kr/i_feel_extremely_frustrated_with_woocommerce_and/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
 

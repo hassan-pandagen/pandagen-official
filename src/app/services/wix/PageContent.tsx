@@ -88,29 +88,6 @@ export default function PageContent() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-5">
-            {/* Quote 1: Lock-in + can't export */}
-            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
-              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-stone-700 leading-relaxed mb-4 italic">
-                One user described difficulty exporting site assets and moving away from the platform.
-              </p>
-              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026</span>
-                <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-              </div>
-            </div>
-
-            {/* Quote 2: Mobile + 3x work */}
-            <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
-              <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
-              <p className="text-stone-700 leading-relaxed mb-4 italic">
-                The same user reported frustration adapting layouts across breakpoints and languages.
-              </p>
-              <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/Temporary-Mix8022</strong> · r/WIX · Apr 3, 2026</span>
-                <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
-              </div>
-            </div>
 
             {/* Quote 3: $ wasted + vendor lock-in */}
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
@@ -119,7 +96,7 @@ export default function PageContent() {
                 Another user described an iOS loading issue, a support interaction, and additional rebuild work.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/jn024</strong> · r/WIX · Apr 3, 2026</span>
+                <span><strong className="text-charcoal">u/jn024</strong> · r/WIX · Apr 4, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>
@@ -131,7 +108,7 @@ export default function PageContent() {
                 A user described moving to a Next.js site while an existing Wix subscription term remained unresolved.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-600 pt-3 border-t border-stone-100">
-                <span><strong className="text-charcoal">u/AnshulJ999</strong> · r/WIX · Apr 4, 2026</span>
+                <span><strong className="text-charcoal">u/AnshulJ999</strong> · r/WIX · Apr 5, 2026</span>
                 <a href="https://www.reddit.com/r/WIX/comments/1sdh7kp/my_experience_with_migrating_away_from_wix_to/" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Verify →</a>
               </div>
             </div>

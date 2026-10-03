@@ -309,7 +309,7 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                For almost a decade I have been suffering from WordPressitis, experimenting with various plugins, themes and suspicious developers. Something works for a quarter or a year then disappears, other things get stripped down and are now offered as monthly subscriptions.
+                For almost a decade I have been &quot;suffering from WordPressitis&quot;, experimenting with various plugins, themes and suspicious developers. Something works for a quarter or a year then disappears, other things get stripped down and are now offered as monthly/yearly subscriptions etc.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">Larvea</strong> · 10-year WordPress owner · 7 upvotes</span>
@@ -321,7 +321,7 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                I either stumble on an agency charging me 100k for one site, or an UpWork specialist who swears his templates are the right ones, and he can get a complete website up and running for 1k.
+                I either stumble on an agency charging me 100k for one site, or an UpWork specialist who swears that his templates are the right ones, and he can get a complete website up and running for 1k.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">Larvea</strong> · The exact gap PandaCodeGen fills</span>
@@ -333,7 +333,7 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                Next absolutely can do just about anything you want. Yes, Next is an SEO powerhouse, but every single meta tag has to be provided and coded for almost every page or template.
+                Next absolutely can do just about anything you want, but nearly everything you want will need to be custom coded. … Yes, Next is an SEO powerhouse, but every single meta tag has to be provided and coded for almost every page or template.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">corey_brown</strong> · r/nextjs · 16 upvotes</span>
@@ -345,7 +345,7 @@ export default function PageContent() {
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-xs">
               <div className="text-cognac text-3xl font-serif leading-none mb-3">&ldquo;</div>
               <p className="text-stone-700 leading-relaxed mb-4 italic">
-                I would highly recommend wpengine. As one of my clients began to grow rapidly, we had innumerable issues with godaddy hosting being able to scale up properly... there were an equal amount of issues when I moved the site to Amazon S3.
+                I would highly recommend the wpengine option. As one of my clients began to grow rapidly, we had innumerable issues with godaddy hosting being able to scale up properly....there were an equal (though very different) amount of issues when I moved the site to Amazon s3&apos;s lighthouse.
               </p>
               <div className="flex items-center justify-between text-xs text-stone-500 pt-3 border-t border-stone-100">
                 <span><strong className="text-charcoal">bobobobobobooo</strong> · WordPress dev · managed hosting billed monthly</span>

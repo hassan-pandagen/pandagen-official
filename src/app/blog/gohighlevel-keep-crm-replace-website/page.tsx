@@ -190,19 +190,19 @@ export default function KeepHighLevelReplaceWebsiteGuide() {
                     <p className="text-xs text-stone-500 mt-1 mb-4">Jeffrey Lemoine, GHL Ideas Board, November 27, 2024 · <a href="https://ideas.gohighlevel.com/website/p/fix-mobile-page-speed" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <BlogQuote>
-                        I stripped everything off the page. No images, no Google fonts, no tracking, no CSS. Just Arial text on a plain page. Page speed is extremely slow for such a basic page. I love GHL but fear I am going to have to move to another LP solution due to these horrible load times.
+                        I stripped everything off of the page. No images, no google fonts, no tracking js, no css, nothing. Just arial text on plain page. Page speed is extremely slow for such a basic page. … I love GHL but fear I&apos;m going to have to move to another LP solution due to these horrible load times.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/AdIllustrious7272, r/gohighlevel, July 29, 2024 · <a href="https://www.reddit.com/r/gohighlevel/comments/1ef21su/mobile_page_speed_debacle_please_help/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <BlogQuote>
-                        I am a huge advocate when it comes to not using the GHL site builder unless the client is not concerned with SEO, site speed, or does not plan to scale. The system is janky, not customizable to a fault, and produces bloated code.
+                        I&apos;m a huge advocate when it comes to not using the GHL site builder unless the client isn&apos;t concerned with SEO, site speed, or doesn&apos;t plan to scale. The system is janky, not customizable to a fault, and produces bloated code.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/Vibesushi, r/gohighlevel, May 30, 2025 · <a href="https://www.reddit.com/r/gohighlevel/comments/1kz7por/ghl_is_the_worst_possible_website_builder_for/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <BlogQuote>
-                        GHL API is way too slow for your frontend to rely on API calls to render or post. GHL sends webhooks one way and needs to be spoken to in API another way. Not to mention their trailing slash nightmare.
+                        …ghl api is way too slow for your frontend to rely on api calls to render or post - you would need a database layer in the middle and duplicate all fields and match schema exactly and still ghl sends webhooks one way and needs to be spoken to in api another way - not to mention their trailing slash nightmare.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4">u/darkmaneckz, r/gohighlevel, April 17, 2026 · <a href="https://www.reddit.com/r/gohighlevel/comments/1sgjok7/anyone_running_a_headless_ghl_setup_nextjs/ognr9ag/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/darkmaneckz, r/gohighlevel, April 17, 2026. Two days later they added: “i kinda take this back if u set up through oauth but you still need ur own state management.” · <a href="https://www.reddit.com/r/gohighlevel/comments/1sgjok7/anyone_running_a_headless_ghl_setup_nextjs/ognr9ag/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The architecture in one minute</h2>
