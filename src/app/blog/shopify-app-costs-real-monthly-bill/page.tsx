@@ -101,8 +101,8 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Shopify",
-            wordCount: 2891,
-            timeRequired: "PT14M",
+            wordCount: 3181,
+            timeRequired: "PT16M",
             about: [
                 { "@type": "Thing", name: "Shopify app costs" },
                 { "@type": "Thing", name: "Software subscription auditing" },
@@ -189,8 +189,16 @@ export default function ShopifyAppCostsPage() {
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Mar 19, 2026" readTime="9 min read" />
 
                     <BlogText>
-                        One r/shopify reply puts the test for any app on the bill in a sentence. It&apos;s linked so you can read the full thread.
+                        Three r/shopify voices on the app bill, in their own words: a six-year merchant whose apps are a third of the bill, a reply on what replacing an app with custom work costs, and a one-line test for keeping any app. Each is linked so you can read the full thread.
                     </BlogText>
+                    <BlogQuote>
+                        I have been on Shopify for 6 years and my store does very well. Every month when I look at my bill over 1/3 of it is app charges. I want to do this, oh I need an app, I want to do that I need an app. The recurring monthly costs suck. Anyone feel this way?
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/merchantMedic</strong> · r/shopify · Feb 18, 2026 · 85 upvotes, 199 comments · <a href="https://www.reddit.com/r/shopify/comments/1r857c6/app_fatigue_im_tired/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        How long is the question. Sometimes our devs quote $5000+ and the app does the same job for $15 a month that&apos;s 28 years to break even lol
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/EpicRageGuy</strong> · r/shopify · Feb 18, 2026 · 32 upvotes · replying to “why not work with a dev and get the custom work done to get rid of the apps?” · <a href="https://www.reddit.com/r/shopify/comments/1r857c6/app_fatigue_im_tired/o62wfef/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
                         If you can&apos;t directly measure ROI with them (conversions or time saving)you probably don&apos;t need them.
                     </BlogQuote>

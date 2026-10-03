@@ -89,8 +89,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website builder", sameAs: ["https://en.wikipedia.org/wiki/Website_builder"] },
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
             ],
-            wordCount: 1838,
-            timeRequired: "PT9M",
+            wordCount: 2332,
+            timeRequired: "PT12M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -160,12 +160,20 @@ export default function WixVsCustomWebsitePage() {
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 12, 2026" readTime="6 min read" />
 
                     <BlogText>
-                        Here is what Wix lock-in sounds like from someone who lived with it: a Wix user writing in their own words on r/WIX, linked to the original comment.
+                        Three Wix users on r/WIX in 2026, in their own words: one who paid for a rebuild and still gave up, one whose plan price more than doubled, and one who says Wix pays for itself. Each quote links to the original post.
                     </BlogText>
                     <BlogQuote>
                         The vendor lock in is extreme. I had a hobby site on wix. I didnt know this was not &quot;wix studio&quot;, and the site wouldn&apos;t load on any ios apple device. … I then was so fed up I paid a wix studio developer $500 to rebuild it on wix studio. Great. It finally expired and I did not even bother with it anymore just money flushed down the drain and many hours wasted because of this awful company and vendor lock in.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/jn024 · r/WIX · Apr 4, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/WIX/comments/1scmih1/warning_do_not_use_wix/oece1a3/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        My plan (Core) jumped from $160/yr to $348/yr without any notification of this 120% fee increase. No email about a fee increase, nothing, just whacked it onto my card.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/maxplanar · r/WIX · Feb 4, 2026 · 27 upvotes, 39 comments · <a href="https://www.reddit.com/r/WIX/comments/1qw4n12/will_be_leaving_wix_due_to_120_increase_in_fees/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <BlogQuote>
+                        I have had my website (which sounds much more complicated than yours) for 5 years. Apart from 1 app which became paid (maps), and Instagram that once a year disconnects and I have to reconnect I had zero issue. I generate almost 1mil$ with it and considering how much it would cost for me to replicate it in WordPress or hiring a web designer, WIX is pretty cost effective and awesome to use.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/MasterMirkinen · r/WIX · Aug 19, 2026 · 8 upvotes · <a href="https://www.reddit.com/r/WIX/comments/1vsqwnu/is_it_time_to_leave_wix_behind/p4ndyw7/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The decision in one minute</h2>

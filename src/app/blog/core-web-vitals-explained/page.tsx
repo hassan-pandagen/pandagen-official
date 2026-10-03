@@ -86,8 +86,8 @@ const articleSchema = {
                 { "@type": "Thing", name: "Website migration", sameAs: ["https://en.wikipedia.org/wiki/Data_migration"] },
                 { "@type": "Thing", name: "Search engine optimization", sameAs: ["https://en.wikipedia.org/wiki/Search_engine_optimization"] },
             ],
-            wordCount: 1967,
-            timeRequired: "PT9M",
+            wordCount: 2189,
+            timeRequired: "PT11M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             keywords: ["Core Web Vitals", "LCP", "INP", "CLS", "PageSpeed Insights"],
             citation: [
@@ -184,13 +184,18 @@ export default function CoreWebVitalsExplainedPage() {
                     />
 
                     <BlogText>
-                        A site owner described the problem in their own words on Reddit in April 2026. The quote below links to the original thread so you can read the full discussion.
+                        Two people on Reddit in 2026, in their own words: a site owner whose clicks stalled at the bottom of page one, and an SEO asking whether chasing Core Web Vitals is worth it for a small site. Each quote links to the original thread so you can read the full discussion.
                     </BlogText>
 
                     <BlogQuote>
                         Total impressions: ~57,000<br />Total clicks: ~1,270<br />Average CTR: 2.2%<br />Average position: 8.6<br />…<br />Clicks are stuck at ~40/day despite high impressions<br />CTR dropped from ~14% (brand queries only) to ~1.2% as non-brand impressions grew
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/Big_University_6035 · r/SEO · Apr 19, 2026 · 25 upvotes, 35 comments · <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+
+                    <BlogQuote>
+                        My client is obsessed with CWV and I can&apos;t say I&apos;m too convinced. Yes - compress images, minify CSS/JS and try your best to remove unused JavaScript (place at the footer etc etc) - but my overall point - is the juice worth the squeeze especially in 2026? … I&apos;d rather place the Tech towards entity-relationship improvements over improving load speed for 0.002 seconds for a skinny site of 200 URLs that gets like 200 visits a day.
+                    </BlogQuote>
+                    <p className="text-xs text-stone-500 mt-1 mb-4">u/concisehacker · r/TechSEO · Jun 26, 2026 · 28 upvotes, 41 comments · <a href="https://www.reddit.com/r/TechSEO/comments/1uftl8x/thoughts_about_core_web_vitals_in_2026/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <div className="my-10">
                         <PageSpeedAnimation />

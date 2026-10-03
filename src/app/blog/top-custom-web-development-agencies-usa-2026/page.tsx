@@ -238,16 +238,16 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                     <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Apr 8, 2026" readTime="5 min read" />
 
                     <BlogText>
-                        Three people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.
+                        Two people close to the WordPress and WooCommerce ecosystem, quoted in their own words, with a link to each original post so you can read the whole thread.
                     </BlogText>
                     <BlogQuote>
                         We are not being killed by competition, I believe we have done this to ourselves. We keep driving away some of the most valuable people and rejecting them when they try to contribute.
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">Matt Mullenweg</strong> (WordPress founder) · April 14, 2026 · reported by The Repository · <a href="https://www.therepository.email/matt-mullenweg-says-the-wheels-have-fallen-off-in-wide-ranging-wordpress-critique" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
-                        I tested 10,000 WooCommerce stores and found they use on average 30 plugins. What bothers users: other platforms have features in core that require a plugin with Woo, plugin conflicts and the minefield to navigate it, pricing of these plugins.
+                        Plugin fatigue: people mention WooCommerce not working out of the box for their usecase, or having to install 30+ plugins and then when something goes wrong, troubleshooting becomes a nightmare. Fear of updating: people are scared that updating might break something basically. … Performance: people mentioning the store becoming sluggish.
                     </BlogQuote>
-                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/beloved-wombat</strong> (Studio Wombat, 15,000-site scrape, Apr 2026) · r/woocommerce · Apr 20, 2026 · Read the selection effect before you use the number: Studio Wombat sells WooCommerce plugins and drew the sample from its own customer database, so every site in it had already bought at least one plugin. That biases a plugin-count average upward and it is not an independent study of WooCommerce stores generally · <a href="https://www.studiowombat.com/blog/woocommerce-data-insights-2026-edition/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
+                    <p className="text-xs text-stone-500 mt-1 mb-4"><strong className="text-stone-600">u/sunyatasattva</strong> (WooCommerce Core team lead, writing personally, not officially) · r/woocommerce · Apr 20, 2026 · 21 upvotes · <a href="https://www.reddit.com/r/woocommerce/comments/1sqom3t/i_am_a_woocommerce_core_team_lead_advocating_for/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
                     <InsightBox variant="warning" label="Commercial disclosure">
                         Every company below is described from its own public pages, read on 13 September 2026.
