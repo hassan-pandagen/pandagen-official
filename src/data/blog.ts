@@ -6,6 +6,7 @@
 import 'server-only';
 import { UPDATE_STATS, REGISTER_START, longDate } from './google-updates';
 import { COMMERCIAL } from './company-facts';
+import { asOf, spec } from './spec-facts';
 
 export type IllustrationType = 'wordpress' | 'speed' | 'code' | 'saas' | 'plugins' | 'traffic' | 'sales' | 'conversion' | 'ranking' | 'cost' | 'performance' | 'security' | 'aicommerce' | 'hosting' | 'webflow' | 'migration';
 
@@ -2003,19 +2004,24 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "shopify-headless",
-    cardStat: "3 paths",
-    cardStatLabel: "Theme, Hydrogen or custom API client",
-    title: "Headless Shopify in 2026: Architecture and Migration Guide",
-    excerpt: "Compare Shopify themes, Hydrogen and custom Storefront API builds across requirements, integrations, SEO, analytics, ownership, testing and total cost.",
+    cardStat: "$0",
+    cardStatLabel: "Extra for Oxygen hosting on any paid Shopify plan",
+    title: "Headless Shopify Cost in 2026: Plans, Hosting and Build",
+    excerpt: "What headless Shopify costs in 2026, line by line: your Shopify plan, Hydrogen and Oxygen at no extra charge, the build, apps and the upkeep most quotes leave out.",
     category: "Shopify",
-    readTime: "14 min",
+    readTime: "17 min",
     date: "Feb 15",
     author: "Hassan",
     role: "Co-founder, Lead Engineer",
     featured: false,
     illustrationType: 'speed',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-03",
     faqs: [
+      // Cost FAQs added 3 Oct 2026; every vendor figure comes from spec-facts.json.
+      { question: "How much does headless Shopify cost?", answer: `Your Shopify plan, the storefront build and the upkeep. As of ${asOf("shopify-plan-basic")}, Shopify's US plans are Basic ${spec("shopify-plan-basic").value}, Grow ${spec("shopify-plan-grow").value}, Advanced ${spec("shopify-plan-advanced").value} and Plus from ${spec("shopify-plan-plus").value}, with lower monthly rates when billed yearly. Hydrogen, Oxygen hosting and the Headless channel add nothing to that bill. The build depends on scope: PandaCodeGen's starts at its $5,000 Scale tier, and larger stores are quoted after a scoping call. After launch, budget at least one API upgrade a year.` },
+      { question: "Do you need Shopify Plus to go headless?", answer: `No. Shopify offers Oxygen hosting at no extra charge on Starter, Basic, Grow, Advanced, Plus, and Pause and build, and the Headless channel is ${spec("shopify-headless-channel-price").value}. Plus, from ${spec("shopify-plan-plus").value}, is a decision about sales volume and features, not a condition of going headless.` },
+      { question: "Is Shopify Oxygen hosting free?", answer: `On paid plans, yes. As of ${asOf("shopify-oxygen-hosting")}, Shopify's developer documentation says Oxygen is available at no extra charge on Starter, Basic, Grow, Advanced, Plus, and Pause and build, and not on Agentic plans. Development stores and trial plans can build and test, but without public environments. Hydrogen itself is ${spec("shopify-hydrogen-license").value}.` },
+      { question: "How often does a headless Shopify store need upgrades?", answer: `Shopify releases ${spec("shopify-api-version-support").value}, so a headless storefront needs at least one API upgrade a year, on top of framework and security updates. Put that in the maintenance budget before launch.` },
       { question: "What is headless Shopify?", answer: "Headless Shopify uses Shopify as the commerce back end while a separate storefront controls rendering and customer experience through supported APIs. The team also assumes more responsibility for frontend delivery, integrations, analytics, SEO, security and maintenance." },
       { question: "How much faster is headless Shopify than a theme?", answer: "There is no universal speed difference. A headless build can support strong performance, but outcomes depend on rendering, caching, media, JavaScript, third parties, data access and implementation quality. Compare representative routes using the same recorded conditions." },
       { question: "Is headless Shopify worth the investment?", answer: "It can be when accepted experience, integration or channel requirements justify the extra build and operating responsibility. Compare full lifecycle cost, internal capability and downside risk with a tested theme-based option; there is no universal revenue or payback threshold." },
@@ -2310,9 +2316,9 @@ export const blogPosts: BlogPost[] = [
     role: "Co-founder, Lead Engineer",
     featured: true,
     illustrationType: 'sales',
-    lastModified: "2026-08-19",
+    lastModified: "2026-10-03",
     faqs: [
-      { question: "Is headless Shopify worth it?", answer: "For most stores, no. Headless buys you control of the storefront and costs you the theme editor, an ongoing engineering commitment, and a hosting line Shopify publishes no price for. It is worth it when you can name a requirement the theme demonstrably cannot meet after you have actually tried, when somebody will own the storefront application after launch, and when the people who run campaigns can still change a page without filing a ticket. Two out of three is not enough, and the third is where these projects quietly fail. The same budget spent on the existing theme, its images, its app load and its data layer usually moves the numbers further and adds nothing to maintenance." },
+      { question: "Is headless commerce worth it?", answer: "For most stores, no. Headless buys you control of the storefront and costs you the theme editor and an ongoing engineering commitment. It is worth it when you can name a requirement the theme demonstrably cannot meet after you have actually tried, when somebody will own the storefront application after launch, and when the people who run campaigns can still change a page without filing a ticket. Two out of three is not enough, and the third is where these projects quietly fail. The same budget spent on the existing theme, its images, its app load and its data layer usually moves the numbers further and adds nothing to maintenance." },
       {
         question: "What is headless commerce in simple terms?",
         answer: "Headless commerce separates the customer-facing storefront from one or more commerce services. APIs and webhooks connect products, pricing, inventory, carts, customers, orders, checkout, content and other systems according to the chosen architecture."
@@ -2320,14 +2326,6 @@ export const blogPosts: BlogPost[] = [
       {
         question: "How much does a headless commerce build cost?",
         answer: "A headless commerce build is normally custom scope rather than a standard tier. PandaCodeGen's published tiers start at $1,500 Starter, $3,500 Growth and $5,000 Scale, and a storefront carrying its own commerce integration, content system, search, accounts and migration usually sits beyond Scale. Those are our prices, not a market average. Budget the storefront build, then hosting, a content system and search if you use them, then whoever keeps the storefront running afterwards."
-      },
-      {
-        question: "How much does headless Shopify cost per month?",
-        answer: "Going headless does not replace your Shopify bill, it adds a storefront to it. Read from Shopify's own pricing page on August 2, 2026, the plan lineup is Basic at US$19/mo, Grow at US$49/mo, Advanced at US$299/mo and Plus from US$2,300/mo, with third-party payment provider fees of 2%, 1%, 0.6% and 0.2% respectively. Regional pricing and a yearly or monthly toggle both change what you see, so read it in your own market. Most published breakdowns still quote the entry plan at $29 and omit the Grow tier entirely."
-      },
-      {
-        question: "Is Shopify headless free?",
-        answer: "The framework is, the hosting is not documented, and the store plan is not free at all. Hydrogen, Shopify's React storefront framework, ships under the MIT licence (Copyright 2023-present, Shopify Inc.), so there is no licence cost. The widely repeated claim that Oxygen hosting is free does not appear in Shopify's developer documentation, which publishes no Oxygen price. The documentation states that deployments are tied to a Shopify store and that shareable deployment links require the Basic plan or above. Ask Shopify what Oxygen costs on your plan and at your traffic, and get the answer in writing."
       },
       {
         question: "What do you lose by going headless on Shopify?",

@@ -20,8 +20,12 @@ const postId = "what-is-headless-commerce";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
 const title = "What Is Headless Commerce? A 2026 Store Owner Guide";
+// 3 Oct 2026: Shopify cost questions moved to /blog/shopify-headless. This page had
+// carried them in its description, keywords and two sections, with plan prices read
+// from a non-US regional pricing page, so the two articles competed for the same
+// cost searches. It now keeps the concept: what headless commerce is and when it fits.
 const description =
-    "What headless commerce is, what headless Shopify actually costs against Shopify's own published plan prices checked August 2, 2026, what Hydrogen and Oxygen do and do not cost, and when a custom storefront is justified.";
+    "What headless commerce is, how it differs from a traditional store, the Shopify and Medusa options, what changes for SEO and editing, and when a custom storefront is justified.";
 
 export const dynamic = "force-static";
 
@@ -32,20 +36,18 @@ export const metadata: Metadata = {
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
         "what is headless commerce",
+        "headless commerce meaning",
         "headless commerce 2026",
+        "headless vs traditional commerce",
         "Shopify headless storefront",
         "Medusa headless commerce",
-        "headless commerce cost",
-        "headless Shopify cost",
-        "Shopify headless pricing",
-        "is Shopify headless free",
     ],
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-03-14",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/what-is-headless-commerce")],
@@ -60,9 +62,8 @@ const sources = [
     { name: "Medusa storefront development", url: "https://docs.medusajs.com/resources/storefront-development" },
     { name: "Medusa production optimization", url: "https://docs.medusajs.com/resources/storefront-development/production-optimizations" },
     { name: "Sanity Visual Editing", url: "https://www.sanity.io/docs/visual-editing" },
-    { name: "Shopify plan pricing", url: "https://www.shopify.com/pricing" },
     { name: "Hydrogen license (MIT)", url: "https://github.com/Shopify/hydrogen/blob/main/LICENSE.md" },
-    { name: "Shopify Hydrogen deployments", url: "https://shopify.dev/docs/storefronts/headless/hydrogen/deployments" },
+    { name: "Shopify: Hydrogen and Oxygen fundamentals, supported plans", url: "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals" },
 ];
 
 const articleSchema = {
@@ -74,7 +75,7 @@ const articleSchema = {
             headline: title,
             description,
             datePublished: "2026-03-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -89,7 +90,7 @@ const articleSchema = {
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
             articleSection: "Ecommerce",
-            keywords: ["what is headless commerce", "headless Shopify cost", "is Shopify headless free", "Hydrogen and Oxygen pricing", "Medusa versus headless Shopify"],
+            keywords: ["what is headless commerce", "headless commerce definition", "headless vs traditional commerce", "Medusa versus headless Shopify"],
             wordCount: 2985,
             timeRequired: "PT15M",
             inLanguage: "en-US",
@@ -97,7 +98,6 @@ const articleSchema = {
                 { "@type": "Thing", name: "Headless commerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify", "https://www.shopify.com"] },
                 { "@type": "Thing", name: "Application programming interface", sameAs: ["https://en.wikipedia.org/wiki/API"] },
-                { "@type": "Thing", name: "Headless Shopify cost" },
             ],
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
@@ -121,7 +121,7 @@ const articleSchema = {
             primaryImageOfPage: { "@type": "ImageObject", url: ogImageUrlForPath(`/blog/${postId}`) },
             breadcrumb: { "@id": `${canonicalUrl}#breadcrumb` },
             datePublished: "2026-03-14",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-03",
             inLanguage: "en-US",
         },
         {
@@ -321,7 +321,7 @@ export default function WhatIsHeadlessCommercePage() {
                         publishing and attribution. Hydrogen is Shopify&apos;s supported React-based option, while
                         Shopify also documents bringing another stack. API versioning, customer accounts, consent,
                         checkout behavior, extensions and plan-specific needs belong in the technical discovery. Our{" "}
-                        <Link href="/blog/shopify-headless" className={linkClass}>guide to headless Shopify decisions</Link> covers
+                        <Link href="/blog/shopify-headless" className={linkClass}>headless Shopify cost and decision guide</Link> covers
                         that discovery in more detail, and{" "}
                         <Link href="/blog/shopify-vs-custom-website" className={linkClass}>Shopify compared with a custom build</Link>{" "}
                         frames the wider platform question. We deliver this work through our{" "}
@@ -438,45 +438,20 @@ export default function WhatIsHeadlessCommercePage() {
                         <Link href="/blog/will-migrating-hurt-my-seo" className={linkClass}>what happens to search visibility during a migration</Link>.
                     </BlogText>
 
-                    <BlogHeader id="cost">How much does headless Shopify cost?</BlogHeader>
+                    <BlogHeader id="cost">What headless costs on a platform you already pay for</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Going headless on Shopify does not replace your Shopify bill, it adds a storefront to it.
-                            Read from Shopify&apos;s own pricing page on August 2, 2026, the plan lineup is Basic at
-                            US$19/mo, Grow at US$49/mo, Advanced at US$299/mo and Plus from US$2,300/mo, with third-party
-                            payment provider fees of 2%, 1%, 0.6% and 0.2% respectively. The page carries a yearly and
-                            monthly toggle and regional pricing, so read it in your own market on the day you budget. On
-                            top of that plan you pay for the storefront build, then for hosting, a content system and
-                            search if you use them, then for whoever keeps the storefront running afterwards.
+                            Going headless doesn&apos;t replace your commerce platform&apos;s bill; it adds a storefront
+                            to it. On Shopify, the headless pieces themselves add little: Hydrogen is open source, and
+                            Shopify offers Oxygen hosting at no extra charge on its paid plans. The real costs are the
+                            build, the apps you replace, and whoever keeps the storefront running after launch. Our{" "}
+                            <Link href="/blog/shopify-headless" className={linkClass}>headless Shopify cost guide</Link>{" "}
+                            prices each line, from the Shopify plan to the yearly API upgrade. If you host the storefront
+                            yourself instead,{" "}
+                            <Link href="/blog/nextjs-hosting-zero-cost" className={linkClass}>what it takes to host a Next.js frontend</Link>{" "}
+                            sets out that line.
                         </BlogText>
                     </div>
-                    <BlogText>
-                        Two things are worth correcting before you use any published breakdown. Several of the cost articles ranking for this query still quote Shopify&apos;s entry
-                            plan at $29 a month, where Shopify&apos;s own page said US$19 when read on
-                            August 2, 2026. Several also skip the Grow plan at US$49 entirely, which is the tier a store outgrowing Basic actually
-                        lands on. If a cost article gets the platform line wrong, treat its build ranges with the same
-                        suspicion.
-                    </BlogText>
-
-                    <BlogHeader id="hydrogen-free">Is Shopify headless free?</BlogHeader>
-                    <div data-speakable="true">
-                        <BlogText>
-                            The framework is, the hosting is not documented, and the store plan definitely is not.
-                            Hydrogen, Shopify&apos;s own React storefront framework, ships under the MIT license
-                            (Copyright 2023-present, Shopify Inc.), so you can read it, fork it and run it anywhere at no
-                            license cost. Oxygen is the part most often repeated without a source. The widely published claim that &ldquo;Hydrogen and Oxygen are free&rdquo; does not appear on Shopify&apos;s pricing page or in its Hydrogen and Oxygen developer documentation, both read August 2, 2026, neither of which stated an Oxygen price. What it does document is
-                            that deployments are tied to a Shopify store, and that shareable deployment links require the
-                            Basic plan or above.
-                        </BlogText>
-                    </div>
-                    <BlogText>
-                        That gap matters when you are building a three-year budget, because the one line you cannot look
-                        up is the one every summary assures you is zero. Ask Shopify directly what Oxygen costs on your
-                        plan and at your traffic before you commit to it, and get the answer in writing. If you host the
-                        storefront yourself instead, the cost moves to your own provider and becomes checkable again;{" "}
-                        <Link href="/blog/nextjs-hosting-zero-cost" className={linkClass}>what it takes to host a Next.js frontend</Link>{" "}
-                        sets out what that line actually looks like.
-                    </BlogText>
 
                     <BlogHeader id="what-you-lose">What you give up when you go headless</BlogHeader>
                     <div data-speakable="true">
@@ -508,12 +483,12 @@ export default function WhatIsHeadlessCommercePage() {
                         <Link href="/blog/website-rebuild-cost-2026" className={linkClass}>rebuild scoping guide</Link>.
                     </BlogText>
 
-                    <BlogHeader id="worth-it">Is headless Shopify worth it?</BlogHeader>
+                    <BlogHeader id="worth-it">Is headless commerce worth it?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
                             For most stores, no, and the reason is specific rather than cautious. Headless buys you
-                            control of the storefront and costs you the theme editor, an ongoing engineering commitment
-                            and a hosting line Shopify does not publish a price for. It is worth it when you can name a
+                            control of the storefront and costs you the theme editor and an ongoing engineering
+                            commitment. It is worth it when you can name a
                             requirement the theme demonstrably cannot meet after you have actually tried, when you have
                             somebody who will own the storefront application after launch, and when the people who run
                             campaigns will still be able to change a page without filing a ticket. Two out of three is

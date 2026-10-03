@@ -12,6 +12,7 @@ import TopicUpLink from "@/components/blog/TopicUpLink";
 import { BlogAuthor, BlogHeader, BlogList, BlogText, InsightBox } from "@/components/ui/BlogStyles";
 import { FAQAccordion } from "@/components/ui/FAQAccordion";
 import { blogPosts } from "@/data/blog";
+import { asOf, spec } from "@/data/spec-facts";
 
 const RelatedPosts = dynamicImport(() => import("@/components/ui/RelatedPosts"));
 const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalButton"));
@@ -19,9 +20,15 @@ const QuoteModalButton = dynamicImport(() => import("@/components/ui/QuoteModalB
 const postId = "shopify-headless";
 const postFAQs = blogPosts.find((post) => post.id === postId)?.faqs ?? [];
 const canonicalUrl = `https://www.pandacodegen.com/blog/${postId}`;
-const title = "Headless Shopify in 2026: Architecture and Migration Guide";
+// 3 Oct 2026: retargeted to cost. Search Console showed Google testing this page for
+// "shopify headless pricing", "headless shopify cost" and "how much does shopify
+// headless cost" (10–30 Aug, around position 35), then dropping it: the page refused
+// to give a cost. It now answers with dated vendor line items and our own price,
+// still without inventing a market price band. The general "what is headless
+// commerce" questions belong to /blog/what-is-headless-commerce.
+const title = "Headless Shopify Cost in 2026: Plans, Hosting and Build";
 const description =
-    "Compare Shopify themes, Hydrogen and custom Storefront API builds across requirements, integrations, SEO migration, analytics, ownership, testing and total cost.";
+    "What headless Shopify costs in 2026, line by line: your Shopify plan, Hydrogen and Oxygen at no extra charge, the build, apps and the upkeep most quotes leave out.";
 
 export const dynamic = "force-static";
 
@@ -31,18 +38,19 @@ export const metadata: Metadata = {
     alternates: { canonical: `/blog/${postId}` },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
     keywords: [
-        "headless Shopify 2026",
-        "Shopify Hydrogen",
-        "Shopify Storefront API",
+        "headless Shopify cost",
+        "Shopify headless pricing",
+        "is Shopify Oxygen free",
+        "headless Shopify without Plus",
+        "Hydrogen vs Next.js cost",
         "Shopify headless migration",
-        "headless Shopify SEO",
     ],
     openGraph: {
         title,
         description,
         type: "article",
         publishedTime: "2026-02-15",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-03",
         authors: ["Hassan Jamal"],
         url: canonicalUrl,
         images: [ogImageForPath("/blog/shopify-headless")],
@@ -55,7 +63,12 @@ const sources = [
         name: "Shopify: headless benefits, tradeoffs and fit",
         url: "https://www.shopify.com/enterprise/blog/what-is-headless-commerce",
     },
+    { name: "Shopify pricing (US)", url: spec("shopify-plan-basic").source },
+    { name: "Shopify: Hydrogen and Oxygen fundamentals, supported plans", url: spec("shopify-oxygen-hosting").source },
+    { name: "Shopify App Store: Headless channel", url: spec("shopify-headless-channel-price").source },
+    { name: "Shopify API versioning", url: spec("shopify-api-version-support").source },
     { name: "Shopify Storefront API reference", url: "https://shopify.dev/docs/api/storefront/latest" },
+    { name: "Vercel pricing", url: spec("vercel-pro-price").source },
     {
         name: "Shopify Hydrogen and Oxygen getting started",
         url: "https://shopify.dev/docs/storefronts/headless/hydrogen/getting-started",
@@ -80,7 +93,7 @@ const articleSchema = {
             image: ogImageUrlForPath("/blog/shopify-headless"),
             description,
             datePublished: "2026-02-15",
-            dateModified: "2026-08-19",
+            dateModified: "2026-10-03",
             author: {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -93,15 +106,15 @@ const articleSchema = {
             },
             publisher: { "@id": "https://www.pandacodegen.com/#organization" },
             mainEntityOfPage: { "@id": `${canonicalUrl}#webpage` },
-            articleSection: "Shopify architecture",
+            articleSection: "Shopify costs",
             inLanguage: "en-US",
             about: [
                 { "@type": "SoftwareApplication", name: "Shopify", sameAs: ["https://en.wikipedia.org/wiki/Shopify"] },
                 { "@type": "Thing", name: "Ecommerce", sameAs: ["https://en.wikipedia.org/wiki/E-commerce"] },
                 { "@type": "Thing", name: "Web performance", sameAs: ["https://en.wikipedia.org/wiki/Web_performance"] },
             ],
-            wordCount: 2844,
-            timeRequired: "PT14M",
+            wordCount: 3480,
+            timeRequired: "PT17M",
             speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable='true']"] },
             citation: sources.map((source) => ({ "@type": "CreativeWork", ...source })),
         },
@@ -111,7 +124,7 @@ const articleSchema = {
             itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pandacodegen.com" },
                 { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.pandacodegen.com/blog" },
-                { "@type": "ListItem", position: 3, name: "Headless Shopify", item: "https://www.pandacodegen.com/blog/shopify-headless" },
+                { "@type": "ListItem", position: 3, name: "Headless Shopify cost", item: "https://www.pandacodegen.com/blog/shopify-headless" },
             ],
         },
         {
@@ -136,6 +149,9 @@ const articleSchema = {
     ],
 };
 
+// "$29/mo billed yearly", the first sentence of a Shopify plan's registry qualifier.
+const yearly = (id: string) => (spec(id).qualifier ?? "").split(". ")[0];
+
 const sourceLinkClass =
     "font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac";
 const inlineLinkClass = "font-medium text-cognac hover:underline";
@@ -147,32 +163,33 @@ export default function ShopifyHeadlessPage() {
             <main className="min-h-screen bg-white pb-24 pt-28">
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
                 <article className="mx-auto max-w-4xl px-5 sm:px-8">
-                    <Breadcrumb items={postCrumbs(postId, "Headless Shopify")} />
+                    <Breadcrumb items={postCrumbs(postId, "Headless Shopify cost")} />
                     <Link href="/blog" className="mb-8 mt-6 inline-flex items-center gap-2 text-sm font-medium text-stone-500 hover:text-charcoal">
                         <ArrowLeft className="h-4 w-4" /> Back to Insights
                     </Link>
 
                     <header data-article-hero="split" className="mb-10 border-b border-stone-200 pb-8">
                       <div data-article-hero-copy>
-                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify architecture</p>
+                        <p className="mb-4 text-sm font-bold uppercase tracking-[0.16em] text-cognac">Shopify costs</p>
                         <h1 className="mb-5 font-serif text-4xl font-medium leading-tight text-charcoal md:text-6xl">
-                            Headless Shopify in 2026: <span className="italic text-cognac">Architecture Before Hype</span>
+                            Headless Shopify cost in 2026: <span className="italic text-cognac">every line on the bill</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Go headless when you need a specific experience, need to connect to something, or need to
-                            sell somewhere Shopify&apos;s themes cannot reach. Do not go headless expecting a
-                            guaranteed lift in speed, rankings or revenue. What it means in practice: you build your
-                            own storefront and Shopify stays the system of record for products, inventory, orders,
-                            customers and checkout. What transfers to you is the storefront code, its hosting, its
-                            release process, and any customer-facing feature a theme or an app used to provide. Where custom code is the answer, PandaCodeGen builds it from $1,500 at a fixed price, has no minimum project size, and hands you code you own.
+                            Headless Shopify costs your Shopify plan, the storefront build and someone to run it. The
+                            headless parts cost nothing extra: Hydrogen is {spec("shopify-hydrogen-license").value}, Oxygen
+                            hosting comes at no extra charge on every paid plan from Starter to Plus, and the Headless
+                            channel that issues your Storefront API keys is {spec("shopify-headless-channel-price").value}.
+                            You don&apos;t need Shopify Plus. The money goes on the build, on replacing storefront apps,
+                            and on upkeep, because Shopify releases {spec("shopify-api-version-support").value}.
                         </p>
                         <p className="mt-4 text-xs text-stone-500">
-                            Reviewed July 24, 2026 against current Shopify and Google documentation.
+                            Prices and plan rules read from Shopify&apos;s own pages in {asOf("shopify-plan-basic")}, as
+                            shown to a US visitor. Shopify sets plan prices by country.
                         </p>
                         <p className="mt-3 text-sm leading-relaxed text-stone-600">
                             Disclosure: PandaCodeGen builds headless Shopify storefronts, so we have a commercial
-                            interest in one side of this decision. That is why the sections below publish no speed
-                            uplift, no price band for the market and no payback period.
+                            interest in one side of this decision. That&apos;s why this page lists vendor prices and
+                            our own price, but no market price band, speed uplift or payback period.
                         </p>
                       </div>
                       <div data-article-hero-screen>
@@ -180,7 +197,75 @@ export default function ShopifyHeadlessPage() {
                       </div>
                     </header>
 
-                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="5 min read" />
+                    <BlogAuthor name="Hassan Jamal" role="Co-founder and Lead Engineer" date="Feb 15, 2026" readTime="17 min read" />
+
+                    <BlogHeader id="cost-line-by-line">Headless Shopify cost, line by line</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            Headless Shopify costs your Shopify plan, from {spec("shopify-plan-basic").value} on Basic,
+                            plus the build and the upkeep. Hydrogen, Oxygen hosting and the Headless channel add nothing
+                            to that bill. Shopify publishes the first four lines below, so you can check them today; the
+                            other four depend on your store and your team, which is where quotes differ. Shopify prices
+                            are US prices as of {asOf("shopify-plan-basic")}.
+                        </BlogText>
+                    </div>
+                    <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Headless Shopify cost by line">
+                        <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+                            <thead className="bg-stone-100 text-charcoal">
+                                <tr><th className="p-4">Line</th><th className="p-4">What you pay</th><th className="p-4">What to know</th></tr>
+                            </thead>
+                            <tbody className="divide-y divide-stone-200 text-stone-700">
+                                <tr>
+                                    <td className="p-4 font-bold">Shopify plan</td>
+                                    <td className="p-4">
+                                        Basic {spec("shopify-plan-basic").value} ({yearly("shopify-plan-basic")}), Grow {spec("shopify-plan-grow").value} ({yearly("shopify-plan-grow")}),
+                                        Advanced {spec("shopify-plan-advanced").value} ({yearly("shopify-plan-advanced")}), Plus from {spec("shopify-plan-plus").value}
+                                    </td>
+                                    <td className="p-4">The plan you&apos;d pay for anyway. Hydrogen on Oxygen runs on every paid plan, so it doesn&apos;t force a higher tier.</td>
+                                </tr>
+                                <tr><td className="p-4 font-bold">Hydrogen</td><td className="p-4">$0</td><td className="p-4">{spec("shopify-hydrogen-license").value}. You can host it on Oxygen or anywhere else.</td></tr>
+                                <tr><td className="p-4 font-bold">Oxygen hosting</td><td className="p-4">No extra charge</td><td className="p-4">On {spec("shopify-oxygen-hosting").value.replace("no extra charge on paid plans: ", "")}. Not on Agentic plans.</td></tr>
+                                <tr><td className="p-4 font-bold">Headless channel and Storefront API</td><td className="p-4">Free channel</td><td className="p-4">The channel issues your API keys. Shopify sets {spec("shopify-storefront-api-buyer-limits").value}.</td></tr>
+                                <tr><td className="p-4 font-bold">Hosting outside Oxygen</td><td className="p-4">Vercel Pro {spec("vercel-pro-price").value}, plus usage</td><td className="p-4">Only if you build in Next.js or another framework. <Link href="/blog/nextjs-hosting-zero-cost" className={inlineLinkClass}>What Vercel really costs</Link> breaks down the usage side.</td></tr>
+                                <tr><td className="p-4 font-bold">Storefront apps</td><td className="p-4">Varies</td><td className="p-4">Apps that draw on the theme need replacing or rebuilding. <Link href="/blog/shopify-app-costs-real-monthly-bill" className={inlineLinkClass}>Audit the app bill first</Link>.</td></tr>
+                                <tr><td className="p-4 font-bold">The build</td><td className="p-4">Your written quote</td><td className="p-4">Ours starts at the Scale tier, $5,000. A store with its own content system, search, accounts and migration is quoted after a scoping call.</td></tr>
+                                <tr><td className="p-4 font-bold">Upkeep</td><td className="p-4">Your team&apos;s or a supplier&apos;s time</td><td className="p-4">At least one API upgrade a year, plus security updates, monitoring and releases.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <BlogHeader id="plus">Do you need Shopify Plus to go headless?</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            No. Shopify offers Oxygen hosting at no extra charge on Starter, Basic, Grow, Advanced, Plus,
+                            and Pause and build, and the Headless channel is {spec("shopify-headless-channel-price").value} on
+                            the App Store. Plus starts at {spec("shopify-plan-plus").value}, and choosing it is a decision
+                            about your sales volume and the features you need, not a condition of going headless.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        One planning catch: development stores and trial plans can build and test a Hydrogen storefront,
+                        but they get no public environments, so their preview links always need a store login. The
+                        number of public environments differs by paid plan, so check that limit before you promise
+                        anyone a shareable preview.
+                    </BlogText>
+
+                    <BlogHeader id="oxygen-or-vercel">Hydrogen on Oxygen or Next.js on Vercel: the running cost</BlogHeader>
+                    <div data-speakable="true">
+                        <BlogText>
+                            On Oxygen, hosting costs nothing extra, and you work inside Oxygen&apos;s limits:{" "}
+                            {spec("shopify-oxygen-limits").value}, and {spec("shopify-oxygen-limits").qualifier}. On Vercel,
+                            a Next.js storefront starts at the Pro plan&apos;s {spec("vercel-pro-price").value} (
+                            {spec("vercel-pro-price").qualifier}), and you choose the framework, the content system and
+                            the rest of the stack yourself.
+                        </BlogText>
+                    </div>
+                    <BlogText>
+                        Next to the build and the upkeep, that hosting gap is small. Pick by the team that will run the
+                        storefront: Hydrogen keeps you on Shopify&apos;s conventions and release tooling, and Next.js
+                        suits a team that already ships one or needs to bring in other systems. Both talk to the same
+                        Storefront API, and both send shoppers to the same Shopify checkout.
+                    </BlogText>
 
                     <section data-speakable="true" className="my-10 rounded-2xl border border-cognac/20 bg-cognac/5 p-7">
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The 2026 decision in one view</h2>
@@ -224,25 +309,24 @@ export default function ShopifyHeadlessPage() {
                         ))}
                     </div>
                     <BlogText>
-                        One dated dependency to check before you scope anything: if your operation runs on Stocky for
-                        purchase orders or demand forecasting,{" "}
-                        Shopify has confirmed it is unavailable after August 31, 2026 &mdash; see{" "}
+                        One dated dependency to check before you scope anything: if your operation ran on Stocky for
+                        purchase orders or demand forecasting, Shopify made it unavailable after August 31, 2026. See{" "}
                         <Link href="/blog/shopify-stocky-sunset-date-2026" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">our guide to that deadline</Link>{" "}
-                        for what stops working. Export what you need before you start a replatform, not during it.
+                        for what stopped working, and export what you still need before a replatform starts.
                     </BlogText>
 
                     <BlogHeader id="is-it-worth-it">Is headless Shopify worth it?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            For most stores, no — and we build headless storefronts, so read that as a filter rather
-                            than modesty. <strong>Headless converts a configurable store into a software project.</strong>{" "}
-                            The build is the smaller half; the part that decides whether it was worth it is who
-                            maintains it, deploys it and is on call for it in year two.
+                            For most stores, no. We build headless storefronts, so take that as a filter, not modesty.{" "}
+                            <strong>Headless converts a configurable store into a software project.</strong> The build
+                            is the smaller half. Whether it was worth it comes down to who maintains it, deploys it and
+                            is on call for it in year two.
                         </BlogText>
                     </div>
                     <BlogText>
                         Before costing a headless build, price the alternative honestly.{" "}
-                        <strong>Online Store 2.0</strong> — sections on every template, app blocks and metafields —
+                        <strong>Online Store 2.0</strong> (sections on every template, app blocks and metafields)
                         closed a large part of the gap that originally justified going headless. A well-built 2.0
                         theme on a disciplined app stack is the right answer for a great many stores that are
                         currently being quoted for Hydrogen.
@@ -253,22 +337,21 @@ export default function ShopifyHeadlessPage() {
                     <BlogList
                         items={[
                             "The theme editor. Merchandisers lose drag-and-drop layout control over the storefront. Every layout change becomes a developer ticket and a deploy, which is a staffing change disguised as a technical one.",
-                            "One-click app installs for storefront features. Apps that inject storefront UI through theme app extensions do not simply work; reviews, loyalty, upsell and search widgets each need an integration decision rather than an install.",
+                            "One-click app installs for storefront features. Apps that inject storefront UI through theme app extensions don't carry over, so reviews, loyalty, upsell and search widgets each need an integration decision, not an install.",
                             "Native previews and the safety of theme duplication. Testing moves into your own staging and release process, which you now own.",
-                            "Shopify's own defaults for storefront analytics and consent. These become architecture you configure rather than settings you toggle -- covered in section 4 below.",
+                            "Shopify's own defaults for storefront analytics and consent. These become architecture you configure, not settings you toggle. The analytics section below covers them.",
                         ]}
                     />
                     <BlogText>
-                        The revenue threshold you will see quoted — usually &quot;not under a few million a year&quot;
-                        — comes from practitioner forums rather than from Shopify, and we do not repeat it as a rule.
-                        <strong> The threshold that actually matters is not revenue, it is whether you employ or
-                        retain someone who will own the frontend after launch.</strong> A ten-million-dollar store
-                        without that person is a worse candidate than a two-million-dollar store with an engineering
-                        team. If the honest answer is that nobody owns it, the correct recommendation is a better 2.0
-                        theme, and the sections below will tell you when it genuinely is not.
+                        The revenue threshold you will see quoted, usually &quot;not under a few million a year&quot;,
+                        comes from practitioner forums rather than from Shopify, and we do not repeat it as a rule.
+                        <strong> The question that decides it: do you employ or retain someone who will own the
+                        frontend after launch?</strong> A ten-million-dollar store without that person is a worse
+                        candidate than a two-million-dollar store with an engineering team. If nobody will own it, the
+                        right call is a better 2.0 theme, and the sections below show when it isn&apos;t.
                     </BlogText>
 
-                    <BlogHeader>What going headless on Shopify actually changes</BlogHeader>
+                    <BlogHeader>What going headless on Shopify changes</BlogHeader>
                     <BlogText>
                         Your storefront team takes over how pages render, how routing works, what the interface does,
                         how content gets in, and most of the analytics and deployment. Shopify keeps running the
@@ -277,12 +360,13 @@ export default function ShopifyHeadlessPage() {
                         <Link href="/blog/what-is-headless-commerce" className={inlineLinkClass}>what headless commerce means in practice</Link>{" "}
                         covers the architecture in plainer terms first.
                     </BlogText>
-                    <InsightBox variant="info" label="Why there is no headless price band or uplift figure here">
-                        You will not find a cost band for a headless build or a predicted ranking and conversion gain on
-                        this page. Both depend on what you ask for, what you connect it to, and who runs it
-                        afterwards. A single figure would tell you nothing about your project. Headless
-                        is also not automatically faster. Shopify's own guidance ties performance to how well it is built, and
-                        moving rendering into your frontend moves that responsibility onto you. Scope the work against your requirements, then measure the build you actually ship.
+                    <InsightBox variant="info" label="Why there is no market price band here">
+                        This page gives Shopify&apos;s published prices and ours, but no industry band for a headless
+                        build and no predicted ranking or conversion gain. Both depend on what you ask for, what you
+                        connect it to and who runs it afterwards, so one figure would tell you nothing about your
+                        project. Headless isn&apos;t automatically faster either: Shopify ties performance to how well
+                        the storefront is built, and moving rendering into your own frontend moves that responsibility
+                        onto you. Scope the work against your requirements, then measure the build you ship.
                     </InsightBox>
 
                     <BlogHeader>What can a Shopify theme not do?</BlogHeader>
@@ -315,7 +399,7 @@ export default function ShopifyHeadlessPage() {
                     <BlogHeader>Hydrogen, Next.js or a Shopify theme: which path?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Three paths are available, and what separates them is not capability but how much integration work your team owns afterwards. A Shopify theme leaves almost all of it with Shopify, Hydrogen splits it, and your own Storefront API client puts every decision on your side. Pick by the team you have rather than the stack you admire.
+                            Three paths are available, and the difference between them is how much integration work your team owns afterwards. A Shopify theme leaves almost all of it with Shopify, Hydrogen splits it, and your own Storefront API client puts every decision on your side. Pick by the team you have rather than the stack you admire.
                         </BlogText>
                     </div>
                     <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -341,7 +425,7 @@ export default function ShopifyHeadlessPage() {
                     <BlogHeader>Which Shopify apps break when you go headless?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Inventory what the store does today, because a headless build has to reproduce every one of these behaviors and none of them come across for free. Six areas cover it, and the last one decides the budget: an app that renders through the theme has no theme to render through once you leave.
+                            Apps that render through the theme break, because a headless storefront has no theme for them to render through: reviews widgets, upsell blocks, cookie banners, chat launchers and page builders. Apps that work through the Shopify admin, such as order management, fulfillment and accounting sync, keep working. Inventory what the store does today across these six areas; the last one decides the budget.
                         </BlogText>
                     </div>
                     <BlogList
@@ -363,7 +447,7 @@ export default function ShopifyHeadlessPage() {
 
                     <BlogHeader>How does headless Shopify change analytics and consent?</BlogHeader>
                     <BlogText>
-                        A custom storefront does not inherit the analytics your theme did. Shopify documents a migration
+                        A custom storefront doesn&apos;t inherit the analytics your theme did. Shopify documents a migration
                         path for custom headless analytics, and says in the same place that the custom setup is not
                         officially supported. Hydrogen has its own
                         supported path. Decide this before framework selection, especially after the 2026 cookie changes.
@@ -377,14 +461,14 @@ export default function ShopifyHeadlessPage() {
                         ]}
                     />
                     <BlogText>
-                        Advertising measurement is part of the same scope rather than a later task. Our guide to{" "}
+                        Advertising measurement belongs in the same scope, not in a later task. Our guide to{" "}
                         <Link href="/blog/fix-meta-ad-tracking-2026" className={inlineLinkClass}>repairing Meta ad tracking in 2026</Link>{" "}
                         covers the server-side event work that a storefront change usually disturbs.
                     </BlogText>
 
                     <BlogHeader>Will headless Shopify hurt your SEO?</BlogHeader>
                     <BlogText>
-                        Headless is not inherently better or worse for SEO. The implementation controls the output.
+                        Headless isn&apos;t better or worse for SEO by itself. The implementation controls the output.
                         Google warns that significant site changes can produce temporary ranking fluctuations while
                         URLs are recrawled and reindexed. Build an evidence-backed migration plan instead of promising
                         ranking retention.
@@ -409,7 +493,7 @@ export default function ShopifyHeadlessPage() {
                     <BlogHeader>What speed should a headless Shopify store hit?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            An <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> means nothing without its test conditions attached, because the same build scores differently on another device, network or cache state. Six things turn a number into something you can hold a supplier to. Agree them before the build, since afterwards every disagreement becomes an argument about what was measured.
+                            Agree a written lab target before the build, with its test conditions attached: we contract for a 90+ Lighthouse <Link href="/ai-info/pricing-and-guarantees" className="font-semibold text-cognac underline decoration-cognac/30 underline-offset-4 hover:decoration-cognac">acceptance target</Link> on the pages named in the scope. Without the conditions the number means nothing, because the same build scores differently on another device, network or cache state. Six things make it a target you can hold a supplier to.
                         </BlogText>
                     </div>
                     <BlogList
@@ -430,10 +514,13 @@ export default function ShopifyHeadlessPage() {
                         sets out the field metrics that acceptance criterion is measured against later.
                     </BlogText>
 
-                    <BlogHeader>What does headless Shopify cost to build and run?</BlogHeader>
+                    <BlogHeader id="after-launch">What keeps costing after launch?</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            The build is one line in a headless budget, and it is rarely the line that decides whether the project was worth doing. Six cost categories run for as long as the storefront does, and two of them, security updates and API version upgrades, arrive on Shopify&apos;s schedule rather than yours. Price the whole column.
+                            The build is one line in a headless budget, and rarely the one that decides whether the
+                            project was worth doing. Six cost categories run for as long as the storefront does, and two
+                            of them arrive on Shopify&apos;s schedule, not yours: security updates, and API upgrades,
+                            because Shopify releases {spec("shopify-api-version-support").value}. Price the whole column.
                         </BlogText>
                     </div>
                     <BlogList
@@ -447,9 +534,10 @@ export default function ShopifyHeadlessPage() {
                         ]}
                     />
                     <InsightBox variant="info" label="PandaCodeGen commercial context">
-                        Our published Scale tier starts at $5,000 and commonly covers scoped headless work in the
-                        $5,000 range. That is our price, not an industry benchmark. Final scope, third-party
-                        costs, ownership, support and acceptance terms are agreed before onboarding. See the{" "}
+                        Our published Scale tier starts at $5,000. A headless storefront with its own content system,
+                        search, customer accounts and migration usually goes beyond Scale and is quoted after a scoping
+                        call. That&apos;s our price, not an industry benchmark. Final scope, third-party costs,
+                        ownership, support and acceptance terms are agreed in writing before work starts. See the{" "}
                         <Link href="/services/ecommerce" className={inlineLinkClass}>ecommerce development service</Link> and the{" "}
                         <Link href="/pricing" className={inlineLinkClass}>pricing page</Link> for what each tier covers.
                     </InsightBox>
@@ -457,8 +545,8 @@ export default function ShopifyHeadlessPage() {
                     <BlogHeader id="sequence">The migration sequence, in order</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Everything above is how to decide. This is how it runs, and the order is the part that
-                            matters, because two of these steps are cheap before you build and expensive after.
+                            A headless Shopify migration runs in six steps, in this order, because two of them are cheap
+                            before you build and expensive after.
                         </BlogText>
                     </div>
                     <BlogList
@@ -468,7 +556,7 @@ export default function ShopifyHeadlessPage() {
                             "Build the frontend against real data, not fixtures. Product, collection, search, cart and any content routes, using the actual catalog, so pagination, variant edge cases and out-of-stock states surface during the build rather than at launch.",
                             "Handle images and third-party scripts deliberately. The theme was doing both for you. Decide what loads on first render and what defers, because this is where a headless rebuild can land slower than the theme it replaced.",
                             "Deploy with URLs mapped and pre-generation decided. Every old address needs a documented destination, and which routes are pre-built versus rendered on request is a decision, not a default.",
-                            "Keep checkout on Shopify. It is the part you want Shopify to keep owning, and it is where PCI scope, fraud tooling and payment integrations already live.",
+                            "Keep checkout on Shopify. It's what you want Shopify to keep owning, and it is where PCI scope, fraud tooling and payment integrations already live.",
                         ]}
                     />
                     <BlogText>
@@ -478,7 +566,7 @@ export default function ShopifyHeadlessPage() {
                         accounting sync and anything operating behind the scenes is unaffected because it never touched
                         the storefront. Reviews widgets, upsell blocks, cookie banners, chat launchers and page builders
                         all rendered through the theme, so on a headless storefront they have to be rebuilt, replaced
-                        with an API-based equivalent, or dropped. Run your app list through that single question before
+                        with an API-based equivalent, or dropped. Run your app list through that question before
                         anyone quotes the work.
                     </BlogText>
 

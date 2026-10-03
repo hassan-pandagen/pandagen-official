@@ -232,18 +232,18 @@
       "vendor": "Shopify",
       "plan": "Basic",
       "label": "Basic plan price",
-      "value": "$25/mo",
-      "qualifier": "$19/mo billed annually",
-      "verifiedAt": "2026-08-20",
+      "value": "$39/mo",
+      "qualifier": "$29/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
+      "verifiedAt": "2026-10-03",
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-grow": {
       "vendor": "Shopify",
       "plan": "Grow",
       "label": "Grow plan price",
-      "value": "$65/mo",
-      "qualifier": "$49/mo billed annually",
-      "verifiedAt": "2026-08-20",
+      "value": "$105/mo",
+      "qualifier": "$79/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
+      "verifiedAt": "2026-10-03",
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-advanced": {
@@ -251,8 +251,8 @@
       "plan": "Advanced",
       "label": "Advanced plan price",
       "value": "$399/mo",
-      "qualifier": "$299/mo billed annually",
-      "verifiedAt": "2026-08-20",
+      "qualifier": "$299/mo billed yearly. US pricing as shown to a US visitor; Shopify sets plan prices by country",
+      "verifiedAt": "2026-10-03",
       "source": "https://www.shopify.com/pricing"
     },
     "shopify-plan-plus": {
@@ -260,8 +260,8 @@
       "plan": "Plus",
       "label": "Plus plan starting price",
       "value": "$2,300/mo",
-      "qualifier": "Starting price; annual pricing not published",
-      "verifiedAt": "2026-08-20",
+      "qualifier": "Starting price; the pricing page offers no yearly rate for Plus",
+      "verifiedAt": "2026-10-03",
       "source": "https://www.shopify.com/pricing"
     },
     "woocommerce-cart-fragments-default": {
@@ -530,6 +530,54 @@
       "qualifier": "USD; in-house Workspace plan billed yearly, plus tax. Additional paid seats and published Site plans are separate.",
       "verifiedAt": "2026-09-25",
       "source": "https://webflow.com/pricing"
+    },
+    "shopify-oxygen-hosting": {
+      "vendor": "Shopify",
+      "label": "Oxygen hosting for Hydrogen storefronts",
+      "value": "no extra charge on paid plans: Starter, Basic, Grow, Advanced, Plus, and Pause and build",
+      "qualifier": "not available on Agentic plans; development stores and trial plans can build and test but get no public environments",
+      "verifiedAt": "2026-10-03",
+      "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
+    },
+    "shopify-headless-channel-price": {
+      "vendor": "Shopify",
+      "label": "Headless sales channel price",
+      "value": "free",
+      "qualifier": "the channel that issues Storefront API tokens for a non-Hydrogen storefront",
+      "verifiedAt": "2026-10-03",
+      "source": "https://apps.shopify.com/headless"
+    },
+    "shopify-hydrogen-license": {
+      "vendor": "Shopify",
+      "label": "Hydrogen licence",
+      "value": "MIT, open source",
+      "qualifier": "no licence fee; you can also self-host it instead of using Oxygen",
+      "verifiedAt": "2026-10-03",
+      "source": "https://github.com/Shopify/hydrogen"
+    },
+    "shopify-api-version-support": {
+      "vendor": "Shopify",
+      "label": "API version support",
+      "value": "a new version every three months, each stable version supported for at least 12 months",
+      "qualifier": "with at least nine months of overlap between consecutive versions",
+      "verifiedAt": "2026-10-03",
+      "source": "https://shopify.dev/docs/api/usage/versioning"
+    },
+    "shopify-storefront-api-buyer-limits": {
+      "vendor": "Shopify",
+      "label": "Storefront API rate limits",
+      "value": "no fixed request-per-minute limit for buyer traffic",
+      "qualifier": "bots and checkout creation are limited, and tokenless access is capped at a query complexity of 1,000",
+      "verifiedAt": "2026-10-03",
+      "source": "https://shopify.dev/docs/api/storefront"
+    },
+    "shopify-oxygen-limits": {
+      "vendor": "Shopify",
+      "label": "Oxygen worker limits",
+      "value": "10 MB per worker, 30 seconds of CPU time per request and 128 MB of memory",
+      "qualifier": "Oxygen doesn't support a proxy in front of a deployment",
+      "verifiedAt": "2026-10-03",
+      "source": "https://shopify.dev/docs/storefronts/headless/hydrogen/fundamentals"
     }
   }
 }
