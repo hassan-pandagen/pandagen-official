@@ -224,3 +224,21 @@ Still open: MyCustomPatches relationship (item 2), Saforne labels, the Gemini as
 UK/EU visitors (item 1), /partners referral disclosure (item 14), the DesignRush profile showing
 a $60 hourly rate and a $1,000 to $10,000 budget (fix on DesignRush), and whether session storage
 written before consent needs consent for EU visitors (legal question).
+
+## Later on 4 Oct 2026
+
+- Assistant (item 1): moved from Google's unpaid Gemini tier to Vercel AI Gateway (uncommitted,
+  in `src/app/api/assistant/route.ts`, with the privacy policy section 2.4 and the chat-panel
+  notice). Defaults: `google/gemini-2.5-flash-lite` pinned to Vertex, then
+  `deepseek/deepseek-v4-flash` pinned to Azure or DigitalOcean; Kimi allowed only through Amazon
+  Bedrock. Every request sets `zeroDataRetention: true` (no extra cost on Pro). Auth is Vercel's
+  OIDC token, so no key is stored. Excluded providers, checked against the gateway's endpoint
+  list: Alibaba, Novita, GMI Cloud and Moonshot's own API. The team has $5 of free gateway credit
+  a month, which covers only some models; buying credit ends it. `GEMINI_API_KEY` can be removed
+  from Vercel once this is live.
+- Saforne (item 2): independent client per the owners. Acquisition talks are under way; if it is
+  acquired, relabel it founder-affiliated everywhere. Each surface already labels it the same way
+  it labels the other independent clients.
+- MyCustomPatches (item 2): owners want it kept as "Independent client" with no LLC named. Open
+  question sent back: whether anyone who owns PandaCodeGen owns any part of the business behind
+  MyCustomPatches, which is the test the disclosure rule uses (shared owners, not shared LLCs).
