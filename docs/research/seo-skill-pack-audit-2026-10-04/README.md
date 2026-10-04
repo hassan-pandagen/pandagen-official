@@ -289,3 +289,19 @@ Owner decisions still open:
 4. shopify-app-costs title still says "Checked Aug 2" (true but stale).
 5. migration-projects.ts says A Step Above Medical testing "begins October 1, 2026".
 6. Real cover photos for the three new posts.
+
+## Assistant model choice, 4 Oct 2026 (tested with a real gateway key)
+
+The gateway's free monthly credit accepts many models but rate-limits each one (roughly 8 to 10
+requests a minute, undocumented). Six free models that run on zero-retention, non-China providers
+with structured JSON were tested on the repo's 151-question suites (rate-limited answers
+excluded): grok-4.1-fast-non-reasoning 1 wrong, gemini-2.5-flash 1, mistral-medium-3.5 5,
+gemini-2.5-flash-lite about 6, gpt-oss-120b 12, gpt-5.4-nano 13 (mostly outcome promises).
+DeepSeek V3.1's only allowed provider was too slow and throttled. DeepSeek V4 Flash is free
+only on providers we exclude; Kimi only through Novita (excluded).
+Decision: requests alternate between Grok 4.1 Fast and Gemini 2.5 Flash (both on Google Cloud
+Vertex AI); Gemini 2.5 Flash-Lite is a fallback only. A rotation run at twice one model's rate
+had 0 rate-limited answers and 3 wrong of 151, all from Flash-Lite. Estimated cost about $0.001
+per answer, within the $5 monthly free credit at current traffic. The privacy policy names the
+models and provider. Dev-only test hooks: x-assistant-models header and `--models=` in the eval
+scripts.
