@@ -304,7 +304,11 @@ export default function TopCustomWebDevelopmentAgenciesPage() {
                                 "Position is heavily influenced by verified review volume. That measures how systematically a firm asks clients for reviews, which is a real operational signal but not the same thing as delivery quality. A team of four doing excellent work will sit below a team of forty with a review-collection process.",
                                 "Directories carry paid tiers. Labels along the lines of premier, sponsored or featured mark a commercial relationship rather than an assessment outcome, and they usually appear above unpaid entries.",
                                 "Filters shape the field before you see it. Minimum project size and location filters decide who is eligible to appear at all, so a list is a view of the directory's members that matched, not a survey of the market.",
-                                "Absence proves nothing. A firm that has not listed, or has not run a review campaign, is invisible to that ranking regardless of the work it does. PandaCodeGen is not on those directories, which is the same limitation applied to us.",
+                                <>
+                                    Absence proves nothing. A firm that has not listed, or has not run a review campaign, is invisible to that ranking regardless of the work it does. PandaCodeGen does have profiles on both, on{" "}
+                                    <a href="https://clutch.co/profile/panda-code-gen" target="_blank" rel="noopener noreferrer" className="text-cognac hover:underline font-medium">Clutch</a>{" "}
+                                    and on DesignRush, and the same limitation applies to us: where we sit in their rankings says more about how many reviews we have collected than about the work we do.
+                                </>,
                             ]}
                         />
                         <BlogText>

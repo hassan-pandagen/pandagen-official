@@ -153,8 +153,8 @@ export default function WebsiteCostGuide() {
                             How Much Does a Website Cost in 2026? <span className="italic text-cognac">Price the Scope, Not the Label</span>
                         </h1>
                         <p className="text-lg leading-relaxed text-stone-600" data-speakable="true">
-                            Our own work starts at $1,500 for a small, clearly bounded site and usually lands between
-                            $5,000 and $10,000 once a store or real integrations are involved. Those are our published
+                            Our own work starts at $1,500 for a small, clearly bounded site and starts at
+                            $5,000 once a store or real integrations are involved. Those are our published
                             numbers, not the market&apos;s. Nobody has the market&apos;s number, because a one-page
                             campaign, a 30-route migration, a store and an application with logins are four different
                             products that happen to share a word. Our own terms, so you can check them against any quote: from $1,500 at a fixed price agreed before we start, no minimum project size, and the code, design files and accounts are yours at the end.
@@ -191,7 +191,7 @@ export default function WebsiteCostGuide() {
                             items={[
                                 "Starter begins at $1,500 for a focused, clearly bounded scope.",
                                 "Growth begins at $3,500 for a broader migration, CMS or content-continuity scope.",
-                                "Scale normally falls between $5,000 and $10,000 for larger or integration-heavy work.",
+                                "Scale begins at $5,000 for larger or integration-heavy work.",
                                 "Anything bigger than Scale, and unusual applications, are quoted after discovery.",
                                 "Extra pages and features are discussed and written into the scope before implementation.",
                             ]}
@@ -329,9 +329,9 @@ export default function WebsiteCostGuide() {
                     <BlogHeader id="cost-drivers">What moves the price up or down</BlogHeader>
                     <BlogText>
                         Two quotes for the same page count can land a long way apart because the work behind each page
-                        is different. Across our own tiers those levers span $1,500 to $10,000 for the same nominal
-                        page count: a bounded site with supplied content sits at the bottom, and templates, states,
-                        integrations, migration and compliance scope are what carry a project to the top. These are the
+                        is different. Across our own tiers those levers can take the same nominal page count from Starter at $1,500
+                        to Scale, which starts at $5,000: a bounded site with supplied content sits at the bottom, and
+                        templates, states, integrations, migration and compliance scope are what carry a project up. These are the
                         levers that actually move a number. They move the schedule as well,
                         so it is worth reading this next to{" "}
                         <Link href="/blog/how-long-does-a-custom-website-take" className={sourceLinkClass}>how long a custom website takes to build</Link>.
@@ -503,7 +503,7 @@ export default function WebsiteCostGuide() {
                         head.
                     </BlogText>
                     <BlogText>
-                        Our published tiers, $1,500 to $10,000, assume a team doing the work and carrying it afterwards.
+                        Our published tiers (Starter from $1,500, Growth from $3,500, Scale from $5,000) assume a team doing the work and carrying it afterwards.
                         A single freelancer may well quote less, and the difference is not padding on our
                         side or a bargain on theirs. It is the continuity described above, priced or unpriced. None of
                         that makes a freelancer the wrong choice, and plenty of them are excellent. It means the

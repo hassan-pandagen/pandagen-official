@@ -646,7 +646,7 @@ export default function AEOPlaybookPage() {
                     <BlogList items={[
                         "Starter from $1,500 for a small, clearly bounded scope.",
                         "Growth from $3,500 for a larger build, a CMS, or a content-continuity scope.",
-                        "Scale commonly starts between $5,000 and $10,000; complex integrations and requirements are quoted after discovery."
+                        "Scale from $5,000 for larger or integration-heavy work; complex integrations and requirements are quoted after discovery."
                     ]} />
                     <BlogText>
                         Those three are build prices, and a build is not what most readers of this article

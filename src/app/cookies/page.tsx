@@ -6,11 +6,11 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | PandaCodeGen" },
-  description: "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026.",
+  description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 4, 2026.",
   alternates: { canonical: "/cookies" },
   openGraph: {
     title: "Cookie Policy | PandaCodeGen",
-    description: "How PandaCodeGen uses cookies and similar technologies. Last updated July 22, 2026.",
+    description: "How PandaCodeGen uses cookies and similar technologies. Last updated October 4, 2026.",
     url: "https://www.pandacodegen.com/cookies",
     siteName: "PandaCodeGen",
     type: "website",
@@ -47,11 +47,18 @@ const rows = [
     purpose: "Provides usage and session-interaction insights when analytics is allowed.",
   },
   {
+    service: "PandaCodeGen first-page source",
+    category: "Runs for every visitor",
+    examples: "pcg_first_touch_source (session storage)",
+    duration: "Until you close the tab or window",
+    purpose: "Remembers where your visit started. Sent to us only if you submit an inquiry form.",
+  },
+  {
     service: "Vercel Web Analytics",
-    category: "Analytics",
-    examples: "May use browser or request identifiers",
-    duration: "Provider-controlled",
-    purpose: "Measures site traffic when analytics is allowed.",
+    category: "Runs for every visitor",
+    examples: "No cookies and nothing stored in your browser",
+    duration: "Vercel discards its request hash after 24 hours",
+    purpose: "Counts page views and referring sites as totals.",
   },
   {
     service: "Meta Pixel",
@@ -110,7 +117,7 @@ export default function CookiesPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-5xl font-bold text-charcoal mb-4">Cookie Policy</h1>
-            <p className="text-stone-600">Last updated: July 22, 2026</p>
+            <p className="text-stone-600">Last updated: October 4, 2026</p>
           </div>
 
           <div className="space-y-8 text-stone-600 leading-relaxed">
@@ -130,6 +137,11 @@ export default function CookiesPage() {
                 Optional services are off by default. On your first visit, you can accept all
                 optional categories, reject them, or choose categories individually. Rejecting
                 optional services does not prevent access to the main website.
+              </p>
+              <p className="mt-4">
+                Two things run for every visitor without waiting for a choice, because neither sets
+                a cookie: Vercel Web Analytics, which counts page views, and a session-storage note
+                of where your visit started. Both are described under Categories below.
               </p>
               <p className="mt-4">
                 You can review or withdraw a choice at any time with the persistent <strong>Cookie
@@ -159,13 +171,36 @@ export default function CookiesPage() {
                 the choice itself.
               </p>
 
+              <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Runs for every visitor</h3>
+              <p>
+                <strong>Vercel Web Analytics</strong> loads on the live site for every visitor,
+                without waiting for a cookie choice. For each page view it records the page
+                address, the site that linked you here, your approximate location (country, region
+                and city), and your device type, operating system and browser. It sets no cookies
+                and stores nothing in your browser. To tell visitors apart for the day, Vercel
+                makes a hash from the incoming request and discards it after 24 hours, so a visit
+                can&apos;t be tied to you or matched with your visits on other days. We see the
+                results only as totals.
+              </p>
+              <p className="mt-4">
+                <strong>First-page source.</strong> When you first open a page, the site saves a
+                short note in your browser&apos;s session storage under the name{" "}
+                <code>pcg_first_touch_source</code>. It holds where you came from (a campaign tag in
+                the link, the referring site or search engine, or &ldquo;Direct&rdquo;), the kind of
+                source (for example search, social or an AI assistant), the address of that first
+                page, and the time you arrived. Session storage is deleted when you close the tab
+                or window. The note is sent to us only if you submit one of our inquiry forms: it
+                then travels with your inquiry, along with the page you sent the form from. If you
+                don&apos;t submit a form, it never leaves your browser.
+              </p>
+
               <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Analytics</h3>
               <p>
-                Google Analytics, Microsoft Clarity, and Vercel Web Analytics help us understand
-                traffic, interactions, technical performance, and aggregate lead-form funnel
-                milestones such as start, progress, validation, abandonment, and completion. We do
-                not send the values typed into form fields as analytics events. Their client-side
-                code loads only after you allow analytics.
+                Google Analytics and Microsoft Clarity help us understand traffic, interactions,
+                technical performance, and aggregate lead-form funnel milestones such as start,
+                progress, validation, abandonment, and completion. We do not send the values typed
+                into form fields as analytics events. Their client-side code loads only after you
+                allow analytics.
               </p>
 
               <h3 className="text-lg font-semibold text-charcoal mb-2 mt-6">Marketing</h3>
@@ -186,8 +221,10 @@ export default function CookiesPage() {
               <h2 className="text-2xl font-bold text-charcoal mb-4">4. Current technology list</h2>
               <p className="mb-4">
                 Exact names and lifetimes can change when providers update their services. The list
-                below describes optional technologies the codebase supports. A provider is active
-                only when the deployment has a verified configuration and you allow its category.
+                below describes the technologies the codebase supports. An optional provider is
+                active only when the deployment has a verified configuration and you allow its
+                category. The consent record, the first-page source note and Vercel Web Analytics
+                run for every visitor.
               </p>
 
               <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Scrollable table">

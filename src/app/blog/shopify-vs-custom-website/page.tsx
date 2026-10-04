@@ -499,8 +499,8 @@ export default function ShopifyVsCustomWebsitePage() {
 
                     <BlogHeader>10. Use project-specific commercial terms</BlogHeader>
                     <BlogText>
-                        PandaCodeGen&apos;s public planning tiers are $1,500 Starter, $3,500 Growth and $5,000 to
-                        $10,000 Scale. Those are entry points for a defined scope, not quotes, and final scope may add
+                        PandaCodeGen&apos;s public planning tiers are $1,500 Starter, $3,500 Growth and Scale
+                        from $5,000. Those are entry points for a defined scope, not quotes, and final scope may add
                         or remove features. A common payment option is 30 percent at onboarding and 70 percent at the
                         delivery milestone, and another written schedule may be agreed. Refund, ownership,
                         performance, support and change-control rights follow the accepted contract, not a generic

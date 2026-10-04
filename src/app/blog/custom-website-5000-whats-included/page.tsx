@@ -185,7 +185,7 @@ export default function CustomWebsite5000Page() {
                         <h2 className="mb-4 text-2xl font-bold text-charcoal">The short answer</h2>
                         <BlogList
                             items={[
-                                "Starter begins at $1,500, Growth at $3,500, and Scale normally falls between $5,000 and $10,000.",
+                                "Starter begins at $1,500, Growth at $3,500, and Scale at $5,000.",
                                 "The tier is a planning anchor. Discovery and the written scope decide the actual price and deliverables.",
                                 "A common payment structure is 30% at onboarding and 70% at the delivery milestone defined in the accepted terms.",
                                 "Speed, support, ownership, refunds and anything out of scope are all written into the agreement.",
@@ -214,7 +214,7 @@ export default function CustomWebsite5000Page() {
                     <div className="my-10 grid gap-4 sm:grid-cols-3">
                         <StatCard stat="$1,500" label="Starter" context="Small, controlled migration scope" />
                         <StatCard stat="$3,500" label="Growth" context="Broader content and CMS scope" />
-                        <StatCard stat="$5K-$10K" label="Scale" context="Larger or integration-heavy scope" />
+                        <StatCard stat="From $5,000" label="Scale" context="Larger or integration-heavy scope" />
                     </div>
 
                     <BlogHeader id="how-many-pages">How many pages does $5,000 get you?</BlogHeader>

@@ -196,7 +196,7 @@ export default function WordPressMigrationCostPage() {
                             items={[
                                 "Starter begins at $1,500 for a small, bounded migration.",
                                 "Growth begins at $3,500 for broader content, templates, CMS or integration work.",
-                                "Scale normally falls between $5,000 and $10,000 for larger or more operationally sensitive scope.",
+                                "Scale begins at $5,000 for larger or more operationally sensitive scope.",
                                 "Bigger stores, apps, regulated data and unusual integrations are priced on their own.",
                                 "Your written quote, not this article, sets the final price, what you get, what counts as done, and what happens if it is not.",
                             ]}

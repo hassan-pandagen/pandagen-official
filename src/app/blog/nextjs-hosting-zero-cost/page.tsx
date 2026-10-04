@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         description: "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
         type: "article",
         publishedTime: "2026-03-13",
-        modifiedTime: "2026-08-02T00:00:00-05:00",
+        modifiedTime: "2026-10-04T00:00:00-05:00",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost",
         images: [ogImageForPath("/blog/nextjs-hosting-zero-cost")],
@@ -57,7 +57,7 @@ const articleSchema = {
             "description": "Vercel Hobby is free for personal, non-commercial projects and includes 100 GB Fast Data Transfer. Pro for businesses starts at $20/month plus usage.",
             "image": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost"),
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-08-02T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -94,6 +94,9 @@ const articleSchema = {
                 { "@type": "CreativeWork", "name": "Vercel Blob usage and pricing", "url": "https://vercel.com/docs/vercel-blob/usage-and-pricing" },
                 { "@type": "CreativeWork", "name": "Vercel Active CPU pricing announcement", "url": "https://vercel.com/blog/introducing-active-cpu-pricing-for-fluid-compute" },
                 { "@type": "CreativeWork", "name": "Vercel Regional Pricing", "url": "https://vercel.com/docs/pricing/regional-pricing" },
+                { "@type": "CreativeWork", "name": "Vercel Flat Rate CDN", "url": "https://vercel.com/docs/pricing/flat-rate-cdn" },
+                { "@type": "CreativeWork", "name": "Flat Rate CDN is now GA for Pro teams", "url": "https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams" },
+                { "@type": "CreativeWork", "name": "Vercel Spend Management", "url": "https://vercel.com/docs/spend-management" },
                 { "@type": "CreativeWork", "name": "Next.js 16.2", "url": "https://nextjs.org/blog/next-16-2" },
                 { "@type": "CreativeWork", "name": "Cloudflare Next.js Deployment Guide", "url": "https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/" },
                 { "@type": "CreativeWork", "name": "Netlify Pricing", "url": "https://www.netlify.com/pricing/" }
@@ -117,7 +120,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/nextjs-hosting-zero-cost") },
             "datePublished": "2026-03-13T00:00:00-05:00",
-            "dateModified": "2026-08-02T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/nextjs-hosting-zero-cost#breadcrumb" },
             "inLanguage": "en-US"
         },
@@ -164,7 +167,7 @@ export default function NextjsHostingZeroCostPage() {
                                 69% of this cluster's search demand is year-qualified, so a lifted
                                 sentence has to be independently dateable or it answers the wrong
                                 question. Never type a vendor's number in here by hand. */}
-                            {`Short answer: as of ${asOf("vercel-hobby-fast-data-transfer")}, Vercel's Hobby plan costs ${spec("vercel-hobby-price").value} for eligible personal, non-commercial projects, with a published fair-use guideline of ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer. A production business website should use Vercel Pro, which as of ${asOf("vercel-pro-price")} starts at ${spec("vercel-pro-price").value}, including one deploying seat, with metered usage on top. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.`}
+                            {`Short answer: as of ${asOf("vercel-hobby-fast-data-transfer")}, Vercel's Hobby plan costs ${spec("vercel-hobby-price").value} for eligible personal, non-commercial projects and includes ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer. A production business website should use Vercel Pro, which as of ${asOf("vercel-pro-price")} starts at ${spec("vercel-pro-price").value}, including one deploying seat, with metered usage on top. Here is the practical Vercel Hobby vs Pro comparison, including limits and commercial Next.js hosting costs.`}
                         </p>
 
                         <BlogAuthor
@@ -189,14 +192,14 @@ export default function NextjsHostingZeroCostPage() {
                     <div className="bg-stone-50 border border-stone-200 rounded-lg p-6 mb-8 md:mb-12" data-speakable="true">
                         <h2 className="font-bold text-charcoal mb-4 text-base">Executive Summary</h2>
                         <BlogList items={[
-                            `Vercel's Hobby plan is a ${spec("vercel-hobby-price").value} plan for eligible personal, non-commercial projects, as of ${asOf("vercel-hobby-price")}. Vercel publishes ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer as a fair-use guideline, not as an itemised plan allowance.`,
+                            `Vercel's Hobby plan is a ${spec("vercel-hobby-price").value} plan for eligible personal, non-commercial projects, as of ${asOf("vercel-hobby-price")}. Its plan page lists ${spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer as included usage, and Hobby can't buy more.`,
                             `Vercel Pro is the starting point for commercial production websites and begins at ${spec("vercel-pro-price").value}, including one deploying seat, with metered usage on top, as of ${asOf("vercel-pro-price")}.`,
                             "A Next.js rebuild can reduce server administration and request-time rendering without making infrastructure free.",
                             "Use this guide to compare Vercel Hobby vs Pro and estimate a realistic Next.js hosting cost for a business website."
                         ]} />
                     </div>
 
-                    <p className="text-stone-700 leading-relaxed mb-6">Vercel pricing for business websites isn&apos;t determined only by traffic. Hobby is free for eligible personal, non-commercial work, with a fair-use guideline of up to 100 GB of Fast Data Transfer and published limits on functions, builds and image optimization. Commercial websites should begin on Pro, currently a $20 monthly platform fee that includes one deploying seat and a usage credit, even when their traffic would fit inside Hobby&apos;s technical allowances. Added seats and on-demand usage can increase the bill. Compare the full platform, maintenance, and usage costs before choosing between managed WordPress hosting and commercial Next.js hosting. If you want the site itself built, not just hosted, PandaCodeGen does that from $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
+                    <p className="text-stone-700 leading-relaxed mb-6">Vercel pricing for business websites isn&apos;t determined only by traffic. Hobby is free for eligible personal, non-commercial work. It includes {spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer and has published limits on functions, builds and image optimization. Commercial websites should begin on Pro, currently a $20 monthly platform fee that includes one deploying seat and a usage credit, even when their traffic would fit inside Hobby&apos;s technical allowances. Added seats and on-demand usage can increase the bill. Compare the full platform, maintenance, and usage costs before choosing between managed WordPress hosting and commercial Next.js hosting. If you want the site itself built, not just hosted, PandaCodeGen does that from $1,500 at a fixed price, with no minimum project size, and you own the code.</p>
 
                     {/* About PandaCodeGen: brand anchor in first-third zone */}
                     <div className="my-6 p-5 bg-stone-50 border-l-4 border-cognac rounded-r-xl">
@@ -356,13 +359,13 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogHeader>The Vercel Free Tier: What You Get</BlogHeader>
 
                         <BlogText>
-                            Vercel Hobby is a real deployment plan for eligible personal, non-commercial projects. These are the figures published on <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a>, <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">pricing page</a> and <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">fair-use guidelines</a>, checked August 2, 2026:
+                            Vercel Hobby is a real deployment plan for eligible personal, non-commercial projects. These are the figures published on <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s Hobby plan docs</a>, <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">pricing page</a> and <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">fair-use guidelines</a>, checked October 4, 2026:
                         </BlogText>
 
                         <BlogList items={[
                             `Fast Data Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-data-transfer").value}, as of ${asOf("vercel-hobby-fast-data-transfer")}.`,
-                            `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons, and on an uncached or image-heavy site it is reached long before the ${spec("vercel-hobby-fast-data-transfer").value.replace(/^up to /, "")} figure.`,
-                            "Edge Requests: up to 1,000,000 a month.",
+                            `Fast Origin Transfer on Vercel's Hobby plan: ${spec("vercel-hobby-fast-origin-transfer").value}, as of ${asOf("vercel-hobby-fast-origin-transfer")}. This is the cap that gets left out of the comparisons, and on an uncached or image-heavy site it is reached long before the 100 GB Fast Data Transfer figure.`,
+                            `CDN Requests (Vercel's new name for Edge Requests): ${spec("vercel-hobby-cdn-requests").value}.`,
                             "Function Invocations: 1,000,000 included.",
                             "Active CPU: 4 CPU-hours. Provisioned Memory: 360 GB-hours.",
                             "Image Optimization: 5,000 transformations, 300,000 cache reads and 100,000 cache writes.",
@@ -377,20 +380,19 @@ export default function NextjsHostingZeroCostPage() {
                                 You get paused, not billed. Vercel&apos;s Hobby documentation states that if you exceed
                                 your usage limits on the Hobby plan, you will in most cases have to wait until 30 days
                                 have passed before you can use the feature again. Hobby can&apos;t buy additional usage.
-                                Pro behaves the opposite way: you keep serving and pay for what you use above the
-                                included amount.
+                                Pro keeps serving. New Pro teams get Flat Rate CDN by default, so a one-day traffic spike
+                                above the included CDN capacity doesn&apos;t change the bill. Other usage, such as
+                                functions, comes out of the $20 monthly credit and is then billed on demand.
                             </BlogText>
                         </div>
 
                         <BlogText>
-                            One detail worth getting right, because it&apos;s commonly stated the other way: <strong>100 GB
-                            isn&apos;t listed as an included Hobby allowance.</strong> Vercel&apos;s Hobby plan page itemises
-                            Active CPU, Provisioned Memory, Function Invocations and image quotas, and no data-transfer
-                            line appears in that table. The 100 GB figure lives on the Fair Use Guidelines page, under
-                            &ldquo;Typical monthly usage guidelines&rdquo;, phrased as <em>up to</em> 100 GB, alongside
-                            Vercel&apos;s statement that it will notify you if your usage is an outlier and will try to
-                            reach out before taking action. Treat 100 GB as the level at which you become an outlier,
-                            not a meter that trips the instant you pass it.
+                            This has changed since our August 2026 check, and older guides (including earlier versions
+                            of this one) say otherwise. <strong>100 GB is now listed as included Hobby usage.</strong> Vercel&apos;s
+                            Hobby plan page puts Fast Data Transfer in its &ldquo;Hobby Included Usage&rdquo; table as
+                            &ldquo;First 100 GB&rdquo;, next to Fast Origin Transfer at &ldquo;First 10 GB&rdquo; and
+                            CDN Requests at &ldquo;First 1,000,000&rdquo;. The figure used to appear only on the Fair Use
+                            Guidelines page. So treat 100 GB as a real monthly limit: go past it and that feature pauses.
                         </BlogText>
 
                         <div className="my-6 overflow-x-auto rounded-xl border border-stone-200" tabIndex={0} role="region" aria-label="Scrollable table">
@@ -403,11 +405,11 @@ export default function NextjsHostingZeroCostPage() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-stone-200 text-stone-700">
-                                    <tr><td className="p-4 font-bold">Price</td><td className="p-4">$0</td><td className="p-4">$20 per user/month, including $20 of usage credit</td></tr>
-                                    <tr><td className="p-4 font-bold">Fast Data Transfer</td><td className="p-4">Up to 100 GB/month, published as a fair-use guideline</td><td className="p-4">1 TB/month included</td></tr>
-                                    <tr><td className="p-4 font-bold">Above the included amount</td><td className="p-4"><strong>Capped. You can&apos;t buy more usage.</strong></td><td className="p-4">Pay-as-you-go, $0.15 to $0.35 per GB by region</td></tr>
-                                    <tr><td className="p-4 font-bold">Fast Origin Transfer</td><td className="p-4">Up to 10 GB/month</td><td className="p-4">Usage-based, $0.06 to $0.43 per GB by region</td></tr>
-                                    <tr><td className="p-4 font-bold">Edge requests</td><td className="p-4">Up to 1M/month</td><td className="p-4">10M/month, then $2.00 to $3.20 per 1M by region</td></tr>
+                                    <tr><td className="p-4 font-bold">Price</td><td className="p-4">$0</td><td className="p-4">$20/month, including one deploying seat and $20 of usage credit</td></tr>
+                                    <tr><td className="p-4 font-bold">Fast Data Transfer</td><td className="p-4">First 100 GB/month included</td><td className="p-4">1 TB/month in the included Flat Rate CDN tier</td></tr>
+                                    <tr><td className="p-4 font-bold">Above the included amount</td><td className="p-4"><strong>Capped. You can&apos;t buy more usage.</strong></td><td className="p-4">With Flat Rate CDN (on by default for new Pro teams): spikes aren&apos;t billed, and a full billing cycle over capacity moves you to the next tier, {spec("vercel-flat-rate-cdn-next-tier").value}. Billed on demand instead: {spec("vercel-fast-data-transfer-on-demand").value}</td></tr>
+                                    <tr><td className="p-4 font-bold">Fast Origin Transfer</td><td className="p-4">First 10 GB/month included</td><td className="p-4">Usage-based, {spec("vercel-fast-origin-transfer-on-demand").value}</td></tr>
+                                    <tr><td className="p-4 font-bold">CDN requests (formerly Edge Requests)</td><td className="p-4">First 1M/month included</td><td className="p-4">1M/month in the included Flat Rate CDN tier; billed on demand, {spec("vercel-cdn-requests-on-demand").value}</td></tr>
                                     <tr><td className="p-4 font-bold">Deploying seats</td><td className="p-4">Personal account</td><td className="p-4">1 included, $20/month each after that</td></tr>
                                     <tr><td className="p-4 font-bold">Read-only viewer seats</td><td className="p-4">Not applicable</td><td className="p-4">Unlimited and free</td></tr>
                                     <tr><td className="p-4 font-bold">Projects / deployments per day</td><td className="p-4">200 / 100</td><td className="p-4">Unlimited / 6,000</td></tr>
@@ -416,7 +418,7 @@ export default function NextjsHostingZeroCostPage() {
                             </table>
                         </div>
                         <p className="text-sm text-stone-500 -mt-2 mb-2">
-                            Every figure in this table was read from <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>, <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Hobby plan docs</a>, <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Pro plan docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a> on August 2, 2026. Overage rates vary by region; confirm yours before budgeting.
+                            Every figure in this table was read from <a href="https://vercel.com/pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s pricing page</a>, <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Hobby plan docs</a>, <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Pro plan docs</a>, <a href="https://vercel.com/docs/pricing/flat-rate-cdn" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Flat Rate CDN docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a> on October 4, 2026. On-demand rates vary by region; confirm yours before budgeting.
                         </p>
 
                         <BlogText>
@@ -440,24 +442,24 @@ export default function NextjsHostingZeroCostPage() {
 
                         <div data-speakable="true">
                             <BlogText>
-                                Vercel Blob, the file-storage product, is free on Hobby within its usage limits.
-                                Vercel&apos;s own pricing example works from 5 GB of included storage, 100,000 simple
-                                operations, 10,000 advanced operations and 100 GB of included data transfer, and Hobby
-                                accounts can create up to 100 separate Blob stores. Individual files can be up to 5 TB,
-                                though anything above 512 MB is never cached, so every access to a file that large is
-                                billed as a cache miss.
+                                Vercel Blob, the file-storage product, is free on Hobby within its usage limits:{" "}
+                                {spec("vercel-hobby-blob-included").value}, as of {asOf("vercel-hobby-blob-included")}.
+                                You can create as many Blob stores as you need, and each new store counts as one
+                                advanced operation. Individual files can be up to 5 TB, though anything above 512 MB is
+                                never cached, so every access to a file that large is a cache miss.
                             </BlogText>
                         </div>
 
                         <BlogText>
                             The part that catches people isn&apos;t the storage figure. <strong>Hobby&apos;s included usage
-                            is shared across all Vercel services in a project</strong>, so every file served out of Blob
-                            spends the same Edge Requests and Fast Data Transfer allowance your pages are spending. Moving
-                            heavy images or downloads into Blob doesn&apos;t move them out of the 100 GB guideline. It only
-                            moves them out of your build. Two smaller details worth knowing: browsing your own Blob store
+                            is shared across all Vercel services in a project</strong>, and every request for a Blob file
+                            counts as one CDN Request, cached or not, against the same 1,000,000 a month your pages use.
+                            The bytes are metered as Blob Data Transfer, which has its own Hobby allowance of just 10 GB.
+                            Moving heavy images or downloads into Blob doesn&apos;t make them free. It mostly moves them out
+                            of your build. Two smaller details worth knowing: browsing your own Blob store
                             in the Vercel dashboard counts as advanced operations against your allowance, and if you do
                             exceed a Blob limit on Hobby you lose access to Blob for 30 days instead of receiving a bill.
-                            Source: <a href="https://vercel.com/docs/vercel-blob/usage-and-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Blob pricing</a>, checked August 2, 2026.
+                            Source: <a href="https://vercel.com/docs/vercel-blob/usage-and-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Blob pricing</a>, checked October 4, 2026.
                         </BlogText>
 
                         <BlogHeader id="check-usage">How to see your own usage before you hit a cap</BlogHeader>
@@ -474,9 +476,12 @@ export default function NextjsHostingZeroCostPage() {
                         </div>
 
                         <BlogText>
-                            Usage notifications are enabled automatically on both plans. Spend Management, which can fire
-                            a webhook or pause projects at a set spend amount, is a Pro feature and is opt-in, so nobody
-                            has it configured by default. If a Hobby project is approaching a limit, the two things that
+                            On Pro, Vercel notifies you automatically when usage reaches 75% of the monthly credit. Spend
+                            Management, which can notify you, fire a webhook or pause production deployments at a set
+                            spend amount, is a Pro feature. Vercel turns on spend notifications at{" "}
+                            {spec("vercel-pro-spend-notification-default").value} by default for new customers, but
+                            pausing production when you reach the amount is a separate setting, so check what yours is
+                            set to. If a Hobby project is approaching a limit, the two things that
                             move the number most are reducing page weight and serving large media from storage designed
                             for it instead of shipping it with the deployment, keeping in mind the shared-allowance point
                             above. Our guides to <Link href="/blog/why-is-my-website-loading-so-slow" className="text-cognac hover:underline">tracing a slow-loading site</Link> and{" "}
@@ -508,16 +513,20 @@ export default function NextjsHostingZeroCostPage() {
                             "Advertising the sale of a product or service.",
                             "Receiving payment to create, update, or host the site.",
                             "Affiliate linking being the primary purpose of the site.",
-                            "Carrying advertisements, including platforms such as Google AdSense.",
-                            "Asking for donations, which Vercel notes also falls under commercial usage."
+                            "Carrying advertisements, including platforms such as Google AdSense."
                         ]} />
+
+                        <BlogText>
+                            Donations used to be on that list. Vercel&apos;s guidelines now say the opposite: asking for
+                            donations does not count as commercial usage.
+                        </BlogText>
 
                         <BlogText>
                             A brochure site for a business, a client project you invoiced for, a store, a paid
                             membership, and a lead-generation landing page are all commercial under that definition.
                             A portfolio, a personal blog with no ads, a learning project and an unreleased prototype
                             are not. If a project sits on the line, Vercel&apos;s guidelines direct you to ask their
-                            support team, not guess. Source: <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Fair Use Guidelines</a>, checked August 2, 2026.
+                            support team, not guess. Source: <a href="https://vercel.com/docs/limits/fair-use-guidelines" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Fair Use Guidelines</a>, checked October 4, 2026.
                         </BlogText>
                         <BlogText>
                             <a href="https://vercel.com/legal/terms" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel&apos;s terms</a> were last updated June 1, 2026 and were read here on August 2, 2026. They say content submitted on
@@ -554,7 +563,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         <BlogList items={[
                             "Team access: count people who need deploying permissions separately from read-only collaborators, then verify the current seat rules.",
-                            "Fast Data Transfer and Edge Requests: how heavy your pages are, how well they cache, how many requests a month, what gets downloaded, and where your traffic comes from.",
+                            "Fast Data Transfer and CDN Requests: how heavy your pages are, how well they cache, how many requests a month, what gets downloaded, and where your traffic comes from.",
                             "Functions: list every API route, form handler, login, scheduled job, search, personalisation and incoming webhook.",
                             "Compute profile: measure Active CPU and provisioned memory for dynamic workloads instead of assuming every Next.js request is static.",
                             "Images and media: count the image transformations, what you serve optimised, video, big catalogues, and any files people download.",
@@ -579,7 +588,7 @@ export default function NextjsHostingZeroCostPage() {
                         <BlogList items={[
                             "The client owns or controls the Vercel team, domain, repository, billing method, and recovery contacts.",
                             "The selected plan permits the commercial workload and provides the required collaboration, security, privacy, and support features.",
-                            "Expected traffic, data transfer, edge requests, functions, builds, images, and logs have been modeled against current included usage.",
+                            "Expected traffic, data transfer, CDN requests, functions, builds, images, and logs have been modeled against current included usage.",
                             "Spend alerts and limits are configured, and someone is responsible for responding before a limit or unexpected bill becomes an incident.",
                             "Preview, production, environment-variable, rollback, DNS, and access-removal procedures are documented before handover.",
                             "The team rechecks current Vercel pricing and terms at proposal, launch, and renewal because plan features and limits can change."
@@ -593,7 +602,7 @@ export default function NextjsHostingZeroCostPage() {
 
                         <h3 id="hobby-hard-caps" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">1. Hobby has hard caps with no overage</h3>
                         <BlogText>
-                            The four Hobby limits covered above (Fast Data Transfer, edge requests, function invocations and compute hours) make usage planning important for eligible personal projects. Build minutes are left off that list on purpose: Vercel publishes no monthly Hobby build-minute allowance, and prices build usage per CPU minute on paid plans. Commercial teams should choose Pro from launch because plan eligibility isn&apos;t a traffic test. Review the current plan documentation and model expected usage before publishing. Source: <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Hobby plan docs</a>.
+                            The four Hobby limits covered above (Fast Data Transfer, CDN requests, function invocations and compute hours) make usage planning important for eligible personal projects. Build minutes are left off that list on purpose: Vercel publishes no monthly Hobby build-minute allowance, and prices build usage per CPU minute on paid plans. Commercial teams should choose Pro from launch because plan eligibility isn&apos;t a traffic test. Review the current plan documentation and model expected usage before publishing. Source: <a href="https://vercel.com/docs/plans/hobby" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Hobby plan docs</a>.
                         </BlogText>
 
                         <h3 id="active-cpu-pricing" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">2. Active CPU pricing is the default Fluid Compute model since June 2025</h3>
@@ -601,9 +610,9 @@ export default function NextjsHostingZeroCostPage() {
                             Vercel announced Active CPU pricing in June 2025 and made it the default Fluid Compute model for supported plans. The model separates Active CPU time from Provisioned Memory, so request shape and workload behavior affect cost. Commercial marketing and e-commerce teams should model their functions against Pro&apos;s included usage and overage rates instead of treating a technically small workload as Hobby-eligible. Source: <a href="https://vercel.com/blog/introducing-active-cpu-pricing-for-fluid-compute" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Active CPU announcement</a>.
                         </BlogText>
 
-                        <h3 id="pro-bandwidth-overage" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Pro data-transfer overage is regionally priced</h3>
+                        <h3 id="pro-bandwidth-overage" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">3. Pro CDN usage is flat-rate by default for new teams</h3>
                         <BlogText>
-                            Pro currently includes 1 TB of Fast Data Transfer and 10 million Edge Requests per month. Additional Fast Data Transfer starts at $0.15 per GB and varies by region, so 100 GB of additional transfer starts around $15, and there&apos;s no one universal overage price. Image-heavy catalogs, downloads, and globally distributed traffic should be modeled by region. Sources: <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Pro plan docs</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a>.
+                            Vercel made Flat Rate CDN generally available on {spec("vercel-flat-rate-cdn-ga-date").value}. New Pro teams have it on by default, and existing teams can switch over in Billing settings. Pro includes the lowest capacity tier at no extra cost: {spec("vercel-pro-cdn-capacity").value}. Vercel says a one-day spike doesn&apos;t change your bill. If a whole billing cycle goes over capacity, Vercel moves you to a higher tier at the start of the next cycle; the next tier up is {spec("vercel-flat-rate-cdn-next-tier").value}. Teams without Flat Rate CDN, and teams above its highest tier, pay on-demand rates instead: {spec("vercel-fast-data-transfer-on-demand").value} for Fast Data Transfer. Flat Rate CDN doesn&apos;t cover Fast Origin Transfer or functions, and it isn&apos;t meant for bulk downloads or sites where media files make up most of the bandwidth, so image-heavy catalogs and downloads still need modeling. Sources: <a href="https://vercel.com/docs/plans/pro-plan" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel Pro plan docs</a>, <a href="https://vercel.com/docs/pricing/flat-rate-cdn" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Flat Rate CDN docs</a>, <a href="https://vercel.com/changelog/flat-rate-cdn-is-now-ga-for-pro-teams" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Vercel changelog</a> and <a href="https://vercel.com/docs/pricing/regional-pricing" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">regional pricing</a>.
                         </BlogText>
 
                         <h3 id="enterprise-floor" className="text-xl md:text-2xl font-bold text-charcoal mt-10 mb-3 leading-tight">4. Vercel Enterprise pricing is custom, not a public floor</h3>
@@ -641,7 +650,7 @@ export default function NextjsHostingZeroCostPage() {
                         </div>
 
                         <BlogList items={[
-                            "Usage-based billing turns a traffic spike into an invoice. Once a Pro team passes its $20 monthly credit and included allowances, Vercel bills on demand. Spend Management, which can alert you or pause projects at a threshold you set, is opt-in and isn't configured for you, so check what your own account is set to instead of assuming a limit exists.",
+                            `Usage-based billing. Once a Pro team uses its $20 monthly credit, Vercel bills further usage on demand. Since ${spec("vercel-flat-rate-cdn-ga-date").value}, new Pro teams get Flat Rate CDN by default, so a one-day traffic spike no longer changes the CDN part of the bill, but functions and other compute are still billed per use. Vercel turns on spend notifications at ${spec("vercel-pro-spend-notification-default").value} by default for new customers. Pausing production when you hit that amount is a separate setting, so check what your own account is set to instead of assuming a limit exists.`,
                             "The Hobby licence is a commercial-use rule, not a traffic rule. Being paid to build a site already makes the deployment commercial, regardless of how little traffic it serves, and that's the clause people read last.",
                             "Content on Hobby and trial Pro plans may be used for model training. Vercel's terms, last updated June 1, 2026, state this and provide an opt-out in team settings; paid Pro doesn't enable model training by default.",
                             "Lock-in, which has improved. Next.js capabilities historically landed on Vercel first and were awkward elsewhere. The Adapters API became stable in Next.js 16.2, giving other platforms a public contract for consuming Next.js build output, so portability is much better than it was.",
@@ -733,7 +742,7 @@ export default function NextjsHostingZeroCostPage() {
                             Five decisions collapse into three. Hobby eligibility is a licence rule, not a capacity rule, so a commercial site is ineligible at any traffic level. Pro is the commercial floor at $20 a month plus seats and usage. And your hosting plan and your PageSpeed score are independent claims that get evidenced separately.
                         </p>
                         <ol className="list-decimal list-inside space-y-2 text-stone-700 leading-relaxed">
-                            <li><strong>Vercel Hobby is free for personal, non-commercial projects.</strong> Its Fast Data Transfer figure is widely quoted as an included 100 GB allowance, and Vercel&apos;s Hobby plan page doesn&apos;t itemise it that way (see the section above). Either way, technical capacity doesn&apos;t make a commercial project eligible.</li>
+                            <li><strong>Vercel Hobby is free for personal, non-commercial projects.</strong> Its plan page lists {spec("vercel-hobby-fast-data-transfer").value} of Fast Data Transfer as included usage, and Hobby can&apos;t buy more. That capacity still doesn&apos;t make a commercial project eligible.</li>
                             <li><strong>Vercel Pro is the starting point for commercial production websites.</strong> Budget from the $20 monthly platform fee, then add any extra seats and on-demand usage; review current pricing before launch.</li>
                             <li><strong>Next.js can reduce request-time work and server administration.</strong> Managed infrastructure, application maintenance, and usage costs still exist.</li>
                             <li><strong>Performance evidence and hosting cost are separate claims.</strong> A faster rebuild doesn&apos;t make commercial hosting free, and a hosting plan doesn&apos;t produce a PageSpeed score. Price the plan from usage and seats; measure performance against named pages under stated test conditions.</li>

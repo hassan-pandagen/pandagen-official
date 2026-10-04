@@ -56,7 +56,7 @@ const pageFaqs: { question: string; answer: string }[] = [
     },
     {
         question: "How much does a website like this cost to build?",
-        answer: "A catalogue site of this shape — around twenty product types, static product and guide pages, a multi-step quote form with file upload, and custom motion work — sits in our Scale tier, which starts at $5,000 and runs to $10,000 depending on scope. The variables that actually move the number are the count of distinct page templates rather than pages, whether product photography exists or has to be produced, how much bespoke animation the design calls for, and whether content is supplied or written. A catalogue of the same size with stock templates and no motion work is a materially cheaper project than this one, and we would say so rather than quote the same figure.",
+        answer: "A catalogue site of this shape (around twenty product types, static product and guide pages, a multi-step quote form with file upload, and custom motion work) sits in our Scale tier, which starts at $5,000, and the final price depends on scope. The variables that actually move the number are the count of distinct page templates rather than pages, whether product photography exists or has to be produced, how much bespoke animation the design calls for, and whether content is supplied or written. A catalogue of the same size with stock templates and no motion work is a materially cheaper project than this one, and we would say so rather than quote the same figure.",
     },
     {
         question: "Why build an editorial homepage instead of a standard ecommerce template?",

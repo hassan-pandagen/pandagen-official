@@ -223,7 +223,7 @@ export default function CookieConsent() {
             <PreferenceRow
               id="consent-analytics"
               title="Analytics"
-              description="Google Analytics, Microsoft Clarity, and Vercel Analytics help us understand visits and improve the site."
+              description="Google Analytics and Microsoft Clarity help us understand visits and improve the site."
               checked={draft.analytics}
               onChange={(checked) => setDraft({ ...draft, analytics: checked })}
             />

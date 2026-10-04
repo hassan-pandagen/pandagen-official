@@ -264,8 +264,8 @@ export default function WebsiteDeveloperAgencyPage() {
                         covers the schedule side of the same scope.
                     </BlogText>
                     <BlogText>
-                        PandaCodeGen&apos;s <Link href="/pricing" className="text-cognac hover:underline">public planning tiers</Link> start at $1,500 Starter, $3,500 Growth and $5,000 to
-                        $10,000 Scale, with larger work scoped separately. Standard payment is 30 percent at onboarding
+                        PandaCodeGen&apos;s <Link href="/pricing" className="text-cognac hover:underline">public planning tiers</Link> start at $1,500 Starter, $3,500 Growth and Scale
+                        from $5,000, with larger work scoped separately. Standard payment is 30 percent at onboarding
                         and 70 percent on delivery under the signed agreement. These are PandaCodeGen terms, not a
                         market average.
                     </BlogText>

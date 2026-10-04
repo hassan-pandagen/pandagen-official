@@ -76,7 +76,7 @@ export const metadata: Metadata = {
         description: `Every ranking update on Google's Search Status Dashboard, with start dates and rollout lengths. The median core update takes ${UPDATE_STATS.medianCoreDays} days to finish rolling out.`,
         type: "article",
         publishedTime: "2026-04-09T00:00:00-05:00",
-        modifiedTime: "2026-08-19",
+        modifiedTime: "2026-10-04",
         authors: ["Hassan Jamal"],
         url: "https://www.pandacodegen.com/blog/google-algorithm-updates",
         images: [ogImageForPath("/blog/google-algorithm-updates")],
@@ -98,7 +98,7 @@ const articleSchema = {
             "description": `A dated register of all ${UPDATE_STATS.total} ranking updates Google has confirmed since ${REGISTER_START}, transcribed from the Search Status Dashboard, with an evidence-led method for diagnosing whether an update affected your site.`,
             "image": ogImageUrlForPath("/blog/google-algorithm-updates"),
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "author": {
                 "@type": "Person",
                 "@id": "https://www.pandacodegen.com/#/schema/person/hassan",
@@ -138,7 +138,7 @@ const articleSchema = {
             "description": `Every ranking update listed on Google's Search Status Dashboard from ${REGISTER_START} onward, with the update name, rollout start date and Google's stated rollout duration. ${GOOGLE_UPDATES.length} entries.`,
             "creator": { "@id": "https://www.pandacodegen.com/#organization" },
             "isBasedOn": DASHBOARD_URL,
-            "dateModified": "2026-08-19",
+            "dateModified": "2026-10-04",
             "temporalCoverage": "2021-11-03/2026-06-26",
             "variableMeasured": ["Update name", "Rollout start date", "Rollout duration"],
             "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -161,7 +161,7 @@ const articleSchema = {
             "isPartOf": { "@id": "https://www.pandacodegen.com/#website" },
             "primaryImageOfPage": { "@type": "ImageObject", "url": ogImageUrlForPath("/blog/google-algorithm-updates") },
             "datePublished": "2026-04-09T00:00:00-05:00",
-            "dateModified": "2026-08-19T00:00:00-05:00",
+            "dateModified": "2026-10-04T00:00:00-05:00",
             "breadcrumb": { "@id": "https://www.pandacodegen.com/blog/google-algorithm-updates#breadcrumb" },
             "inLanguage": "en-US",
         },
@@ -196,11 +196,15 @@ export default function GoogleAlgorithmUpdatesPage() {
                         </h1>
 
                         <p className="text-xl text-stone-600 mb-6 leading-relaxed">
-                            Google has confirmed {UPDATE_STATS.total} ranking updates since {REGISTER_START}, {UPDATE_STATS.coreCount} of them core updates. The most recent is the {UPDATE_STATS.latest.name}, which started {formatStart(UPDATE_STATS.latest.start)} and took {UPDATE_STATS.latest.duration} to roll out. Below is the full dated register, taken from Google&apos;s own dashboard, and the method for working out whether any of it touched your site. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
+                            Google has confirmed {UPDATE_STATS.total} ranking updates since {REGISTER_START}, {UPDATE_STATS.coreCount} of them core updates. {inProgressUpdate ? (
+                                <>The most recent is the {inProgressUpdate.name}, which started {formatStart(inProgressUpdate.start)} and is still rolling out. The last one to finish was the {UPDATE_STATS.latest.name}, which started {formatStart(UPDATE_STATS.latest.start)} and took {UPDATE_STATS.latest.duration} to roll out.</>
+                            ) : (
+                                <>The most recent is the {UPDATE_STATS.latest.name}, which started {formatStart(UPDATE_STATS.latest.start)} and took {UPDATE_STATS.latest.duration} to roll out.</>
+                            )} Below is the full dated register, taken from Google&apos;s own dashboard, and the method for working out whether any of it touched your site. The sites PandaCodeGen builds to pass these checks start at $1,500 at a fixed price, with no minimum project size, and you own the code.
                         </p>
 
                         <BlogAuthor
-                            date="Apr 9, 2026, updated Aug 8, 2026"
+                            date="Apr 9, 2026, updated Oct 4, 2026"
                             readTime="15 min read"
                             bio="Hassan is PandaCodeGen's co-founder and Lead Engineer. He does the speed testing and the technical SEO, and runs migrations with the before-and-after numbers written down."
                             linkedIn="https://www.linkedin.com/in/hassan-jamal-713ba6228/"
@@ -241,9 +245,11 @@ export default function GoogleAlgorithmUpdatesPage() {
                             <InsightBox label="Rolling out right now">
                                 Google started the <strong>{inProgressUpdate.name}</strong> on{" "}
                                 {longDate(inProgressUpdate.start)} and its dashboard still shows the rollout as
-                                ongoing. Google said it may take a few days, published no new spam policies
-                                alongside it, and released no accompanying blog post. It applies globally and to all
-                                languages.{" "}
+                                ongoing.{" "}
+                                {inProgressUpdate.expectedRollout && (
+                                    <>Google says the rollout may take {inProgressUpdate.expectedRollout} to complete. </>
+                                )}
+                                It applies globally and to all languages.{" "}
                                 <strong>
                                     A spam update is not a core update, and the response differs.
                                 </strong>{" "}

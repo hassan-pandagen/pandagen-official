@@ -291,8 +291,8 @@ export default function WebflowMigrationCostPage() {
                     <BlogHeader id="fifty-to-hundred">Webflow migration cost for a 50 to 100 page website</BlogHeader>
                     <div data-speakable="true">
                         <BlogText>
-                            Most sites this size land in our Growth or Scale tier, so $3,500 to $10,000, and which end
-                            depends on template count rather than URL count. Fifty URLs can be five templates repeated
+                            Most sites this size land in our Growth or Scale tier, so from $3,500 for Growth or from
+                            $5,000 for Scale, and which one depends on template count rather than URL count. Fifty URLs can be five templates repeated
                             with different content, or fifty unique layouts with their own interactions, and those are
                             not the same job. Count templates before you budget.
                         </BlogText>

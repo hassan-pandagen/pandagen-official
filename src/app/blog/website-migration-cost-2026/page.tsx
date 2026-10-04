@@ -439,8 +439,8 @@ export default function WebsiteMigrationCostPage() {
 
                     <BlogHeader id="squarespace-migration-cost">Squarespace migration cost</BlogHeader>
                     <BlogText>
-                        Squarespace migrations start at $1,500, reach $3,500 with a blog or Commerce, and $5,000 to
-                        $10,000 for a store with Member Areas or scheduling. The reason the range is wide is that
+                        Squarespace migrations start at $1,500, reach $3,500 with a blog or Commerce, and start at
+                        $5,000 for a store with Member Areas or scheduling. The reason the range is wide is that
                         Squarespace&apos;s current export is partial. Store and portfolio pages, product and video
                         blocks, drafts, style settings and custom CSS are among the documented exclusions. Price the
                         design, content and systems that must be recreated separately, and see our{" "}

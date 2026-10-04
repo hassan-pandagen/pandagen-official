@@ -373,7 +373,7 @@ export default function ShopifySlowLosingSalesPage() {
                         items={[
                             "Starter from $1,500 for a small, clearly bounded scope.",
                             "Growth from $3,500 for a broader storefront, CMS or content-continuity scope.",
-                            "Scale normally between $5,000 and $10,000 for larger catalogs or integration-heavy work.",
+                            "Scale from $5,000 for larger catalogs or integration-heavy work.",
                             "The 90-plus score is measured on named pages on a test bench. It is not a promise about your rankings, your traffic or your revenue.",
                         ]}
                     />

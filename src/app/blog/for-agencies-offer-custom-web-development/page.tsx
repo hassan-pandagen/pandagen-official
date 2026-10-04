@@ -248,8 +248,7 @@ export default function WhiteLabelDevelopmentGuide() {
                     />
                     <BlogText>
                         PandaCodeGen&apos;s <Link href="/pricing" className="text-cognac hover:underline">public starting tiers</Link>{" "}
-                        are planning anchors: Starter at $1,500, Growth at $3,500, and Scale typically from $5,000 to
-                        $10,000, with{" "}
+                        are planning anchors: Starter at $1,500, Growth at $3,500, and Scale from $5,000, with{" "}
                         <Link href="/services/custom-engineering" className="text-cognac hover:underline">larger custom engineering work</Link>{" "}
                         scoped separately.
                         Final price comes from the accepted scope. An agency can add project management, strategy,

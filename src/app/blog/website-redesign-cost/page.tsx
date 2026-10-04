@@ -283,7 +283,7 @@ export default function WebsiteRedesignCostPage() {
                         ]}
                     />
                     <BlogText>
-                        Those four variables are what carry a redesign from $1,500 to $10,000 across our own tiers, and
+                        Those four variables are what carry a redesign from our $1,500 Starter tier up to Scale, which starts at $5,000, and
                         raw page count is the weakest predictor of where it lands. Ten pages using ten templates can be
                         more work than one hundred pages generated from a stable content model. Ask each provider to expose the
                         templates, components, content responsibilities and review process behind the price.

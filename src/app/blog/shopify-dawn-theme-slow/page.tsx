@@ -544,7 +544,7 @@ export default function ShopifyDawnThemeSlowPage() {
 
                     <BlogHeader>What our engagements cost</BlogHeader>
                     <BlogText>
-                        Engagements start at $1,500 and run to $10,000 for integration-heavy commerce work, in the three tiers below. Those are planning anchors, not a quote. The accepted written terms control the final
+                        Engagements start at $1,500, and integration-heavy commerce work starts at $5,000, in the three tiers below. Those are planning anchors, not a quote. The accepted written terms control the final
                         price, the page inventory and the acceptance protocol.
                     </BlogText>
                     <div className="my-6 grid gap-4 sm:grid-cols-3">
