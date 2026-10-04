@@ -227,12 +227,12 @@ export default function WordPressCostPage() {
                     </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Three-year TCO = current annual recurring cost x 3
-                        <br />+ planned renewals and usage growth
-                        <br />+ internal operating labor
-                        <br />+ contracted maintenance and support
-                        <br />+ expected roadmap work
-                        <br />+ incident and contingency allowance
-                        <br />+ migration or exit work inside the period
+                        {" "}<br />+ planned renewals and usage growth
+                        {" "}<br />+ internal operating labor
+                        {" "}<br />+ contracted maintenance and support
+                        {" "}<br />+ expected roadmap work
+                        {" "}<br />+ incident and contingency allowance
+                        {" "}<br />+ migration or exit work inside the period
                     </div>
                     <BlogText>
                         Keep the base case to committed or directly observed cost. Put uncertain items in low, expected
@@ -398,8 +398,8 @@ export default function WordPressCostPage() {
                     <BlogHeader id="payback">Calculate payback only after the inputs are approved</BlogHeader>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Net migration investment = migration cost - avoided near-term WordPress work
-                        <br />Annual verified savings = removed direct cost - new direct cost
-                        <br />Simple payback years = net migration investment / annual verified savings
+                        {" "}<br />Annual verified savings = removed direct cost - new direct cost
+                        {" "}<br />Simple payback years = net migration investment / annual verified savings
                     </div>
                     <BlogText>
                         Keep uncertain business benefits separate from verified direct savings. If annual verified

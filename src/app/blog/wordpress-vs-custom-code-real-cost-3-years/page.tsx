@@ -285,11 +285,11 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Three-year cost = initial work
-                        <br />+ recurring providers and software
-                        <br />+ internal and external operating labor
-                        <br />+ planned roadmap changes
-                        <br />+ evidence-led contingency
-                        <br />+ exit work inside the period
+                        {" "}<br />+ recurring providers and software
+                        {" "}<br />+ internal and external operating labor
+                        {" "}<br />+ planned roadmap changes
+                        {" "}<br />+ evidence-led contingency
+                        {" "}<br />+ exit work inside the period
                     </div>
                     <BlogText>
                         Store quantity, unit cost, frequency, start date, inflation or renewal rule, source, confidence
@@ -465,12 +465,12 @@ export default function WordPressVsCustomCostPage() {
                     </BlogText>
                     <div className="my-6 rounded-xl border border-stone-200 bg-stone-50 p-6 font-mono text-sm leading-7 text-stone-700">
                         Incremental investment = custom three-year initial and transition cost
-                        <br />- WordPress work avoided during transition
-                        <br />
-                        <br />Annual verified savings = removed direct and labor cost
-                        <br />- new direct and labor cost
-                        <br />
-                        <br />Simple payback = incremental investment / annual verified savings
+                        {" "}<br />- WordPress work avoided during transition
+                        {" "}<br />
+                        {" "}<br />Annual verified savings = removed direct and labor cost
+                        {" "}<br />- new direct and labor cost
+                        {" "}<br />
+                        {" "}<br />Simple payback = incremental investment / annual verified savings
                     </div>
                     <BlogText>
                         If annual verified savings are not positive, a savings-based payback does not exist. Capability,

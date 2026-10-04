@@ -360,7 +360,7 @@ export default function PageContent() {
               <div className="md:hidden h-px flex-1 bg-linear-to-r from-cognac/40 to-stone-500/40" />
               <div className="relative z-10 flex flex-col items-center gap-2 rounded-2xl border border-white/15 bg-charcoal px-4 py-4 shadow-lg">
                 <Webhook className="w-6 h-6 text-cognac" />
-                <span className="text-[11px] font-bold uppercase tracking-wider text-white text-center leading-tight">GHL API<br />/ Webhooks</span>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white text-center leading-tight">GHL API{" "}<br />/ Webhooks</span>
                 <ArrowRight className="w-4 h-4 text-stone-400 rotate-90 md:rotate-0" />
               </div>
               <div className="md:hidden h-px flex-1 bg-linear-to-r from-stone-500/40 to-stone-400/40" />

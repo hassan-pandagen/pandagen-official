@@ -77,7 +77,7 @@ export default function EditorialPolicyPage() {
             <div className="mt-5 grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-end lg:gap-16">
               <div>
                 <h1 id="policy-title" className="max-w-3xl text-[clamp(2.5rem,5.5vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.04em]">
-                  Editorial &amp;<br />
+                  Editorial &amp;{" "}<br />
                   <span className="font-serif italic text-cognac">evidence policy.</span>
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">

@@ -188,7 +188,7 @@ export default function CoreWebVitalsExplainedPage() {
                     </BlogText>
 
                     <BlogQuote>
-                        Total impressions: ~57,000<br />Total clicks: ~1,270<br />Average CTR: 2.2%<br />Average position: 8.6<br />…<br />Clicks are stuck at ~40/day despite high impressions<br />CTR dropped from ~14% (brand queries only) to ~1.2% as non-brand impressions grew
+                        Total impressions: ~57,000{" "}<br />Total clicks: ~1,270{" "}<br />Average CTR: 2.2%{" "}<br />Average position: 8.6{" "}<br />…{" "}<br />Clicks are stuck at ~40/day despite high impressions{" "}<br />CTR dropped from ~14% (brand queries only) to ~1.2% as non-brand impressions grew
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/Big_University_6035 · r/SEO · Apr 19, 2026 · 25 upvotes, 35 comments · <a href="https://www.reddit.com/r/SEO/comments/1sq96ph/started_a_project_site_on_march_8_50k_impressions/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
 
@@ -237,21 +237,21 @@ export default function CoreWebVitalsExplainedPage() {
                             </thead>
                             <tbody className="divide-y divide-stone-200 text-stone-700">
                                 <tr>
-                                    <td className="p-4 font-bold">LCP<br /><span className="font-normal text-stone-500">Largest Contentful Paint</span></td>
+                                    <td className="p-4 font-bold">LCP{" "}<br /><span className="font-normal text-stone-500">Largest Contentful Paint</span></td>
                                     <td className="p-4">How long until the largest element in the viewport renders. Usually your hero image or headline.</td>
                                     <td className="p-4">2.5s or less</td>
                                     <td className="p-4">2.5s to 4.0s</td>
                                     <td className="p-4">over 4.0s</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold">INP<br /><span className="font-normal text-stone-500">Interaction to Next Paint</span></td>
+                                    <td className="p-4 font-bold">INP{" "}<br /><span className="font-normal text-stone-500">Interaction to Next Paint</span></td>
                                     <td className="p-4">How long the page takes to visibly respond to a user interaction, across the whole visit.</td>
                                     <td className="p-4">200ms or less</td>
                                     <td className="p-4">200ms to 500ms</td>
                                     <td className="p-4">over 500ms</td>
                                 </tr>
                                 <tr>
-                                    <td className="p-4 font-bold">CLS<br /><span className="font-normal text-stone-500">Cumulative Layout Shift</span></td>
+                                    <td className="p-4 font-bold">CLS{" "}<br /><span className="font-normal text-stone-500">Cumulative Layout Shift</span></td>
                                     <td className="p-4">How much visible content moves unexpectedly while the page loads.</td>
                                     <td className="p-4">0.1 or less</td>
                                     <td className="p-4">0.1 to 0.25</td>

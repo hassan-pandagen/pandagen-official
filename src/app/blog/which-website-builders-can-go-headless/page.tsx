@@ -544,7 +544,7 @@ export default function WhichBuildersHeadlessPage() {
                                 <span className="font-bold text-charcoal">
                                     {spec(id).vendor}: {spec(id).label}
                                 </span>
-                                <br />
+                                {" "}<br />
                                 <a
                                     href={spec(id).source}
                                     target="_blank"

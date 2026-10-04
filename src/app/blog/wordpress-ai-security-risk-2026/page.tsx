@@ -192,7 +192,7 @@ export default function WordPressAiSecurityRiskPage() {
                         Two WooCommerce developers reacting to the April 2026 Essential Plugin backdoor, quoted word for word from r/woocommerce with a link to the thread.
                     </BlogText>
                     <BlogQuote>
-                        And truth be told the backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it&apos;s going to be difficult to avoid<br />The other step is trying to rely less on plugins wherever possible
+                        And truth be told the backdoor was introduced long before it was triggered, so it was a calculated move to slide it under the radar. Beyond reading all the plugin code and vetting it yourself it&apos;s going to be difficult to avoid{" "}<br />The other step is trying to rely less on plugins wherever possible
                     </BlogQuote>
                     <p className="text-xs text-stone-500 mt-1 mb-4">u/BNfreelance · r/woocommerce · Apr 13, 2026 · on Essential Plugin backdoor thread · <a href="https://www.reddit.com/r/woocommerce/comments/1skaoxn/someone_bought_30_wordpress_plugins_and_planted_a/ofzj6uj/" target="_blank" rel="nofollow noopener noreferrer" className="text-cognac hover:underline font-medium">Verify source</a></p>
                     <BlogQuote>
