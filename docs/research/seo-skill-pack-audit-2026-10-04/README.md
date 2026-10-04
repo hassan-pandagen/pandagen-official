@@ -242,3 +242,50 @@ written before consent needs consent for EU visitors (legal question).
 - MyCustomPatches (item 2): owners want it kept as "Independent client" with no LLC named. Open
   question sent back: whether anyone who owns PandaCodeGen owns any part of the business behind
   MyCustomPatches, which is the test the disclosure rule uses (shared owners, not shared LLCs).
+
+## Second round of fixes, 4 Oct 2026 (uncommitted, in the working tree with the redesign)
+
+Verified together on one production build (150 sitemap URLs all 200, all JSON-LD parses, every
+guard passes, no third-party request before consent, no horizontal scroll at 390px on the pages
+checked).
+
+- Dates: one FAQ heading per post (49 had two; `FAQAccordion showHeading={false}`); 32 posts got
+  honest modified dates, each tied to a content commit; every byline shows "Published X · Updated Y"
+  from blog.ts (`PostDateline`); check_dates.py checks bylines and warns on stale dates.
+- Freshness: per-fact `reviewDays` (Vercel 30/60, vendor prices 60/120); research-facts.json is
+  watched; `npm run guard:stamps` scans hand-typed "checked on" dates (not in guard:all yet; the
+  first stamps pass 90 days on 22 Oct).
+- Merges: wordpress-killer, how-to-cut-saas-bill-2026 and why-is-my-website-loading-so-slow merged
+  into their survivors with 308s. shopify-slow-losing-sales was NOT merged (growing, different
+  queries). /ai-info/competitor-comparison now redirects to /blog/top-nextjs-agencies-2026.
+- website-migration-cost-2026 hub: platform sections cut to summaries plus links; generic
+  answer-first opening; WooCommerce "start at $5,000" corrected to canon.
+- Internal links: nine near-ranking posts gained 3 to 7 body links each; service-guides lists
+  rebuilt per cluster; related cards now spread by a stable hash (max 16 to 11 inbound, posts with
+  none 37 to 6). A temporary TITLE_PILOT_PAGES / POSTS_ADDED_DURING_PILOT guard in topical-map.ts
+  keeps the pilot clean; remove it after the pilot is read.
+- Title pilot: TITLE_PILOT.md (3 tests, 3 controls; starts the day the redesign deploys).
+- Homepage description restores "Custom builds from $1,500" and "Code you own"; title unchanged
+  (all homepage clicks are branded). /about titles no longer repeat the brand.
+- Cookie banner: first in tab order, never hides the focused element (0 of 115 obscured, was 16).
+  Contrast fix on /services/wordpress-migration (axe: 0 violations).
+- /work concept pages: page JSON-LD, honest titles and descriptions; a-step-above-medical is
+  noindex,follow and out of the sitemap until finished.
+- Ownership: "What you keep" section on every service page from src/data/platform-portability.ts
+  (66 quoted, dated vendor sources), Service schema with serviceOutput, a manifesto paragraph, and
+  a new post /blog/website-portability.
+- Near-miss reworks: gohighlevel-website-speed (9-step sequence), shopify-app-costs (how app
+  pricing works; 15 prices rechecked, Okendo corrected), woocommerce-too-slow (add-to-cart and
+  checkout), how-to-migrate-wordpress-to-nextjs (DIY intro, one link to the service page).
+- New posts: /blog/is-wix-bad-for-seo, /blog/gohighlevel-vs-wordpress. Covers for the three new
+  posts are placeholders or crops, not generated photographs.
+- Assistant: Vercel AI Gateway with zero data retention and pinned non-China providers.
+
+Owner decisions still open:
+1. Sanity training as a standard handover item (not in company-facts.ts, so not published).
+2. MyCustomPatches relationship (not settled).
+3. HighLevel now publishes "Above 80 on mobile, above 95 on desktop" as a typical optimized
+   score; gohighlevel-website-speed deliberately gives no score range. Quote it or not.
+4. shopify-app-costs title still says "Checked Aug 2" (true but stale).
+5. migration-projects.ts says A Step Above Medical testing "begins October 1, 2026".
+6. Real cover photos for the three new posts.
